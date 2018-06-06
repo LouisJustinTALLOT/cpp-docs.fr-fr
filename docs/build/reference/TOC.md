@@ -204,7 +204,7 @@
 ### [/DELAY (Paramètres d’importation à chargement différé)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (Différer le chargement de l’importation)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (Signer partiellement un assembly)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (définir des indicateurs de chargement dépendant par défaut)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (définir des indicateurs de chargement dépendant par défaut)](dependentloadflag.md)
 ### [/DLL (Générer une DLL)](dll-build-a-dll.md)
 ### [/DRIVER (Pilote Windows NT en mode noyau)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (Utiliser la randomisation du format d’espace d’adresse)](dynamicbase-use-address-space-layout-randomization.md)

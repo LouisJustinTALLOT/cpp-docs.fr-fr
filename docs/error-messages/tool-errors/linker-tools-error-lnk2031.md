@@ -20,7 +20,7 @@ ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34703663"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Erreur des outils Éditeur de liens LNK2031

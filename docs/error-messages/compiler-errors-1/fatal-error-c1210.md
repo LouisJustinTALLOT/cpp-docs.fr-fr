@@ -20,7 +20,7 @@ ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704982"
 ---
 # <a name="fatal-error-c1210"></a>Erreur irrécupérable C1210

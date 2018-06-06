@@ -32,7 +32,7 @@ ms.openlocfilehash: 453bb40e94c1d345adbe22f8792b59d1e584499a
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704826"
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Code pur et vérifiable (C + c++ / CLI)

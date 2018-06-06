@@ -20,7 +20,7 @@ ms.openlocfilehash: 5b21e457feb6d090e4abaf531293987eb3504457
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704969"
 ---
 # <a name="compiler-error-c3862"></a>Erreur du compilateur C3862
