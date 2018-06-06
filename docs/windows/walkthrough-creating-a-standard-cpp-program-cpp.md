@@ -19,11 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
+ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34800084"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
 Vous pouvez utiliser Visual C++ dans l’environnement de développement intégré (IDE) Visual Studio pour créer des programmes C++ Standard. En suivant les étapes décrites dans cette procédure pas à pas, vous pouvez créer un projet, ajouter un nouveau fichier au projet, modifiez le fichier pour ajouter du code C++, puis compiler et exécuter le programme à l’aide de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -42,7 +43,7 @@ Vous pouvez utiliser Visual C++ dans l’environnement de développement intégr
   
 1.  Créer un projet en pointant sur **nouveau** sur la **fichier** menu, puis en cliquant sur **projet**.  
   
-2.  Dans le **Visual C++** volet types de projet, cliquez sur **Win32**, puis cliquez sur **Application Console Win32**.  
+2.  Dans le **Visual C++** volet types de projet, cliquez sur **Windows Desktop**, puis cliquez sur **Application Console Windows**.  
   
 3.  Tapez un nom pour le projet.  
   
@@ -50,11 +51,9 @@ Vous pouvez utiliser Visual C++ dans l’environnement de développement intégr
   
      Cliquez sur **OK** pour créer le projet.  
   
-4.  Dans le **Assistant Application Win32**, cliquez sur **suivant**, sélectionnez **projet vide**, puis cliquez sur **Terminer**.  
+4.  Si **l’Explorateur de solutions** n’apparaît pas, dans le **vue** menu, cliquez sur **l’Explorateur de solutions**.  
   
-5.  Si **l’Explorateur de solutions** n’apparaît pas, dans le **vue** menu, cliquez sur **l’Explorateur de solutions**.  
-  
-6.  Ajoutez un nouveau fichier source au projet, comme suit.  
+5.  Ajoutez un nouveau fichier source au projet, comme suit.  
   
     1.  Dans **l’Explorateur de solutions**, avec le bouton droit le **fichiers sources** dossier, pointez sur **ajouter**, puis cliquez sur **un nouvel élément**.  
   
@@ -62,15 +61,15 @@ Vous pouvez utiliser Visual C++ dans l’environnement de développement intégr
   
      Le fichier .cpp apparaît dans le dossier des fichiers sources dans **l’Explorateur de solutions**, et le fichier est ouvert dans l’éditeur Visual Studio.  
   
-7.  Dans le fichier dans l’éditeur, tapez un programme C++ valide qui utilise la bibliothèque C++ Standard, ou copiez un des exemples de programmes et collez-le dans le fichier.  
+6.  Dans le fichier dans l’éditeur, tapez un programme C++ valide qui utilise la bibliothèque C++ Standard, ou copiez un des exemples de programmes et collez-le dans le fichier.  
   
-8.  Enregistrez le fichier.  
+7.  Enregistrez le fichier.  
   
-9. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+8. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
      Le **sortie** fenêtre affiche des informations sur la progression de la compilation, par exemple, l’emplacement du journal de génération et un message qui indique l’état de la build.  
   
-10. Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.  
+9. Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.  
   
      Si vous avez utilisé l’exemple de programme, une fenêtre de commande s’affiche et indique si certains entiers se trouvent dans le jeu.  
   
