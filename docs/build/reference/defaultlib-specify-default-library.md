@@ -1,7 +1,7 @@
 ---
-title: -DEFAULTLIB (spécifier la bibliothèque par défaut) | Documents Microsoft
+title: /DEFAULTLIB (spécifier la bibliothèque par défaut) | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,36 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48db05ea50917a09e618c782d86dace73a1bf7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569779"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Spécifier la bibliothèque par défaut)
-```  
-/DEFAULTLIB:library  
-```  
-  
-## <a name="remarks"></a>Notes  
- où :  
-  
- *Bibliothèque*  
- Le nom d’une bibliothèque à rechercher lors de la résolution des références externes.  
-  
-## <a name="remarks"></a>Notes  
- L’option /DEFAULTLIB ajoute une *bibliothèque* à la liste des bibliothèques que LINK recherche lors de la résolution des références. Une bibliothèque spécifiée avec /DEFAULTLIB est recherchée après les bibliothèques spécifiées sur la ligne de commande et avant les bibliothèques par défaut nommées dans les fichiers .obj.  
-  
- Le [ignorer toutes les bibliothèques par défaut](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB) substitue/DEFAULTLIB :*bibliothèque*. Le [ignorer les bibliothèques](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB :*bibliothèque*) substitue/DEFAULTLIB :*bibliothèque* lors de la même *bibliothèque* nom est spécifié dans les deux.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
--   Cette option de l’éditeur de liens n’est pas disponible à partir de l’environnement de développement Visual Studio. Pour ajouter une bibliothèque à la phase de liaison, utilisez la **dépendances supplémentaires** propriété à partir de la **entrée** page de propriétés.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+
+Spécifiez une bibliothèque par défaut à Explorer afin de résoudre les références externes.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/DEFAULTLIB**:_bibliothèque_
+
+### <a name="arguments"></a>Arguments
+
+|Argument|Description|
+|-|-|
+*Bibliothèque*|Le nom d’une bibliothèque à rechercher lors de la résolution des références externes.
+
+## <a name="remarks"></a>Notes
+
+Le **/DEFAULTLIB** option ajoute une *bibliothèque* à la liste des bibliothèques que LINK recherche lors de la résolution des références. Une bibliothèque spécifiée avec **/DEFAULTLIB** est recherchée après les bibliothèques spécifiées explicitement sur la ligne de commande et avant les bibliothèques par défaut nommées dans les fichiers .obj.
+
+Lorsqu’il est utilisé sans arguments, le [/NODEFAULTLIB (ignorer toutes les bibliothèques par défaut)](../../build/reference/nodefaultlib-ignore-libraries.md) option substitue à tous les **/DEFAULTLIB**:*bibliothèque* options. Le **/NODEFAULTLIB**:*bibliothèque* option remplacements **/DEFAULTLIB**:*bibliothèque* lors de la même *bibliothèque*nom est spécifié dans les deux.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+
+1. Dans **des Options supplémentaires**, entrez un **/DEFAULTLIB**:*bibliothèque* option pour chaque bibliothèque à rechercher. Choisissez **OK** pour enregistrer vos modifications.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+- [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)
+- [Options de l’éditeur de liens](../../build/reference/linker-options.md)

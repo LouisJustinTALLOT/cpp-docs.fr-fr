@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94a9e75770e822c89ea65a745a2fca491f175d95
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569860"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestion des erreurs et des exceptions (Modern C++)
 En C++ moderne, dans la plupart des scénarios, la meilleure façon de signaler et gérer les erreurs de logique et erreurs d’exécution est d’utiliser des exceptions. Cela est particulièrement vrai lors de la pile peut contenir plusieurs appels de fonction entre la fonction qui détecte l’erreur et la fonction qui a le contexte de savoir comment la gérer. Les exceptions offrent un moyen de formel et bien défini pour le code qui détecte les erreurs pour passer les informations de la pile des appels.  
@@ -46,7 +47,7 @@ class MyClass
 public:  
    void MyFunc(char c)  
    {  
-      if(c < numeric_limits<char>::max())  
+      if(c > numeric_limits<char>::max())  
          throw invalid_argument("MyFunc argument too large.");  
       //...  
    }  

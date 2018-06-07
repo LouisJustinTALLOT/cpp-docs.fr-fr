@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569792"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
-A *application de bureau* en C++ est une application native qui peut accéder à l’ensemble complet d’API Windows et s’exécute dans une fenêtre ou dans la console système. Applications de bureau en C++ peuvent s’exécuter sur Windows XP et Windows 10 (bien que Windows XP n’est ne sont plus officiellement pris en charge et qu’il existe de nombreuses API Windows qui ont été introduites depuis).   Une application de bureau est distincte à partir d’une application de plateforme Windows universelle (UWP), ce qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et autres périphériques. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+A *application de bureau* en C++ est une application native qui peut accéder à l’ensemble complet d’API Windows et s’exécute dans une fenêtre ou dans la console système. Applications de bureau en C++ peuvent s’exécuter sur Windows XP et Windows 10 (bien que Windows XP n’est ne sont plus officiellement pris en charge et qu’il existe de nombreuses API Windows qui ont été introduites depuis).
+
+Une application de bureau est distincte à partir d’une application de plateforme Windows universelle (UWP), ce qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et autres périphériques. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**Pont de bureau** définir des API Windows dans Windows 10 vous pouvez empaqueter votre application de bureau existante ou d’un objet COM en tant qu’une application UWP et ajoutez UWP fonctionnalités telles que touch, ou appeler des API à partir de la moderne. Vous pouvez également ajouter une application UWP pour une solution de bureau dans Visual Studio et le package dans un seul package et utiliser les API Windows pour communiquer entre eux.  
+   
+Dans Visual Studio 2017 une version 15.4 et versions ultérieure, vous pouvez créer un projet de Package d’Application Windows pour simplifier le travail de l’empaquetage de votre application de bureau existante. Certaines restrictions s’appliquent en ce qui concerne le Registre appelle ou utilise des API de votre application de bureau, mais dans de nombreux cas, vous pouvez créer des chemins de code de remplacement pour obtenir une fonctionnalité similaire lors de l’exécution dans un package d’application. Pour plus d’informations, consultez [bureau pont](/windows-uwp/porting/desktop-to-uwp-root).  
   
  **Terminologie**  
   

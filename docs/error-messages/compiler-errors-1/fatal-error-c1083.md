@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569808"
 ---
 # <a name="fatal-error-c1083"></a>Erreur irrécupérable C1083
 
@@ -106,6 +107,8 @@ Lorsqu’un projet est configuré pour utiliser des en-têtes précompilés, les
 
 - Le fichier est compilé à l’aide d’un autre **/ analyze** paramètre de l’option du compilateur que celui utilisé pour la précompilation des en-têtes. Lorsque les en-têtes d’un projet sont précompilés, tous doivent utiliser le même **/ analyze** paramètres. Pour plus d’informations, consultez l’article [/analyze (analyse de code)](../../build/reference/analyze-code-analysis.md).
 
+- Le fichier ou répertoire a été créé par le sous-système Windows pour Linux, par répertoire de respect de la casse est activé, et le cas spécifié d’un fichier ou un chemin d’accès ne correspond pas à la casse du chemin d’accès ou du fichier sur le disque.
+
 - Le fichier, le répertoire ou le disque est en lecture seule.
 
 - Visual Studio ou les outils de ligne de commande n’ont pas d’autorisations suffisantes pour lire le fichier ou le répertoire. Par exemple, cela peut se produire lorsque les fichiers projet ont différentes propriétés que le processus en cours d’exécution Visual Studio ou les outils de ligne de commande. Parfois, ce problème peut être résolu en exécutant Visual Studio ou l’invite de commandes développeur en tant qu’administrateur.
@@ -127,4 +130,4 @@ Pour plus d’informations sur la génération de projets C/C++ dans l’IDE ou 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Propriétés MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Propriétés MSBuild](/visualstudio/msbuild/msbuild-properties)
