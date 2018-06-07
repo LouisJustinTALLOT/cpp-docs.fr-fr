@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753628"
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -67,6 +68,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Contrôle le chargement différé des DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Entraîne le chargement différé de la DLL spécifiée.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Signe partiellement un assembly.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Définit les indicateurs de valeur par défaut sur les charges DLL dépendantes.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Génère une DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crée un pilote en mode noyau.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Spécifie s’il convient de générer une image exécutable qui peut être redéfinie de façon aléatoire au moment du chargement en utilisant la fonctionnalité de randomisation du format d’espace d’adresse (ASLR).|
