@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843073"
 ---
 # <a name="building-browse-information-files-overview"></a>Génération de fichiers d'informations de consultation : vue d'ensemble
 Pour créer des informations de consultation de symboles, le compilateur crée un fichier .sbr pour chaque fichier source dans votre projet, puis BSCMAKE. EXE concatène les fichiers .sbr dans un fichier .bsc.  
@@ -49,7 +50,7 @@ Pour créer des informations de consultation de symboles, le compilateur crée u
   
 1.  Ne pas créer le fichier .bsc au niveau du projet ou utiliser le commutateur /n pour empêcher que les fichiers .sbr tronqués.  
   
-2.  Une fois que tous les projets sont générés, exécutez BSCMAKE avec tous les fichiers .sbr en tant qu’entrée. Les caractères génériques sont acceptés. Par exemple, si vous aviez des répertoires de projet C:\X, C:\Y et C:\Z des fichiers .sbr que vous souhaitez combiner en un fichier .bsc, puis utilisez BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. sbr /o c:\whatever_directory\combined.bsc pour générer le fichier .bsc combiné.  
+2.  Une fois que tous les projets sont générés, exécutez BSCMAKE avec tous les fichiers .sbr en tant qu’entrée. Les caractères génériques sont acceptés. Par exemple, si vous aviez des répertoires de projet C:\X, C:\Y et C:\Z des fichiers .sbr que vous souhaitez combiner en un fichier .bsc, puis utilisez BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*.sbr /o c:\whatever_directory\combined.bsc pour générer le fichier .bsc combiné.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)   
