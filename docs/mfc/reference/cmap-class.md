@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239422"
 ---
 # <a name="cmap-class"></a>CMap (classe)
 Classe de collection de dictionnaires qui mappe des clés uniques à des valeurs.  
@@ -67,13 +68,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  Classe de l’objet utilisé comme clé pour la carte.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  Type de données utilisé pour `KEY` arguments ; généralement une référence à `KEY`.  
   
  `VALUE`  
  Classe de l’objet stocké dans le mappage.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  Type de données utilisé pour `VALUE` arguments ; généralement une référence à `VALUE`.  
   
 ## <a name="members"></a>Membres  
@@ -135,7 +136,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  `CMap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtempl.h  
   
 ##  <a name="cmap"></a>  CMap::CMap  

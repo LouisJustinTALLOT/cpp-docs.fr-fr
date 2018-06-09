@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df6ecf03a5b1c92dc7e435fc014615db09422638
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcfac98c5ff36f84ec0b7c4d2fbd6ff40cbb0d4
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239448"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL, complément
 
@@ -28,7 +29,7 @@ Prise en charge des MFC et bibliothèques ensemble (MBCS) caractère multioctet 
 
 **Visual Studio 2015**: à la fois Unicode et MBCS MFC DLL sont inclus dans les composants de programme d’installation de Visual C++, mais prise en charge des MFC n’est pas installé par défaut. Visual C++ et MFC sont des configurations dont l’installation est facultative dans le programme d’installation de Visual Studio. Pour que MFC soit installé, choisissez **Personnalisé** dans le programme d’installation et, sous **Langages de programmation**, assurez-vous que **Visual C++** et **Microsoft Foundation Classes pour C++** sont sélectionnés. Si vous avez déjà installé Visual Studio, il vous est demandé d’installer Visual C++ et/ou MFC quand vous tentez de créer un projet MFC.
 
-**Visual Studio 2017**: le Unicode et les DLL MFC MBCS sont installés avec le **bureau développement avec C++** la charge de travail lorsque vous sélectionnez **prise en charge MFC et ATL** à partir de la **facultatif Composants** volet. Si votre installation n’inclut pas ces composants, vous pouvez lancer le programme d’installation à partir de la **nouveaux projets** boîte de dialogue à l’aide de la **ouvrir Visual Studio Installer** lien.
+**Visual Studio 2017**: le Unicode et les DLL MFC MBCS sont installés avec le **bureau développement avec C++** la charge de travail lorsque vous sélectionnez **prise en charge MFC et ATL** à partir de la **facultatif Composants** volet. Si votre installation n’inclut pas ces composants, accédez à la **fichier | Nouveaux projets** boîte de dialogue et cliquez sur le **ouvrir Visual Studio Installer** lien.
 
 ## <a name="see-also"></a>Voir aussi
 
