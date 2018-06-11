@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705697"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Projet Makefile, propriétés (Linux C++)
 
@@ -92,7 +93,7 @@ Chemin de recherche Include | Spécifie le chemin de recherche Include pour rés
 Fichiers Include forcés | Spécifie les fichiers Include forcés.
 Définitions de préprocesseur | Spécifie les définitions du préprocesseur utilisées par les fichiers sources.
 Annuler la définition de définitions de préprocesseur | Spécifie l’annulation de la définition d’une ou de plusieurs définitions du préprocesseur.     (/U[macro])
-Options supplémentaires | Spécifie les commutateurs du compilateur supplémentaires utilisés par IntelliSense durant l’analyse des fichiers C++.
+Options supplémentaires | Spécifie les commutateurs supplémentaires du compilateur utilisés par IntelliSense lors de l’analyse des fichiers C++.
 
 ### <a name="build"></a>Générer
 

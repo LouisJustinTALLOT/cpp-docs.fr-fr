@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705603"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -1936,7 +1937,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - Compilateurs croisés et natifs 64 bits.
 - L’option de compilateur /analyze (analyse du code d’entreprise) a été ajoutée.
 - L’option de compilateur /bigobj a été ajoutée.
-- /clr:pure, /clr:safe et /clr:oldSyntax ont été ajoutés. (Dépréciés plus tard dans Visual Studio 2015.)
+- /clr:pure, /clr:safe et /clr:oldSyntax ont été ajoutés. (Déconseillée ultérieurement dans Visual Studio 2015 et supprimée dans Visual Studio 2017.)
 - Options de compilateur dépréciées : plusieurs options de compilateur ont été dépréciées dans cette version. Pour plus d’informations, consultez Options de compilateur dépréciées.
 - La double conversion de code (thunking) dans le code /clr est réduite. Pour plus d’informations, consultez Double conversion de code (thunking) (C++).
 - L’option /EH (Modèle de gestion des exceptions) ou /EHs ne peut plus être utilisée pour intercepter une exception levée par un élément autre qu’une clause throw. Utilisez /EHa.

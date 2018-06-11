@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799192"
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
 
@@ -85,7 +86,7 @@ L'utilisation du CRT lié de manière statique implique que les informations d'�
 
 Comme une DLL générée avec une liaison à une bibliothèque CRT statique aura son propre état CRT, il est déconseillé de se lier statiquement à la bibliothèque CRT dans une DLL, sauf si les conséquences de cette action sont spécifiquement souhaitées et comprises. Par exemple, si vous appelez [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) dans un exécutable qui charge la DLL liée à sa propre bibliothèque CRT statique, les exceptions matérielles générées par le code de la DLL ne sont pas interceptées par le traducteur, tandis que les exceptions matérielles générées par le code du fichier exécutable principal le sont.
 
-Si vous utilisez le commutateur **/clr** du compilateur, votre code sera lié à une bibliothèque statique, msvcmrt.lib. La bibliothèque statique fournit un proxy entre votre code géré et la bibliothèque CRT native. Vous ne pouvez pas utiliser la bibliothèque CRT liée statiquement (les options **/MT** ou **/MTd** ) avec **/clr**. Utilisez à la place les bibliothèques liées dynamiquement (**/MD** ou **/MDd**).
+Si vous utilisez le commutateur **/clr** du compilateur, votre code sera lié à une bibliothèque statique, msvcmrt.lib. La bibliothèque statique fournit un proxy entre votre code géré et la bibliothèque CRT native. Vous ne pouvez pas utiliser la bibliothèque CRT liée statiquement (les options **/MT** ou **/MTd** ) avec **/clr**. Utilisez à la place les bibliothèques liées dynamiquement (**/MD** ou **/MDd**). Les bibliothèques CRT managées pures sont déconseillées dans Visual Studio 2015 et non prises en charge dans Visual Studio 2017.
 
 Pour plus d’informations sur l’utilisation de CRT avec **/clr**, consultez [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -112,10 +113,15 @@ Pour la compatibilité binaire, plusieurs fichiers DLL peuvent être spécifiés
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Quels sont les problèmes qui peuvent se poser si une application utilise plusieurs versions du CRT ?
 
-Si vous avez plusieurs fichiers DLL ou EXE, vous pouvez avoir plusieurs CRT, que vous utilisiez ou non différentes versions de Visual C++. Par exemple, la liaison statique de la bibliothèque CRT dans plusieurs DLL peut présenter le même problème. Il a été demandé aux développeurs rencontrant ce problème avec des bibliothèques CRT statiques de compiler avec **/MD** pour utiliser la DLL de la bibliothèque CRT. Si vos DLL passent des ressources CRT à travers la limite d’une DLL, vous risquez de rencontrer des problèmes de non-correspondance des CRT, ce qui peut vous amener à recompiler votre projet avec Visual C++.
+Chaque image exécutable (EXE ou DLL) peut avoir son propre CRT lié statiquement, ou peut être liée de manière dynamique à un CRT. La version du CRT statique incluse ou chargée dynamiquement par une image particulière dépend de la version des outils et des bibliothèques avec lesquels elle a été créée. Un même processus peut charger plusieurs images EXE et DLL, chacune avec son propre CRT. Chacun de ces CRT peut utiliser un allocateur différent, avoir des dispositions de structure interne différentes, et utiliser des dispositions de stockage différentes. Cela signifie que la mémoire, les ressources CRT ou les classes allouées et passées dans une limite DLL peuvent entraîner des problèmes dans la gestion de la mémoire, dans l’utilisation statique interne ou dans interprétation de la disposition. Par exemple, si une classe est allouée dans une DLL, mais passée puis supprimée par une autre, quel est l’annulateur d’allocation CRT utilisé ? Les erreurs causées peuvent aller d’un léger problème à une erreur fatale irrécupérable et, par conséquent, le transfert direct de ces ressources est fortement déconseillé.
 
-Si votre programme utilise plusieurs versions de la bibliothèque CRT, une attention particulière est nécessaire pour passer certains objets CRT (comme les descripteurs de fichiers, les paramètres régionaux et les variables d'environnement) à travers les limites des DLL. Pour plus d’informations sur les problèmes rencontrés et leur résolution, consultez [Erreurs potentielles de passage d’objets CRT entre frontières DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Vous pouvez éviter la plupart de ces problèmes en utilisant des technologies Application Binary Interface (ABI) car elles sont conçues pour être stables et versionnables. Concevez vos interfaces d’exportation DLL pour passer les informations par valeur ou pour utiliser une mémoire passée par l’appelant plutôt qu’allouée localement puis retournée à l’appelant. Utilisez des techniques de marshaling pour copier des données structurées entre des images exécutables. Encapsulez les ressources localement et autorisez uniquement la manipulation au moyen de handles ou de fonctions que vous exposez aux clients.
+
+Il est également possible d’éviter certains de ces problèmes si toutes les images de votre processus utilisent la même version chargée dynamiquement du CRT. Pour vous assurer que tous les composants utilisent la même version DLL du CRT, créez-les à l’aide de l’option **/MD** et utilisez les mêmes outils de compilateur et paramètres de propriétés.
+
+Une attention particulière est nécessaire si votre programme passe certaines ressources CRT (comme les handles de fichiers, les paramètres régionaux et les variables d'environnement) à travers les limites des DLL, même en utilisant la même version du CRT. Pour plus d’informations sur les problèmes rencontrés et leur résolution, consultez [Erreurs potentielles de passage d’objets CRT entre frontières DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+- [Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)
