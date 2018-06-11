@@ -1,7 +1,7 @@
 ---
 title: 'Procédure pas à pas : Compilation d’un programme C sur la ligne de commande | Documents Microsoft'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,28 +15,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e303a9e1618c73d173e9d23c614cfc506ec68a
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253787"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : Compilation d’un programme C sur la ligne de commande
 Visual C++ inclut un compilateur C que vous pouvez utiliser pour créer toutes sortes de programmes de console de base pour les applications de bureau Windows complets, les applications mobiles et bien plus encore.  
   
  Cette procédure pas à pas montre comment créer une base « Hello, World »-programme C de style à l’aide d’un texte de l’éditeur, puis le compiler sur la ligne de commande. Si vous préférez travailler en C++ sur la ligne de commande, consultez [procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si vous souhaitez essayer l’IDE de Visual Studio au lieu d’utiliser la ligne de commande, consultez [procédure pas à pas : utilisation de projets et Solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [à l’aide de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="prerequisites"></a>Prérequis  
- Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et les composants facultatifs de Visual C++ ou Microsoft Visual C++ Build Tools.  
+## <a name="prerequisites"></a>Prérequis
+
+Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et les composants facultatifs de Visual C++ ou les outils de génération pour Visual Studio.  
   
- Visual Studio est un environnement puissant de développement intégré qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour plusieurs langages et les plateformes. Pour plus d’informations sur ces fonctionnalités et comment télécharger et installer Visual Studio, y compris l’édition de Visual Studio Community gratuite, consultez [VisualStudio.com](https://www.visualstudio.com/).  
+Visual Studio est un environnement puissant de développement intégré qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour plusieurs langages et les plateformes. Pour plus d’informations sur ces fonctionnalités et comment télécharger et installer Visual Studio, y compris l’édition de Visual Studio Community gratuite, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).  
   
- Les outils de génération Visual Studio installe uniquement les compilateurs de ligne de commande, outils et bibliothèques que vous avez besoin pour générer des programmes C et C++. Il est idéal pour les laboratoires de build ou la classe exerce et installe assez rapidement. Pour installer uniquement les outils de ligne de commande, téléchargez [Visual Studio Tools Build](https://go.microsoft.com/fwlink/p/?linkid=840931) et exécutez le programme d’installation. Pour plus d’informations, consultez [outils de génération de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+Les outils de génération pour la version de Visual Studio de Visual Studio installe uniquement l’ensemble d’outils de ligne de commande, les compilateurs, outils et bibliothèques que vous avez besoin pour générer des programmes C et C++. Il est idéal pour les laboratoires de build ou la classe exerce et installe assez rapidement. Pour installer uniquement l’ensemble d’outils de ligne de commande, téléchargez [outils de génération pour Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) et exécutez le programme d’installation.  
   
- Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes de l’environnement de ligne de commande afin de trouver les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commande simple**. Vous avez besoin une *invite de commandes développeur* fenêtre, qui est une fenêtre d’invite de commandes standard qui a toutes les variables d’environnement requises à définir. Heureusement, Visual C++ installe des raccourcis pour vous permet de lancer des invites de commandes développeur qui ont la configuration d’environnement pour les versions de ligne de commande. Malheureusement, les noms des raccourcis d’invite de commandes développeur et où ils se situent sont différents dans presque chaque version de Visual C++ et sur différentes versions de Windows. Votre première tâche de procédure pas à pas consiste à rechercher le raccourci de droite à utiliser.  
+Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes de l’environnement de ligne de commande afin de trouver les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commande simple**. Vous avez besoin une *invite de commandes développeur* fenêtre, qui est une fenêtre d’invite de commandes standard qui a toutes les variables d’environnement requises à définir. Heureusement, Visual C++ installe des raccourcis pour vous permet de lancer des invites de commandes développeur qui ont la configuration d’environnement pour les versions de ligne de commande. Malheureusement, les noms des raccourcis d’invite de commandes développeur et où ils se situent sont différents dans presque chaque version de Visual C++ et sur différentes versions de Windows. Votre première tâche de procédure pas à pas consiste à rechercher le raccourci de droite à utiliser.  
   
 > [!NOTE]
->  Un raccourci d’invite de commandes développeur définit automatiquement les chemins d’accès corrects pour le compilateur et les outils et pour tous les en-têtes requis et les bibliothèques. Certaines de ces valeurs sont différentes pour chaque configuration de build. Vous devez définir ces valeurs d’environnement vous-même si vous n’utilisez pas l’un des raccourcis. Pour plus d’informations, consultez [définir le chemin d’accès et les Variables d’environnement pour les générations de ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Étant donné que l’environnement de génération est complexe, nous vous recommandons vivement de que vous utilisez un raccourci d’invite de commandes développeur au lieu de générer votre propre.  
+> Un raccourci d’invite de commandes développeur définit automatiquement les chemins d’accès corrects pour le compilateur et les outils et pour tous les en-têtes requis et les bibliothèques. Certaines de ces valeurs sont différentes pour chaque configuration de build. Vous devez définir ces valeurs d’environnement vous-même si vous n’utilisez pas l’un des raccourcis. Pour plus d’informations, consultez [définir le chemin d’accès et les Variables d’environnement pour les générations de ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Étant donné que l’environnement de génération est complexe, nous vous recommandons vivement de que vous utilisez un raccourci d’invite de commandes développeur au lieu de générer votre propre.  
   
 ## <a name="open-a-developer-command-prompt"></a>Ouvrez une invite de commandes développeur  
   
@@ -63,7 +65,7 @@ Visual C++ inclut un compilateur C que vous pouvez utiliser pour créer toutes s
     > [!NOTE]
     >  Si vous obtenez une erreur, tels que « « cl » n’est pas reconnu comme une commande interne ou externe, un programme exécutable ou un fichier de commandes, » erreur C1034 ou l’erreur LNK1104 lorsque vous exécutez le **cl** de commandes, puis soit vous n’utilisez pas d’une invite de commandes développeur, ou un problème se pose avec votre installation de Visual C++. Vous devez corriger ce problème avant de continuer.  
   
-     Si vous ne trouvez pas le développeur raccourci d’invite de commande, ou si vous obtenez un message d’erreur lorsque vous entrez `cl`, puis votre installation Visual C++ peut rencontrer un problème. Essayez de réinstaller le composant Visual C++ dans Visual Studio, ou réinstaller les outils de génération de Visual Studio. Ne passez à la section suivante jusqu'à ce que cela fonctionne. Pour plus d’informations sur l’installation et la résolution des problèmes de Visual C++, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).  
+     Si vous ne trouvez pas le développeur raccourci d’invite de commande, ou si vous obtenez un message d’erreur lorsque vous entrez `cl`, puis votre installation Visual C++ peut rencontrer un problème. Essayez de réinstaller le composant Visual C++ dans Visual Studio, ou réinstaller les outils de génération pour Visual Studio. Ne passez à la section suivante jusqu'à ce que cela fonctionne. Pour plus d’informations sur l’installation et la résolution des problèmes de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).  
   
     > [!NOTE]
     >  Selon la version de Windows sur l’ordinateur et la configuration de sécurité du système, vous devrez peut-être avec le bouton droit pour ouvrir le menu contextuel pour le raccourci d’invite de commandes développeur, puis choisissez **exécuter en tant qu’administrateur** à avec succès, générez et exécutez le programme que vous créez en suivant cette procédure pas à pas.  

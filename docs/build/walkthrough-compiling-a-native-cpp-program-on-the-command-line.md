@@ -1,7 +1,7 @@
 ---
 title: 'Procédure pas à pas : Compilation d’un programme C++ natif sur la ligne de commande | Documents Microsoft'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd65dff0a354ebbed4435b8867271091211279d
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253829"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 Visual C++ inclut un compilateur de ligne de commande C++ que vous pouvez utiliser pour créer toutes sortes d’applications console Visual basic pour applications de plateforme Windows universelle, les applications de bureau, les pilotes de périphérique et les composants .NET.  
@@ -31,13 +32,13 @@ Visual C++ inclut un compilateur de ligne de commande C++ que vous pouvez utilis
  Dans cette procédure pas à pas, vous pouvez utiliser votre propre programme Visual C++ au lieu de taper le programme illustré, ou vous pouvez utiliser un exemple de code Visual C++ provenant d'un autre article d'aide.  
   
 ## <a name="prerequisites"></a>Prérequis  
- Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et les composants facultatifs de Visual C++ ou Microsoft Visual C++ Build Tools.  
+ Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et le développement de bureau facultatif avec la charge de travail de C++ ou les outils de génération de ligne de commande pour Visual Studio.  
   
- Visual Studio est un environnement puissant de développement intégré qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour plusieurs langages et les plateformes. Pour plus d’informations sur ces fonctionnalités et comment télécharger et installer Visual Studio, y compris l’édition de Visual Studio Community gratuite, consultez [VisualStudio.com](https://www.visualstudio.com/).  
+ Visual Studio est un environnement puissant de développement intégré (IDE) qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour plusieurs langages et les plateformes. Pour plus d’informations sur la façon de télécharger et installer Visual Studio, y compris l’édition gratuite de Visual Studio Community et pour inclure la prise en charge pour le développement C/C++, consultez [prise en charge de l’installation de C++ dans Visual Studio](../build/vscpp-step-0-installation.md).  
   
- Les outils de génération Visual Studio installe uniquement les compilateurs de ligne de commande, outils et bibliothèques que vous avez besoin pour générer des programmes C et C++. Il est idéal pour les laboratoires de build ou la classe exerce et installe assez rapidement. Pour installer uniquement les outils de ligne de commande, téléchargez [Visual Studio Tools Build](https://go.microsoft.com/fwlink/p/?linkid=840931) et exécutez le programme d’installation. Pour plus d’informations, consultez [outils de génération de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Les outils de génération pour Visual Studio installe uniquement les compilateurs de ligne de commande, outils et bibliothèques que vous avez besoin pour générer des programmes C et C++. Il est idéal pour les laboratoires de build ou la classe exerce et installe assez rapidement. Pour installer uniquement les outils de ligne de commande, téléchargez [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).  
   
- Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes de l’environnement de ligne de commande afin de trouver les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commande simple**. Heureusement, Visual C++ installe des raccourcis pour vous permet de lancer une invite de commandes développeur qui a la configuration d’environnement pour les versions de ligne de commande. Malheureusement, les noms des raccourcis d’invite de commandes développeur et où ils se situent sont différents dans presque chaque version de Visual C++ et sur différentes versions de Windows. La première tâche de la procédure pas à pas est de trouver celui qui convient à utiliser.  
+ Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes de l’environnement de ligne de commande afin de trouver les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commande simple** sans effectuer certaines tâches de préparation. Heureusement, Visual C++ installe des raccourcis pour vous permet de lancer une invite de commandes développeur qui a la configuration d’environnement pour les versions de ligne de commande. Malheureusement, les noms des raccourcis d’invite de commandes développeur et où ils se situent sont différents dans presque chaque version de Visual C++ et sur différentes versions de Windows. La première tâche de la procédure pas à pas est de trouver celui qui convient à utiliser.  
   
 > [!NOTE]
 >  Un raccourci d’invite de commandes développeur définit automatiquement les chemins d’accès corrects pour le compilateur et les outils et pour tous les en-têtes requis et les bibliothèques. Vous devez définir ces valeurs d’environnement vous-même si vous utilisez une fenêtre d’invite de commandes normale. Pour plus d’informations, consultez [définir le chemin d’accès et les Variables d’environnement pour les générations de ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Nous vous recommandons de qu'utiliser un raccourci d’invite de commandes développeur au lieu de générer votre propre.  
