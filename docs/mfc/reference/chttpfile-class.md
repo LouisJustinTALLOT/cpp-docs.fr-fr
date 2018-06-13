@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372617"
 ---
 # <a name="chttpfile-class"></a>Classe de CHttpFile
 Fournit les fonctionnalités permettant de demander et de lire des fichiers sur un serveur HTTP.  
