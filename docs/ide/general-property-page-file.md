@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés Général (fichier) | Documents Microsoft
+title: Général, page de propriétés (Fichier) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324033"
 ---
 # <a name="general-property-page-file"></a>Général, page de propriétés (Fichier)
 
-Quand un fichier est sélectionné dans **l’Explorateur de solutions**, le **général** page de propriétés sous la **propriétés de Configuration** nœud contient les propriétés suivantes :
+Quand un fichier est sélectionné dans **l’Explorateur de solutions**, la page de propriétés **Général** sous le nœud **Propriétés de configuration** contient les propriétés suivantes :
 
-**Exclure de la Build**  
-Spécifie si le fichier doit être dans la génération de la configuration actuelle.
+**Exclure de la génération**  
+Spécifie si le fichier doit se trouver dans la génération de la configuration actuelle.
 
 Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
 **Outil**  
-L’outil qui permet de générer ce fichier. Consultez [spécifiant des outils de génération personnalisée](../ide/specifying-custom-build-tools.md) pour plus d’informations.
+Outil qui doit être utilisé pour générer ce fichier. Pour plus d’informations, consultez [Spécification des outils de génération personnalisée](../ide/specifying-custom-build-tools.md).
 
 Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
-Pour plus d’informations sur l’accès à la **général** page de propriétés sous la **propriétés de Configuration** nœud, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+Pour plus d’informations sur l’accès à la page de propriétés **Général** sous le nœud **Propriétés de configuration**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
 
-Pour les projets non Windows, consultez [référence de Page de propriété Linux C++](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+Pour les projets non-Windows, consultez [Informations de référence sur les pages de propriétés dans un projet Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="see-also"></a>Voir aussi
 

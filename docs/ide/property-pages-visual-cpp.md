@@ -1,5 +1,5 @@
 ---
-title: Pages de propriétés (Visual C++) | Documents Microsoft
+title: Pages de propriétés (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,47 +26,48 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339707"
 ---
 # <a name="property-pages-visual-c"></a>Pages de propriétés (Visual C++)
 
-Les pages de propriétés vous permettent de spécifier les paramètres des projets Visual Studio. Pour ouvrir la **Pages de propriétés** projet de la boîte de dialogue de Visual Studio, dans le **projet** menu, choisissez **propriétés**.
+Les pages de propriétés vous permettent de spécifier les paramètres des projets Visual Studio. Pour ouvrir la boîte de dialogue **Pages de propriétés** d’un projet Visual Studio, dans le menu **Projet**, choisissez **Propriétés**.
 
 Vous pouvez spécifier les paramètres du projet pour qu'ils s'appliquent à toutes les configurations de build. Vous pouvez aussi spécifier différentes propriétés de projet pour chaque configuration de build. Par exemple, vous pouvez spécifier certains paramètres pour la configuration Release et d’autres paramètres pour la configuration Debug.
 
-Pas toutes les pages disponibles sont toujours affichées dans le **Pages de propriétés** boîte de dialogue. Les pages affichées varient en fonction des types de fichiers contenus dans le projet.
+La boîte de dialogue **Pages de propriétés** n’affiche pas nécessairement toutes les pages disponibles. Les pages affichées varient en fonction des types de fichiers contenus dans le projet.
 
-Pour plus d’informations, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+Pour plus d’informations, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
 
-Pour les projets non Windows, consultez [référence de Page de propriété Linux C++](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+Pour les projets non-Windows, consultez [Informations de référence sur les pages de propriétés dans un projet Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="default-properties-vs-modified-properties"></a>Propriétés par défaut et propriétés modifiées
 
-Lorsque vous utilisez la **nouveau projet** boîte de dialogue pour créer un projet, Visual Studio utilise le modèle de projet spécifié pour initialiser les propriétés du projet. Par conséquent, les valeurs des propriétés du modèle peuvent être considérées comme des valeurs par défaut pour ce type de projet. Dans d'autres types de projets, les propriétés peuvent avoir des valeurs par défaut différentes.
+Quand vous créez un projet à partir de la boîte de dialogue **Nouveau projet**, Visual Studio utilise le modèle de projet spécifié pour initialiser les propriétés du projet. Par conséquent, les valeurs des propriétés du modèle peuvent être considérées comme des valeurs par défaut pour ce type de projet. Dans d'autres types de projets, les propriétés peuvent avoir des valeurs par défaut différentes.
 
 Une valeur de propriété de projet apparaît en gras si elle est modifiée. Une propriété de projet peut être modifiée pour les raisons suivantes :
 
 - L'Assistant Application modifie la propriété, car il exige une valeur de propriété différente de celle spécifiée dans le modèle de projet.
 
-- Vous spécifiez une valeur de propriété différente dans la **nouveau projet** boîte de dialogue.
+- Vous pouvez spécifier une valeur de propriété différente dans la boîte de dialogue **Nouveau projet**.
 
 - Vous pouvez spécifier une valeur de propriété différente dans une page de propriétés du projet.
 
 > [!TIP]
-> Pour afficher le jeu final de valeurs de propriété MSBuild utilise pour générer votre projet, examinez le fichier de sortie du préprocesseur, que vous pouvez créer à l’aide de cette ligne de commande : **MSBuild / de prétraitement :** *preprocessor_output_ nom de fichier*<sub>opt</sub> *NomFichier_Projet*<sub>opt</sub>
+> Pour voir le jeu de valeurs de propriétés final que MSBuild utilise pour générer votre projet, examinez le fichier de sortie du préprocesseur, que vous pouvez créer en utilisant cette ligne de commande : **MSBuild /preprocess:** *nom_fichier_sortie_préprocesseur*<sub>opt</sub> *nom_fichier_projet*<sub>opt</sub>
 
 ## <a name="resetting-properties"></a>Réinitialisation des propriétés
 
-Lorsque vous affichez la **Pages de propriétés** boîte de dialogue pour un projet et le nœud de projet est sélectionné dans **l’Explorateur de solutions**, pour de nombreuses propriétés, vous pouvez sélectionner **hériter du parent ou du projet valeurs par défaut** ou modifier la valeur une autre façon.
+Quand vous consultez la boîte de dialogue **Pages de propriétés** d’un projet et que le nœud du projet est sélectionné dans **l’Explorateur de solutions**, pour un grand nombre de propriétés, vous pouvez sélectionner **Hériter des paramètres par défaut du parent ou du projet**, ou modifier la valeur d’une autre façon.
 
-Lorsque vous affichez la **Pages de propriétés** boîte de dialogue pour un projet et un fichier est sélectionné dans **l’Explorateur de solutions**, pour de nombreuses propriétés, vous pouvez sélectionner **héritent par défaut du parent ou du projet** ou modifier la valeur une autre façon. Cependant, si le projet contient de nombreux fichiers dont certaines propriétés ont des valeurs différentes des valeurs par défaut du projet, la génération de ce dernier prend plus de temps.
+Quand vous consultez la boîte de dialogue **Pages de propriétés** d’un projet et qu’un fichier est sélectionné dans **l’Explorateur de solutions**, pour un grand nombre de propriétés, vous pouvez sélectionner **Hériter des paramètres par défaut du parent ou du projet**, ou modifier la valeur d’une autre façon. Cependant, si le projet contient de nombreux fichiers dont certaines propriétés ont des valeurs différentes des valeurs par défaut du projet, la génération de ce dernier prend plus de temps.
 
 > [!TIP]
-> Pour actualiser le **Pages de propriétés** boîte de dialogue afin qu’elle affiche les sélections les plus récentes, choisissez **appliquer**.
+> Pour actualiser la boîte de dialogue **Pages de propriétés** de sorte qu’elle affiche les sélections les plus récentes, choisissez **Appliquer**.
 
-La plupart des valeurs par défaut du projet sont les valeurs par défaut du système (plateforme). Certains paramètres par défaut du projet dérivent des feuilles de style qui sont appliqués lorsque vous mettez à jour les propriétés dans le **valeurs par défaut du projet** section de la **général** page de propriétés de configuration pour le projet. Pour plus d’informations, consultez [général, Page de propriétés (projet)](../ide/general-property-page-project.md).
+La plupart des valeurs par défaut du projet sont les valeurs par défaut du système (plateforme). Certains paramètres par défaut du projet dérivent des feuilles de style qui sont appliquées au moment où vous mettez à jour les propriétés dans la section **Paramètres par défaut du projet** de la page de propriétés de configuration **Général** du projet. Pour plus d'informations, consultez [Général, page de propriétés (Projet)](../ide/general-property-page-project.md).
 
 ## <a name="specifying-user-defined-values"></a>Spécification de valeurs définies par l'utilisateur
 
@@ -76,19 +77,19 @@ Pour définir une propriété avec une valeur définie par l'utilisateur ou une 
 
 - Tapez la valeur ou la liste de valeurs.
 
-- Cliquez sur la flèche déroulante. Si **modifier** n’est disponible, choisissez-le, puis, dans la zone de texte, tapez la valeur ou une liste de valeurs. Une autre façon de spécifier une liste est de taper chaque valeur sur une ligne distincte dans la zone de texte. Dans la page de propriétés, les valeurs s'affichent sous forme de liste délimitée par des points-virgules.
+- Choisissez la flèche déroulante. Si **Modifier** est disponible, choisissez-le, puis tapez la valeur ou la liste de valeurs dans la zone de texte. Une autre façon de spécifier une liste est de taper chaque valeur sur une ligne distincte dans la zone de texte. Dans la page de propriétés, les valeurs s'affichent sous forme de liste délimitée par des points-virgules.
 
-   Pour insérer une macro de fichier projet en tant que valeur, choisissez **Macros** puis double-cliquez sur le nom de macro.
+   Pour insérer une macro de fichier projet comme valeur, choisissez **Macros**, puis double-cliquez sur le nom de la macro.
 
-- Cliquez sur la flèche déroulante. Si **Parcourir** n’est disponible, sélectionnez-le, puis sélectionnez une ou plusieurs valeurs.
+- Choisissez la flèche déroulante. Si **Parcourir** est disponible, choisissez-le, puis sélectionnez une ou plusieurs valeurs.
 
-Pour une propriété à valeurs multiples, le **hériter des paramètres par défaut parent ou du projet** option est disponible lorsque vous cliquez sur la flèche déroulante dans la colonne à droite du nom de la propriété, puis choisissez **modifier**. Cette option est activée par défaut.
+Pour une propriété multivaleur, l’option **Hériter des paramètres par défaut du parent ou du projet** est disponible quand vous choisissez la flèche déroulante de la colonne à droite du nom de la propriété, puis choisissez **Modifier**. Cette option est activée par défaut.
 
-Notez qu'une page de propriétés présente uniquement les paramètres correspondant au niveau actuel d'une propriété à valeurs multiples qui hérite d'un autre niveau. Par exemple, si un fichier est sélectionné dans **l’Explorateur de solutions** et que vous sélectionnez le C/C++ **définitions de préprocesseur** propriété, les définitions au niveau des fichiers sont affichées, mais héritée les définitions au niveau du projet ne sont pas affichés. Pour afficher à la fois au niveau actuel et les valeurs héritées, cliquez sur la flèche déroulante dans la colonne à droite du nom de la propriété, puis choisissez **modifier**. Si vous utilisez la [modèle de projet Visual C++](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine), ce comportement est également valable pour les objets de fichiers et de projets. Ainsi, quand vous formulez une requête pour récupérer les valeurs d'une propriété au niveau du fichier, vous n'obtenez pas les valeurs de cette même propriété au niveau du projet. Vous devez obtenir explicitement les valeurs de la propriété au niveau du projet. De même, certaines valeurs héritées d'une propriété peuvent provenir d'une feuille de style qui n'est pas accessible par programmation.
+Notez qu'une page de propriétés présente uniquement les paramètres correspondant au niveau actuel d'une propriété à valeurs multiples qui hérite d'un autre niveau. Par exemple, si un fichier est sélectionné dans **l’Explorateur de solutions** et que vous sélectionnez la propriété **Définitions de préprocesseur** C/C++, les définitions au niveau du fichier sont affichées, mais pas les définitions héritées au niveau du projet. Pour afficher à la fois les valeurs du niveau actuel et les valeurs héritées, choisissez la flèche déroulante de la colonne à droite du nom de la propriété, puis **Modifier**. Si vous utilisez le [modèle de projet Visual C++](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine), ce comportement s’applique aussi aux objets des fichiers et projets. Ainsi, quand vous formulez une requête pour récupérer les valeurs d'une propriété au niveau du fichier, vous n'obtenez pas les valeurs de cette même propriété au niveau du projet. Vous devez obtenir explicitement les valeurs de la propriété au niveau du projet. De même, certaines valeurs héritées d'une propriété peuvent provenir d'une feuille de style qui n'est pas accessible par programmation.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Avancé, outil manifeste, propriétés de Configuration, \<Projectname > boîte de dialogue Pages de propriétés](../ide/advanced-manifest-tool.md)
+[Avancé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/advanced-manifest-tool.md)
 
 [Ligne de commande, pages de propriétés](../ide/command-line-property-pages.md)
 
@@ -100,7 +101,7 @@ Notez qu'une page de propriétés présente uniquement les paramètres correspon
 
 [Général, page de propriétés (Projet)](../ide/general-property-page-project.md)
 
-[Général, outil manifeste, propriétés de Configuration, \<Projectname > boîte de dialogue Pages de propriétés](../ide/general-manifest-tool-configuration-properties.md)
+[Général, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/general-manifest-tool-configuration-properties.md)
 
 [HLSL, page de propriétés](../ide/hlsl-property-pages.md)
 
@@ -110,9 +111,9 @@ Notez qu'une page de propriétés présente uniquement les paramètres correspon
 
 [HLSL, page de propriétés : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)
 
-[Entrée et sortie, outil, les propriétés de Configuration, manifeste \<Projectname > boîte de dialogue Pages de propriétés](../ide/input-and-output-manifest-tool.md)
+[Entrée et sortie, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/input-and-output-manifest-tool.md)
 
-[Isolé COM, outil manifeste, propriétés de Configuration, \<Projectname > boîte de dialogue Pages de propriétés](../ide/isolated-com-manifest-tool.md)
+[COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/isolated-com-manifest-tool.md)
 
 [Éditeur de liens, page de propriétés](../ide/linker-property-pages.md)
 
