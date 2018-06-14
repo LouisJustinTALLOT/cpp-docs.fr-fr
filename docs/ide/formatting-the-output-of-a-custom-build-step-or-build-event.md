@@ -1,5 +1,5 @@
 ---
-title: Mise en forme la sortie d’une étape de génération personnalisée ou un événement de Build | Documents Microsoft
+title: Mise en forme de la sortie d’une étape de build personnalisée ou d’un événement de build| Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,40 +21,41 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7da71e6391d2d3223b47ba528686d2fec003ab3a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321348"
 ---
-# <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Mise en forme de la sortie d'une étape de génération personnalisée ou d'un événement de build
-Si la sortie d’une étape de génération personnalisée ou un événement de build est correctement mise en forme, les utilisateurs obtiennent les avantages suivants :  
+# <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Mise en forme de la sortie d’une étape de build personnalisée ou d’un événement de build
+Si la sortie d’un événement de build ou d’une étape de build personnalisée est correctement mise en forme, les utilisateurs bénéficient des avantages suivants :  
   
--   Erreurs et avertissements sont comptées dans le **sortie** fenêtre.  
+-   Les avertissements et les erreurs sont comptabilisés dans la fenêtre **Sortie**.  
   
--   La sortie apparaît dans le **liste des tâches** fenêtre.  
+-   La sortie apparaît dans la fenêtre **Liste des tâches**.  
   
--   En cliquant sur la sortie dans le **sortie** fenêtre affiche la rubrique appropriée.  
+-   Un clic sur la sortie dans la fenêtre **Sortie** permet d’afficher la rubrique appropriée.  
   
--   Les opérations F1 sont activées dans le **liste des tâches** fenêtre ou **sortie** fenêtre.  
+-   Les opérations F1 sont activées dans la fenêtre **Liste des tâches** ou dans la fenêtre **Sortie**.  
   
- Le format de la sortie doit être :  
+ La sortie doit avoir le format suivant :  
   
- {*nom de fichier* (*line #* [, *colonne #*]) &#124; *toolname*} **:**  
+ {*filename* (*line#* [, *column#*]) &#124; *toolname*} **:**  
   
- [*n’importe quel texte*] {**erreur** &#124; **avertissement**} *code ###***:*** chaîne localisable*  
+ [*any text*] {**error** &#124; **warning**} *code####***:*** localizable string*  
   
- [ *n’importe quel texte* ]  
+ [ *any text* ]  
   
  Où :  
   
--   {*un* &#124; *b*} est un choix entre *un* ou *b*.  
+-   {*a* &#124; *b*} correspond à un choix de *a* ou *b*.  
   
--   [`ccc`] est un paramètre ou une chaîne facultative.  
+-   [`ccc`] correspond à une chaîne ou un paramètre facultatif.  
   
- Par exemple :  
+ Exemple :  
   
- C:\\*sourcefile.cpp*(134) : erreur C2143 : erreur de syntaxe : manquant ';' avant '}'  
+ C:\\*sourcefile.cpp*(134) : erreur C2143 : erreur de syntaxe : ';' manquant avant '}'  
   
- LINK : erreur irrécupérable LNK1104 : Impossible d’ouvrir le fichier '*somelib.lib*'  
+ LINK : erreur irrécupérable LNK1104 : impossible d’ouvrir le fichier '*somelib.lib*'  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des étapes de génération personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)

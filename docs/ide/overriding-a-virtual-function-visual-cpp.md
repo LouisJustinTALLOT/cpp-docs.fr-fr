@@ -1,5 +1,5 @@
 ---
-title: Substitution d’une fonction virtuelle (Visual C++) | Documents Microsoft
+title: Remplacement d’une fonction virtuelle (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,36 +20,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d8580d27442b0cae7e343a568beaa9aeae500461
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337741"
 ---
-# <a name="overriding-a-virtual-function-visual-c"></a>Substitution d'une fonction virtuelle (Visual C++)
-Vous pouvez substituer des fonctions virtuelles définies dans une classe de base à partir de Visual Studio [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
+# <a name="overriding-a-virtual-function-visual-c"></a>Remplacement d’une fonction virtuelle (Visual C++)
+Vous pouvez remplacer des fonctions virtuelles définies dans une classe de base à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) de Visual Studio.  
   
 ### <a name="to-override-a-virtual-function-in-the-properties-window"></a>Pour remplacer une fonction virtuelle dans la fenêtre Propriétés  
   
-1.  Dans l’affichage de classes, cliquez sur la classe.  
+1.  Dans Affichage de classes, cliquez sur la classe.  
   
-2.  Dans la fenêtre Propriétés, cliquez sur le **substitue** bouton.  
+2.  Dans la fenêtre Propriétés, cliquez sur le bouton **Remplacements**.  
   
     > [!NOTE]
-    >  Le **substitue** bouton est disponible lorsque vous sélectionnez le nom de classe dans l’affichage de classes ou lorsque vous cliquez sur dans la fenêtre source.  
+    >  Le bouton **Remplacements** est disponible quand vous sélectionnez le nom de la classe dans Affichage de classes ou que vous cliquez dans la fenêtre source.  
   
-     La colonne de gauche répertorie les fonctions virtuelles. Si le nom d’une fonction virtuelle apparaît également dans la colonne de droite, puis un remplacement a déjà été implémenté.  
+     La colonne de gauche liste les fonctions virtuelles. Si le nom d’une fonction virtuelle apparaît également dans la colonne de droite, un remplacement a déjà été implémenté.  
   
-3.  Si la fonction n’a aucune substitution, puis cliquez sur la cellule dans la colonne de droite dans la fenêtre Propriétés pour afficher le nom proposé de la fonction remplacer en tant que \<Ajouter >*FuncName*.  
+3.  Si la fonction n’a pas de remplacement, cliquez sur la cellule de la colonne de droite dans la fenêtre Propriétés pour afficher le nom suggéré du remplacement de la fonction comme \<add>*FuncName*.  
   
-4.  Cliquez sur le nom suggéré pour ajouter un code stub pour la fonction.  
+4.  Cliquez sur le nom suggéré pour ajouter du code stub pour la fonction.  
   
-5.  Pour modifier une fonction de substitution, double-cliquez sur le nom de la fonction dans l’affichage de classes et modifiez le code dans la fenêtre source.  
+5.  Pour modifier une fonction de remplacement, double-cliquez sur le nom de la fonction dans Affichage de classes et modifiez le code dans la fenêtre source.  
   
- Pour supprimer un remplacement, cliquez sur le nom de fonction de remplacement dans la colonne de droite et sélectionnez \<Supprimer >*FuncName*. Le code de fonction est commenté.  
+ Pour supprimer un remplacement, cliquez sur le nom de la fonction de remplacement dans la colonne de droite et sélectionnez \<delete>*FuncName*. Le code de la fonction est commenté.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)   
  [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d’une Variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
  [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigation dans la Structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)

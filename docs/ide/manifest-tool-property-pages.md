@@ -1,5 +1,5 @@
 ---
-title: Pages de propriétés outil manifeste | Documents Microsoft
+title: Pages de propriétés de l’outil Manifeste | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321985"
 ---
 # <a name="manifest-tool-property-pages"></a>Pages de propriétés de l'outil Manifeste
-Utilisez le **outil manifeste** pages de propriétés pour définir les options pour mt.exe de génération.  
+Utilisez les pages de propriétés de **l’outil Manifeste** pour définir les options de génération de mt.exe.  
   
- Pour plus d’informations sur l’outil manifeste, consultez [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Pour plus d’informations sur l’outil Manifeste, consultez [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- [Général, outil manifeste, propriétés de Configuration, \<Projectname > boîte de dialogue Pages de propriétés](../ide/general-manifest-tool-configuration-properties.md)  
+ [Général, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/general-manifest-tool-configuration-properties.md)  
   
- [Entrée et sortie, outil, les propriétés de Configuration, manifeste \<Projectname > boîte de dialogue Pages de propriétés](../ide/input-and-output-manifest-tool.md)  
+ [Entrée et sortie, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/input-and-output-manifest-tool.md)  
   
- [Isolé COM, outil manifeste, propriétés de Configuration, \<Projectname > boîte de dialogue Pages de propriétés](../ide/isolated-com-manifest-tool.md)  
+ [COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/isolated-com-manifest-tool.md)  
   
- [Avancé, outil manifeste, propriétés de Configuration, \<Projectname > boîte de dialogue Pages de propriétés](../ide/advanced-manifest-tool.md)  
+ [Avancé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/advanced-manifest-tool.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés](../ide/property-pages-visual-cpp.md)

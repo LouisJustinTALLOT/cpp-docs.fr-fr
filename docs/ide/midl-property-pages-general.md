@@ -1,5 +1,5 @@
 ---
-title: 'Pages de propriétés MIDL : Général | Documents Microsoft'
+title: 'Pages de propriétés MIDL : Général | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,22 +27,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329980"
 ---
 # <a name="midl-property-pages-general"></a>Pages de propriétés MIDL : Général
-Le **général** page de propriétés dans le **MIDL** dossier spécifie les options de compilateur MIDL suivantes :  
+La page de propriétés **Général** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
   
 -   Définitions de préprocesseur [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
 -   Autres répertoires Include ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Ignorer le chemin d’accès Include Standard ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Chemin d’accès Include standard ignoré ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   MkTypLib Compatible ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   Compatible MkTypLib ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Niveau d’avertissement ([Wn](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   Niveau d’avertissement ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
 -   Avertissement comme erreur ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
@@ -52,11 +53,11 @@ Le **général** page de propriétés dans le **MIDL** dossier spécifie les opt
   
 -   Environnement cible ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Générer des Proxies sans stub ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Génération de proxies sans stub ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- Pour plus d’informations sur l’accès à la **général** page de propriétés dans le **MIDL** dossier, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+ Pour plus d’informations sur l’accès à la page de propriétés **Général** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
- Pour plus d’informations sur l’accès par programme aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> objet.  
+ Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez l’objet <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [MIDL, page de propriétés](../ide/midl-property-pages.md)

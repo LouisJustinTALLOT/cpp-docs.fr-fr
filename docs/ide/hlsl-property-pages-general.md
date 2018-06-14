@@ -1,5 +1,5 @@
 ---
-title: 'Pages de propriétés HLSL : Général | Documents Microsoft'
+title: 'Pages de propriétés HLSL : Général | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,48 +22,49 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 77cc9a44076999633fd17b049cbcfad75f65eb7e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340136"
 ---
 # <a name="hlsl-property-pages-general"></a>Pages de propriétés HLSL : Général
-Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez son **général** page de propriétés. Pour plus d’informations sur l’accès à la **général** page de propriétés dans le dossier HLSL, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez sa page de propriétés **Général**. Pour plus d’informations sur l’accès à la page de propriétés **Général** dans le dossier HLSL, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Autres répertoires Include**  
- Ajoute un ou plusieurs répertoires pour le chemin d’accès include. Utilisez des points-virgules pour séparer les répertoires.  
+ Ajoute un ou plusieurs répertoires au chemin include. Utilisez des points-virgules pour séparer les répertoires.  
   
- Cette propriété correspond à la **/I [path]** argument de ligne de commande.  
+ Cette propriété correspond à l’argument de ligne de commande **/I[chemin]**.  
   
- **Nom de point d’entrée**  
- Spécifie le point d’entrée pour le nuanceur. Par défaut, la valeur est **principal**.  
+ **Nom du point d’entrée**  
+ Spécifie le nom du point d’entrée pour le nuanceur. Par défaut, la valeur est **main**.  
   
- Cette propriété correspond à la **/E [nom]** argument de ligne de commande.  
+ Cette propriété correspond à l’argument de ligne de commande **/E[nom]**.  
   
  **Désactiver les optimisations**  
- **Oui (/ Od)** pour désactiver les optimisations ; sinon, **non**. Par défaut, la valeur est **Oui (/ Od)** pour **déboguer** configurations et **non** pour **version** configurations.  
+ **Oui (/Od)** pour désactiver les optimisations ; sinon, **Non**. Par défaut, la valeur est **Oui (/Od)** pour les configurations **Debug** et **Non** pour les configurations **Release**.  
   
- Le **/Od** un argument de ligne de commande du compilateur HLSL applique implicitement la **/GFP, même** argument de ligne de commande, mais une sortie ne pas être identique à la sortie qui est généré en passant à la fois le **/Od**  et **/GFP, même** des arguments de ligne de commande explicitement.  
+ L’argument de ligne de commande **/Od** du compilateur HLSL applique implicitement l’argument de ligne de commande **/Gfp**, mais la sortie peut ne pas être identique à la sortie qui est produite en passant explicitement les deux arguments de ligne de commande **/Od** et **/Gfp**.  
   
  **Activer les informations de débogage**  
- **Oui (/ Zi)** pour activer les informations de débogage ; sinon, **non**. Par défaut, la valeur est **Oui (/ Zi)** pour **déboguer** configurations et **non** pour **version** configurations.  
+ **Oui (/Zi)** pour activer les informations de débogage ; sinon, **Non**. Par défaut, la valeur est **Oui (/Zi)** pour les configurations **Debug** et **Non** pour les configurations **Release**.  
   
  **Type de nuanceur**  
- Spécifie le type de nuanceur. Différents types de nuanceurs implémentent différentes parties du pipeline graphique. Certains types de nuanceurs sont uniquement disponibles dans les modèles de nuanceur les plus récentes (qui sont spécifié par le **Shader Model** propriété) : par exemple, calculer les nuanceurs ont été introduites dans le modèle de nuanceur 5.  
+ Spécifie le type de nuanceur. Les différents types de nuanceurs implémentent des parties différentes du pipeline graphique. Certains types de nuanceurs sont disponibles seulement dans les modèles de nuanceur les plus récents (qui sont spécifiés par la propriété **Modèle de nuanceur**) : par exemple, les nuanceurs de calcul ont été introduits dans le modèle de nuanceur 5.  
   
- Cette propriété correspond à la **[type]** partie de la **/T [type] _ [modèle]** des arguments de ligne de commande du compilateur HLSL. Le **modèles de nuanceur** propriété spécifie le **[modèle]** partie de l’argument.  
+ Cette propriété correspond à la partie **[type]** de l’argument de ligne de commande **/T [type]_[modèle]** du compilateur HLSL. La propriété **Modèles de nuanceur** spécifie la partie **[modèle]** de l’argument.  
   
  **Modèle de nuanceur**  
- Spécifie le modèle de nuanceur. Modèles de nuanceur différentes ont des fonctions différentes. En général, plus les modèles de nuanceur offrent des fonctionnalités étendues, mais nécessitent plus moderne matériel graphique pour exécuter le code du nuanceur. Certains types de nuanceurs (qui sont spécifié par le **Type de nuanceur** propriété) sont uniquement disponibles dans les modèles de nuanceur les plus récentes, de calcul, par exemple, les nuanceurs ont été introduites dans le modèle de nuanceur 5.  
+ Spécifie le modèle de nuanceur. Les différents modèles de nuanceur ont des fonctionnalités différentes. En général, les modèles de nuanceur plus récents offrent des fonctionnalités étendues, mais ils nécessitent du matériel graphique plus moderne pour exécuter le code du nuanceur. Certains types de nuanceurs (qui sont spécifiés par la propriété **Type de nuanceur**) sont disponibles seulement dans les modèles de nuanceur les plus récents : par exemple, les nuanceurs de calcul ont été introduits dans le modèle de nuanceur 5.  
   
- Cette propriété correspond à la **[modèle]** partie de la **/T [type] _ [modèle]** des arguments de ligne de commande du compilateur HLSL. Le **Type de nuanceur** propriété spécifie le **[type]** partie de l’argument.  
+ Cette propriété correspond à la partie **[modèle]** de l’argument de ligne de commande **/T [type]_[modèle]** du compilateur HLSL. La propriété **Type de nuanceur** spécifie la partie **[type]** de l’argument.  
   
  **Définitions de préprocesseur**  
  Ajoute une ou plusieurs définitions de symbole de préprocesseur à appliquer au fichier de code source HLSL. Utilisez des points-virgules pour séparer les définitions de symbole.  
   
- Cette propriété correspond à la **/D [définitions]** des arguments de ligne de commande du compilateur HLSL.  
+ Cette propriété correspond à la partie **/D [définitions]** de l’argument de ligne de commande du compilateur HLSL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pages de propriétés HLSL](../ide/hlsl-property-pages.md)   
- [Pages de propriétés HLSL : avancé](../ide/hlsl-property-pages-advanced.md)   
+ [HLSL, page de propriétés](../ide/hlsl-property-pages.md)   
+ [HLSL, page de propriétés : Avancé](../ide/hlsl-property-pages-advanced.md)   
  [HLSL, page de propriétés : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)

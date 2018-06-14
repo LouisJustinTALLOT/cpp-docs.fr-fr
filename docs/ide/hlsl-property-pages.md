@@ -1,5 +1,5 @@
 ---
-title: Pages de propriétés HLSL | Documents Microsoft
+title: Pages de propriétés HLSL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323129"
 ---
 # <a name="hlsl-property-pages"></a>Pages de propriétés HLSL
-Vous pouvez utiliser les pages de propriétés HLSL du compilateur (fxc.exe) pour configurer chaque nuanceur HLSL les fichiers sont générés. Les propriétés sont divisées en trois catégories :  
+Vous pouvez utiliser les pages de propriétés du compilateur HLSL (fxc.exe) pour configurer la façon dont les fichiers du nuanceur HLSL sont générés. Les propriétés sont divisées en trois catégories :  
   
 -   [HLSL, page de propriétés : Général](../ide/hlsl-property-pages-general.md)  
   
-     Fournit des propriétés pour spécifier des options du compilateur HLSL couramment utilisées.  
+     Fournit des propriétés pour spécifier des options fréquemment utilisées pour le compilateur HLSL.  
   
 -   [HLSL, page de propriétés : Avancé](../ide/hlsl-property-pages-advanced.md)  
   
@@ -33,11 +34,11 @@ Vous pouvez utiliser les pages de propriétés HLSL du compilateur (fxc.exe) pou
   
 -   [HLSL, page de propriétés : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)  
   
-     Fournit des propriétés pour spécifier la façon dont les fichiers sont générés par le compilateur HLSL.  
+     Fournit des propriétés pour spécifier la façon dont les fichiers sont sortis par le compilateur HLSL.  
   
- Vous pouvez spécifier des arguments de ligne de commande au compilateur HLSL à l’aide de la **des Options supplémentaires** propriété de la **ligne de commande** page de propriétés ; Cela inclut les arguments qui ne peut pas être configurés à l’aide des autres propriétés des pages de propriétés HLSL. Pour plus d’informations sur le compilateur HLSL, consultez [outil compilateur de l’effet](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
+ Vous pouvez spécifier des arguments de ligne de commande au compilateur HLSL à l’aide de la propriété **Options supplémentaires** de la page de propriétés **Ligne de commande** ; cela inclut les arguments qui ne peuvent pas être configurés à l’aide d’autres propriétés des pages de propriétés HLSL. Pour plus d’informations sur le compilateur HLSL, consultez [Outil Compilateur d’effets](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés](../ide/property-pages-visual-cpp.md)   
- [Pages de propriétés ligne de commande](../ide/command-line-property-pages.md)   
- [La compilation des nuanceurs](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+ [Pages de propriétés Ligne de commande](../ide/command-line-property-pages.md)   
+ [Compilation de nuanceurs](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

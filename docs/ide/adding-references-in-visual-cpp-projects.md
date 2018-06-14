@@ -1,5 +1,5 @@
 ---
-title: Ajouter des références de projets Visual C++ | Documents Microsoft
+title: Ajout de références aux projets Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336106"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Ajout de références aux projets Visual C++
 Il est très courant pour les programmes d’appeler des API dans d’autres fichiers binaires comme les DLL, les composants Windows Runtime, les Kits de développement logiciel (SDK) d’extension, les composants COM et les assemblys .NET. La façon dont votre programme détecte les autres fichiers binaires dépend de votre type de projet et du type de fichier binaire.  
   
  Dans un projet C++ natif, si vous consommez une DLL ou un composant COM natif qui n’est pas produit par un autre projet de votre solution, utilisez LoadLibrary ou CoCreateInstance pour spécifier le chemin du fichier binaire. Sinon, laissez le système le rechercher à des emplacements spécifiques bien définis.  
   
- Dans d’autres types de projet tels que les projets UWP ou C++/CLI, ou quand le fichier binaire est produit par un autre projet de votre solution, vous ajoutez une *référence* à l’assembly, au composant ou au projet.   Une référence est essentiellement un ensemble de données qui permet à votre programme de localiser l’emplacement du fichier binaire, et de communiquer avec ce dernier.       Quand vous ajoutez une référence, Visual Studio gère les détails de bas niveau. Pour définir les références d’un projet C++ pour .NET Frameworkassemblies (C + c++ / CLI uniquement), des composants COM, les autres projets dans votre solution, notamment les projets partagés ou les services connectés, avec le bouton droit sur le **références** nœud **L’Explorateur de solutions** pour afficher les **Gestionnaire de références**. Ce que vous voyez dans le Gestionnaire de références diffère selon le type de votre projet.  
+ Dans d’autres types de projet tels que les projets UWP ou C++/CLI, ou quand le fichier binaire est produit par un autre projet de votre solution, vous ajoutez une *référence* à l’assembly, au composant ou au projet.   Une référence est essentiellement un ensemble de données qui permet à votre programme de localiser l’emplacement du fichier binaire, et de communiquer avec ce dernier.       Quand vous ajoutez une référence, Visual Studio gère les détails de bas niveau. Pour définir les références d’un projet C++ à des assemblys .NET Framework (C++/CLI uniquement), des composants COM ou d’autres projets de votre solution, notamment des projets partagés ou des services connectés, cliquez avec le bouton droit sur le nœud **Références** dans **l’Explorateur de solutions** pour afficher le **Gestionnaire de références**. Ce que vous voyez dans le Gestionnaire de références diffère selon le type de votre projet.  
   
  Dans un projet C++ natif (ATL), le concept de *références* s’applique uniquement aux autres projets de la solution, notamment les projets partagés. Ainsi, vous ne voyez que cela dans le **Gestionnaire de références**:  
   
- ![Visual C&#43; &#43; Gestionnaire de références &#40;projets ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "du Gestionnaire de références Visual C++ (projets ATL)")  
+ ![Visual C&#43; &#43; Gestionnaire de références &#40;Projets ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Gestionnaire de références Visual C++ (Projets ATL)")  
   
  Dans un projet C++/CLI ou un projet de plateforme Windows universelle, le concept de références s’applique à plusieurs genres de fichiers binaires, en plus des autres projets de la solution.  Ceux-ci sont tous exposés dans le **Gestionnaire de références**.
   
@@ -58,7 +59,7 @@ Il est très courant pour les programmes d’appeler des API dans d’autres fic
  Affiche l'outil utilisé pour générer l'assembly d'interopérabilité à partir de la bibliothèque COM référencée ou d'un contrôle ActiveX.  
   
 ### <a name="assembly-reference-properties"></a>Propriétés de la référence à l'assembly  
- Propriétés de référence d’assembly sont disponibles uniquement pour les références à Frameworkassemblies .NET dans C + c++ / projets CLI. Ces propriétés sont affichées uniquement lorsqu’un Frameworkassembly .NET est sélectionné dans le **références** volet. Les propriétés ne peuvent pas être modifiées.  
+ Les propriétés de référence d’assembly sont disponibles seulement pour les références aux assemblys .NET Framework dans les projets C++/CLI. Ces propriétés sont affichées seulement quand un assembly .NET Framework est sélectionné dans le volet **Références**. Les propriétés ne peuvent pas être modifiées.  
   
  **Chemin d’accès relatif**  
  Affiche le chemin d'accès relatif du répertoire de projet à l'assembly référencé.  
@@ -103,7 +104,7 @@ Il est très courant pour les programmes d’appeler des API dans d’autres fic
  Affiche le chemin d'accès du répertoire de l'assembly référencé.  
   
  **Identité**  
- Pour le Frameworkassemblies .NET, affiche le chemin d’accès complet. Pour les composants COM, affiche le GUID.  
+ Pour les assemblys .NET Framework, affiche le chemin complet. Pour les composants COM, affiche le GUID.  
   
  **Étiquette**  
  Affiche l'étiquette de la référence.  

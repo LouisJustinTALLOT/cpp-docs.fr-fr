@@ -1,5 +1,5 @@
 ---
-title: 'Pages de propriétés MIDL : Sortie | Documents Microsoft'
+title: 'Pages de propriétés MIDL : Sortie | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325771"
 ---
 # <a name="midl-property-pages-output"></a>Pages de propriétés MIDL : Sortie
-Le **sortie** page de propriétés dans le **MIDL** dossier spécifie les options de compilateur MIDL suivantes :  
+La page de propriétés **Sortie** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
   
 -   Répertoire de sortie ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
@@ -41,13 +42,13 @@ Le **sortie** page de propriétés dans le **MIDL** dossier spécifie les option
   
 -   Fichier proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Générer la bibliothèque de types ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Génération d’une bibliothèque de types ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
 -   Bibliothèque de types ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
- Pour plus d’informations sur l’accès à la **sortie** page de propriétés dans le **MIDL** dossier, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+ Pour plus d’informations sur l’accès à la page de propriétés **Sortie** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
- Pour plus d’informations sur l’accès par programme aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
+ Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [MIDL, page de propriétés](../ide/midl-property-pages.md)

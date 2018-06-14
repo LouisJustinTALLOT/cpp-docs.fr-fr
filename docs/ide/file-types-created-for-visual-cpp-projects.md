@@ -1,5 +1,5 @@
 ---
-title: Types de fichiers créés pour les projets Visual C++ | Documents Microsoft
+title: Types de fichiers créés pour les projets Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,9 +26,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336015"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Types de fichiers créés pour les projets Visual C++
 Cette rubrique décrit tous les types de fichiers associés aux projets Visual C++ pour les applications de bureau classiques. Les fichiers réellement inclus dans votre projet varient en fonction du type de projet et des options que vous sélectionnez quand vous utilisez un Assistant.  
@@ -72,7 +73,7 @@ Cette rubrique décrit tous les types de fichiers associés aux projets Visual C
 |.HxC|Projet|Fichier projet d'aide.|  
 |.ico|Ressource|Fichier graphique de bitmap d'icône.|  
 |.idb|Compilation|Fichier d'état contenant des informations de dépendance entre les fichiers sources et les définitions de classe, qui peuvent être utilisés par le compilateur durant la régénération minimale et la compilation incrémentielle. Utilisez l'option de compilateur [/Fd](../build/reference/fd-program-database-file-name.md) pour spécifier le nom du fichier .idb. Pour plus d'informations, consultez [/Gm (Activer la régénération minimale)](../build/reference/gm-enable-minimal-rebuild.md) .|  
-|.idl|Compilation|Fichier de langage de définition d'interface. Consultez [fichier IDL (Interface Definition Language)](http://msdn.microsoft.com/library/windows/desktop/aa378712) dans le SDK Windows pour plus d’informations.|  
+|.idl|Compilation|Fichier de langage de définition d'interface. Pour plus d’informations, consultez [Fichier IDL (Interface Definition Language)](http://msdn.microsoft.com/library/windows/desktop/aa378712) dans le SDK Windows.|  
 |.ilk|Liaison|Fichier de liaison incrémentielle. Pour plus d'informations, consultez [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) .|  
 |.map|Liaison|Fichier texte contenant des informations sur l'éditeur de liens. Utilisez l'option de compilateur [/Fm](../build/reference/fm-name-mapfile.md) pour nommer le fichier .map. Pour plus d'informations, consultez [/MAP](../build/reference/map-generate-mapfile.md) .|  
 |.mfcribbon-ms|Ressource|Fichier de ressources contenant le code XML qui définit boutons, contrôles et attributs du ruban. Pour plus d'informations, consultez [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -86,7 +87,7 @@ Cette rubrique décrit tous les types de fichiers associés aux projets Visual C
 |.vap|Projet|Fichier projet Visual Studio Analyzer.|  
 |.vbg|Solution|Fichier de groupe de projets compatible.|  
 |.vbp, .vip, .vbproj|Projet|Fichier projet Visual Basic.|  
-|.vcxitems|Projet|Projet pour le partage de fichiers de code entre plusieurs projets C++ d’éléments partagés. Pour plus d'informations, consultez [Fichiers projet et Makefiles](../ide/project-and-solution-files.md) .|
+|.vcxitems|Projet|Projet d’éléments partagés permettant de partager des fichiers de code entre plusieurs projets C++. Pour plus d'informations, consultez [Fichiers projet et Makefiles](../ide/project-and-solution-files.md) .|
 |.vcxproj|Projet|Fichier projet Visual C++. Pour plus d'informations, consultez [Fichiers projet et Makefiles](../ide/project-and-solution-files.md) .|  
 |.vcxproj.filters|Projet|Quand vous ajoutez un fichier à un projet via l'Explorateur de solutions, le fichier de filtres détermine à quel emplacement le fichier est ajouté dans l'arborescence de l'Explorateur de solutions, en fonction de son extension de nom de fichier.|  
 |.vdproj|Projet|Fichier projet de déploiement Visual Studio.|  
@@ -101,5 +102,5 @@ Cette rubrique décrit tous les types de fichiers associés aux projets Visual C
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et gestion de projets Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Types de projet Visual C++](../ide/visual-cpp-project-types.md)   
+ [Types de projets Visual C++](../ide/visual-cpp-project-types.md)   
  [Prise en charge d’autres langues par l’Assistant](../ide/wizard-support-for-other-languages.md)

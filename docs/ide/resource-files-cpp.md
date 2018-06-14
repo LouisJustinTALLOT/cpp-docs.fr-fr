@@ -1,5 +1,5 @@
 ---
-title: Fichiers de ressources (C++) | Documents Microsoft
+title: Fichiers de ressources (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334995"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
-Les ressources sont des éléments d’interface qui fournissent des informations à l’utilisateur. Bitmaps, icônes, barres d’outils et les curseurs sont toutes les ressources. Certaines ressources peuvent être manipulées pour exécuter une action, telle que sélectionner à partir d’un menu ou la saisie de données dans la boîte de dialogue.  
+Les ressources sont des éléments d’interface qui fournissent des informations à l’utilisateur. Les bitmaps, les icônes, les barres d’outils et les curseurs sont tous des ressources. Certaines ressources peuvent être manipulées afin d’effectuer une action spécifique, telle que la sélection d’une commande dans un menu ou la saisie de données dans une boîte de dialogue.  
   
- Consultez [utilisation des ressources](../windows/working-with-resource-files.md) pour plus d’informations.  
+ Pour plus d’informations, consultez [Utilisation de ressources](../windows/working-with-resource-files.md).  
   
 |Nom de fichier|Emplacement du répertoire|Emplacement dans l'Explorateur de solutions|Description|  
 |---------------|------------------------|--------------------------------|-----------------|  
-|*Nomproj*.rc|*Nomproj*|Fichiers sources|Le fichier de script de ressources pour le projet. Le fichier de script de ressources contient les éléments suivants, selon le type de projet et la prise en charge sélectionnée pour le projet (par exemple, les barres d’outils, les boîtes de dialogue ou HTML) :<br /><br /> -Définition du menu par défaut.<br />-Tables d’accélérateurs et chaîne.<br />-Par défaut **sur** boîte de dialogue.<br />-Les autres boîtes de dialogue.<br />-Fichier icône (res\\*NomProj*.ico).<br />-Informations de version.<br />-Les Bitmaps.<br />-Barre d’outils.<br />-Les fichiers HTML.<br /><br /> Le fichier de ressources inclut le fichier Afxres.rc pour les ressources standard de Microsoft Foundation Class.|  
-|Resource.h|*Nomproj*|Fichiers d'en-tête|Le fichier d’en-tête de ressource qui contient les définitions pour les ressources utilisées par le projet.|  
-|*Nomproj*.rc2|*Nomproj*\res|Fichiers sources|Le fichier de script contenant des ressources supplémentaires utilisés par le projet. Vous pouvez inclure le fichier .rc2 en haut du fichier .rc du projet.<br /><br /> Un fichier .rc2 est utile pour inclure des ressources utilisées par plusieurs projets différents. Au lieu de créer les mêmes ressources pour les projets différents, vous pouvez les placer dans un fichier .rc2 et ajouter le fichier .rc2 dans le fichier .rc principal.|  
-|*Nomproj*.def|*Nomproj*|Fichiers sources|Le fichier de définition de module pour un projet DLL. Pour un contrôle, il fournit le nom et la description du contrôle, ainsi que la taille du tas de l’exécution.|  
-|*Nomproj*.ico|*Nomproj*\res|Fichiers de ressources|Le fichier d’icône pour le projet ou le contrôle. Cette icône s’affiche lorsque l’application est réduite. Il est également utilisé dans l’application **sur** boîte. Par défaut, MFC fournit l’icône MFC et ATL fournit l’icône ATL.|  
-|*Nomproj*Doc.ico|*Nomproj*\res|Fichiers de ressources|Le fichier d’icône pour un projet MFC qui prend en charge l’architecture document/vue.|  
-|ToolBar.bmp|*Nomproj*\res|Fichiers de ressources|Le fichier bitmap représentant l’application ou le contrôle dans une barre d’outils ou une palette. Cette image bitmap est incluse dans le fichier de ressources du projet. La barre d’outils initiale et la barre d’état sont construites dans le **CMainFrame** classe.|  
-|Ribbon.mfcribbon-ms|*Nomproj*\res|Fichiers de ressources|Le fichier de ressources qui contient le code XML qui définit les boutons, les contrôles et les attributs dans le ruban. Pour plus d'informations, consultez [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
+|*NomProj*.rc|*NomProj*|Fichiers sources|Fichier de script de ressources pour le projet. Ce fichier contient les éléments suivants, selon le type du projet et la prise en charge sélectionnée pour le projet (par exemple, barres d’outils, boîtes de dialogue ou HTML) :<br /><br /> -   Définition du menu par défaut.<br />-   Tables d’accélérateurs et de chaînes.<br />-   Boîte de dialogue **À propos de** par défaut.<br />-   Autres boîtes de dialogue.<br />-   Fichier icône (res\\*NomProj*.ico).<br />-   Informations de version.<br />-   Bitmaps.<br />-   Barre d’outils.<br />-   Fichiers HTML.<br /><br /> Le fichier de ressources inclut le fichier Afxres.rc pour les ressources standard des classes MFC (Microsoft Foundation Class).|  
+|Resource.h|*NomProj*|Fichiers d'en-tête|Fichier d’en-tête des ressources qui contient les définitions des ressources utilisées par le projet.|  
+|*NomProj*.rc2|*NomProj*\res|Fichiers sources|Fichier de script qui contient les ressources supplémentaires utilisées par le projet. Vous pouvez ajouter le fichier .rc2 en haut du fichier .rc associé au projet.<br /><br /> Un fichier .rc2 s’avère utile pour ajouter des ressources utilisées par plusieurs projets différents. Au lieu de créer les mêmes ressources pour chaque projet, vous pouvez les regrouper dans un fichier .rc2 et ajouter ce dernier au fichier .rc principal.|  
+|*NomProj*.def|*NomProj*|Fichiers sources|Fichier de définition de module pour un projet DLL. Dans le cas d’un contrôle, ce fichier fournit le nom et la description du contrôle ainsi que la taille du tas au moment de l’exécution.|  
+|*NomProj*.ico|*NomProj*\res|Fichiers de ressources|Fichier icône pour le projet ou le contrôle. Cette icône s’affiche quand l’application est réduite. Elle figure également dans la boîte de dialogue **À propos de** relative à l’application. Par défaut, MFC fournit l’icône MFC et ATL, l’icône ATL.|  
+|*NomProj*Doc.ico|*NomProj*\res|Fichiers de ressources|Fichier icône pour un projet MFC qui offre une prise en charge de l’architecture document/vue.|  
+|Toolbar.bmp|*NomProj*\res|Fichiers de ressources|Fichier bitmap représentant l’application ou le contrôle dans une barre d’outils ou une palette. Cette bitmap est intégrée au fichier de ressources du projet. La barre d’outils et la barre d’état initiales sont construites dans la classe **CMainFrame**.|  
+|ribbon.mfcribbon-ms|*NomProj*\res|Fichiers de ressources|Fichier de ressources qui contient le code XML définissant les boutons, les contrôles et les attributs dans le ruban. Pour plus d'informations, consultez [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de fichiers créés pour les projets Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

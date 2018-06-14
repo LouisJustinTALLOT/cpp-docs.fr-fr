@@ -1,5 +1,5 @@
 ---
-title: Création de projets du Bureau à l’aide des Assistants Application | Documents Microsoft
+title: Création de projets de bureau à l’aide des Assistants Application | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334013"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Création de projets de bureau à l'aide des Assistants Application
-Tous les types de projets Visual C++ possèdent un Assistant Application pour créer rapidement et aisément de nouveaux projets, basés sur le modèle de projet.  Pour ouvrir un Assistant application, utilisez le **nouveau projet** boîte de dialogue pour spécifier les propriétés de projet telles que le nom de projet, ou l’annuaire et la solution où doit résider votre projet.  
+Tous les types de projets Visual C++ possèdent un Assistant Application pour créer rapidement et aisément de nouveaux projets, basés sur le modèle de projet.  Pour ouvrir un Assistant Application, utilisez la boîte de dialogue **Nouveau projet** afin de spécifier les propriétés de votre projet, par exemple le nom du projet, ou bien le répertoire et la solution où doit résider votre projet.  
   
 #### <a name="to-open-a-visual-c-application-wizard"></a>Pour ouvrir un Assistant Application Visual C++  
   
@@ -35,13 +36,13 @@ Tous les types de projets Visual C++ possèdent un Assistant Application pour c
   
      La boîte de dialogue **Nouveau projet** s’affiche.  
   
-2.  Dans le volet Types de projets, sélectionnez le **projets Visual C++** dossier. Une icône de chaque type de projet C++ s'affiche dans le volet Modèles.  
+2.  Dans le volet Types de projets, sélectionnez le dossier **Projets Visual C++**. Une icône de chaque type de projet C++ s'affiche dans le volet Modèles.  
   
 3.  Dans le volet Modèles, sélectionnez une icône pour choisir un type de projet. Un message s'affiche sous les deux volets, indiquant le type de projet que vous vous apprêtez à créer.  
   
-4.  Spécifiez les propriétés de votre projet ou ignorez cette étape pour utiliser les propriétés par défaut du projet proposées par Visual Studio. Consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md) pour plus d’informations.  
+4.  Spécifiez les propriétés de votre projet ou ignorez cette étape pour utiliser les propriétés par défaut du projet proposées par Visual Studio. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
-5.  Cliquez sur **OK**et l’Assistant pour votre projet de type s’ouvre. Si vous souhaitez lire la rubrique d’aide pour l’Assistant, appuyez sur **F1**.  
+5.  Cliquez sur **OK** pour ouvrir l’Assistant correspondant au type de votre projet. Si vous souhaitez lire la rubrique d’aide de l’Assistant, appuyez sur **F1**.  
   
  Lorsque vous créez un projet, vous pouvez générer une nouvelle solution ou ajouter le projet à une solution existante. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Exemples de déploiement | Documents Microsoft
+title: Exemples de déploiement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,9 +18,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327409"
 ---
 # <a name="deployment-examples"></a>Exemples de déploiement
 Cette section contient des exemples montrant comment déployer des applications Visual C++.  
@@ -36,4 +37,4 @@ Cette section contient des exemples montrant comment déployer des applications 
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure pas à pas : déploiement manuel d’une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [Déploiement d’Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)

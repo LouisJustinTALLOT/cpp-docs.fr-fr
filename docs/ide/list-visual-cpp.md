@@ -1,5 +1,5 @@
 ---
-title: '&lt;liste&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;list&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323977"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;liste&gt; (Visual C++)
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 Le bloc \<listheader> permet de définir la ligne d’en-tête d’une table ou d’une liste de définitions. Au moment de définir une table, il vous suffit de fournir une entrée pour le terme figurant dans l’en-tête.  
   
 ## <a name="syntax"></a>Syntaxe  

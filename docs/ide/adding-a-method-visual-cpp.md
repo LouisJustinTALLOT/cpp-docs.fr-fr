@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une méthode (Visual C++) | Documents Microsoft
+title: Ajout d’une méthode (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324432"
 ---
 # <a name="adding-a-method--visual-c"></a>Ajout d'une méthode (Visual C++)
-Vous pouvez utiliser la [Assistant Ajout de méthode](../ide/add-method-wizard.md) pour ajouter une méthode à une interface dans votre projet. Si le projet contient une classe associée à l’interface, l’Assistant modifie la classe, trop.  
+Vous pouvez utiliser [l’Assistant Ajout de méthode](../ide/add-method-wizard.md) pour ajouter une méthode à une interface dans votre projet. Si le projet contient une classe associée à l’interface, l’Assistant modifie également la classe.  
   
 ### <a name="to-add-a-method-to-your-object"></a>Pour ajouter une méthode à votre objet  
   
-1.  Dans Affichage de classes, développez le nœud du projet pour afficher l’interface à laquelle vous souhaitez ajouter la méthode.  
+1.  Dans l’affichage de classes, développez le nœud du projet pour afficher l’interface à laquelle vous souhaitez ajouter la méthode.  
   
     > [!NOTE]
-    >  Vous pouvez également ajouter des méthodes aux dispinterfaces qui, à moins que le projet est attribué, se trouvent sous le nœud de bibliothèque.  
+    >  Vous pouvez également ajouter des méthodes aux dispinterfaces qui, tant que le projet n’est pas attribué, se trouvent sous le nœud de la bibliothèque.  
   
-2.  Cliquez sur le nom de l’interface.  
+2.  Cliquez avec le bouton droit sur le nom de l’interface.  
   
-3.  Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une méthode**.  
+3.  Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une méthode**.  
   
-4.  Dans l’Assistant Ajout de méthode, fournissez les informations pour créer la méthode.  
+4.  Dans l’Assistant Ajout de méthode, indiquez les informations permettant de créer la méthode.  
   
-5.  Spécifier les paramètres de langage de définition interface pour cette méthode dans le [attributs IDL](../ide/idl-attributes-add-method-wizard.md) page de l’Assistant.  
+5.  Spécifiez tous les paramètres IDL (Interface Definition Language) pour cette méthode dans la page [Attributs IDL](../ide/idl-attributes-add-method-wizard.md) de l’Assistant.  
   
 6.  Cliquez sur **Terminer** pour ajouter la méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’une Interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
+ [Création d’une interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Modification d’une interface COM](../ide/editing-a-com-interface.md)

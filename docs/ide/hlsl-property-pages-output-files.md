@@ -1,5 +1,5 @@
 ---
-title: 'Pages de propriétés HLSL : Fichiers de sortie | Documents Microsoft'
+title: 'Pages de propriétés HLSL : Fichiers de sortie | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4fd1dc3ba92201567f24aa84ff8dddcd96798b38
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339194"
 ---
 # <a name="hlsl-property-pages-output-files"></a>Pages de propriétés HLSL : fichiers de sortie
-Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez son **fichiers de sortie** propriété. Pour plus d’informations sur l’accès à la **fichiers de sortie** page de propriétés dans le dossier HLSL, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez sa propriété **Fichiers de sortie**. Pour plus d’informations sur l’accès à la page de propriétés **Fichiers de sortie** dans le dossier HLSL, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
- **Nom de Variable d’en-tête**  
- Spécifie le nom d’un tableau qui est utilisé pour du code HLSL objet encodé. Le tableau est contenu dans un fichier d’en-tête qui est générée par le compilateur HLSL. Le nom du fichier d’en-tête est spécifié par le **nom de fichier d’en-tête** propriété.  
+ **Nom de la variable dans l’en-tête**  
+ Spécifie le nom d’un tableau qui est utilisé pour encoder le code objet HLSL. Le tableau est contenu dans un fichier d’en-tête qui est généré par le compilateur HLSL. Le nom du fichier d’en-tête est spécifié par la propriété **Nom du fichier d’en-tête**.  
   
- Cette propriété correspond à la **/Vn [name]** argument de ligne de commande.  
+ Cette propriété correspond à l’argument de ligne de commande **/Vn[name]**.  
   
- **Nom de fichier d’en-tête**  
- Spécifie le nom du fichier d’en-tête généré par le compilateur HLSL. L’en-tête contient du code HLSL objet qui est codé dans un tableau. Le nom du tableau est spécifié par le **nom de la Variable en-tête** propriété.  
+ **Nom du fichier d’en-tête**  
+ Spécifie le nom du fichier d’en-tête qui est généré par le compilateur HLSL. L’en-tête contient le code objet HLSL qui est encodé dans un tableau. Le nom du tableau est spécifié par la propriété **Nom de la variable dans l’en-tête**.  
   
- Cette propriété correspond à la **/Fh [name]** argument de ligne de commande.  
+ Cette propriété correspond à l’argument de ligne de commande **/Fh[name]**.  
   
  **Nom de fichier objet**  
- Spécifie le nom du fichier objet qui est générée par le compilateur HLSL. Par défaut, la valeur est **.cso de % (Filename) $(OutDir)**.  
+ Spécifie le nom du fichier objet qui est généré par le compilateur HLSL. Par défaut, la valeur est **$(OutDir)%(Filename).cso**.  
   
- Cette propriété correspond à la **/Fo [name]** argument de ligne de commande.  
+ Cette propriété correspond à l’argument de ligne de commande **/Fo[name]**.  
   
  **Sortie de l’assembleur**  
- **Listing assembleur uniquement (/ Fc)** pour simplement les instructions de langage d’assembly de sortie. **Code de l’assembly et Hex (/ Fx)** vers la sortie des instructions de langage d’assembly et le code d’opération correspondant au format hexadécimal. Par défaut, aucune annonce n’est sortie.  
+ **Listing du code assembleur uniquement (/Fc)** pour générer uniquement des instructions en langage assembleur. **Code de l’assembly et Hex (/Fx)** pour générer à la fois des instructions en langage assembleur et le code d’opération correspondant au format hexadécimal. Par défaut, aucune liste n’est générée.  
   
- **Fichier de sortie assembleur**  
- Spécifie le nom du fichier d’assembly liste générée par le compilateur HLSL.  
+ **Fichier de sortie de l’assembleur**  
+ Spécifie le nom du fichier listing d’assembly qui est généré par le compilateur HLSL.  
   
- Cette propriété correspond à la **/Fc [nom]** et **/Fx [nom]** des arguments de ligne de commande.  
+ Cette propriété correspond aux arguments de ligne de commande **/Fc[name]** et **/Fx[name]**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés HLSL](../ide/hlsl-property-pages.md)   
- [Pages de propriétés HLSL : général](../ide/hlsl-property-pages-general.md)   
+ [Pages de propriétés HLSL : Général](../ide/hlsl-property-pages-general.md)   
  [HLSL, page de propriétés : Avancé](../ide/hlsl-property-pages-advanced.md)

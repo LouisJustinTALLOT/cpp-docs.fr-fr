@@ -1,5 +1,5 @@
 ---
-title: Génération de projets C++ dans Visual Studio | Documents Microsoft
+title: Génération de projets C++ dans Visual Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340500"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Génération de projets C++ dans Visual Studio
 Dans l'environnement de développement intégré (IDE) de Visual Studio, il existe plusieurs façons de générer une solution complète ou un seul projet dans cette solution. Vous pouvez également modifier les paramètres de build et spécifier des étapes de génération personnalisées pour rendre plus efficace votre processus de développement.  
   
- Pour créer une solution est ouverte dans Visual Studio et sélectionné dans **l’Explorateur de solutions**, vous pouvez :  
+ Pour générer une solution qui est ouverte dans Visual Studio et sélectionnée dans **l’Explorateur de solutions**, vous pouvez effectuer les opérations suivantes, au choix :  
   
 -   Dans la barre de menus, choisissez **Générer**, puis **Générer la solution**.  
   
--   Ou, **l’Explorateur de solutions**, ouvrez le menu contextuel de la solution, puis sélectionnez **générer la Solution**.  
+-   Dans **l’Explorateur de solutions**, ouvrez le menu contextuel de la solution, puis choisissez **Générer la solution**.  
   
 -   Appuyez sur F7. (Raccourci clavier par défaut vers les paramètres de développement C/C++)  
   
--   Ou, dans le [fenêtre commande](/visualstudio/ide/reference/command-window) (dans la barre de menus, choisissez **vue**, **autres fenêtres**, **fenêtre commande**), entrez `Build.BuildSolution`.  
+-   Dans la [Fenêtre Commande](/visualstudio/ide/reference/command-window) (dans la barre de menus, choisissez **Affichage**, **Autres fenêtres**, **Fenêtre Commande**), entrez `Build.BuildSolution`.  
   
--   Ou, dans le [lancement rapide](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) , entrez `build build solution`.  
+-   Dans la zone [Lancement rapide](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box), entrez `build build solution`.  
   
- Pour générer un projet est sélectionné dans **l’Explorateur de solutions**, vous pouvez :  
+ Pour générer un projet qui est sélectionné dans **l’Explorateur de solutions**, vous pouvez effectuer les opérations suivantes, au choix :  
   
--   Dans la barre de menus, choisissez **générer**, **générer \<nom du projet >**.  
+-   Dans la barre de menus, choisissez **Générer**, **Générer \<Nom du projet**.  
   
--   Ou, **l’Explorateur de solutions**, ouvrez le menu contextuel du projet, puis sélectionnez **Build**.  
+-   Dans **l’Explorateur de solutions**, ouvrez le menu contextuel du projet, puis choisissez **Générer**.  
   
--   Ou, dans la fenêtre de commande (dans la barre de menus, choisissez **vue**, **autres fenêtres**, **fenêtre commande**), entrez `Build.BuildOnlyProject`.  
+-   Dans la Fenêtre Commande (dans la barre de menus, choisissez **Affichage**, **Autres fenêtres**, **Fenêtre Commande**), entrez `Build.BuildOnlyProject`.  
   
--   Ou, dans la zone de lancement rapide, entrez `build project only build only <project name>`.  
+-   Dans la zone Lancement rapide, entrez `build project only build only <project name>`.  
   
- Quand vous générez une application Visual C++ dans Visual Studio, vous pouvez modifier un grand nombre de paramètres de la build dans la boîte de dialogue Pages de propriétés du projet. Pour plus d’informations sur la définition des propriétés du projet, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+ Quand vous générez une application Visual C++ dans Visual Studio, vous pouvez modifier un grand nombre de paramètres de la build dans la boîte de dialogue Pages de propriétés du projet. Pour plus d’informations sur la définition des propriétés de projet, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
- Pour obtenir un exemple sur la façon d’utiliser l’IDE pour créer, générer et déboguer un projet C++, consultez [procédure pas à pas : Explorer l’IDE de Visual Studio avec C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pour obtenir un exemple sur l’utilisation de l’IDE pour générer un C + c++ / projet CLR, consultez [procédure pas à pas : compilation d’un programme C++ qui cible le CLR dans Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Pour obtenir un exemple sur l’utilisation de l’IDE pour créer une application Windows Runtime, consultez [créer votre première application Windows Runtime en C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Pour un exemple d’utilisation de l’IDE afin de créer, générer et déboguer un projet C++, consultez [Procédure pas à pas : explorer l’IDE Visual Studio avec C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pour un exemple d’utilisation de l’IDE afin de générer un projet C++/CLR, consultez [Procédure pas à pas : compilation d’un programme C++ qui cible le CLR dans Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Pour un exemple d’utilisation de l’IDE afin de créer une application Windows Runtime, consultez [Créer votre première application Windows Runtime en C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
  Pour en savoir plus sur la manière de générer, modifier les paramètres de build et spécifier des étapes de génération personnalisées, reportez-vous aux articles suivants.  
   
@@ -67,8 +68,8 @@ Dans l'environnement de développement intégré (IDE) de Visual Studio, il exis
  Présente la structure XML d'un fichier .vcxproj.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Boîte de dialogue Options projets, répertoires VC ++](vcpp-directories-property-page.md)  
- (Uniquement pour les projets de MSBuild) Explique comment modifier le chemin de recherche des fichiers exécutables, notamment des fichiers, les fichiers de bibliothèque et les fichiers de code source pendant une génération.  
+ [Répertoires VC++, Projets, Options (boîte de dialogue)](vcpp-directories-property-page.md)  
+ (Projets MSBuild uniquement) Explique comment modifier le chemin de recherche des fichiers exécutables, des fichiers Include, des fichiers de bibliothèque et des fichiers de code source lors d’une génération.  
   
  [Compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Fournit des informations sur la génération d'applications dans Visual Studio.  
@@ -80,10 +81,10 @@ Dans l'environnement de développement intégré (IDE) de Visual Studio, il exis
  Fournit des liens vers des présentations de la génération de programmes à l'aide des options C++, du compilateur et de l'éditeur de liens, ainsi qu'avec des outils de génération supplémentaires.  
   
  [Mise à niveau de projets à partir de versions antérieures de Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- Fournit des liens vers les rubriques traitant les problèmes de mise à niveau de votre projet C++ vers des versions plus récentes de l’ensemble d’outils du compilateur.  
+ Fournit des liens vers des rubriques traitant des problèmes de mise à niveau de votre projet C++ vers des versions plus récentes de l’ensemble d’outils du compilateur.  
   
 [Guide du portage et de la mise à niveau de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  Obtenir des informations détaillées sur la mise à niveau des applications C++ qui ont été créées dans les versions antérieures de Visual Studio et également comment migrer les applications qui ont été créées à l’aide des outils autres que Visual Studio.  
+  Informations détaillées sur la mise à niveau d’applications C++ qui ont été créées dans des versions antérieures de Visual Studio et sur la migration des applications qui ont été créées avec des outils autres que Visual Studio.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de plateforme Windows universelle (C++)](../windows/universal-windows-apps-cpp.md)

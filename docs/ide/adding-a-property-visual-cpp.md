@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une propriété (Visual C++) | Documents Microsoft
+title: Ajout d’une propriété (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327578"
 ---
-# <a name="adding-a-property-visual-c"></a>Ajout d'une propriété locale (Visual C++)
-Vous pouvez utiliser la [Assistant Ajout de propriété](../ide/names-add-property-wizard.md) pour ajouter une méthode à une interface dans votre projet.  
+# <a name="adding-a-property-visual-c"></a>Ajout d’une propriété (Visual C++)
+Vous pouvez utiliser [l’Assistant Ajout de propriété](../ide/names-add-property-wizard.md) pour ajouter une propriété à une interface de votre projet.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Pour ajouter une propriété à votre objet  
   
-1.  Dans [affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez sur le nom de l’interface à laquelle vous souhaitez ajouter la propriété.  
+1.  Dans [l’affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur le nom de l’interface à laquelle vous souhaitez ajouter la propriété.  
   
     > [!NOTE]
-    >  Vous pouvez également ajouter des propriétés aux dispinterfaces qui, à moins que le projet utilise des attributs, sont imbriquées dans le nœud de bibliothèque.  
+    >  Vous pouvez également ajouter des propriétés aux dispinterfaces qui, tant que le projet n’est pas attribué, sont imbriquées dans le nœud de la bibliothèque.  
   
-2.  Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une propriété**.  
+2.  Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une propriété**.  
   
-3.  Dans le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md), fournissez les informations pour créer la propriété.  
+3.  Dans [l’Assistant Ajout de propriété](../ide/names-add-property-wizard.md), indiquez les informations permettant de créer la propriété.  
   
-4.  Spécifiez les paramètres interface definition language (IDL) pour la propriété dans le [attributs IDL](../ide/idl-attributes-add-property-wizard.md) page de l’Assistant.  
+4.  Spécifiez tous les paramètres IDL (Interface Definition Language) pour la propriété dans la page [Attributs IDL](../ide/idl-attributes-add-property-wizard.md) de l’Assistant.  
   
 5.  Cliquez sur **Terminer** pour ajouter la propriété.  
   
- Le **obtenir** et `Put` méthodes de la propriété sont affichées sous forme de deux icônes dans l’affichage de classes, sous l’interface où elle est définie. Vous pouvez double-cliquer sur l’icône pour afficher la déclaration de propriété dans le fichier .idl.  
+ Les méthodes **Get** et `Put` de la propriété sont affichées sous la forme de deux icônes dans l’affichage de classes, sous l’interface où elle est définie. Vous pouvez double-cliquer sur l’une ou l’autre des icônes pour voir la déclaration de propriété dans le fichier .idl.  
   
--   Pour les interfaces ATL, les **obtenir** et **Put** fonctions sont ajoutées au fichier .cpp, et les références à ces fonctions sont ajoutées au fichier .h.  
+-   Pour les interfaces ATL, les fonctions **Get** et **Put** sont ajoutées au fichier .cpp tandis que les références à ces fonctions sont ajoutées au fichier .h.  
   
--   Pour les dispinterfaces MFC, si vous sélectionnez **variable membre** comme type d’implémentation, une méthode et une variable sont ajoutées à la classe qui l’implémente. Si vous sélectionnez **méthodes Get/Set** comme type d’implémentation, deux méthodes sont ajoutées à la classe qui l’implémente.  
+-   Pour les dispinterfaces MFC, si vous sélectionnez **Variable membre** comme type d’implémentation, une méthode et une variable sont ajoutées à la classe qui l’implémente. Si vous sélectionnez **Méthodes Get/Set** comme type d’implémentation, deux méthodes sont ajoutées à la classe qui l’implémente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’une Interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
- [Modification d’une Interface COM](../ide/editing-a-com-interface.md)   
- [Le modèle d’objet composant](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Pointeurs d’interface et Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [Création d’une interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
+ [Modification d’une interface COM](../ide/editing-a-com-interface.md)   
+ [COM (Component Object Model)](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
+ [Pointeurs d’interface et interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484)

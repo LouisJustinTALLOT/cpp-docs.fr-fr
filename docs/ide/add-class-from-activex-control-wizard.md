@@ -1,5 +1,5 @@
 ---
-title: Ajoutez la classe à partir de l’Assistant contrôle ActiveX | Documents Microsoft
+title: Assistant Ajout d’une classe à partir d’un contrôle ActiveX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,9 +19,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336815"
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Assistant Ajout d’une classe à partir d’un contrôle ActiveX
 Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle ActiveX disponible. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir du contrôle ActiveX sélectionné.  
@@ -31,46 +32,46 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle Ac
   
 |Option|Description|  
 |------------|-----------------|  
-|**Registry**|La bibliothèque de types est enregistrée dans le système. Bibliothèques de types inscrits sont répertoriés dans **contrôles ActiveX disponibles**.|  
-|**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Vous devez fournir l’emplacement du fichier dans **emplacement**.|  
+|**Registry**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Contrôles ActiveX disponibles**.|  
+|**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais elle est contenue dans un fichier. Vous devez indiquer l’emplacement du fichier dans **Emplacement**.|  
   
  **Contrôles ActiveX disponibles**  
- Spécifie les contrôles ActiveX actuellement inscrits dans le système. Sélectionnez un contrôle ActiveX dans cette liste pour afficher ses interfaces dans les **Interfaces** liste. Consultez [contrôles ActiveX MFC : distribution de contrôles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) pour plus d’informations sur l’inscription des contrôles ActiveX.  
+ Spécifie les contrôles ActiveX actuellement inscrits dans le système. Sélectionnez un contrôle ActiveX dans cette liste pour afficher ses interfaces dans la liste **Interfaces**. Pour plus d’informations sur l’inscription des contrôles ActiveX, consultez [Contrôles ActiveX MFC : distribution de contrôles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md).  
   
- Si vous cliquez sur **fichier** sous **ajouter une classe à partir**, cette case n’est pas disponible pour modification.  
+ Si vous cliquez sur **Fichier** sous **Ajouter une classe à partir de**, cette zone n’est pas modifiable.  
   
  **Emplacement**  
- Spécifie l’emplacement du contrôle ActiveX. Si vous cliquez sur **fichier** sous **ajouter une classe à partir**, vous pouvez fournir l’emplacement du fichier contenant la bibliothèque de types. Pour accéder à l’emplacement du fichier, cliquez sur le bouton de sélection.  
+ Spécifie l’emplacement du contrôle ActiveX. Si vous cliquez sur **Fichier** sous **Ajouter une classe à partir de**, vous pouvez indiquer l’emplacement du fichier contenant la bibliothèque de types. Pour accéder à l’emplacement du fichier, cliquez sur le bouton de sélection (...).  
   
- Si vous cliquez sur **Registre** sous **ajouter une classe à partir**, cette case n’est pas disponible pour modification.  
+ Si vous cliquez sur **Registre** sous **Ajouter une classe à partir de**, cette zone n’est pas modifiable.  
   
  **Interfaces**  
- Spécifie les interfaces du contrôle ActiveX sélectionné dans **contrôles ActiveX disponibles** ou dans le fichier spécifié dans la bibliothèque de types **emplacement**.  
+ Spécifie les interfaces dans le contrôle ActiveX actuellement sélectionné dans **Contrôles ActiveX disponibles** ou dans la bibliothèque de types dans le fichier spécifié dans **Emplacement**.  
   
 |Bouton de transfert|Description|  
 |---------------------|-----------------|  
-|**>**|Ajoute l’interface actuellement sélectionné dans le **Interfaces** liste. Non disponible si aucune interface n’est sélectionnée.|  
-|**>>**|Ajoute toutes les interfaces dans le contrôle ActiveX sélectionné dans **contrôles ActiveX disponibles** ou dans le fichier spécifié dans la bibliothèque de types **emplacement**.|  
-|**<**|Supprime la classe actuellement sélectionnée dans le **classes générées** liste. Non disponible si aucune classe n’est actuellement sélectionné dans le **classes générées** liste.|  
-|**<\<**|Supprime toutes les classes dans le **classes générées** liste. If indisponible le **classes générées** liste est vide.|  
+|**>**|Ajoute l’interface actuellement sélectionnée à la liste **Interfaces**. N’est pas disponible si aucune interface n’est sélectionnée.|  
+|**>>**|Ajoute toutes les interfaces dans le contrôle ActiveX actuellement sélectionné dans **Contrôles ActiveX disponibles** ou dans la bibliothèque de types dans le fichier spécifié dans **Emplacement**.|  
+|**<**|Supprime la classe actuellement sélectionnée de la liste **Classes générées**. N’est pas disponible si aucune classe n’est actuellement sélectionnée dans la liste **Classes générées**.|  
+|**<\<**|Supprime toutes les classes de la liste **Classes générées**. N’est pas disponible si la liste **Classes générées** est vide.|  
   
  **Classes générées**  
- Spécifie les noms de classe à générer à partir des interfaces ajoutées à l’aide de la **>** ou **>>** bouton. Vous pouvez cliquer sur cette zone pour sélectionner une classe, puis haut ou bas pour faire défiler la liste, afficher chaque nom de classe dans le `Class` boîte et nom de fichier dans le **fichier .h** boîte généré par l’Assistant lorsque vous cliquez sur  **Terminer**. Vous pouvez sélectionner qu’une seule classe à la fois dans cette zone.  
+ Spécifie les noms de classe à générer à partir des interfaces ajoutées à l’aide du bouton **>** ou **>>**. Cliquez dans cette zone pour sélectionner une classe, puis utilisez les touches Haut ou bas pour faire défiler la liste. Le nom de chaque classe apparaît dans la zone `Class`, et le nom du fichier, généré par l’Assistant quand vous cliquez sur **Terminer**, apparaît dans la zone **Fichier .h**. Vous ne pouvez sélectionner qu’une seule classe à la fois dans cette zone.  
   
- Vous pouvez supprimer une classe en la sélectionnant dans cette liste en cliquant sur **<**. Vous n’avez pas besoin de sélectionner une classe dans le **classes générées** boîte pour supprimer toutes les classes ; en cliquant sur **<<**, vous supprimez toutes les classes dans le **classes générées** zone.  
+ Pour supprimer une classe, sélectionnez-la dans cette liste et cliquez sur **<**. Vous n’êtes pas obligé de sélectionner une classe dans la zone **Classes générées** pour supprimer toutes les classes. Cliquez sur **<<** pour supprimer toutes les classes de la zone **Classes générées**.  
   
  `Class`  
- Spécifie le nom de la classe sélectionnée dans la **classes générées** zone que l’Assistant ajoute lorsque vous cliquez sur **Terminer**. Vous pouvez modifier le nom dans la `Class` boîte.  
+ Spécifie le nom de la classe sélectionnée dans la zone **Classes générées**. Cette classe est ajoutée par l’Assistant quand vous cliquez sur **Terminer**. Vous pouvez modifier le nom dans la zone `Class`.  
   
- **fichier .h**  
- Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **classes générées**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous choisissez un fichier existant, l’Assistant enregistrera pas à l’emplacement sélectionné jusqu'à ce que vous cliquez sur **Terminer** dans l’Assistant.  
+ **Fichier .h**  
+ Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui fourni dans **Classes générées**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous choisissez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.  
   
- L’Assistant ne remplacera pas un fichier. Si vous sélectionnez le nom d’un fichier existant, lorsque vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour ajouter le fichier ; cliquez sur **non** pour revenir à l’Assistant et spécifiez un autre nom de fichier.  
+ L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.  
   
- **fichier .cpp**  
- Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **classes générées**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. Le fichier n’est pas enregistré à l’emplacement sélectionné jusqu'à ce que vous cliquez sur **Terminer** dans l’Assistant.  
+ **Fichier .cpp**  
+ Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui fourni dans **Classes générées**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.  
   
- L’Assistant ne remplacera pas un fichier. Si vous sélectionnez le nom d’un fichier existant, lorsque vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour ajouter le fichier ; cliquez sur **non** pour revenir à l’Assistant et spécifiez un autre nom de fichier.  
+ L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout d’une classe à partir d’un contrôle ActiveX](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   

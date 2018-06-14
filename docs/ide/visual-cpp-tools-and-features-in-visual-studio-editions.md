@@ -1,5 +1,5 @@
 ---
-title: Outils Visual C++ et des fonctionnalités dans les éditions de Visual Studio | Documents Microsoft
+title: Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -18,11 +18,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337247"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Outils Visual C++ et des fonctionnalités dans les éditions de Visual Studio
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio
 
 Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles dans Visual Studio. La présence d'une croix (« X ») dans une cellule indique que la fonctionnalité est disponible ; une cellule vide indique que la fonctionnalité n'est pas disponible. Les remarques entre parenthèses indiquent qu'une fonctionnalité est disponible, mais limitée.
 
@@ -184,6 +185,6 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 ## <a name="see-also"></a>Voir aussi
 
 [Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Quelles sont les nouveautés dans Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets Visual C++](../ide/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>

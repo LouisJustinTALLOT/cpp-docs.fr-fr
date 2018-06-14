@@ -1,5 +1,5 @@
 ---
-title: 'Pages de propriétés MIDL : Avancé | Documents Microsoft'
+title: 'Pages de propriétés MIDL : Avancé | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,36 +28,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330802"
 ---
 # <a name="midl-property-pages-advanced"></a>Pages de propriétés MIDL : Avancé
-Le **avancé** page de propriétés dans le **MIDL** dossier spécifie les options de compilateur MIDL suivantes :  
+La page de propriétés **Avancé** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
   
--   Activer la vérification des erreurs ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Activation de la vérification d’erreurs ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérifie les Allocations ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des allocations ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérifier les limites ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des limites ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
 -   Vérification de la plage Enum ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérifier les pointeurs de référence ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des pointeurs de référence ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérifier les données Stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des données stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Valider les paramètres ([/ robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Validation des paramètres ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
   
--   Alignement des membres de struct ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Alignement des membres de la structure ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Rediriger la sortie ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Redirection de la sortie ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
 -   Options de préprocesseur C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
 -   Définitions de préprocesseur non définies ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \* / fiable est utilisable uniquement lors de la génération pour Windows 2000 ou un ordinateur plus loin. Si vous générez un projet ATL et que vous souhaitez utiliser / robust, modifiez cette ligne dans le fichier dlldatax.c :  
+ \* /robust peut être utilisé uniquement lors de la génération sur un ordinateur Windows 2000 ou ultérieur. Si vous générez un projet ATL et souhaitez utiliser /robust, modifiez cette ligne dans le fichier dlldatax.c :  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
@@ -65,9 +66,9 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
 ```  
   
- Pour plus d’informations sur l’accès à la **avancé** page de propriétés dans le **MIDL** dossier, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+ Pour plus d’informations sur l’accès à la page de propriétés **Avancé** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
- Pour plus d’informations sur l’accès par programme aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
+ Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [MIDL, page de propriétés](../ide/midl-property-pages.md)

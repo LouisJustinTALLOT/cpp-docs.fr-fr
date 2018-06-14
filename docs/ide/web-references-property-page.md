@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés références Web | Documents Microsoft
+title: Références web, page de propriétés | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,28 +21,29 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328849"
 ---
 # <a name="web-references-property-page"></a>Références web, page de propriétés
-Le **références Web** page de propriétés spécifie comment la classe proxy du service Web XML est générée. Une classe de proxy de service Web XML sera être générée si vous ajoutez une référence web à votre projet. Consultez [ajouter une référence Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) pour plus d’informations.  
+La page de propriétés **Références web** spécifie la manière dont la classe proxy de service web XML est générée. Une classe proxy de service web XML est générée si vous ajoutez une référence web à votre projet. Pour plus d’informations, consultez [Ajouter une référence web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5).  
   
- Le **références Web** page de propriétés contient les propriétés suivantes :  
+ La page de propriétés **Références web** contient les propriétés suivantes :  
   
  **Fichier de sortie**  
- Le nom du fichier pour contenir la classe proxy du service Web XML.  
+ Nom du fichier qui doit contenir la classe proxy de service web XML.  
   
  **Suppression de la bannière de démarrage**  
- N’affiche pas la bannière de l’outil Web Services Description Language (Wsdl.exe).  
+ N’affiche pas la bannière pour l’outil Web Services Description Language (Wsdl.exe).  
   
  **Espace de noms**  
  Spécifie le nom du proxy web généré.  
   
  **Références supplémentaires**  
- Spécifie les DLL supplémentaires référencées par la DLL de proxy.  
+ Spécifie les DLL supplémentaires référencées par la DLL proxy.  
   
- Pour plus d’informations sur l’accès à la **une référence Web** page de propriétés, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+ Pour plus d’informations sur l’accès à la page de propriétés **Références web**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés](../ide/property-pages-visual-cpp.md)

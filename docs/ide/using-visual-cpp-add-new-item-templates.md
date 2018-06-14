@@ -1,5 +1,5 @@
 ---
-title: À l’aide de Visual C++ modèles Ajouter un nouvel élément | Documents Microsoft
+title: Utilisation de modèles Ajouter un nouvel élément de Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332814"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilisation de modèles Ajouter un nouvel élément de Visual C++
-Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visual C++ à l’aide de la **ajouter un nouvel élément** commande. Lorsque vous utilisez la **ajouter un nouvel élément** commande, le `Add New Item` boîte de dialogue s’affiche avec une liste des modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.  
+Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visual C++ à l’aide de la commande **Ajouter un nouvel élément**. Quand vous utilisez la commande **Ajouter un nouvel élément**, la boîte de dialogue `Add New Item` s’affiche avec une liste de modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.  
   
- Le tableau suivant est une liste alphabétique des modèles Ajouter un nouvel élément de Visual C++.  
+ Le tableau suivant présente la liste des modèles Ajouter un nouvel élément de Visual C++.  
   
 |Modèle|Description|  
 |--------------|-----------------|  
@@ -34,33 +35,33 @@ Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visua
 |Fichier bitmap (.bmp)|Crée un fichier bitmap Win32.|  
 |Fichier C++ (.cpp)|Crée un fichier source C++.|  
 |Diagramme de classes (.cd)|Crée un diagramme de classes vide.|  
-|Ensemble de règles analyse de code (.ruleset)|Crée un fichier de paramètres de configuration de l’analyse du Code.|  
+|Ensemble de règles d’analyse du code (.ruleset)|Crée un fichier de paramètres pour la configuration de l’analyse du code.|  
 |Fichier de configuration (app.config)|Crée un fichier de configuration vide.|  
-|Classe de composant|Ajoute une classe de composant à l’aide des fonctionnalités CLR.|  
+|Classe de composant|Ajoute une classe de composant avec des fonctionnalités CLR.|  
 |Fichier curseur (.cur)|Crée un fichier curseur Win32.|  
-|Fichier de découverte statique (.disco)|Crée un fichier de découverte statique, qui est un document XML qui contient des liens vers d’autres ressources qui décrivent le service Web XML, permet la découverte par programmation d’un service Web XML.|  
-|Jeu de frames (.htm)|Ajoute un fichier HTML hébergeant plusieurs pages HTML.|  
+|Fichier de découverte statique (.disco)|Crée un fichier de découverte statique qui est un document XML contenant des liens vers d’autres ressources qui décrivent le service web XML, ce qui permet la découverte par programmation d’un service web XML.|  
+|Jeu de frames (.htm)|Ajoute un fichier HTML qui héberge plusieurs pages HTML.|  
 |Fichier d’en-tête (.h)|Crée un fichier d’en-tête C++.|  
-|De Page HTML (.htm)|Crée un fichier HTML vide.|  
+|Page HTML (.htm)|Crée un fichier HTML vide.|  
 |Fichier icône (.ico)|Crée un fichier icône Win32.|  
-|Classe Installer|Ajoute une classe qui hérite de la [classe Installer](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) à l’aide des fonctionnalités CLR.|  
-|Fichier MIDL (.idl)|Crée un fichier de langage de définition d’Interface.|  
+|Classe Installer|Ajoute une classe qui hérite de la [classe Installer](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) avec des fonctionnalités CLR.|  
+|Fichier MIDL (.idl)|Crée un fichier IDL (Interface Definition Language).|  
 |Fichier de définition de module (.def)|Crée un fichier de définition d’exportation de DLL.|  
-|Feuille de propriétés (.props)|Crée un fichier de feuille de propriétés de Visual C++.|  
+|Feuille de propriétés (.props)|Crée un fichier de feuille de propriétés Visual C++.|  
 |Script d’inscription (.rgs)|Crée un fichier de script d’inscription ATL.|  
 |Rapport (.rdlc)|Crée un fichier de rapport.|  
 |Fichier de ressources (.rc)|Crée un fichier de ressources Win32.|  
-|Fichier de modèle de ressource (.rct)|Crée un fichier de modèle de ressource.|  
-|Ruban (.mfcribbon-ms)|Crée un fichier de ruban.|  
-|Fichier de réponse de serveur (.srf)|Crée un fichier de réponse de serveur qui est utilisé avec ATL Server.|  
-|Fichier de Script SQL (.sql)|Crée un fichier de script SQL. **Remarque :** ce modèle n’est pas une fonctionnalité d’édition professionnelle.|  
+|Fichier modèle de ressource (.rct)|Crée un fichier modèle de ressource.|  
+|Ruban (.mfcribbon-ms)|Crée un fichier du ruban.|  
+|Fichier réponse de serveur (.srf)|Crée un fichier réponse de serveur utilisé avec ATL Server.|  
+|Fichier de script SQL (.sql)|Crée un fichier de script SQL. **Remarque :** Ce modèle n’est pas une fonctionnalité de la version Professional Edition.|  
 |Feuille de style (.css)|Ajoute une feuille de style en cascade utilisée pour les définitions complexes de style HTML.|  
 |Fichier texte (.txt)|Ajoute un fichier texte vide.|  
-|Contrôle utilisateur|Ajoute un contrôle utilisateur à l’aide des fonctionnalités CLR.|  
-|Windows Form|Ajoute un Windows Form à l’aide des fonctionnalités CLR.|  
+|Contrôle utilisateur|Ajoute un contrôle utilisateur avec des fonctionnalités CLR.|  
+|Windows Form|Ajoute un Windows Form avec des fonctionnalités CLR.|  
 |Fichier XML (.xml)|Ajoute un fichier XML vide.|  
-|Fichier de schéma XML (.xsd)|Crée un fichier qui est utilisé pour définir un schéma pour les documents XML.|  
-|Fichier XSLT (.xslt)|Crée un fichier utilisé pour transformer les documents XML.|  
+|Fichier de schéma XML (.xsd)|Crée un fichier utilisé pour définir un schéma pour des documents XML.|  
+|Fichier XSLT (.xslt)|Crée un fichier utilisé pour transformer des documents XML.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)

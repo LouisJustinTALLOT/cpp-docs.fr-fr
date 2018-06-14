@@ -1,5 +1,5 @@
 ---
-title: '&lt;valeur&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;value&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325394"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;valeur&gt; (Visual C++)
-Le \<valeur > balise vous permet de décrire une propriété et des méthodes d’accesseur de propriété. Remarquez que lorsque vous ajoutez une propriété avec un Assistant code dans l’environnement de développement intégré Visual Studio, un [ \<Résumé >](../ide/summary-visual-cpp.md) balise pour la nouvelle propriété. Vous devez ensuite ajouter manuellement une balise \<value> pour décrire la valeur représentée par la propriété.  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+La balise \<value> vous permet de décrire une propriété et des méthodes d’accesseur de propriété. Notez que, quand vous ajoutez une propriété avec un Assistant Code dans l’environnement de développement intégré (IDE) de Visual Studio, cela ajoute une balise [\<summary>](../ide/summary-visual-cpp.md) pour la nouvelle propriété. Vous devez ensuite ajouter manuellement une balise \<value> pour décrire la valeur représentée par la propriété.  
   
 ## <a name="syntax"></a>Syntaxe  
   

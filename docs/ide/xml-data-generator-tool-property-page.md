@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés d’outil de générateur de données XML | Documents Microsoft
+title: XML Data Generator Tool, page de propriétés | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329941"
 ---
-# <a name="xml-data-generator-tool-property-page"></a>Outil XML Data Generator Tool (page de propriétés)
-Le **outil XML Data Generator Tool** page de propriétés devient disponible lorsque vous ajoutez un jeu de données à un projet.  
+# <a name="xml-data-generator-tool-property-page"></a>XML Data Generator Tool, page de propriétés
+La page de propriétés **XML Data Generator Tool** devient accessible quand vous ajoutez un groupe de données à un projet.  
   
- Le **outil XML Data Generator Tool** page de propriétés contient les propriétés suivantes :  
+ La page de propriétés **XML Data Generator Tool** contient les propriétés suivantes :  
   
  **Fichier de sortie**  
- Spécifie le nom de fichier de sortie à utiliser.  
+ Spécifie le nom du fichier de sortie à utiliser.  
   
  **Suppression de la bannière de démarrage**  
- Supprime l’affichage des messages d’informations et de la bannière de démarrage.  
+ Supprime l’affichage de la bannière de démarrage et des messages d’information.  
   
- **Langage Proxy généré**  
- Détermine s’il faut ou non d’émettre du code managé.  
+ **Langage proxy généré**   
+ Détermine s’il convient ou non d’émettre du code managé.  
   
- Pour plus d’informations sur l’accès à la **outil XML Data Generator Tool** page de propriétés, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
+ Pour plus d’informations sur l’accès à la page de propriétés **XML Data Generator Tool**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
- Pour plus d’informations sur la façon d’accéder par programme aux membres de cet objet, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+ Pour plus d’informations sur l’accès par programmation aux membres de cet objet, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés](../ide/property-pages-visual-cpp.md)

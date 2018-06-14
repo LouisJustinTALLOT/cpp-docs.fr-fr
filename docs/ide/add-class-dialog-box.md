@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue classe ajouter | Documents Microsoft
+title: Ajouter une classe, boîte de dialogue | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339772"
 ---
 # <a name="add-class-dialog-box"></a>Ajouter une classe, boîte de dialogue
 La boîte de dialogue **Ajouter une classe** contient des modèles qui vous permettent de :  
   
--   Ouvrir un Assistant de code correspondant, s’il est disponible. Pour plus d’informations, consultez [Ajout de fonctionnalités avec les Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md).  
+-   Ouvrir un Assistant de code correspondant, s’il est disponible. Pour plus d’informations, consultez [Ajout de fonctionnalités avec des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
  \- ou -  
   
 -   Créer automatiquement votre classe en ajoutant les fichiers appropriés et le code source à votre projet.  
   
- Vous pouvez accéder à la **ajouter une classe** boîte de dialogue à partir de la **projet** menu, **l’Explorateur de solutions**, ou [affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Vous pouvez accéder à la boîte de dialogue **Ajouter une classe** à partir du menu **Projet**, de **l’Explorateur de solutions** ou de l’[Affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
 >  Quand vous essayez d’ajouter une classe qui ne convient pas à votre projet actuel, vous recevez un message d’erreur. Cliquez sur **OK** pour revenir à la boîte de dialogue **Ajouter une classe** .  
@@ -82,7 +83,7 @@ La boîte de dialogue **Ajouter une classe** contient des modèles qui vous perm
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d’une Variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
- [Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Remplacement d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigation dans la Structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)

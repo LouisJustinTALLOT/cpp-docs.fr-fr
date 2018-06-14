@@ -1,5 +1,5 @@
 ---
-title: '&lt;inclure&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;include&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330425"
 ---
-# <a name="ltincludegt-visual-c"></a>&lt;inclure&gt; (Visual C++)
-La balise \<include> vous permet de faire référence à des commentaires dans un autre fichier qui décrivent les types et les membres dans votre code source. Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.  Par exemple, vous pouvez utiliser \<inclure > pour insérer des commentaires standard « standard » qui sont utilisés au sein de l’entreprise.  
+# <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
+La balise \<include> vous permet de faire référence à des commentaires dans un autre fichier qui décrivent les types et les membres dans votre code source. Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.  Par exemple, vous pouvez utiliser \<include> pour insérer des commentaires « d’éléments réutilisables » standard qui sont utilisés au sein de votre équipe ou société.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +36,10 @@ La balise \<include> vous permet de faire référence à des commentaires dans u
   
 #### <a name="parameters"></a>Paramètres  
  `filename`  
- Le nom du fichier contenant la documentation. Le nom de fichier peut être qualifié avec un chemin.  Mettez le nom entre guillemets simples ou doubles.  Le compilateur émet un avertissement s'il ne trouve pas `filename`.  
+ Nom du fichier contenant la documentation. Le nom de fichier peut être qualifié avec un chemin.  Mettez le nom entre guillemets simples ou doubles.  Le compilateur émet un avertissement s'il ne trouve pas `filename`.  
   
  `tagpath`  
- Une expression XPath valide qui sélectionne le jeu de nœuds souhaité contenu dans le fichier.  
+ Expression XPath valide qui sélectionne la collection de nœuds souhaitée contenue dans le fichier.  
   
  `name`  
  Spécificateur de nom contenu dans la balise qui précède les commentaires ; `name` possède un `id`.  
@@ -47,12 +48,12 @@ La balise \<include> vous permet de faire référence à des commentaires dans u
  ID de la balise qui précède les commentaires.  Mettez le nom entre guillemets simples ou doubles.  
   
 ## <a name="remarks"></a>Notes  
- La balise \<include> utilise la syntaxe XML XPath. Reportez-vous à la documentation de XPath pour les méthodes de personnalisation à l’aide de \<inclure >.  
+ La balise \<include> utilise la syntaxe XML XPath. Reportez-vous à la documentation XPath pour savoir comment personnaliser votre utilisation de la balise \<include>.  
   
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple comprend plusieurs fichiers. Le premier fichier, qui utilise \<inclure >, contient les commentaires de documentation suivants :  
+ Cet exemple comprend plusieurs fichiers. Le premier fichier, qui utilise \<include>, contient les commentaires de documentation suivants :  
   
 ```  
 // xml_include_tag.cpp  

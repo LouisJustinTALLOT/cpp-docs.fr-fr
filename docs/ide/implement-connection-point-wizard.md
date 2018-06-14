@@ -1,5 +1,5 @@
 ---
-title: Implémenter l’Assistant Point de connexion | Documents Microsoft
+title: Assistant Implémentation d’un point de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323756"
 ---
 # <a name="implement-connection-point-wizard"></a>Assistant Implémentation d'un point de connexion
-Cet Assistant implémente un point de connexion pour un objet COM. Un objet connectable (c'est-à-dire une source) peut exposer un point de connexion pour ses propres interfaces ou pour toute interface sortante. Visual C++ et Windows fournissent tous deux bibliothèques de types qui ont des interfaces sortantes. Chaque interface sortante peut être implémentée par un client sur un objet (autrement dit, un récepteur).  
+Cet Assistant implémente un point de connexion pour un objet COM. Un objet connectable (c’est-à-dire une source) peut exposer un point de connexion pour son interface personnelle ou pour n’importe quelle interface sortante. Visual C++ et Windows proposent des bibliothèques de types avec des interfaces sortantes. Chaque interface sortante peut être implémentée par un client sur un objet (autrement dit, un récepteur).  
   
- Pour plus d’informations, consultez [Points de connexion ATL](../atl/atl-connection-points.md).  
+ Pour plus d’informations, consultez [ATL, points de connexion](../atl/atl-connection-points.md).  
   
  **Bibliothèques de types disponibles**  
- Affiche les bibliothèques de types disponibles contenant les définitions d’interface pour laquelle vous pouvez implémenter des points de connexion. Cliquez sur le bouton de sélection pour rechercher un fichier contenant la bibliothèque de types à utiliser.  
+ Affiche les bibliothèques de types disponibles contenant les définitions d’interface pour lesquelles vous pouvez implémenter des points de connexion. Cliquez sur le bouton de sélection pour rechercher un fichier contenant la bibliothèque de types à utiliser.  
   
  **Emplacement**  
- Affiche l’emplacement de la bibliothèque de types actuellement sélectionnée dans le **bibliothèques de types disponibles** liste.  
+ Affiche l’emplacement de la bibliothèque de types actuellement sélectionnée dans la liste **Bibliothèques de types disponibles**.  
   
  **Interfaces**  
- Affiche les interfaces dont les définitions sont contenues dans la bibliothèque de types actuellement sélectionnée dans le **bibliothèques de types disponibles** boîte.  
+ Affiche les interfaces dont les définitions sont contenues dans la bibliothèque de types actuellement sélectionnée dans la zone **Bibliothèques de types disponibles**.  
   
 |Bouton de transfert|Description|  
 |---------------------|-----------------|  
-|**>**|Ajoute à la **implémenter les points de connexion** liste le nom d’interface actuellement sélectionné dans le **Interfaces** liste.|  
-|**>>**|Ajoute à la **implémenter les points de connexion** répertorier tous les noms d’interface disponibles dans le **Interfaces** liste.|  
-|**<**|Supprime le nom d’interface actuellement sélectionné dans le **implémenter les points de connexion** liste.|  
-|**<<**|Supprime tous les noms de l’interface du **implémenter les points de connexion** liste.|  
+|**>**|Ajoute à la liste **Implémenter les points de connexion** le nom d’interface actuellement sélectionné dans la liste **Interfaces**.|  
+|**>>**|Ajoute à la liste **Implémenter les points de connexion** les noms de toutes les interfaces disponibles dans la liste **Interfaces**.|  
+|**<**|Supprime le nom d’interface actuellement sélectionné dans la liste **Implémenter les points de connexion**.|  
+|**<<**|Supprime les noms de toutes les interfaces actuellement affichés dans la liste **Implémenter les points de connexion**.|  
   
  **Implémenter les points de connexion**  
- Affiche les noms des interfaces pour lesquelles vous implémentez des points de connexion lorsque vous cliquez sur **Terminer**.  
+ Affiche les noms des interfaces pour lesquelles vous implémentez des points de connexion quand vous cliquez sur **Terminer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémentation d’un Point de connexion](../ide/implementing-a-connection-point-visual-cpp.md)
+ [Implémentation d’un point de connexion](../ide/implementing-a-connection-point-visual-cpp.md)

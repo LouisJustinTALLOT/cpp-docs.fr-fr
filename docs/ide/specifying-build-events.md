@@ -1,5 +1,5 @@
 ---
-title: Spécification d’événements de Build | Documents Microsoft
+title: Spécification d’événements de build | Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -27,42 +27,43 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334962"
 ---
 # <a name="specifying-build-events"></a>Spécification d’événements de build
 
-Vous pouvez utiliser des événements de build pour spécifier des commandes qui s’exécutent avant le démarrage, avant que le processus de liaison, ou après la génération.
+Vous pouvez utiliser des événements de build pour spécifier des commandes qui s’exécutent avant le début de la génération, avant le processus d’édition des liens ou après la génération.
 
-Les événements de build sont exécutés uniquement si la build atteint ces étapes du processus de génération. Si une erreur se produit dans la build, la *post-build* événement ne survient pas ; si l’erreur se produit avant la phase de liaison, ni le *avant lien* ni le *post-build* événement se produit. En outre, si aucun fichier ne doit être lié, le *avant lien* événement ne se produit pas. Le *avant lien* événement n’est pas également disponible dans les projets qui ne contiennent pas d’étape de liaison.
+Les événements de build sont exécutés uniquement si la build atteint ces étapes du processus de génération. Si une erreur survient pendant la génération, l’événement *post-build* ne se produit pas ; si l’erreur se produit avant la phase de liaison, ni l’événement *avant l’édition des liens* ni l’événement *post-build* ne se produisent. De plus, si aucun fichier ne doit être lié, l’événement *avant l’édition des liens* ne se produit pas. L’événement *avant l’édition des liens* n’est pas non plus disponible dans les projets qui ne contiennent pas d’étape de liaison.
 
-Si aucun fichier ne doit être généré, aucun événement de build se produit.
+Si aucun fichier ne doit être généré, aucun événement de build ne se produit.
 
-Pour obtenir des informations générales sur les événements de build, consultez [présentation des étapes de génération personnalisée et des événements de Build](../ide/understanding-custom-build-steps-and-build-events.md).
+Pour obtenir des informations générales sur les événements de build, consultez [Présentation des étapes de build personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md).
 
 ### <a name="to-specify-a-build-event"></a>Pour spécifier un événement de build
 
 1. Dans l’**Explorateur de solutions**, sélectionnez le projet pour lequel vous voulez spécifier l’événement de build.
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
 
-1. Dans le **des événements de Build** dossier, sélectionnez une page de propriétés des événements de build.
+1. Dans le dossier **Événements de build**, sélectionnez une page de propriétés d’événement de build.
 
-1. Spécifiez les propriétés associées à l’événement de build :
+1. Spécifiez les propriétés associées à l’événement de build :
 
-   - Dans **ligne de commande**, spécifiez une commande comme si vous le feriez à l’invite de commandes. Spécifiez une commande valide ou un fichier de commandes, et les entrées requises ou les fichiers de sortie. Spécifiez le **appeler** commande avant le nom d’un fichier de commandes afin de garantir que toutes les commandes suivantes sont exécutées.
+   - Dans **Ligne de commande**, spécifiez une commande comme vous le feriez à une invite de commandes. Spécifiez une commande ou un fichier de commandes valide, ainsi que les fichiers d’entrée ou de sortie requis. Spécifiez la commande batch **call** avant le nom d’un fichier de commandes pour garantir l’exécution de toutes les commandes suivantes.
 
-      Plusieurs fichiers d’entrée et de sortie peuvent être spécifiés symboliquement avec les macros de MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers ou les noms des groupes de fichiers, consultez [Macros commun pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md).
+      Il est possible de spécifier plusieurs fichiers d’entrée et de sortie symboliquement à l’aide de macros MSBuild. Pour plus d’informations sur la spécification de l’emplacement de fichiers ou de noms de jeux de fichiers, consultez [Macros courantes pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Étant donné que le caractère « % » est réservé à MSBuild, si vous spécifiez une variable d’environnement remplacez chaque **%** avec un caractère d’échappement le **% 25** séquence d’échappement hexadécimale. Par exemple, remplacez **%Windir%** avec **25WINDIR % 25**. MSBuild remplace chaque **% 25** séquence avec le **%** caractères avant d’accéder à la variable d’environnement.
+      Dans la mesure où le caractère « % » est réservé à MSBuild, quand vous spécifiez une variable d’environnement, il convient de remplacer chaque caractère d’échappement **%** par la séquence d’échappement hexadécimale **%25**. Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
 
-   - Dans **Description**, tapez une description pour cet événement. La description est imprimée sur le **sortie** fenêtre lorsque cet événement se produit.
+   - Dans **Description**, tapez une description pour cet événement. La description s’affiche dans la fenêtre **Sortie** quand cet événement se produit.
 
-   - Dans **exclu de la génération**, spécifiez **Oui** si vous ne souhaitez pas que l’événement à exécuter.
+   - Dans **Exclu de la génération**, spécifiez **Oui** si vous ne voulez pas que l’événement soit exécuté.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation des étapes de génération personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)  
+[Présentation des étapes de build personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)  
 [Macros courantes pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md)  
 [Dépannage des personnalisations de génération](../ide/troubleshooting-build-customizations.md)  

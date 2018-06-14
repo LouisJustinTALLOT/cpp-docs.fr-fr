@@ -1,5 +1,5 @@
 ---
-title: . Le traitement du fichier XML | Documents Microsoft
+title: Traitement de fichier .Xml | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340513"
 ---
 # <a name="xml-file-processing"></a>Traitement de fichier.Xml
-Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. Pour plus d’informations, consultez [recommandé de commentaires de Documentation balises](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier .xml peuvent utiliser la chaîne d’ID pour identifier le .NET Framework métadonnées ou la réflexion élément correspondant à laquelle s’applique la documentation.  
+Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. Pour plus d’informations, consultez [Balises recommandées pour les commentaires de documentation](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier .xml peuvent utiliser la chaîne d’ID pour identifier l’élément de métadonnées/réflexion .NET Framework correspondant auquel s’applique la documentation.  
   
  Le fichier .xml n’est pas une représentation hiérarchique de votre code, il s’agit d’une liste plate avec un ID généré pour chaque élément.  
   
  Le compilateur respecte les règles suivantes quand il génère les chaînes d’ID :  
   
--   Aucun espace blanc n’est placé dans la chaîne.  
+-   La chaîne ne contient aucun espace blanc.  
   
--   La première partie de la chaîne d’ID identifie le type de membre identifié, avec un caractère unique suivi par un signe deux-points. Les types de membres suivants sont utilisés :  
+-   La première partie de la chaîne d’ID identifie le type du membre, avec un caractère unique suivi de deux-points. Les types de membres suivants sont utilisés :  
   
     |Caractère|Description|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> Vous ne pouvez pas ajouter des commentaires de documentation à un espace de noms, les références cref à un espace de noms sont possibles.|  
+    |N|namespace<br /><br /> Vous ne pouvez pas ajouter de commentaires de documentation à un espace de noms, mais des références cref à un espace de noms sont possibles.|  
     |T|type : classe, interface, struct, enum, délégué|  
     |D|typedef|  
     |F|champ|  
     |P|propriété (notamment des indexeurs ou autres propriétés indexées)|  
     |M|méthode (notamment des méthodes spéciales telles que des constructeurs, des opérateurs, etc.)|  
     |E|événement|  
-    |!|chaîne d’erreur<br /><br /> Le reste de la chaîne fournit des informations sur l’erreur. Le compilateur Visual C++ génère des informations d’erreur pour les liens qui ne peut pas être résolus.|  
+    |!|chaîne d’erreur<br /><br /> Le reste de la chaîne fournit des informations sur l’erreur. Le compilateur Visual C++ génère des informations d’erreur pour les liens qui ne peuvent pas être résolus.|  
   
--   La deuxième partie de la chaîne est le nom qualifié complet de l’élément, en commençant à la racine de l’espace de noms. Le nom de l’élément, sur son type ou les types et espace de noms englobant sont séparés par des points. Si le nom de l’élément lui-même comporte des points, ceux-ci sont remplacés par un signe dièse (« # »). Il est supposé qu’aucun élément n’a un signe dièse directement dans son nom. Par exemple, le nom qualifié complet de le `String` constructeur serait « # ctor ».  
+-   La deuxième partie de la chaîne est le nom qualifié complet de l’élément, en commençant à la racine de l’espace de noms. Le nom de l’élément, son ou ses types englobants et l’espace de noms sont séparés par des points. Si le nom de l’élément lui-même comporte des points, ceux-ci sont remplacés par un signe dièse (« # »). On suppose qu’aucun élément n’a de signe dièse directement dans son nom. Par exemple, le nom complet du constructeur `String` est « System.String.#ctor ».  
   
 -   Pour les propriétés et méthodes, si la méthode a des arguments, la liste d’arguments entre parenthèses suit. S’il n’y a pas d’arguments, aucune parenthèse n’est présente. Les arguments sont séparés par des virgules. L’encodage de chaque argument correspond directement à son encodage dans une signature .NET Framework :  
   
     -   Types de base. Les types réguliers (ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE) sont représentés en tant que nom qualifié complet du type.  
   
-    -   Les types intrinsèques (par exemple ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF et ELEMENT_TYPE_VOID) sont représentés en tant que le nom qualifié complet du type complet correspondant, par exemple, **System.Int32** ou **System.TypedReference**.  
+    -   Les types intrinsèques (par exemple ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF et ELEMENT_TYPE_VOID) sont représentés comme le nom complet du type complet correspondant, par exemple, **System.Int32** ou **System.TypedReference**.  
   
     -   ELEMENT_TYPE_PTR est représenté par un « * » après le type modifié.  
   
@@ -76,7 +77,7 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
   
     -   ELEMENT_TYPE_SENTINEL  
   
--   Pour seulement les opérateurs de conversion, la valeur de retour de la méthode est encodée comme un ' ~' suivi du type de retour, comme auparavant encodé.  
+-   Pour les opérateurs de conversion uniquement, la valeur de retour de la méthode est encodée sous la forme « ~ », suivi du type de retour, conformément à l’encodage ci-dessus.  
   
 -   Pour les types génériques, le nom du type est suivi d’un accent grave, puis d’un chiffre qui indique le nombre de paramètres de type générique.  Par exemple :  
   
@@ -84,12 +85,12 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
     <member name="T:MyClass`2">  
     ```  
   
-     Pour un type qui est défini en tant que `public class MyClass<T, U>`.  
+     pour un type défini comme `public class MyClass<T, U>`.  
   
-     Pour les méthodes acceptant des types génériques comme paramètres, les paramètres de type générique sont spécifiés sous forme de nombres précédés (par exemple \`0, \`1).  Chaque chiffre représente une notation de tableau de base zéro pour les paramètres génériques du type.  
+     Pour les méthodes qui prennent des types génériques comme paramètres, les paramètres de type générique sont spécifiés sous forme de chiffres précédés d’accents graves (par exemple \`0, \`1).  Chaque chiffre représente une notation de tableau de base zéro pour les paramètres génériques du type.  
   
 ## <a name="example"></a>Exemple  
- Les exemples suivants illustrent la façon dont les chaînes d’identification pour une classe et ses membres sont générées.  
+ Les exemples suivants montrent comment les chaînes d’ID pour une classe et ses membres sont générées.  
   
 ```  
 // xml_id_strings.cpp  

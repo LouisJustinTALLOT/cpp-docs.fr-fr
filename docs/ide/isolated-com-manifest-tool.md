@@ -1,5 +1,5 @@
 ---
-title: Outil manifeste isolé des propriétés de COM (Visual C++) | Documents Microsoft
+title: Propriétés COM isolé de l’outil Manifeste (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330179"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolé COM, outil manifeste, propriétés de Configuration, &lt;nom_projet&gt; boîte de dialogue Pages de propriétés
-Utilisez cette boîte de dialogue pour spécifier **COM isolé** des options pour [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de &lt;NomProjet&gt;
+Utilisez cette boîte de dialogue pour spécifier des options **COM isolé** pour [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés. Développez le **outil manifeste** nœud sous **propriétés communes**, puis sélectionnez **COM isolé**.  
+ Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés. Développez le nœud **Outil Manifeste** sous **Propriétés communes**, puis sélectionnez **COM isolé**.  
   
 ## <a name="task-list"></a>Liste des tâches  
   
@@ -34,19 +35,19 @@ Utilisez cette boîte de dialogue pour spécifier **COM isolé** des options pou
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Fichier bibliothèque de types**  
- Utilise l’option /tlb pour spécifier le nom de fichier de bibliothèque de types (fichier .tlb) que l’outil manifeste utilisera pour générer le fichier manifest.  
+ Utilise l’option /tlb pour spécifier le nom du fichier bibliothèque de types (fichier .tlb) que l’outil Manifeste utilise pour générer le fichier manifeste.  
   
- **Fichier de Script d’inscription**  
- Utilise l’option /rgs pour spécifier le nom du fichier de script d’inscription (fichier .rgs) que l’outil manifeste utilisera pour générer le fichier manifest.  
+ **Fichier de script d’inscription**  
+ Utilise l’option /rgs pour spécifier le nom du fichier de script d’inscription (fichier .rgs) que l’outil Manifeste utilise pour générer le fichier manifeste.  
   
- **Nom de fichier de composant**  
- Utilise l’option /dll pour spécifier le nom de la ressource qui génère l’outil manifeste. Vous devez entrer une valeur pour cette propriété lorsque les valeurs pour une **fichier bibliothèque de types** ou **fichier de Script de** sont spécifiés.  
+ **Nom de fichier du composant**  
+ Utilise l’option /dll pour spécifier le nom de la ressource que l’outil Manifeste génère. Vous devez entrer une valeur pour cette propriété quand des valeurs sont spécifiées pour **Fichier bibliothèque de types** ou **Fichier de script d’inscription**.  
   
  **Fichier de remplacement**  
- Utilise l’option /replacements pour spécifier le chemin d’accès complet au fichier qui contient des valeurs pour les chaînes dans le fichier .rgs.  
+ Utilise l’option /replacements pour spécifier le chemin complet au fichier qui contient des valeurs pour les chaînes remplaçables dans le fichier .rgs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications isolées](http://msdn.microsoft.com/library/aa375190)   
- [Manifeste d’Application ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Pages de propriétés outil manifeste](../ide/manifest-tool-property-pages.md)   
+ [Manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
+ [Pages de propriétés de l’outil Manifeste](../ide/manifest-tool-property-pages.md)   
  [Utilisation des propriétés de projet](../ide/working-with-project-properties.md)   

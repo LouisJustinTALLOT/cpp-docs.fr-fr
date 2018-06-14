@@ -1,5 +1,5 @@
 ---
-title: Fichiers de projet | Documents Microsoft
+title: Fichiers projet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327227"
 ---
 # <a name="project-files"></a>Fichiers projet
-Un fichier de projet Visual C++ est un fichier XML qui porte l’extension de nom de fichier .vcxproj et qui contient les informations requises pour générer un projet Visual C++.  
+Un fichier projet Visual C++ est un fichier XML dont l’extension de nom de fichier est .vcxproj et qui contient des informations nécessaires à la génération d’un projet Visual C++.  
   
 ## <a name="example"></a>Exemple  
- L’exemple de fichier .vcxproj suivant a été produit en spécifiant un **Application Console Win32** dans les **nouveau projet** boîte de dialogue. Pour traiter un projet fichier, utilisez l’outil msbuild.exe à la ligne de commande ou la **générer** dans le [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Cet exemple ne peut pas être traité, car les fichiers d’en-tête source requis ne sont pas fournies.) Pour plus d’informations sur les éléments XML dans un fichier projet, consultez [référence du schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **Application console Win32** dans la boîte de dialogue **Nouveau projet**. Pour traiter un fichier projet, utilisez l’outil msbuild.exe au niveau de la ligne de commande ou la commande **Générer** dans l’[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Cet exemple ne peut pas être traité, car les fichiers sources et les fichiers d’en-tête requis n’ont pas été fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Informations de référence sur le schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

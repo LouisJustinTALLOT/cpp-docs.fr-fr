@@ -1,5 +1,5 @@
 ---
-title: '&lt;autorisation&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;permission&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324081"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;autorisation&gt; (Visual C++)
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
 La balise \<permission> vous permet de documenter l’accès d’un membre. <xref:System.Security.PermissionSet> vous permet de spécifier l’accès à un membre.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -47,7 +48,7 @@ La balise \<permission> vous permet de documenter l’accès d’un membre. <xre
 ## <a name="remarks"></a>Notes  
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
- Le compilateur Visual C++ tente de résoudre les références cref en une seule passe via les commentaires de la documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Consultez [ \<seealso >](../ide/seealso-visual-cpp.md) pour plus d’informations.  
+ Le compilateur Visual C++ tente de résoudre les références cref en une seule passe via les commentaires de la documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Pour plus d’informations, consultez [\<seealso>](../ide/seealso-visual-cpp.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,5 +1,5 @@
 ---
-title: Nouveau projet à partir de Code existant - fichiers de code Source (Visual C++) | Documents Microsoft
+title: Nouveau projet à partir du code existant, fichiers sources (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338693"
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Spécifier l'emplacement du projet et les fichiers sources, Assistant Créer un projet à partir de fichiers de code existants
-Utilisez cette page de l’Assistant créer un projet à partir de fichiers de Code existants pour spécifier :  
+Utilisez cette page de l’Assistant Créer un projet à partir de fichiers de code existants pour spécifier :  
   
--   Le chemin d’accès du répertoire du nouveau projet  
+-   le chemin du répertoire du nouveau projet  
   
--   Les répertoires pour rechercher des fichiers de code source existant  
+-   les répertoires dans lesquels rechercher les fichiers sources existants  
   
--   Les types de fichiers que l’Assistant va importer dans le nouveau projet  
+-   les types de fichiers que l’Assistant importera dans le nouveau projet  
   
 ## <a name="task-list"></a>Liste des tâches  
  [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Emplacement du fichier projet**  
- Spécifie le chemin d’accès du répertoire du nouveau projet. Cet emplacement est où l’Assistant sera déposer tous les fichiers (et dans les sous-répertoires) du nouveau projet.  
+ Spécifie le chemin du répertoire du nouveau projet. Cet emplacement correspond à l’endroit où l’Assistant déposera tous les fichiers (et les sous-répertoires) du nouveau projet.  
   
  **Parcourir**  
- Affiche la **emplacement du fichier de projet** boîte de dialogue qui vous permet de spécifier le répertoire qui contiendra le nouveau projet. Ce contrôle vous permet de naviguer vers le dossier de votre choix.  
+ Affiche la boîte de dialogue **Emplacement du fichier projet** dans laquelle vous spécifiez le répertoire qui contiendra le nouveau projet. Ce contrôle vous permet de naviguer vers le dossier de votre choix.  
   
  **Nom du projet**  
- Spécifie le nom du nouveau projet. Fichiers de projet, qui ont les extensions de fichier .vcxproj adoptent ce nom. Fichiers de code existants conserve son nom d’origine.  
+ Spécifie le nom du nouveau projet. Les fichiers projet qui ont des extensions de fichier comme .vcxproj adopteront ce nom. Les fichiers de code existants garderont leur nom d’origine.  
   
- **Ajouter des fichiers au projet à partir de ces dossiers.**  
- Lorsqu’elle est activée, définit l’Assistant pour copier des fichiers de code existants à partir de leurs répertoires d’origine (qui sont spécifiés dans la zone de liste sous ce contrôle) dans le nouveau projet.  
+ **Ajouter les fichiers au projet à partir de ces dossiers**  
+ Quand cette option est activée, l’Assistant copie les fichiers de code existants depuis leur répertoire d’origine (qui est spécifié dans la zone de liste sous ce contrôle) dans le nouveau projet.  
   
  **Ajouter les sous-dossiers**  
- Spécifie pour copier des fichiers de code à partir de tous les sous-répertoires du répertoire répertoriées **dossier** colonne dans le nouveau projet.  
+ Spécifie de copier les fichiers de code à partir de tous les sous-répertoires du répertoire figurant dans la colonne **Dossier** dans le nouveau projet.  
   
  **Dossier**  
- Indique le chemin d’accès au répertoire qui contient les fichiers de code existants à copier dans le nouveau projet. Cette colonne répertorie tous les répertoires que l’Assistant recherche les fichiers de code existants.  
+ Indique le chemin du répertoire qui contient les fichiers de code existants à copier dans le nouveau projet. Cette colonne répertorie tous les répertoires dans lesquels l’Assistant recherchera les fichiers de code existants.  
   
  **Ajouter**  
- Affiche la **ajouter des fichiers au projet à partir de ce dossier** boîte de dialogue qui vous permet de spécifier les répertoires dans laquelle l’Assistant recherche les fichiers de code existants.  
+ Affiche la boîte de dialogue **Ajouter les fichiers au projet à partir de ce dossier**, dans laquelle vous pouvez spécifier les répertoires dans lesquels l’Assistant recherchera les fichiers de code existants.  
   
  **Supprimer**  
- Supprime le chemin d’accès du répertoire est sélectionné dans la liste case à gauche de ce contrôle.  
+ Supprime le chemin du répertoire qui est sélectionné dans la zone de liste à gauche de ce contrôle.  
   
  **Types de fichiers à ajouter au projet**  
- Spécifie les types de fichiers que l’Assistant ajoutera dans le nouveau projet basé sur les extensions de fichier donné. Extensions de fichier sont précédées du caractère générique astérisque et sont délimitées dans la liste des extensions de fichier par un point-virgule.  
+ Spécifie les types de fichiers que l’Assistant ajoutera au nouveau projet en fonction des extensions de fichier données. Les extensions de fichier sont précédées du caractère générique astérisque, et sont délimitées dans la liste d’extensions de fichier par un point-virgule.  
   
  **Afficher tous les fichiers dans l’Explorateur de solutions**  
- Spécifie que tous les fichiers dans le nouveau projet pour être visible et affichée dans la fenêtre de l’Explorateur de solutions. Cette option est activée par défaut.
+ Indique que tous les fichiers du nouveau projet doivent être visibles et affichés dans la fenêtre Explorateur de solutions. Cette option est activée par défaut.

@@ -1,5 +1,5 @@
 ---
-title: '&lt;exemple&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;example&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321429"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;exemple&gt; (Visual C++)
-La balise \<example> vous permet de spécifier un exemple d’utilisation d’une méthode ou de tout autre membre de bibliothèque. En règle générale, cela implique également l’utilisation de la [ \<code >](../ide/code-visual-cpp.md) balise.  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+La balise \<example> vous permet de spécifier un exemple d’utilisation d’une méthode ou de tout autre membre de bibliothèque. En règle générale, cela implique également l’utilisation de la balise [\<code>](../ide/code-visual-cpp.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

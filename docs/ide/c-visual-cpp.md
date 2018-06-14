@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;c&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329256"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-Le \<c > balise indique que le texte d’une description doit être marqué en tant que code. Utilisez [\<code>](../ide/code-visual-cpp.md) pour indiquer plusieurs lignes comme étant du code.  
+La balise \<c> indique que le texte d’une description doit être marqué comme étant du code. Utilisez [\<code>](../ide/code-visual-cpp.md) pour indiquer plusieurs lignes comme étant du code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +35,7 @@ Le \<c > balise indique que le texte d’une description doit être marqué en t
   
 #### <a name="parameters"></a>Paramètres  
  `text`  
- Le texte que vous souhaitez indiquer en tant que code.  
+ Texte que vous souhaitez indiquer comme étant du code.  
   
 ## <a name="remarks"></a>Notes  
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  

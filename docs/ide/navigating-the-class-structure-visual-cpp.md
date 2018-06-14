@@ -1,5 +1,5 @@
 ---
-title: Navigation dans la Structure de classe (Visual C++) | Documents Microsoft
+title: Parcours de la structure de classe (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330231"
 ---
-# <a name="navigating-the-class-structure-visual-c"></a>Parcours de la structures de classes (Visual C++)
-Vous pouvez accéder à une structure de classe de projet, notamment les fonctions, l’héritage et à l’aide des interfaces [affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) ou [Explorateur d’objets](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
+# <a name="navigating-the-class-structure-visual-c"></a>Parcours de la structures de classe (Visual C++)
+Vous pouvez parcourir la structure de classe d’un projet, notamment les fonctions, les héritages et les interfaces, à l’aide de [l’affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) ou de [l’Explorateur d’objets](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
   
- Vous pouvez accéder à une déclaration de fonction en double-cliquant sur le nom de fonction dans l’affichage de classes. Vous pouvez accéder à une définition de classe, double-cliquez sur le nom de classe dans l’affichage de classes.  
+ Vous pouvez accéder à une déclaration de fonction en double-cliquant sur le nom de la fonction dans l’affichage de classes. Pour accéder à une définition de classe, double-cliquez sur le nom de la classe dans l’affichage de classes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)   
  [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d’une Variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
- [Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Substitution d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)

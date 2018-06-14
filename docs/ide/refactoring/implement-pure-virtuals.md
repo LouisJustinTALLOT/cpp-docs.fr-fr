@@ -1,5 +1,5 @@
 ---
-title: Implémenter les virtuels purs | Documents Microsoft
+title: Implémenter les virtuels purs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328024"
 ---
 # <a name="implement-pure-virtuals"></a>Implémenter les virtuels purs
-**Ce que :** vous permet de générer d’immédiatement le code requis pour implémenter toutes les méthodes virtuelles pures dans une classe. 
+**Quoi :** vous permet de générer immédiatement le code requis pour implémenter toutes les méthodes virtuelles pures dans une classe. 
 
-**Quand :** vous voulez hériter d’une classe avec des fonctions virtuelles pures.  
+**Quand :** vous voulez hériter d’une classe avec des fonctions virtuelles pures.  
 
-**Pourquoi :** vous pouvez implémenter manuellement les fonctions virtuelles pures tous les un par un, mais cette fonctionnalité génère automatiquement toutes les signatures de méthode.
+**Pourquoi :** vous pouvez implémenter manuellement toutes les fonctions virtuelles pures une par une, mais cette fonctionnalité génère automatiquement toutes les signatures de méthode.
 
 **Comment :**
 
-1. Placez votre curseur de texte ou de la souris sur la classe dans laquelle vous souhaitez implémenter les fonctions virtuelles pures de la classe de base.
+1. placez le curseur texte ou de la souris sur la classe dans laquelle vous souhaitez implémenter les fonctions virtuelles pures de la classe de base.
 
    ![Code mis en surbrillance](images/virtuals_highlight.png)
 
 1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
-     * Appuyez sur **Ctrl+.** pour déclencher le **Actions rapides et refactorisations** menu et sélectionnez **implémenter tous les virtuels purs pour la classe*ClassName*'** dans le menu contextuel, où  *ClassName* est le nom de la classe sélectionnée.
+     * Appuyez sur **Ctrl+.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Implémenter tous les virtuels purs pour la classe '*ClassName*'** dans le menu contextuel, où  *ClassName* est le nom de la classe sélectionnée.
    * **Souris**
-     * Avec le bouton droit et sélectionnez le **Actions rapides et refactorisations** menu et sélectionnez **implémenter tous les virtuels purs pour la classe*ClassName*'** dans le menu contextuel, où  *ClassName* est le nom de la classe sélectionnée.
+     * Cliquez avec le bouton droit et choisissez le menu **Actions rapides et refactorisations**, puis sélectionnez **Implémenter tous les virtuels purs pour la classe '*ClassName*'** dans le menu contextuel, où  *ClassName* est le nom de la classe sélectionnée.
 
-1. Les signatures de méthode virtuelle pure seront créés automatiquement, prêt à être implémentée.
+1. Les signatures de méthode virtuelle pure sont créées automatiquement, prêtes à être implémentées.
 
-   ![Implémenter les virtuels purs résultat](images/virtuals_result.png)
+   ![Implémenter les virtuels purs, résultat](images/virtuals_result.png)

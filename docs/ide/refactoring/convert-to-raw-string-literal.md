@@ -1,5 +1,5 @@
 ---
-title: Convertir en littéral de chaîne brute | Documents Microsoft
+title: Convertir en littéral de chaîne brute | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,30 +12,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328407"
 ---
-# <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brut
-**Ce que :** vous permet de transformer une chaîne en une chaîne brute C++ littéral.
+# <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brute
+**Quoi :** vous permet de transformer une chaîne en littéral de chaîne brute C++.
 
-**Quand :** vous avez une chaîne avec des caractères d’échappement qui ne doivent pas être traités comme des caractères d’échappement.
+**Quand :** vous avez une chaîne avec des caractères d’échappement qui ne doivent pas être traités comme des caractères d’échappement.
 
-**Pourquoi :** Impossible de double échappement caractères, mais cela a pour conséquence des chaînes à confusion et illisibles.  À l’aide de littéraux de chaîne bruts rend beaucoup plus facile à lire des chaînes.
+**Pourquoi :** vous pouvez doubler la séquence d’échappement, mais cela aboutit souvent à des chaînes illisibles et qui prêtent à confusion.  L’utilisation de littéraux de chaînes brutes facilite la lecture des chaînes.
 
 **Comment :**
 
-1. Placez le curseur de texte ou de la souris au-dessus de la chaîne d’échappement à convertir.
+1. placez le curseur texte ou de la souris sur la chaîne faisant l’objet d’une séquence d’échappement à convertir.
 
    ![Code mis en surbrillance](images/stringliteral_highlight.png)
 
 1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
-     * Appuyez sur **Ctrl+.** pour déclencher le **Actions rapides et refactorisations** menu et sélectionnez **convertir en littéral de chaîne brute** dans le menu contextuel.
+     * Appuyez sur **Ctrl+.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.
    * **Souris**
-     * Cliquez sur le code, sélectionnez le **Actions rapides et refactorisations** menu et sélectionnez **convertir en littéral de chaîne brute** dans le menu contextuel.
-     * Cliquez sur le ![Lightbulb](images/bulb.png) icône qui apparaît dans la marge de gauche et sélectionnez **convertir en littéral de chaîne brute** dans le menu contextuel.
+     * Cliquez avec le bouton droit sur le code et choisissez le menu **Actions rapides et refactorisations**, puis sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.
+     * Cliquez sur l’icône ![Ampoule](images/bulb.png) qui apparaît dans la marge de gauche et sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.
 
-1. La chaîne doit être convertie immédiatement dans un littéral de chaîne brute.  
+1. La chaîne est immédiatement convertie en littéral de chaîne brute.  
 
-   ![Résultat littéral de chaîne brute](images/stringliteral_result.png)
+   ![Littéral de chaîne brute, résultat](images/stringliteral_result.png)

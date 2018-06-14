@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une classe C++ générique | Documents Microsoft
+title: Ajout d’une classe C++ générique | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,25 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326470"
 ---
 # <a name="adding-a-generic-c-class"></a>Ajout d'une classe C++ générique
-Vous pouvez ajouter une classe C++ générique à l’aide de **affichage de classes**. Une classe C++ générique est une classe que vous définissez ou qui est dérivée d’une classe que vous définissez.  
+Vous pouvez ajouter une classe C++ générique via **l’affichage de classes**. Une classe C++ générique est une classe que vous définissez ou qui est dérivée d’une classe que vous définissez.  
   
 ### <a name="to-add-a-generic-c-class-to-a-project"></a>Pour ajouter une classe C++ générique à un projet  
   
-1.  Dans **affichage de classes**, cliquez sur le projet auquel vous souhaitez ajouter la nouvelle classe, cliquez sur **ajouter**, puis cliquez sur **classe**.  
+1.  Dans **l’affichage de classes**, cliquez avec le bouton droit sur le projet auquel vous voulez ajouter la nouvelle classe, cliquez sur **Ajouter**, puis sur **Classe**.  
   
-2.  Dans le [ajouter une classe](../ide/add-class-dialog-box.md) boîte de dialogue, dans le volet Modèles, cliquez sur **classe C++**. Cliquez sur **ajouter** pour afficher les [Assistant classe C++ générique](../ide/generic-cpp-class-wizard.md).  
+2.  Dans la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md), dans le volet Modèles, cliquez sur **Classe C++**. Cliquez sur **Ajouter** pour afficher [l’Assistant Classe C++ générique](../ide/generic-cpp-class-wizard.md).  
   
-3.  Dans l’Assistant, fournissez un nom de classe et définir des paramètres ou accepter les valeurs par défaut.  
+3.  Dans l’Assistant, indiquez le nom de la classe, puis définissez les paramètres ou acceptez les valeurs par défaut.  
   
-4.  Pour fermer l’Assistant et afficher la nouvelle classe C++ générique dans le projet, cliquez sur **Terminer**.  
+4.  Pour fermer l’Assistant et afficher la nouvelle classe C++ générique du projet, cliquez sur **Terminer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)   
  [Classe MFC](../mfc/reference/adding-an-mfc-class.md)   
- [Objet Simple ATL](../atl/reference/adding-an-atl-simple-object.md)
+ [Objet simple ATL](../atl/reference/adding-an-atl-simple-object.md)

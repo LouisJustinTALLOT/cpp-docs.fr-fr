@@ -1,5 +1,5 @@
 ---
-title: Types de projet Visual C++ | Documents Microsoft
+title: Types de projet Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2017
 ms.technology:
@@ -22,13 +22,14 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339980"
 ---
 # <a name="visual-c-project-types"></a>Types de projets Visual C++
 
-Vous pouvez utiliser un modèle de projet pour créer la structure de base du programme, les menus, les barres d’outils, les icônes, les références et les instructions `#include` adaptés au type de projet que vous voulez créer. Visual Studio intègre plusieurs types de modèles de projet Visual C++ qui s’accompagnent pour la plupart d’Assistants qui vous permettent de personnaliser vos projets au moment de les créer. Immédiatement après avoir créé un projet, vous pouvez générer et exécuter l’application ; Il est conseillé de génération intermittente à mesure que vous développez votre application.
+Vous pouvez utiliser un modèle de projet pour créer la structure de base du programme, les menus, les barres d’outils, les icônes, les références et les instructions `#include` adaptés au type de projet que vous voulez créer. Visual Studio intègre plusieurs types de modèles de projet Visual C++ qui s’accompagnent pour la plupart d’Assistants qui vous permettent de personnaliser vos projets au moment de les créer. Dès que vous avez créé un projet, vous pouvez le générer et exécuter l’application. Une bonne pratique est d’effectuer des générations intermittentes à mesure que vous développez votre application.
 
 Vous n’êtes pas tenu d’utiliser un modèle pour créer un projet. Cependant, dans la plupart des cas, c’est un choix judicieux, car il est plus facile de modifier les fichiers et la structure de projet fournis que de les créer entièrement.  
   
@@ -37,69 +38,69 @@ Vous n’êtes pas tenu d’utiliser un modèle pour créer un projet. Cependant
 
 ## <a name="project-templates"></a>Modèles de projet
 
-Les modèles de projet inclus dans Visual Studio peut varier selon la version du produit et les charges de travail que vous avez installé. Si vous avez installé le développement de bureau avec une charge de travail de C++, Visual Studio propose ces modèles de projet Visual C++.
+Les modèles de projet inclus dans Visual Studio dépendent de la version du produit et des charges de travail que vous avez installées. Si vous avez installé la charge de travail Développement Desktop en C++, Visual Studio propose ces modèles de projet Visual C++.
 
 ### <a name="windows-desktop"></a>Bureau Windows
 
 |Modèle de projet|Description|  
 |----------------------|-----------------------------| 
-|[Application Console Windows](../windows/creating-a-console-application.md)|Projet de création d’une application console Windows.|
-|[Application de bureau Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projet de création d’une application de bureau (Win32) de Windows.|
-|[Bibliothèque de liens dynamiques](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projet de création d’une bibliothèque de liens dynamiques (DLL).|
+|[Application console Windows](../windows/creating-a-console-application.md)|Projet de création d’une application console Windows.|
+|[Application de bureau Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projet de création d’une application de bureau Windows (Win32).|
+|[Bibliothèque de liens dynamiques](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projet de création d’une DLL (bibliothèque de liens dynamiques).|
 |[Bibliothèque statique](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Projet de création d’une bibliothèque statique (LIB).|
-|Assistant de bureau Windows|Un Assistant permettant de créer des applications de bureau Windows et les bibliothèques avec des options supplémentaires.|
+|Assistant Windows Desktop|Assistant de création d’applications de bureau Windows et de bibliothèques avec des options supplémentaires.|
 
 ### <a name="general"></a>Général
 
 |Modèle de projet|Description|
 |----------------------|-----------------------------|
-|Projet vide|Projet vide pour la création d’une application, une bibliothèque ou une DLL. Vous devez ajouter n’importe quel code ou les ressources requises.|
-|[Projet Makefile](../ide/creating-a-makefile-project.md)|Système de génération de projet pour à l’aide d’un externe.|
-|Projet d’éléments partagés|Un projet est utilisé pour le partage de fichiers entre plusieurs projets.|
+|Projet vide|Projet vide de création d’une application, d’une bibliothèque ou d’une DLL. Vous devez ajouter le code ou les ressources nécessaires.|
+|[Projet Makefile](../ide/creating-a-makefile-project.md)|Projet d’utilisation d’un système de génération externe.|
+|Projet d’éléments partagés|Projet utilisé pour partager des fichiers entre plusieurs projets.|
 
 ### <a name="atl"></a>ATL
 
 |Modèle de projet|Description|
 |----------------------|-----------------------------|
-|[Projet ATL](../atl/reference/creating-an-atl-project.md)|Un projet qui utilise Active Template Library.|
+|[Projet ATL](../atl/reference/creating-an-atl-project.md)|Projet qui utilise Active Template Library.|
 
 ### <a name="test"></a>Tester
 
 |Modèle de projet|Description|
 |----------------------|-----------------------------|
-|[Projet de Test unitaire natif](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Un projet qui contient des tests unitaires C++ natifs.|
+|[Projet de test unitaire natif](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projet qui contient des tests unitaires C++ natifs.|
 
 ### <a name="mfc"></a>MFC
 
-Si vous ajoutez que le MFC et ATL prennent en charge le composant à votre installation de Visual Studio, ces modèles de projet sont ajoutés à Visual Studio.
+Si vous ajoutez le composant de prise en charge MFC et ATL à votre installation de Visual Studio, ces modèles de projet sont ajoutés à Visual Studio.
 
 |Modèle de projet|Description|
 |----------------------|-----------------------------|
-|[Application MFC](../mfc/reference/creating-an-mfc-application.md)|Projet de création d’une application qui utilise la bibliothèque Microsoft Foundation classes (MFC).|
+|[Application MFC](../mfc/reference/creating-an-mfc-application.md)|Projet de création d’une application qui utilise la bibliothèque MFC (Microsoft Foundation Class).|
 |[Contrôle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Projet de création d’un contrôle ActiveX qui utilise la bibliothèque MFC.|
 |[DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md)|Projet de création d’une bibliothèque de liens dynamiques qui utilise la bibliothèque MFC.|
 
 ### <a name="windows-universal-apps"></a>Applications Windows universelles
 
-Si vous ajoutez le composant Outils de plateforme universelle Windows de C++ à votre installation de Visual Studio, ces modèles de projet sont ajoutés à Visual Studio.
+Si vous ajoutez le composant des outils de plateforme Windows universelle C++ à votre installation de Visual Studio, ces modèles de projet sont ajoutés à Visual Studio.
 
-Pour une vue d’ensemble des applications Windows universelles en C++, consultez [Universal Windows applications (C++)](../windows/universal-windows-apps-cpp.md).
+Pour une vue d’ensemble des applications Windows universelles en C++, consultez [Applications Windows universelles (C++)](../windows/universal-windows-apps-cpp.md).
 
 |Modèle de projet|Description|
 |----------------------|-----------------------------|
-|Applications vide|Un projet pour une application de plateforme Windows universelle (UWP) d’une page qui n’a aucune disposition ni aucun contrôle prédéfini.|
-|DirectX 11 App|Un projet pour une application de plateforme Windows universelle qui utilise DirectX 11.|
-|Application DirectX 12|Un projet pour une application de plateforme Windows universelle qui utilise DirectX 12.|
-|Application DirectX 11 et XAML|Un projet pour une application de plateforme Windows universelle qui utilise DirectX 11 et XAML.|
-|Application de Test unitaire|Projet pour créer une application de tests unitaires pour les applications de plateforme Windows universelle (UWP).|
-|DLL|Un projet pour une bibliothèque de liens dynamiques (DLL) native qui peut être utilisé par un composant d’application ou le runtime de plateforme Windows universelle.|
-|Bibliothèque statique|Un projet pour une bibliothèque de liens statiques native (LIB) qui peut être utilisé par un composant d’application ou le runtime de plateforme Windows universelle.|
-|Composant Windows Runtime|Projet pour un composant Windows Runtime qui peut être utilisé par une application de plateforme Windows universelle, quel que soit le langage de programmation dans lequel l’application est écrite.|
-|Projet de package d’Application Windows|Un projet qui crée un package UWP qui permet à une application de bureau être distribués via le Store de Microsoft ou de chargement.|
+|Applications vide|Projet d’application de plateforme Windows universelle (UWP) d’une seule page sans contrôle ni disposition prédéfinis.|
+|DirectX 11 App|Projet d’application de plateforme Windows universelle qui utilise DirectX 11.|
+|Application DirectX 12|Projet d’application de plateforme Windows universelle qui utilise DirectX 12.|
+|Application DirectX 11 et XAML|Projet d’application de plateforme Windows universelle qui utilise DirectX 11 et XAML.|
+|Application de tests unitaires|Projet de création d’une application de tests unitaires pour des applications de plateforme Windows universelle (UWP).|
+|DLL|Projet de bibliothèque de liens dynamiques (DLL) native pouvant être utilisée par une application de plateforme Windows universelle ou un composant d’exécution.|
+|Bibliothèque statique|Projet de bibliothèque de liens statiques (LIB) native pouvant être utilisée par une application de plateforme Windows universelle ou un composant d’exécution.|
+|Composant Windows Runtime|Projet de composant Windows Runtime pouvant être utilisé par une application de plateforme Windows universelle, quel que soit le langage de programmation dans lequel l’application est écrite.|
+|Projet de création de packages d’application Windows|Projet qui crée un package UWP permettant à une application de bureau d’être chargée indépendamment ou distribuée via le Microsoft Store.|
 
 ## <a name="todo-comments"></a>Commentaires TODO
 
-La plupart des fichiers générés par un modèle de projet contiennent des commentaires TODO pour vous aider à repérer les endroits où vous pouvez fournir votre propre code source. Pour plus d’informations sur l’ajout de code, consultez [Ajout de fonctionnalités avec les Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md) et [utilisation des fichiers de ressources](../windows/working-with-resource-files.md).
+La plupart des fichiers générés par un modèle de projet contiennent des commentaires TODO pour vous aider à repérer les endroits où vous pouvez fournir votre propre code source. Pour plus d’informations sur l’ajout de code, consultez [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md) et [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: Fichiers d’en-tête précompilés | Documents Microsoft
+title: Fichiers d’en-tête précompilés | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,9 +22,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328085"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 Ces fichiers sont utilisés pour générer un fichier d’en-tête précompilé *Projname*.pch et un fichier de types précompilé Stdafx.obj.  

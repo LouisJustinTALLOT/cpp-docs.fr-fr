@@ -1,5 +1,5 @@
 ---
-title: '&lt;code&gt; (Visual C++) | Documents Microsoft'
+title: '&lt;code&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330117"
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
-Le \<code > balise vous donne un moyen d’indiquer une ou plusieurs lignes en tant que code.  
+La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant du code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +39,7 @@ Le \<code > balise vous donne un moyen d’indiquer une ou plusieurs lignes en t
  Texte à marquer comme étant du code.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez [ \<c >](../ide/c-visual-cpp.md) pour indiquer une partie du texte doit être marquée en tant que code.  
+ Utilisez [\<c>](../ide/c-visual-cpp.md) pour indiquer qu’une partie du texte doit être marquée comme étant du code.  
   
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   

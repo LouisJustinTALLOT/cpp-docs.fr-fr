@@ -1,5 +1,5 @@
 ---
-title: Fichiers d’aide (WinHelp) | Documents Microsoft
+title: Fichiers d’aide (WinHelp) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 505506c7f3a14a73c6b0c859a70938fee3eed69e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331543"
 ---
 # <a name="help-files-winhelp"></a>Fichiers d'aide (WinHelp)
-Les fichiers suivants sont créés lorsque vous ajoutez le type WinHelp de prise en charge de l’aide à votre application en sélectionnant le **contextuelle** case à cocher, puis en sélectionnant **format WinHelp** dans les [Fonctionnalités avancées](../mfc/reference/advanced-features-mfc-application-wizard.md) page de l’Assistant Application MFC.  
+Les fichiers suivants sont créés quand vous ajoutez la prise en charge de l’aide de type WinHelp à votre application en cochant la case **Aide contextuelle**, puis en sélectionnant **Format WinHelp** dans la page [Fonctionnalités avancées](../mfc/reference/advanced-features-mfc-application-wizard.md) de l’Assistant Application MFC.  
   
 |Nom de fichier|Emplacement du répertoire|Emplacement dans l'Explorateur de solutions|Description|  
 |---------------|------------------------|--------------------------------|-----------------|  
-|*Nomproj*.hpj|*Nomproj*\hlp|Fichiers sources|Le fichier de projet d’aide utilisé par le compilateur d’aide pour créer votre programme ou le fichier d’aide du contrôle.|  
-|*Nomproj*.rtf|*Nomproj*\hlp|Fichiers d’aide|Contient des rubriques de modèle que vous pouvez modifier et les informations sur la personnalisation de votre fichier .hpj.|  
-|*Nomproj*.cnt|*Nomproj*\hlp|Fichiers d’aide|Fournit la structure pour le **contenu** fenêtre dans l’aide de Windows.|  
-|Makehelp.bat|*Nomproj*|Fichiers sources|Utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|  
-|Print.RTF|*Nomproj*\hlp|Fichiers d’aide|Créé si votre projet inclut la prise en charge l’impression (la valeur par défaut). Décrit les commandes d’impression et les boîtes de dialogue.|  
-|*.bmp|*Nomproj*\hlp|Fichiers de ressources|Contenir des images pour les rubriques d’aide générées différents.|  
+|*NomProj*.hpj|*NomProj*\hlp|Fichiers sources|Fichier projet d’aide utilisé par le compilateur d’aide pour créer le fichier d’aide de votre programme ou contrôle.|  
+|*NomProj*.rtf|*NomProj*\hlp|Fichiers d’aide|Contient des rubriques de modèles que vous pouvez modifier et des informations sur la personnalisation de votre fichier .hpj.|  
+|*NomProj*.cnt|*NomProj*\hlp|Fichiers d’aide|Fournit la structure de la fenêtre **Sommaire** dans l’aide de Windows.|  
+|Makehelp.bat|*NomProj*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|  
+|Print.rtf|*NomProj*\hlp|Fichiers d’aide|Fichier créé si votre projet offre une prise en charge de l’impression (option par défaut). Ce fichier décrit les commandes et boîtes de dialogue relatives à l’impression.|  
+|*.bmp|*NomProj*\hlp|Fichiers de ressources|Contient les images des différentes rubriques d’aide générées.|  
   
- Vous pouvez ajouter la prise en charge de WinHelp à un projet de contrôle ActiveX MFC en sélectionnant **générer les fichiers d’aide** dans les [paramètres de l’Application](../mfc/reference/application-settings-mfc-activex-control-wizard.md) onglet de l’Assistant contrôle ActiveX MFC. Les fichiers suivants sont ajoutés à votre projet lorsque vous ajoutez la prise en charge de l’aide pour un contrôle ActiveX MFC :  
+ Vous pouvez ajouter la prise en charge de WinHelp à un projet de contrôle ActiveX MFC en sélectionnant **Générer des fichiers d’aide** sous l’onglet [Paramètres de l’application](../mfc/reference/application-settings-mfc-activex-control-wizard.md) de l’Assistant Contrôle ActiveX MFC. Les fichiers suivants sont ajoutés à votre projet quand vous ajoutez la prise en charge de l’aide à un contrôle ActiveX MFC :  
   
 |Nom de fichier|Emplacement du répertoire|Emplacement dans l'Explorateur de solutions|Description|  
 |---------------|------------------------|--------------------------------|-----------------|  
-|*Nomproj*.hpj|*Nomproj*\hlp|Fichiers sources|Le fichier de projet utilisé par le compilateur d’aide pour créer votre programme ou le fichier d’aide du contrôle.|  
-|*Nomproj*.rtf|*Nomproj*\hlp|Projet|Contient des rubriques de modèle que vous pouvez modifier et les informations sur la personnalisation de votre fichier .hpj.|  
-|Makehelp.bat|*Nomproj*|Fichiers sources|Utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|  
-|Bullet.bmp|*Nomproj*|Fichiers de ressources|Utilisé par le fichier des rubriques aide standard pour représenter les listes à puces.|  
+|*NomProj*.hpj|*NomProj*\hlp|Fichiers sources|Fichier projet utilisé par le compilateur d’aide pour créer le fichier d’aide de votre programme ou contrôle.|  
+|*NomProj*.rtf|*NomProj*\hlp|Projet|Contient des rubriques de modèles que vous pouvez modifier et des informations sur la personnalisation de votre fichier .hpj.|  
+|Makehelp.bat|*NomProj*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|  
+|Bullet.bmp|*NomProj*|Fichiers de ressources|Fichier utilisé pour représenter les listes à puces dans les rubriques d’aide standard.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de fichiers créés pour les projets Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
