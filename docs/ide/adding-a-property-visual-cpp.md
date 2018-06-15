@@ -16,13 +16,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33327578"
 ---
-# <a name="adding-a-property-visual-c"></a>Ajout d’une propriété (Visual C++)
+# <a name="adding-a-property-visual-c"></a>Ajout d'une propriété locale (Visual C++)
 Vous pouvez utiliser [l’Assistant Ajout de propriété](../ide/names-add-property-wizard.md) pour ajouter une propriété à une interface de votre projet.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Pour ajouter une propriété à votre objet  

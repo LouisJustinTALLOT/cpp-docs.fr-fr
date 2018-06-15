@@ -18,13 +18,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33334397"
 ---
-# <a name="makefile-project-wizard"></a>Assistant Projet Makefile
+# <a name="makefile-project-wizard"></a>Projet Makefile (Assistant)
 Utilisez cet Assistant pour créer une ligne de commande que le moteur de génération doit exécuter. Une fois que vous avez créé le projet, vous pouvez afficher et modifier les propriétés du projet dans la [page de propriétés](../ide/working-with-project-properties.md) du projet.  
   
 ## <a name="overview"></a>Vue d'ensemble  

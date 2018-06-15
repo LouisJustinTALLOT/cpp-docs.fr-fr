@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f92f871f22fb01f3f0f37677c393fcd481c08120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33325193"
 ---
 # <a name="add-event-wizard"></a>Assistant Ajout d'événement
@@ -55,7 +55,7 @@ Cet Assistant ajoute un événement à un projet de contrôle ActiveX MFC. Vous 
  Ajoute le paramètre que vous spécifiez dans **Nom du paramètre** et son type à **Liste de paramètres**. Vous devez cliquer sur **Ajouter** pour ajouter un paramètre à la liste.  
   
  **Supprimer**  
- Supprime le paramètre que vous sélectionnez dans **Liste de paramètres** de la liste.  
+ Supprime de la liste le paramètre que vous sélectionnez dans **Liste de paramètres**.  
   
  **Liste de paramètres**  
  Affiche tous les paramètres et leurs types actuellement ajoutés pour la méthode. Quand vous ajoutez des paramètres, l’Assistant met à jour la **Liste de paramètres** pour afficher chaque paramètre avec son type.  

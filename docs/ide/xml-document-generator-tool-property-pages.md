@@ -19,10 +19,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339074"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Outil Générateur de documents XML, page de propriétés
@@ -32,7 +32,7 @@ La page de propriétés Outil Générateur de documents XML expose les fonctionn
 >  Les options de xdcmake.exe dans l’environnement de développement (pages de propriétés) diffèrent des options de xdcmake.exe quand celui-ci est utilisé sur la ligne de commande. Pour plus d’informations sur l’utilisation de xdcmake.exe à partir de la ligne de commande, consultez [Informations de référence sur XDCMake](../ide/xdcmake-reference.md).  
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
- **Supprimer la bannière de démarrage**  
+ **Suppression de la bannière de démarrage**  
  Supprimez le message de copyright.  
   
  **Fichiers de document supplémentaires**  

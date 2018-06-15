@@ -15,13 +15,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337572"
 ---
-# <a name="delimiters-for-visual-c-documentation-tags"></a>Délimiteurs pour les balises de documentation Visual C++
+# <a name="delimiters-for-visual-c-documentation-tags"></a>Délimiteurs pour les étiquettes de documentation Visual C++
 L’utilisation de balises de documentation exige des délimiteurs, qui indiquent au compilateur où un commentaire de documentation commence et se termine.  
   
  Vous pouvez utiliser les genres de délimiteurs ci-dessous avec les balises de documentation XML :  

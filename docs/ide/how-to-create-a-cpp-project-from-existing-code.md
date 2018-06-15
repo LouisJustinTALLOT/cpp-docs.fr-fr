@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1786e5704d7afd07576ab738d907eb841518f8be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33330133"
 ---
-# <a name="how-to-create-a-c-project-from-existing-code"></a>Guide pratique pour créer un projet C++ à partir de code existant
+# <a name="how-to-create-a-c-project-from-existing-code"></a>Comment : créer un projet C++ à partir d'un code existant
 
 Dans Visual Studio, vous pouvez déplacer vos fichiers de code existants dans un projet Visual C++ à l’aide de l’Assistant **Créer un projet à partir de fichiers de code existants**. Cet Assistant n’est pas disponible dans les anciennes éditions Express de Visual Studio. Cet Assistant crée une solution et un projet utilisant le système MSBuild pour gérer vos fichiers sources et la configuration de build.  
   
-Le portage de vos fichiers de code existants dans un projet Visual C++ vous permet d’utiliser toutes les fonctionnalités de gestion de projets MSBuild natives intégrées à l’IDE. Si vous préférez utiliser votre système de génération existant, tel que des makefiles nmake, CMake ou des alternatives, vous pouvez utiliser l’option Ouvrir un dossier à la place. Pour plus d’informations, consultez [Projets Ouvrir un dossier dans Visual C++](../ide/non-msbuild-projects.md). Les deux options vous permettent d’utiliser les fonctionnalités de l’IDE comme [IntelliSense](/visualstudio/ide/using-intellisense) et [Propriétés du projet](../ide/working-with-project-properties.md).  
+Le portage de vos fichiers de code existants dans un projet Visual C++ vous permet d’utiliser toutes les fonctionnalités de gestion de projets MSBuild natives intégrées à l’IDE. Si vous préférez utiliser votre système de génération existant, tel que des makefiles nmake, CMake ou des alternatives, vous pouvez utiliser l’option Ouvrir un dossier à la place. Pour plus d’informations, consultez [Open Folder projects in Visual C++](../ide/non-msbuild-projects.md). Les deux options vous permettent d’utiliser les fonctionnalités de l’IDE comme [IntelliSense](/visualstudio/ide/using-intellisense) et [Propriétés du projet](../ide/working-with-project-properties.md).  
   
 ### <a name="to-create-a-c-project-from-existing-code"></a>Pour créer un projet C++ à partir de code existant  
   

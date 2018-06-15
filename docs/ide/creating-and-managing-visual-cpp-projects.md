@@ -22,10 +22,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33332421"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Création et gestion de projets Visual C++ basés sur MSBuild
@@ -43,7 +43,7 @@ Vous pouvez créer des projets Visual C++ en choisissant **Fichier &#124; Nouvea
   
 -   Créez un projet vide (sous l’onglet **Général**), puis ajoutez manuellement les fichiers de code source en cliquant avec le bouton droit sur le nœud de projet dans l’Explorateur de solutions et en choisissant **Ajouter &#124; Élément existant**.  
   
--   Utilisez l’[Assistant Application Win32](../windows/win32-application-wizard.md).  
+-   using the [Win32 Application Wizard](../windows/win32-application-wizard.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Types de projets Visual C++](../ide/visual-cpp-project-types.md)  

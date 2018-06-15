@@ -19,13 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33329941"
 ---
-# <a name="xml-data-generator-tool-property-page"></a>XML Data Generator Tool, page de propriétés
+# <a name="xml-data-generator-tool-property-page"></a>Outil XML Data Generator Tool (page de propriétés)
 La page de propriétés **XML Data Generator Tool** devient accessible quand vous ajoutez un groupe de données à un projet.  
   
  La page de propriétés **XML Data Generator Tool** contient les propriétés suivantes :  

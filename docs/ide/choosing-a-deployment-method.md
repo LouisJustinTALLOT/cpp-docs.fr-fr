@@ -23,10 +23,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338664"
 ---
 # <a name="choosing-a-deployment-method"></a>Choix d'une méthode de déploiement
@@ -55,6 +55,6 @@ ms.locfileid: "33338664"
  Nous vous recommandons d’éviter la liaison statique quand vous redistribuez des bibliothèques Visual C++. Bien que la liaison statique n’améliore presque jamais de manière significative les performances des applications, elle en rend la maintenance presque toujours plus coûteuse. Par exemple, considérez une application statiquement liée à une bibliothèque en cours de mise à jour avec des améliorations de sécurité. Celle-ci ne pourra pas bénéficier des ces améliorations à moins d'être recompilée et redéployée. À la place, nous vous recommandons de lier vos applications dynamiquement aux bibliothèques desquelles elles dépendent, de manière à en permettre la mise à jour dans tous les emplacements où elles sont déployées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement d’applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Exemples de déploiement](../ide/deployment-examples.md)

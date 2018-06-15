@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33325073"
 ---
 # <a name="help-files-html-help"></a>Fichiers d'aide (aide HTML)
@@ -29,7 +29,7 @@ Les fichiers suivants sont créés quand vous ajoutez la prise en charge de l’
 |*NomProj*.hhp|*NomProj*\hlp|fichiers d'aide HTML|Fichier projet d’aide. Il contient les données nécessaires à la compilation des fichiers d’aide en un fichier .hxs ou .chm.|  
 |*NomProj*.hhk|*NomProj*\hlp|fichiers d'aide HTML|Contient un index des rubriques d’aide.|  
 |*NomProj*.hhc|*NomProj*\hlp|fichiers d'aide HTML|Contenu du projet d’aide.|  
-|Makehtmlhelp.bat|*NomProj*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|  
+|Makehtmlhelp.bat|*Projname*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|  
 |Afxcore.htm|*NomProj*\hlp|Rubriques d’aide HTML|Contient les rubriques d’aide standard relatives aux objets de l’écran et commandes MFC. Ajoutez vos propres rubriques d’aide à ce fichier.|  
 |Afxprint.htm|*NomProj*\hlp|Rubriques d’aide HTML|Contient les rubriques d’aide relatives aux commandes d’impression.|  
 |*.jpg; \*.gif|*NomProj*\hlp\Images|Fichiers de ressources|Contient les images des différentes rubriques d’aide générées.|  

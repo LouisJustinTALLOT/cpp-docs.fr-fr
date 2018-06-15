@@ -17,13 +17,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33327809"
 ---
-# <a name="command-line-property-pages"></a>Pages de propriétés Ligne de commande
+# <a name="command-line-property-pages"></a>pages de propriétés Ligne de commande
 La plupart des dossiers des pages de propriétés contiennent une page de propriétés **Ligne de commande**. Cette page affiche les propriétés définies dans le dossier. La page de propriétés **Ligne de commande** contient également une zone **Options supplémentaires** dans laquelle vous pouvez spécifier les propriétés valides pour l’outil, mais pour lesquelles aucune propriété n’existe dans le dossier.  
   
  Les commandes que vous entrez dans la zone d’édition sont passées à l’outil pour le dossier. L’entrée n’est soumise à aucune vérification et les dépendances ne sont pas non plus contrôlées.  

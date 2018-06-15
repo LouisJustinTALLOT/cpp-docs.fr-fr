@@ -18,13 +18,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33330231"
 ---
-# <a name="navigating-the-class-structure-visual-c"></a>Parcours de la structures de classe (Visual C++)
+# <a name="navigating-the-class-structure-visual-c"></a>Parcours de la structures de classes (Visual C++)
 Vous pouvez parcourir la structure de classe d’un projet, notamment les fonctions, les héritages et les interfaces, à l’aide de [l’affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) ou de [l’Explorateur d’objets](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
   
  Vous pouvez accéder à une déclaration de fonction en double-cliquant sur le nom de la fonction dans l’affichage de classes. Pour accéder à une définition de classe, double-cliquez sur le nom de la classe dans l’affichage de classes.  

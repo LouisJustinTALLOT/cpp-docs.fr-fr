@@ -21,13 +21,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33331517"
 ---
-# <a name="linker-property-pages"></a>Pages de propriétés de l'éditeur de liens
+# <a name="linker-property-pages"></a>pages de propriétés de l'Éditeur de liens
 
 Cette rubrique décrit les propriétés suivantes de la page de propriétés **Général** de l’éditeur de liens. Pour obtenir la version Linux de cette page, consultez [Éditeur de liens, propriétés (Linux C++)](../linux/prop-pages/linker-linux.md).
 

@@ -13,13 +13,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33328618"
 ---
-# <a name="recommended-tags-for-documentation-comments-visual-c"></a>Balises recommandées pour les commentaires de documentation (Visual C++)
+# <a name="recommended-tags-for-documentation-comments-visual-c"></a>Étiquettes recommandées pour les commentaires de documentation (Visual C++)
 Le compilateur Visual C++ traite les commentaires de documentation dans votre code et crée un fichier .xdc pour chaque compiland, et xdcmake.exe traite les fichiers .xdc dans un fichier .xml. Le traitement du fichier .xml pour créer une documentation est un détail qui doit être implémenté sur votre site.  
   
  Les balises sont traitées sur des constructions telles que les types et les membres de type.  

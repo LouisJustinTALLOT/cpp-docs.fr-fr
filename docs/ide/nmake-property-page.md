@@ -20,13 +20,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33327458"
 ---
-# <a name="nmake-property-page"></a>NMake, page de propriétés
+# <a name="nmake-property-page"></a>NMake (page de propriétés)
 La page de propriétés **NMake** vous permet de spécifier des paramètres de build pour les projets NMake.  
   
  Pour plus d’informations sur les projets NMake, consultez [Création d’un projet Makefile](../ide/creating-a-makefile-project.md). Pour les projets MakeFile autres que Windows, consultez [Projet Makefile, propriétés (Linux C++)](../linux/prop-pages/makefile-linux.md), [Propriétés générales du projet (Makefile Android C++)](/visualstudio/cross-platform/general-makefile-android-prop-page) ou [Propriétés NMake (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).

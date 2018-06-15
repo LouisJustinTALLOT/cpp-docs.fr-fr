@@ -19,10 +19,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337546"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribution des fichiers Visual C++
@@ -56,4 +56,4 @@ Pour résoudre ce genre d’erreur, vérifiez que le programme d’installation 
 |[Redistribution de la bibliothèque MFC](../ide/redistributing-the-mfc-library.md)|Décrit comment redistribuer une application qui utilise MFC.|
 |[Redistribution d’une application ATL](../ide/redistributing-an-atl-application.md)|Décrit comment redistribuer une application qui utilise ATL. Depuis Visual Studio 2012, aucune bibliothèque redistribuable pour ATL n'est requise.|
 |[Exemples de déploiement](../ide/deployment-examples.md)|Fournit des liens vers des exemples qui illustrent le déploiement d'applications Visual C++.|
-|[Déploiement d’applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)|Présente les concepts et les technologies de déploiement de Visual C++.|
+|[Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)|Présente les concepts et les technologies de déploiement de Visual C++.|

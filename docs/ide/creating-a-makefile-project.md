@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dc854f96f1c41baf28a5af4ca1f253e47d9a8914
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336776"
 ---
 # <a name="creating-a-makefile-project"></a>Création d'un projet Makefile
 
-Si vous disposez d’un projet de code source existant que vous générez à partir de la ligne de commande à l’aide d’un makefile, l’environnement de développement Visual Studio vous propose plusieurs méthodes pour le transformer en projet capable de tirer pleinement parti des fonctionnalités de l’IDE de Visual Studio. Cet article décrit comment créer un projet Makefile dans Visual Studio qui utilise votre makefile existant pour générer votre code dans l’IDE. Vous pouvez également utiliser l’Assistant **Créer un projet à partir de fichiers de code existants** pour créer un projet MSBuild natif à partir de votre code source. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md). À compter de Visual Studio 2017, vous pouvez également recourir à la fonctionnalité **Ouvrir un dossier**. Celle-ci peut utiliser plusieurs systèmes de génération existants comme s’il s’agissait de projets Visual Studio natifs. Pour plus d’informations, consultez [Projets Ouvrir un dossier dans Visual C++](non-msbuild-projects.md).
+Si vous disposez d’un projet de code source existant que vous générez à partir de la ligne de commande à l’aide d’un makefile, l’environnement de développement Visual Studio vous propose plusieurs méthodes pour le transformer en projet capable de tirer pleinement parti des fonctionnalités de l’IDE de Visual Studio. Cet article décrit comment créer un projet Makefile dans Visual Studio qui utilise votre makefile existant pour générer votre code dans l’IDE. Vous pouvez également utiliser l’Assistant **Créer un projet à partir de fichiers de code existants** pour créer un projet MSBuild natif à partir de votre code source. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md). À compter de Visual Studio 2017, vous pouvez également recourir à la fonctionnalité **Ouvrir un dossier**. Celle-ci peut utiliser plusieurs systèmes de génération existants comme s’il s’agissait de projets Visual Studio natifs. Pour plus d’informations, consultez [Open Folder projects in Visual C++](non-msbuild-projects.md).
 
 Pour ouvrir et générer votre code source à l’aide de votre makefile existant dans Visual Studio, commencez par créer un projet en sélectionnant le modèle de projet MakeFile. Un Assistant vous aide à spécifier les commandes et l’environnement utilisé par votre makefile. Vous pouvez ensuite utiliser ce projet pour générer votre code dans l’environnement de développement Visual Studio.
 

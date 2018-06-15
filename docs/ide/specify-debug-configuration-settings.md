@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b40bafe817ebf1dd25cc40115635b895502e0df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33335040"
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Spécifier les paramètres de configuration Debug, Assistant Créer un projet à partir de fichiers de code existants

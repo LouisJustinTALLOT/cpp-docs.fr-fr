@@ -19,10 +19,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4fd1dc3ba92201567f24aa84ff8dddcd96798b38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339194"
 ---
 # <a name="hlsl-property-pages-output-files"></a>Pages de propriétés HLSL : fichiers de sortie
@@ -53,6 +53,6 @@ Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilis
  Cette propriété correspond aux arguments de ligne de commande **/Fc[name]** et **/Fx[name]**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pages de propriétés HLSL](../ide/hlsl-property-pages.md)   
+ [HLSL, page de propriétés](../ide/hlsl-property-pages.md)   
  [Pages de propriétés HLSL : Général](../ide/hlsl-property-pages-general.md)   
  [HLSL, page de propriétés : Avancé](../ide/hlsl-property-pages-advanced.md)

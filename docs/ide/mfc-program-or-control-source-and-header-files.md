@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340227"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Fichiers d'en-tête et fichiers sources de contrôle ou de programme MFC
 Les fichiers suivants sont créés quand vous créez un projet MFC dans Visual Studio, selon les options que vous sélectionnez pour le projet que vous créez. Par exemple, votre projet contient les fichiers *NomProj*dlg.cpp et *NomProj*dlg.h seulement si vous créez un projet ou une classe basés sur des boîtes de dialogue.  
   
- Tous ces fichiers se trouvent dans le répertoire *NomProj*, ainsi que dans le dossier Header Files (fichiers .h) ou Source Files (fichiers .cpp) de l’Explorateur de solutions.  
+ Tous ces fichiers sont dans le répertoire *NomProj* ainsi que dans le dossier Header Files (fichiers .h) ou dans le dossier Source Files (fichiers .cpp) de l’Explorateur de solutions.  
   
 |Nom de fichier|Description|  
 |---------------|-----------------|  

@@ -17,13 +17,13 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33332323"
 ---
-# <a name="clickonce-deployment-for-visual-c-applications"></a>Déploiement ClickOnce pour les applications Visual C++
+# <a name="clickonce-deployment-for-visual-c-applications"></a>Déploiement de ClickOnce pour les applications Visual C++
 Visual Studio propose deux technologies différentes pour déployer les applications Windows : le déploiement ClickOnce ou le déploiement [Windows Installer](http://msdn.microsoft.com/library/cc185688).  
   
 ## <a name="clickonce-deployment-in-c"></a>Déploiement ClickOnce en C++  

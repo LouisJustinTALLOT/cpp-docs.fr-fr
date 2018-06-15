@@ -22,10 +22,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338781"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Fonctionnement des dépendances d'une application Visual C++
@@ -42,4 +42,4 @@ Pour déterminer les bibliothèques Visual C++ dont dépend une application, vou
  Lorsque vous disposez de la liste complète des DLL dont dépend votre application, vous pouvez déterminer celles que vous devez redistribuer avec votre application lors du déploiement vers un autre ordinateur. Dans la plupart des cas, vous n’avez pas besoin de redistribuer les DLL système, mais vous devez peut-être redistribuer les DLL des bibliothèques Visual C++. Pour plus d’informations, consultez [Détermination des DLL à redistribuer](../ide/determining-which-dlls-to-redistribute.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement d’applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)

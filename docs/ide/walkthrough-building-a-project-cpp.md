@@ -17,10 +17,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33332453"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : génération d’un projet (C++)
@@ -30,7 +30,7 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
   
 -   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.  
   
--   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE de Visual Studio pour le Développement Desktop en C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ### <a name="to-fix-compilation-errors"></a>Pour résoudre les erreurs de compilation  
   

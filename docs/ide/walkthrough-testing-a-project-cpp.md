@@ -17,10 +17,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3a9455fa9bf3c9f903f5018a1263978913aa35b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33333562"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
@@ -32,7 +32,7 @@ Quand vous exécutez un programme en mode débogage, vous pouvez utiliser des po
   
 -   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.  
   
--   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE de Visual Studio pour le Développement Desktop en C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ### <a name="to-run-a-program-in-debug-mode"></a>Pour exécuter le programme en mode débogage  
   

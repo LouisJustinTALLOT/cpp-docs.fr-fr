@@ -22,13 +22,13 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338765"
 ---
-# <a name="understanding-custom-build-steps-and-build-events"></a>Présentation des étapes de build personnalisée et des événements de build
+# <a name="understanding-custom-build-steps-and-build-events"></a>Présentation des étapes de génération personnalisée et des événements de build
 Dans l’environnement de développement Visual C++, vous pouvez personnaliser le processus de build de trois façons :  
   
  **Étapes de build personnalisée**  
@@ -42,7 +42,7 @@ Dans l’environnement de développement Visual C++, vous pouvez personnaliser l
   
  [Résolution des problèmes de personnalisations de build](../ide/troubleshooting-build-customizations.md) peut vous aider à faire en sorte que vos étapes de build personnalisée et vos événements de build s’exécutent comme prévu.  
   
- Le format de sortie d’une étape de build personnalisée ou d’un événement de build peut aussi améliorer la maniabilité de l’outil. Pour plus d’informations, consultez [Mise en forme de la sortie d’une étape de build personnalisée ou d’un événement de build](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
+ Le format de sortie d’une étape de build personnalisée ou d’un événement de build peut aussi améliorer la maniabilité de l’outil. Pour plus d’informations, consultez [Mise en forme de la sortie d’une étape de génération personnalisée ou d’un événement de build](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
   
  Les événements de build et les étapes de build personnalisée s’exécutent dans l’ordre suivant, avec d’autres étapes de build :  
   

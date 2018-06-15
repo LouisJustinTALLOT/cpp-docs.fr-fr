@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33325729"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Ajout d'une variable membre (Visual C++)

@@ -17,10 +17,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340032"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : débogage d'un projet (C++)
@@ -30,7 +30,7 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
   
 -   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.  
   
--   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le Développement Desktop en C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ### <a name="to-fix-a-program-that-has-a-bug"></a>Pour corriger un programme contenant un bogue  
   

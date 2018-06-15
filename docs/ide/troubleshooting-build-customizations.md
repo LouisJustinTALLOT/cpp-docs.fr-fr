@@ -21,10 +21,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33330270"
 ---
 # <a name="troubleshooting-build-customizations"></a>Dépannage des personnalisations de génération

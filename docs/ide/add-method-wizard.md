@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340344"
 ---
 # <a name="add-method-wizard"></a>Assistant Ajout de méthode
@@ -73,7 +73,7 @@ Utilisez cet Assistant pour ajouter une méthode à une interface. Selon le type
 |Attribut de paramètre|Description|Combinaisons autorisées|  
 |-------------------------|-----------------|--------------------------|  
 |**In**|Indique que le paramètre est transmis de la procédure appelante à la procédure appelée.|**in** uniquement<br /><br /> **in** et **out**|  
-|**Out**|Indique que le paramètre pointeur est retourné par la procédure appelée à la procédure appelante (du serveur au client).|**out** uniquement<br /><br /> **in** et **out**<br /><br /> **out** et **retval**|  
+|**Out**|Indique que le paramètre de pointeur est retourné par la procédure appelée à la procédure appelante (du serveur au client).|**out** uniquement<br /><br /> **in** et **out**<br /><br /> **out** et **retval**|  
 |**Retval**|Indique que le paramètre reçoit la valeur de retour du membre.|**retval** et out|  
   
  **Type de paramètre**  

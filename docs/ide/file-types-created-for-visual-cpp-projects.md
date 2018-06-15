@@ -25,10 +25,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336015"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Types de fichiers créés pour les projets Visual C++

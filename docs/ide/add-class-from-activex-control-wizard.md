@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336815"
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Assistant Ajout d’une classe à partir d’un contrôle ActiveX
@@ -33,7 +33,7 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle Ac
 |Option|Description|  
 |------------|-----------------|  
 |**Registry**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Contrôles ActiveX disponibles**.|  
-|**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais elle est contenue dans un fichier. Vous devez indiquer l’emplacement du fichier dans **Emplacement**.|  
+|**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Vous devez indiquer l’emplacement du fichier dans **Emplacement**.|  
   
  **Contrôles ActiveX disponibles**  
  Spécifie les contrôles ActiveX actuellement inscrits dans le système. Sélectionnez un contrôle ActiveX dans cette liste pour afficher ses interfaces dans la liste **Interfaces**. Pour plus d’informations sur l’inscription des contrôles ActiveX, consultez [Contrôles ActiveX MFC : distribution de contrôles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md).  

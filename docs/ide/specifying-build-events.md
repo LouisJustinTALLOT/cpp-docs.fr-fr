@@ -26,10 +26,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33334962"
 ---
 # <a name="specifying-build-events"></a>Spécification d’événements de build
@@ -64,6 +64,6 @@ Pour obtenir des informations générales sur les événements de build, consult
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation des étapes de build personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)  
+[Présentation des étapes de génération personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)  
 [Macros courantes pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md)  
 [Dépannage des personnalisations de génération](../ide/troubleshooting-build-customizations.md)  
