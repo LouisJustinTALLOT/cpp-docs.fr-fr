@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688994"
 ---
 # <a name="asynchronous-agents-library"></a>bibliothèque d’agents asynchrones
 La bibliothèque d’Agents asynchrones (ou simplement *bibliothèque d’Agents*) fournit un modèle de programmation qui vous permet d’augmenter la robustesse du développement d’applications d’accès concurrentiel. La bibliothèque d’Agents est une bibliothèque de modèles C++ qui encourage un modèle de programmation basé sur acteur et un dans le processus passage des messages de flux de données à granularité grossière et les tâches de traitement « pipeline ». La bibliothèque d’Agents repose sur les composants de gestion des ressources et de planification du Runtime d’accès concurrentiel.  

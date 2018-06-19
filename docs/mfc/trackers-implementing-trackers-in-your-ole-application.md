@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381548"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Dispositifs de suivi : implémentation de dispositifs de suivi dans votre application OLE
 Dispositifs de suivi fournissent une interface graphique pour permettre aux utilisateurs d’interagir avec les éléments clients OLE. À l’aide de différents styles de suivi, OLE client éléments peuvent être affichés avec une bordure hachurée, poignées de redimensionnement et diverses autres effets visuels. Cet article décrit :  

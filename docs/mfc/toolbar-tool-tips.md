@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383495"
 ---
 # <a name="toolbar-tool-tips"></a>Info-bulles de barre d'outils
 Info-bulles sont des petites fenêtres contextuelles qui présentent une courte description de l’objectif d’un bouton barre d’outils lorsque vous placez la souris sur un bouton pour une période donnée. Lorsque vous créez une application avec l’Assistant Application qui possède une barre d’outils, outil tip est prise en charge pour vous. Cet article explique l’outil Conseil charge créé par l’Assistant Application et comment ajouter la prise en charge du Conseil outils à votre application.  

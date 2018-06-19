@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691740"
 ---
 # <a name="ompnestlockt"></a>omp_nest_lock_t
 Un type qui contient les éléments suivants d’informations sur un verrou : si le verrou est disponible, et que l’identité du thread qui détient le verrou ainsi que le nombre d’imbrication.  

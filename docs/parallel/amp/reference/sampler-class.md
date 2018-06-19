@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693341"
 ---
 # <a name="sampler-class"></a>sampler, classe
 La classe de l’échantillonneur agrège les informations de configuration d’échantillonnage à utiliser pour l’échantillonnage de texture.  

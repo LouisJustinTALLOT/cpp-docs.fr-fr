@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689514"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation, classe
 Cette classe décrit une exception levée quand la méthode `Context::Oversubscribe` est appelée avec le paramètre `_BeginOversubscription` défini sur `false` sans appel préalable à la méthode `Context::Oversubscribe` avec le paramètre `_BeginOversubscription` défini sur `true`.  

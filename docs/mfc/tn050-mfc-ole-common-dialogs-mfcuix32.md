@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380901"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050 : boîtes de dialogue communes MFC/OLE (MFCUIx32)
 Cette note couvert à l’origine des problèmes et à l’avenir de OLE boîtes de dialogue courantes fournies et utilisées par MFC. Les boîtes de dialogue communes OLE sont maintenant fournis comme un composant intégré au système (OLEDLG. DLL) et sont entièrement documentées dans la documentation du produit.  

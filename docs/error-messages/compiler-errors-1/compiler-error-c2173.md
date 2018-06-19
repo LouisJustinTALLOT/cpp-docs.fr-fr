@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33175967"
 ---
 # <a name="compiler-error-c2173"></a>Erreur du compilateur C2173
 'fonction' : le paramètre réel n’est pas un pointeur : paramètre 'numéro1', liste de paramètres 'numéro2'  

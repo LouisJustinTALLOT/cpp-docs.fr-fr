@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225075"
 ---
 # <a name="fatal-error-c1086"></a>Erreur irrécupérable C1086
 Impossible de rechercher le fichier 'type_fichier' : 'fichier' : message  

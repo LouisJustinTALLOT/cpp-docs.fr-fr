@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688438"
 ---
 # <a name="311-ompsetnumthreads-function"></a>3.1.1 Fonction omp_set_num_threads
 Le `omp_set_num_threads` fonction définit le nombre par défaut de threads à utiliser pour les régions parallèles suivantes qui ne spécifient pas une `num_threads` clause. Le format est le suivant :  

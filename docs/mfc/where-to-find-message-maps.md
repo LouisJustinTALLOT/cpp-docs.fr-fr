@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383391"
 ---
 # <a name="where-to-find-message-maps"></a>Où trouver des tables de messages
 Lorsque vous créez une nouvelle application squelette avec l’Assistant Application, l’Assistant Application écrit une table des messages pour chaque classe cible de commande qu’il crée pour vous. Cela inclut votre application dérivée document, vue et classes de fenêtre frame. Certaines de ces tables des messages possèdent déjà des entrées fournies par l’Assistant Application pour certains messages et les commandes prédéfinies, et certaines sont seulement des espaces réservés pour les gestionnaires que vous ajouterez.  

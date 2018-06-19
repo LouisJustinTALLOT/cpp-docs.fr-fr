@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686069"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 Fonction omp_get_thread_num
 Le `omp_get_thread_num` fonction retourne le nombre de threads, au sein de son équipe, du thread d’exécution de la fonction. Le se trouve de thread nombre compris entre 0 et **omp_get_num_threads()**-1, inclus. Le thread principal de l’équipe est 0.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384132"
 ---
 # <a name="when-update-handlers-are-called"></a>Quand les gestionnaires de mise à jour sont-ils appelés ?
 Supposons que l’utilisateur clique sur la souris dans le menu fichier, ce qui génère un `WM_INITMENUPOPUP` message. Mécanisme de mise à jour de l’infrastructure met à jour collectivement tous les éléments dans le menu fichier avant du menu déroulant pour que les utilisateurs puissent le voir.  

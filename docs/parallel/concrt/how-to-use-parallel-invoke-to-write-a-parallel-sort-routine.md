@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689166"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle
 Ce document décrit comment utiliser le [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algorithme pour améliorer les performances de l’algorithme de tri bitonique. L’algorithme de tri bitonique manière récursive divise la séquence d’entrée en plus petites partitions triées. L’algorithme de tri bitonique peut s’exécuter en parallèle car chaque opération de partition est indépendante de toutes les autres opérations.  

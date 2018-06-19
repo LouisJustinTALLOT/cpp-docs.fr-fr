@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385120"
 ---
 # <a name="using-your-old-toolbars"></a>Utilisation de vos anciennes barres d'outils
 Si vous avez utilisé les versions précédentes de Visual C++ pour créer des barres d’outils personnalisées, la nouvelle implémentation de la classe [CToolBar](../mfc/reference/ctoolbar-class.md) peut entraîner des problèmes. Afin que vous n’êtes pas obligé d’abandonner vos anciennes barres d’outils à utiliser les nouvelles fonctionnalités, l’ancienne implémentation est toujours prise en charge.  

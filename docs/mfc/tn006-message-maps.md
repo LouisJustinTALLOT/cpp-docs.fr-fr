@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384695"
 ---
 # <a name="tn006-message-maps"></a>TN006 : tables des messages
 Cette note décrit la fonctionnalité de mappage de messages MFC.  

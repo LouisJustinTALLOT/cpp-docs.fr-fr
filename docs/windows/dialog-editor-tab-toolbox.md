@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882574"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Éditeur de boîtes de dialogue, onglet de la boîte à outils
 L’onglet d’éditeur de boîte de dialogue s’affiche dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox) lorsque vous travaillez dans l’éditeur de boîte de dialogue. Pour ajouter des contrôles à votre nouvelle boîte de dialogue, faites glisser les contrôles à partir de la boîte à outils vers la boîte de dialogue que vous créez (pour plus d’informations, consultez [Ajout d’un contrôle à une boîte de dialogue](adding-a-control-to-a-dialog-box.md)). Vous pouvez ensuite déplacer les contrôles ou modifier leur taille et leur forme.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385389"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
 [Partie 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de cette procédure pas à pas vous a montré comment ajouter un ruban Office Fluent classique Scribble application. Cette partie présente comment ajouter des panneaux de ruban et des contrôles qui permettent aux utilisateurs au lieu des menus et des commandes.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686719"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 Fonction omp_get_nested
 Le `omp_get_nested` fonction retourne une valeur différente de zéro si le parallélisme imbriquée est activée et la valeur 0 si elle est désactivée. Pour plus d’informations sur le parallélisme imbriquée, consultez la Section 3.1.9 page 40. Le format est le suivant :  

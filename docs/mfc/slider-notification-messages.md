@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381977"
 ---
 # <a name="slider-notification-messages"></a>Messages de notification du Slider
 Un contrôle slider notifie sa fenêtre parente des actions de l’utilisateur en envoyant au parent `WM_HSCROLL` ou `WM_VSCROLL` messages, en fonction de l’orientation du contrôle slider. Pour gérer ces messages, ajouter des gestionnaires pour les `WM_HSCROLL` et `WM_VSCROLL` messages à la fenêtre parente. Le [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) et [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) fonctions membres recevront un code de notification, la position du curseur et un pointeur vers le [CSliderCtrl](../mfc/reference/csliderctrl-class.md) objet. Notez que le pointeur est de type **CScrollBar \***  bien qu’il pointe vers un `CSliderCtrl` objet. Vous devrez peut-être convertir ce pointeur si vous avez besoin manipuler le contrôle slider.  

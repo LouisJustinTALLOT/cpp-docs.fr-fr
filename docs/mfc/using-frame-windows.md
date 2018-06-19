@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381915"
 ---
 # <a name="using-frame-windows"></a>Utilisation de fenêtres frame
 Infrastructure MFC crée des fenêtres frame de document et les vues et leurs documents, dans le cadre de son implémentation de commandes nouveau et ouvrir dans le menu fichier. Étant donné que l’infrastructure effectue la plupart du travail de fenêtre frame pour vous, vous ne jouez qu’un rôle limité dans la création, à l’aide et la destruction des fenêtres. Vous pouvez, toutefois, explicitement créer vos propres fenêtres frame et fenêtres enfants à des fins spéciales.  

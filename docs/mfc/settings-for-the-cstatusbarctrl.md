@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380160"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Paramètres de l'objet CStatusBarCtrl
 La position par défaut d’un [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) fenêtre d’état est au bas de la fenêtre parente, mais vous pouvez spécifier le `CCS_TOP` style pour qu’elle s’affiche en haut de la zone cliente de la fenêtre parente.  

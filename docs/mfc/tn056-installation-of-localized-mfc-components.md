@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380875"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056 : installation de composants MFC localisés
 Cette note technique, qui décrit l’installation de composants MFC localisés, est désormais obsolète.  

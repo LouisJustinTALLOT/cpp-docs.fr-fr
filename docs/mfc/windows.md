@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384463"
 ---
 # <a name="windows"></a>Windows
 Cette famille d’articles traite des objets de fenêtre dans l’infrastructure MFC. Toutes les fenêtres MFC dérivent de la classe [CWnd](../mfc/reference/cwnd-class.md), y compris les fenêtres frame, les vues, les boîtes de dialogue et les contrôles.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384109"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020 : conventions de dénomination d'ID et de numérotation
 Cette note décrit les ID d’affectation de noms et les conventions de numérotation MFC 2.0 utilise pour les ressources, les commandes, les chaînes, les contrôles et fenêtres enfants.  

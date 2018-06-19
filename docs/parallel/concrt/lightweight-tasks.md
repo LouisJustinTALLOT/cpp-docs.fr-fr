@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687411"
 ---
 # <a name="lightweight-tasks"></a>Tâches légères
 Ce document décrit le rôle des tâches légères dans le Runtime d’accès concurrentiel. A *tâche légère* est une tâche que vous planifiez directement à partir d’un `concurrency::Scheduler` ou `concurrency::ScheduleGroup` objet. Une tâche légère ressemble à la fonction que vous fournissez à l’API Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (fonction). Par conséquent, les tâches légères sont utiles lorsque vous adaptez du code existant pour utiliser les fonctionnalités de planification du Runtime d’accès concurrentiel. Le Runtime d’accès concurrentiel lui-même utilise des tâches légères pour planifier des agents asynchrones et envoyer des messages entre les blocs de messages asynchrones.  

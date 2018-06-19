@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690089"
 ---
 # <a name="a27---use-of-c99-variable-length-arrays"></a>A.27   Utilisation de tableaux de longueur variable C99
 L’exemple suivant montre comment utiliser des tableaux de longueur Variable C99 (VLAs) dans un `firstprivate` directive ([Section 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) sur la page 26).  

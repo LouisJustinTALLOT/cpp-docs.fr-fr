@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889343"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Définition de la taille d’une zone de liste déroulante et de sa liste déroulante
 Vous pouvez redimensionner une zone de liste déroulante lorsque vous l’ajoutez à la boîte de dialogue. Vous pouvez également spécifier la taille de la zone de liste déroulante.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381944"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Utilisation de l'Éditeur de boîtes de dialogue pour ajouter des contrôles
 Lorsque vous créez votre ressource de modèle de boîte de dialogue avec le [éditeur de boîte de dialogue](../windows/dialog-editor.md), vous faites glisser les contrôles à partir d’une palette de contrôles et les déposer dans la boîte de dialogue. Les spécifications pour ce type de contrôle est ajouté à la ressource de modèle de boîte de dialogue. Lorsque vous construisez un objet de la boîte de dialogue et l’appel de ses **créer** ou `DoModal` fonction membre, l’infrastructure crée un contrôle Windows et le place dans la fenêtre de la boîte de dialogue à l’écran.  

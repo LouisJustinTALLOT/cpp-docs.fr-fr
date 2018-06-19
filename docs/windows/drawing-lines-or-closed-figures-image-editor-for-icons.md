@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882773"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Dessin de ligne ou de figures fermées (Éditeur d'images pour les icônes)
 Outils de l’éditeur d’images pour tracer des lignes et de figures fermées fonctionnent tous de la même façon : vous placez le point d’insertion à un moment donné et que vous faites glisser vers un autre. Pour les lignes, ces points sont les points de terminaison. Pour les figures fermées, ces points sont les coins opposés d’un rectangle englobant de l’illustration.  

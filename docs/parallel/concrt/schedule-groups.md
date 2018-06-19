@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688789"
 ---
 # <a name="schedule-groups"></a>Groupes de planification
 Ce document décrit le rôle des groupes de planification dans le Runtime d’accès concurrentiel. A *groupe de planification* l’affinité entre l’ou les regroupe, tâches associées. Chaque planificateur possède un ou plusieurs groupes de planification. Utilisez des groupes de planification quand vous avez besoin d’un degré élevé de localité entre les tâches, par exemple, quand un groupe de tâches connexes tire parti d’une exécution sur le même nœud de processeur. À l’inverse, utilisez des instances de planificateur lorsque votre application a des exigences de qualité spécifiques, par exemple, lorsque vous souhaitez limiter la quantité de ressources de traitement qui sont allouées à un ensemble de tâches. Pour plus d’informations sur les instances de planificateur, consultez [Instances de planificateur](../../parallel/concrt/scheduler-instances.md).  

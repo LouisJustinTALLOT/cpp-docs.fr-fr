@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890181"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Enregistrement de bitmaps au format GIF ou JPEG (Éditeur d'images pour les icônes)
 Lorsque vous créez une image bitmap, l’image est créée dans le format bitmap (.bmp). Vous pouvez, toutefois, enregistrez l’image au format GIF ou JPEG ou dans d’autres formats graphiques.  

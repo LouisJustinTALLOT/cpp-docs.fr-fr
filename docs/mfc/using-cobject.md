@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382296"
 ---
 # <a name="using-cobject"></a>Utilisation de CObject
 [CObject](../mfc/reference/cobject-class.md) est la classe de base racine pour la plupart de la bibliothèque Microsoft Foundation classe (MFC). La `CObject` classe contient de nombreuses fonctionnalités utiles que vous pouvez incorporer dans vos propres objets, y compris la prise en charge de la sérialisation, les informations de classe d’exécution et sortie de diagnostic d’objet. Si vous dérivez votre classe de `CObject`, votre classe peut exploiter ces `CObject` fonctionnalités.  

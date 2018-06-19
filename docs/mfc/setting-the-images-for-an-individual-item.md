@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380599"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Définition des images d'un élément individuel
 Les différents types d’images utilisée par l’élément de zone de liste déroulante étendue sont déterminés par les valeurs dans le `iImage`, **iSelectedImage**, et **transport** membres de le [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) structure. Chaque valeur est l’index d’une image dans la liste d’images associée du contrôle. Par défaut, ces membres sont définis sur 0, le contrôle affiche pas d’image pour l’élément. Si vous souhaitez utiliser des images pour un élément spécifique, vous pouvez modifier la structure en conséquence, lors de l’insertion de l’élément de zone de liste déroulante ou en modifiant un élément de zone de liste déroulante existant.  

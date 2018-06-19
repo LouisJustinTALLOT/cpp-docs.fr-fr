@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379705"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Paramètres du contrôle ToolBar
 Les boutons sur une barre d’outils peuvent afficher une image bitmap, une chaîne ou les deux. Par défaut, la taille de l’image est définie aux dimensions de 16 par 15 pixels. Tous les boutons sont la même largeur, par défaut 24 par 22 pixels. Hauteur de la barre d’outils est déterminée par la hauteur des boutons et la largeur de la barre d’outils est identique à la largeur de la zone cliente de la fenêtre parente, également par défaut.  

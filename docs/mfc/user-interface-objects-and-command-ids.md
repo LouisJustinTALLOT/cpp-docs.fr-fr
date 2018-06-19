@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385597"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Objets d'interface utilisateur et ID de commande
 Éléments de menu, des boutons de barre d’outils et touches accélérateur sont « objets interface utilisateur » capables de générer des commandes. Chacun de ces objets interface utilisateur ait un ID. Vous associez un objet d’interface utilisateur une commande en affectant le même ID à l’objet et de la commande. Comme expliqué dans [Messages](../mfc/messages.md), commandes sont implémentées en tant que messages spéciaux. L’illustration « Commandes dans la structure » ci-dessous montre comment le framework gère les commandes. Lorsqu’un objet d’interface utilisateur génère une commande, tel que `ID_EDIT_CLEAR_ALL`, un des objets dans votre application gère la commande, dans la figure ci-dessous, l’objet de document `OnEditClearAll` fonction est appelée via la table des messages du document.  

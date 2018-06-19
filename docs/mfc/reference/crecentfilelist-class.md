@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377251"
 ---
 # <a name="crecentfilelist-class"></a>Classe de CRecentFileList
 Prend en charge le contrôle de la liste des derniers fichiers utilisés (MRU).  

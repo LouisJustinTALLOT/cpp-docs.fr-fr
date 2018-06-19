@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384213"
 ---
 # <a name="visualization-manager"></a>Gestionnaire de visualisation
 Le gestionnaire visuel est un objet qui contrôle l'apparence d'une application entière. Il agit comme une classe unique dans laquelle vous pouvez insérer l'intégralité du code de dessin pour votre application. La bibliothèque MFC inclut plusieurs gestionnaires visuels. Vous pouvez également créer votre propre gestionnaire visuel si vous souhaitez créer une vue personnalisée pour votre application. Les illustrations suivantes montrent la même application lorsque différents gestionnaires visuels sont activés :  

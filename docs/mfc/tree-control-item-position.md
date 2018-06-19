@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382149"
 ---
 # <a name="tree-control-item-position"></a>Position d’élément de contrôle d’arborescence
 Position initiale d’un élément est définie lorsque l’élément est ajouté au contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) à l’aide de la `InsertItem` fonction membre. L’appel de fonction membre spécifie le handle de l’élément parent et le handle de l’élément après lequel le nouvel élément doit être inséré. Le deuxième handle doit identifier un élément enfant du parent donné ou une de ces valeurs : `TVI_FIRST`, `TVI_LAST`, ou `TVI_SORT`.  

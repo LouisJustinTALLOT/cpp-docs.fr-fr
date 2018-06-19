@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693859"
 ---
 # <a name="scheduler-instances"></a>Instances de planificateur
 Ce document décrit le rôle des instances de planificateur dans le Runtime d’accès concurrentiel et comment utiliser le [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) et [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classes pour créer et gérer instances de planificateur. Instances de planificateur sont utiles lorsque vous souhaitez associer des stratégies de planification explicites à des types spécifiques de charges de travail. Par exemple, vous pouvez créer une instance du planificateur pour effectuer certaines tâches avec une priorité de thread élevée et utiliser le planificateur par défaut pour effectuer d’autres tâches avec une priorité de thread normale.  

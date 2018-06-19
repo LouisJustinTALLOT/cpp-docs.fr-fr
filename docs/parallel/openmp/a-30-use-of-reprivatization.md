@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689608"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   Utilisation de la reprivatisation
 L’exemple suivant montre la reprivatization des variables. Variables privées peuvent être marqués `private` dans une directive imbriquée. Ils n’ont pas à être partagées dans la région parallèle englobante.  

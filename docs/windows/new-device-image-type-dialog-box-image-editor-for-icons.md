@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879618"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nouvelle &lt;périphérique&gt; Image du Type de boîte de dialogue (Éditeur d’images pour les icônes)
 Vous permet de créer une nouvelle image de périphérique d’un type spécifié. Pour ouvrir la **nouveau \<appareil > Image** boîte de dialogue, cliquez sur **nouveau Type d’Image** sur la **Image** menu.  

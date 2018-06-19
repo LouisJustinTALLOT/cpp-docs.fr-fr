@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382764"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Opérations de glisser-déplacer pour le contrôle d’arborescence
 Un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie une notification lorsque l’utilisateur commence à faire glisser un élément. Le contrôle envoie un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) message de notification lorsque l’utilisateur commence à faire glisser un élément avec le bouton gauche de la souris et un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) message de notification lorsque l’utilisateur commence à faire glisser avec le bouton droit. Vous pouvez empêcher un contrôle d’arborescence d’envoyer des notifications en lui attribuant le le **TVS_DISABLEDRAGDROP** style.  

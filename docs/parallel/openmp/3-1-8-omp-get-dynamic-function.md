@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686189"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 Fonction omp_get_dynamic
 Le **omp_get_dynamic** fonction retourne une valeur différente de zéro si l’ajustement dynamique de threads est activé, sinon, retourne 0. Le format est le suivant :  

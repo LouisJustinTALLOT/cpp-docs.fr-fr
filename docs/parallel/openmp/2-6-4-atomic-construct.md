@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688126"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Construction atomic
 Le `atomic` directive garantit qu’un emplacement de mémoire spécifique est mise à jour atomiquement, plutôt que d’exposer la possibilité de plusieurs simultanées de l’écriture de threads. La syntaxe de la `atomic` la directive est la suivante :  

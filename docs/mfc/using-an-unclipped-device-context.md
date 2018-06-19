@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381008"
 ---
 # <a name="using-an-unclipped-device-context"></a>Utilisation d'un contexte de périphérique non découpé
 Si vous êtes absolument certain que votre contrôle ne dessinera pas en dehors de sa zone client, vous pouvez réaliser un gain de vitesse modeste mais palpable en désactivant l’appel à `IntersectClipRect` effectué par `COleControl`. Pour ce faire, supprimez le **clipPaintDC** indicateur dans le jeu d’indicateurs retourné par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Par exemple :  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693804"
 ---
 # <a name="synchronization-data-structures"></a>Structures de données de synchronisation
 Le Runtime d’accès concurrentiel fournit plusieurs structures de données qui vous permettent de synchroniser l’accès aux données partagées à partir de plusieurs threads. Ces structures de données sont utiles lorsque vous avez partagé des données que vous modifiez rarement. Un objet de synchronisation, par exemple, une section critique, entraîne des autres threads d’attendre que la ressource partagée est disponible. Par conséquent, si vous utilisez un tel objet pour synchroniser l’accès aux données qui sont fréquemment utilisés, vous pouvez perdre l’extensibilité dans votre application. Le [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) fournit le [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) (classe), ce qui vous permet de partager une ressource entre plusieurs threads ou tâches sans avoir besoin pour la synchronisation. Pour plus d’informations sur la `combinable` de classe, consultez [conteneurs et objets parallèles](../../parallel/concrt/parallel-containers-and-objects.md).  

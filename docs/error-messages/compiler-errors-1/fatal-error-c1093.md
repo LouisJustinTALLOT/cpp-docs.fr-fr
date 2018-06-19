@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226342"
 ---
 # <a name="fatal-error-c1093"></a>Erreur irrécupérable C1093
 Échec de l’appel d’API 'nom de la fonction' 'emplacement d’appel' : 'texte du runtime'  

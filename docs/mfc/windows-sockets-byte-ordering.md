@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385155"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets : classement des octets
 Cet article et deux autres articles similaires décrivent plusieurs problèmes de programmation Windows Sockets. Cet article traite de l’ordre des octets. Les autres problèmes sont traités dans les articles : [Windows Sockets : blocage](../mfc/windows-sockets-blocking.md) et [Windows Sockets : conversion de chaînes](../mfc/windows-sockets-converting-strings.md).  

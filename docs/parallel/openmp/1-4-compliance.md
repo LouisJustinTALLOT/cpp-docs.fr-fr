@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687229"
 ---
 # <a name="14-compliance"></a>1.4 Conformité
 Une implémentation de l’API de C/C++ OpenMP est *conforme OpenMP* si il reconnaît et conserve la sémantique de tous les éléments de cette spécification, tel qu’indiqué dans les chapitres 1, 2, 3, 4, et l’annexe C. annexes A, B, D, E et F sont pour informations uniquement et ne font pas partie de la spécification. Les implémentations qui incluent uniquement un sous-ensemble de l’API ne sont pas compatibles OpenMP.  

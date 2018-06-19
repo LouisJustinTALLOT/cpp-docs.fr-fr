@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882925"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Affichage ou masquage de la grille de pixels (Éditeur d'images pour les icônes)
 Pour tous les volets d’éditeur d’images avec un facteur d’agrandissement égale ou supérieure à 4, vous pouvez afficher une grille qui délimite les pixels individuels dans l’image.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691492"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Exemples illustrant l'imbrication incorrecte de directives de partage de travail
 Les exemples de cette section illustrent les règles d’imbrication de la directive. Pour plus d’informations sur l’imbrication de directive, consultez [Section 2.9](../../parallel/openmp/2-9-directive-nesting.md) sur la page 33.  

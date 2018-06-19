@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381034"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test des propriétés et des événements avec le conteneur de test
 L’application conteneur de Test, fournie avec Visual C++, est un conteneur de contrôles ActiveX pour tester et déboguer des contrôles ActiveX. Conteneur de test permet au développeur de contrôle tester les fonctionnalités du contrôle en modifiant ses propriétés, en appelant ses méthodes et en déclenchant ses événements. Conteneur de test peut afficher des journaux de notifications de liaison de données et fournit également des fonctions de test de la fonctionnalité de persistance d’un contrôle ActiveX : vous pouvez enregistrer les propriétés dans un flux de données ou sous-stockage, les recharger et examiner les données de flux stockée. Cette section décrit comment utiliser les fonctionnalités de base du conteneur de Test. Pour plus d’informations, sélectionnez le **aide** menu lors de l’exécution du conteneur de Test.  

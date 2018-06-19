@@ -79,6 +79,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377364"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe de CMFCToolBarComboBoxButton
 Un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante ( [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)).  

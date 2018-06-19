@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687281"
 ---
 # <a name="319-ompsetnested-function"></a>3.1.9 Fonction omp_set_nested
 Le **omp_set_nested** fonction active ou désactive le parallélisme imbriqué. Le format est le suivant :  

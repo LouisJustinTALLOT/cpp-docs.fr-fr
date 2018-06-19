@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378332"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistance des contrôles OLE
 Une fonctionnalité des contrôles OLE est propriété persistance (sérialisation), ce qui permet le contrôle OLE lire ou écrire des valeurs de propriété à partir d’un fichier ou un flux. Une application conteneur peut utiliser la sérialisation pour stocker des valeurs de propriété d’un contrôle même après que l’application a détruit le contrôle. Les valeurs de propriété du contrôle OLE peuvent alors être lues à partir du fichier ou flux de données lorsqu’une nouvelle instance du contrôle est créé ultérieurement.  

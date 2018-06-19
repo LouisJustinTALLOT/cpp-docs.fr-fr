@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381844"
 ---
 # <a name="window-dialog-and-control-classes"></a>Classes de fenêtre, de boîte de dialogue et de contrôle
 Classe `CWnd` et ses classes dérivées encapsulent un `HWND`, un handle de fenêtre de Windows. `CWnd` utilisables par lui-même ou comme base pour dériver de nouvelles classes. Les classes dérivées fournies par la bibliothèque de classes représentent différents types de windows.  

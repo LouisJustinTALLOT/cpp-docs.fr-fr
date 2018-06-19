@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690609"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilisation des objets accelerator et accelerator_view
 Vous pouvez utiliser la [accelerator](../../parallel/amp/reference/accelerator-class.md) et [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) des classes pour spécifier le périphérique ou l’émulateur pour exécuter votre code C++ AMP sur. Un système peut avoir plusieurs périphériques ou les émulateurs qui varient selon la quantité de mémoire, la prise en charge de la mémoire partagée, support de débogage ou prise en charge de la double précision. C++ Accelerated les Massive Parallelism (C++ AMP) fournit des API que vous pouvez utiliser pour examiner les accélérateurs disponibles, définissez un en tant que la valeur par défaut, indiquez plusieurs accelerator_views différents pour les appels multiples à parallel_for_each et effectuer des tâches de débogage spéciales.  

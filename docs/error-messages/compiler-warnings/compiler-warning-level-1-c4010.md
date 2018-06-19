@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274652"
 ---
 # <a name="compiler-warning-level-1-c4010"></a>Compilateur avertissement (niveau 1) C4010
 commentaire sur une ligne contient le caractère de continuation de ligne  

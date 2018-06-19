@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199509"
 ---
 # <a name="fatal-error-c1852"></a>Erreur irrécupérable C1852
 'nom_fichier' n’est pas un fichier d’en-tête précompilé valide  

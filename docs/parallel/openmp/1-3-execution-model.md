@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687892"
 ---
 # <a name="13-execution-model"></a>1.3 Modèle d'exécution
 OpenMP utilise le modèle de bifurcation-jointure de l’exécution en parallèle. Bien que ce modèle de bifurcation-jointure puisse être utile pour résoudre de nombreux problèmes, il est quelque peu conçu pour les grandes applications basées sur tableau. OpenMP est conçue pour la prise en charge des programmes qui seront exécute correctement à la fois comme parallèle programmes (plusieurs threads d’exécution et une bibliothèque de prise en charge OpenMP complète) et en tant que programmes séquentiels (directives ignorées et une bibliothèque de stubs OpenMP simple). Toutefois, il est possible et autorisé à développer un programme qui ne se comporte pas correctement lors de l’exécution de manière séquentielle. En outre, différents degrés de parallélisme peuvent entraîner des résultats numériques différents en raison de modifications dans l’association d’opérations numériques. Par exemple, une réduction de la série d’addition peut avoir un modèle différent des associations d’ajout à une réduction en parallèle. Ces différentes associations peuvent modifier les résultats de l’addition à virgule flottante.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691901"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Clauses d'attributs de partage de données
 Plusieurs directives acceptent les clauses qui lui permet de contrôler les attributs de partage des variables pendant la durée de la région. Les clauses d’attributs de partage s’appliquent uniquement aux variables dans l’étendue lexicale de la directive de sur lequel la clause apparaît. Toutes les clauses suivantes sont autorisées sur toutes les directives. La liste des clauses qui sont valides sur une directive particulière sont décrites dans la directive.  

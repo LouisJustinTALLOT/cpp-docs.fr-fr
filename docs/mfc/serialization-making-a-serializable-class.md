@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383414"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Sérialisation : définir une classe sérialisable
 Cinq étapes principales sont requises pour rendre une classe sérialisable. Elles sont répertoriées ci-dessous et expliquées dans les sections suivantes :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226673"
 ---
 # <a name="fatal-error-c1311"></a>Erreur irrécupérable 1311
 Le format COFF ne peut pas initialiser de manière statique 'var' avec un nombre octet (s) d’une adresse  

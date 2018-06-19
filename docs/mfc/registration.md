@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381168"
 ---
 # <a name="registration"></a>Inscription
 Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OLE, OLE présente une liste des types d'objets dans le but d'en choisir un. OLE obtient la liste de la base de données d'inscription du système, qui contient les informations fournies par les applications serveur. Lorsqu'un serveur s'inscrit lui-même, les entrées qu'il place dans la base de données d'inscription du système (le Registre) décrivent chaque type d'objet qu'il fournit, les extensions de fichier, le chemin d'accès à lui-même, parmi d'autres informations.  

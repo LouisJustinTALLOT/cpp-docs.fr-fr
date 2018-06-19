@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687736"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>Comment : implémenter divers modèles de producteur-consommateur
 Cette rubrique décrit comment implémenter le modèle de producteur-consommateur dans votre application. Dans ce modèle, le *producteur* envoie des messages à un bloc de message et le *consommateur* lit les messages de ce bloc.  

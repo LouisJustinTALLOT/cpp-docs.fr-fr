@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890428"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Police de l'outil texte (Éditeur d'images pour les icônes)
 Spécifie les paramètres de police lorsque vous utilisez la [boîte de dialogue Outil texte](../windows/text-tool-dialog-box-image-editor-for-icons.md) de la [Éditeur d’images](../windows/image-editor-for-icons.md).  

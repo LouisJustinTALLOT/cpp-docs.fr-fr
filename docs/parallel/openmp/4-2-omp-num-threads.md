@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687645"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 Le **OMP_NUM_THREADS** variable d’environnement définit le nombre de threads à utiliser pendant l’exécution, par défaut, sauf si ce nombre est modifié explicitement en appelant le **omp_set_num_threads** routine de bibliothèque ou par explicite **num_threads** clause sur une **parallèles** directive.  

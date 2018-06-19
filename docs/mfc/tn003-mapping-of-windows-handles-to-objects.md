@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382971"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003 : mappage des handles Windows à des objets
 Cette note décrit les classes MFC des routines qui prennent en charge le mappage Windows handles vers des objets C++ de l’objet.  

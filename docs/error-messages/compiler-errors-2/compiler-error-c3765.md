@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274766"
 ---
 # <a name="compiler-error-c3765"></a>Erreur du compilateur C3765
 'événement' : Impossible de définir un événement dans un class/struct 'type' marqués comme event_receiver  

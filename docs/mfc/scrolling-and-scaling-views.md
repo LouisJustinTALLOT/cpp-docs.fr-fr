@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379266"
 ---
 # <a name="scrolling-and-scaling-views"></a>Défilement et mise à l'échelle des vues
 MFC prend en charge les vues qui défilent et des vues qui sont automatiquement mis à l’échelle à la taille de la fenêtre frame qui les affiche. Classe `CScrollView` prend en charge les deux types de vues.  

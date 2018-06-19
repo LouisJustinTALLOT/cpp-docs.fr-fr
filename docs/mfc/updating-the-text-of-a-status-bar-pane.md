@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384476"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Mise à jour du texte d'un volet de barre d'état
 Cet article explique comment modifier le texte qui apparaît dans un volet de barre d’état MFC. Une barre d’état, un objet de la fenêtre de la classe [CStatusBar](../mfc/reference/cstatusbar-class.md) — contient plusieurs « volets ». Chaque volet est une zone rectangulaire de la barre d’état que vous pouvez utiliser pour afficher des informations. Par exemple, de nombreuses applications affichent l’état de la touche VERR, VERR. NUM et défil dans les volets de droite. Les applications affichent également souvent du texte informatif dans le volet de gauche (volet 0), parfois appelé « volet de message ». Par exemple, la barre d’état MFC par défaut utilise le volet de message pour afficher une chaîne décrivant le bouton de barre d’outils ou élément de menu sélectionné. La figure dans [barres d’état](../mfc/status-bar-implementation-in-mfc.md) affiche une barre d’état à partir d’une application MFC de créés par l’Assistant Création d’applications.  

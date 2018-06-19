@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385107"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
 Cette procédure pas à pas montre comment modifier une application MFC existante à utiliser l’interface utilisateur du ruban. Visual Studio prend en charge le ruban Office 2007 et le ruban paysages de Windows 7. Pour plus d’informations sur l’interface utilisateur du ruban, consultez [rubans](http://go.microsoft.com/fwlink/p/?linkid=129233) sur le site Web MSDN.  

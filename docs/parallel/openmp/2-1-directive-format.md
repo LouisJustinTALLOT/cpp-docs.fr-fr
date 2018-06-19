@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687269"
 ---
 # <a name="21-directive-format"></a>2.1 Format des directives
 La syntaxe d’une directive OpenMP est bonne et due forme spécifiée par la grammaire dans [annexe C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)et de manière informelle comme suit :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693375"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency, espace de noms (C++ AMP)
 Fournit des classes et des fonctions qui accélèrent l’exécution du code C++ sur du matériel de données en parallèle. Pour plus d’informations, consultez [présentation de C++ AMP](../cpp-amp-overview.md)  

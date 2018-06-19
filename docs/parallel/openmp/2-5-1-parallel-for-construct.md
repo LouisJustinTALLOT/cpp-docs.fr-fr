@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687151"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 Construction for parallèle
 Le **parallèles pour** la directive est un raccourci pour un **parallèles** région qui contient un seul **pour** la directive. La syntaxe de la **parallèles pour** la directive est la suivante :  

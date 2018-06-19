@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379669"
 ---
 # <a name="servers-user-interface-issues"></a>Serveurs : problèmes d'interface utilisateur
 Une application serveur possède un nombre de fonctionnalités qui doivent être ajoutées à l’interface utilisateur à fournir des éléments OLE aux applications conteneur. Pour plus d’informations sur les menus et les ressources supplémentaires qui doivent être ajoutés à une application serveur, consultez [Menus et ressources : ajouts de serveur](../mfc/menus-and-resources-server-additions.md).  

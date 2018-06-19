@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383784"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Utilisation des champs de rappel dans un contrôle de sélecteur de date et heure
 Outre les caractères de format standard qui définissent les champs de sélecteur de date et d'heure, vous pouvez personnaliser la sortie en spécifiant certaines parties d'une chaîne de format personnalisée comme champs de rappel. Pour déclarer un champ de rappel, incluez un ou plusieurs caractères "X" (code ASCII 88) n'importe où dans le corps de la chaîne de format. Par exemple, la chaîne suivante "Aujourd'hui, nous sommes le : "aa"/"MM"/"jj" (jour "X") '"fait que le contrôle de date et d'heure affiche la valeur actuelle comme année suivie du mois, de la date, et enfin du jour.  

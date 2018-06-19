@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687112"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Comment : effectuer une sélection parmi les tâches terminées
 Cet exemple montre comment utiliser le [classes concurrency::choice](../../parallel/concrt/reference/choice-class.md) et [concurrency::join](../../parallel/concrt/reference/join-class.md) des classes pour sélectionner la première tâche afin de terminer un algorithme de recherche.  

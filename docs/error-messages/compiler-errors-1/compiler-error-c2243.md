@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172587"
 ---
 # <a name="compiler-error-c2243"></a>Erreur du compilateur C2243
 La conversion 'type de conversion' de 'type1' en 'type2' existe, mais n'est pas accessible  

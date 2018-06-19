@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379656"
 ---
 # <a name="serialization-serializing-an-object"></a>Sérialisation : sérialisation d'un objet
 L’article [sérialisation : définir une classe sérialisable](../mfc/serialization-making-a-serializable-class.md) montre comment rendre une classe sérialisable. Une fois que vous avez une classe sérialisable, vous pouvez sérialiser des objets de cette classe vers et à partir d’un fichier via un [CArchive](../mfc/reference/carchive-class.md) objet. Cet article explique :  

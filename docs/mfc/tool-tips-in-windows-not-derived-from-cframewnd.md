@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382084"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Info-bulles dans les fenêtres non dérivées de CFrameWnd
 Cette série d’articles couvre l’activation d’info-bulles pour les contrôles contenus dans une fenêtre qui n’est pas dérivée [CFrameWnd](../mfc/reference/cframewnd-class.md). L’article [barres d’outils, info-bulles](../mfc/toolbar-tool-tips.md) fournit des informations sur les info-bulles pour les contrôles dans un `CFrameWnd`.  

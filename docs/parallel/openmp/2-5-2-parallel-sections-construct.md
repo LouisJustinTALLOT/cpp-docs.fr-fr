@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689478"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 Construction de sections parallèles
 Le **de sections parallèles** directive fournit un formulaire contextuel pour spécifier un **parallèles** région contenant un seul **sections** directive. La sémantique est identique à spécifier explicitement un **parallèles** directive immédiatement suivie d’un **sections** directive. La syntaxe de la **de sections parallèles** la directive est la suivante :  

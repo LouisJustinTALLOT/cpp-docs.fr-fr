@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889405"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Définition d’un curseur&#39;s Hot Spot (Éditeur d’images pour les icônes)
 La zone réactive d’un [curseur](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) est le point auquel se réfère Windows dans le suivi de la position du curseur. Par défaut, la zone réactive est définie dans le coin supérieur gauche du curseur (coordonnées 0,0). La propriété de zone réactive dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) affiche les coordonnées de la zone réactive.  

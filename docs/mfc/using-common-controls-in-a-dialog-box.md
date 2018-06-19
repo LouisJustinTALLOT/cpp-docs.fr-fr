@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382689"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilisation de contrôles communs dans une boîte de dialogue
 Les contrôles communs Windows peuvent être utilisés dans [boîtes de dialogue](../mfc/dialog-boxes.md), forment les vues, les vues des enregistrements et toute autre fenêtre basée sur un modèle de boîte de dialogue. La procédure suivante, avec quelques modifications mineures, fonctionne également pour les formes.  

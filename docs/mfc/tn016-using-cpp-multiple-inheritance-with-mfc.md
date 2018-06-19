@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384086"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016 : utilisation de l'héritage multiple C++ avec MFC
 Cette note décrit l'utilisation de l'héritage multiple avec les classes Microsoft Foundation Class. L'utilisation de l'héritage multiple n'est pas nécessaire avec MFC. L'héritage multiple n'est pas utilisé dans les classes MFC et n'est pas nécessaire pour écrire une bibliothèque de classes.  

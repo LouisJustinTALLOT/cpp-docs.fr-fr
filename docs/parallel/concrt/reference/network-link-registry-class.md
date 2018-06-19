@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688295"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
 La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.  

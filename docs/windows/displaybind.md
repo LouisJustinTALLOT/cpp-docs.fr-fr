@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879885"
 ---
 # <a name="displaybind"></a>displaybind
 Indique une propriété qui doit être affichée à l’utilisateur comme pouvant être liée.  

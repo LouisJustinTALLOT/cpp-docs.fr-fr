@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892789"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Définition de la largeur d'une barre de défilement horizontale
 Lorsque vous ajoutez une zone de liste avec une barre de défilement horizontale à une boîte de dialogue à l’aide des classes MFC, la barre de défilement s’affiche pas automatiquement dans votre application.  

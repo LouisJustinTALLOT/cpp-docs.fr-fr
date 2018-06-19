@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689712"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 Fonctions omp_set_lock and omp_set_nest_lock
 Chacune de ces fonctions bloque le thread d’exécution de la fonction jusqu'à ce que le verrou spécifié n’est disponible et qu’il définit ensuite le verrou. Un verrou simple n’est disponible que si elle est déverrouillée. Un verrou pouvant est disponible s’il est déverrouillé, ou si elle est déjà détenu par le thread d’exécution de la fonction. Le format est le suivant :  

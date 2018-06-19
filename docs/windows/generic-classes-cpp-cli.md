@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881398"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 Une classe générique est déclarée à l’aide de la forme suivante :  

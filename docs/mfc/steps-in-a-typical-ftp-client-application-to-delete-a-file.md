@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380563"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Étapes pour supprimer un fichier dans une application cliente FTP classique
 Le tableau suivant décrit les étapes que vous pouvez effectuer dans une application cliente FTP classique qui supprime un fichier.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198376"
 ---
 # <a name="compiler-error-c2494"></a>Erreur du compilateur C2494
 'mot_clé' ne peut pas être appelé à partir d’une expression de filtre ou bloc __finally/finally  

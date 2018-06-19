@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689319"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Planificateur de tâches (runtime d’accès concurrentiel)
 Les rubriques de cette partie de la documentation décrivent les fonctionnalités importantes du planificateur de tâches du runtime d’accès concurrentiel. Le planificateur de tâches s’avère utile quand vous voulez affiner les performances de votre code existant qui utilise le runtime d’accès concurrentiel.  

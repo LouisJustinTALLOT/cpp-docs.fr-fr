@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690486"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migration d'OpenMP au runtime d'accès concurrentiel
 Le runtime d’accès concurrentiel accepte divers modèles de programmation. Ces modèles peuvent chevaucher ou compléter les modèles d’autres bibliothèques. Les documents dans cette section compare [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) le runtime d’accès concurrentiel et fournissent des exemples sur la migration du code OpenMP existant pour utiliser le Runtime d’accès concurrentiel.  

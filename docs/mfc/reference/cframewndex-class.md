@@ -193,6 +193,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377821"
 ---
 # <a name="cframewndex-class"></a>Classe de CFrameWndEx
 Implémente les fonctionnalités d'une fenêtre frame superposée ou contextuelle à interface monodocument (SDI) Windows et fournit les membres permettant de gérer la fenêtre. Il étend le [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  

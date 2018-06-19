@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381759"
 ---
 # <a name="using-ccomboboxex"></a>Utilisation de CComboBoxEx
 Le contrôle de zone de liste déroulante étendue est une extension du contrôle de zone de liste déroulante standard qui fournit la prise en charge native pour les images de l’élément. Ces images peuvent être utilisées pour indiquer l’état des éléments individuels dans la zone de liste déroulante, tels que les éléments actuellement sélectionnés et. Pour rendre des images d’élément facilement accessible, le contrôle fournit la prise en charge de la liste des images.  

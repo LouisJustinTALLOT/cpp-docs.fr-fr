@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380108"
 ---
 # <a name="styles-for-the-progress-control"></a>Styles du contrôle Progress
 Lorsque vous créez initialement du contrôle progress ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), utilisez le `dwStyle` pour spécifier les styles de fenêtre souhaitée pour votre contrôle de progression. La liste suivante détaille les styles de fenêtre applicables. Le contrôle ignore tout style de fenêtre autres que ceux répertoriés ici. Vous devez toujours créer le contrôle comme une fenêtre enfant, généralement d’une boîte de dialogue parent.  

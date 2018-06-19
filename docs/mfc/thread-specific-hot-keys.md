@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380417"
 ---
 # <a name="thread-specific-hot-keys"></a>Touches d'accès rapide spécifiques aux threads
 Une application définit une touche d’accès rapide spécifiques aux threads ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) à l’aide de Windows **RegisterHotKey** (fonction). Lorsque l’utilisateur appuie sur une touche d’accès rapide spécifiques aux threads, Windows publie une [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) message au début de la file d’attente des messages d’un thread particulier. Le **WM_HOTKEY** message contient le code de touche virtuelle, état du décalage et défini par l’utilisateur ID de la touche d’accès rapide spécifique qui a été enfoncée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h. Pour plus d’informations sur cette méthode, consultez [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  

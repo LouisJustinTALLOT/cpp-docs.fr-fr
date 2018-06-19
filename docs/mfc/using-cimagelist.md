@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385789"
 ---
 # <a name="using-cimagelist"></a>Utilisation de CImageList
 Une liste d’images, représentée par la classe [CImageList](../mfc/reference/cimagelist-class.md), est une collection d’images de même taille, chacun d’eux peut être référencé par son index. Listes d’images sont utilisées pour gérer efficacement les grands ensembles d’icônes ou de bitmaps. Listes d’images pas eux-mêmes sont des contrôles, car ils ne sont pas windows ; Toutefois, ils sont utilisés avec différents types de contrôles, y compris les contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)), contrôles d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) et les contrôles de tabulation ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384060"
 ---
 # <a name="using-views"></a>Utilisation de vues
 Responsabilités de la vue sont afficher graphiquement les données du document à l’utilisateur et d’accepter et d’interpréter l’entrée d’utilisateur en tant qu’opérations sur le document. Vos tâches d’écriture de votre classe d’affichage sont à :  

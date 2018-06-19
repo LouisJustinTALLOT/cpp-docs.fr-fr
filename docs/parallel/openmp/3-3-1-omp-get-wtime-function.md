@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689491"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 Fonction omp_get_wtime
 Le `omp_get_wtime` fonction retourne une valeur à virgule flottante double précision égale à la durée écoulée totale d’exécution en secondes depuis le « moment donné dans le passé ».  L’heure « réelle dans le passé » est arbitraire, mais il ne peut ne pas changer pendant l’exécution de l’application. Le format est le suivant :  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687723"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Prise en charge du multithreading pour le code plus ancien (Visual C++)
 Visual C++ vous permet d’avoir plusieurs threads simultanés d’exécution en cours d’exécution simultanément. Avec le multithreading, vous pouvez exécuter les tâches en arrière-plan, gérer des flux simultanés d’entrées, gérer une interface utilisateur et bien plus encore.  

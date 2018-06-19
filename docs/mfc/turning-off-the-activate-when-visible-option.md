@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384779"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>Désactivation de l'option Actif quand il est visible
 Un contrôle a deux états : active ou inactive. En règle générale, ces États correspondaient à la présence du contrôle ait ou non une fenêtre. Un contrôle actif avait une fenêtre ; un contrôle inactif n’ont pas. Avec l’introduction de l’activation sans fenêtre, cette distinction n’est plus universelle, mais s’applique toujours à de nombreux contrôles.  

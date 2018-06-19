@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229773"
 ---
 # <a name="compiler-error-c2614"></a>Erreur du compilateur C2614
 'classe1' : l’initialisation de membre non conforme : 'classe2' n’est pas une base ni un membre  

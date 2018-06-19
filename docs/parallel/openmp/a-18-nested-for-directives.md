@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690866"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   Directives for imbriquées
 L’exemple suivant de `for` directive imbrication ([Section 2.9](../../parallel/openmp/2-9-directive-nesting.md) sur la page 33) est conforme car interne et externe `for` directives lier aux différentes régions parallèles :  

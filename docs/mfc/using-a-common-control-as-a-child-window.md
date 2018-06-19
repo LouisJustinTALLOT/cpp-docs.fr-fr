@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382822"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Utilisation d'un contrôle commun en tant que fenêtre enfant
 Un des contrôles communs Windows peut servir en tant que fenêtre enfant de toute autre fenêtre. La procédure suivante décrit comment créer un contrôle commun de manière dynamique et travailler avec lui.  

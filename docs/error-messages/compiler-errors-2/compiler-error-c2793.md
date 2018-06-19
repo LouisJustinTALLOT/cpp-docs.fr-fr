@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236290"
 ---
 # <a name="compiler-error-c2793"></a>Erreur du compilateur C2793
 'jeton' : jeton inattendu après ' ::', identificateur ou mot clé 'operator' attendu  

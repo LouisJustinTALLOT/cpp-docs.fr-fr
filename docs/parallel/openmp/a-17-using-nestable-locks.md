@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689907"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Utilisation de verrous pouvant être imbriqués
 L’exemple suivant (pour [Section 3.2](../../parallel/openmp/3-2-lock-functions.md) page 41) montre comment un verrou pouvant peut être utilisé pour synchroniser les mises à jour pour un ensemble de la structure et un de ses membres.  

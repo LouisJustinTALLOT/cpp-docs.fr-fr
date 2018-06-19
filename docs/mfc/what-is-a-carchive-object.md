@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383827"
 ---
 # <a name="what-is-a-carchive-object"></a>Qu'est-ce qu'un objet CArchive ?
 A `CArchive` objet fournit un mécanisme de mise en mémoire tampon de type sécurisé pour l’écriture et la lecture des objets sérialisables vers ou depuis un `CFile` objet. Généralement les `CFile` objet représente un fichier de disque ; Toutefois, il peut également être un fichier de mémoire (`CSharedFile` objet), peut-être représentant le Presse-papiers.  
