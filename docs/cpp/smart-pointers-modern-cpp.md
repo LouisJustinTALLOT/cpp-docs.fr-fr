@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424350"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (Modern C++)
 Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives pointeurs*, qui sont utilisés pour garantir que les programmes sont exempts de la mémoire et les fuites de ressources et sont contre les exceptions.  

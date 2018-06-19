@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354653"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Mise en forme des valeurs de temps : Classes à usage général
 La procédure suivante montre la mise en forme des valeurs d’heure.  

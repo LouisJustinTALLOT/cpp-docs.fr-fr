@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421942"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Utilisation de la gestion structurée des exceptions avec C++
 La gestion structurée des exceptions décrite dans ces articles fonctionne avec les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++ et n'est pas recommandée. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, le mécanisme de gestion des exceptions C++ est plus souple, car il peut gérer les exceptions de tout type.  

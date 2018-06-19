@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360147"
 ---
 # <a name="building-cc-isolated-applications"></a>Génération d'applications isolées C/C++
 Une application isolée dépend uniquement les assemblys côte à côte et le lie à ses dépendances à l’aide d’un manifeste. Il n’est pas requis pour votre application soit complètement isolée pour pouvoir s’exécuter correctement sur Windows ; Toutefois, en faisant l’acquisition d’établissement d’isoler totalement votre application, vous pouvez gagner du temps si vous avez besoin votre application à l’avenir de service. Pour plus d’informations sur les avantages de fabrication isoler totalement votre application, consultez [Applications isolées](http://msdn.microsoft.com/library/aa375190).  

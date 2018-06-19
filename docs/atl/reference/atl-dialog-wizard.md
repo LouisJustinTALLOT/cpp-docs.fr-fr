@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358004"
 ---
 # <a name="atl-dialog-wizard"></a>Assistant Boîte de dialogue ATL
 Cet Assistant insère dans le projet un objet boîte de dialogue ATL, dérivé de [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Une boîte de dialogue dérivé `CAxDialogImpl` peut héberger des contrôles ActiveX.  

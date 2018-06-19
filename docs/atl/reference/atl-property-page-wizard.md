@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359780"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/reference/adding-an-atl-property-page.md) ou à un projet MFC avec prise en charge ATL. Une page de propriétés ATL fournit une interface utilisateur pour définir les propriétés (ou en appelant les méthodes) d’un ou plusieurs objets COM.  

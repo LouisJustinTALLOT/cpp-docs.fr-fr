@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057937"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 Génère soit un `UWOP_SAVE_XMM128` ou un `UWOP_SAVE_XMM128_FAR` déroulement d’entrée du code pour le registre XMM spécifié et le décalage à l’aide de l’offset de prologue actuel. MASM choisira l’encodage le plus efficace.  
