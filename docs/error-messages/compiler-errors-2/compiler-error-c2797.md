@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238161"
 ---
 # <a name="compiler-error-c2797"></a>Erreur du compilateur C2797
 (Obsolète) L’initialisation de listes à l’intérieur de la liste des initialiseurs membre ou l’initialiseur de membre de données non statiques n’est pas implémentée.  

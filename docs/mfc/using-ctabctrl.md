@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383680"
 ---
 # <a name="using-ctabctrl"></a>Utilisation de CTabCtrl
 Un « contrôle onglet » est semblable aux intercalaires d’un agenda ou aux dossiers suspendus dans un fichier CAB. Utilisez le contrôle onglet, représenté par la classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), pour afficher plusieurs pages d’informations ou des contrôles à un utilisateur à la fois, dans un format qui suggère un homologue ou une relation logique entre chaque page.  

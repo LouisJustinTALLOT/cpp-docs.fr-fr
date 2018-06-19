@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379858"
 ---
 # <a name="variant-parameter-type-constants"></a>Constantes de type paramètre variant
 Cette rubrique répertorie les nouvelles constantes qui indiquent les types de paramètre variant conçus pour une utilisation avec les classes de contrôle OLE de la bibliothèque Microsoft Foundation Class.  

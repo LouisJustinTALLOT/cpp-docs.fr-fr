@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381710"
 ---
 # <a name="tree-control-label-editing"></a>Modification des étiquettes de contrôles d’arborescence
 L’utilisateur peut modifier directement les étiquettes des éléments dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) qui a le **TVS_EDITLABELS** style. L’utilisateur commence à modifier en cliquant sur l’étiquette de l’élément qui a le focus. Une application commence à modifier à l’aide de la [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) fonction membre. Le contrôle d’arborescence envoie la notification lorsque la modification commence et lorsqu’elle est annulée ou terminée. Lorsque la modification est effectuée, vous êtes responsable de la mise à jour de l’étiquette de l’élément, le cas échéant.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222239"
 ---
 # <a name="compiler-error-c2348"></a>Erreur du compilateur C2348
 'type name' : n’est pas un agrégat de style C, ne peut pas être exporté dans un IDL incorporé  
