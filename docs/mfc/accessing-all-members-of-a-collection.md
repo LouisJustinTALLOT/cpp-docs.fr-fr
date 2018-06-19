@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334845"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accès à tous les membres d'une collection
 Les classes de collection de tableau MFC (qu’elles soient ou non basées sur un modèle) utilisent des index pour accéder à leurs éléments. Les classes de collection de mappage et de liste MFC (qu’elles soient ou non basées sur un modèle) utilisent un indicateur de type **POSITION** pour décrire une position donnée dans la collection. Pour accéder à un ou plusieurs membres d’une collection de ce type, vous devez en premier lieu initialiser l’indicateur de position et passer plusieurs fois cette position à la collection et lui demander de retourner l’élément suivant. La collection n’est pas responsable du suivi des informations d’état de la progression de l’itération. Ces informations sont conservées dans l’indicateur de position. En revanche, pour une position donnée, la collection est chargée de retourner l’élément suivant.  

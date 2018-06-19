@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323145"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>Avertissement de l'optimisation guidée par profil PG1087
 Le fichier PGC 'fichier' n’est pas valide.  

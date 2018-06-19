@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380206"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Récupérer des données d'un objet Dialog
 Le framework fournit un moyen simple pour initialiser les valeurs des contrôles dans une boîte de dialogue et pour récupérer les valeurs des contrôles. L’approche manuelle plus laborieuse consiste à appeler des fonctions telles que la `SetDlgItemText` et `GetDlgItemText` fonctions membres de classe `CWnd`, qui s’appliquent aux fenêtres de contrôle. Ces fonctions, vous d’accéder à chaque contrôle individuellement afin de définir ou obtenir sa valeur, appeler des fonctions telles que `SetWindowText` et `GetWindowText`. Approche de l’infrastructure automatise l’initialisation et la récupération.  

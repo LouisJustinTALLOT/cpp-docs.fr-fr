@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689595"
 ---
 # <a name="262-critical-construct"></a>2.6.2 Construction critical
 Le **critique** directive identifie une construction qui restreint l’exécution du bloc structuré associé à un seul thread à la fois. La syntaxe de la **critique** la directive est la suivante :  

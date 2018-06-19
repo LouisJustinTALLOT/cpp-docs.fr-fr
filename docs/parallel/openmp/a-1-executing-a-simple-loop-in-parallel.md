@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686124"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   Exécution d'une boucle simple en parallèle
 L’exemple suivant montre comment paralléliser une boucle simple à l’aide de la `parallel for` directive ([Section 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) page 16). La variable d’itération de boucle est privée par défaut, donc il n’est pas nécessaire de spécifier explicitement dans une clause privée.  

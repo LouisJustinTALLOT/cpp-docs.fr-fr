@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854052"
 ---
 # <a name="accelerator-modifier-property"></a>Modifier, propriété d'un accélérateur
 Les éléments suivants sont des entrées valides pour la propriété Modifier dans la table d’accélérateurs.  

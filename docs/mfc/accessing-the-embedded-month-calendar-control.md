@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332125"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Accès au contrôle Month Calendar Control incorporé
 L’objet de contrôle de calendrier mensuel incorporé est accessible à partir de la `CDateTimeCtrl` objet avec un appel à la [fonction membre GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) fonction membre.  

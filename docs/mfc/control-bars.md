@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347897"
 ---
 # <a name="control-bars"></a>Barres de contrôles
 "La barre de contrôle" est le nom général pour les barres d'outils, les barres d'état et les barres de boîte de dialogue. Classes MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, et **CReBar** dérive la classe [CControlBar](../mfc/reference/ccontrolbar-class.md), qui implémente leurs fonctionnalités communes.  

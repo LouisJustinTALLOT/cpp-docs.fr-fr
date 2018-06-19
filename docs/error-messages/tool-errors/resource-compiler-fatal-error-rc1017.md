@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325300"
 ---
 # <a name="resource-compiler-fatal-error-rc1017"></a>Erreur irrécupérable RC1017 du compilateur de ressources 
 expression constante entière non valide  

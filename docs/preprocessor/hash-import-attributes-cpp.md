@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842285"
 ---
 # <a name="import-attributes-c"></a>Attributs #import (C++)
 Fournit des liens vers des attributs utilisés avec la directive #import.  

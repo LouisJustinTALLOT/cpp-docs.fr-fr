@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316447"
 ---
 # <a name="project-build-error-prj0015"></a>Erreur de génération de projet PRJ0015
 Le périphérique NULL est introuvable sur votre système. Nous ne pouvons pas lancer une génération.  

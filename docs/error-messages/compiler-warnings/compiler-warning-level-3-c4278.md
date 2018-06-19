@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296674"
 ---
 # <a name="compiler-warning-level-3-c4278"></a>Avertissement du compilateur (niveau 3) C4278
 'identificateur' : identificateur de la bibliothèque de types 'tlb' est déjà une macro ; Utilisez le qualificateur 'rename'  

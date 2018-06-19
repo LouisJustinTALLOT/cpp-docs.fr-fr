@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696251"
 ---
 # <a name="32-lock-functions"></a>3.2 Fonctions de verrouillage
 Les fonctions décrites dans cette section manipulent des verrous utilisés pour la synchronisation.  

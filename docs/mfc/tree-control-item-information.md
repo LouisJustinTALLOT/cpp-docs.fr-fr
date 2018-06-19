@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385363"
 ---
 # <a name="tree-control-item-information"></a>Informations sur les éléments de contrôle d’arborescence
 Contrôles d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) contenant un nombre de fonctions membres qui récupèrent des informations sur les éléments dans le contrôle. Le [GetItem](../mfc/reference/ctreectrl-class.md#getitem) fonction membre extrait tout ou partie des données associées à un élément. Ces données peut inclure de texte de l’élément, état, images, le nombre d’éléments enfants et une valeur de données de 32 bits définies par l’application. Il existe également un [SetItem](../mfc/reference/ctreectrl-class.md#setitem) fonction que vous pouvez définir tout ou partie des données associées à un élément.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849143"
 ---
 # <a name="grammar-summary-cc"></a>Résumé de la grammaire (C/C++)
 Cette section décrit la grammaire formelle du préprocesseur. Elle traite de la syntaxe des directives de prétraitement et opérateurs décrits dans [le préprocesseur](../preprocessor/preprocessor.md) et dans [Directives Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  

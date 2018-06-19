@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687060"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>API OpenMP C et C++
 Traite des OpenMP C et C++ API, comme décrit dans la spécification de version 2.0 à partir du tableau de révision Architecture OpenMP.  
