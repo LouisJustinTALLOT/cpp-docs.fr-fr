@@ -36,13 +36,14 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846647"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Directives #if, #elif, #else et #endif (C/C++)
 La directive `#if`, ainsi que les directives `#elif`, `#else` et `#endif`, permettent de contrôler la compilation de certaines parties d'un fichier source. Si l'expression que vous écrivez (après `#if`) a une valeur différente de zéro, le groupe de lignes qui suit immédiatement la directive `#if` est conservé dans l'unité de traduction.  
   
 ## <a name="grammar"></a>Grammaire  
  *conditionnel* :  
- *If-partie elif-parties*opt*partie « else »*opt*endif en ligne*  
+ *If-partie elif-parties*opt*partie « else »* opt*endif en ligne*  
   
  *If-partie* :  
  *texte de la ligne d’if*  

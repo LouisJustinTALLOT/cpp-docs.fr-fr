@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346179"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Cycle de vie d'une boîte de dialogue
 Au cours du cycle de vie d’une boîte de dialogue, l’utilisateur appelle la boîte de dialogue, généralement à l’intérieur d’un gestionnaire de commandes qui crée et initialise l’objet de la boîte de dialogue, l’utilisateur interagit avec la boîte de dialogue et la boîte de dialogue se ferme.  

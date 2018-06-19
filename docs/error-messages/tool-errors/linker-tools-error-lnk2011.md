@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300745"
 ---
 # <a name="linker-tools-error-lnk2011"></a>Erreur des outils Éditeur de liens LNK2011
 objet précompilé ne pas lié dans ; image ne peut pas s’exécuter  

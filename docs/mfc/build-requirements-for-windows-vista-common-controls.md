@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342158"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Configuration requise pour les contrôles communs Windows Vista
 La bibliothèque Microsoft Foundation Class (MFC) prend en charge la version 6.1 des contrôles communs Windows. Les contrôles communs sont inclus dans [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] et la bibliothèque est incluse dans [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. La bibliothèque fournit de nouvelles méthodes qui améliorent les classes existantes et de nouvelles classes et méthodes qui prennent en charge [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] contrôles communs. Lorsque vous créez votre application, vous devez respecter les exigences de compilation et de migration décrites dans les sections suivantes.  

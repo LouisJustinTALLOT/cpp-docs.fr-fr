@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343374"
 ---
 # <a name="destroying-window-objects"></a>Destruction d’objets fenêtres
 Être vigilant avec vos propres fenêtres enfants pour détruire l’objet fenêtre C++ quand l’utilisateur a terminé avec la fenêtre. Si ces objets ne sont pas détruits, votre application ne récupère pas leur mémoire. Heureusement, le framework gère la destruction des fenêtres, ainsi que la création de boîtes de dialogue, des vues et fenêtres frame. Si vous créez des fenêtres supplémentaires, vous êtes responsable de leur destruction.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857836"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Alignement des contrôles sur un repère
 Les poignées de redimensionnement de contrôles alignent sur les repères lorsque les contrôles sont déplacés et les repères d’alignement aux contrôles (s’il n’y a aucun contrôle précédemment aligné sur le guide). Lorsqu’un repère est déplacé, contrôles dépendent, sont également déplacent. Les contrôles alignés sur plusieurs repères sont redimensionnés lorsqu’un repère est déplacé.  

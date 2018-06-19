@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342964"
 ---
 # <a name="derived-message-maps"></a>Tables des messages dérivées
 Au cours de la gestion des messages, un message de la classe de la vérification de la carte n’est pas la fin de l’article de table des messages. Que se passe-t-il si classe `CMyView` (dérivée de `CView`) ne comporte aucune entrée correspondante pour un message  

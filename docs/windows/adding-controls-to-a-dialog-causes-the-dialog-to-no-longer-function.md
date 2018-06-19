@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858992"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>La boîte de dialogue ne fonctionne plus après l'ajout de contrôles
 Après avoir ajouté un contrôle commun ou un contrôle d’édition enrichi pour une boîte de dialogue, il n’apparaît pas lorsque vous testez la boîte de dialogue ou la boîte de dialogue n’apparaît pas.  

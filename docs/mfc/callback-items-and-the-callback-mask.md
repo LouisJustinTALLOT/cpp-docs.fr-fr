@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342772"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Éléments de rappel et masque de rappel
 Pour chacun de ses éléments, un contrôle list view stocke en général, le texte d’étiquette, l’index de liste d’images des icônes de l’élément, et un ensemble de bits indicateurs pour l’état de l’élément. Vous pouvez définir des éléments individuels en tant qu’éléments de rappel, qui sont utiles si votre application stocke déjà certaines des informations pour un élément.  

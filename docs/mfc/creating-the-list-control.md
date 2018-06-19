@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342044"
 ---
 # <a name="creating-the-list-control"></a>Création du contrôle de liste
 Comment le contrôle de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)) est créé varie selon que vous soyez l’utilisation du contrôle directement ou à l’aide de la classe [CListView](../mfc/reference/clistview-class.md) à la place. Si vous utilisez `CListView`, l’infrastructure construit l’affichage dans le cadre de sa séquence de création de document/vue. Création de l’affichage de liste crée également le contrôle de liste (les deux sont identiques). Le contrôle est créé dans la vue [OnCreate](../mfc/reference/cwnd-class.md#oncreate) fonction gestionnaire. Dans ce cas, le contrôle est prêt à ajouter des éléments, via un appel à [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

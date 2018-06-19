@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845607"
 ---
 # <a name="porting-guide-com-spy"></a>Guide du portage : COMSpy
 Cette rubrique est la deuxième d'une série d'articles qui décrit le processus de mise à niveau d'anciens projets Visual C++ vers la dernière version de Visual Studio. L'exemple de code utilisé dans cette rubrique a été compilé avec Visual Studio 2005.  

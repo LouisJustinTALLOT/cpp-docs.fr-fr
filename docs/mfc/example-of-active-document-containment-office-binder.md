@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345958"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Exemple de relation contenant-contenu de documents actifs : classeur Office
 Le classeur Microsoft Office est un exemple d’un conteneur de documents actifs. Un classeur Office comprend deux volets principaux, comme conteneurs. Le volet gauche contient des icônes qui correspondent à des documents actifs dans le classeur. Chaque document est appelé un *section* dans le classeur. Par exemple, un classeur peut contenir des documents Word, PowerPoint fichiers, feuilles de calcul Excel et ainsi de suite.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862720"
 ---
 # <a name="arrays-c-component-extensions"></a>Tableaux (extensions du composant C++)
 Le `Platform::Array<T>` type dans C + c++ / CX, ou le `array` mot clé dans C + c++ / CLI, déclare un tableau d’un type spécifié et la valeur initiale.  

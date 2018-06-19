@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860305"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Types de paramètre d'attribut  (extensions du composant C++)
 Les valeurs passées aux attributs doivent être connus du compilateur au moment de la compilation.  Paramètres d’attribut peuvent être des types suivants :  

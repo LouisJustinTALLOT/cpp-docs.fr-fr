@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343016"
 ---
 # <a name="documentview-sample-list"></a>Liste d'exemples de document/vue
 Consultez les exemples de programmes suivants qui illustrent l’utilisation de l’architecture document/vue de MFC de façons intéressantes :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385578"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets : notifications de socket
 Cet article décrit les fonctions de notification dans les classes de Sockets. Ces fonctions membres sont des fonctions de rappel que l’infrastructure appelle pour notifier à votre objet socket d’événements importants. Les fonctions de notification sont :  

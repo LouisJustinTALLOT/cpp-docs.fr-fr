@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344267"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Glisser-déposer : implémentation d’une cible de dépôt
 Cet article explique comment rendre votre application à une cible de dépôt. Implémentation d’une cible de dépôt prend plus de temps que l’implémentation d’une source de déplacement, mais elle est toujours relativement simple. Ces techniques s’appliquent également aux applications non-OLE.  

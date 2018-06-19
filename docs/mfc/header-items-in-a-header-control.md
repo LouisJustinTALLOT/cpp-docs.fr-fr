@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344920"
 ---
 # <a name="header-items-in-a-header-control"></a>Éléments d'en-tête dans un contrôle Header
 Vous avez un contrôle important sur l’apparence et le comportement des éléments d’en-tête qui constituent un contrôle header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Chaque élément d’en-tête peut avoir une chaîne, une image bitmap, une image à partir d’une liste d’images associée, ou une valeur 32 bits définie par l’application associée. La chaîne, bitmap ou image s’affiche dans l’élément d’en-tête.  

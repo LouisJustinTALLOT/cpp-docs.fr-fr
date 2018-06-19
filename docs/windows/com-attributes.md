@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861384"
 ---
 # <a name="com-attributes"></a>Attributs COM
 Le COM injectent du code pour prendre en charge plusieurs domaines de développement COM et le développement du common language runtime du .NET Framework. Ces zones vont de prise en charge d’interfaces existantes et de mise en œuvre de l’interface personnalisée prise en charge des propriétés stock, les méthodes et les événements. En outre, la prise en charge sont accessibles pour composite et de l’implémentation du contrôle ActiveX.  

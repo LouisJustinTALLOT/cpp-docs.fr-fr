@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342145"
 ---
 # <a name="clipboard-adding-other-formats"></a>Presse-papiers : ajout d'autres formats
 Cette rubrique explique comment développer la liste des formats pris en charge, en particulier pour la prise en charge OLE. La rubrique [Presse-papiers : copies et collage de données](../mfc/clipboard-copying-and-pasting-data.md) décrit l’implémentation minimale nécessaire pour prendre en charge le copier- coller à partir du Presse-papiers. Si c’est vous vous, les seuls formats placés dans le Presse-papiers sont `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**et éventuellement `CF_LINKSOURCE`. La plupart des applications nécessitent d’autres formats dans le Presse-papiers à ces trois.  

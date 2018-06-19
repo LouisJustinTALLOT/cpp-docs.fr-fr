@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853815"
 ---
 # <a name="benefits-of-character-set-portability"></a>Avantages de la portabilité d'un jeu de caractères
 Vous pouvez bénéficier de l’aide des fonctionnalités de portabilité runtime MFC et C même si vous n’envisagez pas internationaliser votre application pour :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302274"
 ---
 # <a name="bscmake-error-bk1514"></a>Erreur BSCMAKE BK1514
 tous les. Fichiers SBR ont été tronqués, aucun trouvé dans le nom de fichier  

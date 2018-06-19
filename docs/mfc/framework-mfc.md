@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344394"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 Votre travail dans le cadre de la bibliothèque Microsoft Foundation classes (MFC) repose en grande partie sur quelques classes majeures et plusieurs outils Visual C++. Certaines classes encapsulent une grande partie de l’interface de programmation d’application (API) Win32. Autres classes encapsulent des concepts d’application tels que des documents, vues et l’application elle-même. D’autres encore encapsulent des fonctionnalités OLE et fonctionnalités d’accès aux données ODBC et DAO.  

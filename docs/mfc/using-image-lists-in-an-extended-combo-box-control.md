@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383343"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Utilisation de listes d'images dans un contrôle de zone de liste déroulante étendue
 La fonction principale des contrôles de zone de liste déroulante étendue est la possibilité d’associer des images à partir d’une liste d’images à des éléments individuels d’un contrôle de zone de liste déroulante. Chaque élément est en mesure d’afficher trois images différentes : une pour l’état sélectionné, l’autre pour son état désélectionné et une troisième pour une image de superposition.  

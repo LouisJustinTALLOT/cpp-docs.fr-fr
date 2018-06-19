@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342213"
 ---
 # <a name="common-dialog-classes"></a>Classes de boîtes de dialogue communes
 En plus de la classe [CDialog](../mfc/reference/cdialog-class.md), MFC fournit plusieurs classes dérivées de `CDialog` qui encapsulent des boîtes de dialogue couramment utilisées, comme indiqué dans le tableau suivant. Ces boîtes de dialogue sont appelées les « boîtes de dialogue communes » et font partie de la bibliothèque de boîte de dialogue commune Windows (COMMDLG.) (DLL). Les ressources de modèle de boîte de dialogue et d’un code de ces classes sont fournies dans les fenêtres de boîtes de dialogue communes qui font partie de Windows 3.1 et versions ultérieures.  

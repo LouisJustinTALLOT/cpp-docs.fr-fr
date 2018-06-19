@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329814"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portrait de l'architecture document/vue
 Documents et vues sont associés dans une application MFC classique. Données stockées dans le document, mais la vue a un accès privilégié aux données. La séparation du document de vue sépare le stockage et la maintenance des données à partir de son affichage.  

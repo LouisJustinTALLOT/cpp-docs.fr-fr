@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847414"
 ---
 # <a name="setlocale"></a>setlocale
 Définit les paramètres régionaux (pays/région et langue) à utiliser lors de la conversion des constantes à caractères larges et des littéraux de chaîne.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858966"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Ajout de valeurs à un contrôle Combo Box
 Vous pouvez ajouter des valeurs à un contrôle combo box tant que vous avez l’éditeur de boîte de dialogue Ouvrir.  

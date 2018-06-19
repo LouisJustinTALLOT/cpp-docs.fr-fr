@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858144"
 ---
 # <a name="locales-and-code-pages"></a>Paramètres régionaux et pages de codes
 Un ID de paramètres régionaux reflète les conventions et langue locales pour une région géographique spécifique. Une langue donnée peut être parlée dans plusieurs pays/région ; par exemple, le portugais est parlé au Brésil et Portugal. À l’inverse, un pays/région peut avoir plusieurs langues officiels. Par exemple, le Canada a deux langues : anglais et le Français. Par conséquent, le Canada a deux paramètres régionaux distincts : anglais (Canada) et en Français canadien. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires.  

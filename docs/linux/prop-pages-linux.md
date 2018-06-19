@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324010"
 ---
 # <a name="linux-project-property-page-reference"></a>Informations de référence sur les pages de propriétés dans un projet Linux
 

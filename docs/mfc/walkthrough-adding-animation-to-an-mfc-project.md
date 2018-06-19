@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384747"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Procédure pas à pas : ajout d'une animation à un projet MFC
 Cette procédure pas à pas explique comment ajouter un objet animé base à un Visual C++, le projet de bibliothèque de classes Microsoft Foundation (MFC).  
