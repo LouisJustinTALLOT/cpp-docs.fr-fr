@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373538"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Chaînes modèles de document, Assistant Application MFC
 Dans cette page de l’Assistant Application MFC, fournir ou d’affiner les options suivantes pour faciliter la localisation et gestion des documents. Chaînes modèles de document sont disponibles pour les applications qui incluent **prise en charge d’architecture Document/vue** dans les [Type d’Application](../../mfc/reference/application-type-mfc-application-wizard.md). Ils ne sont pas disponibles pour les boîtes de dialogue. Étant donné que la plupart des chaînes modèles de document sont visibles et employées par les utilisateurs de l’application, elles sont traduites dans la **langue de ressource** indiqué dans le **Type d’Application** page de l’Assistant.  

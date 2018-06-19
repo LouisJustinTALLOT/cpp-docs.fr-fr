@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381567"
 ---
 # <a name="using-cprogressctrl"></a>Utilisation de CProgressCtrl
 Vous pouvez utiliser le contrôle de progression pour indiquer la progression d’une opération longue. Il s’agit d’un rectangle qui se remplit progressivement avec la couleur de surbrillance système en tant que l’exécution de l’opération.  

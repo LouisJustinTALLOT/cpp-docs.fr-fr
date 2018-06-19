@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351661"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personnalisation du clavier et de la souris
 MFC permet à l'utilisateur de l'application de personnaliser la façon dont il gère le clavier et l'entrée de la souris. L'utilisateur peut personnaliser l'entrée clavier en attribuant des raccourcis clavier aux commandes. L'utilisateur peut également personnaliser l'entrée de la souris en sélectionnant la commande qui doit être exécutée lorsque l'utilisateur double-clique dans des fenêtres spécifiques de l'application. Cette rubrique explique comment personnaliser les entrées pour votre application.  

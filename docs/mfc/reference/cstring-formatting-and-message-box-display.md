@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375038"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Mise en forme de CString et affichage des boîtes de message
 Un nombre de fonctions est fourni à mettre en forme et à analyser `CString` objets. Vous pouvez utiliser ces fonctions chaque fois que vous devez manipuler `CString` objets, mais ils sont particulièrement utiles pour la mise en forme de chaînes qui seront affiche dans le texte de la boîte de message.  

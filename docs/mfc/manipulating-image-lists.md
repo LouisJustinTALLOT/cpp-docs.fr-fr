@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349156"
 ---
 # <a name="manipulating-image-lists"></a>Manipulation de listes d'images
 Le [remplacer](../mfc/reference/cimagelist-class.md#replace) fonction membre remplace une image dans une liste d’images ([CImageList](../mfc/reference/cimagelist-class.md)) avec une nouvelle image. Cette fonction est également utile si vous devez augmenter de façon dynamique le nombre d’images dans un objet de liste d’images. Le [fonction SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) fonction modifie dynamiquement le nombre d’images stockées dans la liste d’images. Si vous augmentez la taille de la liste d’images, appelez **remplacer** pour ajouter des images aux nouveaux emplacements. Si vous réduisez la taille de la liste d’images, les images au-delà de la nouvelle taille sont libérées.  

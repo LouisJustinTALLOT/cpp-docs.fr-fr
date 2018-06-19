@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350031"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Contrôles ActiveX MFC : ajout de méthodes personnalisées
 Méthodes personnalisées diffèrent des méthodes stock dans la mesure où ils ne sont pas déjà implémentées par `COleControl`. Vous devez fournir l’implémentation pour chaque méthode personnalisée que vous ajoutez à votre contrôle.  

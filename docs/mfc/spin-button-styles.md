@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380095"
 ---
 # <a name="spin-button-styles"></a>Styles de bouton toupie
 Nombre des paramètres pour un bouton de sélection numérique ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) sont contrôlées par les styles. Vous pouvez définir les styles suivants à l’aide de la **propriétés** fenêtre dans l’éditeur de boîte de dialogue.  

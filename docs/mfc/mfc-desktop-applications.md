@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350233"
 ---
 # <a name="mfc-desktop-applications"></a>MFC, applications de bureau
 La bibliothèque MFC (Microsoft Foundation Class) fournit un wrapper orienté objet pour une grande partie des API Win32 et COM. Bien qu'elle puisse servir à créer des applications bureautiques très simples, elle est très utile pour développer des interfaces utilisateur plus complexes avec plusieurs contrôles. Vous pouvez utiliser MFC pour créer des applications avec des interfaces utilisateur de style Office.  

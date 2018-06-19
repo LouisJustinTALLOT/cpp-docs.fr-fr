@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369666"
 ---
 # <a name="cfont-class"></a>CFont (classe)
 Encapsule une police GDI (Graphics Device Interface) Windows et fournit des fonctions membres pour la manipuler.  

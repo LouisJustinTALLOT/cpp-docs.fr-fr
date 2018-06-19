@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368775"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe de CMFCCaptionButton
 La `CMFCCaptionButton` classe implémente un bouton qui s’affiche dans la barre de légende pour un volet d’ancrage ou une fenêtre mini-frame. En général, l'infrastructure crée les boutons de légende automatiquement.  

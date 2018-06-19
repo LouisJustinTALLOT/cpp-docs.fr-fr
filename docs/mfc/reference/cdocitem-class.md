@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366591"
 ---
 # <a name="cdocitem-class"></a>Classe de CDocItem
 Classe de base des éléments de document, qui sont les composants des données d'un document.  

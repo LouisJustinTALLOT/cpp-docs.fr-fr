@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371330"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask, classe
 Le `CMFCTasksPaneTask` classe est une classe d’assistance qui représente des tâches pour le contrôle de volet de tâches ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L’objet tâche représente un élément dans le groupe de tâches ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Chaque tâche peut avoir une commande exécutée par l’infrastructure lorsqu’un utilisateur clique sur la tâche et une icône qui apparaît à gauche du nom de la tâche.  

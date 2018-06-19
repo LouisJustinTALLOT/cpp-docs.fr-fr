@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351808"
 ---
 # <a name="providing-windowless-activation"></a>Mise à disposition de l'activation sans fenêtre
 Code de création de fenêtre (autrement dit, tout ce qui se produit lorsque vous appelez **CreateWindow**) est coûteux à exécuter. Un contrôle qui gère une fenêtre affichée à l'écran doit gérer les messages de la fenêtre. Les contrôles sans fenêtre sont donc plus rapides que les contrôles avec fenêtre.  

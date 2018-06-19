@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842766"
 ---
 # <a name="phases-of-translation"></a>Phases de traduction
 Les programmes C et C++ se composent d'un ou de plusieurs fichiers sources contenant chacun une partie du texte du programme. Un fichier source qui inclut ses fichiers Include (fichiers inclus à la directive de préprocesseur `#include`) mais ne contient pas les sections de code supprimées par les directives de compilation conditionnelle telles que `#if` est appelé « unité de traduction. »  

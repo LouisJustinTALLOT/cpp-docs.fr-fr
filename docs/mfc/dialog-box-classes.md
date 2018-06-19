@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351687"
 ---
 # <a name="dialog-box-classes"></a>Classes de boîte de dialogue
 Classe `CDialog` et ses classes dérivées encapsulent les fonctionnalités de la boîte de dialogue. Dans la mesure où une boîte de dialogue est un type spécial de fenêtre, `CDialog` est dérivée de `CWnd`. Dériver vos classes de boîte de dialogue à partir de `CDialog` ou utilisez une des classes de boîte de dialogue courantes pour les boîtes de dialogue standard, telles que l’ouverture ou de l’enregistrement d’un fichier, l’impression, en sélectionnant une police ou une couleur, lancer une opération de recherche et remplacement, ou effectuer diverses liées à OLE opérations.  
