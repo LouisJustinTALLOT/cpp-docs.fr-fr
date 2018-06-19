@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386827"
 ---
 # <a name="type-char"></a>char, type
 Le type `char` est utilisé pour stocker la valeur entière d'un membre du jeu de caractères qui peut être représenté. Cette valeur est le code ASCII correspondant au caractère spécifié.  

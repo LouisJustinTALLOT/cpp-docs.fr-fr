@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374370"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Chargement de toutes les importations pour une DLL à chargement différé
 Le **__HrLoadAllImportsForDll** fonction, définie dans delayhlp.cpp, indique à l’éditeur de liens de charger toutes les importations d’une DLL qui a été spécifiée avec la [DELAYLOAD](../../build/reference/delayload-delay-load-import.md) option de l’éditeur de liens.  

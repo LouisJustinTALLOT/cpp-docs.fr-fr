@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367266"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Expressions utilisées dans le prétraitement d'un makefile
 Le **! IF** ou **! Si** `constantexpression` se compose de constantes entières (notation décimale ou en langage C), les constantes de chaîne ou de commandes. Utilisez des parenthèses pour regrouper les expressions. Les expressions utiliser C-style entier long signé arithmétiques ; nombres se présentent sous forme de 32 bits de complément à 2 comprise entre - 2147483648 et 2147483647.  

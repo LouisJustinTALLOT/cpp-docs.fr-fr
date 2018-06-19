@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378325"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annuler la définition de symboles)
 Le **/U** option du compilateur annule la définition du symbole de préprocesseur spécifié. Le **/u** option du compilateur annule les symboles spécifiques à Microsoft que le compilateur définit.  

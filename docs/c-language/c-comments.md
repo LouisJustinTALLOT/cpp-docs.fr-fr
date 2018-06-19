@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384344"
 ---
 # <a name="c-comments"></a>Commentaires en C
 Un « commentaire » est une séquence de caractères commençant par la combinaison d’une barre oblique et d’un astérisque (<b>/\*</b>), traitée comme un espace blanc par le compilateur ou ignoré. Un commentaire peut inclure toute combinaison de caractères du jeu de caractères utilisable, y compris les caractères de saut de ligne, à l’exclusion du séparateur « de fin de commentaire » (<b>\*/</b>). Les commentaires peuvent occuper plusieurs lignes mais ne peuvent pas être imbriqués.  

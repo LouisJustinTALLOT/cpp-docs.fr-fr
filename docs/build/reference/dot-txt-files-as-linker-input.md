@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369901"
 ---
 # <a name="txt-files-as-linker-input"></a>Fichiers .txt en tant qu'entrée dans l'éditeur de liens
 LIEN attend des fichiers texte comme entrée supplémentaire. Le [fichier de commandes](../../build/reference/link-command-files.md) spécificateur (@) et le [adresse de Base](../../build/reference/base-base-address.md) (/ BASE), [/DEF](../../build/reference/def-specify-module-definition-file.md), et [/Order](../../build/reference/order-put-functions-in-order.md) spécifient des fichiers texte. Ces fichiers peuvent avoir des extension, pas seulement .txt.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385255"
 ---
 # <a name="signed-bitwise-operations"></a>Opérateurs de bits signés
 **ANSI 3.3** Résultats des opérations au niveau du bit sur les entiers signés  

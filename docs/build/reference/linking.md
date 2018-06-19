@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372414"
 ---
 # <a name="linking"></a>Liaison
 Pour plus d’informations sur l’utilisation de l’éditeur de liens, consultez les sections suivantes :  

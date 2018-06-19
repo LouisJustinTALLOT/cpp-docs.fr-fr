@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390516"
 ---
 # <a name="files-and-streams"></a>Fichiers et flux
 Un programme communique avec l'environnement cible en lisant et en écrivant dans des fichiers. Un fichier peut être :  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377142"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Prétraiter jusqu'à un fichier)
 Prétraite des fichiers sources C et C++ et écrit la sortie prétraitée dans un fichier.  

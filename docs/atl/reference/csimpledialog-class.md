@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362385"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog (classe)
 Cette classe implémente une boîte de dialogue modale base.  

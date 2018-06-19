@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376557"
 ---
 # <a name="using-verify-instead-of-assert"></a>Utilisation de VERIFY au lieu d'ASSERT
 Supposons que lorsque vous exécutez la version debug de votre application MFC, il n’existe aucun problème. Toutefois, la version de la même application se bloque, retourne des résultats incorrects et/ou présente certains autres comportement anormal.  

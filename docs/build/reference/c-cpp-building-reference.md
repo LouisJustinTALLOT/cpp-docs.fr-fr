@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375482"
 ---
 # <a name="cc-building-reference"></a>Référence à la génération C/C++
 Visual C++ propose deux méthodes de création d’un programme C/C++. La plus simple (et le plus courant) consiste à [générer dans l’environnement de développement Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). L’autre méthode consiste à [construire à partir d’une invite de commandes à l’aide des outils de ligne de commande](../../build/building-on-the-command-line.md). Dans les deux cas, vous pouvez créer vos fichiers sources à l’aide de l’éditeur de code source Visual C++ ou un éditeur tiers de votre choix.  

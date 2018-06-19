@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373398"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Régénération minimale IDE)
 **/FD** n’est pas exposée aux utilisateurs, sauf dans les [ligne de commande](../../ide/command-line-property-pages.md) page de propriétés d’un projet C++ **Pages de propriétés** boîte de dialogue si et seulement si [/Gm (activer la régénération minimale)](../../build/reference/gm-enable-minimal-rebuild.md) n’est pas également sélectionné. **/FD** n’a aucun effet autre que l’environnement de développement. **/FD** n’est pas exposée dans la sortie de **cl / ?**.  

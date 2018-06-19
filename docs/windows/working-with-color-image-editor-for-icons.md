@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891657"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Utilisation des couleurs (Éditeur d'images pour les icônes)
 L’éditeur d’images contient de nombreuses fonctionnalités qui permettent de gérer et de personnaliser les couleurs. Vous pouvez définir une couleur de premier plan ou d’arrière-plan, couleur de remplissage des zones limitées ou sélectionnez une couleur dans une image à utiliser comme couleur de premier plan ou d’arrière-plan actuelle. Vous pouvez utiliser les outils de la [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md) , ainsi que de la palette de couleurs dans les [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md) pour créer des images.  

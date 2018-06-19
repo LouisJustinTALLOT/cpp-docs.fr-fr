@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378338"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Liste des fichiers Include)
 Indique au compilateur générer une liste des fichiers include. Imbriqué inclure les fichiers sont également affichés (les fichiers qui sont inclus dans les fichiers que vous incluez).  

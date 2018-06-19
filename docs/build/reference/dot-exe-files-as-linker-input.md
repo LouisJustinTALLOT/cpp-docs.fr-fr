@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372401"
 ---
 # <a name="exe-files-as-linker-input"></a>Fichiers .exe en tant qu'entrée dans l'éditeur de liens
 Le [nom du fichier Stub MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) option spécifie le nom d’un fichier .exe qui s’exécute avec MS-DOS. LIEN examine le fichier spécifié pour être sûr qu’il s’agit d’un programme MS-DOS valide.  

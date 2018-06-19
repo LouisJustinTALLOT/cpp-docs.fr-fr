@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129666"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Comment : extraire des champs de données à l'aide d'expressions régulières (C++/CLI)
 L’exemple de code suivant illustre l’utilisation d’expressions régulières pour extraire des données à partir d’une chaîne mise en forme. Le code suivant exemple utilise la <xref:System.Text.RegularExpressions.Regex> classe pour spécifier un modèle qui correspond à une adresse de messagerie. Ce modèle inclut des identificateurs de champ qui peuvent être utilisés pour récupérer les parties de nom d’hôte de chaque adresse de messagerie. La <xref:System.Text.RegularExpressions.Match> classe est utilisée pour exécuter les critères spéciaux réel. Si l’adresse de messagerie donnée est valide, le nom d’utilisateur et les noms d’hôte sont extraites et affichées.  

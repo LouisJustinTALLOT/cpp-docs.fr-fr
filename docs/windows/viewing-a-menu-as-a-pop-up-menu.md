@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891017"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Affichage d'un menu sous la forme d'un menu contextuel
 Normalement, quand vous utilisez l'Éditeur de menus, une ressource de menu s'affiche sous forme de barre de menus. Toutefois, il est possible que des ressources de menu soient ajoutées à la barre de menus de l'application pendant l'exécution du programme.  

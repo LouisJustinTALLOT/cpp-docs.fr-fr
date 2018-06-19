@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375296"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Activer les tests de pile)
 Active les tests de pile pour chaque appel de fonction qui requiert un stockage pour les variables locales.  

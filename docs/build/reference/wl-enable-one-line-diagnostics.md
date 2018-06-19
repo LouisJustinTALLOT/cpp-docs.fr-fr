@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376785"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Activer un diagnostic de ligne)
 Ajoute des informations supplémentaires à un message d’erreur ou avertissement.  

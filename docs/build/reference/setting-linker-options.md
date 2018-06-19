@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374919"
 ---
 # <a name="setting-linker-options"></a>Définition des options de l'Éditeur de liens
 Options de l’éditeur de liens peuvent être définies à l’intérieur ou en dehors de l’environnement de développement. Pour chaque option de l’éditeur de liens explique comment elle peut être définie dans l’environnement de développement. Consultez [les Options de l’éditeur de liens](../../build/reference/linker-options.md) pour une liste complète.  

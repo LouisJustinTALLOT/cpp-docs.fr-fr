@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362506"
 ---
 # <a name="cwintraits-class"></a>Classe de CWinTraits
 Cette classe fournit une méthode pour standardiser les styles utilisés lors de la création d’un objet window.  

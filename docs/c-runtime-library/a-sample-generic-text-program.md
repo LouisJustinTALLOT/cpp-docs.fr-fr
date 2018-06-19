@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388959"
 ---
 # <a name="a-sample-generic-text-program"></a>Programme de texte générique, exemple
 **Section spécifique de Microsoft**  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375582"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Prise en charge de l'éditeur de liens pour les DLL à chargement différé
 L’éditeur de liens Visual C++ prend désormais en charge le chargement différé des DLL. Cela vous évite d’avoir à utiliser les fonctions du Kit de développement logiciel Windows **LoadLibrary** et **GetProcAddress** pour implémenter le chargement différé des DLL.  

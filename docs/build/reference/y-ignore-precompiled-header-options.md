@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375075"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignorer les options d’en-têtes précompilés)
 Causes tous les autres `/Y` compilateur options doivent être ignorés (et ne peut pas être substitué).  

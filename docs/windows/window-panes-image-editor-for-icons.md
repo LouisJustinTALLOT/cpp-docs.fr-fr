@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892837"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Volets de fenêtre (Éditeur d'images pour les icônes)
 En règle générale, la fenêtre de l’éditeur d’images affiche une image dans les deux volets séparés par une barre de fractionnement. Une vue est la taille réelle et l’autre est agrandie (facteur d’agrandissement de la valeur par défaut est 6). Les vues dans ces deux volets sont mis à jour automatiquement : modifications que vous apportez dans un volet sont immédiatement répercutées dans l’autre. Les deux volets facilitent vous permet de travailler sur une vue agrandie de votre image, dans laquelle vous pouvez distinguer les pixels et, en même temps, observez l’effet de votre travail sur l’affichage de la taille réelle de l’image.  

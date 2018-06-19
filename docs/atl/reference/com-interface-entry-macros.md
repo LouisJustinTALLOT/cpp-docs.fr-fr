@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366586"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
  Ces macros entrer des interfaces d’un objet dans son mappage COM afin qu’ils peuvent être accessibles par `QueryInterface`. L’ordre des entrées dans le mappage COM est que les interfaces de commande ne fonctionnera pas une correspondance **IID** pendant `QueryInterface`.  

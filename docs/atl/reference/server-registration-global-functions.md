@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364703"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de l’inscription de serveur
 Ces fonctions fournissent la prise en charge pour l’inscription et la désinscription des objets serveur dans la table des objets.  

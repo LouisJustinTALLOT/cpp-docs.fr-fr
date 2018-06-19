@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127833"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Comment : convertir une chaîne standard en System::String
 Cette rubrique montre comment convertir une chaîne de la bibliothèque Standard C++ ([\<chaîne >](../standard-library/string.md)) à un <xref:System.String>.  

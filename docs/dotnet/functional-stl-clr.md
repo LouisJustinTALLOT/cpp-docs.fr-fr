@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112834"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir l’un nombre de classes de modèle et les fonctions et les délégués de modèle associés.  

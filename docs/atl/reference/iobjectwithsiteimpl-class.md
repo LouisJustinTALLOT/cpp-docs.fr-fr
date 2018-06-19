@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362037"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe d’IObjectWithSiteImpl de prendre facilement
 Cette classe fournit des méthodes permettant d’un objet communiquer avec son site.  

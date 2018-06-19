@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375804"
 ---
 # <a name="setting-compiler-options"></a>Définition des options du compilateur
 Les options de compilateur C et C++peuvent être définies dans l'environnement de développement ou sur la ligne de commande.  

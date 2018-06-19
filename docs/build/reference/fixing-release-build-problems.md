@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372150"
 ---
 # <a name="fixing-release-build-problems"></a>Résolution de problèmes liés à la version release
 Si votre code génère des erreurs de compilation après basculement à partir de la version debug à une version Release, il existe quelques domaines que vous devez vérifier.  

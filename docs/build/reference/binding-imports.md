@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368926"
 ---
 # <a name="binding-imports"></a>Liaison d’importations
 Le comportement de l’éditeur de liens par défaut est pour créer une table d’adresses importation pouvant être liées pour la DLL à chargement différé. Si la DLL est liée, la fonction d’assistance tente d’utiliser les informations liées au lieu d’appeler **GetProcAddress** sur chaque importation référencée. Si l’horodatage ou l’adresse préférée ne correspondre pas celles de la DLL chargée, la fonction d’assistance suppose la table d’adresses importation liée est obsolète et se poursuit comme s’il n’existe pas.  

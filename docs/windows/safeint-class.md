@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891335"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 Étend les primitives entières afin d’empêcher le dépassement sur les entiers et vous permet de comparer les différents types d’entiers.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377116"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profileur des outils d'analyse des performances)
 Génère un fichier de sortie utilisable avec le profileur Outils d’analyse des performances.  

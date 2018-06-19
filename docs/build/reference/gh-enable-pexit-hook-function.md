@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374503"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Activer la fonction de raccordement _pexit)
 Appelle le `_pexit` fonction à la fin de chaque méthode ou fonction.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369612"
 ---
 # <a name="error-message-edit-control"></a>contrôle de modification du message d'erreur
 Le **Message d’erreur** zone contient le texte du message d’erreur système ou du message d’erreur de module selon la valeur entrée.  

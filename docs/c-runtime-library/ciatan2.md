@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387143"
 ---
 # <a name="ciatan2"></a>_CIatan2
 Calcule l’arc tangente de *x* / *y* où *x* et *y* sont des valeurs en haut de la pile.  

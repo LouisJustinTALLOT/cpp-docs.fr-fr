@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374698"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 Spécifie l'architecture pour la génération de code sur x86. Consultez également [/arch (x64)](../../build/reference/arch-x64.md) et [/arch (ARM)](../../build/reference/arch-arm.md).  

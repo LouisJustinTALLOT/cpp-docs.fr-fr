@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373486"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Génération d'un fichier .bsc par BSCMAKE
 BSCMAKE génère ou régénère un fichier .bsc de la manière la plus efficace que possible. Pour éviter d’éventuels problèmes, il est important de comprendre le processus de génération.  

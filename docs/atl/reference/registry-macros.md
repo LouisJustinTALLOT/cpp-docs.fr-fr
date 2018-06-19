@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365215"
 ---
 # <a name="registry-macros"></a>Macros de Registre
 Ces macros définissent des installations de bibliothèque et de Registre de type utile.  

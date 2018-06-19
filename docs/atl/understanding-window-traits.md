@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362366"
 ---
 # <a name="understanding-window-traits"></a>Présentation des caractéristiques de la fenêtre
 Classes de fenêtre traits fournissent une méthode simple pour standardiser les styles utilisés pour la création d’un objet fenêtre ATL. Caractéristiques de la fenêtre sont acceptés en tant que paramètres de modèle par [CWindowImpl](../atl/reference/cwindowimpl-class.md) et d’autres classes de fenêtre ATL comme un moyen de fournir des styles de fenêtre au niveau de la classe par défaut.  

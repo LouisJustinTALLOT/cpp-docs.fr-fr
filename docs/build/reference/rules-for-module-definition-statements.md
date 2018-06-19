@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376388"
 ---
 # <a name="rules-for-module-definition-statements"></a>Règles s'appliquant aux instructions de définition de module
 Les règles de syntaxe suivantes s’appliquent à toutes les instructions dans un fichier .def. Autres règles qui s’appliquent à des instructions spécifiques sont décrites dans chaque instruction.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891092"
 ---
 # <a name="type-forwarding-ccli"></a>Transfert de type (C++/CLI)
 *Transfert de type* vous permet de déplacer un type d’un assembly (assembly A) dans un autre assembly (assembly B), tel qu’il n’est pas nécessaire de recompiler les clients qui utilisent l’assembly A.  

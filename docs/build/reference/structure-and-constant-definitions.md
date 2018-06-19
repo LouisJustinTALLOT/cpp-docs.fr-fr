@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376031"
 ---
 # <a name="structure-and-constant-definitions"></a>Définitions des structures et constantes
 La routine d’assistance par défaut utilise plusieurs structures pour communiquer avec les fonctions de raccordement et au cours de toutes les exceptions. Voici les valeurs de notification et de défaillance, des structures d’informations et le type de pointeur de fonction de raccordement passées aux raccordements des :  

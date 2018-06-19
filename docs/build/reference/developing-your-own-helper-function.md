@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371396"
 ---
 # <a name="developing-your-own-helper-function"></a>Développement de votre propre fonction d'assistance
 Voulez-vous fournir votre propre version de la routine de traitement spécifique en fonction des noms des DLL ou des importations. Il existe deux méthodes d’effectuer cette opération : codage de votre choix, éventuellement basée sur le code fourni, ou simplement placer la version fournie à l’aide des raccordements de notification précédemment.  

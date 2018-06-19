@@ -64,6 +64,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366193"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe de IOleObjectImpl
 Cette classe implémente **IUnknown** et est l’interface principale par le biais duquel un conteneur communique avec un contrôle.  

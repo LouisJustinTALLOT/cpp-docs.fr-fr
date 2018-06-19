@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376867"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (inclure tous les fichiers d’objets de bibliothèque)
 Force l’éditeur de liens à inclure tous les fichiers d’objet dans la bibliothèque statique dans le fichier exécutable associé.  

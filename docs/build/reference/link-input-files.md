@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374825"
 ---
 # <a name="link-input-files"></a>Fichiers d'entrée LINK
 Vous fournissez l’éditeur de liens des fichiers qui contiennent des objets, des bibliothèques standards, ressources, les définitions de module et d’importation d’entrée de commande. LIEN n’utilise pas les extensions de fichier à faire des hypothèses sur le contenu d’un fichier. Au lieu de cela, lien examine chaque fichier d’entrée pour déterminer quel type de fichier.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369368"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>États du module d’une DLL MFC normale liée de manière dynamique aux MFC
 La possibilité de lier de manière dynamique une expression régulière DLL MFC à la DLL MFC permet quelques configurations qui sont très complexes. Par exemple, une DLL MFC normale et l’exécutable qui l’utilise peuvent tous deux liaison dynamique à la DLL MFC et les DLL d’extension MFC.  

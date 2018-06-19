@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373372"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Nom du fichier Include imposé)
 Indique au préprocesseur de traiter le fichier d’en-tête spécifié.  

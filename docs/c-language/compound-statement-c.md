@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385723"
 ---
 # <a name="compound-statement-c"></a>Instruction composite (C)
 Une instruction composée (également appelée « bloc ») correspond généralement au corps d'une autre instruction, telle que l'instruction **if**. L'article [Déclarations et types](../c-language/declarations-and-types.md) décrit la forme et la signification des déclarations qui peuvent figurer en tête d'une instruction composée.  

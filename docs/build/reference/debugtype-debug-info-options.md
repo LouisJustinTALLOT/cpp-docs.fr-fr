@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375368"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (options d'informations de débogage)
 L'option /DEBUGTYPE spécifie les types d'informations de débogage générées par l'option /DEBUG.  

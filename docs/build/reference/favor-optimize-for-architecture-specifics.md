@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376219"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (optimisation pour les particularités d'architecture)
 **/ favor :** `option` génère le code qui est optimisé pour une architecture spécifique ou pour les caractéristiques des micro-architectures dans l’AMD et les architectures Intel.  

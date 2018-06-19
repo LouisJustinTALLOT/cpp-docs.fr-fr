@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370119"
 ---
 # <a name="compiler-command-line-syntax"></a>Syntaxe de la ligne de commande du compilateur
 La ligne de commande CL utilise la syntaxe suivante :  

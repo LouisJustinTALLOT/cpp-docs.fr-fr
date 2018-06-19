@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362337"
 ---
 # <a name="security-classes"></a>Classes de sécurité
 Ces classes sont des wrappers pour les classes de sécurité de Win32 et les objets.  

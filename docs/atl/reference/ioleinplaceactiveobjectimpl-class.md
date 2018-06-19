@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365645"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Classe de IOleInPlaceActiveObjectImpl
 Cette classe fournit des méthodes d’assistance de communication entre un contrôle sur place et son conteneur.  

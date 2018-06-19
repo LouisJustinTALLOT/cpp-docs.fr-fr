@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389882"
 ---
 # <a name="byte-and-wide-streams"></a>Flux d'octets et flux larges
 Un flux d'octets traite un fichier comme une séquence d'octets. Dans le programme, le flux est la même séquence d’octets.  

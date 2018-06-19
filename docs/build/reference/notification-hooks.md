@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377817"
 ---
 # <a name="notification-hooks"></a>Raccordements de notification
 Les raccordements de notification sont appelés juste avant que les actions suivantes sont exécutées dans la routine d’assistance :  

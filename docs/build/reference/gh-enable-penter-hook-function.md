@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373151"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Activer la fonction de raccordement _penter)
 Provoque un appel à la `_penter` fonction au début de chaque méthode ou fonction.  

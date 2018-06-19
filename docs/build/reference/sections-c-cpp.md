@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377298"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 Introduit une section d’un ou plusieurs `definitions` qui sont des spécificateurs d’accès dans des sections dans le fichier de sortie de votre projet.  

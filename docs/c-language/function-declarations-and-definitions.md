@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384991"
 ---
 # <a name="function-declarations-and-definitions"></a>Définitions et déclarations de fonctions
 Les prototypes de fonction établissent le nom de la fonction, son type de retour et le type et le nombre de ses paramètres formels. Une définition de fonction comprend le corps de la fonction.  

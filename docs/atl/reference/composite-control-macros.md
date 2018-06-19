@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363659"
 ---
 # <a name="composite-control-macros"></a>Macros de contrôle composite
 Ces macros définissent des tables de récepteurs d’événements et des entrées.  

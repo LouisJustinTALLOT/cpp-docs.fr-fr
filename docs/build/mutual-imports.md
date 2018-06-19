@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377755"
 ---
 # <a name="mutual-imports"></a>Importations mutuelles
 Exporter ou importer dans un autre fichier exécutable présente des complications quand les importations sont mutuelles (ou circulaires). Par exemple, deux DLL importent des symboles de l’autre, semblables aux fonctions mutuellement récursives.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378660"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Créer un fichier d’en-tête précompilé)
 Indique au compilateur de créer un fichier d’en-tête précompilé (.pch) qui représente l’état de la compilation à un certain point.  

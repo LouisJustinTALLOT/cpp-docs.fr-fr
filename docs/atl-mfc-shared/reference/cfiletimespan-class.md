@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362736"
 ---
 # <a name="cfiletimespan-class"></a>Classe de CFileTimeSpan
 Cette classe fournit des méthodes pour la gestion des dates relatives et associés à un fichier de valeurs d’heure.  

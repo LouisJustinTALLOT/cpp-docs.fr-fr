@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375212"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Déchargement d'une DLL à chargement différé
 L’application d’assistance de chargement différé fournie par défaut vérifie si les descripteurs de chargement différé ont un pointeur et une copie de la table des adresses importation (IAT) d’origine dans le champ pUnloadIAT. Dans ce cas, il enregistre un pointeur dans une liste pour le descripteur de délai d’importation. Cela permet à la fonction d’assistance de trouver la DLL par un nom pour prendre en charge le déchargement explicite de cette DLL.  

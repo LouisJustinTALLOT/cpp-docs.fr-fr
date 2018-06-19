@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373814"
 ---
 # <a name="value-edit-control"></a>valeur (contrôle d'édition)
 Pour utiliser le contrôle, entrez une valeur, collez-la depuis le Presse-papiers, ou faites glisser à partir du débogueur dans ce contrôle d’édition. Entrez la valeur au format hexadécimal ou décimal, puis **rechercher**. Valeurs hexadécimales doivent être précédés de 0 x ; les caractères valides sont 0-9, A-F et a-f. Les valeurs décimales peuvent être précédées du signe moins (-) ; les caractères valides sont 0-9.  

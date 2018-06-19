@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374906"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Vue d’ensemble des conventions d’appel x64
 Deux différences importantes entre x86 et [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sont la fonction d’adressage 64 bits et un jeu de 16 bits 64 registres pour une utilisation générale. Étant donné les registres étendu ensemble, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utilise le [__fastcall](../cpp/fastcall.md) convention d’appel et un modèle de gestion des exceptions basé sur RISC. Le `__fastcall` convention utilise des registres pour les quatre premiers arguments et le frame de pile pour passer des arguments supplémentaires.  

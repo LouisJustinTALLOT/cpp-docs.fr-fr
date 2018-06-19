@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374438"
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (Créer un module MSIL)
 ```  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373164"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problèmes courants lors de la création d’une version release
 Pendant le développement, vous généralement générer et tester avec une version debug de votre projet. Si vous générez ensuite votre application pour une version release, vous pouvez obtenir une violation d’accès.  

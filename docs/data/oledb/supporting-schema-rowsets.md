@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111755"
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur une banque de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisés selon une hiérarchie définie par l’utilisateur, afin qu’il n’y aucun moyen pour vous assurer de la connaissance du schéma à l’exception de par sa lecture. (Un autre exemple, notez que les Assistants Visual C++ utilisent les ensembles de lignes de schéma pour générer des accesseurs pour le consommateur.) Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interface. Dans les applications Visual C++, vous utilisez la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter **IDBSchemaRowset**.  

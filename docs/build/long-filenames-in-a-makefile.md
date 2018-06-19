@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367626"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Noms de fichiers longs dans un makefile
 Placez les longs dans des guillemets doubles, comme suit :  

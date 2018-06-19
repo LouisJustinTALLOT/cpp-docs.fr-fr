@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378455"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Vérifications des erreurs au moment de l'exécution)
 Utilisé pour activer et désactiver la fonctionnalité de vérification-erreur d’exécution, conjointement avec la [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  

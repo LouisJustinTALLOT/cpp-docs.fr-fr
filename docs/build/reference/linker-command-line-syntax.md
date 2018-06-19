@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376164"
 ---
 # <a name="linker-command-line-syntax"></a>Syntaxe de la ligne de commande de l'Éditeur de liens
 Pour exécuter le lien. EXE, utilisez la syntaxe de commande suivante :  

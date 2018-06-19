@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387481"
 ---
 # <a name="lifetime"></a>Durée de vie
 La « durée de vie » est la période durant l'exécution d'un programme pendant laquelle une variable ou une fonction existe. La durée de stockage de l'identificateur détermine sa durée de vie.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890857"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Opérateur de référence de suivi (extensions du composant C++)
 A *référence de suivi* (`%`) se comporte comme une référence C++ ordinaire (`&`), sauf que lorsqu’un objet est assigné à une référence de suivi, le nombre de références de l’objet est incrémenté.  

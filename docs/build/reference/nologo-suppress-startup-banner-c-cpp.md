@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373840"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Suppression de la bannière de démarrage) (C/C++)
 Supprime l’affichage de la bannière de copyright lorsque le compilateur démarre et affiche des messages d’information pendant la compilation.  
