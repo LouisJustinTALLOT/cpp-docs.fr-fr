@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295153"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Avertissement du compilateur (niveau 4) C4337
 bibliothèque de types à 'références croisées biblio_types_1' dans 'biblio_types_2' est en cours d’importation automatiquement  

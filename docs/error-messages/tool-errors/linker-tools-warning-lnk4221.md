@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301006"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Avertissement des outils Éditeur de liens LNK4221
 Ce fichier objet ne définit pas de symboles publics jusqu’ici non définis, afin qu’il ne sera pas être utilisé par l’opération de liaison qui utilise cette bibliothèque  

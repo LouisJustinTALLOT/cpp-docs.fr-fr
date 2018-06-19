@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345138"
 ---
 # <a name="dialog-data-exchange"></a>Échange de données de boîtes de dialogue
 Si vous utilisez le mécanisme DDX, définissez les valeurs initiales des variables membres de l'objet de boîte de dialogue, en général dans votre gestionnaire `OnInitDialog` ou le constructeur de boîte de dialogue. Immédiatement avant l’affichage de la boîte de dialogue, le mécanisme du framework DDX transfère les valeurs des variables membres aux contrôles dans la boîte de dialogue, où elles apparaissent lorsque la boîte de dialogue s’affiche en réponse à `DoModal` ou **créer** . L'implémentation par défaut de `OnInitDialog` dans `CDialog` appelle la fonction membre `UpdateData` de la classe `CWnd` pour initialiser les contrôles dans la boîte de dialogue.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282780"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Avertissement du compilateur (niveau 1) C4727
 « PCH nommé fichier_pch comportant le même horodatage dans fichier_obj_1 et fichier_obj_2.  Utilisation du premier PCH.  

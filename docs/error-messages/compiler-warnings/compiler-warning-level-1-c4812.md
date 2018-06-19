@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282793"
 ---
 # <a name="compiler-warning-level-1-c4812"></a>Avertissement du compilateur (niveau 1) C4812
 style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place  

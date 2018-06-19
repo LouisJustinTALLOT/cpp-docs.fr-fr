@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316723"
 ---
 # <a name="missing-function-body-or-variable"></a>Corps de fonction ou variable manquant
 Avec seulement un prototype de fonction, le compilateur peut poursuivre sans erreur, mais l’éditeur de liens ne peut pas résoudre un appel à une adresse, car il n’existe aucun code de fonction ou un espace réservé pour la variable. Vous ne verrez pas cette erreur avant la création d’un appel à la fonction de l’éditeur de liens doit être résolue.  

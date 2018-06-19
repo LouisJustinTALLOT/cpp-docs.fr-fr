@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686537"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Détermination du nombre fixe de threads
 Certains programmes reposent sur un nombre fixe, spécifiée à l’avance de threads pour exécuter correctement.  Car le paramètre par défaut pour l’ajustement dynamique du nombre de threads est défini par l’implémentation, ces programmes peuvent choisir de désactiver la fonctionnalité de threads dynamiques et de définir le nombre de threads explicitement pour garantir la portabilité. L’exemple suivant montre comment effectuer cette opération à l’aide de `omp_set_dynamic` ([Section 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) sur la page 39), et `omp_set_num_threads` ([Section 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) sur la page 36) :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341246"
 ---
 # <a name="commonly-added-member-functions"></a>Fonctions membres couramment ajoutées
 Si votre boîte de dialogue contient les boutons de commande autres que OK ou sur Annuler, vous devez écrire des fonctions membres de gestionnaire de messages dans votre classe de boîte de dialogue pour répondre aux messages de notification de contrôle qu’ils génèrent. Pour obtenir un exemple, consultez la [Scribble](../visual-cpp-samples.md) exemple de programme. Vous pouvez également gérer les messages de notification de contrôle à partir d’autres contrôles dans votre boîte de dialogue.  

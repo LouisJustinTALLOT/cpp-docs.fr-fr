@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345063"
 ---
 # <a name="frame-window-classes-windows"></a>Classes de fenêtre frame (Fenêtres)
 Fenêtres frame sont des fenêtres frame d’une application ou une partie d’une application. Fenêtres frame contiennent généralement des autres fenêtres, telles que les vues, les barres d’outils et les barres d’état. Dans le cas de `CMDIFrameWnd`, ils peuvent contenir `CMDIChildWnd` objets indirectement.  

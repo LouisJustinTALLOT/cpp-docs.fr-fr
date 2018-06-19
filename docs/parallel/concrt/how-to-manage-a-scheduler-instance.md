@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687658"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Comment : gérer une instance de planificateur
 Instances de planificateur vous permettent d’associer des stratégies de planification spécifiques à différents types de charges de travail. Cette rubrique contient deux exemples simples qui montrent comment créer et gérer une instance du planificateur.  

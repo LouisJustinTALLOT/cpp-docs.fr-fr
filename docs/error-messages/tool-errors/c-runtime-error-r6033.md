@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299992"
 ---
 # <a name="c-runtime-error-r6033"></a>Erreur d’exécution de C R6033
 Essayez d’utiliser le code MSIL de cet assembly lors de l’initialisation du code natif. Cela indique un bogue dans votre application. Il est très probablement le résultat de l’appel à un MSIL compilé (/ clr) à partir d’un constructeur natif ou de DllMain (fonction).  

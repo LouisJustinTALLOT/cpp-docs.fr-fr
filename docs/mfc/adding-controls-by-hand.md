@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342473"
 ---
 # <a name="adding-controls-by-hand"></a>Ajout de contrôles manuellement
 Vous pouvez soit [ajouter des contrôles à une boîte de dialogue avec l’éditeur de boîte de dialogue](../mfc/using-the-dialog-editor-to-add-controls.md) ou les ajouter vous-même, avec le code.  

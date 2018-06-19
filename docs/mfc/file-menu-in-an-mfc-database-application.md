@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345753"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu Fichier dans une application de base de données MFC
 Si vous créez une application de base de données MFC et ne pas utiliser la sérialisation, comment doit interpréter l’ouvrir, fermer, enregistrer et enregistrer en tant que des commandes dans le menu fichier s’il n’existe aucun règles de style pour cette question, voici quelques suggestions :  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347933"
 ---
 # <a name="reading-and-writing-files"></a>Lecture et écriture de fichiers
 Si vous avez utilisé les fonctions de gestion de fichiers de bibliothèque Runtime C, MFC, la lecture et l’écriture des opérations apparaîtra familier. Cet article décrit directement lire et écrire directement à un `CFile` objet. Vous pouvez également en mémoire tampon d’e/s de fichier avec le [CArchive](../mfc/reference/carchive-class.md) classe.  

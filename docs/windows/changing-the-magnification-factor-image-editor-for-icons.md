@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856997"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Modification du facteur d'agrandissement (Éditeur d'images pour les icônes)
 Par défaut, l’éditeur d’images affiche la vue dans le volet de gauche à la taille réelle et la vue dans le volet droit à la taille réelle de 6 heures. Le facteur d’agrandissement (affiché dans la barre d’état en bas de l’espace de travail) est le rapport entre la taille réelle de l’image et la taille affichée. Le facteur par défaut est 6 et la plage est comprise entre 1 et 10.  

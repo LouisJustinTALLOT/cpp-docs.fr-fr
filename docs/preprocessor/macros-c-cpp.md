@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850181"
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Prétraitement développe les macros dans toutes les lignes qui ne sont pas des directives de préprocesseur (les lignes qui n’ont pas un **#** comme premier caractère autre qu’un espace blanc) et dans les parties de certaines directives ne sont pas ignorés dans le cadre d’un compilation conditionnelle. Les directives de « compilation conditionnelle » vous permettent de supprimer la compilation des parties d'un fichier source en testant une expression constante ou un identificateur pour déterminer quels blocs de texte sont transmis au compilateur et quels blocs de texte sont supprimés du fichier source pendant le prétraitement.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849767"
 ---
 # <a name="checkstack"></a>check_stack
 Indique au compilateur pour désactiver les tests de pile si **hors** (ou **-**) est spécifié, ou pour activer les tests de pile si **sur** (ou **+**) est spécifié.  

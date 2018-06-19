@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843624"
 ---
 # <a name="pack"></a>pack
 Spécifie l'alignement de compression pour des membres de structure, d'union et de classe.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344147"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Ajout de plusieurs vues à un seul document
 Dans une application de l’interface monodocument (SDI) créée avec la bibliothèque Microsoft Foundation classes (MFC), chaque type de document est associé à un seul type de vue. Dans certains cas, il est souhaitable que la possibilité de basculer l’affichage actuel d’un document avec une nouvelle vue.  

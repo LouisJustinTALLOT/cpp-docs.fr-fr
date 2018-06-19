@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342083"
 ---
 # <a name="creating-the-dialog-resource"></a>Création des ressources de boîte de dialogue
 Pour concevoir le [boîte de dialogue](../mfc/dialog-boxes.md) et créer la ressource de boîte de dialogue, vous utilisez la [éditeur de boîte de dialogue](../windows/dialog-editor.md). Dans l’éditeur de boîte de dialogue, vous pouvez :  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693651"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procédure pas à pas : création d'un réseau de traitement d'image
 Ce document montre comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement d’image.  

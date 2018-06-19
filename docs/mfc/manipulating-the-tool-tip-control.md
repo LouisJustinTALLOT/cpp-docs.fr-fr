@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346436"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipulation du contrôle d'info-bulle
 Classe `CToolTipCtrl` fournit des fonctions qui contrôlent les différents attributs d’un groupe de membres du `CToolTipCtrl` objet et la fenêtre outil de Conseil.  

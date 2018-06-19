@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689894"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Utilisation des régions parallèles
 Le `parallel` directive ([Section 2.3](../../parallel/openmp/2-3-parallel-construct.md) page 8) peut être utilisé dans les programmes parallèles de granularité grossière. Dans l’exemple suivant, chaque thread dans la région parallèle décide quelle partie du tableau global `x` travailler, en fonction du nombre de threads :  

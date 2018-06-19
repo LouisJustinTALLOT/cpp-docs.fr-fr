@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344202"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Solutions de remplacement de l'architecture document/vue
 Les applications MFC utilisent généralement l'architecture Document/Vue pour gérer les informations, les formats de fichier et la représentation visuelle des données aux utilisateurs. Pour la majorité des applications bureautiques, l'architecture Document/Vue est une architecture d'application appropriée et efficace. Cette architecture sépare les données de visualisation et, dans la plupart des cas, simplifie votre application et réduit le code redondant.  

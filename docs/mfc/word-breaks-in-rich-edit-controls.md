@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382958"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Coupure des mots dans les contrôles RichEdit
 Un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) appelle une fonction appelée « procédure word saut » pour trouver des coupures entre les mots et déterminer où il peut passer des lignes. Le contrôle utilise ces informations lorsque vous effectuez des opérations de retour et lors du traitement des combinaisons de touches CTRL + gauche et CTRL + droite. Une application peut envoyer des messages à un contrôle RichEdit pour remplacer la procédure à la césure par défaut, pour récupérer les informations de césure de mots et de déterminer quelle ligne un caractère donné tombe.  

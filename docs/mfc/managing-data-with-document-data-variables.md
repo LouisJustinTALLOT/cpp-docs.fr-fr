@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344959"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gestion des données avec variables de données de document
 Implémenter des données de votre document en tant que variables membres de votre classe de document. Par exemple, le programme Scribble déclare un membre de données de type `CObList` : une liste liée qui stocke des pointeurs vers `CObject` objets. Cette liste est utilisée pour stocker des tableaux de points qui composent un dessin au trait à main levée.  

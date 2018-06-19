@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348089"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Modèles de document et processus de création de document/vue
 Pour gérer le processus complexe de création de documents avec leurs vues associées et les fenêtres frame, le framework utilise deux classes de modèle de document : [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) pour les applications SDI et [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) pour les applications MDI. Un `CSingleDocTemplate` peut créer et stocker un document d'un type à la fois. Un `CMultiDocTemplate` conserve une liste de plusieurs documents ouverts d'un type.  

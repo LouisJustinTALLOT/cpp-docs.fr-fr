@@ -39,6 +39,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856031"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
 Un aspect important du développement d’applications pour les marchés internationaux est la représentation adéquate des jeux de caractères locaux. Le jeu de caractères ASCII définit les caractères de la plage 0 x 00 à 0x7F. Voici les autres jeux de caractères, européen, qui définissent les caractères dans la plage 0 x 00 à 0x7F identique au jeu de caractères ASCII et également définir une étendue jeu de caractères à partir de 0 x 80 à 0xFF. Par conséquent, un ensemble de 8 bits, caractère unique de l’octet (SBCS) est suffisant pour représenter le jeu de caractères ASCII, ainsi que les jeux de caractères pour de nombreuses langues européennes. Toutefois, certains jeux de caractères de non européens, tels que Kanji (japonais), inclure plus de caractères qu’un schéma de codage sur un octet peut représenter et nécessitent donc le jeu de caractères multioctets (MBCS) encodage.  

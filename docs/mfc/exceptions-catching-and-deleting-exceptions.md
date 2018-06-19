@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345184"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions : interception et suppression d'exceptions
 Les instructions et les exemples suivants montrent comment intercepter et supprimer des exceptions. Pour plus d’informations sur la **essayez**, **catch**, et `throw` mots clés, consultez [gestion des exceptions C++](../cpp/cpp-exception-handling.md).  

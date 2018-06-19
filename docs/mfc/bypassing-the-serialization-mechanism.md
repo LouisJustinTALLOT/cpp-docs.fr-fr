@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343643"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Ignorer le mécanisme de sérialisation
 Comme vous l’avez vu, le framework fournit un moyen de la valeur par défaut pour lire et écrire des données à partir de fichiers. La sérialisation via un objet archive le mieux aux besoins de très nombreuses applications. Une telle application lit un fichier entièrement en mémoire, permet à l’utilisateur de mettre à jour le fichier, puis écrit la version mise à jour sur le disque.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345678"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Gestion de la mémoire : blocs de mémoire redimensionnables
 Le **nouveau** et **supprimer** opérateurs, décrites dans l’article [gestion de la mémoire : exemples](../mfc/memory-management-examples.md), sont correctes pour allouer et libérer des blocs de mémoire de taille fixe et objets. Parfois, votre application peut avoir besoin de blocs de mémoire redimensionnables. Vous devez utiliser les fonctions de bibliothèque Runtime C standard [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), et [libre](../c-runtime-library/reference/free.md) pour gérer les blocs de mémoire redimensionnables sur le tas.  

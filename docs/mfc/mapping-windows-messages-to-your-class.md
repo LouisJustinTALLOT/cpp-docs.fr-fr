@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346267"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mappage des messages Windows à votre classe
 Si vous avez besoin de votre boîte de dialogue pour traiter les messages Windows, remplacez les fonctions de gestionnaire approprié. Pour ce faire, utilisez la fenêtre Propriétés pour [mapper les messages](../mfc/reference/mapping-messages-to-functions.md) à la classe de boîte de dialogue. Il écrit une entrée de table des messages pour chaque message et ajoute les fonctions membres de gestionnaire de messages à la classe. Utilisez l’éditeur de code source Visual C++ pour écrire du code dans les gestionnaires de messages.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302618"
 ---
 # <a name="linker-tools-error-lnk1188"></a>Erreur des outils Éditeur de liens LNK1188
 BADFIXUPSECTION :: cible de correction non valide 'symbole' ; possible de section de longueur zéro  

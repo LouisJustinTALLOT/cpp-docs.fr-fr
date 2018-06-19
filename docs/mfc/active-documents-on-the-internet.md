@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334884"
 ---
 # <a name="active-documents-on-the-internet"></a>Documents actifs sur Internet
 Les documents actifs fournissent une extension aux objets incorporés classiques. Les documents actifs peuvent être multipages et sont affichés dans la zone cliente. Ils exécuter la négociation de menu traditionnels et peuvent être modifiées sur place ainsi que dans une fenêtre ouverte dans l’application serveur. Au lieu d’afficher en tant qu’un petit rectangle entouré d’une bordure hachurée, les documents actifs sont plein cadre et actif toujours en place.  

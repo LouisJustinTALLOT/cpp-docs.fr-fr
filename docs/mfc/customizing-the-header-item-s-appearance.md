@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342892"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personnalisation de l’élément d’en-tête&#39;s apparence
 En définissant le *dwStyle* paramètre lorsque vous créez un contrôle header ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), vous pouvez définir l’apparence et comportement de l’en-tête d’éléments ou de l’en-tête de contrôle lui-même.  

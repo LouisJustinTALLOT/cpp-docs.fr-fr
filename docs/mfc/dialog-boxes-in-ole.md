@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347839"
 ---
 # <a name="dialog-boxes-in-ole"></a>Boîtes de dialogue dans OLE
 Lorsqu’un utilisateur exécute une application OLE, voici les heures lorsque l’application a besoin d’informations à partir de l’utilisateur afin d’effectuer l’opération. Les classes OLE MFC fournissent un nombre de boîtes de dialogue pour recueillir les informations requises. Cette rubrique répertorie les tâches gérées par les boîtes de dialogue OLE et les classes nécessaires pour afficher ces boîtes de dialogue. Pour plus d’informations sur les boîtes de dialogue OLE et les structures utilisées pour personnaliser leur comportement, consultez [référence MFC](../mfc/mfc-desktop-applications.md).  

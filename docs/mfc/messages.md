@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344102"
 ---
 # <a name="messages"></a>Messages
 La boucle de messages dans la **exécuter** fonction membre de classe `CWinApp` récupère les messages générés par divers événements en file d’attente. Par exemple, lorsque l’utilisateur clique sur la souris, Windows envoie plusieurs messages liés à la souris, tels que `WM_LBUTTONDOWN` lorsque le bouton gauche de la souris est enfoncé et `WM_LBUTTONUP` lorsque le bouton gauche de la souris est relâché. Implémentation de l’infrastructure de la boucle de messages d’application distribue le message à la fenêtre appropriée.  

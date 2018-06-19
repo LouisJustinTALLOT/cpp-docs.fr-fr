@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342759"
 ---
 # <a name="header-control-examples"></a>Exemples de contrôle Header
 Pour obtenir des exemples de contrôles d’en-tête, consultez le [contrôles Header](http://msdn.microsoft.com/library/windows/desktop/bb775238) dans le Kit de développement logiciel Windows.  

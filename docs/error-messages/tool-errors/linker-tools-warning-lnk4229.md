@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302748"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>Avertissement des outils Éditeur de liens LNK4229
 directive /directive non valide a été trouvé. ignoré  

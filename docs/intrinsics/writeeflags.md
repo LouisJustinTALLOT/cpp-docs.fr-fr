@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340526"
 ---
 # <a name="writeeflags"></a>__writeeflags
 Écrit la valeur spécifiée pour le programme d’inscription d’état et contrôle (EFLAGS).  

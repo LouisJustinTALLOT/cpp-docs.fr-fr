@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341759"
 ---
 # <a name="debugging-and-exception-classes"></a>Débogage et classes d'exceptions
 Ces classes fournissent la prise en charge pour le débogage d’allocation de mémoire dynamique, ainsi que pour passer des informations sur les exceptions à partir de la fonction où l’exception est levée à la fonction dans laquelle elle est interceptée.  

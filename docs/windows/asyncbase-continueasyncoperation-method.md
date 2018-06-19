@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859590"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>AsyncBase::ContinueAsyncOperation, méthode
 Détermine si l’opération asynchrone doit poursuivre le traitement ou qu’il doit s’arrêter.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275994"
 ---
 # <a name="compiler-error-c3899"></a>Erreur du compilateur C3899
 'var' : utilisation comme l-value des données membres initonly n’est pas autorisée directement dans une région parallèle de la classe 'classe'  

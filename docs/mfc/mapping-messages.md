@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345984"
 ---
 # <a name="mapping-messages"></a>Mappage des messages
 Chaque classe de framework qui peut recevoir des messages ou des commandes possède sa propre « table des messages ». L’infrastructure utilise les tables des messages pour connecter des messages et commandes aux fonctions gestionnaires. Toute classe dérivée de la classe `CCmdTarget` peut avoir une table des messages. Autres articles expliquent les tables des messages en détail et décrivent comment les utiliser.  

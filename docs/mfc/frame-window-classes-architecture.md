@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344176"
 ---
 # <a name="frame-window-classes-architecture"></a>Classes de fenêtre frame (architecture)
 Dans l’architecture document/vue, fenêtres frame sont des fenêtres qui contiennent une fenêtre d’affichage. Ils prennent également en charge ayant contrôle barres qui leur sont attachées.  

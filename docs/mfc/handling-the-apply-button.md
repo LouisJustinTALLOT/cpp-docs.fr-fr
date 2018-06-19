@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345043"
 ---
 # <a name="handling-the-apply-button"></a>Gestion du bouton Appliquer
 Les feuilles de propriétés ont une fonction que les boîtes de dialogue standard n'ont pas : elles permettent à l'utilisateur d'appliquer les modifications qu'il a effectuées avant de fermer la feuille de propriétés. Cette opération s'effectue à l'aide du bouton Appliquer. Cet article décrit les méthodes que vous pouvez utiliser pour implémenter cette fonctionnalité correctement.  

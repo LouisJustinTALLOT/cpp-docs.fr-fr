@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857897"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>Assignation de touches d'accès rapide à des commandes de menu
 Vous pouvez affecter une touche d’accès rapide (un mnémonique qui permet à l’utilisateur de sélectionner le menu à l’aide du clavier) à vos menus et commandes de menu.  

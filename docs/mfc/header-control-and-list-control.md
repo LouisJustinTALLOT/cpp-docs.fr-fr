@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346098"
 ---
 # <a name="header-control-and-list-control"></a>Contrôle Header et contrôle List
 Dans la plupart des cas, vous allez utiliser le contrôle header est incorporé dans un [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView](../mfc/reference/clistview-class.md) objet. Toutefois, il existe des cas où un objet de contrôle d’en-tête distinct est souhaitable, telles que la manipulation de données, organisées en colonnes ou lignes, dans un [CView](../mfc/reference/cview-class.md)-objet dérivé. Dans ce cas, vous devez mieux contrôler l’apparence et le comportement par défaut d’un contrôle header incorporé.  

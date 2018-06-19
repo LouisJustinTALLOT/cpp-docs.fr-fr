@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382270"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051 : utilisation de CTL3D maintenant et dans le futur
 Cette note technique, qui décrit précédemment CTL3D et MFC, est désormais obsolète. L’effet 3D pour les contrôles est automatiquement implémentée par MFC.  

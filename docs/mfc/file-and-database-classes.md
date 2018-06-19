@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344946"
 ---
 # <a name="file-and-database-classes"></a>Classes de fichiers et de bases de données
 Ces classes vous permettent de stocker des informations à une base de données ou un fichier de disque. Il existe trois jeux de classes de base de données, OLE DB, ODBC et DAO, qui fournissent des fonctionnalités similaires. Le groupe de OLE DB est implémenté à l’aide de OLE DB et fonctionne avec les modèles du consommateur OLE DB, le groupe DAO est implémenté à l’aide de l’objet d’accès aux données et le groupe ODBC est implémenté à l’aide de la connectivité de base de données ouverte. Il existe également un ensemble de classes pour la manipulation de fichiers standards, les flux de données Active et les flux de données HTML.  

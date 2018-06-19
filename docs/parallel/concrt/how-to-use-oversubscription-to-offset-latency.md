@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689257"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Comment : utiliser le surabonnement pour compenser la latence
 Le surabonnement peut améliorer l’efficacité globale de certaines applications qui contiennent des tâches qui ont une grande quantité de latence. Cette rubrique montre comment utiliser le surabonnement pour compenser la latence provoquée par la lecture des données à partir d’une connexion réseau.  

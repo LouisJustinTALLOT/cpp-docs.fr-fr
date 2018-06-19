@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342197"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Création d'une classe de boîte de dialogue à l'aide des Assistants Code
 Le tableau suivant répertorie les tâches liées à la boîte de dialogue que les Assistants Code vous aident à que gérer.  

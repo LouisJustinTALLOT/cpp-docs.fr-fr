@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373167"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Définition d'un gestionnaire de messages pour un message réfléchi
 Une fois que vous avez créé une nouvelle classe de contrôle MFC, vous pouvez définir des gestionnaires de messages pour celle-ci. Gestionnaires de messages réfléchis permettent à votre classe de contrôle pour gérer ses propres messages avant que le message est reçu par le parent. Vous pouvez utiliser la bibliothèque MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) fonction pour envoyer des messages à partir de votre contrôle à une fenêtre parente.  

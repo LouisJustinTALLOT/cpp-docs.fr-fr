@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341210"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Création d'un contrôle de zone de liste déroulante étendue
 Comment le contrôle de zone de liste déroulante étendue est créé dépend de l’utilisation du contrôle dans une boîte de dialogue ou de la créer dans un autre type de fenêtre.  

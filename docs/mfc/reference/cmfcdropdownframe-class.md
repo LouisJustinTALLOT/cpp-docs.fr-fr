@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368616"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe de CMFCDropDownFrame
 Fournit une fonctionnalité de fenêtre frame de la liste déroulante pour les barres d’outils de la liste déroulante et les boutons de barre d’outils de la liste déroulante.  

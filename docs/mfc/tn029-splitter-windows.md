@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384721"
 ---
 # <a name="tn029-splitter-windows"></a>TN029 : fenêtres fractionnées
 Cette note décrit les classes MFC [CSplitterWnd classe](../mfc/reference/csplitterwnd-class.md), qui fournit la fenêtre fractionne et gère le redimensionnement des autres fenêtres de volet.  

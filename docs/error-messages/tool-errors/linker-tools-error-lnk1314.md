@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301107"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Erreur des outils Éditeur de liens LNK1314
 (non défini static ou symbole d’étiquette) table de symboles COFF endommagée ou non valide  

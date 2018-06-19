@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374813"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe de CMFCColorPickerCtrl
 La `CMFCColorPickerCtrl` classe fournit une fonctionnalité pour un contrôle qui est utilisé pour sélectionner des couleurs.  

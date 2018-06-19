@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347771"
 ---
 # <a name="mfc-com"></a>MFC COM
 Un sous-ensemble de MFC est conçu pour prendre en charge COM, alors que la plupart de la bibliothèque ATL (Active Template) est conçu pour la programmation COM. Cette section décrit la prise en charge de MFC pour COM.  

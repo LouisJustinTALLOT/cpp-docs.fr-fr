@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858485"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Organisation des contrôles dans les boîtes de dialogue
 L’éditeur de boîte de dialogue fournit des outils de disposition qui alignent et dimensionnent automatiquement les contrôles. Pour la plupart des tâches, vous pouvez utiliser la [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Toutes les commandes de barre d’outils Éditeur de boîte de dialogue sont également disponibles dans le menu Format, et la plupart ont [touches de raccourci](../windows/accelerator-keys-for-the-dialog-editor.md).  

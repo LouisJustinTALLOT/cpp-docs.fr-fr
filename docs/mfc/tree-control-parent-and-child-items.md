@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382513"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Éléments parents et enfants du contrôle d’arborescence
 N’importe quel élément dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) peut comporter une liste de sous-éléments, qui sont appelés éléments enfants, il est associés. Un élément qui a un ou plusieurs éléments enfants est appelé un élément parent. Un élément enfant s'affiche sous l'élément parent et est mis en retrait pour l'identifier comme subordonné au parent. Un élément qui n'a aucun parent est en haut de la hiérarchie et est appelé un élément racine.  

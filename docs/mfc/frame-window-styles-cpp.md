@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343756"
 ---
 # <a name="frame-window-styles-c"></a>Styles de fenêtre frame (C++)
 Fenêtres frame que vous obtenez avec l’infrastructure conviennent pour la plupart des programmes, mais vous pouvez obtenir plus de souplesse à l’aide de fonctions avancées [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) et la fonction globale MFC [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` est une fonction membre de `CWnd`.  

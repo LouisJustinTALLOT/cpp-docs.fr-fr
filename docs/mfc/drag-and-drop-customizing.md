@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344241"
 ---
 # <a name="drag-and-drop-customizing"></a>Glisser-déposer : personnalisation
 L’implémentation par défaut de la fonctionnalité de glisser-déplacer est suffisante pour la plupart des applications. Toutefois, certaines applications peuvent nécessiter que ce comportement par défaut est modifié. Cet article explique les étapes nécessaires pour modifier ces valeurs par défaut. En outre, vous pouvez utiliser cette technique pour établir des applications qui ne prennent pas en charge les documents composés comme sources de déplacement.  

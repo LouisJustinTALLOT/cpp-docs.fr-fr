@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345242"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Rendre des contrôles header owner-drawn
 Vous pouvez définir les éléments individuels d’un contrôle header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) comme éléments owner-drawn. Pour plus d’informations, consultez [les contrôles Header owner-drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) dans le Kit de développement logiciel Windows.  

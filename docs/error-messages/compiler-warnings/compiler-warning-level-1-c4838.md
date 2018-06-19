@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283843"
 ---
 # <a name="compiler-warning-level-1-c4838"></a>Du compilateur (niveau 1) d’avertissement C4838
 la conversion de 'type_1' en 'type_2' requiert une conversion restrictive  

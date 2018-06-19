@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382165"
 ---
 # <a name="using-cricheditctrl"></a>Utilisation de CRichEditCtrl
 Un contrôle RichEdit est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte de caractère et de mise en forme peut être alloué et peut inclure des objets OLE incorporés. Le contrôle RichEdit est représenté dans MFC par la [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) classe.  

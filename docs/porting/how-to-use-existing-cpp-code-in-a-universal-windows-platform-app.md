@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847970"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Comment : utiliser le code C++ existant dans une application pour la plateforme Windows universelle
 Le moyen le plus simple d’exécuter votre programme de bureau dans l’environnement UWP consiste peut-être à utiliser les technologies de pont de bureau. Elles incluent Desktop App Converter, qui va empaqueter votre application existante comme application UWP sans nécessiter de modifications de code. Pour plus d’informations, consultez [Déplacer votre application de bureau vers la plateforme universelle Windows (UWP) avec le pont du bureau](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).

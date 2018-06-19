@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345008"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Sélection actuelle dans un contrôle RichEdit
 L’utilisateur peut sélectionner le texte dans un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) à l’aide de la souris ou du clavier. La sélection actuelle est la plage de caractères sélectionnés ou la position du point d’insertion si aucun caractère n’est sélectionné. Une application peut obtenir des informations sur la sélection actuelle, la sélection actuelle, déterminer quand mettre en surbrillance les modifications de la sélection actuelle et les afficher ou les masquer la sélection.  

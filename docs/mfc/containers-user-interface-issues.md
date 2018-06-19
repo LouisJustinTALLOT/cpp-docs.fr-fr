@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341187"
 ---
 # <a name="containers-user-interface-issues"></a>Conteneurs : problèmes d'interface utilisateur
 Vous devez ajouter un certain nombre de fonctionnalités à l’interface utilisateur de l’application d’un conteneur pour gérer correctement les éléments liés et incorporés. Ces fonctionnalités comprennent les modifications de la structure de menus et les événements qui gère de l’application. Pour plus d’informations à leur sujet, consultez les articles suivants :  

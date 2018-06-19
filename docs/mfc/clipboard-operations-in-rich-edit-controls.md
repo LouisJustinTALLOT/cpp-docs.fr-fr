@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341282"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Opérations du Presse-papiers dans les contrôles RichEdit
 Votre application peut coller le contenu du Presse-papiers dans un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) à l’aide du format de Presse-papiers mieux disponible, soit un format de Presse-papiers spécifique. Vous pouvez également déterminer si un contrôle RichEdit est capable de coller un format de Presse-papiers.  

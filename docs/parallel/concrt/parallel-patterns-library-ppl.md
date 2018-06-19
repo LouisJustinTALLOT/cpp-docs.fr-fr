@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691539"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Bibliothèque de modèles parallèles
 La Bibliothèque de modèles parallèles (PPL) fournit un modèle de programmation essentiel qui favorise l’évolutivité et la facilité d’utilisation dans le cadre du développement d’applications simultanées. La bibliothèque PPL repose sur les composants de planification et de gestion des ressources du runtime d'accès concurrentiel. Elle élève le niveau d'abstraction entre le code de votre application et le mécanisme de threading sous-jacent en fournissant des algorithmes génériques de type sécurisé et des conteneurs qui agissent sur les données en parallèle. La bibliothèque PPL vous permet également de développer des applications qui évoluent en fournissant des alternatives à l'état partagé.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347628"
 ---
 # <a name="message-handlers"></a>Gestionnaires de messages
 Dans les MFC, dédiée *gestionnaire* fonction traite chaque message séparément. Les fonctions de gestionnaire de messages sont des fonctions de membre d’une classe. Cette documentation utilise les termes du contrat *fonction membre de gestionnaire de messages*, *fonction gestionnaire de messages*, *le Gestionnaire de messages*, et *gestionnaire*indifféremment. Certains types de gestionnaires de messages sont également appelés « gestionnaires de commandes ».  

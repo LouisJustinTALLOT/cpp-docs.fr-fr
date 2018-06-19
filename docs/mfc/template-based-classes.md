@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385468"
 ---
 # <a name="template-based-classes"></a>Classes basées sur un modèle
 Cet article explique les classes de collection basées sur un modèle de type sécurisé dans MFC 3.0 et les versions ultérieures. L’utilisation de ces modèles pour créer des collections de type sécurisé est une solution plus pratique qui offre une plus grande cohérence des types que les classes de collection qui ne sont pas basées sur des modèles.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344933"
 ---
 # <a name="managing-mdi-child-windows"></a>Gérer les fenêtres enfants MDI
 La fenêtre frame principale MDI (une par application) contient une fenêtre enfant spéciale appelée la **MDICLIENT** fenêtre. Le **MDICLIENT** gère la zone cliente de la fenêtre frame principale et a elle-même des fenêtres enfants : les fenêtres de document dérivées de `CMDIChildWnd`. Étant donné que les fenêtres de document sont des fenêtres frame eux-mêmes (fenêtres MDI enfants), ils peuvent également avoir leurs propres enfants. Dans tous ces cas, la fenêtre parente gère ses fenêtres enfants et transfère des commandes.  

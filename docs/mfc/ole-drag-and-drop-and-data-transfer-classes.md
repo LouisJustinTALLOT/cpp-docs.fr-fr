@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347040"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Classes de glisser-déposer OLE et de transfert de données
 Ces classes sont utilisées dans les transferts de données OLE. Ils permettent aux données à transférer entre des applications à l’aide du Presse-papiers ou par glisser-déplacer.  

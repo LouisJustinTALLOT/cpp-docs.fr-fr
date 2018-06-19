@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298325"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Avertissement du compilateur (niveau 4) C4437
 dynamic_cast de la base virtuelle 'classe1' en 'classe2' peut échouer dans certains contextes compilation avec/vd2 ou définissez 'classe2' avec #pragma vtordisp (2) système en vigueur  

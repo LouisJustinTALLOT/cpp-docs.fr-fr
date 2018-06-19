@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342876"
 ---
 # <a name="ole-automation-classes"></a>Classes Automation OLE
 Ces classes prennent en charge les clients automation (applications qui contrôlent les autres applications). Les serveurs Automation (les applications qui peuvent être contrôlées par d’autres applications) sont pris en charge via [tables de dispatch](../mfc/reference/dispatch-maps.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340846"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Avantages de l'architecture document/vue
 Le principal avantage à l’aide de l’architecture document/vue MFC est que la prise en charge de plusieurs vues du même document en particulier. (Si vous n’avez pas besoin plusieurs vues et la surcharge de document/vue est excessive dans votre application, vous pouvez éviter l’architecture. [Alternatives à l’Architecture Document/vue](../mfc/alternatives-to-the-document-view-architecture.md).)  

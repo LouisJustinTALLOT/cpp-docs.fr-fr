@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318413"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>Erreur de l'optimisation guidée par profil PG0165
 Lecture de 'Nomfichier.PGD' : ' version de PGD n’est pas pris en charge (incompatibilité de version)'.  

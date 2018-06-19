@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293031"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Avertissement du compilateur (niveau 3) C4534
 'constructeur' ne sera pas un constructeur par défaut pour la classe 'classe' en raison de l’argument par défaut  

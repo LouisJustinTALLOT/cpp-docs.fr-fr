@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343806"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Traitement des messages Windows dans votre boîte de dialogue
 Boîtes de dialogue sont des fenêtres, afin qu’ils peuvent traiter les messages Windows si vous fournissez les fonctions de gestionnaire approprié. Lorsque vous créez votre classe de boîte de dialogue avec l’Assistant Ajouter une classe, l’Assistant ajoute une table des messages vide à la classe. Utilisez la fenêtre Propriétés pour mapper les messages Windows ou les commandes vous souhaitez que votre classe à gérer.  

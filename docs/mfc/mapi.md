@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347531"
 ---
 # <a name="mapi"></a>MAPI
 Cet article décrit le Microsoft MAPI Messaging Application Programming Interface () pour les développeurs d’applications client message. MFC prend en charge un sous-ensemble de MAPI dans la classe **CDocument** mais n’encapsule ne pas l’intégralité de l’API. Pour plus d’informations, consultez [prise en charge MAPI dans MFC](../mfc/mapi-support-in-mfc.md).  

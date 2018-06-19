@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348047"
 ---
 # <a name="initializing-documents-and-views"></a>Initialisation des documents et vues
 Les documents sont créés de deux manières différentes, votre classe de document doit prendre en charge les deux sens. Tout d’abord, l’utilisateur peut créer un nouveau document vide avec la commande fichier nouveau. Dans ce cas, initialisez le document dans la substitution de la [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) fonction membre de classe [CDocument](../mfc/reference/cdocument-class.md). En second lieu, l’utilisateur peut utiliser la commande Ouvrir dans le menu fichier pour créer un nouveau document dont le contenu est lus à partir d’un fichier. Dans ce cas, initialisez le document dans la substitution de la [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) fonction membre de classe **CDocument**. Si les deux initialisations sont identiques, vous pouvez appeler une fonction membre commune à partir des deux remplacements, ou `OnOpenDocument` peut appeler `OnNewDocument` pour initialiser un document propre et puis de terminer l’opération d’ouverture.  

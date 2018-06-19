@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344163"
 ---
 # <a name="-constructors-comment"></a>// Constructeurs, commentaire
 La `// Constructors` section d’une déclaration de classe MFC déclare des constructeurs (dans le sens C++), ainsi que toutes les fonctions d’initialisation requises pour utiliser réellement l’objet. Par exemple, `CWnd::Create` est dans la section des constructeurs car avant d’utiliser le `CWnd` de l’objet, il doit être « entièrement construit » en appelant le constructeur C++ d’abord, puis le **créer** (fonction). En règle générale, ces membres sont publics.  

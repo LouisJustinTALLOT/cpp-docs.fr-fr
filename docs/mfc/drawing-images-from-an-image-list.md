@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345207"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Dessin d'images à partir d'une liste d'images
 Pour dessiner une image, utilisez la [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) fonction membre. Spécifiez un pointeur vers un objet de contexte de périphérique, l’index de l’image à dessiner, l’emplacement dans le contexte de périphérique où dessiner l’image et un jeu d’indicateurs pour désigner le style de dessin.  

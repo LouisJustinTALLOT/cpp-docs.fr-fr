@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347329"
 ---
 # <a name="property-sheets-as-wizards"></a>Feuilles de propriétés sous forme d'assistants
 Une caractéristique clé d’une feuille de propriétés Assistant est que la navigation est fournie avec les boutons suivant ou terminer, précédent et annuler au lieu d’onglets. Vous devez appeler [fonction CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) avant d’appeler [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) sur l’objet de feuille de propriétés pour tirer parti de cette fonctionnalité.  

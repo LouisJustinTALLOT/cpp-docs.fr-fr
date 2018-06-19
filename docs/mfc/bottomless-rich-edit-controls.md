@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343309"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Contrôles RichEdit sans marge inférieure
 Votre application peut redimensionner un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) en fonction des besoins afin qu’il soit toujours la même taille que son contenu. Un contrôle RichEdit prend en charge cette fonctionnalité dite de « sans fin » en envoyant à sa fenêtre parente un [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) message de notification chaque fois que la taille de son contenu change.  

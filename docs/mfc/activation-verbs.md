@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331072"
 ---
 # <a name="activation-verbs"></a>Activation : verbes
 Cet article explique la lecture du rôle principal et secondaire de verbes dans OLE [activation](../mfc/activation-cpp.md).  

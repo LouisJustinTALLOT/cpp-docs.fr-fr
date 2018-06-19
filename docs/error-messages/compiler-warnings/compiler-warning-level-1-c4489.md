@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278416"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>Avertissement du compilateur (niveau 1) C4489
 'spécificateur' : non autorisé sur une méthode d’interface 'méthode' ; remplacer les spécificateurs sont autorisés uniquement sur les méthodes de classe ref classe et la valeur  

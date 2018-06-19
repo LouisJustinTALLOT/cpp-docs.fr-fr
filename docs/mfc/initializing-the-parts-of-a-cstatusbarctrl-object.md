@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344335"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Initialisation des parties d'un objet CStatusBarCtrl
 Par défaut, une barre d’état affiche des informations d’état à l’aide des volets séparés. Ces volets (également appelés en tant que parties) peuvent contenir une chaîne de texte, une icône ou les deux.  

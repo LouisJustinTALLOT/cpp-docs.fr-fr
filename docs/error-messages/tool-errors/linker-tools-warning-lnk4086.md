@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301159"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>Avertissement des outils Éditeur de liens LNK4086
 point d’entrée 'fonction' n’est pas __stdcall avec des octets de 'nombre' arguments ; image ne peut pas s’exécuter  

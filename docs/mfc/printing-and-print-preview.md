@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346254"
 ---
 # <a name="printing-and-print-preview"></a>Impression et aperçu avant impression
 MFC prend en charge l’impression et Aperçu avant impression pour les documents de votre programme via la classe [CView](../mfc/reference/cview-class.md). Pour l’impression de base et Aperçu avant impression, simplement remplacer votre classe d’affichage [OnDraw](../mfc/reference/cview-class.md#ondraw) fonction membre, ce que vous devez faire quand même. Cette fonction peut dessiner dans la vue à l’écran, pour un contexte de périphérique pour une imprimante physique ou dans un contexte de périphérique qui simule votre imprimante à l’écran.  

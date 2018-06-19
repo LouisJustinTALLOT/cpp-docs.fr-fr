@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340991"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Création de boîtes de dialogue non modales
 Pour une boîte de dialogue non modale, vous devez fournir votre propre constructeur public dans votre classe de boîte de dialogue. Pour créer une boîte de dialogue non modale, appelez votre constructeur public, puis l’objet de boîte de dialogue [créer](../mfc/reference/cdialog-class.md#create) fonction membre pour charger la ressource de boîte de dialogue. Vous pouvez appeler **créer** pendant ou après l’appel de constructeur. Si la ressource de boîte de dialogue a la propriété **WS_VISIBLE**, la boîte de dialogue apparaît immédiatement. Si non, vous devez appeler sa [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) fonction membre.  

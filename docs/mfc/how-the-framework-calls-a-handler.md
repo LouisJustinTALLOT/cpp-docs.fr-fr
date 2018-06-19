@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343610"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Méthode d'appel d'un gestionnaire par le Framework
 Les rubriques suivantes d’abord examiner comment le framework achemine les commandes, puis examiner comment les autres messages et les notifications de contrôle sont envoyées à windows :  

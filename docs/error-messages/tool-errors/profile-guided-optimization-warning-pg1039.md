@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316528"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>Avertissement de l'optimisation guidée par profil PG1039
 Échec de l’attente d’une période d’inactivité de balayage.  

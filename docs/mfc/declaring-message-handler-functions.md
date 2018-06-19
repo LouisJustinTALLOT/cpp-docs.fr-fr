@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341708"
 ---
 # <a name="declaring-message-handler-functions"></a>Déclaration des fonctions de gestionnaire de messages
 Certaines règles et conventions régissent les noms de vos fonctions de gestionnaire de messages. Celles-ci dépendent de la catégorie du message, comme décrit dans les rubriques suivantes :  

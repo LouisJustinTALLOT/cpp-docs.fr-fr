@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281640"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Avertissement du compilateur (niveau 1) C4436
 dynamic_cast de la base virtuelle 'classe1' en 'classe2' dans le constructeur ou un destructeur peut échouer avec un objet partiellement construit compilation avec/vd2 ou définir 'classe2' avec #pragma vtordisp (2) système en vigueur  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302670"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Avertissement des outils Éditeur de liens LNK4010
 nombre de numéro de version de sous-système non valide ; version de sous-système par défaut prise par défaut  

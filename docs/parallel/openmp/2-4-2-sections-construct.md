@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688282"
 ---
 # <a name="242-sections-construct"></a>2.4.2 Construction sections
 Le **sections** directive identifie une construction de partage de travail noniterative qui spécifie un jeu des constructions pour être réparti entre les threads dans une équipe. Chaque section est exécutée une fois par un thread dans l’équipe. La syntaxe de la **sections** la directive est la suivante :  

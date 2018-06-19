@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372255"
 ---
 # <a name="msg-structure1"></a>MSG Structure1
 Le `MSG` structure contient des informations de message à partir de la file d’attente des messages d’un thread.  

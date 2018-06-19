@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343413"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Création de documents, fenêtres et vues
 Les illustrations suivantes donnent une vue d’ensemble du processus de création de documents, vues et fenêtres frame. Autres articles qui vous concentrer sur les objets participants fournissent davantage d’informations.  

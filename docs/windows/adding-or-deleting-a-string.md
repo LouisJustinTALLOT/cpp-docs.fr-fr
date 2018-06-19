@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858755"
 ---
 # <a name="adding-or-deleting-a-string"></a>Ajout ou suppression d'une chaîne
 Vous pouvez insérer rapidement de nouvelles entrées dans la table de chaînes à l’aide de l’éditeur de chaînes. Nouvelles chaînes sont placées à la fin de la table et sont fournies à l’identificateur disponible suivant. Vous pouvez modifier ensuite les propriétés ID, Value ou Caption dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) en fonction des besoins.  

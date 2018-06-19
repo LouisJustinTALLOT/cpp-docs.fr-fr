@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385763"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Accès de type sécurisé aux contrôles sans Assistants Code
 La première approche pour la création d’accès de type sécurisé aux contrôles utilise une fonction membre inline pour effectuer un cast de type de retour de la classe `CWnd`de `GetDlgItem` fonction membre vers le type de contrôle C++ approprié, comme dans cet exemple :  

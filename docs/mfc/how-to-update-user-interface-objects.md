@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346205"
 ---
 # <a name="how-to-update-user-interface-objects"></a>Comment : mettre à jour des objets d'interface utilisateur
 En règle générale, les éléments de menu et boutons de barre d’outils ont plusieurs États. Par exemple, un élément de menu est grisé (grisé) si elle n’est pas disponible dans le contexte actuel. Éléments de menu peuvent également être activée ou désactivée. Un bouton de barre d’outils peut également être désactivé dans le cas contraire, ou il peut être vérifiée.  

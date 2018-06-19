@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689582"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading : arrêt d'exécution des threads
 Deux situations normales provoquent un arrêt du thread : la fonction de contrôle s’arrête ou que le thread n’est pas autorisé à s’exécuter jusqu'à la fin. Si un traitement de texte utilise un thread pour l’impression en arrière-plan, la fonction de contrôle s’arrêtera normalement si l’impression terminée. Si l’utilisateur souhaite annuler l’impression, toutefois, le thread d’impression en arrière-plan doit s’est arrêté prématurément. Cette rubrique explique comment implémenter chaque situation et comment obtenir le code de sortie d’un thread qui se termine.  

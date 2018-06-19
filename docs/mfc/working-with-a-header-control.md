@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383030"
 ---
 # <a name="working-with-a-header-control"></a>Utilisation d'un contrôle Header
 La méthode simple pour utiliser un contrôle header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) en association avec un contrôle de liste, consultez [utilisation de CListCtrl](../mfc/using-clistctrl.md) plus loin dans cette famille. Vous pouvez également utiliser un contrôle header par lui-même. MFC appelle **InitCommonControls** pour vous. Les tâches clés sont les suivantes :  

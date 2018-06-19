@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693340"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage
 Cette rubrique utilise le problème du dîner des philosophes pour illustrer comment utiliser la [concurrency::join](../../parallel/concrt/reference/join-class.md) classe pour empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre.  

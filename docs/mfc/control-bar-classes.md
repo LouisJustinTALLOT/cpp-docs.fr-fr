@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342018"
 ---
 # <a name="control-bar-classes"></a>Classes de barre de contrôle
 Barres de contrôles sont attachés à une fenêtre frame. Elles contiennent des boutons, les volets d’état ou un modèle de boîte de dialogue. Barres de contrôles de flottants, également appelés palettes d’outils, sont implémentées par les joindre à un [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) objet.  

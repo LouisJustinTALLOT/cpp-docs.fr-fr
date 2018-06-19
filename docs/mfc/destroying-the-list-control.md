@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343280"
 ---
 # <a name="destroying-the-list-control"></a>Destruction du contrôle de liste
 Si vous incorporez votre [CListCtrl](../mfc/reference/clistctrl-class.md) de l’objet en un membre de données d’une classe de vue ou de la boîte de dialogue, il est détruit lorsque son propriétaire est détruit. Si vous utilisez un [CListView](../mfc/reference/clistview-class.md), l’infrastructure détruit le contrôle lorsqu’elle détruit l’affichage.  

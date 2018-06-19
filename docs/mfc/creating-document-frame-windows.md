@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342941"
 ---
 # <a name="creating-document-frame-windows"></a>Création de fenêtres frame de document
 [Création de document/vue](../mfc/document-view-creation.md) montre comment la [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objet orchestre la création de la fenêtre frame, le document et la vue et en les connectant ensemble. Trois [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) arguments à la `CDocTemplate` constructeur spécifie la fenêtre frame, document et les classes d’affichage du modèle de document crée dynamiquement en réponse à des commandes telles que la commande Nouveau dans le fichier de l’utilisateur menu ou la commande nouvelle fenêtre dans un menu Fenêtre MDI. Le modèle de document stocke ces informations pour une utilisation ultérieure lorsqu’il crée une fenêtre frame pour une vue ou d’un document.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345740"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gestion des menus, barres de contrôle et accélérateurs
 La fenêtre frame gère la mise à jour des objets interface-utilisateur, notamment les menus, les boutons de la barre d'outils, la barre d'état et les accélérateurs. Elle gère également le partage de la barre de menus dans les applications MDI.  

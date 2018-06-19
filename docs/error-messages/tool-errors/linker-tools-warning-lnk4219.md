@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301133"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Avertissement des outils Éditeur de liens LNK4219
 dépassement de la correction nom correction. Cible 'nom de symbole cible' est hors limites, insertion du thunk  

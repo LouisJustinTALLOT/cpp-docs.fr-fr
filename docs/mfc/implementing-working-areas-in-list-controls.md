@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347358"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implémentation d'espaces de travail dans des contrôles de liste
 Par défaut, un contrôle de liste réorganise tous les éléments sous forme de grille standard. Toutefois, une autre méthode est prise en charge, à savoir les zones de travail qui réorganisent les éléments de liste en groupes rectangulaires. Pour une image d’un contrôle de liste qui implémente des zones de travail, consultez l’aide de contrôles List-View dans le SDK Windows.  

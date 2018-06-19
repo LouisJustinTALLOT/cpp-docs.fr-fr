@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347884"
 ---
 # <a name="frame-window-classes"></a>Classes de fenêtre frame
 Chaque application a une « fenêtre frame principale », une fenêtre du bureau qui a généralement le nom de l’application dans sa légende. Chaque document provient généralement d’une « fenêtre frame de document ». Une fenêtre frame de document contient au moins une vue, qui présente les données du document.  

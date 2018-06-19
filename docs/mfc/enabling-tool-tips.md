@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346134"
 ---
 # <a name="enabling-tool-tips"></a>Activation des info-bulles
 Vous pouvez activer la prise en charge d’outils Conseil pour les contrôles enfants d’une fenêtre (par exemple, les contrôles sur une boîte de dialogue ou d’affichage formulaire).  

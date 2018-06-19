@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849325"
 ---
 # <a name="component"></a>component
 Contrôle la collecte des informations de consultation ou les informations sur les dépendances à partir des fichiers sources.  

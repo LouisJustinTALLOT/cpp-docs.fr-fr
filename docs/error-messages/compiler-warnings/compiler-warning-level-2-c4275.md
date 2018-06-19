@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292069"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Avertissement du compilateur (niveau 2) C4275
 non - une interface DLL LocalizedText 'identificateur' utilisée comme base pour l’identificateur' interface DLL LocalizedText'  

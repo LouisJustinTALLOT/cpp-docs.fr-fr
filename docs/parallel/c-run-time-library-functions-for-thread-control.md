@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685760"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Fonctions des bibliothèques Runtime C pour le contrôle des threads
 Tous les programmes Win32 ont au moins un thread. N’importe quel thread peut créer des threads supplémentaires. Un thread peut effectuer son travail rapidement, puis se ferme, ou elle peut rester actif pendant la durée de vie du programme.  

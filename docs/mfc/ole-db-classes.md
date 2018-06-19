@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345102"
 ---
 # <a name="ole-db-classes"></a>Classes OLE DB
 La prise en charge OLE DB dans MFC se compose actuellement de la classe [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Affiche les enregistrements de base de données dans des contrôles, via une vue de formulaire directement connectée à un [CRowset](../data/oledb/crowset-class.md) objet. Pour plus d’informations sur les modèles du consommateur OLE DB, consultez [liste de modèles consommateur OLE DB](../data/oledb/ole-db-consumer-templates-reference.md).  

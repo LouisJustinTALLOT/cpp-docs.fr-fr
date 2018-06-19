@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384346"
 ---
 # <a name="user-defined-tools"></a>Outils définis par l'utilisateur
 MFC prend en charge les outils définis par l'utilisateur. Un outil défini par l'utilisateur est une commande spéciale qui exécute un programme externe spécifié par l'utilisateur. Vous pouvez utiliser le processus de personnalisation pour gérer les outils définis par l'utilisateur. Toutefois, vous ne pouvez pas utiliser ce processus si votre objet d’application n’est pas dérivée de [CWinAppEx classe](../mfc/reference/cwinappex-class.md). Pour plus d’informations sur la personnalisation, consultez [personnalisation pour MFC](../mfc/customization-for-mfc.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695416"
 ---
 # <a name="a-examples"></a>Un fichier . Exemples
 Voici quelques exemples de constructions définies dans ce document. Notez qu’une instruction qui suit une directive est composée uniquement lorsque cela est nécessaire, et une instruction non composées est mise en retrait par rapport à une directive qui la précède.

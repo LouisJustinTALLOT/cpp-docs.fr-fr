@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857361"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Ajout d'une image pour un autre périphérique d'affichage (Éditeur d'images pour les icônes)
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Pour ajouter une image pour un autre périphérique d’affichage  

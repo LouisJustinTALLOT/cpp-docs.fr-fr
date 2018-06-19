@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343474"
 ---
 # <a name="destroying-frame-windows"></a>Destruction des fenêtres frame
 L’infrastructure MFC gère la destruction des fenêtres ainsi que la création des fenêtres associées avec des vues et des documents de framework. Si vous créez des fenêtres supplémentaires, vous êtes responsable de leur destruction.  

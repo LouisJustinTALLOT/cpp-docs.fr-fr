@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856415"
 ---
 # <a name="accelerator-editor"></a>Éditeur d’accélérateurs
 Une table d’accélérateurs est une ressource Windows qui contient une liste de touches accélérateur (également appelées touches de raccourci) et les identificateurs de commandes qui leur sont associés. Un programme peut avoir plusieurs tables d’accélérateurs.  

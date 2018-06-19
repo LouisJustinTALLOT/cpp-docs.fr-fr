@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347244"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Tâches de programmation Internet MFC
 Cette section contient des procédures détaillées pour ajouter la prise en charge d'Internet dans vos applications. Les rubriques suivantes expliquent comment utiliser les classes MFC dans vos applications existantes avec Internet, et comment ajouter la prise en charge des documents actifs vers votre composant COM existant. Vous souhaitez créer un document avec boursiers, équipe de football de Pittsburgh, et la dernière température en Antarctique Microsoft fournit un certain nombre de technologies pour vous aider à le faire sur Internet.  

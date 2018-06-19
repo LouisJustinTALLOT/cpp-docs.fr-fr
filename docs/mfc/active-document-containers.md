@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339018"
 ---
 # <a name="active-document-containers"></a>Conteneurs de documents actifs
 Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Internet Explorer, vous permet de travailler avec plusieurs documents de différents types d’applications au sein d’un frame unique (au lieu de vous obliger à créer et utiliser plusieurs frames d’application pour chaque type de document).  

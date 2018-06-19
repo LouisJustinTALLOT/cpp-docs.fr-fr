@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383548"
 ---
 # <a name="using-cstatusbarctrl"></a>Utilisation de CStatusBarCtrl
 Vous pouvez utiliser le contrôle de barre d’état ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) pour créer une fenêtre de contrôle qui reflète les différents types d’informations d’état de l’application. La fenêtre d’état peut être divisée en parties qui affichent plusieurs types d’informations.  

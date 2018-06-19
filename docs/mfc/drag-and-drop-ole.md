@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344331"
 ---
 # <a name="drag-and-drop-ole"></a>Glisser-déposer (OLE)
 La fonctionnalité glisser-déplacer de l’OLE est essentiellement un raccourci pour copier et coller des données. Lorsque vous utilisez le Presse-papiers pour copier et coller des données, un certain nombre d'étapes sont nécessaires. Vous sélectionnez les données, cliquez sur **couper** ou **copie** à partir de la **modifier** menu, déplacer vers le fichier de destination, la fenêtre ou l’application, placez le curseur dans l’emplacement souhaité, puis cliquez sur **Coller** à partir de la **modifier** menu.  

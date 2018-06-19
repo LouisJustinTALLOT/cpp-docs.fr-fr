@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341324"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Nettoyage des documents et vues
 Lors de la fermeture d’un document, le framework appelle d’abord son [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) fonction membre. Si vous avez alloué de la mémoire dans le segment de mémoire au cours de l’utilisation du document, `DeleteContents` est le meilleur endroit pour la libérer.  

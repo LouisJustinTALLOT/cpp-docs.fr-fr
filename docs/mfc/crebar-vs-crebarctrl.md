@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344972"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar et. CReBarCtrl
 MFC propose deux classes pour créer des rebars : [CReBar](../mfc/reference/crebar-class.md) et [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (qui encapsule le API de contrôle commun de Windows). **CReBar** fournit toutes les fonctionnalités du contrôle commun rebar, et il gère la plupart des paramètres des contrôles communs requis et des structures pour vous.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343942"
 ---
 # <a name="automation-servers"></a>Serveurs Automation
 L'Automation rend possible pour votre application la manipulation d'objets implémentés dans une autre application, ou l'exposition d'objets pour qu'ils puissent être manipulés. Un serveur Automation est une application qui expose des objets programmables (appelés objets Automation) à d’autres applications (appelées [clients Automation](../mfc/automation-clients.md)). Les serveurs Automation sont parfois appelés composants Automation.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346374"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestion des notifications pour les info-bulles
 Lorsque vous spécifiez le `TBSTYLE_TOOLTIPS` style, la barre d’outils crée et gère un contrôle info-bulle. Une info-bulle est une petite fenêtre contextuelle qui contient une ligne de texte décrivant un bouton de barre d’outils. L’info-bulle est cachée uniquement lorsque l’utilisateur place le curseur sur un bouton de barre d’outils et il quitte ensuite pendant environ une demi-seconde. L’info-bulle s’affiche près du curseur.  

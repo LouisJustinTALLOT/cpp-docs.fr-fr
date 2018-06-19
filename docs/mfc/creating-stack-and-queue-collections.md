@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345711"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Création de collections de piles et de files d’attente
 Cet article explique comment créer d’autres structures de données, tel que [piles](#_core_stacks) et [les files d’attente](#_core_queues), des classes de liste à partir de MFC. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.  

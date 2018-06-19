@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341457"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocation et libération de la mémoire Windows
 N’utilisez pas le C++ **supprimer** opérateur pour détruire une fenêtre frame ou une vue. Au lieu de cela, appelez le `CWnd` fonction membre `DestroyWindow`. Par conséquent, les fenêtres frame, doivent être allouées sur le tas avec l’opérateur **nouveau**. Soyez prudent lors de l’allocation de fenêtres frames sur le frame de pile ou globalement. Autres fenêtres doivent être alloués sur le frame de pile chaque fois que possible.  

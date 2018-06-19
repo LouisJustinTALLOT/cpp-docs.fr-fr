@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344622"
 ---
 # <a name="containers-client-item-notifications"></a>Conteneurs : notifications d'élément client
 Cet article présente les fonctions substituables que le framework MFC appelle lorsque les applications serveur modifient des éléments dans le document de votre application cliente.  

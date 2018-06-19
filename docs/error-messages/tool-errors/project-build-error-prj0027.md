@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318985"
 ---
 # <a name="project-build-error-prj0027"></a>Erreur de génération de projet PRJ0027
 Message de journal Unicode 'contenu' contient du contenu qui n’a pas pu être traduit à la page de codes ANSI de l’utilisateur.  

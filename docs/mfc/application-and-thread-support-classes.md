@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341308"
 ---
 # <a name="application-and-thread-support-classes"></a>Classes de prise en charge des applications et des threads
 Chaque application possède un seul et unique objet application ; Cet objet coordonne les autres objets dans le programme en cours d’exécution et qu’il est dérivé de `CWinApp`.  

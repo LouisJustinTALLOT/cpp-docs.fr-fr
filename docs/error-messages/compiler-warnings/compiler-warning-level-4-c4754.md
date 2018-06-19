@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302852"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
 Les règles de conversion pour les opérations arithmétiques dans une comparaison signifient qu’une branche ne peut pas être exécutée.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346163"
 ---
 # <a name="drawing-in-a-view"></a>Dessin dans une vue
 La quasi-totalité de dessin dans votre application se produit dans la vue `OnDraw` fonction membre, que vous devez remplacer dans votre classe d’affichage. (L’exception est la souris de dessin, présentés dans [interprétation entrée via une vue utilisateur](../mfc/interpreting-user-input-through-a-view.md).) Votre `OnDraw` remplacer :  

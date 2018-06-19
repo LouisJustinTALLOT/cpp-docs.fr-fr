@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323548"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Fonctions intrinsèques du compilateur et langage assembleur
 Cette section de la documentation contient des informations sur les intrinsèques du compilateur et le langage assembleur.  

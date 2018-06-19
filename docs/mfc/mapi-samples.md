@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344115"
 ---
 # <a name="mapi-samples"></a>Exemples MAPI
 Consultez les exemples de programmes suivants qui illustrent des fonctionnalités Microsoft MAPI Messaging Application Programming Interface () :  

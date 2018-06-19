@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342184"
 ---
 # <a name="containers"></a>Conteneurs
 Une application conteneur est une application qui peut incorporer des éléments liés ou incorporés dans ses propres documents. Les documents gérés par une application conteneur doivent être en mesure de stocker et afficher les composants de document composé OLE ainsi que les données créées par l’application elle-même. Une application conteneur doit également permettre aux utilisateurs d’insérer de nouveaux éléments ou de modifier des éléments existants.  

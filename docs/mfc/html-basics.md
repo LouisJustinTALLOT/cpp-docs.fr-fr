@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347215"
 ---
 # <a name="html-basics"></a>Éléments fondamentaux relatifs à HTML
 La plupart des navigateurs ont la capacité d'examiner la source HTML des pages que vous consultez. Lorsque vous affichez la source, vous pouvez voir plusieurs balises HTML (HyperText Markup Language) entourées de crochets pointus (<>) et entrecoupées avec du texte.  
