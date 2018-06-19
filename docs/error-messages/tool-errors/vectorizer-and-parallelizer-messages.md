@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336597"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messages du vectoriseur et du paralléliseur
 Vous pouvez utiliser les options du compilateur Visual C++ [/qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir le [parallélisation et vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) pour fournir les codes motifs et messages d’information concernant son activité. Cet article explique les code motifs et les messages.  

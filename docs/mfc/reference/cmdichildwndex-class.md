@@ -127,6 +127,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377621"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 La `CMDIChildWndEx` classe fournit les fonctionnalités de Windows fenêtre interface multidocument (MDI) enfant. Il étend les fonctionnalités de [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). L'infrastructure requiert cette classe lorsqu'une application MDI utilise certaines classes MFC.  

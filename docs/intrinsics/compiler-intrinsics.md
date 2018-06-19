@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339014"
 ---
 # <a name="compiler-intrinsics"></a>compilateur, intrinsèques
 La plupart des fonctions sont contenues dans des bibliothèques, mais certaines sont intégrées au compilateur (c'est-à-dire intrinsèques). On les appelle des fonctions intrinsèques ou tout simplement des intrinsèques.  

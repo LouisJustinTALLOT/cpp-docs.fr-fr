@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377005"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 Permet de créer des boîtes de dialogue qui utilisent HTML plutôt que des ressources de la boîte de dialogue pour implémenter l’interface utilisateur.  

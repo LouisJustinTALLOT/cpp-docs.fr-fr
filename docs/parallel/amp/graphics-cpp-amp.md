@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695364"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) espace de noms que vous pouvez utiliser pour accéder à la prise en charge de texture sur le GPU. Voici quelques scénarios courants :  

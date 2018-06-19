@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347277"
 ---
 # <a name="ole-background-linking-and-embedding"></a>Arrière-plan OLE : liaison et incorporation
 À l’aide de la commande Coller dans une application conteneur peut créer un composant incorporé ou un élément incorporé. Les données sources pour un élément incorporé sont stockées en tant que partie du document OLE qui le contient. De cette façon, un fichier de document pour un document de traitement de texte peut contenir du texte et peut également contenir les bitmaps, des graphiques, des formules ou tout autre type de données.  

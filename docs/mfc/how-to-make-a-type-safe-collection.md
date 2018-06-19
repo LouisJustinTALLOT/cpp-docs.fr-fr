@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354437"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Comment : définir une collection de type sécurisé
 Cet article explique comment créer des collections de types cohérents pour vos propres types de données. Les rubriques traitées ici sont les suivantes :  

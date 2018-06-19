@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688191"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options, classe (runtime d’accès concurrentiel)
 Représente les options autorisées pour la création d’une tâche.  

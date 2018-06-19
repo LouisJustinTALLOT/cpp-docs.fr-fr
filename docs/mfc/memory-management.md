@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345076"
 ---
 # <a name="memory-management"></a>Gestion de la mémoire
 Ce groupe d’articles explique comment tirer parti des services généraux de la MFC Microsoft Foundation Class Library () associés à la gestion de la mémoire. Allocation de mémoire peut être divisée en deux catégories principales : allocations de frame et les allocations de tas.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355137"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Contrôles ActiveX MFC : utilisation des polices
 Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisateur du contrôle modifier l’apparence du texte en modifiant une propriété de police. Propriétés de police sont implémentées en tant qu’objets de police et peut prendre l’une des deux types : stock ou personnalisée. Propriétés stock Font sont des propriétés de polices préimplémentées que vous pouvez ajouter à l’aide de l’Assistant Ajout de propriété. Les propriétés de police personnalisées ne sont pas préimplémentées et le développeur contrôle détermine le comportement et l’utilisation de la propriété.  

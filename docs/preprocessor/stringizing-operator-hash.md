@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841697"
 ---
 # <a name="stringizing-operator-"></a>Opérateur d'enchaînement (#)
 Le signe ou opérateur de « chaîne » (**#**) convertit les paramètres de macro en littéraux de chaîne sans développer la définition de paramètre. Il est utilisé uniquement avec les macros qui acceptent des arguments. S'il précède un paramètre formel dans la définition de la macro, l'argument réel passé par l'appel de macro est entre guillemets et traité en tant que littéral de chaîne. Le littéral de chaîne remplace alors chaque occurrence d'une combinaison de l'opérateur de chaîne et du paramètre formel dans la définition de macro.  

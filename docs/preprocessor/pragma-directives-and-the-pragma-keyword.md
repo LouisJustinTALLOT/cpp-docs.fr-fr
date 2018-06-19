@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846231"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma et mot clé _Pragma
 Les directives pragma spécifient des fonctionnalités de compilateur spécifiques à l’ordinateur ou au système d’exploitation. Le mot clé `__pragma`, qui est spécifique au compilateur Microsoft, vous permet de coder des directives pragma dans des définitions de macros.  

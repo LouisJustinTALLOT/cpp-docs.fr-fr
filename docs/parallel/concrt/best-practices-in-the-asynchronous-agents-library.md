@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692663"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>meilleures pratiques pour la bibliothèque d’agents asynchrones
 Ce document décrit comment utiliser efficacement la bibliothèque d’Agents asynchrones. La bibliothèque d’Agents promeut un modèle de programmation basé sur acteur et un dans le processus passage des messages de flux de données à granularité grossière et les tâches de traitement « pipeline ».  

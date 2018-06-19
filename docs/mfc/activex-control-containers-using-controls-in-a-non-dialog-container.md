@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324900"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Conteneurs de contrôles ActiveX : utilisation de contrôles dans un conteneur autre que de boîte de dialogue
 Dans certaines applications, telles que SDI ou une application MDI, vous devez incorporer un contrôle dans une fenêtre de l’application. Le **créer** fonction membre de la classe wrapper, insérée par Visual C++, peut créer une instance du contrôle de manière dynamique, sans recourir à une boîte de dialogue.  

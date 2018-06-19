@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318345"
 ---
 # <a name="project-build-error-prj0024"></a>Erreur de génération de projet PRJ0024
 Chemin de Unicode 'path' n’a pas pu être traduit dans la page de code ANSI de l’utilisateur.  

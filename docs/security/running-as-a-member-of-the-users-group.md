@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841658"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Exécution en tant que membre du groupe Utilisateurs
 Cette rubrique explique comment la configuration de comptes d’utilisateurs Windows en tant que membres du Groupe Utilisateurs (par opposition au Groupe Administrateurs) améliore la sécurité et réduit le risque d’être infecté par un code malveillant.  

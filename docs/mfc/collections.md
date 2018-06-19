@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345553"
 ---
 # <a name="collections"></a>Collections
 La bibliothèque MFC fournit des classes de collection pour gérer des groupes d’objets. Ces classes sont de deux types :  

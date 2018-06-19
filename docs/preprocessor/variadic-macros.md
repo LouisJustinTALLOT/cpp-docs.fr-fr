@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850533"
 ---
 # <a name="variadic-macros"></a>Macros Variadic
 Macros Variadic sont des macros de type fonction contenant un nombre variable d’arguments.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353984"
 ---
 # <a name="print-preview-architecture"></a>Architecture de l'aperçu avant impression
 Cet article explique comment le framework MFC implémente la fonctionnalité d'aperçu avant impression. Les sujets abordés sont les suivantes :  

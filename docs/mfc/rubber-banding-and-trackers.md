@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379240"
 ---
 # <a name="rubber-banding-and-trackers"></a>Bande élastique et dispositifs de suivi
 Une autre fonctionnalité fournie avec les dispositifs de suivi est la sélection « élastique », qui permet à un utilisateur de sélectionner plusieurs éléments OLE en faisant glisser un rectangle de redimensionnement autour des éléments à sélectionner. Lorsque l’utilisateur relâche le bouton gauche de la souris, les éléments dans la région sélectionnée par l’utilisateur sont sélectionnés et peuvent être manipulées par l’utilisateur. Par exemple, l’utilisateur peut faire glisser la sélection dans une autre application conteneur.  

@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375351"
 ---
 # <a name="data-types-mfc"></a>Types de données (MFC)
 Cette rubrique répertorie les types de données plus couramment utilisés dans la bibliothèque Microsoft Foundation Class. La plupart des types de données est les mêmes que celles dans la plateforme logicielle Kit de développement (SDK), tandis que d’autres sont spécifiques à MFC.  

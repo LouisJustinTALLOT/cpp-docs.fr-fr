@@ -55,6 +55,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694752"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 Un raccourci est une fonctionnalité de matériel qui est optimisée pour le calcul des données en parallèle. Un accélérateur peut être un périphérique connecté à un bus PCIe (par exemple, une carte GPU), ou il peut être une instruction étendue définie sur l’unité centrale principale.  

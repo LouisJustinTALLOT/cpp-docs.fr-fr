@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693141"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. Nouvelles fonctionnalités et les éclaircissements dans la Version 2.0
 Cette annexe résume les principales modifications apportées à la spécification OpenMP C/C++ lors du déplacement de la version 1.0 vers la version 2.0. Les éléments suivants sont les nouvelles fonctionnalités ajoutées à la spécification :  

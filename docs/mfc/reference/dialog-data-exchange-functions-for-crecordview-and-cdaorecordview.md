@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377515"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Échange de données de boîtes de dialogue pour CRecordView et CDaoRecordView
 Cette rubrique répertorie les fonctions DDX_Field utilisées pour échanger des données entre un [CRecordset](../../mfc/reference/crecordset-class.md) et un [CRecordView](../../mfc/reference/crecordview-class.md) formulaire ou un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) et un [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formulaire.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318036"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>Erreur irrécupérable RW1016 du compilateur de ressources 
 Arrêt du RC après erreurs du pré-processeur  

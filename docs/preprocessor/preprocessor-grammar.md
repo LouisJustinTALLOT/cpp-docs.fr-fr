@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843364"
 ---
 # <a name="preprocessor-grammar"></a>Syntaxe du préprocesseur
 **#define***identificateur* *chaîne de jeton*opt    
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/07/2018
  **#pragma***chaîne de jeton*   
   
  *conditionnel* :  
- *If-partie elif-parties*opt*partie « else »*opt*endif en ligne*  
+ *If-partie elif-parties*opt*partie « else »* opt*endif en ligne*  
   
  *If-partie* :  
  *if-linetext*  

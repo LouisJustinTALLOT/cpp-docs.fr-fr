@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371860"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Paramètres du contrôle, Assistant Contrôle ActiveX MFC
 Utilisez cette page de l’Assistant pour spécifier comment vous souhaitez que le contrôle se comporte. Par exemple, vous pouvez baser le contrôle sur les types de contrôles Windows standards, optimiser son comportement et son apparence ou indiquer que le contrôle peut agir comme un conteneur pour d’autres contrôles.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341669"
 ---
 # <a name="application-framework"></a>Infrastructure de l'application
 Le cœur de la bibliothèque Microsoft Foundation classes (MFC) est une encapsulation d’une grande partie de l’API Windows sous forme de C++. Classes de bibliothèque représentent windows, les boîtes de dialogue, les contextes de périphérique, courantes GDI objets tels que des pinceaux et les stylets, les contrôles et les autres éléments Windows standard. Ces classes fournissent une pratique interface de fonction membre C++ les structures de Windows qu’ils encapsulent. Pour plus d’informations sur l’utilisation de ces classes, consultez [rubriques fenêtre](../mfc/window-objects.md).  

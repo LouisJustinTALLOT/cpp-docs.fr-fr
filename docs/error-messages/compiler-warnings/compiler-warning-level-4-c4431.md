@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292254"
 ---
 # <a name="compiler-warning-level-4-c4431"></a>Avertissement du compilateur (niveau 4) C4431
 spécificateur de type manquant - int est pris en compte par défaut. Remarque : C ne prend plus en charge int par défaut  

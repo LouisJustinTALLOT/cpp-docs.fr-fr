@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354899"
 ---
 # <a name="idle-loop-processing"></a>Traitement des boucles inactives
 De nombreuses applications effectuent le traitement lent "en arrière-plan". Parfois, les facteurs de performance exigent l'utilisation du multithreading pour un tel travail. Threads impliquent une surcharge de développement supplémentaire, ils ne sont donc pas recommandés pour les tâches simples comme le travail de la durée d’inactivité que MFC effectue dans le [OnIdle](../mfc/reference/cwinthread-class.md#onidle) (fonction). Cet article se concentre sur le traitement des temps d'inactivité. Pour plus d’informations sur le multithreading, consultez [rubriques de Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353676"
 ---
 # <a name="controls-mfc"></a>Contrôles (MFC)
 Les contrôles sont des objets avec lesquels les utilisateurs peuvent interagir pour entrer ou manipuler des données. Ils apparaissent généralement dans des boîtes de dialogue ou des barres d’outils. Cette série de rubriques traite de trois principaux types de contrôles :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327091"
 ---
 # <a name="resource-compiler-error-rc2175"></a>Erreur RC2175 du compilateur de ressources 
 fichier de ressources nomfichier n’est pas au format 3.00  

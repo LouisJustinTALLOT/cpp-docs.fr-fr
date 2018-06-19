@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846101"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 Dans cette rubrique, vous trouverez des informations sur la façon de porter du code C++ existant vers la plateforme d’application Windows 10, la plateforme Windows universelle. Le terme *universel* signifie que votre code peut s'exécuter sur tout appareil équipé de Windows 10, notamment les ordinateurs de bureau, les téléphones, les tablettes et les appareils nouvelle génération qui exécutent Windows 10. Vous créez un seul projet et une interface utilisateur XAML unique qui fonctionne correctement sur n’importe quel appareil exécutant Windows 10. Vous pouvez utiliser les fonctionnalités de disposition dynamique de XAML pour permettre à l'interface utilisateur de l'application de s'adapter à différentes tailles d'affichage.  

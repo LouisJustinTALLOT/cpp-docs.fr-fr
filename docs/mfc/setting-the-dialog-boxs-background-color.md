@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379981"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Définition de la couleur d'arrière-plan de la boîte de dialogue
 Vous pouvez définir la couleur d’arrière-plan de vos boîtes de dialogue en gérant `WM_CTLCOLOR` messages pour la fenêtre de boîte de dialogue. La couleur que vous définissez est utilisée pour seulement la boîte de dialogue spécifiée.  

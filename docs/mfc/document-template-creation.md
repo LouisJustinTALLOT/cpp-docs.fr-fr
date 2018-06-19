@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345792"
 ---
 # <a name="document-template-creation"></a>Création de modèle de document
 Lors de la création d’un nouveau document en réponse à une `New` ou **ouvrir** commande à partir de la **fichier** menu, le modèle de document crée également une fenêtre frame dont vous souhaitez afficher le document.  

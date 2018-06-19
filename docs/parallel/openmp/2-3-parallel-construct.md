@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692744"
 ---
 # <a name="23-parallel-construct"></a>2.3 Construction parallèle
 La directive suivante définit une région parallèle, qui est une région du programme qui doit être exécutée par plusieurs threads en parallèle. Il s’agit de la construction fondamentale qui démarre l’exécution en parallèle.  

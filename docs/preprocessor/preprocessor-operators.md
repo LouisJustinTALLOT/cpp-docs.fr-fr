@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839336"
 ---
 # <a name="preprocessor-operators"></a>Opérateurs de préprocesseur
 Quatre opérateurs propres au préprocesseur sont utilisées dans le contexte de la `#define` directive (voir la liste suivante pour obtenir un récapitulatif de chaque). Les opérateurs d’enchaînement charizing et collage de jeton sont décrites dans les trois sections suivantes. Pour plus d’informations sur la **défini** (opérateur), consultez [le #if, #elif, #else et #endif Directives](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  

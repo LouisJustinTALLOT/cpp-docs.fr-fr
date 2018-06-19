@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371388"
 ---
 # <a name="colestreamfile-class"></a>Classe de COleStreamFile
 Représente un flux de données ( `IStream`) dans un fichier composé dans le cadre du stockage structuré OLE.  

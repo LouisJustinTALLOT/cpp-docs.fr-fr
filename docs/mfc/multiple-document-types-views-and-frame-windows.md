@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352156"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Types multidocuments, vues et fenêtres frame
 La relation standard entre un document, sa vue et sa fenêtre frame est décrite dans [Création d’un document/d’une vue](../mfc/document-view-creation.md). De nombreuses applications prennent en charge un type de document unique (éventuellement plusieurs documents ouverts de ce type) avec une seule vue du document et une seule fenêtre frame par document. Mais certaines applications peuvent avoir besoin de modifier une ou plusieurs de ces valeurs par défaut.  

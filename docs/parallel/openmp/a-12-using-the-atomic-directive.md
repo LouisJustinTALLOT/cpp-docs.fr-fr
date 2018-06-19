@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691406"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12   Utilisation de la directive atomic
 L’exemple suivant permet d’éviter des conditions de concurrence (mises à jour simultanées d’un élément de *x* par plusieurs threads) à l’aide de la `atomic` directive ([Section 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) à la page 19) :  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375133"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mappages de commande d'édition DHTML
 Les macros suivantes peuvent être utilisés pour mapper les commandes d’édition DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-classes dérivées. Pour obtenir un exemple de leur utilisation, consultez [exemple HTMLEdit](../../visual-cpp-samples.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688113"
 ---
 # <a name="3-run-time-library-functions"></a>3. Fonctions de la bibliothèque Runtime
 Cette section décrit les fonctions de bibliothèque OpenMP C et C++. L’en-tête  **\<omp.h >** déclare deux types, plusieurs fonctions qui peuvent être utilisées pour contrôler l’environnement d’exécution parallèle de la requête et verrouiller des fonctions qui peuvent être utilisées pour synchroniser l’accès aux données.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266553"
 ---
 # <a name="compiler-error-c3832"></a>Erreur du compilateur C3832
 'bibliothèque de types' : bibliothèque de types semble comme si elle a été créée pour des pointeurs 32 bits ; Veuillez modifier le qualificateur 'ptrsize'  

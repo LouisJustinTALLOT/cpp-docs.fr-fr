@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360964"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implémentation de la barre d'outils MFC
 Une barre d’outils est un [barre de contrôle](../mfc/control-bars.md) qui contient les images bitmap des contrôles. Ces images peuvent se comporter comme des boutons de commande, des cases à cocher ou des cases d’option. MFC fournit la classe [CToolbar](../mfc/reference/ctoolbar-class.md) pour gérer des barres d’outils.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342977"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objets de données et sources de données (OLE)
 Lorsque vous effectuez un transfert de données, à l’aide du Presse-papiers ou de glisser -déplacer, les données ont une source et une destination. Une application fournit les données pour la copie et une autre application accepte de collage. Chaque côté du transfert a besoin effectuer diverses opérations sur les mêmes données pour le transfert réussisse. La bibliothèque Microsoft Foundation classes (MFC) fournit deux classes qui représentent chaque côté de ce transfert :  

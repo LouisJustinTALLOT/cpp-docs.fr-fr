@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318023"
 ---
 # <a name="resource-compiler-error-rc2135"></a>Erreur RC2135 du compilateur de ressources 
 fichier introuvable : nom de fichier  

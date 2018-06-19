@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846423"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 

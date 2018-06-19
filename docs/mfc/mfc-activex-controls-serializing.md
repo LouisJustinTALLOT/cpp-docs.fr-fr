@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353496"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Contrôles ActiveX MFC : sérialisation
 Cet article décrit comment sérialiser un contrôle ActiveX. La sérialisation est le processus de lire ou d’écrire sur un support de stockage permanent, tel qu’un fichier de disque. La bibliothèque Microsoft Foundation classes (MFC) fournit la prise en charge intégrée pour la sérialisation dans la classe `CObject`. `COleControl` étend cette prise en charge pour les contrôles ActiveX via l’utilisation d’un mécanisme d’échange de propriété.  

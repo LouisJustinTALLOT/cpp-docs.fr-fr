@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380007"
 ---
 # <a name="settings-for-the-progress-control"></a>Paramètres du contrôle Progress
 Les paramètres de base du contrôle progress ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) sont la plage et la position actuelle. La plage représente l’ensemble de la durée de l’opération. La position actuelle représente l’avancement de votre application vers la réalisation de l’opération. Toute modification de la plage ou la position provoque le contrôle de progression à redessiner.  

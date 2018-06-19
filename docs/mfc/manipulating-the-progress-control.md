@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347401"
 ---
 # <a name="manipulating-the-progress-control"></a>Manipulation du contrôle Progress
 Il existe trois façons de modifier la position actuelle d’un contrôle de progression ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  

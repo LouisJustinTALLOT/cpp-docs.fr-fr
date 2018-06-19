@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380251"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Classes de modèle pour les tableaux, listes et tables
 Ces classes de collection sont des modèles dont les paramètres déterminent les types d’objets stockés dans les fonctions d’agrégation. Le `CArray`, `CMap`, et `CList` classes utilisent les fonctions d’assistance globales qui doivent généralement être personnalisées. Pour plus d’informations sur ces fonctions d’assistance, consultez [Assistants de classe de Collection](../mfc/reference/collection-class-helpers.md). Les classes de pointeurs typés sont des wrappers pour les autres classes dans la bibliothèque de classes. À l’aide de ces wrappers, vous inscrivez du compilateur vérification de type pour vous aider à éviter les erreurs. Pour plus d’informations sur l’utilisation de ces classes, consultez [Collections](../mfc/collections.md).  

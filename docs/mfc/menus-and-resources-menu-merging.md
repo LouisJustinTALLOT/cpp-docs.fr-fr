@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351964"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menus et ressource : fusion de menus
 Cet article décrit les étapes nécessaires pour les applications de document OLE gérer la modification visuelle et l’activation en place correctement. L’activation sur place pose des problèmes pour le conteneur et le serveur les applications (composant). L’utilisateur reste dans la même fenêtre frame (dans le contexte du document conteneur), mais est en cours d’exécution une autre application (serveur). Cela nécessite une coordination entre les ressources des applications conteneur et serveur.  

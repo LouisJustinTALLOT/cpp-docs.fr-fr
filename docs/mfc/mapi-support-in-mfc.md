@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349660"
 ---
 # <a name="mapi-support-in-mfc"></a>Prise en charge MAPI dans MFC
 MFC prend en charge un sous-ensemble de la Microsoft programme Interface MAPI (Messaging Application) dans la classe **CDocument**. Plus précisément, **CDocument** dispose de fonctions membres qui déterminent si la prise en charge de la messagerie est présent sur l’ordinateur de l’utilisateur final et, dans ce cas, activer une commande Envoyer un message dont l’ID de commande standard est **ID_FILE_SEND_MAIL**. La fonction de gestionnaire MFC pour cette commande permet à l'utilisateur d'envoyer un document via la messagerie électronique.  

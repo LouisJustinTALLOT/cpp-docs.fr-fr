@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369721"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS, structure
 Le `NCCALCSIZE_PARAMS` structure contient des informations qu’une application peut utiliser lors du traitement de la `WM_NCCALCSIZE` pour calculer la taille, la position et le contenu valid de la zone cliente d’une fenêtre de message.  

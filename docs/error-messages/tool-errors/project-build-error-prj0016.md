@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319050"
 ---
 # <a name="project-build-error-prj0016"></a>Erreur de génération de projet PRJ0016
 Les paramètres de sécurité de l’utilisateur empêchent le processus de création. Ces paramètres sont requis pour la génération.  

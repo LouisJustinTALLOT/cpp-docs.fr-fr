@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687977"
 ---
 # <a name="asynchronous-agents"></a>Agents asynchrones
 Un *agent asynchrone* (ou simplement *agent*) est un composant d’application qui fonctionne de façon asynchrone avec d’autres agents pour effectuer des tâches de calcul supérieure. Considérer un agent comme une tâche qui a un cycle de vie défini. Par exemple, un agent peut lire les données à partir d’un périphérique d’entrée/sortie (par exemple, le clavier, un fichier sur disque ou une connexion réseau) et un autre agent peuvent exécuter une action sur ces données qu’il est disponible. Le premier agent utilise le passage de message pour informer le second agent que davantage de données est disponible. Le Planificateur de tâches du Runtime d’accès concurrentiel fournit un mécanisme efficace pour permettre aux agents de bloquer et de céder de manière coopérative sans nécessiter de préemption moins efficace.  

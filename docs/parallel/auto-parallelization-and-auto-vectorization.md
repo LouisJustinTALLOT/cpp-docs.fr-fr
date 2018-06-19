@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688464"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallélisation et vectorisation automatiques
 Le paralléliseur automatique et le vectoriseur automatique sont conçus pour fournir des gains de performance automatiques pour les boucles de votre code.  

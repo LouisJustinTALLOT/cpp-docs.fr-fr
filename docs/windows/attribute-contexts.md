@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860331"
 ---
 # <a name="attribute-contexts"></a>Contextes d'attribut
 Attributs C++ peuvent être décrite à l’aide de quatre champs de base : la cible peuvent être appliquées aux (**s’applique à**), si elles sont renouvelables ou non (**Repeatable**), le requis la présence d’autres attributs ( **Attributs obligatoires**) et les incompatibilités avec les autres attributs (**attributs non valides**). Ces champs sont répertoriés dans une table qui l’accompagne dans la rubrique de référence de chaque attribut. Chacun de ces champs est décrit ci-dessous.  

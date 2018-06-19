@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346514"
 ---
 # <a name="general-window-creation-sequence"></a>Séquence de création d'une fenêtre générale
 Lorsque vous créez une fenêtre de la fenêtre de votre choix, comme un enfant, l’infrastructure utilise beaucoup le même processus que celui décrit dans [création de Document/vue](../mfc/document-view-creation.md).  

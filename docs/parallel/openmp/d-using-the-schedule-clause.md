@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694938"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. À l’aide de la Clause de planification
 Une région parallèle a au moins un cloisonnement, de son côté et peut avoir des obstacles supplémentaires qu’il contient. À chaque barrière, les autres membres de l’équipe doivent attendre pour le dernier thread arrivée. Pour réduire ce délai d’attente, le travail doit être distribué afin que tous les threads arrivent à la barrière en même temps. Si certains des partageant le travail est contenu dans **pour** construit, le `schedule` clause peut être utilisée à cet effet.  

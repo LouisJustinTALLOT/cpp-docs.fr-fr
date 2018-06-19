@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369962"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT, structure
 Le `COLORADJUSTMENT` structure définit les valeurs d’ajustement de couleur utilisés par Windows `StretchBlt` et **StretchDIBits** fonctions lors de la `StretchBlt` mode est **demi-teintes**.  

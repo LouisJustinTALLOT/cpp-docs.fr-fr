@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373926"
 ---
 # <a name="event-sink-maps"></a>Tables de récepteurs d'événements
 Lorsqu’un contrôle OLE incorporé déclenche un événement, le conteneur du contrôle reçoit l’événement à l’aide d’un mécanisme, appelé « table d’événements récepteur, « fournie par MFC. Cette table de récepteur d’événements désigne les fonctions de gestionnaire pour chaque événement spécifique, ainsi que les paramètres de ces événements. Pour plus d’informations sur les tables de récepteurs d’événements, consultez l’article [conteneurs de contrôles ActiveX](../../mfc/activex-control-containers.md).  

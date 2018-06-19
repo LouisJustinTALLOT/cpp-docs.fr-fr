@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320217"
 ---
 # <a name="project-build-warning-prj0029"></a>Avertissement de génération de projet PRJ0029
 La propriété 'Sorties' de l’étape de génération personnalisée au niveau du projet n’est pas définie. L’étape de génération personnalisée va être ignorée.  

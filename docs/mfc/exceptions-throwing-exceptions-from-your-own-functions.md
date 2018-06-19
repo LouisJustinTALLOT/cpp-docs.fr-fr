@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346192"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions : levée d'exceptions à partir de vos propres fonctions
 Il est possible d’utiliser le paradigme de gestion des exceptions MFC uniquement pour intercepter les exceptions levées par les fonctions dans MFC ou d’autres bibliothèques. En plus d’intercepter les exceptions levées par le code de bibliothèque, vous pouvez lever des exceptions à partir de votre propre code si vous écrivez des fonctions qui peuvent rencontrer des conditions exceptionnelles.  

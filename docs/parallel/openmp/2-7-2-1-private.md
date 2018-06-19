@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687463"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
 Le `private` clause déclare les variables dans la liste variable être privée pour chaque thread dans une équipe. La syntaxe de la `private` clause est comme suit :  

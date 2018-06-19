@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341295"
 ---
 # <a name="command-targets"></a>Cibles de la commande
 La figure [commandes dans le Framework](../mfc/user-interface-objects-and-command-ids.md) affiche la connexion entre un objet de l’interface utilisateur, comme un élément de menu et la fonction de gestionnaire, l’infrastructure appelle pour exécuter la commande qui en résulte quand l’objet est sélectionné.  

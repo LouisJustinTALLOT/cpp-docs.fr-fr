@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316499"
 ---
 # <a name="resource-compiler-fatal-error-rc1011"></a>Erreur irrécupérable RC1011 du compilateur de ressources 
 limite du compilateur : 'identificateur' : définition de macro trop grande  

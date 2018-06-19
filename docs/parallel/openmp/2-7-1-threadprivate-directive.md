@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692650"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 Directive threadprivate
 Le `threadprivate` directive rend la portée de fichier nommée, portée espace de noms ou des variables static avec portée de bloc spécifiés dans le *variable-list* privé à un thread. *liste de la variable* est une liste séparée par des virgules de variables qui n’ont pas un type incomplet. La syntaxe de la `threadprivate` la directive est la suivante :  

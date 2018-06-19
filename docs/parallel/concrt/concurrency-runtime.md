@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693521"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications parallèles fiables, évolutives et réactives. Il permet d'élever le niveau d'abstraction afin que vous n'ayez pas à gérer les détails de l'infrastructure liés à l'accès concurrentiel. Vous pouvez également l'utiliser pour spécifier les stratégies de planification qui répondent aux exigences de vos applications en matière de qualité de service. Utilisez ces ressources pour vous aider à vous familiariser avec le runtime d'accès concurrentiel.  

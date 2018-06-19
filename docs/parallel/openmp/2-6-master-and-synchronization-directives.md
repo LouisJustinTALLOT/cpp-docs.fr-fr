@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695429"
 ---
 # <a name="26-master-and-synchronization-directives"></a>2.6 Directives principales et directives de synchronisation
 Les sections suivantes décrivent :  
