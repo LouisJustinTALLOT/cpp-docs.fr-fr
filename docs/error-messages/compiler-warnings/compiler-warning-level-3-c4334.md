@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292683"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>Avertissement du compilateur (niveau 3) C4334
 'opérateur' : résultat du décalage 32 bits converti implicitement en 64 bits (était décalage 64 bits destinée ?)  

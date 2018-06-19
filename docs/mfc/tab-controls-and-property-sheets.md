@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385870"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Contrôles onglet et feuilles de propriétés
 Feuilles de propriétés sont des dialogues multipages ou « onglet boîtes de dialogue » qui peuvent afficher jusqu'à 24 ressources de modèle de boîte de dialogue à l’utilisateur. Pour obtenir des exemples de feuilles de propriétés, consultez la boîte de dialogue Propriétés d’affichage de Windows ou de l’exemple d’application MFC suivant :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382984"
 ---
 # <a name="using-clistctrl"></a>Utilisation de CListCtrl
 Utilisez un contrôle de liste pour afficher une disposition quelconque d’icônes avec des étiquettes, comme dans l’Explorateur de fichiers ou des listes en colonnes de texte, avec ou sans icônes. Pour obtenir une description des quatre possibles « vues » (à ne pas confondre avec les vues MFC), vous pouvez avoir dans un contrôle de liste, vues d’icône, petite icône, liste et vue rapport : consultez les vues dans le [CListCtrl](../mfc/reference/clistctrl-class.md) vue d’ensemble de la classe.  

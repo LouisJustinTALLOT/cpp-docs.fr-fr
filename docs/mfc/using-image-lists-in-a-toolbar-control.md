@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382848"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Utilisation de listes d'images dans un contrôle ToolBar
 Par défaut, les images utilisées par les boutons dans un contrôle de barre d’outils sont stockés sous forme de bitmap unique. Toutefois, vous pouvez également stocker des images de boutons dans un ensemble de listes d’images. L’objet de contrôle de barre d’outils peut utiliser jusqu'à trois listes d’images séparées :  

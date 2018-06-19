@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382777"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Utilisation de listes d'images avec des contrôles Header
 Éléments d’en-tête ont la possibilité d’afficher une image dans un élément d’en-tête. Cette image, stockée dans une liste d’images associée est de 16 x 16 pixels et présente les mêmes caractéristiques que les icônes utilisées dans un contrôle list view. Pour implémenter ce comportement avec succès, vous devez d’abord créer et initialiser la liste d’images associez la liste de contrôle header et puis modifier les attributs de l’élément d’en-tête qui va afficher l’image.  

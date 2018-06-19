@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236444"
 ---
 # <a name="compiler-error-c2764"></a>Erreur du compilateur C2764
 'param' : paramètre de modèle non utilisé ou pouvant être déduit dans la spécialisation partielle 'spécialisation'  

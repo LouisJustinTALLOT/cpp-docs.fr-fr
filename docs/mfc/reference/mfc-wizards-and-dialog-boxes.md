@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376276"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC, assistants et boîtes de dialogue
 Les Assistants de Microsoft Foundation classes (MFC) génèrent un code réutilisable pour différents types de composants et des objets. Vous pouvez exécuter les Assistants en ouvrant le menu contextuel pour un projet dans **l’Explorateur de solutions** et en choisissant **ajouter**, **classe**.  

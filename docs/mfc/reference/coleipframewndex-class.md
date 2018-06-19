@@ -109,6 +109,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377569"
 ---
 # <a name="coleipframewndex-class"></a>Classe de COleIPFrameWndEx
 La classe `COleIPFrameWndEx` implémente un conteneur OLE qui prend en charge MFC. Vous devez dériver la classe de fenêtres frames sur place pour votre application depuis la classe `COleIPFrameWndEx` , au lieu de la dériver de la classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 

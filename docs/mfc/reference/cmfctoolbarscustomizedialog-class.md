@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378179"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe de CMFCToolBarsCustomizeDialog
 Une boîte de dialogue non modale onglet ( [CPropertySheet (classe)](../../mfc/reference/cpropertysheet-class.md)) qui permet à l’utilisateur personnaliser les barres d’outils, les menus, les raccourcis clavier, les outils définis par l’utilisateur et les style visuel dans une application. En général, l'utilisateur accède à cette boîte de dialogue en sélectionnant **Personnaliser** dans le menu **Outils** .  

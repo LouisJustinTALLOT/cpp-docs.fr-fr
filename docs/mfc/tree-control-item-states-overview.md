@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383147"
 ---
 # <a name="tree-control-item-states-overview"></a>Vue d’ensemble des états d’élément de contrôle d’arborescence
 Chaque élément dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a un état actuel. Par exemple, un élément peut être sélectionné, desactivé, développé, etc. Dans la plupart des cas, l’arborescence définit automatiquement l’état d’un élément de sorte à refléter toutes les actions de l’utilisateur, comme la sélection d’un élément. Toutefois, vous pouvez également définir état d’un élément à l’aide de la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) fonction membre et récupérer l’état actuel d’un élément à l’aide de la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) fonction membre. Pour obtenir une liste complète des États des éléments, consultez [constantes de contrôle Tree-View](http://msdn.microsoft.com/library/windows/desktop/bb759985) dans le Kit de développement logiciel Windows.  

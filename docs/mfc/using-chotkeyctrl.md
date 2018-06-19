@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381801"
 ---
 # <a name="using-chotkeyctrl"></a>Utilisation de CHotKeyCtrl
 Un contrôle hot key, représenté par la classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), est une fenêtre qui affiche une représentation textuelle de la combinaison de touches l’utilisateur tape, telles que CTRL + MAJ + Q. Il gère également une représentation interne de cette touche sous la forme d’un code de touche virtuelle et un ensemble d’indicateurs qui représentent l’état du décalage. Le contrôle de touche à chaud ne définit pas la touche d’accès rapide, ce qui revient à votre programme. (Pour une liste des codes de touches virtuelles, consultez Winuser.h.)  

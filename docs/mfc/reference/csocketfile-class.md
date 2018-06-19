@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372633"
 ---
 # <a name="csocketfile-class"></a>Classe de CSocketFile
 Objet `CFile` utilisé pour envoyer et recevoir des données sur un réseau via Windows Sockets.  

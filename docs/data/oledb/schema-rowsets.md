@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104280"
 ---
 # <a name="schema-rowsets"></a>Jeux de lignes du schéma
 Schéma (ou métadonnées) est toutes les informations concernant la structure ou de l’organisation, telles que les informations sur le fournisseur, l’ensemble de lignes, la table, les colonnes, une base de données ou autres informations à l’exception du contenu de la base de données. OLE DB permet d’obtenir ces informations sans ouvrir l’ensemble de lignes à l’aide des ensembles de lignes de schéma.  

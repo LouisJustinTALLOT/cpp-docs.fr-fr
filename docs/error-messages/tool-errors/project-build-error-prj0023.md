@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321884"
 ---
 # <a name="project-build-error-prj0023"></a>Erreur de génération de projet PRJ0023
 Outil 'outil', propriété inconnue contient le nom de fichier non valide 'fichier'.  

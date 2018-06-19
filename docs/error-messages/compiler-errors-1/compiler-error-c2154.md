@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168930"
 ---
 # <a name="compiler-error-c2154"></a>Erreur du compilateur C2154
 ’type’ : seul le type énumération est autorisé en tant qu’argument pour un trait de type intrinsèque du compilateur ’__underlying_type’  

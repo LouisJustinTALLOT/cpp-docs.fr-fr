@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197544"
 ---
 # <a name="compiler-error-c2471"></a>Erreur du compilateur C2471
 Impossible de mettre à jour la base de données du programme 'fichier'  

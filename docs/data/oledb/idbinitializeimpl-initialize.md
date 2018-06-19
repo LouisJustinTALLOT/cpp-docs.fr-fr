@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100328"
 ---
 # <a name="idbinitializeimplinitialize"></a>IDBInitializeImpl::Initialize
 Initialise l’objet de source de données en préparation de la prise en charge de la propriété.  

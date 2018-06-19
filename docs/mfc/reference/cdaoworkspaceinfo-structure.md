@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366289"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo, structure
 Le `CDaoWorkspaceInfo` structure contient des informations sur un espace de travail défini pour l’accès de données access (DAO) d’objets de base de données.  

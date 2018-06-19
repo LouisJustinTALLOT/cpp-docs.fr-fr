@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371648"
 ---
 # <a name="standard-command-and-window-ids"></a>ID de fenêtre et commande standard
 La bibliothèque Microsoft Foundation Class définit un numéro d’ID de fenêtre et commande standard dans Afxres.h. Ces ID est couramment utilisés dans les éditeurs de ressources et de la fenêtre Propriétés pour mapper les messages à vos fonctions gestionnaires. Toutes les commandes standards ont une **ID_** préfixe. Par exemple, lorsque vous utilisez l’éditeur de menus, vous normalement liez l’élément de menu Ouvrir le fichier à la norme `ID_FILE_OPEN` ID de commande.  

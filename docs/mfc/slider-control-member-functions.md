@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383443"
 ---
 # <a name="slider-control-member-functions"></a>Fonctions membres de contrôle Slider
 Une application peut appeler le curseur de fonctions de membre d’un contrôle à récupérer des informations sur le contrôle slider ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) et pour modifier ses caractéristiques.  

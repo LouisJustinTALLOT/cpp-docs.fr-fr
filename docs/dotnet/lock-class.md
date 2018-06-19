@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129695"
 ---
 # <a name="lock-class"></a>lock, classe
 Cette classe permet d’automatiser l’acquisition un d'verrou de synchroniser l’accès à un objet à partir de plusieurs threads.  Lors de la construction il acquiert le verrou et quand elle détruit libère le verrou.  

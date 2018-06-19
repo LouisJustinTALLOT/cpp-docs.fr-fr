@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127875"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Comment : intercepter des exceptions en code natif levées à partir de MSIL
 En code natif, vous pouvez intercepter les exceptions C++ native à partir de MSIL.  Vous pouvez intercepter les exceptions CLR avec `__try` et `__except`.  

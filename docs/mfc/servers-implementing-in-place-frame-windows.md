@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380862"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serveurs : implémentations de fenêtres frame sur place
 Cet article explique ce que vous devez effectuer pour implémenter des fenêtres frame au sein de votre application serveur d'édition visuelle si vous n'utilisez pas l'Assistant d'application pour créer votre application serveur. Au lieu de suivre la procédure décrite dans cet article, vous pouvez utiliser une classe de fenêtre frame sur place existante à partir d’une application générée par l’Assistant application ou d’un exemple fourni avec Visual C++.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385191"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accès de type sécurisé aux contrôles avec Assistants Code
 Si vous êtes familiarisé avec les fonctionnalités DDX, vous pouvez utiliser la propriété du contrôle dans le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) pour créer l’accès de type sécurisé. Cette approche est plus facile que la création de contrôles sans Assistants code.  

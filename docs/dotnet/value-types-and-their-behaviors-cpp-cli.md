@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169541"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Types valeur et leurs comportements (C++/CLI)
 Types valeur ont été modifiés de diverses façons entre les Extensions managées pour C++ vers Visual C++. Dans cette section, nous allons le type enum du CLR et le type de classe value, ainsi que d’examiner le boxing et l’accès à l’instance boxed sur le tas CLR, ainsi que d’examiner des pointeurs intérieurs et épingles. Des modifications ont été étendues de langage dans ce domaine.  

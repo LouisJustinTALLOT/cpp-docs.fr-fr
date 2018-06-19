@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378837"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe de CMFCToolBarButton
 Fournit les fonctionnalités de bouton aux barres d’outils.  

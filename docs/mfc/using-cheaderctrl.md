@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382448"
 ---
 # <a name="using-cheaderctrl"></a>Utilisation de CHeaderCtrl
 Utiliser un contrôle header, représenté par la classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)pour afficher des en-têtes de colonnes pour une liste de colonnes. Par exemple, un contrôle header serait utile pour implémenter des contrôles de colonnes dans une feuille de calcul.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374148"
 ---
 # <a name="logpen-structure"></a>LOGPEN, structure
 Le `LOGPEN` structure définit le style, la largeur et la couleur d’un stylet, un dessin utilisé pour dessiner des lignes et les bordures. Le [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) fonction utilise le `LOGPEN` structure.  

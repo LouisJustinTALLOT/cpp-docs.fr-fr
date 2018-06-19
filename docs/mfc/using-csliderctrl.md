@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385815"
 ---
 # <a name="using-csliderctrl"></a>Utilisation de CSliderCtrl
 Le [CSliderCtrl](../mfc/reference/csliderctrl-class.md) classe représente un contrôle slider, également appelé barre de suivi. Un « contrôle slider » est une fenêtre qui contient un curseur et les graduations facultatif marques. Lorsque l’utilisateur déplace le curseur, à l’aide de la souris ou les touches de direction, le contrôle slider envoie des messages de notification pour indiquer le changement.  

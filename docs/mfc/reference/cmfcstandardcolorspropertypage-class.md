@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374278"
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>Classe de CMFCStandardColorsPropertyPage
 Représente une page de propriétés qui utilisent des utilisateurs à sélectionner des couleurs standards dans une boîte de dialogue couleur.  

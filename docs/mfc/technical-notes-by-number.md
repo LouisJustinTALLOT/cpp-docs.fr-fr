@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383716"
 ---
 # <a name="technical-notes-by-number"></a>Notes techniques par numéro
 Les notes techniques ci-dessous sont prioritaires numériquement, avec la note technique plus récemment écrite. Pour obtenir une liste par catégorie, consultez [Notes techniques par catégorie](../mfc/technical-notes-by-category.md).  

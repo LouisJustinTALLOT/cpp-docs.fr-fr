@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170958"
 ---
 # <a name="compiler-error-c2245"></a>Erreur du compilateur C2245
 fonction membre 'function' inexistante spécifiée en tant que friend (la signature de la fonction membre ne correspond à aucune surcharge)  

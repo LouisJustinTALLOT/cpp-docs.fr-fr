@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370166"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe de CMFCRibbonUndoButton
 La `CMFCRibbonUndoButton` classe implémente un bouton de liste déroulante qui contient les commandes d’utilisateur les plus récentes. Les utilisateurs peuvent sélectionner un ou plusieurs des commandes les plus récentes à partir de la liste déroulante pour les annuler ou rétablir.  

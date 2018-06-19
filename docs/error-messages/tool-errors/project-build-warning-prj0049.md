@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319808"
 ---
 # <a name="project-build-warning-prj0049"></a>Avertissement de génération de projet PRJ0049
 Cible référencé '\<référence >' requiert .NET Framework \<MinFrameworkVersion > et ne pourra pas s’exécuter sur le framework cible de ce projet  

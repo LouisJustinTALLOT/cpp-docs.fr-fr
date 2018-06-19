@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233160"
 ---
 # <a name="compiler-error-c2677"></a>Erreur du compilateur C2677
 'opérateur' binaire : aucun opérateur global trouvé qui accepte le type 'type' (ou il n’existe aucune conversion acceptable)  

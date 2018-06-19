@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376556"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 Pages de propriétés affichent les valeurs actuelles des propriétés de contrôle OLE spécifiques dans une interface graphique pour afficher et modifier en prenant en charge un mécanisme de mappage de données en fonction de l’échange de données de boîtes de dialogue (DDX) personnalisable.  

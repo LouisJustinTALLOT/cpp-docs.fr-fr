@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371512"
 ---
 # <a name="cmfcribboncombobox-class"></a>Classe de CMFCRibbonComboBox
 La `CMFCRibbonComboBox` classe implémente un contrôle de zone de liste déroulante que vous pouvez ajouter à une barre de ruban, un panneau de ruban ou un menu contextuel de ruban.  

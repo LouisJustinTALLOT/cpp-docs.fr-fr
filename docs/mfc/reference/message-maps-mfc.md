@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371710"
 ---
 # <a name="message-maps-mfc"></a>Tables des messages (MFC)
 Cette section de la référence répertorie tous les [macros de mappage de message](../../mfc/reference/message-map-macros-mfc.md) et tous les [CWnd](../../mfc/reference/cwnd-class.md) les entrées de table des messages, ainsi que le membre correspondant des prototypes de fonction :  

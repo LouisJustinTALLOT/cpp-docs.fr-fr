@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378474"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les macros suivantes :  

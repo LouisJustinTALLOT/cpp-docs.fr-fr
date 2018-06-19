@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109285"
 ---
 # <a name="setting-properties-in-your-provider"></a>Définition de propriétés dans votre fournisseur
 Permet de trouver le groupe de propriétés et l’ID de propriété pour la propriété que vous voulez. Pour plus d’informations, consultez [propriétés OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) dans les *de référence du programmeur OLE DB*.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101875"
 ---
 # <a name="data-source-object-interfaces"></a>Interfaces de l'objet source de données
 Le tableau suivant montre les interfaces obligatoires et facultatives définies par OLE DB pour un objet de source de données.  

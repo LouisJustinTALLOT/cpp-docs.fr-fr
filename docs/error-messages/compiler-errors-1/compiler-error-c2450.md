@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225392"
 ---
 # <a name="compiler-error-c2450"></a>Erreur du compilateur C2450
 expression de switch de type 'type' est non conforme  

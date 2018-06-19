@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383959"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Extension Internet Win32 (WinInet)
 Une application cliente Internet est un programme qui accède aux informations à partir d’une source de données de réseau (serveur) à l’aide des protocoles Internet tels que HTTP, FTP ou gopher. Une application cliente Internet peut accéder à un serveur pour extraire des données telles que des cartes météo, des actions ou les titres des journaux, par exemple. Le client Internet peut accéder au serveur via un réseau externe (Internet) ou un réseau interne (parfois appelé un intranet).  

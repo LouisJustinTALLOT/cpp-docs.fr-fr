@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377935"
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe de CMFCToolBarImages
 Les images sur une barre d’outils. La `CMFCToolBarImages` classe gère les images de barre d’outils chargées à partir des ressources d’application ou de fichiers.  

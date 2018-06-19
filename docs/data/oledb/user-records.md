@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109805"
 ---
 # <a name="user-records"></a>Enregistrements utilisateur
 Pour utiliser un accesseur statique (autrement dit, un accesseur dérivé **CAccessor)**, le consommateur doit disposer d’un enregistrement d’utilisateur. L’enregistrement de l’utilisateur est une classe C++ qui contienne les éléments de données à l’entrée de handle ou de sortie. L’Assistant Consommateur OLE DB ATL génère un enregistrement d’utilisateur pour le consommateur. Vous pouvez ajouter des méthodes à l’enregistrement d’utilisateur pour les tâches facultatives telles que la gestion des commandes.  

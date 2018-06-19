@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383307"
 ---
 # <a name="using-crebarctrl"></a>Utilisation de CReBarCtrl
 Un contrôle rebar agit comme un conteneur pour les fenêtres enfants. Ces fenêtres enfants, souvent d’autres contrôles, sont assignées à une bande de contrôle rebar. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande disposant de n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant. Toutefois, les bandes ne peut pas contenir plus d’une fenêtre enfant.  

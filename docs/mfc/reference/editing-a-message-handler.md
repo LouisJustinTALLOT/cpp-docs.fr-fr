@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375627"
 ---
 # <a name="editing-a-message-handler"></a>Modification d'un gestionnaire de messages
 Une fois que vous avez défini un gestionnaire de messages, vous pouvez atteindre la définition de la fonction membre pour ajouter ou modifier le code.  

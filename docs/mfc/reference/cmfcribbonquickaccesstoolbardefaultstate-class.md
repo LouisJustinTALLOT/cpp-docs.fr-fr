@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370918"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Classe de CMFCRibbonQuickAccessToolBarDefaultState
 Une classe d’assistance qui gère l’état de la valeur par défaut pour la barre d’outils Accès rapide qui est positionné sur la barre du ruban ( [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)).  

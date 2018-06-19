@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373422"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Types de messages associés aux objets interface utilisateur
 Le tableau suivant présente les types d’objets que vous pouvez utiliser et les types de messages qui s’y rapportent.  

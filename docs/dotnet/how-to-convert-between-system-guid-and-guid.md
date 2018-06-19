@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127440"
 ---
 # <a name="how-to-convert-between-systemguid-and-guid"></a>Comment : procéder à une conversion entre System::Guid et _GUID
 L’exemple de code suivant montre comment effectuer une conversion entre un <xref:System.Guid> et un `_GUID`.  

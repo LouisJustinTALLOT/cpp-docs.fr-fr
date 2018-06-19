@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161601"
 ---
 # <a name="reversecopy-stlclr"></a>reverse_copy (STL/CLR)
 Inverse l’ordre des éléments d’une plage source tout en les copiant dans une plage de destination.  

@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338180"
 ---
 # <a name="arm-intrinsics"></a>Fonctions ARM intrinsèques
 Le compilateur Visual C++ rend les intrinsèques suivantes disponibles sur l’architecture ARM. Pour plus d’informations sur ARM, consultez le [manuels de référence de l’Architecture ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) et [Guide des outils de l’assembleur ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) sur le site Web du centre d’informations ARM.  

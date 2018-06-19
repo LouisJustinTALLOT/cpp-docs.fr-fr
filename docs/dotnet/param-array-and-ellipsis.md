@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158519"
 ---
 # <a name="param-array-and-ellipsis"></a>Tableau Param et points de suspension
 Priorité du tableau param pour résoudre des appels de fonction surchargée a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382071"
 ---
 # <a name="window-procedure-entry-points"></a>Procédure de fenêtre, points d'entrée
 Pour protéger les procédures de fenêtre MFC, un module statique se lie à une implémentation de procédure de fenêtre spéciale. La liaison se produit automatiquement lorsque le module est lié à MFC. Cette procédure de fenêtre utilise la `AFX_MANAGE_STATE` macro pour définir correctement l’état du module effectif, ensuite, il appelle **AfxWndProc**, qui à son tour délègue à la `WindowProc` fonction membre de la `CWnd`-dérivée objet.  

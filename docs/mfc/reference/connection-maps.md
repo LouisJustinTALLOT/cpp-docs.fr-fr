@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372836"
 ---
 # <a name="connection-maps"></a>Tables de connexions
 Contrôles OLE sont en mesure d’exposer les interfaces à d’autres applications. Ces interfaces permettent uniquement l’accès à partir d’un conteneur dans ce contrôle. Si un contrôle OLE souhaite accéder à des interfaces externes d’autres objets OLE, un point de connexion doit être établi. Ce point de connexion permet à un contrôle sortant à des tables de dispatch externes, tels que les tables d’événements ou des fonctions de notification.  
