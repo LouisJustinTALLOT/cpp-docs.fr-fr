@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359017"
 ---
 # <a name="cmessagemap-class"></a>Classe de CMessageMap
 Cette classe autorise que les messages d’un objet est mappé pour l’accès par un autre objet.  

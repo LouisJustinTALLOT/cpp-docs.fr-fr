@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170854"
 ---
 # <a name="compiler-error-c2283"></a>Erreur du compilateur C2283
 'identificateur' : spécificateur pure ou spécificateur de substitution abstrait non autorisé sur un struct sans nom  

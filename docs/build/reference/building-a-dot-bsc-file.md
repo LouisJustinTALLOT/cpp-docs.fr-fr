@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369004"
 ---
 # <a name="building-a-bsc-file"></a>Génération d'un fichier .bsc
 BSCMAKE peut générer un nouveau fichier d’informations à partir de fichiers .sbr nouvellement créé. Il peut également mettre à jour un fichier .bsc existant à l’aide des fichiers .sbr pour les fichiers objets qui ont été modifiés depuis la dernière génération.  

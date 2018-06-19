@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418183"
 ---
 # <a name="strcoll-functions"></a>strcoll, fonctions
 Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes en fonction du paramètre de catégorie `LC_COLLATE` de la page de codes des paramètres régionaux en cours d’utilisation. Chacune des fonctions `_mbscoll` compare deux chaînes en fonction de la page de codes multioctets en cours d’utilisation. Utilisez les fonctions `coll` pour les comparaisons de chaînes s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison. Utilisez les fonctions `cmp` correspondantes pour tester uniquement pour l’égalité des chaînes.  

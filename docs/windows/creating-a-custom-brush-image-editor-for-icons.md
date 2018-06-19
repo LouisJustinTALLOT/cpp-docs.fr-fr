@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873145"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Création d'un pinceau personnalisé (Éditeur d'images pour les icônes)
 Un pinceau personnalisé est une partie rectangulaire d’une image que vous sélectionnez et utilisez comme l’une des formes prêtes à l’emploi de l’éditeur d’images. Toutes les opérations que vous pouvez effectuer sur une sélection, vous pouvez effectuer sur un pinceau personnalisé.  

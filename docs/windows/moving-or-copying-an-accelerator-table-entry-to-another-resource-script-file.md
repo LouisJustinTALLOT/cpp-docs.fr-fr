@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877902"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Déplacement ou copie d'une entrée d'une table d'accélérateurs vers un autre fichier de script de ressources
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Pour déplacer ou copier une entrée de table d'accélérateurs vers un autre fichier de script de ressources  

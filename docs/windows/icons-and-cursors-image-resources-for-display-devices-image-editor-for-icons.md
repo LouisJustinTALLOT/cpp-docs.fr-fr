@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881908"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Icônes et des curseurs : ressources image pour les périphériques d'affichage (Éditeur d'images pour les icônes)
 Les icônes et curseurs sont des ressources graphiques qui peuvent contenir plusieurs images de différentes tailles et modèles de couleurs pour différents types de périphériques d’affichage. De plus, un curseur a une « zone réactive », l’emplacement utilisé par Windows pour suivre sa position. Vous pouvez créer et modifier des icônes et des curseurs à l’aide de l’Éditeur d’images, comme les bitmaps et autres images.  

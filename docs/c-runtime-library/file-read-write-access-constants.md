@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391140"
 ---
 # <a name="file-readwrite-access-constants"></a>Constantes d'accès fichier en lecture/écriture
 ## <a name="syntax"></a>Syntaxe  

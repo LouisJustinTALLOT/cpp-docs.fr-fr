@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881768"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  

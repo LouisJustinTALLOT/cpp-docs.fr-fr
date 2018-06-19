@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359993"
 ---
 # <a name="what-is-atlaxwin100"></a>Qu’est AtlAxWin100 ?
 `AtlAxWin100` est le nom d’une classe de fenêtre qui permet de fournir des fonctionnalités d’hébergement des contrôles ATL. Lorsque vous créez une instance de cette classe, la procédure de fenêtre utilisera automatiquement l’API d’hébergement des contrôles pour créer un objet hôte associé à la fenêtre et le charger avec le contrôle que vous spécifiez comme titre de la fenêtre.  

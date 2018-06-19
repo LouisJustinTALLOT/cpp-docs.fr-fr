@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877834"
 ---
 # <a name="purpose-of-attributes"></a>Objectif des attributs
 Attributs étendent C++ dans le sens n’est pas actuellement possibles sans rompre la structure classique de la langue. Attributs permettent aux fournisseurs (DLL séparées) pour étendre les fonctionnalités de langage dynamique. L’objectif principal d’attributs est de simplifier la création de composants COM, en plus d’accroître la productivité des développeurs de composants. Les attributs peuvent être appliqués à presque n’importe quelle construction C++, telles que des classes, des membres de données ou des fonctions membres. Voici une mise en surbrillance des avantages offerts par cette nouvelle technologie :  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873223"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Création d'une image de périphérique (Éditeur d'images pour les icônes)
 Lorsque vous créez une nouvelle icône ou curseur ressource, l’Image de l’éditeur crée d’abord une image dans un style spécifique (32 x 32, 16 couleurs pour les icônes et 32 x 32, Monochrome pour les curseurs). Vous pouvez ensuite ajouter des images de différentes tailles et des styles à l’icône d’origine et modifier chaque image supplémentaire, si nécessaire, pour les périphériques d’affichage différent. Vous pouvez également modifier une image en effectuant une opération de couper-coller à partir d’un type d’image existant ou d’une bitmap créée dans un programme graphique.  

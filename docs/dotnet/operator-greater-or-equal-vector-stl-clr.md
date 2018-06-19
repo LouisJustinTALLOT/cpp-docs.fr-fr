@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136898"
 ---
 # <a name="operatorgt-vector-stlclr"></a>opérateur&gt;= (vecteur) (STL/CLR)
 Vecteur supérieur ou égal comparaison.  

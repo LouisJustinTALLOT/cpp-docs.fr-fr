@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382500"
 ---
 # <a name="servers-server-items"></a>Serveurs : éléments du serveur
 Lorsqu'un conteneur lance un serveur afin qu'un utilisateur puisse modifier un élément OLE incorporé ou lié, l'application serveur "crée un élément du serveur." L'élément du serveur, qui est un objet d'une classe dérivé de `COleServerItem`, fournit une interface entre le document serveur et l'application conteneur.  

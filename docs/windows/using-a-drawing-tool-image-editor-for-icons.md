@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891670"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Utilisation d'un outil de dessin (Éditeur d'images pour les icônes)
 L’éditeur d’images de dessin à main levée de dessin et effacement des outils de tout le travail de la même façon : vous sélectionnez l’outil et, si nécessaire, [sélectionner des couleurs de premier plan et arrière-plan](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) et options de taille et forme. Vous pouvez ensuite déplacer le pointeur à l’image et cliquez sur ou faites glisser pour dessiner et effacer.  

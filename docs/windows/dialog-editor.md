@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875856"
 ---
 # <a name="dialog-editor"></a>Éditeur de boîtes de dialogue
 L'Éditeur de boîtes de dialogue vous permet de créer et de modifier des ressources de boîte de dialogue. Vous ouvrez l’éditeur de boîte de dialogue, double-cliquez sur le fichier .rc d’une boîte de dialogue Affichage des ressources (**vue &#124; affichage des ressources**). Notez que l'Affichage des ressources n'est pas disponible dans les éditions Express.  

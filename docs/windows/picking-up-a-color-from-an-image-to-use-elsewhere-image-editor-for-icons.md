@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877408"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Sélection d'une couleur dans une image à utiliser ailleurs (Éditeur d'images pour les icônes)
 Le **sélectionner une couleur**, ou de la sélection de couleur, outil permet de n’importe quelle couleur sur l’image de la couleur de premier plan actuelle ou la couleur d’arrière-plan, selon si vous appuyez sur la gauche ou sur le bouton droit de la souris. Pour annuler le **sélectionner une couleur** outil, choisissez un autre outil.  

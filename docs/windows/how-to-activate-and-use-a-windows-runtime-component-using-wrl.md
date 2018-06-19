@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880768"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Comment : activer et utiliser un composant Windows Runtime Component à l'aide de WRL
 Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour initialiser le Runtime Windows et comment activer et utiliser un composant Windows Runtime.  

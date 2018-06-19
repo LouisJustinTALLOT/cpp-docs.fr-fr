@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873509"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Création et définition des repères et des marges
 Si vous déplacez des contrôles, ajout de contrôles, ou réorganiser une disposition en cours, guides peuvent aider à vous alignez précisément les contrôles dans une boîte de dialogue. Repères apparaissent en tant que lignes en pointillés bleues dans la boîte de dialogue affichées dans l’éditeur et les flèches correspondantes dans les règles (en haut et le long du côté gauche de l’éditeur de boîte de dialogue).  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373291"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Passer des options à l'Éditeur de liens)
 Passe une ou plusieurs options de l’éditeur de liens à l’éditeur de liens.  

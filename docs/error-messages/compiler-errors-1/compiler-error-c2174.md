@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171947"
 ---
 # <a name="compiler-error-c2174"></a>Erreur du compilateur C2174
 'fonction' : le paramètre réel a 'void 'comme type : paramètre number1, number2 de liste de paramètres  

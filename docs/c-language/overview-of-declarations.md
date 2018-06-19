@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392625"
 ---
 # <a name="overview-of-declarations"></a>Vue d'ensemble des déclarations
 Une « déclaration » spécifie l'interprétation et les attributs d'un ensemble d'identificateurs. Une déclaration qui permet également que le stockage soit réservé pour l'objet ou la fonction nommés par l'identificateur est appelée une « définition ». Les déclarations C pour les variables, fonctions et types présentent la syntaxe suivante :  

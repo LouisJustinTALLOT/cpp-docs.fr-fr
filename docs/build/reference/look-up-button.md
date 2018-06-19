@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371445"
 ---
 # <a name="look-up-button"></a>Rechercher (bouton)
 Cliquez sur **rechercher** pour récupérer le message d’erreur qui correspond à la valeur entrée système ou le module. Valeurs peuvent être entrées dans un format hexadécimal ou décimal (y compris les valeurs décimales négatifs). Les modules répertoriés dans le **Modules complémentaires pour la recherche d’erreurs** boîte de dialogue sont inclus dans la recherche.  

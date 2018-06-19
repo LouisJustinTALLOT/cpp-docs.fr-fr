@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373720"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Spécification de DLL dont le chargement doit être différé
 Vous pouvez spécifier le chargement de DLL doit être différé avec le [DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` option de l’éditeur de liens. Si vous n'envisagez pas d'utiliser votre propre version d'une fonction d'assistance, vous devez également lier votre programme avec delayimp.lib (applications de bureau) ou dloadhelper.lib (pour les applications du Windows store).  

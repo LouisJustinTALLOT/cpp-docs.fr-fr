@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372241"
 ---
 # <a name="modules-button"></a>Modules (bouton)
 Cliquez sur le **Modules** bouton pour ouvrir la **Modules complémentaires pour la recherche d’erreurs** boîte de dialogue. Entrez le nom du fichier EXE ou DLL voulu dans la zone d’édition et cliquez sur **ajouter** pour inclure les modules dans votre recherche de message d’erreur. Supprimer un module de la liste en le sélectionnant et en cliquant sur le **supprimer** bouton.  

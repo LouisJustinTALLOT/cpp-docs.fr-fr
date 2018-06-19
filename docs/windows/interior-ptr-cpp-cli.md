@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879105"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Un *pointeur intérieur* déclare un pointeur vers à l’intérieur d’un type référence, mais pas à l’objet lui-même. Un pointeur intérieur peut pointer vers un handle de référence, le type de valeur, le handle du type boxed, le membre d’un type managé, ou à un élément d’un tableau managé.  

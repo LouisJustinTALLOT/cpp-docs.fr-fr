@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880678"
 ---
 # <a name="editing-managed-resource-files"></a>Édition de fichiers de ressources managés
 Fichiers de ressources managés (.resx) sont des fichiers XML. Lorsque vous ajoutez un fichier de ressources managé à votre projet à partir de la **ajouter un nouvel élément** boîte de dialogue, la **éditeur de ressources managées** s’ouvre par défaut.  

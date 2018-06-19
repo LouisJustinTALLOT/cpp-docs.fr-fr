@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888387"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase, structure
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  

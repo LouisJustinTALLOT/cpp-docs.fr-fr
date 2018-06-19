@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168644"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
 Procédures stockées étendues, empaquetées comme bibliothèques de liens dynamiques (DLL), permettent d’étendre les fonctionnalités de SQL Server via les fonctions développées à l’aide de Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions dans les DLL. En plus des fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [des fonctions d’agrégation](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  

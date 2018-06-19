@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881209"
 ---
 # <a name="event--c-component-extensions"></a>événement  (extensions du composant C++)
 Le `event` mot clé déclare une *événement*, qui est une notification aux abonnés inscrits (*gestionnaires d’événements*) qu’un élément d’intérêt s’est produit.  

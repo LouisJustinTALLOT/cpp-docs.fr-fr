@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878669"
 ---
 # <a name="previewing-resources"></a>Aperçu des ressources
 L’aperçu des ressources permet d’afficher des ressources graphiques sans les ouvrir. L’aperçu est également utile pour les fichiers exécutables une fois que vous avez compilé, car les identificateurs de ressource se transformer en nombres. Étant donné que ces identificateurs numériques ne fournissent pas suffisamment d’informations, l’aperçu des ressources vous permet de les identifier rapidement.  

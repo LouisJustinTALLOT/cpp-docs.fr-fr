@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362928"
 ---
 # <a name="connection-point-macros"></a>Macros de Point de connexion
 Ces macros définissent les mappages de point de connexion et les entrées.  

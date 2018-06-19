@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874380"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove, méthode
 Supprime le Gestionnaire d’événements représenté par le jeton d’inscription d’événement spécifié à l’ensemble des gestionnaires d’événements associés à l’objet source d’événement actuel.  

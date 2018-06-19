@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172442"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments qui dispose d’un accès dernier sorti. Utilisation de l’adaptateur de conteneur `stack` pour gérer un conteneur sous-jacent comme une pile de transmission de type push.  

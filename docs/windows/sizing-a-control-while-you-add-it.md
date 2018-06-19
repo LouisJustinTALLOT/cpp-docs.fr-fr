@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889685"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>Dimensionnement d'un contrôle pendant son ajout
 ### <a name="to-size-a-control-while-you-add-it"></a>Pour dimensionner un contrôle pendant son ajout  

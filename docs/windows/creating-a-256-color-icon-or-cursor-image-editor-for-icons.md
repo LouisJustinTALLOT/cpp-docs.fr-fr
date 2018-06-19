@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872359"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Création d'une icône ou d'un curseur 256 couleurs (Éditeur d'images pour les icônes)
 À l’aide de l’éditeur d’images, les icônes et curseurs peuvent être de grande taille (64 x 64) avec une palette de 256 couleurs. Après avoir créé la ressource, un style d’image de périphérique est sélectionné.  

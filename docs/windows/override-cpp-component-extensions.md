@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878877"
 ---
 # <a name="override--c-component-extensions"></a>substituer  (extensions du composant C++)
 Le `override` mot clé contextuel indique qu’un membre d’un type substitue à une classe de base ou d’un membre d’interface de base.  

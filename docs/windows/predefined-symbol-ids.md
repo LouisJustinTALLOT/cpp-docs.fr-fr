@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876421"
 ---
 # <a name="predefined-symbol-ids"></a>ID de symbole prédéfinis
 Quand vous commencez un nouveau projet, selon le type de projet, certains ID de symbole sont prédéfinis pour que vous puissiez les utiliser. Ces ID de symbole prennent en charge des bibliothèques et types de projet divers, par exemple MFC. Ils représentent les tâches usuelles généralement incluses dans une application, ou les actions des éléments matériels, par exemple une souris ou une imprimante.  

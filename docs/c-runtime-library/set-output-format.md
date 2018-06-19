@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412330"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Personnalise les formats de sortie utilisés par les fonctions d’E-S mises en forme.  

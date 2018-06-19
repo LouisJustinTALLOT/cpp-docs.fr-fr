@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871830"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Création d'une ressource personnalisée ou d'une ressource données
 Vous pouvez créer une ressource personnalisée ou une ressource de données en plaçant la ressource dans un fichier distinct à l’aide de la syntaxe de fichier de script de ressource normale, puis en incluant ce fichier en double-cliquant sur votre projet dans l’Explorateur de solutions et en cliquant sur **Include des ressources** dans le menu contextuel.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368663"
 ---
 # <a name="malloc-alignment"></a>Alignement avec malloc
 [malloc](../c-runtime-library/reference/malloc.md) est garantie pour retourner la mémoire qui est obligatoirement aligné correctement pour le stockage de tout objet comportant un alignement fondamentaux et qui peut être contenue quantité de mémoire qui est allouée. A *alignement fondamentaux* est un alignement est inférieur ou égal à l’alignement du plus grand qui est pris en charge par l’implémentation d’une spécification d’alignement. (Dans Visual C++, il s’agit l’alignement est requis pour un `double`, ou 8 octets. Dans un code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Par exemple, une allocation de quatre octets est alignée sur une limite qui prend en charge de n’importe quel objet de quatre octets ou plus petit.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357592"
 ---
 # <a name="date-and-time-automation-support"></a>Date et heure : prise en charge Automation
 Cet article décrit comment tirer parti des services de bibliothèque de classes liées à la gestion de date et d’heure. Décrit les procédures :  

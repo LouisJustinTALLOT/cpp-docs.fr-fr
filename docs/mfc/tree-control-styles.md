@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382035"
 ---
 # <a name="tree-control-styles"></a>Styles de contrôle d’arborescence
 Contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles régissent les aspects de l’apparence d’un contrôle d’arborescence. Vous définissez les styles initiaux lorsque vous créez le contrôle d’arborescence. Vous pouvez extraire et modifier les styles après avoir créé le contrôle d’arborescence à l’aide de la [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) et [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) des fonctions de Windows, en spécifiant **GWL_STYLE** pour le `nIndex` paramètre. Pour obtenir une liste complète des styles, consultez [Styles de fenêtre de contrôle d’arborescence](http://msdn.microsoft.com/library/windows/desktop/bb760013) dans le Kit de développement logiciel Windows.  

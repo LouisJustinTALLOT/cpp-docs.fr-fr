@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880255"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Affiner les couleurs (Éditeur d'images pour les icônes)
 Cette boîte de dialogue vous permet de personnaliser les couleurs à qu'utiliser pour votre image. Pour plus d’informations, consultez [personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  

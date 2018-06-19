@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872937"
 ---
 # <a name="editing-accelerator-tables"></a>Modification des tables d'accélérateurs
 Dans Visual C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans l’éditeur d’accélérateurs.  

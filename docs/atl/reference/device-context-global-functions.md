@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358587"
 ---
 # <a name="device-context-global-functions"></a>Fonctions globales de contexte de périphérique
 Cette fonction crée un contexte de périphérique pour un périphérique donné.  

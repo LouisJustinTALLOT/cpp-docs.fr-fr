@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873574"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Paramètres de la grille (Éditeur d'images pour les icônes)
 Vous permet de spécifier les paramètres de grille pour votre image et affiche les lignes de la grille sur l’image modifiée. Les lignes sont utiles pour la modification de l’image, mais ne sont pas enregistrées dans le cadre de l’image elle-même.  

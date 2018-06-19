@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368575"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importation et exportation de fonctions inline
 Les fonctions importées peuvent être définies comme inline. L’effet est à peu près identique à la définition d’une fonction inline standard ; les appels à la fonction sont développés en code inline, à l’instar d’une macro. Il s’agit essentiellement utile comme un moyen de prendre en charge C++ classes utilisées dans une DLL qui peuvent être inline à certaines de leurs membres fonctions par souci d’efficacité.  

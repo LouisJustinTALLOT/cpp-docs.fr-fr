@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881840"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Comment : ouvrir une ressource de manifeste
 Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage des ressources](../windows/resource-view-window.md), la ressource s'ouvre au format binaire. Pour afficher le contenu d'une ressource de manifeste dans un format plus lisible, vous devez ouvrir la ressource à partir de l'Explorateur de solutions.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872063"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Répartition de l'espacement entre les contrôles
 L’éditeur de boîte de dialogue vous permet de contrôles Espace uniformément entre les contrôles extérieur sélectionnés.  

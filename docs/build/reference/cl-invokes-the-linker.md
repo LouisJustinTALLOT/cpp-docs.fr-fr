@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371913"
 ---
 # <a name="cl-invokes-the-linker"></a>CL appelle l'éditeur de liens
 CL appelle automatiquement l’éditeur de liens après la compilation, sauf si l’option /c est utilisée. CL passe à l’éditeur de liens les noms des fichiers .obj créés pendant la compilation et les noms de tous les fichiers spécifiés sur la ligne de commande. L’éditeur de liens utilise les options répertoriées dans la variable d’environnement LINK. Vous pouvez utiliser l’option /link pour spécifier les options de l’éditeur de liens sur la ligne de commande CL. Les options qui suivent l’option /link remplacent ceux de la variable d’environnement LINK. Les options dans le tableau suivant suppriment la liaison.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954019"
 ---
 # <a name="autoinline"></a>auto_inline
 Exclut toutes les fonctions définies dans la plage où **hors** est spécifié ne soit pas considérée comme candidats pour l’expansion inline automatique.  

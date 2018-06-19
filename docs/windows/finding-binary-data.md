@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873561"
 ---
 # <a name="finding-binary-data"></a>Recherche de données binaires
 Vous pouvez rechercher des chaînes ASCII ou des octets hexadécimaux. Par exemple, pour rechercher « Hello », vous pouvez rechercher des soit la chaîne « Hello » ou pour « 48 65 6C 6C 6F » (l’équivalent hexadécimal).  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878806"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Comment : instancier directement les composants WRL
 Découvrez comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime[Microsoft::wrl :: Make](../windows/make-function.md) et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pour instancier un composant à partir du module qui Il définit.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392115"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Spécificateurs de classe de stockage pour les déclarations de niveau externe
 Les variables externes sont des variables au niveau de la portée du fichier. Elles sont définies en dehors de toute fonction et sont potentiellement disponibles pour de nombreuses fonctions. Les fonctions ne peuvent être définies qu'au niveau externe, par conséquent elles ne peuvent pas être imbriquées. Par défaut, toutes les références aux variables externes et aux fonctions du même nom sont des références au même objet, ce qui signifie qu'elles possèdent une « liaison externe. » (Vous pouvez utiliser le mot clé **static** pour modifier ce comportement. Pour plus d'informations sur le mot clé **static**, consultez les informations plus loin dans cette section.)  

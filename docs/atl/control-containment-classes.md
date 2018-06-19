@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356789"
 ---
 # <a name="control-containment-classes"></a>Classes de relation contenant-contenu de contrôle
 Les classes suivantes fournissent la prise en charge de la relation contenant-contenu pour l’hébergement de contrôles :  

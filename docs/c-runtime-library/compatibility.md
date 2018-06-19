@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390480"
 ---
 # <a name="compatibility"></a>Compatibilité
 La bibliothèque UCRT (Universal C Run-Time) prend en charge la majeure partie de la bibliothèque standard C requise pour la conformité C++. Elle implémente la bibliothèque C99 (ISO/IEC 9899:1999), à l’exception des macros de type générique définies dans \<tgmath.h> et de la compatibilité de type stricte dans \<complex.h>. La bibliothèque UCRT implémente également une grande partie de la bibliothèque C POSIX.1 (ISO/IEC 9945-1:1996, l’API système de POSIX), mais elle n’est pas entièrement conforme aux normes POSIX spécifiques.  En outre, la bibliothèque UCRT implémente plusieurs fonctions spécifiques à Microsoft et des macros qui ne font pas partie d’un standard.  

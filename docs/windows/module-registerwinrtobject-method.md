@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874952"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject, méthode
 Inscrit un ou plusieurs objets Windows Runtime pour d’autres applications peuvent s’y connecter.  

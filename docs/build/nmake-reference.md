@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372677"
 ---
 # <a name="nmake-reference"></a>Référence NMAKE
 L'utilitaire de maintenance de programmes de Microsoft (NMAKE.EXE) est un outil en ligne de commande inclus avec [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] qui génère des projets en fonction de commandes contenues dans un fichier de description.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872986"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Affichage ou masquage de la barre d'outils (Éditeur d'images pour les icônes)
 Étant donné que la plupart des outils de dessin sont disponibles à partir de la [clavier](../windows/accelerator-keys-image-editor-for-icons.md), il est parfois utile de masquer la barre d’outils Éditeur d’images.  

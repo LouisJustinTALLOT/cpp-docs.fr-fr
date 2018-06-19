@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359547"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT : Exemple d’un gestionnaire de chaîne personnalisé.
 La bibliothèque ATL implémente un exemple d’un gestionnaire de chaîne personnalisé utilisé par la classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), appelé **CFixedStringMgr**. `CFixedStringT` est dérivé de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) et implémente une chaîne qui alloue ses données de caractères dans le cadre de la `CFixedStringT` de l’objet lui-même, que la chaîne est inférieure à la longueur spécifiée par le **t_nChars** paramètre de modèle de `CFixedStringT`. Avec cette approche, la chaîne n'a pas besoin du tas, sauf si la longueur de la chaîne dépasse la taille de la mémoire tampon fixe. Étant donné que `CFixedStringT` n’utilise pas toujours un segment de mémoire pour allouer ses données de chaîne, il ne peut pas utiliser **CAtlStringMgr** en tant que gestionnaire de chaînes. Elle utilise un gestionnaire de chaîne personnalisée (**CFixedStringMgr**), qui implémente le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Cette interface est décrite dans [implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  

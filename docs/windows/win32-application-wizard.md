@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891423"
 ---
 # <a name="win32-application-wizard"></a>Application Win32 (Assistant)
 L’Assistant Application Win32 Visual C++ vous permet de créer quatre types de projet possibles (répertoriés dans les en-têtes de colonne du tableau ci-dessous). Dans chaque cas, vous pouvez spécifier des options supplémentaires appropriées au type de projet que vous ouvrez. Le tableau suivant indique les options disponibles pour chaque type d’application.  

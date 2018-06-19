@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889640"
 ---
 # <a name="specifying-the-dominant-control"></a>Spécification du contrôle dominant
 Tout d’abord, le contrôle sélectionné est le contrôle dominant.  

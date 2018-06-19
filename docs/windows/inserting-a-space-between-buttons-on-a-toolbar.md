@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879833"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Insertion d'un espace entre des boutons sur une barre d'outils
 En règle générale, pour insérer un espace entre les boutons, faites simplement glisser les autres dans la barre d’outils. Pour supprimer un espace, faites-les glisser vers l’autre.  

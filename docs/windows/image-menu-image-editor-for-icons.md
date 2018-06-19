@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880528"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu Image (Éditeur d'images pour les icônes)
 Le menu Image, qui apparaît uniquement lorsque l’éditeur d’images est active, dispose des commandes pour modifier les images, la gestion des palettes de couleurs et la définition des options de la fenêtre d’éditeur d’images. En outre, les commandes pour l’utilisation des images de périphérique sont disponibles lorsque vous travaillez avec des icônes et des curseurs.  

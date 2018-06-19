@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873119"
 ---
 # <a name="controls-in-dialog-boxes"></a>Contrôles dans les boîtes de dialogue
 Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [onglet Éditeur de la boîte de dialogue](../windows/dialog-editor-tab-toolbox.md) dans les [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), ce qui vous permet de choisir le contrôle souhaité et faites-le glisser sur la boîte de dialogue. Par défaut, la fenêtre Boîte à outils est définie pour masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque l’éditeur de boîte de dialogue est ouverte. Toutefois, vous pouvez épingler la fenêtre Boîte à outils dans la position en cliquant sur le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

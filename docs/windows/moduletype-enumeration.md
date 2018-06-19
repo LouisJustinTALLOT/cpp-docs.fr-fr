@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876834"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType (énumération)
 Spécifie si un module doit prendre en charge un serveur in-process ou un serveur out-of-process.  

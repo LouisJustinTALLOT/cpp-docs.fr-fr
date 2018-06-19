@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881521"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Comment : terminer une opération asynchrone à l'aide de WRL
 Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour démarrer des opérations asynchrones et effectuer des actions lorsque les opérations se terminent.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168839"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problèmes de version pour les types valeur imbriqués dans les types natifs (C++/CLI)
 Envisagez d’un composant d’assembly signé (nom fort) utilisé pour générer un assembly client. Le composant contient un type valeur qui est utilisé dans le client en tant que le type d’un membre d’une union native, une classe ou un tableau. Si une version future du composant modifie la taille ou la disposition du type valeur, le client doit être recompilé.  

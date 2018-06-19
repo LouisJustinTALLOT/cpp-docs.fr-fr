@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391911"
 ---
 # <a name="pointer-declarations"></a>Déclarations de pointeur
 Une « déclaration de pointeur » attribue un nom à une variable pointeur et spécifie le type de l'objet vers lequel pointe la variable. Une variable déclarée comme pointeur contient une adresse mémoire.  

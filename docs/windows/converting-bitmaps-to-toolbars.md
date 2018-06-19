@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872625"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Conversion de bitmaps en barres d'outils
 Vous pouvez créer une nouvelle barre d’outils en convertissant une image bitmap. Le graphique de la bitmap convertit les images du bouton d’une barre d’outils. L’image bitmap contient généralement plusieurs images de bouton dans une seule bitmap, avec une image pour chaque bouton. Les images peuvent être n’importe quelle taille ; la valeur par défaut est 16 pixels de large et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans le [boîte de dialogue Nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md) lorsque vous choisissez Éditeur de barre d’outils à partir de la **Image** menu dans l’éditeur d’images.  

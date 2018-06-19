@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872651"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>EventSource::addRemoveLock_, données de membre
 Synchronise l’accès à la [targets_](../windows/eventsource-targets-data-member.md) tableau lors de l’ajout, la suppression ou appeler des gestionnaires d’événements.  

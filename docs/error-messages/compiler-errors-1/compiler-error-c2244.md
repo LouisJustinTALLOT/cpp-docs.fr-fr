@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172012"
 ---
 # <a name="compiler-error-c2244"></a>Erreur du compilateur C2244
 'identificateur' : Impossible de faire correspondre la définition de fonction avec une déclaration existante  

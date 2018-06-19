@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361510"
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe de CDefaultHashTraits
 Cette classe fournit une fonction statique pour le calcul de valeurs de hachage.  

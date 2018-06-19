@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873691"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Définition des mnémoniques (Touches d'accès rapide)
 Normalement, les utilisateurs du clavier déplacement le focus d’entrée à partir d’un contrôle à l’autre dans une boîte de dialogue avec les touches TAB et flèche. Toutefois, vous pouvez définir une clé d’accès (un nom mnémonique ou facile à retenir) qui permet aux utilisateurs de choisir un contrôle en appuyant sur une clé unique.  

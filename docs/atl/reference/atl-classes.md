@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255751"
 ---
 # <a name="atl-classes-and-structs"></a>Les structs et les classes ATL
 La bibliothèque ATL (Active Template) inclut les classes et structs suivants. Pour rechercher une classe particulière par catégorie, consultez la [vue d’ensemble de la classe ATL](../../atl/atl-class-overview.md).  

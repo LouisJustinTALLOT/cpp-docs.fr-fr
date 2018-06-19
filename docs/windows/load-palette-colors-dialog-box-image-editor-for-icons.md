@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878172"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Charger la palette de couleurs (Éditeur d'images pour les icônes)
 Utilisez cette boîte de dialogue pour charger des palettes de couleurs particulières à utiliser dans votre projet. Pour plus d’informations, consultez [l’enregistrement et chargement de différentes Palettes de couleurs](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  

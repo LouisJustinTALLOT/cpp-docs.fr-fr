@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169109"
 ---
 # <a name="windows-operations-ccli"></a>Opérations Windows (C++/CLI)
 Illustre différentes tâches spécifiques à Windows à l’aide de la [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244183"
 ---
 # <a name="compiler-error-c3032"></a>Erreur du compilateur C3032
 'var' : la variable de la clause 'clause' ne peut pas avoir un type 'type' incomplet  

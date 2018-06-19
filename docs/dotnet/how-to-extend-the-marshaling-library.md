@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135883"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Comment : étendre la bibliothèque de marshaling
 Cette rubrique explique comment étendre la bibliothèque de marshaling pour fournir plus de conversions entre types de données. Les utilisateurs peuvent étendre la bibliothèque de marshaling pour les conversions de données non prises en charge par la bibliothèque.  

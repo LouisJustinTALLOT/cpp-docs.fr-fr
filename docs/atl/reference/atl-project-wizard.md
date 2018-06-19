@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357903"
 ---
 # <a name="atl-project-wizard"></a>Assistant Projet ATL
 La bibliothèque ATL (Active Template) est un ensemble de classes C++ basées sur un modèle qui simplifient l’écriture d’objets COM petits et rapides. L’Assistant Projet ATL crée un projet avec les structures de contenir des objets COM.  

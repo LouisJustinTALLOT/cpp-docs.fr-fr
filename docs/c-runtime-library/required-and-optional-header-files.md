@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410513"
 ---
 # <a name="required-and-optional-header-files"></a>Fichiers d'en-tête requis et facultatifs
 La description de chaque routine d’exécution inclut une liste de fichiers include ou header (.H) obligatoires ou facultatifs pour cette routine. Les fichiers d’en-tête requis doivent être inclus afin d’obtenir la déclaration de fonction pour la routine ou une définition utilisée par une autre routine appelée en interne. Les fichiers d’en-tête facultatifs sont généralement inclus pour tirer parti des constantes prédéfinies, des définitions de type ou des macros inline. Le tableau suivant répertorie quelques exemples de contenu facultatif de fichier d’en-tête :  

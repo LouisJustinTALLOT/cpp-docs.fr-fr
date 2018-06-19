@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138299"
 ---
 # <a name="outline-of-changes-ccli"></a>Plan des modifications (C++/CLI)
 Ce plan propose des exemples de certaines modifications dans le langage des Extensions managées pour C++ vers Visual C++. Suivez le lien qui accompagne chaque élément pour plus d’informations.  

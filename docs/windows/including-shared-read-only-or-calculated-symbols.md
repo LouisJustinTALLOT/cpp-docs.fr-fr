@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879225"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Ajout de symboles partagés (lecture seule) ou calculés
 La première fois que l'environnement de développement lit un fichier de ressources créé par une autre application, il marque tous les fichiers d'en-tête inclus en lecture seule. Ensuite, vous pouvez utiliser la [boîte de dialogue Include des ressources](../windows/resource-includes-dialog-box.md) pour ajouter des fichiers d’en-tête de symbole en lecture seule.  

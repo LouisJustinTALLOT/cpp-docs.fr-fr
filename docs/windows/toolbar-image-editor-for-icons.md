@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890552"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Barre d'outils (Éditeur d'images pour les icônes)
 Le **Éditeur d’images** barre d’outils contient les outils de dessin, de peinture, saisie de texte, effacer et manipulation des vues. Il contient également un sélecteur d’options, avec lequel vous pouvez sélectionner des options pour l’utilisation de chaque outil. Par exemple, vous pouvez choisir différentes largeurs de pinceau, facteurs d’agrandissement et des styles de ligne.  

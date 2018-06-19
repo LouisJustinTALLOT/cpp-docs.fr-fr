@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389954"
 ---
 # <a name="trigraphs"></a>Trigraphes
 Le jeu de caractères source des programmes sources C est contenu dans le jeu de caractères ASCII de 7 bits, mais c'est un sur-ensemble de l'ensemble de code invariant ISO 646-1983. Les séquences de trigraphe permettent d'écrire des programmes C en utilisant uniquement l'ensemble de codes invariant ISO (organisation internationale de normalisation). Les trigraphes sont des séquences de trois caractères (introduites par deux points d'interrogation consécutifs) que le compilateur remplace par leurs caractères de ponctuation correspondants. Vous pouvez utiliser des trigraphes dans les fichiers sources C avec un jeu de caractères qui ne contient pas de représentation graphique pour certains caractères de ponctuation.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162336"
 ---
 # <a name="private-virtual-functions"></a>Fonctions virtuelles privées
 Les fonctions virtuelles privées sont gérées dans les classes dérivées a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  

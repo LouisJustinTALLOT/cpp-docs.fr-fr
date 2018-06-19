@@ -58,6 +58,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417325"
 ---
 # <a name="fundamental-types--c"></a>Types fondamentaux (C++)
 En C++, les types fondamentaux sont divisés en trois catégories : intégral, virgule flottante et void. Les types intégraux sont capables de gérer les nombres entiers. Les types virgule flottante peuvent spécifier des valeurs pouvant avoir des parties fractionnaires.  

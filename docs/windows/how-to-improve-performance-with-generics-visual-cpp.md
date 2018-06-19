@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877564"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Comment : améliorer les performances avec des génériques (Visual C++)
 Avec les génériques, vous pouvez créer du code réutilisable basé sur un paramètre de type. Le type réel du paramètre de type est différé jusqu'à ce que l’appelé par le code client. Pour plus d’informations sur les types génériques, consultez [génériques](../windows/generics-cpp-component-extensions.md).  

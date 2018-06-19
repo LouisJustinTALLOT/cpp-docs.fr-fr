@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164069"
 ---
 # <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 Copie les éléments d'une plage source dans une plage de destination, à l'exception des éléments en double adjacents.  

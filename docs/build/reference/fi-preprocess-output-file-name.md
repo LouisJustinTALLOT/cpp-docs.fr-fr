@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371510"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (prétraiter le nom du fichier de sortie)
 Spécifie le nom du fichier de sortie dans lequel le [/P (Prétraiter dans un fichier)](../../build/reference/p-preprocess-to-a-file.md) option du compilateur écrit la sortie prétraitée.  

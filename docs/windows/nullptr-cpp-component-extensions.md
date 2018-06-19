@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880684"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr  (extensions du composant C++)
 Le `nullptr` mot clé représente un *valeur de pointeur null*. Utilisez une valeur de pointeur null pour indiquer qu’un handle d’objet, pointeur intérieur ou un type pointeur natif ne pointe pas vers un objet.  

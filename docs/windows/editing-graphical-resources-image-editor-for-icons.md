@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882496"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Modification de ressources graphiques (Éditeur d'images pour les icônes)
 Ressources graphiques sont les images que vous définissez pour votre application. Vous pouvez dessiner à main levée ou utiliser des formes. Vous pouvez sélectionner des parties d’une image pour modification, de rotation ou de redimensionnement, ou vous pouvez créer un pinceau personnalisé à partir d’une partie sélectionnée d’une image et dessiner avec ce pinceau. Vous pouvez définir les propriétés de l’image, enregistrer des images dans différents formats et convertir des images d’un format vers un autre.  

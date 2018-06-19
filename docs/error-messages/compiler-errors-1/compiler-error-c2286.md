@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171924"
 ---
 # <a name="compiler-error-c2286"></a>Erreur du compilateur C2286
 pointeurs vers des membres de la représentation sous forme de 'identificateur' est déjà définie à 'héritage' - déclaration ignorée  
