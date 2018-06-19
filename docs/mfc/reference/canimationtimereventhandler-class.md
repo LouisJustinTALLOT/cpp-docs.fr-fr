@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352097"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsque des événements de minutage se produisent.  

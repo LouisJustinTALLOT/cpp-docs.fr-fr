@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694067"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 Ce document décrit les différences entre les fonctionnalités et les modèles de programmation du runtime d’accès concurrentiel et d’autres technologies. Il est important de connaître les avantages du runtime d’accès concurrentiel par rapport à ceux des autres modèles de programmation pour choisir la technologie la mieux adaptée aux exigences de vos applications.  

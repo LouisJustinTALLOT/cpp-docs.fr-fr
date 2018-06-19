@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695322"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallélisme des tâches (runtime d’accès concurrentiel)
 Dans le Runtime d’accès concurrentiel, une *tâche* est une unité de travail qui exécute un travail spécifique et s’exécute généralement en parallèle avec d’autres tâches. Une tâche peut se décomposer en tâches supplémentaires plus affinées qui sont organisées en un *groupe de tâches*.  

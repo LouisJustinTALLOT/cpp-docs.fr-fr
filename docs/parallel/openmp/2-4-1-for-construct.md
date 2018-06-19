@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693547"
 ---
 # <a name="241-for-construct"></a>2.4.1 Construction for
 Le **pour** directive identifie une construction de partage de travail itérative qui spécifie que les itérations de la boucle associée seront exécutées en parallèle. Les itérations de la **pour** boucle sont réparties entre les threads qui existent déjà dans l’équipe de l’exécution de la construction parallèle auquel elle est liée. La syntaxe de la **pour** construction est comme suit :  

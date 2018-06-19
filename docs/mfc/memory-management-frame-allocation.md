@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349309"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestion de la mémoire : allocation de frame
 L'allocation dans le frame tient son nom du "frame de pile" installé lorsqu'une fonction est appelée. Le frame de pile est une zone de la mémoire contenant temporairement les arguments à la fonction, ainsi que toutes les variables qui sont définies comme étant locales à la fonction. Les variables de frame sont souvent appelées variables "automatiques" puisque le compilateur leur alloue de l'espace.  

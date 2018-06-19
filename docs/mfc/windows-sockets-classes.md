@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382126"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets, classes (C++)
 Windows Sockets fournissent un moyen indépendant du protocole de réseau pour la communication entre deux ordinateurs. Ces sockets peuvent être synchrones (votre programme attend jusqu'à ce que la communication s’effectue) ou asynchrone (votre programme poursuit pendant la communication est en cours d’exécution).  

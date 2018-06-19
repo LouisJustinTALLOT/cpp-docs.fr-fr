@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257792"
 ---
 # <a name="compiler-error-c3510"></a>Erreur du compilateur C3510
 ne peut pas localiser de bibliothèque de types dépendante 'type_lib'  

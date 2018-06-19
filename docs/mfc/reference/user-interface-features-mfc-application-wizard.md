@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373796"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Fonctionnalités de l'interface utilisateur, Assistant Application MFC
 Cette rubrique décrit les options que vous pouvez utiliser pour spécifier l’apparence de votre application. Les fonctionnalités d’interface utilisateur disponibles pour votre projet varient selon le type d’application spécifié dans le [Type d’Application, Assistant Application MFC](../../mfc/reference/application-type-mfc-application-wizard.md) page de l’Assistant Application MFC. Par exemple, si vous créez une application d’interface monodocument, vous ne peut pas ajouter des styles du frame enfant.  

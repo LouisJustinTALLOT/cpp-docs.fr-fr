@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372242"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Prise en charge des bases de données, Assistant Application MFC
 Cette page fournit des options qui vous permettent de spécifier le niveau de base de données prend en charge (plus une source de données, si nécessaire) pour votre projet.  

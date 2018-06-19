@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861530"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Touches accélérateur (Éditeur d'images pour les icônes)
 Voici les touches accélérateur pour les commandes de l’éditeur d’Image qui sont liés aux clés par défaut. Pour modifier les touches d’accès, cliquez sur **Options** sur la **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

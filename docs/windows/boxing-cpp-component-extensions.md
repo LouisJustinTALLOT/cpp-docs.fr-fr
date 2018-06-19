@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861355"
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing  (extensions du composant C++)
 Le compilateur Visual C++ peut convertir des types valeur aux objets dans un processus appelé *boxing*et convertir les objets à des types de valeur dans un processus appelé *unboxing*.  

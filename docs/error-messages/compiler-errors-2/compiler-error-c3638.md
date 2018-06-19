@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267088"
 ---
 # <a name="compiler-error-c3638"></a>Erreur du compilateur C3638
 'opérateur' : Impossible de redéfinir le boxing standard et les opérateurs de conversion unboxing  

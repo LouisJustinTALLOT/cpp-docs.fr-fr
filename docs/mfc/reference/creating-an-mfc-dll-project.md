@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374053"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Création d'un projet DLL MFC
 Une DLL MFC est un fichier binaire qui agit comme une bibliothèque partagée de fonctions qui peuvent être utilisés simultanément par plusieurs applications. Pour créer un projet DLL MFC, le plus simple consiste à utiliser l’Assistant DLL MFC.  

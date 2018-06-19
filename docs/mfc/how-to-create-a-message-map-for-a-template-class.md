@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354778"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Comment : créer une table des messages pour une classe de modèle
 La création d'une table des messages dans MFC est un moyen efficace pour diriger les messages Windows vers une instance d'objet appropriée C++. Les exemples de cibles de table des messages MFC comprennent des classes d'application, des classes de document et de vue, des classes de contrôle, etc.  

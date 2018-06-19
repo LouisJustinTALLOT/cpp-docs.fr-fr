@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246889"
 ---
 # <a name="compiler-error-c3202"></a>Erreur du compilateur C3202
 'nom_argument' : argument par défaut non valide pour le paramètre de modèle 'paramètre', modèle de classe attendu  

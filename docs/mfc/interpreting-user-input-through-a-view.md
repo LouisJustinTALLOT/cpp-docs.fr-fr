@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349427"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interprétation de l'entrée utilisateur via une vue
 Autres fonctions membres de la vue de gérer et interprètent toutes les entrées utilisateur. Vous allez généralement définir des fonctions membres de gestionnaire de messages dans votre classe d’affichage à traiter :  

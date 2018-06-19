@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270896"
 ---
 # <a name="compiler-warning-c4746"></a>C4746 d’avertissement du compilateur
 accès volatile de '\<expression > » dépend : [iso&#124;ms] configuration ; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/store.  

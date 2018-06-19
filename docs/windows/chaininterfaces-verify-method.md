@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860692"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify, méthode
 Vérifie que chaque interface définie par les paramètres de modèle `I0` via `I9` hérite de IUnknown et/ou IInspectable et qui `I0` hérite `I1` via `I9`.  

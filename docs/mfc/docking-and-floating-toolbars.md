@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352787"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancrer et rendre flottantes les barres d'outils
 La bibliothèque Microsoft Foundation Class prend en charge les barres d’outils ancrables. Une barre d’outils ancrable peut être attaché ou ancré, n’importe quel côté de sa fenêtre parente, ou il peut être détachée ou laisser flotter, dans sa propre fenêtre mini-frame. Cet article explique comment utiliser les barres d’outils ancrables dans vos applications.  

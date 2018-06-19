@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350352"
 ---
 # <a name="mdi-tabbed-groups"></a>Groupes avec onglet MDI
 La fonctionnalité de groupes avec onglet interface (multidocument MDI) document plusieurs permet à plusieurs applications d’interface (multidocument MDI) de document afficher une ou plusieurs fenêtres à onglets (ou des groupes de fenêtres, appelés *groupes avec onglet*) dans la zone cliente MDI. Les fenêtres avec onglet peuvent être alignées verticalement ou horizontalement. Si une application accueille plusieurs groupes avec onglet MDI, les groupes sont séparés par des séparateurs.  

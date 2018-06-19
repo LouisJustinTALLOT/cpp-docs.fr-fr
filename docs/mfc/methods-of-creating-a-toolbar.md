@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348633"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Méthodes de création d'une barre d'outils
 MFC fournit deux classes pour créer des barres d’outils : [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (qui encapsule le API de contrôle commun de Windows). `CToolBar` fournit toutes les fonctionnalités du contrôle commun de barre d’outils, et il traite la plupart des paramètres des contrôles communs requis et des structures pour vous. Toutefois, votre fichier exécutable obtenu sera plus grand que celui créé à l’aide de `CToolBarCtrl`.  

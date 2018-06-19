@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348987"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Pages et feuilles de propriétés (MFC)
 Une MFC [boîte de dialogue](../mfc/dialog-boxes.md) peuvent effectuer sur un aspect « onglet de boîte de dialogue » en incorporant des feuilles de propriétés et pages de propriétés. Ce type de boîte de dialogue similaire à nombreuses boîtes de dialogue dans Microsoft Word, Excel et Visual C++, appelé « feuille de propriétés » dans MFC, apparaît pour contenir une pile de feuilles à onglets, comme une pile de dossiers de fichiers vu avant vers l’arrière, ou un groupe de fenêtres en cascade. Contrôles sous l’onglet serveur frontal sont visibles ; seul l’onglet étiqueté est visible dans les onglets. Feuilles de propriétés sont particulièrement utiles pour la gestion de grands nombres de propriétés ou paramètres qui se situent assez nettement en plusieurs groupes. En règle générale, une feuille de propriétés peut simplifier une interface utilisateur en remplaçant plusieurs boîtes de dialogue distincte.  

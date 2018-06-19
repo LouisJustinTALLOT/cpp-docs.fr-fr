@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372001"
 ---
 # <a name="mfc-application-wizard"></a>Assistant Application MFC
 L’Assistant Application MFC génère une application qui, lors de la compilation, implémente les fonctionnalités de base d’une application exécutable (.exe) de Windows. L’application de démarrage MFC inclut des fichiers sources (.cpp) C++, fichiers de ressources (.rc), fichiers d’en-tête (.h) et un fichier projet (.vcxproj). Le code généré dans ces fichiers de démarrage est basé sur MFC.  

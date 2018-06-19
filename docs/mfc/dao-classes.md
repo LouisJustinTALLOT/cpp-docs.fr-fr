@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348920"
 ---
 # <a name="dao-classes"></a>Classes DAO
 Ces classes fonctionnent avec les autres classes application framework afin de donner un accès facile aux bases de données objet DAO (Data Access), qui utilisent le même moteur de base de données en tant que Microsoft Visual Basic et Microsoft Access. Les classes DAO peuvent également accéder à un large éventail de bases de données pour laquelle les pilotes de connectivité ODBC (Open Database) sont disponibles.  

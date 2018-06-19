@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694744"
 ---
 # <a name="parallel-containers-and-objects"></a>Conteneurs et objets parallèles
 La bibliothèque de modèles parallèles (PPL) inclut plusieurs conteneurs et objets qui fournissent un accès thread-safe à leurs éléments.  

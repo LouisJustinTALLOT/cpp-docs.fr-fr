@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298861"
 ---
 # <a name="compiler-warning-level-1-c4917"></a>Avertissement du compilateur (niveau 1) C4917
 'déclarateur' : un GUID ne peut être associé à une classe, d’interface ou espace de noms  

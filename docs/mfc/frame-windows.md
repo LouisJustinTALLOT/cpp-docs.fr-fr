@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352061"
 ---
 # <a name="frame-windows"></a>Fenêtres frame
 Lorsqu’une application s’exécute sous Windows, l’utilisateur interagit avec les documents affichés dans des fenêtres frame. Une fenêtre frame de document présente deux composants majeurs : le frame et le contenu encadré. Une fenêtre frame de document peut être un [interface monodocument](../mfc/sdi-and-mdi.md) fenêtre frame (SDI) ou un [interface multidocument](../mfc/sdi-and-mdi.md) fenêtre enfant (MDI). Windows gère la majeure partie de l’interaction utilisateur avec la fenêtre frame : déplacement et redimensionnement de la fenêtre, fermeture, en réduisant et agrandissement. Vous gérez le contenu à l’intérieur du cadre.  

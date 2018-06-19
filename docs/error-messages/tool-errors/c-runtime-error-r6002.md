@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298562"
 ---
 # <a name="c-runtime-error-r6002"></a>Erreur d’exécution C R6002
 prise en charge de virgule flottante n’a ne pas chargé  

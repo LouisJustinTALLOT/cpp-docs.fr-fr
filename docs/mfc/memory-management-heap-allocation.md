@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352410"
 ---
 # <a name="memory-management-heap-allocation"></a>Gestion de la mémoire : allocation de tas
 Le segment de mémoire est réservée pour les besoins de l’allocation de mémoire du programme. Il s’agit d’une zone en dehors du code du programme et de la pile. Les programmes C utilisent les fonctions `malloc` et **libre** pour allouer et libérer la mémoire du segment. La version Debug des MFC fournit des versions modifiées des opérateurs intégrés C++ **nouveau** et **supprimer** pour allouer et libérer des objets dans la mémoire du segment de mémoire.  

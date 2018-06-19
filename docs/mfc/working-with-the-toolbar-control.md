@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385935"
 ---
 # <a name="working-with-the-toolbar-control"></a>Utilisation du contrôle ToolBar
 Cet article explique comment vous pouvez accéder à la [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet sous-jacent un [CToolBar](../mfc/reference/ctoolbar-class.md) pour mieux contrôler vos barres d’outils. Il s’agit d’une rubrique avancée.  

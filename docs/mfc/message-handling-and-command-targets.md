@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349465"
 ---
 # <a name="message-handling-and-command-targets"></a>Gestion des messages et cibles des commandes
 L'interface de dispatch de commande `IOleCommandTarget` définit un mécanisme simple et extensible pour interroger et exécuter des commandes. Ce mécanisme est plus simple qu'`IDispatch` d'Automation, car il dépend entièrement d'un ensemble standard de commandes. Les commandes ont rarement des arguments, et aucune information de type n'est requise. (La cohérence des types est également réduite pour les arguments de commande).  

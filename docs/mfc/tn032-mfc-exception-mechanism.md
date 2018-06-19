@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380839"
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032 : mécanisme d'exception MFC
 Les versions précédentes de Visual C++ ne prenait pas en charge le mécanisme d’exception C++ standard, et MFC fournie macros **TRY/CATCH/THROW** qui ont été utilisées à la place. Cette version de Visual C++ prend entièrement en charge les exceptions C++. Cette note couverts certains aspects de l’implémentation avancée des macros précédentes, y compris comment automatiquement les objets de pile en fonction de nettoyage. Exceptions C++ prenant en charge la pile le déroulement par défaut, cette note technique n’est plus nécessaire.  

@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376136"
 ---
 # <a name="cmfccolorbar-class"></a>Classe de CMFCColorBar
 La `CMFCColorBar` classe représente une barre de contrôle d’ancrage que vous pouvez sélectionner des couleurs dans un document ou une application.  

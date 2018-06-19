@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348568"
 ---
 # <a name="device-contexts"></a>Contextes de périphérique
 Un contexte de périphérique est une structure de données Windows contenant des informations sur les attributs de dessin d’un périphérique tel qu’un écran ou une imprimante. Tous les appels de dessin sont effectués via un objet de contexte de périphérique, qui encapsule les API Windows pour dessiner des lignes, formes et du texte. Contextes de périphérique permettent un dessin indépendant du périphérique dans Windows. Contextes de périphérique peuvent être utilisés pour dessiner à l’écran, l’imprimante ou un métafichier.  

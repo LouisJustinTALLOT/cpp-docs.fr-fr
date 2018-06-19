@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252446"
 ---
 # <a name="compiler-error-c3380"></a>Erreur du compilateur C3380
 'class' : spécificateur d’accès à l’assembly non valide - seuls 'public' ou 'private' sont autorisés  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861543"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Modification de l'ordre de tabulation des contrôles
 L’ordre de tabulation est l’ordre dans lequel la touche TAB déplace le focus d’entrée d’un contrôle à l’autre dans une boîte de dialogue. Généralement, l’ordre de tabulation se déroule de gauche à droite et de haut en bas de la boîte de dialogue. Chaque contrôle possède un **Tabstop** propriété qui détermine si un contrôle reçoit le focus d’entrée.  

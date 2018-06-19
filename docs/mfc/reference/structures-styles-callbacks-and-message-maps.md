@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371098"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Structures, styles, rappels et tables de messages
 Cette section décrit les structures, styles et les fonctions de rappel utilisées par la bibliothèque Microsoft Foundation Class et le message MFC est mappé.  

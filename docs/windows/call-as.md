@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860864"
 ---
 # <a name="callas"></a>call_as
 Permet à un [local](../windows/local-cpp.md) fonction d’être mappée à une fonction distante afin que lorsque la fonction à distance est appelée, la fonction locale est appelée.  

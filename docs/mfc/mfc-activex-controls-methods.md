@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348307"
 ---
 # <a name="mfc-activex-controls-methods"></a>Contrôles ActiveX MFC : méthodes
 Un contrôle ActiveX déclenche des événements pour la communication entre lui-même et son conteneur. Un conteneur peut également communiquer avec un contrôle au moyen de méthodes et propriétés. Méthodes sont également appelées fonctions.  

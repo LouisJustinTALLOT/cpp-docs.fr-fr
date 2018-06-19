@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349711"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Réception des notifications de contrôles communs
 Contrôles communs sont des fenêtres enfants qui envoient des messages de notification à la fenêtre parente lorsque des événements, tels que les entrées de l’utilisateur, se produisent dans le contrôle.  

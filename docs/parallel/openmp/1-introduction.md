@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685838"
 ---
 # <a name="1-introduction"></a>1. Introduction
 Ce document spécifie une collection de directives de compilateur, les fonctions de bibliothèque et les variables d’environnement qui peuvent être utilisés pour spécifier le parallélisme de mémoire partagée dans les programmes C et C++. Les fonctionnalités décrites dans ce document sont collectivement appelées le *OpenMP C/C++ Interface API (Application Program)*. L’objectif de cette spécification est pour fournir un modèle de programmation parallèle qui permet à un programme être portable entre les architectures de mémoire partagée à partir de différents fournisseurs. L’API de C/C++ OpenMP prendra en charge par les compilateurs de nombreux fournisseurs. Plus d’informations sur OpenMP, y compris le *OpenMP Fortran Application Program Interface*, sont accessibles sur le site web suivant :  

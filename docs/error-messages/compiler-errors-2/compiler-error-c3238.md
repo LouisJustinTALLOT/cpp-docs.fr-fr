@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249886"
 ---
 # <a name="compiler-error-c3238"></a>Erreur du compilateur C3238
 'type' : un type portant ce nom a déjà été transféré à l’assembly 'assembly'  

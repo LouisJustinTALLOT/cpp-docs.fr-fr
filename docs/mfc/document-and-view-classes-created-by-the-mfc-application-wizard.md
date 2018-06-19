@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349920"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Classes de document et de vue créées par l'Assistant Application MFC
 L’Assistant Application MFC vous donne un coup de développement de votre programme en créant des documents squelette et des classes d’affichage pour vous. Vous pouvez ensuite [mapper les commandes et les messages à ces classes](../mfc/reference/mapping-messages-to-functions.md) et utiliser l’éditeur de code source Visual C++ pour écrire leurs fonctions membres.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227133"
 ---
 # <a name="fatal-error-c1307"></a>Erreur irrécupérable C1307
 le programme a été modifié depuis que les données du profil ont été recueillies  

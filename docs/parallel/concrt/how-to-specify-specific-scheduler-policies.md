@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685783"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Comment : spécifier des stratégies de planificateur
 Stratégies de planificateur vous permettent de contrôler la stratégie utilisée par le planificateur lorsqu’il gère des tâches. Cette rubrique montre comment utiliser une stratégie du planificateur pour augmenter la priorité de thread d’une tâche qui imprime un indicateur de progression dans la console.  

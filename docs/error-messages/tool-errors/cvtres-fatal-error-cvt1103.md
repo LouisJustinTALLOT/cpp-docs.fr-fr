@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294094"
 ---
 # <a name="cvtres-fatal-error-cvt1103"></a>Erreur irrécupérable CVTRES CVT1103
 Impossible de lire le nom de fichier  

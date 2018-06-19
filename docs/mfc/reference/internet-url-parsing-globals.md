@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374796"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Programmes d’assistance et objet Globals d’analyse des URL Internet
 Lorsqu’un client envoie une requête au serveur Internet, vous pouvez utiliser une des URL de l’objet globals d’analyse pour extraire des informations sur le client. Les fonctions d’assistance fournissent d’autres fonctionnalités internet.

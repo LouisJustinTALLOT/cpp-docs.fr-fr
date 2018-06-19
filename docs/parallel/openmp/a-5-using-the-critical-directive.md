@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686254"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Utilisation de la directive critical
 L’exemple suivant inclut plusieurs `critical` directives ([Section 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) page 18). L’exemple illustre un modèle de file d’attente dans laquelle une tâche est dépilée et d’exécution. Pour vous protéger contre plusieurs threads de retrait de la même tâche, l’opération de retrait doit être dans un `critical` section. Étant donné que les deux files d’attente dans cet exemple sont indépendants, ils sont protégés par `critical` directives avec des noms différents, *xaxis* et *yaxis*.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351113"
 ---
 # <a name="property-sheets-mfc"></a>Feuilles de propriétés (MFC)
 Cette famille d’articles explique comment implémenter la prise en charge des feuilles de propriétés dans les applications MFC. Une feuille de propriétés, également connu sous une onglet boîte de dialogue, fournit un moyen de gérer un grand nombre de contrôles dans une boîte de dialogue. La feuille de propriétés contient des pages de propriétés, chacun basé sur une ressource de modèle de boîte de dialogue distincte. Vous pouvez diviser les contrôles de votre boîte de dialogue en groupes logiques et placer chaque groupe dans sa propre page de propriétés.  

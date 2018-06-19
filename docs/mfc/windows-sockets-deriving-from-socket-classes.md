@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384073"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets : dérivation à partir des classes de sockets
 Cet article décrit certaines des fonctionnalités que vous pouvez obtenir en dérivant votre propre classe à partir d’une des classes de Sockets.  

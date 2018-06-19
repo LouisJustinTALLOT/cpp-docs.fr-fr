@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693261"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel
 Des boucles parallèles ne requièrent pas que toutes les itérations être exécutée. Par exemple, un algorithme qui recherche une valeur peut se terminer dès que la valeur est trouvée. OpenMP ne fournit pas un mécanisme pour sortir d’une boucle parallèle. Toutefois, vous pouvez utiliser une valeur booléenne, ou indicateur, pour permettre à une itération de la boucle pour indiquer que la solution a été trouvée. Le Runtime d’accès concurrentiel fournit des fonctionnalités qui activent une tâche pour annuler d’autres tâches qui n’ont pas encore démarré.  

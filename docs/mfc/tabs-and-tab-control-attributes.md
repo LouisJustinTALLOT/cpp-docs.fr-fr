@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381191"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Onglets et attributs de contrôle d'onglet
 Vous avez un contrôle important sur l’apparence et le comportement des onglets qui constituent un contrôle tab ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Chaque onglet peut avoir une étiquette, une icône, un état d’élément et une valeur 32 bits définie par l’application associée. Pour chaque onglet, vous pouvez afficher l’icône, l’étiquette ou les deux.  

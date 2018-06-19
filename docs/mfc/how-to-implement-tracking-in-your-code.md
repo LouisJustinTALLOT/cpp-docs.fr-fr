@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349734"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Comment : implémenter le suivi dans votre code
 Pour suivre un élément OLE, vous devez gérer certains événements associés à l'élément, tel que cliquer sur l'élément ou mettre à jour la vue du document. Dans tous les cas, il suffit de déclarer une variable temporaire [CRectTracker](../mfc/reference/crecttracker-class.md) et de manipuler l’élément au moyen de cet objet.  

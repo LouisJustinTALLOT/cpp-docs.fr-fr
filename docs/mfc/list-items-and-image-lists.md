@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349111"
 ---
 # <a name="list-items-and-image-lists"></a>Éléments de liste et listes d'images
 Un « élément » dans un contrôle de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)) se compose d’une icône, une étiquette et éventuellement d’autres informations (en « sous-éléments »).  

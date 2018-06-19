@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353694"
 ---
 # <a name="handling-customization-notifications"></a>Gestion des notifications de personnalisation
 Un contrôle commun de barre d’outils Windows a des fonctionnalités de personnalisation intégrées, notamment une boîte de dialogue de personnalisation définie par le système, qui permettent à l’utilisateur d’insérer, de supprimer ou de réorganiser les boutons de barre d’outils. L’application détermine si les fonctionnalités de personnalisation sont disponibles et contrôle l’étendue selon laquelle l’utilisateur peut personnaliser la barre d’outils.  

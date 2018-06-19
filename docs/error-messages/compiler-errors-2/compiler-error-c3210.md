@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256517"
 ---
 # <a name="compiler-error-c3210"></a>Erreur du compilateur C3210
 'type' : déclaration d’accès peut uniquement être appliquée à un membre de classe de base  

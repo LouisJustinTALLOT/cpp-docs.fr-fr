@@ -322,6 +322,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372545"
 ---
 # <a name="internal-classes"></a>Classes internes
 Les classes suivantes sont utilisées en interne dans MFC. Par souci d'exhaustivité, cette section décrit ces classes internes, mais elles ne sont pas destinées à être utilisées directement dans votre code.  

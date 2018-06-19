@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694561"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Meilleures pratiques de la Bibliothèque de modèles parallèles
 Ce document décrit la meilleure façon d’utiliser efficacement la bibliothèque de modèles parallèles (PPL). La bibliothèque de modèles parallèles (PPL) fournit des conteneurs, des objets et des algorithmes à usage général pour effectuer un parallélisme affiné.  

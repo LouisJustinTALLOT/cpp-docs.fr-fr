@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355533"
 ---
 # <a name="help-menu-merging"></a>Fusion des menus Aide
 Lorsqu’un objet est actif dans un conteneur, le menu protocole des Documents OLE de fusion donne le contrôle complet d’objet de la **aide** menu. Par conséquent, les rubriques d'aide du conteneur ne sont pas disponibles à moins que l'utilisateur désactive l'objet. L’architecture de la relation contenant-contenu de document actif développe les règles de la fusion de menus sur place afin d’autoriser le conteneur et un document actif à partager le menu. Les nouvelles règles sont simplement des conventions supplémentaires sur quel composant possède quelle partie du menu et comment le menu partagé est créé.  

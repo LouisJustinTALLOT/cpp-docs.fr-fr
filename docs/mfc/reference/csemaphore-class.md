@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369175"
 ---
 # <a name="csemaphore-class"></a>CSemaphore (classe)
 Un objet de classe `CSemaphore` représente un « sémaphore », un objet de synchronisation qui permet à un nombre limité de threads dans un ou plusieurs processus pour accéder à un maintien un décompte du nombre de threads qui accèdent actuellement à une ressource spécifiée.  

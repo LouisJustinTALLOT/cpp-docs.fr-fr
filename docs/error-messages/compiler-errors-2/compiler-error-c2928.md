@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241802"
 ---
 # <a name="compiler-error-c2928"></a>Erreur du compilateur C2928
 instanciation explicite ; 'identifier' n’est pas une fonction ni une donnée membre static de 'class' de classe de modèle  

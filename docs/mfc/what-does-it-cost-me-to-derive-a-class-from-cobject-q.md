@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381675"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>Comment dériver une classe de CObject ?
 La surcharge de dérivation de classe [CObject](../mfc/reference/cobject-class.md) est minime. Votre classe dérivée hérite seulement quatre fonctions virtuelles et un seul [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objet.  

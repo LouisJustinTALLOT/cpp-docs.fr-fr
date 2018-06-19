@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234581"
 ---
 # <a name="compiler-error-c2765"></a>Erreur du compilateur C2765
 'fonction' : une spécialisation explicite d’un modèle de fonction ne peut pas avoir d’argument par défaut  

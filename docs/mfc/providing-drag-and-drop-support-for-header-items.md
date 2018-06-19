@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349342"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Prise en charge du glisser-déposer pour les éléments d’en-tête
 Pour fournir la prise en charge du glisser-déplacer pour les éléments d’en-tête, spécifiez la `HDS_DRAGDROP` style. Prise en charge du glisser-déplacer pour les éléments d’en-tête donne à l’utilisateur la possibilité de réorganiser les éléments d’un contrôle header. Le comportement par défaut fournit une image translucide de l’élément d’en-tête déplacé et un indicateur visuel de la nouvelle position, si l’élément d’en-tête est supprimée.  

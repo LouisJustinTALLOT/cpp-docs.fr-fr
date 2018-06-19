@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863632"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Prise en charge des jeux de caractères multioctets (MBCS)
 Les jeux de caractères multioctets (MBSC) sont une approche plus ancienne de la nécessité de prendre en charge certains jeux de caractères (japonais et chinois, par exemple) qui ne peuvent pas être représentés par un seul octet. Si vous procédez à un nouveau développement, vous devez utiliser Unicode pour toutes les chaînes de texte à l'exception peut-être des chaînes système qui ne sont pas visibles des utilisateurs finaux. MBCS est une technologie héritée qui n'est pas recommandée pour un nouveau développement.  

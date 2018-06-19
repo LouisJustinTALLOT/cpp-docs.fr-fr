@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691407"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   Liaison de directives barrier
 La liaison de directives de règles de l’appel pour un **barrière** directive à lier englobant le plus proche `parallel` directive. Pour plus d’informations sur la liaison de directives, consultez [Section 2.8](../../parallel/openmp/2-8-directive-binding.md) à la page 32.  

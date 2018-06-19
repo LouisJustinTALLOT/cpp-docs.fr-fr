@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369308"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Noms du contrôle, Assistant Contrôle ActiveX MFC
 Spécifier les noms de la classe de contrôle et de la classe de page de propriétés, les noms de type et les identificateurs de type pour votre contrôle. À l’exception de **nom court**, tous les autres champs peuvent être modifiés de manière indépendante. Si vous modifiez le texte de **nom court**, la modification est répercutée dans les noms de tous les autres champs de cette page. Ce comportement d’affectation de noms est conçu pour rendre tous les noms de facilement identifiables pour vous lorsque vous développez votre contrôle.  

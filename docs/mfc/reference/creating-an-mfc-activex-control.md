@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373287"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Création d'un contrôle ActiveX MFC
 Programmes de contrôle ActiveX sont modulaire conçu pour permettre à un type spécifique de fonctionnalités à une application parente. Par exemple, vous pouvez créer un contrôle tel qu’un bouton pour une utilisation dans une boîte de dialogue ou une barre d’outils pour une utilisation dans une page Web.  

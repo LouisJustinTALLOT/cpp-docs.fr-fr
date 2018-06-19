@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863404"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Touches accélérateur pour l'Éditeur de boîtes de dialogue
 Voici la valeur par défaut les touches accélérateur pour les commandes de l’éditeur de boîte de dialogue. Pour modifier les touches de raccourci, cliquez sur **Options** sur la **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

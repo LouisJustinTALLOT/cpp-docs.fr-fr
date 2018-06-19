@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372390"
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME Structure1
 Le `SYSTEMTIME` structure représente une date et heure à l’aide des membres individuels pour les mois, jour, année, semaine, heure, minute, seconde et milliseconde.  

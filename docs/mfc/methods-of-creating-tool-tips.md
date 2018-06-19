@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349530"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Méthodes de création d'info-bulles
 MFC fournit trois classes pour créer et gérer l’outil de contrôle ToolTip : [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) et [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Les fonctions membres de ces classes encapsulent les API des contrôles communs Windows. Classe `CToolBarCtrl` et classe `CToolTipCtrl` sont dérivés de la classe `CWnd`.  

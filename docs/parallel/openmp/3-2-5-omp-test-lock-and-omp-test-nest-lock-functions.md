@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686225"
 ---
 # <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 Fonctions omp_test_lock and omp_test_nest_lock
 Ces fonctions, essayez de définir un verrou mais ne bloquent pas l’exécution du thread. Le format est le suivant :  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353271"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 Une des utilisations plus puissantes de contrôles ActiveX est la liaison de données, ce qui permet une propriété du contrôle à lier à un champ spécifique dans une base de données. Lorsqu’un utilisateur modifie les données de cette propriété liée, le contrôle notifie la base de données et les demandes que le champ d’enregistrement est mis à jour. La base de données puis vous avertit que le contrôle de la réussite ou l’échec de la demande.  

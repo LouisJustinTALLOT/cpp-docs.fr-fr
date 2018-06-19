@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348974"
 ---
 # <a name="handling-reflected-messages"></a>Gestion des messages réfléchis
 Message réflexion vous permet de gérer les messages pour un contrôle, tel que `WM_CTLCOLOR`, **WM_COMMAND**, et **WM_NOTIFY**, dans le contrôle lui-même. Cela rend le contrôle plus autonome et portable. Le mécanisme fonctionne avec les contrôles communs Windows ainsi qu’avec les contrôles ActiveX (anciennement appelés contrôles OLE).  

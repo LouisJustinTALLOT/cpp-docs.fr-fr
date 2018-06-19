@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352810"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Substitution du routage des commandes standard
 Dans de rares cas où vous devez implémenter une variation de la gamme de framework standard, vous pouvez la remplacer. Il est possible de modifier le routage dans une ou plusieurs classes en remplaçant `OnCmdMsg` dans ces classes. Pour ce faire :  

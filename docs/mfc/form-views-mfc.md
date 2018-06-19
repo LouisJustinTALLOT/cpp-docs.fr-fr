@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349044"
 ---
 # <a name="form-views-mfc"></a>Mode Formulaire (MFC)
 Vous pouvez ajouter des formulaires à n’importe quelle application Visual C++ qui prend en charge les bibliothèques MFC, y compris un [application basée sur des formulaires](../mfc/reference/creating-a-forms-based-mfc-application.md) (une classe d’affichage est dérivée de `CFormView`). Si vous n’avez pas initialement votre application pour prendre en charge les formulaires, Visual C++ ajoute cette prise en charge pour vous lorsque vous insérez un nouveau formulaire. Dans une application SDI ou MDI, qui implémente la valeur par défaut [architecture document/vue](../mfc/document-view-architecture.md), lorsque l’utilisateur choisit le `New` commande (par défaut, sur le **fichier** menu), Visual C++ invite l’utilisateur à Choisissez parmi les formulaires disponibles.  

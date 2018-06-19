@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349997"
 ---
 # <a name="ole-background-mfc-implementation"></a>Arrière-plan OLE : implémentation MFC
 En raison de la taille et de la complexité de l'API OLE brute, l'appeler directement pour écrire des applications OLE peut prendre beaucoup de temps. L'objectif de l'implémentation de la bibliothèque MFC OLE est de réduire la charge de travail dans l'écriture des applications complètes et de type OLE.  

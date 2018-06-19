@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685734"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Comment : créer des agents qui utilisent des stratégies de planificateur spécifiques
 Un agent est un composant d’application qui fonctionne de façon asynchrone avec d’autres composants pour effectuer des tâches de calcul supérieure. En règle générale, un agent a un cycle de vie fixe et conserve l’état.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863697"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue
 Pour les boîtes de dialogue de projet qui sont déjà associés à une classe, vous pouvez tirer parti de certains raccourcis lorsque vous créez des gestionnaires d’événements. Vous pouvez rapidement créer un gestionnaire pour l’événement de notification de contrôle par défaut ou pour les messages Windows applicables.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350053"
 ---
 # <a name="documentview-architecture"></a>Architecture document/vue
 Par défaut, l’Assistant Application MFC crée un squelette d’application avec une classe de document et une classe d’affichage. MFC sépare la gestion des données dans ces deux classes. Le document stocke les données et gère l’impression des données et coordonne la mise à jour de plusieurs vues des données. La vue affiche les données et gère l’interaction avec elle, y compris la sélection et la modification de l’utilisateur.  

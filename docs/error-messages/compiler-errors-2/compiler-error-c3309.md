@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255954"
 ---
 # <a name="compiler-error-c3309"></a>Erreur du compilateur C3309
 'nom_macro' : le nom du module ne peut pas être une macro ou un mot clé  

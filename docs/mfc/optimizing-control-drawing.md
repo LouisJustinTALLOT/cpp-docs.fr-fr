@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351292"
 ---
 # <a name="optimizing-control-drawing"></a>Optimisation du contrôle de dessin
 Lorsqu’un contrôle est demandé à dessiner lui-même dans un contexte de périphérique de fourni par le conteneur, en général, sélectionne les objets GDI (par exemple, des stylets, pinceaux et polices) dans le contexte de périphérique, effectue les opérations de dessin et restaure les objets GDI précédents. Si le conteneur comporte plusieurs contrôles qui doivent être dessinés dans le même contexte de périphérique, et chaque contrôle sélectionne les objets GDI, qu'il a besoin, temps peuvent être enregistré si les contrôles ne restaurent pas individuellement les objets sélectionnés précédemment. Une fois que tous les contrôles sont dessinés, le conteneur peut restaurer automatiquement les objets d’origine.  

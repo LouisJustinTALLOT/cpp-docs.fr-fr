@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351720"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestionnaires pour les plages de table des messages
 Cet article explique comment mapper une plage de messages à une fonction de gestionnaire de message unique (au lieu d’associer un message à une seule fonction).  

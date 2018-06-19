@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351362"
 ---
 # <a name="how-to-customize-the-application-button"></a>Comment : personnaliser le bouton Application
 Lorsque vous cliquez sur le bouton d’Application, un menu de commandes s’affiche. En règle générale, le menu contient relatives aux fichiers de commandes telles que **ouvrir**, **enregistrer**, **impression**, et **Exit**.  

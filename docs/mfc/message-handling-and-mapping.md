@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348526"
 ---
 # <a name="message-handling-and-mapping"></a>Gestion et mappage des messages
 Cette série d’articles explique comment les messages et les commandes sont traitées par l’infrastructure MFC et comment les connecter à leurs fonctions gestionnaires.  

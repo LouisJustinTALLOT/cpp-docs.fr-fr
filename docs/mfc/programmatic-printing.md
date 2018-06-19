@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352833"
 ---
 # <a name="programmatic-printing"></a>Impression par programmation
 OLE a fourni les moyens permettant d’identifier de manière unique les documents persistants (**GetClassFile**) et les charger dans leur code associé (`CoCreateInstance`, **QueryInterface**, **Iid_ipersiststorage**, **IPersistFile::Load**, et **IPersistStorage::Load**). Pour activer davantage l'impression de documents, la relation contenant-contenu de document actif (en utilisant une conception OLE existante non fournie avec OLE 2.0 à l'origine) présente une interface standard de base d'impression, `IPrint`, généralement disponible via un objet qui peut charger l'état permanent du type de document. Chaque vue d’un document actif peut éventuellement prend en charge les le **IPrint** interface afin de fournir ces fonctionnalités.  

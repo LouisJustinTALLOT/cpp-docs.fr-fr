@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348805"
 ---
 # <a name="dialog-bars"></a>Barres de boîte de dialogue
 Une barre de boîte de dialogue est une barre d’outils, un type de [barre de contrôle](../mfc/control-bars.md) qui peut contenir tout type de contrôle. Car il présente les caractéristiques d’une boîte de dialogue non modale, un [CDialogBar](../mfc/reference/cdialogbar-class.md) objet fournit une barre d’outils plus puissant.  

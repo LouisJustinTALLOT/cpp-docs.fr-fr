@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348248"
 ---
 # <a name="headers-and-footers"></a>En-têtes et pieds de page
 Cet article explique comment ajouter des en-têtes et pieds de page à un document imprimé.  

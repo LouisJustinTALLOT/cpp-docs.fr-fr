@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245947"
 ---
 # <a name="compiler-error-c2955"></a>Erreur du compilateur C2955
 ’identificateur’ : l’utilisation d’un modèle de classe ou d’un générique d’alias requiert une liste d’arguments modèles ou génériques  

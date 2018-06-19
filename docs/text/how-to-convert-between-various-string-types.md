@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861225"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Comment : effectuer une conversion entre différents types de chaînes
 Cette rubrique montre comment convertir des différents types de chaînes Visual C++ en d’autres chaînes. Les types de chaînes qui sont couvertes incluent `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), et <xref:System.String?displayProperty=fullName>. Dans tous les cas, une copie de la chaîne est effectuée lorsque converti au nouveau type. Toute modification apportée à la nouvelle chaîne n’affecteront pas la chaîne d’origine et vice versa.  

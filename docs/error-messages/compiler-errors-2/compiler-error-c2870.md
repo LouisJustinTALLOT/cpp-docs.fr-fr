@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243487"
 ---
 # <a name="compiler-error-c2870"></a>Erreur du compilateur C2870
 'nom' : une définition de l’espace de noms doit apparaître soit au niveau de la portée du fichier soit immédiatement au sein d’une autre définition de l’espace de noms  

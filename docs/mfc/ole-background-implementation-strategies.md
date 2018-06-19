@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350495"
 ---
 # <a name="ole-background-implementation-strategies"></a>Arrière-plan OLE : stratégies d'implémentation
 Selon votre application, il existe quatre méthodes d'implémentation possibles pour ajouter la prise en charge OLE :  

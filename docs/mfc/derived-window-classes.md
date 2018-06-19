@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351491"
 ---
 # <a name="derived-window-classes"></a>Classes de fenêtre dérivées
 Vous pouvez créer des fenêtres directement à partir de [CWnd](../mfc/reference/cwnd-class.md), ou dériver de nouvelles classes de fenêtre à partir de `CWnd`. Voici comment vous généralement créez vos propres fenêtres personnalisées. Toutefois, la plupart des fenêtres utilisées dans un programme d’infrastructure sont créées à la place de l’une du `CWnd`-dérivées des classes de fenêtre frame fournies par MFC.  

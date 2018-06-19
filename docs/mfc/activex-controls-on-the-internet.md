@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352307"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.  

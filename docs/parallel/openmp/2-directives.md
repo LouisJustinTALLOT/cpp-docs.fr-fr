@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695887"
 ---
 # <a name="2-directives"></a>2. Directives
 Directives sont basées sur **#pragma** directives définies dans les normes C et C++.  Les compilateurs qui prennent en charge les API C++ OpenMP C inclut une option de ligne de commande qui active et autorise l’interprétation de toutes les directives de compilateur OpenMP.

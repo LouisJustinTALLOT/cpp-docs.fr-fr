@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374836"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 Les classes de collection `CMap`, `CList`, et `CArray` utiliser les fonctions d’assistance globales basé sur un modèle fins telles que la comparaison, la copie et sérialiser des éléments. Dans le cadre de votre implémentation de classes basées sur `CMap`, `CList`, et `CArray`, vous devez remplacer ces fonctions selon les besoins avec des versions adaptées au type de données stockées dans votre carte, une liste ou un tableau. Pour plus d’informations sur les fonctions d’assistance de substitution comme `SerializeElements`, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md). Notez que **ConstructElements** et **DestructElements** ont été déconseillées.  

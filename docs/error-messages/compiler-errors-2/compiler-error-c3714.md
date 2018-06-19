@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266397"
 ---
 # <a name="compiler-error-c3714"></a>Erreur du compilateur C3714
 'méthode' : une méthode de gestionnaire d’événements doit avoir la même convention d’appel en tant que la source 'méthode'  
