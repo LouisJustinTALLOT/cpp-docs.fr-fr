@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369875"
 ---
 # <a name="cl-command-files"></a>Fichiers de commandes CL
 Un fichier de commandes est un fichier texte qui contient les options et les noms de fichiers vous indiquez dans le cas contraire le [ligne de commande](../../build/reference/compiler-command-line-syntax.md) ou spécifier à l’aide de la [variable d’environnement CL](../../build/reference/cl-environment-variables.md). CL accepte un fichier de commandes du compilateur en tant qu’argument dans la variable d’environnement CL ou sur la ligne de commande. Contrairement à la ligne de commande ou à la variable d'environnement CL, un fichier de commandes vous permet d'utiliser plusieurs lignes d'options et de noms de fichiers.  

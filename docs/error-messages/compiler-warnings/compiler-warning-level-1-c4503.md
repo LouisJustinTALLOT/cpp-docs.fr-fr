@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255672"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Avertissement du compilateur (niveau 1) C4503
 

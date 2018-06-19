@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374724"
 ---
 # <a name="module-definition-def-files"></a>Fichiers de définition de module (.Def)
 Les fichiers de définition de module (.def) fournissent à l’éditeur de liens avec des informations sur les exportations, attributs et d’autres informations sur le programme à lier. Un fichier .def est très utile lors de la création d’une DLL. Étant donné que [les options de l’éditeur de liens](../../build/reference/linker-options.md) qui peut être utilisé au lieu des instructions de définition de module, les fichiers .def ne sont généralement pas nécessaires. Vous pouvez également utiliser [__declspec (dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) comme un moyen de spécifier des fonctions exportées.  

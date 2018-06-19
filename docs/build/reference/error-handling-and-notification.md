@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373216"
 ---
 # <a name="error-handling-and-notification"></a>Gestion et notification des erreurs
 Pour plus d’informations sur la gestion des erreurs et la notification, consultez [présentation de la fonction d’assistance](understanding-the-helper-function.md).  

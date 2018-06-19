@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374789"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (forcer les écritures PDB synchrones)
 Force est écrit dans le fichier du programme (PDB) de la base de données, créée par [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) ou [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)— via MSPDBSRV. EXE.  

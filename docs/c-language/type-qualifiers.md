@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389983"
 ---
 # <a name="type-qualifiers"></a>Qualificateurs de type
 Les qualificateurs de type fournissent une des deux propriétés à un identificateur. Le qualificateur de type **const** déclare un objet comme étant non modifiable. Le qualificateur de type `volatile` déclare un élément dont la valeur peut légitimement être modifiée par quelque chose non contrôlé par le programme dans lequel il apparaît, par exemple un thread s'exécutant simultanément.  

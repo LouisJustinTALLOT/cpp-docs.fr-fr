@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111271"
 ---
 # <a name="using-ole-db-record-views"></a>Utilisation des vues de l'enregistrement OLE DB
 Si vous souhaitez afficher les données d’ensemble de lignes OLE DB dans une application MFC, vous devez utiliser la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Un objet de vue de l’enregistrement créé à partir de `COleDBRecordView` vous permet d’afficher les enregistrements de base de données dans des contrôles MFC. La vue de l’enregistrement est une vue de formulaire de boîte de dialogue directement connectée à un objet de l’ensemble de lignes OLE DB créé à partir de la `CRowset` classe de modèle. Obtention d’un handle vers l’objet d’ensemble de lignes est simple :  

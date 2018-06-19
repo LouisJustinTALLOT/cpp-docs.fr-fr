@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369050"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Comment : incorporer un manifeste à une application C/C++
 Il est recommandé qu’une application C/C++ (ou la bibliothèque) son manifeste incorporé dans le fichier binaire final, car cela garantit un comportement correct dans la plupart des scénarios. Par défaut, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tente d’incorporer le manifeste lorsqu’il génère un projet à partir des fichiers sources, consultez [génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md) pour plus d’informations. Toutefois si une application est générée à l’aide de nmake, certaines modifications apportées à un makefile existant sont nécessaires. Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.  

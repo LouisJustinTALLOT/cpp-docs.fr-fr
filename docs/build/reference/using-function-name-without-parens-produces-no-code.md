@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373980"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>L'utilisation d'un nom de fonction sans () ne génère pas de code
 Lorsqu’un nom de fonction déclaré dans votre programme est utilisé sans parenthèses, le compilateur ne génère pas de code. Cela se produit, quelle que soit ou non la fonction accepte des paramètres, car le compilateur calcule l’adresse de la fonction ; Toutefois, étant donné que l’opérateur d’appel de fonction « () » n’est pas présent, aucun appel est effectué. Ce résultat est similaire à ce qui suit :  

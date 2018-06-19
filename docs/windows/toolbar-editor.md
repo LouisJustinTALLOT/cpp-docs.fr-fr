@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891309"
 ---
 # <a name="toolbar-editor"></a>Éditeur de barres d’outils
 L’Éditeur de barres d’outils vous permet de créer des ressources de barre d’outils et de convertir des bitmaps en ressources de barres d’outils. L’Éditeur de barres d’outils utilise un affichage graphique pour afficher une barre d’outils et des boutons qui ressemblent étroitement à leur aspect dans une application finie.  

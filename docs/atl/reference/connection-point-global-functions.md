@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362789"
 ---
 # <a name="connection-point-global-functions"></a>Fonctions globales de Point de connexion
 Ces fonctions prennent en charge les points de connexion et le récepteur de cartes.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358083"
 ---
 # <a name="avoidance-of-heap-contention"></a>Éviter la Contention de tas
 Les gestionnaires de chaînes par défaut fournis par MFC et ATL sont des wrappers simples sur un segment de mémoire globale. Ce tas global est complètement thread-safe, ce qui signifie que plusieurs threads peuvent allouer et libérer de la mémoire simultanément sans endommager le tas. Pour accroître la sécurité des threads, le tas doit sérialiser l’accès à lui-même. Cela est généralement effectuée avec une section critique ou d’un mécanisme de verrouillage semblable. Chaque fois que deux threads essaient d’accéder au tas simultanément, un thread est bloqué jusqu'à la fin de la demande de l’autre thread. Pour de nombreuses applications, cette situation se produit rarement et l’impact sur les performances du tas mécanisme de verrouillage est négligeable. Toutefois, pour les applications qui accèdent fréquemment au tas à partir de plusieurs threads contention pour le verrouillage du tas peut ralentir l’application de s’exécuter plus lentement que s’il s’agit monothread (même sur les ordinateurs avec plusieurs unités centrales).  

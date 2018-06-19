@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128350"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Comment : modifier la classe de référence dans une fonction native
 Vous pouvez passer d’une classe de référence avec un tableau CLR à une fonction native et modifier la classe, à l’aide des services PInvoke.  

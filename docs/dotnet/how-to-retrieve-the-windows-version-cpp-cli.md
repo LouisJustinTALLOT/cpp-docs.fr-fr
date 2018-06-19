@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128265"
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>Comment : récupérer la version Windows (C++/CLI)
 L’exemple de code suivant montre comment récupérer les informations de plateforme et la version du système d’exploitation actuel. Ces informations sont stockées dans le <xref:System.Environment.OSVersion%2A?displayProperty=fullName> propriété et se compose d’une énumération qui décrit la version de Windows en termes généraux et un <xref:System.Environment.Version%2A> objet qui contient la version exacte du système d’exploitation.  

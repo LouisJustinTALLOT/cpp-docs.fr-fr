@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368224"
 ---
 # <a name="makefile-preprocessing"></a>Prétraitement d'un makefile
 Vous pouvez contrôler la session NMAKE en utilisant des expressions et des directives de prétraitement. Instructions de prétraitement peuvent être placées dans le fichier Make ou Tools.ini. À l’aide de directives, vous pouvez conditionnellement traiter votre makefile, afficher des messages d’erreur, inclure d’autres makefiles, annuler la définition d’une macro et activer ou désactiver les certaines options.  

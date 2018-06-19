@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376713"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Activer la gestion des exceptions)
 Obsolète. Gestion synchrone des exceptions à l’aide de l’hypothèse que les fonctions déclarées à l’aide d’Active `extern "C"` lèvent jamais d’exception.  

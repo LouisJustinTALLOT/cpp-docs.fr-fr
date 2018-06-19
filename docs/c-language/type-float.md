@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390933"
 ---
 # <a name="type-float"></a>float, type
 Les nombres à virgule flottante utilisent le format IEEE (Institute of Electrical and Electronics Engineers). Les valeurs de précision simple de type float possèdent 4 octets, comprenant un bit de signe, un exposant binaire 8 bits avec écart de 127 et une mantisse de 23 bits. La mantisse représente un nombre entre 1,0 et 2,0. Étant donné que le bit de poids fort de la mantisse est toujours 1, il n'est pas stocké dans le nombre. Cette présentation donne une plage d’environ 3,4E-38 à 3,4E+38 pour le type float.  

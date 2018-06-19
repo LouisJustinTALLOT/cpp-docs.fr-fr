@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371419"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (threads du compilateur)
 Définit le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code quand la génération de code durant l'édition de liens est spécifiée.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376691"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilisation de la version debug pour vérifier les remplacements de mémoire
 Pour utiliser la version debug pour vérifier les remplacements de mémoire, vous devez tout d’abord reconstruire votre projet pour le débogage. Ensuite, allez jusqu’au début de votre application `InitInstance` la fonction et ajoutez la ligne suivante :  

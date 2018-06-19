@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367509"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary et AfxFreeLibrary
 Processus de liaison explicite avec un appel DLL le [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) fonctionner lorsque le module DLL n’est plus nécessaire. Cette fonction décrémente le nombre de module référence et, si le décompte de références est égal à zéro, annule le mappage à partir de l’espace d’adressage du processus.  

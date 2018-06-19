@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379196"
 ---
 # <a name="overview-of-lib"></a>Vue d'ensemble de LIB
 LIB crée des bibliothèques standard, des bibliothèques d’importation et exportation de fichiers, vous pouvez utiliser avec [lien](../../build/reference/linker-options.md) lors de la création d’un programme. LIB s’exécute à partir d’une invite de commandes.  

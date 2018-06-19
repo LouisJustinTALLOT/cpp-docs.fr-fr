@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373021"
 ---
 # <a name="output-file-f-options"></a>Options du fichier de sortie (/F)
 Les options de fichier de sortie créer ou renommer des fichiers de sortie. Ils affectent tous les fichiers sources C ou C++ spécifiés dans la variable d’environnement CL, sur la ligne de commande ou dans n’importe quel fichier de commandes.  

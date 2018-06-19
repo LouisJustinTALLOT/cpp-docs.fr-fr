@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366365"
 ---
 # <a name="ccomptrbase-class"></a>Classe de CComPtrBase
 Cette classe fournit une base pour les classes de pointeur intelligent à l’aide des routines basé sur COM de mémoire.  

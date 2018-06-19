@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358827"
 ---
 # <a name="understanding-parse-trees"></a>Présentation des arborescences d’analyse
 Vous pouvez définir une ou plusieurs arborescences d’analyse dans votre script registrar où chaque arborescence d’analyse a la forme suivante :  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360111"
 ---
 # <a name="active-technology-and-dlls"></a>Technologie active et DLL
 Technologie active permet de serveurs d’objets à mettre en œuvre entièrement à l’intérieur d’une DLL. Ce type de serveur est appelé serveur in-process. MFC ne gère pas complètement les serveurs in-process pour toutes les fonctionnalités d’édition, essentiellement parce que la technologie Active ne fournit pas un moyen pour un serveur de se connecter à la boucle de messages principale du conteneur. MFC requiert l’accès à la boucle de message de l’application conteneur pour gérer les touches d’accès et le traitement des temps d’inactivité.  

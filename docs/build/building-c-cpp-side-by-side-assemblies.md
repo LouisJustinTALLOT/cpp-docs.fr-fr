@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364019"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Génération d'assemblys côte à côte C/C++
 A [côte-à-côte assembly](http://msdn.microsoft.com/library/windows/desktop/ff951640) est une collection de ressources, un groupe de DLL, classes de fenêtres, serveurs COM, bibliothèques de types ou interfaces : une application à utiliser lors de l’exécution. Le principal avantage de la réintégration des DLL dans des assemblys est que plusieurs versions d’assemblys peuvent être utilisées par les applications en même temps, et il est possible d’assemblys de service est actuellement installé en cas de mise à jour.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359877"
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
 Ces fonctions fournissent la prise en charge pour le mappage COM **IUnknown** implémentations.  

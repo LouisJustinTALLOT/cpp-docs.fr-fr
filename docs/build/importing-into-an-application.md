@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368055"
 ---
 # <a name="importing-into-an-application"></a>Importation dans une application
 Vous pouvez importer des fonctions dans une application à l’aide de deux méthodes :  

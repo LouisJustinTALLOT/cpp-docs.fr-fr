@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112506"
 ---
 # <a name="provider-support-for-bookmarks"></a>Prise en charge des signets par le fournisseur
 L’exemple de cette rubrique ajoute le `IRowsetLocate` de l’interface pour la `CMyProviderRowset` classe. Dans presque tous les cas, commencez par ajouter une interface à un objet COM existant. Vous pouvez ensuite le tester en ajoutant des appels supplémentaires à partir de modèles du consommateur. L’exemple montre comment :  

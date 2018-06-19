@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891579"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Procédure pas à pas : création et utilisation d’une bibliothèque statique (C++)
 Cette procédure pas à pas montre comment créer une bibliothèque statique (fichier .lib) à utiliser avec des applications C++. L’utilisation d’une bibliothèque statique est un excellent moyen de réutiliser le code. Au lieu d'implémenter les mêmes routines dans chaque application qui requiert les fonctionnalités, vous les écrivez une fois pour toutes dans une bibliothèque statique et vous y faites référence dans les applications. Le code lié à partir d'une bibliothèque statique devient partie intégrante de votre application. Il n'est pas nécessaire d'installer un autre fichier pour utiliser le code.  

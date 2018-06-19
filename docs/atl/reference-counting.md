@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358246"
 ---
 # <a name="reference-counting"></a>Comptage des références
 COM n’essaie pas automatiquement de supprimer un objet de la mémoire lorsqu’il détermine que l’objet n’est plus utilisé. Au lieu de cela, le programmeur de l’objet doit supprimer l’objet d’inutilisé. Le programmeur détermine si un objet peut être supprimé en fonction du décompte de références.  

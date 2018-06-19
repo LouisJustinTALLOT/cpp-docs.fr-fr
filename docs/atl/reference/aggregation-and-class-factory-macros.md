@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366417"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agrégation et Macros de fabrique de classe
 Ces macros fournissent des méthodes de contrôle de l’agrégation et de la déclaration des fabriques de classes.  

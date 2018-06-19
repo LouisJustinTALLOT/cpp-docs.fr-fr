@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359605"
 ---
 # <a name="cnonstatelessworker-class"></a>Classe de CNonStatelessWorker
 Reçoit des demandes à partir d’un pool de threads et les transmet à un objet de travail qui est créé et détruit à chaque demande.  

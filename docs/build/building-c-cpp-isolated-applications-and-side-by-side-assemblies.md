@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361282"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Génération d'applications isolées C/C++ et d'assemblys côte à côte
 Visual C++ prend en charge un modèle de déploiement pour les applications clientes Windows qui s’appuie sur l’idée des [applications isolées](http://msdn.microsoft.com/library/aa375190) et des [assemblys côte à côte](http://msdn.microsoft.com/library/ff951640). Par défaut, Visual C++ génère toutes les applications C/C++ natives en tant qu’applications isolées qui utilisent des [manifestes](http://msdn.microsoft.com/library/aa375365) pour décrire leurs dépendances envers des bibliothèques Visual C++.  

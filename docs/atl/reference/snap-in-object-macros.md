@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363908"
 ---
 # <a name="snap-in-object-macros"></a>Macros de l’objet du composant logiciel enfichable
 Ces macros fournissent la prise en charge pour les extensions du composant logiciel enfichable.  

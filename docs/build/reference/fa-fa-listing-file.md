@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378949"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 Crée un fichier listing contenant du code assembleur.  

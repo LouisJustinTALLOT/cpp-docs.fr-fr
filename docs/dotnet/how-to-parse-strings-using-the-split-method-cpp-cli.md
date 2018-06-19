@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132019"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Comment : analyser des chaînes à l'aide de la méthode Split (C++/CLI)
 L’exemple de code suivant montre comment utiliser la <xref:System.String.Split%2A?displayProperty=fullName> méthode pour extraire chaque mot d’une chaîne. Chaîne qui contient plusieurs types de délimiteurs de word est construite, puis analysée en appelant <xref:System.String.Split%2A> avec une liste des délimiteurs des. Ensuite, chaque mot dans la phrase est affiché séparément.  

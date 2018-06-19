@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130862"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Comment : réorganiser des données à l'aide d'expressions régulières (C++/CLI)
 L’exemple de code suivant montre comment la prise en charge des expressions régulières .NET Framework peut être utilisé pour réorganiser ou reformater les données. Le code suivant exemple utilise le <xref:System.Text.RegularExpressions.Regex> et <xref:System.Text.RegularExpressions.Match> classes pour extraire les prénoms et les noms d’une chaîne et afficher ces éléments dans l’ordre inverse.  

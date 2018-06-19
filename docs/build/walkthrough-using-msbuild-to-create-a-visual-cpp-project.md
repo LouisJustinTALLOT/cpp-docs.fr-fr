@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392560"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++
 Cette procédure pas à pas montre comment utiliser [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] pour générer un projet Visual C++ à l’invite de commande. Vous allez apprendre à créer des fichiers sources C++ et un fichier de projet basé sur XML pour une application console Visual C++. Après avoir généré le projet, vous allez apprendre à personnaliser le processus de génération.  
