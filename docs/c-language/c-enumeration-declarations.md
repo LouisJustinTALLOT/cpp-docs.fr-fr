@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389739"
 ---
 # <a name="c-enumeration-declarations"></a>Déclarations d'énumération C
 Une énumération se compose d'un ensemble de constantes entières nommées. Une déclaration de type énumération indique le nom de la balise d'énumération (facultative) et définit l'ensemble des identificateurs d'entiers nommés (appelés « ensemble d'énumération », « constantes d'énumérateur », « énumérateurs » ou « membres »). Une variable avec type énumération stocke une des valeurs de l'ensemble d'énumération défini par ce type.  

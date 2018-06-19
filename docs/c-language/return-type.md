@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390185"
 ---
 # <a name="return-type"></a>Type de retour
 Le type de retour d’une fonction génère la taille et le type de la valeur retournée par la fonction et correspond au spécificateur de type dans la syntaxe ci-dessous :  

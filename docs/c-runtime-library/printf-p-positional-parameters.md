@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391312"
 ---
 # <a name="printfp-positional-parameters"></a>Paramètres positionnels printf_p
 Les paramètres positionnels permettent de spécifier à l’aide d’un nombre l’argument à remplacer dans un champ de chaîne de format. Voici les fonctions `printf` avec paramètres positionnels disponibles :  
