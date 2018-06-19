@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355237"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Modification de la fabrique de classe par défaut et le modèle d’agrégation
 ATL utilise [CComCoClass](../atl/reference/ccomcoclass-class.md) pour définir le modèle par défaut classe fabrique et l’agrégation pour votre objet. `CComCoClass` Spécifie les deux macros suivantes :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356493"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>La modification du contrôle ATL DHTML
 L’Assistant contrôle ATL fournit le code de démarrage vous pouvez générer et exécuter le contrôle, et donc vous pouvez voir la manière dont les méthodes sont écrites dans les fichiers projet et comment le DHTML appelle le code du contrôle C++ en utilisant les méthodes de distribution. Vous pouvez ajouter n’importe quelle méthode de répartition à l’interface. Ensuite, vous pouvez appeler les méthodes dans la ressource HTML.  

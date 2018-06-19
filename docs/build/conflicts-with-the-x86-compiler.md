@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366911"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Conflits avec le compilateur x86
 Types de données qui sont supérieures à 4 octets ne sont pas alignées automatiquement sur la pile lorsque vous utilisez la x86 compilateur de compiler une application. Étant donné que l’architecture pour le x86 compilateur est une pile alignée sur 4 octets, toute valeur supérieure à 4 octets, par exemple, un entier 64 bits, ne peut pas être alignée automatiquement à une adresse de 8 octets.  

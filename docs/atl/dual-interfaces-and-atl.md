@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355044"
 ---
 # <a name="dual-interfaces-and-atl"></a>Interfaces doubles et ATL
 Une interface double permet à ses méthodes accessibles en tant que méthodes dispinterface ou vtable. Cette section décrit certaines des fonctionnalités des interfaces doubles à partir d’un point de vue ATL.  

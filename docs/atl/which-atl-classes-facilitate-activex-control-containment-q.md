@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361948"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Les Classes ATL facilitent la relation contenant-contenu de contrôle ActiveX ?
 Le code d’hébergement des contrôles ATL ne vous oblige à utiliser les classes ATL ; Vous pouvez simplement créer un **« AtlAxWin80 »** fenêtre et utilisez l’API d’hébergement du contrôle si nécessaire (pour plus d’informations, consultez **quel est l’API hébergeant des contrôles ATL**. Toutefois, les classes suivantes rendent les fonctionnalités de la relation contenant-contenu plus facile à utiliser.  

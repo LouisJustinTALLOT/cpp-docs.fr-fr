@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422382"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Mise en forme des chaînes et E/S (Modern C++)
 C++ [iostreams](../standard-library/iostream.md) compatibles avec la chaîne mise en forme d’e/s. Par exemple, le code suivant montre comment définir cout pour mettre en forme un entier et de sortie au format hexadécimal, tout d’abord l’enregistrement de l’état actuel et nouveau paramètre par la suite, car une fois la mise en forme de l’état est passé à cout, il reste de cette façon jusqu'à ce que modifié, pas seulement pour la ligne d’un du code.  

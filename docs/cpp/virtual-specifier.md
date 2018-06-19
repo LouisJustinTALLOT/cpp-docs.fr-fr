@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421258"
 ---
 # <a name="virtual-specifier"></a>Spécificateur virtuel
 Le [virtuels](../cpp/virtual-cpp.md) mot clé peut être appliqué uniquement aux fonctions membres de classe non statique. Cela signifie que la liaison des appels à la fonction est différée jusqu’au moment de l’exécution. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357813"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)
 Dans des cas spéciaux, il pourrez que vous souhaitez implémenter un gestionnaire de chaînes personnalisé qui change plus que de segment de mémoire est utilisé pour allouer de la mémoire. Dans ce cas, vous devez implémenter manuellement le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface en tant que gestionnaire de chaînes personnalisé.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355789"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Ajout d’un composant ATL COM + 1.0
 Cet Assistant ajoute un objet à votre projet qui prend en charge les services COM + 1.0, notamment les transactions.  

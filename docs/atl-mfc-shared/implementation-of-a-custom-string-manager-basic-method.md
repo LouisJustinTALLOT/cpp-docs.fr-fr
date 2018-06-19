@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355723"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implémentation d’un gestionnaire de chaînes personnalisé (méthode de base)
 Le moyen le plus simple pour personnaliser la méthode d’allocation de mémoire pour les données de chaîne fournie par le ATL **CAtlStringMgr** classe, qui fournissent des routines d’allocation de mémoire de votre propre. Le constructeur de **CAtlStringMgr** accepte un seul paramètre : un pointeur vers un `IAtlMemMgr` objet. `IAtlMemMgr` est une classe de base abstraite qui fournit une interface générique à un segment de mémoire. À l’aide de la `IAtlMemMgr` interface, le **CAtlStringMgr** alloue, réalloue et libère la mémoire utilisée pour stocker les données de chaîne. Vous pouvez implémenter la `IAtlMemMgr` interface vous-même, ou utiliser l’un des cinq classes de gestionnaire de mémoire fournis par ATL. Les gestionnaires de mémoire fournis par ATL englobent simplement les fonctions d’allocation mémoire existant :  

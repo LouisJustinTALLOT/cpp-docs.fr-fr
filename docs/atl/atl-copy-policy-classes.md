@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358525"
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de stratégies de copie ATL
 Classes de stratégies de copie sont [classes utilitaires](../atl/utility-classes.md) utilisée pour initialiser, copier et supprimer des données. Elles permettent de définir une sémantique de copie pour n’importe quel type de données, et de définir des conversions entre différents types de données.  

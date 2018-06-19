@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354898"
 ---
 # <a name="atl-registry-component-registrar"></a>Composant de registre ATL (Inscription)
 ATL Registrar offre un accès optimisé dans le Registre système via une interface personnalisée. Le bureau d’enregistrement est libre de threads et permet la liaison statique du code pour les clients C++.  

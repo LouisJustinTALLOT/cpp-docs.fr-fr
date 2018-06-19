@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362582"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Insertion d’un contrôle sur une page web (Didacticiel ATL, Partie 7)
 Votre contrôle est maintenant terminé. Pour voir votre contrôle fonctionne dans une situation réelle, vous devez le placer sur une page Web. Un fichier HTML qui contient le contrôle a été créé lorsque vous avez défini votre contrôle. Ouvrez le fichier PolyCtl.htm **l’Explorateur de solutions**, et vous pouvez voir votre contrôle sur une page Web.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359660"
 ---
 # <a name="ustringorid-class"></a>Classe de _U_STRINGorID
 Cette classe d’argument d’adaptateur permet à deux noms de ressources ( `LPCTSTR`s) ou l’ID de ressource ( **UINT**s) à passer à une fonction sans nécessiter de l’appelant convertir une chaîne à l’aide de l’ID du **MAKEINTRESOURCE** (macro).  

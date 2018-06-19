@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360639"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Prise en charge MFC dans les projets ATL
 Si vous sélectionnez **prise en charge MFC** dans l’Assistant Projet ATL, votre projet déclare l’application en tant qu’objet application MFC (classe). Le projet initialise la bibliothèque MFC et instancie une classe (classe *NomProj*) qui est dérivée de [CWinApp](../../mfc/reference/cwinapp-class.md).  

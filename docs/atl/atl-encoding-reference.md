@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358626"
 ---
 # <a name="atl-encoding-reference"></a>Référence d'encodage ATL
 Encodage dans une plage de normes Internet communes telles qu’uuencode, hexadécimal et UTF-8 est pris en charge par le code trouvé dans atlenc.h.  

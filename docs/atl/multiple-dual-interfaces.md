@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356717"
 ---
 # <a name="multiple-dual-interfaces"></a>Interfaces doubles multiples
 Vous pouvez souhaiter combiner les avantages d’une interface double (autrement dit, la souplesse de vtable et liaison tardive, ce qui la classe rend disponible pour les langages de script, ainsi que C++) avec les techniques de l’héritage multiple.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418037"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 Le spécificateur de type `decltype` génère le type d'une expression spécifiée. Le `decltype` spécificateur de type avec la [auto, mot clé](../cpp/auto-cpp.md), est particulièrement utile pour les développeurs qui écrivent des bibliothèques de modèles. Utilisez `auto` et `decltype` pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template. Sinon, utilisez `auto` et `decltype` pour déclarer une fonction de modèle qui encapsule un appel à une autre fonction, puis retourne le type de retour de la fonction encapsulée.  

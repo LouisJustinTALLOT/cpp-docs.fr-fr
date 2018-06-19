@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361588"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 Pages de propriétés sont implémentées en tant qu’objets COM distincts, et les autoriser à être partagé si nécessaire. Dans cette étape, vous exécuterez les tâches suivantes pour ajouter une page de propriétés au contrôle :  

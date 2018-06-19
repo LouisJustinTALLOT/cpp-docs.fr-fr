@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355362"
 ---
 # <a name="composite-controls-classes"></a>Classes de contrôles composites
 La classe suivante prend en charge la création de contrôles composites  

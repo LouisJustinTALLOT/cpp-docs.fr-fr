@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367483"
 ---
 # <a name="filename-parts-syntax"></a>Syntaxe des éléments d'un nom de fichier
 Syntaxe de parties de nom de fichier dans les commandes représente les composants du nom de fichier dépendant premier (qui peut être un dépendant implicite). Composants de nom de fichier sont lecteur du fichier, chemin d’accès, nom de base et extension spécifiée, pas comme il existe sur le disque. Utilisez **%s** pour représenter le nom de fichier complet. Utilisez **%&#124;**[*parties*]**F** (une barre verticale caractère suit le signe de pourcentage) pour représenter les parties du nom de fichier, où *parties*peut être zéro ou plusieurs lettres parmi les suivantes, dans n’importe quel ordre.  

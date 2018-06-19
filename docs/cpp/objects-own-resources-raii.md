@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419928"
 ---
 # <a name="objects-own-resources-raii"></a>Ressources propres objets (RAII)
 Assurez-vous que les ressources propres objets. Ce principe est également connu sous « resource acquisition is initialization » ou « RAII. »  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366105"
 ---
 # <a name="catlfile-class"></a>Classe de CAtlFile
 Cette classe fournit un wrapper mince entourant les fenêtres des API de gestion de fichiers.  

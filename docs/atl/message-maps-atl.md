@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357256"
 ---
 # <a name="message-maps-atl"></a>Tables des messages (ATL)
 Une table des messages associe une fonction de gestionnaire d’un message particulier, une commande ou une notification. À l’aide d’ATL [macros de table de messages](../atl/reference/message-map-macros-atl.md), vous pouvez spécifier une table des messages pour une fenêtre. Les procédures de fenêtre de `CWindowImpl`, `CDialogImpl`, et `CContainedWindowT` diriger les messages d’une fenêtre à sa table des messages.  

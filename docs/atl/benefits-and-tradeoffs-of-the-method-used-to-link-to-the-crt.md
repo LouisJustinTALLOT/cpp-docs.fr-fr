@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355385"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Avantages et limitations de la méthode utilisée pour le lien vers la bibliothèque CRT
 Votre projet peut lier de manière dynamique ou statique. Le tableau ci-dessous présente les avantages et inconvénients dans le choix de la méthode à utiliser.  

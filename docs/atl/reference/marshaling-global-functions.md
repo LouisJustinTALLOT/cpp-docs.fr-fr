@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362825"
 ---
 # <a name="marshaling-global-functions"></a>Marshaling des fonctions globales
 Ces fonctions fournissent la prise en charge pour le marshaling et de conversion de données de marshaling des pointeurs d’interface.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360029"
 ---
 # <a name="scope-of-atl"></a>Étendue d’ATL
 ATL vous permet de créer facilement des objets COM, des serveurs Automation et des contrôles ActiveX. ATL fournit la prise en charge intégrée pour la plupart des interfaces COM fondamentaux.  

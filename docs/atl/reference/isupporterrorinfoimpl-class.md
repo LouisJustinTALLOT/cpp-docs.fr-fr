@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364579"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Classe de ISupportErrorInfoImpl
 Cette classe fournit une implémentation par défaut de la [ISupportErrorInfo Interface](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) et peut être utilisé lorsque seulement une seule interface génère des erreurs sur un objet.  

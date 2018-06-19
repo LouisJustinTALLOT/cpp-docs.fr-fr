@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356743"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Ajout d’une nouvelle Interface dans un projet ATL
 Lorsque vous ajoutez une interface à votre objet ou contrôle, vous créez extraite des fonctions pour chaque méthode dans cette interface. Dans votre objet ou un contrôle, vous pouvez ajouter uniquement des interfaces figurant actuellement dans une bibliothèque de types existante. En outre, la classe dans laquelle vous ajoutez l’interface doit implémenter la [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) (macro) ou, si le projet est attribué, il doit avoir le `coclass` attribut.  

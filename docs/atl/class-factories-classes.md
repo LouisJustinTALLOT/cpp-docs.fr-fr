@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355343"
 ---
 # <a name="class-factories-classes"></a>Classes de fabriques de classes
 Les classes suivantes implémentent ou prend en charge une fabrique de classe :  

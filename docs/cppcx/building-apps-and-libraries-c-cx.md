@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086341"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Génération d’applications et de bibliothèques (C++/CX)
 Les rubriques de cette section fournissent quelques détails sur l’utilisation du système de génération pour générer une application de plateforme Windows universelle ou un composant Windows Runtime.  

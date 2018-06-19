@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364768"
 ---
 # <a name="cdacl-class"></a>Classe de CDacl
 Cette classe est un wrapper pour une structure de la liste DACL (liste de contrôle d’accès discrétionnaire).  

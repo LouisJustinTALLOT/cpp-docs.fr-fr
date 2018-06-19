@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356519"
 ---
 # <a name="atl-event-handling-summary"></a>Résumé de la gestion des événements ATL
 En général, la gestion des événements COM sont un processus relativement simple. Il existe trois étapes principales :  

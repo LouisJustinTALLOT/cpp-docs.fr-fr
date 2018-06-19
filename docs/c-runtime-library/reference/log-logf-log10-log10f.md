@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402840"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>journal, logf, logl, log10, log10f, log10l
 

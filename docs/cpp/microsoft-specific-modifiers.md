@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420221"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificateurs Microsoft spécifiques
 Cette section décrit les extensions C++ spécifiques à Microsoft dans les domaines suivants :  

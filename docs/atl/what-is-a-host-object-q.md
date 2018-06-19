@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357732"
 ---
 # <a name="what-is-a-host-object"></a>Qu’est un objet hôte ?
 Un objet hôte est un objet COM qui représente le conteneur de contrôle ActiveX fourni par ATL pour une fenêtre particulière. L’objet hôte sous-classe la fenêtre conteneur afin qu’elle peut refléter les messages au contrôle, il fournit les interfaces de conteneur nécessaires à utiliser par le contrôle, et expose le [interface IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) et [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) interfaces vous permettent de configurer l’environnement du contrôle.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358767"
 ---
 # <a name="options-atl-property-page-wizard"></a>Options, Assistant Page de propriétés ATL
 Utilisez cette page de l’Assistant pour définir le niveau d’agrégation et le modèle de thread de page de propriétés que vous créez.  

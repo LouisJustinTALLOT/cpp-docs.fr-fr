@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419792"
 ---
 # <a name="naked-function-calls"></a>Appels de fonction naked
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420104"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Mélange d'exceptions C (structurées) et d'exceptions C++
 Si vous voulez écrire du code plus portable, l'utilisation d'une gestion des exceptions structurées dans un programme C++ n'est pas recommandée. Toutefois, vous voudrez parfois compiler avec **/EHa** et combiner des exceptions structurées et code source C++ et le besoin d’une fonctionnalité pour gérer ces deux types d’exceptions. Car il n’y a aucun concept d’objets ou des exceptions typées pour un gestionnaire d’exceptions structuré, il ne peut pas gérer les exceptions levées par du code C++ ; Toutefois, C++ **catch** gestionnaires peuvent gérer les exceptions structurées. En tant que telle, syntaxe exceptions C++ (**essayez**, `throw`, **catch**) n’est pas accepté par le compilateur C, mais la syntaxe de gestion structurée des exceptions (`__try`, `__except`, `__finally`) est pris en charge par le compilateur C++.  

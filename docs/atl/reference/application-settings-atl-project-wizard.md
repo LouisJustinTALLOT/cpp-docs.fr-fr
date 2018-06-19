@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357403"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Paramètres de l’application, Assistant Projet ATL
 Utilisez le **paramètres de l’Application** page de l’Assistant Projet ATL pour concevoir et ajouter des fonctionnalités de base pour un nouveau projet ATL.  

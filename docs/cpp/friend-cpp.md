@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418261"
 ---
 # <a name="friend-c"></a>friend (C++)
 Dans certaines circonstances, il est plus pratique d’accorder l’accès au niveau des membres à des fonctions qui ne sont pas membres d’une classe ou à tous les membres dans une classe distincte. Seul l'implémenteur de classe peut déclarer qui sont ses fonctions friend. Une fonction ou une classe ne peut pas se déclarer elle-même en tant que fonction ou classe friend d'une classe. Dans une définition de classe, utilisez le `friend` (mot clé) et le nom d’une fonction non membre ou autre classe pour lui accorder un accès aux membres privés et protégés de votre classe.         Dans une définition de modèle, un paramètre de type peut être déclaré en tant que friend.  

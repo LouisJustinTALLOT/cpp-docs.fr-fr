@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358910"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Changement du code de dessin (Didacticiel ATL, partie 4)
 Par défaut, code de dessin du contrôle affiche un carré et le texte **PolyCtl**. Dans cette étape, vous allez modifier le code pour afficher plus intéressant. Les tâches suivantes sont impliquées :  

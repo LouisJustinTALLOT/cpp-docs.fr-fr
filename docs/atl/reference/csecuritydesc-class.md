@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366167"
 ---
 # <a name="csecuritydesc-class"></a>Classe de CSecurityDesc
 Cette classe est un wrapper pour le **SECURITY_DESCRIPTOR** structure.  

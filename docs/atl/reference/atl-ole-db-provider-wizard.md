@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357478"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
 Cet Assistant crée les classes qui composent un fournisseur OLE DB.  

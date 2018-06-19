@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354953"
 ---
 # <a name="formatting-time-automation-classes"></a>Mise en forme d’heure : Classes Automation
 #### <a name="to-format-a-time"></a>Pour mettre en forme une heure  

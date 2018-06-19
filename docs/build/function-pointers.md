@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367145"
 ---
 # <a name="function-pointers"></a>Pointeurs fonction
 Les pointeurs fonction sont simplement des pointeurs vers l’étiquette de la fonction respective. Il n’y a aucune table de configuration requise des matières pour les pointeurs de fonction.  

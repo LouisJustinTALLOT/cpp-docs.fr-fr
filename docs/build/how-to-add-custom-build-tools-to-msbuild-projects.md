@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368328"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Comment : ajouter des outils de génération personnalisée à des projets MSBuild
 Un outil de génération personnalisée est un outil de ligne de commande définis par l’utilisateur qui est associé à un fichier particulier.  

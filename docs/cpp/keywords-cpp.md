@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424761"
 ---
 # <a name="keywords-c"></a>Mots clés (C++)
 Les mots clés sont des identificateurs réservés prédéfinis qui ont des significations particulières. Ils ne peuvent pas être utilisés comme identificateurs dans votre programme. Les mots clés suivants sont réservés pour Microsoft C++. Les noms avec des traits de soulignement à gauche correspondent à des extensions Microsoft.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354853"
 ---
 # <a name="controls-general-support-classes"></a>Contrôles : Classes de prise en charge général
 Les classes suivantes fournissent la prise en charge générale pour les contrôles ATL :  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360124"
 ---
 # <a name="iatlstringmgr-class"></a>Classe de IAtlStringMgr
 Cette classe représente l’interface pour un `CStringT` Gestionnaire de mémoire.  

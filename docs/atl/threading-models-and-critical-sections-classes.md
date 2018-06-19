@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359916"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>Les Classes de Sections critiques et les modèles de thread
 Les classes suivantes définissent un modèle de thread modèle et la section critique :  

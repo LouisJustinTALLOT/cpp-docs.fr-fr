@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355491"
 ---
 # <a name="mmc-snap-in-classes"></a>Classes de composant logiciel enfichable MMC
 Les classes suivantes fournissent la prise en charge pour les composants de composant logiciel enfichable Microsoft Management Console (MMC) développement :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356306"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implémentation d’Interface de gestion d’événements
 ATL vous aide à tous les trois éléments requis pour la gestion des événements : implémentation de l’interface d’événement, indiquant la source d’événements et désinformation la source d’événements. Les étapes précises, que vous devrez prendre varient selon le type de l’interface d’événement et des exigences de performances de votre application.  

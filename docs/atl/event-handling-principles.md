@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355446"
 ---
 # <a name="event-handling-principles"></a>Principes de la gestion des événements
 Il existe trois étapes communes à la gestion des événements. Vous devez :  

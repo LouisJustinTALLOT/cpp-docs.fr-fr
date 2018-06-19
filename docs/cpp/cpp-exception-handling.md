@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413906"
 ---
 # <a name="c-exception-handling"></a>Gestion d'exceptions C++
 Le langage C++ fournit une prise en charge intégrée des levées et des interceptions d'exceptions. Lorsque vous programmez en C++, vous devez presque toujours utiliser la prise en charge intégrée des exceptions C++, comme décrit dans cette section.  

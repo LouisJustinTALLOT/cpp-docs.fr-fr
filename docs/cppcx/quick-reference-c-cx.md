@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092556"
 ---
 # <a name="quick-reference-ccx"></a>Aide-mémoire (C++/CX)
 Le Windows Runtime prend en charge les applications de plateforme Windows universelle (UWP) qui s’exécutent uniquement dans un environnement de système d’exploitation fiable, utilisent les fonctions autorisées, les types de données et les appareils et sont distribuées via Microsoft Store. C + c++ / CX simplifient l’écriture d’applications pour Windows Runtime. Cet article est une référence rapide ; Pour obtenir une documentation plus complète, consultez [système de Type](../cppcx/type-system-c-cx.md) et [Extensions du composant pour les plateformes Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  

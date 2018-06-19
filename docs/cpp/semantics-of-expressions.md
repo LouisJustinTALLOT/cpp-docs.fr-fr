@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424124"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([La priorité des opérateurs et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans [Conventions lexicales](../cpp/lexical-conventions.md), montre les relations C++ opérateurs appliquent aux expressions.)  

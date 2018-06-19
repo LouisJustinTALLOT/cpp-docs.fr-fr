@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418837"
 ---
 # <a name="indirection-on-array-types"></a>Indirection sur les types tableau
 Utilisation de l’opérateur d’indirection (**\***) sur un *n*-type de tableau unidimensionnel génère une *n*tableau unidimensionnel de-1. Si *n* est 1, une valeur scalaire (ou élément de tableau) est transmis.  

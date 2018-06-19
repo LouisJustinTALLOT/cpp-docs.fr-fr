@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420202"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restrictions sur les gestionnaires d'exceptions
 La limitation principale concernant l'utilisation des gestionnaires d'exceptions dans le code tient au fait que vous ne pouvez pas utiliser une instruction `goto` pour accéder à un bloc d'instruction `__try`. À la place, vous devez entrer dans le bloc d'instruction via le flux de contrôle normal. Vous pouvez effectuer un saut hors d'un bloc d'instruction `__try` et imbriquer des gestionnaires d'exceptions comme vous le souhaitez.  

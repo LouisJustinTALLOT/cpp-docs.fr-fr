@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418885"
 ---
 # <a name="linkage-in-names-with-block-scope"></a>Liaison des noms avec la portée de bloc
 Les règles de liaison suivantes s’appliquent aux noms avec une portée de bloc (noms locaux) :  

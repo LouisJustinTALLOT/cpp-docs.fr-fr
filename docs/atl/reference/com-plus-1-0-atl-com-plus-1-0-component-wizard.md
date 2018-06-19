@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358203"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Assistant Composant COM+ 1.0 ATL
 Utilisez cette page de l’Assistant composant ATL COM + 1.0 pour spécifier le type d’interface et les interfaces supplémentaires à prendre en charge.  

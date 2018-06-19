@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420153"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl pour l’encapsulation au moment de la compilation (Modern C++)
 Le *pimpl idiome* est une technique C++ moderne pour masquer l’implémentation, afin de minimiser le couplage, and pour séparer les interfaces. Pimpl est l’abréviation de « pointeur vers l’implémentation. » Vous pouvez déjà être familiarisé avec le concept, mais il connaître d’autres noms comme l’idiome malicieusement ou du compilateur pare-feu.  

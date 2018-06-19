@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366014"
 ---
 # <a name="ccomvariant-class"></a>Classe de CComVariant
 Cette classe encapsule le `VARIANT` type, en fournissant un membre indiquant le type de données stockées.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093544"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Ajout d'une interface à votre fournisseur
 Déterminez l’objet auquel vous souhaitez ajouter l’interface (généralement, des objets data source, ensemble de lignes, commandes ou session créés par l’Assistant fournisseur OLE DB). Il est possible que l’objet que vous devez ajouter l’interface est par votre fournisseur ne prend pas en charge actuellement. Dans ce cas, exécutez l’Assistant fournisseur OLE DB ATL pour créer l’objet. Cliquez sur le projet dans l’affichage de classes, cliquez sur **ajouter une classe** à partir de la **ajouter** menu, puis sur **fournisseur OLE DB ATL**. Vous pouvez souhaiter placer le code d’interface dans un répertoire différent, puis copiez les fichiers à votre projet de fournisseur.  

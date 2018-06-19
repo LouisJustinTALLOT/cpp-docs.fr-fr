@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364540"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Options, Assistant Composant ASP ATL
 Utilisez cette page de l’Assistant composant Active Server Page ATL pour une efficacité accrue et de prise en charge de l’erreur pour l’objet.  

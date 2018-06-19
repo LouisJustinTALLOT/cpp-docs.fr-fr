@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365153"
 ---
 # <a name="security-identifier-global-functions"></a>Fonctions globales identificateur de sécurité
 Ces fonctions retournent des objets common SID bien connu.  

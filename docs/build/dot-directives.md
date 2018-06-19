@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367662"
 ---
 # <a name="dot-directives"></a>Directives précédées par un point
 Spécifiez des directives dot en dehors d’un bloc de description, au début d’une ligne. Directives dot commencent par un point (. ) et sont suivis par un signe deux-points ( :). Les onglets et les espaces sont autorisés. Les noms de directive point respectent la casse et sont en majuscules.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356545"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implémentation d’une fenêtre avec CWindowImpl
 Pour implémenter une fenêtre, dérivez une classe de `CWindowImpl`. Dans votre classe dérivée, déclarez une table des messages et les fonctions de gestionnaire de messages. Vous pouvez maintenant utiliser votre classe de trois façons différentes :  

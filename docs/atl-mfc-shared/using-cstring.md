@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361699"
 ---
 # <a name="using-cstring"></a>Utilisation de CString
 Les rubriques de cette section décrivent comment programmer avec `CString`. Pour la documentation de référence sur les `CString` de classe, consultez la documentation de [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  

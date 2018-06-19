@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418391"
 ---
 # <a name="data-type-ranges"></a>plages de types de données
 Les compilateurs Visual C++ 32 bits et 64 bits identifient les types de la table dans la suite de cet article.  

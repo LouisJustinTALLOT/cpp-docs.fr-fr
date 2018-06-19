@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415492"
 ---
 # <a name="routine-mappings"></a>Mappages de routine
 Les mappages de routine de texte générique sont définis dans TCHAR.H. `_tccpy` et `_tclen` sont mappés à des fonctions dans le modèle MBCS ; ils sont mappés à des macros ou des fonctions inline dans les modèles SBCS et Unicode par souci d’exhaustivité. Pour plus d’informations sur une routine de texte générique, consultez la rubrique d’aide sur la routine associée à `SBCS`, `_MBCS` ou `_UNICODE` correspondante.  

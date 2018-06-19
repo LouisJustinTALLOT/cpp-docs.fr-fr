@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367938"
 ---
 # <a name="image-format"></a>Format d'image
 Le format d’image exécutable est PE32 +. Images exécutables (DLL et exe) sont limitées à une taille maximale de 2 gigaoctets, pour l’adressage relatif avec un déplacement 32 bits peut être utilisée pour traiter les données d’image statique. Ces données incluent la table des adresses d’importation, les constantes de chaîne, les données globales statiques et ainsi de suite.  

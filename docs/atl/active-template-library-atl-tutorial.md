@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354866"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Didacticiel ATL (Active Template Library)
 ATL est conçu pour simplifier le processus de création de contrôles légers, souples et efficace. Ce didacticiel vous guide tout au long de la création d’un contrôle ActiveX, démonstration de nombreux éléments fondamentaux d’ATL et COM.  

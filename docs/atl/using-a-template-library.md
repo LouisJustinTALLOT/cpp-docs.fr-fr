@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357842"
 ---
 # <a name="using-a-template-library"></a>À l’aide d’une bibliothèque de modèles
 Un modèle est un peu comme une macro. Comme avec une macro, appel d’un modèle provoque son développement (avec une substitution de paramètres appropriée) au code que vous avez écrit. Toutefois, un modèle va plus loin que cette option pour autoriser la création de nouvelles classes basées sur les types que vous passez en tant que paramètres. Ces nouvelles classes implémentent les méthodes de type sécurisé d’effectuer l’opération exprimée dans votre code de modèle.  

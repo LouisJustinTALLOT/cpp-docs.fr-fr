@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423416"
 ---
 # <a name="value-types-modern-c"></a>Types de valeur (Modern C++)
 Les classes C++ sont par types de valeur par défaut. Cette rubrique fournit une présentation des types valeur et les problèmes liés à leur utilisation.  

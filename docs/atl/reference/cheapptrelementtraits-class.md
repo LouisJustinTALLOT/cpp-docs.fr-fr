@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360075"
 ---
 # <a name="cheapptrelementtraits-class"></a>Classe de CHeapPtrElementTraits
 Cette classe fournit des méthodes, les fonctions statiques et typedefs utiles lors de la création de collections de pointeurs de tas.  

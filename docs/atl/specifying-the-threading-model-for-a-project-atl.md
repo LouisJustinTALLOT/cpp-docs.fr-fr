@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359634"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Spécification du modèle de thread pour un projet (ATL)
 Les macros suivantes sont disponibles pour spécifier le modèle de thread d’un projet ATL :  

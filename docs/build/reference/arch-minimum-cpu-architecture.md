@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368988"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (Architecture d'UC minimale)
 Les options de l’architecture spécifient l’architecture pour la génération de code. Sélectionnez l’architecture matérielle de base que vous travaillez pour voir/arch des options pour cette plateforme cible.  

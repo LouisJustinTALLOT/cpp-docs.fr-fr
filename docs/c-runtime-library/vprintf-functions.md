@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418378"
 ---
 # <a name="vprintf-functions"></a>Fonctions vprintf
 Chacune de ces fonctions `vprintf` prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans une destination particulière. Les fonctions diffèrent dans la validation des paramètres effectuée, l’utilisation de chaînes à caractères larges ou sur un octet, la destination de sortie et la prise en charge de la spécification de l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.  

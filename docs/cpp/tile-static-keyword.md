@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422161"
 ---
 # <a name="tilestatic-keyword"></a>tile_static, mot clé
 Le mot clé `tile_static` sert à déclarer une variable accessible par tous les threads dans une mosaïque de threads. La durée de vie des variables commence lorsque l'exécution atteint le point de déclaration et se termine lorsque la fonction noyau est retournée. Pour plus d’informations sur l’utilisation de mosaïques, consultez [à l’aide de mosaïques](../parallel/amp/using-tiles.md).  

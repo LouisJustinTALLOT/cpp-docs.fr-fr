@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417273"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Comment : établir une interface entre le code exceptionnel et le code non exceptionnel
 Cet article explique comment implémenter une gestion cohérente des exceptions dans un module C++, et comment convertir ces exceptions vers et depuis des codes d'erreur aux limites de l'exception.  

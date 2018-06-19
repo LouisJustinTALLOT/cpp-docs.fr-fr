@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421271"
 ---
 # <a name="selection-statements-c"></a>Instructions de sélection (C++)
 Les instructions de sélection C++, [si](../cpp/if-else-statement-cpp.md) et [commutateur](../cpp/switch-statement-cpp.md), permettent d’exécuter de façon conditionnelle des sections de code.  

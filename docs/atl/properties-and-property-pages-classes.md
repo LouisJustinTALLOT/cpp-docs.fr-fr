@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355005"
 ---
 # <a name="properties-and-property-pages-classes"></a>Propriétés et des Classes de Pages de propriété
 Les classes suivantes prennent en charge les propriétés et les pages de propriétés :  

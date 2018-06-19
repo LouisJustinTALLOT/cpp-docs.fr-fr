@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360186"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Configuration d’un lien statique avec le Code Registrar (C++ uniquement)
 Les clients C++ peuvent créer un lien statique vers le code de Registrar. La liaison statique de l’Analyseur de Registrar ajoute les environ 5 Ko à une version Release.  

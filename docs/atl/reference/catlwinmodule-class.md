@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358050"
 ---
 # <a name="catlwinmodule-class"></a>Classe de CAtlWinModule
 Cette classe prend en charge pour les composants de fenêtrage ATL.  

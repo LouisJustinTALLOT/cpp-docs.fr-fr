@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355136"
 ---
 # <a name="commandhandler"></a>CommandHandler
 `CommandHandler` est la fonction identifiée par le troisième paramètre de la `COMMAND_HANDLER` macro dans votre table des messages.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355572"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>Fonction CAtlServiceModuleT::ServiceMain
 Le Gestionnaire de contrôle des services (SCM) appelle `ServiceMain` lorsque vous ouvrez l’application Services du panneau, sélectionnez le service, puis cliquez sur **Démarrer**.  

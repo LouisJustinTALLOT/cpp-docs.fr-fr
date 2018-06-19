@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359141"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Classe de CPrimitiveElementTraits
 Cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée des types de données primitifs.  

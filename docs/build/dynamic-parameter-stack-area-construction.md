@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367470"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Construction dynamique d'une zone pour la pile de paramètres
 Si un pointeur de frame est utilisé, l’option existe pour créer dynamiquement la zone paramètre de la pile. Cela n’est pas actuellement effectuée dans le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilateur.  

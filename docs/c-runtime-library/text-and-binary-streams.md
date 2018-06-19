@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410929"
 ---
 # <a name="text-and-binary-streams"></a>Flux texte et binaires
 Un flux de texte se compose d'une ou de plusieurs lignes de texte qui peuvent être écrites sur un affichage orienté texte afin qu'elles puissent être lues. Lors de la lecture d'un flux de texte, le programme lit `NL` (saut de ligne) à la fin de chaque ligne. Lors de l'écriture dans un flux de texte, le programme écrit `NL` pour signaler la fin d'une ligne. Pour faire correspondre différentes conventions dans les environnements cibles pour représenter le texte contenu dans les fichiers, les fonctions de la bibliothèque peuvent modifier le nombre et les représentations des caractères transmis entre le programme et un flux de texte.  

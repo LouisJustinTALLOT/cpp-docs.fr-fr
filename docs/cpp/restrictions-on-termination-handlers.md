@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420580"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restrictions sur les gestionnaires de terminaison
 Vous ne pouvez pas utiliser une instruction `goto` pour accéder à un bloc d'instructions `__try` ou à un bloc d'instructions `__finally`. À la place, vous devez entrer dans le bloc d'instruction via le flux de contrôle normal. (Vous pouvez toutefois sauter hors d'un bloc d'instructions `__try`.) En outre, vous ne pouvez pas imbriquer un gestionnaire d'exceptions ou un gestionnaire de terminaisons dans un bloc `__finally`.  

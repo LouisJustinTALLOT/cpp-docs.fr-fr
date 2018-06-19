@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057990"
 ---
 # <a name="page"></a>PAGE
 La première directive définit la ligne *longueur* et caractère *largeur* de la liste de programme. Si aucun argument n’est fourni, génère un saut de page. La deuxième directive incrémente le numéro de section et réinitialise le numéro de page à 1.  
