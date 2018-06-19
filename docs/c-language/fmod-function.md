@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384409"
 ---
 # <a name="fmod-function"></a>fmod, fonction
 **ANSI 4.5.6.4** Si une erreur de domaine se produit ou si zéro est retourné lorsque la fonction `fmod` a un deuxième argument égal à zéro  

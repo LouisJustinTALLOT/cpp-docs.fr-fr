@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385609"
 ---
 # <a name="preprocessing-directives"></a>Directives de prétraitement
 -   [Constantes de caractère et inclusion conditionnelle](../c-language/character-constants-and-conditional-inclusion.md)  

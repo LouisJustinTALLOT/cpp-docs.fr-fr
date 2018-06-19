@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379235"
 ---
 # <a name="understanding-the-helper-function"></a>Présentation de la fonction d'assistance
 La fonction d’assistance pour la prise en charge de l’éditeur de liens le chargement différé est ce qui charge réellement la DLL au moment de l’exécution. Vous pouvez modifier la fonction d’assistance pour personnaliser son comportement en écrivant votre propre fonction et en le liant à votre programme au lieu d’utiliser la fonction d’assistance fournie dans Delayimp.lib. Une fonction d’assistance sert toutes les DLL à chargement différé.  

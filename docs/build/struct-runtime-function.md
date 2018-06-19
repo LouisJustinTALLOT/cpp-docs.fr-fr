@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379924"
 ---
 # <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION, structure
 Gestion des exceptions basée sur une table requiert une entrée de table pour toutes les fonctions allouer de l’espace de pile ou d’appeler une autre fonction (par exemple, les fonctions non-feuille). Entrées de la table (fonction) ont le format suivant :  

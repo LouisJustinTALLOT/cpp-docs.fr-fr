@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130944"
 ---
 # <a name="hashsetrend-stlclr"></a>hash_set::rend (STL/CLR)
 Désigne la fin de la séquence contrôlée inverse.  

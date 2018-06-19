@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353703"
 ---
 # <a name="can-i-reuse-a-host-window"></a>Puis-je réutiliser une fenêtre hôte ?
 Il est déconseillé de réutiliser les fenêtres hôtes. Pour garantir la robustesse de votre code, vous devez lier la durée de vie de votre fenêtre hôte à la durée de vie d’un contrôle unique.  

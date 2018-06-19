@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382846"
 ---
 # <a name="initialization"></a>Initialisation
 Un « initialiseur » est une valeur ou une séquence de valeurs à assigner à la variable déclarée. Vous pouvez affecter une valeur initiale à une variable en appliquant un initialiseur au déclarateur dans la déclaration de variable. La valeur ou les valeurs de l'initialiseur sont assignées à la variable.  

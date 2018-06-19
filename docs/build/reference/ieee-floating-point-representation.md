@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379430"
 ---
 # <a name="ieee-floating-point-representation"></a>Représentation à virgule flottante IEEE
 Microsoft Visual C++ est compatible avec les standards numériques IEEE. Il existe trois variétés de nombres réels. Real\*4 et réel\*8 sont utilisés dans Visual C++. Real\*4 est déclaré à l’aide du mot **float**. Real\*8 est déclaré à l’aide du mot **double**. Dans la programmation de Windows 32 bits, le `long double` est mappé au type de données **double**. Il est toutefois prise en charge du langage d’assembly pour effectuer des calculs à l’aide du véritable * type de données de 10.  

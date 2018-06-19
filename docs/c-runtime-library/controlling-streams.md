@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388813"
 ---
 # <a name="controlling-streams"></a>Contrôle des flux
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) retourne l’adresse d’un objet de type `FILE`. Vous utilisez cette adresse en tant qu’argument `stream` pour plusieurs fonctions de bibliothèque afin d’effectuer diverses opérations sur un fichier ouvert. Pour un flux d’octets, toutes les entrées surviennent comme si chaque caractère était lu en appelant [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) et toutes les sorties surviennet comme si chaque caractère était écrit en appelant [fputc](../c-runtime-library/reference/fputc-fputwc.md). Pour un flux larges, toutes les entrées surviennent comme si chaque caractère était lu en appelant [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) et toutes les sorties surviennet comme si chaque caractère était écrit en appelant [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

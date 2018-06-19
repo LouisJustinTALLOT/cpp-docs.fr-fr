@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380260"
 ---
 # <a name="targets"></a>Cibles
 Dans une ligne de dépendance, spécifiez une ou plusieurs cibles, à l’aide de n’importe quel nom de fichier valide, le nom de répertoire, ou [pseudocible](../build/pseudotargets.md). Séparez plusieurs cibles par un ou plusieurs des espaces ou des tabulations. Les cibles ne respectent pas la casse. Chemins d’accès sont autorisées avec les noms de fichiers. Une cible ne peut pas dépasser 256 caractères. Si la cible qui précède le signe deux-points est un caractère unique, utilisez un espace de séparation ; Sinon, NMAKE interprète la combinaison lettre-signe deux-points comme un spécificateur de lecteur.  

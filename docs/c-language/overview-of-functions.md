@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385804"
 ---
 # <a name="overview-of-functions"></a>Vue d'ensemble des fonctions
 Les fonctions doivent avoir une définition et une déclaration, même si une définition peut servir de déclaration si celle-ci apparaît avant l'appel de la fonction. La définition de fonction comprend le corps de la fonction, c'est-à-dire le code qui s'exécute lorsque la fonction est appelée.  

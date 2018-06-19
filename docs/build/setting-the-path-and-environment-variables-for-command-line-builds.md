@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381133"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Définir le chemin d’accès et les Variables d’environnement pour les versions de ligne de commande
 

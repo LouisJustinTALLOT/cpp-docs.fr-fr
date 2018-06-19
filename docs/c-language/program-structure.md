@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385954"
 ---
 # <a name="program-structure"></a>Structure du programme
 Cette section donne une vue d'ensemble des programmes C et de l'exécution des programmes. Les termes et les fonctionnalités essentielles à la compréhension des programmes et des composants C sont également expliqués. Les rubriques abordées sont les suivantes :  

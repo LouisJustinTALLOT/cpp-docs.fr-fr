@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387630"
 ---
 # <a name="example-program"></a>Exemple de programme
 Le programme source C suivant se compose de deux fichiers sources. Il fournit une présentation de certaines des déclarations et définitions possibles dans un C programme. Les sections suivantes de cette documentation décrivent comment écrire ces déclarations, définitions et initialisations, et comment utiliser des mots clés C tels que **static** et `extern`. La fonction `printf` est déclarée dans le fichier d'en-tête C STDIO.H.  

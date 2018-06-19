@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392359"
 ---
 # <a name="initializing-scalar-types"></a>Initialisation des types scalaires
 Lors de l'initialisation de types scalaires, la valeur de *assignment-expression* est assignée à la variable. Les règles de conversion pour l'assignation s'appliquent. (Consultez [Conversions de type](../c-language/type-conversions-c.md) pour plus d'informations sur les règles de conversion.)  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353886"
 ---
 # <a name="date-and-time-database-support"></a>Date et heure : prise en charge de base de données
 Depuis la version 4.0, bases de données MFC programmation utilise les [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes pour représenter les données de date et d’heure. Ces classes, également utilisés dans Automation, sont dérivées de la classe [COleVariant](../mfc/reference/colevariant-class.md). Ils fournissent une meilleure prise en charge pour la gestion des données de date et d’heure que [CTime](../atl-mfc-shared/reference/ctime-class.md) et [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  

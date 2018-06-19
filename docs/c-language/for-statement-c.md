@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389279"
 ---
 # <a name="for-statement-c"></a>for, instruction (C)
 L’instruction **for** vous permet de répéter une instruction, ou une instruction composée, un nombre de fois spécifié. Le corps d’une instruction **for** est exécuté zéro ou plusieurs fois jusqu’à ce qu’une condition facultative ait la valeur false. Vous pouvez utiliser des expressions facultatives dans l’instruction **for** pour initialiser et modifier des valeurs pendant l’exécution de l’instruction **for**.  

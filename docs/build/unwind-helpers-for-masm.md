@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380247"
 ---
 # <a name="unwind-helpers-for-masm"></a>Déroulement de l'assistance pour MASM
 Pour écrire des routines d’assembly correctes, il existe un jeu de pseudo-opérations utilisables en parallèle avec les instructions d’assembly réelles pour créer l’approprié .pdata et .xdata. Il existe également un ensemble de macros qui fournissent une utilisation simplifiée des pseudo-opérations pour leurs utilisations les plus courantes.  

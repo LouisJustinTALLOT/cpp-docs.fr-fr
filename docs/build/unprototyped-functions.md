@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380470"
 ---
 # <a name="unprototyped-functions"></a>Fonctions non prototypées
 Pour les fonctions pas entièrement prototypées, l’appelant passe les valeurs entières en tant qu’entiers et les valeurs à virgule flottante double précision. Pour les valeurs à virgule flottante, le Registre entier et le Registre à virgule flottante contiendra la valeur float si l’appelé attend la valeur dans les registres d’entiers.  

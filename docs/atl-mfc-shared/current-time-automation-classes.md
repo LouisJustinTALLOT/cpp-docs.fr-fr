@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353974"
 ---
 # <a name="current-time-automation-classes"></a>Heure actuelle : Les Classes Automation
 La procédure suivante montre comment créer un `COleDateTime` de l’objet et l’initialiser avec l’heure actuelle.  

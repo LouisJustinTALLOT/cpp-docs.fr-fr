@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380319"
 ---
 # <a name="return-values-c"></a>Valeurs de retour (C++)
 Une valeur de retour scalaire qui peut être stockée sur 64 bits est retournée via RAX. Ceci inclut les types __m64. Y compris les valeurs float, double et types de vecteur, tels que les types non scalaires [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) sont retournés dans XMM0. L'état des bits non utilisés dans la valeur retournée dans RAX ou XMM0 est non défini.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391689"
 ---
 # <a name="parameters"></a>Paramètres
 Les arguments sont les noms des valeurs passées à une fonction par un appel de fonction. Les paramètres sont les valeurs que la fonction compte recevoir. Dans un prototype de fonction, les parenthèses suivant le nom de la fonction contiennent une liste complète des types et des paramètres de la fonction. Les déclarations de paramètres spécifient les types, les tailles et les identificateurs des valeurs stockées dans les paramètres.  

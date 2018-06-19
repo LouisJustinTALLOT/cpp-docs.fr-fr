@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137573"
 ---
 # <a name="listunique-stlclr"></a>list::unique (STL/CLR)
 Supprime des éléments adjacents qui réussissent un test spécifié.  

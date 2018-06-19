@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391257"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erreurs potentielles de passage d'objets CRT entre frontières DLL
 Lorsque vous passez des objets CRT tels que des handles de fichiers, des paramètres régionaux et des variables d'environnement dans ou hors d'une DDL (appels de fonction sur la limite DDL), un comportement inattendu peut se produire si la DDL, ainsi que les fichiers qui l'appellent, utilisent des copies différentes des librairies CRT.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386902"
 ---
 # <a name="array-declarations"></a>Déclarations de tableau
 Une « déclaration de tableau » nomme le tableau et spécifie le type de ses éléments. Elle peut également définir le nombre d'éléments du tableau. Une variable de type tableau est considérée comme un pointeur vers le type des éléments du tableau.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385043"
 ---
 # <a name="storage-of-bit-fields"></a>Stockage des champs de bits
 **ANSI 3.5.2.1** L'ordre d'allocation des champs de bits dans un int  

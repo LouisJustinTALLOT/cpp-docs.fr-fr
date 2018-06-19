@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383977"
 ---
 # <a name="initializing-strings"></a>Initialisation de chaînes
 Vous pouvez initialiser un tableau de caractères (ou des caractères larges) avec un littéral de chaîne (ou un littéral de chaîne étendu). Exemple :  

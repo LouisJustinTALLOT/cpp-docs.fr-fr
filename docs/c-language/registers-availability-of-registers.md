@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383941"
 ---
 # <a name="registers-availability-of-registers"></a>Registres : disponibilité des registres
 **ANSI 3.5.1** Étendue à laquelle des objets peuvent être placés dans des registres au moyen du spécificateur de classe de stockage de registre  

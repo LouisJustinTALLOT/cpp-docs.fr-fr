@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385762"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Spécificateurs de classe de stockage pour les déclarations de niveau interne
 Vous pouvez utiliser chacun des quatre éléments terminaux *storage-class-specifier* pour les déclarations de variables au niveau interne. Lorsque vous omettez le *storage-class-specifier* d'une déclaration, la classe de stockage par défaut est **auto**. Par conséquent, le mot clé **auto** est rarement vu dans un programme C.  

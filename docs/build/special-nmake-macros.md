@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380012"
 ---
 # <a name="special-nmake-macros"></a>Macros spéciales de NMAKE
 NMAKE propose plusieurs macros spéciales représentant différents noms de fichiers et les commandes. Une utilisation de certaines de ces macros est dans les règles d’inférence prédéfinies. Comme toutes les macros, les macros fournies par NMAKE respectent la casse.  

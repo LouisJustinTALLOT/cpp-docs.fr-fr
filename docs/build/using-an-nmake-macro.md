@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380574"
 ---
 # <a name="using-an-nmake-macro"></a>Utilisation d'une macro NMAKE
 Pour utiliser une macro, placez son nom entre parenthèses précédées du signe dollar ($) comme suit.  

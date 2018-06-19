@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384279"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Formes obsolètes des déclarations et définitions de fonctions
 En comparaison à la syntaxe recommandée par la norme C ANSI, les anciennes définitions et déclarations de fonction utilisent des règles légèrement différentes pour déclarer des paramètres. Premièrement, les anciennes déclarations n'ont pas de liste de paramètres. Ensuite, dans la définition de fonction, les paramètres sont répertoriés, mais leurs types ne sont pas déclarés dans la liste de paramètres. Les déclarations de type précèdent l'instruction composée constituant le corps de la fonction. L'ancienne syntaxe est obsolète et ne doit pas être utilisée dans le nouveau code. Le code utilisant l'ancienne syntaxe est cependant toujours pris en charge. Cet exemple montre les formes obsolètes des déclarations et des définitions :  

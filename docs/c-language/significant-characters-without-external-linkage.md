@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385232"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Caractères significatifs sans liaison externe
 **ANSI 3.1.2** Nombre de caractères significatifs sans liaison externe  

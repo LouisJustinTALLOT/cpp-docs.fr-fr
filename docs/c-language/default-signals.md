@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382888"
 ---
 # <a name="default-signals"></a>Signaux par défaut
 **ANSI 4.7.1.1** Si l’équivalent de **signal (***sig***, SIG_DFL)** n’est pas exécuté avant l’appel d’un gestionnaire de signal, le blocage du signal effectué  

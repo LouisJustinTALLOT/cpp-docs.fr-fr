@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385538"
 ---
 # <a name="time-zone"></a>Fuseau horaire
 **ANSI 4.12.1** Fuseau horaire et heure d'été locaux  

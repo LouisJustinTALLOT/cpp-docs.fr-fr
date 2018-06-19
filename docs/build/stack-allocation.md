@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380600"
 ---
 # <a name="stack-allocation"></a>Allocation de piles
 Prologue d’une fonction est responsable de l’allocation d’espace de pile pour les variables locales, les registres enregistrés, les paramètres de la pile et paramètres de Registre.  

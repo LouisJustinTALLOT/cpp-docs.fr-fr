@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458912"
 ---
 # <a name="compiler-error-c3533"></a>Erreur du compilateur C3533
 'type' : un paramètre ne peut pas avoir un type contenant 'auto'  

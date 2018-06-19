@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383902"
 ---
 # <a name="punctuation-and-special-characters"></a>Ponctuation et caractères spéciaux
 La ponctuation et les caractères spéciaux du jeu de caractères C ont plusieurs utilisations, qui varient de l’organisation du texte de programme à la définition des tâches effectuées par le compilateur ou le programme compilé. Ils ne spécifient pas d'opération à effectuer. Certains symboles de ponctuation sont également des opérateurs (consultez [Opérateurs](../c-language/c-operators.md)). Le compilateur détermine leur utilisation à partir du contexte.  

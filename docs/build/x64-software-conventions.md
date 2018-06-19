@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380886"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
 Cette section décrit la méthodologie de convention d’appel Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], extension 64 bits à le x86 architecture.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354615"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Notions de base des contrôles composites ATL
 Un contrôle composite est un type de contrôle ActiveX qui peut contenir (semblable à une boîte de dialogue) autres contrôles ActiveX ou Windows. Une fois le contrôle composite est généré, il peut être inséré n’importe où qu'un contrôle ActiveX peut être hébergé.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391624"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversions depuis les types intégraux signés
 Lorsqu'un entier signé est converti en entier non signé de taille égale ou supérieure et que la valeur de l'entier signé n'est pas négative, la valeur reste inchangée. La conversion s'effectue en étendant le signe de l'entier signé. Un entier signé est converti en entier signé plus court en tronquant les bits de poids fort. Le résultat est interprété comme une valeur non signée, comme illustré dans cet exemple.  

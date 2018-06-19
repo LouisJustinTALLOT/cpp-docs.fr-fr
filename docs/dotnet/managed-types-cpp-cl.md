@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135857"
 ---
 # <a name="managed-types-ccl"></a>Types managés (C++/CL)
 La syntaxe de la déclaration des types managés et à créer et utiliser des objets de ces types a été sensiblement modifiée entre les Extensions managées pour C++ vers Visual C++. Cela a été fait pour favoriser leur intégration dans le système de type ISO-C++. Ces modifications sont présentées en détail dans les sous-sections suivantes.  

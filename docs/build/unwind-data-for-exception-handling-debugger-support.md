@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380431"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Données de déroulement pour la gestion des exceptions et la prise en charge du débogueur
 Cette section décrit les structures de données requis pour la gestion des exceptions et le support de débogage.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382492"
 ---
 # <a name="arguments-to-main"></a>Arguments pour main
 **ANSI 2.1.2.2.1** Sémantique des arguments de main  

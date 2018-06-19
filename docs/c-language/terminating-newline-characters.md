@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385108"
 ---
 # <a name="terminating-newline-characters"></a>Fin des caractères de saut de ligne
 **ANSI 4.9.2** Indique si la dernière ligne d'un flux de texte requiert un caractère de saut de ligne de fin  

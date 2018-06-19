@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380286"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>Cibles dans des blocs de description multiples
 Pour mettre à jour une cible dans plusieurs blocs de description à l’aide des commandes différentes, spécifiez deux points consécutifs ( :) entre les cibles et les objets dépendants.  

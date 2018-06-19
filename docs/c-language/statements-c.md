@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387776"
 ---
 # <a name="statements-c"></a>Instructions (C)
 Les instructions d'un programme C contrôlent le flux d'exécution du programme. En C, comme dans d'autres langages de programmation, plusieurs genres d'instructions sont disponibles pour exécuter des boucles, pour sélectionner d'autres instructions à exécuter et pour transférer le contrôle. Après une brève [vue d'ensemble de la syntaxe des instructions](../c-language/overview-of-c-statements.md), cette section décrit les instructions C par ordre alphabétique :  

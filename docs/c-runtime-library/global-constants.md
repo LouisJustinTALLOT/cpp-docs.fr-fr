@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391468"
 ---
 # <a name="global-constants"></a>Constantes globales
 La bibliothèque Runtime de Microsoft contient des définitions pour les constantes globales utilisées par les routines de bibliothèque. Pour utiliser ces constantes, incluez les fichiers d’en-tête appropriés comme indiqué dans la description de chaque constante. Les constantes globales sont répertoriées dans le tableau suivant.  

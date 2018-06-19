@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392144"
 ---
 # <a name="data-type-constants"></a>Constantes de type de données
 Les constantes de type de données sont des plages de valeurs dépendant de l’implémentation qui sont autorisées pour les types de données intégraux. Les constantes répertoriées ci-dessous donnent les plages des types de données intégraux, et sont définies dans LIMITS.H.  

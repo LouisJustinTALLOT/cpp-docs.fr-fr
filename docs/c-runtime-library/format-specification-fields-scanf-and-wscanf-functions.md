@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391946"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Champs de spécification de format : fonctions scanf et wscanf
 Les informations ici s'appliquent à l'ensemble de la famille de fonctions `scanf`, y compris les versions sécurisées, et décrivent les symboles utilisés pour indiquer aux fonctions `scanf` comment analyser le flux d'entrée, tel que le flux d'entrée `stdin` pour `scanf`, en valeurs insérées dans les variables de programme.  

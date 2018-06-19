@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380449"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caractères spéciaux dans un makefile
 Pour utiliser un caractère spécial NMAKE comme un caractère littéral, placez un point d’insertion (^) placés devant lui. NMAKE ignore les signes qui précèdent les autres caractères. Les caractères spéciaux sont :  

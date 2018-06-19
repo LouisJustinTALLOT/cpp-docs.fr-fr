@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381783"
 ---
 # <a name="converting-multibyte-characters"></a>Conversion de caractères multioctets
 **ANSI 3.1.3.4** Paramètres régionaux actuels utilisés pour convertir des caractères multioctets en caractères larges correspondants (codes) pour une constante à caractères larges  

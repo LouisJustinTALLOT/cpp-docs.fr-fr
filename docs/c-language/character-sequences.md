@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382388"
 ---
 # <a name="character-sequences"></a>Séquences de caractères
 **ANSI 3.8.2** Mappage des séquences de caractères de fichier source  

@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379638"
 ---
 # <a name="managing-a-library"></a>Gestion d'une bibliothèque
 Le mode par défaut pour LIB consiste à créer ou modifier une bibliothèque d’objets COFF. LIB s’exécute dans ce mode lorsque vous ne spécifiez pas /EXTRACT (pour copier un objet dans un fichier) ou /DEF (pour générer une bibliothèque d’importation).  

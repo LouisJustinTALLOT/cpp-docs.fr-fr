@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353856"
 ---
 # <a name="data-types-classes"></a>Classes de Types de données
 Les classes suivantes encapsulent des types de données C++ :  

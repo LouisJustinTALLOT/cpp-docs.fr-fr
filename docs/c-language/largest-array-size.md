@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384478"
 ---
 # <a name="largest-array-size"></a>Taille de tableau la plus grande
 **ANSI 3.3.3.4, 4.1.1** Le type d’entier requis pour conserver la taille maximale d’un tableau, c’est-à-dire la taille de **size_t**.  

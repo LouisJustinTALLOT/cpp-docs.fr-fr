@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389174"
 ---
 # <a name="type-int"></a>Type int
 La taille d'un élément `int` signé ou non signé est la taille standard d'un entier sur un ordinateur particulier. Par exemple, dans les systèmes d'exploitation 16 bits, le type `int` inclut habituellement 16 bits, ou 2 octets. Dans les systèmes d'exploitation 32 bits, le type `int` inclut habituellement 32 bits, ou 4 octets. Ainsi, le type `int` équivaut au type `short int` ou **long int**, et le type `unsigned int` équivaut au type **unsigned short** ou `unsigned long`, selon l'environnement cible. Les types `int` représentent tous des valeurs signées, sauf indication contraire.  

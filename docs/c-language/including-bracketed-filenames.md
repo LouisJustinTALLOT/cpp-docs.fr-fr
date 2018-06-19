@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383824"
 ---
 # <a name="including-bracketed-filenames"></a>Intégration des noms de fichiers entre crochets
 **ANSI 3.8.2** Méthode utilisée pour localiser les fichiers à inclure  

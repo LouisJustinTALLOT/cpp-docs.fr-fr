@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353961"
 ---
 # <a name="aggregation"></a>Agrégation
 Il existe des cas de circonstances implémentation d’un objet pour tirer parti des services offerts par un autre objet prégénéré. En outre, il souhaite que cet objet s’affichent en tant que dans le cadre de la première. COM réalise cet objectif grâce à la relation contenant-contenu et d’agrégation.  

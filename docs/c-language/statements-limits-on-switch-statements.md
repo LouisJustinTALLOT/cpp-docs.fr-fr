@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385739"
 ---
 # <a name="statements-limits-on-switch-statements"></a>Instructions : limites dans des instructions switch
 **ANSI 3.6.4.2** Nombre maximal de valeurs **case** dans une instruction `switch`  

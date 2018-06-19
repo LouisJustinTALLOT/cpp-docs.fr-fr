@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388826"
 ---
 # <a name="escape-sequences"></a>Séquences d'échappement
 Les combinaisons de caractères composées d'une barre oblique inverse (**\\**) suivie d'une lettre ou d'une combinaison de chiffres sont appelées "séquences d'échappement". Pour représenter un caractère de saut de ligne, un guillemet simple ou certains autres caractères dans une constante caractère, vous devez utiliser des séquences d'échappement. Une séquence d'échappement est considérée comme un caractère unique et est donc valide en tant que constante caractère.  

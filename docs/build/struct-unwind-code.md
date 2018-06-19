@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390097"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 Le tableau des codes de déroulement est utilisé pour enregistrer la séquence d’opérations dans le prologue qui affectent les registres non volatils et RSP. Chaque élément de code a le format suivant :  

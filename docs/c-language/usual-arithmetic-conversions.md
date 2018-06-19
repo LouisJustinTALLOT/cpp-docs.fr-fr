@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388855"
 ---
 # <a name="usual-arithmetic-conversions"></a>Conversions arithmétiques courantes
 La plupart des opérateurs C effectuent des conversions de type pour faire des opérandes d’une expression un type commun ou pour étendre les valeurs courtes à la taille d’entier utilisée dans les opérations d’ordinateur. Les conversions exécutées par les opérateurs C dépendent de l'opérateur spécifique et du type de l'opérande ou des opérandes. Toutefois, de nombreux opérateurs exécutent des conversions similaires sur les opérandes de types intégraux et flottants. Ces conversions sont appelées « conversions arithmétiques ». La conversion d'une valeur d'opérande en un type compatible n'entraîne aucune modification de sa valeur.  

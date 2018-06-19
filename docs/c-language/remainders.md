@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382479"
 ---
 # <a name="remainders"></a>Restes
 **ANSI 3.3.5** Signe du reste de la division d'entier  

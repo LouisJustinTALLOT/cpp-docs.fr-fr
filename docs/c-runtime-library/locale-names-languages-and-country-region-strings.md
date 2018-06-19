@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391813"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms, aux langues, au pays et à la région
 L'argument *locale* des fonctions `setlocale` et `_create_locale` peut être défini en utilisant les noms de paramètres régionaux, les langages, les codes de pays ou de région, et les pages de codes prises en charge par l'API de NLS Windows. L'argument *locale* prend la forme suivante :  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354539"
 ---
 # <a name="atlmfc-concepts"></a>Concepts ATL/MFC
 Cette section fournit des rubriques conceptuelles et basées sur des tâches pour vous aider à programmer avec les classes partagées entre la bibliothèque ATL (Active Template) et la bibliothèque Microsoft Foundation classes (MFC).  

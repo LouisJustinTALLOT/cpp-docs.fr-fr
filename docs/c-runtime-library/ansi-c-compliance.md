@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387897"
 ---
 # <a name="ansi-c-compliance"></a>Conformité ANSI C
 La convention d’affectation de noms pour tous les identificateurs spécifiques à Microsoft dans le système d’exécution (par exemple, les fonctions, macros, constantes, variables et définitions de type) est compatible ANSI. Dans cette documentation, toute fonction du Runtime qui suit les normes ANSI/ISO C est indiquée comme étant compatible ANSI. Les applications compatibles ANSI doivent utiliser uniquement ces fonctions compatibles ANSI.  

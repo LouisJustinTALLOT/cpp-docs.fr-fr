@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381927"
 ---
 # <a name="c-language-syntax-summary"></a>Résumé de syntaxe du langage C
 Cette section fournit la description complète du langage C et des fonctionnalités du langage C spécifiques à Microsoft. Vous pouvez utiliser la notation de syntaxe dans cette section pour déterminer la syntaxe exacte pour n’importe quel composant de langage. L’explication de la syntaxe s’affiche dans la section de ce manuel, où vous trouverez une rubrique.  

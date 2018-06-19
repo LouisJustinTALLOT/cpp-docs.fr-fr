@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384292"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversions vers et depuis les types pointeur
 Un pointeur vers un type valeur peut être converti en un pointeur vers un type différent. Toutefois, le résultat peut être indéfini en raison des spécifications d'alignement et des tailles de types différents présents dans le stockage. Un pointeur vers un objet peut être converti en un pointeur vers un objet dont le type requiert moins d'alignement ou un alignement aussi strict, et inversement sans modification.  

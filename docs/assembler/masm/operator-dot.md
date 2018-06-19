@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058161"
 ---
 # <a name="operator-"></a>., opérateur
 Le premier opérateur retourne *expression* ainsi que le décalage de *champ* dans sa structure ou l’union. Le deuxième opérateur retourne la valeur à l’emplacement vers lequel pointé *inscrire* ainsi que le décalage de *champ* dans sa structure ou l’union.  

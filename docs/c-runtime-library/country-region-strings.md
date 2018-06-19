@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391442"
 ---
 # <a name="countryregion-strings"></a>Chaînes de pays et de région
 Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir la liste des noms de pays/région qui sont pris en charge par les différentes versions du système d’exploitation Windows, consultez les [Informations de référence de l’API NLS (National Language Support)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Dans les listes, la chaîne de pays/région peut être une des valeurs de la colonne **Locale - Language Country/Region** ou une des abréviations de la colonne **Country or Region name abbreviation**. Pour plus d’informations sur la prise en charge linguistique dans les systèmes d’exploitation Windows par version, consultez [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier).  

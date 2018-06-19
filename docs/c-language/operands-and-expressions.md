@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383447"
 ---
 # <a name="operands-and-expressions"></a>Opérandes et expressions
 Un « opérande » est une entité sur laquelle agit un opérateur. Une « expression » est une séquence d'opérateurs et d'opérandes qui exécute toutes les combinaisons des actions suivantes :  

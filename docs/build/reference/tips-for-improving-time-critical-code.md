@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379508"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Conseils pour l'amélioration du code à durée critique
 L'écriture d'un code rapide demande de comprendre tous les aspects de votre application, ainsi que la manière dont elle interagit avec le système. Cette rubrique suggère des alternatives à certaines techniques de codage évidentes pour vous aider à garantir que les parties critiques en termes de temps de votre code fonctionnent correctement.  

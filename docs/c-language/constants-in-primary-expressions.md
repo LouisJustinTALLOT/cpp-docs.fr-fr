@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382271"
 ---
 # <a name="constants-in-primary-expressions"></a>Constantes dans les expressions primaires
 Un opérande constant a la valeur et le type de la valeur constante qu’il représente. Une constante caractère a le type `int`. Une constante entière a un type `int`, **long**, `unsigned int` ou `unsigned long`, selon la taille de l'entier et la manière dont la valeur est spécifiée. Reportez-vous à l'article [Constantes](../c-language/c-constants.md) pour plus d'informations.  

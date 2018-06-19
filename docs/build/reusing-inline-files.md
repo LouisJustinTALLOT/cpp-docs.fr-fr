@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379898"
 ---
 # <a name="reusing-inline-files"></a>Réutilisation de fichiers inline
 Pour réutiliser un fichier inline, spécifiez <<*nom de fichier* où le fichier est défini et utilisé tout d’abord, puis réutiliser *nom de fichier* sans << plus loin dans la même ou à une autre commande. Exécutez la commande pour créer le fichier inline avant de toutes les commandes qui utilisent le fichier.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387048"
 ---
 # <a name="if-statement-c"></a>if, instruction (C)
 L’instruction **if** contrôle le branchement conditionnel. Le corps d'une instruction **if** est exécuté si la valeur de l'expression est différente de zéro. La syntaxe de l'instruction **if** a deux formes.  

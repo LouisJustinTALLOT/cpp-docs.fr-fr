@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390559"
 ---
 # <a name="function-prototypes"></a>Prototypes de fonctions
 Une déclaration de fonction précède la définition de fonction et spécifie le nom, le type de retour, la classe de stockage et d’autres attributs d’une fonction. Pour être un prototype, la déclaration de fonction doit également établir des types et des identificateurs pour les arguments de la fonction.  

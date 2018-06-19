@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380273"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (Améliorer le débogage optimisé)
 Génère des informations de débogage avancées pour le code optimisé dans des builds autres que debug.  

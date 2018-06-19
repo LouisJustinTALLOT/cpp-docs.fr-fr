@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384540"
 ---
 # <a name="declarations-and-types"></a>Déclarations et types
 Cette section décrit la déclaration et l'initialisation des variables, des fonctions et des types. Le langage C inclut un jeu standard de types de données de base. Vous pouvez également ajouter vos propres types de données, appelés types dérivés, en déclarant de nouveaux types basés sur les types déjà définis. Les rubriques suivantes sont présentées :  

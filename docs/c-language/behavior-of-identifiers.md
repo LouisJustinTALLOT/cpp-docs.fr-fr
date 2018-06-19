@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380799"
 ---
 # <a name="behavior-of-identifiers"></a>Comportement des identificateurs
 -   [Caractères significatifs sans liaison externe](../c-language/significant-characters-without-external-linkage.md)  

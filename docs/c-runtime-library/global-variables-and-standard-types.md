@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388992"
 ---
 # <a name="global-variables-and-standard-types"></a>Variables globales et types standard
 La bibliothèque Runtime de Microsoft contient des définitions pour les [variables globales](../c-runtime-library/global-variables.md), [indicateurs de contrôle](../c-runtime-library/control-flags.md) et [types standard](../c-runtime-library/standard-types.md) utilisés par les routines de bibliothèque. Accédez à ces variables, indicateurs et types en les déclarant dans votre programme ou en incluant les fichiers d’en-tête appropriés.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390689"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Dépannage d'applications isolées C/C++ et d'assemblys côte à côte
 Le chargement d'une application C/C++ peut échouer si les bibliothèques dépendantes sont introuvables. Cet article décrit les raisons les plus courantes de l'échec du chargement d'une application C/C++, et suggère une procédure de résolution des problèmes.  

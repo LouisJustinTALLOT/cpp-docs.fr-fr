@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383863"
 ---
 # <a name="range-of-char-values"></a>Plage de valeurs char
 **ANSI 3.2.1.1** Si un type **char** « brut » a la même plage de valeurs qu’un type **signed char** ou `unsigned char`  

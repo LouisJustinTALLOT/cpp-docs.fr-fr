@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354431"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 Un script registrar offre piloté par les données, plutôt que de piloté par les API, l’accès au Registre du système. Accès piloté par les données est généralement plus efficace, car il accepte uniquement une ou deux lignes dans un script pour ajouter une clé au Registre.  

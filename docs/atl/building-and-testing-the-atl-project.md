@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354728"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Génération et test du projet ATL
 Comme mentionné dans [insertion d’un contrôle Composite](../atl/inserting-a-composite-control.md), un des composants du projet initiales est une page HTML par défaut qui héberge votre nouveau contrôle composite. Après avoir terminé la modification du contrôle composite, cliquez sur **générer la Solution** ou **régénérer la Solution** à partir de la **générer** menu. Une fois le projet généré correctement, chargement de la page HTML, située dans le répertoire racine de votre projet de contrôle composite, dans Internet Explorer ou un autre navigateur et tester les fonctionnalités de votre contrôle.  

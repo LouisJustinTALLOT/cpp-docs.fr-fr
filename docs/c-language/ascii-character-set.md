@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381120"
 ---
 # <a name="ascii-character-set"></a>Jeu de caractères ASCII
 **ANSI 2.2.1** Membres des jeux de caractères source et d'exécution  

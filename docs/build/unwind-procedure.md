@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382021"
 ---
 # <a name="unwind-procedure"></a>Procédure de déroulement
 Le tableau des codes de déroulement est trié dans l’ordre décroissant. Lorsqu’une exception se produit, le contexte complet est stocké par le système d’exploitation dans un enregistrement de contexte. La logique de répartition d’exception est ensuite appelée, ce qui exécute à plusieurs reprises les étapes suivantes pour rechercher un gestionnaire d’exceptions.  

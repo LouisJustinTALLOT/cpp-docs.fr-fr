@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385674"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C
 En plus des déclarateurs pour les membres d’une structure ou une union, un déclarateur de structure peut également être un nombre de bits spécifié, appelé « champ de bits ». Sa longueur est définie à partir du déclarateur pour le nom de champ par un signe deux-points. Un champ de bits est interprété comme un type intégral.  

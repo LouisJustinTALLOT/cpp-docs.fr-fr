@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380448"
 ---
 # <a name="wildcards-and-nmake"></a>NMAKE et les caractères génériques
 NMAKE développe des caractères génériques de nom de fichier (* et ?) dans les lignes de dépendance. Un caractère générique spécifié dans une commande est passé à la commande. NMAKE ne s’étend pas.  

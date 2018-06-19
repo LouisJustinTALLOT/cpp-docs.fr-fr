@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380103"
 ---
 # <a name="specifying-an-inline-file"></a>Spécification d'un fichier inline
 Spécifier deux crochets pointus (<<) dans la commande où *nom de fichier* doit apparaître. Les chevrons ne peut pas être une expansion macro.  

@@ -69,6 +69,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057797"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML et référence de ligne de commande ML64
 Assemble et des liens d’un ou plusieurs fichiers de code source en langage assembleur. Les options de ligne de commande respectent la casse.  

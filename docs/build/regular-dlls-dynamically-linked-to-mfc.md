@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383725"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>DLL régulière MFC liées dynamiquement à MFC
 Une expression régulière que MFC DLL liée dynamiquement à MFC est une DLL qui utilise MFC en interne, et les fonctions exportées de la DLL peuvent être appelées par des exécutables MFC ou non MFC. Comme son nom l’indique, ce type de DLL est généré à l’aide de la version de la bibliothèque de liens dynamiques des MFC (également appelée la version partagée de MFC). Les fonctions sont généralement exportées à partir d’une expression régulière DLL MFC à l’aide de l’interface C standard.  

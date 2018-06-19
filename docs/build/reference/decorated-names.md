@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379378"
 ---
 # <a name="decorated-names"></a>Noms décorés
 Les fonctions, les données et les objets dans les programmes C et C++ sont représentés en interne par leurs noms décorés. A *nom décoré* est une chaîne encodée créée par le compilateur lors de la compilation d’un objet, données ou définition de fonction. Il enregistre les conventions d'appel, les types, les paramètres de fonction et d'autres informations avec le nom. Cette décoration de nom, également appelée *troncage*, permet à l’éditeur de liens de trouver les fonctions et les objets lors de la liaison d’un fichier exécutable.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385834"
 ---
 # <a name="sign-of-bit-fields"></a>Signe des champs de bits
 **ANSI 3.5.2.1** Indique si un champ `int` « brut » est traité en tant que champ de bits **signed int** ou en tant que champ de bits unsigned int  

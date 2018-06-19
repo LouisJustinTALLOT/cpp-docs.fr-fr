@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387009"
 ---
 # <a name="side-effects"></a>Effets secondaires
 L'ordre d'évaluation des expressions est défini par l'implémentation spécifique, sauf lorsque le langage garantit un ordre d'évaluation particulier (comme décrit dans [Priorité et ordre d'évaluation](../c-language/precedence-and-order-of-evaluation.md)). Par exemple, des effets secondaires se produisent dans les appels de fonction suivants :  
