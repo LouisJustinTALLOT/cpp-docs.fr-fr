@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412463"
 ---
 # <a name="secure-template-overloads"></a>Sécuriser les surcharges de modèle
 Microsoft a déprécié de nombreuses fonctions de bibliothèque Runtime C (CRT) au profit de versions plus sécurisées. Par exemple, `strcpy_s` est le remplacement le plus sécurisé pour `strcpy`. Les fonctions dépréciées sont des sources courantes de bogues de sécurité, car elles n’empêchent pas les opérations qui peuvent écraser la mémoire. Par défaut, le compilateur génère un avertissement de dépréciation quand vous utilisez l’une de ces fonctions. Le CRT fournit des surcharges de modèle C++ pour ces fonctions afin de faciliter la transition vers des variantes plus sécurisées.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049929"
 ---
 # <a name="ml-nonfatal-errors-a2000-a2049"></a>Erreurs ML non fatales A2000-A2049
 Pour plus d’informations sur les erreurs ML non fatales, consultez [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md).  

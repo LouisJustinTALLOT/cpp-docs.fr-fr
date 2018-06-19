@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355031"
 ---
 # <a name="modifying-the-atl-project"></a>Modification du projet ATL
 À ce stade, votre projet de contrôle composite implémente les objets nécessaires pour votre contrôle composite. L’étape suivante consiste à ajouter les contrôles que le contrôle composite contenir et de gérer les événements nécessaires.  

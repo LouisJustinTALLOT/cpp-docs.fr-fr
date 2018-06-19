@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054596"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 Insère le code à partir du fichier source donné par source *nom de fichier* dans le fichier source actuel au cours de l’assembly.  

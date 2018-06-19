@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052825"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Référence de Microsoft Macro Assembler
 L’assembleur de macros Microsoft (MASM) offre plusieurs avantages de l’assembly inline. MASM contient un langage de macro qui possède des fonctionnalités telles que le traitement de chaîne de bouclage, arithmétique et du texte. MASM également offre un meilleur contrôle sur le matériel, car il prend en charge les jeux d’instructions de la 386, 486 et Pentium. À l’aide de MASM, vous pouvez également réduire la charge de temps et de mémoire.  

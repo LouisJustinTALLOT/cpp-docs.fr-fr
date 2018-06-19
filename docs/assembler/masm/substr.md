@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056614"
 ---
 # <a name="substr"></a>SUBSTR
 Retourne une sous-chaîne de *textitem*, en commençant à *position*. Le *textitem* peut être une chaîne littérale, une constante précédée d’un `%`, ou la chaîne retournée par une fonction de la macro.  

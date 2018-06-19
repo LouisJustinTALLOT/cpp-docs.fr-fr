@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32399194"
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 

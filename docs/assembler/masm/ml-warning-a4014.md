@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056939"
 ---
 # <a name="ml-warning-a4014"></a>Avertissement ML A4014
 instructions et les données initialisées ne pas pris en charge dans les segments BSS  

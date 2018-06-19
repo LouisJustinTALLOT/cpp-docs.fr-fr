@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408144"
 ---
 # <a name="additional-termination-considerations"></a>Considérations supplémentaires sur la terminaison
 Vous pouvez mettre fin à un programme C++ à l’aide de **quitter**, `return`, ou **abandonner**. Vous pouvez ajouter la sortie de traitement à l'aide de la fonction `atexit`. Ces points sont abordés dans les sections suivantes.  

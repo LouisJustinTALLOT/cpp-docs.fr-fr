@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356339"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implémentation de CComObject, CComAggObject et CComPolyObject
 Les classes de modèle [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), et [CComPolyObject](../atl/reference/ccompolyobject-class.md) sont toujours les classes les plus dérivées dans la chaîne d’héritage. Il est leur responsabilité de gérer toutes les méthodes dans **IUnknown**: `QueryInterface`, `AddRef`, et **version**. En outre, `CComAggObject` et `CComPolyObject` (lorsque utilisé pour les objets regroupés en agrégats) fournissent le décompte des références spéciales et `QueryInterface` sémantique requise pour l’inconnu intérieur.  

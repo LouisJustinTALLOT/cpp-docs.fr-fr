@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416656"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellipses et modèles variadiques
 Cet article explique comment utiliser les points de suspension (`...`) avec des modèles de variadiques C++. Les points de suspension a de nombreuses utilisations en C et C++. Notamment les listes d’arguments variables pour les fonctions. Le `printf()` fonction à partir de la bibliothèque Runtime C est un des exemples plus connus.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407984"
 ---
 # <a name="bstrt-operators"></a>Opérateurs _bstr_t
 Pour plus d’informations sur la `_bstr_t` opérateurs, consultez [_bstr_t, classe](../cpp/bstr-t-class.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423520"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Constructeurs d'initialisation uniforme et de délégation
 En C++ moderne, vous pouvez utiliser *accolade initialisation* pour n’importe quel type, sans le signe égal. En outre, vous pouvez utiliser les constructeurs de délégation pour simplifier votre code lorsque vous avez plusieurs constructeurs qui effectuent le travail similaire.  

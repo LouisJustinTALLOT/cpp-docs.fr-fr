@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055204"
 ---
 # <a name="savereg"></a>.SAVEREG
 Génère soit un `UWOP_SAVE_NONVOL` ou un `UWOP_SAVE_NONVOL_FAR` d’entrée du code pour le Registre spécifié de déroulement (`reg`) et de décalage (`offset`) à l’aide de l’offset de prologue actuel. MASM choisira l’encodage le plus efficace.  

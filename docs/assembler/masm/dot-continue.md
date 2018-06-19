@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050456"
 ---
 # <a name="continue"></a>.CONTINUE
 Génère du code pour accéder à la partie supérieure d’un [. Alors que](../../assembler/masm/dot-while.md) ou [. RÉPÉTEZ les](../../assembler/masm/dot-repeat.md) bloquer si `condition` a la valeur true.  

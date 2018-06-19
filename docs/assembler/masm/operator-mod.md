@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054456"
 ---
 # <a name="operator-mod"></a>MOD, opérateur
 Retourne la valeur entière du reste (modulo) lors de la division *expression1* par *expression2*.  

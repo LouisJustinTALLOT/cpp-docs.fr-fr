@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409382"
 ---
 # <a name="sal-annotations"></a>Annotations SAL
 Si vous examinez les fichiers d'en-tête de bibliothèque, vous remarquerez peut-être des annotations inhabituelles, comme `_In_z` et `_Out_z_cap_(_Size)`. Voici des exemples de la langue d'annotation de code source Microsoft (SEL), qui fournit un ensemble d'annotations pour décrire comment une fonction utilise les paramètres, par exemple, les hypothèses qu'elle fait sur eux et les garanties qu'elle effectue sur le finissage. Le fichier d’en-tête \<sal.h> définit les annotations.  

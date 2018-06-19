@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358688"
 ---
 # <a name="inserting-a-composite-control"></a>Insertion d’un contrôle Composite
 Le **ajouter une classe** boîte de dialogue vous permet d’insérer un objet ATL dans un projet. Accéder à cette boîte de dialogue en cliquant sur le nom du projet dans l’Explorateur de solutions, en pointant sur **ajouter**, puis en cliquant sur **ajouter une classe**.  

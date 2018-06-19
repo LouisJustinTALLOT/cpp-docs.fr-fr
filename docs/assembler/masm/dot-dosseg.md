@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054882"
 ---
 # <a name="dosseg"></a>.DOSSEG
 Trie les segments en fonction de la convention de segment MS-DOS : CODE en premier lieu, puis les segments n’est pas dans DGROUP et puis segments dans DGROUP.  

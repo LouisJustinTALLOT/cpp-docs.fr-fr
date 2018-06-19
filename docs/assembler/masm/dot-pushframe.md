@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053202"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 Génère un `UWOP_PUSH_MACHFRAME` d’entrée du code de déroulement. Si le paramètre facultatif `code` est spécifié, l’entrée de code de déroulement reçoit un modificateur de 1. Sinon, le modificateur est 0.  
