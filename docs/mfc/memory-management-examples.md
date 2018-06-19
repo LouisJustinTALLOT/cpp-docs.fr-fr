@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347189"
 ---
 # <a name="memory-management-examples"></a>Gestion de la mémoire : exemples
 Cet article décrit la façon dont MFC effectue les allocations de frame et les allocations de tas pour chacun des trois types d’allocations de mémoire :  

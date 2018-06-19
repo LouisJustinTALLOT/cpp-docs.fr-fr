@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375906"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 Permet à un élément à afficher, déplacer et redimensionner de différentes manières.  

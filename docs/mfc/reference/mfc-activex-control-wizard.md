@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375061"
 ---
 # <a name="mfc-activex-control-wizard"></a>Contrôle ActiveX MFC (Assistant)
 Un contrôle ActiveX est un type spécifique de [serveur automation](../../mfc/automation-servers.md); il s’agit d’un composant réutilisable. L’application qui héberge le contrôle ActiveX est le [client automation](../../mfc/automation-clients.md) de ce contrôle. Si votre objectif est de créer un tel composant réutilisable, utilisez cet Assistant pour créer votre contrôle. Consultez [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) pour plus d’informations.  

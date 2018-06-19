@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347946"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objets de données et sources de données : création et destruction
 Comme expliqué dans l’article [des objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md), objets de données et sources de données représentent les deux côtés d’un transfert de données. Cet article explique la création et la destruction des objets et sources pour effectuer les transferts de données correctement, notamment :  
