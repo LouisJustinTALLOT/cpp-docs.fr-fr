@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345639"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orchestration d'autres actions Windows
 La fenêtre frame orchestre des États semi-modaux telles qu’une aide contextuelle et Aperçu avant impression. Pour obtenir une description du rôle de la fenêtre frame dans l’aperçu avant impression, consultez [l’impression et Aperçu avant impression](../mfc/printing-and-print-preview.md).  

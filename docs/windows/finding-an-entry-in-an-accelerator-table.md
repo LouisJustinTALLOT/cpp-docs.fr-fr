@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873207"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Recherche d'une entrée dans une table d'accélérateurs
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Pour rechercher une entrée dans une table d'accélérateurs ouverte  

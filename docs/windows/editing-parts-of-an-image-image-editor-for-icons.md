@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876850"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Modification de parties d'une image (Éditeur d'images pour les icônes)
 Vous pouvez effectuer les opérations de modification standard — couper, copier, effacer et déplacement : sur un [sélection](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), indique si la sélection est l’image entière ou une partie de celui-ci. Étant donné que l’éditeur d’images utilise le Presse-papiers Windows, vous pouvez transférer des images entre l’éditeur d’images et d’autres applications pour Windows.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275497"
 ---
 # <a name="compiler-error-c3865"></a>Erreur du compilateur C3865
 'convention_appel' : peut uniquement être utilisé sur des fonctions membres natives  

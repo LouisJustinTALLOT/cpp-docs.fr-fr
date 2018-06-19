@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230398"
 ---
 # <a name="compiler-error-c2548"></a>Erreur du compilateur C2548
 'classe::membre' : paramètre par défaut pour le paramètre manquant  

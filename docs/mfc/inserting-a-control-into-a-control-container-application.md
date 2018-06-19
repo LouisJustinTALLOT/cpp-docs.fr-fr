@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346335"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Conteneurs de contrôles ActiveX : insertion d'un contrôle dans une application de conteneur de contrôle
 Avant de pouvoir accéder à un contrôle ActiveX à partir d’une application de conteneur de contrôle ActiveX, vous devez ajouter le contrôle ActiveX à l’application de conteneur à l’aide de la [insérer un contrôle ActiveX](../windows/insert-activex-control-dialog-box.md) boîte de dialogue.  

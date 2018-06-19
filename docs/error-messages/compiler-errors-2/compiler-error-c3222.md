@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249952"
 ---
 # <a name="compiler-error-c3222"></a>Erreur du compilateur C3222
 ’paramètre’ : impossible de déclarer des arguments par défaut pour des fonctions membres d’un type managé ou WinRT ou des fonctions génériques  

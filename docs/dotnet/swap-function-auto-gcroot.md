@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33165150"
 ---
 # <a name="swap-function-autogcroot"></a>swap, fonction (auto_gcroot)
 Échange des objets entre un `auto_gcroot` et un autre.  

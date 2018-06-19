@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33259133"
 ---
 # <a name="compiler-error-c3480"></a>Erreur du compilateur C3480
 'variable' : une variable de capture lambda doit provenir d’une portée de fonction englobante  

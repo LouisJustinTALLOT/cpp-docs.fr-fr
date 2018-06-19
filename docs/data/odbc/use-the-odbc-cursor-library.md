@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092882"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Utilisation de la bibliothèque de curseurs ODBC
 ODBC gère le défilement via la bibliothèque de curseurs de jeux d’enregistrements. Ces rubriques expliquent comment utiliser la bibliothèque de curseurs.  

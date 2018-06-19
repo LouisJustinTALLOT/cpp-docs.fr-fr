@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268316"
 ---
 # <a name="compiler-error-c3860"></a>Erreur du compilateur C3860
 liste d’arguments de type suivant le nom de la classe doit répertorier les paramètres dans l’ordre utilisé dans la liste de paramètres de type  

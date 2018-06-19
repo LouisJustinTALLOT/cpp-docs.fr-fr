@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888843"
 ---
 # <a name="setting-accelerator-properties"></a>Définition des propriétés d'un accélérateur
 Vous pouvez définir les propriétés d’un accélérateur dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) à tout moment. Vous pouvez également utiliser l'Éditeur d'accélérateurs pour modifier les propriétés d'un accélérateur dans la table d'accélérateurs. Les modifications apportées à l'aide de la fenêtre Propriétés ou de l'Éditeur d'accélérateurs ont le même résultat : elles sont immédiatement répercutées dans la table d'accélérateurs.  

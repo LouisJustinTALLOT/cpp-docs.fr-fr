@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889821"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listes d’arguments de variable (...) (C++/CLI)
 Cet exemple montre comment vous pouvez utiliser la `...` syntaxe dans Visual C++ pour implémenter des fonctions qui ont un nombre variable d’arguments.  

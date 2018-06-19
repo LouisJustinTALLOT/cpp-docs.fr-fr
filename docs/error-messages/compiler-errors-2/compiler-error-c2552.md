@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231732"
 ---
 # <a name="compiler-error-c2552"></a>Erreur du compilateur C2552
 « identificateur » : les éléments qui ne sont pas des agrégats ne peuvent pas être initialisés avec une liste d'initialiseurs  

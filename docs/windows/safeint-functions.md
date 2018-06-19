@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889304"
 ---
 # <a name="safeint-functions"></a>SafeInt, fonctions
 La Bibliothèque SafeInt fournit plusieurs fonctions que vous pouvez utiliser sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md). Si vous souhaitez protéger une seule opération mathématique de dépassement sur les entiers, vous pouvez utiliser ces fonctions. Si vous souhaitez protéger plusieurs opérations mathématiques, vous devez créer `SafeInt` objets. Il est plus efficace de créer `SafeInt` objets que d’utiliser ces fonctions plusieurs fois.  

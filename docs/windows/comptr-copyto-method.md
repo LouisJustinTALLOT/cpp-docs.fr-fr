@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870869"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo, méthode
 Copies de l’interface actuelle ou spécifiée associée à ce ComPtr au pointeur spécifié.  

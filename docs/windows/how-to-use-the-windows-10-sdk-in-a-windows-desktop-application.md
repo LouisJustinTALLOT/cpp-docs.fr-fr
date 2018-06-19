@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882822"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
 Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 2017, il est configuré par défaut pour générer avec la version du SDK Windows 10 qui a été installé lors de la charge de travail de bureau C++ a été installé ou mis à jour. Cette version du SDK Windows est compatible avec toutes les versions récentes de Windows. Si vous souhaitez cibler une version antérieure du Kit de développement, vous pouvez ouvrir le projet | Propriétés et choisissez parmi les autres versions de kit de développement logiciel disponibles dans la liste déroulante Version du Kit de développement logiciel Windows.  

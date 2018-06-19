@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252915"
 ---
 # <a name="compiler-error-c3507"></a>Erreur du compilateur C3507
 un ProgID ne peut être pas dépasser 39 caractères 'id' ; ni contenir n’importe quel signe de ponctuation différencient de '.'; ni commencer par un chiffre  

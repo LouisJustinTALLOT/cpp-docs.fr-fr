@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880567"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Remplissage avec une couleur d'une zone délimitée d'une image (Éditeur d'images pour les icônes)
 L’éditeur d’images fournit le **remplir** outil pour remplir les placée entre la zone d’image avec la couleur de dessin actuelle ou la couleur d’arrière-plan actuelle.  

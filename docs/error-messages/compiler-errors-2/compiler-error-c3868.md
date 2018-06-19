@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268635"
 ---
 # <a name="compiler-error-c3868"></a>Erreur du compilateur C3868
 'type' : les contraintes de paramètre générique 'paramètre' diffèrent de celles de la déclaration  

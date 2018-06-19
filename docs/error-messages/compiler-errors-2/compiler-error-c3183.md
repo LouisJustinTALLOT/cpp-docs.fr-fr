@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252469"
 ---
 # <a name="compiler-error-c3183"></a>Erreur du compilateur C3183
 impossible de définir une classe, un struct ou une union sans nom à l'intérieur du type managé ou WinRT 'type'  

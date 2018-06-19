@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347027"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg, gestionnaire
 Pour effectuer le routage des commandes, chaque cible de la commande appelle la `OnCmdMsg` fonction membre de la cible de la commande suivante dans la séquence. Utilisation de cibles de commandes `OnCmdMsg` pour déterminer si elles peuvent gérer une commande et pour le router vers une autre cible de commande si elles ne peuvent pas le gérer.  

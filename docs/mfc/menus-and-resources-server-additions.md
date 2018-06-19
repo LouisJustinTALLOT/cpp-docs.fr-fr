@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351349"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menus et ressources : ajouts de serveurs
 Cet article décrit les modifications qui doivent être apportées aux menus et aux autres ressources dans une application serveur (composant) d’édition visuelle. Une application serveur requiert de nombreux ajouts à la structure de menus et d’autres ressources, car elle peut être démarrée dans un des trois modes : autonome, incorporé, ou en place. Comme décrit dans la [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md) l’article, il existe un maximum de quatre groupes de menus. Les quatre sont utilisés pour une application serveur complet MDI, alors que seulement trois sont utilisés pour un mini-serveur. L’Assistant application créera la disposition du menu nécessaire pour le type de serveur souhaité. Une personnalisation peut être nécessaire.  

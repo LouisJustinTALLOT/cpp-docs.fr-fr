@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241534"
 ---
 # <a name="compiler-error-c2951"></a>Erreur du compilateur C2951
 déclarations de type sont uniquement autorisées au niveau de l’espace de noms global, ou portée de classe  

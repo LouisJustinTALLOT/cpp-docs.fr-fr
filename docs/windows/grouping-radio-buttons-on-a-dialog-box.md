@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879326"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Regroupement de cases d'option dans une boîte de dialogue
 Lorsque vous ajoutez des cases d’option à une boîte de dialogue, traitez-les comme un groupe en définissant une propriété Groupe dans la fenêtre Propriétés du premier bouton du groupe. Un ID de contrôle pour cette case d’option apparaît alors dans [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md), ce qui vous permet d’ajouter une variable membre pour le groupe de cases d’option.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250887"
 ---
 # <a name="compiler-error-c3163"></a>Erreur du compilateur C3163
 'construct' : attributs non cohérents avec la déclaration précédente  

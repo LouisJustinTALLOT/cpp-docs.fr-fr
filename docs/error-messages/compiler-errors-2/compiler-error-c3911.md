@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274007"
 ---
 # <a name="compiler-error-c3911"></a>Erreur du compilateur C3911
 'méthode_accesseurs_événement' : fonction doit avoir le type 'signature'  

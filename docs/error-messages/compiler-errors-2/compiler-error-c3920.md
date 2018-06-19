@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270278"
 ---
 # <a name="compiler-error-c3920"></a>Erreur du compilateur C3920
 ' opérateur '' : Impossible de définir une incrémentation/de décrémentation suffixée WinRT ou un opérateur CLR appelant le suffixe WinRT ou CLR postfixé entraînera l’appel au préfixe correspondant WinRT ou CLR (opérateur) (op_Increment/op_Decrement), mais avec la sémantique postfixée  

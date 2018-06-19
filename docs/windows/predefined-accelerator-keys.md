@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880793"
 ---
 # <a name="predefined-accelerator-keys"></a>Touches accélérateur prédéfinies
 Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent faire partie d'un projet d'application Windows. Certaines de ces touches virtuelles sont destinées à l'environnement Windows. D'autres sont destinées aux navigateurs ou aux applications Unicode. Vous pouvez utiliser ces touches en tant que touches d'accès rapide.  

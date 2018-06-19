@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344878"
 ---
 # <a name="dialog-data-validation"></a>Validation de données de boîtes de dialogue
 Vous pouvez spécifier la validation en plus de l’échange de données en appelant les fonctions DDV, comme indiqué dans l’exemple de [Dialog Data Exchange](../mfc/dialog-data-exchange.md). Le `DDV_MaxChars` appel dans l’exemple vérifie que la chaîne d’entrée dans le contrôle de zone de texte n’est pas plue de 20 caractères. La fonction DDV avertit en général, l’utilisateur avec une boîte de message si la validation échoue et place le focus sur le contrôle qui posent problème afin de l’utilisateur peut entrer à nouveau les données. Une fonction DDV pour un contrôle donné doit être appelée immédiatement après la fonction DDX pour le même contrôle.  

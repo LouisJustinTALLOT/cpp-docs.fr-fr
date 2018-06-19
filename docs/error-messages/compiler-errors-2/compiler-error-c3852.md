@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272264"
 ---
 # <a name="compiler-error-c3852"></a>Erreur du compilateur C3852
 'membre' ayant le type 'type' : l’initialisation d’agrégats n’a pas pu initialiser ce membre  

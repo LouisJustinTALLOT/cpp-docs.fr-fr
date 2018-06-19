@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888644"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Sélection de couleurs de premier plan ou d'arrière-plan (Éditeur d'images pour les icônes)
 À l’exception de la **gomme**, les outils sur le **Éditeur d’images** dessin de barre d’outils avec la couleur de premier plan ou d’arrière-plan actuelle lorsque vous appuyez sur le bouton gauche ou droit de la souris, respectivement.  

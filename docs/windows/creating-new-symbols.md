@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872294"
 ---
 # <a name="creating-new-symbols"></a>Création de nouveaux symboles
 Quand vous commencez un nouveau projet, il peut s'avérer pratique de mapper les noms de symboles dont vous avez besoin avant de créer les ressources auxquelles ils seront assignés.  

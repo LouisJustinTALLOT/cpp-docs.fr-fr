@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344417"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Comment : ajouter des contrôles de ruban et des gestionnaires d'événements
 Contrôles de ruban sont des éléments, tels que des boutons et des zones de liste déroulante, que vous ajoutez à panneaux. Les panneaux sont des zones de la barre du ruban qui affichent un groupe de contrôles connexes.  

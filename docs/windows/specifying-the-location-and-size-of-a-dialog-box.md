@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890575"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Spécification de l'emplacement et de la taille d'une boîte de dialogue
 L’emplacement et la taille d’une boîte de dialogue, ainsi que l’emplacement et la taille des contrôles qu’il contient, sont mesurés en unités de boîte de dialogue. Les valeurs pour les contrôles individuels et de la boîte de dialogue s’affichent dans le coin inférieur droit de l’état de Visual Studio lorsque vous les sélectionnez pas de la barre.  

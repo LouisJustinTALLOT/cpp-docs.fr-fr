@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348227"
 ---
 # <a name="printing"></a>Impression
 Microsoft Windows implémente un affichage est indépendant du périphérique. Dans MFC, cela signifie que les mêmes appels de dessin, dans le `OnDraw` fonction membre de votre classe d’affichage, sont chargés de dessin sur l’affichage et sur d’autres appareils, tels que des imprimantes. Pour l’aperçu avant impression, le périphérique cible est une sortie d’imprimante simulé à l’affichage.  

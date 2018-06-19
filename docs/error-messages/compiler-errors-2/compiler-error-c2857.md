@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246345"
 ---
 # <a name="compiler-error-c2857"></a>Erreur du compilateur C2857
 ' #include ' instruction spécifiée avec l’option de ligne de commande /YcNomFichier est introuvable dans le fichier source  

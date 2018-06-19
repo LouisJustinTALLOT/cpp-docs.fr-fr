@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343348"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
 Cette rubrique décrit les étapes nécessaires à l’implémentation de copie et de collage à partir du Presse-papiers dans votre application OLE. Il est recommandé de lire le [des objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) rubriques avant de continuer.  

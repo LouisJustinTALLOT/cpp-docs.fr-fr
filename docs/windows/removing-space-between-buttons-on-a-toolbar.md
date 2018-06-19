@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877961"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Suppression d'un espace entre les boutons sur une barre d'outils
 La procédure suivante vous montre comment supprimer un espace entre les boutons sur une barre d’outils.  

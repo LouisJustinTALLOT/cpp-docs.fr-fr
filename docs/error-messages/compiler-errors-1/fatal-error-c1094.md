@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227515"
 ---
 # <a name="fatal-error-c1094"></a>Erreur irrécupérable C1094
 '-Zmval1' : option de ligne de commande non cohérente avec la valeur utilisée pour générer l’en-tête précompilé ('-Zmval2')  

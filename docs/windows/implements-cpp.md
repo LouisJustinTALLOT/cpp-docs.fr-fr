@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880690"
 ---
 # <a name="implements-c"></a>implements (C++)
 Spécifie les interfaces de dispatch qui doivent être membres de la coclasse IDL.  

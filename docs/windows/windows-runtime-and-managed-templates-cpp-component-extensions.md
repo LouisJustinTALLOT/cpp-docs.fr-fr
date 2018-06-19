@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891361"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime et modèles gérés (extensions du composant C++)
 Les modèles vous permettent de définir un prototype d’un type common language runtime ou le Windows Runtime et ensuite instancier des variantes de ce type à l’aide des paramètres de type de modèle différent.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892024"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (structure)
 Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-class.md).  

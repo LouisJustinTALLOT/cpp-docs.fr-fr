@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872833"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>États de l'Éditeur de boîtes de dialogue (repères et grilles)
 Vous pouvez organiser les contrôles dans les boîtes de dialogue avec l’éditeur de boîte de dialogue dans un des trois états différents :  

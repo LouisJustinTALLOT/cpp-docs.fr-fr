@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264788"
 ---
 # <a name="compiler-error-c3703"></a>Erreur du compilateur C3703
 Gestionnaire d’événements' : une méthode de gestionnaire d’événements doit avoir la même classe de stockage en tant que la source 'event'  

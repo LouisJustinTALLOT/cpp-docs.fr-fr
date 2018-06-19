@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342057"
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI déconseillées
 Migration de la bibliothèque Microsoft Foundation classes (MFC) vers les classes et méthodes qui sont basées sur le jeu de caractères Unicode. Par conséquent, les versions ANSI de plusieurs méthodes MFC sont déconseillées. Utilisez les versions Unicode de ces méthodes dans vos applications futures.  

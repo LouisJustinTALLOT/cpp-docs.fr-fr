@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349478"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Mise en forme des caractères dans les contrôles RichEdit
 Vous pouvez utiliser les fonctions membres du contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pour le formatage de caractères et pour récupérer les informations de mise en forme. Pour les caractères, vous pouvez spécifier des caractères, la taille, couleur et effets tels que gras, italique et protégés.  

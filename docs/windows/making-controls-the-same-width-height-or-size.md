@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874796"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Définition de la même largeur, hauteur ou taille pour des contrôles
 Vous pouvez redimensionner un groupe de contrôles en fonction de la taille du contrôle dominant. Vous pouvez également [redimensionner un contrôle basé sur les dimensions de son texte de légende](../windows/sizing-individual-controls.md).  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882548"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Création de régions transparentes ou inversées dans des images de périphérique (Éditeur d'images pour les icônes)
 Dans le [Éditeur d’images](../windows/image-editor-for-icons.md), l’image d’icône ou curseur a un attribut transparent. Bien que les images d’icône et de curseur sont rectangulaires, nombreux n’apparaissent pas, car les parties de l’image sont transparentes ; l’image sous-jacente à l’écran montre via l’icône ou le curseur. Lorsque vous faites glisser une icône, les parties de l’image peuvent apparaître dans une couleur inversée. Vous créez cet effet en définissant la couleur d’écran et inverse dans le [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md).  

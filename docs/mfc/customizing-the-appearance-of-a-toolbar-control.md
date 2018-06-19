@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343692"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personnalisation de l'apparence d'un contrôle ToolBar
 Classe `CToolBarCtrl` propose de nombreux styles qui affectent l’apparence (et, parfois, le comportement) de l’objet de barre d’outils. Modifier l’objet de barre d’outils en définissant le `dwCtrlStyle` paramètre de la `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) fonction membre, lorsque vous créez le contrôle de barre d’outils.  

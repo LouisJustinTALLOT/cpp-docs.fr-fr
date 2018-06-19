@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882730"
 ---
 # <a name="how-to-use-resource-templates"></a>comment : utiliser des modèles de ressources
 Un modèle de ressource est une ressource personnalisée que vous avez enregistrée en tant que fichier .rct. Un modèle de ressource peut servir ensuite de point de départ pour la création d'autres ressources. Les modèles de ressources permettent de gagner du temps pour le développement de ressources ou de groupes de ressources supplémentaires qui partagent des fonctionnalités, par exemple les contrôles standard et autres éléments récurrents. Par exemple, vous pouvez être amené à inclure un bouton Aide et l'icône d'un logo d'entreprise dans plusieurs boîtes de dialogue. Pour y parvenir rapidement, créez un modèle de boîte de dialogue, puis personnalisez-le avec le logo et le bouton Aide.  

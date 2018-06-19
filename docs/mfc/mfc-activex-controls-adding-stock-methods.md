@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349263"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
 Une méthode stock diffère d’une méthode personnalisée dans la mesure où il est déjà implémenté par la classe [COleControl](../mfc/reference/colecontrol-class.md). Par exemple, `COleControl` contient une fonction membre prédéfinie qui prend en charge la méthode d’actualisation de votre contrôle. L’entrée de table de dispatch pour cette méthode stock **DISP_STOCKFUNC_REFRESH**.  

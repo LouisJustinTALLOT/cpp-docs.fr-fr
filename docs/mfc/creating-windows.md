@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341895"
 ---
 # <a name="creating-windows"></a>Création de fenêtres
 L’infrastructure crée automatiquement la plupart des fenêtres, que vous devez dans un programme d’infrastructure. [Création de document/vue](../mfc/document-view-creation.md) montre comment le framework crée des fenêtres frame associées aux documents et vues. Mais à des fins spécial vous pouvez créer vos propres fenêtres, y compris vos propres fenêtres enfants de fenêtres frames ou de vues, en plus des fenêtres fournies par l’infrastructure.  

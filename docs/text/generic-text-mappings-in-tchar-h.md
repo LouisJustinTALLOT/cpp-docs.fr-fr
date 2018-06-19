@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867101"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mappages de texte générique dans Tchar.h
 Pour simplifier le transport de code pour une utilisation internationale, la [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] fournit de la bibliothèque Runtime [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-mappages de texte générique spécifiques pour nombreux types de données, les routines et les autres objets. Vous pouvez utiliser ces mappages, qui sont définis dans Tchar.h, pour écrire du code générique qui peut être compilé sur un octet, multioctet, ou [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] jeux, en fonction d’une constante de manifeste que vous définissez à l’aide de caractères un `#define` instruction. Mappages de texte générique sont [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] extensions qui ne sont pas [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] compatible.  

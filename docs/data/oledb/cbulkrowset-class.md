@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090723"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 Récupère et manipule des lignes à fonctionner sur des données en bloc en récupérant plusieurs handles de ligne avec un seul appel.  

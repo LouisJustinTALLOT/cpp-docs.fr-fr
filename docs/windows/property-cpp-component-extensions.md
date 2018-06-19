@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882704"
 ---
 # <a name="property--c-component-extensions"></a>propriété  (extensions du composant C++)
 Déclare un *propriété*, qui est une fonction membre qui se comporte et est accessible comme un membre de données ou un élément de tableau.  

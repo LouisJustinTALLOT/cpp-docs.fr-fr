@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880190"
 ---
 # <a name="resource-symbols-dialog-box"></a>Symboles des ressources (boîte de dialogue)
 Le **symboles des ressources** boîte de dialogue vous permet d’ajouter de nouveaux symboles des ressources, de changer les symboles affichés, ou passez à l’emplacement dans le code source où un symbole est en cours d’utilisation.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340162"
 ---
 # <a name="active-document-servers"></a>Serveurs de documents actifs
 Les serveurs de documents actifs tels que les documents Word, Excel ou PowerPoint hébergent les documents d'autres types d'application appelés documents actifs. Contrairement aux objets incorporés OLE (qui sont simplement affichés dans la page d'un autre document), les documents actifs fournissent l'interface complète et complètent des fonctionnalités natives de l'application serveur qui les crée. Les utilisateurs peuvent créer des documents en utilisant la pleine puissance de leurs applications favorites (s'ils ont activé les documents actifs), mais peuvent traiter le projet résultant comme une entité unique.  

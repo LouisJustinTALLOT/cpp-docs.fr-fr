@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879355"
 ---
 # <a name="literal-c-component-extensions"></a>littéral (extensions du composant C++)
 Une variable (membre de données) est marqué comme `literal` dans un **/CLR** compilation est l’équivalent natif d’un `static const` variable.  

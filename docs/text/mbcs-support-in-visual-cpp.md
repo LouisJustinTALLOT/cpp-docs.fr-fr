@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865834"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Prise en charge MBCS dans Visual C++
 Lorsque vous exécutez sur une version MBCS de Windows, le système de développement Visual C++ (y compris les outils de l’éditeur, débogueur et ligne de commande de code source intégré) est MBCS, à l’exception de la fenêtre de la mémoire.  

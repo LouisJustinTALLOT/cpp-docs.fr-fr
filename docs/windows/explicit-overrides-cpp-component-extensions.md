@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879501"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Substitutions explicites  (extensions du composant C++)
 Cette rubrique explique comment substituer explicitement un membre d’une classe de base ou une interface. Substitution nommée (explicite) doit uniquement être utilisée pour substituer une méthode par une méthode dérivée qui a un nom différent.  
