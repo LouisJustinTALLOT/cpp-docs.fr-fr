@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088389"
 ---
 # <a name="connecting-to-a-data-source"></a>Connexion à une source de données
 Une source de données ODBC est un ensemble spécifique de données, les informations requises pour accéder aux données et l’emplacement de la source de données, ce qui peut être décrite à l’aide d’un nom de source de données. Du point de vue de votre programme, la source de données inclut les données, le SGBD, le réseau (le cas échéant) et ODBC.  

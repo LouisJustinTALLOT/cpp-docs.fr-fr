@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089636"
 ---
 # <a name="events-ccx"></a>Événements (C++/CX)
 Un objet Windows Runtime type peut déclarer (qui est, publier) les événements et le code client dans le même composant ou dans d’autres composants peuvent s’abonner à ces événements en associant des méthodes appelées *gestionnaires d’événements* avec l’événement. Plusieurs gestionnaires d'événements peuvent être associés à un seul événement. Lorsque l'objet de publication déclenche l'événement, il entraîne l'appel de tous les gestionnaires d'événements. Ainsi, une classe d'abonnement peut effectuer l'action personnalisée appropriée lorsque l'éditeur déclenche l'événement. Un événement a un type délégué qui spécifie la signature que tous les gestionnaires d'événements doivent posséder pour s'abonner à l'événement.  

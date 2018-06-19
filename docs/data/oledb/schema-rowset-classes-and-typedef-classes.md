@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111443"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classes de jeu de lignes du schéma et classes Typedef
 Un schéma est une collection d’objets de base de données qui appartiennent, ou qui ont été créés par un utilisateur particulier. Un catalogue peut contenir un ou plusieurs schémas, mais doit toujours contenir un schéma appelé INFORMATION_SCHEMA, qui contient les vues et les domaines du schéma d’informations. Informations de schéma dans OLE DB sont récupérées à l’aide des ensembles de lignes de schéma prédéfinis et incluent des types, tables, colonnes, index, vues, des assertions et contraintes, statistiques, les jeux de caractères, les classements et domaines.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128278"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Comment : établir des correspondances simples à l'aide d'expressions régulières (C++/CLI)
 L’exemple de code suivant utilise des expressions régulières pour rechercher des correspondances de sous-chaînes exactes. La recherche est effectuée par la méthode statique <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> (méthode), qui prend deux chaînes comme entrée. La première est la chaîne à rechercher, et le deuxième est le motif à rechercher.  

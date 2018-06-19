@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095113"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Utilisation d'ODBC et de pilotes
 ODBC vous permet d’écrire des applications qui ne sont pas dépendantes sur un seul système de gestion de base de données (SGBD). Vous pouvez écrire une application qui peut fonctionner sur plusieurs systèmes SGBD pour lequel les utilisateurs ont le pilote ODBC spécifique.  
