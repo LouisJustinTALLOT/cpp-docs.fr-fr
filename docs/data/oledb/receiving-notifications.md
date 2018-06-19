@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112314"
 ---
 # <a name="receiving-notifications"></a>Réception des notifications
 OLE DB fournit des interfaces pour recevoir des notifications lorsque des événements se produisent. Ceux-ci sont décrits dans [Notifications de l’objet OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) dans les *de référence du programmeur OLE DB*. Le programme d’installation de ces événements utilise le mécanisme de point de connexion COM standard. Par exemple, un objet ATL qui souhaite récupérer des événements via `IRowsetNotify` implémente la `IRowsetNotify` interface en ajoutant `IRowsetNotify` à la liste de la classe dérivée et de l’exposer via une **COM_INTERFACE_ENTRY** (macro).  

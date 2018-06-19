@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129367"
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>Comment : lire un fichier binaire (C++/CLI)
 L’exemple de code suivant montre comment lire des données binaires à partir d’un fichier, à l’aide de deux classes à partir de la <xref:System.IO?displayProperty=fullName> espace de noms : <xref:System.IO.FileStream> et <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> représente le fichier réel. <xref:System.IO.BinaryReader> Fournit une interface pour le flux de données qui autorise l’accès binaire.  

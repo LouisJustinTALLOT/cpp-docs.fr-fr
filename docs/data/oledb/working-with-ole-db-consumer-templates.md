@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108261"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Utilisation des modèles du consommateur OLE DB
 Les rubriques suivantes fournissent des exemples montrant comment utiliser les modèles du consommateur OLE DB dans des scénarios courants :  

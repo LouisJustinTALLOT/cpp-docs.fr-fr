@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135211"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Comment : implémenter une architecture de composants plug-in à l'aide de la réflexion (C++/CLI)
 Les exemples de code suivants illustrent l’utilisation de la réflexion pour implémenter une architecture de « plug-in » simple. La première liste correspond à l’application, et le deuxième est le plug-in. L’application est un formulaire qui se remplit automatiquement à l’aide des classes basée sur formulaire trouvés dans la DLL de plug-in fournie comme argument de ligne de commande.  

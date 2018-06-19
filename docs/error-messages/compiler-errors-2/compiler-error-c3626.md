@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266166"
 ---
 # <a name="compiler-error-c3626"></a>Erreur du compilateur C3626
 'mot clé' : mot clé '__event' peut uniquement être utilisé sur les interfaces COM, les fonctions membres et les membres de données qui sont des pointeurs vers les délégués  

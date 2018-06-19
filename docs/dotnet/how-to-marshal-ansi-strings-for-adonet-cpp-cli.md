@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137469"
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>Comment : marshaler des chaînes ANSI pour ADO.NET (C++/CLI)
 Montre comment ajouter une chaîne native (`char *`) pour une base de données et comment marshaler un <xref:System.String?displayProperty=fullName> à partir d’une base de données vers une chaîne native.  

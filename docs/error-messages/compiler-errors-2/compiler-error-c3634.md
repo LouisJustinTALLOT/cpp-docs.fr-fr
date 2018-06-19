@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263783"
 ---
 # <a name="compiler-error-c3634"></a>Erreur du compilateur C3634
 'fonction' : Impossible de définir une méthode abstraite de géré ou WinRTclass  

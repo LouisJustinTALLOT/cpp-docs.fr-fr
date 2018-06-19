@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164516"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof va à T::typeid
 Le `typeof` opérateur utilisé dans les Extensions managées pour C++ a été supplanté par le `typeid` mot clé dans Visual C++.  

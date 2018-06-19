@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164559"
 ---
 # <a name="serialization-ccli"></a>Sérialisation (C++/CLI)
 La sérialisation (processus de stockage de l’état d’un objet ou un membre sur un support permanent) des classes managées (y compris les différents champs ou propriétés) est prise en charge par le <xref:System.SerializableAttribute> et <xref:System.NonSerializedAttribute> classes.  

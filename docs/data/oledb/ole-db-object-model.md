@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111079"
 ---
 # <a name="ole-db-object-model"></a>Modèle objet OLE DB
 Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quatre premiers objets ou composants répertoriés (les sources de données, les sessions, les commandes et ensembles de lignes) permettent de se connecter à une source de données et l’afficher. Le reste, à commencer par les accesseurs, se rapportent à l’utilisation avec les données lorsqu’elle est affichée.  

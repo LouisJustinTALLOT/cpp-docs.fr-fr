@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273626"
 ---
 # <a name="compiler-error-c3764"></a>Erreur du compilateur C3764
 'fonction_substitution' : ne peut pas substituer la méthode de classe de base 'fonction_classe_base'  

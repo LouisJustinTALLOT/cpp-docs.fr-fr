@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111638"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Notation de cast et l’Introduction de safe_cast&lt;&gt;
 La notation de cast a changé entre les Extensions managées pour C++ vers Visual C++.  

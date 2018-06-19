@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250564"
 ---
 # <a name="compiler-error-c3062"></a>Erreur du compilateur C3062
 'enum' : énumérateur requiert une valeur, car le type sous-jacent est 'type'  

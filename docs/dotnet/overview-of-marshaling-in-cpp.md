@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137132"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Vue d’ensemble du marshaling dans C++
 En mode mixte, vous devez parfois marshaler des données entre les types managés et natifs. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] a introduit la bibliothèque de marshaling pour aider à marshaler et de convertir les données d’une manière simple.  

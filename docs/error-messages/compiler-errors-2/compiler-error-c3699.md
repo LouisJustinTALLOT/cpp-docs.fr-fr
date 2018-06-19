@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265027"
 ---
 # <a name="compiler-error-c3699"></a>Erreur du compilateur C3699
 'opérateur' : Impossible d’utiliser cette indirection sur le type 'type'  

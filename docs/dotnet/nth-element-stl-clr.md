@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132893"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Divise une plage d’éléments, en recherchant le `n`ième élément de la séquence de la plage afin que tous les éléments le précédant lui soient inférieur ou égal à celui-ci et tous les éléments qui suivent dans la séquence sont supérieurs ou égaux.  

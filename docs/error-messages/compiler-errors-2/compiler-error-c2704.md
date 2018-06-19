@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231824"
 ---
 # <a name="compiler-error-c2704"></a>Erreur du compilateur C2704
 'identificateur' : __va_start intrinsèque autorisé uniquement dans les varargs  

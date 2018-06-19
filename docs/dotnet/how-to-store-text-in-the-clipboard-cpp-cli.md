@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138517"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Comment : stocker du texte dans le Presse-papiers (C++/CLI)
 Le code suivant exemple utilise le <xref:System.Windows.Forms.Clipboard> objet défini dans le <xref:System.Windows.Forms> espace de noms pour stocker une chaîne. Cet objet fournit deux fonctions membres : <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> et <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Données sont stockées dans le Presse-papiers en envoyant tout objet dérivé <xref:System.Object> à <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

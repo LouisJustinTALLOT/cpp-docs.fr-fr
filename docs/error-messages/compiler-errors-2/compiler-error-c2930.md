@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247870"
 ---
 # <a name="compiler-error-c2930"></a>Erreur du compilateur C2930
 'class' : type-class-id redéfini comme énumérateur de 'enum identifier'  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128512"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Comment : créer des projets vides CLR
 Pour créer un projet vide CLR, utilisez le **projet vide CLR** modèle, qui est disponible à partir de la **nouveau projet** boîte de dialogue.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129786"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Comment : stocker une référence à un type valeur dans un type natif
 Utilisez `gcroot` sur le type boxed pour contenir une référence à un type valeur dans un type natif.  

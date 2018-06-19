@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111469"
 ---
 # <a name="finally"></a>finally
 En plus de `try` et `catch` prend en charge des exceptions CLR, dans un `finally` clause. La sémantique est identique à la `__finally` bloquer dans les exceptions structurées (SEH). A `__finally` bloc peut suivre un `try` ou `catch` bloc.  

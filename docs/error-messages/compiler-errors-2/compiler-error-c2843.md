@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247539"
 ---
 # <a name="compiler-error-c2843"></a>Erreur du compilateur C2843
 'membre' : ne peut pas prendre l'adresse d'une donnée membre non static ni d'une méthode de type managé ou WinRT  

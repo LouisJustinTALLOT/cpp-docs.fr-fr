@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225461"
 ---
 # <a name="compiler-error-c2487"></a>Erreur du compilateur C2487
 'identificateur' : membre d’une classe d’interface dll ne peut pas être déclaré avec une interface dll  

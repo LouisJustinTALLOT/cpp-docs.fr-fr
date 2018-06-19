@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111352"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Sémantique de pile C++ pour les types de référence
 Avant Visual C++ 2005, une instance d'un type de référence pouvait être créée à l'aide de l'opérateur `new`, qui a créé l'objet sur le tas du garbage collector. Toutefois, vous pouvez à présent créer une instance d'un type de référence en utilisant la même syntaxe que vous devriez utiliser pour créer une instance d'un type natif dans la pile. Par conséquent, vous n’avez pas besoin d’utiliser [gcnew de nouveau, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) pour créer un objet d’un type référence. Et lorsque l'objet est hors de portée, le compilateur appelle le destructeur de l'objet.  

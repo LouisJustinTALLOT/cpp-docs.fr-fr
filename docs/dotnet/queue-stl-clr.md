@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172742"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments qui dispose d’un accès premier sorti. Utilisation de l’adaptateur de conteneur `queue` pour gérer un conteneur sous-jacent comme une file d’attente.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167539"
 ---
 # <a name="compiler-error-c2040"></a>Erreur du compilateur C2040
 'opérateur' : les niveaux d'indirection de 'identificateur1' et de 'identificateur2' sont différents  

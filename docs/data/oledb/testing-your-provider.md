@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104787"
 ---
 # <a name="testing-your-provider"></a>Test de votre fournisseur
 Avant de libérer un fournisseur, vous devez effectuer les tests suivants, dans l’ordre indiqué. Ces tests vous assurer que les fonctions du fournisseur correctement pour la plupart des utilisateurs potentiels.  

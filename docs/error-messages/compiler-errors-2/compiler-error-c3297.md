@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249364"
 ---
 # <a name="compiler-error-c3297"></a>Erreur du compilateur C3297
 'constraint_2' : impossible d’utiliser 'constraint_1' en tant que contrainte, car 'constraint_1' a la contrainte de valeur  

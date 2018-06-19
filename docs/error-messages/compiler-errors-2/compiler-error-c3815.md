@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268329"
 ---
 # <a name="compiler-error-c3815"></a>Erreur du compilateur C3815
 type de retour de la méthode 'accesseur_get' doit correspondre au type du dernier paramètre d’un accesseur Set  

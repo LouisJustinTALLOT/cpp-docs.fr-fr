@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276277"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Erreur C4096 de compilateur (niveau 1) d’avertissement
 « a » : interface n’est pas une interface COM ; ne sera pas émise vers IDL  

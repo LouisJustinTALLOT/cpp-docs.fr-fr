@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130501"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Comment : itérer au sein des tableaux avec for each
 Cette rubrique montre comment utiliser le [pour chacun, dans](../dotnet/for-each-in.md) (mot clé) sur les différents types de tableaux.  

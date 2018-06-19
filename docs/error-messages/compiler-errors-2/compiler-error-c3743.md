@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266514"
 ---
 # <a name="compiler-error-c3743"></a>Erreur du compilateur C3743
 peut uniquement raccorder/décrocher la totalité d’une interface quand le paramètre 'layout_dependent' d’event_receiver a la valeur true  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167663"
 ---
 # <a name="compiler-error-c2026"></a>Erreur du compilateur C2026
 chaîne trop grande, caractères de fin tronqués  

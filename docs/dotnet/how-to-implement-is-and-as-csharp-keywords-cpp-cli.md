@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128616"
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Comment : implémenter les mots clés C# is et as (C++/CLI)
 Cette rubrique montre comment implémenter les fonctionnalités de la `is` et `as` mots clés c# dans Visual C++.  

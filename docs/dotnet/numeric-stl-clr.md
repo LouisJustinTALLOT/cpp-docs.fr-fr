@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139524"
 ---
 # <a name="numeric-stlclr"></a>numériques (STL/CLR)
 Définit les fonctions de modèle de conteneur qui exécutent des algorithmes fournis pour le traitement numérique.  

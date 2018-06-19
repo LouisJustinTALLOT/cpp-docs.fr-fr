@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110339"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Prise en charge des transactions dans OLE DB
 A [transaction](../../data/transactions-mfc-data-access.md) est un moyen pour le groupe ou le lot, une série de mises à jour à une source de données, tous les réussissent et sont validées en même temps ou (si l’une d’elles échoue), aucune n’est validée et toute la transaction est restaurée. Ce processus garantit l’intégrité du résultat sur la source de données.  

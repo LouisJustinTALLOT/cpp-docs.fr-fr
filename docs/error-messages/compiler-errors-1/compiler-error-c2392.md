@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197908"
 ---
 # <a name="compiler-error-c2392"></a>Erreur du compilateur C2392
 'méthode1' : retours covariants types ne sont pas pris en charge dans managed ou WinRTtypes, le cas contraire, 'méthode2' est substitué  

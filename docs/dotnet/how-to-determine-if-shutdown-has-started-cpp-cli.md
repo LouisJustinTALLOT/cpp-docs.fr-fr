@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137700"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Comment : déterminer si le processus d'arrêt a commencé (C++/CLI)
 L’exemple de code suivant montre comment déterminer si l’application ou le .NET Framework s’arrête. Cela est utile pour accéder à des éléments statiques dans le .NET Framework, car, lors de l’arrêt, ces constructions sont finalisées par le système et ne peut pas être utilisées de manière fiable. En vérifiant la <xref:System.Environment.HasShutdownStarted%2A> propriété tout d’abord, vous pouvez éviter tout problème potentiel par ne pas l’accès à ces éléments.  

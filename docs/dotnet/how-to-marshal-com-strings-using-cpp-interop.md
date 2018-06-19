@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133326"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Comment : marshaler des chaînes COM à l’aide de l’interopérabilité C++
 Cette rubrique montre comment un BSTR (format de chaîne de base favorisé dans la programmation COM) peut être passé d’une fonction managée à une fonction non managée et vice versa. Pour interagir avec d’autres types de chaînes, consultez les rubriques suivantes :  

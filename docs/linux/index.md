@@ -3,13 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "Documentation sur le développement Linux avec C++"
-description: "Créez et déboguez des applications exécutées sur Linux."
+title: Documentation sur le développement Linux avec C++
+description: Créez et déboguez des applications exécutées sur Linux.
 ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794178"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentation sur le développement Linux avec C++
 

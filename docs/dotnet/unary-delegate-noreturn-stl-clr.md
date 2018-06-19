@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167835"
 ---
 # <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
 La classe genereic décrit un délégué à un argument qui renvoie `void`. Vous l’utilisez spécifier en termes de son type d’argument d’un délégué.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130112"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Comment : lire les compteurs de performance Windows (C++/CLI)
 Certaines applications et certains sous-systèmes Windows exposent les données de performances via le système de performances Windows. Ces compteurs sont accessibles à l’aide de la <xref:System.Diagnostics.PerformanceCounterCategory> et <xref:System.Diagnostics.PerformanceCounter> classes, qui se trouvent dans le <xref:System.Diagnostics?displayProperty=fullName> espace de noms.  

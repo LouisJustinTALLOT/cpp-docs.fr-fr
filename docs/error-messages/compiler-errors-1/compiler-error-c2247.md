@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172311"
 ---
 # <a name="compiler-error-c2247"></a>Erreur du compilateur C2247
 'identificateur' non accessible, car 'classe' utilise 'spécificateur' pour hériter de 'class'  

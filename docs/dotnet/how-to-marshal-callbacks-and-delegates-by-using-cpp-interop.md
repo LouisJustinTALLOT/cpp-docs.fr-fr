@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132776"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Comment : marshaler des rappels et des délégués à l’aide de l’interopérabilité C++
 Cette rubrique illustre le marshaling de rappels et délégués (version managée d’un rappel) entre du code managé et à l’aide de Visual C++.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132906"
 ---
 # <a name="msclr-namespace"></a>msclr, espace de noms
 Le `msclr` espace de noms contient toutes les classes de la bibliothèque de prise en charge C++. Pour plus d’informations sur ces classes, consultez [bibliothèque de prise en charge C++](../dotnet/cpp-support-library.md).  

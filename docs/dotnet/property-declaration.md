@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161575"
 ---
 # <a name="property-declaration"></a>Déclaration de propriété
 La manière de déclarer une propriété dans une classe managée a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  

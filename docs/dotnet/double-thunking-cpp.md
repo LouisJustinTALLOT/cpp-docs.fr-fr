@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111206"
 ---
 # <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
 Double médiateur fait référence à la perte de performances que peuvent se produire lorsqu’un appel de fonction dans un contexte managé appelle une Visual C++ fonction managée et où l’exécution du programme appelle le point d’entrée natif de la fonction afin d’appeler la fonction managée. Cette rubrique traite des cas de double médiateur et comment vous pouvez l’éviter pour améliorer les performances.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265117"
 ---
 # <a name="compiler-error-c3650"></a>Erreur du compilateur C3650
 'méthode_interface' : ne peut pas être utilisé comme substitution explicite, doit être une fonction membre virtuelle de classe de base  

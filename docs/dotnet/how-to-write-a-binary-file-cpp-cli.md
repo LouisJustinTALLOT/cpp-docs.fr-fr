@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130125"
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>Comment : écrire un fichier binaire (C++/CLI)
 L’exemple de code suivant montre comment écrire des données binaires dans un fichier. Deux classes à partir de la <xref:System.IO> espace de noms sont utilisés : <xref:System.IO.FileStream> et <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> représente le fichier réel, tandis que <xref:System.IO.BinaryWriter> fournit une interface pour le flux de données qui autorise l’accès binaire.  

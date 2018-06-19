@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129747"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Comment : accéder aux caractères d'un System::String
 Vous pouvez accéder aux caractères d’un <xref:System.String> des fonctions de l’objet pour les appels de hautes performances à non managé utilisant `wchar_t*` chaînes. La méthode génère un pointeur intérieur vers le premier caractère de la <xref:System.String> objet. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend un ordinaire `wchar_t` chaîne.  

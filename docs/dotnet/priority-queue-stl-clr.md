@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172538"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une longueur variable ordonné séquence d’éléments qui a un accès limité. Utilisation de l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent comme une file d’attente de priorité.  

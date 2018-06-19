@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112054"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Référence des modèles du consommateur OLE DB
 Modèles du consommateur OLE DB contient les classes suivantes. La documentation de référence inclut également des rubriques sur la [macros pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  

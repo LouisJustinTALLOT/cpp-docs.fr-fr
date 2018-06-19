@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129614"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Comment : valider la mise en forme de données à l'aide d'expressions régulières (C++/CLI)
 L’exemple de code suivant illustre l’utilisation d’expressions régulières pour vérifier la mise en forme d’une chaîne. Dans l’exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide. L’exemple de code suivant utilise la chaîne « \d{3}-\d{3}-\d{4}» pour indiquer que chaque champ représente un numéro de téléphone valide. « D » dans la chaîne indique un chiffre, et l’argument après chaque « d » indique le nombre de chiffres qui doivent être présents. Dans ce cas, le nombre est nécessaire pour être séparés par des tirets.  

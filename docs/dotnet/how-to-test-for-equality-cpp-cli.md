@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127979"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>Comment : tester l'égalité (C++/CLI)
 Dans l’exemple suivant, un test d’égalité qui utilise les Extensions managées pour C++ est basé sur ce que les handles font référence.  

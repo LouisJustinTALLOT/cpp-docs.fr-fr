@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110394"
 ---
 # <a name="ccli-tasks"></a>Tâches C++/CLI
 Les articles de cette section de la documentation indiquent comment utiliser les diverses fonctionnalités du langage c++ / CLI.  

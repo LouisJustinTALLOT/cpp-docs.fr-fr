@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160990"
 ---
 # <a name="replaceif-stlclr"></a>replace_if (STL/CLR)
 Examine tous les éléments d’une plage et les remplace s’ils répondent à un prédicat spécifié.  

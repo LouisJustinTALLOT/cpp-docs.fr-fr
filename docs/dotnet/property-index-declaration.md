@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160834"
 ---
 # <a name="property-index-declaration"></a>Déclaration de l'index de la propriété
 La syntaxe de déclaration d’une propriété indexée a changé entre les Extensions managées pour C++ vers Visual C++.  

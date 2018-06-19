@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128670"
 ---
 # <a name="lexicographicalcompare-stlclr"></a>lexicographical_compare (STL/CLR)
 Compare deux séquences, élément par élément, pour déterminer lequel est inférieur à l'autre.  

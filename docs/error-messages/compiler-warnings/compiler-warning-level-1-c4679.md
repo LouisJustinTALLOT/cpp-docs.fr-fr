@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281546"
 ---
 # <a name="compiler-warning-level-1-c4679"></a>Avertissement du compilateur (niveau 1) C4679
 Le compilateur a rencontré une construction qu’il ne peut pas prendre en charge, ce qui ne peut pas être importée à partir des métadonnées.  

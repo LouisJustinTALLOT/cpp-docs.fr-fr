@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134515"
 ---
 # <a name="minus-stlclr"></a>minus (STL/CLR)
 La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne le premier argument moins le second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
