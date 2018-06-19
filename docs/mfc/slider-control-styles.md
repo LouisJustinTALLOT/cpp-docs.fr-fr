@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380544"
 ---
 # <a name="slider-control-styles"></a>Styles de contrôle Slider
 Contrôles Slider ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) peut avoir une orientation verticale ou horizontale. Ils peuvent contenir des graduations de chaque côté, des deux côtés, ou d'aucun côté. Ils peuvent également être utilisés pour spécifier une plage de valeurs consécutives. Ces propriétés sont contrôlées en utilisant les styles de commande de réglage, que vous spécifiez lors de la création du curseur.  

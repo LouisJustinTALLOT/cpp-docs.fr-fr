@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289657"
 ---
 # <a name="compiler-warning-level-3-c4535"></a>Avertissement du compilateur (niveau 3) C4535
 appel de _set_se_translator() requiert /EHa  

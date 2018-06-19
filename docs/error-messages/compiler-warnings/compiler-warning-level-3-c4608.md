@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290684"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>Avertissement du compilateur (niveau 3) C4608
 'union_member' a déjà été initialisé par un autre membre union dans la liste des initialiseurs, 'union_member'  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169655"
 ---
 # <a name="compiler-error-c2207"></a>Erreur du compilateur C2207
 'membre' : un membre d'un modèle de classe ne peut pas acquérir un type de fonction  

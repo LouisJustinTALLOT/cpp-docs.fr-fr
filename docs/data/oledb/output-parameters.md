@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104384"
 ---
 # <a name="output-parameters"></a>Paramètres de sortie
 Appel d’une procédure stockée est similaire à l’appel d’une commande SQL. La principale différence est que les procédures stockées utilisent des paramètres de sortie (ou des paramètres de « sortie ») et retournent des valeurs.  

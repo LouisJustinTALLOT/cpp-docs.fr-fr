@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105788"
 ---
 # <a name="find-stlclr"></a>find (STL/CLR)
 Recherche la position de la première occurrence d'un élément d'une plage ayant une valeur spécifiée.  

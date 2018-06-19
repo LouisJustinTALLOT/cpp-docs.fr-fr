@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382217"
 ---
 # <a name="using-ctreectrl"></a>Utilisation de CTreeCtrl
 Un contrôle d’arborescence, représenté par la classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), est une fenêtre qui affiche une liste hiérarchique des éléments, tels que les en-têtes dans un document, les entrées dans un index, ou les fichiers et les répertoires sur un disque. Chaque élément se compose d’une étiquette et une image bitmap facultative, et chaque élément peut avoir une liste de sous-éléments associée. En cliquant sur un élément, l’utilisateur peut développer et réduire la liste de sous-éléments associée. L’arborescence de répertoires dans le volet gauche de l’Explorateur de fichiers est un exemple d’un contrôle d’arborescence.  

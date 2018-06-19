@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277233"
 ---
 # <a name="compiler-warning-level-1-c4154"></a>Compilateur avertissement (niveau 1) C4154
 suppression d’une expression de tableau ; conversion en pointeur fournie  

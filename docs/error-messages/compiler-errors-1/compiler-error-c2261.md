@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170464"
 ---
 # <a name="compiler-error-c2261"></a>Erreur du compilateur C2261
 'string' : référence d’assembly n’est pas valide et ne peut pas être résolue  

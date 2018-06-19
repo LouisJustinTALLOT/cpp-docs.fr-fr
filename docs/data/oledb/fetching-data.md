@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101199"
 ---
 # <a name="fetching-data"></a>Récupération de données
 Après avoir ouvert la source de données, de session et objets d’ensemble de lignes, vous pouvez extraire les données. Selon le type d’accesseur que vous utilisez, vous devrez peut-être lier les colonnes.  

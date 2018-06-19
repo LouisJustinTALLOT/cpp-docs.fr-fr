@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162236"
 ---
 # <a name="rotatecopy-stlclr"></a>rotate_copy (STL/CLR)
 Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.  

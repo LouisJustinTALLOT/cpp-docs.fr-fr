@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104995"
 ---
 # <a name="using-accessors"></a>Utilisation des accesseurs
 Les rubriques suivantes expliquent comment déterminer le type d’accesseur est idéal pour les données de votre application, puis comment utiliser les différents types d’accesseurs disponibles :  

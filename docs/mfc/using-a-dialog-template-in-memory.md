@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381236"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Utilisation d'un modèle de boîte de dialogue en mémoire
 Au lieu d’utiliser les méthodes indiquées le [table de la création de la boîte de dialogue](../mfc/creating-a-dialog-class-with-code-wizards.md), vous pouvez créer deux types de boîte de dialogue indirectement à partir d’un modèle de boîte de dialogue en mémoire. Pour plus d’informations, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans les *référence MFC*.  

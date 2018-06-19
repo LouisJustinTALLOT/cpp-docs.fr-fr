@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367209"
 ---
 # <a name="cdraglistbox-class"></a>Classe de CDragListBox
 En plus de fournir les fonctionnalités d’une zone de liste Windows, la `CDragListBox` classe permet à l’utilisateur de déplacer des éléments de zone de liste, tels que des noms de fichiers, dans la zone de liste.  

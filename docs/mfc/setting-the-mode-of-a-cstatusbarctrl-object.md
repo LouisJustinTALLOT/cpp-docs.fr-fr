@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380917"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Définition du mode d'un objet CStatusBarCtrl
 Il existe deux modes pour un `CStatusBarCtrl` objet : simple et non simple. Dans la plupart des cas, votre contrôle de barre d’état aura une ou plusieurs parties, ainsi que le texte et éventuellement une icône ou des icônes. Il s’agit du mode simple. Pour plus d’informations sur ce mode, consultez [initialisation des parties d’un objet CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270815"
 ---
 # <a name="compiler-error-c3909"></a>Erreur du compilateur C3909
 aWinRT ou déclaration d’événement managé doit se produire dans un type managé ou WinRT  

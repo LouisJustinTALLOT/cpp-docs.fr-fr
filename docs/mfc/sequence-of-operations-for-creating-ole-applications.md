@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381207"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Ordre des opérations pour la création d'applications OLE
 Le tableau suivant indique votre rôle et l’infrastructure lors de la création de la liaison OLE et l’incorporation des applications. Ils représentent des options disponibles au lieu d’une séquence d’étapes à effectuer.  

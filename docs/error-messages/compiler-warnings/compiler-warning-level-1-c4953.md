@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293060"
 ---
 # <a name="compiler-warning-level-1-c4953"></a>Avertissement du compilateur (niveau 1) C4953
 'function' Inline a été modifié depuis le rassemblement des données de profil ; données de profil non utilisées  

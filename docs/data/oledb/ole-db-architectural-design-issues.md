@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109779"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Questions relatives à la conception architecturale d'OLE DB
 Vous devez envisager les problèmes suivants avant de commencer votre application OLE DB :  

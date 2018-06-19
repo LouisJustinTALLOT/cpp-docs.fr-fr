@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106256"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl, classe
 Implémente et enregistre [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) sur le consommateur (également appelé « récepteur ») afin qu’il puisse gérer les notifications.  

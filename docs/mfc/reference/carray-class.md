@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357181"
 ---
 # <a name="carray-class"></a>CArray (classe)
 Prend en charge les tableaux qui sont semblables aux tableaux C, mais peuvent réduire et dynamiquement en fonction des besoins de la croissance.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371929"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Chaînes du modèle de document, Assistant Ajouter une classe MFC
 Cette page de l’Assistant est disponible uniquement pour les classes répondant aux critères suivants :  

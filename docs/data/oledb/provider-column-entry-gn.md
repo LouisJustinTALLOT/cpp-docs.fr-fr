@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109974"
 ---
 # <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
 Représente une colonne spécifique pris en charge par le fournisseur.  

@@ -133,6 +133,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378637"
 ---
 # <a name="cwinappex-class"></a>Classe de CWinAppEx
 `CWinAppEx` gère l’état de l’application enregistre l’état dans le Registre, charge l’état à partir du Registre, initialise les gestionnaires de l’application et fournit des liens vers ces mêmes gestionnaires d’applications.  

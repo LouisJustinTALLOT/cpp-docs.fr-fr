@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355478"
 ---
 # <a name="strings-atlmfc"></a>Chaînes (ATL/MFC)
 Presque tous les programmes fonctionnent avec des données de chaîne. Visual C++ propose plusieurs façons de gérer les données de type chaîne.  

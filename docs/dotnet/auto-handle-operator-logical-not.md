@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102769"
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator!
 Opérateur pour l’utilisation de `auto_handle` dans une expression conditionnelle.  

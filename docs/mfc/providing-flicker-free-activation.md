@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356552"
 ---
 # <a name="providing-flicker-free-activation"></a>Mise à disposition de l'activation sans scintillement
 Si votre contrôle se dessine lui-même de façon identique dans les états inactifs et actifs (et n’utilise pas l’activation sans fenêtre), vous pouvez éliminer les opérations de dessin et le scintillement accompagne normalement se produire lors d’une transition entre inactifs États et actif. Pour cela, incluez le **noFlickerActivate** indicateur dans le jeu d’indicateurs retourné par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Par exemple :  

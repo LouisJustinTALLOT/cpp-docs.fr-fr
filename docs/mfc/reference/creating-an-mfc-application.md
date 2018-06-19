@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368811"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 Une application MFC est une application exécutable pour Windows qui se base sur la bibliothèque MFC (Microsoft Foundation Class). L'utilisation de l'Assistant Application MFC constitue le moyen le plus facile pour créer une application MFC.  

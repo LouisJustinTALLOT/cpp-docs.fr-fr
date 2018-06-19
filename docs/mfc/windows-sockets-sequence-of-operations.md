@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385256"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets : ordre des opérations
 Cet article explique côte à côte, l’ordre des opérations pour un socket serveur et un socket client. Comme les sockets utilisent `CArchive` des objets, ils sont nécessairement [sockets de flux](../mfc/windows-sockets-stream-sockets.md).  
