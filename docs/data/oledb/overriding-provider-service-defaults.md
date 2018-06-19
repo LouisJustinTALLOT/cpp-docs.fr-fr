@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110078"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substitution des services par défaut du fournisseur
 Valeur de Registre du fournisseur pour **OLEDB_SERVICES** est retourné en tant que la valeur par défaut pour le [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) propriété d’initialisation de l’objet de source de données.  

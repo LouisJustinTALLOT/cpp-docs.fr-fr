@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107937"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Détermination de manière dynamique des colonnes retournées au consommateur
 Les macros PROVIDER_COLUMN_ENTRY gèrent normalement le **IColumnsInfo::GetColumnsInfo** appeler. Toutefois, étant donné que le consommateur peut choisir d’utiliser des signets, le fournisseur doit être en mesure de modifier les colonnes retournées selon que le consommateur demande un signet.  

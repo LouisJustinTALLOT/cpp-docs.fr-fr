@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113757"
 ---
 # <a name="friend-assemblies-c"></a>Assemblys friend (C++)
 Pour connaître les runtimes applicables, le *assemblys friend* fonctionnalité de langage rend les types qui sont à la portée espace de noms ou une étendue globale dans un composant d’assembly accessible à un ou plusieurs assemblys clients ou .netmodule.  

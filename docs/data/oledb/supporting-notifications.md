@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112093"
 ---
 # <a name="supporting-notifications"></a>Prise en charge des notifications
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implémenter des Interfaces de Point de connexion sur le fournisseur et le consommateur  

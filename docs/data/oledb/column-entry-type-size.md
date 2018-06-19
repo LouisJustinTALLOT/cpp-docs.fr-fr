@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097170"
 ---
 # <a name="columnentrytypesize"></a>COLUMN_ENTRY_TYPE_SIZE
 Représente une liaison à la colonne dans la base de données. Prend en charge `type` et `size` paramètres.  

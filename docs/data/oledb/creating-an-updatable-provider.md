@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098639"
 ---
 # <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
 Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qui peuvent mettre à jour (modifier) le magasin de données. Cette rubrique explique comment créer des fournisseurs de mettre à jour à l’aide de modèles OLE DB.  

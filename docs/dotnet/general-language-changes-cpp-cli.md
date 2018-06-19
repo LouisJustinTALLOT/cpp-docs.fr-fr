@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109136"
 ---
 # <a name="general-language-changes-ccli"></a>Modifications d'ordre général apportées au langage (C++/CLI)
 Nombre de fonctionnalités du langage CLR changé entre les Extensions managées pour C++ vers Visual C++.  

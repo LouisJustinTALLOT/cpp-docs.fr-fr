@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127966"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Comment : obtenir un pointeur vers un tableau d'octets
 Vous pouvez obtenir un pointeur vers le bloc de tableau dans un <xref:System.Byte> tableau par la prise d’adresse du premier élément et en l’assignant à un pointeur.  

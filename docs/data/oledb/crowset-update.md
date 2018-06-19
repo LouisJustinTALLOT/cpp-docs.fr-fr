@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098132"
 ---
 # <a name="crowsetupdate"></a>CRowset::Update
 Transmet toutes les modifications apportées à la ligne en cours depuis la dernière extraction ou **mise à jour** appeler sur celle-ci.  

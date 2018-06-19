@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112379"
 ---
 # <a name="updating-rowsets"></a>mettre à jour les jeux de lignes
 Une opération de base de données très simple consiste à mettre à jour ou à écrire des données dans le magasin de données. Dans OLE DB, le mécanisme de mise à jour est simple : votre application consommatrice définit les valeurs des membres de données liés, puis écrit ces valeurs dans le rowset ; le consommateur demande ensuite au fournisseur de mettre à jour le magasin de données.  

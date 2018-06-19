@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097508"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 Type d'optimisation que vous pouvez utiliser pour passer des données de type chaîne des paramètres d'entrée `Platform::String^` à d'autres méthodes avec un minimum d'opérations de copie.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132175"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Comment : marshaler des pointeurs fonction à l’aide de PInvoke
 Cette rubrique explique comment les délégués managés peut être utilisé à la place des pointeurs de fonction lors de l’interaction avec l’utilisation des fonctionnalités de .NET Framework P/Invoke de fonctions non managées. Toutefois, les programmeurs Visual C++ sont encouragés à utiliser plutôt les fonctionnalités d’interopérabilité C++ (si possible), car P/Invoke peu compilation rapport d’erreurs, n’est pas de type sécurisé et peut être fastidieux à implémenter. Si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option. Dans le cas contraire, consultez les rubriques suivantes :  

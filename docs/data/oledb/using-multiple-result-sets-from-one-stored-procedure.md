@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106308"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Utilisation de plusieurs jeux de résultats à partir d'une seule procédure stockée
 La plupart des procédures stockées retournent plusieurs jeux de résultats. Ce type de procédure stockée inclut généralement une ou plusieurs instructions select. Le consommateur doit en tenir compte pour gérer tous les jeux de résultats.  

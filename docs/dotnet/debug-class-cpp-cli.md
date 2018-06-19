@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106204"
 ---
 # <a name="debug-class-ccli"></a>Classe de débogage (C++/CLI)
 Lorsque vous utilisez <xref:System.Diagnostics.Debug> dans une application Visual C++, le comportement ne change pas entre un débogage et une version Release.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112106"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modèles du consommateur OLE DB (C++)
 Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB version 2.6. (Les modèles de consommateurs OLE DB sont testés pour OLE DB 2.6, mais il ne prennent pas en charge chacune des interfaces de la spécification.) Les modèles de consommateurs réduisent la quantité de code que vous devez écrire pour implémenter un consommateur OLE DB. Les modèles fournissent :  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111830"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Différences du comportement de gestion des exceptions dans /CLR
 [Concepts de base dans l’utilisation des Exceptions](../dotnet/basic-concepts-in-using-managed-exceptions.md) présente la gestion des exceptions dans les applications managées. Dans cette rubrique, les différences du comportement standard de la gestion des exceptions et des restrictions sont décrites en détail. Pour plus d’informations, consultez [la fonction _set_se_translator](../c-runtime-library/reference/set-se-translator.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089910"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 Vous pouvez créer votre classe de vue de l’enregistrement avec le [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md). Si vous utilisez un Assistant Application, il crée la classe de vue d'enregistrement et une ressource de modèle de boîte de dialogue pour elle (sans contrôles). Vous devez utiliser l'éditeur de boîtes de dialogue Visual C++ pour ajouter des contrôles à la ressource de modèle de boîte de dialogue. En revanche, si vous utilisez **ajouter une classe**, vous devez d’abord créer la ressource de modèle de boîte de dialogue dans la boîte de dialogue Éditeur et ensuite créer la classe de vue de l’enregistrement.  

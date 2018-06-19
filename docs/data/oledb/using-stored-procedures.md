@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112236"
 ---
 # <a name="using-stored-procedures"></a>Utilisation des procédures stockées
 Une procédure stockée est un objet exécutable stocké dans une base de données. Appel d’une procédure stockée est similaire à l’appel d’une commande SQL. À l’aide de procédures stockées sur la source de données (au lieu d’exécuter ou de préparation d’une instruction dans l’application cliente) peut fournir plusieurs avantages, notamment des performances accrues, une charge réseau réduite et améliorer la cohérence et la précision.  

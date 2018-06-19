@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105203"
 ---
 # <a name="retrieving-a-blob"></a>Récupération d'un BLOB
 Vous pouvez récupérer un objet binaire volumineux (BLOB) de différentes manières. Vous pouvez utiliser **DBTYPE_BYTES** pour récupérer l’objet BLOB sous la forme d’une séquence d’octets ou utiliser une interface de type `ISequentialStream`. Pour plus d’informations, consultez [BLOB et les objets OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) dans les *de référence du programmeur OLE DB*.  

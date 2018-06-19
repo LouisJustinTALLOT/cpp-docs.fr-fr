@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107485"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Regroupement des ressources dans votre application OLE DB
 Pour tirer parti du regroupement dans votre application, vous devez vous assurer que les services OLE DB sont appelés en obtenant la source de données via **IDataInitialize** ou **IDBPromptInitialize**. Si vous utilisez directement `CoCreateInstance` pour appeler le fournisseur selon le CLSID du fournisseur, aucun service OLE DB n’est appelées.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112041"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Appel à des fonctions natives à partir de code managé
 Le common language runtime fournit des Services d’appel de plateforme, ou PInvoke, qui permet de code managé d’appeler des fonctions de style C dans les bibliothèques liées dynamiques (DLL) natives. Les marshaling de données mêmes sont utilisées pour l’interopérabilité de COM avec le runtime et pour le mécanisme « It Just Works » ou IJW.  

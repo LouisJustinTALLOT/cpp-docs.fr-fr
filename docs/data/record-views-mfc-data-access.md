@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111248"
 ---
 # <a name="record-views--mfc-data-access"></a>Vues d'enregistrements (Accès aux données MFC)
 Cette section s’applique uniquement aux classes ODBC MFC. Pour plus d’informations sur les vues des enregistrements OLE DB, consultez [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) et [à l’aide des vues de l’enregistrement OLE DB](../data/oledb/using-ole-db-record-views.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130969"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Comment : déclarer des handles dans les types natifs
 Vous ne pouvez pas déclarer un type de handle dans un type natif. vcclr.h fournit le modèle de wrapper de type sécurisé `gcroot` pour faire référence à un objet CLR du tas C++. Ce modèle vous permet d’incorporer un handle virtuel dans un type natif et de le traiter comme s’il s’agissait du type sous-jacent. Dans la plupart des cas, vous pouvez utiliser la `gcroot` objet en tant que type incorporé sans conversion. Toutefois, avec [pour chacun, dans](../dotnet/for-each-in.md), vous devez utiliser `static_cast` pour récupérer la référence managée sous-jacente.  

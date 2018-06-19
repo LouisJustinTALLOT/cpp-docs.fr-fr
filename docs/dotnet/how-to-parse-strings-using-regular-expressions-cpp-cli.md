@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131096"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Comment : analyser des chaînes à l'aide d'expressions régulières (C++/CLI)
 L’exemple de code suivant illustre l’analyse de chaîne simple à l’aide de la <xref:System.Text.RegularExpressions.Regex> classe dans le <xref:System.Text.RegularExpressions?displayProperty=fullName> espace de noms. Chaîne qui contient plusieurs types de délimiteurs de word est construite. La chaîne est ensuite analysée à l’aide de la <xref:System.Text.RegularExpressions.Regex> classe conjointement avec la <xref:System.Text.RegularExpressions.Match> classe. Ensuite, chaque mot dans la phrase est affiché séparément.  
