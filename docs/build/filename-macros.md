@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458860"
 ---
 # <a name="filename-macros"></a>Macros de noms de fichiers
 Macros de nom de fichier sont prédéfinies en tant que noms de fichiers spécifiés dans la dépendance (nom de fichier complet pas les spécifications sur le disque). Ces macros n’avez pas besoin d’être mis entre parenthèses lorsqu’elle est appelée ; Spécifiez uniquement un $ comme indiqué.  

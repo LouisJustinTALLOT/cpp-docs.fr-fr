@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365137"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 Cette classe fournit des méthodes pour la création d’une boîte de dialogue modale ou non.  

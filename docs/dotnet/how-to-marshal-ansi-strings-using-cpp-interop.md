@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129393"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Comment : marshaler des chaînes ANSI à l’aide de l’interopérabilité C++
 Cette rubrique montre comment les chaînes ANSI peuvent être passées à l’aide de C++ Interop, mais le .NET Framework <xref:System.String> représente des chaînes au format Unicode, par conséquent, la conversion au format ANSI est une étape supplémentaire. Pour interagir avec d’autres types de chaîne, consultez les rubriques suivantes :  

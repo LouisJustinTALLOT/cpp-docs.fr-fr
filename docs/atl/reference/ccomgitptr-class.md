@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363624"
 ---
 # <a name="ccomgitptr-class"></a>Classe de CComGITPtr
 Cette classe fournit des méthodes pour traiter les pointeurs d’interface et le tableau global d’interface (GIT).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089364"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Affichage et manipulation de données dans un formulaire
 De nombreuses applications d’accès aux données sélectionnent les données et les affichent dans les champs dans un formulaire. La classe de base de données [CRecordView](../../mfc/reference/crecordview-class.md) vous donne un [CFormView](../../mfc/reference/cformview-class.md) objet directement connecté à un objet recordset. La vue de l’enregistrement utilise [échange de données de boîtes de dialogue (DDX)](../../mfc/dialog-data-exchange-and-validation.md) pour déplacer les valeurs des champs de l’enregistrement actif du jeu d’enregistrements pour les contrôles du formulaire et pour replacer les informations mises à jour vers le recordset. L’objet recordset et utilise à son tour, échange de champs d’enregistrements (RFX) pour transférer des données entre ses membres de données de champ et les colonnes correspondantes dans une table de la source de données.  

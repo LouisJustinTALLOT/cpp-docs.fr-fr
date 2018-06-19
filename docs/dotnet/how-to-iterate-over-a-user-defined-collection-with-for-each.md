@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128652"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Comment : itérer au sein d’une collection définie par l’utilisateur en utilisant for each
 Pour une classe doit être une collection de managé, il doit une fonction GetEnumerator non privés qui retourne un handle vers une classe d’énumérateur ou d’une interface.  Une classe d’énumérateur doit contenir la déclaration de fonction de non statique MoveNext et une propriété Current.  

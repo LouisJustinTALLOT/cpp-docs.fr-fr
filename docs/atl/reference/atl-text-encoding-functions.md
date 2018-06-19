@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366076"
 ---
 # <a name="atl-text-encoding-functions"></a>Codage des fonctions de texte ATL
 Ces fonctions prennent en charge le codage et décodage de texte.

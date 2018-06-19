@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368419"
 ---
 # <a name="inference-rules"></a>Règles d'inférence
 Règles d’inférence fournissent des commandes pour mettre à jour les cibles et de déduire des dépendants pour les cibles. Dans une règle d’inférence, les extensions correspondent à une seule cible et dépendants qui ont le même nom. Règles d’inférence sont définies par l’utilisateur ou prédéfinis ; règles prédéfinies peuvent être redéfinis.  

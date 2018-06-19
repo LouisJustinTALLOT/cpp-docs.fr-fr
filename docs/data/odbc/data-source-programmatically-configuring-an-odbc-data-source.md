@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091970"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : configuration d'une source de données ODBC par programme
 Cette rubrique explique comment configurer les noms de sources de données de base de données ODBC (Open Connectivity) par programmation. Cela vous donne une grande souplesse pour accéder aux données sans forcer l’utilisateur d’utiliser explicitement l’administrateur ODBC ou autres programmes pour spécifier les noms de sources de données.  

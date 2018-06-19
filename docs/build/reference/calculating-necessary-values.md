@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369326"
 ---
 # <a name="calculating-necessary-values"></a>Calcul des valeurs nécessaires
 Deux informations critiques doivent être calculées par la routine d’assistance de délai. À cette fin, il existe deux fonctions inline dans delayhlp.cpp pour le calcul de ces informations.  

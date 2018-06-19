@@ -17,6 +17,7 @@ ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34422732"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Optimisation de la virgule flottante de Microsoft Visual C++
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372007"
 ---
 # <a name="prolog-and-epilog"></a>Prologue et épilogue
 Chaque fonction qui alloue de l’espace de pile, appelle d’autres fonctions, enregistre les registres non volatils ou utilise la gestion des exceptions doit posséder un prologue dont les limites d’adresse sont décrites dans les données de déroulement associées à l’entrée de table de fonctions respective (consultez [(X64) de la gestion des exceptions](../build/exception-handling-x64.md)). Le prologue enregistre argument registres leurs adresses de base si nécessaire, exécute un push de registres non volatils sur la pile, alloue la partie fixe de la pile pour les variables locales et les objets temporaires et établit éventuellement un pointeur de frame. Données de déroulement associées doivent décrire l’action du prologue et devez fournir les informations nécessaires pour annuler l’effet du code de prologue.  

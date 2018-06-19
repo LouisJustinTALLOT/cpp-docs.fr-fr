@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089257"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType, interface
 `Platform::IValueType` est une interface d’infrastructure qui est implémentée par des classes et des structs de valeur. Ne doit pas être utilisée de manière explicite dans votre code.  

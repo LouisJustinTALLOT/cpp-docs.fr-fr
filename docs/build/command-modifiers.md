@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367171"
 ---
 # <a name="command-modifiers"></a>Modificateurs de commandes
 Vous pouvez spécifier un ou plusieurs modificateurs de commandes devant une commande, éventuellement séparée par des espaces ou des tabulations. Comme avec les commandes, modificateurs doivent être mis en retrait.  

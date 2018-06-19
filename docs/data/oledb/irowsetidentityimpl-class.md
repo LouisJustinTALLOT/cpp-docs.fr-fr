@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101420"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl, classe
 Implémente le OLE DB [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) interface, ce qui permet de tester pour l’identité de la ligne.  

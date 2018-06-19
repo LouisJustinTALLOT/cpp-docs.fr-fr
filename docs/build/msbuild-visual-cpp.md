@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369303"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Vous pouvez utiliser la **MSBuild** outil pour générer une application Visual C++ à partir de l’invite de commandes. Le processus de génération est contrôlé par les informations contenues dans un fichier projet (.vcxproj) que vous pouvez créer et modifier. Le fichier projet spécifie les options de build en fonction de génèrent étapes, les conditions et les événements.  

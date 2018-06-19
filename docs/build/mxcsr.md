@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368624"
 ---
 # <a name="mxcsr"></a>MxCsr
 L’état du Registre inclut également MxCsr. La convention d’appel divise ce Registre en une partie volatile et une partie non volatile. La partie volatile se compose des indicateurs de 6 état, MXCSR [0:5], alors que le reste du Registre, MXCSR [6:15], est considéré comme non volatile.  

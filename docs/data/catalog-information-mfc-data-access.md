@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090051"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informations relatives au catalogue (Accès aux données MFC)
 Les informations sur les tables d'une source de données peuvent inclure les noms des tables et de leurs colonnes, les privilèges de table, les noms des clés primaires et étrangères, des informations sur les procédures stockées ou les requêtes prédéfinies, des informations sur les index des tables et des statistiques sur les tables.  

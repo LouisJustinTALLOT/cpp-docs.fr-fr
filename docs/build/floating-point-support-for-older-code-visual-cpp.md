@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367158"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Prise en charge de la virgule flottante pour le code plus ancien (Visual C++)
 Les registres MMX et pile à virgule flottante (MM0-MM7/ST0-ST7) sont conservés entre les commutateurs de contexte.  Il n’existe aucune convention d’appel explicite pour ces registres.  L’utilisation de ces registres est strictement interdite dans le code en mode noyau.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096936"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Création d'un fournisseur simple accessible en lecture seule
 Lorsque vous avez créé un fournisseur OLE DB à l’aide de l’Assistant Projet ATL et l’Assistant fournisseur OLE DB ATL, vous pouvez ajouter d’autres fonctionnalités que vous souhaitez prendre en charge. Commencer à concevoir votre fournisseur en examinant le type de données que vous enverrez au consommateur et dans quelles conditions. Il est particulièrement important de déterminer si vous avez besoin prendre en charge les commandes, les transactions et les autres objets facultatifs. Une bonne conception en amont accélérer la mise en œuvre et test.  

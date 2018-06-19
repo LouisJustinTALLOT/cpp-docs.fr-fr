@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362217"
 ---
 # <a name="supporting-idispeventimpl"></a>Prise en charge de IDispEventImpl
 La classe de modèle [IDispEventImpl](../atl/reference/idispeventimpl-class.md) peut être utilisé pour prendre en charge des récepteurs de point de connexion dans votre classe ATL. Un récepteur de points de connexion permet à votre classe gérer les événements déclenchés à partir des objets COM externes. Ces récepteurs de points de connexion sont mappés avec une table de récepteur d’événements, fournie par votre classe.  

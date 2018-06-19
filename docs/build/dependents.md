@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366934"
 ---
 # <a name="dependents"></a>Dépendants
 Dans une ligne de dépendance, spécifiez zéro ou plusieurs dépendants après le signe deux-points ( :)) ou un double deux-points ( :),) à l’aide de n’importe quel nom de fichier valide ou [pseudocible](../build/pseudotargets.md). Séparez les dépendants multiples par un ou plusieurs des espaces ou des tabulations. Objets dépendants ne respectent pas la casse. Chemins d’accès sont autorisées avec les noms de fichiers.  

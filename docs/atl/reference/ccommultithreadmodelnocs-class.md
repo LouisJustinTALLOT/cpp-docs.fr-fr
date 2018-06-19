@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364191"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Classe de CComMultiThreadModelNoCS
 `CComMultiThreadModelNoCS` Fournit des méthodes thread-safe pour incrémenter et décrémenter la valeur d’une variable, sans verrouillage de section critique ou de la fonctionnalité de déverrouillage.  

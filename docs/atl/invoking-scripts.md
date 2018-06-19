@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362269"
 ---
 # <a name="invoking-scripts"></a>Appeler des Scripts
 [À l’aide des paramètres remplaçables (le préprocesseur de Registrar)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) présente les mappages de remplacement et mentionne la méthode Registrar **AddReplacement**. Le bureau d’enregistrement a huit méthodes spécifiques des scripts, et toutes sont décrites dans le tableau suivant.  

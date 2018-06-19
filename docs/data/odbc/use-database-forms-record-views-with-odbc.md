@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089815"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Utilisation des formulaires de base de données (mode Enregistrement) avec ODBC
 Certaines applications, telles que l’entrée de données ou l’affichage de données, nécessitent un formulaire, une vue avec les contrôles de style de la boîte de dialogue.  

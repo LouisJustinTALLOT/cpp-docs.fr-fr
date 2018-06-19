@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096998"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Création d'un consommateur OLE DB en utilisant l'Assistant
 Cette procédure montre comment vous pouvez utiliser l’Assistant Projet ATL et l’Assistant Consommateur OLE DB ATL pour générer un consommateur des modèles OLE DB, puis modifier le code principal de l’application de console pour récupérer et afficher des données à partir d’une table de base de données.  

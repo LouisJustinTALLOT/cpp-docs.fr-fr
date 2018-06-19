@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102382"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Prise en charge de Navigation dans une vue de l'enregistrement (Accès aux données MFC)
 Cette rubrique explique comment prendre en charge le déplacement d’un enregistrement à l’autre dans votre [CRecordView](../mfc/reference/crecordview-class.md) (classe), notamment des informations sur :  

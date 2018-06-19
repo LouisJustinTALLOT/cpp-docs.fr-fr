@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101300"
 ---
 # <a name="defining-stored-procedures"></a>Définition des procédures stockées
 Avant d’appeler une procédure stockée, vous devez tout d’abord définir, en utilisant le [DEFINE_COMMAND](../../data/oledb/define-command.md) (macro). Lorsque vous définissez la commande, désignez les paramètres avec un point d’interrogation ( ?) comme marqueur de paramètre :  

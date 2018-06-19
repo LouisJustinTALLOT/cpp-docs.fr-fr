@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090586"
 ---
 # <a name="odbc-classes-and-threads"></a>Threads et classes ODBC
 Depuis la version 4.2 de MFC, il existe une prise en charge le multithreading pour les classes ODBC MFC. Toutefois, notez que MFC ne fournit pas de prise en charge le multithreading pour les classes DAO.  

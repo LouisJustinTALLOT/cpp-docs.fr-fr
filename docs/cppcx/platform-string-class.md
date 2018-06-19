@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094824"
 ---
 # <a name="platformstring-class"></a>Platform::String, classe
 Représente une collection séquentielle de caractères Unicode utilisée pour représenter du texte. Pour plus d’informations et d’exemples, consultez [chaînes](../cppcx/strings-c-cx.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368432"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 Marque un exécutable qui doit s’exécuter dans un conteneur d’application, par exemple, une application Microsoft Store ni Windows universelles.  

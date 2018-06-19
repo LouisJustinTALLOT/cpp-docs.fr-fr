@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371994"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 Le compilateur appelle LINK automatiquement, sauf si vous spécifiez l’option /c. CL fournit un certain contrôle sur l’éditeur de liens par le biais des options de ligne de commande et les arguments. Le tableau suivant récapitule les fonctionnalités du compilateur affectant la liaison.  

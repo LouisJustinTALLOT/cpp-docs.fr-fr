@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091996"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Record Field Exchange : utilisation de RFX
 Cette rubrique explique comment pour utiliser RFX en fonction de la structure.  

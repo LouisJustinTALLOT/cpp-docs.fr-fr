@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099873"
 ---
 # <a name="csimplerowmdwref"></a>CSimpleRow::m_dwRef
 Décompte de références à un handle de ligne existant.  

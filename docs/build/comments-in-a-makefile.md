@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366781"
 ---
 # <a name="comments-in-a-makefile"></a>Commentaires dans un makefile
 Faites précéder un commentaire avec un signe dièse (#). NMAKE ignore le texte à partir du signe dièse et le caractère de saut de ligne suivant. Exemples :  

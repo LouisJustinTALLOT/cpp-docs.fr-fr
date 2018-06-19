@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369771"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Comment : utiliser des événements de build dans des projets MSBuild
 Un événement de build est une commande qui [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] exécute à un stade particulier dans le processus de génération. Le *pré-build* événement se produit avant le démarrage de la build ; le *avant lien* événement se produit avant le démarrage d’étape de liaison ; et le *post-build* événement se produit après la génération termine correctement. Un événement de build se produit uniquement si l’étape de génération associé se produit. Par exemple, l’événement avant lien n’a pas lieu si l’étape de liaison ne s’exécute pas.  

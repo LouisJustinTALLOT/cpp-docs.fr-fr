@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100614"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implémentation d'un fournisseur simple accessible en lecture seule
 L’exemple étendu de cette rubrique montre comment modifier les fichiers créés par l’Assistant pour créer un fournisseur simple en lecture seule qui lit un ensemble de deux chaînes à partir d’un fichier texte. Pour créer ce fournisseur à partir des fichiers de l’Assistant, ajoutez du code pour effectuer les tâches suivantes :  

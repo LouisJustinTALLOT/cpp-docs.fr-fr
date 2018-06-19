@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367990"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Comment : ajouter une étape de génération personnalisée à des projets MSBuild
 Une étape de génération personnalisée est une étape définie par l’utilisateur dans une build. Une étape de génération personnalisée se comporte comme toute autre *outil de commande* étape, telles que l’étape d’outil de compilation ou de liaison standard.  

@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366128"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mappage des messages (ATL)
 Ces macros définissent des tables des messages et les entrées.  

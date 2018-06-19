@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365583"
 ---
 # <a name="crbtree-class"></a>Classe de CRBTree
 Cette classe fournit des méthodes pour la création et utilisation d’une arborescence rouge-noire.  

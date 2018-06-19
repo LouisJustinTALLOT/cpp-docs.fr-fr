@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369849"
 ---
 # <a name="checking-for-memory-overwrites"></a>Vérification des remplacements de mémoire
 Si vous obtenez une violation d’accès sur un appel à une fonction de manipulation de segment de mémoire, il est possible que votre programme a endommagé le tas. Un problème courant de cette situation serait :  

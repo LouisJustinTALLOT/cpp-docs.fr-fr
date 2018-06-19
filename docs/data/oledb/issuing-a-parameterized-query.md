@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104573"
 ---
 # <a name="issuing-a-parameterized-query"></a>Émission d'une requête paramétrée
 L’exemple suivant émet une requête paramétrée simple qui extrait des enregistrements avec un champ d’âge (qui est supérieur à 30) à partir d’une table dans une base de données Microsoft Access. Pour prendre en charge le paramètre, l’enregistrement de l’utilisateur doit avoir un mappage supplémentaire. Le code suivant, dans un projet ATL, utilise le `CCommand` classe au lieu du `CTable` classe utilisée dans l’exemple précédent, [parcours d’un ensemble de lignes Simple](../../data/oledb/traversing-a-simple-rowset.md).  

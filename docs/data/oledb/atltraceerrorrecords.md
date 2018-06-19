@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093345"
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 Exporte les informations d’enregistrement de l’erreur OLE DB à l’unité de vidage si une erreur est retournée.  

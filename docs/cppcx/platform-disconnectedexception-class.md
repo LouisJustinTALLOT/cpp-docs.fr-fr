@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087487"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException, classe
 Levée quand un objet proxy COM essaie de faire référence à un serveur COM qui n'existe plus  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366794"
 ---
 # <a name="callercallee-saved-registers"></a>Registres enregistrés des appelants/appelés
 Les registres RAX, RCX, RDX, R8, R9, R10, R11 sont considérés comme volatile et doit être considérée comme détruits sur les appels de fonction (sauf dans le cas contraire sécurité estimer par analyse telles qu’une optimisation de l’ensemble du programme).  

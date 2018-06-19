@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091827"
 ---
 # <a name="data-source-managing-connections-odbc"></a>Source de données : gestion des connexions (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  

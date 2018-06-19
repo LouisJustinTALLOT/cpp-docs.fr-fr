@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098275"
 ---
 # <a name="crowsetdelete"></a>CRowset::Delete
 Appels [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) afin de supprimer la ligne actuelle de l’ensemble de lignes.  

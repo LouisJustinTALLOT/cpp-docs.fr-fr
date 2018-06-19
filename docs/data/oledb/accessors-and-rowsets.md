@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094493"
 ---
 # <a name="accessors-and-rowsets"></a>Accesseurs et jeux de lignes
 Pour définir et récupérer des données, les modèles OLE DB utilisent un accesseur et un ensemble de lignes via la [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Cette classe peut gérer plusieurs accesseurs de différents types.  

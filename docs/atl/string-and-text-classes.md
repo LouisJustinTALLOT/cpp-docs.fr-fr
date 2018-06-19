@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362198"
 ---
 # <a name="string-and-text-classes"></a>Chaîne et les Classes de texte
 Ces classes fournissent la prise en charge pour les chaînes et les conversions de chaînes de texte.  

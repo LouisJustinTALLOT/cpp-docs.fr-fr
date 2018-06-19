@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108684"
 ---
 # <a name="ccli-migration-primer"></a>Initiation à la migration de C++/CLI
 Il s’agit d’un repère de déplacement de vos programmes Visual C++ à partir des Extensions managées pour C++ vers Visual C++. 

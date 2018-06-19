@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368959"
 ---
 # <a name="recursion-macros"></a>Macros récursives
 Utiliser des macros de récursivité pour appeler NMAKE de manière récursive. Les sessions récursives héritent des macros de ligne de commande et la variable d’environnement et des informations concernant Tools.ini. Ils n’héritent pas des règles d’inférence définies makefile ou **. SUFFIXES** et **. PRÉCIEUX** spécifications. Pour passer des macros à une session NMAKE récursive, définir une variable d’environnement avec jeu avant l’appel récursif, définissez une macro dans la commande pour l’appel récursif ou définissez une macro dans Tools.ini.  

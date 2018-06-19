@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370945"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 Expose les mêmes fonctionnalités que le [/du segment de mémoire](../../build/reference/heap-set-heap-size.md) option de l’éditeur de liens.  
