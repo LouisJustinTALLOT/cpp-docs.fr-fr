@@ -1,7 +1,7 @@
 ---
 title: Ajout d’un contrôle (ATL didacticiel, partie 2) | Documents Microsoft
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358574"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238706"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et tester sur une page Web.  
@@ -26,7 +26,7 @@ Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et te
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>Pour ajouter un objet à un projet ATL  
   
-1.  Dans Affichage de classes, cliquez sur le projet de polygone.  
+1.  Dans **l’Explorateur de solutions**, cliquez sur le projet de polygone.  
   
 2.  Pointez sur **ajouter** dans le menu contextuel, cliquez sur **un nouvel élément** dans le sous-menu.  
   
@@ -44,8 +44,8 @@ Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et te
 |-----------|--------------|  
 |**Nom court**|Le nom que vous avez entré pour le contrôle.|  
 |**Classe**|Le nom de classe C++ créé pour implémenter le contrôle.|  
-|**fichier .h**|Le fichier est créé pour contenir la définition de la classe C++.|  
-|**fichier .cpp**|Le fichier est créé pour contenir l’implémentation de la classe C++.|  
+|**Fichier .h**|Le fichier est créé pour contenir la définition de la classe C++.|  
+|**Fichier .cpp**|Le fichier est créé pour contenir l’implémentation de la classe C++.|  
 |**Coclasse**|Le nom de la classe de composant pour ce contrôle.|  
 |**Interface**|Le nom de l’interface sur laquelle le contrôle implémentera ses méthodes et propriétés personnalisées.|  
 |**Type**|Description pour le contrôle.|  
