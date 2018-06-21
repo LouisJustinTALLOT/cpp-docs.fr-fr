@@ -57,7 +57,7 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Incrément préfixé](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Décrément préfixé](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Complément à 1](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
-|[Not logique](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
+|[Not logique](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[Négation unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Plus unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Adresse](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
@@ -84,7 +84,7 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Supérieur ou égal à](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
 |**Groupe de priorité 9, de gauche à droite associativité**|
 |[Égalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
-|[Inégalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[Inégalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[\!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |**Priorité de groupe 10 de gauche à droite associativité**|
 |[AND au niveau du bit](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
 |**Priorité de groupe 11, de gauche à droite associativité**|
