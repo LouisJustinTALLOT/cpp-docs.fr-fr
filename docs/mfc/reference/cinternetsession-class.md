@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374563"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271332"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (classe)
 Crée et initialise une ou plusieurs sessions Internet simultanées et, si nécessaire, décrit votre connexion à un serveur proxy.  
@@ -116,7 +116,7 @@ class CInternetSession : public CObject
   
  `CInternetSession`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
@@ -498,10 +498,10 @@ CStdioFile* OpenURL(
   
 |Type d’URL|Returns (Retours)|  
 |--------------|-------------|  
-|file://|**CStdioFile\***|  
-|http://|**CHttpFile\***|  
-|Gopher://|**CGopherFile\***|  
-|FTP : / /|**CInternetFile\***|  
+|file://|**CStdioFile\\\***|  
+|http://|**CHttpFile\\\***|  
+|Gopher://|**CGopherFile\\\***|  
+|FTP : / /|**CInternetFile\\\***|  
   
 ### <a name="remarks"></a>Notes  
  Le paramètre `dwFlags` doit inclure **INTERNET_FLAG_TRANSFER_ASCII** ou **INTERNET_FLAG_TRANSFER_BINARY**, mais pas les deux. Les indicateurs restants peuvent être combinées avec l’opérateur de bits `OR` (opérateur) ( **&#124;**).  

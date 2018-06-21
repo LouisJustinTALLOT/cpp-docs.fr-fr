@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e7ab64af82e2f37104f82778d4c6f5eb12bd032
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377886"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271303"
 ---
 # <a name="event-maps"></a>Tables d'événements
 Chaque fois qu'un contrôle souhaite indiquer à son conteneur qu'une action (déterminée par le développeur du contrôle) s'est produite (par exemple une combinaison de touches, un clic du bouton de la souris ou une modification de l'état du contrôle), il appelle une fonction de déclenchement d'événement. Cette fonction notifie au conteneur de contrôle qu'une action importante s'est produite en déclenchant l'événement associé.  
@@ -70,7 +70,7 @@ DECLARE_EVENT_MAP()
   
  Pour plus d’informations sur les tables d’événements, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
@@ -92,7 +92,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
   
  Pour plus d’informations sur l’événement est mappé et le `BEGIN_EVENT_MAP` (macro), consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="end_event_map"></a>  END_EVENT_MAP  
@@ -102,7 +102,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 END_EVENT_MAP()   
 ```  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="event_custom"></a>  EVENT_CUSTOM  
@@ -123,7 +123,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
  Une liste séparée par des espaces d’une ou plusieurs des constantes en spécifiant la liste des paramètres de la fonction.  
   
 ### <a name="remarks"></a>Notes  
- Le `vtsParams` paramètre est une liste séparée par des espaces de valeurs à partir de la **VTS_** constantes. Un ou plusieurs de ces valeurs séparées par des espaces (non par des virgules) spécifie la liste des paramètres de la fonction. Par exemple :  
+ Le `vtsParams` paramètre est une liste séparée par des espaces de valeurs à partir de la **VTS_** constantes. Un ou plusieurs de ces valeurs séparées par des espaces (non par des virgules) spécifie la liste des paramètres de la fonction. Exemple :  
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
@@ -140,17 +140,17 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_CY**|**DEVISE**|  
 |**VTS_DATE**|**DATE**|  
-|**VTS_BSTR**|**const char\***|  
+|**VTS_BSTR**|**const char\\\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
-|**VTS_FONT**|**IFontDispatch\***|  
+|**VTS_FONT**|**IFontDispatch\\\***|  
 |**VTS_HANDLE**|`HANDLE`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**VARIANTE const\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
+|**VTS_VARIANT**|**VARIANTE const\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE**|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
+|**VTS_PICTURE**|**IPictureDisp\\\***|  
 |**VTS_TRISTATE**|**OLE_TRISTATE**|  
 |**VTS_XPOS_PIXELS**|**OLE_XPOS_PIXELS**|  
 |**VTS_YPOS_PIXELS**|**OLE_YPOS_PIXELS**|  
@@ -164,7 +164,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 > [!NOTE]
 >  Les constantes de type variant supplémentaires ont été définis pour tous les types variants, à l’exception de **VTS_FONT** et **VTS_PICTURE**, qui fournissent un pointeur vers la constante de données variant. Ces constantes sont nommées à l’aide de la **VTS_P** `constantname` convention. Par exemple, **VTS_PCOLOR** est un pointeur vers un **VTS_COLOR** constante.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
@@ -193,7 +193,7 @@ EVENT_CUSTOM_ID(
  Une liste de variables de paramètres passé pour le conteneur de contrôle lorsque l’événement est déclenché.  
   
 ### <a name="remarks"></a>Notes  
- Le `vtsParams` argument est une liste séparée par des espaces, des valeurs à partir de la **VTS_** constantes. Un ou plusieurs de ces valeurs séparées par des espaces, et non par des virgules, spécifie la liste des paramètres de la fonction. Par exemple :  
+ Le `vtsParams` argument est une liste séparée par des espaces, des valeurs à partir de la **VTS_** constantes. Un ou plusieurs de ces valeurs séparées par des espaces, et non par des virgules, spécifie la liste des paramètres de la fonction. Exemple :  
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
@@ -201,7 +201,7 @@ EVENT_CUSTOM_ID(
   
  Pour obtenir la liste de la **VTS_** constantes, consultez [EVENT_CUSTOM](#event_custom).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="on_oleverb"></a>  ON_OLEVERB  
@@ -230,7 +230,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
   
  Les valeurs de la `lpMsg`, `hWndParent`, et `lpRect` paramètres sont extraites des paramètres correspondants de la **IOleObject::DoVerb** fonction membre.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxole.h  
   
 ##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
@@ -253,7 +253,7 @@ ON_STDOLEVERB(iVerb,   memberFxn)
  Consultez [ON_OLEVERB](#on_oleverb) pour obtenir une description du prototype de fonction à utiliser en tant que le `memberFxn` paramètre.  
 
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxole.h  
     
 ## <a name="see-also"></a>Voir aussi  

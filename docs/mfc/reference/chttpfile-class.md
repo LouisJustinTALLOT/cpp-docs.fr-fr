@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372617"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271345"
 ---
 # <a name="chttpfile-class"></a>Classe de CHttpFile
 Fournit les fonctionnalités permettant de demander et de lire des fichiers sur un serveur HTTP.  
@@ -90,7 +90,7 @@ class CHttpFile : public CInternetFile
   
  `CHttpFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Modifie la sémantique des en-têtes de nouveau. Il peut s'agir d'une des valeurs suivantes :  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Fusionne les en-têtes du même nom, à l’aide de l’indicateur pour ajouter le premier en-tête trouvé pour l’en-tête suivant. Par exemple, « accepter : texte / * » suivie » accepter : audio /\*» entraîne la formation de l’en-tête unique « accepter : texte /\*, audio /\*». C’est à l’application appelante pour garantir un schéma cohérent en ce qui concerne les données reçues par les demandes envoyées avec en-têtes fusionnés ou distincts.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Fusionne les en-têtes du même nom, à l’aide de l’indicateur pour ajouter le premier en-tête trouvé pour l’en-tête suivant. Par exemple, « accepter : texte /\*» suivie » accepter : audio /\*» entraîne la formation de l’en-tête unique « accepter : texte /\*, audio /\*». C’est à l’application appelante pour garantir un schéma cohérent en ce qui concerne les données reçues par les demandes envoyées avec en-têtes fusionnés ou distincts.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Effectue une suppression et ajoutez pour remplacer l’en-tête actuel. Le nom d’en-tête permet de supprimer l’en-tête actuel, et la valeur complète sera utilisée pour ajouter le nouvel en-tête. Si la valeur d’en-tête est vide et l’en-tête est trouvé, il est supprimé. Si la valeur n’est pas vide, la valeur d’en-tête est remplacée.  
   
