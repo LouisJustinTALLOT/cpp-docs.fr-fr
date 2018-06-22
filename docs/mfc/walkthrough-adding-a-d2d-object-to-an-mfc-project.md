@@ -1,7 +1,7 @@
 ---
 title: 'Procédure pas à pas : Ajout d’un objet D2D à un projet MFC | Documents Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/19/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,141 +15,156 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7985b36c0eeaa7adf5441a7a6fbb3314bac8353f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384018"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36306006"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Procédure pas à pas : ajout d'un objet D2D à un projet MFC
-Cette procédure pas à pas explique comment ajouter une base Direct2D (D2D) de l’objet à un Visual C++, le projet de bibliothèque de classes Microsoft Foundation (MFC) et ensuite générer le projet dans une application qui imprime « Hello, world » sur un arrière-plan dégradé.  
-  
- La procédure pas à pas montre comment accomplir ces tâches :  
-  
--   Créer une application MFC.  
-  
--   Créer un pinceau de couleur unie et un pinceau de dégradé linéaire.  
-  
--   Modifier le pinceau de dégradé afin qu’elle deviendra correctement lorsque la fenêtre est redimensionnée.  
-  
--   Implémentez un gestionnaire de dessin D2D.  
-  
--   Vérifier les résultats.  
-  
- [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]  
-  
-## <a name="prerequisites"></a>Prérequis  
- Pour effectuer cette procédure pas à pas, vous devez disposer de Visual Studio.  
-  
-### <a name="to-create-an-mfc-application"></a>Pour créer une application MFC  
-  
-1.  Dans le menu **Fichier** , pointez sur **Nouveau** , puis cliquez sur **Projet**.  
-  
-2.  Dans le **nouveau projet** boîte de dialogue, dans le volet gauche sous **modèles installés**, développez **Visual C++** , puis sélectionnez **MFC**. Dans le volet central, sélectionnez **Application MFC**. Dans la zone **Nom**, tapez `MFCD2DWalkthrough`. Cliquez sur **OK**.  
-  
-3.  Dans le **Assistant Application MFC**, cliquez sur **Terminer** sans modifier les paramètres.  
-  
-### <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Pour créer un pinceau de couleur unie et un pinceau de dégradé linéaire  
-  
-1.  Dans **l’Explorateur de solutions**, dans le **MFCD2DWalkthrough** de projet, dans le **fichiers d’en-tête** dossier, ouvrez MFCD2DWalkthroughView.h. Ajoutez le code suivant à la `CMFCD2DWalkthroughView` classe à créer trois variables de données.  
-  
- ```  
-    CD2DTextFormat* m_pTextFormat;  
-    CD2DSolidColorBrush* m_pBlackBrush;  
-    CD2DLinearGradientBrush* m_pLinearGradientBrush;  
- ```  
-  
-     Enregistrez le fichier et fermez-le.  
-  
-2.  Dans le **fichiers sources** dossier, ouvrez MFCD2DWalkthroughView.cpp. Dans le constructeur de la `CMFCD2DWalkthroughView` de classe, ajoutez le code suivant.  
-  
- ''' * / / Activer la prise en charge D2D pour cette fenêtre :  
-    EnableD2DSupport() ;
 
- * / / Initialiser les ressources D2D :  
-    m_pBlackBrush = nouveau CD2DSolidColorBrush(GetRenderTarget(), D2D1::ColorF(D2D1::ColorF::Black)) ;
+Cette procédure pas à pas explique comment ajouter une base Direct2D (D2D) de l’objet à un Visual C++, le projet de bibliothèque de classes Microsoft Foundation (MFC) et ensuite générer le projet dans une application qui imprime « Hello, world » sur un arrière-plan dégradé.
 
- 
-    m_pTextFormat = nouveau CD2DTextFormat(GetRenderTarget(), _T("Verdana"), 50) ;
+La procédure pas à pas montre comment accomplir ces tâches :
 
-    m_pTextFormat -> Get() -> SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER) ;
+- Créer une application MFC.
 
- m_pTextFormat -> Get() -> SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER) ;
+- Créer un pinceau de couleur unie et un pinceau de dégradé linéaire.
 
- 
-    D2D1_GRADIENT_STOP gradientStops [2] ;  
- 
-    gradientStops [0] .color = D2D1::ColorF(D2D1::ColorF::White) ;
+- Modifier le pinceau de dégradé afin qu’elle deviendra correctement lorsque la fenêtre est redimensionnée.
 
-    gradientStops [0] .position = 0.f ;  
-    gradientStops [1] .color = D2D1::ColorF(D2D1::ColorF::Indigo) ;
+- Implémentez un gestionnaire de dessin D2D.
 
-    gradientStops [1] .position = 1.f ne le ;  
- 
-    m_pLinearGradientBrush = CD2DLinearGradientBrush(GetRenderTarget() nouveau,   
-    gradientStops, ARRAYSIZE(gradientStops),  
-    D2D1::LinearGradientBrushProperties (D2D1::Point2F (0, 0), D2D1::Point2F (0, 0))) ;
+- Vérifier les résultats.
 
- ```  
-  
-     Save the file and close it.  
-  
-### To modify the gradient brush so that it will change appropriately when the window is resized  
-  
-1.  On the **Project** menu, click **Class Wizard**.  
-  
-2.  In the **MFC Class Wizard**, under **Class name**, select `CMFCD2DWalkthroughView`.  
-  
-3.  On the **Messages** tab, in the **Messages** box, select `WM_SIZE` and then click **Add Handler**. This action adds the `OnSize` message handler to the `CMFCD2DWalkthroughView` class.  
-  
-4.  In the **Existing handlers** box, select `OnSize`. Click **Edit Code** to display the `CMFCD2DWalkthroughView::OnSize` method. At the end of the method, add the following code.  
-  
- ```  
-    m_pLinearGradientBrush -> SetEndPoint (CPoint (cx, cy)) ;
+[!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
- ```  
-  
-     Save the file and close it.  
-  
-### To implement a D2D drawing handler  
-  
-1.  On the **Project** menu, click **Class Wizard**.  
-  
-2.  In the **MFC Class Wizard**, under **Class name**, select `CMFCD2DWalkthroughView`.  
-  
-3.  On the **Messages** tab, click **Add Custom Message**.  
-  
-4.  In the **Add Custom Message** dialog box, in the **Custom Windows Message** box, type `AFX_WM_DRAW2D`. In the **Message handler name** box, type `OnDraw2D`. Select the **Registered Message** option and then click **OK**. This action adds a message handler for the `AFX_WM_DRAW2D` message to the `CMFCD2DWalkthroughView` class.  
-  
-5.  In the **Existing handlers** box, select `OnDraw2D`. Click **Edit Code** to display the `CMFCD2DWalkthroughView::OnDraw2D` method. Use the following code for the `CMFCD2DWalkthroughView::OnDrawD2D` method.  
-  
- ```  
-    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(WPARAM wParam, LPARAM lParam)  
-    {  
- PRenderTarget CHwndRenderTarget * = (CHwndRenderTarget *) lParam ;  
-    ASSERT_VALID(pRenderTarget) ;
+## <a name="prerequisites"></a>Prérequis
 
- 
-    CRect rect ;  
-    GetClientRect(rect) ;
+Pour effectuer cette procédure pas à pas, vous devez disposer de Visual Studio est installé avec le **bureau développement avec C++** charge de travail et le paramètre facultatif **Visual C++ MFC pour x86 et x64** composant.
 
- 
-    pRenderTarget -> FillRectangle (rect, m_pLinearGradientBrush) ;
+## <a name="to-create-an-mfc-application"></a>Pour créer une application MFC
 
-    pRenderTarget -> DrawText (rect (« Hello, World ! ») de _T, m_pBlackBrush, m_pTextFormat) ;
+1. Sur le **fichier** menu, pointez sur **nouveau** , puis **projet**.
 
- 
-    Renvoie la valeur TRUE ;  
- }  
- ```  
-  
-     Save the file and close it.  
-  
-### To verify the results  
-  
-1.  Build and run the application. It should have a gradient rectangle that changes when you resize the window. “Hello World!” should be displayed in the center of the rectangle.  
-  
-## See Also  
- [Walkthroughs](../mfc/walkthroughs-mfc.md)
+2. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche sous **modèles installés**, développez **Visual C++** , puis sélectionnez **MFC**. Dans le volet central, sélectionnez **Application MFC**. Dans la zone **Nom**, tapez `MFCD2DWalkthrough`. Cliquez sur **OK**.
 
+3. Dans le **Assistant Application MFC**, choisissez **Terminer** sans modifier les paramètres.
+
+## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Pour créer un pinceau de couleur unie et un pinceau de dégradé linéaire
+
+1. Dans **l’Explorateur de solutions**, dans le **MFCD2DWalkthrough** de projet, dans le **fichiers d’en-tête** dossier, ouvrez MFCD2DWalkthroughView.h. Ajoutez ce code à la `CMFCD2DWalkthroughView` classe à créer trois variables de données :
+
+   ```cpp
+   CD2DTextFormat* m_pTextFormat;
+   CD2DSolidColorBrush* m_pBlackBrush;
+   CD2DLinearGradientBrush* m_pLinearGradientBrush;
+   ```
+
+   Enregistrez le fichier et fermez-le.
+
+2. Dans le **fichiers sources** dossier, ouvrez MFCD2DWalkthroughView.cpp. Dans le constructeur de la `CMFCD2DWalkthroughView` de classe, ajoutez le code suivant :
+
+   ```cpp
+   // Enable D2D support for this window:
+   EnableD2DSupport();
+
+   // Initialize D2D resources:
+   m_pBlackBrush = new CD2DSolidColorBrush(
+       GetRenderTarget(),
+       D2D1::ColorF(D2D1::ColorF::Black));
+
+   m_pTextFormat = new CD2DTextFormat(
+       GetRenderTarget(),
+       _T("Verdana"),
+       50);
+
+   m_pTextFormat->Get()->SetTextAlignment(
+       DWRITE_TEXT_ALIGNMENT_CENTER);
+
+   m_pTextFormat->Get()->SetParagraphAlignment(
+       DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+
+   D2D1_GRADIENT_STOP gradientStops[2];
+
+   gradientStops[0].color =
+       D2D1::ColorF(D2D1::ColorF::White);
+
+   gradientStops[0].position = 0.f;
+   gradientStops[1].color =
+       D2D1::ColorF(D2D1::ColorF::Indigo);
+
+   gradientStops[1].position = 1.f;
+
+   m_pLinearGradientBrush = new CD2DLinearGradientBrush(
+       GetRenderTarget(),
+       gradientStops,
+       ARRAYSIZE(gradientStops),
+       D2D1::LinearGradientBrushProperties(
+           D2D1::Point2F(0,0),
+           D2D1::Point2F(0,0)));
+   ```
+
+   Enregistrez le fichier et fermez-le.
+
+## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Pour modifier le pinceau de dégradé afin qu’elle deviendra correctement lorsque la fenêtre est redimensionnée.
+
+1. Sur le **projet** menu, choisissez **Assistant classe**.
+
+2. Dans le **Assistant classe MFC**, sous **nom de la classe**, sélectionnez `CMFCD2DWalkthroughView`.
+
+3. Sur le **Messages** sous l’onglet du **Messages** boîte, sélectionnez `WM_SIZE` , puis **ajouter un gestionnaire**. Cette action ajoute le `OnSize` le Gestionnaire de messages pour la `CMFCD2DWalkthroughView` classe.
+
+4. Dans le **gestionnaires existants** boîte, sélectionnez `OnSize`. Choisissez **modifier le Code** pour afficher le `CMFCD2DWalkthroughView::OnSize` (méthode). À la fin de la méthode, ajoutez le code suivant.
+
+   ```cpp
+   m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
+   ```
+
+   Enregistrez le fichier et fermez-le.
+
+## <a name="to-implement-a-d2d-drawing-handler"></a>Pour implémenter un gestionnaire de dessin D2D
+
+1. Sur le **projet** menu, choisissez **Assistant classe**.
+
+2. Dans le **Assistant classe MFC**, sous **nom de la classe**, sélectionnez `CMFCD2DWalkthroughView`.
+
+3. Sur le **Messages** , onglet choisir **ajouter un Message personnalisé**.
+
+4. Dans le **ajouter un Message personnalisé** boîte de dialogue le **un Message personnalisé Windows** , tapez `AFX_WM_DRAW2D`. Dans le **nom de gestionnaire de messages** , tapez `OnDraw2D`. Sélectionnez le **Message inscrit** option, puis choisissez **OK**. Cette action ajoute un gestionnaire de messages pour le `AFX_WM_DRAW2D` un message à la `CMFCD2DWalkthroughView` classe.
+
+5. Dans le **gestionnaires existants** boîte, sélectionnez `OnDraw2D`. Choisissez **modifier le Code** pour afficher le `CMFCD2DWalkthroughView::OnDraw2D` (méthode). Utilisez ce code pour le `CMFCD2DWalkthroughView::OnDrawD2D` méthode :
+
+   ```cpp
+   afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
+       WPARAM wParam,
+       LPARAM lParam)
+   {
+       CHwndRenderTarget* pRenderTarget = (CHwndRenderTarget*)lParam;
+       ASSERT_VALID(pRenderTarget);
+
+       CRect rect;
+       GetClientRect(rect);
+
+       pRenderTarget->FillRectangle(rect, m_pLinearGradientBrush);
+
+       pRenderTarget->DrawText(
+           _T("Hello, World!"),
+           rect,
+           m_pBlackBrush,
+           m_pTextFormat);
+
+       return TRUE;
+   }
+   ```
+
+   Enregistrez le fichier et fermez-le.
+
+## <a name="to-verify-the-results"></a>Pour vérifier les résultats
+
+- Générez et exécutez l’application. Il doit avoir un rectangle dégradé qui change lorsque vous redimensionnez la fenêtre. « Hello World ! » doit être affiché dans le centre du rectangle.
+
+## <a name="see-also"></a>Voir aussi
+
+- [Procédures pas à pas](../mfc/walkthroughs-mfc.md)
