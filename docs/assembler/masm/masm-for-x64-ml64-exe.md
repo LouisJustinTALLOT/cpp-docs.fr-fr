@@ -1,7 +1,7 @@
 ---
 title: MASM pour x64 (ml64.exe) | Documents Microsoft
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253800"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322246"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM pour x64 (ml64.exe)
 
-Visual Studio inclut 32 bits et 64 bits des versions hébergées de Microsoft Assembler (MASM) pour cibler x64 le code. Nommé ml64.exe, il s’agit de l’assembleur qui accepte x64 langue de l’assembleur. Les outils de ligne de commande MASM sont installés lorsque vous choisissez une charge de travail C++ lors de l’installation de Visual Studio. Les outils MASM ne sont pas disponibles en tant que téléchargement séparé. Pour obtenir des instructions sur la façon de télécharger et installer une copie de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio). Si vous ne souhaitez pas installer l’IDE de Visual Studio terminée, mais uniquement que vous voulez que les outils de ligne de commande, téléchargez le [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).
+Visual Studio inclut 32 bits et 64 bits des versions hébergées de Microsoft Assembler (MASM) pour cibler x64 le code. Nommé ml64.exe, il s’agit de l’assembleur qui accepte x64 langue de l’assembleur. Les outils de ligne de commande MASM sont installés lorsque vous choisissez une charge de travail C++ lors de l’installation de Visual Studio. Les outils MASM ne sont pas disponibles en tant que téléchargement séparé. Pour obtenir des instructions sur la façon de télécharger et installer une copie de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio). Si vous ne souhaitez pas installer l’IDE de Visual Studio terminée, mais uniquement que vous voulez que les outils de ligne de commande, téléchargez le [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
 Pour utiliser MASM pour générer le code pour x64 cible sur la ligne de commande, vous devez utiliser une invite de commandes développeur pour x64 cibles, qui définit le chemin d’accès requis et d’autres variables d’environnement. Pour plus d’informations sur la façon de démarrer une invite de commandes développeur, consultez [code de génération C/C++ sur la ligne de commande](../../build/building-on-the-command-line.md).
 

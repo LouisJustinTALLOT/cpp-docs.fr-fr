@@ -1,7 +1,7 @@
 ---
 title: Générer du Code C/C++ sur la ligne de commande | Documents Microsoft
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379274"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322314"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Générer du code C/C++ sur la ligne de commande
 
@@ -51,7 +51,7 @@ Les raccourcis d’invite de commande sont installés dans un dossier spécifiqu
 
 Les véritable démarrer menu contextuel noms des dossiers et varient selon la version de Visual Studio que vous avez installée et la surnom de l’installation si vous définissez une. Par exemple, si vous avez Visual Studio 2017 installé et que vous avez donné il une installation de surnom de *aperçu*, le raccourci d’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2017 (version préliminaire)**, dans un dossier nommé **Visual Studio 2017**.
 
-Si vous avez installé le [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) (qui inclut également l’ensemble d’outils du compilateur Visual Studio 2015 Update 3), uniquement spécifique à l’architecture ou natif croisée outils d’invite de commandes développeur options sont installées et pas **invite de commandes développeur** contextuel.
+Si vous avez installé le [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (qui inclut également l’ensemble d’outils du compilateur Visual Studio 2015 Update 3), uniquement spécifique à l’architecture ou natif croisée outils d’invite de commandes développeur options sont installées et pas **invite de commandes développeur** contextuel.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Pour ouvrir une fenêtre d’invite de commandes développeur

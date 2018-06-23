@@ -1,7 +1,7 @@
 ---
 title: Styles utilisés par MFC | Documents Microsoft
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 9af450071546691778dc607746870084a7b1f346
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271368"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322418"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC  
   
@@ -321,7 +321,7 @@ Modifier les styles s’appliquent à [classe CEdit](../../mfc/reference/cedit-c
 |`ES_NOHIDESEL`|En règle générale, un contrôle d’édition masque la sélection lorsque le contrôle perd le focus d’entrée et inverse la sélection lorsque le contrôle reçoit le focus d’entrée. Spécification `ES_NOHIDESEL` supprime cette action par défaut.|  
 |`ES_NUMBER`|Autorise uniquement les chiffres doit être entré dans le contrôle d’édition.|  
 |`ES_OEMCONVERT`|Texte entré dans le contrôle d’édition est converti dans le jeu de caractères ANSI pour le jeu de caractères OEM et puis le reconvertit en ANSI. Cela garantit une conversion correcte des caractères lorsque l’application appelle la `AnsiToOem` fonction pour convertir une chaîne ANSI dans le contrôle d’édition en caractères OEM de Windows. Ce style est particulièrement utile pour les contrôles d’édition qui contiennent des noms de fichiers.|  
-|`ES_PASSWORD`|Affiche tous les caractères sous la forme d’un astérisque (**\\\***) lorsqu’ils sont tapés dans le contrôle d’édition. Une application peut utiliser le `SetPasswordChar` fonction membre pour modifier le caractère qui s’affiche.|  
+|`ES_PASSWORD`|Affiche tous les caractères sous la forme d’un astérisque (__\*__) lorsqu’ils sont tapés dans le contrôle d’édition. Une application peut utiliser le `SetPasswordChar` fonction membre pour modifier le caractère qui s’affiche.|  
 |`ES_READONLY`|Empêche l’utilisateur d’entrer ou de modifier du texte dans le contrôle d’édition.|  
 |`ES_RIGHT`|Aligne à droite le texte dans un contrôle d’édition multiligne ou de plusieurs lignes.|  
 |`ES_UPPERCASE`|Convertit tous les caractères en majuscules lorsqu’ils sont tapés dans le contrôle d’édition.|  

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705564"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322392"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
@@ -153,12 +153,14 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C5038](../error-messages/compiler-warnings/c5038.md) (niveau 4)|membre de données '*member1*'sera initialisé après le membre de données'*member2*' <sup>15.3</sup>|
 |C5039 (niveau 4)|'*fonction*' : pointeur ou référence à potentiellement lever fonction passé à la fonction extern C sous - /EHc. Un comportement non défini peut se produire si cette fonction lève une exception. <sup>15.5</sup>|
 |C5042 (niveau 3)|'*fonction*' : les déclarations de fonction au niveau de la portée de bloc ne peut pas être 'inline' spécifié dans C++ standard ; supprimez 'inline' spécificateur <sup>15.5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Compilateur insère atténuation Spectre de la charge de mémoire si le commutateur /Qspectre spécifié <sup>15.7</sup>|
 
-<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1.<br>
-<sup>14.3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3.<br>
-<sup>15.3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.3.<br>
-<sup>15.5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.5.<br>
-<sup>L’autorisation</sup> cet avertissement est désactivé, sauf si le [/ permissive-](../build/reference/permissive-standards-conformance.md) option du compilateur est définie.
+<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1.  
+<sup>14.3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3.  
+<sup>15.3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.3.  
+<sup>15.5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.5.  
+<sup>15.7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.7.  
+<sup>L’autorisation</sup> cet avertissement est désactivé, sauf si le [/ permissive-](../build/reference/permissive-standards-conformance.md) option du compilateur est définie.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements par défaut dans les versions antérieures
 
