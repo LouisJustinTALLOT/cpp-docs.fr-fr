@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347839"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929661"
 ---
 # <a name="dialog-boxes-in-ole"></a>Boîtes de dialogue dans OLE
 Lorsqu’un utilisateur exécute une application OLE, voici les heures lorsque l’application a besoin d’informations à partir de l’utilisateur afin d’effectuer l’opération. Les classes OLE MFC fournissent un nombre de boîtes de dialogue pour recueillir les informations requises. Cette rubrique répertorie les tâches gérées par les boîtes de dialogue OLE et les classes nécessaires pour afficher ces boîtes de dialogue. Pour plus d’informations sur les boîtes de dialogue OLE et les structures utilisées pour personnaliser leur comportement, consultez [référence MFC](../mfc/mfc-desktop-applications.md).  
@@ -46,7 +46,7 @@ Lorsqu’un utilisateur exécute une application OLE, voici les heures lorsque l
  La boîte de dialogue Modifier les liaisons permet à l’utilisateur modifier les informations sur la source d’un objet lié. La boîte de dialogue Mise à jour vérifie les sources de tous les éléments liés dans la boîte de dialogue et affiche la boîte de dialogue Modifier les liens si nécessaire. Afficher la boîte de dialogue Modifier les liaisons lorsque l’utilisateur choisit de liens dans le menu Edition. La boîte de dialogue Mise à jour est généralement affichée lors de la première ouverture d’un document composé. Utilisez le [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) ou [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) de classe, en fonction de la boîte de dialogue où vous souhaitez afficher.  
   
  *Le serveur est occupé ou le serveur ne répond ne pas*  
- La boîte de dialogue serveur occupé s’affiche lorsque l’utilisateur tente d’activer un élément et le serveur est actuellement incapable de traiter la demande, généralement parce que le serveur est en cours d’utilisation par un autre utilisateur ou de tâches. La boîte de dialogue serveur ne répond pas s’affiche si le serveur ne répond pas du tout à la demande d’activation. Ces boîtes de dialogue sont affichés `COleMessageFilter`, basé sur une implémentation de l’interface OLE **IMessageFilter**, et l’utilisateur peut décider s’il faut essayer de nouveau la demande d’activation. Utilisez le [classe COleBusyDialog](../mfc/reference/colebusydialog-class.md) classe pour afficher cette boîte de dialogue.  
+ La boîte de dialogue serveur occupé s’affiche lorsque l’utilisateur tente d’activer un élément et le serveur est actuellement incapable de traiter la demande, généralement parce que le serveur est en cours d’utilisation par un autre utilisateur ou de tâches. La boîte de dialogue serveur ne répond pas s’affiche si le serveur ne répond pas du tout à la demande d’activation. Ces boîtes de dialogue sont affichés `COleMessageFilter`, basé sur une implémentation de l’interface OLE `IMessageFilter`, et l’utilisateur peut décider s’il faut essayer de nouveau la demande d’activation. Utilisez le [classe COleBusyDialog](../mfc/reference/colebusydialog-class.md) classe pour afficher cette boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Boîtes de dialogue](../mfc/dialog-boxes.md)   

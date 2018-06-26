@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4756da7459f3e584dd02b882f5c790412c095561
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343348"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929466"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
 Cette rubrique décrit les étapes nécessaires à l’implémentation de copie et de collage à partir du Presse-papiers dans votre application OLE. Il est recommandé de lire le [des objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) rubriques avant de continuer.  
@@ -41,16 +41,16 @@ Cette rubrique décrit les étapes nécessaires à l’implémentation de copie 
   
 3.  Si l’utilisateur a choisi une opération couper au lieu d’une opération de copie, supprimer les données sélectionnées à partir de votre application.  
   
- Pour voir un exemple de cette séquence, consultez le **fonctions OnEditCut** et **OnEditCopy** des exemples de fonctions dans les MFC OLE programmes [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md). Notez que ces exemples gèrent un pointeur vers les données sélectionnées, afin de l’étape 1 est déjà terminée.  
+ Pour voir un exemple de cette séquence, consultez le `OnEditCut` et `OnEditCopy` des exemples de fonctions dans les MFC OLE programmes [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md). Notez que ces exemples gèrent un pointeur vers les données sélectionnées, afin de l’étape 1 est déjà terminée.  
   
 ##  <a name="_core_pasting_data"></a> Le collage de données  
  Le collage de données est plus compliqué que la copie, car vous devez choisir le format à utiliser pour coller les données dans votre application.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Pour coller des données à partir du Presse-papiers  
   
-1.  Dans votre classe d’affichage, implémentez **OnEditPaste** pour gérer les utilisateurs en choisissant l’option Coller dans le menu Edition.  
+1.  Dans votre classe d’affichage, implémentez `OnEditPaste` pour gérer les utilisateurs en choisissant l’option Coller dans le menu Edition.  
   
-2.  Dans le **OnEditPaste** fonctionne, créez un `COleDataObject` objet et appeler ses `AttachClipboard` fonction membre pour lier cet objet pour les données dans le Presse-papiers.  
+2.  Dans le `OnEditPaste` fonctionne, créez un `COleDataObject` objet et appeler ses `AttachClipboard` fonction membre pour lier cet objet pour les données dans le Presse-papiers.  
   
 3.  Appelez `COleDataObject::IsDataAvailable` pour vérifier si un format particulier est disponible.  
   
@@ -58,10 +58,10 @@ Cette rubrique décrit les étapes nécessaires à l’implémentation de copie 
   
 4.  Effectuez le collage du format.  
   
- Pour obtenir un exemple de fonctionnement, consultez l’implémentation de la **OnEditPaste** fonctions membres dans les classes d’affichage définies dans les programmes exemples MFC OLE [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md).  
+ Pour obtenir un exemple de fonctionnement, consultez l’implémentation de la `OnEditPaste` fonctions membres dans les classes d’affichage définies dans les programmes exemples MFC OLE [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  Le principal avantage de l’opération de collage dans sa propre fonction de séparation est que le même code de collage peut être utilisé lorsque les données sont déplacées dans votre application pendant une opération de glisser-déplacer. Comme dans OCLIENT et HIERSVR, votre `OnDrop` fonction peut également appeler **DoPasteItem**, réutiliser le code écrit pour implémenter des opérations de collage.  
+>  Le principal avantage de l’opération de collage dans sa propre fonction de séparation est que le même code de collage peut être utilisé lorsque les données sont déplacées dans votre application pendant une opération de glisser-déplacer. Comme dans OCLIENT et HIERSVR, votre `OnDrop` fonction peut également appeler `DoPasteItem`, réutiliser le code écrit pour implémenter des opérations de collage.  
   
  Pour gérer l’option Collage spécial dans le menu Edition, consultez la rubrique [boîtes de dialogue OLE](../mfc/dialog-boxes-in-ole.md).  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346615"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928539"
 ---
 # <a name="document-classes"></a>Classes de documents
 Objets de classe de document, créés par les objets de modèle de document, gérer les données de l’application. Vous serez dériver une classe pour vos documents à partir d’une de ces classes.  
@@ -29,7 +29,7 @@ Objets de classe de document, créés par les objets de modèle de document, gé
  Les objets de classe de document interagissent avec les objets de vue. Afficher les objets représentent la zone cliente d’une fenêtre, affichent les données d’un document et permettent aux utilisateurs d’interagir avec elle. Documents et vues sont créées par un objet de modèle de document.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- La classe de base pour les documents spécifiques à l’application. Dérivez votre classe de document ou les classes de **CDocument**.  
+ La classe de base pour les documents spécifiques à l’application. Dérivez votre classe de document ou les classes de `CDocument`.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  Utilisé pour l’implémentation d’un document composé, ainsi que la prise en charge des conteneurs de base. Sert de conteneur pour les classes dérivées de [CDocItem](../mfc/reference/cdocitem-class.md). Cette classe peut être utilisée comme classe de base pour le conteneur de documents et est la classe de base pour `COleServerDoc`.  

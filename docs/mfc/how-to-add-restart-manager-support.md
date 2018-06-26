@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2916bd96bf36333a81b2e8a88e62cc8f562e9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351152"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931271"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Comment : ajouter la prise en charge du Gestionnaire de redémarrage
 
@@ -47,7 +47,7 @@ Le Gestionnaire de redémarrage est une fonctionnalité ajoutée à Visual Studi
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
  ```  
   
-5.  Assurez-vous que la méthode `InitInstance` de votre application appelle sa méthode `InitInstance` parente : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ou `CWinAppEx::InitInstance`. La méthode `InitInstance` est chargée de vérifier le paramètre `m_dwRestartManagerSupportFlags` .  
+5.  Assurez-vous que la méthode `InitInstance` de votre application appelle sa méthode `InitInstance` parente : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ou `CWinAppEx::InitInstance`. Le `InitInstance` (méthode) est chargée de vérifier la *m_dwRestartManagerSupportFlags* paramètre.  
   
 6.  Compilez et exécutez votre application.  
   

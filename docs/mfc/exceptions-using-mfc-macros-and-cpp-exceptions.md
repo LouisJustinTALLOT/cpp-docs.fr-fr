@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 698d8a754716f6876f9a72a0d5043807a32d2089
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346059"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932206"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceptions : utilisation de macros MFC et d'exceptions C++
 Cet article décrit des considérations sur l’écriture de code qui utilise les macros de gestion des exceptions MFC et les mots clés de gestion des exceptions C++.  
@@ -51,7 +51,7 @@ Cet article décrit des considérations sur l’écriture de code qui utilise le
   
  [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- Le problème se produit parce que `e` est supprimé quand l’exécution sort « interne » **CATCH** bloc. À l’aide de la `THROW_LAST` macro au lieu du **lever** instruction provoquera la « externe » **CATCH** bloc pour recevoir un pointeur valid :  
+ Le problème se produit parce que `e` est supprimé quand l’exécution sort « interne » **CATCH** bloc. À l’aide de la **THROW_LAST** macro au lieu du **lever** instruction provoquera la « externe » **CATCH** bloc pour recevoir un pointeur valid :  
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   

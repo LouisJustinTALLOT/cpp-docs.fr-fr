@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353924"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929742"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Contrôles ActiveX MFC : gestion des licences d'un contrôle ActiveX
 Prise en charge de licences, une fonctionnalité facultative de contrôles ActiveX, vous permet de contrôler qui peut utiliser ou distribuer le contrôle. (Pour davantage d’informations sur les problèmes de gestion de licences, consultez les problèmes de gestion de licences dans [mise à niveau d’un contrôle ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -44,7 +44,7 @@ Prise en charge de licences, une fonctionnalité facultative de contrôles Activ
  Contrôles ActiveX qui implémentent des licences vous permettent, en tant que le développeur du contrôle, pour déterminer la façon dont les autres personnes utiliseront le contrôle ActiveX. Vous fournissez à l’acheteur avec le contrôle et. LIC avec l’accord que l’acheteur peut distribuer le contrôle, mais pas le. LIC avec une application qui utilise le contrôle. Cela empêche les utilisateurs de l’application à partir de l’écriture de nouvelles applications qui utilisent le contrôle, sans le premier gestionnaire de licences du contrôle de votre part.  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> Vue d’ensemble du contrôle ActiveX de licence  
- Pour prendre en charge licences des contrôles ActiveX, la [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) classe fournit une implémentation de plusieurs fonctions dans le **IClassFactory2** interface : **IClassFactory2 :: RequestLicKey**, **IClassFactory2::GetLicInfo**, et **IClassFactory2::CreateInstanceLic**. Lorsque le développeur d’applications conteneur effectue une demande pour créer une instance du contrôle, un appel à `GetLicInfo` est effectuée pour vérifier que le contrôle. LIC fichier est présent. Si le contrôle est concédé sous licence, une instance du contrôle peut être créée et placée dans le conteneur. Une fois que le développeur a terminé la construction de l’application conteneur, un autre appel de fonction, cette fois-ci pour `RequestLicKey`, est effectuée. Cette fonction retourne une clé de licence (une simple chaîne de caractères) à l’application conteneur. La clé retournée est ensuite incorporée dans l’application.  
+ Pour prendre en charge licences des contrôles ActiveX, la [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) classe fournit une implémentation de plusieurs fonctions dans le `IClassFactory2` interface : `IClassFactory2::RequestLicKey`, `IClassFactory2::GetLicInfo`, et `IClassFactory2::CreateInstanceLic`. Lorsque le développeur d’applications conteneur effectue une demande pour créer une instance du contrôle, un appel à `GetLicInfo` est effectuée pour vérifier que le contrôle. LIC fichier est présent. Si le contrôle est concédé sous licence, une instance du contrôle peut être créée et placée dans le conteneur. Une fois que le développeur a terminé la construction de l’application conteneur, un autre appel de fonction, cette fois-ci pour `RequestLicKey`, est effectuée. Cette fonction retourne une clé de licence (une simple chaîne de caractères) à l’application conteneur. La clé retournée est ensuite incorporée dans l’application.  
   
  La figure ci-dessous illustre la vérification de la licence d’un contrôle ActiveX qui sera utilisé pendant le développement d’une application conteneur. Comme mentionné précédemment, le développeur d’applications de conteneur doit avoir la bonne. LIC approprié sur l’ordinateur de développement pour créer une instance du contrôle.  
   
@@ -79,15 +79,15 @@ Vérification d’un contrôle ActiveX sous licence pendant l’exécution
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     Vérifie que le contrôle permet une utilisation au moment du design en vérifiant le système la présence du fichier de licence du contrôle. Cette fonction est appelée par l’infrastructure en tant que partie du traitement **IClassFactory2::GetLicInfo** et **IClassFactory::CreateInstanceLic**.  
+     Vérifie que le contrôle permet une utilisation au moment du design en vérifiant le système la présence du fichier de licence du contrôle. Cette fonction est appelée par l’infrastructure en tant que partie du traitement `IClassFactory2::GetLicInfo` et `IClassFactory::CreateInstanceLic`.  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     Demande une clé unique à partir de la DLL du contrôle. Cette clé est incorporée dans l’application conteneur et utilisée avec une version ultérieure, `VerifyLicenseKey`, pour créer une instance du contrôle. Cette fonction est appelée par l’infrastructure en tant que partie du traitement **IClassFactory2::RequestLicKey**.  
+     Demande une clé unique à partir de la DLL du contrôle. Cette clé est incorporée dans l’application conteneur et utilisée avec une version ultérieure, `VerifyLicenseKey`, pour créer une instance du contrôle. Cette fonction est appelée par l’infrastructure en tant que partie du traitement `IClassFactory2::RequestLicKey`.  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     Vérifie que les clés incorporées et unique du contrôle sont identiques. Ainsi, le conteneur créer une instance du contrôle pour son utilisation. Cette fonction est appelée par l’infrastructure en tant que partie du traitement **IClassFactory2::CreateInstanceLic** et peut être substituée pour fournir une vérification personnalisée de la clé de licence. L’implémentation par défaut effectue une comparaison de chaînes. Pour plus d’informations, consultez [personnalisation de la licence d’un contrôle ActiveX](#_core_customizing_the_licensing_of_an_activex_control), plus loin dans cet article.  
+     Vérifie que les clés incorporées et unique du contrôle sont identiques. Ainsi, le conteneur créer une instance du contrôle pour son utilisation. Cette fonction est appelée par l’infrastructure en tant que partie du traitement `IClassFactory2::CreateInstanceLic` et peut être substituée pour fournir une vérification personnalisée de la clé de licence. L’implémentation par défaut effectue une comparaison de chaînes. Pour plus d’informations, consultez [personnalisation de la licence d’un contrôle ActiveX](#_core_customizing_the_licensing_of_an_activex_control), plus loin dans cet article.  
   
 ###  <a name="_core_header_file_modifications"></a> Modifications de fichier d’en-tête  
  L’Assistant contrôle ActiveX place le code suivant dans le fichier d’en-tête. Dans cet exemple, deux fonctions membres de `CSampleCtrl`de l’objet `factory` sont déclarés, l’autre qui vérifie la présence du contrôle. LIC de fichiers et une autre qui extrait la clé de licence à utiliser dans l’application contenant le contrôle :  
@@ -100,7 +100,7 @@ Vérification d’un contrôle ActiveX sous licence pendant l’exécution
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  Si vous modifiez **szLicString** de quelque façon, vous devez également modifier la première ligne dans le contrôle. Fichier LIC ou le Gestionnaire de licences ne fonctionnera pas correctement.  
+>  Si vous modifiez `szLicString` de quelque façon, vous devez également modifier la première ligne dans le contrôle. Fichier LIC ou le Gestionnaire de licences ne fonctionnera pas correctement.  
   
  L’Assistant contrôle ActiveX place le code suivant dans le fichier d’implémentation pour définir la classe du contrôle `VerifyUserLicense` et `GetLicenseKey` fonctions :  
   

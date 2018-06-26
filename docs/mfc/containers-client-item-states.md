@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342171"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929716"
 ---
 # <a name="containers-client-item-states"></a>Conteneurs : états d'élément client
 Cet article explique les différents états par lesquels passe un élément client pendant son cycle de vie.  
   
- Un élément client passe par plusieurs états lorsqu'il est créé, activé, modifié et enregistré. Chaque fois qu’état change l’élément, le framework appelle [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) avec la `OLE_CHANGED_STATE` notification. Le deuxième paramètre est une valeur à partir de la **COleClientItem::ItemState** énumération. Il peut avoir l'une des valeurs suivantes :  
+ Un élément client passe par plusieurs états lorsqu'il est créé, activé, modifié et enregistré. Chaque fois qu’état change l’élément, le framework appelle [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) avec la **OLE_CHANGED_STATE** notification. Le deuxième paramètre est une valeur à partir de la `COleClientItem::ItemState` énumération. Il peut avoir l'une des valeurs suivantes :  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  Dans l'état vide, un élément client n'est pas encore complètement un élément. De la mémoire lui a été allouée, mais elle n'a pas encore été initialisée avec les données de l'élément OLE. Il s’agit d’état est un élément client lorsqu’il a été créé via un appel à **nouveau** mais n’a ne pas encore passé la deuxième étape de la création en deux étapes.  
   
- Dans la deuxième étape, effectuée via un appel à `COleClientItem::CreateFromFile` ou un autre **CreateFrom *** xxxx* (fonction), l’élément est complètement créé. Les données OLE (d'un fichier ou d'une autre source, telle que le Presse-papiers) ont été associées à l'objet dérivé de `COleClientItem`. Maintenant l'élément se trouve dans l'état chargé.  
+ Dans la deuxième étape, effectuée via un appel à `COleClientItem::CreateFromFile` ou un autre `CreateFrom` *xxxx* (fonction), l’élément est complètement créé. Les données OLE (d'un fichier ou d'une autre source, telle que le Presse-papiers) ont été associées à l'objet dérivé de `COleClientItem`. Maintenant l'élément se trouve dans l'état chargé.  
   
  Lorsqu'un élément a été ouvert dans la fenêtre du serveur au lieu d'être ouvert sur place dans le document du conteneur, il se trouve dans l'état ouvert (ou entièrement ouvert). Dans cet état, une hachure croisée est généralement dessinée sur la représentation de l'élément dans la fenêtre du conteneur pour indiquer que l'élément est actif ailleurs.  
   

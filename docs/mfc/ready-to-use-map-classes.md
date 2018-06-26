@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d9e21589fde2ff53d56908342620fe23aca5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348060"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931708"
 ---
 # <a name="ready-to-use-map-classes"></a>Classes de mappage prêtes à être utilisées
 Les classes suivantes sont des classes de mappage de prêt à l’emploi.  
   
  [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- Utilise `void` pointeurs en tant que clés pour la recherche d’autres `void` pointeurs.  
+ Utilise **void** pointeurs en tant que clés pour la recherche d’autres **void** pointeurs.  
   
  [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- Utilise `void` pointeurs en tant que clés pour la recherche de données de type **WORD**.  
+ Utilise **void** pointeurs en tant que clés pour la recherche de données de type **WORD**.  
   
  [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
  Utilise `CString` objets en tant que clés de recherche `CObject` pointeurs.  
   
  [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- Utilise `CString` objets en tant que clés de recherche `void` pointeurs.  
+ Utilise `CString` objets en tant que clés de recherche **void** pointeurs.  
   
  [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
  Utilise `CString` objets en tant que clés pour la recherche d’autres `CString` objets.  
@@ -47,7 +47,7 @@ Les classes suivantes sont des classes de mappage de prêt à l’emploi.
  Utilise des données de type **WORD** trouver `CObject` pointeurs.  
   
  [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- Utilise des données de type **WORD** trouver `void` pointeurs.  
+ Utilise des données de type **WORD** introuvable **void** pointeurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../mfc/class-library-overview.md)

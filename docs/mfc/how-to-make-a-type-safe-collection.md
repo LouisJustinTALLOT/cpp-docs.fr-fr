@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354437"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930031"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Comment : définir une collection de type sécurisé
 Cet article explique comment créer des collections de types cohérents pour vos propres types de données. Les rubriques traitées ici sont les suivantes :  
@@ -42,17 +42,17 @@ Cet article explique comment créer des collections de types cohérents pour vos
   
 #### <a name="to-use-template-based-classes"></a>Pour utiliser des classes basées sur des modèles  
   
-1.  Déclarez une variable du type de classe de collection. Par exemple :  
+1.  Déclarez une variable du type de classe de collection. Exemple :  
   
      [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]  
   
-2.  Appelez la fonction membre de l’objet de la collection. Par exemple :  
+2.  Appelez la fonction membre de l’objet de la collection. Exemple :  
   
      [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]  
   
 3.  Si nécessaire, implémentez le [fonctions d’assistance](../mfc/reference/collection-class-helpers.md) et [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). Pour plus d’informations sur l’implémentation de ces fonctions, consultez [mise en œuvre les fonctions d’assistance](#_core_implementing_helper_functions).  
   
- Cet exemple illustre la déclaration d'une liste d'entiers. Le premier paramètre de l'étape 1 est le type de données stockées en tant qu'éléments dans la liste. Le deuxième paramètre spécifie comment les données doit être passé à et retournées à partir de fonctions membres de la classe de collection, tel que **ajouter** et `GetAt`.  
+ Cet exemple illustre la déclaration d'une liste d'entiers. Le premier paramètre de l'étape 1 est le type de données stockées en tant qu'éléments dans la liste. Le deuxième paramètre spécifie comment les données doit être passé à et retournées à partir de fonctions membres de la classe de collection, tel que `Add` et `GetAt`.  
   
 ##  <a name="_core_implementing_helper_functions"></a> Implémentation des fonctions d’assistance  
  Les classes de collection basées sur les modèles `CArray`, `CList` et `CMap` utilisent cinq fonctions d'assistance globales que vous pouvez personnaliser autant que nécessaire pour votre classe de collection dérivée. Pour plus d’informations sur ces fonctions d’assistance, consultez [Assistants de classe de Collection](../mfc/reference/collection-class-helpers.md) dans les *référence MFC*. L’implémentation de la fonction de sérialisation est nécessaire pour la plupart des utilisations de classes de collection basées sur un modèle.  
@@ -66,10 +66,10 @@ Cet article explique comment créer des collections de types cohérents pour vos
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- Les opérateurs d’insertion surchargés pour `CArchive` appeler `CObject::Serialize` (ou une fonction de substitution) pour chaque **CPerson** objet.  
+ Les opérateurs d’insertion surchargés pour `CArchive` appeler `CObject::Serialize` (ou une fonction de substitution) pour chaque `CPerson` objet.  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> À l’aide des Classes de Collection  
- MFC gère également des classes de collection introduites avec la version 1.0 de MFC. Ces classes ne sont pas basées sur les modèles. Elles peuvent servir à contenir des données des types pris en charge `CObject*`, **UINT**, `DWORD`, et `CString`. Vous pouvez utiliser ces collections prédéfinies (comme `CObList`) pour gérer les collections de tous les objets dérivés de `CObject`. MFC fournit également d’autres collections prédéfinies pour gérer les types primitifs tels que **UINT** et des pointeurs void (`void`*). Toutefois, il est souvent pratique de définir vos propres collections de types cohérents pour stocker des objets de plusieurs classes spécifiques et ses dérivés. Notez que l’utilisation des classes de collection non basées sur des modèles nécessite plus de travail que l’utilisation des classes générées à partir de modèle.  
+ MFC gère également des classes de collection introduites avec la version 1.0 de MFC. Ces classes ne sont pas basées sur les modèles. Elles peuvent servir à contenir des données des types pris en charge `CObject*`, `UINT`, `DWORD`, et `CString`. Vous pouvez utiliser ces collections prédéfinies (comme `CObList`) pour gérer les collections de tous les objets dérivés de `CObject`. MFC fournit également d’autres collections prédéfinies pour gérer les types primitifs tels que `UINT` et des pointeurs void (`void`*). Toutefois, il est souvent pratique de définir vos propres collections de types cohérents pour stocker des objets de plusieurs classes spécifiques et ses dérivés. Notez que l’utilisation des classes de collection non basées sur des modèles nécessite plus de travail que l’utilisation des classes générées à partir de modèle.  
   
  Il existe deux manières de créer des collections de types cohérents avec les collections basées sur les modèles :  
   

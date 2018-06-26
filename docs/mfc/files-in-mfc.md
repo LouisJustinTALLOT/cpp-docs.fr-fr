@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347079"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930501"
 ---
 # <a name="files-in-mfc"></a>Fichiers dans MFC
 Dans les MFC Microsoft Foundation Class Library (), classe [CFile](../mfc/reference/cfile-class.md) gère les opérations d’e/s de fichier normales. Cette famille d’articles explique comment ouvrir et fermer les fichiers ainsi que lire et écrire des données dans ces fichiers. Il décrit également les opérations d’état de fichier. Pour obtenir une description montrant comment utiliser les fonctionnalités de sérialisation basée sur un objet de la bibliothèque MFC en tant qu’un autre moyen de lire et écrire des données dans les fichiers, consultez l’article [sérialisation](../mfc/serialization-in-mfc.md).  
   
 > [!NOTE]
->  Lorsque vous utilisez MFC **CDocument** des objets, le framework effectue l’essentiel du travail de sérialisation pour vous. En particulier, l’infrastructure crée et utilise le `CFile` objet. Il vous suffit d’écrire du code dans votre substitution de la `Serialize` fonction membre de classe **CDocument**.  
+>  Lorsque vous utilisez MFC `CDocument` des objets, le framework effectue l’essentiel du travail de sérialisation pour vous. En particulier, l’infrastructure crée et utilise le `CFile` objet. Il vous suffit d’écrire du code dans votre substitution de la `Serialize` fonction membre de classe `CDocument`.  
   
  La `CFile` classe fournit une interface pour les opérations de fichier binaire à usage général. Le `CStdioFile` et `CMemFile` les classes dérivées de `CFile` et `CSharedFile` classe dérivée de `CMemFile` fournir des services de fichiers plus spécialisées.  
   

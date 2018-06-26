@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352787"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931887"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancrer et rendre flottantes les barres d'outils
 La bibliothèque Microsoft Foundation Class prend en charge les barres d’outils ancrables. Une barre d’outils ancrable peut être attaché ou ancré, n’importe quel côté de sa fenêtre parente, ou il peut être détachée ou laisser flotter, dans sa propre fenêtre mini-frame. Cet article explique comment utiliser les barres d’outils ancrables dans vos applications.  
@@ -62,7 +62,7 @@ La bibliothèque Microsoft Foundation Class prend en charge les barres d’outil
  Consultez l’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) pour obtenir des exemples.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Activation de l’ancrage dans une fenêtre Frame  
- Pour ancrer des barres d’outils dans une fenêtre frame, la fenêtre frame (ou la destination) doit être activée pour permettre l’ancrage. Cette opération est effectuée à l’aide de la [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) (fonction), qui prend un `DWORD` paramètre qui est un ensemble de style de bits indiquant quel côté de la fenêtre frame accepte l’ancrage. Si une barre d’outils est sur le point d’être ancrée et il n’y a plusieurs côtés il peut être ancré à, les côtés indiqués dans le paramètre passé à `EnableDocking` sont utilisés dans l’ordre suivant : haut, bas, gauche, droite. Si vous souhaitez être en mesure de pour ancrer le contrôle des barres de n’importe quel emplacement, passez `CBRS_ALIGN_ANY` à `EnableDocking`.  
+ Pour ancrer des barres d’outils dans une fenêtre frame, la fenêtre frame (ou la destination) doit être activée pour permettre l’ancrage. Cette opération est effectuée à l’aide de la [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) (fonction), qui prend une *DWORD* paramètre qui est un ensemble de style de bits indiquant quel côté de la fenêtre frame accepte l’ancrage. Si une barre d’outils est sur le point d’être ancrée et il n’y a plusieurs côtés il peut être ancré à, les côtés indiqués dans le paramètre passé à `EnableDocking` sont utilisés dans l’ordre suivant : haut, bas, gauche, droite. Si vous souhaitez être en mesure de pour ancrer le contrôle des barres de n’importe quel emplacement, passez **CBRS_ALIGN_ANY** à `EnableDocking`.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> Activation de l’ancrage pour une barre d’outils  
  Après avoir préparé la destination d’ancrage, vous devez préparer la barre d’outils (ou la source) de la même manière. Appelez [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) pour chaque barre d’outils que vous souhaitez ancrer, spécification de la destination côtés à laquelle la barre d’outils doit être ancrés. Si aucun des côtés spécifiés dans l’appel à `CControlBar::EnableDocking` ne correspond aux côtés activées pour l’ancrage dans la fenêtre frame, la barre d’outils ne peut pas ancrer — il flotte. Une fois qu’il a été affichée, il reste une barre d’outils flottante, incapable de s’ancrer à la fenêtre frame.  

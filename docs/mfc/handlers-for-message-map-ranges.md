@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351720"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930821"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestionnaires pour les plages de table des messages
 Cet article explique comment mapper une plage de messages à une fonction de gestionnaire de message unique (au lieu d’associer un message à une seule fonction).  
@@ -96,7 +96,7 @@ Cet article explique comment mapper une plage de messages à une fonction de ges
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Normalement, les fonctions de gestionnaire de commandes simples acceptent aucun paramètre. À l’exception des fonctions de gestionnaire de mise à jour, les fonctions de gestionnaires pour les plages de la table des messages exigent un paramètre supplémentaire, `nID`, de type **UINT**. Ce paramètre est le premier paramètre. Le paramètre supplémentaire contient l’ID de commande supplémentaires nécessaire pour spécifier la commande que l’utilisateur a choisi réellement.  
+ Normalement, les fonctions de gestionnaire de commandes simples acceptent aucun paramètre. À l’exception des fonctions de gestionnaire de mise à jour, les fonctions de gestionnaires pour les plages de la table des messages exigent un paramètre supplémentaire, *nID*, de type **UINT**. Ce paramètre est le premier paramètre. Le paramètre supplémentaire contient l’ID de commande supplémentaires nécessaire pour spécifier la commande que l’utilisateur a choisi réellement.  
   
  Pour plus d’informations sur la configuration des paramètres de fonctions de gestionnaire de mise à jour, consultez [exemple pour une plage d’ID de commande](#_core_example_for_a_range_of_command_ids).  
   
@@ -109,7 +109,7 @@ Cet article explique comment mapper une plage de messages à une fonction de ges
   
 -   Deux ID de commande, début et de fin d’une plage contiguë.  
   
-     Voici `ID_VIEW_ZOOM25` et `ID_VIEW_ZOOM300`.  
+     Voici **ID_VIEW_ZOOM25** et **ID_VIEW_ZOOM300**.  
   
 -   Le nom de la fonction de gestionnaire pour les commandes.  
   
@@ -119,9 +119,9 @@ Cet article explique comment mapper une plage de messages à une fonction de ges
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- Le cas des fonctions de gestionnaire de mise à jour est susceptible d’être plus largement utiles et similaires. Il est assez courant d’écrire `ON_UPDATE_COMMAND_UI` gestionnaires pour un nombre de commandes et trouvez l’écriture ou de la copie, le même code plusieurs fois. La solution consiste à mapper une plage d’ID à une mise à jour la fonction de gestionnaire à l’aide des commandes du `ON_UPDATE_COMMAND_UI_RANGE` (macro). Les ID de commande doivent former une plage contiguë. Pour obtenir un exemple, consultez la **OnUpdateZoom** gestionnaire et ses `ON_UPDATE_COMMAND_UI_RANGE` entrée de table des messages dans la classe d’affichage de l’exemple HIERSVR.  
+ Le cas des fonctions de gestionnaire de mise à jour est susceptible d’être plus largement utiles et similaires. Il est assez courant d’écrire `ON_UPDATE_COMMAND_UI` gestionnaires pour un nombre de commandes et trouvez l’écriture ou de la copie, le même code plusieurs fois. La solution consiste à mapper une plage d’ID à une mise à jour la fonction de gestionnaire à l’aide des commandes du `ON_UPDATE_COMMAND_UI_RANGE` (macro). Les ID de commande doivent former une plage contiguë. Pour obtenir un exemple, consultez la `OnUpdateZoom` gestionnaire et ses `ON_UPDATE_COMMAND_UI_RANGE` entrée de table des messages dans la classe d’affichage de l’exemple HIERSVR.  
   
- Mettre à jour des fonctions de gestionnaire de commandes uniques normalement un seul paramètre, `pCmdUI`, de type **CCmdUI\***. Contrairement aux fonctions gestionnaires, les fonctions de gestionnaire de mise à jour pour les plages de la table des messages ne nécessitent pas un paramètre supplémentaire, `nID`, de type **UINT**. L’ID de commande, qui est nécessaire pour spécifier la commande que l’utilisateur a choisi en fait, se trouve dans le `CCmdUI` objet.  
+ Mettre à jour des fonctions de gestionnaire de commandes uniques normalement un seul paramètre, *pCmdUI*, de type `CCmdUI*`. Contrairement aux fonctions gestionnaires, les fonctions de gestionnaire de mise à jour pour les plages de la table des messages ne nécessitent pas un paramètre supplémentaire, *nID*, de type **UINT**. L’ID de commande, qui est nécessaire pour spécifier la commande que l’utilisateur a choisi en fait, se trouve dans le `CCmdUI` objet.  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> Exemple d’un ID de contrôle de plage  
  Un autre cas intéressant consiste à mapper les messages de notification de contrôle pour une plage d’ID de contrôle à un seul gestionnaire. Supposons que l’utilisateur peut cliquer sur un des boutons de 10. Pour mapper toutes les 10 boutons à un seul gestionnaire, votre entrée de table des messages ressemble à ceci :  
@@ -136,7 +136,7 @@ Cet article explique comment mapper une plage de messages à une fonction de ges
   
 -   Les valeurs d’ID de contrôle associés à la plage contiguë de contrôles.  
   
-     Ceux-ci sont `IDC_BUTTON1` et `IDC_BUTTON10`.  
+     Ceux-ci sont **IDC_BUTTON1** et **IDC_BUTTON10**.  
   
 -   Le nom de la fonction de gestionnaire de messages.  
   

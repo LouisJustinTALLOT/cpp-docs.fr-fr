@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351743"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930431"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : pages de propriétés
 Pages de propriétés permettent à un utilisateur du contrôle ActiveX afficher et modifier les propriétés du contrôle ActiveX. Ces propriétés sont accessibles en appelant une boîte de dialogue Propriétés du contrôle, qui contient une ou plusieurs pages de propriétés qui fournissent une interface graphique personnalisée pour afficher et modifier les propriétés du contrôle.  
@@ -80,13 +80,13 @@ Boîte de dialogue Propriétés
   
 2.  Double-cliquez sur le **boîte de dialogue** icône active.  
   
-3.  Ouvrez le **IDD_PROPPAGE_SAMPLE** boîte de dialogue.  
+3.  Ouvrez la boîte de dialogue IDD_PROPPAGE_SAMPLE.  
   
      L’Assistant contrôle ActiveX ajoute le nom du projet à la fin de l’ID de boîte de dialogue, dans ce cas, un exemple.  
   
 4.  Glisser -déplacer le contrôle sélectionné à partir de la boîte à outils vers la zone de la boîte de dialogue.  
   
-5.  Pour cet exemple, un texte d’étiquette contrôle « Caption : » et un contrôle de zone d’édition avec un **IDC_CAPTION** identificateur sont suffisantes.  
+5.  Pour cet exemple, un texte d’étiquette contrôle « Caption : » et un contrôle de zone d’édition avec un identificateur IDC_CAPTION suffisent.  
   
 6.  Cliquez sur **enregistrer** sur la barre d’outils pour enregistrer vos modifications.  
   
@@ -99,9 +99,9 @@ Boîte de dialogue Propriétés
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Cette fonction associe la page de propriétés `m_caption` variable membre avec la légende, à l’aide de la `DDP_TEXT` (fonction).  
+ Cette fonction associe la page de propriétés *m_caption* variable membre avec la légende, à l’aide de la `DDP_TEXT` (fonction).  
   
- Après avoir configuré le contrôle de page de propriété inséré, vous devez établir un lien entre le contrôle de page de propriétés, `IDC_CAPTION`, et à l’aide de la propriété du contrôle réel, la légende, la **DDP_Text** comme décrit ci-dessus.  
+ Après avoir configuré le contrôle de page de propriété inséré, vous devez établir un lien entre le contrôle de page de propriétés, IDC_CAPTION et la propriété du contrôle réel, à l’aide de la légende du `DDP_Text` comme décrit ci-dessus.  
   
  [Pages de propriétés](../mfc/reference/property-pages-mfc.md) sont disponibles pour d’autres types de contrôle de boîte de dialogue, telles que les cases à cocher, cases d’option et les zones de liste. Le tableau ci-dessous répertorie l’ensemble de la page de propriétés **DDP_** fonctions et leurs objectifs :  
   
@@ -117,7 +117,7 @@ Boîte de dialogue Propriétés
 |`DDP_LBString`|La chaîne sélectionnée dans une zone de liste avec une propriété du contrôle. La chaîne sélectionnée peut commencer par les mêmes lettres que la valeur de propriété, mais n’est pas forcément il entièrement.|  
 |`DDP_LBStringExact`|La chaîne sélectionnée dans une zone de liste avec une propriété du contrôle. La chaîne sélectionnée et la valeur de chaîne de la propriété doivent correspondre exactement.|  
 |`DDP_Radio`|Bouton radio avec une propriété du contrôle.|  
-|**DDP_TEXT**|Texte avec une propriété du contrôle.|  
+|`DDP_Text`|Texte avec une propriété du contrôle.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)   

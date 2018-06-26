@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347946"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931874"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objets de données et sources de données : création et destruction
 Comme expliqué dans l’article [des objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md), objets de données et sources de données représentent les deux côtés d’un transfert de données. Cet article explique la création et la destruction des objets et sources pour effectuer les transferts de données correctement, notamment :  
@@ -72,14 +72,14 @@ Comme expliqué dans l’article [des objets de données et Sources de données 
   
 5.  L'application appelle la fonction membre `SetClipboard` (ou la fonction membre `DoDragDrop` s'il s'agit d'une opération de type Glisser-déplacer) qui appartient à l'objet créé à l'étape 3.  
   
-6.  S’il s’agit d’un **couper** opération ou `DoDragDrop` retourne `DROPEFFECT_MOVE`, les données sélectionnées à l’étape 1 sont supprimées du document.  
+6.  S’il s’agit d’un **couper** opération ou `DoDragDrop` retourne **DROPEFFECT_MOVE**, les données sélectionnées à l’étape 1 sont supprimées du document.  
   
  Ce scénario est implémenté par les exemples OLE MFC [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md). Recherchez la source de la classe dérivée de `CView` de chaque application pour toutes les fonctions sauf `GetClipboardData` et `OnGetClipboardData`. Ces deux fonctions figurent dans les implémentations des classes dérivées de `COleClientItem` ou `COleServerItem`. Ces exemples de programmes montrent bien la manière d'implémenter ces concepts.  
   
  Une autre situation dans laquelle vous pouvez créer un objet `COleDataSource` se produit si vous modifiez le comportement par défaut d'une opération Glisser-déplacer. Pour plus d’informations, consultez la [glisser -déplacer : personnalisation](../mfc/drag-and-drop-customizing.md) l’article.  
   
 ##  <a name="_core_destroying_data_sources"></a> Destruction des Sources de données  
- Les sources de données doivent être détruites par l’application actuellement chargée de ces derniers. Dans les cas où vous remettez la source de données à OLE, telles que l’appel de [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), vous devez appeler **pDataSrc -> InternalRelease**. Par exemple :  
+ Les sources de données doivent être détruites par l’application actuellement chargée de ces derniers. Dans les cas où vous remettez la source de données à OLE, telles que l’appel de [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), vous devez appeler `pDataSrc->InternalRelease`. Exemple :  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

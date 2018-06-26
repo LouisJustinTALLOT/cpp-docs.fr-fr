@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354016"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930002"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
 Cet article traite des rubriques avancées liés au développement de contrôles ActiveX. Elles incluent notamment :  
@@ -79,9 +79,9 @@ Cet article traite des rubriques avancées liés au développement de contrôles
   
 8.  Dans le **fonction Get** et **fonction Set** zones, tapez un nom unique pour vos fonctions Get et Set ou acceptez les noms par défaut.  
   
-9. Ajoutez un paramètre appelé `row` (type `short`), à l’aide du **nom de paramètre** et **Type de paramètre** contrôles.  
+9. Ajoutez un paramètre appelé *ligne* (type *court*), à l’aide du **nom de paramètre** et **Type de paramètre** contrôles.  
   
-10. Ajoutez un deuxième paramètre appelé `column` (type `short`).  
+10. Ajoutez un deuxième paramètre appelé *colonne* (type *court*).  
   
 11. Cliquez sur **Terminer**.  
   
@@ -111,48 +111,48 @@ Cet article traite des rubriques avancées liés au développement de contrôles
   
 |Error|Description|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|Appel de fonction non conforme|  
-|**CTL_E_OVERFLOW**|Dépassement|  
-|**CTL_E_OUTOFMEMORY**|Mémoire insuffisante|  
-|**CTL_E_DIVISIONBYZERO**|Division par zéro|  
-|**CTL_E_OUTOFSTRINGSPACE**|Espace de chaîne|  
-|**CTL_E_OUTOFSTACKSPACE**|Espace de pile|  
-|**CTL_E_BADFILENAMEORNUMBER**|Nom ou numéro de fichier incorrect|  
-|**CTL_E_FILENOTFOUND**|Fichier non trouvé.|  
-|**CTL_E_BADFILEMODE**|Mode de fichier incorrect|  
-|**CTL_E_FILEALREADYOPEN**|Le fichier est déjà ouvert.|  
-|**CTL_E_DEVICEIOERROR**|Erreur d'E/S de périphérique|  
-|**CTL_E_FILEALREADYEXISTS**|Le fichier existe déjà|  
-|**CTL_E_BADRECORDLENGTH**|Longueur d'enregistrement incorrecte|  
-|**CTL_E_DISKFULL**|Disque plein|  
-|**CTL_E_BADRECORDNUMBER**|Numéro d'enregistrement incorrect|  
-|**CTL_E_BADFILENAME**|Nom de fichier incorrect|  
-|**CTL_E_TOOMANYFILES**|Trop de fichiers|  
-|**CTL_E_DEVICEUNAVAILABLE**|Périphérique non disponible|  
-|**CTL_E_PERMISSIONDENIED**|Autorisation refusée|  
-|**CTL_E_DISKNOTREADY**|Disque non prêt|  
-|**CTL_E_PATHFILEACCESSERROR**|Erreur dans le chemin d’accès|  
-|**CTL_E_PATHNOTFOUND**|Chemin d’accès introuvable|  
-|**CTL_E_INVALIDPATTERNSTRING**|Chaîne de modèle non valide|  
-|**CTL_E_INVALIDUSEOFNULL**|Utilisation incorrecte de NULL|  
-|**CTL_E_INVALIDFILEFORMAT**|Format de fichier non valide|  
-|**CTL_E_INVALIDPROPERTYVALUE**|Valeur de propriété non valide|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Index de tableau de propriété non valide|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Set non pris en charge au moment de l’exécution|  
-|**CTL_E_SETNOTSUPPORTED**|Set non pris en charge (propriété en lecture seule)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|Index de tableau de propriétés requis|  
-|**CTL_E_SETNOTPERMITTED**|Set non autorisé|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Get non pris en charge au moment de l’exécution|  
-|**CTL_E_GETNOTSUPPORTED**|Get non pris en charge (propriété en écriture seule)|  
-|**CTL_E_PROPERTYNOTFOUND**|Propriété introuvable|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|Format de Presse-papiers non valide|  
-|**CTL_E_INVALIDPICTURE**|Image non valide|  
-|**CTL_E_PRINTERERROR**|Erreur d'imprimante|  
-|**CTL_E_CANTSAVEFILETOTEMP**|Impossible d’enregistrer le fichier dans TEMP|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|Texte recherché introuvable|  
-|**CTL_E_REPLACEMENTSTOOLONG**|Remplacements trop longs|  
+|CTL_E_ILLEGALFUNCTIONCALL|Appel de fonction non conforme|  
+|CTL_E_OVERFLOW|Dépassement|  
+|CTL_E_OUTOFMEMORY|Mémoire insuffisante|  
+|CTL_E_DIVISIONBYZERO|Division par zéro|  
+|CTL_E_OUTOFSTRINGSPACE|Espace de chaîne|  
+|CTL_E_OUTOFSTACKSPACE|Espace de pile|  
+|CTL_E_BADFILENAMEORNUMBER|Nom ou numéro de fichier incorrect|  
+|CTL_E_FILENOTFOUND|Fichier non trouvé.|  
+|CTL_E_BADFILEMODE|Mode de fichier incorrect|  
+|CTL_E_FILEALREADYOPEN|Le fichier est déjà ouvert.|  
+|CTL_E_DEVICEIOERROR|Erreur d'E/S de périphérique|  
+|CTL_E_FILEALREADYEXISTS|Le fichier existe déjà|  
+|CTL_E_BADRECORDLENGTH|Longueur d'enregistrement incorrecte|  
+|CTL_E_DISKFULL|Disque plein|  
+|CTL_E_BADRECORDNUMBER|Numéro d'enregistrement incorrect|  
+|CTL_E_BADFILENAME|Nom de fichier incorrect|  
+|CTL_E_TOOMANYFILES|Trop de fichiers|  
+|CTL_E_DEVICEUNAVAILABLE|Périphérique non disponible|  
+|CTL_E_PERMISSIONDENIED|Autorisation refusée|  
+|CTL_E_DISKNOTREADY|Disque non prêt|  
+|CTL_E_PATHFILEACCESSERROR|Erreur dans le chemin d’accès|  
+|CTL_E_PATHNOTFOUND|Chemin d’accès introuvable|  
+|CTL_E_INVALIDPATTERNSTRING|Chaîne de modèle non valide|  
+|CTL_E_INVALIDUSEOFNULL|Utilisation incorrecte de NULL|  
+|CTL_E_INVALIDFILEFORMAT|Format de fichier non valide|  
+|CTL_E_INVALIDPROPERTYVALUE|Valeur de propriété non valide|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|Index de tableau de propriété non valide|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Set non pris en charge au moment de l’exécution|  
+|CTL_E_SETNOTSUPPORTED|Set non pris en charge (propriété en lecture seule)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|Index de tableau de propriétés requis|  
+|CTL_E_SETNOTPERMITTED|Set non autorisé|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Get non pris en charge au moment de l’exécution|  
+|CTL_E_GETNOTSUPPORTED|Get non pris en charge (propriété en écriture seule)|  
+|CTL_E_PROPERTYNOTFOUND|Propriété introuvable|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|Format de Presse-papiers non valide|  
+|CTL_E_INVALIDPICTURE|Image non valide|  
+|CTL_E_PRINTERERROR|Erreur d'imprimante|  
+|CTL_E_CANTSAVEFILETOTEMP|Impossible d’enregistrer le fichier dans TEMP|  
+|CTL_E_SEARCHTEXTNOTFOUND|Texte recherché introuvable|  
+|CTL_E_REPLACEMENTSTOOLONG|Remplacements trop longs|  
   
- Si nécessaire, utilisez le **CUSTOM_CTL_SCODE** macro pour définir un code d’erreur personnalisés pour une condition qui n’est pas couverte par un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767, inclusif. Par exemple :  
+ Si nécessaire, utilisez la macro CUSTOM_CTL_SCODE pour définir un code d’erreur personnalisés pour une condition qui n’est pas couverte par un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767, inclusif. Exemple :  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -176,7 +176,7 @@ Cet article traite des rubriques avancées liés au développement de contrôles
   
      - ou -  
   
--   Déclarez une variable locale et une sous-classe en tant qu’élément de la boîte de dialogue. Insérez le code qui ressemble à ceci (`CMyCtrl` est la classe wrapper, `IDC_MYCTRL1` est l’ID du contrôle) :  
+-   Déclarez une variable locale et une sous-classe en tant qu’élément de la boîte de dialogue. Insérez le code qui ressemble à ceci (`CMyCtrl` est la classe wrapper, IDC_MYCTRL1 est l’ID du contrôle) :  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

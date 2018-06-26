@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351648"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928995"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Comment : convertir un ruban MFC existant en ressource du ruban
 Ressources de ruban sont plus faciles à visualiser, modifier et gérer que les rubans codés manuellement. Cette rubrique décrit comment convertir un ruban codé manuellement dans un projet MFC dans une ressource de ruban.  
@@ -29,7 +29,7 @@ Ressources de ruban sont plus faciles à visualiser, modifier et gérer que les 
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Pour convertir un ruban MFC à une ressource de ruban  
   
-1.  Dans Visual Studio, dans un projet MFC existant, ouvrez le fichier source où l’objet CMFCRibbonBar est initialisé. En règle générale, le fichier est mainfrm.cpp. Ajoutez le code suivant après le code d’initialisation pour le ruban.  
+1.  Dans Visual Studio, dans un projet MFC existant, ouvrez le fichier source où le `CMFCRibbonBar` l’objet est initialisé. En règle générale, le fichier est mainfrm.cpp. Ajoutez le code suivant après le code d’initialisation pour le ruban.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

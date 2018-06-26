@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380206"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929593"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Récupérer des données d'un objet Dialog
 Le framework fournit un moyen simple pour initialiser les valeurs des contrôles dans une boîte de dialogue et pour récupérer les valeurs des contrôles. L’approche manuelle plus laborieuse consiste à appeler des fonctions telles que la `SetDlgItemText` et `GetDlgItemText` fonctions membres de classe `CWnd`, qui s’appliquent aux fenêtres de contrôle. Ces fonctions, vous d’accéder à chaque contrôle individuellement afin de définir ou obtenir sa valeur, appeler des fonctions telles que `SetWindowText` et `GetWindowText`. Approche de l’infrastructure automatise l’initialisation et la récupération.  
@@ -47,7 +47,7 @@ Le framework fournit un moyen simple pour initialiser les valeurs des contrôles
   
  DDX et DDV sont expliqués plus en détail dans [échange de données de boîtes de dialogue et la Validation](../mfc/dialog-data-exchange-and-validation.md).  
   
- Pour une boîte de dialogue modale, vous pouvez récupérer des données de l’utilisateur a entré lorsque `DoModal` retourne **IDOK** mais avant de la boîte de dialogue est détruit. Pour une boîte de dialogue non modale, vous pouvez récupérer des données à partir de l’objet de la boîte de dialogue à tout moment en appelant `UpdateData` avec l’argument **TRUE** et ensuite l’accès aux variables de membre de classe de boîte de dialogue. Ce sujet est décrite plus en détail dans [échange de données de boîtes de dialogue et la Validation](../mfc/dialog-data-exchange-and-validation.md).  
+ Pour une boîte de dialogue modale, vous pouvez récupérer des données de l’utilisateur a entré lorsque `DoModal` retourne IDOK mais avant de la boîte de dialogue est détruit. Pour une boîte de dialogue non modale, vous pouvez récupérer des données à partir de l’objet de la boîte de dialogue à tout moment en appelant `UpdateData` avec l’argument **TRUE** et ensuite l’accès aux variables de membre de classe de boîte de dialogue. Ce sujet est décrite plus en détail dans [échange de données de boîtes de dialogue et la Validation](../mfc/dialog-data-exchange-and-validation.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)

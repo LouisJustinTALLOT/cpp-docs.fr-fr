@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354915"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930646"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation d'images dans un contrôle ActiveX
 Cet article décrit le type Picture courant et explique comment l’implémenter dans votre contrôle ActiveX. Les rubriques traitées ici sont les suivantes :  
@@ -71,11 +71,11 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
      Ces modifications sont apportées à plusieurs fonctions qui sont responsables du dessin de votre contrôle ActiveX.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Ajouts à votre projet de contrôle  
- Pour ajouter l’ID de page de propriétés pour la page de propriétés Picture standard, insérez la ligne suivante après la macro `BEGIN_PROPPAGEIDS` dans le fichier d’implémentation du contrôle (.CPP) :  
+ Pour ajouter l’ID de page de propriétés pour la page de propriétés Picture standard, insérez la ligne suivante après la macro BEGIN_PROPPAGEIDS dans le fichier d’implémentation (. CPP) :  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Vous devez également incrémenter d’une unité le paramètre count de votre macro `BEGIN_PROPPAGEIDS` . La ligne suivante le montre :  
+ Vous devez également incrémenter le paramètre du nombre de la macro BEGIN_PROPPAGEIDS d’une unité. La ligne suivante le montre :  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Il n’est pas nécessaire de nommer le membre de données `m_pic`; n’importe quel nom peut convenir.  
+ Il n’est pas nécessaire de nommer le membre de données *m_pic*; n’importe quel nom fera l’affaire.  
   
  Ensuite, ajoutez une propriété personnalisée qui prend en charge un type Picture :  
   
@@ -123,7 +123,7 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
 >  Les noms de la classe et des fonctions de votre contrôle peuvent différer de l’exemple ci-dessus.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> Modifications de votre projet de contrôle  
- Après avoir effectué les ajouts nécessaires au projet de contrôle, vous devez modifier plusieurs fonctions qui affectent le rendu de votre contrôle ActiveX. Ces fonctions, `OnResetState`, `OnDraw`et les fonctions Get/Set d’une propriété Picture personnalisée, se trouvent dans le fichier d’implémentation du contrôle. (Notez que dans cet exemple, la classe du contrôle est appelée `CSampleCtrl`, le membre de données `CPictureHolder` est appelé `m_pic`et le nom de la propriété Picture personnalisée est `ControlPicture`.)  
+ Après avoir effectué les ajouts nécessaires au projet de contrôle, vous devez modifier plusieurs fonctions qui affectent le rendu de votre contrôle ActiveX. Ces fonctions, `OnResetState`, `OnDraw`et les fonctions Get/Set d’une propriété Picture personnalisée, se trouvent dans le fichier d’implémentation du contrôle. (Notez que dans cet exemple, la classe du contrôle est appelée `CSampleCtrl`, le `CPictureHolder` membre de données est appelé *m_pic*, et le nom de la propriété picture personnalisée est `ControlPicture`.)  
   
  Dans la fonction `OnResetState` du contrôle, ajoutez la ligne facultative suivante après l’appel à `COleControl::OnResetState`:  
   

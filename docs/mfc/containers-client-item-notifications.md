@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344622"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928222"
 ---
 # <a name="containers-client-item-notifications"></a>Conteneurs : notifications d'élément client
 Cet article présente les fonctions substituables que le framework MFC appelle lorsque les applications serveur modifient des éléments dans le document de votre application cliente.  
@@ -32,11 +32,11 @@ Cet article présente les fonctions substituables que le framework MFC appelle 
   
 |Notification|Signification|  
 |------------------|-------------|  
-|`OLE_CHANGED`|L'apparence de l'élément OLE a changé.|  
-|`OLE_SAVED`|L'élément OLE a été enregistré.|  
-|`OLE_CLOSED`|L'élément OLE a été fermé.|  
+|**OLE_CHANGED**|L'apparence de l'élément OLE a changé.|  
+|**OLE_SAVED**|L'élément OLE a été enregistré.|  
+|**OLE_CLOSED**|L'élément OLE a été fermé.|  
 |**OLE_RENAMED**|Le document du serveur contenant l'élément OLE a été renommé.|  
-|`OLE_CHANGED_STATE`|L'élément OLE est passé d'un état à un autre.|  
+|**OLE_CHANGED_STATE**|L'élément OLE est passé d'un état à un autre.|  
 |**OLE_CHANGED_ASPECT**|L'aspect de l'élément OLE a été modifié par le framework.|  
   
  Ces valeurs sont comprises entre le **OLE_NOTIFICATION** énumération, qui est définie dans AFXOLE. H.  
@@ -45,9 +45,9 @@ Cet article présente les fonctions substituables que le framework MFC appelle 
   
 |Lorsque le premier argument est|Deuxième argument|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` ou `OLE_CLOSED`|N'est pas utilisé.|  
-|`OLE_CHANGED`|Spécifie l'aspect de l'élément OLE modifié.|  
-|`OLE_CHANGED_STATE`|Décrit l’état en cours (`emptyState`, **loadedState**, `openState`, `activeState`, ou `activeUIState`).|  
+|**OLE_SAVED** ou **OLE_CLOSED**|N'est pas utilisé.|  
+|**OLE_CHANGED**|Spécifie l'aspect de l'élément OLE modifié.|  
+|**OLE_CHANGED_STATE**|Décrit l’état en cours (*emptyState*, *loadedState*, *openState*, *activeState*, ou  *activeUIState*).|  
   
  Pour plus d’informations sur les États d’un élément client peut assumer, consultez [conteneurs : États Client-élément](../mfc/containers-client-item-states.md).  
   

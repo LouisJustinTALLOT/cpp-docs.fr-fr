@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382097"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931155"
 ---
 # <a name="ribbon-designer-mfc"></a>Concepteur de ruban (MFC)
 Le Concepteur de ruban permet de créer et de personnaliser des rubans dans les applications MFC. Un ruban est un élément d'interface utilisateur (IU) qui organise les commandes en groupes logiques. Ces groupes apparaissent sous des onglets distincts dans une bande transversale située dans la partie supérieure de la fenêtre. Le ruban remplace la barre de menus et les barres d'outils. Un ruban peut considérablement améliorer la convivialité d'une l'application. Pour plus d’informations, consultez [rubans](http://go.microsoft.com/fwlink/p/?linkid=129233). L'illustration suivante représente un ruban.  
@@ -34,7 +34,7 @@ Le Concepteur de ruban permet de créer et de personnaliser des rubans dans les 
 ## <a name="understanding-the-ribbon-designer"></a>Présentation du Concepteur de ruban  
  Le Concepteur de ruban crée et stocke le ruban en tant que ressource. Quand vous créez une ressource de ruban, le Concepteur de ruban effectue trois opérations :  
   
--   Il ajoute une entrée dans le script de définition de ressources du projet (* .rc). Dans l'exemple suivant, `IDR_RIBBON` est le nom unique qui identifie la ressource de ruban, `RT_RIBBON_XML` est le type de ressource et `ribbon.mfcribbon-ms` est le nom du fichier de ressources.  
+-   Il ajoute une entrée dans le script de définition de ressources du projet (* .rc). Dans l’exemple suivant, IDR_RIBBON est le nom unique qui identifie la ressource de ruban, RT_RIBBON_XML est le type de ressource et ms-ribbon.mfcribbon est le nom du fichier de ressources.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

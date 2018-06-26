@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a5f94964b9e28b851c34ac456f3cfe630c255c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347962"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932043"
 ---
 # <a name="ready-to-use-array-classes"></a>Classes de tableaux prêtes à être utilisées
 Les classes suivantes sont des classes de tableau de prêt à l’emploi.  
@@ -32,13 +32,13 @@ Les classes suivantes sont des classes de tableau de prêt à l’emploi.
  Stocke des éléments de type **octets** dans un tableau.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- Stocke des éléments de type `DWORD` dans un tableau.  
+ Stocke des éléments de type **DWORD** dans un tableau.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
  Stocke des pointeurs vers les objets de la classe `CObject` ou des objets de classes dérivées de `CObject` dans un tableau.  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- Stocke des pointeurs vers `void` (pointeurs génériques) dans un tableau.  
+ Stocke des pointeurs vers **void** (pointeurs génériques) dans un tableau.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
  Stocke des éléments de type **UINT** dans un tableau.  

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345184"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928767"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions : interception et suppression d'exceptions
-Les instructions et les exemples suivants montrent comment intercepter et supprimer des exceptions. Pour plus d’informations sur la **essayez**, **catch**, et `throw` mots clés, consultez [gestion des exceptions C++](../cpp/cpp-exception-handling.md).  
+Les instructions et les exemples suivants montrent comment intercepter et supprimer des exceptions. Pour plus d’informations sur la **essayez**, **catch**, et **lever** mots clés, consultez [gestion des exceptions C++](../cpp/cpp-exception-handling.md).  
   
  Vos gestionnaires d’exceptions doivent supprimer des objets d’exception qu’ils gèrent, car l’échec de suppression de l’exception entraîne une fuite de mémoire chaque fois que ce code intercepte une exception.  
   
@@ -42,7 +42,7 @@ Les instructions et les exemples suivants montrent comment intercepter et suppri
 -   L’exécution retourne depuis le **catch** bloc.  
   
 > [!NOTE]
->  Lorsque vous supprimez un `CException`, utiliser le **supprimer** fonction membre à supprimer de l’exception. N’utilisez pas le **supprimer** (mot clé), car elle peut échouer si l’exception n’est pas sur le tas.  
+>  Lorsque vous supprimez un `CException`, utilisez le `Delete` fonction membre à supprimer de l’exception. N’utilisez pas le **supprimer** (mot clé), car elle peut échouer si l’exception n’est pas sur le tas.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Pour intercepter et supprimer des exceptions  
   

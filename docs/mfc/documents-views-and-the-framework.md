@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349517"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929218"
 ---
 # <a name="documents-views-and-the-framework"></a>Documents, vues et le Framework
-Les concepts du document et de la vue sont au cœur du framework MFC. Un document est un objet de données avec lequel l'utilisateur interagit dans une session d'édition. Il est créé par le `New` ou **ouvrir** commande sur le **fichier** menu et est généralement stocké dans un fichier. (Les documents standard MFC, dérivées de la classe **CDocument**, sont différents des documents actifs et des documents composés OLE.) Une vue est un objet fenêtre via lequel l'utilisateur interagit avec un document.  
+Les concepts du document et de la vue sont au cœur du framework MFC. Un document est un objet de données avec lequel l'utilisateur interagit dans une session d'édition. Il est créé par le **nouveau** ou **ouvrir** commande sur le **fichier** menu et est généralement stocké dans un fichier. (Les documents standard MFC, dérivées de la classe `CDocument`, sont différents des documents actifs et des documents composés OLE.) Une vue est un objet fenêtre via lequel l'utilisateur interagit avec un document.  
   
  Les objets principaux dans une application active sont :  
   

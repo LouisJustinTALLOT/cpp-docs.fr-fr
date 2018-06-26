@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353271"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929729"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 Une des utilisations plus puissantes de contrôles ActiveX est la liaison de données, ce qui permet une propriété du contrôle à lier à un champ spécifique dans une base de données. Lorsqu’un utilisateur modifie les données de cette propriété liée, le contrôle notifie la base de données et les demandes que le champ d’enregistrement est mis à jour. La base de données puis vous avertit que le contrôle de la réussite ou l’échec de la demande.  
@@ -51,7 +51,7 @@ Diagramme conceptuel d’un contrôle lié aux données
  Il est possible de créer une propriété stock lié aux données, même s’il est probable que vous pouvez un [méthode get/set peut être liée](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Propriétés stock ont le **pouvant être liés** et **requestedit** attributs par défaut.  
+>  Propriétés stock ont le `bindable` et `requestedit` les attributs par défaut.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Pour ajouter une propriété stock peut être liée à l’aide de l’Assistant Ajout de propriété  
   

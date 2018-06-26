@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353694"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930015"
 ---
 # <a name="handling-customization-notifications"></a>Gestion des notifications de personnalisation
 Un contrôle commun de barre d’outils Windows a des fonctionnalités de personnalisation intégrées, notamment une boîte de dialogue de personnalisation définie par le système, qui permettent à l’utilisateur d’insérer, de supprimer ou de réorganiser les boutons de barre d’outils. L’application détermine si les fonctionnalités de personnalisation sont disponibles et contrôle l’étendue selon laquelle l’utilisateur peut personnaliser la barre d’outils.  
   
- Vous pouvez rendre ces fonctionnalités de personnalisation disponible pour l’utilisateur en donnant à la barre d’outils le style `CCS_ADJUSTABLE` . Les fonctionnalités de personnalisation permettent à l’utilisateur de faire glisser un bouton à un nouvel emplacement ou de supprimer un bouton en le faisant glisser en dehors de la barre d’outils. En outre, l’utilisateur peut double-cliquer sur la barre d’outils pour afficher la boîte de dialogue **Personnaliser la barre d’outils** , qui lui permet d’ajouter, de supprimer et de réorganiser les boutons de barre d’outils. L’application peut afficher la boîte de dialogue en utilisant la fonction membre [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) .  
+ Vous pouvez rendre ces fonctionnalités de personnalisation disponibles à l’utilisateur en donnant à la barre d’outils le **CCS_ADJUSTABLE** style. Les fonctionnalités de personnalisation permettent à l’utilisateur de faire glisser un bouton à un nouvel emplacement ou de supprimer un bouton en le faisant glisser en dehors de la barre d’outils. En outre, l’utilisateur peut double-cliquer sur la barre d’outils pour afficher la boîte de dialogue **Personnaliser la barre d’outils** , qui lui permet d’ajouter, de supprimer et de réorganiser les boutons de barre d’outils. L’application peut afficher la boîte de dialogue en utilisant la fonction membre [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) .  
   
  Le contrôle de barre d’outils envoie des messages de notification à la fenêtre parente à chaque étape du processus de personnalisation. Si l’utilisateur maintient enfoncée la touche Maj et commence à faire glisser un bouton, la barre d’outils gère automatiquement l’opération glisser. La barre d’outils envoie le message de notification **TBN_QUERYDELETE** à la fenêtre parente pour déterminer si le bouton peut être supprimé. L’opération glisser se termine si la fenêtre parente retourne **FALSE**. Dans le cas contraire, la barre d’outils capture l’entrée de la souris et attend que l’utilisateur relâche le bouton de la souris.  
   
@@ -165,7 +165,7 @@ Un contrôle commun de barre d’outils Windows a des fonctionnalités de person
  Index du bouton associé à la notification.  
   
  **tbButton**  
- `TBBUTTON` structure qui contient des informations sur le bouton de barre d’outils associé à la notification.  
+ **TBBUTTON** structure qui contient des informations sur le bouton de barre d’outils associé à la notification.  
   
  **cchText**  
  Nombre de caractères dans le texte du bouton.  

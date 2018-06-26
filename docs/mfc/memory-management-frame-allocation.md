@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349309"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931058"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestion de la mémoire : allocation de frame
 L'allocation dans le frame tient son nom du "frame de pile" installé lorsqu'une fonction est appelée. Le frame de pile est une zone de la mémoire contenant temporairement les arguments à la fonction, ainsi que toutes les variables qui sont définies comme étant locales à la fonction. Les variables de frame sont souvent appelées variables "automatiques" puisque le compilateur leur alloue de l'espace.  
@@ -42,7 +42,7 @@ L'allocation dans le frame tient son nom du "frame de pile" installé lorsqu'une
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Pour les variables de fonction locale, cette transition de portée se produit lorsque la fonction existe, mais l'étendue d'une variable de frame peut être inférieure à la fonction si les accolades imbriquées sont utilisées. La suppression automatique des variables de frame est très importante. Dans le cas des types primitifs simples (comme `int` ou **octets**), tableaux ou structures de données, la suppression automatique libère simplement la mémoire utilisée par la variable. Dans la mesure où la variable est sortie de l'étendue, elle est de toute façon inaccessible. Dans le cas des objets C++, toutefois, le processus de suppression automatique est un peu plus compliqué.  
+ Pour les variables de fonction locale, cette transition de portée se produit lorsque la fonction existe, mais l'étendue d'une variable de frame peut être inférieure à la fonction si les accolades imbriquées sont utilisées. La suppression automatique des variables de frame est très importante. Dans le cas des types primitifs simples (comme **int** ou **octets**), tableaux ou structures de données, la suppression automatique libère simplement la mémoire utilisée par la variable. Dans la mesure où la variable est sortie de l'étendue, elle est de toute façon inaccessible. Dans le cas des objets C++, toutefois, le processus de suppression automatique est un peu plus compliqué.  
   
  Lorsqu'un objet est défini comme variable de frame, le constructeur est appelé automatiquement au point où la définition est produite. Lorsque l'objet sort de l'étendue, le destructeur est automatiquement appelé avant que la mémoire de l'objet soit diffusée. Ces constructions et destructions automatiques peuvent être très pratiques, mais vous devez connaître les appels automatiques, notamment le destructeur.  
   

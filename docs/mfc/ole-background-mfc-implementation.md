@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349997"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930324"
 ---
 # <a name="ole-background-mfc-implementation"></a>Arrière-plan OLE : implémentation MFC
 En raison de la taille et de la complexité de l'API OLE brute, l'appeler directement pour écrire des applications OLE peut prendre beaucoup de temps. L'objectif de l'implémentation de la bibliothèque MFC OLE est de réduire la charge de travail dans l'écriture des applications complètes et de type OLE.  
@@ -43,10 +43,10 @@ En raison de la taille et de la complexité de l'API OLE brute, l'appeler direct
  L'interface `IMoniker` est implémentée par la bibliothèque de classes (par exemple, la classe `COleServerItem`) mais n'a pas été exposée précédemment au programmeur. Pour plus d’informations sur cette interface, consultez les implémentations du Moniker OLE dans la section OLE du Kit de développement Windows. Toutefois, consultez également la classe [CMonikerFile](../mfc/reference/cmonikerfile-class.md) et [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
  Interfaces IUnknown et IMarshal  
- Le **IUnknown** interface est implémentée par la bibliothèque de classes mais n’est pas exposée au programmeur. Le **IMarshal** interface n’est pas implémentée par la bibliothèque de classes mais est utilisée en interne. Les serveurs d’automation générés à l’aide de la bibliothèque de classes incorporent déjà des fonctions de marshaling.  
+ Le `IUnknown` interface est implémentée par la bibliothèque de classes mais n’est pas exposée au programmeur. Le `IMarshal` interface n’est pas implémentée par la bibliothèque de classes mais est utilisée en interne. Les serveurs d’automation générés à l’aide de la bibliothèque de classes incorporent déjà des fonctions de marshaling.  
   
  Docfiles (fichiers composés)  
- Les fichiers composés sont partiellement pris en charge par la bibliothèque de classes. Aucune des fonctions qui manipulent directement les fichiers composés au delà de la création n'est prise en charge. MFC utilise la classe **COleFileStream** pour prendre en charge la manipulation des flux avec des fonctions de fichier standard. Pour plus d’informations, consultez l’article [conteneurs : fichiers composés](../mfc/containers-compound-files.md).  
+ Les fichiers composés sont partiellement pris en charge par la bibliothèque de classes. Aucune des fonctions qui manipulent directement les fichiers composés au delà de la création n'est prise en charge. MFC utilise la classe `COleFileStream` pour prendre en charge la manipulation des flux avec des fonctions de fichier standard. Pour plus d’informations, consultez l’article [conteneurs : fichiers composés](../mfc/containers-compound-files.md).  
   
  Serveurs intra-processus et gestionnaires d'objets  
  Les serveurs intra-processus et les gestionnaires d'objets permettent l'implémentation des données de modification visuelle ou des objets COM (Component Object Model) complets dans une bibliothèque de liens dynamiques (DLL). Pour cela, vous pouvez implémenter la DLL en appelant l'API OLE directement. Toutefois, si vous disposez d'un accès en écriture à un serveur Automation et que celui-ci n'offre pas d'interface utilisateur, vous pouvez utiliser AppWizard pour faire de votre serveur un serveur intra-processus et l'intégrer complètement dans une DLL. Pour plus d’informations sur ces sujets, consultez [serveurs Automation](../mfc/automation-servers.md).  

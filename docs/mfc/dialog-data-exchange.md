@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345138"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930857"
 ---
 # <a name="dialog-data-exchange"></a>Échange de données de boîtes de dialogue
-Si vous utilisez le mécanisme DDX, définissez les valeurs initiales des variables membres de l'objet de boîte de dialogue, en général dans votre gestionnaire `OnInitDialog` ou le constructeur de boîte de dialogue. Immédiatement avant l’affichage de la boîte de dialogue, le mécanisme du framework DDX transfère les valeurs des variables membres aux contrôles dans la boîte de dialogue, où elles apparaissent lorsque la boîte de dialogue s’affiche en réponse à `DoModal` ou **créer** . L'implémentation par défaut de `OnInitDialog` dans `CDialog` appelle la fonction membre `UpdateData` de la classe `CWnd` pour initialiser les contrôles dans la boîte de dialogue.  
+Si vous utilisez le mécanisme DDX, définissez les valeurs initiales des variables membres de l'objet de boîte de dialogue, en général dans votre gestionnaire `OnInitDialog` ou le constructeur de boîte de dialogue. Immédiatement avant l’affichage de la boîte de dialogue, le mécanisme du framework DDX transfère les valeurs des variables membres aux contrôles dans la boîte de dialogue, où elles apparaissent lorsque la boîte de dialogue s’affiche en réponse à `DoModal` ou `Create`. L'implémentation par défaut de `OnInitDialog` dans `CDialog` appelle la fonction membre `UpdateData` de la classe `CWnd` pour initialiser les contrôles dans la boîte de dialogue.  
   
  Le même mécanisme transfère les valeurs des contrôles dans les variables membres lorsque l’utilisateur clique sur le bouton OK (ou lorsque vous appelez le `UpdateData` fonction membre avec l’argument **TRUE**). Le mécanisme de validation des données de boîte de dialogue valide tous les éléments de données pour lesquels vous avez spécifiés les règles de validation.  
   

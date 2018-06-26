@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345915"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931962"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Gestion de la notification TTN_NEEDTEXT pour les info-bulles
 Dans le cadre de [l’activation des info-bulles](../mfc/enabling-tool-tips.md), vous gérez le **TTN_NEEDTEXT** message en ajoutant l’entrée suivante à la table des messages de votre fenêtre propriétaire :  
@@ -48,7 +48,7 @@ Dans le cadre de [l’activation des info-bulles](../mfc/enabling-tool-tips.md),
  Un pointeur vers le [structure NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) structure. Cette structure est également présentée ultérieurement dans [ToolTipText, Structure](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Un pointeur vers le code de résultat, vous pouvez définir avant de retourner. **TTN_NEEDTEXT** gestionnaires peuvent ignorer la `pResult` paramètre.  
+ Un pointeur vers le code de résultat, vous pouvez définir avant de retourner. **TTN_NEEDTEXT** gestionnaires peuvent ignorer la *pResult* paramètre.  
   
  Par exemple, pour un gestionnaire de notification en mode formulaire :  
   

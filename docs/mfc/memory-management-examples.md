@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347189"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929305"
 ---
 # <a name="memory-management-examples"></a>Gestion de la mémoire : exemples
 Cet article décrit la façon dont MFC effectue les allocations de frame et les allocations de tas pour chacun des trois types d’allocations de mémoire :  
@@ -99,7 +99,7 @@ Cet article décrit la façon dont MFC effectue les allocations de frame et les 
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Si l’argument pour le `CPerson` constructeur est un pointeur vers `char`, l’instruction pour l’allocation de frame est :  
+     Si l’argument pour le `CPerson` constructeur est un pointeur vers **char**, l’instruction pour l’allocation de frame est :  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

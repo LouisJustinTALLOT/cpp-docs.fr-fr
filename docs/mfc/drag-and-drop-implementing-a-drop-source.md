@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345610"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928978"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Glisser-déposer : implémentation d’une source de dépôt
 Cet article explique comment obtenir votre application pour fournir des données à une opération de glisser-déplacer.  
   
- Implémentation de base d’une source de déplacement est relativement simple. La première étape consiste à déterminer quels événements commenceront une opération glisser. Recommandé d’indications de l’interface utilisateur définissent le début d’une opération de glissement de la sélection de données et un `WM_LBUTTONDOWN` événement se produisant sur un point de données sélectionnées. Les exemples OLE MFC [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md) suivez ces instructions.  
+ Implémentation de base d’une source de déplacement est relativement simple. La première étape consiste à déterminer quels événements commenceront une opération glisser. Recommandé d’indications de l’interface utilisateur définissent le début d’une opération de glissement de la sélection de données et un **WM_LBUTTONDOWN** événement se produisant sur un point de données sélectionnées. Les exemples OLE MFC [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md) suivez ces instructions.  
   
  Si votre application est un conteneur et les données sélectionnées seront lié ou un objet incorporé de type `COleClientItem`, appelez sa `DoDragDrop` fonction membre. Sinon, construisez un `COleDataSource` de l’objet, initialisez-la avec la sélection et appeler l’objet de source de données `DoDragDrop` fonction membre. Si votre application est un serveur, utilisez `COleServerItem::DoDragDrop`. Pour plus d’informations sur la personnalisation du comportement de glisser-déplacer standard, consultez l’article [glisser -déplacer : personnalisation](../mfc/drag-and-drop-customizing.md).  
   
- Si `DoDragDrop` retourne `DROPEFFECT_MOVE`, supprimer la source de données à partir du document source immédiatement. Aucune autre valeur de retour `DoDragDrop` a un effet sur une source de déplacement.  
+ Si `DoDragDrop` retourne **DROPEFFECT_MOVE**, supprimer la source de données à partir du document source immédiatement. Aucune autre valeur de retour `DoDragDrop` a un effet sur une source de déplacement.  
   
  Pour plus d'informations, voir :  
   

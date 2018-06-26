@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347920"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932170"
 ---
 # <a name="containers-advanced-features"></a>Conteneurs : fonctionnalités avancées
 Cet article décrit les étapes nécessaires pour intégrer des fonctionnalités avancées optionnelles dans des applications de conteneur existantes. Ces fonctionnalités sont :  
@@ -70,13 +70,13 @@ Cet article décrit les étapes nécessaires pour intégrer des fonctionnalités
   
     -   Connectez votre objet `COleTemplateServer` à vos modèles de document en appelant la fonction membre `ConnectTemplate` de l'objet.  
   
-    -   Appelez le **COleTemplateServer::RegisterAll** fonction membre pour inscrire tous les objets de classe avec le système OLE.  
+    -   Appelez le `COleTemplateServer::RegisterAll` fonction membre pour inscrire tous les objets de classe avec le système OLE.  
   
-    -   Appelez `COleTemplateServer::UpdateRegistry`. Le seul paramètre `UpdateRegistry` doit être `OAT_CONTAINER` si l'application n'est pas ouverte avec le commutateur "/Embedded". Cela enregistre l'application en tant que conteneur capable de prendre en charge les liens vers des objets incorporés.  
+    -   Appelez `COleTemplateServer::UpdateRegistry`. Le seul paramètre `UpdateRegistry` doit être *OAT_CONTAINER* si l’application n’est pas lancée avec le commutateur « /Embedded ». Cela enregistre l'application en tant que conteneur capable de prendre en charge les liens vers des objets incorporés.  
   
          Si l'application est ouverte avec le commutateur "/Embedded", elle ne doit pas afficher la fenêtre principale, comme une application serveur.  
   
- L’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) implémente cette fonctionnalité. Pour consulter un exemple illustrant la procédure, consultez la fonction `InitInstance` dans le fichier OCLIENT.CPP de cet exemple d'application.  
+ L’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) implémente cette fonctionnalité. Pour obtenir un exemple de cette procédure, consultez le `InitInstance` de fonction dans le *OCLIENT. CPP* fichier de cet exemple d’application.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conteneurs](../mfc/containers.md)   

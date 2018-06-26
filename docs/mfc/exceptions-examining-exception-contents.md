@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343254"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932232"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Exceptions : examen du contenu des exceptions
 Bien qu’un **catch** l’argument du bloc peut être de presque n’importe quel type de données, les fonctions MFC lèvent des exceptions de types dérivés de la classe `CException`. Pour intercepter une exception levée par une fonction MFC, puis, vous écrivez un **catch** dont l’argument est un pointeur de bloc pour un `CException` objet (ou un objet dérivé `CException`, tel que `CMemoryException`). Selon le type exact de l’exception, vous pouvez examiner les membres de données de l’objet exception pour recueillir des informations sur la cause spécifique de l’exception.  
   
- Par exemple, le `CFileException` type a la `m_cause` membre de données qui contient un type énuméré qui spécifie la cause de l’exception du fichier. Quelques exemples de ces valeurs de retour sont **CFileException::fileNotFound** et **CFileException::readOnly**.  
+ Par exemple, le `CFileException` type a la `m_cause` membre de données qui contient un type énuméré qui spécifie la cause de l’exception du fichier. Quelques exemples de ces valeurs de retour sont `CFileException::fileNotFound` et `CFileException::readOnly`.  
   
  L’exemple suivant montre comment examiner le contenu d’un `CFileException`. Autres types d’exceptions peuvent être examinées de la même façon.  
   

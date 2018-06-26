@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343692"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932115"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personnalisation de l'apparence d'un contrôle ToolBar
 Classe `CToolBarCtrl` propose de nombreux styles qui affectent l’apparence (et, parfois, le comportement) de l’objet de barre d’outils. Modifier l’objet de barre d’outils en définissant le `dwCtrlStyle` paramètre de la `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) fonction membre, lorsque vous créez le contrôle de barre d’outils.  
@@ -47,17 +47,17 @@ Classe `CToolBarCtrl` propose de nombreux styles qui affectent l’apparence (et
 -   **TBSTYLE_ALTDRAG** permet aux utilisateurs de modifier la position d’un bouton de barre d’outils en le faisant glisser tout en maintenant la touche ALT ENFONCÉE. Si ce style n’est pas spécifié, l’utilisateur doit maintenir la touche MAJ ENFONCÉE tout en faisant glisser un bouton.  
   
     > [!NOTE]
-    >  Le `CCS_ADJUSTABLE` style doit être spécifié pour activer les boutons de barre d’outils pour la faire glisser.  
+    >  Le **CCS_ADJUSTABLE** style doit être spécifié pour activer les boutons de barre d’outils pour la faire glisser.  
   
 -   **TBSTYLE_REGISTERDROP** génère **TBN_GETOBJECT** notification messages de demande de supprimer les objets cible lorsque le pointeur de la souris passe au-dessus des boutons de barre d’outils.  
   
  Les autres styles affectent les aspects visuels et de l’objet de barre d’outils :  
   
--   `TBSTYLE_WRAPABLE` Crée une barre d’outils qui peut avoir plusieurs lignes de boutons. Boutons de barre d’outils peut « encapsuler » à la ligne suivante lorsque la barre d’outils devienne trop étroite pour inclure tous les boutons sur la même ligne. Retour à la ligne se produit sur des séparateurs et.  
+-   **TBSTYLE_WRAPABLE** crée une barre d’outils qui peut avoir plusieurs lignes de boutons. Boutons de barre d’outils peut « encapsuler » à la ligne suivante lorsque la barre d’outils devienne trop étroite pour inclure tous les boutons sur la même ligne. Retour à la ligne se produit sur des séparateurs et.  
   
--   **TBSTYLE_CUSTOMERASE** génère **NM_CUSTOMDRAW** lorsqu’il traite les messages de notification `WM_ERASEBKGND` messages.  
+-   **TBSTYLE_CUSTOMERASE** génère **NM_CUSTOMDRAW** lorsqu’il traite les messages de notification **WM_ERASEBKGND** messages.  
   
--   `TBSTYLE_TOOLTIPS` Crée un contrôle d’info-bulle qu’une application peut utiliser pour afficher un texte descriptif pour les boutons dans la barre d’outils.  
+-   **TBSTYLE_TOOLTIPS** crée un contrôle d’info-bulle qu’une application peut utiliser pour afficher un texte descriptif pour les boutons dans la barre d’outils.  
   
  Pour obtenir une liste complète des styles de barre d’outils et des styles étendus, consultez [contrôle de barre d’outils et les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb760439) et [Styles étendus de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760430) dans le Kit de développement logiciel Windows.  
   

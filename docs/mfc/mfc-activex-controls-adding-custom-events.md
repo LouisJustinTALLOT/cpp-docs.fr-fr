@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e6e5eeab0be13eb64052eb9e90a570dcc5124d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352529"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929050"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Contrôles ActiveX MFC : ajout d'événements personnalisés
-Événements personnalisés diffèrent des événements stock, dans la mesure où ils ne sont pas déclenchés automatiquement par la classe `COleControl`. Un événement personnalisé reconnaît une action particulière, déterminée par le développeur du contrôle, comme un événement. Les entrées de mappage des événements pour les événements personnalisés sont représentées par le `EVENT_CUSTOM` (macro). La section suivante implémente un événement personnalisé pour un projet de contrôle ActiveX qui a été créé à l’aide de l’Assistant contrôle ActiveX.  
+Événements personnalisés diffèrent des événements stock, dans la mesure où ils ne sont pas déclenchés automatiquement par la classe `COleControl`. Un événement personnalisé reconnaît une action particulière, déterminée par le développeur du contrôle, comme un événement. Les entrées de mappage des événements pour les événements personnalisés sont représentées par la macro EVENT_CUSTOM. La section suivante implémente un événement personnalisé pour un projet de contrôle ActiveX qui a été créé à l’aide de l’Assistant contrôle ActiveX.  
   
 ##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Ajout d’un événement personnalisé avec l’Assistant Ajout d’événement  
  La procédure suivante ajoute un événement personnalisé spécifique, ClickIn. Vous pouvez utiliser cette procédure pour ajouter d’autres événements personnalisés. Remplacez par le nom de votre événement personnalisé et ses paramètres pour le nom de l’événement ClickIn et les paramètres.  
@@ -48,13 +48,13 @@ ms.locfileid: "33352529"
   
      L’Assistant Ajout d’événement s’ouvre.  
   
-4.  Dans le **nom de l’événement** zone, tout d’abord sélectionner n’importe quel événement existant, puis cliquez sur le **personnalisé** radio bouton, puis tapez `ClickIn`.  
+4.  Dans le **nom de l’événement** zone, tout d’abord sélectionner n’importe quel événement existant, puis cliquez sur le **personnalisé** radio bouton, puis tapez *ClickIn*.  
   
 5.  Dans le **nom interne** , tapez le nom de la fonction de déclenchement de l’événement. Pour cet exemple, utilisez la valeur par défaut fournie par l’Assistant Ajout d’événement (`FireClickIn`).  
   
-6.  Ajoutez un paramètre appelé `xCoord` (type `OLE_XPOS_PIXELS`), à l’aide du **nom de paramètre** et **Type de paramètre** contrôles.  
+6.  Ajoutez un paramètre appelé *xCoord* (type *OLE_XPOS_PIXELS*), à l’aide du **nom de paramètre** et **Type de paramètre** contrôles.  
   
-7.  Ajoutez un deuxième paramètre, appelé `yCoord` (type `OLE_YPOS_PIXELS`).  
+7.  Ajoutez un deuxième paramètre, appelé *yCoord* (type *OLE_YPOS_PIXELS*).  
   
 8.  Cliquez sur **Terminer** pour créer l’événement.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33352529"
  Cette ligne assigne à l’événement ClickIn un numéro d’identification spécifique, obtenue à partir de la position de l’événement dans la liste des événements Assistant Ajout d’événement. L’entrée dans la liste des événements permet à un conteneur d’anticiper l’événement. Par exemple, il peut fournir de code de gestionnaire à exécuter lorsque l’événement est déclenché.  
   
 ##  <a name="_core_calling_fireclickin"></a> Appel de FireClickIn  
- Maintenant que vous avez ajouté l’événement personnalisé ClickIn à l’aide de l’Assistant Ajout d’événement, vous devez décider quand cet événement doit être déclenché. Pour cela, vous devez appeler `FireClickIn` lorsque se produit l’action appropriée. Dans le cadre de cette présentation, le contrôle utilise le `InCircle` de fonction à l’intérieur d’un `WM_LBUTTONDOWN` le Gestionnaire de messages de déclencher l’événement ClickIn lorsqu’un utilisateur clique à l’intérieur d’une zone circulaire ou elliptique. La procédure suivante ajoute le `WM_LBUTTONDOWN` gestionnaire.  
+ Maintenant que vous avez ajouté l’événement personnalisé ClickIn à l’aide de l’Assistant Ajout d’événement, vous devez décider quand cet événement doit être déclenché. Pour cela, vous devez appeler `FireClickIn` lorsque se produit l’action appropriée. Dans le cadre de cette présentation, le contrôle utilise le `InCircle` fonction à l’intérieur d’un gestionnaire de messages WM_LBUTTONDOWN pour déclencher l’événement ClickIn lorsqu’un utilisateur clique à l’intérieur d’une zone circulaire ou elliptique. La procédure suivante ajoute le gestionnaire WM_LBUTTONDOWN.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Pour ajouter un gestionnaire de messages avec l’Assistant Ajout d’événement  
   
@@ -92,13 +92,13 @@ ms.locfileid: "33352529"
   
      La fenêtre Propriétés affiche une liste de messages qui peuvent être gérés par le contrôle ActiveX. Tout message apparaissant en gras est déjà possède une fonction de gestionnaire qui lui est affectée.  
   
-4.  Dans la fenêtre Propriétés, sélectionnez le message que vous souhaitez gérer. Dans cet exemple, sélectionnez `WM_LBUTTONDOWN`.  
+4.  Dans la fenêtre Propriétés, sélectionnez le message que vous souhaitez gérer. Dans cet exemple, sélectionnez WM_LBUTTONDOWN.  
   
 5.  Dans la zone de liste déroulante à droite, sélectionnez  **\<Ajouter > OnLButtonDown**.  
   
 6.  Double-cliquez sur la nouvelle fonction de gestionnaire dans Affichage de classes pour atteindre le code du Gestionnaire de messages dans l’implémentation (. Fichier CPP) de votre contrôle ActiveX.  
   
- Le code suivant appelle de l’exemple le **InCircle** chaque clic sur le bouton gauche de la souris dans la fenêtre de contrôle de fonction. Cet exemple peut être trouvé dans le `WM_LBUTTONDOWN` fonction gestionnaire, `OnLButtonDown`, dans le [exemple Circ](../visual-cpp-samples.md) abstraite.  
+ Le code suivant appelle de l’exemple le `InCircle` chaque clic sur le bouton gauche de la souris dans la fenêtre de contrôle de fonction. Cet exemple peut être trouvé dans la fonction gestionnaire WM_LBUTTONDOWN, `OnLButtonDown`, dans le [exemple Circ](../visual-cpp-samples.md) abstraite.  
   
  [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   

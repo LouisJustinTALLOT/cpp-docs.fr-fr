@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a45779034534ce87bd6bd4f55dfda4985a36f01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343643"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931085"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Ignorer le mécanisme de sérialisation
 Comme vous l’avez vu, le framework fournit un moyen de la valeur par défaut pour lire et écrire des données à partir de fichiers. La sérialisation via un objet archive le mieux aux besoins de très nombreuses applications. Une telle application lit un fichier entièrement en mémoire, permet à l’utilisateur de mettre à jour le fichier, puis écrit la version mise à jour sur le disque.  
@@ -34,7 +34,7 @@ Comme vous l’avez vu, le framework fournit un moyen de la valeur par défaut p
   
  Dans ce cas, vous pouvez remplacer le [Serialize](../mfc/reference/cobject-class.md#serialize) fonction d’une manière différente pour servir d’intermédiaire des actions de fichier via un [CFile](../mfc/reference/cfile-class.md) objet plutôt qu’un [CArchive](../mfc/reference/carchive-class.md) objet.  
   
- Vous pouvez utiliser la **ouvrir**, **en lecture**, **écrire**, **fermer**, et `Seek` fonctions membres de classe `CFile` pour ouvrir un fichier , déplacez le pointeur de fichier (recherche) vers un point spécifique dans le fichier, de lire un enregistrement (un nombre spécifié d’octets) à ce stade, permettent la mise à jour de l’utilisateur l’enregistrement, puis recherche au même point et réécrire l’enregistrement dans le fichier. L’infrastructure, le fichier s’ouvre pour vous, et vous pouvez utiliser la `GetFile` fonction membre de classe `CArchive` pour obtenir un pointeur vers le `CFile` objet. Pour une utilisation encore plus flexible et plus élaborée, vous pouvez remplacer le [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) et [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) fonctions membres de classe `CWinApp`. Pour plus d’informations, consultez la classe [CFile](../mfc/reference/cfile-class.md) dans les *référence MFC*.  
+ Vous pouvez utiliser la `Open`, `Read`, `Write`, `Close`, et `Seek` fonctions membres de classe `CFile` pour ouvrir un fichier, déplacez le pointeur de fichier (recherche) vers un point spécifique dans le fichier, lecture d’un enregistrement (un nombre spécifié d’octets ) permettent à ce stade, l’utilisateur de mettre à jour l’enregistrement, puis à nouveau de recherche au même point et réécrire l’enregistrement dans le fichier. L’infrastructure, le fichier s’ouvre pour vous, et vous pouvez utiliser la `GetFile` fonction membre de classe `CArchive` pour obtenir un pointeur vers le `CFile` objet. Pour une utilisation encore plus flexible et plus élaborée, vous pouvez remplacer le [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) et [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) fonctions membres de classe `CWinApp`. Pour plus d’informations, consultez la classe [CFile](../mfc/reference/cfile-class.md) dans les *référence MFC*.  
   
  Dans ce scénario, votre `Serialize` override ne fait rien, à moins que, par exemple, vous l’avez lire et écrire un en-tête de fichier pour maintenir à jour lors de la fermeture du document.  
   

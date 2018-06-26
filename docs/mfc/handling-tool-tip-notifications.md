@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346374"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931812"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestion des notifications pour les info-bulles
-Lorsque vous spécifiez le `TBSTYLE_TOOLTIPS` style, la barre d’outils crée et gère un contrôle info-bulle. Une info-bulle est une petite fenêtre contextuelle qui contient une ligne de texte décrivant un bouton de barre d’outils. L’info-bulle est cachée uniquement lorsque l’utilisateur place le curseur sur un bouton de barre d’outils et il quitte ensuite pendant environ une demi-seconde. L’info-bulle s’affiche près du curseur.  
+Lorsque vous spécifiez la **TBSTYLE_TOOLTIPS** style, la barre d’outils crée et gère un contrôle info-bulle. Une info-bulle est une petite fenêtre contextuelle qui contient une ligne de texte décrivant un bouton de barre d’outils. L’info-bulle est cachée uniquement lorsque l’utilisateur place le curseur sur un bouton de barre d’outils et il quitte ensuite pendant environ une demi-seconde. L’info-bulle s’affiche près du curseur.  
   
  Avant de l’info-bulle s’affiche, le **TTN_NEEDTEXT** message de notification est envoyé à la fenêtre propriétaire de la barre d’outils pour récupérer le texte descriptif pour le bouton. Si la fenêtre propriétaire de la barre d’outils est un `CFrameWnd` fenêtre outil des conseils sont affichés sans effort supplémentaire, car `CFrameWnd` possède un gestionnaire par défaut pour le **TTN_NEEDTEXT** notification. Si la fenêtre propriétaire de la barre d’outils n’est pas dérivée de `CFrameWnd`, tel qu’une vue de formulaire ou de boîte de dialogue, vous devez ajouter une entrée dans la table des messages de votre fenêtre propriétaire et fournir un gestionnaire de notification dans la table des messages. L’entrée à la table des messages de votre fenêtre propriétaire est la suivante :  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355693"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929606"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : localisation d'un contrôle ActiveX
 Cet article décrit les procédures permettant de rechercher des interfaces de contrôle ActiveX.  
@@ -41,7 +41,7 @@ Cet article décrit les procédures permettant de rechercher des interfaces de c
     > [!NOTE]
     >  Cela ne fonctionne pas correctement dans certains cas, lorsque les instances ont des paramètres régionaux.  
   
--   Utilisez le **OnAmbientChanged** fonction de notification pour charger dynamiquement les ressources appropriées pour des paramètres régionaux du conteneur.  
+-   Utilisez le `OnAmbientChanged` fonction de notification pour charger dynamiquement les ressources appropriées pour des paramètres régionaux du conteneur.  
   
     > [!NOTE]
     >  Cela fonctionne pour le contrôle, mais la DLL d'exécution ne met pas à jour dynamiquement ses propres ressources lorsque la propriété LocaleID ambiante change. En outre, les DLL d’exécution des contrôles ActiveX utilisent les paramètres régionaux du thread pour déterminer les paramètres régionaux pour ses ressources.  
@@ -98,7 +98,7 @@ Cet article décrit les procédures permettant de rechercher des interfaces de c
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- Placez l’exemple de code ci-dessus dans une fonction membre du contrôle, tel qu’un remplacement de [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). En outre, `m_hResDLL` doit être une variable membre de la classe de contrôle.  
+ Placez l’exemple de code ci-dessus dans une fonction membre du contrôle, tel qu’un remplacement de [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). En outre, *m_hResDLL* doit être une variable membre de la classe du contrôle.  
   
  Vous pouvez utiliser une logique similaire pour localiser la page des propriétés d'un contrôle. Pour localiser la page de propriétés, ajoutez un code similaire à l’exemple suivant au fichier d’implémentation de la page de propriétés (dans une substitution de [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)) :  
   

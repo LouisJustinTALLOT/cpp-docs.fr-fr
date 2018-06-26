@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343851"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928623"
 ---
 # <a name="exported-dll-function-entry-points"></a>Points d'entrée de fonction DLL exportée
 Pour les fonctions exportées d’une DLL, utilisez la [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro pour maintenir l’état global approprié lors du passage du module DLL à la DLL de l’application appelante.  
   
  En cas d'appel, cette macro définit `pModuleState`, un pointeur vers une structure `AFX_MODULE_STATE` contenant des données globales du module, comme l'état du module efficace pour le reste de l'étendue contenante de la fonction. En sortant de l'étendue contenant la macro, l'état du module effectif précédent est automatiquement restauré.  
   
- Ce basculement est réalisé en créant une instance d’un **AFX_MODULE_STATE** classe sur la pile. Dans le constructeur, cette classe obtient un pointeur vers l'état du module en cours et l'enregistre dans un attribut, puis définit `pModuleState` comme nouvel état du module effectif. Dans le destructeur, cette classe restaure le pointeur stocké dans une variable membre en tant qu'état du module effectif.  
+ Ce basculement est réalisé en créant une instance d’un `AFX_MODULE_STATE` classe sur la pile. Dans le constructeur, cette classe obtient un pointeur vers l'état du module en cours et l'enregistre dans un attribut, puis définit `pModuleState` comme nouvel état du module effectif. Dans le destructeur, cette classe restaure le pointeur stocké dans une variable membre en tant qu'état du module effectif.  
   
  Si vous avez une fonction exportée, telle qu'une fonction qui affiche une boîte de dialogue dans votre DLL, vous devez ajouter le code suivant au début de la fonction :  
   

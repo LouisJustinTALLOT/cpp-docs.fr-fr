@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334845"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931936"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accès à tous les membres d'une collection
 Les classes de collection de tableau MFC (qu’elles soient ou non basées sur un modèle) utilisent des index pour accéder à leurs éléments. Les classes de collection de mappage et de liste MFC (qu’elles soient ou non basées sur un modèle) utilisent un indicateur de type **POSITION** pour décrire une position donnée dans la collection. Pour accéder à un ou plusieurs membres d’une collection de ce type, vous devez en premier lieu initialiser l’indicateur de position et passer plusieurs fois cette position à la collection et lui demander de retourner l’élément suivant. La collection n’est pas responsable du suivi des informations d’état de la progression de l’itération. Ces informations sont conservées dans l’indicateur de position. En revanche, pour une position donnée, la collection est chargée de retourner l’élément suivant.  
@@ -51,7 +51,7 @@ Les classes de collection de tableau MFC (qu’elles soient ou non basées sur u
   
      Cet exemple utilise un tableau de pointeurs typés qui contient des pointeurs vers des objets `CPerson` . Le tableau est dérivé de la classe `CObArray`, l’une des classes prédéfinies non basées sur un modèle. `GetAt` retourne un pointeur vers un objet `CPerson` . Pour les classes de collection de pointeurs typés (tableaux ou listes), le premier paramètre spécifie la classe de base ; le deuxième paramètre spécifie le type à stocker.  
   
-     Le `CTypedPtrArray` classe également des surcharges de la **[]** opérateur afin que vous pouvez utiliser la syntaxe tableau-indice habituel pour accéder aux éléments d’un tableau. Plutôt que d’utiliser l’instruction dans le corps de la boucle `for` ci-dessus, voici une alternative :  
+     Le `CTypedPtrArray` classe également des surcharges de la **[]** opérateur afin que vous pouvez utiliser la syntaxe tableau-indice habituel pour accéder aux éléments d’un tableau. Une alternative à l’instruction dans le corps de la **pour** boucle  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

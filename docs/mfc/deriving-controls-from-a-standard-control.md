@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344498"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932245"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Dériver des contrôles d'un contrôle standard
 Comme avec n’importe quelle [CWnd](../mfc/reference/cwnd-class.md)-classe dérivée, vous pouvez modifier le comportement d’un contrôle en dérivant une classe nouvelle à partir d’une classe de contrôle existante.  
   
 ### <a name="to-create-a-derived-control-class"></a>Pour créer une classe dérivée de contrôle  
   
-1.  Dérivez votre classe à partir d’une classe de contrôle existante et substituez éventuellement la **créer** pour qu’elle fournisse les arguments nécessaires à la classe de base de fonction membre **créer** (fonction).  
+1.  Dérivez votre classe à partir d’une classe de contrôle existante et substituez éventuellement la `Create` pour qu’elle fournisse les arguments nécessaires à la classe de base de fonction membre `Create` (fonction).  
   
 2.  Fournir des fonctions membres de gestionnaire de messages et les entrées de table des messages pour modifier le comportement du contrôle en réponse à des messages Windows spécifiques. Consultez [mappage des Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md).  
   

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345792"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928020"
 ---
 # <a name="document-template-creation"></a>Création de modèle de document
-Lors de la création d’un nouveau document en réponse à une `New` ou **ouvrir** commande à partir de la **fichier** menu, le modèle de document crée également une fenêtre frame dont vous souhaitez afficher le document.  
+Lors de la création d’un nouveau document en réponse à une **nouveau** ou **ouvrir** commande à partir de la **fichier** menu, le modèle de document crée également une fenêtre frame dont vous souhaitez afficher le document.  
   
  Le constructeur de modèle de document spécifie les types de documents, windows et le modèle sera en mesure de créer des vues. Cela est déterminé par les arguments que vous passez au constructeur de modèle de document. Le code suivant illustre la création d’un [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) pour un exemple d’application :  
   

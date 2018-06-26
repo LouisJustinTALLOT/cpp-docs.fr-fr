@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361333"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930095"
 ---
 # <a name="mfc-activex-controls"></a>Contrôles ActiveX MFC
-Un contrôle ActiveX est un composant logiciel réutilisable basé sur le modèle COM (Component Object) qui prend en charge un large éventail de fonctionnalités OLE et peut être personnalisé pour s’ajuster à nombreux besoins logiciels. Contrôles ActiveX sont conçus pour une utilisation dans des conteneurs de contrôles ActiveX ordinaires et sur Internet, dans les pages du World Wide Web. Vous pouvez créer des contrôles ActiveX MFC, décrites ici, ou avec le [bibliothèque ATL (Active Template)](../atl/active-template-library-atl-concepts.md).  
+Un contrôle ActiveX est un composant logiciel réutilisable qui repose sur le modèle COM (Component Object Model), prend en charge une large gamme de fonctionnalités OLE et peut être personnalisé pour répondre à de nombreux besoins logiciels. Contrôles ActiveX sont conçus pour une utilisation dans des conteneurs de contrôles ActiveX ordinaires et sur Internet, dans les pages du World Wide Web. Vous pouvez créer des contrôles ActiveX MFC, décrites ici, ou avec le [bibliothèque ATL (Active Template)](../atl/active-template-library-atl-concepts.md).  
   
  Un contrôle ActiveX peut se dessiner lui-même dans sa propre fenêtre, répondre aux événements (tels que des clics de souris) et être géré via une interface qui contient des propriétés et méthodes semblables à celles des objets Automation.  
   
@@ -77,7 +77,7 @@ Communication entre un conteneur de contrôles ActiveX et un contrôle ActiveX
   
  L’illustration précédente montre également comment les autres interfaces OLE (outre l’automation et les événements) sont gérées par les contrôles.  
   
- Toutes les communications d’un contrôle avec le conteneur est effectuée par `COleControl`. Pour gérer les demandes du conteneur, **COleControl** s’appeler fonctions membres qui sont implémentées dans la classe du contrôle. Toutes les méthodes et certaines propriétés sont gérées de cette façon. Classe de votre contrôle peut également lancer la communication avec le conteneur en appelant les fonctions membres de `COleControl`. Les événements sont déclenchés de cette manière.  
+ Toutes les communications d’un contrôle avec le conteneur est effectuée par `COleControl`. Pour gérer les demandes du conteneur, `COleControl` s’appeler fonctions membres qui sont implémentées dans la classe du contrôle. Toutes les méthodes et certaines propriétés sont gérées de cette façon. Classe de votre contrôle peut également lancer la communication avec le conteneur en appelant les fonctions membres de `COleControl`. Les événements sont déclenchés de cette manière.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> États inactif et actif d’un contrôle ActiveX  
  Un contrôle a deux états : active ou inactive. En règle générale, ces États correspondaient à la présence du contrôle ait ou non une fenêtre. Un contrôle actif avait une fenêtre ; un contrôle inactif n’ont pas. Avec l’introduction de l’activation sans fenêtre, cette distinction n’est plus universelle, mais s’applique toujours à de nombreux contrôles.  
@@ -89,7 +89,7 @@ Communication entre un conteneur de contrôles ActiveX et un contrôle ActiveX
  ![Dans le contrôle ActiveX avec fenêtres actif le traitement des messages](../mfc/media/vc37223.gif "vc37223")  
 Windows traitement des messages dans un contrôle ActiveX avec fenêtres (lorsqu’il est actif)  
   
-##  <a name="_core_serializing_activex_elements"></a> Sérialisation  
+##  <a name="_core_serializing_activex_elements"></a> sérialisation  
  La capacité à sérialiser des données, parfois appelée persistance, permet au contrôle d’écrire la valeur de ses propriétés dans un stockage persistant. Contrôles peuvent ensuite être recréés en lisant l’état de l’objet à partir du stockage.  
   
  Notez qu’un contrôle n’est pas responsable de l’obtention de l’accès au support de stockage. Au lieu de cela, le conteneur du contrôle est chargé de fournir le contrôle avec un support de stockage à utiliser au moment voulu. Pour plus d’informations sur la sérialisation, consultez l’article [contrôles ActiveX MFC : sérialisation](../mfc/mfc-activex-controls-serializing.md). Pour plus d’informations sur l’optimisation de la sérialisation, consultez [optimisation de la persistance et l’initialisation](../mfc/optimizing-persistence-and-initialization.md) dans les contrôles ActiveX : optimisation.  

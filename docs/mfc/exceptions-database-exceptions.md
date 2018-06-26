@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354299"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930236"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 Cet article explique comment gérer les exceptions de base de données. La plupart des éléments de cet article s’applique si vous travaillez avec les classes MFC pour la connectivité ODBC (Open Database) ou les classes MFC pour les objets DAO (Data Access). Matériel spécifique à un ou l’autre modèle est marquée explicitement. Les rubriques traitées ici sont les suivantes :  
@@ -54,7 +54,7 @@ Cet article explique comment gérer les exceptions de base de données. La plupa
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) contient un code d’erreur étendu à partir des classes DAO MFC. Ces codes d’erreur, qui ont des noms au format **AFX_DAO_ERROR_XXX**, sont décrits dans le membre de données dans `CDaoException`.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contient OLE `SCODE` de DAO, le cas échéant. Vous devrez rarement toutefois de fonctionner avec ce code d’erreur. Généralement les informations supplémentaires sont disponibles dans les autres deux membres de données. Le membre de données pour plus d’informations, consultez `SCODE` valeurs.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contient OLE **SCODE** de DAO, le cas échéant. Vous devrez rarement toutefois de fonctionner avec ce code d’erreur. Généralement les informations supplémentaires sont disponibles dans les autres deux membres de données. Le membre de données pour plus d’informations, consultez **SCODE** valeurs.  
   
  Des informations supplémentaires sur les erreurs DAO, le type d’objet DAO Error et la collection d’erreurs de DAO sont disponibles sous la classe [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
@@ -62,7 +62,7 @@ Cet article explique comment gérer les exceptions de base de données. La plupa
  L’exemple suivant tente de construire un [CRecordset](../mfc/reference/crecordset-class.md)-dérivée de l’objet sur le segment de mémoire avec la **nouveau** (opérateur), puis ouvrez le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « Exemple d’Exception DAO » ci-dessous.  
   
 ### <a name="odbc-exception-example"></a>Exemple d’Exception ODBC  
- Le [ouvrir](../mfc/reference/crecordset-class.md#open) fonction membre peut lever une exception (de type [CDBException](../mfc/reference/cdbexception-class.md) pour les classes ODBC), par conséquent cette crochets de code la **ouvrir** appeler avec une **essayez**  bloc. Les **catch** bloc intercepte un `CDBException`. Vous pouvez examiner l’objet exception lui-même, appelé `e`, mais dans ce cas, il est suffisant de savoir que la tentative de création d’un jeu d’enregistrements a échoué. Le **catch** bloc affiche une boîte de message et nettoie en supprimant l’objet recordset.  
+ Le [ouvrir](../mfc/reference/crecordset-class.md#open) fonction membre peut lever une exception (de type [CDBException](../mfc/reference/cdbexception-class.md) pour les classes ODBC), par conséquent cette code crochets le `Open` appeler avec un **essayez** bloc. Les **catch** bloc intercepte un `CDBException`. Vous pouvez examiner l’objet exception lui-même, appelé `e`, mais dans ce cas, il est suffisant de savoir que la tentative de création d’un jeu d’enregistrements a échoué. Le **catch** bloc affiche une boîte de message et nettoie en supprimant l’objet recordset.  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

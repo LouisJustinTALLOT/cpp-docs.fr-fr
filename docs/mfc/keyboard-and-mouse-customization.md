@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351661"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931578"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personnalisation du clavier et de la souris
 MFC permet à l'utilisateur de l'application de personnaliser la façon dont il gère le clavier et l'entrée de la souris. L'utilisateur peut personnaliser l'entrée clavier en attribuant des raccourcis clavier aux commandes. L'utilisateur peut également personnaliser l'entrée de la souris en sélectionnant la commande qui doit être exécutée lorsque l'utilisateur double-clique dans des fenêtres spécifiques de l'application. Cette rubrique explique comment personnaliser les entrées pour votre application.  
@@ -61,7 +61,7 @@ Onglet de personnalisation de la souris
   
  Une fois que votre application initialise le Gestionnaire de la souris, le framework ajoute la **souris** TAB pour accéder à la **personnaliser** boîte de dialogue. Si vous n'ajoutez pas de vue, l'accès à l'onglet génère une exception non gérée. Après avoir créé une liste de vues, les **souris** onglet est disponible à l’utilisateur.  
   
- Lorsque vous ajoutez une nouvelle vue au gestionnaire de souris, vous lui attribuez un ID unique Si vous souhaitez prendre en charge la personnalisation de la souris pour une fenêtre, vous devez traiter le `WM_LBUTTONDBLCLICK` message et appeler le [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) (fonction). Lorsque vous appelez cette fonction, l'un des paramètres est l'ID de cette fenêtre. Il est de la responsabilité des programmeurs de conserver les numéros d'identification et les objets associés.  
+ Lorsque vous ajoutez une nouvelle vue au gestionnaire de souris, vous lui attribuez un ID unique Si vous souhaitez prendre en charge la personnalisation de la souris pour une fenêtre, vous devez traiter le message WM_LBUTTONDBLCLICK et appelez le [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) (fonction). Lorsque vous appelez cette fonction, l'un des paramètres est l'ID de cette fenêtre. Il est de la responsabilité des programmeurs de conserver les numéros d'identification et les objets associés.  
   
 ## <a name="security-concerns"></a>Problèmes de sécurité  
  Comme décrit dans [outils définis par l’utilisateur](../mfc/user-defined-tools.md), l’utilisateur peut associer un ID de l’outil défini par l’utilisateur à l’événement de double-clic. Lorsque l'utilisateur double-clique sur une vue, l'application recherche un outil utilisateur qui correspond à l'ID associé. Si l'application trouve un outil correspondant, il exécute l'outil. Si l'application ne trouve pas d'outil correspondant, il envoie un message WM_COMMAND avec l'ID de la vue sur laquelle a eu lieu le double-clic.  

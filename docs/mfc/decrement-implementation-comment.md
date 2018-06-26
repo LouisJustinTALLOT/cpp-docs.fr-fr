@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1556c690478b242d929b8a5558264218ddf0b63e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89f87c33abfec7b9d055b589726639fcd741e59d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343032"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930272"
 ---
 # <a name="-implementation-comment"></a>// Commentaire sur l'implémentation
 Le `// Implementation` section est la partie la plus importante de toute déclaration de classe MFC.  
   
  Cette section contient tous les détails d’implémentation. Les variables membres et les fonctions membres peuvent apparaître dans cette section. Tout élément sous cette ligne peut changer dans une future version de MFC. À moins que vous ne pouvez pas l’éviter, vous fiez pas aux détails ci-dessous le `// Implementation` ligne. En outre, les membres déclarés en dessous de la ligne d’implémentation ne sont pas documentés, bien qu’une implémentation est décrite dans les notes techniques. Les substitutions de fonctions virtuelles dans la classe de base résident dans cette section, quelle que soit la section la fonction de la classe de base est définie, car le fait qu’une fonction substitue l’implémentation de classe de base est considéré comme un détail d’implémentation. En règle générale, ces membres sont protégés, mais pas toujours.  
   
- Notez à partir de la `CStdioFile` sous [un exemple des commentaires](../mfc/an-example-of-the-comments.md) que les membres déclarés sous le `// Implementation` commentaire peut être déclaré comme **public**, `protected`, ou `private`. Vous devez uniquement utiliser ces membres avec précaution, car elles peuvent changer dans le futur. Déclaration d’un groupe de membres en tant que **public** peut s’avérer nécessaire pour l’implémentation de bibliothèque de classe fonctionne correctement. Toutefois, cela ne signifie pas que vous pouvez utiliser en toute sécurité des membres déclarées.  
+ Notez à partir de la `CStdioFile` sous [un exemple des commentaires](../mfc/an-example-of-the-comments.md) que les membres déclarés sous le `// Implementation` commentaire peut être déclaré comme **public**, **protégé**, ou **privé**. Vous devez uniquement utiliser ces membres avec précaution, car elles peuvent changer dans le futur. Déclaration d’un groupe de membres en tant que **public** peut s’avérer nécessaire pour l’implémentation de bibliothèque de classe fonctionne correctement. Toutefois, cela ne signifie pas que vous pouvez utiliser en toute sécurité des membres déclarées.  
   
 > [!NOTE]
 >  Vous pouvez trouver les commentaires, les autres types au-dessus ou au-dessous de la `// Implementation` commentaire. Dans les deux cas, elles décrivent les types de membres déclarés sous eux. S’ils apparaissent sous la `// Implementation` de commentaire, vous devez supposer que les membres peuvent changer dans les futures versions de MFC.  

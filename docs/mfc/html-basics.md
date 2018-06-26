@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347215"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929088"
 ---
 # <a name="html-basics"></a>Éléments fondamentaux relatifs à HTML
 La plupart des navigateurs ont la capacité d'examiner la source HTML des pages que vous consultez. Lorsque vous affichez la source, vous pouvez voir plusieurs balises HTML (HyperText Markup Language) entourées de crochets pointus (<>) et entrecoupées avec du texte.  
@@ -30,7 +30,7 @@ La plupart des navigateurs ont la capacité d'examiner la source HTML des pages 
   
 1.  Ouvrez le Bloc-notes ou un éditeur de texte brut.  
   
-2.  À partir de la **fichier** menu, choisissez `New`.  
+2.  À partir de la **fichier** menu, choisissez **nouveau**.  
   
 3.  Tapez les lignes suivantes :  
   
@@ -44,7 +44,7 @@ La plupart des navigateurs ont la capacité d'examiner la source HTML des pages 
   
 4.  À partir de la **fichier** menu, choisissez **enregistrer**, enregistrez le fichier sous c:\webpages\First.htm. Laissez le fichier ouvert dans l'éditeur.  
   
-5.  Commutateur vers votre navigateur et de la **fichier** menu, choisissez **ouvrir**, ou de type `file://C:/webpages/first.htm` dans la zone d’édition URL du navigateur. Vous devez voir une page vide avec la légende de fenêtre "Étiquettes HTML principales"  
+5.  Commutateur vers votre navigateur et de la **fichier** menu, choisissez **ouvrir**, ou de type *file://C:/webpages/first.htm* dans la zone d’édition URL du navigateur. Vous devez voir une page vide avec la légende de fenêtre "Étiquettes HTML principales"  
   
      Notez que les balises sont affichées par paires et incluses entre crochets pointus. Les étiquettes ne respectent pas la casse, mais la mise en majuscules est souvent utilisée pour distinguer les étiquettes.  
   

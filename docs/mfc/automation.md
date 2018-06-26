@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345883"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930600"
 ---
 # <a name="automation"></a>Automation
 Automation (anciennement appelé OLE Automation) permet à une application de manipuler des objets implémentés dans une autre application, ou d'exposer des objets pour qu'ils puissent être manipulés.  
@@ -57,7 +57,7 @@ Automation (anciennement appelé OLE Automation) permet à une application de ma
  De nombreuses applications commerciales, telles que Microsoft Excel et Microsoft Visual C++, vous permettent d'automatiser plusieurs de leurs fonctionnalités. Par exemple, dans Visual C++, vous pouvez écrire des macros de VBScript pour automatiser les builds, aspects de la modification ou des tâches de débogage de code.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> Passage de paramètres dans Automation  
- Une difficulté dans la création de méthodes Automation permet de fournir un mécanisme uniforme "sûr" pour passer des données entre les serveurs et les clients Automation. Automation utilise le type **VARIANT** pour passer des données. Le type **VARIANT** est une union avec balises. Il comprend des données membre pour la valeur (il s'agit d'une union anonyme C++) et des données membre indiquant le type d'informations stockées dans l'union. Le type **VARIANT** prend en charge plusieurs types de données standard : des entiers codés sur 2 et 4 octets, des nombres à virgule flottante codés sur 4 et 8 octets, des chaînes et des valeurs booléennes. De plus, il prend en charge les types `HRESULT` (codes d'erreur OLE), **CURRENCY** (un des types numériques à virgule fixe) et les types **DATE** (date et heure absolue), ainsi que les pointeurs vers les interfaces **IUnknown** et `IDispatch` .  
+ Une difficulté dans la création de méthodes Automation permet de fournir un mécanisme uniforme "sûr" pour passer des données entre les serveurs et les clients Automation. Automation utilise le type **VARIANT** pour passer des données. Le type **VARIANT** est une union avec balises. Il comprend des données membre pour la valeur (il s'agit d'une union anonyme C++) et des données membre indiquant le type d'informations stockées dans l'union. Le type **VARIANT** prend en charge plusieurs types de données standard : des entiers codés sur 2 et 4 octets, des nombres à virgule flottante codés sur 4 et 8 octets, des chaînes et des valeurs booléennes. En outre, il prend en charge la **HRESULT** (codes d’erreur OLE), **devise** (un type numérique à virgule fixe), et **DATE** (date et heure absolue) types, ainsi que les pointeurs à `IUnknown` et `IDispatch` interfaces.  
   
  Le type **VARIANT** est encapsulé dans la classe [COleVariant](../mfc/reference/colevariant-class.md) . Les classes **CURRENCY** et **DATE** prises en charge sont encapsulées dans les classes [COleCurrency](../mfc/reference/colecurrency-class.md) et [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .  
   

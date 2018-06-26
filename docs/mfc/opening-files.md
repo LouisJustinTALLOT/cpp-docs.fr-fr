@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352761"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931565"
 ---
 # <a name="opening-files"></a>Ouverture de fichiers
 Dans MFC, la méthode la plus courante pour ouvrir un fichier est un processus en deux étapes.  
@@ -55,7 +55,7 @@ Dans MFC, la méthode la plus courante pour ouvrir un fichier est un processus e
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  Cet exemple crée et ouvre un fichier. S’il existe des problèmes, le `Open` appel peut retourner un `CFileException` de l’objet dans son dernier paramètre, comme indiqué ici. Le `TRACE` macro imprime le nom de fichier et un code indiquant la raison de l’échec. Vous pouvez appeler le `AfxThrowFileException` si vous avez besoin de plus le rapport d’erreurs de fonction.  
+>  Cet exemple crée et ouvre un fichier. S’il existe des problèmes, le `Open` appel peut retourner un `CFileException` de l’objet dans son dernier paramètre, comme indiqué ici. La macro TRACE imprime le nom de fichier et un code indiquant la raison de l’échec. Vous pouvez appeler le `AfxThrowFileException` si vous avez besoin de plus le rapport d’erreurs de fonction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CFile (classe)](../mfc/reference/cfile-class.md)   

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357557"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930128"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Contrôles ActiveX MFC : ajout de propriétés stock
-Propriétés stock diffèrent des propriétés personnalisées dans la mesure où elles sont déjà implémentées par la classe `COleControl`. `COleControl` contient des fonctions membres prédéfinies qui prennent en charge les propriétés communes pour le contrôle. Certaines propriétés courantes incluent la légende du contrôle et les couleurs de premier plan et d’arrière-plan. Pour plus d’informations sur les propriétés stock, consultez [Propriétés Stock prises en charge par l’Assistant Ajout de propriété](#_core_stock_properties_supported_by_classwizard) plus loin dans cet article. Les entrées de mappage de répartition des propriétés stock sont toujours précédées **DISP_STOCKPROP**.  
+Propriétés stock diffèrent des propriétés personnalisées dans la mesure où elles sont déjà implémentées par la classe `COleControl`. `COleControl` contient des fonctions membres prédéfinies qui prennent en charge les propriétés communes pour le contrôle. Certaines propriétés courantes incluent la légende du contrôle et les couleurs de premier plan et d’arrière-plan. Pour plus d’informations sur les propriétés stock, consultez [Propriétés Stock prises en charge par l’Assistant Ajout de propriété](#_core_stock_properties_supported_by_classwizard) plus loin dans cet article. Entrées de la table de dispatch de propriétés sont toujours préfixées par DISP_STOCKPROP de stock.  
   
  Cet article décrit comment ajouter une propriété stock (dans ce cas, la légende) à un contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :  
   
@@ -81,16 +81,16 @@ Propriétés stock diffèrent des propriétés personnalisées dans la mesure o�
   
 |Propriété|Entrée de table de dispatch|Comment accéder à la valeur|  
 |--------------|------------------------|-------------------------|  
-|**Apparence**|**(DE DISP_STOCKPROP_APPEARANCE)**|Valeur accessible en tant que **m_sAppearance**.|  
-|`BackColor`|**(DE DISP_STOCKPROP_BACKCOLOR)**|Valeur accessible en appelant `GetBackColor`.|  
-|`BorderStyle`|**(DE DISP_STOCKPROP_BORDERSTYLE)**|Valeur accessible en tant que **m_sBorderStyle**.|  
-|**Légende**|**(DE DISP_STOCKPROP_CAPTION)**|Valeur accessible en appelant `InternalGetText`.|  
-|**Activé**|**(DE DISP_STOCKPROP_ENABLED)**|Valeur accessible en tant que **m_bEnabled**.|  
-|**Police**|**(DE DISP_STOCKPROP_FONT)**|Consultez l’article [contrôles ActiveX MFC : utilisation des polices](../mfc/mfc-activex-controls-using-fonts.md) pour l’utilisation.|  
-|`ForeColor`|**(DE DISP_STOCKPROP_FORECOLOR)**|Valeur accessible en appelant `GetForeColor`.|  
-|**hWnd**|**(DE DISP_STOCKPROP_HWND)**|Valeur accessible en tant que `m_hWnd`.|  
-|**Text**|**(DE DISP_STOCKPROP_TEXT)**|Valeur accessible en appelant `InternalGetText`. Cette propriété est identique à **légende**, à l’exception du nom de la propriété.|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Valeur accessible en tant que m_lReadyState ou `GetReadyState`|  
+|`Appearance`|(DE DISP_STOCKPROP_APPEARANCE)|Valeur accessible en tant que `m_sAppearance`.|  
+|`BackColor`|(DE DISP_STOCKPROP_BACKCOLOR)|Valeur accessible en appelant `GetBackColor`.|  
+|`BorderStyle`|(DE DISP_STOCKPROP_BORDERSTYLE)|Valeur accessible en tant que `m_sBorderStyle`.|  
+|`Caption`|(DE DISP_STOCKPROP_CAPTION)|Valeur accessible en appelant `InternalGetText`.|  
+|`Enabled`|(DE DISP_STOCKPROP_ENABLED)|Valeur accessible en tant que `m_bEnabled`.|  
+|`Font`|(DE DISP_STOCKPROP_FONT)|Consultez l’article [contrôles ActiveX MFC : utilisation des polices](../mfc/mfc-activex-controls-using-fonts.md) pour l’utilisation.|  
+|`ForeColor`|(DE DISP_STOCKPROP_FORECOLOR)|Valeur accessible en appelant `GetForeColor`.|  
+|`hWnd`|(DE DISP_STOCKPROP_HWND)|Valeur accessible en tant que `m_hWnd`.|  
+|`Text`|(DE DISP_STOCKPROP_TEXT)|Valeur accessible en appelant `InternalGetText`. Cette propriété est identique à `Caption`, à l’exception du nom de la propriété.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valeur accessible en tant que `m_lReadyState` ou `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Propriétés stock et notification  
  La plupart des propriétés stock comportent des fonctions de notification qui peuvent être remplacées. Par exemple, chaque fois que le `BackColor` propriété est modifiée, le `OnBackColorChanged` (une fonction membre de la classe de contrôle) est appelée. L’implémentation par défaut (dans `COleControl`) appelle `InvalidateControl`. Remplacez cette fonction si vous souhaitez exécuter des actions supplémentaires en réponse à cette situation.  

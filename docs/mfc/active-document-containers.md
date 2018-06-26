@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339018"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932157"
 ---
 # <a name="active-document-containers"></a>Conteneurs de documents actifs
 Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Internet Explorer, vous permet de travailler avec plusieurs documents de différents types d’applications au sein d’un frame unique (au lieu de vous obliger à créer et utiliser plusieurs frames d’application pour chaque type de document).  
@@ -50,15 +50,15 @@ Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Inter
   
  Un conteneur de documents actifs qui intègre des documents actifs doit :  
   
--   Être capable de gérer le stockage d’objets via la **IPersistStorage** interface, autrement dit, elle doit fournir une `IStorage` instance à chaque document actif.  
+-   Être capable de gérer le stockage d’objets via la `IPersistStorage` interface, autrement dit, elle doit fournir une `IStorage` instance à chaque document actif.  
   
--   Prend en charge les fonctionnalités d’incorporation de base des documents OLE, nécessitant des objets « site » (une par document ou incorporation) qui implémentent **IOleClientSite** et **IAdviseSink**.  
+-   Prend en charge les fonctionnalités d’incorporation de base des documents OLE, nécessitant des objets de « site » (un par document ou incorporation) qui implémentent `IOleClientSite` et `IAdviseSink`.  
   
--   Prend en charge l’activation sur place des objets incorporés ou des documents actifs. Objets de site du conteneur doivent implémenter `IOleInPlaceSite` et objet de frame du conteneur doit fournir **IOleInPlaceFrame**.  
+-   Prend en charge l’activation sur place des objets incorporés ou des documents actifs. Objets de site du conteneur doivent implémenter `IOleInPlaceSite` et objet de frame du conteneur doit fournir `IOleInPlaceFrame`.  
   
 -   Prend en charge les extensions du document actif en implémentant `IOleDocumentSite` pour fournir le mécanisme pour le conteneur communiquer avec le document. Si vous le souhaitez, le conteneur peut implémenter les interfaces de document actif `IOleCommandTarget` et `IContinueCallback` pour choisir des commandes simples, comme l’impression ou de l’enregistrement.  
   
- L’objet frame, les objets de vue et l’objet de conteneur peuvent implémenter **IOleCommandTarget** pour prendre en charge la distribution de certaines commandes, comme indiqué dans [cibles de la commande](../mfc/message-handling-and-command-targets.md). Objets View et container peuvent également implémenter `IPrint` et `IContinueCallback`pour prendre en charge l’impression par programmation, comme indiqué dans [impression par programmation](../mfc/programmatic-printing.md).  
+ L’objet frame, les objets de vue et l’objet de conteneur peuvent implémenter `IOleCommandTarget` pour prendre en charge la distribution de certaines commandes, comme indiqué dans [cibles de la commande](../mfc/message-handling-and-command-targets.md). Objets View et container peuvent également implémenter `IPrint` et `IContinueCallback`pour prendre en charge l’impression par programmation, comme indiqué dans [impression par programmation](../mfc/programmatic-printing.md).  
   
  L’illustration suivante montre les relations conceptuelles entre un conteneur et ses composants (à gauche) et le document actif et ses vues (à droite). Le document actif gère le stockage et les données et la vue affiche ou imprime ces données. Les interfaces en gras sont celles requises pour la participation de document actif ; Ces valeur en gras et italique sont facultatifs. Toutes les autres interfaces sont requises.  
   
@@ -85,7 +85,7 @@ Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Inter
  Un conteneur qui prend en charge plusieurs vues doit être en mesure de créer d’affichage de plusieurs objets du site dans le site de document. Cela fournit à chaque vue avec les services d’activation et désactivation distincts tel que fourni par le biais `IOleInPlaceSite`.  
   
 ##  <a name="frame_object"></a> Objet frame  
- Objet de frame du conteneur est, par la plupart des cas, la même image que celle qui est utilisée pour l’activation sur place dans les Documents OLE, c'est-à-dire, celui qui gère la négociation de menu et barre d’outils. Un objet de vue a accès à cet objet frame via **IOleInPlaceSite::GetWindowContext**, ce qui permet également d’accéder à l’objet conteneur qui représente le document conteneur (qui peut gérer la négociation de la barre d’outils du volet de niveau et énumération d’objets contenus).  
+ Objet de frame du conteneur est, par la plupart des cas, la même image que celle qui est utilisée pour l’activation sur place dans les Documents OLE, c'est-à-dire, celui qui gère la négociation de menu et barre d’outils. Un objet de vue a accès à cet objet frame via `IOleInPlaceSite::GetWindowContext`, ce qui permet également d’accéder à l’objet conteneur qui représente le document conteneur (qui peut gérer la négociation de la barre d’outils du volet niveau et l’énumération d’objets contenus).  
   
  Un conteneur de documents actifs peut augmenter le frame en ajoutant `IOleCommandTarget`. Cela lui permet de recevoir des commandes lancées dans l’interface utilisateur du document actif de la même manière que cette interface peut permettre à un conteneur d’envoyer les mêmes commandes (telles que **le nouveau fichier**, **ouvrir**,  **Enregistrer en tant que**, **impression**; **Modifier une copie**, **coller**, **Annuler**, etc.) dans un document actif. Pour plus d’informations, consultez [cibles de la commande](../mfc/message-handling-and-command-targets.md).  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334884"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930886"
 ---
 # <a name="active-documents-on-the-internet"></a>Documents actifs sur Internet
 Les documents actifs fournissent une extension aux objets incorporés classiques. Les documents actifs peuvent être multipages et sont affichés dans la zone cliente. Ils exécuter la négociation de menu traditionnels et peuvent être modifiées sur place ainsi que dans une fenêtre ouverte dans l’application serveur. Au lieu d’afficher en tant qu’un petit rectangle entouré d’une bordure hachurée, les documents actifs sont plein cadre et actif toujours en place.  
@@ -55,7 +55,7 @@ Les documents actifs fournissent une extension aux objets incorporés classiques
 |-------------------------|---------------------------------|  
 |Utilise des fichiers composés comme mécanisme de stockage.|`IPersistStorage`.|  
 |Prend en charge les fonctionnalités d’incorporation de base des documents Active, y compris les créer à partir du fichier.|`IPersistFile`, `IOleObject` et `IDataObject`.|  
-|Prend en charge l’activation sur place.|`IOleInPlaceObject` et `IOleInPlaceActiveObject` (à l’aide du conteneur `IOleInPlaceSite` et **IOleInPlaceFrame** interfaces).|  
+|Prend en charge l’activation sur place.|`IOleInPlaceObject` et `IOleInPlaceActiveObject` (à l’aide du conteneur `IOleInPlaceSite` et `IOleInPlaceFrame` interfaces).|  
 |Prend en charge les extensions de document actif qui impliquent ces nouvelles interfaces. Certaines interfaces sont facultatifs.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` et `IPrint`.|  
   
  MFC prend en charge pour l’extension de la prise en charge de serveur intégré existante pour les documents actifs.  
@@ -68,7 +68,7 @@ Les documents actifs fournissent une extension aux objets incorporés classiques
   
 |Type de classe|Anciennement dérivé de|Modifier pour dériver de|  
 |----------------|---------------------------|---------------------------|  
-|Frame en Place|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Frame en Place|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Élément|`COleServerItem`|`CDocObjectServerItem`|  
   
  Vous également modifier la façon dont les informations sont entrées dans le Registre et effectuer plusieurs autres modifications. Si votre application n’a actuellement aucune prise en charge des composants COM, vous pouvez ajouter la prise en charge du serveur en exécutant l’Assistant Application et en intégrant le code spécifique au composant COM avec votre application existante.  

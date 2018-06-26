@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342145"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932016"
 ---
 # <a name="clipboard-adding-other-formats"></a>Presse-papiers : ajout d'autres formats
-Cette rubrique explique comment développer la liste des formats pris en charge, en particulier pour la prise en charge OLE. La rubrique [Presse-papiers : copies et collage de données](../mfc/clipboard-copying-and-pasting-data.md) décrit l’implémentation minimale nécessaire pour prendre en charge le copier- coller à partir du Presse-papiers. Si c’est vous vous, les seuls formats placés dans le Presse-papiers sont `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**et éventuellement `CF_LINKSOURCE`. La plupart des applications nécessitent d’autres formats dans le Presse-papiers à ces trois.  
+Cette rubrique explique comment développer la liste des formats pris en charge, en particulier pour la prise en charge OLE. La rubrique [Presse-papiers : copies et collage de données](../mfc/clipboard-copying-and-pasting-data.md) décrit l’implémentation minimale nécessaire pour prendre en charge le copier- coller à partir du Presse-papiers. Si c’est vous vous, les seuls formats placés dans le Presse-papiers sont **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**et éventuellement **CF_LINKSOURCE**. La plupart des applications nécessitent d’autres formats dans le Presse-papiers à ces trois.  
   
 ##  <a name="_core_registering_custom_formats"></a> Enregistrement de Formats personnalisés  
  Pour créer vos propres formats personnalisés, suivez la même procédure que vous utiliserez lors de l’inscription de n’importe quel format de Presse-papiers : passez le nom du format à la **RegisterClipboardFormat** la fonction et utiliser sa valeur de retour comme ID de format.  

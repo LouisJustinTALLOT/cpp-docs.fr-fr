@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350651"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930543"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus et ressources : ajouts de conteneurs
 Cet article décrit les modifications qui doivent être apportées aux menus et aux autres ressources dans une application conteneur d’édition visuelle.  
@@ -67,27 +67,27 @@ Cet article décrit les modifications qui doivent être apportées aux menus et 
   
 |Id|Touche|Type|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
- La seconde modification doit créer une table d’accélérateurs qui correspond à la nouvelle ressource de menu créée pour l’activation sur place. Cette table comporte des entrées pour les menus fichier et fenêtre en plus de la **VK_ESCAPE** entrée ci-dessus. L’exemple suivant est la table d’accélérateurs créée pour l’activation sur place dans l’exemple MFC [conteneur](../visual-cpp-samples.md):  
+ La seconde modification doit créer une table d’accélérateurs qui correspond à la nouvelle ressource de menu créée pour l’activation sur place. Cette table comporte des entrées pour les menus fichier et fenêtre en plus de l’entrée VK_ESCAPE. L’exemple suivant est la table d’accélérateurs créée pour l’activation sur place dans l’exemple MFC [conteneur](../visual-cpp-samples.md):  
   
 |Id|Touche|Type|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|CTRL+N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|CTRL+O|**VIRTKEY**|  
-|**ID_FILE_SAVE**|CTRL+S|**VIRTKEY**|  
-|**ID_FILE_PRINT**|CTRL+P|**VIRTKEY**|  
-|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE**|MAJ + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_FILE_NEW|CTRL+N|**VIRTKEY**|  
+|ID_FILE_OPEN|CTRL+O|**VIRTKEY**|  
+|ID_FILE_SAVE|CTRL+S|**VIRTKEY**|  
+|ID_FILE_PRINT|CTRL+P|**VIRTKEY**|  
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE|MAJ + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Ajouts de Table de chaînes des Applications conteneur  
  La plupart des modifications aux tables de chaînes pour les applications de conteneur correspondent aux éléments de menu supplémentaires mentionnés dans [ajouts au Menu du conteneur](#_core_container_menu_additions). Elles fournissent le texte affiché dans la barre d’état lorsque chaque élément de menu est affichée. Par exemple, voici les entrées de table de chaînes que génère de l’Assistant application :  
   
 |Id|Chaîne|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|Échec de l’initialisation d’OLE. Assurez-vous que vous utilisez la bonne version des bibliothèques OLE.|  
-|**IDP_FAILED_TO_CREATE**|Échec de création d’objet. Assurez-vous que l’objet est entré dans le Registre système.|  
+|IDP_OLE_INIT_FAILED|Échec de l’initialisation d’OLE. Assurez-vous que vous utilisez la bonne version des bibliothèques OLE.|  
+|IDP_FAILED_TO_CREATE|Échec de création d’objet. Assurez-vous que l’objet est entré dans le Registre système.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md)   

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21369dd8d241bd00da2a0a8005c977094c3abf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349734"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932092"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Comment : implémenter le suivi dans votre code
 Pour suivre un élément OLE, vous devez gérer certains événements associés à l'élément, tel que cliquer sur l'élément ou mettre à jour la vue du document. Dans tous les cas, il suffit de déclarer une variable temporaire [CRectTracker](../mfc/reference/crecttracker-class.md) et de manipuler l’élément au moyen de cet objet.  
@@ -36,7 +36,7 @@ Pour suivre un élément OLE, vous devez gérer certains événements associés 
 |Bordure hachurée|L'élément est actuellement actif en place|  
 |Le modèle de hachurage recouvre l'élément|Le serveur de l'élément est ouvert|  
   
- Vous pouvez traiter cette initialisation facilement à l'aide d'une procédure qui vérifie l'état de l'élément OLE et qui définit les styles appropriés. Le **SetupTracker** fonction se trouve dans l’exemple OCLIENT illustre l’initialisation de suivi. Les paramètres de cette fonction sont l’adresse du dispositif de suivi, *pTracker*; un pointeur vers l’élément client qui est liée à la mise hors tension, `pItem`; et un pointeur vers un rectangle, *pTrueRect*. Pour obtenir un exemple plus complet de cette fonction, consultez l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md).  
+ Vous pouvez traiter cette initialisation facilement à l'aide d'une procédure qui vérifie l'état de l'élément OLE et qui définit les styles appropriés. Le `SetupTracker` fonction se trouve dans l’exemple OCLIENT illustre l’initialisation de suivi. Les paramètres de cette fonction sont l’adresse du dispositif de suivi, *pTracker*; un pointeur vers l’élément client qui est liée à la mise hors tension, *pItem*; et un pointeur vers un rectangle, *pTrueRect* . Pour obtenir un exemple plus complet de cette fonction, consultez l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md).  
   
  Le **SetupTracker** exemple de code présente une seule fonction ; les lignes de la fonction sont mélangées à savoir plus sur les fonctionnalités de la fonction :  
   
@@ -54,9 +54,9 @@ Pour suivre un élément OLE, vous devez gérer certains événements associés 
   
  [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]  
   
- Vous pouvez ensuite appeler cette fonction lorsque le mécanisme de suivi doit être affiché. Par exemple, appeler cette fonction depuis la fonction `OnDraw` de votre classe d'affichage. Cela met à jour l'apparence du dispositif de suivi lorsque la vue est redessinée. Pour obtenir un exemple complet, consultez la **CMainView::OnDraw** fonction de l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md).  
+ Vous pouvez ensuite appeler cette fonction lorsque le mécanisme de suivi doit être affiché. Par exemple, appeler cette fonction depuis la fonction `OnDraw` de votre classe d'affichage. Cela met à jour l'apparence du dispositif de suivi lorsque la vue est redessinée. Pour obtenir un exemple complet, consultez la `CMainView::OnDraw` fonction de l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md).  
   
- Dans votre application, les événements qui requièrent un code de suivi, tel que le redimensionnement, le déplacement ou la détection d'accès, se produisent. Ces actions indiquent généralement qu'une tentative a lieu pour saisir ou déplacer l'élément. Dans ce cas, vous devez déterminer ce qui a été saisi : une poignée de redimensionnement ou une partie de la bordure entre les poignées de redimensionnement. Le gestionnaire de messages `OnLButtonDown` est un bon endroit pour tester la position de la souris par rapport à l'élément. Effectuez un appel à `CRectTracker::HitTest`. Si le test retourne une valeur différente **CRectTracker::hitOutside**, l’élément est redimensionné ou déplacé. Par conséquent, vous devez effectuer un appel à la fonction membre `Track`. Consultez le **CMainView::OnLButtonDown** (fonction) se trouve dans l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) pour obtenir un exemple complet.  
+ Dans votre application, les événements qui requièrent un code de suivi, tel que le redimensionnement, le déplacement ou la détection d'accès, se produisent. Ces actions indiquent généralement qu'une tentative a lieu pour saisir ou déplacer l'élément. Dans ce cas, vous devez déterminer ce qui a été saisi : une poignée de redimensionnement ou une partie de la bordure entre les poignées de redimensionnement. Le gestionnaire de messages `OnLButtonDown` est un bon endroit pour tester la position de la souris par rapport à l'élément. Effectuez un appel à `CRectTracker::HitTest`. Si le test retourne une valeur autre que `CRectTracker::hitOutside`, l’élément est redimensionné ou déplacé. Par conséquent, vous devez effectuer un appel à la fonction membre `Track`. Consultez le `CMainView::OnLButtonDown` (fonction) se trouve dans l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) pour obtenir un exemple complet.  
   
  La classe `CRectTracker` fournit différentes formes de curseur utilisées pour indiquer si un déplacement, un redimensionnement ou un glissement a lieu. Pour gérer l'événement, activez la case à cocher pour déterminer si l'élément actuellement sous la souris est sélectionné. Si tel est le cas, effectuez un appel à `CRectTracker::SetCursor` ou appelez le gestionnaire par défaut. L’exemple suivant est tiré de l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md):  
   

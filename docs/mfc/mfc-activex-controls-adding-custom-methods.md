@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b20d649bc89d9d66103f258ebdfdac767f431b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350031"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930046"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Contrôles ActiveX MFC : ajout de méthodes personnalisées
 Méthodes personnalisées diffèrent des méthodes stock dans la mesure où ils ne sont pas déjà implémentées par `COleControl`. Vous devez fournir l’implémentation pour chaque méthode personnalisée que vous ajoutez à votre contrôle.  
   
- Utilisateur d’un contrôle ActiveX peut appeler une méthode personnalisée à tout moment pour exécuter des actions spécifiques au contrôle. Est de l’entrée de mappage de répartition pour les méthodes personnalisées de la forme `DISP_FUNCTION`.  
+ Utilisateur d’un contrôle ActiveX peut appeler une méthode personnalisée à tout moment pour exécuter des actions spécifiques au contrôle. L’entrée de mappage de répartition pour les méthodes personnalisées est au format DISP_FUNCTION.  
   
 ##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Ajout d’une méthode personnalisée avec l’Assistant Ajout de méthode  
  La procédure suivante illustre l’ajout de la méthode personnalisée PtInCircle à squelette du code d’un contrôle ActiveX. PtInCircle détermine si les coordonnées passées au contrôle sont à l’intérieur ou à l’extérieur du cercle. Cette procédure peut également être utilisée pour ajouter d’autres méthodes personnalisées. Remplacez par le nom de votre méthode personnalisée et ses paramètres pour les paramètres et le nom de la méthode PtInCircle.  
@@ -45,15 +45,15 @@ Méthodes personnalisées diffèrent des méthodes stock dans la mesure où ils 
   
      L’Assistant Ajout de méthode s’ouvre.  
   
-5.  Dans le **nom de la méthode** , tapez `PtInCircle`.  
+5.  Dans le **nom de la méthode** , tapez *PtInCircle*.  
   
-6.  Dans le **nom interne** , tapez le nom de fonction interne de la méthode ou la valeur par défaut (dans ce cas, `PtInCircle`).  
+6.  Dans le **nom interne** , tapez le nom de fonction interne de la méthode ou la valeur par défaut (dans ce cas, *PtInCircle*).  
   
 7.  Dans le **Type de retour** , cliquez sur **VARIANT_BOOL** pour le type de retour de la méthode.  
   
-8.  À l’aide de la **Type de paramètre** et **nom de paramètre** contrôles, ajoutez un paramètre appelé `xCoord` (type **OLE_XPOS_PIXELS**).  
+8.  À l’aide de la **Type de paramètre** et **nom de paramètre** contrôles, ajoutez un paramètre appelé *xCoord* (type *OLE_XPOS_PIXELS*).  
   
-9. À l’aide de la **Type de paramètre** et **nom de paramètre** contrôles, ajoutez un paramètre appelé `yCoord` (type **OLE_YPOS_PIXELS**).  
+9. À l’aide de la **Type de paramètre** et **nom de paramètre** contrôles, ajoutez un paramètre appelé *yCoord* (type *OLE_YPOS_PIXELS*).  
   
 10. Cliquez sur **Terminer**.  
   
@@ -62,19 +62,19 @@ Méthodes personnalisées diffèrent des méthodes stock dans la mesure où ils 
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- Ce code déclare un gestionnaire de méthode de dispatch appelé `PtInCircle`. Cette fonction peut être appelée par l’utilisateur du contrôle à l’aide du nom externe PtInCircle.  
+ Ce code déclare un gestionnaire de méthode de dispatch appelé `PtInCircle`. Cette fonction peut être appelée par l’utilisateur du contrôle à l’aide du nom externe `PtInCircle`.  
   
  La ligne suivante est ajoutée à du contrôle. Fichier IDL :  
   
  [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- Cette ligne assigne à la méthode PtInCircle un numéro d’identification spécifique, la position dans la liste de méthodes et propriétés Assistant Ajout de méthode. Étant donné que l’Assistant Ajout de méthode a été utilisé pour ajouter la méthode personnalisée, l’entrée correspondante a été ajoutée automatiquement du projet. Fichier IDL.  
+ Cette ligne assigne le `PtInCircle` méthode un numéro d’identification spécifique, la position dans la liste de méthodes et propriétés Assistant Ajout de méthode. Étant donné que l’Assistant Ajout de méthode a été utilisé pour ajouter la méthode personnalisée, l’entrée correspondante a été ajoutée automatiquement du projet. Fichier IDL.  
   
  En outre, la ligne suivante, située dans l’implémentation (. Fichier CPP) de la classe du contrôle est ajoutée à la table de dispatch du contrôle :  
   
  [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- Le `DISP_FUNCTION` macro mappe la méthode PtInCircle à la fonction de gestionnaire d' un contrôle, `PtInCircle`, déclare le type de retour soit **VARIANT_BOOL**et déclare deux paramètres de type **VTS_XPOS_PIXELS** et **VTS_YPOSPIXELS** à passer à `PtInCircle`.  
+ La macro DISP_FUNCTION mappe la méthode `PtInCircle` à la fonction de gestionnaire d' un contrôle, `PtInCircle`, déclare le type de retour soit **VARIANT_BOOL**et déclare deux paramètres de type **VTS_XPOS_PIXELS** et **VTS_YPOSPIXELS** à passer à `PtInCircle`.  
   
  Enfin, l’Assistant Ajout de méthode ajoute la fonction stub `CSampleCtrl::PtInCircle` vers le bas de l’implémentation du contrôle (. (CPP) du contrôle. Pour `PtInCircle` pour fonctionner comme indiqué précédemment, il doit être modifié comme suit :  
   

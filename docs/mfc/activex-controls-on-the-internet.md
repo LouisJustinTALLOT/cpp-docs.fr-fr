@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352307"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931975"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.  
@@ -39,7 +39,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
  **Pour être un contrôle ActiveX, un contrôle doit :**  
   
--   Prise en charge la **IUnknown** interface.  
+-   Prise en charge la `IUnknown` interface.  
   
 -   Être un objet COM.  
   
@@ -85,7 +85,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Pour créer votre projet à l'aide de l'Assistant Contrôle ActiveX MFC  
   
-1.  Cliquez sur `New` sur la **fichier** menu.  
+1.  Cliquez sur **nouveau** sur la **fichier** menu.  
   
 2.  Sélectionnez **Assistant contrôle ActiveX MFC** à partir de Visual C++, projets et nommez votre projet.  
   
@@ -109,7 +109,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
      Notez que vous devez inclure AFXCMN.H pour utiliser la classe `CListCtrl`.  
   
-4.  Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si le contrôle a une propriété de chemin d’accès de données qu’une seule, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Par exemple :  
+4.  Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si le contrôle a une propriété de chemin d’accès de données qu’une seule, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Exemple :  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -129,7 +129,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implémentez la **Get/Set** méthodes. Pour **obtenir**, la chaîne de retour. Pour `Set`, chargez la propriété et appelez `SetModifiedFlag`.  
+5.  Implémentez les méthodes `Get/Set`. Pour `Get`, la chaîne de retour. Pour `Set`, chargez la propriété et appelez `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

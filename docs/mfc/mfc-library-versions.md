@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358062"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931763"
 ---
 # <a name="mfc-library-versions"></a>Versions de bibliothèque MFC
 
@@ -89,7 +89,7 @@ Les versions de la bibliothèque MFC ANSI/MBCS prennent en charge les deux jeux 
 
 Pour définir la configuration de votre projet à utiliser sur un octet, multioctet ou les caractères larges chaînes et caractères prise en charge Unicode dans l’IDE, utilisez le **propriétés du projet** boîte de dialogue. Dans le **propriétés de Configuration** > **général** , définissez le **du jeu de caractères** propriété **pas définir** à utiliser un jeu de caractères d’un octet. Affectez à la propriété **utiliser un jeu de caractères codés sur plusieurs octets** à utiliser un jeu de caractères multioctets ou **utiliser un jeu de caractères Unicode** d’utiliser Unicode encodé en UTF-16.
 
-Projets MFC utilisent le symbole de préprocesseur  **\_UNICODE** pour indiquer la prise en charge de Unicode UTF-16 caractères larges, et  **\_MBCS** pour indiquer la prise en charge MBCS. Ces options s’excluent mutuellement dans un projet.
+Projets MFC utilisent le symbole de préprocesseur \_pour indiquer la prise en charge de Unicode UTF-16 caractères larges, UNICODE et \_prise en charge MBCS pour indiquer MBCS. Ces options s’excluent mutuellement dans un projet.
 
 ## <a name="mfc-static-library-naming-conventions"></a>Conventions d’affectation de noms de bibliothèque statique MFC
 

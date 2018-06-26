@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a9c6ecf6516adceda845dadd4f0313ae605f0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3a4b67ccbba97405678985e6412cc56911bd184
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346514"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929690"
 ---
 # <a name="general-window-creation-sequence"></a>Séquence de création d'une fenêtre générale
 Lorsque vous créez une fenêtre de la fenêtre de votre choix, comme un enfant, l’infrastructure utilise beaucoup le même processus que celui décrit dans [création de Document/vue](../mfc/document-view-creation.md).  
   
  Toutes les classes de fenêtre fournis par l’emploi MFC [construction en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md). Autrement dit, lors d’un appel de C++ **nouveau** (opérateur), le constructeur alloue et initialise un objet C++ mais ne crée pas de fenêtre Windows correspondante. Qui est effectué par la suite en appelant le [créer](../mfc/reference/cwnd-class.md#create) fonction membre de l’objet de fenêtre.  
   
- Le **créer** fonction membre crée la fenêtre Windows et stocke son `HWND` dans le membre de données publiques de l’objet C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Créer** donne davantage de flexibilité sur les paramètres de création. Avant d’appeler **créer**, vous pouvez souhaiter enregistrer une classe de fenêtre avec la fonction globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) afin de définir les styles d’icône et de la classe pour le frame.  
+ Le `Create` fonction membre crée la fenêtre Windows et stocke son `HWND` dans le membre de données publiques de l’objet C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` permet de terminer une grande souplesse sur les paramètres de création. Avant d’appeler `Create`, vous pouvez souhaiter enregistrer une classe de fenêtre avec la fonction globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) afin de définir les styles d’icône et de la classe pour le frame.  
   
- Pour les fenêtres frames, vous pouvez utiliser la [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) fonction membre au lieu de **créer**. `LoadFrame` crée la fenêtre de Windows à l’aide de moins de paramètres. Il obtient le nombre de valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu.  
+ Pour les fenêtres frames, vous pouvez utiliser la [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) fonction membre au lieu de `Create`. `LoadFrame` crée la fenêtre de Windows à l’aide de moins de paramètres. Il obtient le nombre de valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu.  
   
 > [!NOTE]
 >  Icône, table d’accélérateurs, les ressources de menu doivent avoir un ID de ressource commun, tel que **IDR_MAINFRAME**, pour pouvoir être chargé par LoadFrame.  

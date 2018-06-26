@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347176"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932002"
 ---
 # <a name="message-sending-and-receiving"></a>Envoi et réception de messages
 Prendre en compte la partie envoi du processus et la manière dont l’infrastructure répond.  
   
  La plupart des messages résultent de l’interaction de l’utilisateur avec le programme. Commandes sont générées par des clics de souris dans les éléments de menu ou des boutons de barre d’outils ou par les séquences de touches accélérateur. L’utilisateur génère également des messages Windows, par exemple, de déplacement ou redimensionnement d’une fenêtre. Autres messages Windows sont envoyés lorsque des événements tels que le démarrage du programme ou l’arrêt se produisent, comme windows Obtient ou perdent le focus et ainsi de suite. Messages de notification de contrôle sont générés par des clics de souris ou d’autres interactions de l’utilisateur avec un contrôle, par exemple un contrôle de bouton ou la zone de liste dans une boîte de dialogue.  
   
- Le **exécuter** fonction membre de classe `CWinApp` récupère les messages et les envoie à la fenêtre appropriée. La plupart des messages de commande sont envoyés à la fenêtre frame principale de l’application. Le `WindowProc` prédéfinie, par l’Obtient de bibliothèque de classe, les messages et les route différemment, en fonction de la catégorie du message reçu.  
+ Le `Run` fonction membre de classe `CWinApp` récupère les messages et les envoie à la fenêtre appropriée. La plupart des messages de commande sont envoyés à la fenêtre frame principale de l’application. Le `WindowProc` prédéfinie, par l’Obtient de bibliothèque de classe, les messages et les route différemment, en fonction de la catégorie du message reçu.  
   
  Examinons à présent la partie réception du processus.  
   

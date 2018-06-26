@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347231"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929129"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Gestionnaires pour les commandes et les notifications de contrôle
 Il n’existe aucun gestionnaire par défaut pour les commandes ou les messages de notification de contrôle. Par conséquent, vous êtes lié uniquement par la convention d’affectation de noms vos gestionnaires pour ces catégories de messages. Lorsque vous mappez la notification de commande ou un contrôle à un gestionnaire, la fenêtre Propriétés propose un nom basé sur le code d’ID ou de notification de contrôle de commande. Vous pouvez accepter le nom proposé, modifier ou remplacer.  
@@ -40,7 +40,7 @@ Il n’existe aucun gestionnaire par défaut pour les commandes ou les messages 
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- Vous pouvez affecter à cette commande ID `IDC_MY_BUTTON` , car elle est équivalente à un objet d’interface utilisateur spécifiques à l’application.  
+ Vous pouvez affecter à cette commande ID **IDC_MY_BUTTON** car il est équivalent à un objet d’interface utilisateur spécifiques à l’application.  
   
  Les deux catégories de messages prennent pas d’arguments et ne retournent aucune valeur.  
   

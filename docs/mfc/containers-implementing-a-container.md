@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342828"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930073"
 ---
 # <a name="containers-implementing-a-container"></a>Conteneurs : implémentation d'un conteneur
 Cet article résume la procédure permettant d'implémenter un conteneur et vous présente d'autres articles qui fournissent des explications détaillées sur l'implémentation des conteneurs. Il répertorie également des fonctionnalités OLE optionnelles que vous pouvez souhaiter implémenter et les articles décrivant ces fonctionnalités.  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>Pour préparer votre classe dérivée de CWinApp  
   
-1.  Initialiser les bibliothèques OLE en appelant **AfxOleInit** dans le `InitInstance` fonction membre.  
+1.  Initialiser les bibliothèques OLE en appelant `AfxOleInit` dans le `InitInstance` fonction membre.  
   
 2.  Appelez `CDocTemplate::SetContainerInfo` dans `InitInstance` pour affecter le menu et les ressources accélératrices utilisés lorsqu'un élément incorporé est activé en place. Pour plus d’informations sur ce sujet, consultez [Activation](../mfc/activation-cpp.md).  
   
@@ -39,7 +39,7 @@ Cet article résume la procédure permettant d'implémenter un conteneur et vous
   
 2.  Remplacez `IsSelected` pour vérifier si l'élément qui lui est passé est sélectionné.  
   
-3.  Implémentez un **OnInsertObject** le Gestionnaire de messages pour afficher les **insérer un objet** boîte de dialogue.  
+3.  Implémentez un `OnInsertObject` le Gestionnaire de messages pour afficher les **insérer un objet** boîte de dialogue.  
   
 4.  Implémentez un gestionnaire de messages `OnSetFocus` pour transférer le focus depuis la vue sur un élément incorporé OLE actif en place.  
   
@@ -51,9 +51,9 @@ Cet article résume la procédure permettant d'implémenter un conteneur et vous
   
 1.  Dérivez une classe de [COleClientItem](../mfc/reference/coleclientitem-class.md). Les objets de cette classe représentent les éléments qui ont été incorporés ou liés à votre document OLE.  
   
-2.  Substituer **OnChange**, `OnChangeItemPosition`, et `OnGetItemPosition`. Ces fonctions gèrent le dimensionnement, le positionnement et la modification d'éléments liés et incorporés.  
+2.  Substituer `OnChange`, `OnChangeItemPosition`, et `OnGetItemPosition`. Ces fonctions gèrent le dimensionnement, le positionnement et la modification d'éléments liés et incorporés.  
   
- L’Assistant application dérivera la classe pour vous, mais vous devrez probablement substituer **OnChange** et les autres fonctions répertoriées avec celle-ci à l’étape 2 de la procédure précédente. Les implémentations squelette doivent être personnalisées pour la plupart des applications, car ces fonctions sont implémentées de manière différente d'une application à l'autre. Pour obtenir des exemples, consultez les exemples MFC [DRAWCLI](../visual-cpp-samples.md) et [conteneur](../visual-cpp-samples.md).  
+ L’Assistant application dérivera la classe pour vous, mais vous devrez probablement substituer `OnChange` et les autres fonctions répertoriées avec celle-ci à l’étape 2 de la procédure précédente. Les implémentations squelette doivent être personnalisées pour la plupart des applications, car ces fonctions sont implémentées de manière différente d'une application à l'autre. Pour obtenir des exemples, consultez les exemples MFC [DRAWCLI](../visual-cpp-samples.md) et [conteneur](../visual-cpp-samples.md).  
   
  Vous devez ajouter plusieurs éléments à la structure du menu de l'application conteneur pour prendre en charge OLE. Pour plus d’informations, consultez [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).  
   

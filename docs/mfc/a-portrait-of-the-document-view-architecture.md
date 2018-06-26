@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329814"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928942"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portrait de l'architecture document/vue
 Documents et vues sont associés dans une application MFC classique. Données stockées dans le document, mais la vue a un accès privilégié aux données. La séparation du document de vue sépare le stockage et la maintenance des données à partir de son affichage.  
@@ -37,7 +37,7 @@ Documents et vues sont associés dans une application MFC classique. Données st
 ## <a name="gaining-access-to-document-data-from-the-view"></a>L’accès aux données à partir de la vue du Document  
  La vue accède aux données de son document à l’aide du [GetDocument](../mfc/reference/cview-class.md#getdocument) de fonction, qui retourne un pointeur vers le document, ou en mettant à la vue de classe C++ `friend` de la classe de document. La vue utilise ensuite son accès aux données pour obtenir les données lorsqu’il est prêt à dessiner ou de les manipuler dans le cas contraire.  
   
- Par exemple, à partir de la vue [OnDraw](../mfc/reference/cview-class.md#ondraw) fonction membre, la vue utilise **GetDocument** pour obtenir un pointeur de document. Elle utilise ensuite ce pointeur pour accéder à un `CString` membre de données dans le document. La vue passe la chaîne à la `TextOut` (fonction). Pour afficher le code pour cet exemple, consultez [dessin dans une vue](../mfc/drawing-in-a-view.md).  
+ Par exemple, à partir de la vue [OnDraw](../mfc/reference/cview-class.md#ondraw) fonction membre, la vue utilise `GetDocument` pour obtenir un pointeur de document. Elle utilise ensuite ce pointeur pour accéder à un `CString` membre de données dans le document. La vue passe la chaîne à la `TextOut` (fonction). Pour afficher le code pour cet exemple, consultez [dessin dans une vue](../mfc/drawing-in-a-view.md).  
   
 ## <a name="user-input-to-the-view"></a>Entrée d’utilisateur à la vue  
  La vue peut également interpréter un clic de souris lui-même en tant que sélection ou de modification des données. De même, elle peut interpréter les séquences de touches en tant qu’entrée de données ou de la modification. Supposons que l’utilisateur tape une chaîne dans une vue qui gère le texte. La vue obtient un pointeur vers le document et utilise le pointeur pour transmettre les nouvelles données au document, qui les stocke dans une structure de données.  

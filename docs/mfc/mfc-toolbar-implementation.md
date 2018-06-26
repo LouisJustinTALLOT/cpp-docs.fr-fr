@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360964"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929225"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implémentation de la barre d'outils MFC
 Une barre d’outils est un [barre de contrôle](../mfc/control-bars.md) qui contient les images bitmap des contrôles. Ces images peuvent se comporter comme des boutons de commande, des cases à cocher ou des cases d’option. MFC fournit la classe [CToolbar](../mfc/reference/ctoolbar-class.md) pour gérer des barres d’outils.  
@@ -44,7 +44,7 @@ Une barre d’outils est un [barre de contrôle](../mfc/control-bars.md) qui con
 > [!NOTE]
 >  Depuis la version 4.0 de MFC, les barres d’outils et les info-bulles sont implémentées à l’aide de Windows 95 et fonctionnalités ultérieure au lieu de l’implémentation précédente spécifique à MFC.  
   
- Pour la compatibilité ascendante, MFC conserve l’implémentation de barre d’outils plus anciens dans la classe **COldToolBar**. La documentation pour les versions antérieures de MFC décrivent **COldToolBar** sous `CToolBar`.  
+ Pour la compatibilité ascendante, MFC conserve l’implémentation de barre d’outils plus anciens dans la classe `COldToolBar`. La documentation pour les versions antérieures de MFC décrivent `COldToolBar` sous `CToolBar`.  
   
  Créez la première barre d’outils dans votre programme en sélectionnant l’option de la barre d’outils dans l’Assistant Application. Vous pouvez également créer des barres d’outils supplémentaires.  
   

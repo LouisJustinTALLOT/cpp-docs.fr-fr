@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20ff02b2d72f1dfa6afab5a0d547b46aa55b18c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a1e848827b46d40c1ec39f2af4788e6957932c5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343552"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929110"
 ---
 # <a name="handling-commands-in-the-document"></a>Gestion des commandes dans le document
-Votre classe de document peut également gérer certaines commandes générées par les éléments de menu, des boutons de barre d’outils ou des touches accélérateur. Par défaut, **CDocument** gère l’enregistrement et l’enregistrer en tant que les commandes dans le menu fichier, vous utilisez la sérialisation. Autres commandes qui affectent les données peuvent également être gérées par les fonctions membres de votre document. Par exemple, dans le programme Scribble, la classe `CScribDoc` fournit un gestionnaire pour la commande Modifier Effacer tout, ce qui supprime toutes les données actuellement stockées dans le document. Documents peuvent avoir des tables des messages, mais contrairement aux vues, les documents ne peut pas traiter les messages Windows standard, uniquement **WM_COMMAND** messages, ou « commandes ».  
+Votre classe de document peut également gérer certaines commandes générées par les éléments de menu, des boutons de barre d’outils ou des touches accélérateur. Par défaut, `CDocument` gère l’enregistrement et l’enregistrer en tant que les commandes dans le menu fichier, vous utilisez la sérialisation. Autres commandes qui affectent les données peuvent également être gérées par les fonctions membres de votre document. Par exemple, dans le programme Scribble, la classe `CScribDoc` fournit un gestionnaire pour la commande Modifier Effacer tout, ce qui supprime toutes les données actuellement stockées dans le document. Documents peuvent avoir des tables des messages, mais contrairement aux vues, les documents ne peut pas traiter les messages Windows standard, uniquement **WM_COMMAND** messages, ou « commandes ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de documents](../mfc/using-documents.md)

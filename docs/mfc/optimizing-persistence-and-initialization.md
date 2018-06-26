@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355658"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930311"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimisation de la persistance et de l'initialisation
 Par défaut, la persistance et l'initialisation dans un contrôle sont gérées par la fonction membre `DoPropExchange`. Dans un contrôle type, cette fonction contient des appels à plusieurs **PX_** fonctions (`PX_Color`, `PX_Font`, et ainsi de suite), une pour chaque propriété.  
@@ -45,7 +45,7 @@ Par défaut, la persistance et l'initialisation dans un contrôle sont gérées 
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Notez que, dans le cas de charge, une variable temporaire est utilisée et puis sa valeur est assignée, plutôt que d’effectuer un cast `m_boolProp` à un **octets** référence. La technique de cast entraîne la modification d'un seul octet de `m_boolProp`, en laissant les octets restants non initialisés.  
+ Notez que, dans le cas de charge, une variable temporaire est utilisée et puis sa valeur est assignée, plutôt que d’effectuer un cast *m_boolProp* à un **octets** référence. La technique aboutirait à un seul octet de *m_boolProp* en cours de modification, en laissant les octets restants non initialisés.  
   
  Pour le même contrôle, vous pouvez optimiser l’initialisation du contrôle en substituant [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) comme suit :  
   

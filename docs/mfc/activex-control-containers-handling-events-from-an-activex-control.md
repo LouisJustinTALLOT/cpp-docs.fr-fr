@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333828"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930659"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX
 Cet article explique l’utilisation de la fenêtre Propriétés pour installer des gestionnaires d’événements pour les contrôles ActiveX dans un conteneur de contrôles ActiveX. Les gestionnaires d’événements sont utilisés pour recevoir des notifications (à partir du contrôle) de certains événements et exécuter des actions en réponse. Cette notification est appelée « déclenche » l’événement.  
@@ -46,7 +46,7 @@ Cet article explique l’utilisation de la fenêtre Propriétés pour installer 
   
  Lorsque vous utilisez la fenêtre Propriétés pour ajouter des événements, un événement mapper entrée (`ON_EVENT`) est ajouté à la table de récepteur d’événement et un gestionnaire d’événements (fonction) est ajoutée à la mise en œuvre du conteneur (. (CPP) du contrôle.  
   
- L’exemple suivant déclare un gestionnaire d’événements, appelé `OnClickInCircCtrl`, pour le contrôle de Circ **ClickIn** événement :  
+ L’exemple suivant déclare un gestionnaire d’événements, appelé `OnClickInCircCtrl`, pour le contrôle de Circ `ClickIn` événement :  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

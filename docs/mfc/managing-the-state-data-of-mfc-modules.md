@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347693"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930514"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Gestion des données d'état des modules MFC
-Cet article décrit les données d’état des modules MFC et le mode de mise à jour de cet état lorsque le flux d’exécution (code du chemin d’accès via une application lors de l’exécution) accède à un module, puis le quitte. L'échange des états de modules avec les macros `AFX_MANAGE_STATE` et `METHOD_PROLOGUE` est également présenté.  
+Cet article décrit les données d’état des modules MFC et le mode de mise à jour de cet état lorsque le flux d’exécution (code du chemin d’accès via une application lors de l’exécution) accède à un module, puis le quitte. Changement des États des modules avec les macros AFX_MANAGE_STATE et METHOD_PROLOGUE est également présenté.  
   
 > [!NOTE]
 >  Le terme "module" fait référence à un programme exécutable ou à une DLL (ou un ensemble de DLL) qui s'exécute indépendamment du reste de l'application, mais utilise une copie partagée de la DLL MFC. Un contrôle ActiveX est un exemple de module classique.  

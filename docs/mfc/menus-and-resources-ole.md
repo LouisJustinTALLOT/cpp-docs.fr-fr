@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347092"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929632"
 ---
 # <a name="menus-and-resources-ole"></a>Menus et ressources (OLE)
 Ce groupe d’articles explique l’utilisation des menus et des ressources dans les applications de document OLE MFC.  
@@ -54,10 +54,10 @@ Ce groupe d’articles explique l’utilisation des menus et des ressources dans
   
 |Nom de la ressource|Utilisez|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|Utilisé dans une application MDI si aucun fichier n’est ouverte, ou dans une application SDI, quelle que soit les fichiers ouverts. Il s’agit du menu standard utilisé dans les applications non-OLE.|  
-|**IDR_\<projet > TYPE**|Utilisé dans une application MDI si les fichiers sont ouverts. Utilisé lors de l’exécution d’une application autonome. Il s’agit du menu standard utilisé dans les applications non-OLE.|  
-|**IDR_\<projet > TYPE_SRVR_IP**|Utilisé par le serveur ou le conteneur lorsqu’un objet est ouvert en place.|  
-|**IDR_\<projet > TYPE_SRVR_EMB**|Utilisé par une application serveur si un objet est ouvert sans utiliser l’activation sur place.|  
+|IDR_MAINFRAME|Utilisé dans une application MDI si aucun fichier n’est ouverte, ou dans une application SDI, quelle que soit les fichiers ouverts. Il s’agit du menu standard utilisé dans les applications non-OLE.|  
+|IDR_\<projet > TYPE|Utilisé dans une application MDI si les fichiers sont ouverts. Utilisé lors de l’exécution d’une application autonome. Il s’agit du menu standard utilisé dans les applications non-OLE.|  
+|IDR_\<projet > TYPE_SRVR_IP|Utilisé par le serveur ou le conteneur lorsqu’un objet est ouvert en place.|  
+|IDR_\<projet > TYPE_SRVR_EMB|Utilisé par une application serveur si un objet est ouvert sans utiliser l’activation sur place.|  
   
  Chacun de ces noms de ressource représente un menu et, en règle générale, une table d’accélérateurs. Un modèle similaire doit être utilisé dans les applications MFC qui ne sont pas créées avec l’Assistant application.  
   

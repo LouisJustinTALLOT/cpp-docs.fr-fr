@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381168"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930688"
 ---
 # <a name="registration"></a>Inscription
 Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OLE, OLE présente une liste des types d'objets dans le but d'en choisir un. OLE obtient la liste de la base de données d'inscription du système, qui contient les informations fournies par les applications serveur. Lorsqu'un serveur s'inscrit lui-même, les entrées qu'il place dans la base de données d'inscription du système (le Registre) décrivent chaque type d'objet qu'il fournit, les extensions de fichier, le chemin d'accès à lui-même, parmi d'autres informations.  
@@ -59,7 +59,7 @@ Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OL
   
  Lorsque votre application serveur démarre, vous devez vous assurer qu'elle peut effectuer l'inscription d'instance. L'inscription d'instance informe les DLL du système OLE que le serveur est activé et prêt à recevoir des demandes issues des conteneurs. Elle n'ajoute pas d'entrée à la base de données d'inscription. Exécutez l'inscription de l'instance du serveur en appelant la fonction membre `ConnectTemplate` définie par `COleTemplateServer`. Cela connecte l'objet `CDocTemplate` à l'objet `COleTemplateServer`.  
   
- Le `ConnectTemplate` fonction accepte trois paramètres : du serveur **CLSID**, un pointeur vers le `CDocTemplate` objet et un indicateur qui indique si le serveur prend en charge plusieurs instances. Un mini-serveur doit prendre en charge plusieurs instances, c'est-à-dire qu'il est possible que plusieurs instances de serveurs s'exécutent simultanément, une pour chaque conteneur. Par conséquent, exécutez **TRUE** cet indicateur en lançant un mini-serveur.  
+ Le `ConnectTemplate` fonction accepte trois paramètres : du serveur *CLSID*, un pointeur vers le `CDocTemplate` objet et un indicateur qui indique si le serveur prend en charge plusieurs instances. Un mini-serveur doit prendre en charge plusieurs instances, c'est-à-dire qu'il est possible que plusieurs instances de serveurs s'exécutent simultanément, une pour chaque conteneur. Par conséquent, exécutez **TRUE** cet indicateur en lançant un mini-serveur.  
   
  Si vous entrez un mini-serveur par définition, il sera toujours exécuté par un conteneur. Vous devez toujours analyser la ligne de commande pour vérifier l'option "/Embedding". L'absence de cette option sur la ligne de commande indique que l'utilisateur a essayé de démarrer le mini-serveur en tant qu'application autonome. Si cela se produit, enregistrez le serveur avec la base de données d'inscription système, puis affichez un message informant l'utilisateur pour lancer le mini-serveur depuis une application conteneur.  
   

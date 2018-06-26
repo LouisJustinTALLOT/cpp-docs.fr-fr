@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342489"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929037"
 ---
 # <a name="automation-clients"></a>Clients Automation
 L'Automation rend possible pour votre application la manipulation d'objets implémentés dans une autre application, ou l'exposition d'objets pour qu'ils puissent être manipulés. Un client Automation est une application qui peut manipuler des objets exposés appartenant à une autre application. L’application qui expose les objets est appelée serveur Automation. Le client manipule les objets de l’application serveur en accédant aux propriétés et fonctions de ces objets.  
@@ -38,7 +38,7 @@ L'Automation rend possible pour votre application la manipulation d'objets impl�
   
  Clients avec liaison statique utilisent une classe proxy qui est liée de manière statique avec l’application cliente. Cette classe fournit une encapsulation C++ de type sécurisé de propriétés et les opérations de l’application serveur.  
   
- La classe `COleDispatchDriver` fournit la prise en charge principale pour le côté client d’Automation. À l’aide de la `Add New Item` boîte de dialogue, vous créez une classe dérivée de `COleDispatchDriver`.  
+ La classe `COleDispatchDriver` fournit la prise en charge principale pour le côté client d’Automation. À l’aide de la **ajouter un nouvel élément** boîte de dialogue, vous créez une classe dérivée de `COleDispatchDriver`.  
   
  Vous spécifiez ensuite le fichier de bibliothèque de types décrivant les propriétés et les fonctions de l’objet de l’application serveur. La boîte de dialogue Ajouter un élément lit ce fichier et crée le `COleDispatchDriver`-classe dérivée, avec des fonctions de membre que votre application peut appeler pour accéder aux objets de l’application serveur en C++ de manière sécurisée. Héritent de fonctionnalités supplémentaires `COleDispatchDriver` simplifie le processus d’appel le serveur Automation adéquat.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350010"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931016"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions : modifications apportées aux macros d'exception dans la version 3.0
 Il s’agit d’une rubrique avancée.  
@@ -46,13 +46,13 @@ Il s’agit d’une rubrique avancée.
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- est levée comme un **CException\***, même si elle est construite comme un **CCustomException**. Le **CATCH** macro dans les versions 2.5 et antérieures utilise `CObject::IsKindOf` pour tester le type au moment de l’exécution. Étant donné que l’expression  
+ est levée comme un `CException*`, même si elle est construite comme un `CCustomException`. Le **CATCH** macro dans les versions 2.5 et antérieures utilise `CObject::IsKindOf` pour tester le type au moment de l’exécution. Étant donné que l’expression  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  a la valeur true, le premier bloc catch intercepte l’exception. Dans la version 3.0, qui utilise des exceptions C++ pour implémentent la majorité des macros de gestion des exceptions, le second bloc catch correspond à la levée `CException`.  
   
- Code similaire à celui-ci est rare. Il apparaît généralement lorsqu’un objet d’exception est passé à une autre fonction qui accepte un type générique **CException\***, effectue le traitement de « throw préliminaire » et enfin lève l’exception.  
+ Code similaire à celui-ci est rare. Il apparaît généralement lorsqu’un objet d’exception est passé à une autre fonction qui accepte un type générique `CException*`, effectue le traitement de « throw préliminaire » et enfin lève l’exception.  
   
  Pour contourner ce problème, déplacez l’expression throw à partir de la fonction au code appelant et lève une exception du type réellement connu du compilateur au moment de que l’exception est générée.  
   
@@ -63,7 +63,7 @@ Il s’agit d’une rubrique avancée.
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- À l’aide de **lever** dans le bloc catch bloc provoque le pointeur `e` à supprimer, afin que le site d’interception extérieur recevra un pointeur non valide. Utilisez `THROW_LAST` à lever de nouveau `e`.  
+ À l’aide de **lever** dans le bloc catch bloc provoque le pointeur `e` à supprimer, afin que le site d’interception extérieur recevra un pointeur non valide. Utilisez **THROW_LAST** à lever de nouveau `e`.  
   
  Pour plus d’informations, consultez [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

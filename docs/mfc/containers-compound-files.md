@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348343"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930223"
 ---
 # <a name="containers-compound-files"></a>Conteneurs : fichiers composés
 Cet article décrit les composants et l'implémentation des fichiers composés, ainsi que les avantages et les inconvénients liés à l'utilisation de fichiers composés dans vos applications OLE.  
@@ -46,7 +46,7 @@ Cet article décrit les composants et l'implémentation des fichiers composés, 
   
 -   Les objets de stockage, comme les répertoires, peuvent contenir d'autres objets de stockage et de flux.  
   
--   **LockBytes** objets représentent l’interface entre les objets de stockage et le matériel physique. Elles déterminent la manière dont les octets réels sont écrites sur le périphérique de stockage le **LockBytes** objet accède, comme un disque dur ou d’une zone de mémoire globale. Pour plus d’informations sur **LockBytes** objets et la `ILockBytes` l’interface, consultez la *référence du programmeur OLE*.  
+-   `LockBytes` les objets représentent l’interface entre les objets de stockage et le matériel physique. Elles déterminent la manière dont les octets réels sont écrites sur le périphérique de stockage du `LockBytes` objet accède, comme un disque dur ou d’une zone de mémoire globale. Pour plus d’informations sur `LockBytes` objets et la `ILockBytes` l’interface, consultez la *référence du programmeur OLE*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Avantages et inconvénients des fichiers composés  
  Les fichiers composés offrent des avantages non disponibles avec les méthodes précédentes de stockage de fichiers. Elles comprennent :  

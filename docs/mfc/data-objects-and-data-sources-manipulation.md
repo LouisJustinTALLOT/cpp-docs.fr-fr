@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349907"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929859"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et sources de données : manipulation
 Après avoir créé un objet de données ou d’une source de données, vous pouvez effectuer un nombre d’opérations courantes sur les données, telles que l’insertion et la suppression des données, énumérer les formats de données et bien plus encore. Cet article décrit les techniques nécessaires pour effectuer les opérations les plus courantes. Les rubriques traitées ici sont les suivantes :  
@@ -73,7 +73,7 @@ Après avoir créé un objet de données ou d’une source de données, vous pou
   
     -   Appelez l’objet de données `BeginEnumFormats` fonction membre à énumérer les formats disponibles dans le Presse-papiers. Appelez ensuite `GetNextFormat` jusqu'à ce que le Presse-papiers renvoie un format prend en charge par votre application, ou il n’existe aucun format plus.  
   
- Si vous utilisez `ON_UPDATE_COMMAND_UI`, vous pouvez désormais activer le collage et, éventuellement, des éléments de collage spécial dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Pour plus d’informations sur le conteneur d’applications doivent faire avec les éléments de menu et, consultez [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).  
+ Si vous utilisez **ON_UPDATE_COMMAND_UI**, vous pouvez désormais activer le collage et, éventuellement, des éléments de collage spécial dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Pour plus d’informations sur le conteneur d’applications doivent faire avec les éléments de menu et, consultez [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> La récupération des données à partir d’un objet de données  
  Une fois que vous avez choisi un format de données, il reste qu’à extraire les données de l’objet de données. Pour ce faire, l’utilisateur décide où placer les données, et l’application appelle la fonction appropriée. Les données seront disponibles dans un des supports suivants :  

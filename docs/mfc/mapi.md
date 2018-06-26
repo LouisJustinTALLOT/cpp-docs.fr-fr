@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347531"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930672"
 ---
 # <a name="mapi"></a>MAPI
-Cet article décrit le Microsoft MAPI Messaging Application Programming Interface () pour les développeurs d’applications client message. MFC prend en charge un sous-ensemble de MAPI dans la classe **CDocument** mais n’encapsule ne pas l’intégralité de l’API. Pour plus d’informations, consultez [prise en charge MAPI dans MFC](../mfc/mapi-support-in-mfc.md).  
+Cet article décrit le Microsoft MAPI Messaging Application Programming Interface () pour les développeurs d’applications client message. MFC prend en charge un sous-ensemble de MAPI dans la classe `CDocument` mais n’encapsule ne pas l’intégralité de l’API. Pour plus d’informations, consultez [prise en charge MAPI dans MFC](../mfc/mapi-support-in-mfc.md).  
   
  MAPI est un ensemble de fonctions qui utilisent des applications de messagerie et prenant en charge les messages pour créer, manipuler, transférer et stocker des messages électroniques. Elle offre aux développeurs d’applications les outils pour définir l’objectif et le contenu des messages électroniques et la flexibilité à la gestion des messages électroniques stockés. MAPI fournit également une interface commune que les développeurs d’applications peuvent utiliser pour créer la messagerie et les applications prenant en charge les messages indépendamment du système de messagerie sous-jacent.  
   

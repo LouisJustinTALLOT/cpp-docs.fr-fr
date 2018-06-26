@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350847"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930350"
 ---
 # <a name="dynamic-layout"></a>Disposition dynamique
 Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que l’utilisateur peut redimensionner, et vous pouvez contrôler la façon que la disposition s’ajuste à la modification de taille. Par exemple, vous pouvez ancrer des boutons au bas d'une boîte de dialogue sur le bord inférieur afin qu'ils restent toujours affichés à cet endroit. Vous pouvez également créer des contrôles, tels que des zones de liste, des zones d'édition et des champs de texte, qui s'agrandissent quand l'utilisateur agrandit la boîte de dialogue.  
@@ -31,7 +31,7 @@ Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que
   
  ![Boîte de dialogue après redimensionnement. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- Vous pouvez contrôler la disposition dynamique en configurant chaque contrôle dans l'éditeur de ressources de l'IDE, ou le faire par programme en accédant à l'objet CMFCDynamicLayout d'un contrôle spécifique et en définissant ses propriétés.  
+ Vous pouvez contrôler la disposition dynamique en spécifiant les détails de chaque contrôle dans l’éditeur de ressources dans l’IDE, ou vous pouvez effectuer par programme en accédant à la `CMFCDynamicLayout` de l’objet d’un contrôle spécifique et la définition des propriétés.  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Définition des propriétés de disposition dynamique dans l'éditeur de ressources  
  L'éditeur de ressources vous permet de définir le comportement de disposition dynamique pour une boîte de dialogue sans avoir à écrire de code.  
@@ -61,7 +61,7 @@ Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que
   
 1.  Recherchez ou ajoutez un emplacement dans le code d'implémentation de votre classe de boîte de dialogue où vous souhaitez spécifier la disposition dynamique de la boîte de dialogue. Par exemple, vous pouvez ajouter la méthode `AdjustLayout` dans votre boîte de dialogue et l'appeler à chaque endroit où la disposition doit être modifiée. Vous pouvez l'appeler d'abord à partir du constructeur ou après avoir apporté les modifications à la boîte de dialogue.  
   
-2.  Dans la boîte de dialogue appeler [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), une méthode de la classe CWnd. GetDynamicLayout retourne un pointeur vers un objet CMFCDynamicLayout.  
+2.  Dans la boîte de dialogue appeler [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), une méthode de la `CWnd` classe. `GetDynamicLayout` Retourne un pointeur vers un `CMFCDynamicLayout` objet.  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que
   
 9. La prochaine fois que l’utilisateur redimensionne la boîte de dialogue, la [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) méthode est appelée, et les paramètres.  
   
-10. Si vous souhaitez désactiver la disposition dynamique, appelez [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) avec `FALSE` que pour les `bEnabled` paramètre.  
+10. Si vous souhaitez désactiver la disposition dynamique, appelez [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) avec **FALSE** que pour les *case d’option bActivé* paramètre.  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que
 
  ```  
   
-     La ressource nommée doit faire référence à une boîte de dialogue contenant des informations de disposition spécifiées sous la forme d'une entrée AFX_DIALOG_LAYOUT dans le fichier de ressources, comme dans l'exemple suivant :  
+     La ressource nommée doit faire référence à une boîte de dialogue qui contient des informations de mise en page sous la forme d’un **AFX_DIALOG_LAYOUT** entrée dans le fichier de ressources, comme dans l’exemple suivant :  
   
  ''' * / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  

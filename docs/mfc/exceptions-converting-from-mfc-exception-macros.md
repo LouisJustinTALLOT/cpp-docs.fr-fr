@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350752"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931116"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions : conversion à partir de macros d'exception MFC
 Il s’agit d’une rubrique avancée.  
   
- Cet article explique comment convertir le code existant écrit avec des macros de Microsoft Foundation Class : **essayez**, **CATCH**, **lever**, et ainsi de suite, pour utiliser la gestion d’exceptions C++ mots clés **essayez**, **catch**, et `throw`. Les rubriques traitées ici sont les suivantes :  
+ Cet article explique comment convertir le code existant écrit avec des macros de Microsoft Foundation Class : **essayez**, **CATCH**, **lever**, et ainsi de suite, pour utiliser la gestion d’exceptions C++ mots clés **essayez**, **catch**, et **lever**. Les rubriques traitées ici sont les suivantes :  
   
 -   [Avantages de la conversion](#_core_advantages_of_converting)  
   
@@ -47,7 +47,7 @@ Il s’agit d’une rubrique avancée.
   
 -   Le code qui utilise les mots clés de gestion des exceptions C++ se compile en un peu plus petits. EXE ou. DLL.  
   
--   Les mots clés de gestion des exceptions C++ sont plus polyvalents : ils peuvent gérer les exceptions de tout type de données qui peuvent être copiés (`int`, **float**, `char`, et ainsi de suite), alors que les macros de gestion des exceptions uniquement de la classe `CException` et classes dérivées.  
+-   Les mots clés de gestion des exceptions C++ sont plus polyvalents : ils peuvent gérer les exceptions de tout type de données qui peuvent être copiés (**int**, **float**, **char**, et ainsi de suite), alors que le macros de gestion des exceptions uniquement de la classe `CException` et classes dérivées.  
   
  La principale différence entre les macros et les mots clés est que l’utilisation des macros « automatique » de code supprime une exception interceptée lorsque l’exception passe hors de portée. Code à l’aide de mots clés ne fait pas, vous devez supprimer explicitement une exception interceptée. Pour plus d’informations, consultez l’article [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
@@ -69,19 +69,19 @@ Il s’agit d’une rubrique avancée.
   
 2.  Délimitation des blocs catch :  
   
-     Avec les macros, le **CATCH** macro (avec ses arguments) commence le premier bloc catch ; le `AND_CATCH` macro commence les blocs catch suivants et le `END_CATCH` macro met fin à la séquence des blocs catch.  
+     Avec les macros, le **CATCH** macro (avec ses arguments) commence le premier bloc catch ; le **AND_CATCH** macro commence les blocs catch suivants et le **END_CATCH** (macro) met fin à la séquence des blocs catch.  
   
-     Avec les mots clés, les **catch** (mot clé) (avec sa déclaration d’exceptions) commence chaque bloc catch. Il n’existe aucun équivalent à la `END_CATCH` macro ; fin avec son accolade fermante de ce bloc catch.  
+     Avec les mots clés, les **catch** (mot clé) (avec sa déclaration d’exceptions) commence chaque bloc catch. Il n’existe aucun équivalent à la **END_CATCH** macro ; fin avec son accolade fermante de ce bloc catch.  
   
 3.  L’expression throw :  
   
-     Utilisent des macros `THROW_LAST` à lever à nouveau l’exception actuelle. Le `throw` (mot clé), sans argument, a le même effet.  
+     Utilisent des macros **THROW_LAST** à lever à nouveau l’exception actuelle. Le **lever** (mot clé), sans argument, a le même effet.  
   
 ##  <a name="_core_doing_the_conversion"></a> La conversion  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Convertir le code à l’aide de macros à utiliser les mots clés de gestion des exceptions C++  
   
-1.  Recherchez toutes les occurrences des macros MFC **essayez**, **CATCH**, `AND_CATCH`, `END_CATCH`, **lever**, et `THROW_LAST`.  
+1.  Recherchez toutes les occurrences des macros MFC **essayez**, **CATCH**, **AND_CATCH**, **END_CATCH**, **lever**, et **THROW_LAST**.  
   
 2.  Remplacer ou supprimer toutes les occurrences des macros suivantes :  
   
@@ -89,13 +89,13 @@ Il s’agit d’une rubrique avancée.
   
      **CATCH** (remplacez-la par **catch**)  
   
-     `AND_CATCH` (Remplacez-la par **catch**)  
+     **AND_CATCH** (remplacez-la par **catch**)  
   
-     `END_CATCH` (Supprimer)  
+     **END_CATCH** (supprimer)  
   
-     **LEVER** (remplacez-la par `throw`)  
+     **LEVER** (remplacez-la par **lever**)  
   
-     `THROW_LAST` (Remplacez-la par `throw`)  
+     **THROW_LAST** (remplacez-la par **lever**)  
   
 3.  Modifier les arguments de macro de sorte qu’ils forment des déclarations d’exceptions valides.  
   

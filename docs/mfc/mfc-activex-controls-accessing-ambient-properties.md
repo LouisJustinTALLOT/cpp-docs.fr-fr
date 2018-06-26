@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348223"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931721"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Contrôles ActiveX MFC : accès aux propriétés ambiantes
 Cet article explique comment un contrôle ActiveX peut accéder aux propriétés ambiantes de son conteneur de contrôle.  
@@ -44,7 +44,7 @@ Cet article explique comment un contrôle ActiveX peut accéder aux propriétés
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  L’appelant doit appeler **() de la version** sur la police retournée.  
+    >  L’appelant doit appeler `Release( )` sur la police retournée.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ Cet article explique comment un contrôle ActiveX peut accéder aux propriétés
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- Si la valeur d’une propriété ambiante change (via une action du conteneur), la **OnAmbientPropertyChanged** fonction membre du contrôle est appelée. Remplacez cette fonction membre pour traiter cette notification. Le paramètre **OnAmbientPropertyChanged** est l’ID de dispatch de la propriété ambiante affectée. La valeur de cet ID de dispatch peut être **DISPID_UNKNOWN**, ce qui signifie qu’une ou plusieurs propriétés ambiantes a changé mais que les informations sur les propriétés ont été affectées ne sont pas disponibles.  
+ Si la valeur d’une propriété ambiante change (via une action du conteneur), la `OnAmbientPropertyChanged` la fonction membre du contrôle est appelée. Remplacez cette fonction membre pour traiter cette notification. Le paramètre `OnAmbientPropertyChanged` est l’ID de dispatch de la propriété ambiante affectée. La valeur de cet ID de dispatch peut être DISPID_UNKNOWN, qui indique qu’une ou plusieurs propriétés ambiantes a changé, mais les informations sur les propriétés affectées ne sont pas disponibles.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)

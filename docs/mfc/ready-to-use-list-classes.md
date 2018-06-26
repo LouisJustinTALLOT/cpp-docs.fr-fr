@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 304b47918424a73e4feda9812c372cb28db0623e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 014c3aabb770dc35fdbf106f9a225e52285d201b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345850"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929674"
 ---
 # <a name="ready-to-use-list-classes"></a>Classes de listes prêtes à être utilisées
 Les classes suivantes sont des classes de liste de prêt à l’emploi.  
@@ -32,7 +32,7 @@ Les classes suivantes sont des classes de liste de prêt à l’emploi.
  Stocke des pointeurs vers les objets de la classe `CObject` ou des objets de classes dérivées de `CObject` dans une liste liée.  
   
  [CPtrList](../mfc/reference/cptrlist-class.md)  
- Stocke des pointeurs vers `void` (pointeurs génériques) dans une liste liée.  
+ Stocke des pointeurs vers **void** (pointeurs génériques) dans une liste liée.  
   
  [CStringList](../mfc/reference/cstringlist-class.md)  
  Magasins `CString` objets dans une liste liée.  

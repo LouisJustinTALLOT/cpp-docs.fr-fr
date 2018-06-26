@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb89180db8e1a6cce2c40bbb4bae0965b972afa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343523"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931851"
 ---
 # <a name="documentview-creation"></a>Création d'un document/d'une vue
-Le framework fournit des implémentations de la `New` et **ouvrir** commandes (entre autres) sur le **fichier** menu. Création d’un nouveau document et sa vue associée et la fenêtre frame est un effort conjoint de l’objet d’application, un modèle de document, du document nouvellement créé et la fenêtre frame nouvellement créé. Le tableau suivant récapitule les objets créent que.  
+Le framework fournit des implémentations de la **nouveau** et **ouvrir** commandes (entre autres) sur le **fichier** menu. Création d’un nouveau document et sa vue associée et la fenêtre frame est un effort conjoint de l’objet d’application, un modèle de document, du document nouvellement créé et la fenêtre frame nouvellement créé. Le tableau suivant récapitule les objets créent que.  
   
 ### <a name="object-creators"></a>Créateurs d’objets  
   

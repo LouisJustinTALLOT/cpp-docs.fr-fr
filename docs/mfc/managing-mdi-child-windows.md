@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344933"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929479"
 ---
 # <a name="managing-mdi-child-windows"></a>Gérer les fenêtres enfants MDI
-La fenêtre frame principale MDI (une par application) contient une fenêtre enfant spéciale appelée la **MDICLIENT** fenêtre. Le **MDICLIENT** gère la zone cliente de la fenêtre frame principale et a elle-même des fenêtres enfants : les fenêtres de document dérivées de `CMDIChildWnd`. Étant donné que les fenêtres de document sont des fenêtres frame eux-mêmes (fenêtres MDI enfants), ils peuvent également avoir leurs propres enfants. Dans tous ces cas, la fenêtre parente gère ses fenêtres enfants et transfère des commandes.  
+La fenêtre frame principale MDI (une par application) contient une fenêtre enfant spéciale appelée fenêtre MDICLIENT. La fenêtre MDICLIENT gère la zone cliente de la fenêtre frame principale et a elle-même des fenêtres enfants : les fenêtres de document dérivées de `CMDIChildWnd`. Étant donné que les fenêtres de document sont des fenêtres frame eux-mêmes (fenêtres MDI enfants), ils peuvent également avoir leurs propres enfants. Dans tous ces cas, la fenêtre parente gère ses fenêtres enfants et transfère des commandes.  
   
- Dans une fenêtre frame MDI, la fenêtre frame gère la **MDICLIENT** fenêtre, repositionnant conjointement avec les barres de contrôles. Le **MDICLIENT** , à son tour, gère toutes les fenêtres de frame enfant MDI. L’illustration suivante montre la relation entre une fenêtre frame MDI, sa **MDICLIENT** fenêtre et les fenêtres frame de document enfants.  
+ Dans une fenêtre frame MDI, la fenêtre frame gère la fenêtre MDICLIENT, il conjointement avec les barres de contrôles. Cette dernière, à son tour, gère toutes les fenêtres de frame enfant MDI. L’illustration suivante montre la relation entre une fenêtre frame MDI, sa fenêtre MDICLIENT et ses fenêtres enfants du frame de document.  
   
  ![Fenêtres enfants dans une fenêtre frame MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
 Enfants et des fenêtres de Frame MDI  
