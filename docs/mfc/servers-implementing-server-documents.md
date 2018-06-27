@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380274"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950826"
 ---
 # <a name="servers-implementing-server-documents"></a>Serveurs : implémentation de documents de serveur
 Cet article explique les étapes à suivre pour implémenter correctement un document serveur si vous n’avez pas spécifié l’option serveur OLE dans l’Assistant application.  
   
 #### <a name="to-define-a-server-document-class"></a>Pour définir une classe de document serveur  
   
-1.  Dérivez votre classe de document de `COleServerDoc` au lieu de **CDocument**.  
+1.  Dérivez votre classe de document à partir de `COleServerDoc` au lieu de `CDocument`.  
   
 2.  Créer une classe d’élément serveur dérivée `COleServerItem`.  
   

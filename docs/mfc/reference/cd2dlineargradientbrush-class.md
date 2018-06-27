@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353681"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957245"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush, classe
 Wrapper pour ID2D1LinearGradientBrush.  
@@ -103,7 +103,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
  `CD2DLinearGradientBrush`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush :: ~ CD2DLinearGradientBrush  
@@ -121,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pResource`  
+ *pResource*  
  Interface de la ressource existante. Ne peut pas être NULL  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -140,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `gradientStops`  
+ *gradientStops*  
  Pointeur vers un tableau de structures de D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Une valeur supérieure ou égale à 1 qui spécifie le nombre de points de dégradé dans le tableau gradientStops.  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  Les points de début et fin du dégradé.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  L’espace où la couleur une interpolation entre les points de dégradé est effectuée.  
   
- `extendMode`  
+ *extendMode*  
  Le comportement du dégradé en dehors de la plage normalisées [0,1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Pointeur vers l’opacité et de transformation d’un pinceau.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -172,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pRenderTarget`  
+ *pRenderTarget*  
  Pointeur vers la cible de rendu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -257,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `point`  
+ *Point*  
  Les coordonnées à deux dimensions de fin du dégradé linéaire dans l’espace de coordonnées du pinceau  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -268,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `point`  
+ *Point*  
  Les coordonnées à deux dimensions de départ du dégradé linéaire dans l’espace de coordonnées du pinceau  
   
 ## <a name="see-also"></a>Voir aussi  

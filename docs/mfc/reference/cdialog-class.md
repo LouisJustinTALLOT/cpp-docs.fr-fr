@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374612"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955012"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 La classe de base utilisée pour afficher des boîtes de dialogue sur l’écran.  
@@ -97,7 +97,7 @@ class CDialog : public CWnd
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|Substituez pour effectuer le bouton Annuler ou l’action de touche ÉCHAP. La valeur par défaut ferme la boîte de dialogue et **DoModal** retourne **IDCANCEL**.|  
+|[CDialog::OnCancel](#oncancel)|Substituez pour effectuer le bouton Annuler ou l’action de touche ÉCHAP. La valeur par défaut ferme la boîte de dialogue et `DoModal` retourne **IDCANCEL**.|  
 |[CDialog::OnOK](#onok)|Substituez pour effectuer l’action du bouton OK dans la boîte de dialogue modale. La valeur par défaut ferme la boîte de dialogue et `DoModal` retourne **IDOK**.|  
   
 ## <a name="remarks"></a>Notes  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  Un mappage de données est généré pour gérer automatiquement l’échange de données entre les variables de membre et des contrôles de la boîte de dialogue. Le mappage de données fournit des fonctions pour initialiser les contrôles dans la boîte de dialogue avec les valeurs correctes, récupèrent les données et valident les données.  
   
- Pour créer une boîte de dialogue modale, construisez un objet sur la pile à l’aide du constructeur pour votre classe dérivée de boîte de dialogue, puis appelez `DoModal` pour créer la fenêtre de dialogue et ses contrôles. Si vous souhaitez créer une boîte de dialogue non modale, appelez **créer** dans le constructeur de votre classe de boîte de dialogue.  
+ Pour créer une boîte de dialogue modale, construisez un objet sur la pile à l’aide du constructeur pour votre classe dérivée de boîte de dialogue, puis appelez `DoModal` pour créer la fenêtre de dialogue et ses contrôles. Si vous souhaitez créer une boîte de dialogue non modale, appelez `Create` dans le constructeur de votre classe de boîte de dialogue.  
   
  Vous pouvez également créer un modèle en mémoire en utilisant un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure de données comme décrit dans le Kit de développement logiciel Windows. Après avoir construit un `CDialog` de l’objet, appelez [CreateIndirect](#createindirect) pour créer un non modal boîte de dialogue, ou appelez [InitModalIndirect](#initmodalindirect) et [DoModal](#domodal) pour créer un modal boîte de dialogue.  
   
@@ -146,7 +146,7 @@ class CDialog : public CWnd
   
  `CDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cdialog"></a>  CDialog::CDialog  
@@ -166,13 +166,13 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contient une chaîne se terminant par null qui est le nom d’une ressource de modèle de boîte de dialogue.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  
@@ -182,10 +182,10 @@ CDialog();
   
  Une fois que vous construisez une boîte de dialogue modale avec l’une des méthodes ci-dessus, appelez `DoModal`.  
   
- Pour construire une boîte de dialogue non modale, utilisez la forme protégée de la `CDialog` constructeur. Le constructeur est protégé, car vous devez dériver votre propre classe de boîte de dialogue pour implémenter une boîte de dialogue non modale. Construction d’une boîte de dialogue non modale est un processus en deux étapes. Tout d’abord appeler le constructeur ; Appelez ensuite la **créer** fonction membre pour créer une boîte de dialogue basées sur une ressource, ou appeler `CreateIndirect` pour créer la boîte de dialogue à partir d’un modèle en mémoire.  
+ Pour construire une boîte de dialogue non modale, utilisez la forme protégée de la `CDialog` constructeur. Le constructeur est protégé, car vous devez dériver votre propre classe de boîte de dialogue pour implémenter une boîte de dialogue non modale. Construction d’une boîte de dialogue non modale est un processus en deux étapes. Tout d’abord appeler le constructeur ; Appelez ensuite la `Create` fonction membre pour créer une boîte de dialogue basées sur une ressource, ou appeler `CreateIndirect` pour créer la boîte de dialogue à partir d’un modèle en mémoire.  
   
 ##  <a name="create"></a>  CDialog::Create  
- Appelez **créer** pour créer une boîte de dialogue non modale à l’aide d’un modèle de boîte de dialogue à partir d’une ressource.  
+ Appelez `Create` pour créer une boîte de dialogue non modale à l’aide d’un modèle de boîte de dialogue à partir d’une ressource.  
   
 ```  
 virtual BOOL Create(
@@ -199,30 +199,30 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contient une chaîne se terminant par null qui est le nom d’une ressource de modèle de boîte de dialogue.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de la fenêtre parente (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les deux formes de retour différent de zéro si l’initialisation et la création de la boîte de dialogue a réussi ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez placer l’appel à **créer** dans le constructeur ou un appel après que le constructeur est appelé.  
+ Vous pouvez placer l’appel à `Create` dans le constructeur ou un appel après que le constructeur est appelé.  
   
- Deux formes de la **créer** fonction membre sont fournis pour accéder à la ressource de modèle de boîte de dialogue par le nom du modèle ou numéro d’ID de modèle (par exemple, IDD_DIALOG1).  
+ Deux formes de la `Create` fonction membre sont fournis pour accéder à la ressource de modèle de boîte de dialogue par le nom du modèle ou numéro d’ID de modèle (par exemple, IDD_DIALOG1).  
   
- Pour un formulaire, passez un pointeur à l’objet de fenêtre parent. Si `pParentWnd` est **NULL**, la boîte de dialogue sera créée avec sa fenêtre parente ou propriétaire défini dans la fenêtre principale de l’application.  
+ Pour un formulaire, passez un pointeur à l’objet de fenêtre parent. Si *pParentWnd* est **NULL**, la boîte de dialogue sera créée avec sa fenêtre parente ou propriétaire défini dans la fenêtre principale de l’application.  
   
- Le **créer** fonction membre retourne immédiatement après avoir créé la boîte de dialogue.  
+ Le `Create` fonction membre retourne immédiatement après avoir créé la boîte de dialogue.  
   
  Utilisez le **WS_VISIBLE** de style dans le modèle de boîte de dialogue si la boîte de dialogue doit apparaître lors de la création de la fenêtre parente. Sinon, vous devez appeler `ShowWindow`. Pour obtenir les styles de la boîte de dialogue et leur application, consultez la [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure dans le SDK Windows et [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) dans les *référence MFC*.  
   
- Utilisez le `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par le **créer** (fonction).  
+ Utilisez le `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par le `Create` (fonction).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -243,16 +243,16 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  Pointe vers la mémoire qui contient un modèle de boîte de dialogue permet de créer la boîte de dialogue. Ce modèle est sous la forme d’un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informations de structure et de contrôle, comme décrit dans le Kit de développement logiciel Windows.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parent de l’objet de la boîte de dialogue (de type [CWnd](../../mfc/reference/cwnd-class.md)). S’il s’agit **NULL**, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  Pointe vers un **DLGINIT** ressource.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  Contient un handle de mémoire globale contenant un modèle de boîte de dialogue. Ce modèle est sous la forme d’un **DLGTEMPLATE** structure et les données pour chaque contrôle dans la boîte de dialogue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un `int` valeur qui spécifie la valeur de la `nResult` paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction n’a pas pu créer la boîte de dialogue ou **IDABORT** si une autre erreur s’est produite, auquel cas la fenêtre sortie contient des informations d’erreur à partir de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Un **int** valeur qui spécifie la valeur de la *%nrésultat* paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction n’a pas pu créer la boîte de dialogue ou **IDABORT** si une autre erreur s’est produite, auquel cas la fenêtre sortie contient des informations d’erreur à partir de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre gère toutes les interactions avec l’utilisateur pendant que la boîte de dialogue est active. C’est ce qui rend la boîte de dialogue modale ; Autrement dit, l’utilisateur ne peut pas interagir avec d’autres fenêtres jusqu'à ce que la boîte de dialogue est fermée.  
@@ -296,11 +296,11 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nResult`  
+ *%nrésultat*  
  Contient la valeur à retourner à partir de la boîte de dialogue à l’appelant de `DoModal`.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre retourne `nResult` en tant que valeur de retour de `DoModal`. Vous devez utiliser le `EndDialog` fonction terminer le traitement de chaque fois qu’une boîte de dialogue modale est créée.  
+ Cette fonction membre retourne *%nrésultat* en tant que valeur de retour de `DoModal`. Vous devez utiliser le `EndDialog` fonction terminer le traitement de chaque fois qu’une boîte de dialogue modale est créée.  
   
  Vous pouvez appeler `EndDialog` à tout moment, même dans [OnInitDialog](#oninitdialog), auquel cas vous devez fermer la boîte de dialogue avant qu’il est affichée ou avant de définir le focus d’entrée.  
   
@@ -332,11 +332,11 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWndCtrl`  
+ *pWndCtrl*  
  Identifie la fenêtre (contrôle) qui doit recevoir le focus.  
   
 ### <a name="remarks"></a>Notes  
- Pour obtenir un pointeur vers le contrôle (fenêtre enfant) pour passer en tant que `pWndCtrl`, appelez le `CWnd::GetDlgItem` fonction membre, qui retourne un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet.  
+ Pour obtenir un pointeur vers le contrôle (fenêtre enfant) pour passer en tant que *pWndCtrl*, appelez le `CWnd::GetDlgItem` fonction membre, qui retourne un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
@@ -357,16 +357,16 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  Pointe vers la mémoire qui contient un modèle de boîte de dialogue permet de créer la boîte de dialogue. Ce modèle est sous la forme d’un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informations de structure et de contrôle, comme décrit dans le Kit de développement logiciel Windows.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  Contient un handle de mémoire globale contenant un modèle de boîte de dialogue. Ce modèle est sous la forme d’un **DLGTEMPLATE** structure et les données pour chaque contrôle dans la boîte de dialogue.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  Pointe vers un **DLGINIT** ressource.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -385,7 +385,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpRect`  
+ *lpRect*  
  Pointe vers un [RECT](../../mfc/reference/rect-structure1.md) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) coordonne l’objet qui contient la boîte de dialogue à convertir.  
   
 ### <a name="remarks"></a>Notes  
@@ -393,7 +393,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  Le **GetDialogBaseUnits** fonction Windows retourne des informations sur la taille de la police système, mais vous pouvez spécifier une police différente pour chaque boîte de dialogue si vous utilisez la **DS_SETFONT** de style dans le fichier de définition de ressource. Le `MapDialogRect` fonction Windows utilise la police appropriée pour cette boîte de dialogue.  
   
- Le `MapDialogRect` fonction membre remplace les unités de boîte de dialogue de `lpRect` avec écran unités (pixels) afin que le rectangle peut être utilisé pour créer une boîte de dialogue ou de positionner un contrôle dans une zone.  
+ Le `MapDialogRect` fonction membre remplace les unités de boîte de dialogue de *lpRect* avec écran unités (pixels) afin que le rectangle peut être utilisé pour créer une boîte de dialogue ou de positionner un contrôle dans une zone.  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  Déplace le focus vers le contrôle suivant dans la boîte de dialogue.  
@@ -472,7 +472,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pFont`  
+ [in] *pFont*  
  Spécifie un pointeur vers la police à utiliser en tant que la police par défaut pour tous les contrôles dans cette boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  Spécifie l’ID du contrôle des qui deviendra la valeur par défaut.  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

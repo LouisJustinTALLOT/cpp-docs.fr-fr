@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356922"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955113"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 Implémente le contrôleur de l'animation, qui propose une interface centrale pour créer et gérer des animations.  
@@ -209,7 +209,7 @@ class CAnimationController : public CObject;
   
  `CAnimationController`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationcontroller"></a>  CAnimationController :: ~ CAnimationController  
@@ -227,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pObject`  
+ *pObject*  
  Pointeur vers un objet d’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -246,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Pointeur vers une image clé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -268,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie GroupID.  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  Spécifie s’il faut exécuter immédiatement l’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -296,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie GroupID.  
   
- `pGroup`  
+ *pGroup*  
  Pointeur vers le groupe d’animation à nettoyer.  
   
 ### <a name="remarks"></a>Notes  
@@ -321,16 +321,16 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe pour lequel l’image clé est créée.  
   
- `pTransition`  
+ *pTransition*  
  Pointeur vers la transition. L’image clé sera insérée dans le plan conceptuel après cette transition.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Pointeur vers l’image clé de base pour cette image clé.  
   
- `offset`  
+ *offset*  
  Décalage en secondes à partir de l’image clé de base spécifiée par pKeyframe.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -347,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bEnable`  
+ *bActivez*  
  Spécifie s’il faut définir ou de libérer un gestionnaire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -366,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bEnable`  
+ *bActivez*  
  Spécifie s’il faut définir ou de libérer les gestionnaires.  
   
- `idleBehavior`  
+ *idleBehavior*  
  Spécifie le comportement inactif pour le Gestionnaire de mise à jour du minuteur.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -386,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwHandlerType`  
+ *dwHandlerType*  
  Une combinaison d’indicateurs UI_ANIMATION_PHT_ (voir Remarques), qui spécifie les gestionnaires à définir ou libérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -405,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `bEnable`  
+ *bActivez*  
  Spécifie s’il faut définir ou de libérer un gestionnaire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -426,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie un GroupID.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un plan conceptuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -449,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pVariable`  
+ *pVariable*  
  Pointeur vers la variable de l’animation.  
   
- `ppObject`  
+ *ppObject*  
  Sortie. Contient un pointeur vers l’objet d’animation ou NULL.  
   
- `ppGroup`  
+ *ppGroup*  
  Sortie. Contient un pointeur vers le groupe d’animation qui contient l’objet d’animation, ou NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -619,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Pointeur vers un groupe d’animation, qui a été planifié.  
   
 ### <a name="remarks"></a>Notes  
@@ -638,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Un pointeur vers un groupe d’animation qui contient un objet d’animation dont la valeur a changé.  
   
- `pObject`  
+ *pObject*  
  Pointeur vers un objet d’animation qui contient une variable d’animation dont la valeur a changé.  
   
- `variable`  
+ *Variable*  
  Pointeur vers une variable de l’animation.  
   
- `newValue`  
+ *nouvelle valeur*  
  Spécifie la nouvelle valeur.  
   
- `prevValue`  
+ *prevValue*  
  Spécifie la valeur précédente.  
   
 ### <a name="remarks"></a>Notes  
@@ -666,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `newStatus`  
+ *newStatus*  
  Nouvel état de gestionnaire d’animation.  
   
- `previousStatus`  
+ *previousStatus*  
  État précédent du Gestionnaire de l’animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -703,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `fps`  
+ *i/s*  
  La fréquence d’images actuelle en images par seconde.  
   
 ### <a name="remarks"></a>Notes  
@@ -722,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Un pointeur vers un groupe d’animation qui contient un objet d’animation dont la valeur a changé.  
   
- `pObject`  
+ *pObject*  
  Pointeur vers un objet d’animation qui contient une variable d’animation dont la valeur a changé.  
   
- `variable`  
+ *Variable*  
  Pointeur vers une variable de l’animation.  
   
- `newValue`  
+ *nouvelle valeur*  
  Spécifie la nouvelle valeur.  
   
- `prevValue`  
+ *prevValue*  
  Spécifie la valeur précédente.  
   
 ### <a name="remarks"></a>Notes  
@@ -748,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Pointeur vers un groupe d’animation dont l’animation est prêt à démarrer.  
   
 ### <a name="remarks"></a>Notes  
@@ -765,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Groupe propriétaire du plan conceptuel actuellement planifié.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -791,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Groupe propriétaire du plan conceptuel actuellement planifié.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -817,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Groupe propriétaire du plan conceptuel actuellement planifié.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -843,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Groupe propriétaire du plan conceptuel actuellement planifié.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -869,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Un pointeur vers un groupe d’animation qui possède le storyboard dont l’état a changé.  
   
- `newStatus`  
+ *newStatus*  
  Spécifie le nouvel état.  
   
- `previousStatus`  
+ *previousStatus*  
  Spécifie l’état précédent.  
   
 ### <a name="remarks"></a>Notes  
@@ -889,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Pointeur vers un groupe qui possède le storyboard.  
   
 ### <a name="remarks"></a>Notes  
@@ -913,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe d’animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -929,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pObject`  
+ *pObject*  
  Pointeur vers un objet d’animation.  
   
- `bNoDelete`  
+ *bNoDelete*  
  Si ce paramètre a la valeur TRUE l’objet ne sera pas supprimé à supprimer.  
   
 ### <a name="remarks"></a>Notes  
@@ -946,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
 ### <a name="remarks"></a>Notes  
@@ -962,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe de planification de l’animation.  
   
- `time`  
+ *time*  
  Spécifie l’heure de planification.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -982,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointeur vers l’objet de fenêtre à définir.  
   
 ### <a name="remarks"></a>Notes  

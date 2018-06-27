@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381021"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952591"
 ---
 # <a name="serialization-in-mfc"></a>Sérialisation dans MFC
 Cet article décrit le mécanisme de sérialisation fourni dans la bibliothèque MFC (Microsoft Foundation Class Library) pour permettre aux objets de persister entre les exécutions de votre programme.  
@@ -41,7 +41,7 @@ Cet article décrit le mécanisme de sérialisation fourni dans la bibliothèque
 > [!NOTE]
 >  Ne confondez pas la classe `CArchive` avec les classes iostream à usage général, utilisées pour le texte mis en forme uniquement. La classe `CArchive` est destinée aux objets sérialisés au format binaire.  
   
- Si vous le souhaitez, vous pouvez ignorer la sérialisation MFC pour créer votre propre mécanisme de stockage persistant de données. Vous devrez remplacer les fonctions membres de classe qui initialisent la sérialisation sur commande de l'utilisateur. Consultez la discussion dans [Note technique 22](../mfc/tn022-standard-commands-implementation.md) de la `ID_FILE_OPEN`, **ID_FILE_SAVE**, et **ID_FILE_SAVE_AS** commandes standard.  
+ Si vous le souhaitez, vous pouvez ignorer la sérialisation MFC pour créer votre propre mécanisme de stockage persistant de données. Vous devrez remplacer les fonctions membres de classe qui initialisent la sérialisation sur commande de l'utilisateur. Consultez la discussion dans [Note technique 22](../mfc/tn022-standard-commands-implementation.md) des commandes standards ID_FILE_OPEN, ID_FILE_SAVE et ID_FILE_SAVE_AS.  
   
  Les articles suivants détaillent les deux principales tâches requises pour la sérialisation :  
   

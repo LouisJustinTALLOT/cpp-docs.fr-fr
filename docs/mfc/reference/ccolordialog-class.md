@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357980"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952110"
 ---
 # <a name="ccolordialog-class"></a>Classe de CColorDialog
 Vous permet d’incorporer une boîte de dialogue de sélection de couleur dans votre application.  
@@ -80,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  Pour construire un `CColorDialog` de l’objet, utilisez le constructeur fourni ou dériver une nouvelle classe et utilisez votre propre constructeur personnalisé.  
   
- Une fois que la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs de la [m_cc](#m_cc) structure pour initialiser les valeurs des contrôles de la boîte de dialogue. Le `m_cc` structure est de type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Une fois que la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs de la [m_cc](#m_cc) structure pour initialiser les valeurs des contrôles de la boîte de dialogue. Le *m_cc* structure est de type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
  Après l’initialisation des contrôles de la boîte de dialogue, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et autoriser l’utilisateur à sélectionner une couleur. `DoModal` Retourne la sélection d’utilisateur d’un OK de la boîte de dialogue ( **IDOK**) ou sur Annuler ( **IDCANCEL**) bouton.  
   
@@ -112,7 +112,7 @@ class CColorDialog : public CCommonDialog
   
  `CColorDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="ccolordialog"></a>  CColorDialog::CColorDialog  
@@ -129,10 +129,10 @@ CColorDialog(
  *clrInit*  
  La sélection de couleur par défaut. Si aucune valeur n’est spécifiée, la valeur par défaut est RGB(0,0,0) (noir).  
   
- `dwFlags`  
+ *dwFlags*  
  Un ensemble d’indicateurs permettant de personnaliser la fonction et l’apparence de la boîte de dialogue. Pour plus d’informations, consultez la [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) structure dans le SDK Windows.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
   
 ### <a name="example"></a>Exemple  
@@ -197,7 +197,7 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Après avoir construit un `CColorDialog` de l’objet, vous pouvez utiliser `m_cc` pour définir les divers aspects de la boîte de dialogue avant d’appeler le [DoModal](#domodal) fonction membre.  
+ Après avoir construit un `CColorDialog` de l’objet, vous pouvez utiliser *m_cc* pour définir les divers aspects de la boîte de dialogue avant d’appeler le [DoModal](#domodal) fonction membre.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
@@ -231,18 +231,18 @@ virtual BOOL OnColorOK();
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- Appelez cette fonction après avoir appelé `DoModal` pour forcer la sélection actuelle de la couleur à la valeur de couleur spécifiée dans `clr`.  
+ Appelez cette fonction après avoir appelé `DoModal` pour forcer la sélection actuelle de la couleur à la valeur de couleur spécifiée dans *clr*.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clr`  
+ *CLR*  
  Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction est appelée depuis un gestionnaire de messages ou `OnColorOK`. La boîte de dialogue met à jour automatiquement la sélection d’utilisateur en fonction de la valeur de le `clr` paramètre.  
+ Cette fonction est appelée depuis un gestionnaire de messages ou `OnColorOK`. La boîte de dialogue met à jour automatiquement la sélection d’utilisateur en fonction de la valeur de la *clr* paramètre.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CColorDialog::OnColorOK](#oncolorok).  

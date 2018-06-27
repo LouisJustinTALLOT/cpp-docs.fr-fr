@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357388"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952220"
 ---
 # <a name="cconnectionpoint-class"></a>Classe de CConnectionPoint
 Définit un type particulier d'interface utilisé pour communiquer avec d'autres objets OLE, appelé « point de connexion ».  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|Récupère le conteneur du contrôle qui possède le mappage de connexion.|  
 |[CConnectionPoint::GetIID](#getiid)|Récupère l’ID de l’interface d’un point de connexion.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Récupère le nombre maximal de points de connexion pris en charge par un contrôle.|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|Récupère un pointeur vers l’élément de la connexion à `pos`.|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Récupère un pointeur vers l’élément de la connexion à *pos*.|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Démarre une itération de la carte en retournant un **POSITION** valeur qui peut être passé à un `GetNextConnection` appeler.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|Appelé par l’infrastructure lors de l’établissement ou l’arrêt d’une connexion.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Récupère un pointeur vers l’interface du récepteur demandé.|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- Le `BEGIN_CONNECTION_PART` et `END_CONNECTION_PART` macros déclarent une classe incorporée, `XSampleConnPt` (dérivée de `CConnectionPoint`) qui implémente ce point de connexion particulier. Si vous souhaitez remplacer toutes les `CConnectionPoint` fonctions membres, ou ajouter vos propres fonctions membres, déclarez-les entre ces deux macros. Par exemple, la macro `CONNECTION_IID` remplace la fonction membre `CConnectionPoint::GetIID` lorsqu'elle est placée entre ces deux macros.  
+ Les macros BEGIN_CONNECTION_PART et END_CONNECTION_PART déclarent une classe incorporée, `XSampleConnPt` (dérivée de `CConnectionPoint`) qui implémente ce point de connexion particulier. Si vous souhaitez remplacer toutes les `CConnectionPoint` fonctions membres, ou ajouter vos propres fonctions membres, déclarez-les entre ces deux macros. Par exemple, la macro CONNECTION_IID remplace le `CConnectionPoint::GetIID` fonction membre lorsqu’elle est placée entre ces deux macros.  
   
  Le deuxième fragment de code est inséré dans le fichier d’implémentation (. CPP) de votre classe du contrôle. Ce code implémente le mappage de connexion, ce qui inclut le point de connexion supplémentaires, `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- Une fois ces fragments de code ont été insérées, le contrôle OLE exemple expose un point de connexion pour le **ISampleSink** interface.  
+ Une fois ces fragments de code ont été insérées, le contrôle OLE exemple expose un point de connexion pour le `ISampleSink` interface.  
   
  En règle générale, les points de connexion prennent en charge la « multidiffusion », qui est la possibilité de distribution à plusieurs récepteurs connectés à la même interface. Le fragment de code suivant montre comment accomplir la multidiffusion en parcourant chaque destinataire sur un point de connexion :  
   
@@ -105,7 +105,7 @@ class CConnectionPoint : public CCmdTarget
   
  `CConnectionPoint`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  En cas de réussite, un pointeur vers le conteneur ; dans le cas contraire **NULL**.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction est généralement implémentée par le `BEGIN_CONNECTION_PART` (macro).  
+ Cette fonction est généralement implémentée par le BEGIN_CONNECTION_PART (macro).  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  Appelé par l’infrastructure pour récupérer l’ID d’interface d’un point de connexion.  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  Remplacez cette fonction si vous souhaitez limiter le nombre de récepteurs qui peuvent se connecter à votre contrôle.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- Récupère un pointeur vers l’élément de la connexion à `pos`.  
+ Récupère un pointeur vers l’élément de la connexion à *pos*.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pos`  
+ *bons de commande*  
  Spécifie une référence à un **POSITION** valeur retournée par une précédente `GetNextConnection` ou [GetStartPosition](#getstartposition) appeler.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’élément de connexion spécifié par `pos`, ou NULL.  
+ Un pointeur vers l’élément de connexion spécifié par *pos*, ou NULL.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction est particulièrement utile pour l’itération au sein de tous les éléments dans le mappage de connexion. Lors de l’itération, ignorer toutes les valeurs NULL retournées par cette fonction.  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bAdvise`  
+ *bAdvise*  
  **TRUE**, si une connexion est établie ; sinon **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pUnkSink`  
+ *pUnkSink*  
  Identificateur de l’interface du récepteur demandé.  
   
- `ppInterface`  
- Un pointeur vers le pointeur d’interface identifié par `pUnkSink`. Si l’objet ne prend pas en charge cette interface, \* `ppInterface` a la valeur **NULL**.  
+ *ppInterface*  
+ Un pointeur vers le pointeur d’interface identifié par *pUnkSink*. Si l’objet ne prend pas en charge cette interface, \* *ppInterface* a la valeur **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  

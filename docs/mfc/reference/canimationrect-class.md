@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357085"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957196"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect, classe
 Implémente les fonctionnalités d'un rectangle dont les côtés peuvent être animés.  
@@ -124,7 +124,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
  `CAnimationRect`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationRect::AddTransition  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLeftTransition`  
+ *pLeftTransition*  
  Spécifie la transition pour le côté gauche.  
   
- `pTopTransition`  
+ *pTopTransition*  
  Spécifie la transition pour le côté supérieur.  
   
- `pRightTransition`  
+ *pRightTransition*  
  Spécifie la transition pour le côté droit.  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  Spécifie la transition pour le côté inférieur.  
   
 ### <a name="remarks"></a>Notes  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  Spécifie le rectangle par défaut.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `nObjectID`  
+ *nObjectID*  
  Spécifie l’ID d’objet.  
   
- `dwUserData`  
+ *dwUserData*  
  Spécifie les données définies par l’utilisateur.  
   
- `pt`  
+ *pt*  
  Coordonnées du coin supérieur gauche.  
   
- `sz`  
+ *sz*  
  Taille du rectangle.  
   
- `nLeft`  
+ *nLeft*  
  Spécifie la coordonnée de la limite gauche.  
   
- `nTop`  
+ *nTop*  
  Spécifie la coordonnée de la limite supérieure.  
   
- `nRight`  
+ *nRight*  
  Spécifie la coordonnée de la limite droite.  
   
- `nBottom`  
+ *nBottom*  
  Spécifie la coordonnée de la limite inférieure.  
   
 ### <a name="remarks"></a>Notes  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lst`  
+ *lst*  
  Lorsque la fonction est retournée, contient des pointeurs aux quatre objets CAnimationVariable représentant les coordonnées du rectangle.  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  La nouvelle valeur du rectangle d’animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  Spécifie les nouvelles valeurs par défaut pour la gauche, haut, droite et bas.  
   
 ### <a name="remarks"></a>Notes  

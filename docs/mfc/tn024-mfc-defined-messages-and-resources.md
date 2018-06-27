@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385610"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957183"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024 : messages et ressources définis par MFC
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33385610"
   
  Ces messages Windows privés et les structures de paramètre associé sont déclarés dans l’en-tête privé MFC ' AFXPRIV. H'. Sachez que votre code qui inclut cet en-tête peut reposer sur comportement non documentée et seront probablement rompues dans les futures versions de MFC.  
   
- Dans les rares cas d’avoir à gérer un de ces messages, vous devez utiliser le `ON_MESSAGE` macro de mappage de message et de gérer le message au format LRESULT/WPARAM/LPARAM générique.  
+ Dans le cas rare de devoir gérer un de ces messages, vous devez utiliser la macro de mappage de message ON_MESSAGE et gérer le message au format LRESULT/WPARAM/LPARAM générique.  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -60,12 +60,12 @@ ms.locfileid: "33385610"
   
  **WM_SIZEPARENT**  
   
- Ce message est envoyé par une fenêtre frame à ses enfants immédiats lors du redimensionnement (**CFrameWnd::OnSize** appelle `CFrameWnd::RecalcLayout` qui appelle `CWnd::RepositionBars`) pour repositionner les barres de contrôles autour du côté de l’image. Le **AFX_SIZEPARENTPARAMS** structure contient le rectangle client disponible actuel du parent et un HDWP (qui peut être NULL) avec laquelle appeler `DeferWindowPos` afin de réduire la mise à jour.  
+ Ce message est envoyé par une fenêtre frame à ses enfants immédiats lors du redimensionnement (`CFrameWnd::OnSize` appelle `CFrameWnd::RecalcLayout` qui appelle `CWnd::RepositionBars`) pour repositionner les barres de contrôles autour du côté de l’image. La structure AFX_SIZEPARENTPARAMS contient le rectangle client disponible actuel du parent et un HDWP (qui peut être NULL) avec laquelle appeler `DeferWindowPos` afin de réduire la mise à jour.  
   
 |||  
 |-|-|  
 |wParam|Non utilisé|  
-|lParam|Adresse d’une **AFX_SIZEPARENTPARAMS** structure|  
+|lParam|Adresse d’une structure AFX_SIZEPARENTPARAMS|  
 |retourne|Non utilisé (0)|  
   
  Ignorer le message indique que la fenêtre ne font partie de la mise en page.  
@@ -82,7 +82,7 @@ ms.locfileid: "33385610"
   
  **WM_IDLEUPDATECMDUI**  
   
- Ce message est envoyé dans le temps d’inactivité pour implémenter la mise à jour de la durée d’inactivité de gestionnaires d’interface utilisateur de commande de mise à jour. Si la fenêtre (généralement une barre de contrôle) gère le message, il crée un `CCmdUI` objet (ou un objet d’une classe dérivée) et appelez **CCmdUI::DoUpdate** pour chacun des « éléments » dans la fenêtre. Cela recherchera à son tour une `ON_UPDATE_COMMAND_UI` gestionnaire pour les objets dans la chaîne du Gestionnaire de commandes.  
+ Ce message est envoyé dans le temps d’inactivité pour implémenter la mise à jour de la durée d’inactivité de gestionnaires d’interface utilisateur de commande de mise à jour. Si la fenêtre (généralement une barre de contrôle) gère le message, il crée un `CCmdUI` objet (ou un objet d’une classe dérivée) et appelez `CCmdUI::DoUpdate` pour chacun des « éléments » dans la fenêtre. Il vérifie à son tour un gestionnaire ON_UPDATE_COMMAND_UI pour les objets dans la chaîne du Gestionnaire de commandes.  
   
 |||  
 |-|-|  
@@ -90,11 +90,11 @@ ms.locfileid: "33385610"
 |lParam|Non utilisé (0)|  
 |retourne|Non utilisé (0)|  
   
- *bDisableIfNoHandler* est différente de zéro pour désactiver l’objet de l’interface utilisateur s’il n’est ni un `ON_UPDATE_COMMAND_UI` ni un `ON_COMMAND` gestionnaire.  
+ *bDisableIfNoHandler* est différente de zéro pour désactiver l’objet d’interface utilisateur, s’il existe un ON_UPDATE_COMMAND_UI, ni un gestionnaire ON_COMMAND.  
   
  **WM_EXITHELPMODE**  
   
- Ce message est publié dans une `CFrameWnd` mode à quitter sensibles au contexte d’aide. L’accusé de réception de ce message termine la boucle modale de démarré par **CFrameWnd::OnContextHelp.**  
+ Ce message est publié dans une `CFrameWnd` mode à quitter sensibles au contexte d’aide. L’accusé de réception de ce message termine la boucle modale de démarré par `CFrameWnd::OnContextHelp`.  
   
 |||  
 |-|-|  
@@ -150,35 +150,35 @@ ms.locfileid: "33385610"
   
  **WM_FLOATSTATUS**  
   
- Ce message est envoyé à toutes les fenêtres publicitaires appartenant à une fenêtre frame lorsque le frame est activé ou désactivé par une autre fenêtre frame de niveau supérieur. Ceci est utilisé par l’implémentation de **MFS_SYNCACTIVE** dans `CMiniFrameWnd`, l’activation de ces fenêtres publicitaires de synchroniser avec l’activation de la fenêtre frame de niveau supérieur.  
+ Ce message est envoyé à toutes les fenêtres publicitaires appartenant à une fenêtre frame lorsque le frame est activé ou désactivé par une autre fenêtre frame de niveau supérieur. Ceci est utilisé par l’implémentation de MFS_SYNCACTIVE dans `CMiniFrameWnd`, l’activation de ces fenêtres publicitaires de synchroniser avec l’activation de la fenêtre frame de niveau supérieur.  
   
 |||  
 |-|-|  
-|wParam|Est une des valeurs suivantes :<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|Est une des valeurs suivantes :<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|Non utilisé (0)|  
   
- La valeur de retour doit être différente de zéro si **FS_SYNCACTIVE** n’est définie et la fenêtre synchronise son activation avec le frame parent. `CMiniFrameWnd` retourne zéro lorsque le style est défini sur **MFS_SYNCACTIVE.**  
+ La valeur de retour doit être différent de zéro si FS_SYNCACTIVE n’est définie et la fenêtre synchronise son activation avec le frame parent. `CMiniFrameWnd` retourne zéro lorsque le style est défini sur MFS_SYNCACTIVE.  
   
  Pour plus d’informations, consultez l’implémentation de `CMiniFrameWnd`.  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- Ce message est envoyé à une fenêtre de niveau supérieur quand une fenêtre dans son « groupe de niveau supérieur » est activée ou désactivée. Une fenêtre fait partie d’un groupe de niveau supérieur s’il s’agit d’une fenêtre de niveau supérieur (aucun parent ou le propriétaire), ou il appartienne à une telle fenêtre. Ce message est semblable en cours d’utilisation pour **WM_ACTIVATEAPP,** fonctionne dans les situations où windows appartenant à différents processus sont combinés dans une hiérarchie de la même fenêtre (courante dans les applications OLE).  
+ Ce message est envoyé à une fenêtre de niveau supérieur quand une fenêtre dans son « groupe de niveau supérieur » est activée ou désactivée. Une fenêtre fait partie d’un groupe de niveau supérieur s’il s’agit d’une fenêtre de niveau supérieur (aucun parent ou le propriétaire), ou il appartienne à une telle fenêtre. Ce message est semblable aux WM_ACTIVATEAPP, mais fonctionne dans les situations où windows appartenant à différents processus sont combinés dans une hiérarchie de la même fenêtre (courante dans les applications OLE).  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE  
  Ces messages sont utilisés dans l’implémentation de l’aide contextuelle. Reportez-vous à [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) pour plus d’informations.  
   
 ## <a name="mfc-private-resource-formats"></a>Formats de ressources MFC privé  
- Actuellement, MFC définit deux formats de ressource privée : **RT_TOOLBAR** et **RT_DLGINIT**.  
+ Actuellement, MFC définit deux formats de ressource privée : RT_TOOLBAR et RT_DLGINIT.  
   
 ## <a name="rttoolbar-resource-format"></a>Format de la ressource RT_TOOLBAR  
- La barre d’outils par défaut fourni par AppWizard est basée sur un **RT_TOOLBAR** ressource personnalisée, qui a été introduite dans MFC 4.0. Vous pouvez modifier cette ressource à l’aide de l’éditeur de la barre d’outils.  
+ La barre d’outils par défaut fourni par AppWizard est basée sur une ressource personnalisée RT_TOOLBAR, qui a été introduite dans MFC 4.0. Vous pouvez modifier cette ressource à l’aide de l’éditeur de la barre d’outils.  
   
 ## <a name="rtdlginit-resource-format"></a>Format de la ressource RT_DLGINIT  
  Un format de ressource privée MFC est utilisé pour stocker les informations d’initialisation supplémentaire de boîte de dialogue. Cela inclut les chaînes initiales stockées dans une zone de liste déroulante. Le format de cette ressource n’est pas conçu pour être modifié manuellement, mais est géré par Visual C++.  
   
- Visual C++ et cela **RT_DLGINIT** ressources ne doivent pas utiliser les fonctionnalités de MFC, car il existe également des API à l’aide des informations de la ressource. À l’aide de Visual C++ rend beaucoup plus facile à écrire, maintenir et convertir votre application à long terme.  
+ Visual C++ et cette ressource RT_DLGINIT ne sont pas obligés d’utiliser les fonctionnalités de MFC, car il existe également des API à l’aide des informations de la ressource. À l’aide de Visual C++ rend beaucoup plus facile à écrire, maintenir et convertir votre application à long terme.  
   
- La structure de base d’un **RT_DLGINIT** ressource est comme suit :  
+ La structure de base d’une ressource RT_DLGINIT est la suivante :  
   
 ```  
 +---------------+    \  

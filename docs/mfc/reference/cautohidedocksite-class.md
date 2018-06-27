@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0792601ae773cf9abc8bb44218eb7395ff68da77
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353639"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952782"
 ---
 # <a name="cautohidedocksite-class"></a>Cautohidedocksite, classe
 Le `CAutoHideDockSite` étend la [cdocksite, classe](../../mfc/reference/cdocksite-class.md) pour implémenter les volets d’ancrage masquables automatiquement.  
@@ -100,7 +100,7 @@ class CAutoHideDockSite : public CDockSite
   
  [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxautohidedocksite.h  
   
 ##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane  
@@ -115,10 +115,10 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pBar`|Le volet de base que l’infrastructure de tests.|  
+|[in] *pBar*|Le volet de base que l’infrastructure de tests.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si `pBar` est dérivée de `CMFCAutoHideBar`; `FALSE` dans le cas contraire.  
+ `TRUE` Si *pBar* est dérivée de `CMFCAutoHideBar`; `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
  Si un objet de base volet est dérivé de `CMFCAutoHideBar`, il peut contenir un `CAutoHideDockSite`.  
@@ -138,14 +138,14 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWnd`|Le volet de l’infrastructure est ancré.|  
-|[in] `dockMethod`|Ancrage des options du volet.|  
-|[in] `lpRect`|Un rectangle qui spécifie les limites pour le volet ancré.|  
+|[in] *pWnd*|Le volet de l’infrastructure est ancré.|  
+|[in] *dockMethod*|Ancrage des options du volet.|  
+|[in] *lpRect*|Un rectangle qui spécifie les limites pour le volet ancré.|  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut n’utilise pas le paramètre `dockMethod`, qui est fourni pour une utilisation ultérieure.  
+ L’implémentation par défaut n’utilise pas le paramètre *dockMethod*, qui est fourni pour une utilisation ultérieure.  
   
- Si `lpRect` est `NULL`, elle place le volet de l’emplacement par défaut sur le site d’ancrage. Si le site d’ancrage est horizontal, l’emplacement par défaut est à l’extrême gauche d’un site d’ancrage. Sinon, l’emplacement par défaut est en haut du site d’ancrage.  
+ Si *lpRect* est `NULL`, elle place le volet de l’emplacement par défaut sur le site d’ancrage. Si le site d’ancrage est horizontal, l’emplacement par défaut est à l’extrême gauche d’un site d’ancrage. Sinon, l’emplacement par défaut est en haut du site d’ancrage.  
   
 ##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  Récupère la taille du site d’ancrage en coordonnées d’écran.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `rect`|Une référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.|  
+|[in] *rect*|Une référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.|  
   
 ### <a name="remarks"></a>Notes  
  Le rectangle est ajusté pour les marges de décalage, afin qu’ils ne soient pas inclus.  
@@ -182,7 +182,7 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
+ [in] *nOffset*  
  Le décalage de nouveau.  
   
 ### <a name="remarks"></a>Notes  
@@ -196,7 +196,7 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
+ [in] *nOffset*  
  Le décalage de nouveau.  
   
 ### <a name="remarks"></a>Notes  
@@ -214,10 +214,10 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `rectNewClientArea`|Une valeur réservée.|  
+|[in] *rectNewClientArea*|Une valeur réservée.|  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut n’utilise pas `rectNewClientArea`. Il redessine les volets avec les marges de la barre d’outils globale et l’espacement du bouton.  
+ L’implémentation par défaut n’utilise pas *rectNewClientArea*. Il redessine les volets avec les marges de la barre d’outils globale et l’espacement du bouton.  
   
 ##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  Appels [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pour les objets sur le site d’ancrage.  
@@ -231,10 +231,10 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pAutoHideToolbar`|Un pointeur vers un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) volet de l’objet se trouve sur le `CAutoHideDockSite`.|  
+|[in] *pAutoHideToolbar*|Un pointeur vers un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) volet de l’objet se trouve sur le `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode recherche la ligne qui contient `pAutoHideToolbar`. Il appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les `CMFCAutoHideBar` objets sur cette ligne. Si `pAutoHideToolbar` est introuvable ou il s’agit `NULL`, cette méthode appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les le `CMFCAutoHideBar` des objets sur le `CAutoHideDockSite`.  
+ Cette méthode recherche la ligne qui contient *pAutoHideToolbar*. Il appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les `CMFCAutoHideBar` objets sur cette ligne. Si *pAutoHideToolbar* est introuvable ou il s’agit `NULL`, cette méthode appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les le `CMFCAutoHideBar` des objets sur le `CAutoHideDockSite`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

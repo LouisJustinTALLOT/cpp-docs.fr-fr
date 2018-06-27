@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357226"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956305"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 La structure `AFX_GLOBAL_DATA` contient des champs et des méthodes qui permettent de gérer l’infrastructure ou de personnaliser l’apparence et le comportement de votre application.  
@@ -109,7 +109,7 @@ struct AFX_GLOBAL_DATA
 ### <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `AFX_GLOBAL_DATA`   
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxglobals.h  
   
 ### <a name="see-also"></a>Voir aussi  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- `angle`  
+ *angle*  
  L’angle de rotation dans le sens horaire, en degrés.  
   
- `center`  
+ *Centre*  
  Le point autour duquel pivoter.  
   
- `matrix`  
+ *Matrice*  
  Lorsque cette méthode est retournée, contient la nouvelle transformation de rotation. Vous devez allouer le stockage pour ce paramètre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `pWnd`  
+ [in] *pWnd*  
  Pointeur vers la fenêtre d’un contrôle.  
   
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Pointeur vers un rectangle qui délimite la zone à dessiner. La valeur par défaut est `NULL`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `hTheme`  
+ [in] *hTheme*  
  Handle vers les données de thème d’une fenêtre ou `NULL`. Si ce paramètre n’est pas `NULL` et que les thèmes sont pris en charge, l’infrastructure utilise le thème spécifié pour dessiner le texte. Sinon, l’infrastructure n’utilise pas de thème pour dessiner le texte.  
   
  Utilisez la méthode [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) pour créer un `HTHEME`.  
   
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `iPartId`  
+ [in] *iPartId*  
  Composant du contrôle ayant l’apparence de texte désirée. Pour plus d’informations, consultez la colonne Composants de la table figurant dans [Composants et états](http://msdn.microsoft.com/library/windows/desktop/bb773210). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.  
   
- [in] `iStateId`  
+ [in] *iStateId*  
  État du contrôle ayant l’apparence de texte désirée. Pour plus d’informations, consultez la colonne États de la table figurant dans [Composants et états](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] `strText`  
+ [in] *%{strText/}*  
  Texte à dessiner.  
   
- [in] `rect`  
+ [in] *rect*  
  Limite de la zone dans laquelle le texte spécifié est dessiné.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Combinaison de bits (OR) d’indicateurs qui spécifient comment le texte spécifié est dessiné.  
   
- Si le `hTheme` paramètre est `NULL` ou si les thèmes ne sont pas pris en charge et activés, le `nFormat` paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) méthode décrit les indicateurs valides. Si les thèmes sont pris en charge, le paramètre `dwFlags` de la méthode [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) décrit les indicateurs valides.  
+ Si le *hTheme* paramètre est `NULL` ou si les thèmes ne sont pas pris en charge et activés, le *nFormat* paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) méthode décrit valides indicateurs. Si les thèmes sont pris en charge, le *dwFlags* paramètre de la [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) méthode décrit les indicateurs valides.  
   
- [in] `nGlowSize`  
+ [in] *nGlowSize*  
  Taille d’un éclat dessiné à l’arrière-plan avant de dessiner le texte spécifié. La valeur par défaut est 0.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Couleur utilisée pour dessiner le texte spécifié. La valeur par défaut est la couleur par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si un thème est utilisé pour dessiner le texte spécifié ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Un thème définit le style visuel d’une application. Un thème n’est pas utilisé pour dessiner le texte si le paramètre `hTheme` a la valeur `NULL`, si la méthode [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) n’est pas prise en charge, ou encore si la composition du [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) est désactivée.  
+ Un thème définit le style visuel d’une application. Un thème n’est pas utilisé pour dessiner le texte si le *hTheme* paramètre est `NULL`, ou si le [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) méthode n’est pas prise en charge, ou si [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) () Composition du Gestionnaire de fenêtrage) est désactivée.  
   
 ### <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer la prise en charge de l’accessibilité ; `FALSE` pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `strBuffer`  
+ [in] *strBuffer*  
  Une mémoire tampon de texte.  
   
- [in] `lpszTag`  
+ [in] *lpszTag*  
  Le nom d’une paire d’ouverture et de fermeture des balises XML.  
   
- [out] `strTag`  
- Lorsque cette méthode est retournée, la `strTag` paramètre contient le texte entre les balises XML balises sont nommés par le `lpszTag` paramètre. Les espaces de début ou de fin sont tronqué à partir du résultat.  
+ [out] *strTag*  
+ Lorsque cette méthode est retournée, la *strTag* paramètre contient le texte entre les balises XML balises qui sont nommées par le *lpszTag* paramètre. Les espaces de début ou de fin sont tronqué à partir du résultat.  
   
- [in] `bIsCharsList`  
- `TRUE` Pour convertir des symboles pour les caractères d’échappement dans le `strTag` paramètre en caractères d’échappement réel ; `FALSE` ne pas à effectuer la conversion. La valeur par défaut est `FALSE`. Pour plus d'informations, consultez la section Notes.  
+ [in] *bIsCharsList*  
+ `TRUE` Pour convertir des symboles pour les caractères d’échappement dans le *strTag* paramètre en caractères d’échappement réel ; `FALSE` ne pas à effectuer la conversion. La valeur par défaut est `FALSE`. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Une paire de balises XML se compose de nommé balises qui indiquent le début et la fin d’une séquence de texte dans la mémoire tampon spécifiée. Le `strBuffer` paramètre spécifie la mémoire tampon et le `lpszTag` paramètre spécifie le nom des balises XML.  
+ Une paire de balises XML se compose de nommé balises qui indiquent le début et la fin d’une séquence de texte dans la mémoire tampon spécifiée. Le *strBuffer* paramètre spécifie la mémoire tampon et le *lpszTag* paramètre spécifie le nom des balises XML.  
   
- Utilisez les symboles dans le tableau suivant pour encoder un jeu de caractères d’échappement dans la mémoire tampon spécifiée. Spécifiez `TRUE` pour le `bIsCharsList` paramètre à convertir les symboles dans le `strTag` paramètre en caractères d’échappement réel. Le tableau suivant utilise le [_T()](../../c-runtime-library/data-type-mappings.md) (macro) pour spécifier le symbole et les chaînes de caractères d’échappement.  
+ Utilisez les symboles dans le tableau suivant pour encoder un jeu de caractères d’échappement dans la mémoire tampon spécifiée. Spécifiez `TRUE` pour le *bIsCharsList* paramètre à convertir les symboles dans le *strTag* paramètre en caractères d’échappement réel. Le tableau suivant utilise le [_T()](../../c-runtime-library/data-type-mappings.md) (macro) pour spécifier le symbole et les chaînes de caractères d’échappement.  
   
 |Symbole|Caractère d'échappement|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `nColor`  
- Une valeur qui spécifie un élément d’interface utilisateur dont la couleur est récupérée. Pour obtenir la liste des valeurs valides, consultez la `nIndex` paramètre de la [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) (méthode).  
+ [in] *nColor*  
+ Une valeur qui spécifie un élément d’interface utilisateur dont la couleur est récupérée. Pour obtenir la liste des valeurs valides, consultez la *nIndex* paramètre de la [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de couleur RVB de l’élément d’interface utilisateur spécifié. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="remarks"></a>Notes  
- Si le `nColor` paramètre est hors limites, la valeur de retour est égale à zéro. Zéro est également une valeur RVB, vous ne pouvez pas utiliser cette méthode pour déterminer si une couleur système est pris en charge par le système d’exploitation actuel. Utilisez plutôt le [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) (méthode), qui retourne `NULL` si la couleur n’est pas pris en charge.  
+ Si le *nColor* paramètre est hors limites, la valeur de retour est égale à zéro. Zéro est également une valeur RVB, vous ne pouvez pas utiliser cette méthode pour déterminer si une couleur système est pris en charge par le système d’exploitation actuel. Utilisez plutôt le [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) (méthode), qui retourne `NULL` si la couleur n’est pas pris en charge.  
   
 ### <a name="see-also"></a>Voir aussi  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in, out] `info`  
+ [dans, out] *info*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) structure qui contient les mesures évolutives associés à la zone non cliente d’une fenêtre non réduite.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` pour récupérer la hauteur des caractères lorsque le texte à l’horizontale ; `FALSE` pour récupérer la hauteur des caractères lorsque le texte verticalement. La valeur par défaut est `TRUE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  Le modèle de thread de la fabrique D2D et les ressources qu’il crée.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Une valeur qui spécifie si l’objet de fabrique d’écriture sera partagé ou isolé  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `lpszClassNamePrefix`  
+ [in] *lpszClassNamePrefix*  
  Le nom de la classe de fenêtre à inscrire.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nom qualifié de la classe inscrite si cette méthode a réussi ; Sinon, un [exception ressources](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Notes  
- La valeur de retour est une liste délimitée par des deux-points de la `lpszClassNamePrefix` la chaîne de paramètres et les représentations sous forme de texte hexadécimal des poignées d’en cours d’instance d’application ; le curseur de l’application, qui est le curseur flèche dont l’identificateur est IDC_ARROW ; et le pinceau d’arrière-plan. Pour plus d’informations sur l’inscription des classes de fenêtre MFC, consultez [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
+ La valeur de retour est une liste délimitée par des deux-points de la *lpszClassNamePrefix* la chaîne de paramètres et les représentations sous forme de texte hexadécimal des handles de l’instance actuelle de l’application ; le curseur de l’application, qui est la flèche curseur dont l’identificateur est IDC_ARROW ; et le pinceau d’arrière-plan. Pour plus d’informations sur l’inscription des classes de fenêtre MFC, consultez [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Voir aussi    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `hwnd`  
+ [in] *hwnd*  
  Handle vers la fenêtre superposée.  
   
- [in] `crKey`  
+ [in] *crKey*  
  La couleur de transparence de clé qui le [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) utilise pour composer la fenêtre superposée.  
   
- [in] `bAlpha`  
+ [in] *bAlpha*  
  La valeur alpha est utilisée pour décrire l’opacité de la fenêtre superposée.  
   
- [in] `dwFlags`  
- Combinaison de bits (OR) d’indicateurs qui spécifient les paramètres de méthode à utiliser. Spécifiez LWA_COLORKEY à utiliser le `crKey` paramètre comme la couleur de transparence. Spécifiez LWA_ALPHA à utiliser le `bAlpha` paramètre pour déterminer l’opacité de la fenêtre superposée.  
+ [in] *dwFlags*  
+ Combinaison de bits (OR) d’indicateurs qui spécifient les paramètres de méthode à utiliser. Spécifiez LWA_COLORKEY à utiliser le *crKey* paramètre comme la couleur de transparence. Spécifiez LWA_ALPHA à utiliser le *bAlpha* paramètre pour déterminer l’opacité de la fenêtre superposée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  Pointeur vers une structure qui contient les attributs d’une police.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Pour spécifier que le texte à l’horizontale ; `FALSE` pour spécifier que le texte verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- `pszPath`  
+ *pszPath*  
  [in] Pointeur vers un nom d’affichage.  
   
- `pbc`  
+ *PBC*  
  Pointeur vers un contexte de liaison qui contrôle l’opération d’analyse.  
   
- `riid`  
+ *riid*  
  Une référence à un ID d’interface.  
   
- `ppv`  
- [out] Lorsque cette fonction est retournée, contient le pointeur d’interface demandé dans `riid`. Il s’agit généralement `IShellItem` ou `IShellItem2`.  
+ *PPV*  
+ [out] Lorsque cette fonction est retournée, contient le pointeur d’interface demandé dans *riid*. Il s’agit généralement `IShellItem` ou `IShellItem2`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite ; une valeur d’erreur dans le cas contraire.  

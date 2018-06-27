@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356378"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953568"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition, classe
 Représente une transition de base.  
@@ -121,7 +121,7 @@ class CBaseTransition : public CObject;
   
  `CBaseTransition`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcbasetransition"></a>  CBaseTransition :: ~ CBaseTransition  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Un pointeur vers le storyboard qui s’anime la variable connexe.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Un pointeur vers le storyboard qui s’anime la variable connexe.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLibrary`  
+ *pLibrary*  
  Pointeur vers la bibliothèque de transitions qui crée des transitions standard. Il peut être NULL pour les transitions personnalisées.  
   
- `pFactory`  
+ *pFactory*  
  Pointeur vers la fabrique de transitions qui crée des transitions personnalisées. Il peut être NULL pour les transitions standard.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLibrary`  
+ *pLibrary*  
  Pointeur vers la bibliothèque de transitions qui crée des transitions standard. Il peut être NULL pour les transitions personnalisées.  
   
- `pFactory`  
+ *pFactory*  
  Pointeur vers la fabrique de transitions qui crée des transitions personnalisées. Il peut être NULL pour les transitions standard.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStart`  
+ *pStart*  
  Une image clé qui spécifie le début de la transition.  
   
- `pEnd`  
+ *mettre en attente*  
  Une image clé qui spécifie la fin de la transition.  
   
 ### <a name="remarks"></a>Notes  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pVariable`  
+ *pVariable*  
  Pointeur vers la variable d’animation connexe.  
   
 ### <a name="remarks"></a>Notes  

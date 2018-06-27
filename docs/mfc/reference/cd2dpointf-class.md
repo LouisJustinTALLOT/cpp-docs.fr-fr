@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6439a25072975d28b98e4c6d88c3a1de8703d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e23dbce668234fecc3162d52e0bbea6fb05a7b06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348704"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957271"
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF, classe
 Wrapper pour `D2D1_POINT_2F`.  
@@ -53,7 +53,7 @@ class CD2DPointF : public D2D1_POINT_2F;
   
  `CD2DPointF`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF  
@@ -67,13 +67,13 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  point de code source  
   
- `fX`  
+ *fX*  
  source X  
   
- `fY`  
+ *année fiscale*  
  source Y  
   
 ##  <a name="operator_cpoint"></a>  CD2DPointF::operator CPoint  

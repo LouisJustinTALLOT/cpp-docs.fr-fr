@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc6556cabaa8f1f04a2a53771b495233620e1a14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384450"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954407"
 ---
 # <a name="tn043-rfx-routines"></a>TN043 : routines RFX
 > [!NOTE]
@@ -63,7 +63,7 @@ RFX_Custom(pFX, "Col2",
   
  Consultez « afxdb.h » pour obtenir la liste de toutes les routines d’échange de champ de recordset fournis avec MFC.  
   
- Appels de champ de Recordset sont un moyen de l’inscription des emplacements de mémoire (généralement les membres de données) pour stocker les données de champ pour un **CMySet** classe.  
+ Appels de champ de Recordset sont un moyen de l’inscription des emplacements de mémoire (généralement les membres de données) pour stocker les données de champ pour un `CMySet` classe.  
   
 ## <a name="notes"></a>Notes  
  Fonctions de champ de Recordset sont conçues pour fonctionner uniquement avec la `CRecordset` classes. Ils ne sont plus généralement utilisables par d’autres classes MFC.  
@@ -77,23 +77,23 @@ RFX_Custom(pFX, "Col2",
 ## <a name="how-does-it-work"></a>Comment cela fonctionne-t-il  
  Vous n’avez pas besoin de comprendre les éléments suivants pour pouvoir utiliser l’échange de champs d’enregistrements. Toutefois, comprendre comment cela fonctionne en arrière-plan vous aideront à écrire votre propre procédure exchange.  
   
- Le `DoFieldExchange` fonction membre est très semblable à la `Serialize` fonction membre, il est responsable de l’obtention ou la définition des données vers/depuis un formulaire externe (dans ce cas colonnes à partir du résultat d’une requête ODBC) à partir de/vers des données membres dans la classe. Le `pFX` paramètre constitue le contexte de l’opération d’échange de données et est semblable à la `CArchive` paramètre `CObject::Serialize`. Le `pFX` (un `CFieldExchange` objet) a un indicateur d’opération, qui est similaire à, mais une généralisation de le `CArchive` indicateur de direction. Fonctions RFX peut-être prendre en charge les opérations suivantes :  
+ Le `DoFieldExchange` fonction membre est très semblable à la `Serialize` fonction membre, il est responsable de l’obtention ou la définition des données vers/depuis un formulaire externe (dans ce cas colonnes à partir du résultat d’une requête ODBC) à partir de/vers des données membres dans la classe. Le *pFX* paramètre constitue le contexte de l’opération d’échange de données et est semblable à la *CArchive* paramètre `CObject::Serialize`. Le *pFX* (un `CFieldExchange` objet) a un indicateur d’opération, qui est similaire à, mais une généralisation de le *CArchive* indicateur de direction. Fonctions RFX peut-être prendre en charge les opérations suivantes :  
   
-- **BindParam** — Indiquez où ODBC doit récupérer les données de paramètre  
+- `BindParam` : Indiquer où ODBC doit récupérer les données de paramètre  
   
-- **BindFieldToColumn** — Indiquez où ODBC doit récupérer/dépôt outputColumn données  
+- `BindFieldToColumn` : Indiquer où ODBC doit récupérer/dépôt outputColumn données  
   
-- **Correction** — définissez **CString et CByteArray** longueurs, définir le statut de valeur NULL de bits  
+- `Fixup` : Définissez `CString/CByteArray` longueurs, définir le statut de valeur NULL de bits  
   
-- **MarkForAddNew** : marque incorrectes si la valeur a changé depuis l’appel de AddNew  
+- `MarkForAddNew` — Marque incorrectes si la valeur a changé depuis l’appel de AddNew  
   
-- **MarkForUpdate** : marque incorrectes si la valeur a changé depuis l’appel de l’édition  
+- `MarkForUpdate` — Marque incorrectes si la valeur a changé depuis l’appel de l’édition  
   
-- **Nom** : ajouter des noms de champs pour les champs marqués comme modifiés  
+- `Name` Ajouter des noms de champs pour les champs marqués comme modifiés  
   
-- **NameValue** — ajout «\<nom de colonne > = » pour les champs marqués comme modifiés  
+- `NameValue` : Permet d’ajouter «\<nom de colonne > = » pour les champs marqués comme modifiés  
   
-- **Valeur** — Ajout » » suivi d’un séparateur, telles que ',' ou ' '  
+- `Value` : Permet d’ajouter « » suivi d’un séparateur, telles que ',' ou ' '  
   
 - `SetFieldDirty` : Définition de champ (c'est-à-dire modifiées) incorrectes bits d’état  
   
@@ -105,18 +105,18 @@ RFX_Custom(pFX, "Col2",
   
 - `IsFieldNullable` : Renvoie la valeur TRUE si le champ peut contenir des valeurs NULL  
   
-- **StoreField** : archiver la valeur de champ  
+- `StoreField` : Valeur de champ d’archivage  
   
-- **LoadField** — recharger archivé la valeur de champ  
+- `LoadField` — Recharger la valeur du champ archivés  
   
-- **GetFieldInfoValue** : retourner des informations générales sur un champ  
+- `GetFieldInfoValue` : Retourne des informations générales sur un champ  
   
-- **GetFieldInfoOrdinal** : retourner des informations générales sur un champ  
+- `GetFieldInfoOrdinal` : Retourne des informations générales sur un champ  
   
 ## <a name="user-extensions"></a>Extensions de l’utilisateur  
  Il existe plusieurs façons d’étendre le mécanisme RFX par défaut. Vous pouvez  
   
--   Ajouter de nouveaux types de données. Par exemple :  
+-   Ajouter de nouveaux types de données. Exemple :  
   
  ```  
     CBookmark 
@@ -149,13 +149,13 @@ RFX_Custom(pFX, "Col2",
 ## <a name="writing-a-custom-rfx"></a>L’écriture d’un RFX personnalisé  
  Pour écrire votre propre fonction personnalisée RFX, il est recommandé que vous copiez une fonction RFX existante et modifiez en fonction de vos besoins. En sélectionnant le droit RFX à copier peut faciliter votre travail. Certaines fonctions RFX ont des propriétés uniques à prendre en compte lorsque vous décidez de laquelle copier.  
   
- **RFX_Long et RFX_Int**:  
+ `RFX_Long` et `RFX_Int`:  
  Ce sont les fonctions RFX la plus simple. La valeur de données n’a pas besoin toute interprétation spéciale, et la taille des données est fixe.  
   
- **RFX_Single et RFX_Double**:  
+ `RFX_Single` et `RFX_Double`:  
  Comme RFX_Long et RFX_Int ci-dessus, ces fonctions sont simples et faire utiliser largement de l’implémentation par défaut. Ils sont stockés dans dbflt.cpp au lieu de dbrfx.cpp, toutefois, pour activer le chargement du runtime bibliothèque virgule flottante uniquement lorsqu’elles sont explicitement référence.  
   
- **RFX_Text et RFX_Binary**:  
+ `RFX_Text` et `RFX_Binary`:  
  Ces deux fonctions allouer une mémoire tampon statique pour contenir les informations de type chaîne ou binaire et doivent l’inscrire ces mémoires tampons avec ODBC SQLBindCol au lieu de l’inscription et la valeur. Pour cette raison, ces deux fonctions ont une grande quantité de code spécial.  
   
  `RFX_Date`:  
@@ -164,9 +164,9 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`:  
  Il s’agit de la bibliothèque de classes uniquement fonction RFX qui n’utilise pas de liaison de colonne pour recevoir et envoyer des données. Cette fonction ignore l’opération BindFieldToColumn au lieu de cela, lors de l’opération de correction, alloue du stockage pour contenir les données SQL_LONGVARCHAR ou SQL_LONGVARBINARY entrantes, puis effectue un appel de SQLGetData pour récupérer la valeur dans le stockage alloué. Lorsque vous préparez renvoyer des valeurs de données à la source de données (telles que les opérations NameValue et valeur), cette fonction utilise la fonctionnalité DATA_AT_EXEC d’ODBC. Consultez [Note technique 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) pour plus d’informations sur l’utilisation de SQL_LONGVARBINARY et SQL_LONGVARCHARs.  
   
- Lorsque vous écrivez votre propre **RFX_** fonction, souvent pouvoir utiliser **CFieldExchange::Default** pour implémenter une opération donnée. Examinez l’implémentation de la valeur par défaut pour l’opération en question. Si elle effectue l’opération vous écririez votre **RFX_** fonction, vous pouvez déléguer à la **CFieldExchange::Default.** Vous pouvez voir des exemples de l’appel de **CFieldExchange::Default** dans dbrfx.cpp  
+ Lorsque vous écrivez votre propre **RFX_** fonction, souvent pouvoir utiliser `CFieldExchange::Default` pour implémenter une opération donnée. Examinez l’implémentation de la valeur par défaut pour l’opération en question. Si elle effectue l’opération vous écririez votre **RFX_** fonction, vous pouvez déléguer à la `CFieldExchange::Default`. Vous pouvez voir des exemples de l’appel de `CFieldExchange::Default` dans dbrfx.cpp  
   
- Il est important d’appeler `IsFieldType` au début de votre fonction RFX, puis revenez immédiatement si elle retourne FALSE. Ce mécanisme conserve le paramètre exécuter les opérations de sur **outputColumns**et vice versa (telle qu’un appel **BindParam** sur une **outputColumn**). En outre, `IsFieldType` automatiquement assure le suivi du nombre de **outputColumns** (`m_nFields`) et params (`m_nParams`).  
+ Il est important d’appeler `IsFieldType` au début de votre fonction RFX, puis revenez immédiatement si elle retourne FALSE. Ce mécanisme conserve le paramètre exécuter les opérations de sur *outputColumns*et vice versa (telle qu’un appel `BindParam` sur une *outputColumn*). En outre, `IsFieldType` automatiquement assure le suivi du nombre de *outputColumns* (*m_nFields*) et params (*m_nParams*).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Notes techniques par numéro](../mfc/technical-notes-by-number.md)   

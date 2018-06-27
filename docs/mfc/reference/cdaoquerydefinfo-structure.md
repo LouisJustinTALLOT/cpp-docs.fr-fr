@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367228"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952285"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo, structure
 Le `CDaoQueryDefInfo` structure contient des informations sur un objet querydef défini pour les objets d’accès aux données (DAO).  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Identifiant de manière unique l’objet querydef. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO. Appelez [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) pour récupérer cette propriété directement.  
   
- `m_nType`  
+ *m_nType*  
  Une valeur qui indique le type opérationnel d’un objet querydef. Il peut avoir l’une des valeurs suivantes :  
   
 - **dbQSelect** sélectionnez : la requête sélectionne des enregistrements.  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  Pour plus d’informations, consultez la rubrique « Propriété de Type » dans l’aide de DAO.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  Date et heure de que création de l’objet querydef. Pour récupérer directement la date de création de l’objet querydef, appelez le [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) fonction membre de la `CDaoTableDef` objet associé à la table. Pour plus d’informations, consultez les commentaires ci-dessous. Consultez également la rubrique « DateCreated, LastUpdated propriétés » dans l’aide de DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  La date et l’heure de la dernière modification apportée à l’objet querydef. Pour récupérer directement la date de dernière mise à jour de la table, appelez le [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) fonction membre de l’objet querydef. Pour plus d’informations, consultez les commentaires ci-dessous. Et consultez la rubrique « DateCreated, LastUpdated propriétés » dans l’aide de DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Indique si les modifications peuvent être apportées à un objet querydef. Si cette propriété est **TRUE**, querydef est modifiable ; sinon, il n’est pas. Updatable signifie que la définition de la requête de l’objet querydef peut être modifiée. A la valeur de la propriété d’être mise à jour d’un objet querydef **TRUE** si la définition de requête peut être mis à jour, même si le jeu d’enregistrements résultant n’est pas modifiable. Pour récupérer cette propriété directement, appelez la querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) fonction membre. Pour plus d’informations, consultez la rubrique « Propriété actualisable » dans l’aide de DAO.  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  L’instruction SQL qui définit la requête exécutée par un objet querydef. La propriété SQL contient l’instruction SQL qui détermine la façon dont les enregistrements sont sélectionnés, groupés et triés lorsque vous exécutez la requête. Vous pouvez utiliser la requête pour sélectionner des enregistrements à inclure dans un objet de jeu d’enregistrements de type feuille de réponse dynamique ou instantané. Vous pouvez également définir des requêtes pour modifier des données sans retourner les enregistrements en bloc. Vous pouvez récupérer la valeur de cette propriété directement en appelant la querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) fonction membre.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Fournit des informations sur la source d’une base de données utilisé dans une requête directe. Ces informations prennent la forme d’une chaîne de connexion. Pour plus d’informations sur les chaînes de connexion et pour plus d’informations sur la récupération de la valeur de cette propriété directement, consultez le [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) fonction membre.  
   
  *m_nODBCTimeout*  
@@ -108,7 +108,7 @@ struct CDaoQueryDefInfo
   
  Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la querydef a été créée ou mises à jour. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichier en utilisant le **net temps** commande afin d’éviter des incohérences dans les paramètres de propriété DateCreated et LastUpdated.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366260"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951290"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo, structure
 Le `CDaoRelationInfo` structure contient des informations sur une relation définie entre les champs de deux tables dans un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Identifie l’objet de relation. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  Noms de la table étrangère dans la relation. Une table étrangère est une table utilisée pour contenir des clés étrangères. En règle générale, vous utilisez une table étrangère pour établir ou appliquer l’intégrité référentielle. La table étrangère est généralement le côté « plusieurs » d’une relation un-à-plusieurs. Tables contenant des codes d’États américains ou canadiens provinces les commandes client sont des exemples de tables externes.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Contient des informations sur le type de relation. La valeur de ce membre peut être une des opérations suivantes :  
   
 - **dbRelationUnique** relation est un à un.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** suppressions seront produisent en cascade.  
   
- `m_pFieldInfos`  
- Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le `m_nFields` donnée membre donne le nombre d’éléments du tableau.  
+ *m_pFieldInfos*  
+ Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le *m_nFields* donnée membre donne le nombre d’éléments du tableau.  
   
- `m_nFields`  
- Le nombre de `CDaoRelationFieldInfo` des objets dans le `m_pFieldInfos` membre de données.  
+ *m_nFields*  
+ Le nombre de `CDaoRelationFieldInfo` des objets dans le *m_pFieldInfos* membre de données.  
   
 ## <a name="remarks"></a>Notes  
  Les références aux principaux et secondaires ci-dessus indiquent la façon dont les informations sont retournées par la [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre dans la classe `CDaoDatabase`.  
@@ -83,7 +83,7 @@ struct CDaoRelationInfo
   
  Les informations extraites par le [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre est stockée dans un `CDaoRelationInfo` structure. `CDaoRelationInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationInfo` objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

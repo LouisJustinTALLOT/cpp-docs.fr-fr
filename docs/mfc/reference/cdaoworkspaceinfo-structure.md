@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6979124916e8a9cc1dc723008491bababc0322
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 705c855a817f0c6ca342e51258c7d6c1e61fa392
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366289"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951076"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo, structure
 Le `CDaoWorkspaceInfo` structure contient des informations sur un espace de travail défini pour l’accès de données access (DAO) d’objets de base de données.  
@@ -39,7 +39,7 @@ struct CDaoWorkspaceInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Identifie l’objet de l’espace de travail. Pour récupérer la valeur de cette propriété directement, appelez l’objet querydef [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) fonction membre. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
  *m_strUserName*  
@@ -53,7 +53,7 @@ struct CDaoWorkspaceInfo
   
  Les informations extraites par le [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) fonction membre est stockée dans un `CDaoWorkspaceInfo` structure. `CDaoWorkspaceInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoWorkspaceInfo` objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357013"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952383"
 ---
 # <a name="ccommandlineinfo-class"></a>Classe de CCommandLineInfo
 Contribue à l'analyse de la ligne de commande au démarrage de l'application.  
@@ -93,11 +93,11 @@ class CCommandLineInfo : public CObject
 |*application* nom de fichier|Ouvrir un fichier.|  
 |*application* `/p` nom de fichier|Fichier d’impression à l’imprimante par défaut.|  
 |*application* `/pt` port de pilote d’imprimante nom de fichier|Fichier d’impression à l’imprimante spécifiée.|  
-|*Application* `/dde`|Pour démarrer et await commande DDE.|  
-|*Application* `/Automation`|Démarrer comme serveur OLE automation.|  
-|*Application* `/Embedding`|Démarrer modifier un élément OLE incorporé.|  
-|*Application* `/Register`<br /><br /> *Application* `/Regserver`|Informe l’application d’exécuter des tâches de l’inscription.|  
-|*Application* `/Unregister`<br /><br /> *Application* `/Unregserver`|Informe l’application d’exécuter des tâches de l’annulation de l’inscription.|  
+|*application* `/dde`|Pour démarrer et await commande DDE.|  
+|*application* `/Automation`|Démarrer comme serveur OLE automation.|  
+|*application* `/Embedding`|Démarrer modifier un élément OLE incorporé.|  
+|*application* `/Register`<br /><br /> *application* `/Regserver`|Informe l’application d’exécuter des tâches de l’inscription.|  
+|*application* `/Unregister`<br /><br /> *application* `/Unregserver`|Informe l’application d’exécuter des tâches de l’annulation de l’inscription.|  
   
  Dérivez une nouvelle classe à partir de `CCommandLineInfo` pour gérer d’autres indicateurs et les valeurs de paramètre. Substituer [ParseParam](#parseparam) pour gérer les indicateurs de nouveau.  
   
@@ -106,7 +106,7 @@ class CCommandLineInfo : public CObject
   
  `CCommandLineInfo`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pszParam`  
+ *pszParam*  
  Le paramètre ou un indicateur.  
   
  *bFlag*  
- Indique si `pszParam` est un paramètre ou un indicateur.  
+ Indique si *pszParam* est un paramètre ou un indicateur.  
   
- `bLast`  
+ *Explosion*  
  Indique si c’est l’ou les derniers indicateur sur la ligne de commande.  
   
 ### <a name="remarks"></a>Notes  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) appelle `ParseParam` qu’une seule fois pour chaque paramètre ou un indicateur sur la ligne de commande, en passant l’argument de `pszParam`. Si le premier caractère du paramètre est un ' **-**'ou' **/**», puis il est supprimé et *bFlag* a la valeur `TRUE`. Lors de l’analyse le dernier paramètre, `bLast` a la valeur `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) appelle `ParseParam` qu’une seule fois pour chaque paramètre ou un indicateur sur la ligne de commande, en passant l’argument de *pszParam*. Si le premier caractère du paramètre est un ' **-**'ou' **/**», puis il est supprimé et *bFlag* a la valeur `TRUE`. Lors de l’analyse le dernier paramètre, *bLast* a la valeur `TRUE`.  
   
  L’implémentation par défaut de cette fonction reconnaît les indicateurs suivants : `/p`, `/pt`, `/dde`, `/Automation`, et `/Embedding`, comme indiqué dans le tableau suivant :  
   
@@ -290,11 +290,11 @@ virtual void ParseParam(
 |*application* nom de fichier|Ouvrir un fichier.|  
 |*application* `/p` nom de fichier|Fichier d’impression à l’imprimante par défaut.|  
 |*application* `/pt` port de pilote d’imprimante nom de fichier|Fichier d’impression à l’imprimante spécifiée.|  
-|*Application* `/dde`|Pour démarrer et await commande DDE.|  
-|*Application* `/Automation`|Démarrer comme serveur OLE automation.|  
-|*Application* `/Embedding`|Démarrer modifier un élément OLE incorporé.|  
-|*Application* `/Register`<br /><br /> *Application* `/Regserver`|Informe l’application d’exécuter des tâches de l’inscription.|  
-|*Application* `/Unregister`<br /><br /> *Application* `/Unregserver`|Informe l’application d’exécuter des tâches de l’annulation de l’inscription.|  
+|*application* `/dde`|Pour démarrer et await commande DDE.|  
+|*application* `/Automation`|Démarrer comme serveur OLE automation.|  
+|*application* `/Embedding`|Démarrer modifier un élément OLE incorporé.|  
+|*application* `/Register`<br /><br /> *application* `/Regserver`|Informe l’application d’exécuter des tâches de l’inscription.|  
+|*application* `/Unregister`<br /><br /> *application* `/Unregserver`|Informe l’application d’exécuter des tâches de l’annulation de l’inscription.|  
   
  Ces informations sont stockées dans [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), et [m_nShellCommand](#m_nshellcommand). Les indicateurs sont marquées par soit une oblique ' **/**'ou un trait d’union' **-**'.  
   

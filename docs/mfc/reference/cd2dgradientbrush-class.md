@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354192"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956231"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush, classe
 La classe de base de la CD2DLinearGradientBrush et les classes CD2DRadialGradientBrush.  
@@ -77,7 +77,7 @@ class CD2DGradientBrush : public CD2DBrush;
   
  `CD2DGradientBrush`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush :: ~ CD2DGradientBrush  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `gradientStops`  
+ *gradientStops*  
  Pointeur vers un tableau de structures de D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Une valeur supérieure ou égale à 1 qui spécifie le nombre de points de dégradé dans le tableau gradientStops.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  L’espace où la couleur une interpolation entre les points de dégradé est effectuée.  
   
- `extendMode`  
+ *extendMode*  
  Le comportement du dégradé en dehors de la plage normalisées [0,1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Pointeur vers l’opacité et de transformation d’un pinceau.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

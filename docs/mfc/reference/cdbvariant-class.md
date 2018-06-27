@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369081"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951817"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (classe)
 Représente un type de données variant pour les classes ODBC MFC.  
@@ -85,7 +85,7 @@ class CDBVariant
 |Name|Description|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Contient une valeur de type **BOOL**.|  
-|[CDBVariant::m_chVal](#m_chval)|Contient une valeur de type `unsigned char`.|  
+|[CDBVariant::m_chVal](#m_chval)|Contient une valeur de type **unsigned char**.|  
 |[CDBVariant::m_dblVal](#m_dblval)|Contient une valeur de type **double**.|  
 |[CDBVariant::m_fltVal](#m_fltval)|Contient une valeur de type **float**.|  
 |[CDBVariant::m_iVal](#m_ival)|Contient une valeur de type **court**.|  
@@ -99,14 +99,14 @@ class CDBVariant
 ## <a name="remarks"></a>Notes  
  `CDBVariant` ne dispose pas d’une classe de base.  
   
- `CDBVariant` est semblable à [COleVariant](../../mfc/reference/colevariant-class.md); Cependant, `CDBVariant` n’utilise pas d’OLE. `CDBVariant` Vous permet de stocker une valeur sans se préoccuper du type de données. `CDBVariant` effectue le suivi du type de données de la valeur actuelle, qui est stocké dans une union.  
+ `CDBVariant` est semblable à [COleVariant](../../mfc/reference/colevariant-class.md); Cependant, `CDBVariant` n’utilise pas d’OLE. `CDBVariant` vous permet de stocker une valeur sans se préoccuper du type de données. `CDBVariant` effectue le suivi du type de données de la valeur actuelle, qui est stocké dans une union.  
   
  Classe [CRecordset](../../mfc/reference/crecordset-class.md) utilise `CDBVariant` objets dans les trois fonctions de membre : `GetFieldValue`, `GetBookmark`, et `SetBookmark`. Par exemple, `GetFieldValue` vous permet de récupérer dynamiquement des données dans une colonne. Étant donné que le type de données de la colonne ne peut pas être connu au moment de l’exécution `GetFieldValue` utilise un `CDBVariant` objet pour stocker les données de la colonne.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CDBVariant`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb.h  
   
 ##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant  
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si la valeur de la [m_dwType](#m_dwtype) membre de données est **DBVT_DATE**, **DBVT_STRING**, ou **DBVT_BINARY**, **effacer**libère la mémoire associée au membre de l’union de pointeur. **Désactivez** définit `m_dwType` à **DBVT_NULL**.  
+ Si la valeur de la [m_dwType](#m_dwtype) membre de données est **DBVT_DATE**, **DBVT_STRING**, ou **DBVT_BINARY**, `Clear` libère la mémoire associée au membre de l’union de pointeur. `Clear` définit `m_dwType` à **DBVT_NULL**.  
   
- Le `CDBVariant` appels de destructeur **clair**.  
+ Le `CDBVariant` destructeur appelle `Clear`.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Stocke une valeur de type **BOOL**.  

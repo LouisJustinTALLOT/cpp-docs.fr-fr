@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354133"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954674"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize, classe
 Implémente les fonctionnalités d'un objet taille dont les dimensions peuvent être animées.  
@@ -101,7 +101,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pCXTransition`  
+ *pCXTransition*  
  Pointeur vers la transition pour la largeur.  
   
- `pCYTransition`  
+ *pCYTransition*  
  Pointeur vers la transition pour la hauteur.  
   
 ### <a name="remarks"></a>Notes  
@@ -138,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `szDefault`  
+ *szDefault*  
  Spécifie la taille par défaut.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `nObjectID`  
+ *nObjectID*  
  Spécifie l’ID d’objet.  
   
- `dwUserData`  
+ *dwUserData*  
  Spécifie les données définies par l’utilisateur.  
   
 ### <a name="remarks"></a>Notes  
@@ -163,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lst`  
+ *lst*  
  Lorsque la fonction est retournée, contient des pointeurs aux deux objets CAnimationVariable représentant la largeur et la hauteur.  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -213,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `szValue`  
+ *szValue*  
  Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -257,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `szSrc`  
+ *szSrc*  
  Fait référence à CSize ou SIZE.  
   
 ### <a name="remarks"></a>Notes  
@@ -271,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `szDefault`  
+ *szDefault*  
  Spécifie la nouvelle taille par défaut.  
   
 ### <a name="remarks"></a>Notes  

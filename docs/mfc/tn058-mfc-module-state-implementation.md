@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9702e57cb893c4018662a9bd1713342ba199d06d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385750"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952838"
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058 : implémentation de l'état du module MFC
 > [!NOTE]
@@ -47,21 +47,21 @@ ms.locfileid: "33385750"
 ## <a name="module-state-switching"></a>Changement d’état du module  
  Chaque thread contient un pointeur vers l’état du module « Active » ou « actifs » (sans surprise, le pointeur fait partie d’état local de thread de MFC). Ce pointeur est modifié lorsque le thread d’exécution passe la limite d’un module, tel qu’une application dans un contrôle OLE ou DLL ou un contrôle OLE rappel dans une application.  
   
- L’état du module en cours est basculée en appelant **AfxSetModuleState**. Dans la plupart des cas, vous gérerez jamais directement avec l’API. MFC, dans de nombreux cas, il vous demandera (à WinMain, OLE-points d’entrée, **AfxWndProc**, etc..). Cette opération est effectuée dans n’importe quel composant que vous écrivez en la liant statiquement dans une spéciale **WndProc**et une spéciale `WinMain` (ou `DllMain`) qui sait quel état de module doit être en cours. Vous pouvez voir ce code en examinant DLLMODUL. RPC ou APPMODUL. CPP dans le répertoire MFC\SRC.  
+ L’état du module en cours est basculée en appelant `AfxSetModuleState`. Dans la plupart des cas, vous gérerez jamais directement avec l’API. MFC, dans de nombreux cas, il vous demandera (à WinMain, OLE-points d’entrée, `AfxWndProc`, etc..). Cette opération est effectuée dans n’importe quel composant que vous écrivez en la liant statiquement dans une spéciale `WndProc`et une spéciale `WinMain` (ou `DllMain`) qui sait quel état de module doit être en cours. Vous pouvez voir ce code en examinant DLLMODUL. RPC ou APPMODUL. CPP dans le répertoire MFC\SRC.  
   
- Il est rare que vous souhaitez définir l’état du module et donnez-lui la valeur de retour pas. La plupart du temps que vous souhaitez « push » votre propre module d’état que celui en cours et ensuite, une fois que vous avez terminé, « pop » dans un contexte d’origine. Pour cela, la macro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) et la classe spéciale **AFX_MAINTAIN_STATE**.  
+ Il est rare que vous souhaitez définir l’état du module et donnez-lui la valeur de retour pas. La plupart du temps que vous souhaitez « push » votre propre module d’état que celui en cours et ensuite, une fois que vous avez terminé, « pop » dans un contexte d’origine. Pour cela, la macro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) et la classe spéciale `AFX_MAINTAIN_STATE`.  
   
  `CCmdTarget` possède des fonctionnalités spéciales pour prendre en charge le changement d’état module. En particulier, un `CCmdTarget` est la classe racine utilisée pour OLE automation et OLE COM points d’entrée. Comme n’importe quel autre point d’entrée exposés au système, ces points d’entrée doivent définir l’état du module approprié. Comment est une donnée `CCmdTarget` savoir ce que l’état du module « correct » doit être la réponse est qu’il « souvient de « quel est l’état du module « active » lorsqu’il est construit, tel qu’il peut définir l’état du module en cours pour que « mémorisés » appelé de valeur lorsqu’il est plus loin. Par conséquent, le module d’état qui une donnée `CCmdTarget` est associé l’objet est l’état du module qui était actuelle lorsque l’objet a été construit. Prendre un exemple simple de chargement d’un serveur INPROC, création d’un objet et appeler ses méthodes.  
   
-1.  La DLL est chargée par OLE à l’aide de **LoadLibrary**.  
+1.  La DLL est chargée par OLE à l’aide de `LoadLibrary`.  
   
-2. **RawDllMain fournie** est appelée en premier. Il définit l’état du module à l’état du module statique connu pour la DLL. Pour cette raison **RawDllMain fournie** statiquement liée à la DLL.  
+2. `RawDllMain` est appelée en premier. Il définit l’état du module à l’état du module statique connu pour la DLL. Pour cette raison `RawDllMain` statiquement liée à la DLL.  
   
 3.  Le constructeur de la fabrique de classe associé à notre objet est appelé. `COleObjectFactory` est dérivé de `CCmdTarget` et par conséquent, il souvient dans quel état de module, il a été instancié. Ceci est important, lorsque la fabrique de classe est invitée à créer des objets, il sait maintenant l’état du module pour rendre actuel.  
   
 4. `DllGetClassObject` est appelé pour obtenir la fabrique de classe. MFC recherche dans la liste de fabrique de classe associée à ce module et le retourne.  
   
-5. **COleObjectFactory::XClassFactory2::CreateInstance** est appelée. Avant la création de l’objet et de la renvoyer, cette fonction affecte l’état du module à l’état du module en cours à l’étape 3 (celle qui était actuelle lorsque le `COleObjectFactory` a été instancié). Cette opération est effectuée à l’intérieur de [METHOD_PROLOGUE](com-interface-entry-points.md).  
+5. La méthode `COleObjectFactory::XClassFactory2::CreateInstance` est appelée. Avant la création de l’objet et de la renvoyer, cette fonction affecte l’état du module à l’état du module en cours à l’étape 3 (celle qui était actuelle lorsque le `COleObjectFactory` a été instancié). Cette opération est effectuée à l’intérieur de [METHOD_PROLOGUE](com-interface-entry-points.md).  
   
 6.  Lorsque l’objet est créé, il est trop un `CCmdTarget` dérivés et de la même façon `COleObjectFactory` mémorisés quel état module était actif, c’est ce nouvel objet. À présent l’objet sait quel état de module pour basculer vers chaque fois qu’elle est appelée.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33385750"
   
  Comme vous pouvez le voir, l’état du module est propagée à partir de l’objet à l’objet comme elles sont créées. Il est important d’avoir l’état du module définie de manière appropriée. Si elle n’est pas définie, l’objet de la DLL ou COM peut interagir mal avec une application MFC qui l’appelle, ou peut être impossible de trouver ses propres ressources ou peut échouer dans d’autres façons d’effectuer.  
   
- Notez que certains types de DLL, en particulier les DLL « Extension MFC » ne change pas l’état du module dans leurs **RawDllMain fournie** (en fait, ils généralement n’ont pas un **RawDllMain fournie**). Il s’agit, car ils sont conçus pour se comporter « comme si « elles étaient réellement présents dans l’application qui les utilise. Ils sont très bien une partie de l’application est en cours d’exécution et il s’agit de son intention de modifier l’état global de l’application.  
+ Notez que certains types de DLL, en particulier les DLL « Extension MFC » ne change pas l’état du module dans leurs `RawDllMain` (en fait, ils généralement n’ont pas un `RawDllMain`). Il s’agit, car ils sont conçus pour se comporter « comme si « elles étaient réellement présents dans l’application qui les utilise. Ils sont très bien une partie de l’application est en cours d’exécution et il s’agit de son intention de modifier l’état global de l’application.  
   
  Contrôles OLE et autres DLL est très différents. Ils ne souhaitent pas modifier l’état de l’application appelante ; l’application qui les appelle même peut-être pas une application MFC et par conséquent, il ne peut y avoir aucun état à modifier. Il s’agit de la raison que le changement d’état module a été inventé.  
   
@@ -81,9 +81,9 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  Cela permute l’état du module en cours avec l’état retourné à partir de [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate) jusqu'à la fin de la portée actuelle.  
   
- Les problèmes avec des ressources dans les DLL se poseront si la macro `AFX_MODULE_STATE` n'est pas utilisée. Par défaut, MFC utilise le handle de ressource d'application principale pour charger le modèle de ressources. Ce modèle est réellement enregistré dans la DLL. La cause première est que les informations d'état du module MFC n'ont pas été basculées par la macro `AFX_MODULE_STATE`. Le handle de ressources est récupéré de l'état du module MFC. Ne pas afficher l'état du module provoque l'utilisation du mauvais handle de ressource.  
+ Des problèmes avec les ressources dans les DLL se produira si la macro AFX_MODULE_STATE n’est pas utilisée. Par défaut, MFC utilise le handle de ressource d'application principale pour charger le modèle de ressources. Ce modèle est réellement enregistré dans la DLL. La cause première est que les informations sur l’état du module MFC n’ont pas été basculées par la macro AFX_MODULE_STATE. Le handle de ressources est récupéré de l'état du module MFC. Ne pas afficher l'état du module provoque l'utilisation du mauvais handle de ressource.  
   
- `AFX_MODULE_STATE` n’a pas besoin à placer dans chaque fonction dans la DLL. Par exemple, `InitInstance` peut être appelé par du code MFC dans l'application sans `AFX_MODULE_STATE` car MFC déplace automatiquement l'état du module avant `InitInstance`, puis le restaure après le retour de `InitInstance`. Cela vaut également pour tous les gestionnaires de mappage de message. Les DLL régulières MFC ont une procédure de fenêtre principale spéciale qui bascule automatiquement l’état du module avant d’acheminer un message.  
+ AFX_MODULE_STATE n’a pas besoin à placer dans chaque fonction dans la DLL. Par exemple, `InitInstance` peut être appelé par du code MFC dans l’application sans AFX_MODULE_STATE car MFC déplace automatiquement l’état du module avant `InitInstance` , puis le restaure après le retour `InitInstance` retourne. Cela vaut également pour tous les gestionnaires de mappage de message. Les DLL régulières MFC ont une procédure de fenêtre principale spéciale qui bascule automatiquement l’état du module avant d’acheminer un message.  
   
 ## <a name="process-local-data"></a>Traitement des données locales  
  Traiter les données locales ne sont pas que de telles préoccupation n'avait pas été pour la difficulté du modèle Win32s DLL. Dans Win32s toutes les DLL partagent leurs données globales, même lorsque le chargement par plusieurs applications. Cela est très différent du modèle de données de DLL Win32 « real », où chaque DLL Obtient une copie distincte de son espace de données dans chaque processus qui s’attache à la DLL. Pour ajouter à la complexité, données allouées sur le tas dans une DLL Win32s sont en fait les processus spécifiques (au moins autant que la propriété est). Tenez compte des données et au code suivant :  
@@ -139,7 +139,7 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
   
  MFC implémente ce en deux étapes. Tout d’abord, est une couche sur Win32 **Tls\***  API (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**, etc.) qui Utilisez uniquement deux index TLS par processus, quel que soit le nombre de DLL que vous avez. Ensuite, le `CProcessLocal` modèle est fourni pour accéder à ces données. Il substitue l’opérateur -> qui est ce qui permet la syntaxe intuitive affichés ci-dessus. Tous les objets qui sont encapsulés par `CProcessLocal` doit être dérivé de `CNoTrackObject`. `CNoTrackObject` fournit un allocateur de niveau inférieur (**LocalAlloc**/**LocalFree**) et un destructeur virtuel telles que MFC peut détruire automatiquement les objets locaux de processus lorsque le processus est terminé. Ces objets peuvent avoir un destructeur personnalisé si un nettoyage supplémentaire est nécessaire. L’exemple ci-dessus ne nécessite pas un, étant donné que le compilateur génère un destructeur par défaut pour détruire l’embedded `CString` objet.  
   
- Il existe des autres avantages intéressantes de cette approche. Sont non seulement toutes les `CProcessLocal` objets détruits automatiquement, elles sont construites pas jusqu'à ce qu’ils sont nécessaires. `CProcessLocal::operator->` instancie l’objet associé à la première fois qu’elle est appelée et aucune plus tôt. Dans l’exemple ci-dessus, cela signifie que le «`strGlobal`' chaîne ne sera construite jusqu'à ce que la première fois **SetGlobalString** ou **GetGlobalString** est appelée. Dans certains cas, cela peut aider à réduire le temps de démarrage DLL.  
+ Il existe des autres avantages intéressantes de cette approche. Sont non seulement toutes les `CProcessLocal` objets détruits automatiquement, elles sont construites pas jusqu'à ce qu’ils sont nécessaires. `CProcessLocal::operator->` instancie l’objet associé à la première fois qu’elle est appelée et aucune plus tôt. Dans l’exemple ci-dessus, cela signifie que le «`strGlobal`' chaîne ne sera construite jusqu'à ce que la première fois `SetGlobalString` ou `GetGlobalString` est appelée. Dans certains cas, cela peut aider à réduire le temps de démarrage DLL.  
   
 ## <a name="thread-local-data"></a>Données locales de thread  
  Comme pour traiter les données locales, les données locales de thread sont utilisées lorsque les données doivent être locales sur un thread donné. Autrement dit, vous devez une instance distincte des données pour chaque thread qui accède à ces données. Ce nombre de fois où permet à la place des mécanismes de synchronisation complète. Si les données ne doivent pas être partagée par plusieurs threads, ces mécanismes peuvent être coûteuse et inutiles. Supposons que nous avons eu un `CString` objet (semblable à l’exemple ci-dessus). Nous pouvons rendre thread local en encapsulant avec un `CThreadLocal` modèle :  

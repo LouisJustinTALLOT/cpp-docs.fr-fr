@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352604"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953098"
 ---
 # <a name="carchiveexception-class"></a>Classe d’exception CArchiveException
 Représente une condition d’exception de sérialisation  
@@ -65,11 +65,11 @@ class CArchiveException : public CException
   
  `CArchiveException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Construit un `CArchiveException` objet, le stockage de la valeur `cause` dans l’objet.  
+ Construit un `CArchiveException` objet, le stockage de la valeur *provoquer* dans l’objet.  
   
 ```  
 CArchiveException(
@@ -78,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cause`  
+ *cause*  
  Une variable de type énuméré qui indique la raison de l’exception. Pour obtenir la liste des énumérateurs, consultez la [m_cause](#m_cause) membre de données.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Pointe vers une chaîne contenant le nom de la `CArchive` objet qui a provoqué l’exception.  
   
 ### <a name="remarks"></a>Notes  
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Ce membre de données est une variable publique de type `int`. Ses valeurs sont définies par un `CArchiveException` type énuméré. Voici les énumérateurs et leurs significations :  
+ Ce membre est une variable publique de type **int**. Ses valeurs sont définies par un `CArchiveException` type énuméré. Voici les énumérateurs et leurs significations :  
   
 - **CArchiveException::none** aucune erreur ne s’est produite.  
   

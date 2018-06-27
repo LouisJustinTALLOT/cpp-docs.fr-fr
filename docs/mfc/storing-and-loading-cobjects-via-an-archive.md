@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5cc426e3494117bff98577f02178709a2588f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a2dc227815f8888b85784ea92e58b3e91ffc83a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380726"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954973"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Stockage et chargement de CObjects via une archive
 Stockage et chargement `CObject`via une archive nécessite un examen supplémentaire. Dans certains cas, vous devez appeler la `Serialize` fonction de l’objet, où le `CArchive` objet est un paramètre de la `Serialize` appel, au lieu d’utiliser le **< \<** ou **>>** opérateur de la `CArchive`. L’élément important à prendre en compte est que le `CArchive` **>>** opérateur constructions le `CObject` en mémoire selon `CRuntimeClass` précédemment écrites dans le fichier par l’archive de stockage des informations.  
@@ -37,7 +37,7 @@ Stockage et chargement `CObject`via une archive nécessite un examen supplément
 -   Lors de la désérialisation de l’objet, vous disposez déjà de mémoire allouée pour celle-ci.  
   
 > [!CAUTION]
->  Si vous chargez l’objet en utilisant la `Serialize` (fonction), vous devez également stocker l’objet en utilisant la `Serialize` (fonction). Ne pas stocker à l’aide de la `CArchive` **<<** opérateur et le chargement puis à l’aide la `Serialize` , fonction ou stocker à l’aide de la `Serialize` de fonction, puis son chargement à l’aide de **CArchive >>** opérateur.  
+>  Si vous chargez l’objet en utilisant la `Serialize` (fonction), vous devez également stocker l’objet en utilisant la `Serialize` (fonction). Ne pas stocker à l’aide de la `CArchive` **<<** opérateur et le chargement puis à l’aide la `Serialize` , fonction ou stocker à l’aide de la `Serialize` de fonction, puis son chargement à l’aide de `CArchive >>` opérateur.  
   
  L’exemple suivant illustre les cas :  
   
@@ -45,7 +45,7 @@ Stockage et chargement `CObject`via une archive nécessite un examen supplément
   
  [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- En résumé, si votre classe sérialisable définit incorporé **CObjec**t en tant que membre, vous devez *pas* utiliser le `CArchive` **< \<** et **>>** opérateurs pour cet objet, mais doivent appeler le `Serialize` de fonction à la place. En outre, si votre classe sérialisable définit un pointeur vers un `CObject` (ou un objet dérivé `CObject`) en tant que membre, mais les constructions de cet autre objet dans son propre constructeur, vous devez également appeler `Serialize`.  
+ En résumé, si votre classe sérialisable définit incorporé `CObject` en tant que membre, vous devez *pas* utiliser le `CArchive` **< \<** et **>>** opérateurs pour cet objet, mais doivent appeler le `Serialize` de fonction à la place. En outre, si votre classe sérialisable définit un pointeur vers un `CObject` (ou un objet dérivé `CObject`) en tant que membre, mais les constructions de cet autre objet dans son propre constructeur, vous devez également appeler `Serialize`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sérialisation : sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)

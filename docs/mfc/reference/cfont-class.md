@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c577a153536b7c9a5def95915e802301841a485b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369666"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955025"
 ---
 # <a name="cfont-class"></a>CFont (classe)
 Encapsule une police GDI (Graphics Device Interface) Windows et fournit des fonctions membres pour la manipuler.  
@@ -85,7 +85,7 @@ class CFont : public CGdiObject
   
  `CFont`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cfont"></a>  CFont::CFont  
@@ -123,31 +123,31 @@ BOOL CreateFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nHeight`  
- Spécifie la hauteur souhaitée (en unités logiques) de la police. Consultez le `lfHeight` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure dans le SDK Windows pour obtenir une description. La valeur absolue de `nHeight` ne doit pas dépasser 16 384 unités du périphérique après leur conversion. Pour toutes les comparaisons de hauteur, le mappeur de polices recherche la plus grande police qui ne dépasse pas la taille demandée ou la plus petite police si toutes les polices dépassent la taille demandée.  
+ *nHeight*  
+ Spécifie la hauteur souhaitée (en unités logiques) de la police. Consultez le `lfHeight` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure dans le SDK Windows pour obtenir une description. La valeur absolue de *nHeight* ne doit pas dépasser 16 384 unités du périphérique après leur conversion. Pour toutes les comparaisons de hauteur, le mappeur de polices recherche la plus grande police qui ne dépasse pas la taille demandée ou la plus petite police si toutes les polices dépassent la taille demandée.  
   
- `nWidth`  
- Spécifie la largeur moyenne (en unités logiques) de caractères dans la police. Si `nWidth` est 0, les proportions de l’appareil doit concorder avec les proportions de numérisation des polices disponibles pour trouver la plus proche, déterminé par la valeur absolue de la différence.  
+ *nWidth*  
+ Spécifie la largeur moyenne (en unités logiques) de caractères dans la police. Si *nWidth* est 0, les proportions de l’appareil doit concorder avec les proportions de numérisation des polices disponibles pour trouver la plus proche, déterminé par la valeur absolue de la différence.  
   
- `nEscapement`  
+ *nEscapement*  
  Spécifie l’angle (en unités de degré de 0,1) entre le vecteur d’échappement et l’axe des abscisses de la surface d’affichage. Le vecteur d’échappement est la ligne à l’origine des premier et derniers caractères sur une ligne. L’angle est mesuré dans le sens inverse à partir de l’axe des abscisses. Consultez le `lfEscapement` membre dans le `LOGFONT` structure dans le SDK Windows pour plus d’informations.  
   
- `nOrientation`  
+ *nOrientation*  
  Spécifie l’angle (en unités de degré de 0,1) entre la ligne de base d’un caractère et l’axe des abscisses. L’angle est mesuré dans le sens inverse à partir de l’axe des x pour les systèmes de coordonnées dans lequel l’axe y est bas et vers la droite de l’axe x pour les systèmes de coordonnées dans lequel l’axe y est activé.  
   
- `nWeight`  
- Spécifie l’épaisseur de police (en pixels ancrés par 1 000). Consultez le `lfWeight` membre dans le `LOGFONT` structure dans le SDK Windows pour plus d’informations. Les valeurs spécifiées sont approximatives ; l’apparence réelle dépend de la police. Certaines polices ont uniquement `FW_NORMAL`, `FW_REGULAR`, et `FW_BOLD` poids. Si `FW_DONTCARE` est spécifié, une pondération par défaut est utilisée.  
+ *nWeight*  
+ Spécifie l’épaisseur de police (en pixels ancrés par 1 000). Consultez le *lfWeight* membre dans le `LOGFONT` structure dans le SDK Windows pour plus d’informations. Les valeurs spécifiées sont approximatives ; l’apparence réelle dépend de la police. Certaines polices ont uniquement `FW_NORMAL`, `FW_REGULAR`, et `FW_BOLD` poids. Si `FW_DONTCARE` est spécifié, une pondération par défaut est utilisée.  
   
- `bItalic`  
+ *bItalic*  
  Spécifie si la police est en italique.  
   
- `bUnderline`  
+ *bUnderline*  
  Spécifie si la police est soulignée.  
   
- `cStrikeOut`  
+ *cStrikeOut*  
  Spécifie si les caractères de la police sont barrées. Spécifie une police barré, si une valeur différente de zéro.  
   
- `nCharSet`  
+ *nCharSet*  
  Spécifie les setSee de caractère de la police la `lfCharSet` membre dans le `LOGFONT` structure dans le SDK Windows pour obtenir la liste de valeurs.  
   
  Le jeu de caractères OEM est dépendante du système.  
@@ -156,24 +156,24 @@ BOOL CreateFont(
   
  Le mappeur de polices n’utilise pas le `DEFAULT_CHARSET` valeur. Une application peut utiliser cette valeur pour permettre au nom et la taille de la police pour décrire complètement la police logique. Si une police portant le nom spécifié n’existe pas, une police à partir de n’importe quel jeu de caractères peut être remplacée par la police spécifiée. Pour éviter des résultats inattendus, les applications doivent utiliser le `DEFAULT_CHARSET` valeur avec parcimonie.  
   
- `nOutPrecision`  
+ *nOutPrecision*  
  Spécifie la précision de la sortie souhaitée. La précision de sortie définit le degré de parenté doit correspondre à la sortie de la police demandée hauteur, largeur, l’orientation de caractères, échappement et le pas. Consultez le `lfOutPrecision` membre dans le `LOGFONT` structure dans le SDK Windows pour obtenir la liste de valeurs et plus d’informations.  
   
- `nClipPrecision`  
+ *nClipPrecision*  
  Spécifie la précision de l’extrait de votre choix. La précision de découpage définit comment découper des caractères qui sont partiellement en dehors de la zone de découpage. Consultez le `lfClipPrecision` membre dans le `LOGFONT` structure dans le SDK Windows pour obtenir la liste de valeurs.  
   
  Pour utiliser une police incorporée d’en lecture seule, une application doit spécifier `CLIP_ENCAPSULATE`.  
   
- Pour obtenir une rotation cohérente de périphérique, les polices TrueType et les polices vectorielles, une application peut utiliser l’opérateur OR pour combiner les `CLIP_LH_ANGLES` valeur avec les autres `nClipPrecision` valeurs. Si le `CLIP_LH_ANGLES` bit est défini, la rotation de toutes les polices dépend de l’orientation du système de coordonnées gauche ou droite. (Pour plus d’informations sur l’orientation des systèmes de coordonnées, consultez la description de le `nOrientation` paramètre.) Si `CLIP_LH_ANGLES` est ne pas définie, les polices de périphérique toujours faire pivoter à gauche, mais la rotation des autres polices dépend de l’orientation du système de coordonnées.  
+ Pour obtenir une rotation cohérente de périphérique, les polices TrueType et les polices vectorielles, une application peut utiliser l’opérateur OR pour combiner les `CLIP_LH_ANGLES` valeur avec les autres *nClipPrecision* valeurs. Si le `CLIP_LH_ANGLES` bit est défini, la rotation de toutes les polices dépend de l’orientation du système de coordonnées gauche ou droite. (Pour plus d’informations sur l’orientation des systèmes de coordonnées, consultez la description de la *nOrientation* paramètre.) Si `CLIP_LH_ANGLES` est ne pas définie, les polices de périphérique toujours faire pivoter à gauche, mais la rotation des autres polices dépend de l’orientation du système de coordonnées.  
   
- `nQuality`  
+ *nQuality*  
  Spécifie la qualité de sortie de la police, qui définit comment l’interface GDI doit essayer de faire correspondre les attributs de police logique à ceux d’une police physique réelle. Consultez le `lfQuality` membre dans le `LOGFONT` structure dans le SDK Windows pour obtenir la liste de valeurs.  
   
- `nPitchAndFamily`  
+ *nPitchAndFamily*  
  Spécifie la hauteur et la famille de la police. Consultez le `lfPitchAndFamily` membre dans le `LOGFONT` structure dans le SDK Windows pour obtenir la liste de valeurs et plus d’informations.  
   
- `lpszFacename`  
- Un `CString` ou un pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Les fenêtres [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) fonction peut être utilisée pour énumérer toutes les polices disponibles actuellement. Si `lpszFacename` est `NULL`, l’interface GDI utilise une police indépendant du périphérique.  
+ *lpszFacename*  
+ Un `CString` ou un pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Les fenêtres [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) fonction peut être utilisée pour énumérer toutes les polices disponibles actuellement. Si *lpszFacename* est `NULL`, l’interface GDI utilise une police indépendant du périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -183,7 +183,7 @@ BOOL CreateFont(
   
  Le `CreateFont` (fonction) ne crée pas une nouvelle police Windows GDI. Il sélectionne simplement la plus proche à partir de polices physiques disponibles pour l’interface GDI.  
   
- Applications peuvent utiliser les paramètres par défaut pour la plupart des paramètres lors de la création d’une police logique. Les paramètres qui doivent toujours des valeurs spécifiques sont `nHeight` et `lpszFacename`. Si `nHeight` et `lpszFacename` ne sont pas définies par l’application, la police logique qui est créée est dépendante de l’appareil.  
+ Applications peuvent utiliser les paramètres par défaut pour la plupart des paramètres lors de la création d’une police logique. Les paramètres qui doivent toujours des valeurs spécifiques sont *nHeight* et *lpszFacename*. Si *nHeight* et *lpszFacename* ne sont pas définies par l’application, la police logique qui est créée est dépendante de l’appareil.  
   
  Lorsque vous avez terminé avec le `CFont` objet créé par le `CreateFont` fonction, utilisez `CDC::SelectObject` pour sélectionner une autre police dans le contexte de périphérique, puis supprimez le `CFont` objet n’est plus nécessaire.  
   
@@ -198,7 +198,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpLogFont`  
+ *lpLogFont*  
  Pointe vers un `LOGFONT` structure qui définit les caractéristiques de la police logique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -225,20 +225,20 @@ BOOL CreatePointFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPointSize`  
+ *nPointSize*  
  Hauteur de la police en dixièmes d’un point a demandé. (Par exemple, passer 120 pour demander une police de 12 points.)  
   
- `lpszFaceName`  
- Un `CString` ou un pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Les fenêtres **EnumFontFamilies** fonction peut être utilisée pour énumérer toutes les polices disponibles actuellement. Si `lpszFaceName` est **NULL**, l’interface GDI utilise une police indépendant du périphérique.  
+ *lpszFaceName*  
+ Un `CString` ou un pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Les fenêtres **EnumFontFamilies** fonction peut être utilisée pour énumérer toutes les polices disponibles actuellement. Si *lpszFaceName* est **NULL**, l’interface GDI utilise une police indépendant du périphérique.  
   
- `pDC`  
- Pointeur vers le [CDC](../../mfc/reference/cdc-class.md) objet à être utilisée pour convertir la hauteur en `nPointSize` sur des unités logiques. Si **NULL**, un contexte de périphérique est utilisé pour la conversion.  
+ *contrôleur de domaine principal*  
+ Pointeur vers le [CDC](../../mfc/reference/cdc-class.md) objet à être utilisée pour convertir la hauteur en *nPointSize* sur des unités logiques. Si **NULL**, un contexte de périphérique est utilisé pour la conversion.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Il convertit automatiquement la hauteur en `nPointSize` sur des unités logiques à l’aide de la `CDC` objet pointé par `pDC`.  
+ Il convertit automatiquement la hauteur en *nPointSize* sur des unités logiques à l’aide de la `CDC` objet pointé par *pDC*.  
   
  Lorsque vous avez terminé avec le `CFont` objet créé par le `CreatePointFont` de fonction, tout d’abord sélectionner la police hors du contexte de périphérique, puis supprimez le `CFont` objet.  
   
@@ -255,17 +255,17 @@ BOOL CreatePointFontIndirect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpLogFont`  
+ *lpLogFont*  
  Pointe vers un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure qui définit les caractéristiques de la police logique. Le **lfHeight** membre de la `LOGFONT` structure est mesurée en dixièmes d’un point au lieu des unités logiques. (Par exemple, **lfHeight** à 120 pour demander une police de 12 points.)  
   
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers le [CDC](../../mfc/reference/cdc-class.md) objet à être utilisée pour convertir la hauteur en **lfHeight** sur des unités logiques. Si **NULL**, un contexte de périphérique est utilisé pour la conversion.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction convertit automatiquement la hauteur en **lfHeight** sur des unités logiques à l’aide de la `CDC` objet pointé par `pDC` avant de passer le `LOGFONT` structure une session sur Windows.  
+ Cette fonction convertit automatiquement la hauteur en **lfHeight** sur des unités logiques à l’aide de la `CDC` objet pointé par *pDC* avant de passer le `LOGFONT` structure une session sur Windows.  
   
  Lorsque vous avez terminé avec le `CFont` objet créé par le `CreatePointFontIndirect` de fonction, tout d’abord sélectionner la police hors du contexte de périphérique, puis supprimez le `CFont` objet.  
   
@@ -280,7 +280,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hFont`  
+ *hFont*  
  Un **HFONT** handle vers une police de Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  

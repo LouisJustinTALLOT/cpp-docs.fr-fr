@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f891366c4d195c012f57a6de9a6b96bc1aafceb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19cb52659c92b470057098edf3b65de4042e3bb9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381944"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950368"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Utilisation de l'Éditeur de boîtes de dialogue pour ajouter des contrôles
-Lorsque vous créez votre ressource de modèle de boîte de dialogue avec le [éditeur de boîte de dialogue](../windows/dialog-editor.md), vous faites glisser les contrôles à partir d’une palette de contrôles et les déposer dans la boîte de dialogue. Les spécifications pour ce type de contrôle est ajouté à la ressource de modèle de boîte de dialogue. Lorsque vous construisez un objet de la boîte de dialogue et l’appel de ses **créer** ou `DoModal` fonction membre, l’infrastructure crée un contrôle Windows et le place dans la fenêtre de la boîte de dialogue à l’écran.  
+Lorsque vous créez votre ressource de modèle de boîte de dialogue avec le [éditeur de boîte de dialogue](../windows/dialog-editor.md), vous faites glisser les contrôles à partir d’une palette de contrôles et les déposer dans la boîte de dialogue. Les spécifications pour ce type de contrôle est ajouté à la ressource de modèle de boîte de dialogue. Lorsque vous construisez un objet de la boîte de dialogue et l’appel de ses `Create` ou `DoModal` fonction membre, l’infrastructure crée un contrôle Windows et le place dans la fenêtre de la boîte de dialogue à l’écran.  
   
  Vous pouvez à la place [créer manuellement des contrôles](../mfc/adding-controls-by-hand.md) si vous le souhaitez. Il s’agit plus de travail.  
   

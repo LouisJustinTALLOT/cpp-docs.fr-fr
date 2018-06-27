@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350795"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956445"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF, classe
 Wrapper pour `D2D1_RECT_F`.  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Retourne un `boolean` valeur qui indique si une expression ne contient aucune donnée valide ( `null`).|  
+|[CD2DRectF::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide ( **null**).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -61,7 +61,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
@@ -81,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  rectangle source  
   
- `fLeft`  
+ *fLeft*  
  Coordonnée gauche source  
   
- `fTop`  
+ *fTop*  
  coordonnée supérieure source  
   
- `fRight`  
+ *fait peur*  
  coordonnée droite source  
   
- `fBottom`  
+ *fBottom*  
  Coordonnée inférieure source  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352221"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957115"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsque l'état d'un storyboard est modifié ou qu'un storyboard est mis à jour.  
@@ -69,7 +69,7 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
   
  `CAnimationStoryboardEventHandler`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
@@ -89,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
@@ -108,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `storyboard`  
+ *table de montage séquentiel*  
  Pointeur vers la table de montage séquentiel dont l’état a changé.  
   
- `newStatus`  
+ *newStatus*  
  Spécifie le nouvel état de la table de montage séquentiel.  
   
- `previousStatus`  
+ *previousStatus*  
  Spécifie l’état précédent de la table de montage séquentiel.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -128,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `storyboard`  
+ *table de montage séquentiel*  
  Pointeur vers le storyboard qui a été mis à jour.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -142,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
 ## <a name="see-also"></a>Voir aussi  

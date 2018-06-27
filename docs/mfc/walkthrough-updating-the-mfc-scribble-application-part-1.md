@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385107"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956793"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
 Cette procédure pas à pas montre comment modifier une application MFC existante à utiliser l’interface utilisateur du ruban. Visual Studio prend en charge le ruban Office 2007 et le ruban paysages de Windows 7. Pour plus d’informations sur l’interface utilisateur du ruban, consultez [rubans](http://go.microsoft.com/fwlink/p/?linkid=129233) sur le site Web MSDN.  
@@ -186,31 +186,31 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
 3.  Vous pouvez personnaliser le bouton d’Application en modifiant ses propriétés. Les ID de message utilisés dans ce code sont déjà définis dans le menu pour 1.0 de dessin à main levée.  
   
-4.  Dans la vue conception, cliquez sur le bouton d’Application pour afficher ses propriétés. Modifier les valeurs de propriété comme suit : **Image** à `IDB_RIBBON_MAIN`, **invite** à `File`, **clés** à `f`, **degrandesImages** à `IDB_RIBBON_FILELARGE`, et **petites Images** à `IDB_RIBBON_FILESMALL`.  
+4.  Dans la vue conception, cliquez sur le bouton d’Application pour afficher ses propriétés. Modifier les valeurs de propriété comme suit : **Image** à *IDB_RIBBON_MAIN*, **invite** à *fichier*, **clés** pour *f*, **grandes Images** à *IDB_RIBBON_FILELARGE*, et **petites Images** à *IDB_RIBBON_ FILESMALL*.  
   
 5.  Les modifications suivantes créer le menu qui s’affiche lorsque l’utilisateur clique sur le bouton d’Application. Cliquez sur le bouton de sélection (**...** ) à côté **principal éléments** pour ouvrir le **Éditeur d’éléments**.  
   
-    1.  Cliquez sur **ajouter** pour ajouter un bouton. Modification **légende** à `&New`, **ID** à `ID_FILE_NEW`, **Image** à `0`, **Image grande** à `0`.  
+    1.  Cliquez sur **ajouter** pour ajouter un bouton. Modification **légende** à *& nouveau*, **ID** à *ID_FILE_NEW*, **Image** à *0*, **Image grande** à *0*.  
   
-    2.  Cliquez sur **ajouter** pour ajouter un deuxième bouton. Modification **légende** à `&Save`, **ID** à `ID_FILE_SAVE`, **Image** à `2`, et **Image grande** à `2`.  
+    2.  Cliquez sur **ajouter** pour ajouter un deuxième bouton. Modification **légende** à *& Enregistrer*, **ID** à *ID_FILE_SAVE*, **Image** à *2* , et **Image grande** à *2*.  
   
-    3.  Cliquez sur **ajouter** pour ajouter un bouton de tiers. Modification **légende** à `Save &As`, **ID** à `ID_FILE_SAVE_AS`, **Image** à `3`, et **Image grande** à `3`.  
+    3.  Cliquez sur **ajouter** pour ajouter un bouton de tiers. Modification **légende** à *en & registrer sous*, **ID** à *ID_FILE_SAVE_AS*, **Image** à *3*, et **Image grande** à *3*.  
   
-    4.  Cliquez sur **ajouter** pour ajouter un quatrième bouton. Modification **légende** à `&Print`, **ID** à `ID_FILE_PRINT`, **Image** à `4`, et **Image grande** à `4`.  
+    4.  Cliquez sur **ajouter** pour ajouter un quatrième bouton. Modification **légende** à *& Imprimer*, **ID** à *ID_FILE_PRINT*, **Image** à *4* , et **Image grande** à *4*.  
   
     5.  Modifier la **élément** type **séparateur** puis cliquez sur **ajouter**.  
   
-    6.  Modifier la **élément** type **bouton**. Cliquez sur **ajouter** pour ajouter un cinquième bouton. Modification **légende** à `&Close`, **ID** à `ID_FILE_CLOSE`, **Image** à `5`, et **Image grande** à `5`.  
+    6.  Modifier la **élément** type **bouton**. Cliquez sur **ajouter** pour ajouter un cinquième bouton. Modification **légende** à *& fermer*, **ID** à *ID_FILE_CLOSE*, **Image** à *5* , et **Image grande** à *5*.  
   
 6.  Les modifications suivantes créer un sous-menu sous le bouton d’impression que vous avez créé à l’étape précédente.  
   
-    1.  Cliquez sur le **impression** bouton, remplacez le **élément** type **étiquette**, puis cliquez sur **insérer**. Modification **légende** à `Preview and print the document`.  
+    1.  Cliquez sur le **impression** bouton, remplacez le **élément** type **étiquette**, puis cliquez sur **insérer**. Modification **légende** à *afficher un aperçu et imprimer le document*.  
   
-    2.  Cliquez sur le **impression** bouton, remplacez le **élément** type **bouton**et cliquez sur **insérer**. Modification **légende** à `&Print`, **ID** à `ID_FILE_PRINT`, **Image** à `4`, et **Image grande** à `4`.  
+    2.  Cliquez sur le **impression** bouton, remplacez le **élément** type **bouton**et cliquez sur **insérer**. Modification **légende** à *& Imprimer*, **ID** à *ID_FILE_PRINT*, **Image** à *4* , et **Image grande** à *4*.  
   
-    3.  Cliquez sur le **impression** puis cliquez sur **insérer** pour ajouter un bouton. Modification **légende** à `&Quick Print`, **ID** à `ID_FILE_PRINT_DIRECT`, **Image** à `7`, et **Image grande** à `7`.  
+    3.  Cliquez sur le **impression** puis cliquez sur **insérer** pour ajouter un bouton. Modification **légende** à *& rapide impression*, **ID** à *ID_FILE_PRINT_DIRECT*, **Image** à *7*, et **Image grande** à *7*.  
   
-    4.  Cliquez sur le **impression** puis cliquez sur **insérer** pour ajouter un autre bouton. Modification **légende** à `Print Pre&view`, **ID** à `ID_FILE_PRINT_PREVIEW`, **Image** à `6`, et **Image grande** à `6`.  
+    4.  Cliquez sur le **impression** puis cliquez sur **insérer** pour ajouter un autre bouton. Modification **légende** à *impression Aperç & u*, **ID** à *ID_FILE_PRINT_PREVIEW*, **Image** à *6*, et **Image grande** à *6*.  
   
     5.  Vous avez modifié le **principal éléments**. Cliquez sur **fermer** pour quitter le **Éditeur d’éléments**.  
   
@@ -218,7 +218,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
     1.  Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (**...** ) à côté **bouton** pour ouvrir le **Éditeur d’éléments**.  
   
-    2.  Cliquez sur **ajouter** pour ajouter un bouton. Modification **légende** à `E&xit`, **ID** à `ID_APP_EXIT`, **Image** à `8`.  
+    2.  Cliquez sur **ajouter** pour ajouter un bouton. Modification **légende** à *& quitter*, **ID** à *ID_APP_EXIT*, **Image** à *8* .  
   
  [[Sections](#top)]  
   
@@ -233,7 +233,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
     CMFCRibbonBar m_wndRibbonBar ;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>Pour ajouter une catégorie d’accueil et de modifier le panneau de configuration  
   
-1.  Le programme de dessin à main levée ne requiert qu’une seule catégorie. Dans la vue de conception, cliquez sur **catégorie** pour afficher ses propriétés. Modifier les valeurs de propriété comme suit : **légende** à `&Home`, **grandes Images** à `IDB_RIBBON_HOMELARGE`, **petites Images** à `IDB_RIBBON_HOMESMALL`.  
+1.  Le programme de dessin à main levée ne requiert qu’une seule catégorie. Dans la vue de conception, cliquez sur **catégorie** pour afficher ses propriétés. Modifier les valeurs de propriété comme suit : **légende** à *& accueil*, **grandes Images** à *IDB_RIBBON_HOMELARGE*,  **Petites Images** à *IDB_RIBBON_HOMESMALL*.  
   
-2.  Chaque catégorie de ruban s’articule autour des panneaux nommées. Chaque panneau contient un ensemble de contrôles qui effectuent des opérations connexes. Cette catégorie contient un panneau de configuration. Cliquez sur **panneau**, puis modifiez **légende** à `Edit` et **Index d’images** à `0`.  
+2.  Chaque catégorie de ruban s’articule autour des panneaux nommées. Chaque panneau contient un ensemble de contrôles qui effectuent des opérations connexes. Cette catégorie contient un panneau de configuration. Cliquez sur **panneau**, puis modifiez **légende** à *modifier* et **Index d’images** à *0*.  
   
-3.  Pour le **modifier** du panneau, ajouter un bouton qui est responsable de l’effacement du contenu du document. L’ID de message pour ce bouton a déjà été défini dans la ressource de menu IDR_SCRIBBTYPE. Spécifiez `Clear All` comme texte du bouton et de l’index de la bitmap qui décore le bouton. Ouvrez le **boîte à outils**, puis faites glisser un **bouton** à la **modifier** Panneau de configuration. Cliquez sur le bouton et redéfinissez **légende** à `Clear All`, **ID** à `ID_EDIT_CLEAR_ALL`, **Index d’images** à `0`, **Large Image Index**  à `0`.  
+3.  Pour le **modifier** du panneau, ajouter un bouton qui est responsable de l’effacement du contenu du document. L’ID de message pour ce bouton a déjà été défini dans la ressource de menu IDR_SCRIBBTYPE. Spécifiez *Effacer tout* comme texte du bouton et de l’index de la bitmap qui décore le bouton. Ouvrez le **boîte à outils**, puis faites glisser un **bouton** à la **modifier** Panneau de configuration. Cliquez sur le bouton et redéfinissez **légende** à *Effacer tout*, **ID** à *ID_EDIT_CLEAR_ALL*, **Indexd’images** à *0*, **grande Image Index** à *0*.  
   
 4.  Enregistrer les modifications, puis créer et exécuter l’application. L’application Scribble doit être affichée, et elle doit avoir une barre de ruban en haut de la fenêtre au lieu d’une barre de menus. La barre du ruban doit avoir une catégorie, **accueil**, et **accueil** doit avoir un panneau de configuration, **modifier**. Les boutons de ruban que vous avez ajoutés doivent être associées avec les gestionnaires d’événements existants et le **ouvrir**, **fermer**, **enregistrer**, **Print**, et **Effacer tout** boutons doivent fonctionner comme prévu.  
   

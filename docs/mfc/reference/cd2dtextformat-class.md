@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352888"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955467"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat, classe
 Wrapper pour IDWriteTextFormat.  
@@ -90,7 +90,7 @@ class CD2DTextFormat : public CD2DResource;
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat :: ~ CD2DTextFormat  
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  Un objet CString qui contient le nom de la famille de polices.  
   
- `fontSize`  
+ *FontSize*  
  La taille logique de la police en DIP (« pixels indépendants du périphérique ») unités. Une DIP est égal à 1/96e de pouce.  
   
- `fontWeight`  
+ *FontWeight*  
  Une valeur qui indique l’épaisseur de police pour l’objet texte.  
   
- `fontStyle`  
+ *fontStyle*  
  Une valeur qui indique le style de police pour l’objet texte.  
   
- `fontStretch`  
+ *fontStretch*  
  Une valeur qui indique l’étirement de police pour l’objet texte.  
   
- `strFontLocale`  
+ *strFontLocale*  
  Un objet CString qui contient le nom des paramètres régionaux.  
   
- `pFontCollection`  
+ *pFontCollection*  
  Pointeur vers un objet de collection de polices. Lorsque ce paramètre est NULL, indique la collection de polices système.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382929"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955870"
 ---
 # <a name="special-cwinapp-services"></a>Services CWinApp spéciaux
 Outre la boucle de messages en cours d’exécution et de vous donner la possibilité d’initialiser l’application et nettoyer après cela, [CWinApp](../mfc/reference/cwinapp-class.md) fournit plusieurs autres services.  
@@ -61,7 +61,7 @@ Outre la boucle de messages en cours d’exécution et de vous donner la possibi
   
  Si vous souhaitez initialiser GDI + pour votre application (en appelant [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) dans votre [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) fonction), vous devez supprimer le thread d’arrière-plan GDI +.  
   
- Vous faire cela en définissant le **SuppressBackgroundThread** membre de la [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) structure **TRUE**. Lorsque la suppression GDI + arrière-plan thread, le **NotificationHook** et **NotificationUnhook** appels doivent être effectués uniquement avant entrer et de quitter la boucle de message de l’application. Pour plus d’informations sur ces appels, consultez [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Par conséquent, un bon emplacement pour appeler **GdiplusStartup** et les fonctions de raccordement de notification dans une substitution de la fonction virtuelle [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), comme indiqué ci-dessous :  
+ Vous faire cela en définissant le `SuppressBackgroundThread` membre de la [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) structure **TRUE**. Lorsque la suppression GDI + arrière-plan thread, le `NotificationHook` et `NotificationUnhook` appels doivent être effectués uniquement avant entrer et de quitter la boucle de message de l’application. Pour plus d’informations sur ces appels, consultez [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Par conséquent, un bon emplacement pour appeler `GdiplusStartup` et les fonctions de raccordement de notification dans une substitution de la fonction virtuelle [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), comme indiqué ci-dessous :  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35a3fb35115e1fd86a2ccf168e048a697a17dc01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0be95b0092db315dd3af7086770411b93eb2ae23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378503"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955210"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 Fournit les fonctionnalités d'une fenêtre frame contextuelle ou superposée d'interface monodocument (SDI) Windows, ainsi que des membres permettant de gérer la fenêtre.  
@@ -152,7 +152,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::EnableDocking](#enabledocking)|Permet à une barre de contrôle être ancrée.|  
 |[CFrameWnd::EndModalState](#endmodalstate)|Termine l’état modal de la fenêtre frame. Permet à toutes les fenêtres désactivées par `BeginModalState`.|  
 |[CFrameWnd::FloatControlBar](#floatcontrolbar)|Flotte une barre de contrôle.|  
-|[CFrameWnd::GetActiveDocument](#getactivedocument)|Retourne l’actif **CDocument** objet.|  
+|[CFrameWnd::GetActiveDocument](#getactivedocument)|Retourne l’actif `CDocument` objet.|  
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|Retourne l’actif `CFrameWnd` objet.|  
 |[CFrameWnd::GetActiveView](#getactiveview)|Retourne l’actif `CView` objet.|  
 |[CFrameWnd::GetControlBar](#getcontrolbar)|Récupère la barre de contrôle.|  
@@ -215,11 +215,11 @@ class CFrameWnd : public CWnd
   
 -   Indirectement le générer à l’aide d’un modèle de document.  
   
- Avant d’appeler soit **créer** ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide de C++ **nouveau** opérateur. Avant d’appeler **créer**, vous pouvez également enregistrer une classe de fenêtre avec le [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) fonction globale pour définir les styles d’icône et de la classe pour le frame.  
+ Avant d’appeler soit `Create` ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide de C++ **nouveau** opérateur. Avant d’appeler `Create`, vous pouvez également enregistrer une classe de fenêtre avec le [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) fonction globale pour définir les styles d’icône et de la classe pour le frame.  
   
- Utilisez le **créer** fonction membre pour passer des paramètres de création du frame immédiats comme arguments.  
+ Utilisez le `Create` fonction membre pour passer des paramètres de création du frame immédiats comme arguments.  
   
- `LoadFrame` nécessite moins d’arguments que **créer**et récupère à la place de la plupart de ses valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu. Pour être accessible aux `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, **IDR_MAINFRAME**).  
+ `LoadFrame` nécessite moins d’arguments que `Create`et récupère à la place de la plupart de ses valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu. Pour être accessible aux `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, **IDR_MAINFRAME**).  
   
  Lorsqu’un `CFrameWnd` objet contient des vues et des documents, elles sont créées indirectement par le framework au lieu de directement par le programmeur. Le `CDocTemplate` objet orchestre la création de l’image, la création des vues contenant et la connexion des vues de document approprié. Les paramètres de la `CDocTemplate` constructeur spécifie la `CRuntimeClass` des trois classes impliquées (document, le frame et vue). A `CRuntimeClass` objet est utilisé par l’infrastructure pour créer dynamiquement les nouvelles images lorsque spécifié par l’utilisateur (par exemple, en utilisant la commande fichier nouveau ou la commande nouvelle fenêtre de plusieurs documents MDI (interface)).  
   
@@ -260,7 +260,7 @@ class CFrameWnd : public CWnd
   
  `CFrameWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="activateframe"></a>  CFrameWnd::ActivateFrame  
@@ -271,7 +271,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nCmdShow`  
+ *nCmdShow*  
  Spécifie le paramètre à passer à [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow). Par défaut, le frame est affiché et restauré correctement.  
   
 ### <a name="remarks"></a>Notes  
@@ -279,7 +279,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
   
  L’implémentation par défaut active le frame et affiche en haut de l’ordre de plan et, si nécessaire, exécute la procédure de fenêtre frame principale de l’application.  
   
- Remplacez cette fonction membre pour modifier la façon dont une image est activée. Par exemple, vous pouvez forcer des fenêtres MDI enfants à être agrandi. Ajouter la fonctionnalité appropriée, puis appeler la version classe de base avec explicite `nCmdShow`.  
+ Remplacez cette fonction membre pour modifier la façon dont une image est activée. Par exemple, vous pouvez forcer des fenêtres MDI enfants à être agrandi. Ajouter la fonctionnalité appropriée, puis appeler la version classe de base avec explicite *nCmdShow*.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
@@ -317,37 +317,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszClassName`  
+ *lpszClassName*  
  Pointe vers une chaîne de caractères terminée par null que les noms de la classe Windows. Le nom de classe peut être n’importe quel nom inscrit avec le `AfxRegisterWndClass` fonction globale ou **RegisterClass** fonction Windows. Si **NULL**, utilise la valeur par défaut prédéfinie `CFrameWnd` attributs.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Pointe vers une chaîne de caractères terminée par null qui représente le nom de la fenêtre. Utilisé en tant que texte de la barre de titre.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie la fenêtre [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributs. Inclure le **FWS_ADDTOTITLE** si vous souhaitez que la barre de titre pour afficher automatiquement le nom du document représenté dans la fenêtre de style.  
   
- `rect`  
- Spécifie la taille et la position de la fenêtre. Le `rectDefault` valeur permet à Windows pour spécifier la taille et la position de la nouvelle fenêtre.  
+ *Rect*  
+ Spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows pour spécifier la taille et la position de la nouvelle fenêtre.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie la fenêtre parente de la fenêtre frame. Ce paramètre doit être **NULL** pour les fenêtres frames de niveau supérieur.  
   
  *lpszMenuName*  
  Identifie le nom de la ressource de menu à utiliser avec la fenêtre. Utilisez **MAKEINTRESOURCE** si le menu contient un ID d’entier au lieu d’une chaîne. Ce paramètre peut être **NULL**.  
   
- `dwExStyle`  
+ *dwExStyle*  
  Spécifie la fenêtre étendue [style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) attributs.  
   
- `pContext`  
+ *pContext*  
  Spécifie un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. Ce paramètre peut être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation a réussi ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Construire un `CFrameWnd` objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit la `CFrameWnd` de l’objet, puis appelez **créer**, qui crée la fenêtre frame Windows et l’attache à le `CFrameWnd` objet. **Créer** initialise le nom de classe et le nom de la fenêtre de la fenêtre et enregistre les valeurs par défaut pour son style, le parent et le menu associé.  
+ Construire un `CFrameWnd` objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit la `CFrameWnd` de l’objet, puis appelez `Create`, ce qui crée la fenêtre frame Windows et l’attache à le `CFrameWnd` objet. `Create` Initialise le nom de classe de la fenêtre et le nom de la fenêtre et enregistre les valeurs par défaut pour son style, le parent et le menu associé.  
   
- Utilisez `LoadFrame` plutôt que **créer** pour charger la fenêtre frame à partir d’une ressource au lieu de spécifier ses arguments.  
+ Utilisez `LoadFrame` plutôt que `Create` pour charger la fenêtre frame à partir d’une ressource au lieu de spécifier ses arguments.  
   
 ##  <a name="createview"></a>  CFrameWnd::CreateView  
  Appelez `CreateView` pour créer un affichage dans un frame.  
@@ -359,10 +359,10 @@ CWnd* CreateView(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pContext`  
+ *pContext*  
  Spécifie le type de document et la vue.  
   
- `nID`  
+ *nID*  
  Numéro d’identification d’une vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -382,15 +382,15 @@ void DockControlBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBar`  
+ *pBar*  
  Pointe vers la barre de contrôle pour être ancrée.  
   
- `nDockBarID`  
+ *nDockBarID*  
  Détermine quel côté de la fenêtre frame à prendre en considération d’ancrage. Il peut être 0, ou la valeur d’un ou plusieurs des opérations suivantes :  
   
 - `AFX_IDW_DOCKBAR_TOP` Ancrer en haut de la fenêtre frame.  
   
-- **AFX_IDW_DOCKBAR_BOTTOM** ancre en fonction de la partie inférieure de la fenêtre frame.  
+- `AFX_IDW_DOCKBAR_BOTTOM` Ancrer à la partie inférieure de la fenêtre frame.  
   
 - `AFX_IDW_DOCKBAR_LEFT` Ancrer sur le côté gauche de la fenêtre frame.  
   
@@ -398,11 +398,11 @@ void DockControlBar(
   
  Si 0, la barre de contrôle peut être ancrée à n’importe quel côté activée pour l’ancrage dans la fenêtre frame de destination.  
   
- `lpRect`  
+ *lpRect*  
  Détermine, en coordonnées d’écran, où la barre de contrôle sera ancrée dans la zone non cliente de la fenêtre frame de destination.  
   
 ### <a name="remarks"></a>Notes  
- La barre de contrôle sera ancrée à un des côtés de la fenêtre frame spécifié dans les appels à la fois aux [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) et [CFrameWnd::EnableDocking](#enabledocking). Le côté choisi est déterminé par `nDockBarID`.  
+ La barre de contrôle sera ancrée à un des côtés de la fenêtre frame spécifié dans les appels à la fois aux [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) et [CFrameWnd::EnableDocking](#enabledocking). Sélectionné côté est déterminé par *nDockBarID*.  
   
 ##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking  
  Appelez cette fonction pour activer les barres de contrôle dans une fenêtre frame.  
@@ -412,7 +412,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwDockStyle`  
+ *dwDockStyle*  
  Spécifie les côtés de la fenêtre frame peuvent servir d’ancrage de sites pour les barres de contrôle. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `CBRS_ALIGN_TOP` Permet d’ancrage en haut de la zone cliente.  
@@ -452,13 +452,13 @@ void FloatControlBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBar`  
+ *pBar*  
  Pointe vers la barre de contrôle pour être affichée.  
   
- `point`  
+ *Point*  
  L’emplacement, en coordonnées d’écran, où l’angle supérieur gauche de la barre de contrôle sera placé.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie s’il faut aligner la barre de contrôle horizontalement ou verticalement dans sa nouvelle fenêtre frame. Il peut prendre l’une des opérations suivantes :  
   
 - `CBRS_ALIGN_TOP` Oriente la barre de contrôle verticalement.  
@@ -510,7 +510,7 @@ CView* GetActiveView() const;
  Un pointeur vers la version [CView](../../mfc/reference/cview-class.md). S’il n’existe aucun affichage actuel, retourne **NULL**.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction retourne **NULL** lorsqu’elle est appelée pour une fenêtre frame principale MDI ( `CMDIFrameWnd`). Dans une application MDI, la fenêtre frame principale MDI n’a pas une vue associée. Au lieu de cela, chaque fenêtre enfant ( `CMDIChildWnd`) a une ou plusieurs vues associées. La vue active dans une application MDI peut être obtenue par la recherche d’abord la fenêtre enfant MDI active et puis en recherchant la vue active pour cette fenêtre enfant. La fenêtre enfant MDI active sont accessibles en appelant la fonction `MDIGetActive` ou **GetActiveFrame** comme illustré dans l’exemple suivant :  
+ Cette fonction retourne **NULL** lorsqu’elle est appelée pour une fenêtre frame principale MDI ( `CMDIFrameWnd`). Dans une application MDI, la fenêtre frame principale MDI n’a pas une vue associée. Au lieu de cela, chaque fenêtre enfant ( `CMDIChildWnd`) a une ou plusieurs vues associées. La vue active dans une application MDI peut être obtenue par la recherche d’abord la fenêtre enfant MDI active et puis en recherchant la vue active pour cette fenêtre enfant. La fenêtre enfant MDI active sont accessibles en appelant la fonction `MDIGetActive` ou `GetActiveFrame` comme illustré dans l’exemple suivant :  
   
  [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
@@ -522,14 +522,14 @@ CControlBar* GetControlBar(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  Le numéro d’ID d’une barre de contrôle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la barre de contrôle qui est associé à l’ID.  
   
 ### <a name="remarks"></a>Notes  
- Le `nID` paramètre fait référence à l’identificateur unique est passé à la **créer** méthode de la barre de contrôle. Pour plus d’informations sur les barres de contrôles, reportez-vous à la rubrique intitulée [barres de contrôles](../../mfc/control-bars.md).  
+ Le *nID* paramètre fait référence à l’identificateur unique est passé à la `Create` (méthode) de la barre de contrôle. Pour plus d’informations sur les barres de contrôles, reportez-vous à la rubrique intitulée [barres de contrôles](../../mfc/control-bars.md).  
   
  `GetControlBar` Retourne la barre de contrôle même si elle est flottant et par conséquent, n’est pas une fenêtre enfant de l’image.  
   
@@ -541,7 +541,7 @@ void GetDockState(CDockState& state) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `state`  
+ *state*  
  Contient l’état actuel de la fenêtre frame barres de contrôles au moment du retour.  
   
 ### <a name="remarks"></a>Notes  
@@ -603,14 +603,14 @@ virtual void GetMessageString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  ID de ressource du message souhaité.  
   
- `rMessage`  
+ *rMessage*  
  `CString` objet dans lequel placer le message.  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut charge simplement la chaîne spécifiée par `nID` à partir du fichier de ressources. Cette fonction est appelée par l’infrastructure lors de la chaîne de message dans la barre d’état à jour.  
+ L’implémentation par défaut charge simplement la chaîne spécifiée par *nID* du fichier de ressources. Cette fonction est appelée par l’infrastructure lors de la chaîne de message dans la barre d’état à jour.  
   
 ##  <a name="gettitle"></a>  CFrameWnd::GetTitle  
  Récupère le titre de l’objet de fenêtre.  
@@ -632,16 +632,16 @@ void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDoc`  
+ *pDoc*  
  Pointe vers le document auquel la fenêtre frame est associée. Peut être **NULL**.  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  Si **TRUE**, indique que l’image doit être visible et actif. Si **FALSE**, aucuns descendants ne sont visibles.  
   
 ### <a name="remarks"></a>Notes  
  Cela entraîne de toutes les vues dans cette fenêtre frame pour recevoir leurs `OnInitialUpdate` appels.  
   
- En outre, s’il n’est pas une vue active, la vue principale de la fenêtre frame devient active. L’affichage principal est une vue avec l’ID enfant de **AFX_IDW_PANE_FIRST**. Enfin, la fenêtre frame est rendue visible si `bMakeVisible` est différente de zéro. Si `bMakeVisible` est 0, le focus actuel et l’état de visibilité de la fenêtre frame demeurent inchangés. Il n’est pas nécessaire d’appeler cette fonction lorsque vous utilisez l’implémentation de l’infrastructure du nouveau fichier et ouvrir le fichier.  
+ En outre, s’il n’est pas une vue active, la vue principale de la fenêtre frame devient active. L’affichage principal est une vue avec l’ID enfant de **AFX_IDW_PANE_FIRST**. Enfin, la fenêtre frame est rendue visible si *bMakeVisible* est différente de zéro. Si *bMakeVisible* est 0, le focus actuel et l’état de visibilité de la fenêtre frame demeurent inchangés. Il n’est pas nécessaire d’appeler cette fonction lorsque vous utilisez l’implémentation de l’infrastructure du nouveau fichier et ouvrir le fichier.  
   
 ##  <a name="inmodalstate"></a>  CFrameWnd::InModalState  
  Appelez cette fonction membre pour vérifier si une fenêtre frame est modale ou non.  
@@ -671,7 +671,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszResourceName`  
+ *lpszResourceName*  
  Identifie le nom de la ressource de l’accélérateur. Utilisez **MAKEINTRESOURCE** si la ressource est identifiée par un ID d’entier.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -692,7 +692,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszProfileName`  
+ *lpszProfileName*  
  Nom d’une section dans le fichier d’initialisation (INI) ou d’une clé dans le Registre Windows où sont stockées les informations d’état.  
   
 ### <a name="remarks"></a>Notes  
@@ -712,26 +712,26 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDResource`  
+ *nIDResource*  
  ID de ressources partagées associées à la fenêtre frame.  
   
  *dwDefaultStyle*  
  L’image [style](../../mfc/reference/styles-used-by-mfc.md#window-styles). Inclure le **FWS_ADDTOTITLE** si vous souhaitez que la barre de titre pour afficher automatiquement le nom du document représenté dans la fenêtre de style.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers le parent du cadre.  
   
- `pContext`  
+ *pContext*  
  Un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. Ce paramètre peut être **NULL**.  
   
 ### <a name="remarks"></a>Notes  
- Construire un `CFrameWnd` objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit la `CFrameWnd` de l’objet, puis appelez `LoadFrame`, qui se charge de la fenêtre frame Windows et des ressources associées et attache la fenêtre frame à le `CFrameWnd` objet. Le `nIDResource` paramètre spécifie le menu, la table d’accélérateurs, l’icône et la ressource de chaîne du titre de la fenêtre frame.  
+ Construire un `CFrameWnd` objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit la `CFrameWnd` de l’objet, puis appelez `LoadFrame`, qui se charge de la fenêtre frame Windows et des ressources associées et attache la fenêtre frame à le `CFrameWnd` objet. Le *nIDResource* paramètre spécifie le menu, la table d’accélérateurs, l’icône et la ressource de chaîne du titre de la fenêtre frame.  
   
- Utilisez le **créer** fonction membre plutôt que `LoadFrame` lorsque vous souhaitez spécifier tous les paramètres de création de la fenêtre frame.  
+ Utilisez le `Create` fonction membre plutôt que `LoadFrame` lorsque vous souhaitez spécifier tous les paramètres de création de la fenêtre frame.  
   
  Le framework appelle `LoadFrame` lorsqu’il crée une fenêtre frame à l’aide d’un objet de modèle de document.  
   
- L’infrastructure utilise le `pContext` argument afin de spécifier les objets pour la connexion à la fenêtre frame, y compris les contenus des objets de vue. Vous pouvez définir le `pContext` argument **NULL** lorsque vous appelez `LoadFrame`.  
+ L’infrastructure utilise le *pContext* argument afin de spécifier les objets pour la connexion à la fenêtre frame, y compris les contenus des objets de vue. Vous pouvez définir le *pContext* argument **NULL** lorsque vous appelez `LoadFrame`.  
   
 ##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable  
  Lorsque ce membre de données est activé (qui est la valeur par défaut), éléments de menu qui n’ont pas `ON_UPDATE_COMMAND_UI` ou `ON_COMMAND` gestionnaires seront automatiquement désactivés lorsque l’utilisateur retire un menu déroulant.  
@@ -772,7 +772,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - **borderSet** = 3  
   
- `lpRectBorder`  
+ *lpRectBorder*  
  Pointeur vers un [RECT](../../mfc/reference/rect-structure1.md) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les coordonnées de la bordure.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -789,7 +789,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  L’ID du contrôle de la barre est affichée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -821,10 +821,10 @@ virtual BOOL OnCreateClient(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpcs`  
+ *locale*  
  Un pointeur vers un Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.  
   
- `pContext`  
+ *pContext*  
  Un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -833,7 +833,7 @@ virtual BOOL OnCreateClient(
 ### <a name="remarks"></a>Notes  
  Ne jamais appeler cette fonction.  
   
- L’implémentation par défaut de cette fonction crée un `CView` objet à partir des informations fournies dans `pContext`, si possible.  
+ L’implémentation par défaut de cette fonction crée un `CView` objet à partir des informations fournies dans les *pContext*, si possible.  
   
  Remplacez cette fonction pour substituer les valeurs passées dans la `CCreateContext` de l’objet ou pour modifier les façon dont les contrôles dans la zone principale du client de la fenêtre frame sont créés. Le `CCreateContext` vous pouvez substituer les membres sont décrits dans le [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) classe.  
   
@@ -863,7 +863,7 @@ virtual void OnSetPreviewMode(
  *bPreview*  
  Spécifie s’il faut ou non à placer l’application en mode d’aperçu avant impression. La valeur **TRUE** à placer dans l’aperçu avant impression, **FALSE** pour annuler le mode Aperçu.  
   
- `pState`  
+ *pState*  
  Un pointeur vers un **CPrintPreviewState** structure.  
   
 ### <a name="remarks"></a>Notes  
@@ -889,8 +889,8 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pCmdUI`  
- Un pointeur vers un [CCmdUI](../../mfc/reference/ccmdui-class.md) objet qui représente le menu qui a généré la commande de mise à jour. Appels du Gestionnaire de mise à jour la [activer](../../mfc/reference/ccmdui-class.md#enable) fonction membre de la `CCmdUI` par le biais de l’objet `pCmdUI` pour mettre à jour l’interface utilisateur.  
+ *pCmdUI*  
+ Un pointeur vers un [CCmdUI](../../mfc/reference/ccmdui-class.md) objet qui représente le menu qui a généré la commande de mise à jour. Appels du Gestionnaire de mise à jour la [activer](../../mfc/reference/ccmdui-class.md#enable) fonction membre de la `CCmdUI` par le biais de l’objet *pCmdUI* pour mettre à jour l’interface utilisateur.  
   
 ##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout  
  Appelé par le framework lorsque les barres de contrôles standard sont activées ou désactivées ou lorsque la fenêtre frame est redimensionnée.  
@@ -900,7 +900,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bNotify`  
+ *bNotify*  
  Détermine si l’élément actif de la place de la fenêtre frame reçoit la notification de la modification de la disposition. Si **TRUE**, l’élément est notifié ; sinon **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
@@ -923,7 +923,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszProfileName`  
+ *lpszProfileName*  
  Nom d’une section dans le fichier d’initialisation ou une clé dans le Registre Windows où sont stockées les informations d’état.  
   
 ### <a name="remarks"></a>Notes  
@@ -937,7 +937,7 @@ void SetActivePreviewView(CView* pViewNew);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pViewNew`  
+ *pViewNew*  
  Pointeur vers une vue d’être activées.  
   
 ### <a name="remarks"></a>Notes  
@@ -955,7 +955,7 @@ void SetActiveView(
  *pViewNew*  
  Spécifie un pointeur vers un [CView](../../mfc/reference/cview-class.md) objet, ou **NULL** pour aucune vue active.  
   
- `bNotify`  
+ *bNotify*  
  Spécifie si la vue doit être averti de l’activation. Si **TRUE**, `OnActivateView` est appelée pour le nouvel affichage ; si **FALSE**, il n’est pas.  
   
 ### <a name="remarks"></a>Notes  
@@ -969,7 +969,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `state`  
+ *state*  
  S’applique à l’état stocké aux barres de contrôles de la fenêtre frame.  
   
 ### <a name="remarks"></a>Notes  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `nState`|Spécifie s’il faut afficher ou masquer le menu. Le `nState` paramètre peut avoir les valeurs suivantes :<br /><br /> -AFX_MBS_VISIBLE (0 x 01) - affiche le menu si elle est masquée, mais n’a aucun effet s’il est visible.<br />-AFX_MBS_HIDDEN (0 x 02) - masque le menu si elle est visible, mais n’a aucun effet s’il est masqué.|  
+|[in] *nState*|Spécifie s’il faut afficher ou masquer le menu. Le *nState* paramètre peut avoir les valeurs suivantes :<br /><br /> -AFX_MBS_VISIBLE (0 x 01) - affiche le menu si elle est masquée, mais n’a aucun effet s’il est visible.<br />-AFX_MBS_HIDDEN (0 x 02) - masque le menu si elle est visible, mais n’a aucun effet s’il est masqué.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode modifie correctement l’état de menu ; dans le cas contraire, `false`.  
@@ -1005,10 +1005,10 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `nStyle`|Spécifie si le menu par défaut est masqué, ou n’est visible et a le focus. Le `nStyle` paramètre peut avoir les valeurs suivantes :<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01)-<br />     Le menu est affiché en permanence et par défaut n’a pas le focus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur la touche ALT ou sur ÉCHAP pour masquer le menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinaison (OR)) - le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur F10 pour basculer le focus ou de désactiver le menu. Le menu s’affiche jusqu'à ce que vous appuyez sur la touche ALT ou sur ÉCHAP pour le masquer.|  
+|[in] *nStyle*|Spécifie si le menu par défaut est masqué, ou n’est visible et a le focus. Le *nStyle* paramètre peut avoir les valeurs suivantes :<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01)-<br />     Le menu est affiché en permanence et par défaut n’a pas le focus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur la touche ALT ou sur ÉCHAP pour masquer le menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinaison (OR)) - le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur F10 pour basculer le focus ou de désactiver le menu. Le menu s’affiche jusqu'à ce que vous appuyez sur la touche ALT ou sur ÉCHAP pour le masquer.|  
   
 ### <a name="remarks"></a>Notes  
- Si la valeur de la `nStyle` paramètre n’est pas valide, cette méthode déclare en mode débogage et déclenche [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) en mode Release. En cas d’autres erreurs d’exécution, cette méthode déclare en mode débogage et déclenche une exception dérivée de la [CException](../../mfc/reference/cexception-class.md) classe.  
+ Si la valeur de la *nStyle* paramètre n’est pas valide, cette méthode déclare en mode débogage et déclenche [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) en mode Release. En cas d’autres erreurs d’exécution, cette méthode déclare en mode débogage et déclenche une exception dérivée de la [CException](../../mfc/reference/cexception-class.md) classe.  
   
  Cette méthode affecte l’état des menus dans les applications écrites pour [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] et versions ultérieures.  
   
@@ -1021,10 +1021,10 @@ void SetMessageText(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszText`  
+ *lpszText*  
  Pointe vers la chaîne doit être placé sur la barre d’état.  
   
- `nID`  
+ *nID*  
  Chaîne d’ID de ressource de la chaîne doit être placé sur la barre d’état.  
   
 ### <a name="remarks"></a>Notes  
@@ -1038,7 +1038,7 @@ void SetProgressBarPosition(int nProgressPos);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nProgressPos`  
+ *nProgressPos*  
  Spécifie la position à définir. Il doit être dans la plage définie par `SetProgressBarRange`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1053,10 +1053,10 @@ void SetProgressBarRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nRangeMin`  
+ *nRangeMin*  
  Valeur minimale.  
   
- `nRangeMax`  
+ *nRangeMax*  
  Valeur maximale.  
   
 ### <a name="remarks"></a>Notes  
@@ -1069,7 +1069,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `tbpFlags`  
+ *tbpFlags*  
  Indicateurs qui contrôlent l’état actuel du bouton de progression. Spécifiez uniquement une de ces indicateurs, car tous les États s’excluent mutuellement : TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.  
   
 ### <a name="remarks"></a>Notes  
@@ -1089,14 +1089,14 @@ BOOL SetTaskbarOverlayIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDResource`  
- Spécifie l’ID de ressource d’une icône à utiliser en tant que le segment de recouvrement. Consultez la description pour `hIcon` pour plus d’informations.  
+ *nIDResource*  
+ Spécifie l’ID de ressource d’une icône à utiliser en tant que le segment de recouvrement. Consultez la description pour *hIcon* pour plus d’informations.  
   
- `lpcszDescr`  
+ *lpcszDescr*  
  Pointeur vers une chaîne qui fournit une version texte de remplacement des informations fournies par le segment de recouvrement, à des fins d’accessibilité.  
   
- `hIcon`  
- Le handle d’une icône à utiliser en tant que le segment de recouvrement. Il s’agit d’une petite icône, mesurer 16 x 16 pixels à 96 points par pouce (PPP). Si une icône de recouvrement est déjà appliquée sur le bouton de barre des tâches, ce segment existant est remplacé. Cette valeur peut être `NULL`. Comment un `NULL` valeur est traitée dépend de si le bouton de barre des tâches représente une fenêtre unique ou un groupe de windows. Il incombe à l’application appelante pour libérer `hIcon` quand il n’est plus nécessaire.  
+ *hIcon*  
+ Le handle d’une icône à utiliser en tant que le segment de recouvrement. Il s’agit d’une petite icône, mesurer 16 x 16 pixels à 96 points par pouce (PPP). Si une icône de recouvrement est déjà appliquée sur le bouton de barre des tâches, ce segment existant est remplacé. Cette valeur peut être `NULL`. Comment un `NULL` valeur est traitée dépend de si le bouton de barre des tâches représente une fenêtre unique ou un groupe de windows. Il incombe à l’application appelante pour libérer *hIcon* quand il n’est plus nécessaire.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` en cas de réussite ; `FALSE` si la version de système d’exploitation est inférieure à Windows 7 ou si une erreur se produit de définition de l’icône.  
@@ -1111,7 +1111,7 @@ void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTitle`  
+ *lpszTitle*  
  Pointeur vers une chaîne de caractères contenant le titre de l’objet de fenêtre.  
   
 ##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar  
@@ -1125,10 +1125,10 @@ void ShowControlBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBar`  
+ *pBar*  
  Pointeur vers la barre de contrôle doit être affiché ou masqué.  
   
- `bShow`  
+ *bShow*  
  Si **TRUE**, spécifie que la barre de contrôle doit être indiqué. Si **FALSE**, spécifie que la barre de contrôle doit être masqué.  
   
  *bDelay*  
@@ -1142,7 +1142,7 @@ void ShowOwnedWindows(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bShow`  
+ *bShow*  
  Spécifie si les fenêtres enfants doivent être affichés ou masqués.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368980"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957076"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe de CFindReplaceDialog
 Vous permet d’implémenter des boîtes de dialogue Rechercher/Remplacer des chaînes standard dans votre application.  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Une fois un `CFindReplaceDialog` objet a été construit, vous devez appeler la [créer](#create) fonction membre pour créer et afficher la boîte de dialogue.  
   
- Utilisez le [m_fr](#m_fr) structure pour initialiser la boîte de dialogue avant d’appeler **créer**. Le `m_fr` structure est de type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Pour plus d’informations sur cette structure, consultez le Kit de développement logiciel Windows.  
+ Utilisez le [m_fr](#m_fr) structure pour initialiser la boîte de dialogue avant d’appeler `Create`. Le `m_fr` structure est de type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Pour plus d’informations sur cette structure, consultez le Kit de développement logiciel Windows.  
   
  Dans l’ordre de la fenêtre parente d’être averti des demandes de recherche/remplacement, vous devez utiliser les fenêtres [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) la fonction et utiliser le [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) (macro) de la table des messages dans le cadre de votre fenêtre qui gère ce message enregistré.  
   
@@ -122,7 +122,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  `CFindReplaceDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Étant donné que la `CFindReplaceDialog` objet est une boîte de dialogue non modale, vous devez construire sur le segment de mémoire à l’aide de la `new` opérateur.  
+ Étant donné que la `CFindReplaceDialog` objet est une boîte de dialogue non modale, vous devez construire sur le segment de mémoire à l’aide de la **nouveau** opérateur.  
   
- Au cours de destruction, le framework essaie d’exécuter un `delete this` sur le pointeur vers la boîte de dialogue. Si vous avez créé la boîte de dialogue dans la pile, le `this` pointeur n’existe pas et un comportement non défini.  
+ Au cours de destruction, le framework essaie d’exécuter un **supprimer cette** sur le pointeur vers la boîte de dialogue. Si vous avez créé la boîte de dialogue dans la pile, le **cela** pointeur n’existe pas et un comportement non défini.  
   
  Pour plus d’informations sur la construction de `CFindReplaceDialog` , consultez la [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) vue d’ensemble. Utilisez le [CFindReplaceDialog::Create](#create) fonction membre pour afficher la boîte de dialogue.  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Définissez ce paramètre sur `TRUE` pour afficher un **trouver** boîte de dialogue. Affectez-lui la valeur `FALSE` pour afficher un **rechercher/remplacer** boîte de dialogue.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Pointeur vers la chaîne de recherche par défaut lorsque la boîte de dialogue s’affiche. Si `NULL`, la boîte de dialogue ne contient pas une chaîne de recherche par défaut.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Pointeur vers la chaîne de remplacement par défaut lorsque la boîte de dialogue s’affiche. Si `NULL`, la boîte de dialogue ne contient pas une chaîne de remplacement par défaut.  
   
- `dwFlags`  
+ *dwFlags*  
  Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. La valeur par défaut est `FR_DOWN`, ce qui indique que la recherche doit continuer vers le bas. Consultez le [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue. Il s’agit de la fenêtre qui reçoit le message spécial qui indique qu’une action de recherche/remplacement est demandée. Si `NULL`, la fenêtre principale de l’application est utilisée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lParam`  
+ *lParam*  
  Le **lparam** la valeur passée à la fenêtre frame **OnFindReplace** fonction membre.  
   
 ### <a name="return-value"></a>Valeur de retour  

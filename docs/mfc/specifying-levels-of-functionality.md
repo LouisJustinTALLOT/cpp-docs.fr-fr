@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 425cbf2f9c769dbbb6cd054b9af6b7f6f5fc9d52
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381145"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954463"
 ---
 # <a name="specifying-levels-of-functionality"></a>Spécification de niveaux de fonctionnalité
 Cet article décrit comment ajouter des niveaux suivants de fonctionnalités à votre [CObject](../mfc/reference/cobject-class.md)-classe dérivée :  
@@ -43,26 +43,26 @@ Cet article décrit comment ajouter des niveaux suivants de fonctionnalités à 
   
 1.  Dérivez votre classe de `CObject`, comme décrit dans la [dérivant une classe de CObject](../mfc/deriving-a-class-from-cobject.md) l’article.  
   
-2.  Utilisez le `DECLARE_DYNAMIC` macro dans votre déclaration de classe, comme indiqué ici :  
+2.  Utilisez la macro DECLARE_DYNAMIC dans votre déclaration de classe, comme indiqué ici :  
   
      [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
   
-3.  Utilisez le `IMPLEMENT_DYNAMIC` macro dans le fichier d’implémentation (. CPP) de votre classe. Cette macro prend comme arguments le nom de la classe et de sa classe de base, comme suit :  
+3.  Utilisez la macro IMPLEMENT_DYNAMIC dans le fichier d’implémentation (. CPP) de votre classe. Cette macro prend comme arguments le nom de la classe et de sa classe de base, comme suit :  
   
      [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
   
 > [!NOTE]
->  Placez toujours `IMPLEMENT_DYNAMIC` dans le fichier d’implémentation (. CPP) pour votre classe. Le `IMPLEMENT_DYNAMIC` macro doit être évaluée une seule fois pendant une compilation et ne doit donc pas être utilisé dans un fichier d’interface (. H) qui pourrait potentiellement être inclus dans plusieurs fichiers.  
+>  Placez toujours le IMPLEMENT_DYNAMIC dans le fichier d’implémentation (. CPP) pour votre classe. La macro IMPLEMENT_DYNAMIC doit être évaluée une seule fois pendant une compilation et ne doit donc pas être utilisée dans un fichier d’interface (. H) qui pourrait potentiellement être inclus dans plusieurs fichiers.  
   
 #### <a name="_core_to_add_dynamic_creation_support"></a> Pour ajouter la prise en charge la création dynamique  
   
 1.  Dérivez votre classe de `CObject`.  
   
-2.  Utilisez le `DECLARE_DYNCREATE` macro dans la déclaration de classe.  
+2.  Utilisez la macro DECLARE_DYNCREATE dans la déclaration de classe.  
   
 3.  Définissez un constructeur sans argument (constructeur par défaut).  
   
-4.  Utilisez le `IMPLEMENT_DYNCREATE` macro dans le fichier d’implémentation de classe.  
+4.  Utilisez la macro IMPLEMENT_DYNCREATE dans le fichier d’implémentation de classe.  
   
 #### <a name="_core_to_add_serialization_support"></a> Pour ajouter la prise en charge de la sérialisation  
   
@@ -73,11 +73,11 @@ Cet article décrit comment ajouter des niveaux suivants de fonctionnalités à 
     > [!NOTE]
     >  Si vous appelez `Serialize` directement, autrement dit, vous ne souhaitez pas sérialiser l’objet via un pointeur polymorphe, ignorez les étapes 3 à 5.  
   
-3.  Utilisez le `DECLARE_SERIAL` macro dans la déclaration de classe.  
+3.  Utilisez la macro DECLARE_SERIAL dans la déclaration de classe.  
   
 4.  Définissez un constructeur sans argument (constructeur par défaut).  
   
-5.  Utilisez le `IMPLEMENT_SERIAL` macro dans le fichier d’implémentation de classe.  
+5.  Utilisez la macro IMPLEMENT_SERIAL dans le fichier d’implémentation de classe.  
   
 > [!NOTE]
 >  Un « pointeur polymorphe » pointe vers un objet d’une classe (l’appeler A) ou un objet de toute classe dérivée d’un (par exemple, B). Pour sérialiser via un pointeur polymorphe, la structure doit déterminer la classe d’exécution de l’objet, qu'il sérialise (B), dans la mesure où il peut être un objet de toute classe dérivée à partir d’une classe de base (A).  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353947"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956705"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame, classe
 Implémente les fonctionnalités de base d'une image clé.  
@@ -81,7 +81,7 @@ class CBaseKeyFrame : public CObject;
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
@@ -94,10 +94,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un plan conceptuel.  
   
- `bDeepAdd`  
+ *que bDeepAdd*  
  Si ce paramètre a la valeur TRUE et que l’image clé ajouté dépend d’une autre image clé ou transition, cette méthode tente d’ajouter cette image clé ou une transition vers tout d’abord d’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  

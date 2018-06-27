@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384909"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951622"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procédure pas à pas : ajout d'une classe CTaskDialog à une application
 Cette procédure pas à pas présente la [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) et vous montre comment en ajouter une à votre application.  
@@ -44,7 +44,7 @@ Cette procédure pas à pas présente la [CTaskDialog Class](../mfc/reference/ct
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Pour remplacer une boîte de message Windows par un CTaskDialog  
   
-1.  Créez un projet d’application MFC avec les paramètres par défaut. Appelez-le `MyProject`.  
+1.  Créez un projet d’application MFC avec les paramètres par défaut. Appelez-le *MyProject*.  
   
 2.  Ouvrez le fichier MyProject.cpp dans l’ **Explorateur de solutions** .  
   
@@ -74,7 +74,7 @@ Cette procédure pas à pas présente la [CTaskDialog Class](../mfc/reference/ct
  }  
  ```  
   
-6.  Insérez le code suivant entre parenthèses à la suite de l’instruction `if` de l’étape 5. Ce code crée `CTaskDialog`.  
+6.  Insérez le code suivant entre les crochets après le **si** instruction à l’étape 5. Ce code crée `CTaskDialog`.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ Cette procédure pas à pas présente la [CTaskDialog Class](../mfc/reference/ct
   
 2.  Développez l’ **Affichage des ressources** jusqu’à ce que vous puissiez sélectionner le dossier **Table de chaînes** . Développez-le et double-cliquez sur l’entrée **Table de chaînes** .  
   
-3.  Faites défiler l’écran jusqu’au bas de la table de chaînes et ajoutez une nouvelle entrée. Modifiez l’ID en lui attribuant la valeur `TEMP_LINE1`. Définissez la légende en lui attribuant la valeur **Command Line 1**.  
+3.  Faites défiler l’écran jusqu’au bas de la table de chaînes et ajoutez une nouvelle entrée. Modifier le code pour *TEMP_LINE1*. Définir la légende *1 de la ligne de commande*.  
   
-4.  Ajoutez une autre nouvelle entrée. Modifiez l’ID en lui attribuant la valeur `TEMP_LINE2`. Définissez la légende en lui attribuant la valeur **Command Line 2**.  
+4.  Ajoutez une autre nouvelle entrée. Modifier le code pour *TEMP_LINE2*. Définir la légende *2 de la ligne de commande*.  
   
 5.  Revenez à MyProject.cpp.  
   
@@ -192,7 +192,7 @@ Cette procédure pas à pas présente la [CTaskDialog Class](../mfc/reference/ct
   
 2.  Accédez à la parenthèse fermante de l’instruction `if (CTaskDialog::IsSupported())` .  
   
-3.  Insérez le code suivant juste avant la parenthèse fermante de l’instruction `if` (avant le bloc `else` ) :  
+3.  Insérez le code suivant juste avant la parenthèse fermante de la **si** instruction (avant le **else** bloc) :  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

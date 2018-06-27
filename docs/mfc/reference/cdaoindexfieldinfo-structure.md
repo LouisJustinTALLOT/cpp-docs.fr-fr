@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be9a6a9db842f1e80be62f48a9990cff36168e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 759f8e6f9349fdcac61f6aca81d311e3bbc39e1d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367254"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957043"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo, structure
 Le `CDaoIndexFieldInfo` structure contient des informations sur un objet de champ d’index défini pour les objets d’accès aux données (DAO).  
@@ -38,7 +38,7 @@ struct CDaoIndexFieldInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Identifie l’objet de champ d’index. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
  *m_bDescending*  
@@ -51,7 +51,7 @@ struct CDaoIndexFieldInfo
   
  Appelez le `GetIndexInfo` fonction membre de l’objet conteneur tabledef ou recordset, dont les index collection est stocké l’objet index vous intéressez. Puis accéder à la `m_pFieldInfos` membre de la [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) objet. La longueur de la `m_pFieldInfos` tableau est stocké dans `m_nFields`. `CDaoIndexFieldInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoIndexFieldInfo` objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

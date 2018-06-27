@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1dada4601b7e20dd4e05af861d48099ce2391c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385227"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950978"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
 Cette procédure pas à pas montre comment utiliser le **Assistant Application MFC** pour créer une application comportant un ruban par défaut. Vous pouvez ensuite développer le ruban en ajoutant un **personnalisé** catégorie de ruban qui a un **favoris** ruban du Panneau de configuration et en ajoutant ensuite quelques unes des commandes pour le panneau de configuration les plus utilisées.  
@@ -32,7 +32,7 @@ Cette procédure pas à pas montre comment utiliser le **Assistant Application M
   
 1.  Utilisez le **Assistant Application MFC** pour créer une application MFC comportant un ruban. Pour exécuter l’Assistant, dans le **fichier** menu, pointez sur **nouveau**, puis cliquez sur **projet**.  
   
-2.  Dans le **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud sous **modèles installés**, sélectionnez **MFC**, puis sélectionnez  **Application MFC**. Tapez un nom pour le projet, par exemple, `MFCRibbonApp`, puis cliquez sur **OK**.  
+2.  Dans le **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud sous **modèles installés**, sélectionnez **MFC**, puis sélectionnez  **Application MFC**. Tapez un nom pour le projet, par exemple, *MFCRibbonApp*, puis cliquez sur **OK**.  
   
 3.  Sur la première page de la **Assistant Application MFC**, cliquez sur **suivant**.  
   
@@ -40,7 +40,7 @@ Cette procédure pas à pas montre comment utiliser le **Assistant Application M
   
 5.  Sur le **prise en charge des documents composés** , assurez-vous que **aucun** est sélectionné, puis cliquez sur **suivant**.  
   
-6.  Sur le **propriétés du modèle de Document** page, dans le **extension de fichier** , tapez une extension de nom de fichier pour les documents créés par cette application, par exemple, `mfcrbnapp`. Cliquez sur **Suivant**.  
+6.  Sur le **propriétés du modèle de Document** page, dans le **extension de fichier** , tapez une extension de nom de fichier pour les documents créés par cette application, par exemple, *mfcrbnapp*. Cliquez sur **Suivant**.  
   
 7.  Sur le **prise en charge de la base de données** , assurez-vous que **aucun** est sélectionné, puis cliquez sur **suivant**.  
   
@@ -62,14 +62,14 @@ Cette procédure pas à pas montre comment utiliser le **Assistant Application M
   
      Une catégorie qui a la légende **Category1** est créé. Par défaut, la catégorie contient un seul volet.  
   
-     Avec le bouton droit **Category1** puis cliquez sur **propriétés**. Dans le **propriétés** fenêtre, modification **légende** à `Custom`.  
+     Avec le bouton droit **Category1** puis cliquez sur **propriétés**. Dans le **propriétés** fenêtre, modification **légende** à *personnalisé*.  
   
      Le **grandes Images** et **petites Images** propriétés spécifient les bitmaps qui sont utilisés comme icônes pour les éléments de ruban dans cette catégorie. La création de bitmaps personnalisées n'entrant pas dans le cadre de cette procédure, réutilisez les bitmaps créées par l'Assistant. Les bitmaps de petite taille mesurent 16 pixels par 16 pixels. Pour les petites images, utilisez les bitmaps qui sont accessibles par l'ID de ressource IDB_FILESMALL. Les bitmaps de grande taille mesurent 32 pixels par 32 pixels. Pour les grandes images, utilisez les bitmaps qui sont accessibles par l'ID de ressource IDB_FILELARGE.  
   
     > [!NOTE]
     >  Sur les écrans HDPI (high dots per inch), les versions HDPI des images sont automatiquement utilisées.  
   
-3.  Il vous appartient maintenant de personnaliser le volet. Les volets sont utilisés pour regrouper des éléments qui sont liés de façon logique les uns aux autres. Par exemple, sur le **accueil** onglet de cette application, le **couper**, **copie**, et **coller** commandes se trouvent sur le  **Presse-papiers** Panneau de configuration. Pour personnaliser le panneau de configuration, avec le bouton droit **Panel1** puis cliquez sur **propriétés**. Dans le **propriétés** fenêtre, modification **légende** à `Favorites`.  
+3.  Il vous appartient maintenant de personnaliser le volet. Les volets sont utilisés pour regrouper des éléments qui sont liés de façon logique les uns aux autres. Par exemple, sur le **accueil** onglet de cette application, le **couper**, **copie**, et **coller** commandes se trouvent sur le  **Presse-papiers** Panneau de configuration. Pour personnaliser le panneau de configuration, avec le bouton droit **Panel1** puis cliquez sur **propriétés**. Dans le **propriétés** fenêtre, modification **légende** à *favoris*.  
   
      Vous pouvez spécifier le **Index d’images** pour le panneau de configuration. Ce nombre indique l’icône qui s’affiche si le volet du ruban est ajouté à la **une barre d’outils Accès rapide**. L'icône n'est pas affichée sur le volet du ruban.  
   
@@ -83,9 +83,9 @@ Cette procédure pas à pas montre comment utiliser le **Assistant Application M
   
      Pour créer le **impression** bouton, faites glisser un outil bouton vers le panneau.  
   
-     Dans le **propriétés** fenêtre, de modifier le **ID** propriété **ID_FILE_PRINT**, qui doit être défini. Modification **légende** à `Print`. Modification **Index de l’Image** à `4`.  
+     Dans le **propriétés** fenêtre, de modifier le **ID** propriété **ID_FILE_PRINT**, qui doit être défini. Modification **légende** à *impression*. Modification **Index de l’Image** à *4*.  
   
-     Pour créer le **impression rapide** bouton, cliquez sur la colonne de valeur de propriété en regard **des éléments de Menu**, puis cliquez sur le bouton de sélection (**...** ). Dans le **Éditeur d’éléments**, cliquez sur le sans étiquette **ajouter** bouton permettant de créer un élément de menu. Dans le **propriétés** fenêtre, modification **légende** à `Quick Print`, **ID** à `ID_FILE_PRINT_DIRECT`, et **Image** à `5` . La propriété de l'image spécifie l'icône Impression rapide dans la ressource de bitmap IDB_FILESMALL.  
+     Pour créer le **impression rapide** bouton, cliquez sur la colonne de valeur de propriété en regard **des éléments de Menu**, puis cliquez sur le bouton de sélection (**...** ). Dans le **Éditeur d’éléments**, cliquez sur le sans étiquette **ajouter** bouton permettant de créer un élément de menu. Dans le **propriétés** fenêtre, modification **légende** à *impression rapide*, **ID** à *ID_FILE_PRINT_DIRECT*, et **Image** à *5*. La propriété de l'image spécifie l'icône Impression rapide dans la ressource de bitmap IDB_FILESMALL.  
   
 3.  Pour vérifier que les boutons ont été ajoutés au volet du ruban, générez l'application et exécutez-la. Pour générer l’application, dans le **générer** menu, cliquez sur **générer la Solution**. Si l’application est générée avec succès, exécutez-la en cliquant sur **démarrer le débogage** sur la **déboguer** menu. Le **impression** bouton et la liste déroulante de zone sur le **favoris** panneau sur le **personnalisé** onglet du ruban doit être affiché.  
   

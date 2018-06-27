@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9020eb0165a0f06e430caa6a0e1641ea1afb3d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cf3f78624761b364bf192876cb8368c73507e86
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358340"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951573"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush, classe
 Wrapper pour ID2D1SolidColorBrush.  
@@ -95,7 +95,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
  [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush :: ~ CD2DSolidColorBrush  
@@ -113,7 +113,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pResource`  
+ *pResource*  
  Interface de la ressource existante. Ne peut pas être NULL  
   
 ##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
@@ -136,19 +136,19 @@ CD2DSolidColorBrush(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `color`  
+ *Couleur*  
  Les valeurs de rouges, verts, bleus et alphanumériques de la couleur du pinceau.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Pointeur vers l’opacité et de transformation d’un pinceau.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
- `nAlpha`  
+ *nAlpha*  
  Opacité de la couleur du pinceau.  
   
 ##  <a name="create"></a>  CD2DSolidColorBrush::Create  
@@ -159,7 +159,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pRenderTarget`  
+ *pRenderTarget*  
  Pointeur vers la cible de rendu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -234,7 +234,7 @@ void SetColor(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `color`  
+ *Couleur*  
  La couleur de ce pinceau de couleur unie  
   
 ## <a name="see-also"></a>Voir aussi  

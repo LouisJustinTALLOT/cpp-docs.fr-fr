@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350883"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956832"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 Trois fonctions de rappel s’affichent dans la bibliothèque Microsoft Foundation Class. Ces fonctions de rappel sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de retourner à Windows, étant donné que les exceptions ne peut pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
@@ -35,7 +35,7 @@ Trois fonctions de rappel s’affichent dans la bibliothèque Microsoft Foundati
 |[Fonction de rappel pour CDC::GrayString](#graystring)||
 |[Fonction de rappel pour CDC::SetAbortProc](#setabortproc)|| 
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h 
 
 ## <a name="enum_objects"></a> Fonction de rappel pour CDC::EnumObjects
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  Pointe vers un [LOGPEN](../../mfc/reference/logpen-structure.md) ou [LOGBRUSH](../../mfc/reference/logbrush-structure.md) structure de données qui contient des informations sur les attributs de logiques de l’objet.  
   
- `lpData`  
+ *lpData*  
  Points de données fourni par l’application passé à la `EnumObjects` (fonction).  
   
 ### <a name="return-value"></a>Valeur de retour  
- La fonction de rappel retourne un `int`. La valeur de ce retour est définie par l’utilisateur. Si la fonction de rappel retourne 0, `EnumObjects` arrête d’énumération au début.  
+ La fonction de rappel retourne un **int**. La valeur de ce retour est définie par l’utilisateur. Si la fonction de rappel retourne 0, `EnumObjects` arrête d’énumération au début.  
   
 ### <a name="remarks"></a>Notes  
  Le nom réel doit être exporté.  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hDC`  
- Identifie un contexte de périphérique de mémoire avec une image bitmap d’au moins la largeur et la hauteur spécifiée par `nWidth` et `nHeight` à `GrayString`.  
+ *hDC*  
+ Identifie un contexte de périphérique de mémoire avec une image bitmap d’au moins la largeur et la hauteur spécifiée par *nWidth* et *nHeight* à `GrayString`.  
   
- `lpData`  
+ *lpData*  
  Pointe vers la chaîne de caractères à ajouter.  
   
- `nCount`  
+ *nCount*  
  Spécifie le nombre de caractères en sortie.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  Identifie le contexte de périphérique.  
   
- `code`  
- Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne s’est produite. Il s’agit de **SP_OUTOFDISK** si le Gestionnaire d’impression n’est pas l’espace disque et davantage d’espace disque devient disponible si l’application attend. Si `code` est **SP_OUTOFDISK**, l’application ne dispose pas d’annuler le travail d’impression. Si elle n’est pas le cas, elle doit générer pour le Gestionnaire d’impression en appelant le **PeekMessage** ou **GetMessage** fonction Windows.  
+ *Code*  
+ Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne s’est produite. Il s’agit de **SP_OUTOFDISK** si le Gestionnaire d’impression n’est pas l’espace disque et davantage d’espace disque devient disponible si l’application attend. Si *code* est **SP_OUTOFDISK**, l’application ne dispose pas d’annuler le travail d’impression. Si elle n’est pas le cas, elle doit générer pour le Gestionnaire d’impression en appelant le `PeekMessage` ou `GetMessage` fonction Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour de la fonction de gestionnaire d’abandon est différent de zéro si le travail d’impression pour continuer et 0 si elle est annulée.  

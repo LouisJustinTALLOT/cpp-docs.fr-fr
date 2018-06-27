@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c033d33dd6b1e6c0ccd5bbdb4b6af6939521f592
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384132"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956172"
 ---
 # <a name="when-update-handlers-are-called"></a>Quand les gestionnaires de mise à jour sont-ils appelés ?
-Supposons que l’utilisateur clique sur la souris dans le menu fichier, ce qui génère un `WM_INITMENUPOPUP` message. Mécanisme de mise à jour de l’infrastructure met à jour collectivement tous les éléments dans le menu fichier avant du menu déroulant pour que les utilisateurs puissent le voir.  
+Supposons que l’utilisateur clique sur la souris dans le menu fichier, ce qui génère un message WM_INITMENUPOPUP. Mécanisme de mise à jour de l’infrastructure met à jour collectivement tous les éléments dans le menu fichier avant du menu déroulant pour que les utilisateurs puissent le voir.  
   
  Pour ce faire, l’infrastructure achemine mettre à jour des commandes pour tous les éléments de menu dans le menu contextuel sur le routage des commandes standard. Cibles de la commande sur le routage ont la possibilité de mettre à jour tous les éléments de menu en faisant correspondre la commande de mise à jour avec une entrée de table des messages appropriée (sous la forme `ON_UPDATE_COMMAND_UI`) et en appelant une fonction de « gestionnaire de mise à jour ». Par conséquent, pour un menu comportant six éléments, six commandes de mise à jour sont envoyées. Si un gestionnaire de mise à jour existe pour l’ID de commande de l’élément de menu, elle est appelée pour effectuer la mise à jour. Si ce n’est pas le cas, le framework vérifie l’existence d’un gestionnaire pour cet ID de commande et Active ou désactive l’élément de menu approprié.  
   
@@ -42,7 +42,7 @@ Supposons que l’utilisateur clique sur la souris dans le menu fichier, ce qui 
   
  Il est possible de désactiver la désactivation par défaut des objets d’interface utilisateur. Pour plus d’informations, consultez la [membre m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) membre de classe `CFrameWnd` dans les *référence MFC*.  
   
- L’initialisation de menu est activée automatiquement dans le framework, qui se produisent lors de l’application reçoit un `WM_INITMENUPOPUP` message. Lors de la boucle inactive, l’infrastructure recherche le routage des commandes pour les gestionnaires de mise à jour de bouton de la même façon comme il le fait pour les menus.  
+ L’initialisation de menu est activée automatiquement dans le framework, qui se produisent lors de l’application reçoit un message WM_INITMENUPOPUP. Lors de la boucle inactive, l’infrastructure recherche le routage des commandes pour les gestionnaires de mise à jour de bouton de la même façon comme il le fait pour les menus.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide pratique pour mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)

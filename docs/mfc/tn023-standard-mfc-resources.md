@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383173"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952035"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023 : ressources MFC standard
 Cette note décrit les ressources standard fournies et requises par la bibliothèque MFC.  
@@ -45,7 +45,7 @@ Cette note décrit les ressources standard fournies et requises par la biblioth�
   
 -   Indicate.rc : contient des ressources de chaîne pour les indicateurs d'état du bouton de la barre d'état, tels que "CAP" pour les Majuscules.  
   
--   Prompts.rc : contient des ressources de chaîne d'invite de menu pour chaque commande prédéfinie, par exemple "Create a new document" pour `ID_FILE_NEW`.  
+-   Prompts.rc : Contient les ressources de chaîne d’invite de menu pour chaque commande prédéfinie, par exemple « Créer un nouveau document » pour ID_FILE_NEW.  
   
 -   Commdlg.rc : fichier .rc compatible Visual C++ qui contient les modèles de la boîte de dialogue COMMDLG standard.  
   
@@ -77,10 +77,10 @@ Cette note décrit les ressources standard fournies et requises par la biblioth�
 >  Faites attention de ne pas déplacer involontairement des ressources en dehors du fichier Common.rc de manière irréversible. Si vous maintenez la touche CTRL enfoncée pendant que vous faites glisser des ressources, vous allez créer une copie. Si vous ne conservez pas la touche CTRL enfoncée pendant que vous effectuez le déplacement des éléments, les ressources seront déplacées. Si vous avez modifié le fichier Common.rc par inadvertance, cliquez sur "Non" lorsque vous êtes invité à enregistrer les modifications apportées au fichier Common.rc.  
   
 > [!NOTE]
->  Les fichiers de ressources .rc contiennent une ressource `TEXTINCLUDE` particulière qui vous empêche d'écraser par erreur les fichiers .rc standard.  
+>  Les fichiers de ressources .rc contiennent une ressource TEXTINCLUDE spéciale qui vous empêche d’écraser les fichiers .rc standard.  
   
 ### <a name="customizing-standard-framework-resources"></a>Personnalisation des ressources framework standard  
- Les ressources framework standard sont généralement incluses dans une application avec la commande #include dans le fichier de ressources d'une application. AppWizard génère un fichier de ressources. Ce fichier contient les ressources framework standard adéquates, en fonction des options AppWizard que vous sélectionnez. Vous pouvez examiner, ajouter ou supprimer les ressources incluses en modifiant les directives au moment de la compilation. Pour ce faire, ouvrez le **ressource** menu et sélectionnez **Set Includes**. Recherchez l’élément de modification "Compile-Time Directives". Par exemple :  
+ Les ressources framework standard sont généralement incluses dans une application avec la commande #include dans le fichier de ressources d'une application. AppWizard génère un fichier de ressources. Ce fichier contient les ressources framework standard adéquates, en fonction des options AppWizard que vous sélectionnez. Vous pouvez examiner, ajouter ou supprimer les ressources incluses en modifiant les directives au moment de la compilation. Pour ce faire, ouvrez le **ressource** menu et sélectionnez **Set Includes**. Recherchez l’élément de modification "Compile-Time Directives". Exemple :  
   
 ```  
 #include "afxres.rc"  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358353"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952178"
 ---
 # <a name="cbitmapbutton-class"></a>Classe de CBitmapButton
 Crée des contrôles de bouton de commande étiquetés avec des images bitmap au lieu de texte.  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  Dans le `CDialog` l’objet [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) appel de routine, le `CBitmapButton` l’objet [AutoLoad](#autoload) à l’aide, en tant que paramètres, ID de contrôle du bouton de la fonction et le `CDialog` l’objet**cela** pointeur.  
   
- Si vous souhaitez traiter les messages de notification de Windows, tel que **BN_CLICKED**, envoyé par un contrôle de bouton de la bitmap à son parent (généralement une classe dérivée de **CDialog)**, ajouter à la `CDialog`-dérivée objet d’une fonction table des messages entrée et le Gestionnaire de messages membre pour chaque message. Les notifications envoyées par un `CBitmapButton` objet sont les mêmes que celles envoyées par un [CButton](../../mfc/reference/cbutton-class.md) objet.  
+ Si vous souhaitez traiter les messages de notification de Windows, telles que BN_CLICKED, envoyé par un contrôle de bouton de la bitmap à son parent (généralement une classe dérivée de `CDialog`), ajouter à la `CDialog`-objet dérivée un membre d’entrée et le Gestionnaire de messages de table des messages fonction pour chaque message. Les notifications envoyées par un `CBitmapButton` objet sont les mêmes que celles envoyées par un [CButton](../../mfc/reference/cbutton-class.md) objet.  
   
  La classe [CToolBar](../../mfc/reference/ctoolbar-class.md) adopte une approche différente pour les boutons de bitmap.  
   
@@ -115,7 +115,7 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  ID du contrôle. du bouton  
   
- `pParent`  
+ *pParent*  
  Pointeur vers l’objet qui possède le bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356686"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954150"
 ---
 # <a name="ccmdui-class"></a>CCmdUI (classe)
 Est utilisé uniquement dans un `ON_UPDATE_COMMAND_UI` gestionnaire dans un `CCmdTarget`-classe dérivée.  
@@ -79,7 +79,7 @@ class CCmdUI
   
  Lorsqu’un utilisateur de votre application extrait un menu, chaque élément de menu doit savoir si elle doit être affiché comme activé ou désactivé. La cible d’une commande de menu fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` gestionnaire. Pour chacun des objets d’interface utilisateur de commande dans votre application, utilisez la fenêtre Propriétés pour créer un prototype d’entrée et de la fonction table des messages pour chaque gestionnaire.  
   
- Lorsque le menu est extraite, l’infrastructure recherche et appelle chacune `ON_UPDATE_COMMAND_UI` gestionnaire, chaque gestionnaire appelle `CCmdUI` telles que les fonctions membres **activer** et **vérifier**et ensuite le framework en conséquence affiche chaque élément de menu.  
+ Lorsque le menu est extraite, l’infrastructure recherche et appelle chacune `ON_UPDATE_COMMAND_UI` gestionnaire, chaque gestionnaire appelle `CCmdUI` telles que les fonctions membres `Enable` et `Check`, le framework puis convenablement affiche chaque élément de menu.  
   
  Un élément de menu peut être remplacé par un bouton de barre de contrôle ou un autre objet d’interface utilisateur de commande sans modifier le code dans le `ON_UPDATE_COMMAND_UI` gestionnaire.  
   
@@ -98,7 +98,7 @@ class CCmdUI
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CCmdUI`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bOn`  
+ *bOn*  
  **TRUE** pour activer l’élément, **FALSE** pour la désactiver.  
   
 ### <a name="example"></a>Exemple  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>Notes  
- **NULL** si l’élément n’est pas un menu. Si le sous-menu est une fenêtre contextuelle, `m_nID` contient l’ID du premier élément dans le menu contextuel. Pour plus d’informations, consultez [Note technique 21](../../mfc/tn021-command-and-message-routing.md).  
+ **NULL** si l’élément n’est pas un menu. Si le sous-menu est une fenêtre contextuelle, *m_nID* contient l’ID du premier élément dans le menu contextuel. Pour plus d’informations, consultez [Note technique 21](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Pointeur (de type `CWnd`) à l’objet fenêtre, comme une barre d’outil ou d’état, qui la notification est envoyée.  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nCheck`  
+ *nVérifiez*  
  Spécifie l’état de la vérification à définir. Si 0, désactive ; Si 1, les contrôles ; et si le 2 définit indéterminé.  
   
 ### <a name="remarks"></a>Notes  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszText`  
+ *lpszText*  
  Pointeur vers une chaîne de texte.  
   
 ### <a name="example"></a>Exemple  

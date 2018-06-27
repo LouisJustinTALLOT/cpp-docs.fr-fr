@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352097"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953270"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsque des événements de minutage se produisent.  
@@ -64,7 +64,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
   
  `CAnimationTimerEventHandler`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance  
@@ -77,10 +77,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
@@ -113,7 +113,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `fps`  
+ *i/s*  
   
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
@@ -126,7 +126,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
 ## <a name="see-also"></a>Voir aussi  

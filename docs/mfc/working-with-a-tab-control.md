@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4dbc01c83f9561c8174d2a14365a6a8c94e6ded
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab7d4f434bf958c3bf47dc1f91101d35cf04add7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383160"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954957"
 ---
 # <a name="working-with-a-tab-control"></a>Utilisation d'un contrôle Tab
-Le moyen le plus simple d’utiliser un contrôle tab ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) est en l’ajoutant à une ressource de modèle de boîte de dialogue avec l’éditeur de boîte de dialogue. Vous pouvez également utiliser un contrôle onglet en lui-même. MFC appelle **InitCommonControls** pour vous. Les tâches clés sont les suivantes :  
+Le moyen le plus simple d’utiliser un contrôle tab ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) est en l’ajoutant à une ressource de modèle de boîte de dialogue avec l’éditeur de boîte de dialogue. Vous pouvez également utiliser un contrôle onglet en lui-même. MFC appelle `InitCommonControls` pour vous. Les tâches clés sont les suivantes :  
   
 -   [Création du contrôle tab](../mfc/creating-the-tab-control.md)  
   

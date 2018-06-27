@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354619"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954489"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush, classe
 Wrapper pour ID2D1BitmapBrush.  
@@ -124,7 +124,7 @@ class CD2DBitmapBrush : public CD2DBrush;
   
  `CD2DBitmapBrush`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="dtor"></a>  CD2DBitmapBrush :: ~ CD2DBitmapBrush  
@@ -142,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pResource`  
+ *pResource*  
  Interface de la ressource existante. Ne peut pas être NULL  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -176,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Pointeur vers les modes d’extension et le mode d’interpolation d’un pinceau d’image bitmap.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Pointeur vers l’opacité et de transformation d’un pinceau.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
- `uiResID`  
+ *uiResID*  
  Le numéro d’ID de ressource de la ressource.  
   
- `lpszType`  
+ *lpszType*  
  Pointeur vers une chaîne terminée par le caractère null qui contient le type de ressource.  
   
- `sizeDest`  
+ *sizeDest*  
  Taille de la destination de la bitmap.  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  Pointeur vers une chaîne se terminant par null qui contient le nom du fichier.  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -208,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Pointeur vers les propriétés de pinceau d’image bitmap.  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -219,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pRenderTarget`  
+ *pRenderTarget*  
  Pointeur vers la cible de rendu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -331,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBitmap`  
+ *pBitmap*  
  L’image bitmap source utilisée par le pinceau  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -342,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `extendModeX`  
+ *extendModeX*  
  Une valeur qui spécifie la manière dont le pinceau dispose en mosaïque horizontale les zones qui s’étendent au-delà de sa bitmap  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -353,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `extendModeY`  
+ *extendModeY*  
  Une valeur qui spécifie la façon dont le pinceau dispose en mosaïque verticale les zones qui s’étendent au-delà de sa bitmap  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -364,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `interpolationMode`  
+ *interpolationMode*  
  Le mode d’interpolation utilisé lorsque l’image bitmap du pinceau est mis à l’échelle ou pivotée  
   
 ## <a name="see-also"></a>Voir aussi  

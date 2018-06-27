@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 98410fb8b62eb160e21803b60a14ce731ffc8c23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463077"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957453"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fournit les fonctionnalités d'un contrôle d'édition Windows.  
@@ -181,7 +181,7 @@ class CEdit : public CWnd
   
  Vous pouvez créer un contrôle d’édition à partir d’un modèle de boîte de dialogue ou directement dans votre code. Dans les deux cas, tout d’abord appeler le constructeur `CEdit` pour construire le `CEdit` de l’objet, puis appelez le [créer](#create) fonction membre pour créer les fenêtres de contrôle d’édition et attacher le `CEdit` objet.  
   
- Construction peut être un processus en une étape dans une classe dérivée de `CEdit`. Écrire un constructeur pour la classe dérivée et appelez **créer** à partir de dans le constructeur.  
+ Construction peut être un processus en une étape dans une classe dérivée de `CEdit`. Écrire un constructeur pour la classe dérivée et appelez `Create` à partir de dans le constructeur.  
   
  `CEdit` hérite des fonctionnalités importantes de `CWnd`. Pour définir et récupérer le texte à partir d’un `CEdit` de l’objet, utilisez le `CWnd` fonctions membres [SetWindowText](cwnd-class.md#setwindowtext) et [GetWindowText](cwnd-class.md#getwindowtext), ou les obtenir tout le contenu d’une modification contrôle, même si elle est un contrôle multiligne. Les lignes de texte dans un contrôle multiligne sont séparés par des séquences de caractères '\r\n'. En outre, si un contrôle d’édition est multiligne, obtenir et définir une partie du texte du contrôle en appelant le `CEdit` fonctions membres [GetLine](#getline), [fonction membre SetSel](#setsel), [fonction membre GetSel](#getsel)et [ ReplaceSel](#replacesel).  
   
@@ -238,7 +238,7 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="canundo"></a>  CEdit::CanUndo  
@@ -249,7 +249,7 @@ BOOL CanUndo() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la dernière opération de modification peut être annulée par un appel à la **Annuler** fonction membre ; 0 si elle ne peut pas être annulée.  
+ Différent de zéro si la dernière opération de modification peut être annulée par un appel à la `Undo` fonction membre ; 0 si elle ne peut pas être annulée.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) dans le Kit de développement logiciel Windows.  
@@ -278,7 +278,7 @@ int CharFromPos(CPoint pt) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  Les coordonnées d’un point dans la zone cliente de cet `CEdit` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -302,7 +302,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Notes  
- La suppression effectuée par **clair** puissent être annulées en appelant le [Annuler](#undo) fonction membre.  
+ La suppression effectuée par `Clear` puissent être annulées en appelant le [Annuler](#undo) fonction membre.  
   
  Pour supprimer la sélection actuelle et placer le contenu supprimé dans le Presse-papiers, appelez le [couper](#cut) fonction membre.  
   
@@ -336,25 +336,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle d’édition. Appliquer n’importe quelle combinaison de [modifier les styles](styles-used-by-mfc.md#edit-styles) au contrôle.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle d’édition. Peut être un `CRect` objet ou `RECT` structure.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie la fenêtre du parent du contrôle d’édition (généralement un `CDialog`). Il ne doit pas être **NULL**.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de la modifier  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation a réussi ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CEdit` objet en deux étapes. Tout d’abord, appelez le `CEdit` constructeur, puis appelez **créer**, ce qui crée le contrôle d’édition Windows et l’attache à le `CEdit` objet.  
+ Vous construisez un `CEdit` objet en deux étapes. Tout d’abord, appelez le `CEdit` constructeur, puis appelez `Create`, ce qui crée le contrôle d’édition Windows et l’attache à le `CEdit` objet.  
   
- Lorsque **créer** s’exécute, Windows envoie les [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), et [WM_ GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) messages pour le contrôle d’édition.  
+ Lorsque `Create` s’exécute, Windows envoie les [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), et [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) messages dans le contrôle d’édition.  
   
  Ces messages sont gérées par défaut par le [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), et [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) fonctions membres dans la `CWnd` classe de base. Pour étendre le traitement du message par défaut, dérivez une classe de `CEdit`, ajouter une table des messages à la nouvelle classe et substituer les fonctions membres de gestionnaire de messages ci-dessus. Substituer `OnCreate`, par exemple, pour effectuer l’initialisation nécessaire pour la nouvelle classe.  
   
@@ -381,7 +381,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Notes  
- La suppression effectuée par **couper** puissent être annulées en appelant le [Annuler](#undo) fonction membre.  
+ La suppression effectuée par `Cut` puissent être annulées en appelant le [Annuler](#undo) fonction membre.  
   
  Pour supprimer la sélection actuelle sans la placer le texte supprimé dans le Presse-papiers, appelez le [clair](#clear) fonction membre.  
   
@@ -445,10 +445,10 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `lpszText`  
+ [out] *lpszText*  
  Un pointeur vers une chaîne qui contient le texte de la file d’attente.  
   
- [in] `cchText`  
+ [in] *cchText*  
  Le nombre de caractères qui peuvent être reçus. Ce nombre comprend à la fin du `NULL` caractère.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] `pichStart`|Index de base zéro du premier caractère dans la plage de texte qui est mis en surbrillance.|  
-|[out] `pichEnd`|Index de base zéro du dernier caractère de la plage de texte qui est mis en surbrillance.|  
+|[out] *pichStart*|Index de base zéro du premier caractère dans la plage de texte qui est mis en surbrillance.|  
+|[out] *pichEnd*|Index de base zéro du dernier caractère de la plage de texte qui est mis en surbrillance.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -544,7 +544,7 @@ UINT GetLimitText() const;
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
- Appelez cette fonction pour récupérer une ligne de texte à partir d’un contrôle d’édition et le place dans `lpszBuffer`.  
+ Appelez cette fonction pour récupérer une ligne de texte à partir d’un contrôle d’édition et le place dans *lpszbuffer a été*.  
   
 ```  
 int GetLine(
@@ -558,17 +558,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Spécifie le numéro de ligne à récupérer à partir de plusieurs lignes contrôle d’édition. Numéros de ligne sont de base zéro ; la valeur 0 spécifie la première ligne. Ce paramètre est ignoré par un contrôle d’édition sur une ligne.  
   
- `lpszBuffer`  
+ *lpszbuffer a été*  
  Pointe vers la mémoire tampon qui reçoit une copie de la ligne. Le premier mot de la mémoire tampon doit spécifier le nombre maximal de caractères qui peuvent être copiés dans la mémoire tampon.  
   
- `nMaxLength`  
- Spécifie le nombre maximal d’octets pouvant être copiée dans la mémoire tampon. `GetLine` place cette valeur dans le premier mot de `lpszBuffer` avant l’appel à Windows.  
+ *nMaxLength*  
+ Spécifie le nombre maximal d’octets pouvant être copiée dans la mémoire tampon. `GetLine` place cette valeur dans le premier mot de *lpszbuffer a été* avant l’appel à Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre d’octets réellement copiés. La valeur de retour est 0 si le numéro de ligne spécifiée par `nIndex` est supérieur au nombre de lignes dans le contrôle d’édition.  
+ Le nombre d’octets réellement copiés. La valeur de retour est 0 si le numéro de ligne spécifié par *nIndex* est supérieur au nombre de lignes dans le contrôle d’édition.  
   
 ### <a name="remarks"></a>Notes  
  La ligne copiée ne contient pas un caractère de fin de la valeur null.  
@@ -661,7 +661,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpRect`  
+ *lpRect*  
  Pointe vers le `RECT` structure qui reçoit le rectangle de mise en forme.  
   
 ### <a name="remarks"></a>Notes  
@@ -686,10 +686,10 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStartChar`  
+ *nStartChar*  
  Référence à un entier qui recevra la position du premier caractère dans la sélection actuelle.  
   
- `nEndChar`  
+ *nEndChar*  
  Référence à un entier qui recevra la position du premier caractère non sélectionnée après la fin de la sélection actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -722,7 +722,7 @@ void LimitText(int nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nChars`  
+ *nChars*  
  Spécifie la longueur (en octets) du texte que l’utilisateur peut entrer. Si ce paramètre est 0, la longueur de texte est définie sur **UINT_MAX** octets. Il s'agit du comportement par défaut.  
   
 ### <a name="remarks"></a>Notes  
@@ -744,11 +744,11 @@ int LineFromChar(int nIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
- Contient la valeur d’index de base zéro du caractère souhaité dans le texte du contrôle d’édition, ou -1. Si `nIndex` est -1, il spécifie la ligne actuelle, autrement dit, la ligne qui contient le point d’insertion.  
+ *nIndex*  
+ Contient la valeur d’index de base zéro du caractère souhaité dans le texte du contrôle d’édition, ou -1. Si *nIndex* est -1, il spécifie la ligne actuelle, autrement dit, la ligne qui contient le point d’insertion.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le numéro de ligne de base zéro de la ligne contenant l’index de caractère spécifié par `nIndex`. Si `nIndex` est -1, le numéro de la ligne qui contient le premier caractère de la sélection est retourné. S’il n’existe pas de sélection, le numéro de ligne actuel est retourné.  
+ Le numéro de ligne de base zéro de la ligne contenant l’index de caractère spécifié par *nIndex*. Si *nIndex* est -1, le numéro de la ligne qui contient le premier caractère de la sélection est retourné. S’il n’existe pas de sélection, le numéro de ligne actuel est retourné.  
   
 ### <a name="remarks"></a>Notes  
  Un index de caractère est le nombre de caractères à partir du début du contrôle d’édition.  
@@ -768,11 +768,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLine`  
- Contient la valeur d’index pour la ligne de votre choix dans le texte du contrôle d’édition, ou -1. Si `nLine` est -1, il spécifie la ligne actuelle, autrement dit, la ligne qui contient le point d’insertion.  
+ *nLine*  
+ Contient la valeur d’index pour la ligne de votre choix dans le texte du contrôle d’édition, ou -1. Si *nLine* est -1, il spécifie la ligne actuelle, autrement dit, la ligne qui contient le point d’insertion.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’index de caractère de la ligne spécifiée dans `nLine` ou -1 si le numéro de ligne spécifié est supérieur au nombre de lignes dans le contrôle d’édition.  
+ L’index de caractère de la ligne spécifiée dans *nLine* ou -1 si le numéro de ligne spécifié est supérieur au nombre de lignes dans le contrôle d’édition.  
   
 ### <a name="remarks"></a>Notes  
  L’index de caractère est le nombre de caractères à partir du début du contrôle d’édition de la ligne spécifiée.  
@@ -792,17 +792,17 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLine`  
+ *nLine*  
  Index de base zéro d’un caractère dans la ligne dont la longueur doit être récupéré. La valeur par défaut est -1.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pour les contrôles d’édition sur une ligne, la valeur de retour est la longueur, en `TCHAR`s, du texte dans le contrôle d’édition.  
   
- Pour les contrôles d’édition multiligne, la valeur de retour est la longueur, en `TCHAR`s, de la ligne spécifiée par la `nLine` paramètre. Pour [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] la longueur est le nombre d’octets dans la ligne de texte, pour le texte Unicode, la longueur est le nombre de caractères dans la ligne. La longueur n’inclut pas le caractère de retour chariot à la fin de la ligne.  
+ Pour les contrôles d’édition multiligne, la valeur de retour est la longueur, en `TCHAR`s, de la ligne spécifiée par le *nLine* paramètre. Pour [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] la longueur est le nombre d’octets dans la ligne de texte, pour le texte Unicode, la longueur est le nombre de caractères dans la ligne. La longueur n’inclut pas le caractère de retour chariot à la fin de la ligne.  
   
- Si le `nLine` paramètre est supérieur au nombre de caractères dans le contrôle, la valeur de retour est égale à zéro.  
+ Si le *nLine* paramètre est supérieur au nombre de caractères dans le contrôle, la valeur de retour est égale à zéro.  
   
- Si le `nLine` paramètre est -1, la valeur de retour est le nombre de caractères non sélectionnés dans les lignes qui contiennent des caractères sélectionnés. Par exemple, si la sélection s’étend à partir du quatrième caractère d’une ligne et le huitième caractère de la fin de la ligne suivante, la valeur de retour est 10. Autrement dit, trois caractères sur la première ligne et sept suivante.  
+ Si le *nLine* paramètre est -1, la valeur de retour est le nombre de caractères non sélectionnés dans les lignes qui contiennent des caractères sélectionnés. Par exemple, si la sélection s’étend à partir du quatrième caractère d’une ligne et le huitième caractère de la fin de la ligne suivante, la valeur de retour est 10. Autrement dit, trois caractères sur la première ligne et sept suivante.  
   
  Pour plus d’informations sur la `TCHAR` de type, consultez la `TCHAR` ligne dans la table [les Types de données Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
@@ -822,16 +822,16 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLines`  
+ *nLines*  
  Spécifie le nombre de lignes à faire défiler verticalement.  
   
- `nChars`  
+ *nChars*  
  Spécifie le nombre de positions de caractère pour faire défiler horizontalement. Cette valeur est ignorée si le contrôle d’édition est la **ES_RIGHT** ou **ES_CENTER** style.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre est traitée uniquement par les contrôles d’édition de plusieurs lignes.  
   
- Le contrôle d’édition ne défile pas verticalement au-delà de la dernière ligne du texte dans le contrôle d’édition. Si la ligne en cours ainsi que le nombre de lignes spécifié par `nLines` dépasse le nombre total de lignes dans le contrôle d’édition, la valeur est ajustée afin que la dernière ligne du contrôle d’édition est l’objet d’un défilement vers le haut de la fenêtre de contrôle d’édition.  
+ Le contrôle d’édition ne défile pas verticalement au-delà de la dernière ligne du texte dans le contrôle d’édition. Si la ligne en cours ainsi que le nombre de lignes spécifié par *nLines* dépasse le nombre total de lignes dans le contrôle d’édition, la valeur est ajustée afin que la dernière ligne du contrôle d’édition est l’objet d’un défilement vers le haut de la fenêtre de contrôle d’édition.  
   
  `LineScroll` peut être utilisé pour faire défiler horizontalement au-delà du dernier caractère de n’importe quelle ligne.  
   
@@ -863,14 +863,14 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nChar`  
+ *nChar*  
  Index de base zéro du caractère spécifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Les coordonnées du coin supérieur gauche du caractère spécifié par `nChar`.  
+ Les coordonnées du coin supérieur gauche du caractère spécifié par *nChar*.  
   
 ### <a name="remarks"></a>Notes  
- Le caractère est spécifié en donnant sa valeur d’index de base zéro. Si `nChar` est supérieur à l’index du dernier caractère dans ce `CEdit` de l’objet, la valeur de retour spécifie les coordonnées de la position de caractère juste après le dernier caractère dans ce `CEdit` objet.  
+ Le caractère est spécifié en donnant sa valeur d’index de base zéro. Si *nChar* est supérieur à l’index du dernier caractère dans ce `CEdit` de l’objet, la valeur de retour spécifie les coordonnées de la position de caractère juste après le dernier caractère dans ce `CEdit` objet.  
   
 > [!NOTE]
 >  Cette fonction membre est disponible avec Windows 95 et Windows NT 4.0.  
@@ -881,17 +881,17 @@ CPoint PosFromChar(UINT nChar) const;
   Consultez l’exemple de [CEdit::LineFromChar](#linefromchar).  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
- Appelez cette fonction pour remplacer la sélection actuelle dans un contrôle d’édition avec le texte spécifié par `lpszNewText`.  
+ Appelez cette fonction pour remplacer la sélection actuelle dans un contrôle d’édition avec le texte spécifié par *lpszNewText*.  
   
 ```  
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszNewText`  
+ *lpszNewText*  
  Pointe vers une chaîne terminée par le caractère null qui contient le texte de remplacement.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Pour spécifier que cette fonction peut être annulée, définissez la valeur de ce paramètre pour **TRUE** . La valeur par défaut est **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
@@ -917,10 +917,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
  Pointeur vers une chaîne qui contient la file d’attente à afficher dans le contrôle d’édition.  
   
- [in] `fDrawWhenFocused`  
+ [in] *fDrawWhenFocused*  
  Si `false`, la bannière de signal n’est pas dessinée lorsque l’utilisateur clique sur le contrôle d’édition et donne le contrôle le focus.  
   
  Si `true`, la bannière de signal est dessinée, même lorsque le contrôle a le focus. La bannière de signal disparaît lorsque l’utilisateur commence à taper dans le contrôle.  
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `ichStart`|Index de base zéro du premier caractère dans la plage de texte pour mettre en surbrillance.|  
-|[in] `ichEnd`|Index de base zéro du dernier caractère dans la plage de texte pour mettre en surbrillance.|  
+|[in] *ichStart*|Index de base zéro du premier caractère dans la plage de texte pour mettre en surbrillance.|  
+|[in] *ichEnd*|Index de base zéro du dernier caractère dans la plage de texte pour mettre en surbrillance.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -995,7 +995,7 @@ void SetLimitText(UINT nMax);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nMax`  
+ *nombre maximal*  
  La nouvelle limite de texte en caractères.  
   
 ### <a name="remarks"></a>Notes  
@@ -1044,7 +1044,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bModified`  
+ *bModified*  
  La valeur **TRUE** indique que le texte a été modifié et la valeur **FALSE** indique qu’il est modifié. Par défaut, l’indicateur modifié est défini.  
   
 ### <a name="remarks"></a>Notes  
@@ -1088,7 +1088,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bReadOnly`  
+ *bReadOnly*  
  Spécifie s’il faut définir ou supprimer l’état en lecture seule du contrôle d’édition. La valeur **TRUE** définit l’état en lecture seule ; la valeur **FALSE** définit l’état en lecture-écriture.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1110,7 +1110,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpRect`  
+ *lpRect*  
  Pointe vers le `RECT` structure ou `CRect` objet qui spécifie les nouvelles dimensions du rectangle de mise en forme.  
   
 ### <a name="remarks"></a>Notes  
@@ -1135,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpRect`  
+ *lpRect*  
  Pointe vers un `RECT` structure ou `CRect` objet qui spécifie les nouvelles dimensions du rectangle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1176,10 +1176,10 @@ void SetSel(
  *bNoScroll*  
  Indique si le point d’insertion doit être atteint dans la vue. Si **FALSE**, le point d’insertion devient visible. Si **TRUE**, le point d’insertion ne défile pas dans la vue.  
   
- `nStartChar`  
- Spécifie la position de départ. Si `nStartChar` est égal à 0 et `nEndChar` est -1, tout le texte du contrôle d’édition est sélectionné. Si `nStartChar` est -1, une sélection en cours est supprimée.  
+ *nStartChar*  
+ Spécifie la position de départ. Si *nStartChar* est égal à 0 et *nEndChar* est -1, tout le texte du contrôle d’édition est sélectionné. Si *nStartChar* est -1, une sélection en cours est supprimée.  
   
- `nEndChar`  
+ *nEndChar*  
  Spécifie la position de fin.  
   
 ### <a name="remarks"></a>Notes  
@@ -1202,13 +1202,13 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cxEachStop`  
- Spécifie que les taquets de tabulation doivent être définies à chaque `cxEachStop` unités de boîte de dialogue.  
+ *cxEachStop*  
+ Spécifie que les taquets de tabulation doivent être définies à chaque *cxEachStop* unités de boîte de dialogue.  
   
- `nTabStops`  
- Spécifie le nombre de taquets de tabulation contenues dans `rgTabStops`. Ce nombre doit être supérieur à 1.  
+ *nTabStops*  
+ Spécifie le nombre de taquets de tabulation contenues dans *rgTabStops*. Ce nombre doit être supérieur à 1.  
   
- `rgTabStops`  
+ *rgTabStops*  
  Pointe vers un tableau d’entiers non signés, la spécification de l’onglet s’arrête en unités de boîte de dialogue. Une unité de boîte de dialogue est une distance horizontale ou verticale. Une unité de boîte de dialogue horizontale est égale à un quart de l’unité de largeur de base de dialogue actuelle et 1 unité de boîte de dialogue vertical est égale à un huitième de l’unité de base de hauteur de boîte de dialogue actuelle. Les unités de dialogue sont calculées en fonction de la hauteur et de la largeur de la police système actuelle. Le **GetDialogBaseUnits** fonction Windows retourne, unités de base, la boîte de dialogue active en pixels.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1217,7 +1217,7 @@ BOOL SetTabStops(
 ### <a name="remarks"></a>Notes  
  Lorsque le texte est copié dans un contrôle d’édition de plusieurs lignes, n’importe quel caractère de tabulation dans le texte entraînera l’espace à générer jusqu'à la tabulation suivante.  
   
- Pour définir des taquets de tabulation à la taille par défaut de 32 unités de boîte de dialogue, appelez la version sans paramètre de cette fonction membre. Pour définir des taquets de tabulation sur une taille de 32, appelez la version avec le `cxEachStop` paramètre. Pour définir des taquets de tabulation dans un tableau de taille, utilisez la version avec deux paramètres.  
+ Pour définir des taquets de tabulation à la taille par défaut de 32 unités de boîte de dialogue, appelez la version sans paramètre de cette fonction membre. Pour définir des taquets de tabulation sur une taille de 32, appelez la version avec le *cxEachStop* paramètre. Pour définir des taquets de tabulation dans un tableau de taille, utilisez la version avec deux paramètres.  
   
  Cette fonction membre est traitée uniquement par les contrôles d’édition de plusieurs lignes.  
   
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `pEditBalloonTip`|Pointeur vers un [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) structure qui décrit l’info-bulle.|  
-|[in] `lpszTitle`|Pointeur vers une chaîne Unicode qui contient le titre de l’info-bulle.|  
-|[in] `lpszText`|Pointeur vers une chaîne Unicode qui contient le texte d’info-bulle Info-bulle.|  
-|[in] `ttiIcon`|Un `INT` qui spécifie le type d’icône à associer à l’info-bulle. La valeur par défaut est `TTI_NONE`. Pour plus d’informations, consultez la `ttiIcon` membre de la [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) structure.|  
+|[in] *pEditBalloonTip*|Pointeur vers un [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) structure qui décrit l’info-bulle.|  
+|[in] *lpszTitle*|Pointeur vers une chaîne Unicode qui contient le titre de l’info-bulle.|  
+|[in] *lpszText*|Pointeur vers une chaîne Unicode qui contient le texte d’info-bulle Info-bulle.|  
+|[in] *ttiIcon*|Un **INT** qui spécifie le type d’icône à associer à l’info-bulle. La valeur par défaut est `TTI_NONE`. Pour plus d’informations, consultez la `ttiIcon` membre de la [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -1277,7 +1277,7 @@ BOOL Undo();
  Pour un contrôle d’édition sur une ligne, la valeur de retour est toujours différent de zéro. Pour un contrôle d’édition de plusieurs lignes, la valeur de retour est différent de zéro si l’opération d’annulation a réussi, ou 0 si l’opération de restauration échoue.  
   
 ### <a name="remarks"></a>Notes  
- Une opération d’annulation peut également être annulée. Par exemple, vous pouvez restaurer le texte supprimé avec le premier appel à **Annuler**. Tant qu’il n’existe aucune opération de modification intermédiaire, vous pouvez supprimer le texte en utilisant un deuxième appel à **Annuler**.  
+ Une opération d’annulation peut également être annulée. Par exemple, vous pouvez restaurer le texte supprimé avec le premier appel à `Undo`. Tant qu’il n’existe aucune opération de modification intermédiaire, vous pouvez supprimer le texte en utilisant un deuxième appel à `Undo`.  
   
  Pour plus d’informations, consultez [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) dans le Kit de développement logiciel Windows.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351635"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950302"
 ---
 # <a name="bitmap-structure"></a>Structure BITMAP
 Le **BITMAP** structure définit la hauteur, largeur, format de couleur et les valeurs de bit d’une image bitmap logique **.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Spécifie la hauteur de la bitmap dans les lignes de la trame. La hauteur doit être supérieure à 0.  
   
  *bmWidthBytes*  
- Spécifie le nombre d’octets dans chaque ligne raster. Cette valeur doit être un nombre pair, car l’interface GDI (GDI) suppose que les valeurs de bit d’une image bitmap forment un tableau d’entiers de (2 octets). En d’autres termes, **bmWidthBytes** \* 8 doit être au prochain multiple de 16 supérieure ou égale à la valeur obtenue lorsque le **bmWidth** membre est multiplié par la **bmBitsPixel**  membre.  
+ Spécifie le nombre d’octets dans chaque ligne raster. Cette valeur doit être un nombre pair, car l’interface GDI (GDI) suppose que les valeurs de bit d’une image bitmap forment un tableau d’entiers de (2 octets). En d’autres termes, *bmWidthBytes* \* 8 doit être au prochain multiple de 16 supérieure ou égale à la valeur obtenue lorsque le *bmWidth* membre est multiplié par la *bmBitsPixel*  membre.  
   
  *bmPlanes*  
  Spécifie le nombre de plans de couleur de l’image bitmap.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Spécifie le nombre de bits de couleur adjacent sur chaque plan nécessaire à la définition d’un pixel.  
   
  *bmBits*  
- Pointe vers l’emplacement des valeurs de bits de l’image bitmap. Le **bmBits** membre doit être un pointeur long vers un tableau de valeurs de 1 octet.  
+ Pointe vers l’emplacement des valeurs de bits de l’image bitmap. Le *bmBits* membre doit être un pointeur long vers un tableau de valeurs de 1 octet.  
   
 ## <a name="remarks"></a>Notes  
  Les formats bitmap actuellement utilisés sont monochrome et couleur. L’image bitmap monochrome utilise un format de bits 1, 1-plan. Chaque analyse est un multiple de 16 bits.  
@@ -87,7 +87,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Chaque périphérique possède son propre format couleur unique. Pour transférer une image bitmap d’un périphérique à un autre, utilisez la [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) et [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) fonctions Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

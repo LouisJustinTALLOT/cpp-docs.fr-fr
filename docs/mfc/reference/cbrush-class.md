@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355887"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954102"
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 Encapsule un pinceau GDI (Graphics Device Interface) Windows.  
@@ -91,7 +91,7 @@ class CBrush : public CGdiObject
   
  `CBrush`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cbrush"></a>  CBrush::CBrush  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `crColor`  
+ *crColor*  
  Spécifie la couleur de premier plan du pinceau comme une couleur RVB. Si le pinceau est livré, ce paramètre spécifie la couleur des hachures.  
   
- `nIndex`  
+ *nIndex*  
  Spécifie le style de hachurage du pinceau. Il peut prendre l’une des valeurs suivantes :  
   
 - `HS_BDIAGONAL` Hachage vers le bas (de gauche à droite) à 45 degrés  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Hachage vertical  
   
- `pBitmap`  
+ *pBitmap*  
  Pointe vers un `CBitmap` objet qui spécifie une image bitmap avec laquelle le pinceau peint.  
   
 ### <a name="remarks"></a>Notes  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Le constructeur avec un seul [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre construit un pinceau uni avec la couleur spécifiée. Spécifie une valeur RVB de la couleur et peut être construite avec le `RGB` macro dans WINDOWS. H.  
   
- Le constructeur avec deux paramètres construit un pinceau à hachures. Le `nIndex` paramètre spécifie l’index d’un motif hachuré. Le `crColor` paramètre spécifie la couleur.  
+ Le constructeur avec deux paramètres construit un pinceau à hachures. Le *nIndex* paramètre spécifie l’index d’un motif hachuré. Le *crColor* paramètre spécifie la couleur.  
   
  Le constructeur avec un `CBitmap` paramètre construit un pinceau à motif. Le paramètre identifie une image bitmap. La bitmap est censée ont été créés à l’aide de [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), ou [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). La taille minimale d’une image bitmap à utiliser dans un motif de remplissage est 8 x 8 pixels.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  Les deux versions diffèrent dans la façon dont vous gérez le fichier DIB :  
   
--   Dans la première version, pour obtenir un handle du fichier DIB vous appelez Windows **GlobalAlloc** fonction pour allouer un bloc de mémoire globale et remplissez la mémoire avec le fichier DIB compressé.  
+-   Dans la première version, pour obtenir un handle du fichier DIB vous appelez Windows `GlobalAlloc` fonction pour allouer un bloc de mémoire globale et remplissez la mémoire avec le fichier DIB compressé.  
   
--   Dans la deuxième version, il n’est pas nécessaire d’appeler **GlobalAlloc** pour allouer de la mémoire pour le fichier DIB compressé.  
+-   Dans la deuxième version, il n’est pas nécessaire d’appeler `GlobalAlloc` pour allouer de la mémoire pour le fichier DIB compressé.  
   
  Un fichier DIB compressé se compose d’un `BITMAPINFO` immédiatement suivi d’un tableau d’octets qui définit les pixels de la bitmap de structure de données. Les images bitmap utilisées en tant que modèles de remplissage doivent être de 8 x 8 pixels. Si la bitmap est supérieure, Windows crée un motif de remplissage à l’aide uniquement les bits correspondant pour les 8 premières lignes et 8 colonnes de pixels dans le coin supérieur gauche de l’image bitmap.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Pour plus d’informations sur l’utilisation des fonctions suivantes de Windows, consultez le Kit de développement logiciel Windows :  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (cette fonction est fournie uniquement pour la compatibilité avec les applications écrites pour les versions de Windows antérieures à 3.0 ; utilisez la **CreateDIBPatternBrushPt** fonction.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (cette fonction est fournie uniquement pour la compatibilité avec les applications écrites pour les versions de Windows antérieures à 3.0 ; utilisez la `CreateDIBPatternBrushPt` fonction.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (cette fonction doit être utilisée pour les applications Win32).  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Spécifie le style de hachurage du pinceau. Il peut prendre l’une des valeurs suivantes :  
   
 - `HS_BDIAGONAL` Hachage vers le bas (de gauche à droite) à 45 degrés  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Hachage vertical  
   
- `crColor`  
+ *crColor*  
  Spécifie la couleur de premier plan du pinceau comme une couleur RVB (la couleur des hachures). Consultez [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) dans le SDK Windows pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBitmap`  
+ *pBitmap*  
  Identifie une image bitmap.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Le pinceau peut ensuite être sélectionné pour n’importe quel contexte de périphérique qui prend en charge les opérations raster. L’image bitmap identifié par `pBitmap` est initialisé en général à l’aide de la [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), ou [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) (fonction).  
+ Le pinceau peut ensuite être sélectionné pour n’importe quel contexte de périphérique qui prend en charge les opérations raster. L’image bitmap identifié par *pBitmap* est initialisé en général à l’aide de la [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap :: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), ou [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) (fonction).  
   
  Les images bitmap utilisées en tant que modèles de remplissage doivent être de 8 x 8 pixels. Si la bitmap est supérieure, Windows n’utilise que les bits correspondant aux 8 premières lignes et colonnes de pixels dans le coin supérieur gauche de l’image bitmap.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure qui spécifie la couleur du pinceau. Spécifie une valeur RVB de la couleur et peut être construite avec le `RGB` macro dans WINDOWS. H.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure qui spécifie la couleur du pinceau. La couleur spécifie une valeur RVB et peut être construite avec la macro RVB dans WINDOWS. H.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Spécifie un index de couleur. Cette valeur correspond à la couleur utilisée pour peindre l’un des éléments de 21 fenêtre. Consultez [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) dans le SDK Windows pour obtenir la liste de valeurs.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hBrush`  
+ *hBrush*  
  `HANDLE` un pinceau GDI de Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLogBrush`  
+ *pLogBrush*  
  Pointe vers un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure qui contient des informations sur le pinceau.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la fonction réussit, et `pLogBrush` est un pointeur valid, la valeur de retour est le nombre d’octets stockés dans la mémoire tampon.  
+ Si la fonction réussit, et *pLogBrush* est un pointeur valid, la valeur de retour est le nombre d’octets stockés dans la mémoire tampon.  
   
- Si la fonction réussit, et `pLogBrush` est **NULL**, la valeur de retour est le nombre d’octets requis pour conserver les informations de la fonction stocke dans la mémoire tampon.  
+ Si la fonction réussit, et *pLogBrush* est **NULL**, la valeur de retour est le nombre d’octets requis pour conserver les informations de la fonction stocke dans la mémoire tampon.  
   
  Si la fonction échoue, la valeur de retour est 0.  
   

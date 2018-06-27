@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384086"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954856"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016 : utilisation de l'héritage multiple C++ avec MFC
 Cette note décrit l'utilisation de l'héritage multiple avec les classes Microsoft Foundation Class. L'utilisation de l'héritage multiple n'est pas nécessaire avec MFC. L'héritage multiple n'est pas utilisé dans les classes MFC et n'est pas nécessaire pour écrire une bibliothèque de classes.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- Dans ce cas, `CObject` est inclus deux fois. Cela signifie que vous avez besoin d'une méthode pour lever l'ambiguïté dans toute référence à des méthodes ou des opérateurs `CObject`. Le `operator new` et [opérateur delete](../mfc/reference/cobject-class.md#operator_delete) sont deux opérateurs qui doivent être de lever l’ambiguïté. Autre exemple, le code suivant génère une erreur de compilation :  
+ Dans ce cas, `CObject` est inclus deux fois. Cela signifie que vous avez besoin d'une méthode pour lever l'ambiguïté dans toute référence à des méthodes ou des opérateurs `CObject`. Le **new, opérateur** et [opérateur delete](../mfc/reference/cobject-class.md#operator_delete) sont deux opérateurs qui doivent être de lever l’ambiguïté. Autre exemple, le code suivant génère une erreur de compilation :  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Réimplémentation des méthodes CObject  
- Lorsque vous créez une classe qui contient au moins deux classes de base dérivées de `CObject`, vous devez réimplémenter les méthodes `CObject` que vous voulez que d'autres personnes utilisent. Opérateurs `new` et `delete` sont obligatoires et [Dump](../mfc/reference/cobject-class.md#dump) est recommandé. L'exemple suivant réimplémente les opérateurs `new` et `delete` et la méthode `Dump` :  
+ Lorsque vous créez une classe qui contient au moins deux classes de base dérivées de `CObject`, vous devez réimplémenter les méthodes `CObject` que vous voulez que d'autres personnes utilisent. Opérateurs **nouveau** et **supprimer** sont obligatoires et [Dump](../mfc/reference/cobject-class.md#dump) est recommandé. L’exemple suivant réimplémente les **nouveau** et **supprimer** opérateurs et le `Dump` méthode :  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  Il peut sembler qu'hériter virtuellement `CObject` résoudrait le problème de l'ambiguïté de fonction, mais ce n'est pas le cas. Étant donné qu'il n'y a pas de données membres dans `CObject`, vous n'avez pas besoin de l'héritage virtuel pour éviter plusieurs copies des données membres d'une classe de base. Dans le premier exemple qui a été indiqué précédemment, la méthode virtuelle `Dump` est toujours ambiguë parce qu'elle est implémentée différemment dans `CFrameWnd` et `CObList`. La meilleure méthode pour éclaircir l'ambiguïté consiste à suivre les règles présentées dans la section précédente.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf et saisie à l'exécution  
- Le mécanisme de saisie à l'exécution pris en charge par MFC dans `CObject` utilise les macros `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` et `IMPLEMENT_SERIAL`. Ces macros peuvent effectuer une vérification de type d'exécution pour vous assurer que les conversions en aval sont sécurisées.  
+ Le mécanisme de saisie exécution pris en charge par MFC dans `CObject` utilise les macros DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL et IMPLEMENT_SERIAL. Ces macros peuvent effectuer une vérification de type d'exécution pour vous assurer que les conversions en aval sont sécurisées.  
   
- Les macros prennent en charge une seule classe de base et s'exécutent de façon limitée pour multiplier les classes héritées. La classe de base que vous spécifiez dans `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` doit être la première classe de base (ou la plus à gauche). Ce positionnement vous permet de faire une vérification de type de la classe de base à gauche uniquement. Le système de types d'exécution ne sait rien des classes de base supplémentaires. Dans l'exemple suivant, les systèmes d'exécution font la vérification de type sur `CFrameWnd`, mais ne savent rien de `CObList`.  
+ Les macros prennent en charge une seule classe de base et s'exécutent de façon limitée pour multiplier les classes héritées. La classe de base que vous spécifiez dans IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL doit être la classe de base premier (ou la plus à gauche). Ce positionnement vous permet de faire une vérification de type de la classe de base à gauche uniquement. Le système de types d'exécution ne sait rien des classes de base supplémentaires. Dans l'exemple suivant, les systèmes d'exécution font la vérification de type sur `CFrameWnd`, mais ne savent rien de `CObList`.  
   
 ```  
 class CListWnd : public CFrameWnd,

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383833"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951138"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistants et les Éditeurs de ressources
 Visual C++ inclut plusieurs Assistants à utiliser dans la programmation MFC, ainsi que de nombreux éditeurs de ressources intégrés. Pour la programmation, les contrôles ActiveX le [Assistant contrôle ActiveX](../mfc/reference/mfc-activex-control-wizard.md) joue un rôle de façon très similaire à celle de l’Assistant Application MFC. Si vous pouvez écrire des applications MFC sans que la plupart de ces outils, les outils considérablement simplifieront et accélérer votre travail.  
@@ -41,7 +41,7 @@ Visual C++ inclut plusieurs Assistants à utiliser dans la programmation MFC, ai
 > [!NOTE]
 >  Affichage de classes vous permet également de substituer des fonctions virtuelles dans les classes MFC. Sélectionnez la classe et la fonction virtuelle à substituer. Le reste du processus est similaire à la gestion des messages, comme décrit dans les paragraphes suivants.  
   
- Applications s’exécutant sous Windows sont [orientées messages](../mfc/message-handling-and-mapping.md). Actions de l’utilisateur et d’autres événements qui se produisent dans le programme en cours d’exécution que Windows envoyer des messages aux fenêtres dans le programme. Par exemple, si l’utilisateur clique sur la souris dans une fenêtre, Windows envoie une `WM_LBUTTONDOWN` message lorsque le bouton gauche de la souris est enfoncé et un `WM_LBUTTONUP` message lorsque le bouton est relâché. Windows envoie également **WM_COMMAND** messages lorsque l’utilisateur sélectionne des commandes à partir de la barre de menus.  
+ Applications s’exécutant sous Windows sont [orientées messages](../mfc/message-handling-and-mapping.md). Actions de l’utilisateur et d’autres événements qui se produisent dans le programme en cours d’exécution que Windows envoyer des messages aux fenêtres dans le programme. Par exemple, si l’utilisateur clique sur la souris dans une fenêtre, Windows envoie un message WM_LBUTTONDOWN quand le bouton gauche de la souris est enfoncé et un message WM_LBUTTONUP lorsque le bouton est relâché. Windows envoie également des messages WM_COMMAND lorsque l’utilisateur sélectionne des commandes à partir de la barre de menus.  
   
  Dans l’infrastructure MFC, divers objets, tels que des documents, vues, fenêtres frame, les modèles de document et l’objet d’application peuvent « gérer » les messages. Un tel objet fournit une fonction « gestionnaire » comme l’un de ses membres des fonctions et l’infrastructure mappe le message entrant à son gestionnaire.  
   

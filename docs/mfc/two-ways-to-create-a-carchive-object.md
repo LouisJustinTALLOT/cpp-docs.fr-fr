@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386117"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954791"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Deux manières de créer un objet CArchive
 Il existe deux manières de créer un objet `CArchive` :  
@@ -48,7 +48,7 @@ Il existe deux manières de créer un objet `CArchive` :
   
 3.  Crée un `CArchive` objet qui pointe vers ce `CFile` objet. Lors de la création du `CArchive` de l’objet, le framework définit le mode de « stocker » (écrire, sérialiser), par opposition à « chargement » (lecture, désérialisation).  
   
-4.  Appelle le `Serialize` fonction définie dans votre **CDocument**-classe dérivée, en lui passant une référence à la `CArchive` objet.  
+4.  Appelle le `Serialize` fonction définie dans votre `CDocument`-classe dérivée, en lui passant une référence à la `CArchive` objet.  
   
  De votre document `Serialize` fonction puis écrit les données de la `CArchive` de l’objet, comme expliqué dans quelques instants. Au retour de votre `Serialize` fonction, le framework supprime le `CArchive` objet, puis le `CFile` objet.  
   

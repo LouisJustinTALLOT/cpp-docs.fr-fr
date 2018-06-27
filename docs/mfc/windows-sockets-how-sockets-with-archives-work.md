@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c4f581acb0af27f44c88d59597e52b057991ee4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385214"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954277"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets : fonctionnement des sockets avec des archives
 Cet article explique comment un [CSocket](../mfc/reference/csocket-class.md) objet, un [CSocketFile](../mfc/reference/csocketfile-class.md) objet et un [CArchive](../mfc/reference/carchive-class.md) objet sont combinées afin de simplifier l’envoi et de recevoir des données via un Windows Socket.  
   
- L’article [Windows Sockets : exemple de Sockets utilisant des Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md) présente la **PacketSerialize** (fonction). L’objet de l’archive dans le **PacketSerialize** exemple fonctionne comme un objet archive transmis à une MFC [Serialize](../mfc/reference/cobject-class.md#serialize) (fonction). La principale différence est que pour les sockets, l’archive n'est pas attachée à une norme [CFile](../mfc/reference/cfile-class.md) objet (en général associé à un fichier de disque), mais un `CSocketFile` objet. Au lieu de se connecter à un fichier de disque, le `CSocketFile` objet se connecte à un `CSocket` objet.  
+ L’article [Windows Sockets : exemple de Sockets utilisant des Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md) présente la `PacketSerialize` (fonction). L’objet de l’archive dans le `PacketSerialize` exemple fonctionne comme un objet archive transmis à une MFC [Serialize](../mfc/reference/cobject-class.md#serialize) (fonction). La principale différence est que pour les sockets, l’archive n'est pas attachée à une norme [CFile](../mfc/reference/cfile-class.md) objet (en général associé à un fichier de disque), mais un `CSocketFile` objet. Au lieu de se connecter à un fichier de disque, le `CSocketFile` objet se connecte à un `CSocket` objet.  
   
  A `CArchive` objet gère une mémoire tampon. Lorsque la mémoire tampon d’une archive (envoi) de stockage est plein, associé à un `CFile` contenu du tampon d’objet écrit. Le vidage de la mémoire tampon d’une archive attachée à un socket est équivalent à l’envoi d’un message. Lorsque la mémoire tampon d’une archive de chargement (réception) est plein, le `CFile` objet s’arrête de lire jusqu'à ce que la mémoire tampon est à nouveau disponible.  
   
@@ -51,7 +51,7 @@ CArchive, CSocketFile et CSocket
  Si `CSocket` n’étaient pas implémentées en tant qu’objet deux États, il est possible de recevoir des notifications supplémentaires pour le même type d’événement pendant que vous ont été traite une notification précédente. Par exemple, vous pouvez obtenir un `OnReceive` notification lors du traitement un `OnReceive`. Dans le fragment de code ci-dessus, extraction `str` à partir de l’archive peut entraîner une récurrence. En changeant d’état, `CSocket` empêche la récurrence tout en empêchant les notifications supplémentaires. La règle générale n’est aucune notification dans les notifications.  
   
 > [!NOTE]
->  A `CSocketFile` peut également être utilisé comme un fichier (limité) sans un `CArchive` objet. Par défaut, le `CSocketFile` du constructeur `bArchiveCompatible` paramètre est **TRUE**. Spécifie que l’objet de fichier doit être utilisé avec une archive. Pour utiliser l’objet fichier sans archive, passez **FALSE** dans le `bArchiveCompatible` paramètre.  
+>  A `CSocketFile` peut également être utilisé comme un fichier (limité) sans un `CArchive` objet. Par défaut, le `CSocketFile` du constructeur *bArchiveCompatible* paramètre est **TRUE**. Spécifie que l’objet de fichier doit être utilisé avec une archive. Pour utiliser l’objet fichier sans archive, passez **FALSE** dans les *bArchiveCompatible* paramètre.  
   
  En mode « compatible archive », un `CSocketFile` objet offre de meilleures performances et réduit le risque de « blocage ». Un blocage se produit lorsque les sockets de transmission et de réception sont en attente sur l’autre, ou en attente d’une ressource commune. Cette situation peut se produire si le `CArchive` objet travaillé avec la `CSocketFile` comme il le fait avec un `CFile` objet. Avec `CFile`, l’archive peut supposer que s’il reçoit le nombre d’octets qu’il a demandée, la fin du fichier a été atteinte. Avec `CSocketFile`, toutefois, données message en fonction ; la mémoire tampon peut contenir plusieurs messages, donc recevoir moins que le nombre d’octets demandés n’implique pas la fin du fichier. L’application ne bloque pas, dans ce cas, ce qui est possible avec `CFile`, et poursuivre la lecture de messages à partir de la mémoire tampon jusqu'à ce que la mémoire tampon est vide. Le [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fonctionner dans `CArchive` est utile pour surveiller l’état du tampon de l’archive dans ce cas.  
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386052"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955890"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026 : routines DDX et DDV
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  Pour obtenir la liste de toutes les routines d’échange de données de boîte de dialogue et les routines de validation de données de boîte de dialogue fournis avec MFC, consultez « afxdd_.h ».  
   
- C’est ce que les données de boîte de dialogue : données de membre dans le **CMyDialog** classe. Il n’est pas stocké dans un struct ou autres.  
+ C’est ce que les données de boîte de dialogue : données de membre dans la `CMyDialog` classe. Il n’est pas stocké dans un struct ou autres.  
   
 ## <a name="notes"></a>Notes  
  Bien que nous appelons cette « données de la boîte de dialogue », toutes les fonctionnalités sont disponibles dans n’importe quelle classe dérivée de `CWnd` et ne sont pas limités à simplement les boîtes de dialogue.  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>Comment cela fonctionne-t-il  
  Vous n’avez pas besoin de comprendre les éléments suivants pour pouvoir utiliser les données de la boîte de dialogue. Toutefois, comprendre comment cela fonctionne en arrière-plan sera vous aider à écrire votre propre procédure de validation ou d’exchange.  
   
- Le `DoDataExchange` fonction membre est très semblable à la `Serialize` la fonction membre - il est responsable de l’obtention ou la définition des données vers/à partir d’un formulaire externe (dans ce cas contrôles dans une boîte de dialogue) à partir de/vers des données membres dans la classe. Le `pDX` paramètre constitue le contexte de l’opération d’échange de données et est semblable à la `CArchive` paramètre `CObject::Serialize`. Le `pDX` (un `CDataExchange` objet) a une direction d’indicateur comme `CArchive` a un indicateur de direction :  
+ Le `DoDataExchange` fonction membre est très semblable à la `Serialize` la fonction membre - il est responsable de l’obtention ou la définition des données vers/à partir d’un formulaire externe (dans ce cas contrôles dans une boîte de dialogue) à partir de/vers des données membres dans la classe. Le *pDX* paramètre constitue le contexte de l’opération d’échange de données et est semblable à la `CArchive` paramètre `CObject::Serialize`. Le *pDX* (un `CDataExchange` objet) a une direction d’indicateur comme `CArchive` a un indicateur de direction :  
   
--   Si **! m_bSaveAndValidate**, puis de charger l’état des données dans les contrôles.  
+-   If ! *m_bSaveAndValidate*, puis de charger l’état des données dans les contrôles.  
   
--   Si `m_bSaveAndValidate`, puis définissez l’état des données à partir des contrôles.  
+-   Si *m_bSaveAndValidate*, puis définissez l’état des données à partir des contrôles.  
   
- La validation se produit uniquement lorsque `m_bSaveAndValidate` est défini. La valeur de `m_bSaveAndValidate` est déterminé par le paramètre BOOL `CWnd::UpdateData`.  
+ La validation se produit uniquement lorsque *m_bSaveAndValidate* est défini. La valeur de *m_bSaveAndValidate* est déterminé par le paramètre BOOL `CWnd::UpdateData`.  
   
  Il existe trois autres intéressants `CDataExchange` membres :  
   
-- `m_pDlgWnd`: La fenêtre (généralement une boîte de dialogue) qui contient les contrôles. Cela consiste à empêcher les appelants des fonctions DDX_ et DDX_ globales à partir de 'this' passer chaque routine DDX/DDV.  
+- *m_pDlgWnd*: la fenêtre (généralement une boîte de dialogue) qui contient les contrôles. Cela consiste à empêcher les appelants des fonctions DDX_ et DDX_ globales à partir de 'this' passer chaque routine DDX/DDV.  
   
 - `PrepareCtrl`, et `PrepareEditCtrl`: prépare un contrôle de boîte de dialogue pour l’échange de données. Stocke le handle de ce contrôle pour définir le focus si une validation échoue. `PrepareCtrl` est utilisé pour les contrôles nonedit et `PrepareEditCtrl` est utilisé pour les contrôles d’édition.  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  Ces expressions arbitraires ne sont pas modifiables par ClassWizard et par conséquent doit être déplacées en dehors de commentaires spéciaux format (/ / {{AFX_DATA_MAP(CMyClass)).  
   
- Avoir le **DoDialogExchange** fonction membre incluent des instructions conditionnelles ou toute autre instruction C++ valide avec des appels de fonction échange et validation mélangés.  
+ Avoir le `DoDialogExchange` fonction membre incluent des instructions conditionnelles ou toute autre instruction C++ valide avec des appels de fonction échange et validation mélangés.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

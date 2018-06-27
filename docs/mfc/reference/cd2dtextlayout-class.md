@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355923"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951609"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout, classe
 Wrapper pour IDWriteTextLayout.  
@@ -96,7 +96,7 @@ class CD2DTextLayout : public CD2DResource;
   
  [CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout :: ~ CD2DTextLayout  
@@ -119,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `strText`  
+ *%{strText/}*  
  Un objet CString qui contient la chaîne pour créer un nouvel objet CD2DTextLayout à partir de.  
   
- `textFormat`  
+ *textFormat*  
  Un objet CString qui contient le format à appliquer à la chaîne.  
   
- `sizeMax`  
+ *sizeMax*  
  La taille de la zone de disposition.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -171,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `currentPosition`  
+ *position actuelle*  
  La position du texte à examiner.  
   
- `textRange`  
+ *textRange*  
  La plage de texte qui a la même mise en forme en tant que le texte à la position spécifiée par la position actuelle. Cela signifie que l’exécution a la mise en forme exacte que la position spécifiée, y compris de manière non limitative, le nom de famille de polices.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -190,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `currentPosition`  
+ *position actuelle*  
  La position du texte à inspecter.  
   
- `textRange`  
+ *textRange*  
  La plage de texte qui a la même mise en forme en tant que le texte à la position spécifiée par la position actuelle. Cela signifie que l’exécution a la mise en forme exacte que la position spécifiée, y compris de manière non limitative, le nom des paramètres régionaux.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -246,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  Le nom de famille de polices qui s’applique à la chaîne de caractères dans la plage spécifiée par textRange  
   
- `textRange`  
+ *textRange*  
  Plage de texte à laquelle cette modification s’applique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -265,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  Une chaîne de nom se terminant par null de paramètres régionaux  
   
- `textRange`  
+ *textRange*  
  Plage de texte à laquelle cette modification s’applique.  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367290"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951031"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
 Fournit la prise en charge de l'ancrage pour les volets dérivés de `CWnd`.  
@@ -63,7 +63,7 @@ class CDockablePaneAdapter : public CDockablePane
   
  [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxDockablePaneAdapter.h  
   
 ##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
@@ -90,13 +90,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nom du profil.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  L’index du profil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -114,13 +114,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nom du profil.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  L’index de profil (par défaut, l’ID de contrôle de la fenêtre).  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
+ [in] *pWnd*  
  Pointeur vers la fenêtre de l’adaptateur de volet à encapsuler.  
   
 ### <a name="return-value"></a>Valeur de retour  

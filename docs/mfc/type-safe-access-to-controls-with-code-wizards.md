@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025fd280dc6bf0947dae59cf77abe141bc312df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88f86a8f22bae990261be5150755a26d50d4bef8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385191"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950459"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accès de type sécurisé aux contrôles avec Assistants Code
 Si vous êtes familiarisé avec les fonctionnalités DDX, vous pouvez utiliser la propriété du contrôle dans le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) pour créer l’accès de type sécurisé. Cette approche est plus facile que la création de contrôles sans Assistants code.  
   
  Si vous souhaitez simplement accéder à la valeur d’un contrôle, DDX la fournit. Si vous voulez plus qu’accéder à la valeur d’un contrôle, utilisez l’Assistant Ajout de Variable membre pour ajouter une variable membre de la classe appropriée à votre classe de boîte de dialogue. Attachez cette variable membre à la propriété du contrôle.  
   
- Variables membres peuvent avoir une propriété de contrôle au lieu d’une propriété de valeur. La propriété de valeur fait référence au type de données retournées par le contrôle, telles que `CString` ou `int`. La propriété Control permet un accès direct au contrôle via un membre de données dont le type est une des classes de contrôles dans MFC, telles que `CButton` ou `CEdit`.  
+ Variables membres peuvent avoir une propriété de contrôle au lieu d’une propriété de valeur. La propriété de valeur fait référence au type de données retournées par le contrôle, telles que `CString` ou **int**. La propriété Control permet un accès direct au contrôle via un membre de données dont le type est une des classes de contrôles dans MFC, telles que `CButton` ou `CEdit`.  
   
 > [!NOTE]
 >  Pour un contrôle donné, vous pouvez, si vous le souhaitez, avoir plusieurs variables membres avec la propriété Value et au plus une variable membre avec la propriété du contrôle. Vous pouvez avoir qu’un seul objet MFC mappé à un contrôle, car plusieurs objets attachés à un contrôle, ou toute autre fenêtre, peuvent engendrer une ambiguïté dans la table des messages.  
   
- Vous pouvez utiliser cet objet pour appeler des fonctions membres de l’objet contrôle. Ces appels affectent le contrôle dans la boîte de dialogue. Par exemple, pour un contrôle de case à cocher représenté par une variable `m_Checkbox`, de type `CButton`, vous pouvez appeler :  
+ Vous pouvez utiliser cet objet pour appeler des fonctions membres de l’objet contrôle. Ces appels affectent le contrôle dans la boîte de dialogue. Par exemple, pour un contrôle de case à cocher représenté par une variable *m_Checkbox*, de type `CButton`, vous pouvez appeler :  
   
  [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
   
- Ici, la variable membre `m_Checkbox` remplit la même fonction que la fonction membre `GetMyCheckbox` illustré [accès de Type sécurisé aux contrôles sans Assistants de Code](../mfc/type-safe-access-to-controls-without-code-wizards.md). Si la case à cocher n’est pas une case à cocher automatique, vous devez toujours un gestionnaire dans votre classe de boîte de dialogue pour le **BN_CLICKED** message de notification de contrôle lorsque le bouton est activé.  
+ Ici, la variable membre *m_Checkbox* remplit la même fonction que la fonction membre `GetMyCheckbox` illustré [accès de Type sécurisé aux contrôles sans Assistants de Code](../mfc/type-safe-access-to-controls-without-code-wizards.md). Si la case à cocher n’est pas une case à cocher automatique, vous déclenchera un gestionnaire dans votre classe de boîte de dialogue pour le message de notification de contrôle BN_CLICKED lorsque le bouton est activé.  
   
  Pour plus d’informations sur les contrôles, consultez [contrôles](../mfc/controls-mfc.md).  
   

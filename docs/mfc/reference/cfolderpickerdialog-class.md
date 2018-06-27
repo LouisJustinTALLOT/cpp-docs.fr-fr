@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366419"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956517"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog, classe
 Cfolderpickerdialog, classe implémente CFileDialog en mode de sélecteur de dossier.  
@@ -60,7 +60,7 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
@@ -75,16 +75,16 @@ explicit CFolderPickerDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFolder`  
+ *lpszFolder*  
  Dossier initial.  
   
- `dwFlags`  
+ *dwFlags*  
  Une combinaison d’un ou plusieurs indicateurs qui vous permettent de personnaliser la boîte de dialogue.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de l’objet de boîte de dialogue.  
   
- `dwSize`  
+ *dwSize*  
  La taille de la structure OPENFILENAME.  
   
 ### <a name="remarks"></a>Notes  

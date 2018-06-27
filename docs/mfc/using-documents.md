@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385630"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950212"
 ---
 # <a name="using-documents"></a>Utilisation de documents
 Collaboration, documents et vues :  
@@ -44,7 +44,7 @@ Collaboration, documents et vues :
   
 -   [Gérer](../mfc/handling-commands-in-the-document.md) la plupart des commandes et les messages de votre application.  
   
- Le document est particulièrement impliqué dans la gestion des données. Stocker vos données, en règle générale, dans les variables de membre de classe de document. La vue utilise ces variables pour accéder aux données à afficher et mettre à jour. Mécanisme de sérialisation du document par défaut gère la lecture et l’écriture des données vers et à partir de fichiers. Documents peuvent également gérer les commandes (mais pas Windows autres que des messages **WM_COMMAND**).  
+ Le document est particulièrement impliqué dans la gestion des données. Stocker vos données, en règle générale, dans les variables de membre de classe de document. La vue utilise ces variables pour accéder aux données à afficher et mettre à jour. Mécanisme de sérialisation du document par défaut gère la lecture et l’écriture des données vers et à partir de fichiers. Documents peuvent également gérer les commandes (mais pas les messages Windows autres que WM_COMMAND).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
   

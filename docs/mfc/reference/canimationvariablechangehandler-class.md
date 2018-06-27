@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350990"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957089"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsque la valeur d'une variable de l'animation est modifiée.  
@@ -62,7 +62,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
   
  `CAnimationVariableChangeHandler`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `storyboard`  
+ *table de montage séquentiel*  
  La table de montage séquentiel qui anime la variable.  
   
- `variable`  
+ *Variable*  
  La variable d’animation qui a été mis à jour.  
   
- `newValue`  
+ *nouvelle valeur*  
  Nouvelle valeur.  
   
- `previousValue`  
+ *previousValue*  
  La valeur précédente.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
 ## <a name="see-also"></a>Voir aussi  

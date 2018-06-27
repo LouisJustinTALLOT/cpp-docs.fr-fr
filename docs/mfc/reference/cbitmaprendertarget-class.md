@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd752ff649491ce23b537987ff9f4aebf7811255
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351674"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956750"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget, classe
 Wrapper pour ID2D1BitmapRenderTarget.  
@@ -80,7 +80,7 @@ class CBitmapRenderTarget : public CRenderTarget;
   
  `CBitmapRenderTarget` 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
@@ -91,7 +91,7 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTarget`  
+ *pTarget*  
  Interface de cible de rendu existante. Ne peut pas être NULL  
   
 ##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bitmap`  
+ *Bitmap*  
  Lorsque cette méthode est retournée, contient l’image bitmap valide pour cette cible de rendu. Cette image bitmap peut être utilisée pour les opérations de dessin.  
   
 ### <a name="return-value"></a>Valeur de retour  

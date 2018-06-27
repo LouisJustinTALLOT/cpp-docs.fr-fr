@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e061802cbcd8926a146e5765cc9ecfd9bf917295
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea99cfb77f295530f65b3d3b07888b0735fc0b6a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348151"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950501"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO, structure
 Le `BITMAPINFO` structure définit les dimensions et les informations de couleur pour une image bitmap indépendante du périphérique de Windows (DIB).  
@@ -36,10 +36,10 @@ typedef struct tagBITMAPINFO {
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `bmiHeader`  
+ *bmiHeader*  
  Spécifie un [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) structure qui contient des informations sur les dimensions et le format de couleur d’une image bitmap indépendante du périphérique.  
   
- `bmiColors`  
+ *bmiColors*  
  Spécifie un tableau de [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) ou `DWORD` des types de données qui définissent les couleurs dans l’image bitmap.  
   
 ## <a name="remarks"></a>Notes  
@@ -55,7 +55,7 @@ typedef struct tagBITMAPINFO {
   
 - [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) structure  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

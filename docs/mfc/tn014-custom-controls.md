@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384580"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956845"
 ---
 # <a name="tn014-custom-controls"></a>TN014 : contrôles personnalisés
 Cette note décrit la prise en charge MFC pour les contrôles personnalisés et de dessin automatique. Il décrit le sous-classement dynamique, également et décrit la relation entre [CWnd](../mfc/reference/cwnd-class.md) objets et `HWND`s.  
@@ -100,11 +100,11 @@ Cette note décrit la prise en charge MFC pour les contrôles personnalisés et 
 ## <a name="using-self-draw-controls-and-menus"></a>Utilisation des contrôles et menus de dessin automatique  
  Pour les champs de dessin automatique, vous devez substituer les méthodes `OnMeasureItem` et `OnDrawItem`.  
   
- Pour les zones de liste et les zones de liste déroulante de dessin automatique, vous devez remplacer `OnMeasureItem` et `OnDrawItem`. Vous devez spécifier le style `LBS_OWNERDRAWVARIABLE` pour les zones de liste ou le style `CBS_OWNERDRAWVARIABLE` pour les zones de liste déroulante du modèle de la boîte de dialogue. Le style `OWNERDRAWFIXED` ne fonctionne pas avec les éléments de dessin automatique car la hauteur d'élément fixe est définie avant que les contrôles de dessin automatique soient joints à la zone de liste. (Vous pouvez utiliser les méthodes [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) et [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) à passer outre cette limitation.)  
+ Pour les zones de liste et les zones de liste déroulante de dessin automatique, vous devez remplacer `OnMeasureItem` et `OnDrawItem`. Vous devez spécifier le style LBS_OWNERDRAWVARIABLE pour les zones de liste ou un style CBS_OWNERDRAWVARIABLE pour les zones de liste déroulante dans le modèle de boîte de dialogue. Le style OWNERDRAWFIXED ne fonctionnera pas avec des éléments de dessin automatique car la hauteur d’élément fixe est déterminée avant que les contrôles de dessin automatique sont attachés à la zone de liste. (Vous pouvez utiliser les méthodes [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) et [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) à passer outre cette limitation.)  
   
- Le basculement vers un style `OWNERDRAWVARIABLE` force le système à appliquer le style `NOINTEGRALHEIGHT` au contrôle. Étant donné que le contrôle ne peut pas calculer une hauteur intégrale avec des éléments de taille variable, le style par défaut `INTEGRALHEIGHT` est ignoré et le contrôle est toujours `NOINTEGRALHEIGHT`. Si les éléments sont à hauteur fixe, vous pouvez empêcher les éléments partiels d'être dessinés en spécifiant que la taille de contrôle soit un multiplicateur entier de la taille d'élément.  
+ Passage à un style OWNERDRAWVARIABLE force le système à appliquer le style NOINTEGRALHEIGHT au contrôle. Étant donné que le contrôle ne peut pas calculer une hauteur intégrale avec les éléments de tailles variable, le style par défaut de la propriété INTEGRALHEIGHT est ignoré et le contrôle est toujours NOINTEGRALHEIGHT. Si les éléments sont à hauteur fixe, vous pouvez empêcher les éléments partiels d'être dessinés en spécifiant que la taille de contrôle soit un multiplicateur entier de la taille d'élément.  
   
- Pour les zones de liste et les zones de liste déroulante de dessin automatique avec le style `LBS_SORT` ou `CBS_SORT`, vous devez substituer la méthode `OnCompareItem`.  
+ Pour dessiner des zones de liste et zones de liste déroulante avec le style LBS_SORT ou CBS_SORT, vous devez substituer la `OnCompareItem` (méthode).  
   
  Pour les zones de liste et les zones de liste déroulante de dessin automatique, `OnDeleteItem` n'est généralement pas remplacé. Vous pouvez remplacer `OnDeleteItem` si vous souhaitez effectuer un traitement spécial. Un cas où cela s'appliquerait lorsque la mémoire ou d'autres ressources sont stockées avec chaque élément de la zone de liste ou de la zone de liste déroulante.  
   

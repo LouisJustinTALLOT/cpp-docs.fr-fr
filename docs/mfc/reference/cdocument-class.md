@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 696b0d63a7b81b550e99981f199132713fe8a6ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0d67012afe34cf3fe2c4633f2d838d1f3bfb49
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377038"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952529"
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
 Fournit les fonctionnalités de base pour les classes de documents définies par l'utilisateur.  
@@ -228,7 +228,7 @@ class CDocument : public CCmdTarget
 ## <a name="remarks"></a>Notes  
  Un document représente l’unité de données en général, l’utilisateur s’ouvre avec la commande fichier ouvrir et enregistre avec la commande de l’enregistrement du fichier.  
   
- **CDocument** prend en charge les opérations standards telles que la création d’un document, son chargement et l’enregistrer. Manipule les documents à l’aide de l’interface définie par le framework **CDocument**.  
+ `CDocument` prend en charge des opérations standards telles que la création d’un document, son chargement et l’enregistrer. Manipule les documents à l’aide de l’interface définie par l’infrastructure `CDocument`.  
   
  Une application peut prendre en charge plusieurs types de document ; par exemple, une application peut prendre en charge des feuilles de calcul et de documents de texte. Chaque type de document a un modèle de document associé ; le modèle de document spécifie quelles ressources (par exemple, table d’accélérateurs, icône ou menu) sont utilisés pour ce type de document. Chaque document contient un pointeur vers son associé `CDocTemplate` objet.  
   
@@ -236,11 +236,11 @@ class CDocument : public CCmdTarget
   
  Documents qui font partie de la norme de l’infrastructure routage des commandes et par conséquent recevoir des commandes à partir des composants d’interface utilisateur standard (par exemple, l’élément de menu de l’enregistrement du fichier). Un document reçoit des commandes transmises par la vue active. Si le document ne gère une commande donnée, il transfère la commande pour le modèle de document qui le gère.  
   
- Lorsque les données d’un document sont modifiées, chacune de ses vues doit refléter ces modifications. **CDocument** fournit le [UpdateAllViews](#updateallviews) fonction membre vous permettant de notifier les vues de telles modifications, pour les vues peuvent se repeindre selon les besoins. L’infrastructure vous demande également de l’utilisateur d’enregistrer un fichier modifié avant de le fermer.  
+ Lorsque les données d’un document sont modifiées, chacune de ses vues doit refléter ces modifications. `CDocument` Fournit la [UpdateAllViews](#updateallviews) fonction membre vous permettant de notifier les vues de telles modifications, pour les vues peuvent se repeindre selon les besoins. L’infrastructure vous demande également de l’utilisateur d’enregistrer un fichier modifié avant de le fermer.  
   
  Pour implémenter des documents dans une application classique, vous devez procédez comme suit :  
   
--   Dérivez une classe de **CDocument** pour chaque type de document.  
+-   Dérivez une classe de `CDocument` pour chaque type de document.  
   
 -   Ajoutez des variables membres pour stocker les données de chaque document.  
   
@@ -248,9 +248,9 @@ class CDocument : public CCmdTarget
   
 -   Remplacer la [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) fonction membre dans votre classe de document pour écrire et lire les données du document vers et depuis le disque.  
   
- **CDocument** prend en charge l’envoi de votre document par courrier si la prise en charge de messagerie (MAPI) est présente. Consultez les articles [MAPI](../../mfc/mapi.md) et [prise en charge MAPI dans MFC](../../mfc/mapi-support-in-mfc.md).  
+ `CDocument` prend en charge l’envoi de votre document par courrier si la prise en charge de messagerie (MAPI) est présente. Consultez les articles [MAPI](../../mfc/mapi.md) et [prise en charge MAPI dans MFC](../../mfc/mapi-support-in-mfc.md).  
   
- Pour plus d’informations sur **CDocument**, consultez [sérialisation](../../mfc/serialization-in-mfc.md), [rubriques sur l’Architecture Document/vue](../../mfc/document-view-architecture.md), et [création de Document/vue](../../mfc/document-view-creation.md).  
+ Pour plus d’informations sur `CDocument`, consultez [sérialisation](../../mfc/serialization-in-mfc.md), [rubriques sur l’Architecture Document/vue](../../mfc/document-view-architecture.md), et [création de Document/vue](../../mfc/document-view-creation.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -259,7 +259,7 @@ class CDocument : public CCmdTarget
   
  `CDocument`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="addview"></a>  CDocument::AddView  
@@ -270,7 +270,7 @@ void AddView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pView`  
+ *pView*  
  Pointe vers la vue à ajouter.  
   
 ### <a name="remarks"></a>Notes  
@@ -298,7 +298,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pFrame`  
+ *pFrame*  
  Pointe vers la fenêtre frame d’une vue associée au document.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -359,10 +359,10 @@ virtual POSITION FindChunk(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `guid`  
+ *guid*  
  Spécifie le GUID d’un segment à rechercher.  
   
- `pid`  
+ *pid*  
  Spécifie un PID d’un segment à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -406,13 +406,13 @@ virtual CFile* GetFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFileName`  
+ *lpszFileName*  
  Chaîne qui est le chemin d’accès au fichier souhaité. Le chemin d’accès peut être relatif ou absolu.  
   
- `pError`  
+ *pError*  
  Pointeur vers un objet d’exception du fichier existant qui indique l’état d’achèvement de l’opération.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Mode de partage et d’accès. Spécifie l’action à entreprendre lors de l’ouverture du fichier. Vous pouvez combiner les options répertoriées dans le constructeur CFile [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) à l’aide de l’opération de bits OR (&#124;) (opérateur). Autorisation d’accès un à et un seul partage sont requis ; le **modeCreate** et **modeNoInherit** modes sont facultatifs.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -439,14 +439,14 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rPosition`  
+ *rPosition*  
  Une référence à un **POSITION** valeur retournée par un appel précédent à la `GetNextView` ou [GetFirstViewPosition](#getfirstviewposition) fonctions membres. Cette valeur ne doit pas être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la vue identifié par `rPosition`.  
+ Un pointeur vers la vue identifié par *rPosition*.  
   
 ### <a name="remarks"></a>Notes  
- La fonction retourne la vue identifiée par `rPosition` et définit ensuite `rPosition` à la **POSITION** valeur de la vue suivante dans la liste. Si la vue récupérée est le dernier dans la liste, puis `rPosition` a la valeur **NULL**.  
+ La fonction retourne la vue identifiée par *rPosition* et définit ensuite *rPosition* à la **POSITION** valeur de la vue suivante dans la liste. Si la vue récupérée est le dernier dans la liste, puis *rPosition* a la valeur **NULL**.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
@@ -472,13 +472,13 @@ virtual BOOL GetThumbnail(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cx`  
+ *CX*  
  Spécifie la largeur et la hauteur de l’image bitmap.  
   
- `phbmp`  
+ *phbmp*  
  Contient un handle vers une image bitmap, lorsque la fonction est retournée avec succès.  
   
- `pdwAlpha`  
+ *pdwAlpha*  
  Contient une valeur DWORD spécifiant la valeur du canal alpha, lorsque la fonction est retournée avec succès.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -539,10 +539,10 @@ virtual HRESULT LoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStream`  
+ *pStream*  
  Pointeur vers un flux de données. Ce flux est fourni par l’interpréteur de commandes.  
   
- `dwGrfMode`  
+ *dwGrfMode*  
  Mode d’accès dans le flux.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -659,13 +659,13 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `deEvent`  
+ [in] *deEvent*  
  Type de données énuméré qui décrit le type d’événement.  
   
 ### <a name="remarks"></a>Notes  
  Événements de document peuvent affecter plusieurs classes. Cette méthode est chargée pour la gestion des événements de document qui affectent les classes autres que la [CDocument (classe)](../../mfc/reference/cdocument-class.md). Actuellement, la seule classe qui doit répondre aux événements de document est la [CDataRecoveryHandler classe](../../mfc/reference/cdatarecoveryhandler-class.md). Le `CDocument` classe a d’autres méthodes remplaçables responsables de la gestion de l’effet sur le `CDocument`.  
   
- Le tableau suivant répertorie les valeurs possibles pour `deEvent` et les événements qu’elles correspondent aux.  
+ Le tableau suivant répertorie les valeurs possibles pour *deEvent* et les événements qu’elles correspondent aux.  
   
 |Value|Événement correspondant|  
 |-----------|-------------------------|  
@@ -684,10 +684,10 @@ virtual void OnDrawThumbnail(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dc`  
+ *dc*  
  Une référence à un contexte de périphérique.  
   
- `lprcBounds`  
+ *lprcBounds*  
  Spécifie un rectangle englobant de la zone où la miniature doit être dessinée.  
   
 ### <a name="remarks"></a>Notes  
@@ -716,10 +716,10 @@ virtual HRESULT OnLoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStream`  
+ *pStream*  
  Pointeur vers un flux entrant.  
   
- `grfMode`  
+ *grfMode*  
  Mode d’accès dans le flux.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -761,7 +761,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPathName`  
+ *lpszPathName*  
  Pointe vers le chemin d’accès du document à ouvrir.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -791,7 +791,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `phwnd`  
+ *phwnd*  
  [out] Lorsque cette méthode est retournée, contient un pointeur vers le HWND retourné en appelant le `GetFocus` (fonction) à partir du thread de premier plan du Gestionnaire d’aperçu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -807,7 +807,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pmsg`  
+ *pMsg*  
  [in] Pointeur vers un message de fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -859,7 +859,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPathName`  
+ *lpszPathName*  
  Pointe vers le chemin d’accès qualifié complet dans lequel le fichier doit être enregistré.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -885,7 +885,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pCmdUI`  
+ *pCmdUI*  
  Un pointeur vers le [CCmdUI](../../mfc/reference/ccmdui-class.md) objet associé à la **ID_FILE_SEND_MAIL** commande.  
   
 ### <a name="remarks"></a>Notes  
@@ -901,13 +901,13 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pFrame`  
- Pointeur vers le [CFrameWnd](../../mfc/reference/cframewnd-class.md) qui contient les informations associé **CDocument** objet.  
+ *pFrame*  
+ Pointeur vers le [CFrameWnd](../../mfc/reference/cframewnd-class.md) qui contient les informations associé `CDocument` objet.  
   
 ### <a name="remarks"></a>Notes  
  Elle peut être substituée pour fournir un nettoyage personnalisé, mais veillez à appeler la classe de base.  
   
- La valeur par défaut de `PreCloseFrame` n’a aucun effet **CDocument**. Le **CDocument**-classes dérivées [COleDocument](../../mfc/reference/coledocument-class.md) et [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) utiliser cette fonction membre.  
+ La valeur par défaut de `PreCloseFrame` n’a aucun effet `CDocument`. Le `CDocument`-classes dérivées [COleDocument](../../mfc/reference/coledocument-class.md) et [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) utiliser cette fonction membre.  
   
 ##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  Lit la valeur du segment suivante.  
@@ -917,8 +917,8 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ppValue`  
- [out] Lorsque la fonction retourne, `ppValue` contient la valeur qui a été lu.  
+ *ppValue*  
+ [out] Lorsque la fonction retourne, *ppValue* contient la valeur qui a été lu.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -935,16 +935,16 @@ virtual void ReleaseFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pFile`  
+ *pFile*  
  Pointeur vers l’objet CFile à libérer.  
   
- `bAbort`  
+ *bAbort*  
  Spécifie si le fichier doit être publié à l’aide `CFile::Close` ou `CFile::Abort`. **FALSE** si le fichier doit être publié à l’aide de [CFile::Close](../../mfc/reference/cfile-class.md#close); **TRUE** si le fichier doit être publié à l’aide de [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
 ### <a name="remarks"></a>Notes  
- Si `bAbort` est **TRUE**, `ReleaseFile` appelle `CFile::Abort`, et le fichier est publié. `CFile::Abort` pas lève une exception.  
+ Si *bAbort* est **TRUE**, `ReleaseFile` appelle `CFile::Abort`, et le fichier est publié. `CFile::Abort` pas lève une exception.  
   
- Si `bAbort` est **FALSE**, `ReleaseFile` appelle `CFile::Close` et le fichier est publié.  
+ Si *bAbort* est **FALSE**, `ReleaseFile` appelle `CFile::Close` et le fichier est publié.  
   
  Remplacez cette fonction membre pour demander une action de l’utilisateur avant la publication du fichier.  
   
@@ -958,10 +958,10 @@ virtual void RemoveChunk(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `Guid`  
+ *Guid*  
  Spécifie le GUID d’un segment à supprimer.  
   
- `Pid`  
+ *PID*  
  Spécifie le PID d’un segment à supprimer.  
   
 ### <a name="remarks"></a>Notes  
@@ -974,7 +974,7 @@ void RemoveView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pView`  
+ *pView*  
  Pointe vers la vue en cours de suppression.  
   
 ### <a name="remarks"></a>Notes  
@@ -996,7 +996,7 @@ virtual void ReportSaveLoadException(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPathName`  
+ *lpszPathName*  
  Pointe vers le nom du document qui était en cours d’enregistrement ou chargement.  
   
  *e*  
@@ -1005,11 +1005,11 @@ virtual void ReportSaveLoadException(
  *benregistrement des*  
  Indicateur qui signale que l’opération était en cours ; différent de zéro si le document a été sauvegardé, 0 si le document a été chargé.  
   
- `nIDPDefault`  
+ *nIDPDefault*  
  Identificateur du message d’erreur à afficher si la fonction ne spécifie pas une valeur plus spécifique.  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut examine l’objet exception et recherche un message d’erreur qui décrit précisément la cause. Si un message spécifique est introuvable ou si *e* est **NULL**, le message général spécifié par le `nIDPDefault` paramètre est utilisé. Puis, la fonction affiche une boîte de message contenant le message d’erreur. Remplacez cette fonction si vous souhaitez fournir des messages d’échec supplémentaire et personnalisé. Il s’agit d’une avancée substituable.  
+ L’implémentation par défaut examine l’objet exception et recherche un message d’erreur qui décrit précisément la cause. Si un message spécifique est introuvable ou si *e* est **NULL**, le message général spécifié par le *nIDPDefault* paramètre est utilisé. Puis, la fonction affiche une boîte de message contenant le message d’erreur. Remplacez cette fonction si vous souhaitez fournir des messages d’échec supplémentaire et personnalisé. Il s’agit d’une avancée substituable.  
   
 ##  <a name="savemodified"></a>  CDocument::SaveModified  
  Appelé par l’infrastructure avant un document modifié est le point d’être fermé.  
@@ -1032,7 +1032,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pValue`  
+ *pValue*  
  Spécifie une valeur de segment à définir.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1048,11 +1048,11 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bModified`  
+ *bModified*  
  Indicateur précisant si le document a été modifié.  
   
 ### <a name="remarks"></a>Notes  
- En appelant cette fonction de manière cohérente, vous vérifiez que le framework invite l’utilisateur à enregistrer les modifications avant de fermer un document. En général, vous devez utiliser la valeur par défaut **TRUE** pour la `bModified` paramètre. Pour marquer un document comme nettoyer (non modifié), appelez cette fonction avec la valeur **FALSE**.  
+ En appelant cette fonction de manière cohérente, vous vérifiez que le framework invite l’utilisateur à enregistrer les modifications avant de fermer un document. En général, vous devez utiliser la valeur par défaut **TRUE** pour le *bModified* paramètre. Pour marquer un document comme nettoyer (non modifié), appelez cette fonction avec la valeur **FALSE**.  
   
 ##  <a name="setpathname"></a>  CDocument::SetPathName  
  Appelez cette fonction pour spécifier le chemin d’accès qualifié complet du fichier de disque du document.  
@@ -1064,14 +1064,14 @@ virtual void SetPathName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPathName`  
+ *lpszPathName*  
  Pointe vers la chaîne à utiliser en tant que le chemin d’accès pour le document.  
   
- `bAddToMRU`  
+ *bAddToMRU*  
  Détermine si le nom de fichier est ajouté à la plus récemment (MRU) fichiers utilisés. Si **valeur est TRUE,** le nom de fichier est ajoutée ; si **FALSE**, il n’est pas ajouté.  
   
 ### <a name="remarks"></a>Notes  
- Selon la valeur de `bAddToMRU` le chemin d’accès est ajoutée ou pas ajouté à la liste des derniers fichiers utilisés conservée par l’application. Notez que certains documents ne sont pas associés à un fichier de disque. Appelez cette fonction uniquement si vous substituez l’implémentation par défaut pour ouvrir et enregistrer des fichiers utilisés par l’infrastructure.  
+ Selon la valeur de *bAddToMRU* le chemin d’accès est ajoutée ou pas ajouté à la liste des derniers fichiers utilisés conservée par l’application. Notez que certains documents ne sont pas associés à un fichier de disque. Appelez cette fonction uniquement si vous substituez l’implémentation par défaut pour ouvrir et enregistrer des fichiers utilisés par l’infrastructure.  
   
 ##  <a name="settitle"></a>  CDocument::SetTitle  
  Appelez cette fonction pour spécifier le titre du document (la chaîne affichée dans la barre de titre d’une fenêtre frame).  
@@ -1081,7 +1081,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTitle`  
+ *lpszTitle*  
  Pointe vers la chaîne à utiliser comme le titre du document.  
   
 ### <a name="remarks"></a>Notes  
@@ -1098,19 +1098,19 @@ void UpdateAllViews(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pSender`  
+ *pSender*  
  Pointe vers la vue qui a modifié le document, ou **NULL** si toutes les vues doivent être mis à jour.  
   
- `lHint`  
+ *lHint*  
  Contient des informations sur la modification.  
   
- `pHint`  
+ *pHint*  
  Pointe vers un objet stockant les informations sur la modification.  
   
 ### <a name="remarks"></a>Notes  
- Vous devez appeler cette fonction après avoir appelé la [SetModifiedFlag](#setmodifiedflag) fonction membre. Cette fonction informe chaque vue associée au document, à l’exception de la vue spécifié par `pSender`, que le document a été modifié. En règle générale, vous appelez cette fonction à partir de votre classe d’affichage une fois que l’utilisateur a modifié le document via une vue.  
+ Vous devez appeler cette fonction après avoir appelé la [SetModifiedFlag](#setmodifiedflag) fonction membre. Cette fonction informe chaque vue associée au document, à l’exception de la vue spécifié par *pSender*, que le document a été modifié. En règle générale, vous appelez cette fonction à partir de votre classe d’affichage une fois que l’utilisateur a modifié le document via une vue.  
   
- Cette fonction appelle le [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) afficher de la fonction membre pour chacune des vues du document à l’exception de l’envoi, passage `pHint` et `lHint`. Utilisez ces paramètres pour passer des informations aux vues sur les modifications apportées au document. Vous pouvez encoder à l’aide des informations `lHint` et/ou que vous pouvez définir un [CObject](../../mfc/reference/cobject-class.md)-classe dérivée stockent des informations sur les modifications et passer un objet de classe à l’aide `pHint`. Remplacer la `CView::OnUpdate` fonction membre dans votre [CView](../../mfc/reference/cview-class.md)-classe pour optimiser la mise à jour de l’affichage de la vue basée sur les informations passées dérivée.  
+ Cette fonction appelle le [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) afficher de la fonction membre pour chacune des vues du document à l’exception de l’envoi, passage *pHint* et *lHint*. Utilisez ces paramètres pour passer des informations aux vues sur les modifications apportées au document. Vous pouvez encoder à l’aide des informations *lHint* et/ou que vous pouvez définir un [CObject](../../mfc/reference/cobject-class.md)-classe dérivée stockent des informations sur les modifications et passer un objet de classe à l’aide *pHint*. Remplacer la `CView::OnUpdate` fonction membre dans votre [CView](../../mfc/reference/cview-class.md)-classe pour optimiser la mise à jour de l’affichage de la vue basée sur les informations passées dérivée.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366471"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953699"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget, classe
 Wrapper pour ID2D1DCRenderTarget.  
@@ -83,7 +83,7 @@ class CDCRenderTarget : public CRenderTarget;
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="attach"></a>  CDCRenderTarget::Attach  
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTarget`  
+ *pTarget*  
  Interface de cible de rendu existante. Ne peut pas être NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dc`  
+ *dc*  
  Le contexte de périphérique pour lequel la cible de rendu émet des commandes de dessin  
   
- `rect`  
+ *Rect*  
  Les dimensions du handle vers un contexte de périphérique (HDC) auquel la cible de rendu est liée  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `props`  
+ *propriétés*  
  Le mode de rendu, format de pixel, options de communication à distance, les informations de résolution et la prise en charge DirectX minimale requise pour le rendu matériel.  
   
 ### <a name="return-value"></a>Valeur de retour  

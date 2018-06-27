@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384463"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950472"
 ---
 # <a name="windows"></a>Windows
 Cette famille d’articles traite des objets de fenêtre dans l’infrastructure MFC. Toutes les fenêtres MFC dérivent de la classe [CWnd](../mfc/reference/cwnd-class.md), y compris les fenêtres frame, les vues, les boîtes de dialogue et les contrôles.  
   
- Le premier groupe d’articles décrit [objets fenêtres](../mfc/window-objects.md) en général. Reportez-vous à ce groupe pour des informations générales sur C++ objets fenêtres, comment ils encapsulent un HWND, et comment utiliser les lorsque vous créez vos propres fenêtres, telles que des fenêtres enfants.  
+ Le premier groupe d’articles décrit [objets fenêtres](../mfc/window-objects.md) en général. Pour ce groupe pour des informations générales sur les objets de fenêtre C++, comment ils encapsulent une `HWND`, et comment utiliser les lorsque vous créez vos propres fenêtres, telles que des fenêtres enfants.  
   
  Le deuxième groupe d’articles décrit [fenêtres frame](../mfc/frame-windows.md)— fenêtres qui placent un frame autour du contenu, en particulier. Reportez-vous à ce groupe pour plus d’informations sur la façon dont l’infrastructure MFC gère les fenêtres frame et le contenu du frame, y compris les barres de contrôles et des vues.  
   

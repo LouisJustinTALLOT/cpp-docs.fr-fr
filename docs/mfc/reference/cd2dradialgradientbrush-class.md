@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354350"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952272"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush, classe
 Wrapper pour ID2D1RadialGradientBrush.  
@@ -115,7 +115,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
  `CD2DRadialGradientBrush`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush :: ~ CD2DRadialGradientBrush  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pResource`  
+ *pResource*  
  Interface de la ressource existante. Ne peut pas être NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentTarget`  
+ *pParentTarget*  
  Pointeur vers la cible de rendu.  
   
- `gradientStops`  
+ *gradientStops*  
  Pointeur vers un tableau de structures de D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Une valeur supérieure ou égale à 1 qui spécifie le nombre de points de dégradé dans le tableau gradientStops.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  Le centre, décalage d’origine du dégradé et de rayon x rayon y de pinceau de messagerie du dégradé.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  L’espace où la couleur une interpolation entre les points de dégradé est effectuée.  
   
- `extendMode`  
+ *extendMode*  
  Le comportement du dégradé en dehors de la plage normalisées [0,1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Pointeur vers l’opacité et de transformation d’un pinceau.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pRenderTarget`  
+ *pRenderTarget*  
  Pointeur vers la cible de rendu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `point`  
+ *Point*  
  Le centre de l’ellipse dans l’espace de coordonnées du pinceau de dégradé  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  Le décalage de l’origine du dégradé du centre de l’ellipse du dégradé  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `radiusX`  
+ *radiusX*  
  Le rayon x de l’ellipse du dégradé. Cette valeur se trouve dans l’espace de coordonnées du pinceau  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `radiusY`  
+ *radiusY*  
  Le rayon y de l’ellipse du dégradé. Cette valeur se trouve dans l’espace de coordonnées du pinceau  
   
 ## <a name="see-also"></a>Voir aussi  

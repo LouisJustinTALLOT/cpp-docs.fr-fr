@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355910"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954038"
 ---
 # <a name="application-control"></a>Contrôle d'application
 OLE requiert un contrôle important sur les applications et leurs objets. Les DLL système OLE doivent être en mesure de lancer et de distribuer automatiquement des applications, coordonner leur production et la modification d’objets et ainsi de suite. Les fonctions dans cette rubrique ces besoins. En plus d’être appelés par les DLL système OLE, ces fonctions doivent parfois être appelées par les applications ainsi. 
@@ -53,12 +53,12 @@ BOOL AFXAPI AfxOleCanExitApp();
  Différent de zéro si l’application peut s’arrêter ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Une application ne doit pas s’arrêter s’il existe des références en suspens à ses objets. Les fonctions globales `AfxOleLockApp` et `AfxOleUnlockApp` incrémenter ou décrémenter, respectivement, un compteur de références aux objets de l’application. L’application ne doit pas s’arrêter quand ce compteur est différente de zéro. Si le compteur est différente de zéro, fenêtre principale de l’application est masquée (pas détruite) lorsque l’utilisateur sélectionne Fermer dans le menu système ou quitter dans le menu fichier. L’infrastructure appelle cette fonction **CFrameWnd::OnClose**.  
+ Une application ne doit pas s’arrêter s’il existe des références en suspens à ses objets. Les fonctions globales `AfxOleLockApp` et `AfxOleUnlockApp` incrémenter ou décrémenter, respectivement, un compteur de références aux objets de l’application. L’application ne doit pas s’arrêter quand ce compteur est différente de zéro. Si le compteur est différente de zéro, fenêtre principale de l’application est masquée (pas détruite) lorsque l’utilisateur sélectionne Fermer dans le menu système ou quitter dans le menu fichier. L’infrastructure appelle cette fonction `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h 
 
 ##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
@@ -79,7 +79,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
   
  [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxwin.h 
 
 ##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
@@ -95,7 +95,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ### <a name="remarks"></a>Notes  
  L’utilisateur est dans le contrôle de l’application lorsque l’utilisateur a explicitement ouvert ou créé un nouveau document. L’utilisateur est également dans le contrôle si l’application n’a pas été lancée par les DLL système OLE, en d’autres termes, si l’utilisateur a lancé l’application avec l’interpréteur de commandes du système.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h
 
 ##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
@@ -114,7 +114,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
   
  Appelez cette fonction si d’autres actions dans votre application doivent placer l’utilisateur dans le contrôle de l’application.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h
 
 ##  <a name="afxolelockapp"></a>  AfxOleLockApp  
@@ -134,7 +134,7 @@ void AFXAPI AfxOleLockApp();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h
 
 ##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
@@ -147,12 +147,12 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>Notes  
  Consultez `AfxOleLockApp` pour plus d’informations.  
   
- Lorsque le nombre d’objets actifs atteint zéro, **AfxOleOnReleaseAllObjects** est appelée.  
+ Lorsque le nombre d’objets actifs atteint zéro, `AfxOleOnReleaseAllObjects` est appelée.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [AfxOleLockApp](#afxolelockapp).  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
@@ -164,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Paramètres  
- `clsid`  
+ *clsid*  
  L’ID de classe unique du contrôle.  
   
- `lpszProgID`  
+ *lpszProgID*  
  ID de programme unique du contrôle.  
    
 ### <a name="return-value"></a>Valeur de retour  
@@ -185,7 +185,7 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** < afxwin.h >  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -207,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clsid`  
+ *clsid*  
  Référence à l’ID de classe OLE. du serveur  
   
- `lpszClassName`  
+ *lpszClassName*  
  Pointeur vers une chaîne contenant le nom de classe des objets du serveur.  
   
  *lpszShortTypeName*  
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  Pointeur vers une chaîne contenant le nom long du type d’objet du serveur, telles que « Graphique de Microsoft Excel 5.0 ».  
   
- `nAppType`  
+ *nAppType*  
  Une valeur extraite de la **OLE_APPTYPE** énumération spécifiant le type d’application OLE. Les valeurs possibles sont les suivantes :  
   
 - `OAT_INPLACE_SERVER` Serveur a interface utilisateur complète du serveur.  
@@ -230,19 +230,19 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`-objet compatible.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Tableau de pointeurs vers des chaînes représentant les clés et valeurs à ajouter si aucune valeur existante pour les clés ne se trouvent dans le Registre du système OLE.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Tableau de pointeurs vers des chaînes représentant les clés et valeurs à ajouter à la base de registres OLE si le Registre contient des valeurs existantes pour les clés spécifiées.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la classe de serveur est inscrit avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- La plupart des applications peuvent utiliser **COleTemplateServer::Register** pour inscrire les types de documents de l’application. Si le format du Registre de système de votre application ne tient pas le modèle par défaut, vous pouvez utiliser `AfxOleRegisterServerClass` pour plus de contrôle.  
+ La plupart des applications peuvent utiliser `COleTemplateServer::Register` pour inscrire les types de documents de l’application. Si le format du Registre de système de votre application ne tient pas le modèle par défaut, vous pouvez utiliser `AfxOleRegisterServerClass` pour plus de contrôle.  
   
- Le Registre se compose d’un jeu de clés et valeurs. Le `rglpszRegister` et `rglpszOverwrite` arguments sont des tableaux de pointeurs vers des chaînes, consistant en une clé et une valeur séparant par un **NULL** caractère ( `'\0'`). Chacune de ces chaînes peut avoir des paramètres remplaçables dont les emplacements sont marqués par les séquences de caractères `%1` via `%5`.  
+ Le Registre se compose d’un jeu de clés et valeurs. Le *rglpszRegister* et *rglpszOverwrite* arguments sont des tableaux de pointeurs vers des chaînes, consistant en une clé et une valeur séparant par un **NULL** caractère ( `'\0'`). Chacune de ces chaînes peut avoir des paramètres remplaçables dont les emplacements sont marqués par les séquences de caractères *%1* via *%5*.  
   
  Les symboles sont renseignés comme suit :  
   
@@ -254,7 +254,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 |%4|Nom de type court|  
 |%5|Nom de type long|  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h
 
 ##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
@@ -271,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pClient`  
+ *pClient*  
  Pointeur vers l’élément OLE de client.  
   
- `pMenu`  
+ *pMenu*  
  Pointeur vers l’objet menu mise à jour.  
   
  *iMenuItem*  
  Index de l’élément de menu à mettre à jour.  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  L’ID de commande qui correspond au verbe principal.  
   
  *nIDVerbMax*  
@@ -290,13 +290,13 @@ void AFXAPI AfxOleSetEditMenu(
  ID de l’élément de menu convertir.  
   
 ### <a name="remarks"></a>Notes  
- Si le serveur reconnaît uniquement un verbe principal, l’élément de menu devienne « verbe *typename* objet » et le `nIDVerbMin` commande est envoyée lorsque l’utilisateur sélectionne la commande. Si le serveur reconnaît plusieurs verbes, alors que l’élément de menu devienne « *typename* objet » et un sous-menu répertoriant tous les verbes s’affiche lorsque l’utilisateur sélectionne la commande. Lorsque l’utilisateur choisit un verbe dans le sous-menu, `nIDVerbMin` est envoyé si la première action est choisie, `nIDVerbMin` + 1 est envoyé si la deuxième action est choisi et ainsi de suite. La valeur par défaut `COleDocument` implémentation gère automatiquement cette fonctionnalité.  
+ Si le serveur reconnaît uniquement un verbe principal, l’élément de menu devienne « verbe *typename* objet » et le *nIDVerbMin* commande est envoyée lorsque l’utilisateur sélectionne la commande. Si le serveur reconnaît plusieurs verbes, alors que l’élément de menu devienne « *typename* objet » et un sous-menu répertoriant tous les verbes s’affiche lorsque l’utilisateur sélectionne la commande. Lorsque l’utilisateur choisit un verbe dans le sous-menu, *nIDVerbMin* est envoyé si la première action est choisie, *nIDVerbMin* + 1 est envoyé si la deuxième action est choisi et ainsi de suite. La valeur par défaut `COleDocument` implémentation gère automatiquement cette fonctionnalité.  
   
  Vous devez disposer de l’instruction suivante dans le script de ressources d’application de votre client (. Fichier de RC) :  
   
  **#include \<afxolecl.rc >**  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxole.h 
 
 ## <a name="see-also"></a>Voir aussi  
@@ -311,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Paramètres  
- `clsid`  
+ *clsid*  
  L’ID de classe unique du contrôle.  
   
- `lpszProgID`  
+ *lpszProgID*  
  ID de programme unique du contrôle.  
    
 ### <a name="return-value"></a>Valeur de retour  
@@ -331,7 +331,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** < afxwin.h >  
    
 ### <a name="see-also"></a>Voir aussi  

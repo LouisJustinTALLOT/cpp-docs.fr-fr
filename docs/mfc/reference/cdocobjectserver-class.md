@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367404"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956458"
 ---
 # <a name="cdocobjectserver-class"></a>Classe de CDocObjectServer
 Implémente les interfaces OLE supplémentaires nécessaires pour transformer un serveur normal `COleDocument` en serveur DocObject complet : `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`et `IPrint`.  
@@ -84,7 +84,7 @@ class CDocObjectServer : public CCmdTarget
   
  `CDocObjectServer`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdocob.h  
   
 ##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Notes  
- `ActivateDocObject` appels `IOleDocumentSite`de **ActivateMe** (méthode), mais n’affiche ne pas la vue, car il attend pour obtenir des instructions sur la façon de configurer et afficher la vue, indiqué dans l’appel à [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` appels `IOleDocumentSite`de `ActivateMe` (méthode), mais n’affiche ne pas la vue, car il attend pour obtenir des instructions sur la façon de configurer et afficher la vue, indiqué dans l’appel à [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Ensemble, `ActivateDocObject` et `OnActivateView` activer et afficher la vue DocObject. DocObject activation diffère des autres types d’activation des OLE sur place. L’activation DocObject ignore l’affichage des bordures de hachurage de place et ornements d’objet (par exemple, des poignées de redimensionnement), ignore les fonctions de mesure d’objet et dessine dans le rectangle d’affichage au lieu des faire glisser en dehors de ce rectangle (par exemple, normal, les barres de défilement activation sur place).  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Pointeur vers le document du site client qui est le client pour le serveur DocObject.  
   
- `pDocSite`  
+ *pDocSite*  
  Un pointeur vers le `IOleDocumentSite` interface implémentée par le conteneur.  
   
 ### <a name="remarks"></a>Notes  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ar`  
+ *ar*  
  A `CArchive` objet permettant de sérialiser l’état d’affichage.  
   
 ### <a name="remarks"></a>Notes  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ar`  
+ *ar*  
  A `CArchive` de l’objet dans lequel l’état d’affichage est sérialisé.  
   
 ### <a name="remarks"></a>Notes  

@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382035"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953143"
 ---
 # <a name="tree-control-styles"></a>Styles de contrôle d’arborescence
-Contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles régissent les aspects de l’apparence d’un contrôle d’arborescence. Vous définissez les styles initiaux lorsque vous créez le contrôle d’arborescence. Vous pouvez extraire et modifier les styles après avoir créé le contrôle d’arborescence à l’aide de la [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) et [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) des fonctions de Windows, en spécifiant **GWL_STYLE** pour le `nIndex` paramètre. Pour obtenir une liste complète des styles, consultez [Styles de fenêtre de contrôle d’arborescence](http://msdn.microsoft.com/library/windows/desktop/bb760013) dans le Kit de développement logiciel Windows.  
+Contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles régissent les aspects de l’apparence d’un contrôle d’arborescence. Vous définissez les styles initiaux lorsque vous créez le contrôle d’arborescence. Vous pouvez extraire et modifier les styles après avoir créé le contrôle d’arborescence à l’aide de la [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) et [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) des fonctions de Windows, en spécifiant **GWL_STYLE** pour le *nIndex* paramètre. Pour obtenir une liste complète des styles, consultez [Styles de fenêtre de contrôle d’arborescence](http://msdn.microsoft.com/library/windows/desktop/bb760013) dans le Kit de développement logiciel Windows.  
   
  Le **TVS_HASLINES** style améliore la représentation graphique de la hiérarchie d’un contrôle d’arborescence en traçant des lignes qui lient les éléments enfants à leur élément parent correspondant. Ce style ne lie pas les éléments à la racine de la hiérarchie. Pour ce faire, vous devez combiner les **TVS_HASLINES** et **TVS_LINESATROOT** styles.  
   

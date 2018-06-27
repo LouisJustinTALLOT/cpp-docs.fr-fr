@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb514531e600243fe02f8b5a6a9cd91a30c14542
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357239"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952578"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 Fournit les fonctionnalités d'une zone de liste modifiable Windows.  
@@ -254,7 +254,7 @@ class CComboBox : public CWnd
   
  Si vous incorporez un `CComboBox` objet dans une autre fenêtre de l’objet, vous n’avez pas besoin de le détruire. Si vous créez le `CComboBox` de l’objet sur la pile, il est supprimé automatiquement. Si vous créez le `CComboBox` objet sur le tas à l’aide de la **nouveau** (fonction), vous devez appeler **supprimer** sur l’objet de suppression de la zone de liste déroulante Windows est détruite.  
   
- **Remarque** si vous souhaitez gérer `WM_KEYDOWN` et `WM_CHAR` messages, vous devrez sous-classer la zone de liste déroulante Modifier et les contrôles de zone de liste, dériver des classes de `CEdit` et `CListBox`, et ajouter des gestionnaires pour les messages à dérivé classes. Pour plus d’informations, consultez [ http://support.microsoft.com/default.aspxscid=kb; en-us ; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) et [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Remarque** si vous souhaitez gérer les messages WM_KEYDOWN et WM_CHAR, vous devrez sous-classer la zone de liste déroulante Modifier et les contrôles de zone de liste, dériver des classes de `CEdit` et `CListBox`, et ajouter des gestionnaires pour les messages aux classes dérivées. Pour plus d’informations, consultez [ http://support.microsoft.com/default.aspxscid=kb; en-us ; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) et [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -265,7 +265,7 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="addstring"></a>  CComboBox::AddString  
@@ -276,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszString`  
+ *lpszString*  
  Pointe vers la chaîne se terminant par null qui doit être ajouté.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -324,7 +324,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  Un pointeur long désignant un [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -366,25 +366,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style de la zone de liste déroulante. Appliquer n’importe quelle combinaison de [styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à la zone.  
   
- `rect`  
+ *Rect*  
  Pointe vers la position et la taille de la zone de liste déroulante. Peut être un [Rect, structure](../../mfc/reference/rect-structure1.md) ou un `CRect` objet.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie la fenêtre parente de la zone de liste modifiable (généralement un `CDialog`). Il ne doit pas être **NULL**.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID du contrôle. de zone de liste déroulante  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CComboBox` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée la zone de liste déroulante Windows et l’attache à le `CComboBox` objet.  
+ Vous construisez un `CComboBox` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée la zone de liste déroulante Windows et l’attache à le `CComboBox` objet.  
   
- Lorsque **créer** s’exécute, Windows envoie les [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), et [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages à la zone de liste déroulante.  
+ Lorsque `Create` s’exécute, Windows envoie les [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), et [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages dans la zone de liste déroulante.  
   
  Ces messages sont gérées par défaut par le [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), et [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) fonctions membres dans la `CWnd` classe de base. Pour étendre le traitement du message par défaut, dérivez une classe de `CComboBox`, ajouter une table des messages à la nouvelle classe et substituer les fonctions membres de gestionnaire de messages précédent. Substituer `OnCreate`, par exemple, pour effectuer l’initialisation nécessaire pour une nouvelle classe.  
   
@@ -428,7 +428,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Un pointeur long vers Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure qui contient des informations sur l’élément supprimé. Consultez [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) pour obtenir une description de cette structure.  
   
 ### <a name="remarks"></a>Notes  
@@ -438,21 +438,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
 ##  <a name="deletestring"></a>  CComboBox::DeleteString  
- Supprime l’élément dans la position `nIndex` à partir de la zone de liste déroulante.  
+ Supprime l’élément dans la position *nIndex* à partir de la zone de liste déroulante.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Spécifie l’index de la chaîne doit être supprimé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la valeur de retour est supérieure ou égale à 0, il est un nombre de chaînes restants dans la liste. La valeur de retour est **CB_ERR** si `nIndex` spécifie un index supérieur au nombre d’éléments dans la liste.  
+ Si la valeur de retour est supérieure ou égale à 0, il est un nombre de chaînes restants dans la liste. La valeur de retour est **CB_ERR** si *nIndex* spécifie un index supérieur au nombre d’éléments dans la liste.  
   
 ### <a name="remarks"></a>Notes  
- Tous les éléments qui suivent `nIndex` se déplacent vers le bas une position. Par exemple, si une zone de liste déroulante contient deux éléments, la suppression du premier élément provoquera l’élément restant à figurer dans la première position. `nIndex`= 0 pour l’élément dans la première position.  
+ Tous les éléments qui suivent *nIndex* se déplacent vers le bas une position. Par exemple, si une zone de liste déroulante contient deux éléments, la suppression du premier élément provoquera l’élément restant à figurer dans la première position. *nIndex*= 0 pour l’élément dans la première position.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
@@ -467,8 +467,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `attr`  
- Peut être n’importe quelle combinaison de la `enum` valeurs décrites dans [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) ou n’importe quelle combinaison des valeurs suivantes :  
+ *attr*  
+ Peut être n’importe quelle combinaison de la **enum** valeurs décrites dans [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) ou n’importe quelle combinaison des valeurs suivantes :  
   
 - **DDL_READWRITE** fichier peut être lu ou écrit à.  
   
@@ -478,15 +478,15 @@ int Dir(
   
 - **DDL_SYSTEM** fichier est un fichier système.  
   
-- **DDL_DIRECTORY** le nom spécifié par `lpszWildCard` spécifie un répertoire.  
+- **DDL_DIRECTORY** le nom spécifié par *lpszWildCard* spécifie un répertoire.  
   
 - **DDL_ARCHIVE** fichier a été archivé.  
   
-- **DDL_DRIVES** incluent tous les lecteurs qui correspondent au nom spécifié par `lpszWildCard`.  
+- **DDL_DRIVES** incluent tous les lecteurs qui correspondent au nom spécifié par *lpszWildCard*.  
   
 - **DDL_EXCLUSIVE** indicateur Exclusive. Si la valeur de l’indicateur exclusive, seuls les fichiers du type spécifié sont répertoriés. Dans le cas contraire, les fichiers du type spécifié sont répertoriés en plus des fichiers « normales ».  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  Pointe vers une chaîne de spécification de fichier. La chaîne peut contenir des caractères génériques (par exemple, *.\*).  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -506,13 +506,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un pointeur vers un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin nécessaire.  
   
 ### <a name="remarks"></a>Notes  
  Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Consultez [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) pour obtenir une description de cette structure.  
   
- Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CComboBox` objet. Avant l’arrêt de cette fonction membre, l’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct`.  
+ Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CComboBox` objet. Avant l’arrêt de cette fonction membre, l’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans *lpDrawItemStruct*.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
@@ -527,10 +527,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStartAfter`  
- Contient l’index de base zéro de l’élément précédant le premier élément à rechercher. Lorsque la recherche atteint le bas de la zone de liste, il continue à partir du haut de la zone de liste à l’élément spécifié par `nStartAfter`. Si-1, la zone de liste entière est recherchée à partir du début.  
+ *nStartAfter*  
+ Contient l’index de base zéro de l’élément précédant le premier élément à rechercher. Lorsque la recherche atteint le bas de la zone de liste, il continue à partir du haut de la zone de liste à l’élément spécifié par *nStartAfter*. Si-1, la zone de liste entière est recherchée à partir du début.  
   
- `lpszString`  
+ *lpszString*  
  Pointe vers la chaîne se terminant par null qui contient le préfixe à rechercher. La recherche respecte la casse est indifférente, afin de cette chaîne peut contenir toute combinaison de lettres majuscules et les minuscules.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -543,7 +543,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
- Appelez le `FindStringExact` fonction membre pour rechercher la première chaîne de zone de liste (dans une zone de liste modifiable) qui correspond à la chaîne spécifiée dans `lpszFind`.  
+ Appelez le `FindStringExact` fonction membre pour rechercher la première chaîne de zone de liste (dans une zone de liste modifiable) qui correspond à la chaîne spécifiée dans *lpszFind*.  
   
 ```  
 int FindStringExact(
@@ -552,17 +552,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndexStart`  
- Spécifie l’index de base zéro de l’élément précédant le premier élément à rechercher. Lorsque la recherche atteint le bas de la zone de liste, il continue à partir du haut de la zone de liste à l’élément spécifié par `nIndexStart`. Si `nIndexStart` est -1, la zone de liste entière est recherchée à partir du début.  
+ *nIndexStart*  
+ Spécifie l’index de base zéro de l’élément précédant le premier élément à rechercher. Lorsque la recherche atteint le bas de la zone de liste, il continue à partir du haut de la zone de liste à l’élément spécifié par *nIndexStart*. Si *nIndexStart* est -1, la zone de liste entière est recherchée à partir du début.  
   
- `lpszFind`  
+ *lpszFind*  
  Pointe vers la chaîne se terminant par null à rechercher. Cette chaîne peut contenir un nom de fichier complet, y compris l’extension. La recherche n’est pas la casse, cette chaîne peut contenir toute combinaison de lettres majuscules et les minuscules.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément correspondant, ou **CB_ERR** si la recherche a échoué.  
   
 ### <a name="remarks"></a>Notes  
- Si la zone de liste modifiable a été créée avec un style de mode owner-draw, mais sans le [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `FindStringExact` tente de faire correspondre la valeur DWORD par rapport à la valeur de `lpszFind`.  
+ Si la zone de liste modifiable a été créée avec un style de mode owner-draw, mais sans le [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `FindStringExact` tente de faire correspondre la valeur DWORD par rapport à la valeur de *lpszFind*.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] `lpszText`|Pointeur vers une mémoire tampon qui reçoit le texte de bannière de signal.|  
-|[in] `cchText`|Taille de la mémoire tampon qui le `lpszText` paramètre pointe vers.|  
+|[out] *lpszText*|Pointeur vers une mémoire tampon qui reçoit le texte de bannière de signal.|  
+|[in] *cchText*|Taille de la mémoire tampon qui le *lpszText* paramètre pointe vers.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Dans la première surcharge, une [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de bannière de signal si elle existe ; sinon, un `CString` objet qui a une longueur nulle.  
@@ -747,14 +747,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient l’index de base zéro d’un élément dans la zone de liste de la zone de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de 32 bits associée à l’élément, ou **CB_ERR** si une erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de 32 bits peut être définie avec la `dwItemData` paramètre d’un [SetItemData](#setitemdata) appel de fonction membre. Utilisez le `GetItemDataPtr` fonction membre si la valeur de 32 bits doit être récupéré est un pointeur ( **void\***).  
+ La valeur de 32 bits peut être définie avec la *dwItemData* paramètre d’un [SetItemData](#setitemdata) appel de fonction membre. Utilisez le `GetItemDataPtr` fonction membre si la valeur de 32 bits doit être récupéré est un pointeur ( **void\***).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
@@ -767,7 +767,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient l’index de base zéro d’un élément dans la zone de liste de la zone de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -784,8 +784,8 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
- Spécifie le composant de la zone de liste déroulante dont la hauteur doit être récupéré. Si le `nIndex` paramètre est -1, la hauteur de la partie du contrôle d’édition (ou texte statique) de la zone de liste déroulante est récupérée. Si la zone de liste modifiable a la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` Spécifie l’index de base zéro de l’élément de liste dont la hauteur doit être récupéré. Dans le cas contraire, `nIndex` doit être définie sur 0.  
+ *nIndex*  
+ Spécifie le composant de la zone de liste déroulante dont la hauteur doit être récupéré. Si le *nIndex* paramètre est -1, la hauteur de la partie du contrôle d’édition (ou texte statique) de la zone de liste déroulante est récupérée. Si la zone de liste modifiable a la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, *nIndex* Spécifie l’index de base zéro de l’élément de liste dont la hauteur doit être récupéré. Dans le cas contraire, *nIndex* doit être définie sur 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur, en pixels, de l’élément spécifié dans une zone de liste déroulante. La valeur de retour est **CB_ERR** si une erreur se produit.  
@@ -807,17 +807,17 @@ void GetLBText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient l’index de base zéro de la chaîne de la zone de liste doit être copié.  
   
- `lpszText`  
+ *lpszText*  
  Pointe vers une mémoire tampon pour recevoir la chaîne. La mémoire tampon d’espace disponible est suffisant pour la chaîne et un caractère null de fin.  
   
- `rString`  
+ *rString*  
  Une référence à un `CString`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La longueur (en octets) de la chaîne, à l’exclusion du caractère null de fin. Si `nIndex` ne spécifie pas un index valide, la valeur de retour est **CB_ERR**.  
+ La longueur (en octets) de la chaîne, à l’exclusion du caractère null de fin. Si *nIndex* ne spécifie pas un index valide, la valeur de retour est **CB_ERR**.  
   
 ### <a name="remarks"></a>Notes  
  La deuxième forme de ce membre fonction remplit un `CString` avec le texte de l’élément.  
@@ -833,11 +833,11 @@ int GetLBTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient l’index de base zéro de la chaîne de la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La longueur de la chaîne en octets, à l’exclusion du caractère null de fin. Si `nIndex` ne spécifie pas un index valide, la valeur de retour est **CB_ERR**.  
+ La longueur de la chaîne en octets, à l’exclusion du caractère null de fin. Si *nIndex* ne spécifie pas un index valide, la valeur de retour est **CB_ERR**.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CComboBox::GetLBText](#getlbtext).  
@@ -897,10 +897,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nItems`  
+ *nItems*  
  Spécifie le nombre d’éléments à ajouter.  
   
- `nBytes`  
+ *nBytes*  
  Spécifie la quantité de mémoire, en octets, à allouer pour les chaînes de l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -909,7 +909,7 @@ int InitStorage(
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction avant d’ajouter un grand nombre d’éléments à la partie zone de liste de la `CComboBox`.  
   
- Windows 95/98 : le `wParam` paramètre est limité aux valeurs 16 bits. Cela signifie que les zones de liste ne peut pas contenir d’éléments de plus de 32 767. Bien que le nombre d’éléments est limité, la taille totale des éléments dans une zone de liste est limitée uniquement par la mémoire disponible.  
+ Windows 95/98 : le *wParam* paramètre est limité aux valeurs 16 bits. Cela signifie que les zones de liste ne peut pas contenir d’éléments de plus de 32 767. Bien que le nombre d’éléments est limité, la taille totale des éléments dans une zone de liste est limitée uniquement par la mémoire disponible.  
   
  Cette fonction permet d’accélérer l’initialisation des zones de liste qui ont un grand nombre d’éléments (plus de 100). Il pré-alloue la quantité spécifiée de mémoire suivante qui [AddString](#addstring), [InsertString](#insertstring), et [Dir](#dir) fonctions acceptent les plus brefs délais. Vous pouvez utiliser des estimations pour les paramètres. Si vous surestimer, la mémoire supplémentaire est allouée ; Si vous sous-estimez, l’allocation normale est utilisée pour les éléments qui dépassent le montant préalloué.  
   
@@ -926,10 +926,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient l’index de base zéro de la position dans la zone de liste qui doit recevoir la chaîne. Si ce paramètre est -1, la chaîne est ajoutée à la fin de la liste.  
   
- `lpszString`  
+ *lpszString*  
  Pointe vers la chaîne terminée par le caractère null qui doit être insérée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -952,7 +952,7 @@ BOOL LimitText(int nMaxChars);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nMaxChars`  
+ *nMaxChars*  
  Spécifie la longueur (en octets) du texte que l’utilisateur peut entrer. Si ce paramètre est 0, la longueur du texte est définie à 65 535 octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -974,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Un pointeur long désignant un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
 ### <a name="remarks"></a>Notes  
@@ -1020,10 +1020,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStartAfter`  
- Contient l’index de base zéro de l’élément précédant le premier élément à rechercher. Lorsque la recherche atteint le bas de la zone de liste, il continue à partir du haut de la zone de liste à l’élément spécifié par `nStartAfter`. Si-1, la zone de liste entière est recherchée à partir du début.  
+ *nStartAfter*  
+ Contient l’index de base zéro de l’élément précédant le premier élément à rechercher. Lorsque la recherche atteint le bas de la zone de liste, il continue à partir du haut de la zone de liste à l’élément spécifié par *nStartAfter*. Si-1, la zone de liste entière est recherchée à partir du début.  
   
- `lpszString`  
+ *lpszString*  
  Pointe vers la chaîne se terminant par null qui contient le préfixe à rechercher. La recherche respecte la casse est indifférente, afin de cette chaîne peut contenir toute combinaison de lettres majuscules et les minuscules.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1059,7 +1059,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
  Cette méthode envoie le [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple de code suivant définit la variable, `m_combobox`, qui est utilisé pour accéder par programme le contrôle de zone de liste déroulante. Cette variable est utilisée dans l'exemple suivant.  
+ L’exemple de code suivant définit la variable, *m_combobox*, qui est utilisé pour accéder par programme le contrôle de zone de liste déroulante. Cette variable est utilisée dans l'exemple suivant.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1076,11 +1076,11 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nSelect`  
+ *nSelect*  
  Spécifie l’index de base zéro de la chaîne à sélectionner. Si -1, la sélection actuelle dans la zone de liste est supprimée et le contrôle d’édition est désactivé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro de l’élément sélectionné si le message a réussi. La valeur de retour est **CB_ERR** si `nSelect` est supérieur au nombre d’éléments dans la liste ou si `nSelect` a la valeur -1, ce qui efface la sélection.  
+ Index de base zéro de l’élément sélectionné si le message a réussi. La valeur de retour est **CB_ERR** si *nSelect* est supérieur au nombre d’éléments dans la liste ou si *nSelect* a la valeur -1, ce qui efface la sélection.  
   
 ### <a name="remarks"></a>Notes  
  Si nécessaire, la zone de liste fait défiler la chaîne dans la vue (si la zone de liste est visible). Le texte du contrôle d’édition de la zone de liste modifiable est modifié pour refléter la nouvelle sélection. Sélection précédente dans la zone de liste est supprimée.  
@@ -1096,7 +1096,7 @@ int SetDroppedWidth(UINT nWidth);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nWidth`  
+ *nWidth*  
  La largeur minimale autorisée de la partie de la zone de liste de la zone de liste déroulante, en pixels.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1120,10 +1120,10 @@ BOOL SetEditSel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStartChar`  
+ *nStartChar*  
  Spécifie la position de départ. Si la position de départ est définie sur -1, une sélection existante est supprimée.  
   
- `nEndChar`  
+ *nEndChar*  
  Spécifie la position de fin. Si la position de fin est définie sur -1, puis tout le texte de la position de départ au dernier caractère dans le contrôle d’édition est sélectionné.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1191,10 +1191,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient un index de base zéro de l’élément à définir.  
   
- `dwItemData`  
+ *dwItemData*  
  Contient la nouvelle valeur à associer à l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1216,10 +1216,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Contient un index de base zéro de l’élément.  
   
- `pData`  
+ *pData*  
  Contient le pointeur à associer à l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1241,15 +1241,15 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Spécifie si la hauteur des éléments de liste ou de la hauteur de la partie du contrôle d’édition (ou texte statique) de la zone de liste déroulante est définie.  
   
- Si la zone de liste modifiable a la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` Spécifie l’index de base zéro de l’élément de liste dont la hauteur doit être définie ; sinon, `nIndex` doit être 0 et la hauteur de la liste de tous les éléments définira.  
+ Si la zone de liste modifiable a la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, *nIndex* Spécifie l’index de base zéro de l’élément de liste dont la hauteur doit être définie ; sinon, *nIndex* doit être 0 et la hauteur de tous les éléments de liste sera définie.  
   
- Si `nIndex` est -1, la hauteur du contrôle d’édition ou la partie de texte statique de la zone de liste déroulante doit être défini.  
+ Si *nIndex* est -1, la hauteur du contrôle d’édition ou la partie de texte statique de la zone de liste déroulante doit être défini.  
   
- `cyItemHeight`  
- Spécifie la hauteur, en pixels, du composant de zone de liste déroulante identifié par `nIndex`.  
+ *cyItemHeight*  
+ Spécifie la hauteur, en pixels, du composant de zone de liste déroulante identifié par *nIndex*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  **CB_ERR** si l’index ou la hauteur n’est pas valide ; sinon, 0.  
@@ -1268,7 +1268,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nNewLocale`  
+ *nNewLocale*  
  La nouvelle valeur de l’identificateur (LCID) de paramètres régionaux à définir pour la zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|Spécifie le nombre minimal d’éléments visibles.|  
+|[in] *iMinVisible*|Spécifie le nombre minimal d’éléments visibles.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -1300,7 +1300,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Cette méthode envoie le [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple de code suivant définit la variable, `m_combobox`, qui est utilisé pour accéder par programme le contrôle de zone de liste déroulante. Cette variable est utilisée dans l'exemple suivant.  
+ L’exemple de code suivant définit la variable, *m_combobox*, qui est utilisé pour accéder par programme le contrôle de zone de liste déroulante. Cette variable est utilisée dans l'exemple suivant.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1317,14 +1317,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Spécifie l’index de base zéro de l’élément de zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Zéro en cas de réussite, ou **CB_ERR** si une erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
- Le système fait défiler la liste jusqu'à ce que soit l’élément spécifié par `nIndex` s’affiche en haut de la liste de zone ou la plage de défilement maximal a été atteint.  
+ Le système fait défiler la liste jusqu'à ce que soit l’élément spécifié par *nIndex* s’affiche en haut de la liste de zone ou la plage de défilement maximal a été atteint.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  

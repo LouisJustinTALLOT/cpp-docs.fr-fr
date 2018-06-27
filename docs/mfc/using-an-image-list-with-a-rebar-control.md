@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381743"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950704"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Utilisation d'une liste d'images avec un contrôle rebar
 Chaque bande rebar peut contenir, entre autres choses, une image à partir d’une liste d’images associée. La procédure suivante détaille les étapes nécessaires pour afficher une image dans une bande rebar.  
@@ -31,9 +31,9 @@ Chaque bande rebar peut contenir, entre autres choses, une image à partir d’u
   
 2.  Modifier la **REBARBANDINFO** structure pour assigner une image à une bande rebar :  
   
-    -   Définir le **cas** membre **RBBIM_IMAGE**, à l’aide de l’opérateur OR au niveau du bit pour inclure des indicateurs supplémentaires si nécessaire.  
+    -   Définir le *cas* membre à `RBBIM_IMAGE`, à l’aide de l’opérateur OR au niveau du bit pour inclure des indicateurs supplémentaires si nécessaire.  
   
-    -   Définir le `iImage` membre à l’index de liste d’images de l’image à afficher.  
+    -   Définir le *iImage* membre à l’index de liste d’images de l’image à afficher.  
   
 3.  Initialiser les membres de données restantes, telles que la taille, le texte et le handle de la fenêtre enfant contenue, avec les informations nécessaires.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385376"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952409"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : utilisation de plusieurs fichiers de ressources et fichiers d’en-tête avec Visual C++
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Lorsque Visual C++ compile le. Fichier RC, il définit **APSTUDIO_INVOKED** ainsi que **RC_INVOKED**. Si la structure de fichiers créée par AppWizard est endommagée et que Visual C++ lit la ligne #error ci-dessus, il signale une erreur irrécupérable et abandonne la lecture du fichier .RC.  
+ Lorsque Visual C++ compile le. Fichier RC, il définit `APSTUDIO_INVOKED` ainsi que `RC_INVOKED`. Si la structure de fichiers créée par AppWizard est endommagée et que Visual C++ lit la ligne #error ci-dessus, il signale une erreur irrécupérable et abandonne la lecture du fichier .RC.  
   
  **Gestion des symboles partagés par plusieurs Visual C++ modifié. Fichiers RC**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** est la valeur de symbole suivante qui sera utilisée pour une ressource de boîte de dialogue, les ressources de menu et ainsi de suite. La plage valide des valeurs de symboles de ressources est comprise entre 1 et 0x6FFF.  
+ `_APS_NEXT_RESOURCE_VALUE` est la valeur de symbole suivante qui sera utilisée pour une ressource de boîte de dialogue, les ressources de menu et ainsi de suite. La plage valide des valeurs de symboles de ressources est comprise entre 1 et 0x6FFF.  
   
- **_APS_NEXT_COMMAND_VALUE** est la valeur de symbole suivante qui sera utilisée pour une identification de la commande. La plage valide des valeurs de symboles de commandes est comprise entre 0x8000 et 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` est la valeur de symbole suivante qui sera utilisée pour une identification de la commande. La plage valide des valeurs de symboles de commandes est comprise entre 0x8000 et 0xDFFF.  
   
- **_APS_NEXT_CONTROL_VALUE** est la valeur de symbole suivante qui sera utilisée pour un contrôle de boîte de dialogue. La plage valide des valeurs de symboles de contrôles de boîtes de dialogue est comprise entre 8 et 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` est la valeur de symbole suivante qui sera utilisée pour un contrôle de boîte de dialogue. La plage valide des valeurs de symboles de contrôles de boîtes de dialogue est comprise entre 8 et 0xDFFF.  
   
- **_APS_NEXT_SYMED_VALUE** est la valeur de symbole suivante qui sera émise lorsque vous assignez manuellement une valeur de symbole à l’aide de la nouvelle commande dans le navigateur de symbole.  
+ `_APS_NEXT_SYMED_VALUE` est la valeur de symbole suivante qui sera émise lorsque vous assignez manuellement une valeur de symbole à l’aide de la nouvelle commande dans le navigateur de symbole.  
   
  Visual C++ commence avec des valeurs légèrement supérieures à la valeur la plus basse autorisée lors de la création d'un fichier .RC. AppWizard initialise également ces valeurs à quelque chose de plus approprié pour les applications MFC. Pour plus d’informations sur les plages de valeurs d’ID, consultez [Technical Note 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- À présent chaque fois que vous créez un nouveau fichier de ressources, même dans le même projet, Visual C++ définit les mêmes **_APS_NEXT\_**  valeurs. Cela signifie que si vous ajoutez par exemple plusieurs boîtes de dialogue dans deux fichiers .RC différents, il est très probable que la même valeur #define soit assignée à différentes boîtes de dialogue. Par exemple, le même nombre, 101, peut être assigné à IDD_MY_DLG1 dans le premier fichier .RC et à IDD_MY_DLG2 dans un deuxième fichier .RC.  
+ À présent chaque fois que vous créez un nouveau fichier de ressources, même dans le même projet, Visual C++ définit les mêmes `_APS_NEXT_` valeurs. Cela signifie que si vous ajoutez par exemple plusieurs boîtes de dialogue dans deux fichiers .RC différents, il est très probable que la même valeur #define soit assignée à différentes boîtes de dialogue. Par exemple, le même nombre, 101, peut être assigné à IDD_MY_DLG1 dans le premier fichier .RC et à IDD_MY_DLG2 dans un deuxième fichier .RC.  
   
- Pour éviter cela, vous devez réserver une plage numérique distincte pour chacun des quatre domaines d'ID dans les fichiers .RC respectifs. Cela en mettant à jour manuellement la **_APS_NEXT** dans chacune des valeurs de la. Fichiers RC `before` commencer l’ajout de ressources. Par exemple, si le premier. Fichier RC utilise la valeur par défaut **_APS_NEXT** valeurs, vous souhaiterez peut-être assigner les éléments suivants **_APS_NEXT** valeurs à la seconde. Fichier RC :  
+ Pour éviter cela, vous devez réserver une plage numérique distincte pour chacun des quatre domaines d'ID dans les fichiers .RC respectifs. Cela en mettant à jour manuellement le `_APS_NEXT` dans chacune des valeurs de la. Fichiers RC **avant** commencer l’ajout de ressources. Par exemple, si le premier. Fichier RC utilise la valeur par défaut `_APS_NEXT` valeurs, vous souhaiterez peut-être assigner les éléments suivants `_APS_NEXT` valeurs à la seconde. Fichier RC :  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

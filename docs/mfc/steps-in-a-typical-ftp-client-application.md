@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f5a21bd5fa20a40123ce442959125ea62c60d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fe5a55afda9e77db6e8baddd68c09f4250071bb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381122"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951199"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Étapes dans une application cliente FTP classique
 Une application cliente de type FTP crée un [CInternetSession](../mfc/reference/cinternetsession-class.md) et un [CFtpConnection](../mfc/reference/cftpconnection-class.md) objet. Notez que ces classes WinInet MFC ne contrôlent pas réellement les paramètres de type proxy ; IIS effectue.  
@@ -45,7 +45,7 @@ Une application cliente de type FTP crée un [CInternetSession](../mfc/reference
 |Remplacez par un nouveau répertoire FTP sur le serveur.|Utilisez [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Change le répertoire que vous êtes connecté sur le serveur.|  
 |Rechercher le premier fichier dans le répertoire FTP.|Utilisez [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Recherche le premier fichier. Si aucun fichier n’est trouvé, retourne FALSE.|  
 |Recherchez le fichier suivant dans le répertoire FTP.|Utilisez [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Recherche le fichier suivant. Retourne FALSE si le fichier est introuvable.|  
-|Ouvrez le fichier trouvé par **FindFile** ou `FindNextFile` pour lire ou écrire.|Utilisez [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), en utilisant le nom de fichier retourné par [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) ou [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Ouvre le fichier sur le serveur pour lire ou écrire. Retourne un [CInternetFile](../mfc/reference/cinternetfile-class.md) objet.|  
+|Ouvrez le fichier trouvé par `FindFile` ou `FindNextFile` pour lire ou écrire.|Utilisez [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), en utilisant le nom de fichier retourné par [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) ou [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Ouvre le fichier sur le serveur pour lire ou écrire. Retourne un [CInternetFile](../mfc/reference/cinternetfile-class.md) objet.|  
 |Lire ou écrire dans le fichier.|Utilisez [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read) ou [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|Lit ou écrit le nombre spécifié d’octets, à l’aide d’un tampon que vous fournissez.|  
 |Gestion des exceptions.|Utilisez le [CInternetException](../mfc/reference/cinternetexception-class.md) classe.|Gère tous les types d’exceptions Internet courants.|  
 |Terminer la session FTP.|Supprimer le [CInternetSession](../mfc/reference/cinternetsession-class.md) objet.|Nettoie automatiquement les connexions et les descripteurs de fichiers ouverts.|  

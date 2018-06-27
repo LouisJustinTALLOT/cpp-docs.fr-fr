@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcf6fd613231567cbb54b95c8be924919d93269
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e232c363da4c9bbaf7e049551f9e2915671098c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357726"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957440"
 ---
 # <a name="cbutton-class"></a>Classe de CButton
 Fournit les fonctionnalités des contrôles bouton Windows.  
@@ -153,9 +153,9 @@ class CButton : public CWnd
   
  En outre, le [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) dérivé de la classe `CButton` prend en charge la création de contrôles bouton étiquetés avec des images bitmap au lieu de texte. Un `CBitmapButton` peut avoir des bitmaps distinctes pour un bouton du, vers le bas, le focus et désactivé des États.  
   
- Vous pouvez créer un contrôle de bouton à partir d’un modèle de boîte de dialogue ou directement dans votre code. Dans les deux cas, tout d’abord appeler le constructeur `CButton` pour construire le `CButton` de l’objet, puis appelez le **créer** fonction membre pour créer les fenêtres de contrôle de bouton et en l’attachant à la `CButton` objet.  
+ Vous pouvez créer un contrôle de bouton à partir d’un modèle de boîte de dialogue ou directement dans votre code. Dans les deux cas, tout d’abord appeler le constructeur `CButton` pour construire le `CButton` de l’objet, puis appelez le `Create` fonction membre pour créer les fenêtres de contrôle de bouton et en l’attachant à la `CButton` objet.  
   
- Construction peut être un processus en une étape dans une classe dérivée de `CButton`. Écrire un constructeur pour la classe dérivée et appelez **créer** à partir de dans le constructeur.  
+ Construction peut être un processus en une étape dans une classe dérivée de `CButton`. Écrire un constructeur pour la classe dérivée et appelez `Create` à partir de dans le constructeur.  
   
  Si vous souhaitez traiter les messages de notification Windows envoyés par un contrôle de bouton à son parent (généralement une classe dérivée de [CDialog](../../mfc/reference/cdialog-class.md)), ajouter une fonction table des messages de membre des entrée et le Gestionnaire de messages à la classe parente pour chaque message.  
   
@@ -189,7 +189,7 @@ class CButton : public CWnd
   
  `CButton`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cbutton"></a>  CButton::CButton  
@@ -215,26 +215,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszCaption`  
+ *lpszCaption*  
  Spécifie le texte du contrôle de bouton.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle bouton. Appliquer n’importe quelle combinaison de [styles des boutons](../../mfc/reference/styles-used-by-mfc.md#button-styles) au bouton.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle bouton. Il peut être soit un `CRect` objet ou un `RECT` structure.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie les fenêtre du parent du contrôle de bouton, généralement un `CDialog`. Il ne doit pas être **NULL**.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de bouton  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CButton` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle de bouton Windows et l’attache à le `CButton` objet.  
+ Vous construisez un `CButton` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle de bouton Windows et l’attache à le `CButton` objet.  
   
  Si le **WS_VISIBLE** style est fourni, Windows envoie le contrôle de tous les messages qui sont requises pour activer et afficher le bouton.  
   
@@ -261,11 +261,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un pointeur long désignant un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. La structure contient des informations sur l’élément doit être dessiné et le type de dessin nécessaire.  
   
 ### <a name="remarks"></a>Notes  
- Un bouton owner-drawn a la **BS_OWNERDRAW** set de style. Remplacez cette fonction membre pour implémenter le dessin pour un owner-drawn `CButton` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant le membre de la fonction s’arrête.  
+ Un bouton owner-drawn a la **BS_OWNERDRAW** set de style. Remplacez cette fonction membre pour implémenter le dessin pour un owner-drawn `CButton` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans *lpDrawItemStruct* avant le membre de la fonction s’arrête.  
   
  Consultez également le [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) valeurs de style.  
   
@@ -370,7 +370,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  Un pointeur vers la liste d’images de la `CButton` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] `lpszNote`|Pointeur vers une mémoire tampon, l’appelant est responsable de l’allocation et désallocation. Si la valeur de retour est `true`, la mémoire tampon contient le texte de la note qui est associé au contrôle de lien de commande en cours ; sinon, la mémoire tampon reste inchangée.|  
-|[in, out] `cchNote`|Pointeur vers une variable d’entier non signé.<br /><br /> Lorsque cette méthode est appelée, la variable contient la taille de la mémoire tampon spécifiée par le `lpszNote` paramètre.<br /><br /> Lorsque cette méthode est retournée, si la valeur de retour est `true` la variable contient la taille de la note associée au contrôle de lien de commande en cours. Si la valeur de retour est `false`, la variable contient la taille de mémoire tampon requise pour contenir la note.|  
+|[out] *lpszNote*|Pointeur vers une mémoire tampon, l’appelant est responsable de l’allocation et désallocation. Si la valeur de retour est `true`, la mémoire tampon contient le texte de la note qui est associé au contrôle de lien de commande en cours ; sinon, la mémoire tampon reste inchangée.|  
+|[dans, out] *cchNote*|Pointeur vers une variable d’entier non signé.<br /><br /> Lorsque cette méthode est appelée, la variable contient la taille de la mémoire tampon spécifiée par le *lpszNote* paramètre.<br /><br /> Lorsque cette méthode est retournée, si la valeur de retour est `true` la variable contient la taille de la note associée au contrôle de lien de commande en cours. Si la valeur de retour est `false`, la variable contient la taille de mémoire tampon requise pour contenir la note.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Dans la première surcharge, une [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de la note associé au contrôle de lien de commande en cours.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] `pInfo`|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
+|[out] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] `pSize`|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
+|[out] *pSize*|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -549,7 +549,7 @@ BOOL GetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pmargin`  
+ *pmargin*  
  Un pointeur de la marge de texte de la `CButton` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -569,7 +569,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hBitmap`  
+ *hBitmap*  
  Le handle d’une image bitmap.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -607,10 +607,10 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStyle`  
+ *nStyle*  
  Spécifie le [bouton style](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- `bRedraw`  
+ *bRedraw*  
  Spécifie si le bouton doit être redessiné. Une valeur différente de zéro redessine le bouton. Une valeur 0 ne redessine pas le bouton. Par défaut, le bouton est redessiné.  
   
 ### <a name="remarks"></a>Notes  
@@ -627,7 +627,7 @@ void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nCheck`  
+ *nVérifiez*  
  Spécifie l’état d’activation. Ce paramètre peut être une des opérations suivantes :  
   
 |Value|Signification|  
@@ -650,7 +650,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hCursor`  
+ *hCursor*  
  Le handle d’un curseur.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true` Pour définir `BST_DROPDOWNPUSHED` état ; sinon, `false`.|  
+|[in] *fDropDown*|`true` Pour définir `BST_DROPDOWNPUSHED` état ; sinon, `false`.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -698,7 +698,7 @@ BOOL SetDropDownState(BOOL fDropDown);
  Cette méthode envoie le [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple de code suivant définit la variable, `m_splitButton`, qui est utilisé pour accéder par programme le contrôle bouton partagé. Cette variable est utilisée dans l’exemple suivant.  
+ L’exemple de code suivant définit la variable, *m_splitButton*, qui est utilisé pour accéder par programme le contrôle bouton partagé. Cette variable est utilisée dans l’exemple suivant.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -736,7 +736,7 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hIcon`  
+ *hIcon*  
  Le handle d’une icône.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -770,7 +770,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  Pointeur vers la nouvelle liste d’images.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `lpszNote`|Pointeur vers une chaîne Unicode qui est définie en tant que texte de la note pour le contrôle de lien de commande.|  
+|[in] *lpszNote*|Pointeur vers une chaîne Unicode qui est définie en tant que texte de la note pour le contrôle de lien de commande.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -801,7 +801,7 @@ BOOL SetNote(LPCTSTR lpszNote);
  Cette méthode envoie le [BCM_SETNOTE détermine](http://msdn.microsoft.com/library/windows/desktop/bb775977) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple de code suivant définit la variable, `m_cmdLink`, qui est utilisé pour accéder par programme le contrôle de lien de commande. Cette variable est utilisée dans l’exemple suivant.  
+ L’exemple de code suivant définit la variable, *m_cmdLink*, qui est utilisé pour accéder par programme le contrôle de lien de commande. Cette variable est utilisée dans l’exemple suivant.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `chGlyph`|Un caractère qui spécifie le glyphe à utiliser en tant que la fractionnement bouton flèche de déroulement.|  
+|[in] *chGlyph*|Un caractère qui spécifie le glyphe à utiliser en tant que la fractionnement bouton flèche de déroulement.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -829,7 +829,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles qui ont le style de bouton `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
- Un glyphe est la représentation physique d’un caractère dans une police particulière. Le `chGlyph` paramètre n’est pas utilisé en tant que le glyphe, mais au lieu de cela permet de sélectionner un glyphe à partir d’un jeu de glyphes de définies par le système. Le glyphe de flèche de déroulement située par défaut est spécifié par un caractère '6' et ressemble à caractère Unicode TRIANGLE pointant noir vers le bas (U + 25BC).  
+ Un glyphe est la représentation physique d’un caractère dans une police particulière. Le *chGlyph* paramètre n’est pas utilisé en tant que le glyphe, mais au lieu de cela permet de sélectionner un glyphe à partir d’un jeu de glyphes de définies par le système. Le glyphe de flèche de déroulement située par défaut est spécifié par un caractère '6' et ressemble à caractère Unicode TRIANGLE pointant noir vers le bas (U + 25BC).  
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_GLYPH` indicateur et le `himlGlyph` membre avec le `chGlyph` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
   
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet à affecter pour le contrôle de bouton partagé actuel.|  
+|[in] *pSplitImageList*|Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet à affecter pour le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
- Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_IMAGE` indicateur et le `himlGlyph` membre avec le `pSplitImageList` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode initialise la `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_IMAGE` indicateur et la `himlGlyph` membre avec le *pSplitImageList* paramètre, puis envoie cette structure le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Spécifie les paramètres qui déterminent la manière dont Windows crée le contrôle de bouton partagé actuel.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `pInfo`|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui définit le contrôle de bouton partagé actuel.|  
+|[in] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui définit le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `pSize`|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
+|[in] *pSize*|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Lorsque le contrôle bouton partagé est développé, il peut afficher un composant de liste déroulante par exemple un contrôle de liste ou un contrôle pager. Cette méthode spécifie la taille du rectangle englobant qui contient le composant de liste déroulante.  
   
- Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_SIZE` indicateur et le `size` membre avec le `pSize` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode initialise la `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_SIZE` indicateur et la `size` membre avec le *pSize* paramètre et qui envoie ensuite dans la structure du [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, `m_splitButton`, qui est utilisé pour accéder par programme le contrôle bouton partagé. Cette variable est utilisée dans l’exemple suivant.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|Combinaison de bits de styles de bouton de fractionnement. Pour plus d’informations, consultez la `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
+|[in] *uSplitStyle*|Combinaison de bits de styles de bouton de fractionnement. Pour plus d’informations, consultez la `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -939,7 +939,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  Les styles de bouton Fractionner spécifient l’alignement, proportions et format graphique avec laquelle Windows Dessine une icône de bouton de fractionnement. Pour plus d’informations, consultez la `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
   
- Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_STYLE` indicateur et le `uSplitStyle` membre avec le `uSplitStyle` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_STYLE` indicateur et le `uSplitStyle` membre avec le *uSplitStyle* paramètre, puis envoie Cette structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, `m_splitButton`, qui est utilisé pour accéder par programme le contrôle bouton partagé.  
@@ -978,7 +978,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pmargin`  
+ *pmargin*  
  Pointeur vers la nouvelle marge de texte.  
   
 ### <a name="return-value"></a>Valeur de retour  

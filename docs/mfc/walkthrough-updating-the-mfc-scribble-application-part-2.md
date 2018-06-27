@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385389"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952428"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
 [Partie 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de cette procédure pas à pas vous a montré comment ajouter un ruban Office Fluent classique Scribble application. Cette partie présente comment ajouter des panneaux de ruban et des contrôles qui permettent aux utilisateurs au lieu des menus et des commandes.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385389"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Pour ajouter un panneau d’affichage et le volet de fenêtre à la barre du ruban  
   
-1.  Créer un panneau de configuration nommé `View`, qui a deux cases à cocher Activer/désactiver la barre d’état et la barre d’outils.  
+1.  Créer un panneau de configuration nommé *vue*, qui a deux cases à cocher Activer/désactiver la barre d’état et la barre d’outils.  
   
     1.  À partir de la **boîte à outils**, faites glisser un **panneau** à la **accueil** catégorie. Puis faites glisser deux **cases à cocher** pour le panneau de configuration.  
   
-    2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à `View`.  
+    2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à *vue*.  
   
-    3.  Cliquez sur la première case à cocher pour modifier ses propriétés. Modification **ID** à `ID_VIEW_TOOLBAR` et **légende** à `Toolbar`.  
+    3.  Cliquez sur la première case à cocher pour modifier ses propriétés. Modification **ID** à *ID_VIEW_TOOLBAR* et **légende** à *barre d’outils*.  
   
-    4.  Cliquez sur la deuxième case à cocher pour modifier ses propriétés. Modification **ID** à `ID_VIEW_STATUS_BAR` et **légende** à `Status Bar`.  
+    4.  Cliquez sur la deuxième case à cocher pour modifier ses propriétés. Modification **ID** à *ID_VIEW_STATUS_BAR* et **légende** à *barre d’état*.  
   
-2.  Créer un panneau de configuration nommé `Window` qui a un bouton partagé. Lorsqu’un utilisateur clique sur le bouton partagé, un menu contextuel affiche les trois commandes qui sont déjà définis dans l’application Scribble.  
+2.  Créer un panneau de configuration nommé *fenêtre* qui a un bouton partagé. Lorsqu’un utilisateur clique sur le bouton partagé, un menu contextuel affiche les trois commandes qui sont déjà définis dans l’application Scribble.  
   
     1.  À partir de la **boîte à outils**, faites glisser un **panneau** à la **accueil** catégorie. Puis faites glisser un **bouton** pour le panneau de configuration.  
   
-    2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à `Window`.  
+    2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à *fenêtre*.  
   
-    3.  Cliquez sur le bouton. Modification **légende** à `Windows`, **clés** à `w`, **grande Image Index** à `1`, et **Mode fractionné** pour `False`. Puis cliquez sur le bouton de sélection (**...** ) à côté **des éléments de Menu** pour ouvrir le **Éditeur d’éléments** boîte de dialogue.  
+    3.  Cliquez sur le bouton. Modification **légende** à *Windows*, **clés** à *w*, **grande Image Index** à *1* , et **Mode fractionné** à *False*. Puis cliquez sur le bouton de sélection (**...** ) à côté **des éléments de Menu** pour ouvrir le **Éditeur d’éléments** boîte de dialogue.  
   
     4.  Cliquez sur **ajouter** trois fois pour ajouter trois boutons.  
   
-    5.  Cliquez sur le premier bouton et redéfinissez **légende** à `New Window`, et **ID** à `ID_WINDOW_NEW`.  
+    5.  Cliquez sur le premier bouton et redéfinissez **légende** à *nouvelle fenêtre*, et **ID** à *ID_WINDOW_NEW*.  
   
-    6.  Cliquez sur le deuxième bouton et redéfinissez **légende** à `Cascade`, et **ID** à `ID_WINDOW_CASCADE`.  
+    6.  Cliquez sur le deuxième bouton et redéfinissez **légende** à *Cascade*, et **ID** à *ID_WINDOW_CASCADE*.  
   
-    7.  Cliquez sur le troisième bouton et redéfinissez **légende** à `Tile`, et **ID** à `ID_WINDOW_TILE_HORZ`.  
+    7.  Cliquez sur le troisième bouton et redéfinissez **légende** à *vignette*, et **ID** à *ID_WINDOW_TILE_HORZ*.  
   
 3.  Enregistrer les modifications, puis créer et exécuter l’application. Le **vue** et **fenêtre** panneaux doit être affiché. Cliquez sur les boutons pour confirmer qu’ils fonctionnent correctement.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385389"
   
 1.  À partir de la **boîte à outils**, faites glisser un **panneau** à la **accueil** catégorie. Puis faites glisser deux **boutons** pour le panneau de configuration.  
   
-2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à `Help`.  
+2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à *aide*.  
   
-3.  Cliquez sur le premier bouton. Modification **légende** à `Help Topics`, et **ID** à `ID_HELP_FINDER`.  
+3.  Cliquez sur le premier bouton. Modification **légende** à *rubriques d’aide*, et **ID** à *ID_HELP_FINDER*.  
   
-4.  Cliquez sur le deuxième bouton. Modification **légende** à `About Scribble...`, et **ID** à `ID_APP_ABOUT`.  
+4.  Cliquez sur le deuxième bouton. Modification **légende** à *sur Scribble...* , et **ID** à *ID_APP_ABOUT*.  
   
 5.  Enregistrer les modifications, puis créer et exécuter l’application. A **aide** Panneau de configuration qui contient deux boutons de ruban doit être affiché.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385389"
   
 1.  À partir de la **boîte à outils**, faites glisser un **panneau** à la **accueil** catégorie. Puis faites glisser un **case à cocher** et deux **zones de liste déroulante** pour le panneau de configuration.  
   
-2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à `Pen`.  
+2.  Cliquez sur le panneau de configuration pour modifier ses propriétés. Modification **légende** à *stylet*.  
   
-3.  Cliquez sur la case à cocher. Modification **légende** à `Use Thick`, et **ID** à `ID_PEN_THICK_OR_THIN`.  
+3.  Cliquez sur la case à cocher. Modification **légende** à *utiliser épais*, et **ID** à *ID_PEN_THICK_OR_THIN*.  
   
-4.  Cliquez sur la première zone de liste déroulante. Modification **légende** à `Thin Pen`, **ID** à `ID_PEN_THIN_WIDTH`, **texte** à `2`, **Type** à `Drop List`, et **données** à `1;2;3;4;5;6;7;8;9;`.  
+4.  Cliquez sur la première zone de liste déroulante. Modification **légende** à *mince stylet*, **ID** à *ID_PEN_THIN_WIDTH*, **texte** à *2* , **Type** à *liste déroulante*, et **données** à *1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 ; 9 ;*.  
   
-5.  Cliquez sur la deuxième zone de liste déroulante. Modification **légende** à `Thick Pen`, **ID** à `ID_PEN_THICK_WIDTH`, **texte** à `5`, **Type** à `Drop List`, et **données** à `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
+5.  Cliquez sur la deuxième zone de liste déroulante. Modification **légende** à *stylet épais*, **ID** à *ID_PEN_THICK_WIDTH*, **texte** à  *5*, **type** à *liste déroulante*, et **données** à *5 ; 6 ; 7 ; 8 ; 9 ; 10 ; 11 ; 12 ; 13 ; 14 ; 15 ; 16 ; 17 ; 18 ; 19 ; 20 ;*.  
   
 6.  Zones de liste déroulante nouveau ne correspondent pas à tous les éléments de menu existants. Par conséquent, vous devez créer un élément de menu pour chaque option de stylet.  
   
     1.  Dans le **affichage des ressources** fenêtre, ouvrez la ressource de menu IDR_SCRIBBTYPE.  
   
-    2.  Cliquez sur **stylet** pour ouvrir la p**en** menu. Puis cliquez sur **Type ici** et type `Thi&n Pen`.  
+    2.  Cliquez sur **stylet** pour ouvrir la p**en** menu. Puis cliquez sur **Type ici** et type *si & n stylet*.  
   
-    3.  Cliquez sur le texte que vous venez de taper pour ouvrir la **propriétés** fenêtre, puis modifier l’ID de la propriété à `ID_PEN_THIN_WIDTH`.  
+    3.  Cliquez sur le texte que vous venez de taper pour ouvrir la **propriétés** fenêtre, puis modifier l’ID de la propriété à *ID_PEN_THIN_WIDTH*.  
   
     4.  Vous devez également créer un gestionnaire d’événements pour chaque élément de menu du stylet. Cliquez sur le **si & n stylet** élément de menu que vous venez de créer, puis sur **ajouter un gestionnaire d’événements**. Le **Assistant Gestionnaire d’événements** s’affiche.  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi (pThinComboBox -> GetItem(nCurSel)) ;
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Pour ajouter un bouton de couleur dans le panneau du stylet  
   
-1.  Avant d’ajouter le bouton de couleur, créer un élément de menu pour celui-ci. Dans le **affichage des ressources** fenêtre, ouvrez la ressource de menu IDR_SCRIBBTYPE. Cliquez sur le **stylet** élément de menu pour ouvrir le menu de stylet. Puis cliquez sur **Type ici** et type `&Color`. Cliquez sur le texte que vous venez de taper pour afficher le **propriétés** fenêtre. Modifier le code à `ID_PEN_COLOR`.  
+1.  Avant d’ajouter le bouton de couleur, créer un élément de menu pour celui-ci. Dans le **affichage des ressources** fenêtre, ouvrez la ressource de menu IDR_SCRIBBTYPE. Cliquez sur le **stylet** élément de menu pour ouvrir le menu de stylet. Puis cliquez sur **Type ici** et type *& couleur*. Cliquez sur le texte que vous venez de taper pour afficher le **propriétés** fenêtre. Modifier le code pour *ID_PEN_COLOR*.  
   
 2.  Maintenant, ajoutez le bouton de couleur. À partir de la **boîte à outils**, faites glisser un **bouton de couleur** à la **stylet** Panneau de configuration.  
   
-3.  Cliquez sur le bouton de couleur. Modification **légende** à `Color`, **ID** à `ID_PEN_COLOR`, **SimpleLook** à `True`, **grande Image Index** à `1`, et **Mode fractionné** à `False`.  
+3.  Cliquez sur le bouton de couleur. Modification **légende** à *couleur*, **ID** à *ID_PEN_COLOR*, **SimpleLook** à  *True*, **grande Image Index** à *1*, et **Mode fractionné** à *False*.  
   
 4.  Enregistrer les modifications, puis créer et exécuter l’application. Le nouveau bouton de couleur doit être affiché sur le **stylet** Panneau de configuration. Toutefois, il ne peut pas être utilisé car il n’a pas encore d’un gestionnaire d’événements. Les étapes suivantes montrent comment ajouter un gestionnaire d’événements pour le bouton de couleur.  
   

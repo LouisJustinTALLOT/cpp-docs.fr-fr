@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366237"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951596"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo, structure
 Le `CDaoParameterInfo` structure contient des informations sur un objet de paramètre défini pour les objets d’accès aux données (DAO).  
@@ -39,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Identifie l’objet de paramètre. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
- `m_nType`  
- Une valeur qui indique le type de données d’un objet de paramètre. Pour obtenir la liste des valeurs possibles, consultez la `m_nType` membre de la [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. Pour plus d’informations, consultez la rubrique « Propriété de Type » dans l’aide de DAO.  
+ *m_nType*  
+ Une valeur qui indique le type de données d’un objet de paramètre. Pour obtenir la liste des valeurs possibles, consultez la *m_nType* membre de la [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. Pour plus d’informations, consultez la rubrique « Propriété de Type » dans l’aide de DAO.  
   
  *m_varValue*  
  La valeur du paramètre, qui est stocké dans un [COleVariant](../../mfc/reference/colevariant-class.md) objet.  
@@ -60,7 +60,7 @@ struct CDaoParameterInfo
   
  `CDaoParameterInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoParameterInfo` objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

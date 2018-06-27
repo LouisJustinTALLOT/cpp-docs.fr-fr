@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322509"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957388"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC
 
@@ -99,9 +99,9 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
    Avec les classes ODBC, MFC avait besoin de définir ces options via des macros ou des types énumérés.
 
-   Avec les classes DAO, DAO fournit la définition de ces options dans un fichier d'en-tête (DBDAOINT.H). Ce type d'ensemble d'enregistrements est un membre énuméré de `CRecordset`, mais avec DAO il s'agit en fait d'une constante. Par exemple, vous utiliseriez `snapshot` lorsque vous spécifiez le type de `CRecordset` dans ODBC, mais `DB_OPEN_SNAPSHOT` lorsque vous spécifiez le type de `CDaoRecordset`.
+   Avec les classes DAO, DAO fournit la définition de ces options dans un fichier d'en-tête (DBDAOINT.H). Ce type d'ensemble d'enregistrements est un membre énuméré de `CRecordset`, mais avec DAO il s'agit en fait d'une constante. Par exemple, vous utiliseriez **instantané** lorsque vous spécifiez le type de `CRecordset` dans ODBC, mais **DB_OPEN_SNAPSHOT** lorsque vous spécifiez le type de `CDaoRecordset`.
 
-- Le type de jeu d’enregistrements par défaut `CRecordset` est `snapshot` tandis que le type de jeu d’enregistrements par défaut pour `CDaoRecordset` est `dynaset` (voir la Remarque ci-dessous pour un problème supplémentaire sur les instantanés de la classe ODBC).
+- Le type de jeu d’enregistrements par défaut `CRecordset` est **instantané** tandis que le type de jeu d’enregistrements par défaut pour `CDaoRecordset` est **dynaset** (voir la Remarque ci-dessous pour un problème supplémentaire sur les instantanés de la classe ODBC).
 
 - La classe ODBC `CRecordset` comporte une option permettant de créer un type de jeu d'enregistrements basé sur le transfert uniquement. Dans la classe `CDaoRecordset`, le transfert uniquement n'est pas un type de jeu d'enregistrements, mais plutôt une propriété (ou option) de certains types de jeux d'enregistrements.
 
@@ -111,7 +111,7 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
 - La classe d'exception a été modifiée. `CDBExceptions` levées dans les classes ODBC et `CDaoExceptions` dans les classes DAO.
 
-- `RFX_Date` utilise `CTime` et `TIMESTAMP_STRUCT` objets lors de la `DFX_Date` utilise `COleDateTime`. Le `COleDateTime` est presque identique à `CTime`, mais est basée sur un OLE de 8 octets `DATE` au lieu de 4 octets `time_t` et donc une plus large de données peut contenir.
+- `RFX_Date` utilise `CTime` et `TIMESTAMP_STRUCT` objets lors de la `DFX_Date` utilise `COleDateTime`. Le `COleDateTime` est presque identique à `CTime`, mais est basée sur un OLE de 8 octets **DATE** au lieu de 4 octets **time_t** et donc une plus large de données peut contenir.
 
    > [!NOTE]
    > Les instantanés (`CDaoRecordset`) DAO sont en lecture seule alors que les instantanés (`CRecordset`) ODBC peuvent être modifiés selon le pilote et l'utilisation de la bibliothèque de curseurs ODBC. Si vous utilisez la bibliothèque de curseurs, les instantanés `CRecordset` sont modifiables. Si vous utilisez des pilotes Microsoft issus de Desktop Driver Pack 3.0 sans bibliothèque de curseurs ODBC, les instantanés `CRecordset` sont en lecture seule. Si vous utilisez un autre pilote, consultez la documentation du pilote pour voir si des captures instantanées (`STATIC_CURSORS`) sont en lecture seule.

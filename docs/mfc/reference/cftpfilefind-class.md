@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370518"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956276"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind (classe)
 Contribue à la recherche des fichiers Internet sur les serveurs FTP.  
@@ -75,7 +75,7 @@ class CFtpFileFind : public CFileFind
   
  `CFtpFileFind`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pConnection`  
+ *pConnection*  
  Un pointeur vers un `CFtpConnection` objet. Vous pouvez obtenir une connexion FTP en appelant [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  L’identificateur de contexte pour le `CFtpFileFind` objet. Consultez **remarques** pour plus d’informations sur ce paramètre.  
   
 ### <a name="remarks"></a>Notes  
- La valeur par défaut `dwContext` est envoyé par MFC pour le `CFtpFileFind` à partir de l’objet le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le `CFtpFileFind` objet. Vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
+ La valeur par défaut *dwContext* est envoyé par MFC pour le `CFtpFileFind` à partir de l’objet le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le `CFtpFileFind` objet. Vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de la vue d’ensemble de la classe plus haut dans cette rubrique.  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pstrName`  
+ *pstrName*  
  Un pointeur vers une chaîne contenant le nom du fichier à rechercher. Si **NULL**, l’appel effectue une recherche par caractères génériques (*).  
   
- `dwFlags`  
+ *dwFlags*  
  Les indicateurs qui décrivent comment gérer cette session. Ces indicateurs peuvent être combinées avec l’opérateur OR au niveau du bit (&#124;) et sont les suivantes :  
   
 -   INTERNET_FLAG_RELOAD obtenir les données provenant du câble, même s’il est mis en cache localement. Il s’agit de l’indicateur par défaut.  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355160"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957401"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint, classe
 Implémente les fonctionnalités d'un point dont les coordonnées peuvent être animées.  
@@ -101,7 +101,7 @@ class CAnimationPoint : public CAnimationBaseObject;
   
  `CAnimationPoint`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationPoint::AddTransition  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pXTransition`  
+ *pXTransition*  
  Pointeur vers la transition pour les coordonnées X.  
   
- `pYTransition`  
+ *pYTransition*  
  Un pointeur vers la transition pour Y coordonnée.  
   
 ### <a name="remarks"></a>Notes  
@@ -138,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ptDefault`  
+ *ptDefault*  
  Spécifie les coordonnées de point par défaut.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `nObjectID`  
+ *nObjectID*  
  Spécifie l’ID d’objet.  
   
- `dwUserData`  
+ *dwUserData*  
  Spécifie les données définies par l’utilisateur.  
   
 ### <a name="remarks"></a>Notes  
@@ -161,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lst`  
+ *lst*  
  Lorsque la fonction est retournée, contient des pointeurs aux deux objets CAnimationVariable représentant les coordonnées X et Y.  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -185,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ptValue`  
+ *ptValue*  
  Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -255,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ptSrc`  
+ *ptSrc*  
  Fait référence à CPoint ou POINT.  
   
 ### <a name="remarks"></a>Notes  
@@ -269,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ptDefault`  
+ *ptDefault*  
  Spécifie la valeur de point par défaut.  
   
 ### <a name="remarks"></a>Notes  

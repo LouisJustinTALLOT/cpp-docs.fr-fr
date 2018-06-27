@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367391"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955441"
 ---
 # <a name="cdumpcontext-class"></a>Classe de CDumpContext
 Prend en charge la sortie de diagnostic en fonction du flux dans un format contrôlable de visu.  
@@ -79,7 +79,7 @@ class CDumpContext
   
  Le `CDumpContext` classe a une insertion surchargée ( **<<**) opérateur pour `CObject` des pointeurs qui exporte les données de l’objet. Si vous avez besoin d’un format dump personnalisé pour un objet dérivé, substituez [CObject::Dump](../../mfc/reference/cobject-class.md#dump). La plupart des classes Microsoft Foundation implémentent substitué `Dump` fonction membre.  
   
- Les classes qui ne sont pas dérivés de `CObject`, tel que `CString`, `CTime`, et `CTimeSpan`, ont leurs propres surchargé `CDumpContext` des opérateurs d’insertion, en tant que structures souvent utilisé comme **CFileStatus**, `CPoint`, et `CRect`.  
+ Les classes qui ne sont pas dérivés de `CObject`, tel que `CString`, `CTime`, et `CTimeSpan`, ont leurs propres surchargé `CDumpContext` des opérateurs d’insertion, en tant que structures souvent utilisé comme `CFileStatus`, `CPoint`, et `CRect`.  
   
  Si vous utilisez la [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) ou [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro dans l’implémentation de votre classe, puis `CObject::Dump` imprime le nom de votre `CObject`-classe dérivée. Dans le cas contraire, il imprime `CObject`.  
   
@@ -94,7 +94,7 @@ class CDumpContext
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CDumpContext`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext  
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pFile`  
+ *pFile*  
  Un pointeur vers le `CFile` objet qui est la destination de vidage.  
   
 ### <a name="remarks"></a>Notes  
@@ -180,10 +180,10 @@ void HexDump(
  *pby*  
  Pointeur vers une mémoire tampon contenant les octets à vider.  
   
- `nBytes`  
+ *nBytes*  
  Le nombre d’octets à vider.  
   
- `nWidth`  
+ *nWidth*  
  Nombre maximal d’octets vidés par ligne (pas la largeur de la ligne de sortie).  
   
 ### <a name="remarks"></a>Notes  
@@ -223,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  A `CDumpContext` référence. À l’aide de la valeur de retour, vous pouvez écrire plusieurs insertions sur une seule ligne de code source.  
   
 ### <a name="remarks"></a>Notes  
- L’opérateur d’insertion est surchargée pour `CObject` pointeurs ainsi que pour les types les plus primitifs. Un pointeur vers caractère se traduit par un dump du contenu de la chaîne ; un pointeur vers `void` entraîne un vidage hexadécimal de l’adresse. A **LONGLONG** des résultats dans un fichier de vidage d’un entier signé 64 bits ; A **ULONGLONG** des résultats dans un fichier de vidage d’un entier non signé 64 bits.  
+ L’opérateur d’insertion est surchargée pour `CObject` pointeurs ainsi que pour les types les plus primitifs. Un pointeur vers caractère se traduit par un dump du contenu de la chaîne ; un pointeur vers **void** entraîne un vidage hexadécimal de l’adresse. A **LONGLONG** des résultats dans un fichier de vidage d’un entier signé 64 bits ; A **ULONGLONG** des résultats dans un fichier de vidage d’un entier non signé 64 bits.  
   
  Si vous utilisez la `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` macro dans l’implémentation de votre classe, puis l’opérateur d’insertion, via `CObject::Dump`, imprime le nom de votre `CObject`-classe dérivée. Dans le cas contraire, il imprime `CObject`. Si vous remplacez le `Dump` fonction de la classe, puis vous pouvez fournir une sortie plus significative de contenu de l’objet au lieu d’un fichier de vidage hexadécimal.  
   

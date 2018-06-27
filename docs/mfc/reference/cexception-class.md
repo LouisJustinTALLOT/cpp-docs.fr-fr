@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368031"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951707"
 ---
 # <a name="cexception-class"></a>CException (classe)
 Classe de base pour toutes les exceptions dans la bibliothèque MFC (Microsoft Foundation Class).  
@@ -87,7 +87,7 @@ class AFX_NOVTABLE CException : public CObject
   
  `CException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="cexception"></a>  CException::CException  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>Paramètres  
  *b_AutoDelete*  
- Spécifiez **TRUE** si la mémoire pour le `CException` objet a été alloué sur le tas. Cela entraîne le `CException` objet doit être supprimé quand le **supprimer** fonction membre est appelée pour supprimer l’exception. Spécifiez **FALSE** si le `CException` objet est sur la pile ou est un objet global. Dans ce cas, le `CException` objet ne sera pas supprimé lorsque la **supprimer** fonction membre est appelée.  
+ Spécifiez **TRUE** si la mémoire pour le `CException` objet a été alloué sur le tas. Cela entraîne le `CException` objet doit être supprimé quand le `Delete` fonction membre est appelée pour supprimer l’exception. Spécifiez **FALSE** si le `CException` objet est sur la pile ou est un objet global. Dans ce cas, le `CException` objet ne sera pas supprimé lorsque la `Delete` fonction membre est appelée.  
   
 ### <a name="remarks"></a>Notes  
  Vous devez normalement jamais appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’un `CException`-classe dérivée et appeler son constructeur, ou il doit utiliser un des MFC lever les fonctions, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), lever un type prédéfini. Cette documentation est fournie uniquement par souci d’exhaustivité.  
   
 ##  <a name="delete"></a>  CException::Delete  
- Cette fonction vérifie si le **CException** objet a été créé sur le tas, et si tel est le cas, il appelle la **supprimer** opérateur sur l’objet.  
+ Cette fonction vérifie si le `CException` objet a été créé sur le tas, et si tel est le cas, il appelle la **supprimer** opérateur sur l’objet.  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Lorsque vous supprimez un **CException** de l’objet, utilisez le **supprimer** fonction membre à supprimer de l’exception. N’utilisez pas le **supprimer** opérateur directement, car le `CException` objet peut être un objet global ou ont été créées sur la pile.  
+ Lorsque vous supprimez un `CException` de l’objet, utilisez le `Delete` fonction membre à supprimer de l’exception. N’utilisez pas le **supprimer** opérateur directement, car le `CException` objet peut être un objet global ou ont été créées sur la pile.  
   
  Vous pouvez spécifier si l’objet doit être supprimé lorsque l’objet est construit. Pour plus d’informations, consultez [CException::CException](#cexception).  
   
- Vous devez uniquement appeler **supprimer** si vous utilisez C++ **essayez**- **catch** mécanisme. Si vous utilisez les macros MFC **essayez** et **CATCH**, alors ces macros appelle automatiquement cette fonction.  
+ Vous devez uniquement appeler `Delete` si vous utilisez C++ **essayez**- **catch** mécanisme. Si vous utilisez les macros MFC **essayez** et **CATCH**, alors ces macros appelle automatiquement cette fonction.  
   
 ### <a name="example"></a>Exemple  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nType`  
+ *%nLes*  
  Spécifie le style de la boîte de message. Appliquer n’importe quelle combinaison de la [styles de zone de message](styles-used-by-mfc.md#message-box-styles) à la zone. Si vous ne spécifiez pas ce paramètre, la valeur par défaut est **MB_OK**.  
   
  *nMessageID*  

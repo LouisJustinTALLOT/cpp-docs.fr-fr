@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53daaaa5ef4997762342cbfb74ae4d5fa96097d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d86faf89aea0f991a9fdd27bec6bb7969404986
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366159"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956909"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo, structure
 Le `CDaoRelationFieldInfo` structure contient des informations sur un champ dans une relation définie pour les objets d’accès aux données (DAO).  
@@ -38,10 +38,10 @@ struct CDaoRelationFieldInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Le nom du champ dans la table primaire de la relation.  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  Le nom du champ dans la table étrangère de la relation.  
   
 ## <a name="remarks"></a>Notes  
@@ -51,7 +51,7 @@ struct CDaoRelationFieldInfo
   
  Appelez le [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre de conteneur `CDaoDatabase` dans dont les Relations collection est stocké l’objet de relation que vous êtes intéressé par l’objet. Puis accéder à la `m_pFieldInfos` membre de la [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objet. `CDaoRelationFieldInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationFieldInfo` objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

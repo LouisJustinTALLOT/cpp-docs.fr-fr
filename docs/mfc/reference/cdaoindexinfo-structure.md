@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367033"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954063"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo, structure
 Le `CDaoIndexInfo` structure contient des informations sur l’objet index défini pour les objets d’accès aux données (DAO).  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Identifie l’objet de champ. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  Un pointeur vers un tableau de [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) objets indiquant quels champs tabledef ou recordset sont les champs clés dans un index. Chaque objet identifie un champ dans l’index. L’ordre d’index par défaut est croissant. Un objet d’index peut avoir un ou plusieurs champs représentant les clés d’index pour chaque enregistrement. Il peuvent être par ordre croissant, décroissant, ou une combinaison des deux.  
   
- `m_nFields`  
- Le nombre de champs stockés dans `m_pFieldInfos`.  
+ *m_nFields*  
+ Le nombre de champs stockés dans *m_pFieldInfos*.  
   
  *m_bPrimary*  
  Si la propriété Primary est **TRUE**, l’objet index représente un index principal. Un index primaire se compose d’un ou plusieurs champs qui identifient de manière unique tous les enregistrements dans une table dans un ordre prédéfini. Étant donné que le champ d’index doit être unique, la propriété Unique de l’objet Index est également définie **TRUE** dans DAO. Si l’index primaire est composée de plusieurs champs, chaque champ peut contenir des valeurs dupliquées, mais chaque combinaison de valeurs à partir de tous les champs indexés doit être unique. Un index primaire est constitué d’une clé pour la table et contient généralement les mêmes champs que la clé primaire.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  Pour plus d’informations, consultez la rubrique « Ignorer Nulls Property » dans l’aide de DAO.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Indique si un objet d’index DAO requiert une valeur non Null. Si cette propriété est **TRUE**, l’objet index n’autorise pas une valeur Null. Pour plus d’informations, consultez la rubrique « Propriété Required » dans l’aide de DAO.  
   
 > [!TIP]
@@ -106,11 +106,11 @@ struct CDaoIndexInfo {
   
  Objets d’index ne sont pas représentées par une classe MFC. Au lieu de cela, DAO des objets MFC sous-jacente de la classe d’objets [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contient une collection d’objets index, appelée la collection d’index. Ces classes fournissent des fonctions de membre pour accéder à des informations sur les index des éléments individuels, ou vous pouvez accéder à la fois avec un `CDaoIndexInfo` objet en appelant le `GetIndexInfo` fonction membre de l’objet conteneur.  
   
- `CDaoIndexInfo` a un constructeur et un destructeur pour allouer et désallouer les informations de champ d’index dans correctement `m_pFieldInfos`.  
+ `CDaoIndexInfo` a un constructeur et un destructeur pour allouer et désallouer les informations de champ d’index dans correctement *m_pFieldInfos*.  
   
  Les informations extraites par le `GetIndexInfo` fonction membre d’un objet tabledef est stockée dans un `CDaoIndexInfo` structure. Appelez le `GetIndexInfo` fonction membre de l’objet conteneur tabledef dans dont la collection d’index est stocké l’objet index. `CDaoIndexInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoIndexInfo` objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

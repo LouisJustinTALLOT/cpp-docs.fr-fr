@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356536"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952096"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue, classe
 Implémente les fonctionnalités d'un objet d'animation qui a une valeur.  
@@ -93,7 +93,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
  `CAnimationValue`
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTransition`  
+ *pTransition*  
  Pointeur vers un objet de transition.  
   
 ### <a name="remarks"></a>Notes  
@@ -125,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Spécifie la valeur par défaut.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `nObjectID`  
+ *nObjectID*  
  Spécifie l’ID d’objet.  
   
- `dwUserData`  
+ *dwUserData*  
  Spécifie les données définies par l’utilisateur.  
   
 ### <a name="remarks"></a>Notes  
@@ -150,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lst`  
+ *lst*  
  Lorsque la fonction est retournée, elle contient un pointeur à CAnimationVariable qui représente la valeur animée.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -162,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblValue`  
+ *dblValue*  
  Sortie. Lorsque la fonction retourne, elle contient une valeur actuelle de la variable de l’animation.  
   
- `nValue`  
+ *nValeur*  
  Sortie. Lorsque la fonction retourne, elle contient une valeur actuelle de la variable de l’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -229,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblVal`  
+ *dblVal*  
  Spécifie la valeur à affecter à la valeur de l’Animation.  
   
- `nVal`  
+ *nVal*  
  Spécifie la valeur à affecter à la valeur de l’Animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -246,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Spécifie la valeur par défaut.  
   
 ### <a name="remarks"></a>Notes  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367059"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951685"
 ---
 # <a name="cfieldexchange-class"></a>Classe de CFieldExchange
 Prend en charge les routines d'échange de champs d'enregistrements (RFX) et d'échange de champs d'enregistrements en bloc (RFX en bloc) utilisées par les classes de base de données.  
@@ -53,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  Si vous travaillez avec les classes d’objets d’accès aux données (DAO) plutôt que les classes de base de données ODBC (Open Connectivity), utilisez la classe [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : base de données de programmation](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` objet fournit les informations de contexte nécessitent pour RFX ou RFX en bloc en placez. `CFieldExchange` objets prennent en charge un nombre d’opérations, y compris les paramètres de liaison et les membres de données de champ et en définissant des indicateurs différents sur les champs de l’enregistrement actif. RFX et RFX en bloc des opérations sont effectuées sur les membres de données de classe de recordset de types définis par le `enum` **FieldType** dans `CFieldExchange`. Possible **FieldType** les valeurs sont :  
+ A `CFieldExchange` objet fournit les informations de contexte nécessitent pour RFX ou RFX en bloc en placez. `CFieldExchange` objets prennent en charge un nombre d’opérations, y compris les paramètres de liaison et les membres de données de champ et en définissant des indicateurs différents sur les champs de l’enregistrement actif. RFX et RFX en bloc des opérations sont effectuées sur les membres de données de classe de recordset de types définis par le **enum** **FieldType** dans `CFieldExchange`. Possible **FieldType** les valeurs sont :  
   
 - **CFieldExchange::outputColumn** pour les membres de données de champ.  
   
@@ -68,7 +68,7 @@ class CFieldExchange
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CFieldExchange`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb.h  
   
 ##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
@@ -96,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nFieldType`  
+ *nFieldType*  
  Une valeur de la **enum FieldType**, déclarés dans `CFieldExchange`, ce qui peut prendre l’une des opérations suivantes :  
   
 - **CFieldExchange::outputColumn**  
@@ -121,7 +121,7 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|Paramètre de sortie. Une valeur de retour de procédure stockée de jeu d’enregistrements.|  
 |**CFieldExchange::inoutParam**|Paramètre d’entrée/sortie. Une valeur qui est passée et retournée à partir de l’ensemble d’enregistrements de procédure stockée.|  
   
- En général, chaque groupe d’appels de fonction RFX associé avec les membres de données de champ ou de membres de données de paramètre doit être précédé par un appel à `SetFieldType`. Le `nFieldType` de chaque paramètre de `SetFieldType` appel identifie le type des membres de données représenté par les appels de fonction RFX qui suivent le `SetFieldType` appeler.  
+ En général, chaque groupe d’appels de fonction RFX associé avec les membres de données de champ ou de membres de données de paramètre doit être précédé par un appel à `SetFieldType`. Le *nFieldType* de chaque paramètre de `SetFieldType` appel identifie le type des membres de données représenté par les appels de fonction RFX qui suivent le `SetFieldType` appeler.  
   
  Pour plus d’informations sur la gestion des paramètres de sortie et d’entrée/sortie, consultez le `CRecordset` fonction membre [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Pour plus d’informations sur les fonctions RFX et RFX en bloc, consultez la rubrique [fonctions Record Field Exchange](../../mfc/reference/record-field-exchange-functions.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   

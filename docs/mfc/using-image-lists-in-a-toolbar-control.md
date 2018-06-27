@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382848"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951905"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Utilisation de listes d'images dans un contrôle ToolBar
 Par défaut, les images utilisées par les boutons dans un contrôle de barre d’outils sont stockés sous forme de bitmap unique. Toutefois, vous pouvez également stocker des images de boutons dans un ensemble de listes d’images. L’objet de contrôle de barre d’outils peut utiliser jusqu'à trois listes d’images séparées :  
@@ -30,7 +30,7 @@ Par défaut, les images utilisées par les boutons dans un contrôle de barre d�
   
 -   Désactivé image liste contient des images pour les boutons de barre d’outils qui sont actuellement désactivées.  
   
--   Mise en surbrillance image liste contient des images pour les boutons de barre d’outils qui sont actuellement mis en surbrillance. Cette liste d’images est uniquement utilisée lors de la barre d’outils utilise le **TBSTYLE_FLAT** style.  
+-   Mise en surbrillance image liste contient des images pour les boutons de barre d’outils qui sont actuellement mis en surbrillance. Cette liste d’images est utilisée uniquement lorsque la barre d’outils utilise le style TBSTYLE_FLAT.  
   
  Ces listes d’images sont utilisées par le contrôle de barre d’outils lorsque vous les associez avec le `CToolBarCtrl` objet. Cette association s’effectue via des appels à [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), et [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

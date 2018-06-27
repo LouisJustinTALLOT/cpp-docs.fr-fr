@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352016"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953881"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU, classe
 Wrapper pour `D2D1_RECT_U`.  
@@ -48,7 +48,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Retourne un `boolean` valeur qui indique si une expression ne contient aucune donnée valide ( `null`).|  
+|[CD2DRectU::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide ( **null**).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -61,7 +61,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
  `CD2DRectU`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
@@ -81,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  rectangle source  
   
- `uLeft`  
+ *uLeft*  
  Coordonnée gauche source  
   
- `uTop`  
+ *uTop*  
  coordonnée supérieure source  
   
- `uRight`  
+ *uRight*  
  coordonnée droite source  
   
- `uBottom`  
+ *uBottom*  
  Coordonnée inférieure source  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  

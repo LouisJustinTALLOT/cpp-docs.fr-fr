@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367209"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955987"
 ---
 # <a name="cdraglistbox-class"></a>Classe de CDragListBox
 En plus de fournir les fonctionnalités d’une zone de liste Windows, la `CDragListBox` classe permet à l’utilisateur de déplacer des éléments de zone de liste, tels que des noms de fichiers, dans la zone de liste.  
@@ -85,7 +85,7 @@ class CDragListBox : public CListBox
   
  `CDragListBox`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées de l’élément déplacé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées de l’élément déplacé.  
   
 ### <a name="remarks"></a>Notes  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet contenant x et y de l’écran coordonnées du curseur.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nItem`  
+ *nItem*  
  Index de base zéro du point d’insertion.  
   
 ### <a name="remarks"></a>Notes  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  Spécifie l’index de base zéro de la chaîne supprimée.  
   
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées du site de dépôt.  
   
 ### <a name="remarks"></a>Notes  
  Le comportement par défaut copie l’élément de zone de liste et ses données vers le nouvel emplacement, puis supprime l’élément d’origine. Remplacez cette fonction pour personnaliser le comportement par défaut, telles que l’activation des copies des éléments de zone de liste à faire glisser vers d’autres emplacements dans la liste.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Appel de cette fonction pour récupérer l’index de base zéro de l’élément de zone de liste située à `pt`.  
+ Appel de cette fonction pour récupérer l’index de base zéro de l’élément de zone de liste située à *pt*.  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées d’un point dans la zone de liste.  
   
  *bAutoScroll*  

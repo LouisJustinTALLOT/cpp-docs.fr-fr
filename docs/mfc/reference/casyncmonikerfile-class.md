@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 765f88ef021b333a563fd92f7e9c7806960902e1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356010"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956981"
 ---
 # <a name="casyncmonikerfile-class"></a>Classe CAsyncMonikerFile
 Fournit les fonctionnalités nécessaires à l'utilisation de monikers asynchrones dans les contrôles ActiveX (anciennement contrôles OLE).  
@@ -110,7 +110,7 @@ class CAsyncMonikerFile : public CMonikerFile
   
  `CAsyncMonikerFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
@@ -121,7 +121,7 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Il ne crée pas le `IBindHost` interface. `IBindHost` est utilisé uniquement si vous fournissez dans le **ouvrir** fonction membre.  
+ Il ne crée pas le `IBindHost` interface. `IBindHost` est utilisé uniquement si vous fournissez dans le `Open` fonction membre.  
   
  Pour obtenir une description de le `IBindHost` l’interface, consultez le Kit de développement logiciel Windows.  
   
@@ -143,16 +143,16 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pUnkControlling`  
- Un pointeur vers l’inconnu de contrôle (externe **IUnknown**) ou **NULL** si l’agrégation n’est pas utilisée.  
+ *pUnkControlling*  
+ Un pointeur vers l’inconnu de contrôle (externe `IUnknown`) ou **NULL** si l’agrégation n’est pas utilisée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si `pUnkControlling` n’est pas **NULL**, la fonction retourne un pointeur à l’exception interne **IUnknown** sur un nouvel objet COM prenant en charge `IBindStatusCallback`. Si `pUnkControlling` est **NULL**, la fonction retourne un pointeur vers un **IUnknown** sur un nouvel objet COM prenant en charge `IBindStatusCallback`.  
+ Si *pUnkControlling* n’est pas **NULL**, la fonction retourne un pointeur à l’exception interne `IUnknown` sur un nouvel objet COM prenant en charge `IBindStatusCallback`. Si `pUnkControlling` est **NULL**, la fonction retourne un pointeur vers un `IUnknown` sur un nouvel objet COM prenant en charge `IBindStatusCallback`.  
   
 ### <a name="remarks"></a>Notes  
- `CAsyncMonikerFile` nécessite un objet COM qui implémente `IBindStatusCallback`. MFC implémente ce type d’objet, et il ne peut être agrégé. Vous pouvez substituer `CreateBindStatusCallback` pour retourner votre propre objet COM. Votre objet COM peut agréger l’implémentation MFC en appelant `CreateBindStatusCallback` avec inconnu de contrôle de votre objet COM. Les objets COM implémentés à l’aide de la `CCmdTarget` prise en charge COM peut récupérer le contrôle inconnu à l’aide de **CCmdTarget::GetControllingUnknown**.  
+ `CAsyncMonikerFile` nécessite un objet COM qui implémente `IBindStatusCallback`. MFC implémente ce type d’objet, et il ne peut être agrégé. Vous pouvez substituer `CreateBindStatusCallback` pour retourner votre propre objet COM. Votre objet COM peut agréger l’implémentation MFC en appelant `CreateBindStatusCallback` avec inconnu de contrôle de votre objet COM. Les objets COM implémentés à l’aide de la `CCmdTarget` prise en charge COM peut récupérer le contrôle inconnu à l’aide de `CCmdTarget::GetControllingUnknown`.  
   
- Vous pouvez également votre objet COM peut déléguer à l’implémentation MFC en appelant **CreateBindStatusCallback (NULL)**.  
+ Vous pouvez également votre objet COM peut déléguer à l’implémentation MFC en appelant `CreateBindStatusCallback( NULL )`.  
   
  [CAsyncMonikerFile::Open](#open) appelle `CreateBindStatusCallback`.  
   
@@ -166,7 +166,7 @@ virtual DWORD GetBindInfo() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Récupère les paramètres pour **IBindStatusCallBack**. Pour obtenir une description de le `IBindStatusCallback` l’interface, consultez le Kit de développement logiciel Windows.  
+ Récupère les paramètres pour `IBindStatusCallBack`. Pour obtenir une description de le `IBindStatusCallback` l’interface, consultez le Kit de développement logiciel Windows.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut définit la liaison doit être asynchrone, utilisez un support de stockage (un flux de données) et à utiliser le modèle d’émission de données. Remplacez cette fonction si vous souhaitez modifier le comportement de la liaison.  
@@ -184,7 +184,7 @@ IBinding* GetBinding() const;
  Un pointeur vers le `IBinding` interface fournie au commencement de transfert asynchrone. Retourne **NULL** si pour une raison quelconque le transfert ne peut pas être exécutée de façon asynchrone.  
   
 ### <a name="remarks"></a>Notes  
- Cela permet de contrôler le transfert de données processus via le `IBinding` de l’interface, par exemple, avec **IBinding::Abort**, **IBinding::Pause**, et **IBinding::Resume**.  
+ Cela permet de contrôler le transfert de données processus via le `IBinding` de l’interface, par exemple, avec `IBinding::Abort`, `IBinding::Pause`, et `IBinding::Resume`.  
   
  Pour obtenir une description de le `IBinding` l’interface, consultez le Kit de développement logiciel Windows.  
   
@@ -219,7 +219,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwSize`  
+ *dwSize*  
  La quantité cumulée (en octets) de données disponibles depuis le début de la liaison. Peut être égal à zéro, indiquant que la quantité de données ne s’applique pas à l’opération, ou qu’aucun montant spécifique est désormais disponible.  
   
  *bscfFlag*  
@@ -259,47 +259,47 @@ virtual void OnProgress(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ulProgress`  
- Indique la progression actuelle de l’opération de liaison par rapport à la valeur maximale attendue indiquée dans `ulProgressMax`.  
+ *ulProgress*  
+ Indique la progression actuelle de l’opération de liaison par rapport à la valeur maximale attendue indiquée dans *ulProgressMax*.  
   
- `ulProgressMax`  
- Indique la valeur maximale attendue de `ulProgress` pour la durée des appels à `OnProgress` pour cette opération.  
+ *ulProgressMax*  
+ Indique la valeur maximale attendue de *ulProgress* pour la durée des appels à `OnProgress` pour cette opération.  
   
- `ulStatusCode`  
+ *ulStatusCode*  
  Fournit des informations supplémentaires concernant la progression de l’opération de liaison. Les valeurs valides sont effectuées à partir de la `BINDSTATUS` énumération. Consultez la section Notes pour les valeurs possibles.  
   
- `szStatusText`  
- Plus d’informations sur l’état d’avancement, selon la valeur de `ulStatusCode`. Consultez la section Notes pour les valeurs possibles.  
+ *szStatusText*  
+ Plus d’informations sur l’état d’avancement, selon la valeur de *ulStatusCode*. Consultez la section Notes pour les valeurs possibles.  
   
 ### <a name="remarks"></a>Notes  
- Les valeurs possibles pour `ulStatusCode` (et `szStatusText` pour chaque valeur) sont :  
+ Les valeurs possibles pour *ulStatusCode* (et *szStatusText* pour chaque valeur) sont :  
   
  **BINDSTATUS_FINDINGRESOURCE**  
- L’opération de liaison est de trouver la ressource qui contient l’objet ou le stockage liée. Le `szStatusText` fournit le nom d’affichage de la ressource recherchée pour (par exemple, « www.microsoft.com »).  
+ L’opération de liaison est de trouver la ressource qui contient l’objet ou le stockage liée. Le *szStatusText* fournit le nom d’affichage de la ressource recherchée pour (par exemple, « www.microsoft.com »).  
   
  **BINDSTATUS_CONNECTING**  
- L’opération de liaison se connecte à la ressource qui contient l’objet ou le stockage liée. Le `szStatusText` fournit le nom d’affichage de la ressource qui est connecté à (par exemple, une adresse IP).  
+ L’opération de liaison se connecte à la ressource qui contient l’objet ou le stockage liée. Le *szStatusText* fournit le nom d’affichage de la ressource qui est connecté à (par exemple, une adresse IP).  
   
  **BINDSTATUS_SENDINGREQUEST**  
- Demande l’objet ou le stockage liée à l’opération de liaison. Le `szStatusText` fournit le nom complet de l’objet (par exemple, un nom de fichier).  
+ Demande l’objet ou le stockage liée à l’opération de liaison. Le *szStatusText* fournit le nom complet de l’objet (par exemple, un nom de fichier).  
   
  **BINDSTATUS_REDIRECTING**  
- L’opération de liaison a été redirigée vers un emplacement de données différents. Le `szStatusText` fournit le nom complet du nouvel emplacement de données.  
+ L’opération de liaison a été redirigée vers un emplacement de données différents. Le *szStatusText* fournit le nom complet du nouvel emplacement de données.  
   
  **BINDSTATUS_USINGCACHEDCOPY**  
- L’opération de liaison est la récupération de l’objet ou le stockage à partir d’une copie mise en cache. Le `szStatusText` est **NULL**.  
+ L’opération de liaison est la récupération de l’objet ou le stockage à partir d’une copie mise en cache. Le *szStatusText* est **NULL**.  
   
  **BINDSTATUS_BEGINDOWNLOADDATA**  
- L’opération de liaison a commencé à recevoir de l’objet ou le stockage liée. Le `szStatusText` fournit le nom complet de l’emplacement des données.  
+ L’opération de liaison a commencé à recevoir de l’objet ou le stockage liée. Le *szStatusText* fournit le nom complet de l’emplacement des données.  
   
  **BINDSTATUS_DOWNLOADINGDATA**  
- L’opération de liaison continue de recevoir l’objet ou le stockage liée à. Le `szStatusText` fournit le nom complet de l’emplacement des données.  
+ L’opération de liaison continue de recevoir l’objet ou le stockage liée à. Le *szStatusText* fournit le nom complet de l’emplacement des données.  
   
  **BINDSTATUS_ENDDOWNLOADDATA**  
- L’opération de liaison a fini de recevoir l’objet ou le stockage liée. Le `szStatusText` fournit le nom complet de l’emplacement des données.  
+ L’opération de liaison a fini de recevoir l’objet ou le stockage liée. Le *szStatusText* fournit le nom complet de l’emplacement des données.  
   
  **BINDSTATUS_CLASSIDAVAILABLE**  
- Une instance de l’objet lié aux est sur le point d’être créé. Le `szStatusText` fournit le CLSID du nouvel objet au format de chaîne, permettant au client d’annuler l’opération de liaison, si vous le souhaitez.  
+ Une instance de l’objet lié aux est sur le point d’être créé. Le *szStatusText* fournit le CLSID du nouvel objet au format de chaîne, permettant au client d’annuler l’opération de liaison, si vous le souhaitez.  
   
 ##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  Remplacez cette fonction dans vos classes dérivées pour effectuer des actions lors de la liaison démarre.  
@@ -319,7 +319,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hresult`  
+ *HRESULT*  
  Un `HRESULT` qui est l’erreur ou la valeur de l’avertissement.  
   
  *szErrort*  
@@ -374,23 +374,23 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszURL`  
+ *lpszURL*  
  Pointeur vers le fichier à ouvrir en mode asynchrone. Le fichier peut être n’importe quel nom de fichier ou une URL valide.  
   
- `pError`  
+ *pError*  
  Pointeur vers les exceptions de fichier. En cas d’erreur, elle est définie à la cause.  
   
- `pMoniker`  
- Un pointeur vers l’interface de monikers asynchrones `IMoniker`, un moniker précis qui est la combinaison du moniker du document, que vous pouvez extraire avec **IOleClientSite::GetMoniker (** *OLEWHICHMK_ CONTENEUR* **)** et un moniker créé à partir du nom de chemin d’accès. Le contrôle peut utiliser ce moniker à lier, mais ce n’est pas le moniker qu'est conseillé d’enregistrer le contrôle.  
+ *pMoniker*  
+ Un pointeur vers l’interface de monikers asynchrones `IMoniker`, un moniker précis qui est la combinaison du moniker du document, que vous pouvez extraire avec `IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`et un moniker créé à partir du nom de chemin d’accès. Le contrôle peut utiliser ce moniker à lier, mais ce n’est pas le moniker qu'est conseillé d’enregistrer le contrôle.  
   
  *pBindHost*  
- Un pointeur vers le `IBindHost` interface permettant de créer le moniker à partir d’un chemin d’accès relatif potentiellement. Si l’hôte de la liaison n’est pas valide ou ne fournit pas d’un moniker, l’appel par défaut **ouvrir (** `lpszFileName` **,**`pError`**)**. Pour obtenir une description de le `IBindHost` l’interface, consultez le Kit de développement logiciel Windows.  
+ Un pointeur vers le `IBindHost` interface permettant de créer le moniker à partir d’un chemin d’accès relatif potentiellement. Si l’hôte de la liaison n’est pas valide ou ne fournit pas un moniker, l’appel de valeur par défaut est `Open(lpszFileName,pError)`. Pour obtenir une description de le `IBindHost` l’interface, consultez le Kit de développement logiciel Windows.  
   
- `pServiceProvider`  
- Un pointeur vers le `IServiceProvider` interface. Si le fournisseur de services n’est pas valide ou ne parvient pas à fournir le service pour `IBindHost`, l’appel par défaut est **ouvrir (** `lpszFileName` **,**`pError`**)**.  
+ *pServiceProvider*  
+ Un pointeur vers le `IServiceProvider` interface. Si le fournisseur de services n’est pas valide ou ne parvient pas à fournir le service pour `IBindHost`, l’appel par défaut est `Open(lpszFileName,pError)`.  
   
  *pUnknown*  
- Un pointeur vers le **IUnknown** interface. Si `IServiceProvider` est trouvée, la fonction interroge pour `IBindHost`. Si le fournisseur de services n’est pas valide ou ne parvient pas à fournir le service pour `IBindHost`, l’appel par défaut est **ouvrir (** `lpszFileName` **,**`pError`**)**.  
+ Un pointeur vers le `IUnknown` interface. Si `IServiceProvider` est trouvée, la fonction interroge pour `IBindHost`. Si le fournisseur de services n’est pas valide ou ne parvient pas à fournir le service pour `IBindHost`, l’appel par défaut est `Open(lpszFileName,pError)`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le fichier est ouvert avec succès ; Sinon, 0.  
@@ -398,7 +398,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>Notes  
  Cet appel lance le processus de liaison.  
   
- Vous pouvez utiliser une URL ou un nom de fichier pour le `lpszURL` paramètre. Par exemple :  
+ Vous pouvez utiliser une URL ou un nom de fichier pour le *lpszURL* paramètre. Exemple :  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

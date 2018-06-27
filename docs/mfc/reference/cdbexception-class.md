@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368333"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952246"
 ---
 # <a name="cdbexception-class"></a>Classe de CDBException
 Représente une condition d'exception résultant des classes de base de données.  
@@ -67,7 +67,7 @@ class CDBException : public CException
   
  `CDBException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb.h  
   
 ##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** votre demande de verrouiller des enregistrements de mise à jour ne pourrait pas être satisfaite, car votre pilote ODBC ne prend pas en charge le verrouillage.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED apparaît** vous avez appelé `CRecordset::Update` ou **supprimer** pour une table sans clé unique et plusieurs enregistrements modifiés.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED apparaît** vous avez appelé `CRecordset::Update` ou `Delete` pour une table sans clé unique et plusieurs enregistrements modifiés.  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD** vous avez tenté de modifier ou supprimer un enregistrement supprimé précédemment. Vous devez accéder à un nouvel enregistrement en cours après une suppression.  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** votre demande pour une feuille de réponse dynamique ne pourrait pas être satisfaite, car le pilote ODBC ne prend pas en charge de mises à jour positionnées.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** vous avez appelé `CRecordset::Update` ou **supprimer**, mais lorsque l’opération a commencé l’enregistrement n’est plus introuvable.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** vous avez appelé `CRecordset::Update` ou `Delete`, mais lorsque l’opération a commencé l’enregistrement n’est plus introuvable.  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** une tentative de chargement d’ODBC. Échec de la DLL ; Windows n’a pas été trouvé ou Impossible de charger cette DLL. Cette erreur est irrécupérable.  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY** vous avez tenté de mettre à jour un jeu d’enregistrements en lecture seule, ou la source de données est en lecture seule. Aucune opération de mise à jour ne peut être effectuée avec l’ensemble d’enregistrements ou `CDatabase` objet auquel il est associé.  
   
-- **SQL_ERROR** échouée de la fonction. Le message d’erreur retourné par la fonction ODBC **SQLError** est stocké dans le **m_strError** membre de données.  
+- **SQL_ERROR** échouée de la fonction. Le message d’erreur retourné par la fonction ODBC `SQLError` est stocké dans le **m_strError** membre de données.  
   
 - **SQL_INVALID_HANDLE** fonction a échoué en raison d’un handle d’environnement non valide, le handle de connexion ou le handle d’instruction. Cela indique une erreur de programmation. Aucune information supplémentaire n’est disponible à partir de la fonction ODBC **SQLError**.  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>Notes  
  La chaîne est le formulaire « état : % s, natif : % ld, origine : % s », où les codes de format, dans l’ordre, sont remplacées par les valeurs qui décrivent :  
   
--   Le **SQLSTATE**, une chaîne se terminant par null contenant un code d’erreur à cinq caractères retourné dans le *szSqlState* paramètre de la fonction ODBC **SQLError**. **SQLSTATE** valeurs sont répertoriées dans l’annexe A, [Codes d’erreur ODBC](https://msdn.microsoft.com/library/ms714687.aspx), dans le *de référence du programmeur ODBC*. Exemple : « S0022 ».  
+-   Le **SQLSTATE**, une chaîne se terminant par null contenant un code d’erreur à cinq caractères retourné dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. **SQLSTATE** valeurs sont répertoriées dans l’annexe A, [Codes d’erreur ODBC](https://msdn.microsoft.com/library/ms714687.aspx), dans le *de référence du programmeur ODBC*. Exemple : « S0022 ».  
   
--   Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la **SQLError** (fonction). Exemple : 207.  
+-   Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la `SQLError` (fonction). Exemple : 207.  
   
--   Le texte de message d’erreur retourné dans le *szErrorMsg* paramètre de la **SQLError** (fonction). Ce message se compose de plusieurs noms entre crochets. Comme une erreur est passée à l’utilisateur à partir de sa source, chaque composant ODBC (source de données, pilote, le Gestionnaire de pilotes) ajoute son propre nom. Ces informations aident à identifier l’origine de l’erreur. Exemple : [Microsoft] [pilote ODBC SQL Server] [SQL Server]  
+-   Le texte de message d’erreur retourné dans le *szErrorMsg* paramètre de la `SQLError` (fonction). Ce message se compose de plusieurs noms entre crochets. Comme une erreur est passée à l’utilisateur à partir de sa source, chaque composant ODBC (source de données, pilote, le Gestionnaire de pilotes) ajoute son propre nom. Ces informations aident à identifier l’origine de l’erreur. Exemple : [Microsoft] [pilote ODBC SQL Server] [SQL Server]  
   
  Le framework interprète la chaîne d’erreur et met ses composants dans **m_strStateNativeOrigin**; si **m_strStateNativeOrigin** contient des informations pour plusieurs erreurs, les erreurs sont séparées par sauts de ligne. Le framework met le texte d’erreur alphanumériques dans **m_strError**.  
   

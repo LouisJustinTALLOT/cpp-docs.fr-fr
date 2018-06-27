@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355950"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957297"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable, classe
 Représente une variable de l'animation.  
@@ -123,7 +123,7 @@ class CAnimationVariable;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CAnimationVariable`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable :: ~ CAnimationVariable  
@@ -141,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTransition`  
+ *pTransition*  
  Pointeur vers une transition à ajouter.  
   
 ### <a name="remarks"></a>Notes  
@@ -158,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pController`  
+ *pController*  
  Pointeur vers le contrôleur de l’animation parent.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers le storyboard.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  TRUE si cette méthode doit ajouter des transitions qui dépendent des images clés.  
   
 ### <a name="remarks"></a>Notes  
@@ -178,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Spécifie la valeur par défaut.  
   
 ### <a name="remarks"></a>Notes  
@@ -192,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bAutodestroy`  
+ *bAutodestroy*  
  Spécifie si cette méthode doit supprimer les objets de transition.  
   
 ### <a name="remarks"></a>Notes  
@@ -206,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pManager`  
+ *pManager*  
  Pointeur vers le Gestionnaire d’animations.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -225,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-`pLibrary`  
+*pLibrary*  
  Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -244,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pController`  
+ *pController*  
  Pointeur vers un contrôleur parent.  
   
- `bEnable`  
+ *bActivez*  
  TRUE - activer l’événement, FALSE - désactiver l’événement.  
   
 ### <a name="remarks"></a>Notes  
@@ -263,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pController`  
+ *pController*  
  Pointeur vers un contrôleur parent.  
   
- `bEnable`  
+ *bActivez*  
  TRUE - activer l’événement, FALSE - désactiver l’événement.  
   
 ### <a name="remarks"></a>Notes  
@@ -307,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblValue`  
+ *dblValue*  
  La valeur actuelle de la variable de l’animation.  
   
- `nValue`  
+ *nValeur*  
  La valeur actuelle de la variable de l’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -378,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Spécifie la nouvelle valeur par défaut.  
   
 ### <a name="remarks"></a>Notes  
@@ -392,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentObject`  
+ *pParentObject*  
  Pointeur vers un objet d’animation qui contient cette variable.  
   
 ### <a name="remarks"></a>Notes  

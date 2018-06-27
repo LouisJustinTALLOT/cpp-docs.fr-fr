@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306006"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954869"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Procédure pas à pas : ajout d'un objet D2D à un projet MFC
 
@@ -48,7 +48,7 @@ Pour effectuer cette procédure pas à pas, vous devez disposer de Visual Studio
 
 1. Sur le **fichier** menu, pointez sur **nouveau** , puis **projet**.
 
-2. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche sous **modèles installés**, développez **Visual C++** , puis sélectionnez **MFC**. Dans le volet central, sélectionnez **Application MFC**. Dans la zone **Nom**, tapez `MFCD2DWalkthrough`. Cliquez sur **OK**.
+2. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche sous **modèles installés**, développez **Visual C++** , puis sélectionnez **MFC**. Dans le volet central, sélectionnez **Application MFC**. Dans le **nom** , tapez *MFCD2DWalkthrough*. Cliquez sur **OK**.
 
 3. Dans le **Assistant Application MFC**, choisissez **Terminer** sans modifier les paramètres.
 
@@ -132,7 +132,7 @@ Pour effectuer cette procédure pas à pas, vous devez disposer de Visual Studio
 
 3. Sur le **Messages** , onglet choisir **ajouter un Message personnalisé**.
 
-4. Dans le **ajouter un Message personnalisé** boîte de dialogue le **un Message personnalisé Windows** , tapez `AFX_WM_DRAW2D`. Dans le **nom de gestionnaire de messages** , tapez `OnDraw2D`. Sélectionnez le **Message inscrit** option, puis choisissez **OK**. Cette action ajoute un gestionnaire de messages pour le `AFX_WM_DRAW2D` un message à la `CMFCD2DWalkthroughView` classe.
+4. Dans le **ajouter un Message personnalisé** boîte de dialogue le **un Message personnalisé Windows** , tapez *AFX_WM_DRAW2D*. Dans le **nom de gestionnaire de messages** , tapez *OnDraw2D*. Sélectionnez le **Message inscrit** option, puis choisissez **OK**. Cette action ajoute un gestionnaire de messages pour le message AFX_WM_DRAW2D la `CMFCD2DWalkthroughView` classe.
 
 5. Dans le **gestionnaires existants** boîte, sélectionnez `OnDraw2D`. Choisissez **modifier le Code** pour afficher le `CMFCD2DWalkthroughView::OnDraw2D` (méthode). Utilisez ce code pour le `CMFCD2DWalkthroughView::OnDrawD2D` méthode :
 

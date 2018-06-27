@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376569"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955074"
 ---
 # <a name="cfilefind-class"></a>Classe de CFileFind
 Effectue des recherches de fichiers local et est la classe de base pour [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) et [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), qui effectuent des recherches dans des fichiers Internet.  
@@ -147,7 +147,7 @@ class CFileFind : public CObject
   
  `CFileFind`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="cfilefind"></a>  CFileFind::CFileFind  
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTM`  
+ *pTM*  
  Pointeur vers l'objet CAtlTransactionManager  
   
 ### <a name="example"></a>Exemple  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>Notes  
  Ferme le fichier spécifié par la valeur actuelle de la poignée de la recherche. Remplacez cette fonction pour modifier le comportement par défaut.  
   
- Vous devez appeler la [FindFile](#findfile) ou [FindNextFile](#findnextfile) fonctions au moins une fois pour récupérer un handle de recherche valide. Le **FindFile** et `FindNextFile` fonctions utilisent le handle de recherche pour rechercher des fichiers portant des noms qui correspondent à un nom donné.  
+ Vous devez appeler la [FindFile](#findfile) ou [FindNextFile](#findnextfile) fonctions au moins une fois pour récupérer un handle de recherche valide. Le `FindFile` et `FindNextFile` fonctions utilisent le handle de recherche pour rechercher des fichiers portant des noms qui correspondent à un nom donné.  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  Appelez cette fonction membre pour ouvrir une recherche de fichier.  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pstrName`  
- Un pointeur vers une chaîne contenant le nom du fichier à rechercher. Si vous passez **NULL** pour `pstrName`, **FindFile** est un caractère générique (*.\*) recherche.  
+ *pstrName*  
+ Un pointeur vers une chaîne contenant le nom du fichier à rechercher. Si vous passez **NULL** pour *pstrName*, **FindFile** est un caractère générique (*.\*) recherche.  
   
  *dwUnused*  
- Réservé pour rendre **FindFile** polymorphe avec les classes dérivées. Doit être 0.  
+ Réservé pour rendre `FindFile` polymorphe avec les classes dérivées. Doit être 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Pour obtenir des informations d’erreur plus complètes, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Notes  
- Après avoir appelé **FindFile** pour commencer la recherche de fichiers, appelez [FindNextFile](#findnextfile) pour extraire les fichiers suivants. Vous devez appeler `FindNextFile` au moins une fois avant d’appeler les fonctions membres d’attribut suivant :  
+ Après avoir appelé `FindFile` pour commencer la recherche de fichiers, appelez [FindNextFile](#findnextfile) pour extraire les fichiers suivants. Vous devez appeler `FindNextFile` au moins une fois avant d’appeler les fonctions membres d’attribut suivant :  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -238,7 +238,7 @@ virtual BOOL FindFile(
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -292,7 +292,7 @@ virtual BOOL FindNextFile();
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTimeStamp`  
+ *pTimeStamp*  
  Un pointeur vers un [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure contenant l’heure de création du fichier.  
   
- `refTime`  
+ *refTime*  
  Une référence à un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `refTime`  
+ *refTime*  
  Une référence à un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Un pointeur vers un [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure contenant l’heure de dernier accès au fichier.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTimeStamp`  
+ *pTimeStamp*  
  Un pointeur vers un [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure contenant l’heure de la dernière écriture dans le fichier.  
   
- `refTime`  
+ *refTime*  
  Une référence à un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwMask`  
+ *dwMask*  
  Spécifie un ou plusieurs attributs de fichier identifiés dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure, pour le fichier trouvé. Pour rechercher plusieurs attributs, utilisez l’opérateur de bits OR (&#124;) (opérateur). N’importe quelle combinaison des attributs suivants est acceptable :  
   
 -   FILE_ATTRIBUTE_ARCHIVE le fichier est un fichier d’archive. Applications utilisent cet attribut pour marquer les fichiers pour la sauvegarde ou la suppression.  

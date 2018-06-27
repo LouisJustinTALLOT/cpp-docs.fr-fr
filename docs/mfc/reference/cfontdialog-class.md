@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368346"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953673"
 ---
 # <a name="cfontdialog-class"></a>Classe de CFontDialog
 Permet d’incorporer une boîte de dialogue de sélection de polices à votre application.  
@@ -125,7 +125,7 @@ class CFontDialog : public CCommonDialog
   
  `CFontDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- L `plfInitial`  
+ *plfInitial*  
  Un pointeur vers un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure de données qui vous permet de définir certaines caractéristiques de la police.  
   
- `charFormat`  
+ *charFormat*  
  Un pointeur vers un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) contrôle d’édition de structure de données qui vous permet de définir certaines caractéristiques de la police dans un riche.  
   
- `dwFlags`  
+ *dwFlags*  
  Spécifie un ou plusieurs indicateurs de choix de police. Une ou plusieurs valeurs prédéfinies peuvent être combinées à l'aide de l'opérateur de bits OR. Si vous changez le membre de structure de `m_cf.Flag`, veillez à utiliser un opérateur de bits OR dans les changements pour préserver le comportement par défaut. Pour plus d’informations sur chacune de ces indicateurs, consultez la description de la [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) structure dans le SDK Windows.  
   
- pdcPrinter  
+ *pdcPrinter*  
  Pointeur vers un contexte de périphérique d'impression. Si ce paramètre est fourni, il pointe vers un contexte de périphérique d'impression pour l'imprimante sur laquelle les polices doivent être sélectionnées.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente ou la fenêtre propriétaire de la boîte de dialogue de police.  
   
 ### <a name="remarks"></a>Notes  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cf`  
+ *CF*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure contenant des informations sur la mise en forme des caractères de la police sélectionnée.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

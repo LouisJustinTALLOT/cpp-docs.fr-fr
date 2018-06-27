@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384109"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951365"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020 : conventions de dénomination d'ID et de numérotation
 Cette note décrit les ID d’affectation de noms et les conventions de numérotation MFC 2.0 utilise pour les ressources, les commandes, les chaînes, les contrôles et fenêtres enfants.  
@@ -68,7 +68,7 @@ Cette note décrit les ID d’affectation de noms et les conventions de numérot
 |IDM_|Pour les éléments de menu qui n’utilisent pas l’architecture de commande MFC.|  
 |ID_|Pour les commandes de menu qui utilisent l’architecture de commande MFC.|  
   
- Les commandes qui suivent l’architecture de la commande MFC doivent avoir un `ON_COMMAND` Gestionnaire de commande et peut avoir un `ON_UPDATE_COMMAND_UI` gestionnaire. Si ces gestionnaires de commandes suivent l’architecture de commande MFC, elles fonctionneront correctement si elles sont liées à une commande de menu, un bouton de barre d’outils ou un bouton de barre de boîte de dialogue. Le même préfixe « ID_ » est également utilisé pour une chaîne d’invite de menu qui s’affiche sur la barre de message du programme. La plupart des éléments de menu dans votre application doit suivre les conventions de commande MFC. ID de commande tous de la norme (par exemple, `ID_FILE_NEW`) suivent cette convention.  
+ Les commandes qui suivent l’architecture de la commande MFC doivent posséder un gestionnaire de commandes ON_COMMAND et peuvent avoir un gestionnaire ON_UPDATE_COMMAND_UI. Si ces gestionnaires de commandes suivent l’architecture de commande MFC, elles fonctionneront correctement si elles sont liées à une commande de menu, un bouton de barre d’outils ou un bouton de barre de boîte de dialogue. Le même préfixe « ID_ » est également utilisé pour une chaîne d’invite de menu qui s’affiche sur la barre de message du programme. La plupart des éléments de menu dans votre application doit suivre les conventions de commande MFC. Tous les ID de commande standard (par exemple, ID_FILE_NEW) suivent cette convention.  
   
  MFC utilise également « IDP_ » comme une forme spécialisée de chaînes (au lieu de « service »). Les chaînes avec le préfixe « IDP_ » sont des invites, autrement dit, les chaînes utilisées dans les boîtes de message. Les chaînes « IDP_ » peuvent contenir « %1 » et « %2 » en tant qu’espaces réservés de chaînes déterminés par le programme. Les chaînes « IDP_ » ont généralement les rubriques d’aide associées, et non les chaînes « Service ». Les chaînes « IDP_ » sont toujours localisés, et les chaînes « Service » ne peuvent pas être localisées.  
   

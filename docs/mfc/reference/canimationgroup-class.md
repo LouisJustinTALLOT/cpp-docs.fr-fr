@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355631"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955733"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup, classe
 Implémente un groupe d’animation, qui combine un storyboard d’animation, des objets d’animation et des transitions pour définir une animation.  
@@ -126,7 +126,7 @@ class CAnimationGroup;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CAnimationGroup`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup :: ~ CAnimationGroup  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un objet COM de plan conceptuel.  
   
- `bAddDeep`  
+ *bAddDeep*  
  Spécifie si cette méthode doit ajouter aux table de montage séquentiel des images clés qui dépendent d’autres images clés.  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un objet COM de plan conceptuel.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  Pas CAnimationGroup::Animate  
  Réalise une animation d’un groupe.  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit ; Sinon, FALSE.  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentController`  
+ *pParentController*  
  Pointeur vers le contrôleur de l’animation qui crée un groupe.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie GroupID.  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pVariable`  
+ *pVariable*  
  Pointeur vers la variable de l’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTimer`  
+ *pTimer*  
  Pointeur vers la minuterie de l’animation.  
   
- `time`  
+ *time*  
  Spécifie l’heure de planification de l’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Spécifie comment détruire les transitions.  
   
 ### <a name="remarks"></a>Notes  

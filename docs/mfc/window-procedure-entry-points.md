@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1095061cce8ff8f189984aca99a06eb741a46e83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382071"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956380"
 ---
 # <a name="window-procedure-entry-points"></a>Procédure de fenêtre, points d'entrée
-Pour protéger les procédures de fenêtre MFC, un module statique se lie à une implémentation de procédure de fenêtre spéciale. La liaison se produit automatiquement lorsque le module est lié à MFC. Cette procédure de fenêtre utilise la `AFX_MANAGE_STATE` macro pour définir correctement l’état du module effectif, ensuite, il appelle **AfxWndProc**, qui à son tour délègue à la `WindowProc` fonction membre de la `CWnd`-dérivée objet.  
+Pour protéger les procédures de fenêtre MFC, un module statique se lie à une implémentation de procédure de fenêtre spéciale. La liaison se produit automatiquement lorsque le module est lié à MFC. Cette procédure de fenêtre utilise la macro AFX_MANAGE_STATE pour définir correctement l’état du module effectif, puis il appelle `AfxWndProc`, qui à son tour délègue à la `WindowProc` fonction membre d’approprié `CWnd`-objet dérivé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des données d’état des modules MFC](../mfc/managing-the-state-data-of-mfc-modules.md)

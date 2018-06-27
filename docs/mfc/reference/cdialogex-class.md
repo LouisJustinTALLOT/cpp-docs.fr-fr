@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368044"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951850"
 ---
 # <a name="cdialogex-class"></a>Cdialogex, classe
 La classe `CDialogEx` spécifie la couleur d'arrière-plan et l'image d'arrière-plan d'une boîte de dialogue.  
@@ -72,7 +72,7 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdialogex.h  
   
 ##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  L’ID de ressource d’un modèle de boîte de dialogue.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  Le nom de ressource d’un modèle de boîte de dialogue.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Pointeur vers la fenêtre parente. La valeur par défaut est `NULL`.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente. La valeur par défaut est `NULL`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `color`  
+ [in] *couleur*  
  Une valeur de couleur RVB.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` mettre à jour immédiatement l’écran ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Handle vers l’image d’arrière-plan.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  L’ID de ressource de l’image d’arrière-plan.  
   
- [in] `location`  
+ [in] *emplacement*  
  Parmi les `CDialogEx::BackgroundLocation` les valeurs qui spécifient l’emplacement de l’image. Les valeurs valides sont BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT et BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Pour détruire automatiquement de l’image d’arrière-plan ; dans le cas contraire, `FALSE`.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` pour redessiner immédiatement de la boîte de dialogue dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384288"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953501"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059 : utilisation des macros de conversion MBCS/Unicode MFC
 > [!NOTE]
@@ -86,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  Il existe des appels supplémentaires lorsque la conversion est nécessaire, mais l'utilisation des macros est simple et efficace.  
   
- L'implémentation de chaque macro utilise la fonction _alloca() pour allouer de la mémoire provenant de la pile au lieu du tas. Il est beaucoup plus rapide d'allouer de la mémoire à partir de la pile plutôt que du tas, car elle est automatiquement libérée lorsque la fonction est désactivée. En outre, évitent d’appeler les macros **MultiByteToWideChar** (ou **WideCharToMultiByte**) plusieurs fois. Cette opération s'effectue en allouant un peu plus de mémoire qu'il n'en faut. Nous savons qu’un contrôleur MBC effectue la conversion en seul **WCHAR** et pour chaque **WCHAR** nous prenons un maximum de deux octets MBC. En allouant un peu plus de mémoire que nécessaire, mais toujours en quantité suffisante pour gérer la conversion du deuxième appel, le deuxième appel à la fonction de conversion est évité. L’appel à la fonction d’assistance **AfxA2Whelper** réduit le nombre de push d’arguments doit être effectué afin d’effectuer la conversion (cela entraîne un code plus petit, que si elle a appelé **MultiByteToWideChar**directement).  
+ L'implémentation de chaque macro utilise la fonction _alloca() pour allouer de la mémoire provenant de la pile au lieu du tas. Il est beaucoup plus rapide d'allouer de la mémoire à partir de la pile plutôt que du tas, car elle est automatiquement libérée lorsque la fonction est désactivée. En outre, évitent d’appeler les macros `MultiByteToWideChar` (ou `WideCharToMultiByte`) plusieurs fois. Cette opération s'effectue en allouant un peu plus de mémoire qu'il n'en faut. Nous savons qu’un contrôleur MBC effectue la conversion en seul **WCHAR** et pour chaque **WCHAR** nous prenons un maximum de deux octets MBC. En allouant un peu plus de mémoire que nécessaire, mais toujours en quantité suffisante pour gérer la conversion du deuxième appel, le deuxième appel à la fonction de conversion est évité. L’appel à la fonction d’assistance `AfxA2Whelper` réduit le nombre de push d’arguments doit être effectué afin d’effectuer la conversion (cela entraîne un code plus petit, que si elle a appelé `MultiByteToWideChar` directement).  
   
- Pour que les macros disposent d'un espace de stockage temporaire, il est nécessaire de déclarer une variable locale intitulée _convert qui effectue l'opération dans chaque fonction qui utilise les macros de conversion. Cela est effectué en appelant le **USES_CONVERSION** comme indiqué précédemment dans l’exemple de macro.  
+ Pour que les macros disposent d'un espace de stockage temporaire, il est nécessaire de déclarer une variable locale intitulée _convert qui effectue l'opération dans chaque fonction qui utilise les macros de conversion. Pour cela, vous devez appeler la macro USES_CONVERSION comme indiqué précédemment dans l’exemple.  
   
  Il existe des macros de conversion génériques et des macros OLE spécifiques. Ces deux différents ensembles de macros sont décrits ci-dessous. Toutes les macros résident dans AFXPRIV.H.  
   
@@ -105,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  En plus des conversions de texte, il existe également des macros et des fonctions d'assistance permettant de convertir les chaînes `TEXTMETRIC`, `DEVMODE`, `BSTR` et les chaînes allouées par OLE. Ces macros dépasse le cadre de cette discussion, reportez-vous à AFXPRIV. H pour plus d’informations sur ces macros.  
   
 ## <a name="ole-conversion-macros"></a>Macros de conversion OLE  
- Les macros de conversion OLE sont conçues spécifiquement pour gérer les fonctions qui **OLESTR** caractères. Si vous examinez les en-têtes OLE, vous verrez plusieurs références à **LPCOLESTR** et **OLECHAR**. Ces types permettent de faire référence aux types de caractères utilisés dans les interfaces OLE d'une manière qui n'est pas spécifique à la plateforme. **OLECHAR** est mappé à `char` dans les plateformes Win16 et Macintosh et **WCHAR** dans Win32.  
+ Les macros de conversion OLE sont conçues spécifiquement pour gérer les fonctions qui **OLESTR** caractères. Si vous examinez les en-têtes OLE, vous verrez plusieurs références à **LPCOLESTR** et **OLECHAR**. Ces types permettent de faire référence aux types de caractères utilisés dans les interfaces OLE d'une manière qui n'est pas spécifique à la plateforme. **OLECHAR** est mappé à **char** dans les plateformes Win16 et Macintosh et **WCHAR** dans Win32.  
   
  Pour conserver le nombre de **#ifdef** directives dans la bibliothèque MFC code minimal Nous disposons d’une macro similaire pour chaque conversion qui impliquant des chaînes OLE. Les macros suivantes sont le plus souvent utilisées :  
   
@@ -116,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- Là encore, il existe des macros similaires pour exécuter les chaînes `TEXTMETRIC`, `DEVMODE`, `BSTR` et les chaînes allouées par OLE. Pour plus d'informations, consultez AFXPRIV.H.  
+ Là encore, il existe des macros similaires pour faire TEXTMETRIC, DEVMODE, BSTR et chaînes allouées par OLE. Pour plus d'informations, consultez AFXPRIV.H.  
   
 ## <a name="other-considerations"></a>Autres considérations  
  N'utilisez pas les macros dans une boucle étroite. Par exemple, vous ne souhaitez pas écrire le type de code suivant :  
@@ -145,7 +145,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 }  
 ```  
   
- Si la chaîne n'est pas constante, encapsulez l'appel de la méthode au sein d'une fonction. Cela permet de libérer successivement de la mémoire tampon. Par exemple :  
+ Si la chaîne n'est pas constante, encapsulez l'appel de la méthode au sein d'une fonction. Cela permet de libérer successivement de la mémoire tampon. Exemple :  
   
 ```  
 void CallSomeMethod(int ii, LPCTSTR lpsz)  

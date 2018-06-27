@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368948"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952301"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView (classe)
 Vue qui affiche des enregistrements de base de données dans des contrôles.  
@@ -92,7 +92,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  `CDaoRecordView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
@@ -104,10 +104,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contient une chaîne se terminant par null qui est le nom d’une ressource de modèle de boîte de dialogue.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -116,10 +116,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  Votre classe dérivée doit fournir son propre constructeur. Dans le constructeur de votre classe dérivée, appelez le constructeur de `CDaoRecordView::CDaoRecordView` avec le nom de la ressource ou l’ID en tant qu’argument.  
   
- **CDaoRecordView::OnInitialUpdate** appelle `CWnd::UpdateData`, qui appelle `CWnd::DoDataExchange`. Cet appel initial à `DoDataExchange` se connecte `CDaoRecordView` contrôle (indirectement) de `CDaoRecordset` créés par ClassWizard de données membres de champ. Ces membres de données ne peut pas être utilisés tant qu’après l’appel de la classe de base **CFormView::OnInitialUpdate** fonction membre.  
+ `CDaoRecordView::OnInitialUpdate` appels `CWnd::UpdateData`, qui appelle `CWnd::DoDataExchange`. Cet appel initial à `DoDataExchange` se connecte `CDaoRecordView` contrôle (indirectement) de `CDaoRecordset` créés par ClassWizard de données membres de champ. Ces membres de données ne peut pas être utilisés tant qu’après l’appel de la classe de base `CFormView::OnInitialUpdate` fonction membre.  
   
 > [!NOTE]
->  Si vous utilisez ClassWizard, l’Assistant définit un `enum` valeur `CDaoRecordView::IDD` de la déclaration de classe et dans l’initialisation d’un membre de liste pour le constructeur.  
+>  Si vous utilisez ClassWizard, l’Assistant définit un **enum** valeur `CDaoRecordView::IDD` de la déclaration de classe et dans l’initialisation d’un membre de liste pour le constructeur.  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -165,7 +165,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
  Un pointeur vers un `CDaoRecordset`-objet dérivé si l’objet a été correctement créé ; sinon une **NULL** pointeur.  
   
 ### <a name="remarks"></a>Notes  
- Vous devez substituer cette fonction membre pour construire ou obtenir un objet recordset et retournent un pointeur vers elle. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet de jeu d’enregistrements du type que vous avez spécifié avec ClassWizard et appelle son **ouvrir** membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.  
+ Vous devez substituer cette fonction membre pour construire ou obtenir un objet recordset et retournent un pointeur vers elle. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet de jeu d’enregistrements du type que vous avez spécifié avec ClassWizard et appelle son `Open` membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.  
   
  Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Une des valeurs d’ID de commande standard suivantes :  
   
 - `ID_RECORD_FIRST` Déplacer vers le premier enregistrement dans le jeu d’enregistrements.  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Si vous déplacez au-delà du dernier enregistrement du jeu d’enregistrements, la vue de l’enregistrement continue d’afficher le dernier enregistrement. Si vous déplacez vers l’arrière au-delà du premier enregistrement, la vue de l’enregistrement continue à afficher le premier enregistrement.  
   
 > [!CAUTION]
->  Appel de `OnMove` lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. Appelez la fonction de gestionnaire de mise à jour interface utilisateur appropriée : **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, ou  **OnUpdateRecordPrev** — avant correspondants opération de déplacement pour déterminer si le jeu d’enregistrements dispose de tous les enregistrements.  
+>  Appel de `OnMove` lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. Appelez la fonction de gestionnaire de mise à jour interface utilisateur appropriée : `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, ou `OnUpdateRecordPrev` — avant correspondants opération de déplacement pour déterminer si le jeu d’enregistrements dispose de tous les enregistrements.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CFormView, classe](../../mfc/reference/cformview-class.md)   

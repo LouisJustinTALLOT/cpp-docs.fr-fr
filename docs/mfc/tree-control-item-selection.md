@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb08fcbb1bd77cc80fdbe014d8c9e8a0851254d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc533046695db409067ff603e30cedbe11ad5ca4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385896"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953555"
 ---
 # <a name="tree-control-item-selection"></a>Sélection d’éléments de contrôle d’arborescence
-Lorsque la sélection passe d’un élément à un autre, un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) et [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) messages de notification. Ces deux messages contiennent une valeur qui spécifie si la modification est le résultat d’un clic de souris ou une combinaison de touches. Les notifications concernent également plus d’informations sur l’élément qui est activé à la sélection et l’élément qui perd la sélection. Vous pouvez utiliser ces informations pour définir les attributs d’élément qui dépendent de l’état de sélection de l’élément. Retour de **TRUE** en réponse à **TVN_SELCHANGING** empêche la sélection à partir de la modification ; retour **FALSE** permet la modification.  
+Lorsque la sélection passe d’un élément à un autre, un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) et [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) messages de notification. Ces deux messages contiennent une valeur qui spécifie si la modification est le résultat d’un clic de souris ou une combinaison de touches. Les notifications concernent également plus d’informations sur l’élément qui est activé à la sélection et l’élément qui perd la sélection. Vous pouvez utiliser ces informations pour définir les attributs d’élément qui dépendent de l’état de sélection de l’élément. Retour de **TRUE** en réponse à `TVN_SELCHANGING` empêche la sélection à partir de la modification ; retour **FALSE** permet la modification.  
   
  Une application peut modifier la sélection en appelant le [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) fonction membre.  
   

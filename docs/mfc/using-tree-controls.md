@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384867"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954593"
 ---
 # <a name="using-tree-controls"></a>Utilisation de contrôles d’arborescence
 L’utilisation typique d’un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) suit le modèle suivant :  
@@ -31,7 +31,7 @@ L’utilisation typique d’un contrôle d’arborescence ([CTreeCtrl](../mfc/re
   
 -   Placer les données dans le contrôle en appelant le `CTreeCtrl`de [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) fonction une fois pour chaque élément de données. `InsertItem` Retourne un handle vers l’élément que vous pouvez utiliser pour faire plus tard, par exemple quand Ajout d’éléments enfants. Est judicieux pour initialiser les données `OnInitDialog` (pour les contrôles dans les boîtes de dialogue) ou `OnInitialUpdate` (pour les vues).  
   
--   Lorsque l’utilisateur interagit avec le contrôle, il envoie différents messages de notification. Vous pouvez spécifier une fonction pour gérer chacun des messages que vous souhaitez gérer en ajoutant un **ON_NOTIFY_REFLECT** macro dans la table des messages de la fenêtre du contrôle ou en ajoutant un `ON_NOTIFY` (macro) à la table des messages de la fenêtre parente. Consultez [Messages de Notification de contrôle d’arborescence](../mfc/tree-control-notification-messages.md) plus loin dans cette rubrique pour obtenir la liste des notifications possibles.  
+-   Lorsque l’utilisateur interagit avec le contrôle, il envoie différents messages de notification. Vous pouvez spécifier une fonction pour gérer chacun des messages que vous souhaitez gérer en ajoutant une macro ON_NOTIFY_REFLECT à la table dans la table des messages de la fenêtre du contrôle ou en ajoutant une macro ON_NOTIFY à la table des messages de la fenêtre parente. Consultez [Messages de Notification de contrôle d’arborescence](../mfc/tree-control-notification-messages.md) plus loin dans cette rubrique pour obtenir la liste des notifications possibles.  
   
 -   Appelez les diverses fonctions de jeu de membres pour définir des valeurs pour le contrôle. Les modifications que vous pouvez apporter incluent la définition de la mise en retrait et la modification du texte, image ou associés liées un élément de données.  
   

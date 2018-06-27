@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366712"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951554"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (classe)
 Fournit les fonctionnalités d'une boîte de dialogue non modale Windows dans une barre de contrôles.  
@@ -53,7 +53,7 @@ class CDialogBar : public CControlBar
 ## <a name="remarks"></a>Notes  
  Une barre de boîte de dialogue ressemble à une boîte de dialogue car elle contient des contrôles Windows standard que l’utilisateur peut passer. Un autre similarité est que vous créez un modèle de boîte de dialogue pour représenter la barre de boîte de dialogue.  
   
- Création et utilisation d’une barre de boîte de dialogue sont similaire à la création et utilisation d’un `CFormView` objet. Tout d’abord, utilisez le [éditeur de boîte de dialogue](../../windows/dialog-editor.md) pour définir un modèle de boîte de dialogue avec le style **WS_CHILD** et aucun autre style. Le modèle ne doit pas avoir le style **WS_VISIBLE**. Dans votre code d’application, appelez le constructeur pour construire le `CDialogBar` de l’objet, puis appelez **créer** pour créer la fenêtre de la barre de boîte de dialogue et l’attacher à la `CDialogBar` objet.  
+ Création et utilisation d’une barre de boîte de dialogue sont similaire à la création et utilisation d’un `CFormView` objet. Tout d’abord, utilisez le [éditeur de boîte de dialogue](../../windows/dialog-editor.md) pour définir un modèle de boîte de dialogue avec le style **WS_CHILD** et aucun autre style. Le modèle ne doit pas avoir le style **WS_VISIBLE**. Dans votre code d’application, appelez le constructeur pour construire le `CDialogBar` de l’objet, puis appelez `Create` pour créer la fenêtre de la barre de boîte de dialogue et l’attacher à la `CDialogBar` objet.  
   
  Pour plus d’informations sur `CDialogBar`, consultez l’article [barres de boîte de dialogue](../../mfc/dialog-bars.md) et [Technical Note 31](../../mfc/tn031-control-bars.md), barres de contrôles.  
   
@@ -71,7 +71,7 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Un pointeur vers le parent `CWnd` objet.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Un pointeur vers le nom de la `CDialogBar` modèle de ressource de boîte de dialogue de l’objet.  
   
- `nStyle`  
+ *nStyle*  
  Le style de la barre d’outils. Styles de barre d’outils supplémentaires pris en charge sont :  
   
-- `CBRS_TOP` Barre de contrôle est en haut de la fenêtre frame.  
+- **CBRS_TOP** barre de contrôle est en haut de la fenêtre frame.  
   
-- `CBRS_BOTTOM` Barre de contrôle est en bas de la fenêtre frame.  
+- **CBRS_BOTTOM** barre de contrôle est en bas de la fenêtre frame.  
   
-- `CBRS_NOALIGN` Barre de contrôle n’est pas repositionné lorsque le parent est redimensionné.  
+- **CBRS_NOALIGN** barre de contrôle n’est pas repositionné lorsque le parent est redimensionné.  
   
-- `CBRS_TOOLTIPS` Barre de contrôle affiche des info-bulles.  
+- **CBRS_TOOLTIPS** barre de contrôle affiche des info-bulles.  
   
 - **CBRS_SIZE_DYNAMIC** barre de contrôle est dynamique.  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** barre de contrôle est flottant.  
   
-- `CBRS_FLYBY` Barre d’état affiche des informations sur le bouton.  
+- **CBRS_FLYBY** barre d’état affiche des informations sur le bouton.  
   
 - **CBRS_HIDE_INPLACE** barre de contrôle n’est pas affichée à l’utilisateur.  
   
- `nID`  
+ *nID*  
  L’ID de contrôle de la barre de boîte de dialogue.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  L’ID de ressource de la `CDialogBar` modèle de boîte de dialogue de l’objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Si vous spécifiez la `CBRS_TOP` ou `CBRS_BOTTOM` style d’alignement, la largeur de la barre de boîte de dialogue est celle de la fenêtre frame et sa hauteur est celle de la ressource spécifiée par `nIDTemplate`. Si vous spécifiez la `CBRS_LEFT` ou `CBRS_RIGHT` style d’alignement, hauteur de la barre de boîte de dialogue est celle de la fenêtre frame et sa largeur est celle de la ressource spécifiée par `nIDTemplate`.  
+ Si vous spécifiez la **CBRS_TOP** ou **CBRS_BOTTOM** style d’alignement, la largeur de la barre de boîte de dialogue est celle de la fenêtre frame et sa hauteur est celle de la ressource spécifiée par *nIDTemplate*. Si vous spécifiez la **CBRS_LEFT** ou **CBRS_RIGHT** style d’alignement, hauteur de la barre de boîte de dialogue est celle de la fenêtre frame et sa largeur est celle de la ressource spécifiée par *nIDTemplate*.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  

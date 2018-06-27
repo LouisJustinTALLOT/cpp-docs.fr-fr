@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255767"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955243"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (classe)
 Encapsule la boîte de dialogue commune qui est utilisée pour le fichier ouvert ou opérations d’enregistrement.  
@@ -248,7 +248,7 @@ class CFileDialog : public CCommonDialog
   
  Vous pouvez utiliser `CFileDialog` en l’état avec le constructeur fourni, ou vous pouvez dériver votre propre classe de boîte de dialogue de `CFileDialog` et écrire un constructeur pour l’adapter à vos besoins. Dans les deux cas, ces boîtes de dialogue seront comporte comme des boîtes de dialogue MFC standard, car ils sont dérivés de la [CCommonDialog classe](../../mfc/reference/ccommondialog-class.md). `CFileDialog` s’appuie sur le COMMDLG. Fichier DLL qui est inclus dans Windows.  
   
- L’apparence et la fonctionnalité de le `CFileDialog` avec Windows Vista ou versions ultérieures diffèrent des versions antérieures de Windows. La valeur par défaut `CFileDialog` utilise automatiquement le nouveau Windows Vista ou un style ultérieure sans modification du code si un programme est compilé et exécuté sous Windows Vista ou version ultérieure. Utilisez la `bVistaStyle` dans le constructeur de remplacer manuellement cette mise à jour automatique. L’exception à la mise à jour automatique est boîtes de dialogue personnalisées. Ils ne seront pas convertis vers le nouveau style. Pour plus d’informations sur le constructeur, consultez [CFileDialog::CFileDialog](#cfiledialog).  
+ L’apparence et la fonctionnalité de le `CFileDialog` avec Windows Vista ou versions ultérieures diffèrent des versions antérieures de Windows. La valeur par défaut `CFileDialog` utilise automatiquement le nouveau Windows Vista ou un style ultérieure sans modification du code si un programme est compilé et exécuté sous Windows Vista ou version ultérieure. Utilisez le *bVistaStyle* dans le constructeur de remplacer manuellement cette mise à jour automatique. L’exception à la mise à jour automatique est boîtes de dialogue personnalisées. Ils ne seront pas convertis vers le nouveau style. Pour plus d’informations sur le constructeur, consultez [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
 >  Le système de contrôle de code diffère dans Windows Vista ou version ultérieure à partir de versions antérieures de Windows, lorsque vous utilisez un `CFileDialog`. Vous devez mettre à jour toutes les références à `CFileDialog` contrôles dans le code avant que vous pouvez déplacer votre projet à partir d’une version antérieure de Windows.  
@@ -305,7 +305,7 @@ class CFileDialog : public CCommonDialog
   
  `CFileDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="addcheckbutton"></a>  CFileDialog::AddCheckButton  
@@ -319,13 +319,13 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la coche à ajouter.  
   
- `strLabel`  
+ *strLabel*  
  Nom du bouton de vérification.  
   
- `bChecked`  
+ *bChecked*  
  Valeur booléenne qui indique l’état actuel de la coche. `TRUE` Si elle est activée ; `FALSE` dans le cas contraire  
   
 ### <a name="remarks"></a>Notes  
@@ -338,7 +338,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la zone de liste déroulante à ajouter.  
   
 ### <a name="remarks"></a>Notes  
@@ -354,13 +354,13 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID du contrôle conteneur à ajouter l’élément.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément.  
   
- `strLabel`  
+ *strLabel*  
  Texte de l’élément.  
   
 ### <a name="remarks"></a>Notes  
@@ -375,10 +375,10 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la zone d’édition à ajouter.  
   
- `strText`  
+ *%{strText/}*  
  Nom de la zone d’édition.  
   
 ### <a name="remarks"></a>Notes  
@@ -393,10 +393,10 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID du menu à ajouter.  
   
- `strLabel`  
+ *strLabel*  
  Le nom du menu.  
   
 ### <a name="remarks"></a>Notes  
@@ -416,13 +416,13 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFolder`  
+ *lpszFolder*  
  Un chemin d’accès au dossier à disposition à l’utilisateur. Cela peut uniquement être un dossier.  
   
- `fdap`  
+ *fdap*  
  Spécifie où le dossier est placé dans la liste.  
   
- `psi`  
+ *PSI*  
  Pointeur vers une instance de IShellItem qui représente le dossier à disposition à l’utilisateur. Cela peut uniquement être un dossier.  
   
 ### <a name="remarks"></a>Notes  
@@ -437,10 +437,10 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du bouton Ajouter.  
   
- `strLabel`  
+ *strLabel*  
  Le nom du bouton.  
   
 ### <a name="remarks"></a>Notes  
@@ -453,7 +453,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID du groupe de bouton d’option à ajouter.  
   
 ### <a name="remarks"></a>Notes  
@@ -466,7 +466,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  Ajouter de l’ID du séparateur.  
   
 ### <a name="remarks"></a>Notes  
@@ -481,10 +481,10 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID du texte à ajouter.  
   
- `strText`  
+ *%{strText/}*  
  Le nom du texte.  
   
 ### <a name="remarks"></a>Notes  
@@ -522,44 +522,44 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  Le paramètre qui spécifie le type de boîte de dialogue pour créer. Affectez-lui la valeur `TRUE` pour construire un **ouvrir le fichier** boîte de dialogue. Affectez-lui la valeur `FALSE` pour construire un **enregistrer le fichier sous** boîte de dialogue.  
   
- [in] `lpszDefExt`  
- Extension de nom de fichier par défaut. Si l’utilisateur n’inclut pas d’extension connue (celui qui possède une association sur l’ordinateur de l’utilisateur) dans la zone Nom de fichier, l’extension spécifiée par `lpszDefExt` est automatiquement ajouté au nom de fichier. Si ce paramètre est `NULL`, aucune extension n’est ajoutée.  
+ [in] *lpszDefExt*  
+ Extension de nom de fichier par défaut. Si l’utilisateur n’inclut pas d’extension connue (celui qui possède une association sur l’ordinateur de l’utilisateur) dans la zone Nom de fichier, l’extension spécifiée par *lpszDefExt* est automatiquement ajouté au nom de fichier. Si ce paramètre est `NULL`, aucune extension n’est ajoutée.  
   
- [in] `lpszFileName`  
+ [in] *lpszFileName*  
  Le nom de fichier initial qui apparaît dans la zone Nom de fichier. Si `NULL`, aucun nom de fichier initial s’affiche.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Une combinaison d’un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser la boîte de dialogue. Pour obtenir une description de ces indicateurs, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure dans le SDK Windows. Si vous modifiez le `m_ofn.Flags` membre de la structure, utilisez un opérateur de bits OR dans vos modifications de conserver le comportement par défaut.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Une série de paires de chaînes qui spécifient des filtres que vous pouvez appliquer au fichier. Si vous spécifiez des filtres de fichiers, seuls les fichiers qui correspondent aux critères de filtre seront affiche dans la liste de fichiers. Consultez la section Notes pour plus d’informations sur l’utilisation des filtres de fichier.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue de fichier.  
   
- [in] `dwSize`  
+ [in] *dwSize*  
  La taille de la `OPENFILENAME` structure. Cette valeur dépend de la version du système d’exploitation. MFC permet de déterminer le type approprié de la boîte de dialogue pour créer ce paramètre. La taille par défaut de 0 signifie que le code MFC déterminent la taille de la boîte de dialogue correct à utiliser en fonction de la version du système d’exploitation sur lequel le programme est exécuté.  
   
- [in] `bVistaStyle`  
+ [in] *bVistaStyle*  
  **Remarque** ce paramètre est disponible dans Visual Studio 2008 et versions ultérieures et elle va entraîner la boîte de dialogue Nouveau style à utiliser uniquement si vous exécutez dans Windows Vista ou version ultérieure.  
   
  Le paramètre qui spécifie le style de la boîte de dialogue de fichier. Affectez-lui la valeur `TRUE` à utiliser les boîtes de dialogue de fichier de style Vista nouvelle. Dans le cas contraire, l’ancien style des boîtes de dialogue servira. Consultez la section Notes pour plus d’informations en cours d’exécution sous Vista.  
   
 ### <a name="remarks"></a>Notes  
- Soit un **ouvrir le fichier** ou **enregistrer le fichier sous** boîte de dialogue est construite, selon la valeur de `bOpenFileDialog`.  
+ Soit un **ouvrir le fichier** ou **enregistrer le fichier sous** boîte de dialogue est construite, selon la valeur de *bOpenFileDialog*.  
   
- Spécification d’une extension par défaut à l’aide `lpszDefExt` peut ne pas produire le comportement que vous attendez, car il est rarement prévisibles les extensions ont des associations de fichiers sur l’ordinateur de l’utilisateur. Si vous avez besoin de davantage de contrôle sur l’ajout d’une extension par défaut, vous pouvez dériver votre propre classe de `CFileDialog`et remplacez le `CFileDialog::OnFileNameOK` méthode pour effectuer votre propre gestion de l’extension.  
+ Spécification d’une extension par défaut à l’aide *lpszDefExt* peut ne pas produire le comportement que vous attendez, car il est rarement prévisibles les extensions ont des associations de fichiers sur l’ordinateur de l’utilisateur. Si vous avez besoin de davantage de contrôle sur l’ajout d’une extension par défaut, vous pouvez dériver votre propre classe de `CFileDialog`et remplacez le `CFileDialog::OnFileNameOK` méthode pour effectuer votre propre gestion de l’extension.  
   
- Pour activer l’utilisateur de sélectionner plusieurs fichiers, définissez le `OFN_ALLOWMULTISELECT` indicateur avant d’appeler [DoModal](#domodal). Vous devez fournir votre propre tampon du nom de fichier pour stocker la liste retournée de plusieurs noms de fichiers. Cela en remplaçant `m_ofn.lpstrFile` avec un pointeur vers une mémoire tampon vous avez alloué, après avoir construit la [CFileDialog](../../mfc/reference/cfiledialog-class.md), mais avant d’appeler `DoModal`. En outre, vous devez définir `m_ofn.nMaxFile` avec le nombre de caractères dans la mémoire tampon pointée par `m_ofn.lpstrFile`. Si vous définissez le nombre maximal de fichiers à sélectionner pour `n`, la taille de mémoire tampon nécessaire est `n`*(_MAX_PATH + 1) + 1. Par exemple :  
+ Pour activer l’utilisateur de sélectionner plusieurs fichiers, définissez le `OFN_ALLOWMULTISELECT` indicateur avant d’appeler [DoModal](#domodal). Vous devez fournir votre propre tampon du nom de fichier pour stocker la liste retournée de plusieurs noms de fichiers. Cela en remplaçant `m_ofn.lpstrFile` avec un pointeur vers une mémoire tampon vous avez alloué, après avoir construit la [CFileDialog](../../mfc/reference/cfiledialog-class.md), mais avant d’appeler `DoModal`. En outre, vous devez définir `m_ofn.nMaxFile` avec le nombre de caractères dans la mémoire tampon pointée par `m_ofn.lpstrFile`. Si vous définissez le nombre maximal de fichiers à sélectionner pour `n`, la taille de mémoire tampon nécessaire est `n`*(_MAX_PATH + 1) + 1. Exemple :  
   
  [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
   
  Pour activer l’utilisateur de redimensionner une boîte de dialogue Explorer-style à l’aide de la souris ou du clavier, définissez la `OFN_ENABLESIZING` indicateur. Définition de cet indicateur est uniquement nécessaire si vous fournissez une procédure de raccordement ou d’un modèle personnalisé. L’indicateur fonctionne uniquement avec une boîte de dialogue Explorer-style ; boîtes de dialogue de l’ancienne ne peut pas être redimensionnés.  
   
- Le `lpszFilter` paramètre est utilisé pour déterminer le type d’un fichier doit avoir pour être affiché dans la liste des fichiers de nom de fichier. La première chaîne de la paire de chaîne décrit le filtre ; la seconde indique l’extension de nom de fichier à utiliser. Plusieurs extensions peuvent être spécifiées à l’aide d’un point-virgule (le caractère « ; ») comme délimiteur. La chaîne se termine avec deux '&#124;' caractères suivis d’un `NULL` caractère. Vous pouvez également utiliser un [CString](../../atl-mfc-shared/using-cstring.md) objet pour ce paramètre.  
+ Le *lpszFilter* paramètre est utilisé pour déterminer le type d’un fichier doit avoir pour être affiché dans la liste des fichiers de nom de fichier. La première chaîne de la paire de chaîne décrit le filtre ; la seconde indique l’extension de nom de fichier à utiliser. Plusieurs extensions peuvent être spécifiées à l’aide d’un point-virgule (le caractère « ; ») comme délimiteur. La chaîne se termine avec deux '&#124;' caractères suivis d’un `NULL` caractère. Vous pouvez également utiliser un [CString](../../atl-mfc-shared/using-cstring.md) objet pour ce paramètre.  
   
  Par exemple, [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] permet aux utilisateurs d’ouvrir des fichiers qui ont des extensions .xlc (graphique) ou .xls (feuille de calcul), entre autres. Le filtre pour Excel peut être écrite en tant que :  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  Toutefois, si vous envisagez d’utiliser cette chaîne directement mettre à jour le `OPENFILENAME` structure, vous devez délimiter vos chaînes avec le caractère null, « \0 », au lieu des barres verticales («&#124;»).  
   
- Le `bVistaStyle` paramètre s’applique uniquement lors de l’exécution sous Windows Vista ou version ultérieure. Dans les versions antérieures de Windows, ce paramètre est ignoré. Si `bVistaStyle` a la valeur `TRUE`, lorsque vous compilez un programme avec Visual Studio 2008 ou version ultérieure, le nouveau style Vista **boîte de dialogue fichier** sera utilisé. Dans le cas contraire, le style MFC précédent **boîte de dialogue fichier** sera utilisé.  
+ Le *bVistaStyle* paramètre s’applique uniquement lors de l’exécution sous Windows Vista ou version ultérieure. Dans les versions antérieures de Windows, ce paramètre est ignoré. Si *bVistaStyle* a la valeur `TRUE`, lorsque vous compilez un programme avec Visual Studio 2008 ou version ultérieure, le nouveau style Vista **boîte de dialogue fichier** sera utilisé. Dans le cas contraire, le style MFC précédent **boîte de dialogue fichier** sera utilisé.  
   
- Modèles de boîte de dialogue ne sont pas pris en charge sur les boîtes de dialogue en fonction de `bVistaStyle`  
+ Modèles de boîte de dialogue ne sont pas pris en charge sur les boîtes de dialogue en fonction de *bVistaStyle*  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFileDialog::DoModal](#domodal).  
@@ -606,7 +606,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
@@ -633,10 +633,10 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la case à cocher.  
   
- `bChecked`  
+ *bChecked*  
  L’état de la case à cocher. `TRUE` Indique activé ; `FALSE` indique est désactivée.  
   
 ### <a name="remarks"></a>Notes  
@@ -652,13 +652,13 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle conteneur.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément.  
   
- `dwState`  
+ *dwState*  
  Une référence à une variable qui reçoit un des plus de valeurs de l’énumération CDCONTROLSTATE qui indique l’état actuel du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -673,10 +673,10 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle.  
   
- `dwState`  
+ *dwState*  
  Une référence à une variable qui reçoit une ou plusieurs valeurs de l’énumération CDCONTROLSTATE qui indique l’état actuel du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -691,10 +691,10 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la zone d’édition.  
   
- `strText`  
+ *%{strText/}*  
  Valeur du texte.  
   
 ### <a name="remarks"></a>Notes  
@@ -773,7 +773,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  Le pointeur vers l’objet COM interne pour le `CFileDialog`. Il vous incombe de libérer ce pointeur en conséquence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a `bVistaStyle` la valeur `true`. Si vous utilisez cette fonction lorsque `bVistaStyle` est `false`, elle retournera `NULL` en mode version finale et lève une assertion en mode débogage.  
+ Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a *bVistaStyle* la valeur `true`. Si vous utilisez cette fonction lorsque *bVistaStyle* est `false`, elle retournera `NULL` en mode version finale et lève une assertion en mode débogage.  
   
  Pour plus d’informations sur la `IFileDialogCustomize` l’interface, consultez [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
@@ -793,7 +793,7 @@ IFileOpenDialog* GetIFileOpenDialog();
  Le pointeur vers l’objet COM interne pour le `CFileDialog`. Il vous incombe de libérer ce pointeur en conséquence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a `bVistaStyle` la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **ouvrir** boîte de dialogue ou si `bVistaStyle` a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
+ Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a *bVistaStyle* la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **ouvrir** boîte de dialogue ou si *bVistaStyle* a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
   
  Pour plus d’informations sur la `IFileOpenDialog` l’interface, consultez [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
@@ -813,7 +813,7 @@ IFileSaveDialog* GetIFileSaveDialog();
  Le pointeur vers l’objet COM interne pour le `CFileDialog`. Il vous incombe de libérer ce pointeur en conséquence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a `bVistaStyle` la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **enregistrer** boîte de dialogue ou si `bVistaStyle` a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
+ Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a *bVistaStyle* la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **enregistrer** boîte de dialogue ou si *bVistaStyle* a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
   
  Pour plus d’informations sur la `IFileSaveDialog` l’interface, consultez [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
@@ -830,7 +830,7 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pos`  
+ *bons de commande*  
  Une référence à un **POSITION** valeur retournée par une précédente `GetNextPathName` ou `GetStartPosition` l’appel de fonction. **NULL** si la fin de la liste a été atteinte.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -924,10 +924,10 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle conteneur.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément sélectionné par l’utilisateur dans le contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -950,7 +950,7 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  ID du contrôle à masquer.  
   
 ### <a name="remarks"></a>Notes  
@@ -972,7 +972,7 @@ BOOL IsPickFoldersMode() const;
  `m_ofn` est une structure de type `OPENFILENAME`. Les données de cette structure représentent l’état actuel de la `CFileDialog`.  
   
 ### <a name="remarks"></a>Notes  
- Utiliser cette structure pour initialiser l’apparence d’un **ouvrir le fichier** ou **enregistrer le fichier sous** boîte de dialogue après avoir il construit mais avant de les afficher avec les [DoModal](#domodal) (méthode). Par exemple, vous pouvez définir le `lpstrTitle` membre `m_ofn` à la légende vous souhaitez disposer de la boîte de dialogue.  
+ Utiliser cette structure pour initialiser l’apparence d’un **ouvrir le fichier** ou **enregistrer le fichier sous** boîte de dialogue après avoir il construit mais avant de les afficher avec les [DoModal](#domodal) (méthode). Par exemple, vous pouvez définir le *lpstrTitle* membre `m_ofn` à la légende vous souhaitez disposer de la boîte de dialogue.  
   
  Avec le Windows Vista ou ultérieur style de [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` toujours correspondre à l’état de la boîte de dialogue n’est pas garantie. Il est synchronisé avec la boîte de dialogue dans les versions antérieures de Windows. Consultez [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) et [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) pour plus d’informations sur la synchronisation de la `m_ofn` structure et le `CFileDialog` état sous Windows Vista ou version ultérieure.  
   
@@ -1026,7 +1026,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1039,7 +1039,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du bouton.  
   
 ### <a name="remarks"></a>Notes  
@@ -1054,10 +1054,10 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la case à cocher.  
   
- `bChecked`  
+ *bChecked*  
  Checked ou unchecked.  
   
 ### <a name="remarks"></a>Notes  
@@ -1070,7 +1070,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1139,10 +1139,10 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle conteneur.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément.  
   
 ### <a name="remarks"></a>Notes  
@@ -1161,17 +1161,17 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  ID de la zone de liste ou zone de liste déroulante dans laquelle la sélection s’est produite.  
   
- `iCurSel`  
+ *iCurSel*  
  L’index de la sélection actuelle.  
   
- `nCode`  
+ *nCode*  
  Le code de notification de contrôle. Ce paramètre doit avoir une des valeurs suivantes :  
   
-- **CD_LBSELCHANGE** spécifie `iCurSel` est l’élément sélectionné dans une zone de liste à sélection unique.  
+- **CD_LBSELCHANGE** spécifie *iCurSel* est l’élément sélectionné dans une zone de liste à sélection unique.  
   
-- **CD_LBSELSUB** Spécifie que `iCurSel` n’est plus sélectionné dans une zone de liste à sélection multiple.  
+- **CD_LBSELSUB** Spécifie que *iCurSel* n’est plus sélectionné dans une zone de liste à sélection multiple.  
   
-- **CD_LBSELADD** Spécifie que `iCurSel` est sélectionné dans une zone de liste à sélection multiple.  
+- **CD_LBSELADD** Spécifie que *iCurSel* est sélectionné dans une zone de liste à sélection multiple.  
   
 - **CD_LBSELNOITEMS** Spécifie qu’aucune sélection n’existe dans une zone de liste à sélection multiple.  
   
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPathName`  
+ *lpszPathName*  
  Le chemin d’accès du fichier sur lequel la violation de partage s’est produite.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1225,10 +1225,10 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID du contrôle conteneur à supprimer l’élément.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément.  
   
 ### <a name="remarks"></a>Notes  
@@ -1243,10 +1243,10 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la case à cocher.  
   
- `bChecked`  
+ *bChecked*  
  L’état de la case à cocher. `TRUE` Indique activé ; `FALSE` indique désactivé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1262,13 +1262,13 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle conteneur.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément.  
   
- `dwState`  
+ *dwState*  
  Une ou plusieurs valeurs de l’énumération CDCONTROLSTATE qui indiquent le nouvel état du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1284,13 +1284,13 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle conteneur.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément.  
   
- `strLabel`  
+ *strLabel*  
  Texte de l’élément.  
   
 ### <a name="remarks"></a>Notes  
@@ -1305,10 +1305,10 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle.  
   
- `strLabel`  
+ *strLabel*  
  Le nom du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1323,10 +1323,10 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle.  
   
- `dwState`  
+ *dwState*  
  Une ou plusieurs valeurs de l’énumération CDCONTROLSTATE qui indiquent l’état actuel du contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1346,10 +1346,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  L’ID du contrôle pour lequel définir le texte.  
   
- [in] `lpsz`  
+ [in] *lpsz*  
  Pointeur vers la chaîne qui contient le texte à définir pour le contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1365,7 +1365,7 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpsz`  
+ *lpsz*  
  Un pointeur vers une chaîne contenant l’extension par défaut à utiliser pour l’objet de boîte de dialogue. Cette chaîne ne doit pas contenir un point (.).  
   
 ### <a name="remarks"></a>Notes  
@@ -1381,10 +1381,10 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID de la zone d’édition.  
   
- `strText`  
+ *%{strText/}*  
  Valeur du texte.  
   
 ### <a name="remarks"></a>Notes  
@@ -1397,7 +1397,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPropList`  
+ *lpszPropList*  
  Liste de propriétés prédéfinies séparées par un « ; ». Pour obtenir la liste des indicateurs, consultez la `Flags` section de [OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
 ### <a name="remarks"></a>Notes  
@@ -1412,10 +1412,10 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du contrôle conteneur.  
   
- `dwIDItem`  
+ *dwIDItem*  
  L’ID de l’élément sélectionné par l’utilisateur dans le contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1435,16 +1435,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nWin3ID`  
+ [in] *nWin3ID*  
  Contient le numéro d’ID de la ressource de modèle pour l’Explorateur de non- `CFileDialog` objet. Ce modèle est uniquement utilisé sur Windows NT 3.51, ou lorsque le style OFN_EXPLORER n’est pas présent.  
   
- [in] `nWin4ID`  
+ [in] *nWin4ID*  
  Contient le numéro d’ID de la ressource de modèle pour l’Explorateur de `CFileDialog` objet. Ce modèle est utilisé uniquement sur [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] et versions ultérieures, Windows 95 et versions ultérieures, ou lorsque le style OFN_EXPLORER est présent.  
   
- [in] `lpWin3ID`  
+ [in] *lpWin3ID*  
  Contient le nom de la ressource de modèle pour l’Explorateur de non- `CFileDialog` objet. Ce modèle est uniquement utilisé sur Windows NT 3.51, ou lorsque le style OFN_EXPLORER n’est pas présent.  
   
- [in] `lpWin4ID`  
+ [in] *lpWin4ID*  
  Contient le nom de la ressource de modèle de l’Explorateur `CFileDialog` objet. Ce modèle est utilisé uniquement sur [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] et versions ultérieures, Windows 95 et versions ultérieures, ou lorsque le style OFN_EXPLORER est présent.  
   
 ### <a name="remarks"></a>Notes  
@@ -1463,10 +1463,10 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwIDCtl`  
+ *dwIDCtl*  
  L’ID du groupe visual.  
   
- `strLabel`  
+ *strLabel*  
  Le nom du groupe.  
   
 ### <a name="remarks"></a>Notes  

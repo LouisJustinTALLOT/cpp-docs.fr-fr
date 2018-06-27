@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369214"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952396"
 ---
 # <a name="cdaoexception-class"></a>Classe de CDaoException
 Représente une condition d'exception résultant des classes de base de données MFC basées sur des objets d'accès aux données (DAO).  
@@ -88,7 +88,7 @@ class CDaoException : public CException
   
  `CDaoException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index des informations d’erreur dans la collection d’erreurs du moteur de base de données, pour la recherche par index.  
   
 ### <a name="remarks"></a>Notes  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |CDaoErrorInfo membre|Information|Signification|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|Code d'erreur|Le code d’erreur DAO|  
+|`m_lErrorCode`|Code d'erreur|Le code d’erreur DAO|  
 |`m_strSource`|Source|Le nom de l’objet ou l’application qui a généré l’erreur|  
 |`m_strDescription`|Description|Une chaîne descriptive associée à l’erreur|  
 |`m_strHelpFile`|Fichier d’aide|Un chemin d’accès à un fichier d’aide Windows dans lequel l’utilisateur peut obtenir des informations sur le problème|  
-|**m_lHelpContext**|Contexte d’aide|L’ID de contexte pour une rubrique dans le fichier d’aide de DAO|  
+|`m_lHelpContext`|Contexte d’aide|L’ID de contexte pour une rubrique dans le fichier d’aide de DAO|  
   
  Pour plus d’informations sur les informations contenues dans le `CDaoErrorInfo` d’objets, consultez la [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure.  
   

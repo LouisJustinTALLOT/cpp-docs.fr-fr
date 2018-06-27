@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355602"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952542"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject, classe
 Classe de base pour tous les objets d'animation.  
@@ -129,7 +129,7 @@ class CAnimationBaseObject : public CObject;
   
  `CAnimationBaseObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject :: ~ CAnimationBaseObject  
@@ -149,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un plan conceptuel.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Avec la valeur FALSE, cette méthode ajoute uniquement les transitions qui ne dépendent pas des images clés.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -175,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `nObjectID`  
+ *nObjectID*  
  Spécifie l’ID d’objet.  
   
- `dwUserData`  
+ *dwUserData*  
  Données utilisateur, qui peuvent être associées à l’objet d’animation et récupérées ultérieurement lors de l’exécution.  
   
 ### <a name="remarks"></a>Notes  
@@ -195,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bAutodestroy`  
+ *bAutodestroy*  
  Spécifie s’il faut détruire automatiquement les objets de transition ou juste les supprimer de la liste associée.  
   
 ### <a name="remarks"></a>Notes  
@@ -209,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pVariable`  
+ *pVariable*  
  Pointeur vers la variable de l’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -251,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pController`  
+ *pController*  
  Pointeur vers un contrôleur parent.  
   
- `bEnable`  
+ *bActivez*  
  Spécifie s’il faut activer ou désactiver l’événement de modification de valeur d’entier.  
   
 ### <a name="remarks"></a>Notes  
@@ -270,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pController`  
+ *pController*  
  Pointeur vers un contrôleur parent.  
   
- `bEnable`  
+ *bActivez*  
  Spécifie s’il faut activer ou désactiver l’événement de modification de valeur.  
   
 ### <a name="remarks"></a>Notes  
@@ -289,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lst`  
+ *lst*  
  Une liste qui doit être remplie avec les variables d’animation contenues dans un objet d’animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -390,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bValue`  
+ *bValue*  
  Spécifie l’indicateur de destruction automatique.  
   
 ### <a name="remarks"></a>Notes  
@@ -406,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nObjectID`  
+ *nObjectID*  
  Spécifie le nouvel ID d’objet.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie le nouvel ID de groupe.  
   
 ### <a name="remarks"></a>Notes  
@@ -433,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwUserData`  
+ *dwUserData*  
  Spécifie les données personnalisées.  
   
 ### <a name="remarks"></a>Notes  

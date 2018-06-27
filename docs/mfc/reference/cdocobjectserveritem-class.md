@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367046"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956626"
 ---
 # <a name="cdocobjectserveritem-class"></a>Classe de CDocObjectServerItem
 Implémente les verbes de serveur OLE , en particulier pour les serveurs DocObject.  
@@ -79,7 +79,7 @@ class CDocObjectServerItem : public COleServerItem
   
  `CDocObjectServerItem`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdocob.h  
   
 ##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pServerDoc`  
+ *pServerDoc*  
  Pointeur vers le document qui contiendra le nouvel élément DocObject.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Indique si l’objet peut être supprimé lors de la libération d’un lien vers celui-ci. L’argument de la valeur **FALSE** si le `CDocObjectServerItem` objet fait partie intégrante de données de votre document. Affectez-lui la valeur **TRUE** si l’objet est une structure secondaire utilisée pour identifier une plage de données de votre document qui peuvent être supprimées par l’infrastructure.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

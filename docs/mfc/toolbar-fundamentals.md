@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383972"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951635"
 ---
 # <a name="toolbar-fundamentals"></a>Notions de base de barre d'outils
 Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter une barre d’outils par défaut pour votre application en sélectionnant une option dans l’Assistant Application. Les sujets abordés sont les suivantes :  
@@ -56,11 +56,11 @@ Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter 
 -   Gère la barre d’outils, et notamment la possibilité pour ancrer ou faire flotter.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> La barre d’outils dans le Code  
- La barre d’outils est un [CToolBar](../mfc/reference/ctoolbar-class.md) objet déclaré comme un membre de données de votre application **CMainFrame** classe. En d’autres termes, l’objet de barre d’outils est incorporé dans l’objet de fenêtre frame principale. Cela signifie que MFC crée la barre d’outils lorsqu’il crée la fenêtre frame et détruit la barre d’outils lorsqu’il détruit la fenêtre frame. La déclaration de classe partielle suivante, pour une application d’interface (multidocument MDI) document plusieurs, présente les membres de données pour une barre d’outils incorporée et une barre d’état incorporée. Il montre également la substitution de la `OnCreate` fonction membre.  
+ La barre d’outils est un [CToolBar](../mfc/reference/ctoolbar-class.md) objet déclaré comme un membre de données de votre application `CMainFrame` classe. En d’autres termes, l’objet de barre d’outils est incorporé dans l’objet de fenêtre frame principale. Cela signifie que MFC crée la barre d’outils lorsqu’il crée la fenêtre frame et détruit la barre d’outils lorsqu’il détruit la fenêtre frame. La déclaration de classe partielle suivante, pour une application d’interface (multidocument MDI) document plusieurs, présente les membres de données pour une barre d’outils incorporée et une barre d’état incorporée. Il montre également la substitution de la `OnCreate` fonction membre.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Création de la barre d’outils se produit dans **CMainFrame::OnCreate**. MFC appelle [OnCreate](../mfc/reference/cwnd-class.md#oncreate) après la création de la fenêtre pour le frame mais avant de devenir visible. La valeur par défaut `OnCreate` que l’Assistant Application génère d’effectue les tâches suivantes de la barre d’outils :  
+ Création de la barre d’outils se produit dans `CMainFrame::OnCreate`. MFC appelle [OnCreate](../mfc/reference/cwnd-class.md#oncreate) après la création de la fenêtre pour le frame mais avant de devenir visible. La valeur par défaut `OnCreate` que l’Assistant Application génère d’effectue les tâches suivantes de la barre d’outils :  
   
 1.  Appelle le `CToolBar` l’objet [créer](../mfc/reference/ctoolbar-class.md#create) fonction membre à créer sous-jacent [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet.  
   
@@ -69,7 +69,7 @@ Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter 
 3.  Appelle des fonctions permettant d’ancrage flottante et info-bulles. Pour plus d’informations sur ces appels, consultez l’article [ancrées et flottantes les barres d’outils](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  L’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) comprend des illustrations des anciennes et nouvelles barres d’outils MFC. Les barres d’outils qui utilisent **COldToolbar** nécessitent des appels à l’étape 2 pour `LoadBitmap` (au lieu de `LoadToolBar`) et `SetButtons`. Les nouvelles barres d’outils nécessitent des appels à `LoadToolBar`.  
+>  L’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) comprend des illustrations des anciennes et nouvelles barres d’outils MFC. Les barres d’outils qui utilisent `COldToolbar` nécessitent des appels à l’étape 2 pour `LoadBitmap` (au lieu de `LoadToolBar`) et `SetButtons`. Les nouvelles barres d’outils nécessitent des appels à `LoadToolBar`.  
   
  L’ancrage, flottant et outil conseils appels sont facultatifs. Vous pouvez supprimer des lignes à partir de `OnCreate` si vous préférez. Le résultat est une barre d’outils reste fixe, flottante ou re-Impossible d’et ne peut pas afficher les info-bulles.  
   

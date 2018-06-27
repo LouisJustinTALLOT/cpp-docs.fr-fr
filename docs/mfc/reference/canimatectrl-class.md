@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356394"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952324"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (classe)
 Fournit les fonctionnalités du contrôle commun d'animation Windows.  
@@ -105,7 +105,7 @@ class CAnimateCtrl : public CWnd
   
  `CAnimateCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de styles décrits dans la section Notes ci-dessous et les styles de contrôle animation décrites dans windows [Styles de contrôle Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) dans le Kit de développement logiciel Windows.  
   
- `rect`  
+ *Rect*  
  Spécifie la position et la taille d' un contrôle animation. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
- `pParentWnd`  
- Spécifie les fenêtre parente d' un contrôle animation généralement un `CDialog`. Il ne doit pas être **NULL.**  
+ *pParentWnd*  
+ Spécifie les fenêtre parente d' un contrôle animation généralement un `CDialog`. Il ne doit pas être **NULL**.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de l’animation  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CAnimateCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle de l’animation et l’attache à le `CAnimateCtrl` objet.  
+ Vous construisez un `CAnimateCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle de l’animation et l’attache à le `CAnimateCtrl` objet.  
   
  Appliquez ce qui suit [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) à un contrôle de l’animation.  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED** rarement  
   
- Si vous souhaitez utiliser les styles étendus windows avec votre contrôle animation, appelez [CreateEx](#createex) au lieu de **créer**.  
+ Si vous souhaitez utiliser les styles étendus windows avec votre contrôle animation, appelez [CreateEx](#createex) au lieu de `Create`.  
   
  Outre les styles de fenêtre répertoriés ci-dessus, il pouvez que vous souhaitez appliquer une ou plusieurs des styles de contrôle animation à un contrôle animation. Consultez le Kit de développement logiciel Windows pour plus d’informations sur [styles de contrôle animation](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwExStyle`  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ *dwExStyle*  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de la fenêtre et de styles de contrôle animation décrites dans [Styles de contrôle Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) dans le Kit de développement logiciel Windows.  
   
- `rect`  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de `pParentWnd`.  
+ *Rect*  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. du contrôle  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFileName`  
+ *lpszFileName*  
  A `CString` objet ou un pointeur vers une chaîne se terminant par null qui contient le nom du fichier AVI ou le nom d’une ressource AVI. Si ce paramètre est **NULL**, le système ferme le clip AVI qui a été ouverte précédemment pour le contrôle de l’animation, le cas échéant.  
   
- `nID`  
+ *nID*  
  L’identificateur de ressource AVI. Si ce paramètre est **NULL**, le système ferme le clip AVI qui a été ouverte précédemment pour le contrôle de l’animation, le cas échéant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nFrom`  
+ *ndu registre*  
  Index de base zéro de l’image où la lecture commence. Valeur doit être inférieure à 65 536. Valeur 0 signifie commence par le premier frame du clip AVI.  
   
- `nTo`  
+ *Pas*  
  Index de base zéro de l’image où lecture se termine. Valeur doit être inférieure à 65 536. Une valeur de - 1 signifie la dernière image du clip AVI.  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nTo`  
+ *Pas*  
  Index de base zéro de l’image à afficher. Valeur doit être inférieure à 65 536. La valeur 0 permet d’afficher le premier frame du clip AVI. La valeur -1 permet d’afficher la dernière image du clip AVI.  
   
 ### <a name="return-value"></a>Valeur de retour  

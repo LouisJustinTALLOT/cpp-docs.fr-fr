@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371541"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953399"
 ---
 # <a name="ceditview-class"></a>Classe de CEditView
 Type de classe d'affichage qui fournit les fonctionnalités d'un contrôle d'édition Windows et peut être utilisé pour implémenter des fonctionnalités d'éditeur de texte simples.  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|Style par défaut pour les objets de type **CEditView.**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|Style par défaut pour les objets de type `CEditView`.|  
   
 ## <a name="remarks"></a>Notes  
  La `CEditView` classe fournit les fonctions supplémentaires suivantes :  
@@ -149,7 +149,7 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="ceditview"></a>  CEditView::CEditView  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Après avoir construit l’objet, vous devez appeler la [CWnd::Create](../../mfc/reference/cwnd-class.md#create) fonction avant que le contrôle d’édition est utilisé. Si vous dérivez une classe de `CEditView` et l’ajouter au modèle en utilisant `CWinApp::AddDocTemplate`, le framework appelle deux ce constructeur et la **créer** (fonction).  
+ Après avoir construit l’objet, vous devez appeler la [CWnd::Create](../../mfc/reference/cwnd-class.md#create) fonction avant que le contrôle d’édition est utilisé. Si vous dérivez une classe de `CEditView` et l’ajouter au modèle en utilisant `CWinApp::AddDocTemplate`, le framework appelle deux ce constructeur et le `Create` (fonction).  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  Contient le style par défaut de la `CEditView` objet.  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Passer ce membre statique en tant que le `dwStyle` paramètre de la **créer** fonction pour obtenir le style par défaut pour le `CEditView` objet.  
+ Passer ce membre statique en tant que le `dwStyle` paramètre de la `Create` fonction pour obtenir le style par défaut pour le `CEditView` objet.  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  Appelez le `FindText` fonction pour rechercher la `CEditView` mémoire tampon de texte de l’objet.  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Le texte à rechercher.  
   
- `bNext`  
+ *bsuivant*  
  Spécifie la direction de la recherche. Si **TRUE**, la direction de recherche est vers la fin de la mémoire tampon. Si **FALSE**, le sens de la recherche est vers le début de la mémoire tampon.  
   
- `bCase`  
+ *bCase*  
  Spécifie si la recherche respecte la casse. Si **TRUE**, la recherche respecte la casse. Si **FALSE**, la recherche n’est pas la casse.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le texte recherché est trouvé ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction recherche le texte dans la mémoire tampon pour le texte spécifié par `lpszFind`, en commençant à la sélection actuelle, dans le sens spécifié par `bNext`et avec respect de la casse spécifié par `bCase`. Si le texte est trouvé, il définit la sélection sur le texte recherché et retourne une valeur différente de zéro. Si le texte est introuvable, la fonction retourne 0.  
+ Cette fonction recherche le texte dans la mémoire tampon pour le texte spécifié par *lpszFind*, en commençant à la sélection actuelle, dans le sens spécifié par *bsuivant*et avec respect de la casse spécifié par *bCase*. Si le texte est trouvé, il définit la sélection sur le texte recherché et retourne une valeur différente de zéro. Si le texte est introuvable, la fonction retourne 0.  
   
  Normalement, vous n’avez pas besoin d’appeler le `FindText` fonction sauf si vous substituez `OnFindNext`, qui appelle `FindText`.  
   
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `strResult`  
+ *strResult*  
  Une référence à la `CString` objet qui doit recevoir le texte sélectionné.  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  Pointeur vers la mémoire tampon du contrôle d’édition.  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- Recherche dans la mémoire tampon pour le texte spécifié par le texte `lpszFind`, dans le sens spécifié par `bNext`, avec respect de la casse spécifié par `bCase`.  
+ Recherche dans la mémoire tampon pour le texte spécifié par le texte *lpszFind*, dans le sens spécifié par *bsuivant*, avec respect de la casse spécifié par *bCase*.  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Le texte à rechercher.  
   
- `bNext`  
+ *bsuivant*  
  Spécifie la direction de la recherche. Si **TRUE**, la direction de recherche est vers la fin de la mémoire tampon. Si **FALSE**, le sens de la recherche est vers le début de la mémoire tampon.  
   
- `bCase`  
+ *bCase*  
  Spécifie si la recherche respecte la casse. Si **TRUE**, la recherche respecte la casse. Si **FALSE**, la recherche n’est pas la casse.  
   
 ### <a name="remarks"></a>Notes  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Le texte à rechercher.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Texte à remplacer le texte recherché.  
   
- `bCase`  
+ *bCase*  
  Spécifie si recherche respecte la casse. Si **TRUE**, la recherche respecte la casse. Si **FALSE**, la recherche n’est pas la casse.  
   
 ### <a name="remarks"></a>Notes  
- `OnReplaceAll` recherche dans la mémoire tampon pour le texte spécifié par le texte `lpszFind`, avec respect de la casse spécifié par `bCase`. La recherche commence au début de la sélection actuelle. Chaque fois que le texte de recherche est trouvé, cette fonction remplace cette occurrence du texte avec le texte spécifié par `lpszReplace`. La recherche s’effectue via un appel à [FindText](#findtext). Dans l’implémentation par défaut, [OnTextNotFound](#ontextnotfound) est appelée si le texte est introuvable.  
+ `OnReplaceAll` recherche dans la mémoire tampon pour le texte spécifié par le texte *lpszFind*, avec respect de la casse spécifié par *bCase*. La recherche commence au début de la sélection actuelle. Chaque fois que le texte de recherche est trouvé, cette fonction remplace cette occurrence du texte avec le texte spécifié par *lpszReplace*. La recherche s’effectue via un appel à [FindText](#findtext). Dans l’implémentation par défaut, [OnTextNotFound](#ontextnotfound) est appelée si le texte est introuvable.  
   
- Si la sélection actuelle ne correspond pas à `lpszFind`, la sélection est mise à jour pour la première occurrence du texte spécifié par `lpszFind` et une opération de remplacement n’est pas effectuée. Cela permet à l’utilisateur confirmer qu’il s’agit qu’ils souhaitent faire lorsque la sélection ne correspond pas à du texte à remplacer.  
+ Si la sélection actuelle ne correspond pas à *lpszFind*, la sélection est mise à jour pour la première occurrence du texte spécifié par *lpszFind* et une opération de remplacement n’est pas effectuée. Cela permet à l’utilisateur confirmer qu’il s’agit qu’ils souhaitent faire lorsque la sélection ne correspond pas à du texte à remplacer.  
   
  Substituer `OnReplaceAll` modifier la manière dont un `CEditView`-objet dérivé remplace le texte.  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Le texte à rechercher.  
   
- `bNext`  
+ *bsuivant*  
  Spécifie la direction de la recherche. Si **TRUE**, la direction de recherche est vers la fin de la mémoire tampon. Si **FALSE**, le sens de la recherche est vers le début de la mémoire tampon.  
   
- `bCase`  
+ *bCase*  
  Spécifie si la recherche respecte la casse. Si **TRUE**, la recherche respecte la casse. Si **FALSE**, la recherche n’est pas la casse.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Texte à remplacer le texte trouvé.  
   
 ### <a name="remarks"></a>Notes  
- Après le remplacement de la sélection, cette fonction recherche le texte dans la mémoire tampon pour l’occurrence suivante du texte spécifié par `lpszFind`, dans le sens spécifié par `bNext`, avec respect de la casse spécifié par `bCase`. La recherche s’effectue via un appel à [FindText](#findtext). Si le texte est introuvable, [OnTextNotFound](#ontextnotfound) est appelée.  
+ Après le remplacement de la sélection, cette fonction recherche le texte dans la mémoire tampon pour l’occurrence suivante du texte spécifié par *lpszFind*, dans le sens spécifié par *bsuivant*, avec respect de la casse spécifié par *bCase*. La recherche s’effectue via un appel à [FindText](#findtext). Si le texte est introuvable, [OnTextNotFound](#ontextnotfound) est appelée.  
   
  Substituer `OnReplaceSel` modifier la manière dont un `CEditView`-objet dérivé remplace le texte sélectionné.  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Le texte à rechercher.  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique d’imprimante.  
   
  *rectLayout*  
  Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [Rect, structure](../../mfc/reference/rect-structure1.md) spécifiant le rectangle dans lequel le texte doit être restitué.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Index dans la mémoire tampon du premier caractère à restituer.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Index dans la mémoire tampon du caractère suivant le dernier caractère à restituer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ar`  
+ *ar*  
  Référence à la `CArchive` objet qui stocke le texte sérialisé.  
   
 ### <a name="remarks"></a>Notes  
  `SerializeRaw` diffère de `CEditView`d’implémentation interne de `Serialize` dans la mesure où il lit et écrit le texte uniquement, sans faire précéder les données de la description de l’objet.  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- Appelez `SetPrinterFont` pour définir la police d’imprimante pour la police spécifiée par `pFont`.  
+ Appelez `SetPrinterFont` pour définir la police d’imprimante pour la police spécifiée par *pFont*.  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pFont`  
+ *pFont*  
  Un pointeur vers un objet de type `CFont`. Si **NULL**, la police utilisée pour l’impression est basée sur la police d’affichage.  
   
 ### <a name="remarks"></a>Notes  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nTabStops`  
+ *nTabStops*  
  Largeur de chaque taquet de tabulation, en unités de boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  

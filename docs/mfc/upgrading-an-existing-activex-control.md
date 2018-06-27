@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385305"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955672"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Mise à niveau d'un contrôle ActiveX
 Contrôles ActiveX existant (anciennement contrôles OLE) peut être utilisé sur Internet sans modification. Toutefois, vous souhaiterez modifier des contrôles afin d’améliorer leurs performances. Lorsque vous utilisez votre contrôle sur une page Web, il existe des considérations supplémentaires. Le fichier .ocx et tous les fichiers de prise en charge doivent se trouver sur l’ordinateur cible, ou être téléchargés sur Internet. Cela rend la taille du code et un aspect important de temps de téléchargement. Téléchargements peuvent être empaquetés dans un fichier .cab signé. Vous pouvez marquer votre contrôle comme sécurisés pour les scripts et l’initialisation.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  Le `-s 6144` paramètre réserve un espace dans le fichier CAB pour la signature de code.  
   
 ### <a name="the-version-tag"></a>La balise de Version  
- Notez ici que la `#Version` informations spécifiées dans un fichier CAB s’applique au contrôle spécifié par le `CLASSID` paramètre de la `<OBJECT>` balise.  
+ Notez ici que la `#Version` informations spécifiées dans un fichier CAB s’applique au contrôle spécifié par le *CLASSID* paramètre de la `<OBJECT>` balise.  
   
- Selon la version spécifiée, vous pouvez forcer le téléchargement de votre contrôle. Pour des spécifications complètes de la `OBJECT` balise, y compris le `CODEBASE` paramètre, voir le W3C la référence.  
+ Selon la version spécifiée, vous pouvez forcer le téléchargement de votre contrôle. Pour des spécifications complètes de la `OBJECT` balise, y compris le *CODEBASE* paramètre, voir le W3C la référence.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Le marquage de contrôle sécurisé pour les scripts et l’initialisation  
  Contrôles ActiveX utilisés dans les pages Web doivent être marqués comme sécurisé pour le script et l’initialisation s’ils sont en fait sans échec. Un contrôle sécurisé ne sera pas effectuer d’e/s disque ou accéder directement à la mémoire ou les registres d’un ordinateur.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Sous les directives OCX 96, un contrôle doit toujours réaliser sa palette en arrière-plan.  
   
- Les conteneurs plus anciens qui n’utilisent pas la propriété ambiante palette enverra `WM_QUERYNEWPALETTE` et `WM_PALETTECHANGED` messages. Un contrôle peut substituer `OnQueryNewPalette` et `OnPaletteChanged` pour gérer ces messages.  
+ Les conteneurs plus anciens qui n’utilisent pas la propriété ambiante palette envoient les messages WM_QUERYNEWPALETTE et WM_PALETTECHANGED. Un contrôle peut substituer `OnQueryNewPalette` et `OnPaletteChanged` pour gérer ces messages.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Niveaux de sécurité du navigateur Internet Explorer et de contrôler le comportement  
  Un navigateur propose des options pour le niveau de sécurité configurable par l’utilisateur. Étant donné que les pages Web peuvent contenir un contenu actif qui peut endommager l’ordinateur d’un utilisateur, navigateurs autorisent l’utilisateur à sélectionner des options pour le niveau de sécurité. Selon la façon dont un navigateur implémente des niveaux de sécurité, un contrôle ne peut pas être téléchargé à tout ou affiche un certificat ou un message d’avertissement pour autoriser l’utilisateur de choisir au moment de l’exécution ou non télécharger le contrôle. Le comportement de contrôles ActiveX à des niveaux de sécurité élevé, moyen et faible dans Internet Explorer est répertorié ci-dessous.  

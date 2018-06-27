@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 683281af3d029dca7e8060bb250a49f8e095d597
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384954"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954580"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062 : réflexion de message pour les contrôles Windows
 > [!NOTE]
@@ -54,25 +54,25 @@ ms.locfileid: "33384954"
   
  **Quelle est la réflexion de Message**  
   
- Contrôles Windows envoient fréquemment des messages de notification vers les fenêtres parents. Par exemple, de nombreux contrôles envoient un message de notification de contrôle couleur (`WM_CTLCOLOR` ou une de ses variantes) à leur parent pour permettre au parent de fournir un pinceau pour peindre l’arrière-plan du contrôle.  
+ Contrôles Windows envoient fréquemment des messages de notification vers les fenêtres parents. Par exemple, de nombreux contrôles envoient un message de notification de couleur contrôle (WM_CTLCOLOR ou une de ses variantes) à leur parent pour permettre au parent de fournir un pinceau pour peindre l’arrière-plan du contrôle.  
   
  Dans Windows et MFC avant la version 4.0, la fenêtre parente, souvent une boîte de dialogue, est responsable de la gestion de ces messages. Cela signifie que le code pour traiter le message doit se trouver dans la classe de la fenêtre parent et qu’il doit être dupliqué dans chaque classe qui doit gérer ce message. Dans le cas ci-dessus, chaque boîte de dialogue qui voulaient des contrôles avec des arrière-plans personnalisés devront gérer le message de notification de contrôle de couleur. Il est beaucoup plus facile de réutiliser le code si une classe de contrôle peut être écrite qui serait gérer sa propre couleur d’arrière-plan.  
   
- Dans MFC 4.0, l’ancien mécanisme fonctionne toujours, fenêtres parentes peuvent gérer les messages de notification. En outre, cependant, MFC 4.0 facilite la réutilisation en fournissant une fonctionnalité appelée « réflexion de message » qui permet à ces messages de notification être gérés dans la fenêtre du contrôle enfant ou de la fenêtre parente, ou les deux. Dans l’exemple de couleur d’arrière-plan du contrôle, vous pouvez maintenant écrire une classe de contrôle qui définit sa propre couleur d’arrière-plan en gérant la reflété `WM_CTLCOLOR` message, tout cela sans partie de confiance sur le parent. (Notez que réflexion de message est implémenté par MFC, pas par Windows, la classe de fenêtre parente doit être dérivée `CWnd` pour la réflexion de message à utiliser.)  
+ Dans MFC 4.0, l’ancien mécanisme fonctionne toujours, fenêtres parentes peuvent gérer les messages de notification. En outre, cependant, MFC 4.0 facilite la réutilisation en fournissant une fonctionnalité appelée « réflexion de message » qui permet à ces messages de notification être gérés dans la fenêtre du contrôle enfant ou de la fenêtre parente, ou les deux. Dans l’exemple de couleur d’arrière-plan du contrôle, vous pouvez maintenant écrire une classe de contrôle qui définit sa propre couleur d’arrière-plan en gérant le message réfléchi WM_CTLCOLOR, tout cela sans partie de confiance sur le parent. (Notez que réflexion de message est implémenté par MFC, pas par Windows, la classe de fenêtre parente doit être dérivée `CWnd` pour la réflexion de message à utiliser.)  
   
- Les versions antérieures de MFC a quelque chose de similaire à la réflexion de message en fournissant des fonctions virtuelles de certains messages, telles que des messages pour les zones de liste owner-drawn (`WM_DRAWITEM`, et ainsi de suite). Le nouveau mécanisme de réflexion de message est généralisée et cohérente.  
+ Les versions antérieures de MFC fait quelque chose de similaire à la réflexion de message en fournissant des fonctions virtuelles de certains messages, telles que des messages pour les zones de liste owner-drawn (WM_DRAWITEM et ainsi de suite). Le nouveau mécanisme de réflexion de message est généralisée et cohérente.  
   
  Réflexion de message est à compatibilité descendante avec le code écrit pour les versions de MFC avant 4.0.  
   
- Si vous avez fourni un gestionnaire pour un message spécifique, ou pour une plage de messages, dans la classe de la fenêtre parente, il remplace répercutées gestionnaires de messages pour le message même condition que vous n’appelez pas la fonction de gestionnaire de classe de base dans votre propre gestionnaire. Par exemple, si vous gérez `WM_CTLCOLOR` dans votre classe de boîte de dialogue, votre gestion remplace les gestionnaires de messages réfléchis.  
+ Si vous avez fourni un gestionnaire pour un message spécifique, ou pour une plage de messages, dans la classe de la fenêtre parente, il remplace répercutées gestionnaires de messages pour le message même condition que vous n’appelez pas la fonction de gestionnaire de classe de base dans votre propre gestionnaire. Par exemple, si vous gérez WM_CTLCOLOR dans votre classe de boîte de dialogue, votre gestion remplacent les gestionnaires de messages réfléchis.  
   
- Si, dans votre classe de fenêtre parente, vous fournissez un gestionnaire pour un spécifique **WM_NOTIFY** message ou une plage de **WM_NOTIFY** messages, votre gestionnaire est appelé uniquement si le contrôle enfant envoyer ces messages n’a pas un gestionnaire de messages réfléchis via **ON_NOTIFY_REFLECT()**. Si vous utilisez **ON_NOTIFY_REFLECT_EX()** dans votre table des messages, votre gestionnaire de messages peut ou peut ne pas autoriser la fenêtre parente gérer le message. Si le gestionnaire retourne **FALSE**, le message sera géré par le parent, lors d’un appel retourne **TRUE** n’autorise pas le parent pour la gérer. Notez que le message réfléchi est traité avant le message de notification.  
+ Si, dans votre classe de fenêtre parente, vous fournissez un gestionnaire pour un message WM_NOTIFY spécifique ou des messages d’une plage de WM_NOTIFY, votre gestionnaire sera appelé uniquement si le contrôle enfant envoyer ces messages n’a pas un gestionnaire de messages réfléchis via `ON_NOTIFY_REFLECT()`. Si vous utilisez `ON_NOTIFY_REFLECT_EX()` dans votre table des messages, votre gestionnaire de messages peut ou peut ne pas autoriser la fenêtre parente gérer le message. Si le gestionnaire retourne **FALSE**, le message sera géré par le parent, lors d’un appel retourne **TRUE** n’autorise pas le parent pour la gérer. Notez que le message réfléchi est traité avant le message de notification.  
   
- Lorsqu’un **WM_NOTIFY** message est envoyé, le contrôle est proposé à la première occasion de le gérer. Si tout autre message réfléchi est envoyée, la fenêtre parente possède la première occasion de le gérer et le contrôle reçoit le message réfléchi. Il doit pour ce faire, une fonction de gestionnaire et une entrée appropriée dans la table de messages de classe du contrôle.  
+ Lorsqu’un message WM_NOTIFY est envoyé, le contrôle est proposé à la première occasion de le gérer. Si tout autre message réfléchi est envoyée, la fenêtre parente possède la première occasion de le gérer et le contrôle reçoit le message réfléchi. Il doit pour ce faire, une fonction de gestionnaire et une entrée appropriée dans la table de messages de classe du contrôle.  
   
- La macro de table des messages pour les messages réfléchis est légèrement différente de celle des notifications régulières : il a **_REFLECT** ajouté à son nom habituel. Par exemple, pour gérer un **WM_NOTIFY** message dans la page parente, vous utilisez la macro `ON_NOTIFY` dans la table des messages du parent. Pour gérer le message renvoyé dans le contrôle enfant, utilisez la **ON_NOTIFY_REFLECT** macro dans la table des messages du contrôle enfant. Dans certains cas, les paramètres sont différents, également. Notez que ClassWizard permettre généralement ajouter les entrées de table des messages pour vous fournir des implémentations squelette de fonction avec des paramètres corrects.  
+ La macro de table des messages pour les messages réfléchis est légèrement différente de celle des notifications régulières : il a *_REFLECT* ajouté à son nom habituel. Par exemple, pour gérer un message WM_NOTIFY dans le parent, utilisez la macro ON_NOTIFY dans la table des messages du parent. Pour gérer le message renvoyé dans le contrôle enfant, utilisez la macro ON_NOTIFY_REFLECT dans la table des messages du contrôle enfant. Dans certains cas, les paramètres sont différents, également. Notez que ClassWizard permettre généralement ajouter les entrées de table des messages pour vous fournir des implémentations squelette de fonction avec des paramètres corrects.  
   
- Consultez [TN061 : Messages ON_NOTIFY et WM_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) pour plus d’informations sur le nouveau **WM_NOTIFY** message.  
+ Consultez [TN061 : Messages ON_NOTIFY et WM_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) pour plus d’informations sur le nouveau message WM_NOTIFY.  
   
  **Les entrées de table des messages et les Prototypes de fonction de gestionnaire de Messages réfléchis**  
   
@@ -80,19 +80,19 @@ ms.locfileid: "33384954"
   
  ClassWizard permettre généralement ajouter ces entrées de table des messages pour vous et fournir des implémentations squelette de fonction. Consultez [définition d’un gestionnaire de messages pour un Message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) pour plus d’informations sur la façon de définir des gestionnaires de messages réfléchis.  
   
- Pour convertir le nom du message pour le nom de macro réfléchi, ajoutez **ON_** et ajoutez **_REFLECT**. Par exemple, `WM_CTLCOLOR` devient **ON_WM_CTLCOLOR_REFLECT**. (Pour voir les messages peuvent être reflétées, effectuer la conversion inverse sur les entrées de la macro dans le tableau ci-dessous).  
+ Pour convertir le nom du message pour le nom de macro réfléchi, ajoutez *ON_* et ajoutez *_REFLECT*. Par exemple, WM_CTLCOLOR devient ON_WM_CTLCOLOR_REFLECT. (Pour voir les messages peuvent être reflétées, effectuer la conversion inverse sur les entrées de la macro dans le tableau ci-dessous).  
   
  Les trois exceptions à la règle ci-dessus sont les suivantes :  
   
--   La macro pour **WM_COMMAND** notifications est **ON_CONTROL_REFLECT**.  
+-   La macro pour les notifications de WM_COMMAND est ON_CONTROL_REFLECT.  
   
--   La macro pour **WM_NOTIFY** reflets est **ON_NOTIFY_REFLECT**.  
+-   La macro pour les réflexions WM_NOTIFY est ON_NOTIFY_REFLECT.  
   
--   La macro pour `ON_UPDATE_COMMAND_UI` reflets est **ON_UPDATE_COMMAND_UI_REFLECT**.  
+-   La macro pour les réflexions ON_UPDATE_COMMAND_UI est ON_UPDATE_COMMAND_UI_REFLECT.  
   
  Dans chacun de ces cas spéciaux, vous devez spécifier le nom de la fonction membre de gestionnaire. Dans les autres cas, vous devez utiliser le nom standard de votre fonction de gestionnaire.  
   
- La signification des paramètres et valeurs de retour des fonctions sont décrits dans le nom de fonction ou le nom de fonction avec **sur** ajouté. Par exemple, **CtlColor** est documenté dans `OnCtlColor`. Plusieurs gestionnaires de messages réfléchis doivent moins de paramètres que les gestionnaires similaire dans une fenêtre parente. Simplement mettre en correspondance les noms dans le tableau ci-dessous, avec les noms des paramètres formels dans la documentation.  
+ La signification des paramètres et valeurs de retour des fonctions sont décrits dans le nom de fonction ou le nom de fonction avec *sur* ajouté. Par exemple, `CtlColor` est documenté dans `OnCtlColor`. Plusieurs gestionnaires de messages réfléchis doivent moins de paramètres que les gestionnaires similaire dans une fenêtre parente. Simplement mettre en correspondance les noms dans le tableau ci-dessous, avec les noms des paramètres formels dans la documentation.  
   
 |Entrée de mappage|Prototype de fonction|  
 |---------------|------------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "33384954"
 |**(DE ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **) ;**|  
 |**(DE ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **) ;**|  
   
- Le **ON_NOTIFY_REFLECT** et **ON_CONTROL_REFLECT** macros présentent des variations qui permettent de traiter un message donné plusieurs objets (tels que le contrôle et son parent).  
+ Les macros ON_NOTIFY_REFLECT et ON_CONTROL_REFLECT présentent des variations qui permettent de traiter un message donné plusieurs objets (tels que le contrôle et son parent).  
   
 |Entrée de mappage|Prototype de fonction|  
 |---------------|------------------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "33384954"
   
 2.  Avec votre projet chargé dans Visual C++, utiliser ClassWizard pour créer une nouvelle classe nommée `CYellowEdit` selon `CEdit`.  
   
-3.  Ajoutez trois variables de membre à votre `CYellowEdit` classe. Les deux premières seront **COLORREF** variables devant contenir la couleur du texte et la couleur d’arrière-plan. Le troisième une `CBrush` objet qui contiendra le pinceau pour peindre l’arrière-plan. Le `CBrush` objet vous permet de créer le pinceau d’une seule fois, simplement y faire référence après cela et pour détruire le pinceau automatiquement lorsque le `CYellowEdit` est détruit.  
+3.  Ajoutez trois variables de membre à votre `CYellowEdit` classe. Les deux premières seront *COLORREF* variables devant contenir la couleur du texte et la couleur d’arrière-plan. Le troisième une `CBrush` objet qui contiendra le pinceau pour peindre l’arrière-plan. Le `CBrush` objet vous permet de créer le pinceau d’une seule fois, simplement y faire référence après cela et pour détruire le pinceau automatiquement lorsque le `CYellowEdit` est détruit.  
   
 4.  Initialiser les variables de membre en écrivant le constructeur comme suit :  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33384954"
  }  
  ```  
   
-5.  À l’aide de ClassWizard, ajouter un gestionnaire pour le reflété `WM_CTLCOLOR` un message à votre `CYellowEdit` classe. Notez que le signe égal devant le nom du message dans la liste des messages, que vous pouvez gérer indique que le message soit reflétée. Cela est décrit dans [définition d’un gestionnaire de messages pour un Message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
+5.  À l’aide de ClassWizard, ajouter un gestionnaire pour le message réfléchi WM_CTLCOLOR à votre `CYellowEdit` classe. Notez que le signe égal devant le nom du message dans la liste des messages, que vous pouvez gérer indique que le message soit reflétée. Cela est décrit dans [définition d’un gestionnaire de messages pour un Message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
   
      ClassWizard ajoute la fonction de macro et structure de table des messages suivante :  
   

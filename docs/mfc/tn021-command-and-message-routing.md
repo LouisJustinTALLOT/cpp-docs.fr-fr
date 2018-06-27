@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384948"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955720"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021 : Routage des commandes et des messages
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384948"
  Veuillez font référence à Visual C++ pour des informations détaillées sur les architectures décrites ici, en particulier la distinction entre les messages, les notifications de contrôle et les commandes Windows. Cette note suppose que vous maîtrisez les problèmes décrits dans la documentation et traite uniquement des sujets très avancés.  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Routage des commandes et la distribution MFC 1.0 fonctionnalité évolue à MFC 2.0 Architecture  
- Windows offre la **WM_COMMAND** message qui est surchargée pour fournir des notifications de commandes de menu, les touches d’accès et les notifications de contrôle de boîte de dialogue.  
+ Windows a le message WM_COMMAND qui est surchargé pour fournir des notifications de commandes de menu, les touches d’accès et les notifications de contrôle de boîte de dialogue.  
   
- 1.0 de MFC créées sur ce petit en permettant à un gestionnaire de commandes (par exemple, « OnFileNew ») un **CWnd** classe appel en réponse à une spécifique dérivée **WM_COMMAND**. Cela est collé avec une structure de données appelée la table des messages et entraîne un mécanisme de commande très faible.  
+ 1.0 de MFC créées sur ce petit en permettant à un gestionnaire de commandes (par exemple, « OnFileNew ») un `CWnd` appel en réponse à une WM_COMMAND spécifique classe dérivée. Cela est collé avec une structure de données appelée la table des messages et entraîne un mécanisme de commande très faible.  
   
- MFC 1.0 également des fonctionnalités supplémentaires pour la séparation des notifications de contrôle à partir des messages de commande. Commandes sont représentées par un ID de 16 bits, parfois appelé un ID de commande. Commandes normalement démarrent un **CFrameWnd** (autrement dit, une sélection de menu ou un accélérateur traduit) et seront acheminés vers plusieurs autres fenêtres.  
+ MFC 1.0 également des fonctionnalités supplémentaires pour la séparation des notifications de contrôle à partir des messages de commande. Commandes sont représentées par un ID de 16 bits, parfois appelé un ID de commande. Commandes normalement démarrent un `CFrameWnd` (autrement dit, une sélection de menu ou un accélérateur traduit) et seront acheminés vers plusieurs autres fenêtres.  
   
  MFC 1.0 utilisé le routage des commandes dans un sens limité pour l’implémentation de plusieurs documents MDI (Interface). (Une fenêtre frame MDI déléguer des commandes à sa fenêtre enfant MDI active.)  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384948"
   
 -   PEUT-être dans un tableau d’ID utilisé pour créer une barre d’outils.  
   
--   Dans un **ON_COMMAND** (macro).  
+-   Dans un ON_COMMAND (macro).  
   
--   Par exemple, dans un **ON_UPDATE_COMMAND_UI** (macro).  
+-   Par exemple dans un ON_UPDATE_COMMAND_UI (macro).  
   
  Actuellement, la seule implémentation dans MFC qui requiert l’ID de commande être > = 0 x 8000 est l’implémentation de boîtes de dialogue GOSUB/commandes.  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384948"
   
  Vous pouvez placer un bouton normal dans une boîte de dialogue modale normal avec le IDC du bouton Définir à l’ID de commande appropriée. Lorsque l’utilisateur sélectionne le bouton, le propriétaire de la boîte de dialogue (généralement la fenêtre frame principale) Obtient la commande comme n’importe quelle autre commande. Cela s’appelle une commande GOSUB, car il est généralement utilisé pour afficher une autre boîte de dialogue (un GOSUB de la première boîte de dialogue).  
   
- Vous pouvez également appeler la fonction **CWnd::UpdateDialogControls** dans votre boîte de dialogue et lui passer l’adresse de votre fenêtre frame principale. Cette fonction active ou désactive votre selon qu’ils aient des gestionnaires de commandes dans le cadre des contrôles de boîte de dialogue. Cette fonction est appelée automatiquement pour vous pour les barres de contrôle dans la boucle inactive de votre application, mais vous devez l’appeler directement pour les boîtes de dialogue normales que vous souhaitez que cette fonctionnalité.  
+ Vous pouvez également appeler la fonction `CWnd::UpdateDialogControls` dans votre boîte de dialogue et lui passer l’adresse de votre fenêtre frame principale. Cette fonction active ou désactive votre selon qu’ils aient des gestionnaires de commandes dans le cadre des contrôles de boîte de dialogue. Cette fonction est appelée automatiquement pour vous pour les barres de contrôle dans la boucle inactive de votre application, mais vous devez l’appeler directement pour les boîtes de dialogue normales que vous souhaitez que cette fonctionnalité.  
   
 ## <a name="when-onupdatecommandui-is-called"></a>Lorsque ON_UPDATE_COMMAND_UI est appelée  
- Maintenir l’état activé/activé de tous le programme éléments de menu de tout le temps peut poser un problème de ressources de calcul. Une technique courante consiste à activer/vérification des éléments de menu uniquement lorsque l’utilisateur sélectionne la fenêtre contextuelle. L’implémentation MFC 2.0 de **CFrameWnd** gère le **WM_INITMENUPOPUP** le message et utilise l’architecture de routage de commande pour déterminer les États des menus par le biais de **ON_UPDATE_COMMAND_ L’interface utilisateur** gestionnaires.  
+ Maintenir l’état activé/activé de tous le programme éléments de menu de tout le temps peut poser un problème de ressources de calcul. Une technique courante consiste à activer/vérification des éléments de menu uniquement lorsque l’utilisateur sélectionne la fenêtre contextuelle. L’implémentation MFC 2.0 de `CFrameWnd` gère le message WM_INITMENUPOPUP et utilise l’architecture de routage de commande pour déterminer les États des menus via les gestionnaires ON_UPDATE_COMMAND_UI.  
   
- **CFrameWnd** gère également le **WM_ENTERIDLE** message pour décrire l’actuel élément du menu sélectionné sur l’état de la barre (également connu sous la ligne de message).  
+ `CFrameWnd` gère également le message WM_ENTERIDLE pour décrire l’actuel élément du menu sélectionné sur l’état de la barre (également connu sous la ligne de message).  
   
- Structure de menu d’une application et modifié par Visual C++, est utilisé pour représenter des commandes potentielles disponibles au **WM_INITMENUPOPUP** heure. **ON_UPDATE_COMMAND_UI** gestionnaires peuvent modifier l’état ou le texte d’un menu ou pour des utilisations avancées (telles que la liste des derniers fichiers utilisés du fichier ou le menu déroulant des verbes OLE), modifiez réellement la structure de menu avant le menu est dessiné.  
+ Structure de menu d’une application et modifié par Visual C++, est utilisé pour représenter les commandes potentiels disponibles au moment de WM_INITMENUPOPUP. Gestionnaires ON_UPDATE_COMMAND_UI peuvent modifier l’état ou le texte d’un menu ou pour des utilisations avancées (telles que la liste des derniers fichiers utilisés du fichier ou le menu déroulant des verbes OLE), réellement modifier la structure de menu avant que le menu est dessiné.  
   
- Le même type de **ON_UPDATE_COMMAND_UI** traitement est effectué pour les barres d’outils (et les autres barres de contrôles) lorsque l’application passe à la boucle inactive. Consultez le *Class Library Reference* et [Technical Note 31](../mfc/tn031-control-bars.md) pour plus d’informations sur les barres de contrôles.  
+ Le même type de traitement de ON_UPDATE_COMMAND_UI est effectué pour les barres d’outils (et les autres barres de contrôles) lorsque l’application passe à la boucle inactive. Consultez le *Class Library Reference* et [Technical Note 31](../mfc/tn031-control-bars.md) pour plus d’informations sur les barres de contrôles.  
   
 ## <a name="nested-pop-up-menus"></a>Menus contextuels imbriqués  
- Si vous utilisez une structure imbriquée, vous remarquerez que la **ON_UPDATE_COMMAND_UI** gestionnaire pour le premier élément de menu dans le menu contextuel est appelé dans les deux cas.  
+ Si vous utilisez une structure imbriquée, vous remarquerez que le gestionnaire ON_UPDATE_COMMAND_UI pour le premier élément de menu dans le menu contextuel est appelé dans les deux cas.  
   
- Tout d’abord, elle est appelée pour le menu contextuel lui-même. Cela est nécessaire, car les menus contextuels n’ont pas d’ID et nous utilisons l’ID du premier élément de menu du menu contextuel pour faire référence à l’intégralité du menu contextuel. Dans ce cas, le **m_pSubMenu** variable membre de la **CCmdUI** objet sera non NULL et qu’il pointe vers le menu contextuel.  
+ Tout d’abord, elle est appelée pour le menu contextuel lui-même. Cela est nécessaire, car les menus contextuels n’ont pas d’ID et nous utilisons l’ID du premier élément de menu du menu contextuel pour faire référence à l’intégralité du menu contextuel. Dans ce cas, le *m_pSubMenu* variable membre de la `CCmdUI` objet sera non NULL et qu’il pointe vers le menu contextuel.  
   
- En second lieu, elle est appelée juste avant que les éléments de menu dans le menu contextuel sont à dessiner. Dans ce cas, l’ID fait référence uniquement pour le premier élément de menu et le **m_pSubMenu** variable membre de la **CCmdUI** objet seront NULL.  
+ En second lieu, elle est appelée juste avant que les éléments de menu dans le menu contextuel sont à dessiner. Dans ce cas, l’ID fait référence uniquement pour le premier élément de menu et le *m_pSubMenu* variable membre de la `CCmdUI` objet seront NULL.  
   
  Cela vous permet d’activer le menu contextuel distinct à partir de ses éléments de menu, mais nécessite que vous écrivez du code prenant en charge de menu. Par exemple, dans un menu imbriqué avec la structure suivante :  
   

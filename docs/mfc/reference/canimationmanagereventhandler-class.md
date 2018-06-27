@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358256"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955646"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsque l'état d'un gestionnaire d'animation est modifié.  
@@ -66,7 +66,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
   
  `CAnimationManagerEventHandler`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  Sortie. Si la méthode réussit, elle contient un pointeur vers un objet COM qui va gérer les mises à jour de l’état à un gestionnaire d’animation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `newStatus`  
+ *newStatus*  
  Nouvel état.  
   
- `previousStatus`  
+ *previousStatus*  
  État précédent.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
 ## <a name="see-also"></a>Voir aussi  

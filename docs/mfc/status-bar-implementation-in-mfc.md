@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381086"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950446"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implémentation de la barre d'état dans MFC
 A [CStatusBar](../mfc/reference/cstatusbar-class.md) objet est une barre de contrôle avec une ligne de texte des volets de sortie. Les volets de sortie sont fréquemment utilisés comme des lignes de message et comme indicateurs d'états. Exemples : les lignes de message à l’aide de menu qui expliquent brièvement la commande de menu sélectionné et les indicateurs qui indiquent l’état de l’arrêt défil, VERR. NUM et défil.  
   
- Depuis la version 4.0 de MFC, les barres d’état sont implémentées à l’aide de la classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), qui encapsule une barre de contrôle commun d’état. Pour la compatibilité ascendante, MFC conserve l’implémentation de barre d’état ancienne dans la classe **COldStatusBar**. La documentation pour les versions antérieures de MFC décrit **COldStatusBar** sous `CStatusBar`.  
+ Depuis la version 4.0 de MFC, les barres d’état sont implémentées à l’aide de la classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), qui encapsule une barre de contrôle commun d’état. Pour la compatibilité ascendante, MFC conserve l’implémentation de barre d’état ancienne dans la classe `COldStatusBar`. La documentation pour les versions antérieures de MFC décrit `COldStatusBar` sous `CStatusBar`.  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), une fonction membre new 4.0 de MFC, vous permet de tirer parti de la prise en charge du contrôle commun Windows pour des fonctionnalités supplémentaires et de personnalisation de la barre d’état. `CStatusBar` fonctions membres vous donnent la plupart des fonctionnalités des contrôles communs Windows ; Toutefois, lorsque vous appelez `GetStatusBarCtrl`, vous pouvez donner à vos barres d’état davantage les caractéristiques d’une barre d’état. Lorsque vous appelez `GetStatusBarCtrl`, il retourne une référence à un `CStatusBarCtrl` objet. Vous pouvez utiliser cette référence pour manipuler le contrôle de barre d’état.  
   

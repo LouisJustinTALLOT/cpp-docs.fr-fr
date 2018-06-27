@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369123"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954531"
 ---
 # <a name="cfileexception-class"></a>Classe de CFileException
 Représente une condition d'exception liée à un fichier.  
@@ -88,7 +88,7 @@ class CFileException : public CException
   
  `CFileException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="cfileexception"></a>  CFileException::CFileException  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cause`  
+ *cause*  
  Une variable de type énuméré qui indique la raison de l’exception. Consultez [CFileException::m_cause](#m_cause) pour obtenir la liste des valeurs possibles.  
   
- `lOsError`  
- Une raison spécifique du système d’exploitation de l’exception, s’il est disponible. Le `lOsError` paramètre fournit davantage d’informations que `cause` est.  
+ *lOsError*  
+ Une raison spécifique du système d’exploitation de l’exception, s’il est disponible. Le *lOsError* paramètre fournit davantage d’informations que *provoquer* est.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Pointe vers une chaîne contenant le nom de la `CFile` objet qui a provoqué l’exception.  
   
 ### <a name="remarks"></a>Notes  
  N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction globale [AfxThrowFileException](exception-processing.md#afxthrowfileexception).  
   
 > [!NOTE]
->  La variable `lOsError` s’applique uniquement aux `CFile` et `CStdioFile` objets. La `CMemFile` classe ne gère pas ce code d’erreur.  
+>  La variable *lOsError* s’applique uniquement aux `CFile` et `CStdioFile` objets. La `CMemFile` classe ne gère pas ce code d’erreur.  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  Convertit une valeur d’erreur de bibliothèque donné en un `CFileException` erreur valeur énumérée.  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nErrno`  
+ *nErrno*  
  Un code d’erreur entier tel que défini dans le fichier include de l’exécution ERRNO. H.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] `lpszError`  
+ [dans, out] *lpszError*  
  Pointeur vers une mémoire tampon qui reçoit un message d’erreur.  
   
- [in] `nMaxError`  
+ [in] *nMaxError*  
  Le nombre maximal de caractères de que la mémoire tampon spécifiée peut contenir. Cela inclut le caractère null de fin.  
   
- [in, out] `pnHelpContext`  
+ [dans, out] *pnHelpContext*  
  Pointeur vers un entier non signé qui reçoit l’ID de contexte d’aide. Si `NULL`, aucun ID n’est retourné.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Ce membre de données est une variable publique de type `int`. Voici les énumérateurs et leurs significations :  
+ Ce membre est une variable publique de type **int**. Voici les énumérateurs et leurs significations :  
   
 - `CFileException::none` 0 : aucune erreur ne s’est produite.  
   
@@ -235,14 +235,14 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- Retourne un énumérateur qui correspond à une donnée `lOsError` valeur. Si le code d’erreur est inconnu, la fonction retourne **CFileException::generic**.  
+ Retourne un énumérateur qui correspond à une donnée *lOsError* valeur. Si le code d’erreur est inconnu, la fonction retourne **CFileException::generic**.  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lOsError`  
+ *lOsError*  
  Un code d’erreur spécifique du système d’exploitation.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -252,34 +252,34 @@ static int PASCAL OsErrorToException(LONG lOsError);
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- Construit un `CFileException` objet correspondant à une donnée `nErrno` valeur, puis lève l’exception.  
+ Construit un `CFileException` objet correspondant à une donnée *nErrno* valeur, puis lève l’exception.  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nErrno`  
+ *nErrno*  
  Un code d’erreur entier tel que défini dans le fichier include de l’exécution ERRNO. H.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Un pointeur vers la chaîne contenant le nom du fichier qui a provoqué l’exception, s’il est disponible.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- Lève un `CFileException` correspondant à une donnée `lOsError` valeur. Si le code d’erreur est inconnu, alors que la fonction lève une exception codée en tant que **CFileException::generic**.  
+ Lève un `CFileException` correspondant à une donnée *lOsError* valeur. Si le code d’erreur est inconnu, alors que la fonction lève une exception codée en tant que **CFileException::generic**.  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lOsError`  
+ *lOsError*  
  Un code d’erreur spécifique du système d’exploitation.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Un pointeur vers la chaîne contenant le nom du fichier qui a provoqué l’exception, s’il est disponible.  
   
 ### <a name="example"></a>Exemple  

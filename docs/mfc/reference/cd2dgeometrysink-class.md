@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355283"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952370"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink, classe
 Wrapper pour ID2D1GeometrySink.  
@@ -107,7 +107,7 @@ class CD2DGeometrySink;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CD2DGeometrySink`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink :: ~ CD2DGeometrySink  
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `arc`  
+ *Arc*  
  Le segment d’arc à ajouter à la figure  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bezier`  
+ *Bézier*  
  Structure qui décrit les points de contrôle et le point de terminaison de la courbe de Bézier à ajouter.  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `beziers`  
+ *courbes*  
  Tableau des segments de Bézier qui décrit les courbes Bézier à créer. Une courbe est tracée à partir du point d’actuel du récepteur de la géométrie (le point de terminaison du dernier segment dessiné ou l’emplacement spécifié par BeginFigure) au point de terminaison du premier segment de Bézier dans le tableau. Si le tableau contient des segments de Bézier supplémentaires, chaque segment de Bézier consécutif utilise le point de terminaison du segment de Bézier précédent comme son point de départ.  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `point`  
+ *Point*  
  Le point de terminaison de la ligne à dessiner.  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `points`  
+ *points*  
  Tableau d’un ou plusieurs points qui décrivent les lignes à tracer. Une ligne est tracée à partir du point d’actuel du récepteur de la géométrie (le point de terminaison du dernier segment dessiné ou l’emplacement spécifié par BeginFigure) et le premier point dans le tableau. Si le tableau contient des points supplémentaires, une ligne est dessinée à partir du premier point et le deuxième point dans le tableau, à partir du deuxième point pour le troisième point et ainsi de suite. Tableau d’une séquence de points de terminaison des lignes à tracer.  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bezier`  
+ *Bézier*  
  Une structure qui décrit le point de contrôle et le point de terminaison de la courbe de Bézier quadratique à ajouter.  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `beziers`  
+ *courbes*  
  Tableau d’une séquence de segments de Bézier quadratiques.  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `startPoint`  
+ *startPoint*  
  Le point à partir duquel commencer la nouvelle figure.  
   
- `figureBegin`  
+ *figureBegin*  
  Indique si la nouvelle figure doit être creuse ou remplie.  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pathGeometry`  
+ *pathGeometry*  
  Objet CD2DPathGeometry existant.  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `figureEnd`  
+ *figureEnd*  
  Une valeur qui indique si la figure est fermée. Si la figure est fermée, une ligne est dessinée entre le point actuel et le point de départ spécifié par BeginFigure.  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `fillMode`  
+ *fillMode*  
  La méthode utilisée pour déterminer si un point donné fait partie de la géométrie.  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `vertexFlags`  
+ *vertexFlags*  
  Options de trait et de jointure à appliquer aux nouveaux segments ajoutés à la géométrie du récepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
