@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: cb7c6a3c3384debb33a9192dc2e887725088bc3f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762059"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238589"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Améliorations de la conformité de C++ dans Visual Studio 2017 versions 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) et [15.7](#improvements_157)
 
@@ -493,12 +493,12 @@ ou effectuer un cast statique pour convertir l’objet avant de le transmettre 
     printf("%i\n", static_cast<int>(s))
 ```
 
-Pour les chaînes générées et gérées à l’aide de CStringW, vous devez utiliser le `operator LPCWSTR()` fourni pour caster un objet CStringW vers le pointeur C attendu par la chaîne de format.
+Pour les chaînes générées et gérées à l’aide de CString, vous devez utiliser le `operator LPCTSTR()` fourni pour caster un objet CString vers le pointeur C attendu par la chaîne de format.
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>Qualificateurs cv dans la construction de la classe
