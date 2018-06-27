@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354146"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951741"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor, classe
 Implémente les fonctionnalités d'une couleur dont les composants rouge, vert et bleu peuvent être animés.  
@@ -107,7 +107,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
  `CAnimationColor`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationColor::AddTransition  
@@ -121,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pRTransition`  
+ *pRTransition*  
  Transition pour la composante rouge.  
   
- `pGTransition`  
+ *pGTransition*  
  Transition pour la composante verte.  
   
- `pBTransition`  
+ *pBTransition*  
  Transition pour la composante bleue.  
   
 ### <a name="remarks"></a>Notes  
@@ -147,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `color`  
+ *Couleur*  
  Spécifie la couleur par défaut.  
   
- `nGroupID`  
+ *nGroupID*  
  Spécifie l’ID de groupe.  
   
- `nObjectID`  
+ *nObjectID*  
  Spécifie l’ID d’objet.  
   
- `dwUserData`  
+ *dwUserData*  
  Spécifie les données définies par l’utilisateur.  
   
 ### <a name="remarks"></a>Notes  
@@ -170,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lst`  
+ *lst*  
  Lorsque la fonction est retournée, contient des pointeurs aux trois objets CAnimationVariable représentant les composants rouges, verts et bleus.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -233,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `color`  
+ *Couleur*  
  Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -279,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `color`  
+ *Couleur*  
  Spécifie la nouvelle valeur de couleur de l’Animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -293,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `color`  
+ *Couleur*  
  Spécifie les nouvelles valeurs par défaut pour les composants rouges, verts et bleus.  
   
 ### <a name="remarks"></a>Notes  

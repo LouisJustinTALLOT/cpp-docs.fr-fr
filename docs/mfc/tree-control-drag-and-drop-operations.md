@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382764"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956250"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Opérations de glisser-déplacer pour le contrôle d’arborescence
-Un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie une notification lorsque l’utilisateur commence à faire glisser un élément. Le contrôle envoie un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) message de notification lorsque l’utilisateur commence à faire glisser un élément avec le bouton gauche de la souris et un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) message de notification lorsque l’utilisateur commence à faire glisser avec le bouton droit. Vous pouvez empêcher un contrôle d’arborescence d’envoyer des notifications en lui attribuant le le **TVS_DISABLEDRAGDROP** style.  
+Un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie une notification lorsque l’utilisateur commence à faire glisser un élément. Le contrôle envoie un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) message de notification lorsque l’utilisateur commence à faire glisser un élément avec le bouton gauche de la souris et un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) message de notification lorsque l’utilisateur commence à faire glisser avec le bouton droit. Vous pouvez empêcher un contrôle d’arborescence d’envoyer des notifications en lui attribuant le style TVS_DISABLEDRAGDROP.  
   
  Vous obtenez une image à afficher pendant une opération glisser en appelant le [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) fonction membre. L’arborescence crée une image bitmap de glissement basée sur le nom de l’élément déplacé. Le contrôle d’arborescence crée une liste d’images, ajoute l’image bitmap, puis retourne un pointeur vers le [CImageList](../mfc/reference/cimagelist-class.md) objet.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6fd065d13d3c61b88cc24144cfc64368020d16
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385578"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953969"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets : notifications de socket
 Cet article décrit les fonctions de notification dans les classes de Sockets. Ces fonctions membres sont des fonctions de rappel que l’infrastructure appelle pour notifier à votre objet socket d’événements importants. Les fonctions de notification sont :  
@@ -43,14 +43,14 @@ Cet article décrit les fonctions de notification dans les classes de Sockets. C
   
  Ces fonctions sont des fonctions de rappel substituable. `CAsyncSocket` et `CSocket` convertir des messages à des notifications, mais vous devez implémenter la notification de fonctionne de répondre si vous souhaitez les utiliser. Les fonctions de notification sont appelées au moment où que votre socket reçoit une notification d’un événement d’intérêt, telles que la présence de données à lire.  
   
- MFC appelle les fonctions de notification pour vous permettre de personnaliser le comportement de votre socket au moment où qu'il est notifié. Par exemple, vous pouvez appeler **réception** à partir de votre `OnReceive` fonction de notification, autrement dit, elle est averti qu’il existe des données à lire, que vous appelez **réception** à le lire. Cette approche n’est pas nécessaire, mais il s’agit d’un scénario valide. En guise d’alternative, vous pouvez utiliser votre fonction de notification pour suivre la progression, d’impression **TRACE** messages et ainsi de suite.  
+ MFC appelle les fonctions de notification pour vous permettre de personnaliser le comportement de votre socket au moment où qu'il est notifié. Par exemple, vous pouvez appeler `Receive` à partir de votre `OnReceive` fonction de notification, autrement dit, elle est averti qu’il existe des données à lire, que vous appelez `Receive` à le lire. Cette approche n’est pas nécessaire, mais il s’agit d’un scénario valide. En guise d’alternative, vous pouvez utiliser votre fonction de notification pour suivre la progression, d’impression **TRACE** messages et ainsi de suite.  
   
  Vous pouvez tirer parti de ces notifications en substituant les fonctions de notification dans une classe dérivée de socket et en fournissant une implémentation.  
   
- Pendant une opération de réception ou envoi de données, un `CSocket` objet devient synchrone. Au cours de l’état synchrone, toutes les notifications destinées aux autres sockets sont mises en attente pendant que le socket en cours attend une notification qu’il souhaite. (Par exemple, pendant un **réception** appel, le socket attend une notification de lecture.) Une fois le socket a terminé son opération synchrone et asynchrone redevient, autres sockets peuvent commencer à recevoir les notifications en file d’attente.  
+ Pendant une opération de réception ou envoi de données, un `CSocket` objet devient synchrone. Au cours de l’état synchrone, toutes les notifications destinées aux autres sockets sont mises en attente pendant que le socket en cours attend une notification qu’il souhaite. (Par exemple, pendant un `Receive` appel, le socket attend une notification de lecture.) Une fois le socket a terminé son opération synchrone et asynchrone redevient, autres sockets peuvent commencer à recevoir les notifications en file d’attente.  
   
 > [!NOTE]
->  Dans `CSocket`, le `OnConnect` fonction de notification n’est jamais appelée. Pour les connexions, vous appelez **connexion**, qui retournera lorsque la connexion est terminée (avec succès ou erreur). Gestion des notifications de connexion est un détail d’implémentation MFC.  
+>  Dans `CSocket`, le `OnConnect` fonction de notification n’est jamais appelée. Pour les connexions, vous appelez `Connect`, qui retournera lorsque la connexion est terminée (avec succès ou erreur). Gestion des notifications de connexion est un détail d’implémentation MFC.  
   
  Pour plus d’informations sur chaque fonction de notification, consultez la fonction de la classe `CAsyncSocket` dans les *référence MFC*. Pour le code source et des informations sur les exemples MFC, consultez [exemples MFC](../visual-cpp-samples.md).  
   

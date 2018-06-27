@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382971"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951506"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003 : mappage des handles Windows à des objets
 Cette note décrit les classes MFC des routines qui prennent en charge le mappage Windows handles vers des objets C++ de l’objet.  
@@ -56,15 +56,15 @@ Cette note décrit les classes MFC des routines qui prennent en charge le mappag
   
 -   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Étant donné un handle à l’une de ces objets, vous pouvez trouver l’objet MFC qui encapsule le handle en appelant la méthode statique `FromHandle`. Par exemple, prenons un HWND appelé `hWnd`, la ligne suivante retourne un pointeur vers le `CWnd` qui encapsule `hWnd`:  
+ Étant donné un handle à l’une de ces objets, vous pouvez trouver l’objet MFC qui encapsule le handle en appelant la méthode statique `FromHandle`. Par exemple, prenons un HWND appelé *hWnd*, la ligne suivante retourne un pointeur vers le `CWnd` qui encapsule *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Si `hWnd` n’a pas d’un objet de wrapper spécifique, une valeur temporaire `CWnd` est créée pour encapsuler `hWnd`. Cela rend possible d’obtenir un objet C++ valide à partir d’un handle quelconque.  
+ Si *hWnd* n’a pas d’un objet de wrapper spécifique, une valeur temporaire `CWnd` est créée pour encapsuler *hWnd*. Cela rend possible d’obtenir un objet C++ valide à partir d’un handle quelconque.  
   
- Après avoir configuré un objet de wrapper, vous pouvez récupérer son handle à partir d’une variable membre public de la classe wrapper. Dans le cas d’un `CWnd`, `m_hWnd` contient le HWND de cet objet.  
+ Après avoir configuré un objet de wrapper, vous pouvez récupérer son handle à partir d’une variable membre public de la classe wrapper. Dans le cas d’un `CWnd`, *m_hWnd* contient le HWND de cet objet.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>Attachement de Handles pour les objets MFC  
  Étant donné un objet de wrapper de descripteur nouvellement créé et un handle à un objet de Windows, vous pouvez associer les deux en appelant le `Attach` fonctionnent comme dans cet exemple :  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Cela crée une entrée dans l’association de carte permanente `myWnd` et `hWnd`. Appel de `CWnd::FromHandle(hWnd)` retourne maintenant un pointeur vers `myWnd`. Lorsque `myWnd` est supprimé, le destructeur automatiquement détruira `hWnd` en appelant les fenêtres [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) (fonction). Si ce n’est pas souhaité, `hWnd` doit être détaché de `myWnd` avant `myWnd` est détruit (normalement, lorsque vous quittez la portée à laquelle `myWnd` a été défini). Le `Detach` méthode.  
+ Cela crée une entrée dans l’association de carte permanente *myWnd* et *hWnd*. Appel de `CWnd::FromHandle(hWnd)` retourne maintenant un pointeur vers *myWnd*. Lorsque *myWnd* est supprimé, le destructeur automatiquement détruira *hWnd* en appelant les fenêtres [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) (fonction). Si ce n’est pas souhaité, *hWnd* doit être détaché de *myWnd* avant *myWnd* est détruit (normalement, lorsque vous quittez la portée à laquelle *myWnd*a été défini). Le `Detach` méthode.  
   
 ```  
 myWnd.Detach();

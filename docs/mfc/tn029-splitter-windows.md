@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384721"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957222"
 ---
 # <a name="tn029-splitter-windows"></a>TN029 : fenêtres fractionnées
 Cette note décrit les classes MFC [CSplitterWnd classe](../mfc/reference/csplitterwnd-class.md), qui fournit la fenêtre fractionne et gère le redimensionnement des autres fenêtres de volet.  
@@ -66,7 +66,7 @@ Cette note décrit les classes MFC [CSplitterWnd classe](../mfc/reference/csplit
  Volet :  
  Une fenêtre d’application spécifique qui un `CSplitterWnd` gère. Un volet est généralement un objet qui est dérivé de la [classe CView](../mfc/reference/cview-class.md), mais peut être une [CWnd](../mfc/reference/cwnd-class.md) objet ayant l’ID de fenêtre enfant approprié.  
   
- À utiliser un `CWnd`-dérivée de l’objet, passez le `RUNTIME_CLASS` de l’objet à la `CreateView` fonctionnent comme vous le feriez si vous utilisiez un `CView`-classe dérivée. Votre classe doit utiliser `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE` , car l’infrastructure utilise la création dynamique lors de l’exécution. Bien qu’il y a beaucoup de code dans `CSplitterWnd` qui est spécifique à la `CView` (classe), [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) est toujours utilisé avant que ces actions sont effectuées.  
+ Pour utiliser un `CWnd`-dérivée d’objet, passez le RUNTIME_CLASS de l’objet à la `CreateView` fonctionnent comme vous le feriez si vous utilisiez un `CView`-classe dérivée. Votre classe doit utiliser DECLARE_DYNCREATE et IMPLEMENT_DYNCREATE, car l’infrastructure utilise la création dynamique lors de l’exécution. Bien qu’il y a beaucoup de code dans `CSplitterWnd` qui est spécifique à la `CView` (classe), [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) est toujours utilisé avant que ces actions sont effectuées.  
   
  Barre de fractionnement :  
  Un contrôle qui est placé entre les lignes et colonnes de volets. Il peut être utilisé pour ajuster les tailles des lignes ou colonnes de volets.  
@@ -88,14 +88,14 @@ Cette note décrit les classes MFC [CSplitterWnd classe](../mfc/reference/csplit
 [      ][      ][v]  
 ```  
   
- Lorsque l’utilisateur déplace la barre de défilement `WM_VSCROLL` messages seront envoyés aux deux modes. Lorsque des affichages définit la position de barre de défilement, la barre de défilement partagé sera définie.  
+ Lorsque l’utilisateur déplace la barre de défilement, vous recevrez les messages WM_VSCROLL pour les deux vues. Lorsque des affichages définit la position de barre de défilement, la barre de défilement partagé sera définie.  
   
  Notez que les barres de défilement partagé sont particulièrement utiles avec les objets de vue similaire. Si vous combinez des vues de types différents dans un séparateur, vous devez écrire un code spécial pour coordonner les positions de défilement. N’importe quel `CView`-classe dérivée qui utilise le `CWnd` API délègue à la barre de défilement partagé s’il existe de barre de défilement. Le `CScrollView` implémentation est un exemple d’un `CView` classe qui prend en charge partagé des barres de défilement. Les classes qui ne sont pas dérivés de `CView`, des classes qui s’appuient sur les barres de défilement du contrôle de code non, ou qui utilisent des infrastructures Windows standard (par exemple, `CEditView`) ne fonctionne pas avec la fonctionnalité de barre de défilement partagé de `CSplitterWnd`.  
   
 ## <a name="minimum-sizes"></a>Tailles minimales  
  Pour chaque ligne, il existe une hauteur de ligne minimale, et pour chaque colonne a une largeur minimale de la colonne. Ce minimum garantit qu’un volet n’est pas trop petit pour être affichées en détail.  
   
- Pour une fenêtre fractionnée statique, la largeur de colonnes et la hauteur minimale de ligne initiale est 0. Pour une fenêtre fractionnée dynamique, la largeur de colonnes et la hauteur minimale des lignes initiales sont définis par le `sizeMin` paramètre de la `CSplitterWnd::Create` (fonction).  
+ Pour une fenêtre fractionnée statique, la largeur de colonnes et la hauteur minimale de ligne initiale est 0. Pour une fenêtre fractionnée dynamique, la largeur de colonnes et la hauteur minimale des lignes initiales sont définis par le *sizeMin* paramètre de la `CSplitterWnd::Create` (fonction).  
   
  Vous pouvez modifier ces tailles minimales en utilisant le [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) et [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) fonctions.  
   

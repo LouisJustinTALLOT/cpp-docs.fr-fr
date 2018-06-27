@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358039"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952750"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition, classe
 Implémente une transition personnalisée.  
@@ -86,7 +86,7 @@ class CCustomTransition : public CBaseTransition;
   
  `CCustomTransition`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
@@ -97,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pInterpolator`  
+ *pInterpolator*  
  Pointeur vers l’interpolateur personnalisé.  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -110,7 +110,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pFactory`  
+ *pFactory*  
  Pointeur vers la fabrique de transitions qui est responsable de la création de transitions personnalisées.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -161,7 +161,7 @@ void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `initialValue`  
+ *initialValue*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  Définit une rapidité initiale, qui est appliquée à une variable d’animation associée à cette transition.  
@@ -171,7 +171,7 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)

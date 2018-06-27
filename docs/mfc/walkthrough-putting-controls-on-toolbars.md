@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c134431500ed3e7b2b2229ea5b4b3da7cac6fa48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45a04f81ee7419bdf45052f0f1f2746dd7866af8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385081"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957170"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : placement de contrôles dans les barres d'outils
 Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient un contrôle Windows. Dans les MFC, un bouton de barre d’outils doit être un [CMFCToolBarButton classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe dérivée, par exemple [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [CMFCToolBarMenuButton classe](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -32,7 +32,7 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
   
 2.  Réservez une image de barre d'outils (icône bouton) pour le bouton dans toutes les images bitmap de la barre d'outils parente.  
   
-3.  Dans le gestionnaire de messages qui gère le message `AFX_WM_RESETTOOLBAR`, procédez comme suit :  
+3.  Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, procédez comme suit :  
   
     1.  Construisez le contrôle de bouton à l'aide d'une classe dérivée de `CMFCToolbarButton`.  
   
@@ -47,7 +47,7 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
  Lorsque vous activez la personnalisation, vous créez le **personnaliser** boîte de dialogue dans le Gestionnaire de personnalisation `OnViewCustomize` à l’aide de la [CMFCToolBarsCustomizeDialog classe](../mfc/reference/cmfctoolbarscustomizedialog-class.md) classe. Avant d’afficher le **personnaliser** boîte de dialogue en appelant [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), appelez [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) à remplacer le bouton standard avec le nouveau contrôle.  
   
 ## <a name="example-creating-a-find-combo-box"></a>Exemple : création d'une zone de liste déroulante Rechercher  
- Cette section décrit comment créer un contrôle de zone de liste déroulante `Find` qui apparaît dans une barre d'outils et contient les dernières chaînes utilisées. L'utilisateur peut entrer une chaîne du contrôle puis appuyer sur la touche d'entrée pour rechercher un document, ou appuyer sur la touche Échap pour retourner le focus au frame principal. Cet exemple suppose que le document s’affiche dans un [classe CEditView](../mfc/reference/ceditview-class.md)-dérivée de vue.  
+ Cette section décrit comment créer un **trouver** contrôle de zone de liste déroulante qui apparaît sur une barre d’outils contient les chaînes de recherche de récemment utilisés. L'utilisateur peut entrer une chaîne du contrôle puis appuyer sur la touche d'entrée pour rechercher un document, ou appuyer sur la touche Échap pour retourner le focus au frame principal. Cet exemple suppose que le document s’affiche dans un [classe CEditView](../mfc/reference/ceditview-class.md)-dérivée de vue.  
   
 ### <a name="creating-the-find-control"></a>Création du contrôle de recherche (Find)  
  En premier lieu, créez le contrôle de la zone de liste déroulante `Find` :  
@@ -65,9 +65,9 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
   
 2.  Créer une nouvelle classe, `CFindComboBox`, dérivée de [CComboBox (classe)](../mfc/reference/ccombobox-class.md).  
   
-3.  Dans la classe `CFindComboBox`, substituez la méthode virtuelle `PreTranslateMessage`. Cette méthode active la zone de liste déroulante traiter les [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) message. Si l'utilisateur appuie sur la touche Échap (`VK_ESCAPE`), retournez le focus sur la fenêtre frame principale. Si l'utilisateur appuie sur la touche Entrée (`VK_ENTER`), publiez dans la fenêtre frame principale un message `WM_COMMAND` contenant l'ID de commande `ID_EDIT_FIND_COMBO`.  
+3.  Dans la classe `CFindComboBox`, substituez la méthode virtuelle `PreTranslateMessage`. Cette méthode active la zone de liste déroulante traiter les [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) message. Si l'utilisateur appuie sur la touche Échap (`VK_ESCAPE`), retournez le focus sur la fenêtre frame principale. Si l’utilisateur appuie sur la touche entrée (`VK_ENTER`), valider dans la fenêtre frame principale un message WM_COMMAND contenant le `ID_EDIT_FIND_COMBO` ID de commande.  
   
-4.  Créez une classe pour le `Find` bouton de zone de liste modifiable, dérivé [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Dans cet exemple, cela est nommé `CFindComboButton`.  
+4.  Créez une classe pour le **trouver** bouton de zone de liste modifiable, dérivé [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Dans cet exemple, cela est nommé `CFindComboButton`.  
   
 5.  Le constructeur de `CMFCToolbarComboBoxButton` prend trois paramètres : l'ID de commande du bouton, l'index d'image du bouton et le style de la zone de liste déroulante. Définissez ces paramètres comme suit :  
   
@@ -81,9 +81,9 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
   
 7.  Utilisez le [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macro pour rendre le bouton de liste déroulante persistant. Le gestionnaire de l'espace de travail charge et stocke automatiquement l'état du bouton dans le Registre Windows.  
   
-8.  Implémentez le gestionnaire `ID_EDIT_FIND_COMBO` dans l'affichage de votre document. Utilisez [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) avec `ID_EDIT_FIND_COMBO` pour récupérer tous les `Find` boutons de zone de liste déroulante. Il peut exister plusieurs copies d'un bouton avec le même ID de commande suite à la personnalisation.  
+8.  Implémentez le gestionnaire `ID_EDIT_FIND_COMBO` dans l'affichage de votre document. Utilisez [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) avec `ID_EDIT_FIND_COMBO` pour récupérer tous les **trouver** boutons de zone de liste déroulante. Il peut exister plusieurs copies d'un bouton avec le même ID de commande suite à la personnalisation.  
   
-9. Dans le Gestionnaire de messages ID_EDIT_FIND `OnFind`, utilisez [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) pour déterminer si la commande find a été envoyée à partir de la `Find` bouton de zone de liste déroulante. Si oui, recherchez le texte et ajoutez la chaîne recherchée dans la zone de liste déroulante.  
+9. Dans le Gestionnaire de messages ID_EDIT_FIND `OnFind`, utilisez [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) pour déterminer si la commande find a été envoyée à partir de la **trouver** bouton de zone de liste déroulante. Si oui, recherchez le texte et ajoutez la chaîne recherchée dans la zone de liste déroulante.  
   
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Ajout du contrôle de recherche (Find) dans la barre d'outils principale  
  Pour ajouter le bouton de zone de liste déroulante à la barre d'outils, suivez ces étapes :  
@@ -91,15 +91,15 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
 1.  Implémentez le gestionnaire de messages `AFX_WM_RESETTOOLBAR` `OnToolbarReset` dans la fenêtre frame principale.  
   
     > [!NOTE]
-    >  Le framework envoie le message à la fenêtre frame principale lorsqu'une barre d'outils est initialisée pendant le démarrage de l'application, ou lorsqu'une barre d'outils est réinitialisée pendant la personnalisation. Dans les deux cas, vous devez remplacer le bouton de barre d'outils standard par le bouton de zone de liste déroulante `Find` personnalisé.  
+    >  Le framework envoie le message à la fenêtre frame principale lorsqu'une barre d'outils est initialisée pendant le démarrage de l'application, ou lorsqu'une barre d'outils est réinitialisée pendant la personnalisation. Dans les deux cas, vous devez remplacer le bouton de barre d’outils standard par personnalisé **trouver** bouton de zone de liste déroulante.  
   
-2.  Dans le gestionnaire `AFX_WM_RESETTOOLBAR`, examinez l'ID de barre d'outils, autrement dit, `WPARAM` du message `AFX_WM_RESETTOOLBAR`. Si l’ID de la barre d’outils est égale à celle de la barre d’outils qui contient le `Find` bouton de zone de liste déroulante, appelez [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) pour remplacer le `Find` bouton (autrement dit, le bouton avec l’ID de commande `ID_EDIT_FIND)` avec un `CFindComboButton` objet.  
+2.  Dans le `AFX_WM_RESETTOOLBAR` gestionnaire, examinez l’ID de la barre d’outils, autrement dit, le *WPARAM* du message AFX_WM_RESETTOOLBAR. Si l’ID de la barre d’outils est égale à celle de la barre d’outils qui contient le **trouver** bouton de zone de liste déroulante, appelez [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) pour remplacer le **trouver** bouton (autrement dit, le bouton avec l’ID de commande `ID_EDIT_FIND)` avec un `CFindComboButton` objet.  
   
     > [!NOTE]
     >  Vous pouvez construire un objet `CFindComboBox` sur la pile, car `ReplaceButton` copie le bouton et conserve la copie.  
   
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Ajout du contrôle de recherche (Find) dans la boîte de dialogue Personnaliser  
- Dans le Gestionnaire de personnalisation `OnViewCustomize`, appelez [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) pour remplacer le `Find` bouton (autrement dit, le bouton avec l’ID de commande `ID_EDIT_FIND)` avec un `CFindComboButton` objet.  
+ Dans le Gestionnaire de personnalisation `OnViewCustomize`, appelez [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) pour remplacer le **trouver** bouton (autrement dit, le bouton avec l’ID de commande `ID_EDIT_FIND)` avec un `CFindComboButton` objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../mfc/hierarchy-chart.md)   

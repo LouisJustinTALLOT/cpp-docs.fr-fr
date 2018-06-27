@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352110"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956357"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsque la valeur d'une variable de l'animation est modifiée.  
@@ -68,7 +68,7 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
   
  `CAnimationVariableIntegerChangeHandler`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
@@ -88,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `storyboard`  
+ *table de montage séquentiel*  
  La table de montage séquentiel qui anime la variable.  
   
- `variable`  
+ *Variable*  
  La variable d’animation qui a été mis à jour.  
   
- `newValue`  
+ *nouvelle valeur*  
  La nouvelle valeur arrondie.  
   
- `previousValue`  
+ *previousValue*  
  La précédente valeur arrondie.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pAnimationController`  
+ *pAnimationController*  
  Pointeur vers le contrôleur de l’animation, qui doit recevoir des événements.  
   
 ## <a name="see-also"></a>Voir aussi  

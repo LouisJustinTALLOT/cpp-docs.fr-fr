@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357181"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953386"
 ---
 # <a name="carray-class"></a>CArray (classe)
 Prend en charge les tableaux qui sont semblables aux tableaux C, mais peuvent réduire et dynamiquement en fonction des besoins de la croissance.  
@@ -70,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `TYPE`  
- Paramètre de modèle qui spécifie le type des objets stockés dans le tableau. `TYPE` est un paramètre qui est retourné par `CArray`.  
+ *TYPE*  
+ Paramètre de modèle qui spécifie le type des objets stockés dans le tableau. *TYPE* est un paramètre qui est retourné par `CArray`.  
   
- `ARG` *_* `TYPE`  
- Paramètre de modèle qui spécifie le type d’argument qui est utilisé pour accéder aux objets stockés dans le tableau. Souvent, une référence à `TYPE`. `ARG_TYPE` est un paramètre qui est passé à `CArray`.  
+ *ARG* *_* *TYPE*  
+ Paramètre de modèle qui spécifie le type d’argument qui est utilisé pour accéder aux objets stockés dans le tableau. Souvent, une référence à *TYPE*. *ARG_TYPE* est un paramètre qui est passé à `CArray`.  
   
 ## <a name="members"></a>Membres  
   
@@ -136,7 +136,7 @@ class CArray : public CObject
   
  `CArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  `Header:` afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
@@ -147,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle spécifiant le type d’arguments de référence à des éléments dans ce tableau.  
   
- `newElement`  
+ *newElement*  
  L’élément à ajouter à ce tableau.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de l’élément ajouté.  
   
 ### <a name="remarks"></a>Notes  
- Si [SetSize](#setsize) a été utilisé avec un `nGrowBy` valeur supérieure à 1, puis de mémoire supplémentaire peut-être être alloué. Toutefois, la limite supérieure augmente de 1 uniquement.  
+ Si [SetSize](#setsize) a été utilisé avec un *nGrowBy* valeur supérieure à 1, puis de mémoire supplémentaire peut-être être alloué. Toutefois, la limite supérieure augmente de 1 uniquement.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -179,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>Notes  
  Les tableaux doivent être du même type.  
   
- Si nécessaire, **Append** peut allouer de mémoire supplémentaire pour prendre en compte les éléments ajoutés dans le tableau.  
+ Si nécessaire, `Append` peut allouer de mémoire supplémentaire pour prendre en compte les éléments ajoutés dans le tableau.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -211,7 +211,7 @@ void Copy(const CArray& src);
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction membre pour remplacer les éléments d’un tableau avec les éléments d’un autre tableau.  
   
- **Copie** ne libère pas la mémoire ; Cependant, si nécessaire, **copie** peut allouer de mémoire supplémentaire pour prendre en compte les éléments copiés dans le tableau.  
+ **Copie** ne libère pas la mémoire ; Cependant, si nécessaire, `Copy` peut allouer de mémoire supplémentaire pour prendre en compte les éléments copiés dans le tableau.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -225,7 +225,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -262,7 +262,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TYPE*  
  Paramètre de modèle qui spécifie le type des éléments du tableau.  
   
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -336,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Notes  
  Étant donné que les index de tableau sont de base zéro, cette fonction retourne une valeur 1 moins `GetSize`.  
   
- La condition **() de GetUpperBound** = -1 indique que le tableau ne contient aucun élément.  
+ La condition `GetUpperBound( )` = -1 indique que le tableau ne contient aucun élément.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CArray::GetAt](#getat).  
@@ -356,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui peut être supérieur à la valeur retournée par `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle spécifiant le type d’éléments dans ce tableau.  
   
- `newElement`  
+ *newElement*  
  L’élément doit être placé dans ce tableau.  
   
- `nCount`  
+ *nCount*  
  Le nombre de fois que cet élément doit être inséré (par défaut 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un index entier qui peut être supérieur à la valeur retournée par [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
+ *pNewArray*  
  Un autre tableau qui contient les éléments à ajouter à ce tableau.  
   
 ### <a name="remarks"></a>Notes  
  Dans le processus, il se déplace (en augmentant l’index) l’élément existant à cet index et il se déplace tous les éléments au-dessus de lui.  
   
- La deuxième version insère tous les éléments d’une autre `CArray` collection, en commençant à la `nStartIndex` position.  
+ La deuxième version insère tous les éléments d’une autre `CArray` collection, en commençant à la *nStartIndex* position.  
   
  Le `SetAt` (fonction), en revanche, remplace un élément du tableau spécifié et ne pas déplacer des éléments.  
   
@@ -406,7 +406,7 @@ const TYPE& operator[](int_ptr nindex) const;
  *TYPE*  
  Paramètre de modèle spécifiant le type d’éléments dans ce tableau.  
   
- `nIndex`  
+ *nIndex*  
  Index de l’élément auquel accéder.  
   
 ### <a name="remarks"></a>Notes  
@@ -429,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pNewData`  
+ *pNewData*  
  Une nouvelle mémoire tampon pour le tableau d’éléments.  
   
- `pData`  
+ *pData*  
  L’ancien tableau d’éléments.  
   
- `nCount`  
+ *nCount*  
  Nombre d’éléments dans le tableau ancien.  
   
 ### <a name="remarks"></a>Notes  
- `pNewData` est toujours suffisamment grande pour contenir tous les `pData` éléments.  
+ *pNewData* est toujours suffisamment grande pour contenir tous les *pData* éléments.  
   
  Le [CArray](../../mfc/reference/carray-class.md) implémentation utilise cette méthode pour copier les anciennes données à une nouvelle mémoire tampon lors de la baie doit augmenter ou réduire (lorsque [SetSize](#setsize) ou [FreeExtra](#freeextra) sont appelés). L’implémentation par défaut copie uniquement les données.  
   
@@ -468,10 +468,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  Nombre d'éléments à supprimer.  
   
 ### <a name="remarks"></a>Notes  
@@ -490,13 +490,13 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type des arguments utilisés pour faire référence à des éléments de tableau.  
   
- `newElement`  
+ *newElement*  
  La nouvelle valeur d’élément doit être stocké à la position spécifiée.  
   
 ### <a name="remarks"></a>Notes  
@@ -515,13 +515,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle spécifiant le type d’éléments dans le tableau.  
   
- `newElement`  
+ *newElement*  
  L’élément à ajouter à ce tableau. A **NULL** la valeur est autorisée.  
   
 ### <a name="remarks"></a>Notes  
@@ -540,10 +540,10 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nNewSize`  
+ *nNewSize*  
  La nouvelle taille du tableau (nombre d’éléments). Doit être supérieur ou égal à 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Le nombre minimal d’emplacements d’élément pour allouer si une augmentation de la taille n’est nécessaire.  
   
 ### <a name="remarks"></a>Notes  
@@ -551,7 +551,7 @@ void SetSize(
   
  Utilisez cette fonction pour définir la taille de votre tableau avant de commencer à l’aide du tableau. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  
   
- Le `nGrowBy` paramètre affecte l’allocation de mémoire interne lors de l’agrandissement du tableau. Son utilisation n’affecte jamais la taille du tableau comme indiqué par [GetSize](#getsize) et [GetUpperBound](#getupperbound). Si la valeur par défaut est utilisée, MFC alloue la mémoire de façon à éviter la fragmentation de la mémoire et optimiser l’efficacité de la plupart des cas.  
+ Le *nGrowBy* paramètre affecte l’allocation de mémoire interne lors de l’agrandissement du tableau. Son utilisation n’affecte jamais la taille du tableau comme indiqué par [GetSize](#getsize) et [GetUpperBound](#getupperbound). Si la valeur par défaut est utilisée, MFC alloue la mémoire de façon à éviter la fragmentation de la mémoire et optimiser l’efficacité de la plupart des cas.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [GetData](#getdata).  

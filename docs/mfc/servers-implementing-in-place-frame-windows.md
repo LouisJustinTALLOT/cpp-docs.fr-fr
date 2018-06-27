@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380862"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956427"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serveurs : implémentations de fenêtres frame sur place
 Cet article explique ce que vous devez effectuer pour implémenter des fenêtres frame au sein de votre application serveur d'édition visuelle si vous n'utilisez pas l'Assistant d'application pour créer votre application serveur. Au lieu de suivre la procédure décrite dans cet article, vous pouvez utiliser une classe de fenêtre frame sur place existante à partir d’une application générée par l’Assistant application ou d’un exemple fourni avec Visual C++.  
@@ -32,17 +32,17 @@ Cet article explique ce que vous devez effectuer pour implémenter des fenêtres
   
 1.  Dérivez une classe de fenêtre frame en place depuis `COleIPFrameWnd`.  
   
-    -   Utilisez la macro `DECLARE_DYNCREATE` dans votre fichier d'en-tête de la classe.  
+    -   Utilisez la macro DECLARE_DYNCREATE dans votre fichier d’en-tête de classe.  
   
-    -   Utilisez la macro `IMPLEMENT_DYNCREATE` dans votre fichier d'implémentation de classe (.cpp). Cela permet aux objets de cette classe d'être créés par le .NET Framework.  
+    -   Utilisez la macro IMPLEMENT_DYNCREATE dans votre fichier d’implémentation (.cpp). Cela permet aux objets de cette classe d'être créés par le .NET Framework.  
   
 2.  Déclarez un membre `COleResizeBar` dans la classe de fenêtre frame. Cela est nécessaire si vous voulez prendre en charge le redimensionnement en place dans les applications serveur.  
   
-     Déclarez une `OnCreate` le Gestionnaire de messages (à l’aide de la **propriétés** fenêtre) et appelez **créer** pour votre `COleResizeBar` membre, si vous l’avez défini.  
+     Déclarez une `OnCreate` le Gestionnaire de messages (à l’aide de la **propriétés** fenêtre) et appelez `Create` pour votre `COleResizeBar` membre, si vous l’avez défini.  
   
 3.  Si vous avez une barre d'outils, déclarez un membre `CToolBar` dans la classe de fenêtre frame.  
   
-     Remplacez la fonction membre `OnCreateControlBars` pour créer une barre d'outils lorsque le serveur en place est actif. Par exemple :  
+     Remplacez la fonction membre `OnCreateControlBars` pour créer une barre d'outils lorsque le serveur en place est actif. Exemple :  
   
      [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
   

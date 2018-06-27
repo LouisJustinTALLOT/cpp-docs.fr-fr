@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355412"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954658"
 ---
 # <a name="afx-messages"></a>AFX (messages)
 Ces messages sont utilisés dans la bibliothèque MFC.  
@@ -89,7 +89,7 @@ Ces messages sont utilisés dans la bibliothèque MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Message|Description|[in] `wParam`|`lParam` (Tous les paramètres sont [in], sauf indication contraire).|Valeur de retour|  
+|Message|Description|[in] *wParam*|*lParam* (tous les paramètres sont [in], sauf indication contraire).|Valeur de retour|  
 |AFX_WM_ACCGETOBJECT|Non utilisé.|Non utilisé.|Non applicable.|Non applicable.|  
 |AFX_WM_ACCGETSTATE|Utilisé pour la prise en charge de l’accessibilité. Envoyer ce message à `CMFCPopupMenu` ou `CMFCRibbonPanelMenu` pour récupérer l’état de l’élément actuel.|Index de l’élément, ce qui peut être un bouton de menu ou un séparateur.|Non utilisé.|L’état de l’élément. Il est -1 si l’index n’est pas valide, 0 si le bouton de menu n’a aucun attribut spécial. Dans le cas contraire, il est une combinaison des indicateurs suivants :<br /><br /> TBBS_DISABLED : l’élément est désactivé<br /><br /> TBBS_CHECKED : l’élément est activé<br /><br /> TBBS_BUTTON : l’élément est un bouton de commande standard<br /><br /> TBBS_PRESSED : bouton est enfoncé.<br /><br /> TBBS_INDETERMINATE : état indéfini<br /><br /> TBBS_SEPARATOR - plutôt qu’un bouton de menu, formulaires de cet élément une séparation entre les autres éléments de menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Le framework envoie ce message pour le contrôle de barre de contrôle redimensionnable. Traiter ce message pour recevoir des notifications à partir de `CMFCTabCtrl` objets lorsqu’un utilisateur modifie un onglet actif.|L’index d’un onglet.|Non utilisé.|Différent de zéro.|  
@@ -131,7 +131,7 @@ Ces messages sont utilisés dans la bibliothèque MFC.
 |AFX_WM_UPDATETOOLTIPS|Envoyé à tous les propriétaires de l’info-bulle pour indiquer que les contrôles d’info-bulle doivent être recréées.|Le type de contrôle qui doit traiter ce message. Consultez le tableau plus loin dans cette rubrique pour obtenir la liste des valeurs possibles.|Non utilisé.|Non utilisé.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` envoie ce message pour le frame parent lorsque l’utilisateur clique sur le **aide** bouton ou insère le mode d’aide en cliquant sur le **aide** bouton de légende ou la touche F1.|Non utilisé.|Un pointeur vers l’instance de `CMFCWindowsManagerDialog`.|Non utilisé.|  
   
- Le tableau suivant montre les valeurs pour le mot de poids faible de la `lParam` paramètre de la méthode AFX_WM_HSCROLL :  
+ Le tableau suivant montre les valeurs pour le mot de poids faible de la *lParam* paramètre de la méthode AFX_WM_HSCROLL :  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ Ces messages sont utilisés dans la bibliothèque MFC.
 |SB_THUMBTRACK|L’utilisateur fait glisser le curseur de défilement. Le message AFX_WM_ON_HSCROLL est envoyé à plusieurs reprises avec cette valeur jusqu'à ce que l’utilisateur relâche le bouton de la souris. Le mot de poids fort indique la position à laquelle la case de défilement a été déplacée.|  
   
 > [!NOTE]
->  Le mot de poids fort de le `lParam` paramètre spécifie la position actuelle de la case de défilement, si le mot de poids faible est SB_THUMBPOSITION ou SB_THUMBTRACK ; sinon, ce mot n’est pas utilisé.  
+>  Le mot de poids fort de le *lParam* paramètre spécifie la position actuelle de la case de défilement, si le mot de poids faible est SB_THUMBPOSITION ou SB_THUMBTRACK ; sinon, ce mot n’est pas utilisé.  
   
- Le tableau suivant répertorie les valeurs d’indicateur pour la `lParam` paramètre du message AFX_WM_UPDATETOOLTIPS :  
+ Le tableau suivant répertorie les valeurs d’indicateur pour le *lParam* paramètre du message AFX_WM_UPDATETOOLTIPS :  
   
 |||  
 |-|-|  
