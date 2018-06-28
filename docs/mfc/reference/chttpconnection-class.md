@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09f92440a926f547f051dd0bee73468a1958813e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367644"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041024"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection, classe
 Gère votre connexion à un serveur HTTP.  
@@ -66,7 +66,7 @@ class CHttpConnection : public CInternetConnection
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
@@ -100,36 +100,36 @@ CHttpConnection(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pSession`  
+ *pSession*  
  Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet.  
   
- `hConnected`  
+ *hConnected*  
  Un handle à une connexion Internet.  
   
- `pstrServer`  
+ *pstrServer*  
  Un pointeur vers une chaîne contenant le nom du serveur.  
   
- `dwContext`  
- L’identificateur de contexte pour le `CInternetConnection` objet. Consultez **remarques** pour plus d’informations sur `dwContext`.  
+ *dwContext*  
+ L’identificateur de contexte pour le `CInternetConnection` objet. Consultez **remarques** pour plus d’informations sur *dwContext*.  
   
- `nPort`  
+ *%nPort*  
  Numéro qui identifie le port Internet pour cette connexion.  
   
- `pstrUserName`  
+ *pstrUserName*  
  Pointeur vers une chaîne se terminant par null qui spécifie le nom de l’utilisateur de se connecter. Si **NULL**, la valeur par défaut est anonyme.  
   
- `pstrPassword`  
- Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe à utiliser pour vous connecter. Si les deux `pstrPassword` et `pstrUserName` sont **NULL**, le mot de passe anonyme par défaut est le nom d’utilisateur par courrier électronique. Si `pstrPassword` est **NULL** (ou une chaîne vide), mais `pstrUserName` n’est pas **NULL**, un mot de passe vierge est utilisé. Le tableau suivant décrit le comportement pour les quatre paramètres possibles de `pstrUserName` et `pstrPassword`:  
+ *pstrPassword*  
+ Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe à utiliser pour vous connecter. Si les deux *pstrPassword* et *pstrUserName* sont **NULL**, le mot de passe anonyme par défaut est le nom d’utilisateur par courrier électronique. Si *pstrPassword* est **NULL** (ou une chaîne vide), mais *pstrUserName* n’est pas **NULL**, un mot de passe vierge est utilisé. Le tableau suivant décrit le comportement pour les quatre paramètres possibles de *pstrUserName* et *pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|Nom d’utilisateur envoyé au serveur FTP|Mot de passe envoyé au serveur FTP|  
+|*pstrUserName*|*pstrPassword*|Nom d’utilisateur envoyé au serveur FTP|Mot de passe envoyé au serveur FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL** ou « »|**NULL** ou « »|« anonyme »|Nom de l’utilisateur par courrier électronique|  
-|Non- **NULL** chaîne|**NULL** ou « »|`pstrUserName`|" "|  
+|Non- **NULL** chaîne|**NULL** ou « »|*pstrUserName*|" "|  
 |**NULL** Non - **NULL** chaîne|**ERREUR**|**ERREUR**||  
-|Non- **NULL** chaîne|Non- **NULL** chaîne|`pstrUserName`|`pstrPassword`|  
+|Non- **NULL** chaîne|Non- **NULL** chaîne|*pstrUserName*|*pstrPassword*|  
   
- `dwFlags`  
- N’importe quelle combinaison de la **INTERNET_ FLAG_\***  indicateurs. Consultez le tableau dans le **remarques** section de [CHttpConnection::OpenRequest](#openrequest) pour obtenir une description de `dwFlags` valeurs.  
+ *dwFlags*  
+ N’importe quelle combinaison de la **INTERNET_ FLAG_\***  indicateurs. Consultez le tableau dans le **remarques** section de [CHttpConnection::OpenRequest](#openrequest) pour obtenir une description de *dwFlags* valeurs.  
   
 ### <a name="remarks"></a>Notes  
  Vous ne créez jamais un `CHttpConnection` directement. Au lieu de cela, vous créez un objet en appelant [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
@@ -159,31 +159,31 @@ CHttpFile* OpenRequest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pstrVerb`  
+ *pstrVerb*  
  Un pointeur vers une chaîne contenant le verbe à utiliser dans la demande. Si `NULL`, « GET » est utilisé.  
   
- `pstrObjectName`  
+ *pstrObjectName*  
  Un pointeur vers une chaîne contenant l’objet cible du verbe spécifié. Il s’agit généralement d’un nom de fichier, un module exécutable ou d’un spécificateur de recherche.  
   
- `pstrReferer`  
- Un pointeur vers une chaîne qui spécifie l’adresse (URL) du document à partir de laquelle l’URL dans la demande ( `pstrObjectName`) a été obtenu. Si `NULL`, aucun en-tête HTTP n’est spécifié.  
+ *pstrReferer*  
+ Un pointeur vers une chaîne qui spécifie l’adresse (URL) du document à partir de laquelle l’URL dans la demande ( *pstrObjectName*) a été obtenu. Si `NULL`, aucun en-tête HTTP n’est spécifié.  
   
- `dwContext`  
- L’identificateur de contexte pour le `OpenRequest` opération. Consultez la section Notes pour plus d’informations `dwContext`.  
+ *dwContext*  
+ L’identificateur de contexte pour le `OpenRequest` opération. Consultez la section Notes pour plus d’informations sur les *dwContext*.  
   
- `ppstrAcceptTypes`  
- Un pointeur vers un tableau se terminant par null de `LPCTSTR` des pointeurs vers des chaînes indiquant les types de contenu accepté par le client. Si `ppstrAcceptTypes` est `NULL`, les serveurs interprètent que le client accepte uniquement des documents de type « texte / * » (autrement dit, des documents texte uniquement et pas des images ou autres fichiers binaires). Le type de contenu est équivalent à la type_contenu variable CGI, qui identifie le type de données pour les requêtes que vous ont lié des informations, tels que HTTP POST et PUT.  
+ *ppstrAcceptTypes*  
+ Un pointeur vers un tableau se terminant par null de `LPCTSTR` des pointeurs vers des chaînes indiquant les types de contenu accepté par le client. Si *ppstrAcceptTypes* est `NULL`, les serveurs interprètent que le client accepte uniquement des documents de type « texte / * » (autrement dit, des documents texte uniquement et pas des images ou autres fichiers binaires). Le type de contenu est équivalent à la type_contenu variable CGI, qui identifie le type de données pour les requêtes que vous ont lié des informations, tels que HTTP POST et PUT.  
   
- `pstrVersion`  
+ *pstrVersion*  
  Pointeur vers une chaîne qui définit la version HTTP. Si `NULL`, « HTTP/1.0 » est utilisé.  
   
- `dwFlags`  
- N’importe quelle combinaison des indicateurs INTERNET_ FLAG_ *. Consultez la section Notes pour obtenir une description des possibles `dwFlags` valeurs.  
+ *dwFlags*  
+ N’importe quelle combinaison des indicateurs INTERNET_ FLAG_ *. Consultez la section Notes pour obtenir une description des possibles *dwFlags* valeurs.  
   
- `nVerb`  
+ *nVerb*  
  Un numéro associé au type de demande HTTP. Il peut s'agir d'une des valeurs suivantes :  
   
-|Type de demande HTTP|Valeur `nVerb`|  
+|Type de demande HTTP|*nVerb* valeur|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -197,7 +197,7 @@ CHttpFile* OpenRequest(
  Un pointeur vers le [CHttpFile](../../mfc/reference/chttpfile-class.md) objet demandé.  
   
 ### <a name="remarks"></a>Notes  
- `dwFlags` peut avoir l'une des valeurs suivantes :  
+ *dwFlags* peut prendre l’une des opérations suivantes :  
   
 |Indicateur d’Internet|Description|  
 |-------------------|-----------------|  

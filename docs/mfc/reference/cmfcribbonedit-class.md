@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374174"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040858"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe de CMFCRibbonEdit
 Implémente un contrôle d’édition qui se trouve sur une barre de ruban.  
@@ -152,7 +152,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonEdit.h  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonEdit::CanBeStretched  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  Commande ID pour la `CMFCRibbonEdit` contrôle.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  La largeur, en pixels, de la zone de texte pour le `CMFCRibbonEdit` contrôle.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  L’étiquette pour le `CMFCRibbonEdit` contrôle.  
   
- [in] `nImage`  
+ [in] *nImage*  
  Index de la petite image à utiliser pour la `CMFCRibbonEdit` contrôle. La collection de petites images est gérée par la catégorie de ruban parent.  
   
 ### <a name="remarks"></a>Notes  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `src`  
+ [in] *src*  
  Objet `CMFCRibbonEdit` source.  
   
 ### <a name="remarks"></a>Notes  
- Le `src` paramètre doit être de type `CMFCRibbonEdit`.  
+ Le *src* paramètre doit être de type `CMFCRibbonEdit`.  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  Crée une nouvelle zone de texte pour le [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objet.  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Un pointeur vers la fenêtre parente de la `CMFCRibbonEdit` objet.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  Spécifie le style de la zone de texte. Vous pouvez combiner les styles de fenêtre répertoriés dans la section Notes avec le [modifier les styles de contrôle](http://msdn.microsoft.com/library/windows/desktop/bb775464) qui sont décrites dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nMin`  
+ [in] *nMin*  
  La valeur minimale de la toupie.  
   
- [in] `nMax`  
+ [in] *nombre maximal*  
  La valeur maximale de la toupie.  
   
 ### <a name="remarks"></a>Notes  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bInFloatyMode`  
+ [in] *bInFloatyMode*  
  `TRUE` Si le `CMFCRibbonEdit` contrôle est en mode flottant ; sinon, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.  
   
- [in] `strText`  
- Le texte d’affichage [ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit classe").  
+ [in] *%{strText/}*  
+ Le texte d’affichage [cmfcribbonedit classe](../../mfc/reference/cmfcribbonedit-class.md "").  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Distance, en pixels, du côté gauche de la zone de liste pour afficher du texte.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle d’affichage pour le `CMFCRibbonEdit` contrôle.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le contrôle ; `FALSE` pour désactiver le contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` Si le pointeur se trouve dans les limites de la `CMFCRibbonEdit` contrôle ; sinon, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Si la touche d’accès affiche un menu contextuel. dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Si la disposition est de droite à gauche ; `FALSE` si la disposition est de gauche à droite.  
   
 ### <a name="remarks"></a>Notes  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Pour afficher le contrôle ; `FALSE` pour masquer le contrôle.  
   
 ### <a name="remarks"></a>Notes  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParent`  
+ *pParent*  
  Pointeur vers la fenêtre parente de la `CMFCRibbonEdit` objet.  
   
- `data`  
+ *data*  
  Les données d’accessibilité pour les `CMFCRibbonEdit` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `strText`  
+ [in] *%{strText/}*  
  Le texte de la zone de texte.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nAlign`  
+ [in] *nAlign*  
  Valeur d’énumération un alignement de texte. Consultez la section Notes pour les valeurs possibles.  
   
 ### <a name="remarks"></a>Notes  
- Le paramètre `nAlign` fait partie de la modification suivante des styles de contrôle :  
+ Le paramètre *nAlign* fait partie de la modification suivante des styles de contrôle :  
   
 - **ES_LEFT** pour l’alignement à gauche  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nWidth`  
+ [in] *nWidth*  
  La largeur, en pixels, de la zone de texte.  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` Pour définir la largeur pour le mode flottante ; `FALSE` pour définir la largeur pour le mode normal.  
   
 ### <a name="remarks"></a>Notes  

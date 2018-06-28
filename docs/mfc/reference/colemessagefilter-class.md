@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371362"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037609"
 ---
 # <a name="colemessagefilter-class"></a>Classe de l’intermédiaire de COleMessageFilter
 Gère l'accès concurrentiel requis par l'interaction des applications OLE.  
@@ -95,7 +95,7 @@ class COleMessageFilter : public CCmdTarget
   
  `COleMessageFilter`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  Le `BeginBusyState` et `EndBusyState` appels incrémenter et décrémenter, respectivement, un compteur qui détermine si l’application est occupée. Par exemple, deux appels à `BeginBusyState` et un appel à `EndBusyState` toujours le résultat dans un état de disponibilité. Pour annuler un état occupé, il est nécessaire d’appeler `EndBusyState` le même nombre de fois `BeginBusyState` a été appelée.  
   
- Par défaut, l’infrastructure passe à l’état occupé pendant le traitement inactif, ce qui est effectué par [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Pendant que l’application gère **ON_COMMANDUPDATEUI** notifications, les appels entrants sont traitées plus tard, après le traitement inactif est terminé.  
+ Par défaut, l’infrastructure passe à l’état occupé pendant le traitement inactif, ce qui est effectué par [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Pendant que l’application gère les notifications ON_COMMANDUPDATEUI, les appels entrants sont gérés plus tard, après que le traitement inactif est terminé.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Crée un objet `COleMessageFilter`.  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  Le `BeginBusyState` et `EndBusyState` appels incrémenter et décrémenter, respectivement, un compteur qui détermine si l’application est occupée. Par exemple, deux appels à `BeginBusyState` et un appel à `EndBusyState` toujours le résultat dans un état de disponibilité. Pour annuler un état occupé, il est nécessaire d’appeler `EndBusyState` le même nombre de fois `BeginBusyState` a été appelée.  
   
- Par défaut, l’infrastructure passe à l’état occupé pendant le traitement inactif, ce qui est effectué par [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Pendant que l’application gère `ON_UPDATE_COMMAND_UI` notifications, les appels entrants sont gérées à l’issue du traitement inactif.  
+ Par défaut, l’infrastructure passe à l’état occupé pendant le traitement inactif, ce qui est effectué par [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Pendant que l’application gère les notifications ON_UPDATE_COMMAND_UI, les appels entrants sont gérées à l’issue du traitement inactif.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Appelé par l’infrastructure pour traiter les messages pendant un appel OLE est en cours d’exécution.  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pMsg`  
+ *pMsg*  
  Pointeur vers le message en attente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Lorsqu’une application appelante est en attente pour un appel doit être terminé, le framework appelle `OnMessagePending` avec un pointeur vers le message en attente. Par défaut, le framework distribue `WM_PAINT` des messages, afin que les mises à jour de la fenêtre peuvent se produire lors d’un appel qui prend beaucoup de temps.  
+ Lorsqu’une application appelante est en attente pour un appel doit être terminé, le framework appelle `OnMessagePending` avec un pointeur vers le message en attente. Par défaut, le framework distribue des messages WM_PAINT, afin que les mises à jour de la fenêtre peuvent se produire lors d’un appel qui prend beaucoup de temps.  
   
  Vous devez enregistrer votre filtre de messages au moyen d’un appel à [inscrire](#register) avant qu’il peut devenir actif.  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nTimeout`  
+ *%ndélai*  
  Nombre de millisecondes que le délai d’attente de message.  
   
 ### <a name="remarks"></a>Notes  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nRetryReply`  
+ *nRetryReply*  
  Nombre de millisecondes entre les tentatives.  
   
 ### <a name="remarks"></a>Notes  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  Réponse de l’appelant est contrôlé par les fonctions `SetRetryReply` et [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Détermine la durée pendant laquelle l’application appelante doit attendre entre les nouvelles tentatives pour un appel donné. `SetMessagePendingDelay` Détermine la durée pendant laquelle l’application appelante attend une réponse du serveur avant d’entreprendre d’action supplémentaire.  
   
- Généralement, les valeurs par défaut sont acceptables et n’avez pas besoin d’être modifié. Le framework retente l’appel de chaque `nRetryReply` millisecondes jusqu'à ce que l’appel ou le délai d’attente de messages a expiré. La valeur 0 pour `nRetryReply` spécifie une nouvelle tentative immédiate et - 1 indique l’annulation de l’appel.  
+ Généralement, les valeurs par défaut sont acceptables et n’avez pas besoin d’être modifié. Le framework retente l’appel de chaque *nRetryReply* millisecondes jusqu'à ce que l’appel ou le délai d’attente de messages a expiré. La valeur 0 pour *nRetryReply* spécifie une nouvelle tentative immédiate et - 1 indique l’annulation de l’appel.  
   
  Lorsque le délai d’attente de message a expiré, OLE « occupé la boîte de dialogue » (voir [classe COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) s’affiche afin que l’utilisateur peut choisir d’annuler ou de renouveler l’appel. Appelez [EnableBusyDialog](#enablebusydialog) pour activer ou désactiver cette boîte de dialogue.  
   

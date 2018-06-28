@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376018"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041956"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 Fournit les fonctionnalités du contrôle commun d'en-tête Windows.  
@@ -159,7 +159,7 @@ class CHeaderCtrl : public CWnd
   
  `CHeaderCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nColumn`  
+ *nColumn*  
  Valeur de la colonne qui indique le filtre à effacer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle d’en-tête. Pour obtenir une description des styles de contrôle d’en-tête, consultez [Styles de contrôle d’en-tête](http://msdn.microsoft.com/library/windows/desktop/bb775241) dans le Kit de développement logiciel Windows.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle d’en-tête. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie l’en-tête fenêtre du contrôle parent, généralement un `CDialog`. Il ne doit pas être **NULL**.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de l’en-tête  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation a réussi ; Sinon, zéro.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CHeaderCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle header et l’attache à le `CHeaderCtrl` objet.  
+ Vous construisez un `CHeaderCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle header et l’attache à le `CHeaderCtrl` objet.  
   
  Outre les styles de contrôle d’en-tête, vous pouvez utiliser les styles de contrôle courants suivants pour déterminer comment le contrôle header positionne et redimensionne (consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) pour plus d’informations) :  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** spécifie un nombre quelconque de contrôles par le biais duquel l’utilisateur peut passer à l’aide de la touche TAB. La touche TAB déplace l’utilisateur sur le contrôle suivant spécifié par le **WS_TABSTOP** style.  
   
- Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de **créer**.  
+ Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de `Create`.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwExStyle`  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ *dwExStyle*  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  En-tête style du contrôle. Pour obtenir une description des styles de contrôle d’en-tête, consultez [Styles de contrôle d’en-tête](http://msdn.microsoft.com/library/windows/desktop/bb775241) dans le Kit de développement logiciel Windows. Consultez [créer](#create) pour obtenir la liste des styles supplémentaires.  
   
- `rect`  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de `pParentWnd`.  
+ *Rect*  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. du contrôle  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez `CreateEx` au lieu de **créer** pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
+ Utilisez `CreateEx` au lieu de `Create` pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  Fonction membre CHeaderCtrl::CreateDragImage  
  Crée une version transparente de l’image d’un élément dans un contrôle header.  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de base zéro de l’élément dans le contrôle header. L’image attribuée à cet élément est la base de l’image transparente.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Spécifie l’index de base zéro de l’élément à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un pointeur vers un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure décrivant l’élément à peindre.  
   
 ### <a name="remarks"></a>Notes  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CHeaderCtrl` objet.  
   
- L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant ce membre de la fonction s’arrête.  
+ L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans *lpDrawItemStruct* avant ce membre de la fonction s’arrête.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nColumn`  
+ *nColumn*  
  La colonne à modifier.  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  Une valeur qui spécifie comment gérer l’utilisateur de modifications si l’utilisateur est en train de modifier le filtre lorsque le [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) message est envoyé.  
   
  Spécifiez `true` pour ignorer les modifications apportées par l’utilisateur, ou `false` pour accepter les modifications apportées par l’utilisateur.  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Spécifie l’index de base zéro de l’élément à récupérer.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Pointeur vers un [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure qui reçoit le nouvel élément. Cette structure est utilisée avec la `InsertItem` et `SetItem` fonctions membres. Les indicateurs définis dans le **masque** élément vous assurer que les valeurs dans les éléments correspondants sont correctement renseignés lors du retour. Si le **masque** a la valeur zéro, les valeurs dans les autres éléments de structure sont sans signification.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `iItem`|Index de base zéro d’un élément d’en-tête dont le style est `HDF_SPLITBUTTON`. Pour plus d’informations, consultez la `fmt` membre de la [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure.|  
-|[out] `lpRect`|Pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure pour recevoir les informations du rectangle englobant.|  
+|[in] *iItem*|Index de base zéro d’un élément d’en-tête dont le style est `HDF_SPLITBUTTON`. Pour plus d’informations, consultez la `fmt` membre de la [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure.|  
+|[out] *lpRect*|Pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure pour recevoir les informations du rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette fonction a réussi ; dans le cas contraire, `false`.  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de base zéro de l’élément de contrôle d’en-tête.  
   
- `lpRect`  
+ *lpRect*  
  Un pointeur vers l’adresse d’un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit les informations du rectangle englobant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `piArray`  
+ *piArray*  
  Pointeur vers l’adresse d’une mémoire tampon qui reçoit les valeurs d’index des éléments dans le contrôle header, dans l’ordre dans lequel elles apparaissent de gauche à droite.  
   
- `iCount`  
+ *iCount*  
  Le nombre d’éléments de contrôle d’en-tête. Doit être non négatif.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] `lpRect`|Pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit les informations du rectangle englobant.|  
+|[out] *lpRect*|Pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit les informations du rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette fonction a réussi ; dans le cas contraire, `false`.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|Pointeur vers un [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) structure qui spécifie le point à tester et reçoit les résultats du test.|  
+|[dans, out] *phdhti*|Pointeur vers un [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) structure qui spécifie le point à tester et reçoit les résultats du test.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément d’en-tête, le cas échéant, à la position spécifiée ; Sinon, -1.  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Index de base zéro de l'élément à insérer. Si la valeur est zéro, l’élément est inséré au début du contrôle header. Si la valeur est supérieure à la valeur maximale, l’élément est inséré à la fin du contrôle header.  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nWidth`  
+ *nWidth*  
  Largeur, en pixels de la marge qui entoure une image bitmap dans un contrôle d’en-tête existant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `iItem`|Index de base zéro d’un élément d’en-tête.|  
+|[in] *iItem*|Index de base zéro d’un élément d’en-tête.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  La position du pointeur. Le contrôle header met en surbrillance la ligne de séparation approprié en fonction de la position du pointeur.  
   
- `nIndex`  
+ *nIndex*  
  Index de la ligne de séparation en surbrillance.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pImageList`  
+ *pImageList*  
  Un pointeur vers un `CImageList` objet contenant la liste d’images à assigner au contrôle header.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Index de base zéro de l’élément devant être manipulé.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Pointeur vers un [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure qui contient des informations sur le nouvel élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iCount`  
+ *iCount*  
  Le nombre d’éléments de contrôle d’en-tête.  
   
- `piArray`  
+ *piArray*  
  Pointeur vers l’adresse d’une mémoire tampon qui reçoit les valeurs d’index des éléments dans le contrôle header, dans l’ordre dans lequel elles apparaissent de gauche à droite.  
   
 ### <a name="return-value"></a>Valeur de retour  

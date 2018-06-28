@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371388"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041443"
 ---
 # <a name="colestreamfile-class"></a>Classe de COleStreamFile
 Représente un flux de données ( `IStream`) dans un fichier composé dans le cadre du stockage structuré OLE.  
@@ -81,7 +81,7 @@ class COleStreamFile : public CFile
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="attach"></a>  COleStreamFile::Attach  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpStream`  
+ *lpStream*  
  Pointe vers le flux de données OLE ( `IStream`) à associer à l’objet. Ne peut pas être **NULL**.  
   
 ### <a name="remarks"></a>Notes  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpStream`  
+ *lpStream*  
  Pointeur vers le flux OLE à associer à l’objet.  
   
 ### <a name="remarks"></a>Notes  
- Si `lpStream` est **NULL**, l’objet n’est pas associé à un flux OLE, dans le cas contraire, l’objet est associé avec le flux OLE fourni.  
+ Si *lpStream* est **NULL**, l’objet n’est pas associé à un flux OLE, dans le cas contraire, l’objet est associé avec le flux OLE fourni.  
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans le Kit de développement logiciel Windows.  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pError`  
+ *pError*  
  Pointe vers un [CFileException](../../mfc/reference/cfileexception-class.md) objet ou **NULL** qui indique l’état d’achèvement de l’opération de création. Spécifiez ce paramètre si vous souhaitez analyser des exceptions possibles générées par la tentative de création du flux.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpStorage`  
+ *lpStorage*  
  Pointe vers l’objet de stockage OLE qui contient le flux doit être créé. Ne peut pas être **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nom du flux de données doit être créé. Ne peut pas être **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Mode d’accès à utiliser lors de l’ouverture du flux. Exclusif, en lecture/écriture et créer des modes sont utilisés par défaut. Pour obtenir une liste complète des modes disponibles, consultez [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Pointe vers un [CFileException](../../mfc/reference/cfileexception-class.md) objet ou **NULL**. Spécifiez ce paramètre si vous souhaitez analyser des exceptions possibles générées par la tentative de création du flux.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le flux est créé avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Une exception de fichier sera levée si la fonction open échoue et `pError` n’est pas **NULL**.  
+ Une exception de fichier sera levée si la fonction open échoue et *pError* n’est pas **NULL**.  
   
  Pour plus d’informations, consultez [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) dans le Kit de développement logiciel Windows.  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpStorage`  
+ *lpStorage*  
  Pointe vers l’objet de stockage OLE qui contient le flux à ouvrir. Ne peut pas être **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nom du flux à ouvrir. Ne peut pas être **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Mode d’accès à utiliser lors de l’ouverture du flux. Exclusif et en lecture/écriture, les modes sont utilisés par défaut. Pour obtenir la liste complète des modes disponibles, consultez [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Pointe vers un [CFileException](../../mfc/reference/cfileexception-class.md) objet ou **NULL**. Spécifiez ce paramètre si vous souhaitez analyser des exceptions possibles générées par une tentative d’ouverture du flux.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le flux est ouvert avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Une exception de fichier sera levée si la fonction open échoue et `pError` n’est pas **NULL**.  
+ Une exception de fichier sera levée si la fonction open échoue et *pError* n’est pas **NULL**.  
   
  Pour plus d’informations, consultez [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) dans le Kit de développement logiciel Windows.  
   

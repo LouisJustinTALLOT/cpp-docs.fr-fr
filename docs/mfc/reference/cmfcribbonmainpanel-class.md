@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367956"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037362"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Classe de CMFCRibbonMainPanel
 Implémente un panneau de ruban qui s’affiche lorsque vous cliquez sur le [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -79,7 +79,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
   
  [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonMainPanel.h  
   
 ##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
@@ -90,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Pointeur vers l’élément de ruban à ajouter au volet principal.  
   
 ### <a name="remarks"></a>Notes  
@@ -106,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszLabel`  
+ *lpszLabel*  
  Spécifie la chaîne à ajouter à la liste des fichiers récents.  
   
- `nWidth`  
+ *nWidth*  
  Spécifie la largeur, en pixels, du Panneau de liste des fichiers récents.  
   
 ### <a name="remarks"></a>Notes  
@@ -122,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Pointeur vers l’élément Ruban à ajouter au bas de la fenêtre principale.  
   
 ### <a name="remarks"></a>Notes  
@@ -137,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pElem`  
+ *pElem*  
  Pointeur vers un élément de ruban à ajouter à la partie droite de la fenêtre principale.  
   
- `nWidth`  
+ *nWidth*  
  Spécifie la largeur, en pixels, du panneau droit.  
   
 ### <a name="remarks"></a>Notes  
