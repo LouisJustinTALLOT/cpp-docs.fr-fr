@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369529"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039779"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Cmfcacceleratorkey, classe
 Une classe d’assistance qui implémente le mappage de clé virtuel et la mise en forme.  
@@ -68,7 +68,7 @@ class CMFCAcceleratorKey : public CObject
   
  `CMFCAcceleratorKey`   
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxacceleratorkey.h  
   
 ##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
@@ -80,7 +80,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Pointeur vers une touche de raccourci.  
   
 ### <a name="remarks"></a>Notes  
@@ -94,7 +94,7 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `str`  
+ [out] *str*  
  Une référence à un `CString` objet dans lequel la méthode écrit la touche de raccourci traduites.  
   
 ### <a name="remarks"></a>Notes  
@@ -108,7 +108,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Pointeur vers une touche de raccourci.  
   
 ### <a name="remarks"></a>Notes  

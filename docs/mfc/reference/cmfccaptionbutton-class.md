@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368775"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040627"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe de CMFCCaptionButton
 La `CMFCCaptionButton` classe implémente un bouton qui s’affiche dans la barre de légende pour un volet d’ancrage ou une fenêtre mini-frame. En général, l'infrastructure crée les boutons de légende automatiquement.  
@@ -90,7 +90,7 @@ class CMFCCaptionButton : public CObject
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcaptionbutton.h  
   
 ##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nHit`  
+ [in] *nHit*  
  La commande associée au bouton.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  Spécifie si le bouton est aligné à gauche.  
   
- Le tableau suivant répertorie les valeurs possibles pour le `nHit` paramètre.  
+ Le tableau suivant répertorie les valeurs possibles pour le *nHit* paramètre.  
   
 |Value|Commande|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` pour l’image de gauche ou droite ID ; `FALSE` pour haut ou flèche ID d’image.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` Pour agrandir l’image ID ; `FALSE` pour une réduction de l’image ID.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ptTo`  
+ [in] *ptTo*  
  Nouvel emplacement.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Indique s’il faut ou non afficher le bouton.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le bouton.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Indique s’il faut dessiner une image de bouton actif  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Réservé pour une utilisation dans une classe dérivée.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Indique s’il faut dessiner une image de bouton agrandie  
   
- [in] `bDisabled`  
+ [in] *bDésactiver*  
  Indique s’il faut dessiner une image de bouton activé  
   
 ### <a name="remarks"></a>Notes  
- Le `bMaximized` paramètre n’est utilisé avec le bouton Agrandir ou réduire le bouton.  
+ Le *bMaximized* paramètre n’est utilisé avec le bouton Agrandir ou réduire le bouton.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Définit la taille de miniature de la barre de titre.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` hauteur de barre de titre mini ; `FALSE` pour la hauteur par défaut de la barre de titre.  
   
 ## <a name="see-also"></a>Voir aussi  

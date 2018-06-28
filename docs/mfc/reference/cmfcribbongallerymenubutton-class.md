@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370905"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041258"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe de CMFCRibbonGalleryMenuButton
 Implémente un bouton de menu de ruban qui contient des galeries de ruban.  
@@ -97,7 +97,7 @@ ASSERT_VALID (pExButton);
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonPaletteGallery.h  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -132,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `uiID`  
- L’ID de commande du bouton. Ceci est la valeur envoyée dans le **WM_COMMAND** message lorsque l’utilisateur clique sur ce bouton.  
+ *uiID*  
+ L’ID de commande du bouton. Il s’agit de la valeur envoyée dans le message WM_COMMAND lorsque l’utilisateur clique sur ce bouton.  
   
- `iImage`  
- Index de l’image à afficher avec le bouton de menu de la galerie. Les images sont stockées dans le `imagesPalette` paramètre.  
+ *iImage*  
+ Index de l’image à afficher avec le bouton de menu de la galerie. Les images sont stockées dans le *imagesPalette* paramètre.  
   
- `lpszText`  
+ *lpszText*  
  Le texte à afficher sur le bouton de menu.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Contient la liste des images à afficher dans la galerie.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  L’ID de ressource de la liste d’images pour les images à afficher dans la galerie.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Spécifie la largeur en pixels de l’image à afficher dans la galerie.  
   
 ### <a name="remarks"></a>Notes  

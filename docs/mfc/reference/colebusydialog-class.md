@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374368"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040910"
 ---
 # <a name="colebusydialog-class"></a>Classe de la classe COleBusyDialog
 Utilisé pour les boîtes de dialogue OLE Le serveur ne répond pas ou Le serveur est occupé.  
@@ -86,7 +86,7 @@ class COleBusyDialog : public COleDialog
   
  `COleBusyDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  Si **TRUE**, appelez la boîte de dialogue ne répond pas au lieu de la boîte de dialogue serveur occupé. Le libellé dans la boîte de dialogue ne répond pas est légèrement différent de celle du texte dans la boîte de dialogue serveur occupé, et le bouton Annuler est désactivé.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicateur de création. Peut contenir zéro ou plusieurs des valeurs suivantes associées à l’opérateur OR au niveau du bit :  
   
 - **BZ_DISABLECANCELBUTTON** désactiver le bouton Annuler lors de l’appel de la boîte de dialogue.  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** désactiver le bouton de nouvelle tentative lors de l’appel de la boîte de dialogue.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de l’objet de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  

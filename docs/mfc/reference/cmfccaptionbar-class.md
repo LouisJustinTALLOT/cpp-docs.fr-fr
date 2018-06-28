@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375831"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038970"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
 A `CMFCCaptionBar` objet est une barre de contrôle qui peut afficher trois éléments : un bouton, une étiquette de texte et une image bitmap. Elle ne peut afficher qu'un élément de chaque type à la fois. Vous pouvez aligner chaque élément sur le bord gauche ou droit du contrôle ou le centrer. Vous pouvez également appliquer un style 2D ou 3D aux bordures supérieure et inférieure de la barre de légende.  
@@ -173,7 +173,7 @@ class CMFCCaptionBar : public CPane
   
  [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcaptionbar.h  
   
 ##  <a name="create"></a>  CMFCCaptionBar::Create  
@@ -189,19 +189,19 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  La combinaison OR logique des styles de barre de légende.  
   
- `pParentWnd`  
+ *pParentWnd*  
  La fenêtre parente du contrôle de barre de légende.  
   
- `uID`  
+ *UID*  
  L’ID du contrôle de barre de légende.  
   
- `nHeight`  
+ *nHeight*  
  La hauteur, en pixels, du contrôle de barre de légende. S’il est -1, la hauteur est calculée en fonction de la hauteur de l’icône, le texte et le bouton affichant le contrôle de barre de légende.  
   
- `bIsMessageBarMode`  
+ *bIsMessageBarMode*  
  `TRUE` Si la barre de légende est en mode de la barre de message ; `FALSE` dans le cas contraire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -230,7 +230,7 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le bouton, `FALSE` pour désactiver le bouton.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
@@ -241,7 +241,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `elem`  
+ [in] *elem*  
  Un élément de barre de légende pour lequel récupérer l’alignement.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -332,10 +332,10 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique de la barre de légende.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle à remplir.  
   
 ### <a name="remarks"></a>Notes  
@@ -353,10 +353,10 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Un contexte de périphérique qui est utilisé pour afficher les bordures.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectangle englobant.  
   
 ### <a name="remarks"></a>Notes  
@@ -376,16 +376,16 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant du bouton.  
   
- [in] `strButton`  
+ [in] *strButton*  
  Étiquette de texte du bouton.  
   
- [in] `bEnabled`  
+ [in] *case d’option bActivé*  
  `TRUE` Si le bouton est activé ; `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
@@ -401,10 +401,10 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique qui est utilisé pour afficher l’image.  
   
- [in] `rect`  
+ [in] *rect*  
  Spécifie le rectangle englobant de l’image.  
   
 ### <a name="remarks"></a>Notes  
@@ -421,13 +421,13 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant du texte.  
   
- [in] `strText`  
+ [in] *%{strText/}*  
  La chaîne de texte à afficher.  
   
 ### <a name="remarks"></a>Notes  
@@ -485,16 +485,16 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Handle de l’image bitmap à définir.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Une valeur RVB qui spécifie la couleur transparente de l’image bitmap.  
   
- [in] `bStretch`  
+ [in] *bStretch*  
  Si `TRUE`, la bitmap est étendue si elle ne tient pas à l’image du rectangle englobant. Dans le cas contraire, l’image bitmap n’est pas étendue.  
   
- [in] `bmpAlignment`  
+ [in] *bmpAlignment*  
  L’alignement de l’image bitmap.  
   
 ### <a name="remarks"></a>Notes  
@@ -502,7 +502,7 @@ void SetBitmap(
   
  L’image bitmap précédent est supprimé automatiquement. Si la barre de légende affiche une icône, car vous avez appelé la [CMFCCaptionBar::SetIcon](#seticon) (méthode), l’image bitmap ne s’affichera pas sauf si vous supprimez l’icône en appelant [CMFCCaptionBar::RemoveIcon](#removeicon).  
   
- L’image bitmap est aligné comme spécifié par le `bmpAlignment` paramètre.  Ce paramètre peut avoir l'une des valeurs `BarElementAlignment` suivantes :  
+ L’image bitmap est aligné comme spécifié par le *bmpAlignment* paramètre.  Ce paramètre peut avoir l'une des valeurs `BarElementAlignment` suivantes :  
   
 -   ALIGN_INVALID  
   
@@ -520,7 +520,7 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nSize`  
+ [in] *nSize*  
  La nouvelle taille, en pixels, de la bordure de barre de légende.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
@@ -535,16 +535,16 @@ void SetButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszLabel`  
+ *lpszLabel*  
  L’étiquette du bouton commande.  
   
- `uiCmdUI`  
+ *uiCmdUI*  
  ID de commande. du bouton  
   
- `btnAlignmnet`  
+ *btnAlignmnet*  
  Alignement du bouton.  
   
- `bHasDropDownArrow`  
+ *bHasDropDownArrow*  
  `TRUE` Si le bouton affiche une liste déroulante flèche, `FALSE` dans le cas contraire.  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
@@ -555,7 +555,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bPresed`  
+ *bPresed*  
  `TRUE` Si le bouton conserve son état enfoncé, `FALSE` dans le cas contraire.  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
@@ -568,10 +568,10 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  La légende de l’info-bulle.  
   
- [in] `lpszDescription`  
+ [in] *lpszDescription*  
  Description de l’info-bulle.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
@@ -582,7 +582,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` Si la bordure d’une barre de légende est en deux dimensions. `FALSE` Si la bordure est 3D.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
@@ -595,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hIcon`  
+ [in] *hIcon*  
  Le handle de l’icône à définir.  
   
- [in] `iconAlignment`  
+ [in] *iconAlignment*  
  L’alignement de l’icône.  
   
 ### <a name="remarks"></a>Notes  
  Barres de légende peuvent afficher des icônes ou bitmaps. Consultez [CMFCCaptionBar::SetBitmap](#setbitmap) pour savoir comment afficher une image bitmap. Si vous définissez une icône et une image bitmap, l’icône est toujours affichée. Appelez [CMFCCaptionBar::RemoveIcon](#removeicon) pour supprimer une icône de la barre de légende.  
   
- L’icône est aligné en fonction de la `iconAlignment` paramètre. Il peut être une de ces `BarElementAlignment` valeurs :  
+ L’icône est aligné en fonction de la *iconAlignment* paramètre. Il peut être une de ces `BarElementAlignment` valeurs :  
   
 -   ALIGN_INVALID  
   
@@ -624,10 +624,10 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  Le texte de l’info-bulle.  
   
- [in] `lpszDescription`  
+ [in] *lpszDescription*  
  Description de l’info-bulle.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
@@ -638,7 +638,7 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nMargin`  
+ [in] *nMargin*  
  La distance, en pixels, entre le bord des éléments de barre de légende et le bord du contrôle de barre de légende.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
@@ -651,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `strText`  
+ [in] *%{strText/}*  
  La chaîne de texte à définir.  
   
- [in] `textAlignment`  
+ [in] *textAlignment*  
  L’alignement du texte.  
   
 ### <a name="remarks"></a>Notes  
- L’étiquette de texte est aligné comme spécifié par le `textAlignment` paramètre. Il peut être une de ces `BarElementAlignment` valeurs :  
+ L’étiquette de texte est aligné comme spécifié par le *textAlignment* paramètre. Il peut être une de ces `BarElementAlignment` valeurs :  
   
 -   ALIGN_INVALID  
   

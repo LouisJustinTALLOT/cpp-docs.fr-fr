@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367969"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040740"
 ---
 # <a name="cmemorystate-structure"></a>Structure de CMemoryState
 Fournit un moyen pratique pour détecter les fuites de mémoire dans votre programme.  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  Comme avec d’autres diagnostics, le `CMemoryState` diagnostics sont disponibles uniquement dans les versions debug de votre programme. Une version de débogage doit avoir le **_DEBUG** constante définie.  
   
- Si vous pensez que votre programme comporte une fuite de mémoire, vous pouvez utiliser la `Checkpoint`, **différence**, et `DumpStatistics` fonctions pour détecter la différence entre l’état de la mémoire (objets alloués) à deux niveaux différents dans un programme exécution. Ces informations peuvent être utiles pour déterminer si une fonction est nettoyage de tous les objets qu’il alloue.  
+ Si vous pensez que votre programme comporte une fuite de mémoire, vous pouvez utiliser la `Checkpoint`, `Difference`, et `DumpStatistics` fonctions pour détecter la différence entre l’état de la mémoire (objets alloués) à deux différents points dans l’exécution du programme. Ces informations peuvent être utiles pour déterminer si une fonction est nettoyage de tous les objets qu’il alloue.  
   
  Si simplement savoir où se produit le déséquilibre de l’allocation et la désallocation ne fournit pas suffisamment d’informations, vous pouvez utiliser la `DumpAllObjectsSince` à vider tous les objets alloués depuis le précédent appel de fonction `Checkpoint`. Ce dump illustre l’ordre d’allocation, le fichier source et la ligne où l’objet a été alloué (si vous utilisez `DEBUG_NEW` pour l’allocation) et la dérivation de l’objet, son adresse et sa taille. `DumpAllObjectsSince` appelle également de chaque objet `Dump` afin de fournir des informations sur son état actuel.  
   
@@ -78,7 +78,7 @@ struct CMemoryState
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CMemoryState`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="checkpoint"></a>  CMemoryState::Checkpoint  

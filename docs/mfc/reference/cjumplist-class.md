@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369048"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038501"
 ---
 # <a name="cjumplist-class"></a>Classe de CJumpList
 A `CJumpList` est la liste des raccourcis qui s’affiché lorsque vous avec le bouton droit sur une icône dans la barre des tâches.  
@@ -91,7 +91,7 @@ class CJumpList;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxadv.h  
   
 ##  <a name="_dtorcjumplist"></a>  CJumpList :: ~ CJumpList  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  Spécifie un nom de catégorie. Si la catégorie spécifiée n’existe pas, il sera créé.  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  Spécifie un chemin d’accès au fichier de destination.  
   
- `strCategoryName`  
+ *strCategoryName*  
  Spécifie un nom de catégorie. Si la catégorie spécifiée n’existe pas, il sera créé.  
   
- `pShellItem`  
+ *pShellItem*  
  Spécifie un élément de l’interpréteur de commandes qui représente la destination ajoutée.  
   
- `pShellLink`  
+ *pShellLink*  
  Spécifie un lien de l’interpréteur de commandes qui représente la destination ajoutée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `category`  
+ *category*  
  Spécifie un type de catégorie connue. Peut être `KDC_RECENT`, ou `KDC_KNOWN`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  Spécifie le chemin d’accès cible.  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  Spécifie les arguments de ligne de commande de l’exécutable spécifié par strTargetExecutablePath.  
   
- `strTitle`  
+ *strTitle*  
  Nom de la tâche qui s’affichera dans la liste de Destination.  
   
- `strIconLocation`  
+ *strIconLocation*  
  Emplacement de l’icône qui s’affichera dans la liste de Destination, ainsi que le titre.  
   
- `iIconIndex`  
+ *iIconIndex*  
  Index de l’icône.  
   
- `pShellLink`  
+ *pShellLink*  
  Lien d’interface qui représente une tâche à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pObjectCollection`  
+ *pObjectCollection*  
  Une collection de tâches à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bAutoCommit`  
+ *bAutoCommit*  
  Si ce paramètre a la valeur FALSE la liste n’est pas automatiquement validée dans le destructeur.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `strAppID`  
+ *strAppID*  
  Chaîne qui spécifie l’ID de modèle d’Application utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  

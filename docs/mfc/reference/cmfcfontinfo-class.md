@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368291"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038599"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe de CMFCFontInfo
 La `CMFCFontInfo` classe décrit le nom et autres attributs de la police.  
@@ -76,7 +76,7 @@ class CMFCFontInfo : public CObject
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfcfontinfo"></a>  CMFCFontInfo::CMFCFontInfo  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszName`  
+ [in] *le caractère*  
  Le nom de la police. Pour plus d’informations, consultez la `lfFaceName` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
- [in] `lpszScript`  
+ [in] *lpszScript*  
  Le nom du script (jeu de caractères) de la police.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Une valeur qui spécifie le jeu de caractères (script) de la police. Pour plus d’informations, consultez la `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Une valeur qui spécifie la hauteur et la famille de la police. Pour plus d’informations, consultez la `lfPitchAndFamily` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
- [in] `nType`  
+ [in] *%nLes*  
  Une valeur qui spécifie le type de police. Ce paramètre peut être une combinaison d’opérations de bits (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.  
   
- [in] `src`  
+ [in] *src*  
  Existant `CMFCFontInfo` objet dont les membres sont utilisés pour construire ce `CMFCFontInfo` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la `nCharSet` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
+ Pour plus d’informations, consultez la *nCharSet* paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Une valeur qui spécifie la hauteur (taille) et la famille (par exemple, serif serif et à espacement fixe) de la police.  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la `nPitchAndFamily` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
+ Pour plus d’informations, consultez la *nPitchAndFamily* paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Une valeur qui spécifie le type de la police.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la `nType` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
+ Pour plus d’informations, consultez la *%nLes* paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  Le nom de la police : par exemple, **Arial**.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la `lpszName` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
+ Pour plus d’informations, consultez la *le caractère* paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  Le nom d’un jeu de caractères (script) associé à la police.  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la `lpszScript` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
+ Pour plus d’informations, consultez la *lpszScript* paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

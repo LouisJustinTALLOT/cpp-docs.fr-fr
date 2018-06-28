@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371580"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040832"
 ---
 # <a name="cmultidoctemplate-class"></a>Classe de CMultiDocTemplate
 Définit un modèle de document qui implémente l'interface multidocument (MDI).  
@@ -70,7 +70,7 @@ class CMultiDocTemplate : public CDocTemplate
   
  `CMultiDocTemplate`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate  
@@ -85,10 +85,10 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDResource`  
+ *nIDResource*  
  Spécifie l’ID des ressources utilisées avec le type de document. Cela peut inclure le menu, icône, table d’accélérateurs et ressources de type chaîne.  
   
- La ressource de chaîne se compose de sous-chaînes jusqu'à sept séparés par le caractère « \n » (le caractère « \n » est nécessaire comme espace réservé, si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources de l’application. Par exemple :  
+ La ressource de chaîne se compose de sous-chaînes jusqu'à sept séparés par le caractère « \n » (le caractère « \n » est nécessaire comme espace réservé, si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources de l’application. Exemple :  
   
  `// MYCALC.RC`  
   
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  Pour plus d’informations sur ces types de ressources, consultez [éditeurs de ressources](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Pointe vers le `CRuntimeClass` objet de la classe de document. Cette classe est un **CDocument**-dérivée la classe que vous définissez pour représenter vos documents.  
+ *pDocClass*  
+ Pointe vers le `CRuntimeClass` objet de la classe de document. Cette classe est un `CDocument`-dérivée la classe que vous définissez pour représenter vos documents.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Pointe vers le `CRuntimeClass` objet de la classe de fenêtre frame. Cette classe peut être un `CMDIChildWnd`-classe dérivée, ou il peut être `CMDIChildWnd` elle-même si vous souhaitez le comportement par défaut pour vos fenêtres frame de document.  
   
- `pViewClass`  
+ *pViewClass*  
  Pointe vers le `CRuntimeClass` objet de la classe d’affichage. Cette classe est un `CView`-dérivée la classe que vous définissez pour afficher vos documents.  
   
 ### <a name="remarks"></a>Notes  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367183"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038456"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame, classe
 Représente une image clé de l'animation.  
@@ -89,7 +89,7 @@ class CKeyFrame : public CBaseKeyFrame;
   
  [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un plan conceptuel.  
   
- `bDeepAdd`  
+ *que bDeepAdd*  
  Spécifie s’il faut ajouter l’image clé ou une transition de manière récursive.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un plan conceptuel.  
   
- `bDeepAdd`  
+ *que bDeepAdd*  
  Spécifie s’il faut ajouter une transition de manière récursive.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pStoryboard`  
+ *pStoryboard*  
  Pointeur vers un plan conceptuel.  
   
- `bDeepAdd`  
+ *que bDeepAdd*  
  Spécifie si cette image clé dépendante de façon récursive pour ajouter une image clé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTransition`  
+ *pTransition*  
  Pointeur vers une transition.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Pointeur vers l’image clé.  
   
- `offset`  
+ *offset*  
  Offset, en secondes, à partir de l’image clé spécifiée par pKeyframe.  
   
 ### <a name="remarks"></a>Notes  

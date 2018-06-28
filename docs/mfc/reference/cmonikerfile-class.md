@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369227"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037267"
 ---
 # <a name="cmonikerfile-class"></a>Classe de CMonikerFile
 Représente un flux de données ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) nommé par une [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -85,7 +85,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="close"></a>  CMonikerFile::Close  
@@ -113,7 +113,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pError`  
+ *pError*  
  Un pointeur vers une exception de fichier. En cas d’erreur, elle est définie à la cause.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -130,7 +130,7 @@ BOOL Detach(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pError`  
+ *pError*  
  Un pointeur vers une exception de fichier. En cas d’erreur, elle est définie à la cause.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -164,22 +164,22 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszURL`  
+ *lpszURL*  
  Une URL ou le nom du fichier à ouvrir.  
   
- `pError`  
+ *pError*  
  Un pointeur vers une exception de fichier. En cas d’erreur, elle est définie à la cause.  
   
- `pMoniker`  
+ *pMoniker*  
  Un pointeur vers l’interface de moniker `IMoniker` à utiliser pour obtenir un flux de données.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Le `lpszURL` paramètre ne peut pas être utilisé sur un ordinateur Macintosh. Uniquement les `pMoniker` formulaire de **ouvrir** peut être utilisé sur un ordinateur Macintosh.  
+ Le *lpszURL* paramètre ne peut pas être utilisé sur un ordinateur Macintosh. Uniquement les *pMoniker* formulaire de **ouvrir** peut être utilisé sur un ordinateur Macintosh.  
   
- Vous pouvez utiliser une URL ou un nom de fichier pour le `lpszURL` paramètre. Par exemple :  
+ Vous pouvez utiliser une URL ou un nom de fichier pour le *lpszURL* paramètre. Exemple :  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

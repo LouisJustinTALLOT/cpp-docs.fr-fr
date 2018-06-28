@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373701"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042220"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe de CMFCVisualManagerWindows7
 Le `CMFCVisualManagerWindows7` donne à une application l’apparence d’un [!INCLUDE[win7](../../build/includes/win7_md.md)] application.  
@@ -120,7 +120,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  `CMFCVisualManagerWindows7`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxvisualmanagerwindows7.h  
   
 ##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7 :: ~ CMFCVisualManagerWindows7  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pEdit`  
+ [in] *pEdit*  
  Pointeur vers le contrôle d’édition. Cette valeur ne peut pas être `NULL`.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  Retourne si la zone du ruban est mis en surbrillance.  
   
- [out] `bIsPaneHighlighted`  
- Retourne `TRUE` si le ruban du panneau qui contient `pEdit` est mis en surbrillance.  
+ [out] *bIsPaneHighlighted*  
+ Retourne `TRUE` si le ruban du panneau qui contient *pEdit* est mis en surbrillance.  
   
- [out] `bIsDisabled`  
- Retourne si `pEdit` est désactivé.  
+ [out] *bIsDisabled*  
+ Retourne si *pEdit* est désactivé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La couleur d’arrière-plan de la zone d’édition `pEdit`.  
+ La couleur d’arrière-plan de la zone d’édition *pEdit*.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique d’un bouton de menu.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un pointeur vers un `CMFCToolBarButton`. Le framework remplit l’arrière-plan de ce bouton.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectangle qui spécifie les limites de la zone d’image de bouton menu.  
   
- [in] `state`  
+ [in] *état*  
  L’état du bouton.  
   
 ### <a name="remarks"></a>Notes  

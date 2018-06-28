@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d83765309f6df860b190d3ea2114e7e0fd35724
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e0962d4a0c97db27f7d5ae31ec58eb26f20a7f7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367631"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038391"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget, classe
 Wrapper pour ID2D1HwndRenderTarget.  
@@ -92,7 +92,7 @@ class CHwndRenderTarget : public CRenderTarget;
   
  [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="attach"></a>  CHwndRenderTarget::Attach  
@@ -103,7 +103,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pTarget`  
+ *pTarget*  
  Interface de cible de rendu existante. Ne peut pas être NULL  
   
 ##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
@@ -124,7 +124,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hwnd`  
+ *HWND*  
  Le HWND associé à cette cible de rendu  
   
 ##  <a name="create"></a>  CHwndRenderTarget::Create  
@@ -135,7 +135,7 @@ BOOL Create(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWnd`  
+ *hWnd*  
  Le HWND associé à cette cible de rendu  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -196,7 +196,7 @@ BOOL ReCreate(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWnd`  
+ *hWnd*  
  Le HWND associé à cette cible de rendu  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -210,7 +210,7 @@ BOOL Resize(const CD2DSizeU& size);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `size`  
+ *size*  
  La nouvelle taille de la cible de rendu en pixels de périphérique  
   
 ### <a name="return-value"></a>Valeur de retour  

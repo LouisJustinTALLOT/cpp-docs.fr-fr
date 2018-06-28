@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86250968fa8f6dfd9cb1a3b9a790549f70baa569
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375844"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039108"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 Fournit les fonctionnalités du contrôle commun de liste d'images Windows.  
@@ -169,7 +169,7 @@ class CImageList : public CObject
   
  `CImageList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="add"></a>  CImageList::Add  
@@ -189,16 +189,16 @@ int Add(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pbmImage`  
+ *pbmImage*  
  Pointeur vers l’image bitmap qui contient l’ou les images. Le nombre d’images est déduit à partir de la largeur de l’image bitmap.  
   
- `pbmMask`  
+ *pbmMask*  
  Pointeur vers l’image bitmap contenant le masque. Si aucun masque n’est utilisé avec la liste d’images, ce paramètre est ignoré.  
   
- `crMask`  
+ *crMask*  
  Couleur utilisée pour générer le masque. Chaque pixel de cette couleur dans l’image bitmap donnée est modifiée sur noir et le bit correspondant dans le masque est défini à un.  
   
- `hIcon`  
+ *hIcon*  
  Handle de l’icône qui contient l’image bitmap et un masque pour la nouvelle image.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -218,7 +218,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hImageList`  
+ *hImageList*  
  Handle vers un objet de liste d’images.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -237,10 +237,10 @@ BOOL BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à faire glisser.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Coordonnées de la position de départ glisser (en règle générale, la position du curseur). Les coordonnées sont exprimées par rapport à l’angle supérieur gauche de l’image.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -280,10 +280,10 @@ BOOL Copy(
  *iDst*  
  Index de base zéro de l’image à utiliser comme destination de l’opération de copie.  
   
- `iSrc`  
+ *iSrc*  
  Index de base zéro de l’image à utiliser comme source de l’opération de copie.  
   
- `uFlags`  
+ *uFlags*  
  La valeur d’indicateur de bits qui spécifie le type d’opération de copie doit être effectuée. Ce paramètre peut être une des valeurs suivantes :  
   
 |Value|Signification|  
@@ -291,7 +291,7 @@ BOOL Copy(
 |`ILCF_MOVE`|L’image source est copié dans les index de l’image de destination. Cette opération entraîne plusieurs instances d’une image donnée. `ILCF_MOVE` est la valeur par défaut.|  
 |`ILCF_SWAP`|Les images source et destination échangent des positions dans la liste d’images.|  
   
- `pSrc`  
+ *pSrc*  
  Un pointeur vers un `CImageList` objet qui est la cible de l’opération de copie.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -338,13 +338,13 @@ BOOL Create(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cx`  
+ *CX*  
  Dimensions de chaque image, en pixels.  
   
- `cy`  
+ *CY*  
  Dimensions de chaque image, en pixels.  
   
- `nFlags`  
+ *nIndicateurs*  
  Spécifie le type de liste d’images à créer. Ce paramètre peut être une combinaison des valeurs suivantes, mais il peut inclure uniquement un de le `ILC_COLOR` valeurs.  
   
 |Value|Signification|  
@@ -358,40 +358,40 @@ BOOL Create(CImageList* pImageList);
 |`ILC_COLORDDB`|Utilisez une image bitmap dépendant du périphérique.|  
 |`ILC_MASK`|Utilise un masque. La liste d’images contient deux images bitmap, un est un bitmap monochrome utilisé comme un masque. Si cette valeur n’est pas incluse, la liste d’images contient uniquement une image bitmap. Consultez [dessin d’Images à partir d’une liste d’images](../../mfc/drawing-images-from-an-image-list.md) pour plus d’informations sur les images masquées.|  
   
- `nInitial`  
+ *nInitial*  
  Nombre d’images contenant la liste d’images initialement.  
   
- `nGrow`  
+ *nGrow*  
  Nombre d’images dont la liste d’images peut augmenter lorsque le système doit redimensionner la liste pour faire place aux nouvelles images. Ce paramètre représente le nombre de nouvelles images de que la liste de l’image redimensionnée peut contenir.  
   
- `nBitmapID`  
+ *nBitmapID*  
  ID de ressource de l’image bitmap à associer à la liste d’images.  
   
- `crMask`  
+ *crMask*  
  Couleur utilisée pour générer un masque. Chaque pixel de cette couleur dans la bitmap spécifiée est modifiée sur la couleur noire, et le bit correspondant dans le masque est défini à un.  
   
- `lpszBitmapID`  
+ *lpszBitmapID*  
  Chaîne contenant les ID des images de ressources.  
   
- `imagelist1`  
+ *imageList1*  
  Référence à un objet `CImageList`.  
   
- `nImage1`  
+ *nImage1*  
  Index de la première image existante.  
   
- `imagelist2`  
+ *ImageList2*  
  Référence à un objet `CImageList`.  
   
- `nImage2`  
+ *nImage2*  
  Index de la deuxième image existante.  
   
- `dx`  
+ *DX*  
  Décalage de l’axe x de la deuxième image de la relation à la première image, en pixels.  
   
- `dy`  
+ *dy*  
  Décalage de l’axe y de l’image de seconde dans une relation à la première image, en pixels.  
   
- `pImageList`  
+ *pImageList*  
  Un pointeur vers un `CImageList` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -443,7 +443,7 @@ HIMAGELIST Detach();
   Consultez l’exemple de [CImageList::Attach](#attach).  
   
 ##  <a name="dragenter"></a>  CImageList::DragEnter  
- Pendant une opération glisser, verrouille les mises à jour de la fenêtre spécifiée par `pWndLock` et affiche l’image glissée à la position spécifiée par `point`.  
+ Pendant une opération glisser, verrouille les mises à jour de la fenêtre spécifiée par *pWndLock* et affiche l’image glissée à la position spécifiée par *point*.  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -452,10 +452,10 @@ static BOOL PASCAL DragEnter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWndLock`  
+ *pWndLock*  
  Pointeur vers la fenêtre propriétaire de l’image glissée.  
   
- `point`  
+ *Point*  
  Position à laquelle afficher l’image glissée. Coordonnées sont exprimées par rapport à l’angle supérieur gauche de la fenêtre (et non à la zone client).  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -464,7 +464,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="remarks"></a>Notes  
  Les coordonnées étant relatif au coin supérieur gauche de la fenêtre, vous devez compenser la largeur des éléments de la fenêtre, telles que la bordure, la barre de titre et la barre de menus, lorsque vous spécifiez les coordonnées.  
   
- Si `pWndLock` est **NULL**, cette fonction Dessine l’image dans le contexte d’affichage associé à la fenêtre du bureau, et les coordonnées sont exprimées par rapport à l’angle supérieur gauche de l’écran.  
+ Si *pWndLock* est **NULL**, cette fonction Dessine l’image dans le contexte d’affichage associé à la fenêtre du bureau, et les coordonnées sont exprimées par rapport à l’angle supérieur gauche de l’écran.  
   
  Cette fonction verrouille toutes les autres mises à jour dans la fenêtre donnée pendant l’opération de glissement. Si vous avez besoin effectuer un dessin pendant une opération glisser, telles que la mise en surbrillance de la cible d’une opération de glisser-déplacer, vous pouvez masquer temporairement l’image à l’aide de la [CImageList::DragLeave](#dragleave) (fonction).  
   
@@ -472,14 +472,14 @@ static BOOL PASCAL DragEnter(
   Consultez l’exemple de [CImageList::BeginDrag](#begindrag).  
   
 ##  <a name="dragleave"></a>  CImageList::DragLeave  
- Déverrouille la fenêtre spécifiée par `pWndLock` et masque l’image glissée, ce qui permet de la fenêtre de la mise à jour.  
+ Déverrouille la fenêtre spécifiée par *pWndLock* et masque l’image glissée, ce qui permet de la fenêtre de la mise à jour.  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWndLock`  
+ *pWndLock*  
  Pointeur vers la fenêtre propriétaire de l’image glissée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -496,7 +496,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  Nouvelle position de glissement.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -516,7 +516,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bShow`  
+ *bShow*  
  Spécifie si l’image glissée doit être affiché.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -537,23 +537,23 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique de destination.  
   
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à dessiner.  
   
- `pt`  
+ *pt*  
  Emplacement à dessiner dans le contexte de périphérique spécifié.  
   
- `nStyle`  
+ *nStyle*  
  Indicateur spécifiant le style de dessin. Il peut être une ou plusieurs des valeurs suivantes :  
   
 |Value|Signification|  
 |-----------|-------------|  
 |`ILD_BLEND25`, **ILD_FOCUS**|Dessine l’image, 25 pour cent avec la couleur de surbrillance du système de fusion. Cette valeur n’a aucun effet si la liste d’images ne contient pas un masque.|  
 |`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Dessine l’image, 50 pour cent avec la couleur de surbrillance du système de fusion. Cette valeur n’a aucun effet si la liste d’images ne contient pas un masque.|  
-|**ILD_MASK**|Dessine le masque.|  
+|`ILD_MASK`|Dessine le masque.|  
 |`ILD_NORMAL`|Dessine l’image à l’aide de la couleur d’arrière-plan pour la liste d’images. Si la couleur d’arrière-plan est le `CLR_NONE` valeur, l’image est dessinée en toute transparence à l’aide du masque.|  
 |`ILD_TRANSPARENT`|Dessine l’image en toute transparence à l’aide du masque, quelle que soit la couleur d’arrière-plan.|  
   
@@ -578,17 +578,17 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique de destination.  
   
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à dessiner.  
   
- `pt`  
+ *pt*  
  Emplacement à dessiner dans le contexte de périphérique spécifié.  
   
- `sz`  
- Taille de la partie de l’image à dessiner par rapport à l’angle supérieur gauche de l’image. Consultez `dx` et *dy* dans [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) dans le Kit de développement logiciel Windows.  
+ *sz*  
+ Taille de la partie de l’image à dessiner par rapport à l’angle supérieur gauche de l’image. Consultez *dx* et *dy* dans [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) dans le Kit de développement logiciel Windows.  
   
  *clrBk*  
  Couleur d’arrière-plan de l’image. Consultez *rgbBk* dans [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) dans le Kit de développement logiciel Windows.  
@@ -596,7 +596,7 @@ BOOL DrawEx(
  *clrFg*  
  Couleur de premier plan de l’image. Consultez *rgbFg* dans [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) dans le Kit de développement logiciel Windows.  
   
- `nStyle`  
+ *nStyle*  
  Indicateur spécifiant le style de dessin. Consultez *fStyle* dans [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) dans le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -634,30 +634,30 @@ BOOL DrawIndirect(
  *pimldp*  
  Un pointeur vers un [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure qui contient des informations sur l’opération de dessin.  
   
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique de destination. Vous devez supprimer cette [CDC](../../mfc/reference/cdc-class.md) lorsque vous avez terminé de l’objet.  
   
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à dessiner.  
   
- `pt`  
+ *pt*  
  A [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui contient les coordonnées x et y où l’image est dessinée.  
   
- `sz`  
+ *sz*  
  A [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure indiquant la taille de l’image à dessiner.  
   
  *ptOrigin*  
  A [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui contient les coordonnées x et y spécifiant le coin supérieur gauche de l’opération de dessin par rapport à l’image elle-même. Les pixels de l’image à gauche de la coordonnée x et au-dessus de la coordonnée y figurent pas.  
   
- `fStyle`  
+ *fStyle*  
  Indicateur spécifiant le style de dessin et, éventuellement, l’image de superposition. Consultez la section Notes pour plus d’informations sur l’image de superposition. L’implémentation par défaut MFC, `ILD_NORMAL`, dessine l’image à l’aide de la couleur d’arrière-plan pour la liste d’images. Si la couleur d’arrière-plan est le `CLR_NONE` valeur, l’image est dessinée en toute transparence à l’aide d’un masque.  
   
- Autres styles possibles sont décrits dans le **fStyle** membre de la [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure.  
+ Autres styles possibles sont décrits dans le *fStyle* membre de la [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure.  
   
  *dwRop*  
- Valeur qui spécifie un code d’opération de rastérisation. Ces codes définissent comment combiner les données de couleur pour le rectangle source avec les données de couleur du rectangle de destination obtenir la couleur finale. Implémentation, par défaut de MFC **SRCCOPY**, copie le rectangle source directement vers le rectangle de destination. Ce paramètre est ignoré si le `fStyle` paramètre n’inclut pas le **ILD_ROP** indicateur.  
+ Valeur qui spécifie un code d’opération de rastérisation. Ces codes définissent comment combiner les données de couleur pour le rectangle source avec les données de couleur du rectangle de destination obtenir la couleur finale. Implémentation, par défaut de MFC **SRCCOPY**, copie le rectangle source directement vers le rectangle de destination. Ce paramètre est ignoré si le *fStyle* paramètre n’inclut pas le **ILD_ROP** indicateur.  
   
- D’autres valeurs possibles sont décrites dans le **dwRop** membre de la [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure.  
+ D’autres valeurs possibles sont décrites dans le *dwRop* membre de la [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure.  
   
  *rgbBack*  
  La couleur d’arrière-plan d’image, par défaut `CLR_DEFAULT`. Ce paramètre peut être une valeur RVB définies par l’application ou l’une des valeurs suivantes :  
@@ -675,7 +675,7 @@ BOOL DrawIndirect(
 |`CLR_DEFAULT`|Couleur de premier plan par défaut. L’image est dessinée à l’aide de la couleur de surbrillance système en tant que la couleur de premier plan.|  
 |`CLR_NONE`|Aucune couleur de dégradé. L’image est fusionnée avec la couleur du contexte de périphérique de destination.|  
   
- Ce paramètre est utilisé uniquement si `fStyle` inclut la `ILD_BLEND25` ou `ILD_BLEND50` indicateur.  
+ Ce paramètre est utilisé uniquement si *fStyle* inclut la `ILD_BLEND25` ou `ILD_BLEND50` indicateur.  
   
  *fState*  
  Indicateur qui spécifie l’état de dessin. Ce membre peut contenir un ou plusieurs indicateurs d’état de liste image.  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Notes  
  Utilisez la première version, si vous souhaitez remplir la structure Win32 vous-même. Utilisez la deuxième version, si vous souhaitez tirer parti d’un ou plusieurs des arguments par défaut MFC ou éviter la gestion de la structure.  
   
- Une image de superposition est une image qui est dessinée sur l’image principale, spécifiée dans cette fonction membre par la `nImage` paramètre. Dessiner un masque de superposition à l’aide de la [dessiner](#draw) fonction membre avec l’index de base un du masque de superposition spécifié à l’aide de la [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) (macro).  
+ Une image de superposition est une image qui est dessinée sur l’image principale, spécifiée dans cette fonction membre par la *nImage* paramètre. Dessiner un masque de superposition à l’aide de la [dessiner](#draw) fonction membre avec l’index de base un du masque de superposition spécifié à l’aide de la [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) (macro).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -722,7 +722,7 @@ HICON ExtractIcon(int nImage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -742,7 +742,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hImageList`  
+ *hImageList*  
  Spécifie la liste d’images.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -762,7 +762,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hImageList`  
+ *hImageList*  
  Spécifie la liste d’images.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -797,7 +797,7 @@ static CImageList* PASCAL GetDragImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpPoint`  
+ *lpPoint*  
  Adresse d’un [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui reçoit actuel faites glisser la position.  
   
  *lpPointHotSpot*  
@@ -829,7 +829,7 @@ BOOL GetImageInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image.  
   
  *pImageInfo*  
@@ -889,7 +889,7 @@ BOOL Read(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pArchive`  
+ *pArchive*  
  Un pointeur vers un `CArchive` objet à partir de laquelle la liste d’images doit être lu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -906,14 +906,14 @@ BOOL Remove(int nImage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Tous les éléments qui suivent `nImage` se déplacent vers le bas une position. Par exemple, si une liste d’images contient deux éléments, la suppression du premier élément provoquera l’élément restant à figurer dans la première position. `nImage`= 0 pour l’élément dans la première position.  
+ Tous les éléments qui suivent *nImage* se déplacent vers le bas une position. Par exemple, si une liste d’images contient deux éléments, la suppression du premier élément provoquera l’élément restant à figurer dans la première position. *nImage*= 0 pour l’élément dans la première position.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
@@ -934,22 +934,22 @@ int Replace(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à remplacer.  
   
- `pbmImage`  
+ *pbmImage*  
  Pointeur vers l’image bitmap qui contient l’image.  
   
- `pbmMask`  
+ *pbmMask*  
  Pointeur vers l’image bitmap contenant le masque. Si aucun masque n’est utilisé avec la liste d’images, ce paramètre est ignoré.  
   
- `hIcon`  
+ *hIcon*  
  Handle vers l’icône qui contient l’image bitmap et un masque pour la nouvelle image.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La version retour **BOOL** retourne différente de zéro cas de réussite ; sinon, 0.  
   
- La version retour `int` retourne l’index de base zéro de l’image de cas de réussite ; sinon - 1.  
+ La version retour **int** retourne l’index de base zéro de l’image de cas de réussite ; sinon - 1.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction membre après avoir appelé [fonction SetImageCount](#setimagecount) pour affecter le nouveau, images valides pour l’espace réservé de numéros d’index de l’image.  
@@ -965,7 +965,7 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cr`  
+ *retour chariot*  
  Couleur d’arrière-plan à définir. Il peut être `CLR_NONE`. Dans ce cas, les images sont dessinées en toute transparence à l’aide du masque.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -987,7 +987,7 @@ BOOL SetDragCursorImage(
  *nDrag*  
  Index de la nouvelle image pour pouvoir être associé à l’image glissée.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Position de la zone réactive dans la nouvelle image.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1028,7 +1028,7 @@ BOOL SetOverlayImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImage`  
+ *nImage*  
  Index de base zéro de l’image à utiliser comme un masque de superposition.  
   
  *nOverlay*  
@@ -1053,7 +1053,7 @@ BOOL Write(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pArchive`  
+ *pArchive*  
  Un pointeur vers un `CArchive` objet dans lequel la liste d’images doit être stocké.  
   
 ### <a name="return-value"></a>Valeur de retour  

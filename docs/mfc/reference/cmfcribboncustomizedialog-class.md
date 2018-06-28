@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370192"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040897"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Classe de CMFCRibbonCustomizeDialog
 Affiche le ruban **personnaliser** page.  
@@ -69,7 +69,7 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribboncustomizedialog.h  
   
 ##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
@@ -82,10 +82,10 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Pointeur vers la fenêtre parente (généralement le frame principal).  
   
- [in] `pRibbon`  
+ [in] *pRibbon*  
  Un pointeur vers le `CMFCRibbonBar` qui doit être personnalisé.  
   
 ### <a name="example"></a>Exemple  

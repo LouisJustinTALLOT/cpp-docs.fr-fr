@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372718"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040010"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe de CMFCPropertySheet
 La classe `CMFCPropertySheet` prend en charge une feuille de propriétés où chaque page de propriétés est représentée par un onglet de page, un bouton de barre d'outils, un nœud de contrôle d'arborescence ou un élément de liste.  
@@ -140,7 +140,7 @@ class CMFCPropertySheet : public CPropertySheet
   
  [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpropertysheet.h  
   
 ##  <a name="addpage"></a>  CMFCPropertySheet::AddPage  
@@ -151,7 +151,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pPage`  
+ [in] *pPage*  
  Pointeur vers un objet de la page. Ce paramètre ne peut pas être `NULL`.  
   
 ### <a name="remarks"></a>Notes  
@@ -171,20 +171,20 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pCategory`  
+ [in] *pCategory*  
  Pointeur vers un nœud d’arborescence parent, ou `NULL` pour associer la page spécifiée avec le nœud de niveau supérieur. Appelez le [CMFCPropertySheet::AddTreeCategory](#addtreecategory) méthode pour obtenir ce pointeur.  
   
- [in] `pPage`  
+ [in] *pPage*  
  Pointeur vers un objet de page de propriétés.  
   
- [in] `nIconNum`  
+ [in] *nIconNum*  
  Index de base zéro d’une icône, ou -1 si aucune icône n’est utilisé. Lorsque la page n’est pas sélectionnée, l’icône s’affiche en regard de la page de propriétés du contrôle arborescence. La valeur par défaut est -1.  
   
- [in] `nSelIconNum`  
+ [in] *nSelIconNum*  
  Index de base zéro d’une icône, ou -1 si aucune icône n’est utilisé. Lorsque la page est sélectionnée, l’icône s’affiche en regard de la page de propriétés du contrôle arborescence. La valeur par défaut est -1.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode ajoute une page de propriétés comme une feuille d’un contrôle d’arborescence. Pour ajouter une page de propriétés, créez un `CMFCPropertySheet` de l’objet, appelez le [CMFCPropertySheet::SetLook](#setlook) méthode avec la `look` paramètre la valeur `CMFCPropertySheet::PropSheetLook_Tree`, puis utilisez cette méthode pour ajouter la page de propriétés.  
+ Cette méthode ajoute une page de propriétés comme une feuille d’un contrôle d’arborescence. Pour ajouter une page de propriétés, créez un `CMFCPropertySheet` de l’objet, appelez le [CMFCPropertySheet::SetLook](#setlook) méthode avec la *rechercher* paramètre la valeur `CMFCPropertySheet::PropSheetLook_Tree`, puis utilisez cette méthode pour ajouter la page de propriétés .  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Ajoute un nouveau nœud au contrôle d’arborescence.  
@@ -198,23 +198,23 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Nom du nœud.  
   
- [in] `nIconNum`  
+ [in] *nIconNum*  
  Index de base zéro d’une icône, ou -1 si aucune icône n’est utilisé. Lorsque la page n’est pas sélectionnée, l’icône s’affiche en regard de la page de propriétés du contrôle arborescence. La valeur par défaut est -1.  
   
- [in] `nSelectedIconNum`  
+ [in] *nSelectedIconNum*  
  Index de base zéro d’une icône, ou -1 si aucune icône n’est utilisé. Lorsque la page est sélectionnée, l’icône s’affiche en regard de la page de propriétés du contrôle arborescence. La valeur par défaut est -1.  
   
- [in] `pParentCategory`  
+ [in] *pParentCategory*  
  Pointeur vers un nœud d’arborescence parent, ou `NULL` pour associer la page spécifiée avec le nœud de niveau supérieur. Définissez ce paramètre avec le [CMFCPropertySheet::AddTreeCategory](#addtreecategory) (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le nouveau nœud dans le contrôle d’arborescence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour ajouter un nouveau nœud, qui est également appelé une catégorie, au contrôle d’arborescence. Pour ajouter un nœud, créez un `CMFCPropertySheet` de l’objet, appelez le [CMFCPropertySheet::SetLook](#setlook) méthode avec la `look` paramètre défini sur `CMFCPropertySheet::PropSheetLook_Tree`, puis utilisez cette méthode pour ajouter le nœud.  
+ Utilisez cette méthode pour ajouter un nouveau nœud, qui est également appelé une catégorie, au contrôle d’arborescence. Pour ajouter un nœud, créez un `CMFCPropertySheet` de l’objet, appelez le [CMFCPropertySheet::SetLook](#setlook) méthode avec la *rechercher* paramètre la valeur `CMFCPropertySheet::PropSheetLook_Tree`, puis utilisez cette méthode pour ajouter le nœud.  
   
  Utilisez la valeur de retour de cette méthode dans les appels suivants à [CMFCPropertySheet::AddPageToTree](#addpagetotree) et [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
@@ -234,16 +234,16 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pszCaption`  
+ [in] *pszCaption*  
  Chaîne qui contient la légende de la feuille des propriétés. Ne peut pas être `NULL`.  
   
- [in] `nIDCaption`  
+ [in] *nIDCaption*  
  Un ID de ressource qui contient la légende de la feuille des propriétés.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente de la feuille de propriétés, ou `NULL` si la fenêtre parente est la fenêtre principale de l’application. La valeur par défaut est `NULL`.  
   
- [in] `iSelectPage`  
+ [in] *iSelectPage*  
  Index de base zéro de la page de propriété top. La valeur par défaut est 0.  
   
 ### <a name="remarks"></a>Notes  
@@ -257,11 +257,11 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nHeaderHeight`  
+ [in] *nHeaderHeight*  
  La hauteur de l’en-tête, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Pour utiliser la valeur de la `nHeaderHeight` paramètre pour dessiner un en-tête personnalisé, substituez le [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) (méthode).  
+ Pour utiliser la valeur de la *nHeaderHeight* paramètre pour dessiner un en-tête personnalisé, substituez le [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) (méthode).  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Récupère la hauteur de l'en-tête actuel.  
@@ -334,7 +334,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pPage`  
+ [in] *pPage*  
  Pointeur vers un objet de page de propriété qui représente la page de propriété enabled.  
   
 ### <a name="remarks"></a>Notes  
@@ -351,13 +351,13 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Le numéro de page de propriété de base zéro.  
   
- [in] `rectHeader`  
+ [in] *rectHeader*  
  Un rectangle englobant qui indique où dessiner l’en-tête.  
   
 ### <a name="remarks"></a>Notes  
@@ -371,7 +371,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pPage`  
+ [in] *pPage*  
  Pointeur vers un objet de page de propriété qui représente la page de propriétés à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -385,7 +385,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pCategory`  
+ [in] *pCategory*  
  Pointeur vers une catégorie (nœud) à supprimer.  
   
 ### <a name="remarks"></a>Notes  
@@ -400,14 +400,14 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pPage`  
+ [in] *pPage*  
  Pointeur vers l’objet de page de propriétés qui représente la page de propriétés à supprimer. Ne peut pas être `NULL`.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Index de base zéro de la page à supprimer.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode supprime la page de propriété spécifiée et détruit la fenêtre associée. La page de propriétés de l’objet qui le `pPage` spécifie de paramètre n’est pas détruit tant que le [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) fenêtre est fermée.  
+ Cette méthode supprime la page de propriété spécifiée et détruit la fenêtre associée. La page de propriétés de l’objet qui le *pPage* spécifie de paramètre n’est pas détruit tant que le [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) fenêtre est fermée.  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Spécifie la liste des images utilisées dans le contrôle de navigation du volet Outlook.  
@@ -421,16 +421,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiImageListResID`  
+ [in] *uiImageListResID*  
  L’ID de ressource d’une liste d’images.  
   
- [in] `cx`  
+ [in] *cx*  
  La largeur, en pixels, des icônes dans la liste d’images.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  La couleur de l’image transparente. Les parties de l’image qui sont de cette couleur est transparents. La valeur par défaut est la couleur magenta, RGB(255,0,255).  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Handle vers une liste d’images existant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -451,16 +451,16 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `look`  
+ [in] *rechercher*  
  Une des valeurs d’énumération qui spécifie l’apparence de la feuille de propriétés. Le style par défaut pour une feuille de propriétés est `CMFCPropertySheet::PropSheetLook_Tabs`. Pour plus d’informations, consultez le tableau dans la section Notes de cette rubrique.  
   
- [in] `nNavControlWidth`  
+ [in] *nNavControlWidth*  
  La largeur du contrôle de navigation, en pixels. La valeur par défaut est 100.  
   
 ### <a name="remarks"></a>Notes  
  Pour afficher une feuille de propriétés dans un style autre que la valeur par défaut, appelez cette méthode avant de créer la fenêtre de feuille de propriétés.  
   
- Le tableau suivant répertorie les valeurs d’énumération qui peuvent être spécifiés dans le `look` paramètre.  
+ Le tableau suivant répertorie les valeurs d’énumération qui peuvent être spécifiés dans le *rechercher* paramètre.  
   
 |Value|Description|  
 |-----------|-----------------|  

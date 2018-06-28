@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371697"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042376"
 ---
 # <a name="clinkctrl-class"></a>Classe de CLinkCtrl
 Fournit les fonctionnalités du contrôle commun SysLink Windows.  
@@ -102,7 +102,7 @@ class CLinkCtrl : public CWnd
   
  `CLinkCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Pointeur vers une chaîne terminée par zéro qui contient l’élément marqué le texte à afficher. Pour plus d’informations, consultez la section « Accès balisage et lien » dans la rubrique [vue d’ensemble des contrôles de SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le `Windows SDK` pour plus d’informations.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle de lien. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie la fenêtre parente du contrôle de lien. Il ne doit pas être `NULL`.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de lien  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>Notes  
  Vous construisez un `CLinkCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle de lien et l’attache à le `CLinkCtrl` objet. Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CLinkCtrl::CreateEx](#createex) au lieu de `Create`.  
   
- La deuxième forme de la `Create` méthode est déconseillée. Utiliser la première forme qui spécifie le `lpszLinkMarkup` paramètre.  
+ La deuxième forme de la `Create` méthode est déconseillée. Utiliser la première forme qui spécifie le *lpszLinkMarkup* paramètre.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit deux variables, nommées `m_Link1` et `m_Link2`, qui permettent d’accéder aux deux contrôles de lien.  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Pointeur vers une chaîne terminée par zéro qui contient l’élément marqué le texte à afficher. Pour plus d’informations, consultez la section « Accès balisage et lien » dans la rubrique [vue d’ensemble des contrôles de SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwExStyle`  
- Spécifie le style étendu du contrôle de lien. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ *dwExStyle*  
+ Spécifie le style étendu du contrôle de lien. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le Kit de développement logiciel Windows.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle de lien. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie la fenêtre parente du contrôle de lien. Il ne doit pas être `NULL`.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de lien  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des constantes de style Windows étendus.  
   
- La deuxième forme de la `CreateEx` méthode est déconseillée. Utiliser la première forme qui spécifie le `lpszLinkMarkup` paramètre.  
+ La deuxième forme de la `CreateEx` méthode est déconseillée. Utiliser la première forme qui spécifie le *lpszLinkMarkup* paramètre.  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Récupère la hauteur idéale du contrôle de lien.  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|La largeur maximale de la liaison, en pixels.|  
-|[out] * `pSize`|Un pointeur vers un Windows [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, la `cy` membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien qui est spécifiée par `cxMaxWidth`. Le `cx` membre de la structure contient la largeur du texte de lien qui est réellement nécessaire.|  
+|[in] *cxMaxWidth*|La largeur maximale de la liaison, en pixels.|  
+|[out] * *pSize*|Un pointeur vers un Windows [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, la *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien qui est spécifiée par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur du texte de lien qui est réellement nécessaire.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- La hauteur préférée du texte du lien, en pixels. La valeur de retour est la même que la valeur de la `cy` membre de la `SIZE` structure.  
+ La hauteur préférée du texte du lien, en pixels. La valeur de retour est la même que la valeur de la *cy* membre de la `SIZE` structure.  
   
 ### <a name="remarks"></a>Notes  
  Pour obtenir un exemple de la `GetIdealSize` (méthode), consultez l’exemple de [CLinkCtrl::Create](#create).  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Un pointeur vers un [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure pour recevoir des informations sur les éléments.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iLink`  
+ *iLink*  
  L’index d’un élément de contrôle de lien.  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iLink`  
+ *iLink*  
  L’index d’un élément de contrôle de lien.  
   
- `pnState`  
+ *pnState*  
  La valeur de l’élément d’état spécifié.  
   
- `stateMask`  
+ *stateMask*  
  Combinaison d’indicateurs qui décrivent l’élément d’état pour obtenir. Pour obtenir la liste de valeurs, consultez la description de la **état** membre dans le [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Éléments autorisées sont identiques à celles autorisées dans **état**.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iLink`  
+ *iLink*  
  L’index d’un élément de contrôle de lien.  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) objet contenant l’URL représenté par l’élément spécifié  
   
- `szUrl`  
+ *szUrl*  
  Une chaîne se terminant par null qui contient l’URL représenté par l’élément spécifié  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Un pointeur vers un [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure contenant les informations à définir.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iLink`  
+ *iLink*  
  L’index d’un élément de contrôle de lien.  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iLink`  
+ *iLink*  
  L’index d’un élément de contrôle de lien.  
   
- `pnState`  
+ *pnState*  
  La valeur de l’élément d’état spécifié qui est définie.  
   
- `stateMask`  
+ *stateMask*  
  Combinaison d’indicateurs décrivant l’élément d’état en cours de définition. Pour obtenir la liste de valeurs, consultez la description de la **état** membre dans le [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Éléments autorisées sont identiques à celles autorisées dans **état**.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iLink`  
+ *iLink*  
  L’index d’un élément de contrôle de lien.  
   
- `szUrl`  
+ *szUrl*  
  Une chaîne se terminant par null qui contient l’URL représenté par l’élément spécifié  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369032"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037286"
 ---
 # <a name="cmfckeymapdialog-class"></a>Classe de CMFCKeyMapDialog
 La `CMFCKeyMapDialog` classe prend en charge un contrôle qui mappe des commandes à des touches du clavier.  
@@ -97,7 +97,7 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxkeymapdialog.h  
   
 ##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Un pointeur vers la fenêtre parente de la `CMFCKeyMapDialog` objet.  
   
- [in] `bEnablePrint`  
+ [in] *bEnablePrint*  
  `TRUE` Si la liste des touches d’accès peut être imprimée ; dans le cas contraire, `FALSE`. La valeur par défaut est `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nItem`  
+ [in] *nItem*  
  Index de base zéro d’un élément dans la liste interne des mappages de touches.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Un ID de commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers un bouton de barre d’outils qui est utilisé pour mapper une combinaison de touches du clavier pour un nom de commande et une description. L’élément de mappage de clés est stockée dans un contrôle de liste interne.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Index de base zéro qui spécifie l’emplacement où insérer le nouvel élément de mappage de clés dans le contrôle de liste interne.  
   
 ### <a name="remarks"></a>Notes  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dc`  
+ [in] *contrôleur de domaine*  
  Le contexte de périphérique pour l’imprimante.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Le numéro de page à imprimer.  
   
- [in] `cx`  
+ [in] *cx*  
  Le décalage horizontal de l’en-tête, en pixels.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dc`  
+ [in] *contrôleur de domaine*  
  Le contexte de périphérique de l’imprimante.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Index de base zéro de l’élément à imprimer.  
   
- [in] `y`  
+ [in] *y*  
  Le décalage vertical entre le haut de la page et la position de l’élément.  
   
- [in] `cx`  
+ [in] *cx*  
  Le décalage horizontal entre la gauche de la page et la position de l’élément.  
   
- [in] `bCalcHeight`  
+ [in] *bCalcHeight*  
  `TRUE` pour calculer la hauteur meilleures pour l’élément d’impression ; `FALSE` tronquer l’élément impression afin qu’elle s’adapte à l’espace par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  

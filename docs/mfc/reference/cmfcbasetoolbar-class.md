@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366315"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037842"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Classe de CMFCBaseToolBar
 Classe de base pour les barres d’outils.  
@@ -69,7 +69,7 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbasetoolbar.h  
   
 ##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
@@ -90,7 +90,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `size`  
+ [out] *taille*  
  La taille minimale d’une barre d’outils.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
@@ -101,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndOldParent`  
+ [in] *pWndOldParent*  
  Pointeur vers la fenêtre parente précédente.  
   
 ## <a name="see-also"></a>Voir aussi  

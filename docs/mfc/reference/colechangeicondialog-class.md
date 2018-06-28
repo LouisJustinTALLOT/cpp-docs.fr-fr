@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375097"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041043"
 ---
 # <a name="colechangeicondialog-class"></a>Classe de la classe COleChangeIconDialog
 Utilisé pour la boîte de dialogue OLE Changer d'icône.  
@@ -86,7 +86,7 @@ class COleChangeIconDialog : public COleDialog
   
  `COleChangeIconDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointe vers l’élément à convertir.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicateur de création, qui contient un nombre quelconque des valeurs suivantes associées à l’aide de l’opérateur de bits- or (opérateur) :  
   
 - **CIF_SELECTCURRENT** Spécifie que la case d’option en cours sera sélectionnée initialement lorsque la boîte de dialogue est appelée. Il s'agit de la valeur par défaut.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** Spécifie que l’icône doit être extraits à partir de l’exécutable spécifié dans le **szIconExe** champ [m_ci](#m_ci) au lieu de récupérer à partir du type. Cela est utile pour incorporer ou lier les fichiers autres que OLE.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue sera définie sur la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointe vers l’élément dont l’icône change.  
   
 ### <a name="return-value"></a>Valeur de retour  

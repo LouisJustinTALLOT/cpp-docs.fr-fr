@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369705"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042054"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe de CMFCRibbonCheckBox
 La classe `CMFCRibbonCheckBox` implémente une case à cocher que vous pouvez ajouter à un volet du ruban, une barre d'outils Accès rapide ou un menu contextuel.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-où `nID` correspond à l'ID de commande de case à cocher et `lpszText` représente l'étiquette de texte de la case à cocher.  
+où *nID* est l’ID de commande de case à cocher et *lpszText* représente l’étiquette de texte de la case à cocher.  
   
  Vous pouvez ajouter une case à cocher à un panneau de ruban à l’aide de [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -90,7 +90,7 @@ où `nID` correspond à l'ID de commande de case à cocher et `lpszText` représ
   
  [CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribboncheckbox.h  
   
 ##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  Spécifie l’ID de commande.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Spécifie l’étiquette de texte.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le `CDC` associé à la case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le `CDC` associé à cette case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le `CDC` objet associé à cette case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le `CDC` dans lequel dessiner la case à cocher.  
   
 ### <a name="remarks"></a>Notes  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `CDC*`  
+ [in] *Capture de données modifiées**  
  Pointeur vers le `CDC` associé à la case à cocher.  
   
- [in] `CRect`  
+ [in] *CRect*  
  A `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique dans lequel dessiner la case à cocher.  
   
- [in] `strText`  
+ [in] *%{strText/}*  
  Le texte d’affichage.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  La distance, en pixels, du côté gauche de la zone de liste pour afficher du texte.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle d’affichage de la case à cocher.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Si la case à cocher est activée, ou `FALSE` si ce n’est pas le cas.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Si la case à cocher est sélectionnée, ou `FALSE` si ce n’est pas le cas.  
   
 ### <a name="remarks"></a>Notes  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParent`  
+ *pParent*  
  La fenêtre parente de la case à cocher.  
   
- `data`  
+ *data*  
  Données d’accessibilité de la case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  

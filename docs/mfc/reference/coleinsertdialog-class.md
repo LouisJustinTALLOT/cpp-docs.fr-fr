@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374879"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042168"
 ---
 # <a name="coleinsertdialog-class"></a>Classe de la classe COleInsertDialog
 Utilisée pour la boîte de dialogue OLE Insérer un objet.  
@@ -101,7 +101,7 @@ class COleInsertDialog : public COleDialog
   
  `COleInsertDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Indicateur de création qui contient un nombre quelconque des valeurs suivantes pour être combinées à l’aide de l’opérateur OR au niveau du bit :  
   
 - **IOF_SHOWHELP** Spécifie que le bouton d’aide s’affiche lorsque la boîte de dialogue est appelée.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** Spécifie que la boîte de dialogue doit valider les classes qu’il ajoute à la zone de liste en vous assurant que les serveurs spécifiés dans la base de données d’inscription existent pour que la boîte de dialogue s’affiche. Définition de cet indicateur peut fortement nuire aux performances.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de l’objet de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointe vers l’élément à créer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Une des valeurs suivantes :  
   
  `COleInsertDialog::DocObjectsOnly` insère uniquement DocObjects.  

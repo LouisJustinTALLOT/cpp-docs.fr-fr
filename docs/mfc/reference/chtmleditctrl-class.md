@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367154"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040140"
 ---
 # <a name="chtmleditctrl-class"></a>Classe de CHtmlEditCtrl
 Fournit les fonctionnalités du contrôle ActiveX WebBrowser dans une fenêtre MFC.  
@@ -71,7 +71,7 @@ class CHtmlEditCtrl: public CWnd,
   
  `CHtmlEditCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxhtml.h  
   
 ##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszWindowName`  
+ *lpszWindowName*  
  Ce paramètre est inutilisé.  
   
- `dwStyle`  
+ *dwStyle*  
  Ce paramètre est inutilisé.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie la fenêtre du contrôle parent. Il ne doit pas être **NULL**.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle  
   
- `pContext`  
+ *pContext*  
  Ce paramètre est inutilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ppDocument`  
+ *ppDocument*  
  L’interface de document.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

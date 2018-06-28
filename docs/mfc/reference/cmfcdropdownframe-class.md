@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368616"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041992"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe de CMFCDropDownFrame
 Fournit une fonctionnalité de fenêtre frame de la liste déroulante pour les barres d’outils de la liste déroulante et les boutons de barre d’outils de la liste déroulante.  
@@ -88,7 +88,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
  [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdropdowntoolbar.h  
   
 ##  <a name="create"></a>  CMFCDropDownFrame::Create  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWndParent`|La fenêtre parente de l’image de la liste déroulante.|  
-|[in] `x`|Coordonnée d’écran horizontale pour l’emplacement de l’image du bas vers le bas.|  
-|[in] `y`|Coordonnée d’écran verticale pour l’emplacement de l’image du bas vers le bas.|  
-|[in] `pWndOriginToolbar`|La barre d’outils qui affiche les boutons de liste déroulante par cette méthode pour remplir le nouvel objet de frame de la liste déroulante.|  
+|[in] *pWndParent*|La fenêtre parente de l’image de la liste déroulante.|  
+|[in] *x*|Coordonnée d’écran horizontale pour l’emplacement de l’image du bas vers le bas.|  
+|[in] *y*|Coordonnée d’écran verticale pour l’emplacement de l’image du bas vers le bas.|  
+|[in] *pWndOriginToolbar*|La barre d’outils qui affiche les boutons de liste déroulante par cette méthode pour remplir le nouvel objet de frame de la liste déroulante.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si le cadre de la liste déroulante a été créé avec succès ; dans le cas contraire `FALSE`.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `bNotify`|Non utilisé.|  
+|[in] *bNotify*|Non utilisé.|  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsque le frame de la liste déroulante est créé ou la fenêtre parente est redimensionnée. Cette méthode calcule la position et la taille de l’image de la liste déroulante à l’aide de la position et la taille de la fenêtre parente.  
@@ -171,11 +171,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Pour détruire automatiquement de la fenêtre de la barre d’outils de liste déroulante associée. dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Si `bAutoDestroy` est `TRUE`, puis le `CMFCDropDownFrame` destructeur détruit la fenêtre de la barre d’outils de liste déroulante associée. La valeur par défaut est `TRUE`.  
+ Si *bAutoDestroy* est `TRUE`, puis le `CMFCDropDownFrame` destructeur détruit la fenêtre de la barre d’outils de liste déroulante associée. La valeur par défaut est `TRUE`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

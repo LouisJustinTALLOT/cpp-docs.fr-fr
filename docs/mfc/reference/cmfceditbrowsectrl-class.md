@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369321"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037972"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe de CMFCEditBrowseCtrl
 La `CMFCEditBrowseCtrl` classe prend en charge le contrôle d’édition Parcourir, qui est une zone de texte modifiable contenant éventuellement un bouton Parcourir. Lorsque l’utilisateur clique sur le bouton Parcourir, le contrôle effectue une action personnalisée ou affiche une boîte de dialogue standard qui contient un explorateur de fichiers ou de dossiers.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Pour fournir une image personnalisée pour le bouton Parcourir, appelez le [SetBrowseButtonImage](#setbrowsebuttonimage) méthode ou remplacement le [OnDrawBrowseButton](#ondrawbrowsebutton) (méthode).  
   
-7.  Pour supprimer le bouton Parcourir le contrôle edit, appelez le [EnableBrowseButton](#enablebrowsebutton) méthode avec la `bEnable` paramètre la valeur `FALSE`.  
+7.  Pour supprimer le bouton Parcourir le contrôle edit, appelez le [EnableBrowseButton](#enablebrowsebutton) méthode avec la *bActivez* paramètre la valeur `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -127,7 +127,7 @@ class CMFCEditBrowseCtrl : public CEdit
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxeditbrowsectrl.h  
   
 ##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bEnable`  
+ *bActivez*  
  `TRUE` Pour afficher le bouton Parcourir. `FALSE` ne pas à afficher le bouton Parcourir. La valeur par défaut est `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  L’étiquette qui s’affiche sur le bouton Parcourir. La valeur par défaut est « **...** ".  
   
 ### <a name="remarks"></a>Notes  
- Si le `bEnable` paramètre est `TRUE`, implémenter une action personnalisée pour effectuer un clic sur le bouton Parcourir. Pour implémenter une action personnalisée, dérivez une classe à partir de la `CMFCEditBrowseCtrl` classe et substituer sa [OnBrowse](#onbrowse) (méthode).  
+ Si le *bActivez* paramètre est `TRUE`, implémenter une action personnalisée pour effectuer un clic sur le bouton Parcourir. Pour implémenter une action personnalisée, dérivez une classe à partir de la `CMFCEditBrowseCtrl` classe et substituer sa [OnBrowse](#onbrowse) (méthode).  
   
  Si le `bEnable` paramètre est `TRUE`, le mode de navigation du contrôle est `BrowseMode_Default`; sinon, le mode de navigation est `BrowseMode_None`. Pour plus d’informations sur les modes de navigation, consultez la [GetMode](#getmode) (méthode).  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszDefExt`  
+ *lpszDefExt*  
  Spécifie l’extension de nom de fichier par défaut utilisée dans la boîte de dialogue de sélection de fichier. La valeur par défaut est `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Spécifie la chaîne de filtrage par défaut utilisée dans la boîte de dialogue de sélection de fichier. La valeur par défaut est `NULL`.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicateurs de boîte de dialogue. La valeur par défaut est une combinaison (OR) au niveau du bit de OFN_HIDEREADONLY et OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Notes  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- `Rect`  
+ *Rect*  
  Le rectangle englobant du bouton Parcourir.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` Si le bouton est activé ; dans le cas contraire, `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Si le bouton est mis en surbrillance ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hIcon`  
+ *hIcon*  
  Le handle d’une icône.  
   
- `hBitmap`  
+ *hBitmap*  
  Le handle d’une image bitmap.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  L’ID de ressource d’une image bitmap.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` Pour supprimer l’icône spécifiée ou bitmap lorsque cette méthode se termine ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `strFileName`  
+ *strFileName*  
  Spécifie le nom de fichier non autorisé.  
   
 ### <a name="return-value"></a>Valeur de retour  

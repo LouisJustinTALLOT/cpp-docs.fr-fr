@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377621"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041888"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 La `CMDIChildWndEx` classe fournit les fonctionnalités de Windows fenêtre interface multidocument (MDI) enfant. Il étend les fonctionnalités de [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). L'infrastructure requiert cette classe lorsqu'une application MDI utilise certaines classes MFC.  
@@ -226,7 +226,7 @@ class CMDIChildWndEx : public CMDIChildWnd
   
  [CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxMDIChildWndEx.h  
   
 ##  <a name="addpane"></a>  CMDIChildWndEx::AddPane  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Pointeur vers le volet.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` Pour ajouter le volet à la fin de la liste des volets pour le Gestionnaire d’ancrage ; dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Pointeur vers le volet.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hdwp`  
+ [in] *hdwp*  
  Handle vers une structure de fenêtre différée.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
  Pointeur vers le volet.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  L’ID du volet.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Pointeur vers un rectangle.  
   
 ### <a name="remarks"></a>Notes  
- Le `lpRect` paramètre n’est pas utilisé.  
+ Le *lpRect* paramètre n’est pas utilisé.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Ancre un volet à gauche d’un autre volet.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBar`  
+ *pBar*  
  Pointeur vers le volet est ancrée.  
   
- `pLeftOf`  
+ *pLeftOf*  
  Pointeur vers le volet qui sert de point de référence.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` en cas de réussite, `FALSE` en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode prend le volet spécifié par `pBar` et il est ancré sur le côté gauche du volet spécifié par `pLeftOf`.  
+ Cette méthode prend le volet spécifié par *pBar* et il est ancré sur le côté gauche du volet spécifié par *pLeftOf*.  
   
  Appelez cette méthode lorsque vous souhaitez ancrer les volets plusieurs dans un ordre prédéfini.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Spécifie les côtés de la fenêtre frame principale qui est activée. Utiliser une ou plusieurs des indicateurs suivants.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Spécifie l’alignement d’ancrage à activer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  ID de contrôle du volet à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Pointeur vers le volet à insérer.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Pointeur vers le volet adjacent.  
   
- [in] `bAfter`  
- Si `TRUE`, `pControlBar` est inséré après `pTarget`. Si `FALSE`, `pControlBar` est inséré avant `pTarget`.  
+ [in] *exécuteront-ils*  
+ Si `TRUE`, *pControlBar* est inséré après *pTarget*. Si `FALSE`, *pControlBar* est inséré avant *pTarget*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si la méthode réussit, `FALSE` dans le cas contraire.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Le point spécifié.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Spécifie le bord le point est proche. Les valeurs possibles sont `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, et `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Si le point est proche de la bordure externe du site d’ancrage ; `FALSE` dans le cas contraire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pFrame`  
+ [in] *pFrame*  
  Pointeur vers une fenêtre mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bPreview`  
+ [in] *bPreview*  
  Si `TRUE`, entrer en mode Aperçu avant impression. Si `FALSE`, quitter le mode Aperçu avant impression.  
   
- [in] `pState`  
+ [in] *pState*  
  Pointeur vers la structure d’état de l’aperçu avant impression.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  Si `TRUE`, ajoutez le nom du document pour le titre.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Spécifie le point, en coordonnées d’écran, à vérifier.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Augmenter la zone de recherche de ce montant. Un volet satisfait les critères de recherche si le point donné se situe dans la zone accrue.  
   
- [in] `bExactBar`  
- `TRUE` pour ignorer la `nSensitivity` paramètre ; sinon, `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` pour ignorer la *nSensitivity* paramètre ; sinon, `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Si ce n’est pas `NULL`, la méthode recherche uniquement les volets du type spécifié.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Si un volet se trouve au point spécifié, ce paramètre contient le côté du volet qui a été le plus proche du point spécifié. Pour plus d'informations, consultez la section Remarques.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour déterminer si un volet contient le point spécifié en fonction des conditions telles que la classe d’exécution et la visibilité spécifiées.  
   
- Lorsque la fonction retourne et un volet a été trouvé, `dwAlignment` contient l’alignement du point spécifié. Par exemple, si le point est la plus proche de la partie supérieure du volet, `dwAlignment` a la valeur `CBRS_ALIGN_TOP`.  
+ Lorsque la fonction retourne et un volet a été trouvé, *dwAlignment* contient l’alignement du point spécifié. Par exemple, si le point est la plus proche de la partie supérieure du volet, *dwAlignment* a la valeur `CBRS_ALIGN_TOP`.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Recalcule la disposition de la fenêtre.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bNotify`  
+ [in] *bNotify*  
  Si `TRUE`, l’élément actif de la place de la fenêtre reçoit la notification de la modification de la disposition.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Pointeur vers le volet à supprimer.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  Si `TRUE`, le volet supprimé est détruit.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  Si `TRUE`, ajuster la disposition d’ancrage immédiatement.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  Si `TRUE`, la mise en page d’accueil est liée à la liste des barres de masquage automatique. Si `FALSE`, la mise en page d’accueil est liée à la liste des volets régulières.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Pointeur vers un volet qui remplace le volet supprimé.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hIcon`  
+ *hIcon*  
  Un handle d’une icône à afficher sur l’onglet de la barre des tâches Windows 7.  
   
 ### <a name="remarks"></a>Notes  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  Spécifie si cette fonction doit vérifier le nombre d’enfants MDI enregistré avec les onglets MDI. Si ce nombre est 0, cette fonction supprime le rectangle de découpage de miniature de la barre des tâches de l’application.  
   
 ### <a name="remarks"></a>Notes  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  Spécifie le nouveau rectangle de découpage. Si le rectangle est vide ou null, la capture est supprimée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Combinaison de valeurs STPFLAG. Pour plus d’informations, consultez [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
 ### <a name="remarks"></a>Notes  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWndBefore`  
+ *pWndBefore*  
  Pointeur vers la fenêtre MDI enfant dont la miniature est insérée à gauche. Cette fenêtre doit déjà être inscrits via `RegisterTaskbarTab`. Si cette valeur est `NULL`, la nouvelle vignette est ajoutée à la fin de la liste.  
   
 ### <a name="remarks"></a>Notes  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWndBefore`  
+ *pWndBefore*  
  Pointeur vers la fenêtre MDI enfant dont la miniature est insérée à gauche. Cette fenêtre doit déjà être inscrits via `RegisterTaskbarTab`. Si cette valeur est `NULL`, la nouvelle vignette est ajoutée à la fin de la liste.  
   
 ### <a name="remarks"></a>Notes  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hBmpDst`  
+ *hBmpDst*  
  Handle vers une image bitmap de destination.  
   
- `rectDst`  
+ *rectDst*  
  Spécifie le rectangle de destination.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  Handle vers une image bitmap source.  
   
- `rectSrc`  
+ *rectSrc*  
  Spécifie le rectangle source.  
   
 ### <a name="remarks"></a>Notes  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  Spécifie un pointeur vers la fenêtre parente de niveau supérieur de la fenêtre en cours d’activation. Le pointeur peut être temporaire et ne doit pas être stocké.  
   
- `nHitTest`  
+ *nHitTest*  
  Spécifie le code de la zone de test de positionnement. Un test de positionnement est un test qui détermine l’emplacement du curseur.  
   
- `message`  
+ *message*  
  Spécifie le nombre de messages de la souris.  
   
 ### <a name="remarks"></a>Notes  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nState`  
+ *nState*  
  Spécifie si la `CWnd` est activé ou désactivé.  
   
- `pWndOther`  
+ *pWndOther*  
  Pointeur vers le `CWnd` est activée ou désactivée. Le pointeur peut être `NULL`, et il peut être temporaire.  
   
- `bMinimized`  
+ *bMinimized*  
  Spécifie l’état réduit de la `CWnd` est activée ou désactivée. La valeur `TRUE` indique la fenêtre est réduite.  
   
 ### <a name="remarks"></a>Notes  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nWidth`  
+ *nWidth*  
  Spécifie la largeur de la bitmap requise.  
   
- `nHeight`  
+ *nHeight*  
  Spécifie la hauteur de la bitmap requise.  
   
 ### <a name="remarks"></a>Notes  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  Ce paramètre est `TRUE` si la bitmap est demandée pour l’enfant MDI, qui est actuellement actif et la fenêtre principale n’est pas réduit. La valeur par défaut dans ce cas de traitement prend un instantané de la fenêtre principale.  
   
- `ptLocation`  
+ *ptLocation*  
  Spécifie l’emplacement de l’image bitmap (multi-niveau) principal coordonnées clientes de fenêtre. Ce point doit être fourni par l’appelé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bEnable`  
+ *bActivez*  
  Spécifie s’il faut activer ( `TRUE`), ou désactiver ( `FALSE`) d’une partie de la zone du client d’une fenêtre pour afficher la sélection automatique.  
   
 ### <a name="remarks"></a>Notes  

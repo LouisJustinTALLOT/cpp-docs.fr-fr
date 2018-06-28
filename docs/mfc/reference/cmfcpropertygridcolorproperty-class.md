@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367992"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040806"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Classe de CMFCPropertyGridColorProperty
 La classe `CMFCPropertyGridColorProperty` prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de couleur.  
@@ -87,7 +87,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
  [CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpropertygridctrl.h  
   
 ##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `strName`  
+ [in] *strName*  
  Nom de la propriété.  
   
- [in] `color`  
+ [in] *couleur*  
  La valeur de couleur de la propriété.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Pointeur vers une palette de couleurs. La valeur par défaut est `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  La description de la propriété. La valeur par défaut est `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Données spécifiques à l’application, comme un entier ou un pointeur vers d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Le texte de l’étiquette du bouton automatique.  
   
- [in] `colorAutomatic`  
+ [in] *automatiqueCouleur*  
  La valeur de couleur RVB de la couleur automatique (par défaut).  
   
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le bouton automatique ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Le texte d’étiquette de l’autre bouton.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` Pour afficher les `CMFCColorDialog` boîte de dialogue. `FALSE` pour afficher la boîte de dialogue de sélection de couleurs standard. La valeur par défaut est `TRUE`.  
   
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour afficher le bouton autre ; dans le cas contraire, `FALSE`.  La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `color`  
+ [in] *couleur*  
  Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nColumnsNumber`  
+ [in] *nColumnsNumber*  
  Le nombre de colonnes dans la grille de propriétés de couleur souhaité.  
   
 ### <a name="remarks"></a>Notes  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `varValue`  
+ [in] *varValue*  
  Valeur.  
   
 ### <a name="remarks"></a>Notes  

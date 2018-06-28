@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43c9fdc667f5bd40b6c683f6e48753a084266847
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368141"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037646"
 ---
 # <a name="cmapstringtostring-class"></a>Classe de CMapStringToString
 Prend en charge les mappages d'objets `CString` indexés par des objets `CString` .  
@@ -69,7 +69,7 @@ class CMapStringToString : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CMapStringToString` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur comme paramètre, de fonction d’une valeur de retour ou de « sortie » remplacer par un pointeur vers `char`. Chaque fois que vous voyez un `CObject` pointeur comme un paramètre de fonction de « entrée », remplacez par un pointeur vers `char`.  
+ Les fonctions membres de `CMapStringToString` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur comme paramètre, de fonction d’une valeur de retour ou de « sortie » remplacer par un pointeur vers **char**. Chaque fois que vous voyez un `CObject` pointeur comme un paramètre de fonction de « entrée », remplacez par un pointeur vers **char**.  
   
  `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`  
   
@@ -130,7 +130,7 @@ class CMapStringToString : public CObject
   
  `CMapStringToString`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ##  <a name="cpair"></a>  CMapStringToString::CPair  
@@ -169,7 +169,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
- Récupère l’élément de mappage vers lequel pointé `pAssocRec`.  
+ Récupère l’élément de mappage vers lequel pointé *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;  
@@ -200,7 +200,7 @@ CPair* PLookup(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Pointeur vers la clé de l’élément à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  

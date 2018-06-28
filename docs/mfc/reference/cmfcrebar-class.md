@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368798"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037959"
 ---
 # <a name="cmfcrebar-class"></a>Classe de CMFCReBar
 A `CMFCReBar` objet est une barre de contrôle qui fournit des informations d’état pour les contrôles rebar, la persistance et la mise en page.  
@@ -88,7 +88,7 @@ class CMFCReBar : public CPane
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRebar.h  
   
 ##  <a name="addbar"></a>  CMFCReBar::AddBar  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Pointeur vers la fenêtre enfant qui doit être insérée dans le rebar. L’objet référencé doit avoir le **WS_CHILD** style de fenêtre.  
   
- [in] `pszText`  
+ [in] *pszText*  
  Spécifie le texte à afficher sur le contrôle rebar. Le texte n’est pas partie de la fenêtre enfant. Au lieu de cela, il est affiché sur le rebar lui-même.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Spécifie l’image bitmap à afficher sur l’arrière-plan du contrôle rebar.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Contient le style à appliquer à la bande. Pour obtenir une liste complète des styles de bande, consultez la description de `fStyle` dans les [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) structure dans la documentation du Kit de développement logiciel Windows.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Représente la couleur de premier plan du rebar.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Représente la couleur d’arrière-plan du rebar.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Pointeur vers la fenêtre parente de ce contrôle rebar.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Spécifie le style du contrôle rebar. La valeur de style par défaut est **RBS_BANDBORDERS**, qui affiche limiter les lignes entre les bandes contiguës sur le contrôle rebar. Pour obtenir la liste des styles valides, consultez [Styles de contrôle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) dans la documentation du Kit de développement logiciel Windows.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Le style de fenêtre du contrôle rebar. Pour obtenir la liste des styles valides, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  ID de fenêtre enfant. du rebar  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
- [in] `pTI`  
+ [in] *point*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>Notes  
   

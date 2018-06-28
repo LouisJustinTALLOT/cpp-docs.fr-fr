@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374895"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038219"
 ---
 # <a name="coledropsource-class"></a>Classe de COleDropSource
 Permet de faire glisser vers une cible de déplacement des données.  
@@ -72,7 +72,7 @@ class COleDropSource : public CCmdTarget
   
  `COleDropSource`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dropEffect`  
+ *dropEffect*  
  L’effet que vous souhaitez afficher à l’utilisateur, ce qui indique généralement ce qui se produit si la suppression s’est produite au niveau de ce point avec les données sélectionnées. Il s’agit généralement de la valeur retournée par l’appel le plus récent à [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre qui contient les données sélectionnées.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  Indique si la touche ÉCHAP a été enfoncée depuis le dernier appel à `COleDropSource::QueryContinueDrag`.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contient l’état des touches de modification du clavier. Il s’agit d’une combinaison de plusieurs des opérations suivantes : **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, et **MK_RBUTTON**.  
   
 ### <a name="return-value"></a>Valeur de retour  

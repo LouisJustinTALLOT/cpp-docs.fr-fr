@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374082"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037900"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Classe de CMFCOutlookBarPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -140,7 +140,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
  [CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxoutlookbarpane.h  
   
 ##  <a name="addbutton"></a>  CMFCOutlookBarPane::AddButton  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiImage`  
+ [in] *uiImage*  
  Spécifie l’identificateur de ressource d’une image bitmap.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Spécifie le texte du bouton.  
   
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Spécifie l’ID. du contrôle de bouton  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Spécifie l’index de base zéro dans la page de la barre outlook au niveau duquel insérer le bouton.  
   
- [in] `uiLabel`  
+ [in] *uiLabel*  
  Un ID de ressource de chaîne.  
   
- [in] `szBmpFileName`  
+ [in] *szBmpFileName*  
  Spécifie le nom du fichier d’image de disque à charger.  
   
- [in] `szLabel`  
+ [in] *szLabel*  
  Spécifie le texte du bouton.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Un descripteur de bitmap d’un bouton.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Handle vers l’icône d’un boutons.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour insérer un nouveau bouton dans la page d’une barre Outlook. L’image du bouton peut être chargé à partir des ressources d’application ou à partir d’un fichier de disque.  
   
- Si l’ID de page spécifiée par `uiPageID` est -1, le bouton est inséré dans la première page.  
+ Si l’ID de page spécifiée par *uiPageID* est -1, le bouton est inséré dans la première page.  
   
- Si l’index spécifié par `iInsertAt` est -1, le bouton est ajouté à la fin de la page.  
+ Si l’index spécifié par *iInsertAt* est -1, le bouton est ajouté à la fin de la page.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Spécifie la fenêtre parente du contrôle de volet de barre Outlook. Ne doit pas être `NULL`.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Style de fenêtre.  Pour obtenir la liste des styles de fenêtre, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID du contrôle. Doit être unique pour activer l’enregistrement de l’état du contrôle.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Spécifie les styles spéciaux qui définissent le comportement du contrôle de volet de barre Outlook lorsqu’elle est détachée de la barre Outlook.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers un bouton de barre d’outils sur lequel un utilisateur a cliqué.  
   
- [in] `pPopup`  
+ [in] *pPopup*  
  Pointeur vers le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bPageScroll`  
+ [in] *bPageScroll*  
  Si `TRUE`, activer le mode de défilement de la page. Si `FALSE`, désactiver le mode de défilement de la page.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Spécifie l’ID de commande d’un bouton à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `color`  
+ [in] *couleur*  
  Spécifie la couleur d’arrière-plan.  
   
 ### <a name="remarks"></a>Notes  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiImageID`  
+ [in] *uiImageID*  
  Spécifie l’ID de ressource d’image.  
   
 ### <a name="remarks"></a>Notes  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clrRegText`  
+ [in] *clrRegText*  
  Spécifie la nouvelle couleur non sélectionné.  
   
- [in] `clrSelText`  
+ [in] *clrSelText*  
  Spécifie la nouvelle couleur pour le texte sélectionné.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `color`  
+ *Couleur*  
  Spécifie la nouvelle couleur transparente.  
   
 ### <a name="remarks"></a>Notes  

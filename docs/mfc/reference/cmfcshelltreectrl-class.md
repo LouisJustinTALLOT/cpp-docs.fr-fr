@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371444"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041943"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe de CMFCShellTreeCtrl
 Le `CMFCShellTreeCtrl` classe étend [CTreeCtrl (classe)](../../mfc/reference/ctreectrl-class.md) fonctionnalités en affichant une hiérarchie des éléments du Shell.  
@@ -87,7 +87,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
   
  `CMFCShellTreeCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxshelltreeCtrl.h  
   
 ## <a name="example"></a>Exemple  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui spécifie s’il faut activer le menu contextuel.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `strPath`  
+ [out] *strPath*  
  Une référence à un paramètre de chaîne. La méthode écrit le chemin d’accès de l’élément à ce paramètre.  
   
- [in] `htreeItem`  
+ [in] *htreeItem*  
  La méthode récupère le chemin d’accès pour cet élément de contrôle d’arborescence.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; 0 dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Si cette méthode échoue, `strPath` contient la chaîne vide.  
+ Si cette méthode échoue, *strPath* contient une chaîne vide.  
   
- Si vous ne spécifiez pas `hTreeItem`, cette méthode essaie d’obtenir la chaîne de l’élément actuellement sélectionné. Si aucun élément n’est sélectionné et `hTreeItem` est `NULL`, cette méthode échoue.  
+ Si vous ne spécifiez pas *hTreeItem*, cette méthode essaie d’obtenir la chaîne de l’élément actuellement sélectionné. Si aucun élément n’est sélectionné et *hTreeItem* est `NULL`, cette méthode échoue.  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  Retourne un pointeur vers le [CMFCShellListCtrl affichant classe](../../mfc/reference/cmfcshelllistctrl-class.md) objet qui est associé à ce [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objet.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `message`  
- [in] `wParam`  
- [in] `lParam`  
- [in] `pLResult`  
+ [in] *message*  
+ [in] *wParam*  
+ [in] *lParam*  
+ [in] *pLResult*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pItem`  
- [in] `bSelected`  
+ [in] *pItem*  
+ [in] *bSelected*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pItem`  
+ [in] *pItem*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Chaîne qui spécifie le chemin d’accès d’un élément.  
   
- [in] `lpidl`  
+ [in] *lpidl*  
  Un PIDL qui spécifie l’élément  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Indicateurs à définir.  
   
- [in] `bRefresh`  
+ [in] *bRefresh*  
  Valeur booléenne qui spécifie si le `CMFCShellTreeCtrl` doit être immédiatement actualisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pShellList`  
+ [in] *pShellList*  
  Un pointeur vers un `CMFCShellListCtrl` objet.  
   
 ### <a name="remarks"></a>Notes  

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374037"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038888"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
 Fournit les fonctionnalités d'une fenêtre frame d'interface multidocument (MDI) Windows, ainsi que des membres permettant de gérer la fenêtre.  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Vous pouvez construire une fenêtre frame MDI en appelant le [créer](../../mfc/reference/cframewnd-class.md#create) ou [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) fonction membre de `CFrameWnd`.  
   
- Avant d’appeler **créer** ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide de C++ **nouveau** opérateur. Avant d’appeler **créer** vous pouvez également enregistrer une classe de fenêtre avec le [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction globale pour définir les styles d’icône et de la classe pour le frame.  
+ Avant d’appeler `Create` ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide de C++ **nouveau** opérateur. Avant d’appeler `Create` vous pouvez également enregistrer une classe de fenêtre avec le [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction globale pour définir les styles d’icône et de la classe pour le frame.  
   
- Utilisez le **créer** fonction membre pour passer des paramètres de création du frame immédiats comme arguments.  
+ Utilisez le `Create` fonction membre pour passer des paramètres de création du frame immédiats comme arguments.  
   
- `LoadFrame` nécessite moins d’arguments que **créer**et récupère à la place de la plupart de ses valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu. Accessible par `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, **IDR_MAINFRAME**).  
+ `LoadFrame` nécessite moins d’arguments que `Create`et récupère à la place de la plupart de ses valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu. Accessible par `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, **IDR_MAINFRAME**).  
   
  Bien que **MDIFrameWnd** est dérivée de `CFrameWnd`, une classe de fenêtre frame dérivée de `CMDIFrameWnd` ne doivent pas être déclaré avec `DECLARE_DYNCREATE`.  
   
@@ -134,7 +134,7 @@ class CMDIFrameWnd : public CFrameWnd
   
  `CMDIFrameWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cmdiframewnd"></a>  CMDIFrameWnd::CMDIFrameWnd  
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Appelez le **créer** ou `LoadFrame` fonction membre pour créer la fenêtre frame MDI visible.  
+ Appelez le `Create` ou `LoadFrame` fonction membre pour créer la fenêtre frame MDI visible.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Un pointeur long désignant un [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Pointeur vers le menu contextuel de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pClass`  
+ *pClass*  
  La classe d’exécution de la fenêtre enfant doit être créé.  
   
  *nResource*  
  ID de ressources partagées associées à la fenêtre enfant.  
   
- `hMenu`  
+ *hMenu*  
  Menu de la fenêtre enfant.  
   
- `hAccel`  
+ *hAccel*  
  Accélérateur de la fenêtre enfant.  
   
 ### <a name="remarks"></a>Notes  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nType`  
+ *%nLes*  
  Spécifie un indicateur en cascade. Seul l’indicateur suivant peut être spécifié : `MDITILE_SKIPDISABLED`, désactivés fenêtres MDI enfants qui empêche d’être mises en cascade.  
   
 ### <a name="remarks"></a>Notes  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre à optimiser.  
   
 ### <a name="remarks"></a>Notes  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre à restaurer.  
   
 ### <a name="example"></a>Exemple  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Spécifie le menu du nouveau menu fenêtre frame. Si **NULL**, le menu n’est pas modifié.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Spécifie le menu de la nouvelle fenêtre, menu contextuel. Si **NULL**, le menu n’est pas modifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nType`  
+ *%nLes*  
  Spécifie un indicateur de mosaïque. Ce paramètre peut être l’un des indicateurs suivants :  
   
 - `MDITILE_HORIZONTAL` Vignettes des fenêtres enfants MDI afin qu’une fenêtre s’affiche au-dessus d’un autre.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Vignettes des fenêtres enfants MDI afin qu’une fenêtre s’affiche à côté des autres.  
   
 ### <a name="remarks"></a>Notes  
- La première version de `MDITile`, les vignettes sans paramètres, les fenêtres verticalement sous Windows 3.1 et versions ultérieures. La deuxième version vignettes windows verticalement ou horizontalement, selon la valeur de le `nType` paramètre.  
+ La première version de `MDITile`, les vignettes sans paramètres, les fenêtres verticalement sous Windows 3.1 et versions ultérieures. La deuxième version vignettes windows verticalement ou horizontalement, selon la valeur de la *%nLes* paramètre.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CMDIFrameWnd::MDICascade](#mdicascade).  

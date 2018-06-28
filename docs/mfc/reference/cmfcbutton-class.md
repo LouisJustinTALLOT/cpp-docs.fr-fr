@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afd30c9f27d83e7d4cfaf9b993b258b069f73dc4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378824"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039230"
 ---
 # <a name="cmfcbutton-class"></a>Classe de CMFCButton
 Le `CMFCButton` classe ajoute des fonctionnalités à la [CButton](../../mfc/reference/cbutton-class.md) classe telles que l’alignement du texte du bouton, combinaison de texte du bouton et une image, sélection d’un curseur et en spécifiant une info-bulle.  
@@ -200,7 +200,7 @@ class CMFCButton : public CButton
   
  [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbutton.h  
   
 ##  <a name="cleanup"></a>  CMFCButton::CleanUp  
@@ -218,7 +218,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bOn`  
+ [in] *bOn*  
  `TRUE` Pour afficher tout le texte ; `FALSE` au texte tronqué.  
   
 ### <a name="remarks"></a>Notes  
@@ -233,10 +233,10 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bOn`  
+ [in] *bOn*  
  `TRUE` Pour utiliser la police du menu application en tant que la police de texte de bouton. `FALSE` à utiliser la police système. La valeur par défaut est `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` à se redessiner immédiatement avec l’écran ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -250,7 +250,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour utiliser le thème actuel de Windows pour dessiner les bordures du bouton ; `FALSE` à ne pas utiliser le thème de Windows. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -473,13 +473,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Une référence à un rectangle qui englobe le bouton.  
   
- [in] `uiState`  
+ [in] *uiState*  
  L’état actuel de bouton. Pour plus d’informations, consultez la `itemState` membre de la [drawitemstruct, Structure](../../mfc/reference/drawitemstruct-structure.md) rubrique.  
   
 ### <a name="remarks"></a>Notes  
@@ -496,13 +496,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Une référence à un rectangle qui englobe le bouton.  
   
- [in] `uiState`  
+ [in] *uiState*  
  L’état actuel de bouton. Pour plus d’informations, consultez la `itemState` membre de la [drawitemstruct, Structure](../../mfc/reference/drawitemstruct-structure.md) rubrique.  
   
 ### <a name="remarks"></a>Notes  
@@ -518,10 +518,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Une référence à un rectangle qui englobe le bouton.  
   
 ### <a name="remarks"></a>Notes  
@@ -540,19 +540,19 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Une référence à un rectangle qui englobe le bouton.  
   
- [in] `strText`  
+ [in] *%{strText/}*  
  Texte à dessiner.  
   
- [in] `uiDTFlags`  
- Indicateurs qui spécifient comment mettre en forme le texte. Pour plus d’informations, consultez la `nFormat` paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) (méthode).  
+ [in] *uiDTFlags*  
+ Indicateurs qui spécifient comment mettre en forme le texte. Pour plus d’informations, consultez la *nFormat* paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) (méthode).  
   
- [in] `uiState`  
+ [in] *uiState*  
  (Réservé).  
   
 ### <a name="remarks"></a>Notes  
@@ -568,10 +568,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Une référence à un rectangle qui englobe le bouton.  
   
 ### <a name="remarks"></a>Notes  
@@ -585,7 +585,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -601,11 +601,11 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nTimeDelay`  
+ [in] *nTimeDelay*  
  Un nombre non négatif qui spécifie l’intervalle entre les messages sont envoyés à la fenêtre parente. L’intervalle est mesurée en millisecondes et sa valeur par défaut est 500 millisecondes. Spécifiez zéro pour désactiver le mode de répétition automatique message.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode provoque le bouton pour envoyer des messages WM_COMMAND constamment à la fenêtre parente jusqu'à ce que le bouton est relâché, ou le `nTimeDelay` paramètre est défini à zéro.  
+ Cette méthode provoque le bouton pour envoyer des messages WM_COMMAND constamment à la fenêtre parente jusqu'à ce que le bouton est relâché, ou le *nTimeDelay* paramètre est défini à zéro.  
   
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  Définit l’image d’un bouton activé.  
@@ -634,40 +634,40 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hIcon`  
+ [in] *hIcon*  
  Handle vers l’icône qui contient l’image bitmap et un masque pour la nouvelle image.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Pour spécifier que les ressources bitmap d’être détruit automatiquement ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  Handle vers l’icône qui contient l’image pour l’état sélectionné.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Handle vers l’image bitmap qui contient l’image pour l’état non sélectionné.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  Handle vers l’image bitmap qui contient l’image pour l’état sélectionné.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  Spécifie une couleur transparente pour l’arrière-plan du bouton. Autrement dit, la face du bouton. `TRUE` Pour utiliser la valeur de couleur RVB (192, 192, 192) ; `FALSE` à utiliser la valeur de couleur définie par `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  ID de ressource pour l’image non sélectionné.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  ID de ressource pour l’image sélectionnée.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  Handle vers l’icône de l’image désactivée.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  Handle vers l’image bitmap qui contient l’image désactivée.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  ID de ressource de l’image bitmap désactivé.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` utiliser uniquement des images 32 bits qui utilisent le canal alpha. `FALSE`, de ne pas utiliser uniquement des images de canal alpha. La valeur par défaut est `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -682,10 +682,10 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `crFace`  
+ [in] *crFace*  
  Une valeur de couleur RVB.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` pour redessiner l’écran immédiatement ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -718,40 +718,40 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hIcon`  
+ [in] *hIcon*  
  Handle vers l’icône qui contient l’image bitmap et un masque pour la nouvelle image.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Pour spécifier que les ressources bitmap d’être détruit automatiquement ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  Handle vers l’icône qui contient l’image pour l’état sélectionné.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Handle vers l’image bitmap qui contient l’image pour l’état non sélectionné.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  Handle vers l’image bitmap qui contient l’image pour l’état sélectionné.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  ID de ressource pour l’image non sélectionné.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  ID de ressource pour l’image sélectionnée.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  Spécifie une couleur transparente pour l’arrière-plan du bouton. Autrement dit, la face du bouton. `TRUE` Pour utiliser la valeur de couleur RVB (192, 192, 192) ; `FALSE` à utiliser la valeur de couleur définie par `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  Handle vers l’icône de l’image désactivée.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  Handle vers l’image bitmap qui contient l’image désactivée.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  ID de ressource de l’image bitmap désactivé.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` utiliser uniquement des images 32 bits qui utilisent le canal alpha. `FALSE`, de ne pas utiliser uniquement des images de canal alpha. La valeur par défaut est `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -770,7 +770,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hcursor`  
+ [in] *hcursor*  
  Le handle d’un curseur.  
   
 ### <a name="remarks"></a>Notes  
@@ -803,13 +803,13 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `id`  
+ [in] *id*  
  Un des identificateurs d’image de bouton qui est défini dans le `CMenuImage::IMAGES_IDS` énumération. Les valeurs de l’image spécifient des images telles que des flèches, des codes confidentiels et cases d’option.  
   
- [in] `state`  
+ [in] *état*  
  Un des identificateurs de bouton image état est défini dans le `CMenuImages::IMAGE_STATE` énumération. Les États d’image spécifient des couleurs du bouton telles que les gris foncé et blancs gris noir, gris clair. La valeur par défaut est `CMenuImages::ImageBlack`.  
   
- [in] `idDisabled`  
+ [in] *idDisabled*  
  Un des identificateurs d’image de bouton qui est défini dans le `CMenuImage::IMAGES_IDS` énumération. L’image indique que le bouton est désactivé. La valeur par défaut est la première image de bouton ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Notes  
@@ -822,7 +822,7 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clrText`  
+ [in] *clrText*  
  Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -835,7 +835,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clrTextHot`  
+ [in] *clrTextHot*  
  Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -848,7 +848,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszToolTipText`  
+ [in] *lpszToolTipText*  
  Pointeur vers le texte de l’info-bulle. Spécifiez NULL pour désactiver l’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
@@ -861,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  `TRUE` pour calculer, mais pas modifier, la nouvelle taille du bouton ; `FALSE` pour modifier la taille du bouton. La valeur par défaut est `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  

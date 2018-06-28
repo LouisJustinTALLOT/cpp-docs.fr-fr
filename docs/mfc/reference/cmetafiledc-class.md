@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368145"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039535"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 Implémente un métafichier Windows, qui contient une séquence de commandes SQL GDI (Graphics Device Interface) que vous pouvez relire pour créer une image ou du texte voulu.  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  Envoyez ensuite le `CMetaFileDC` la séquence de l’objet `CDC` commandes GDI que vous prévoyez pour pouvoir relire. Seules les commandes GDI qui créent de sortie, comme `MoveTo` et `LineTo`, peut être utilisé.  
   
- Une fois que vous avez envoyé les commandes souhaitées du métafichier, appelez le **fermer** fonction membre, ce qui ferme les contextes de périphérique de métafichier et retourne un handle de métafichier. Puis de supprimer le `CMetaFileDC` objet.  
+ Une fois que vous avez envoyé les commandes souhaitées du métafichier, appelez le `Close` fonction membre, ce qui ferme les contextes de périphérique de métafichier et retourne un handle de métafichier. Puis de supprimer le `CMetaFileDC` objet.  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) pouvez ensuite utiliser le handle de métafichier pour lire le métafichier à plusieurs reprises. Le métafichier peut également être manipulé par les fonctions de Windows telles que [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), qui copie un métafichier sur le disque.  
   
@@ -83,7 +83,7 @@ class CMetaFileDC : public CDC
   
  `CMetaFileDC`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="close"></a>  CMetaFileDC::Close  
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDCRef`  
+ *pDCRef*  
  Identifie une unité de référence pour le métafichier amélioré.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Pointe vers une chaîne de caractères terminée par null. Spécifie le nom de fichier pour le métafichier amélioré doit être créé. Si ce paramètre est **NULL**, le métafichier amélioré est basée sur la mémoire et son contenu perdu lorsque l’objet est détruit ou lorsque Win32 **DeleteEnhMetaFile** est appelée.  
   
- `lpBounds`  
+ *lpBounds*  
  Pointe vers un [RECT](../../mfc/reference/rect-structure1.md) structure de données ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les dimensions dans **HIMETRIC** unités (par incréments de.01-millimètre) de l’image à stocker dans le métafichier amélioré.  
   
- `lpszDescription`  
+ *lpszDescription*  
  Pointe vers une chaîne terminée par zéro qui spécifie le nom de l’application qui a créé l’image, ainsi que le titre de l’image.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>Notes  
  Ce contrôleur de domaine peut être utilisé pour stocker une image indépendante du périphérique.  
   
- Windows utilise l’appareil de référence identifié par le `pDCRef` paramètre pour enregistrer les unités de l’appareil sur lequel une image apparaît à l’origine et la résolution. Si le `pDCRef` paramètre est **NULL**, il utilise le périphérique d’affichage actuelle pour référence.  
+ Windows utilise l’appareil de référence identifié par le *pDCRef* paramètre pour enregistrer les unités de l’appareil sur lequel une image apparaît à l’origine et la résolution. Si le *pDCRef* paramètre est **NULL**, il utilise le périphérique d’affichage actuelle pour référence.  
   
- Les membres de gauche et supérieure de la `RECT` structure de données vers lequel pointe le `lpBounds` paramètre doit être plus petite que les membres de droite et en bas, respectivement. Points le long des bords du rectangle sont inclus dans l’image. Si `lpBounds` est **NULL**, l’interface GDI (GDI) calcule les dimensions du plus petit rectangle qui entoure l’image dessinée par l’application. Le `lpBounds` paramètre doit être fourni lorsque cela est possible.  
+ Les membres de gauche et supérieure de la `RECT` structure de données vers lequel pointe le *lpBounds* paramètre doit être plus petite que les membres de droite et en bas, respectivement. Points le long des bords du rectangle sont inclus dans l’image. Si *lpBounds* est **NULL**, l’interface GDI (GDI) calcule les dimensions du plus petit rectangle qui entoure l’image dessinée par l’application. Le *lpBounds* paramètre doit être fourni lorsque cela est possible.  
   
- La chaîne pointée par le `lpszDescription` paramètre doit contenir un caractère null entre le nom de l’application et le nom de l’image et doit se terminer par deux caractères null, par exemple, « XYZ Graphics Editor\0Bald Eagle\0\0, « où \0 représente la valeur null caractère. Si `lpszDescription` est **NULL**, il n’existe aucune entrée correspondante dans l’en-tête du métafichier amélioré.  
+ La chaîne pointée par le *lpszDescription* paramètre doit contenir un caractère null entre le nom de l’application et le nom de l’image et doit se terminer par deux caractères null, par exemple, « XYZ Graphics Editor\0Bald Eagle\0\0, « où \0 représente le caractère null. Si *lpszDescription* est **NULL**, il n’existe aucune entrée correspondante dans l’en-tête du métafichier amélioré.  
   
  Les applications utilisent le contrôleur de domaine créé par cette fonction pour stocker une image de graphique dans un métafichier amélioré. Le handle de ce contrôleur de domaine peut être passé à n’importe quelle fonction GDI.  
   
- Une fois une application stocke une image dans un métafichier amélioré, il peut afficher l’image sur tout périphérique de sortie en appelant le `CDC::PlayMetaFile` (fonction). Lorsque vous affichez l’image, Windows utilise le rectangle vers lequel pointé le `lpBounds` paramètre et les données de la résolution de l’appareil de référence pour positionner et redimensionner l’image. Le contexte de périphérique retourné par cette fonction contient les mêmes attributs par défaut associés à n’importe quel nouveau contrôleur de domaine.  
+ Une fois une application stocke une image dans un métafichier amélioré, il peut afficher l’image sur tout périphérique de sortie en appelant le `CDC::PlayMetaFile` (fonction). Lorsque vous affichez l’image, Windows utilise le rectangle vers lequel pointé le *lpBounds* paramètre et les données de la résolution de l’appareil de référence pour positionner et redimensionner l’image. Le contexte de périphérique retourné par cette fonction contient les mêmes attributs par défaut associés à n’importe quel nouveau contrôleur de domaine.  
   
  Les applications doivent utiliser Win32 **GetWinMetaFileBits** fonction pour convertir un métafichier amélioré à l’ancien format de métafichier Windows.  
   

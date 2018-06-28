@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370918"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041803"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Classe de CMFCRibbonQuickAccessToolBarDefaultState
 Une classe d’assistance qui gère l’état de la valeur par défaut pour la barre d’outils Accès rapide qui est positionné sur la barre du ruban ( [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -67,7 +67,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
   
  [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonquickaccesstoolbar.h  
   
 ##  <a name="addcommand"></a>  CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `[in] uiCmd`  
+ *[in] uiCmd*  
  Spécifie l’ID de commande.  
   
- `[in] bIsVisible`  
+ *[in] bIsVisible*  
  Définit la visibilité de la commande lorsque la barre d’outils Accès rapide est dans l’état par défaut.  
   
 ### <a name="remarks"></a>Notes  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `src`  
+ [in] *src*  
  Une référence à la source de `CMFCRibbonQuickAccessToolBarDefaultState` objet à copier à partir de.  
   
 ### <a name="remarks"></a>Notes  

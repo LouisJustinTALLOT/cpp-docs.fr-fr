@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370287"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042519"
 ---
 # <a name="coleconvertdialog-class"></a>Classe de la classe COleConvertDialog
 Pour plus d’informations, consultez la [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure dans le SDK Windows.  
@@ -95,7 +95,7 @@ class COleConvertDialog : public COleDialog
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointe vers l’élément à être converti ou activé.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicateur de création, qui contient un nombre quelconque des valeurs suivantes associées à l’aide de l’opérateur de bits- or (opérateur) :  
   
 - **CF_SELECTCONVERTTO** Spécifie que la case d’option Convertir en sera sélectionnée initialement lorsque la boîte de dialogue est appelée. Il s'agit de la valeur par défaut.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** Spécifie que le bouton d’aide s’affiche lorsque la boîte de dialogue est appelée.  
   
- `pClassID`  
- Pointe vers le CLSID de l’élément à être converti ou activé. Si **NULL**, le **CLSID** associés `pItem` sera utilisé.  
+ *pClassID*  
+ Pointe vers le CLSID de l’élément à être converti ou activé. Si **NULL**, le **CLSID** associés *pItem* sera utilisé.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointe vers l’élément à être converti ou activé. Ne peut pas être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  

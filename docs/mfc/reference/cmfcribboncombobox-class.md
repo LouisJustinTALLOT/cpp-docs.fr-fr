@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371512"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040744"
 ---
 # <a name="cmfcribboncombobox-class"></a>Classe de CMFCRibbonComboBox
 La `CMFCRibbonComboBox` classe implémente un contrôle de zone de liste déroulante que vous pouvez ajouter à une barre de ruban, un panneau de ruban ou un menu contextuel de ruban.  
@@ -114,7 +114,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribboncombobox.h  
   
 ##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  La chaîne de l’élément à ajouter.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Les données associées à l’élément à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  ID de la zone de liste déroulante.  
   
- [in] `bHasEditBox`  
+ [in] *bHasEditBox*  
  `TRUE` Si vous souhaitez une zone d’édition dans le contrôle ; `FALSE` dans le cas contraire.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Largeur de la zone de liste déroulante en pixels. ou -1 pour la largeur par défaut.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  L’étiquette de l’affichage de la zone de liste déroulante.  
   
- [in] `nImage`  
+ [in] *nImage*  
  L’index de la petite image de la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro de l’élément à supprimer.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Les données associées à l’élément à supprimer.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  La chaîne de l’élément à supprimer. S’il existe plusieurs éléments avec la même chaîne, le premier élément est supprimé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le redimensionnement ; `FALSE` pour désactiver le redimensionnement.  
   
 ### <a name="remarks"></a>Notes  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
  La chaîne d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour la zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nItem`  
+ [in] *nItem*  
  L’index de l’élément sélectionné.  
   
 ### <a name="remarks"></a>Notes  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément dans la zone de liste.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Les données associées à un élément dans la zone de liste.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  La chaîne d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nHeight`  
+ [in] *nHeight*  
  La hauteur, en pixels, de la zone de liste.  
   
 ### <a name="remarks"></a>Notes  

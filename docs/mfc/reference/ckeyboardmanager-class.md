@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ff8f622eb3af52ad23f8f4fc7a20ecb8be9b77
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369100"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041134"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe de CKeyboardManager
 Gère les tables de touches de raccourci pour la fenêtre frame principale et les fenêtres frames enfants.  
@@ -97,7 +97,7 @@ class CKeyboardManager : public CObject
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxkeyboardmanager.h  
   
 ##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
@@ -134,23 +134,23 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  ID de la commande.  
   
- [out] `str`  
+ [out] *str*  
  Référence à un objet `CString`.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  Pointeur vers une fenêtre frame.  
   
- [in] `bIsDefaultFrame`  
+ [in] *bIsDefaultFrame*  
  Spécifie si la fenêtre frame est la fenêtre frame par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le raccourci est trouvé ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode recherche la commande spécifiée par `uiCmd` et récupère la touche de raccourci par défaut. Ensuite, la méthode accepte la chaîne associée à cette touche de raccourci et écrit la valeur pour le `str` paramètre.  
+ Cette méthode recherche la commande spécifiée par *uiCmd* et récupère la touche de raccourci par défaut. Ensuite, la méthode accepte la chaîne associée à cette touche de raccourci et écrit la valeur pour le *str* paramètre.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Détermine si la clé spécifiée est gérée par le [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
@@ -168,16 +168,16 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `nKey`|Clé à vérifier.|  
-|[in] `fVirt`|Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Une fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|  
-|[in] `bIsDefaultFrame`|Un paramètre booléen qui indique si `pWndFrame` est la fenêtre frame par défaut.|  
+|[in] *nKey*|Clé à vérifier.|  
+|[in] *fVirt*|Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *pWndFrame*|Une fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|  
+|[in] *bIsDefaultFrame*|Un paramètre booléen qui indique si *pWndFrame* est la fenêtre frame par défaut.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la touche de raccourci est gérée. `FALSE` Si la clé n’est pas gérée ou si `pWndFrame` est `NULL`.  
+ `TRUE` Si la touche de raccourci est gérée. `FALSE` Si la clé n’est pas gérée ou si *pWndFrame* est `NULL`.  
   
 ### <a name="remarks"></a>Notes  
- Les paramètres d’entrée doivent correspondre à l’entrée dans la table d’accélérateurs à la fois pour `nKey` et `fVirt` pour déterminer si une touche de raccourci est gérée dans `pWndFrame`.  
+ Les paramètres d’entrée doivent correspondre à l’entrée dans la table d’accélérateurs à la fois pour *nKey* et *fVirt* pour déterminer si une touche de raccourci est gérée dans *pWndFrame*.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Indique si un caractère imprimable.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `nChar`|Cette méthode vérifie le caractère.|  
+|[in] *nChar*|Cette méthode vérifie le caractère.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le caractère imprimable, zéro si elle n’est pas.  
@@ -222,17 +222,17 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Le chemin d’accès du Registre où `CKeyboardManager` les données sont enregistrées.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Pointeur vers une fenêtre frame à utiliser en tant que la fenêtre par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’état a été chargé avec succès ou 0 dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Si le `lpszProfileName` paramètre est `NULL`, cette méthode vérifie l’emplacement de Registre par défaut `CKeyboardManager` données. L’emplacement de Registre par défaut est spécifiée par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Les données doivent être écrites précédemment avec la méthode [CKeyboardManager::SaveState](#savestate).  
+ Si le *lpszProfileName* paramètre est `NULL`, cette méthode vérifie l’emplacement de Registre par défaut `CKeyboardManager` données. L’emplacement de Registre par défaut est spécifiée par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Les données doivent être écrites précédemment avec la méthode [CKeyboardManager::SaveState](#savestate).  
   
  Si vous ne spécifiez pas une fenêtre par défaut, la fenêtre frame principale de votre application sera utilisée.  
   
@@ -256,17 +256,17 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Le chemin d’accès du Registre pour l’enregistrement du `CKeyboardManager` état.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Pointeur vers une fenêtre frame qui devient la fenêtre par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’état du clavier manager a été enregistré avec succès, ou 0 dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Si le `lpszProfileName` paramètre est `NULL`, cette méthode écrit le `CKeyboardManager` à l’état de l’emplacement par défaut spécifié par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Si vous spécifiez un emplacement, vous pouvez charger les données ultérieurement à l’aide de la méthode [CKeyboardManager::LoadState](#loadstate).  
+ Si le *lpszProfileName* paramètre est `NULL`, cette méthode écrit le `CKeyboardManager` à l’état de l’emplacement par défaut spécifié par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Si vous spécifiez un emplacement, vous pouvez charger les données ultérieurement à l’aide de la méthode [CKeyboardManager::LoadState](#loadstate).  
   
  Si vous ne spécifiez pas une fenêtre par défaut, la fenêtre frame principale est utilisée en tant que la fenêtre par défaut.  
   
@@ -280,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShowAll`  
+ [in] *bShowAll*  
  Si `true`, toutes les touches de raccourci seront affichera. Si `false`, la première clé raccourci s’affichera.  
   
- [in] `lpszDelimiter`  
+ [in] *lpszDelimiter*  
  Chaîne à insérer entre les touches de raccourci. Ce séparateur n’a aucun effet si seule une touche de raccourci est affichée.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, si une commande contient plus d’une touche de raccourci associée, uniquement la première touche de raccourci s’affichera. Cette fonction vous permet de répertorier toutes les touches de raccourci associées à toutes les commandes.  
   
- Les touches de raccourci apparaît en regard de la commande dans la barre de menus. Si tous les raccourcis clavier sont affichés, la chaîne fournie par `lpszDelimiter` pour séparer les touches de raccourci individuels.  
+ Les touches de raccourci apparaît en regard de la commande dans la barre de menus. Si tous les raccourcis clavier sont affichés, la chaîne fournie par *lpszDelimiter* pour séparer les touches de raccourci individuels.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Convertit un caractère en son Registre supérieure.  
@@ -299,7 +299,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nChar`  
+ [in] *nChar*  
  Caractère à convertir.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -323,19 +323,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  Pointeur vers un modèle de document.  
   
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Pointeur vers la nouvelle touche de raccourci.  
   
- [in] `nSize`  
+ [in] *nSize*  
  La taille de la nouvelle table de raccourci.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Pointeur vers la fenêtre frame par défaut.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  Handle vers la nouvelle table de raccourci.  
   
 ### <a name="return-value"></a>Valeur de retour  

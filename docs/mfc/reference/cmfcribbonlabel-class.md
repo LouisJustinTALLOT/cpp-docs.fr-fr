@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370120"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042493"
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe de CMFCRibbonLabel
 Implémente une étiquette de texte non interactive pour un ruban.  
@@ -67,7 +67,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
  Le texte à afficher dans l’étiquette.  
   
- [in] `bIsMultiLine`  
+ [in] *bIsMultiLine*  
  `TRUE` Pour spécifier que l’étiquette est une étiquette multiligne. dans le cas contraire, `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParent`  
+ [in] *pParent*  
  Représente la fenêtre parente de l’étiquette de ruban actuelle.  
   
- [out] `data`  
+ [out] *données*  
  Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité de l’étiquette de ruban actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le `data` paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, `FALSE`.  
+ `TRUE` Si le *données* paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, `FALSE`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

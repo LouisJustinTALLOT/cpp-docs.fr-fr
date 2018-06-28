@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375614"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040114"
 ---
 # <a name="coleresizebar-class"></a>Classe de COleResizeBar
 Type de barre de contrôle qui prend en charge le redimensionnement des éléments OLE sur place.  
@@ -68,7 +68,7 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente de la barre de redimensionnement.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le [style de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributs.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant de la barre de redimensionnement.  
   
 ### <a name="return-value"></a>Valeur de retour  

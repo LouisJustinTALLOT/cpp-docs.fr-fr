@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d18ab91e1b1c3af7e676cbad9992094238214e38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f92f600d5005fbc85b1dd82ce66274020adb4b2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377718"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042194"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe de CMFCPopupMenu
 Implémente les fonctionnalités de menu contextuel Windows et les étend en ajoutant des fonctionnalités telles que des menus volants et des info-bulles.
@@ -302,7 +302,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
  `CMFCPopupMenu`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpopupmenu.h  
   
 ##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu  
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pTopFrame`  
- [in] `pPopupMenu`  
+ [in] *pTopFrame*  
+ [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -330,7 +330,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Si le menu contextuel peut afficher des entrées vides ; `FALSE` dans le cas contraire.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
@@ -352,7 +352,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ptScreen`  
+ [in] *ptScreen*  
  Un point, en coordonnées d’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -361,17 +361,17 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="remarks"></a>Notes  
  Un paramètre MENUAREA_TYPE peut avoir l’une des valeurs suivantes.  
   
--   EXTÉRIEUR - `ptScreen` est en dehors de la liste déroulante.  
+-   EXTÉRIEUR - *ptScreen* est en dehors de la liste déroulante.  
   
--   LOGO - `ptScreen` se trouve sur une zone de logo.  
+-   LOGO - *ptScreen* se trouve sur une zone de logo.  
   
--   TEAROFF_CAPTION - `ptScreen` sur la légende détachable.  
+-   TEAROFF_CAPTION - *ptScreen* sur la légende détachable.  
   
--   SHADOW_BOTTOM - `ptScreen` est sur l’ombre en bas du menu contextuel.  
+-   SHADOW_BOTTOM - *ptScreen* sur l’ombre en bas du menu contextuel.  
   
--   SHADOW_RIGHT - `ptScreen` est sur l’ombre à droite du menu contextuel.  
+-   SHADOW_RIGHT - *ptScreen* sur l’ombre à droite du menu contextuel.  
   
--   MENU - `ptScreen` sur une commande.  
+-   MENU - *ptScreen* sur une commande.  
   
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSetFocusToBar`  
+ [in] *bSetFocusToBar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -395,10 +395,10 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pCustPage`  
+ [in] *pCustPage*  
  Pointeur vers une page de personnalisation.  
   
- [in] `lpszTitle`  
+ [in] *lpszTitle*  
  Chaîne qui contient la légende de menu.  
   
 ### <a name="remarks"></a>Notes  
@@ -418,29 +418,29 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  La fenêtre parente de la `CMFCPopupMenu`.  
   
- [in] `x`  
+ [in] *x*  
  Coordonnée d’écran horizontale pour l’emplacement du menu contextuel  
   
- [in] `y`  
+ [in] *y*  
  Coordonnée d’écran verticale de l’emplacement du menu contextuel.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Handle vers une ressource de menu.  
   
- [in] `bLocked`  
+ [in] *bloqué*  
  Un paramètre booléen qui indique si le menu est personnalisable. `FALSE` Indique que le menu contextuel est personnalisable.  
   
- [in] `bOwnMessage`  
+ [in] *bOwnMessage*  
  Un paramètre booléen qui indique comment le framework achemine les messages de menu. Consultez la section Notes pour plus de détails.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si la méthode a réussi ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Si `bOwnMessage` est `TRUE`, le framework achemine les messages de menu à `pWndParent`. `pWndParent` ne doit pas être `NULL` si `bOwnMessage` est `TRUE.` si `bOwnMessage` est `FALSE`, le framework achemine les messages de menu au menu contextuel parent.  
+ Si *bOwnMessage* est `TRUE`, le framework achemine les messages de menu à *pWndParent*. *pWndParent* ne doit pas être `NULL` si *bOwnMessage* est `TRUE.` si *bOwnMessage* est `FALSE`, le framework achemine les messages de menu au menu contextuel parent .  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `Create` méthode de la `CMFCPopuMenu` classe. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../visual-cpp-samples.md).  
@@ -458,9 +458,9 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndMain`  
- [in] `uiID`  
- [in] `lpszName`  
+ [in] *pWndMain*  
+ [in] *uiID*  
+ [in] *le caractère*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -487,16 +487,16 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iLogoSize`  
+ [in] *iLogoSize*  
  La taille du logo, en pixels.  
   
- [in] `nLogoLocation`  
+ [in] *nLogoLocation*  
  Type de données énuméré qui indique l’emplacement du logo.  
   
 ### <a name="remarks"></a>Notes  
  Pour afficher le logo, implémentez la méthode [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) dans la fenêtre frame principale.  
   
- Les valeurs possibles pour `nLogoLocation` sont MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP et MENU_LOGO_BOTTOM.  
+ Les valeurs possibles pour *nLogoLocation* sont MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP et MENU_LOGO_BOTTOM.  
   
 ##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
  Active le son de menu.  
@@ -506,7 +506,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le son, `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
@@ -520,7 +520,7 @@ void EnableResize(CSize sizeMinResize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `sizeMinResize`  
+ [in] *sizeMinResize*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -532,7 +532,7 @@ void EnableScrolling(BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `BOOL`  
+ [in] *BOOL*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -544,7 +544,7 @@ void EnableVertResize(int nMinResize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nMinResize`  
+ [in] *nMinResize*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -556,7 +556,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -596,7 +596,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bNoSystem`  
+ [in] *bNoSystem*  
  Un paramètre booléen qui indique si cette méthode vérifie la valeur globale. FALSE si vous souhaitez que cette méthode retourne le style d’animation pour cette instance de la [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -682,7 +682,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -722,7 +722,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectParentBtn`  
+ [in] *rectParentBtn*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -849,17 +849,17 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `button`  
+ [in] *bouton*  
  Une référence à l’élément de menu à ajouter.  
   
- [in] `iInsertAt`  
- Index de base zéro pour le nouvel élément. Si `iInsertAt` est -1, l’élément est ajouté à la fin du menu.  
+ [in] *iInsertAt*  
+ Index de base zéro pour le nouvel élément. Si *iInsertAt* est -1, l’élément est ajouté à la fin du menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la position où l’élément a été inséré. -1 si la méthode échoue.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode échoue si vous fournissez une valeur non valide pour `iInsertAt`, par exemple un entier supérieur au nombre d’éléments actuellement dans le menu contextuel.  
+ Cette méthode échoue si vous fournissez une valeur non valide pour *iInsertAt*, par exemple un entier supérieur au nombre d’éléments actuellement dans le menu contextuel.  
   
 ##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
  Insère un séparateur dans le menu contextuel à l’emplacement spécifié.  
@@ -869,16 +869,16 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Index de base zéro de la position où cette méthode insère le séparateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la position où le séparateur a été inséré. -1 si cette méthode échoue.  
   
 ### <a name="remarks"></a>Notes  
- La valeur -1 pour `iInsertAt` signifie que cette méthode ajoute le séparateur à la fin du menu contextuel.  
+ La valeur -1 pour *iInsertAt* signifie que cette méthode ajoute le séparateur à la fin du menu contextuel.  
   
- Cette méthode échoue si `iInsertAt` est une valeur non valide.  
+ Cette méthode échoue si *iInsertAt* est une valeur non valide.  
   
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose  
 
@@ -1013,7 +1013,7 @@ static BOOL IsSendMenuSelectMsg();
  `TRUE` Si le framework informe le frame parent ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Le framework informe le frame parent en l’envoyant le `WM_MENUSELECT` message lorsque utilisée sélectionne une commande de menu.  
+ Le framework informe le frame parent en envoyant le message WM_MENUSELECT lorsque utilisée sélectionne une commande de menu.  
   
 ##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
  Indique si le menu contextuel est actuellement visible.  
@@ -1033,7 +1033,7 @@ void MoveTo(const CPoint& pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pt`  
+ [in] *pt*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1045,7 +1045,7 @@ virtual void OnChangeHot(int nHot);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nHot`  
+ [in] *nHot*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1057,7 +1057,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uidCmdID`  
+ [in] *uidCmdID*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in] *nID*  
+ [in] *nCode*  
+ [in] *pExtra*  
+ [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1090,7 +1090,7 @@ BOOL PostCommand(UINT uiCommandID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1104,7 +1104,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1118,7 +1118,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bNotify`  
+ [in] *bNotify*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1137,7 +1137,7 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro de l’élément à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1163,13 +1163,13 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nElapse`  
+ [in] *nElapse*  
  La nouvelle animation vitesse, en millisecondes.  
   
 ### <a name="remarks"></a>Notes  
  La vitesse d’animation est une valeur globale et affecte tous les menus contextuels dans l’application. Cette valeur spécifie la durée de l’animation d’un menu contextuel terminer.  
   
- Par défaut, ce paramètre est défini sur 30 millisecondes. La plage des valeurs valides pour `nElapse` est comprise entre 0 et 200.  
+ Par défaut, ce paramètre est défini sur 30 millisecondes. La plage des valeurs valides pour *nElapse* est comprise entre 0 et 200.  
   
 ##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  Définit le type de l’animation de ce menu contextuel.  
@@ -1179,11 +1179,11 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `type`  
+ [in] *type*  
  Type de données énuméré qui spécifie le type d’animation.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [CMFCPopupMenu::GetAnimationType](#getanimationtype) pour obtenir la liste des valeurs valides pour `type`.  
+ Consultez [CMFCPopupMenu::GetAnimationType](#getanimationtype) pour obtenir la liste des valeurs valides pour *type*.  
   
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
@@ -1193,7 +1193,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1205,7 +1205,7 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  L’ID de commande de menu de la nouvelle commande par défaut.  
   
 ### <a name="remarks"></a>Notes  
@@ -1219,7 +1219,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bValue`  
+ [in] *bValue*  
  `TRUE` Si vous souhaitez que l’infrastructure pour forcer le focus d’entrée à la barre de menus quand un menu contextuel s’affiche. `FALSE` Si vous souhaitez que le menu contextuel pour conserver le focus.  
   
 ### <a name="remarks"></a>Notes  
@@ -1233,7 +1233,7 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bValue`  
+ [in] *bValue*  
  `TRUE` Si vous souhaitez que l’infrastructure pour dessiner les ombres du menu, `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
@@ -1247,7 +1247,7 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iMaxWidth`  
+ [in] *iMaxWidth*  
  La largeur maximale pour le menu contextuel, en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -1261,7 +1261,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMsgWnd`  
+ [in] *pMsgWnd*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1273,7 +1273,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElem`  
+ [in] *pElem*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1285,7 +1285,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `Type`  
+ [in] *Type*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1306,7 +1306,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bRightAlign`  
+ [in] *bRightAlign*  
  Valeur booléenne qui indique l’alignement de menu. `TRUE` Indique l’alignement à droite, `FALSE` indique l’alignement à gauche.  
   
 ### <a name="remarks"></a>Notes  
@@ -1320,7 +1320,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Si le menu contextuel informe son frame parent, `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
@@ -1353,7 +1353,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lprectScreen`  
+ [in] *lprectScreen*  
  Un rectangle qui spécifie la région de mise à jour, en coordonnées d’écran.  
   
 ### <a name="remarks"></a>Notes  
@@ -1367,7 +1367,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lprectScreen`  
+ [in] *lprectScreen*  
  Un rectangle, en coordonnées d’écran, qui spécifie les limites de la région de mise à jour.  
   
 ### <a name="remarks"></a>Notes  

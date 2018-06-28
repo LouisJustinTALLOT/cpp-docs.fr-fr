@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373131"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039600"
 ---
 # <a name="coledroptarget-class"></a>Classe de COleDropTarget
 Fournit le mécanisme de communication entre une fenêtre et les bibliothèques OLE.  
@@ -85,7 +85,7 @@ class COleDropTarget : public CCmdTarget
   
  `COleDropTarget`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre que le curseur est saisie.  
   
- `pDataObject`  
+ *pDataObject*  
  Pointe vers l’objet de données contenant les données qui peuvent être supprimées.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, et **MK_RBUTTON**.  
   
- `point`  
+ *Point*  
  Contient l’emplacement actuel du curseur en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’effet que si la suppression a été tentée à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
+ L’effet que si la suppression a été tentée à l’emplacement spécifié par *point*. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre que le curseur quitte.  
   
 ### <a name="remarks"></a>Notes  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre est placé le curseur.  
   
- `pDataObject`  
+ *pDataObject*  
  Pointe vers l’objet de données qui contient les données à supprimer.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, et **MK_RBUTTON**.  
   
- `point`  
+ *Point*  
  Contient l’emplacement actuel du curseur en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’effet que si la suppression a été tentée à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
+ L’effet que si la suppression a été tentée à l’emplacement spécifié par *point*. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Appelé par le framework avant d’appeler [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) pour déterminer si `point` est dans la zone de défilement.  
+ Appelé par le framework avant d’appeler [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) pour déterminer si *point* est dans la zone de défilement.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre, sur que le curseur se trouve actuellement.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, et **MK_RBUTTON**.  
   
- `point`  
+ *Point*  
  Contient l’emplacement du curseur, en pixels, par rapport à l’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’effet que si la suppression a été tentée à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
+ L’effet que si la suppression a été tentée à l’emplacement spécifié par *point*. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre, sur que le curseur se trouve actuellement.  
   
- `pDataObject`  
+ *pDataObject*  
  Pointe vers l’objet de données qui contient les données à supprimer.  
   
- `dropEffect`  
+ *dropEffect*  
  L’effet que l’utilisateur a choisi pour l’opération de suppression. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
- `point`  
+ *Point*  
  Contient l’emplacement du curseur, en pixels, par rapport à l’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre, sur que le curseur se trouve actuellement.  
   
- `pDataObject`  
+ *pDataObject*  
  Pointe vers l’objet de données qui contient les données à supprimer.  
   
- `dropDefault`  
+ *dropDefault*  
  L’effet que l’utilisateur a choisi pour l’opération de dépôt par défaut en fonction de l’état actuel de la clé. Il peut être `DROPEFFECT_NONE`. Effets de déplacement sont décrites dans la section Notes.  
   
- `dropList`  
+ *liste déroulante*  
  Liste des effets de dépôt qui prend en charge de la source de déplacement. Valeurs d’effet de dépôt peuvent être combinées à l’aide de l’opération de bits OR ( **&#124;**) opération. Effets de déplacement sont décrites dans la section Notes.  
   
- `point`  
+ *Point*  
  Contient l’emplacement du curseur, en pixels, par rapport à l’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’effet résultant de la tentative de suppression à l’emplacement spécifié par `point`. Effets de déplacement sont décrites dans la section Notes.  
+ L’effet résultant de la tentative de suppression à l’emplacement spécifié par *point*. Effets de déplacement sont décrites dans la section Notes.  
   
 ### <a name="remarks"></a>Notes  
  Tout d’abord, l’infrastructure appelle cette fonction. Si elle ne gère pas la liste déroulante, le framework appelle ensuite [OnDrop](#ondrop). En règle générale, vous devez substituer [OnDropEx](../../mfc/reference/cview-class.md#ondropex) dans la classe d’affichage pour prendre en charge le bouton droit de la souris, faites glisser et déposez. En règle générale, la classe d’affichage [OnDrop](../../mfc/reference/cview-class.md#ondrop) est utilisé pour gérer le cas de prise en charge simple glisser -déplacer.  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers la fenêtre qui doit être enregistré en tant que cible de dépôt.  
   
 ### <a name="return-value"></a>Valeur de retour  

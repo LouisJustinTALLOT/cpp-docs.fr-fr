@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378679"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042262"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe de CMFCRibbonBaseElement
 Le `CMFCRibbonBaseElement` est la classe de base pour tous les éléments que vous pouvez ajouter à un [barre du ruban](../../mfc/reference/cmfcribbonbar-class.md). Parmi les exemples d'éléments de ruban figurent les boutons de ruban, les cases à cocher de ruban et les zones de listes déroulantes de ruban.  
@@ -411,7 +411,7 @@ class CMFCRibbonBaseElement : public CObject
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbaseribbonelement.h  
   
 ##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `arElems`  
+ [in] *arElems*  
  Référence à un [CArray](../../mfc/reference/carray-class.md) de touches d’accès.  
   
 ### <a name="remarks"></a>Notes  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Pointeur vers une zone de liste de commandes.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `src`  
+ [in] *src*  
  La source de [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) objet.  
   
 ### <a name="remarks"></a>Notes  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `type`  
+ [in] *type*  
  Un type d’image de valeur énumérée. Consultez la section Notes pour obtenir la liste des valeurs possibles.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Le rectangle de l’image.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode dans une classe dérivée pour dessiner l’image de l’élément Ruban.  
   
- Le tableau suivant répertorie les valeurs possibles pour le `type` paramètre :  
+ Le tableau suivant répertorie les valeurs possibles pour le *type* paramètre :  
   
  `RibbonImageLarge`  
  Grande taille de l’image 32 x 32 pixels.  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElement`  
+ [in] *pElement*  
  Pointeur vers un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’élément de ruban si `pElement` pointe vers l’objet actuel ; sinon `NULL`.  
+ Un pointeur vers l’élément de ruban si *pElement* pointe vers l’objet actuel ; sinon `NULL`.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwData`  
+ [in] *dwData*  
  Les données associées à un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de commande pour un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Pointeur vers un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] `arElements`  
+ [dans, out] *arElements*  
  Tableau d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de commande d’un élément de ruban.  
   
- [in] `arElements`  
+ [in] *arElements*  
  Tableau d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Si l’élément de ruban affiche un menu contextuel. dans le cas contraire `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nDelay`  
+ [in] *nDelay*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bWithDelay`  
+ [in] *bWithDelay*  
  `TRUE` Pour ajouter la notification de commande à la file d’attente de message de la fenêtre parente. `FALSE` pour envoyer le message immédiatement à la fenêtre parente.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de l’élément de ruban dans la liste.  
   
 ### <a name="remarks"></a>Notes  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `qat`  
+ [in] *rapide*  
  La barre d’outils Accès rapide.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pPanelMenuBar`  
+ [in] *pPanelMenuBar*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `pHot`  
+ [in] *photorésine*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectangle de limite de la touche d’accès.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Si la touche d’accès est pour un bouton de menu contextuel ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectangle d’image de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour l’élément de ruban.  
   
- [in] `strText`  
+ [in] *%{strText/}*  
  Le texte d’affichage.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Distance, en pixels, du côté gauche de la zone de liste pour afficher du texte.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle d’affichage de l’élément Ruban.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Si la touche d’accès affiche un menu contextuel. dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nUpperChar`  
+ [in] *nUpperChar*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nChar`  
+ [in] *nChar*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShow`  
+ [in] *bShow*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Le paramètre n’est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParent`  
+ *pParent*  
  La fenêtre parente de l’élément ruban.  
   
- `data`  
+ *data*  
  Les données d’accessibilité de l’élément ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bCompactMode`  
+ [in] *bCompactMode*  
  `TRUE` Pour réduire la taille d’affichage de l’élément de ruban ; `FALSE` pour augmenter la taille d’affichage de l’élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Le tableau suivant résume la logique de cette méthode.  
   
-|`bCompactMode`|Taille actuelle de l’élément Ruban|Nouvelle taille d’élément de ruban|  
+|*bCompactMode*|Taille actuelle de l’élément Ruban|Nouvelle taille d’élément de ruban|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|Compact|Aucune modification.|  
 |`TRUE`|Intermediate|Compact s’il est possible.|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwData`  
+ [in] *dwData*  
  La valeur de données.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsDefaultMenuLook`  
+ [in] *bIsDefaultMenuLook*  
  `TRUE` Pour définir l’élément de ruban apparaisse comme une commande contextuelle ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
  La description de l’élément Ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  ID de la commande.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bOneRow`  
+ [in] *bOneRow*  
  `TRUE` Pour limiter la taille d’affichage de l’élément de ruban compresser ou intermédiaire ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  La touche d’accès de l’élément Ruban.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  La touche d’accès pour le menu contextuel de l’élément de ruban.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Pointeur vers un élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParent`  
+ [in] *pParent*  
  Pointeur vers une catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Le menu parent.  
   
 ### <a name="remarks"></a>Notes  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Pointeur vers la barre du ruban parent.  
   
 ### <a name="remarks"></a>Notes  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
+ [in] *rect*  
  Les dimensions du rectangle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
  Le texte et la touche d’accès de l’élément Ruban.  
   
 ### <a name="remarks"></a>Notes  
- Pour définir la touche d’accès pour l’élément de ruban, ajoutez la séquence d’échappement de saut de ligne suivie par les caractères de touche d’accès à `lpszText`.  
+ Pour définir la touche d’accès pour l’élément de ruban, ajoutez la séquence d’échappement de saut de ligne suivie par les caractères de touche d’accès à *lpszText*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Pour afficher le texte à droite ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
  Le texte info-bulle.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Pour afficher l’élément de ruban ; `FALSE` pour masquer l’élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  La hauteur de la ligne.  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368320"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037370"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Classe de CMFCImagePaintArea
 Fournit la zone d’image qui vous permet de modifier une image dans une boîte de dialogue Éditeur image.  
@@ -83,7 +83,7 @@ class CMFCImagePaintArea : public CButton
   
  [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afximagepaintarea.h  
   
 ##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pParentDlg`|Pointeur vers la boîte de dialogue qui est le parent de l’éditeur d’images.|  
+|[in] *pParentDlg*|Pointeur vers la boîte de dialogue qui est le parent de l’éditeur d’images.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Récupère le mode de dessin en cours.  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pBitmap`|La nouvelle image bitmap à afficher.|  
+|[in] *pBitmap*|La nouvelle image bitmap à afficher.|  
   
 ### <a name="remarks"></a>Notes  
- Si `pBitmap` est `NULL`, cette méthode définit la taille de la zone de peinture modifiable à zéro. Dans le cas contraire, il définit la taille de la zone modifiable de peinture à la taille de l’image bitmap fournis.  
+ Si *pBitmap* est `NULL`, cette méthode définit la taille de la zone de peinture modifiable à zéro. Dans le cas contraire, il définit la taille de la zone modifiable de peinture à la taille de l’image bitmap fournis.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Définit la couleur de dessin en cours.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `color`|La nouvelle couleur de dessin.|  
+|[in] *couleur*|La nouvelle couleur de dessin.|  
   
 ### <a name="remarks"></a>Notes  
  Lorsque vous sélectionnez une couleur dans la barre d’outils image éditeur palette ou sélecteur de couleurs, l’infrastructure appelle cette méthode pour mettre à jour la couleur de dessin en cours. La couleur de dessin initiale est noire (un `COLORREF` la valeur 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `mode`|Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valeur qui spécifie le mode de dessin en cours.|  
+|[in] *mode*|Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valeur qui spécifie le mode de dessin en cours.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

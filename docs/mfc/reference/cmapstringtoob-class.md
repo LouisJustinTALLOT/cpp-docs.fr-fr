@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375769"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042246"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb (classe)
 Classe de collection de dictionnaires qui mappe des objets `CString` uniques à des pointeurs `CObject` .  
@@ -110,7 +110,7 @@ class CMapStringToOb : public CObject
   
  `CMapStringToOb`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ##  <a name="cmapstringtoob"></a>  CMapStringToOb::CMapStringToOb  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBlockSize`  
+ *nBlockSize*  
  Spécifie la granularité d’allocation de mémoire pour l’extension de la carte.  
   
 ### <a name="remarks"></a>Notes  
- À mesure que la carte augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
+ À mesure que la carte augmente, la mémoire est allouée en unités de *nBlockSize* entrées.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux **CMapStringToOb :: CMapStringToOb**.  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Clé dont la valeur de hachage doit être calculé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hashSize`  
+ *hashSize*  
  Nombre d’entrées dans la table de hachage.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Si **TRUE**, alloue de la table de hachage lors de l’initialisation ; sinon, la table est allouée lorsque nécessaire.  
   
 ### <a name="remarks"></a>Notes  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Spécifie la clé de chaîne qui identifie l’élément à rechercher.  
   
- `rValue`  
+ *rValue*  
  Spécifie la valeur retournée à partir de l’élément recherchée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Spécifie la clé de chaîne qui identifie l’élément à rechercher.  
   
- `rKey`  
+ *rKey*  
  La référence à la clé associée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à un pointeur vers un `CObject` de l’objet ; ou **NULL** si la carte est vide ou `key` est hors limites.  
+ Une référence à un pointeur vers un `CObject` de l’objet ; ou **NULL** si la carte est vide ou *clé* est hors limites.  
   
 ### <a name="remarks"></a>Notes  
  Par conséquent, il peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value). S’il n’existe aucun élément de carte avec la clé spécifiée, un nouvel élément est créé.  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Spécifie la chaîne utilisée pour la recherche de la carte.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Spécifie la chaîne qui est la clé du nouvel élément.  
   
- `newValue`  
+ *nouvelle valeur*  
  Spécifie le `CObject` pointeur qui est la valeur du nouvel élément.  
   
 ### <a name="remarks"></a>Notes  

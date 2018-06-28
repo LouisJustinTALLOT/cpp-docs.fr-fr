@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370843"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037494"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup, classe
 Le `CMFCTasksPaneTaskGroup` est une classe d’assistance utilisée par le [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) contrôle. Les objets de type `CMFCTasksPaneTaskGroup` représentent un *groupe de tâches*. Le groupe de tâches est une liste d'éléments affichée par l'infrastructure dans une zone séparée comportant un bouton de réduction. La zone peut avoir une légende facultative (nom de groupe). Si un groupe est réduit, la liste de tâches n’est pas visible.  
@@ -99,7 +99,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxTasksPane.h  
   
 ##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszName`  
+ *Caractère*  
  Spécifie le nom du groupe dans la légende du groupe.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Spécifie si le groupe est aligné au bas du contrôle de volet de tâches.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Spécifie si le groupe est désigné en tant que *spéciale* et par conséquent, si la légende du groupe est remplie avec une couleur différente.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Spécifie si le groupe est réduit.  
   
- `pPage`  
+ *pPage*  
  Spécifie la page de propriétés auquel appartient ce groupe de tâches.  
   
- `hIcon`  
+ *hIcon*  
  Spécifie l’icône qui s’affiche dans la légende du groupe.  
   
 ### <a name="remarks"></a>Notes  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParent`  
+ [in] *pParent*  
  Représente la fenêtre parente du groupe de tâches en cours.  
   
- [out] `data`  
+ [out] *données*  
  Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité du groupe de tâches en cours.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le `data` paramètre a été correctement remplis avec les données d’accessibilité du groupe de tâches en cours ; sinon, `FALSE`.  
+ `TRUE` Si le *données* paramètre a été correctement remplis avec les données d’accessibilité du groupe de tâches en cours ; sinon, `FALSE`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377912"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040205"
 ---
 # <a name="cobarray-class"></a>CObArray (classe)
 Prend en charge des tableaux de pointeurs `CObject` .  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  Comme avec un tableau C, le temps d’accès pour un `CObArray` élément indexé est constante et est indépendant de la taille du tableau.  
   
- `CObArray` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau de `CObject` des pointeurs est stocké dans une archive, avec l’opérateur d’insertion surchargés ou avec le `Serialize` fonction membre, chaque `CObject` élément est, à son tour, sérialisé, ainsi que son index de tableau.  
+ `CObArray` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau de `CObject` des pointeurs est stocké dans une archive, avec l’opérateur d’insertion surchargés ou avec le `Serialize` fonction membre, chaque `CObject` élément est, à son tour, sérialisé, ainsi que son index de tableau.  
   
  Si vous avez besoin d’un vidage de personne `CObject` éléments dans un tableau, vous devez définir la profondeur de la `CDumpContext` objet à 1 ou supérieur.  
   
@@ -125,14 +125,14 @@ class CObArray : public CObject
  Dérivation de classe Array est similaire à la dérivation de la liste. Pour plus d’informations sur la dérivation d’une classe de liste de spécial, consultez l’article [Collections](../../mfc/collections.md).  
   
 > [!NOTE]
->  Vous devez utiliser le `IMPLEMENT_SERIAL` macro dans l’implémentation de votre classe dérivée si vous prévoyez de sérialiser le tableau.  
+>  Si vous prévoyez de sérialiser le tableau, vous devez utiliser la macro IMPLEMENT_SERIAL dans l’implémentation de votre classe dérivée.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CObArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ##  <a name="add"></a>  CObArray::Add  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `newElement`  
+ *newElement*  
  Le `CObject` pointeur à ajouter à ce tableau.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de l’élément ajouté.  
   
 ### <a name="remarks"></a>Notes  
- Si [SetSize](#setsize) a été utilisé avec un `nGrowBy` valeur supérieure à 1, puis de mémoire supplémentaire peut-être être alloué. Toutefois, la limite supérieure augmente de 1 uniquement.  
+ Si [SetSize](#setsize) a été utilisé avec un *nGrowBy* valeur supérieure à 1, puis de mémoire supplémentaire peut-être être alloué. Toutefois, la limite supérieure augmente de 1 uniquement.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CObArray::Add`.  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Notes  
  Les tableaux doivent être du même type.  
   
- Si nécessaire, **Append** peut allouer de mémoire supplémentaire pour prendre en compte les éléments ajoutés dans le tableau.  
+ Si nécessaire, `Append` peut allouer de mémoire supplémentaire pour prendre en compte les éléments ajoutés dans le tableau.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CObArray::Append`.  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  Les éléments à copier dans le tableau source.  
   
 ### <a name="remarks"></a>Notes  
- **Copie** ne libère pas la mémoire ; Cependant, si nécessaire, **copie** peut allouer de mémoire supplémentaire pour prendre en compte les éléments copiés dans le tableau.  
+ `Copy` ne libère pas la mémoire ; Toutefois, si nécessaire, `Copy` peut allouer de mémoire supplémentaire pour prendre en compte les éléments copiés dans le tableau.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CObArray::Copy`.  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui peut être supérieur à la valeur retournée par `GetUpperBound`.  
   
- `newElement`  
- Le `CObject` pointeur doit être placé dans ce tableau. A `newElement` de valeur **NULL** est autorisée.  
+ *newElement*  
+ Le `CObject` pointeur doit être placé dans ce tableau. A *newElement* de valeur **NULL** est autorisée.  
   
- `nCount`  
+ *nCount*  
  Le nombre de fois que cet élément doit être inséré (par défaut 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un index entier qui peut être supérieur à la valeur retournée par `GetUpperBound`.  
   
- `pNewArray`  
+ *pNewArray*  
  Un autre tableau qui contient les éléments à ajouter à ce tableau.  
   
 ### <a name="remarks"></a>Notes  
  La première version de `InsertAt` insère un élément (ou plusieurs copies d’un élément) à l’index spécifié dans un tableau. Dans le processus, il se déplace (en augmentant l’index) l’élément existant à cet index et il se déplace tous les éléments au-dessus de lui.  
   
- La deuxième version insère tous les éléments d’une autre `CObArray` collection, en commençant à la `nStartIndex` position.  
+ La deuxième version insère tous les éléments d’une autre `CObArray` collection, en commençant à la *nStartIndex* position.  
   
  Le `SetAt` (fonction), en revanche, remplace un élément du tableau spécifié et ne pas déplacer des éléments.  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `GetUpperBound`.  
   
- `nCount`  
+ *nCount*  
  Nombre d'éléments à supprimer.  
   
 ### <a name="remarks"></a>Notes  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `GetUpperBound`.  
   
- `newElement`  
+ *newElement*  
  Le pointeur d’objet à insérer dans ce tableau. A **NULL** la valeur est autorisée.  
   
 ### <a name="remarks"></a>Notes  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0.  
   
- `newElement`  
+ *newElement*  
  Le pointeur d’objet à ajouter à ce tableau. A **NULL** la valeur est autorisée.  
   
 ### <a name="remarks"></a>Notes  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nNewSize`  
+ *nNewSize*  
  La nouvelle taille du tableau (nombre d’éléments). Doit être supérieur ou égal à 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Le nombre minimal d’emplacements d’élément pour allouer si une augmentation de la taille n’est nécessaire.  
   
 ### <a name="remarks"></a>Notes  
  Si la nouvelle taille est inférieure à l’ancienne taille, puis le tableau est tronqué et toute la mémoire inutilisée est libérée. Pour plus d’efficacité, appelez `SetSize` pour définir la taille du tableau avant de l’utiliser. Cela évite la nécessité de réallocation et de copier le tableau chaque fois qu’un élément est ajouté.  
   
- Le `nGrowBy` paramètre affecte l’allocation de mémoire interne lors de l’agrandissement du tableau. Son utilisation n’affecte jamais la taille du tableau comme indiqué par `GetSize` et `GetUpperBound`.  
+ Le *nGrowBy* paramètre affecte l’allocation de mémoire interne lors de l’agrandissement du tableau. Son utilisation n’affecte jamais la taille du tableau comme indiqué par `GetSize` et `GetUpperBound`.  
   
  Si la taille du tableau est devenue, allouée de tous les nouveaux **CObject \***  pointeurs sont définies sur NULL.  
   

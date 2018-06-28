@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366328"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040884"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition, classe
 Encapsule une transition linéaire.  
@@ -71,7 +71,7 @@ class CLinearTransition : public CBaseTransition;
   
  [CLinearTransition](../../mfc/reference/clineartransition-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
@@ -84,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `duration`  
+ *Durée*  
  La durée de la transition.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  La valeur de la variable à la fin de la transition de l’animation.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-`pLibrary`  
+*pLibrary*  
  Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  

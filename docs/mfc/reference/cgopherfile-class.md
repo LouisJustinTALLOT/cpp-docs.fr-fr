@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366881"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040972"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile (classe)
 Fournit les fonctionnalités permettant de rechercher et de lire des fichiers sur un serveur Gopher.  
@@ -46,7 +46,7 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|Construit un objet `CGopherFile`.|  
   
 ## <a name="remarks"></a>Notes  
- Le service gopher n’autorise pas les utilisateurs à écrire des données dans un fichier gopher, car ce service fonctionne principalement comme une interface de menus pour la recherche d’informations. Le `CGopherFile` fonctions membres **écrire**, `WriteString`, et `Flush` ne sont pas implémentées pour `CGopherFile`. Appel de ces fonctions sur un `CGopherFile` de l’objet, retourne un [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Le service gopher n’autorise pas les utilisateurs à écrire des données dans un fichier gopher, car ce service fonctionne principalement comme une interface de menus pour la recherche d’informations. Le `CGopherFile` fonctions membres `Write`, `WriteString`, et `Flush` ne sont pas implémentées pour `CGopherFile`. Appel de ces fonctions sur un `CGopherFile` de l’objet, retourne un [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
  Pour en savoir plus sur la façon `CGopherFile` fonctionne avec les autres classes MFC Internet, consultez l’article [de programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -61,7 +61,7 @@ class CGopherFile : public CInternetFile
   
  `CGopherFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hFile`  
+ *hFile*  
  Un handle vers un `HINTERNET` fichier.  
   
- `refLocator`  
+ *refLocator*  
  Une référence à un [objet CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objet.  
   
- `pConnection`  
+ *pConnection*  
  Un pointeur vers un [objet CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objet.  
   
- `hSession`  
+ *hSession*  
  Handle vers la session Internet en cours.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Un pointeur vers une chaîne utilisée pour rechercher le serveur gopher. Consultez [Gopher Sessions](cgopherlocator-class.md) pour plus d’informations sur les localisateurs gopher.  
   
  *dwLocLen*  
- Une valeur DWORD qui contient le nombre d’octets dans `pstrLocator`.  
+ Une valeur DWORD qui contient le nombre d’octets dans *pstrLocator*.  
   
- `dwContext`  
+ *dwContext*  
  Pointeur vers l’identificateur de contexte du fichier en cours d’ouverture.  
   
 ### <a name="remarks"></a>Notes  

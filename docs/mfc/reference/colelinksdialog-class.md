@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368967"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042532"
 ---
 # <a name="colelinksdialog-class"></a>Classe de COleLinksDialog
 Utilisée pour la boîte de dialogue OLE Modifier les liens.  
@@ -83,7 +83,7 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="domodal"></a>  COleLinksDialog::DoModal  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDoc`  
+ *pDoc*  
  Pointe vers le document OLE qui contient les liens à modifier.  
   
- `pView`  
- Pointe vers la vue actuelle sur `pDoc`.  
+ *pView*  
+ Pointe vers la vue actuelle sur *pDoc*.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicateur de création, qui contient 0 ou **ELF_SHOWHELP** pour spécifier si le bouton d’aide s’affichera lorsque la boîte de dialogue s’affiche.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373301"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042307"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Contrôle onglet qui a l'apparence visuelle du **Volet de navigation** dans Microsoft Outlook.  
@@ -132,7 +132,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxoutlookbartabctrl.h  
   
 ##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  Pointeur vers un contrôle à ajouter.  
   
- [in] `lpszName`  
+ [in] *le caractère*  
  Spécifie le nom de l’onglet.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Si `TRUE`, la page sera créée comme détachable.  
   
- [in] `nImageID`  
+ [in] *nImageID*  
  Index d’image dans la liste d’images interne pour l’image à afficher dans le nouvel onglet.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Spécifie le AFX_ `CBRS_`* style pour les volets d’ancrage encapsulées.  
   
 ### <a name="remarks"></a>Notes  
@@ -168,7 +168,7 @@ void AddControl(
   
  Cette fonction appelle en interne sur [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- Si vous définissez `bDetachable` à `TRUE`, `AddControl` crée en interne un `CDockablePaneAdapter` de l’objet et encapsule le contrôle ajouté. Il définit automatiquement la classe d’exécution de la fenêtre à onglets à la classe d’exécution de `CMFCOutlookBar` et la classe d’exécution de l’image flottante vers `CMultiPaneFrameWnd`.  
+ Si vous définissez *bDetachable* à `TRUE`, `AddControl` crée en interne un `CDockablePaneAdapter` de l’objet et encapsule le contrôle ajouté. Il définit automatiquement la classe d’exécution de la fenêtre à onglets à la classe d’exécution de `CMFCOutlookBar` et la classe d’exécution de l’image flottante vers `CMultiPaneFrameWnd`.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `AddControl` méthode dans la `CMFCOutlookBarTabCtrl` classe. Cet extrait de code fait partie de la [exemple de démonstration d’Outlook](../../visual-cpp-samples.md).  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
+ [in] *rect*  
  Spécifie la taille initiale et la position, en pixels.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointe vers la fenêtre parente. Ne doit pas être `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  L’ID du contrôle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le contrôle a été créé avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- En règle générale, les contrôles de barre d’onglet outlook sont créés lorsque [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md) contrôles le `WM_CREATE` message du processus.  
+ En règle générale, les contrôles de barre d’onglet outlook sont créés lorsque [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md) contrôle le message WM_CREATE du processus.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Spécifie si l’animation qui se produit pendant le basculement entre les onglets actifs est activée.  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Spécifie si l’animation doit être activée ou désactivée.  
   
 ### <a name="remarks"></a>Notes  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bEnable`  
+ *bActivez*  
  Si `TRUE`, activer la modification sur place de l’étiquette de texte. Si `FALSE`, désactiver la modification sur place.  
   
 ### <a name="remarks"></a>Notes  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Détermine si les boutons de défilement sont affichées.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  Détermine si la barre de défilement supérieur est affiché.  
   
- [in] `bIsDown`  
+ [in] *bIsDown*  
  Détermine si la barre de défilement en bas est affichée.  
   
 ### <a name="remarks"></a>Notes  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet à ouvrir.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  Spécifie la nouvelle taille de bordure en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiAlign`  
+ [in] *uiAlign*  
  Spécifie l’alignement du texte.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Si `TRUE`, la fenêtre outlook est redessinée.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction permet de modifier l’alignement du texte des boutons de page.  
   
- `uiAlign` Peut prendre l’une des valeurs suivantes :  
+ *uiAlign* peut prendre l’une des valeurs suivantes :  
   
 |Constante|Signification|  
 |--------------|-------------|  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
  Spécifie l’ID de ressource de l’image à charger.  
   
- [in] `cx`  
+ [in] *cx*  
  Spécifie la largeur d’une image dans la liste d’images, en pixels.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Une valeur RVB qui spécifie la couleur transparente.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nVisiblePageButtons`  
+ [in] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>Notes  
   

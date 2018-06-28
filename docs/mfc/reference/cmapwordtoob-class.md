@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367141"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041829"
 ---
 # <a name="cmapwordtoob-class"></a>Classe de CMapWordToOb
 Prend en charge les mappages de pointeurs `CObject` indexés par des mots 16 bits.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CMapWordToOb` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CString` ou un **const** pointeur vers `char` en tant que paramètre de fonction ou de valeur de retour, remplacez **WORD**.  
+ Les fonctions membres de `CMapWordToOb` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CString` ou un **const** pointeur vers **char** en tant que paramètre de fonction ou de valeur de retour, remplacez **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -115,7 +115,7 @@ class CMapWordToOb : public CObject
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

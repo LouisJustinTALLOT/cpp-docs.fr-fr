@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366907"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039480"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed, classe
 Encapsule une transition de vitesse linéaire.  
@@ -71,7 +71,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
  [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
@@ -84,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblSpeed`  
+ *dblSpeed*  
  La valeur absolue de la rapidité de la variable.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  La valeur de la variable à la fin de la transition de l’animation.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-`pLibrary`  
+*pLibrary*  
  Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  

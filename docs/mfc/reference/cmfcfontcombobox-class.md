@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375743"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039997"
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe de CMFCFontComboBox
 La `CMFCFontComboBox` classe crée un contrôle de zone de liste déroulante qui contient une liste de polices.  
@@ -83,7 +83,7 @@ class CMFCFontComboBox : public CComboBox
   
  [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxfontcombobox.h  
   
 ##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDesc`  
+ [in] *pDesc*  
  Pointe vers un objet de description de police.  
   
- [in] `lpszName`  
+ [in] *le caractère*  
  Spécifie un nom de police.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Spécifie un jeu de caractères. La valeur par défaut est DEFAULT_CHARSET. Pour plus d’informations, consultez la `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nFontType`  
+ [in] *nFontType*  
  Spécifie le type de police. La valeur par défaut est la combinaison d’opérations de bits (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Spécifie le jeu de caractères de police. La valeur par défaut est DEFAULT_CHARSET.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Spécifie la hauteur de police et de la famille. La valeur par défaut est DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valeur de retour  

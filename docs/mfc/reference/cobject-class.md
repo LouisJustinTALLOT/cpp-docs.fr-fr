@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377238"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041709"
 ---
 # <a name="cobject-class"></a>CObject (classe)
 Classe de base principale pour la bibliothèque MFC (Microsoft Foundation Class).  
@@ -96,7 +96,7 @@ class AFX_NOVTABLE CObject
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="assertvalid"></a>  CObject::AssertValid  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>Notes  
  La version par défaut est automatiquement appelée par le constructeur de votre classe dérivée.  
   
- Si votre classe est sérialisable (il intègre le `IMPLEMENT_SERIAL` (macro)), doit disposer d’un constructeur par défaut (un constructeur sans arguments) dans votre déclaration de classe. Si vous n’avez pas besoin d’un constructeur par défaut, déclarez privée ou protégée constructeur « vide ». Pour plus d’informations, consultez [à l’aide de CObject](../../mfc/using-cobject.md).  
+ Si votre classe est sérialisable (il incorpore la macro IMPLEMENT_SERIAL), doit disposer d’un constructeur par défaut (un constructeur sans arguments) dans votre déclaration de classe. Si vous n’avez pas besoin d’un constructeur par défaut, déclarez privée ou protégée constructeur « vide ». Pour plus d’informations, consultez [à l’aide de CObject](../../mfc/using-cobject.md).  
   
  Le constructeur de copie de classe C++ par défaut standard effectue une copie membre-par-membre. La présence de privé `CObject` constructeur de copie garantit un message d’erreur du compilateur si le constructeur de copie de votre classe est requise mais non disponible. Vous devez donc fournir un constructeur de copie si votre classe requiert cette fonctionnalité.  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dc`  
+ *dc*  
  Le contexte de dump de diagnostic pour le vidage, généralement `afxDump`.  
   
 ### <a name="remarks"></a>Notes  
- Lorsque vous écrivez votre propre classe, vous devez substituer la `Dump` fonction pour fournir des services de diagnostic pour vous-même et d’autres utilisateurs de votre classe. Le substituée `Dump` appelle généralement la `Dump` fonction de sa classe de base avant d’imprimer des membres de données uniques à la classe dérivée. `CObject::Dump` Imprime le nom de classe si votre classe utilise le `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` (macro).  
+ Lorsque vous écrivez votre propre classe, vous devez substituer la `Dump` fonction pour fournir des services de diagnostic pour vous-même et d’autres utilisateurs de votre classe. Le substituée `Dump` appelle généralement la `Dump` fonction de sa classe de base avant d’imprimer des membres de données uniques à la classe dérivée. `CObject::Dump` Imprime le nom de classe si votre classe utilise le `IMPLEMENT_DYNAMIC` ou la macro IMPLEMENT_SERIAL.  
   
 > [!NOTE]
 >  Votre `Dump` fonction ne doit pas s’imprimer un caractère de saut de ligne à la fin de sa sortie.  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pClass`  
+ *pClass*  
  Un pointeur vers un [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure associée à votre `CObject`-classe dérivée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet correspond à la classe ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction teste `pClass` si (1) il s’agit d’un objet de la classe spécifiée ou (2) il s’agit d’un objet d’une classe dérivée de la classe spécifiée. Cette fonction fonctionne uniquement pour les classes déclarées avec le [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), ou [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) (macro).  
+ Cette fonction teste *pClass* si (1) il s’agit d’un objet de la classe spécifiée ou (2) il s’agit d’un objet d’une classe dérivée de la classe spécifiée. Cette fonction fonctionne uniquement pour les classes déclarées avec le [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), ou [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) (macro).  
   
  N’utilisez pas cette fonction largement car elle occulte la fonctionnalité de polymorphisme C++. Utilisez à la place des fonctions virtuelles.  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ar`  
+ *ar*  
  A `CArchive` objet à sérialiser vers ou depuis.  
   
 ### <a name="remarks"></a>Notes  

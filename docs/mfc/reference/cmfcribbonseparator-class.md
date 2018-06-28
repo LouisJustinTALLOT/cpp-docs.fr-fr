@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370856"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039793"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe de CMFCRibbonSeparator
 Implémente le séparateur de ruban.  
@@ -100,7 +100,7 @@ Appelez [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-clas
   
  [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbaseribbonelement.h  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
@@ -113,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Un pointeur vers le **commandes** où est ajouté le séparateur de liste.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Ignoré.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro de la chaîne dans la zone de liste spécifiée par `pWndListBox`.  
+ Index de base zéro de la chaîne dans la zone de liste spécifiée par *pWndListBox*.  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  Construit un objet `CMFCRibbonSeparator`.  
@@ -130,7 +130,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsHoriz`  
+ [in] *bIsHoriz*  
  Si `TRUE`, le séparateur est horizontal ; si `FALSE`, le séparateur est vertical.  
   
 ### <a name="remarks"></a>Notes  
@@ -149,7 +149,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `Src`  
+ [in] *Src*  
  L’élément de ruban source d’origine.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
@@ -160,7 +160,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contenu de l’appareil.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -197,7 +197,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pDC`|Pointeur vers un contexte de périphérique.|  
-|[in] `strText`|Texte affiché dans la liste.|  
-|[in] `nTextOffset`|Espacement entre le texte et le côté gauche du rectangle englobant.|  
-|[in] `rect`|Spécifie le rectangle englobant.|  
-|[in] `bIsSelected`|Ignoré.|  
-|[in] `bHighlighted`|Ignoré.|  
+|[in] *contrôleur de domaine principal*|Pointeur vers un contexte de périphérique.|  
+|[in] *%{strText/}*|Texte affiché dans la liste.|  
+|[in] *nTextOffset*|Espacement entre le texte et le côté gauche du rectangle englobant.|  
+|[in] *rect*|Spécifie le rectangle englobant.|  
+|[in] *bIsSelected*|Ignoré.|  
+|[in] *bHighlighted*|Ignoré.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

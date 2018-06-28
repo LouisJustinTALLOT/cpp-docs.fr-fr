@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370378"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040023"
 ---
 # <a name="coleipframewnd-class"></a>Classe de COleIPFrameWnd
 Base pour la fenêtre de modification sur place de votre application.  
@@ -69,7 +69,7 @@ class COleIPFrameWnd : public CFrameWnd
   
  `COleIPFrameWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpPosRect`  
+ *lpPosRect*  
  Pointeur vers un `RECT` structure ou un `CRect` objet contenant l’à la place frame actuelle coordonnées de position de fenêtre, en pixels, par rapport à la zone cliente.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Pointeur vers un `RECT` structure ou un `CRect` objet contenant l’à la place frame rectangle de découpage coordonnées actuelles de fenêtre, en pixels, par rapport à la zone cliente.  
   
 ### <a name="remarks"></a>Notes  

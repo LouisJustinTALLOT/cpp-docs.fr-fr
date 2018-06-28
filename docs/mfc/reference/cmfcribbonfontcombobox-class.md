@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370505"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039373"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe de CMFCRibbonFontComboBox
 Implémente une zone de liste déroulante contenant une liste de polices. Vous placez la zone de liste déroulante sur un panneau de ruban.  
@@ -92,7 +92,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
  [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonComboBox.h  
   
 ##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nFontType`  
+ [in] *nFontType*  
  Spécifie le type de police des polices à ajouter.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Spécifie le jeu de caractères des polices à ajouter.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Spécifie la hauteur et la famille de polices à ajouter.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  L’ID de commande de la commande qui s’exécute lorsque l’utilisateur sélectionne un élément dans la zone de liste déroulante.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Spécifie les types de police à afficher dans la zone de liste déroulante. Les options valides sont **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, et **TRUETYPE_FONTTYPE**, ou toute autre combinaison au niveau du bit.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Filtre les polices dans la zone de liste déroulante à ceux qui appartiennent au jeu de caractères spécifié...  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Spécifie la hauteur et la famille de polices qui s’affichent dans la zone de liste déroulante.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Spécifie la largeur, en pixels, de la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations sur les éventuelles `nFontType` les valeurs de paramètre, consultez [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du Kit de développement logiciel Windows.  
+ Pour plus d’informations sur les éventuelles *nFontType* les valeurs de paramètre, consultez [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du Kit de développement logiciel Windows.  
   
- Pour plus d’informations sur les jeux de caractères valide qui peut être assigné à `nCharSet`et les valeurs valides qui peuvent être affectés à `nPitchAndFamily`, consultez [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) dans la documentation du Kit de développement logiciel Windows.  
+ Pour plus d’informations sur les jeux de caractères valide qui peut être assigné à *nCharSet*et les valeurs valides qui peuvent être affectés à *nPitchAndFamily*, consultez [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) dans le Documentation du Kit de développement logiciel Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszName`  
+ ' le caractère *  
  Spécifie le nom de la police à sélectionner.  
   
- `nCharSet`  
+ *nCharSet*  
  Spécifie le jeu de caractères de la police sélectionnée.  
   
- `bExact`  
+ *bExact*  
  `TRUE` Pour spécifier que le jeu de caractères doit correspondre à lors de la sélection d’une police ; `FALSE` pour spécifier que le jeu de caractères peut être ignoré lors de la sélection d’une police.  
   
 ### <a name="return-value"></a>Valeur de retour  

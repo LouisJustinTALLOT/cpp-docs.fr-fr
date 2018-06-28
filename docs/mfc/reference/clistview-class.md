@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366341"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037613"
 ---
 # <a name="clistview-class"></a>CListView (classe)
 Simplifie l’utilisation du contrôle de liste et de [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe qui encapsule la fonctionnalité de contrôle de liste, avec l’architecture document / vue de MFC.  
@@ -74,7 +74,7 @@ class CListView : public CCtrlView
   
  `CListView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcview.h  
   
 ##  <a name="clistview"></a>  CListView::CListView  
@@ -105,7 +105,7 @@ void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nImageList`  
+ *nImageList*  
  Index de base zéro de l’image à supprimer.  
   
 ## <a name="see-also"></a>Voir aussi  

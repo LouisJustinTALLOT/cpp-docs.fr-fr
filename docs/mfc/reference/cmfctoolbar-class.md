@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 870f2e53688f4ea45bbf61c8f41dd30606670d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a767c0c53aff4234a773cc8b788eaf0289972347
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378881"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041761"
 ---
 # <a name="cmfctoolbar-class"></a>Classe de CMFCToolBar
 Le `CMFCToolBar` ressemble à [CToolBar (classe)](../../mfc/reference/ctoolbar-class.md), mais fournit la prise en charge supplémentaire des fonctionnalités d’interface utilisateur. Celles-ci incluent les barres d'outils à deux dimensions, les barres d'outils avec images interactives, les grandes icônes, les boutons pager, les barres d'outils verrouillées, les contrôles rebar, le texte sous les images, les images d'arrière-plan et les barres d'outils avec onglets. La classe `CMFCToolBar` contient également une prise en charge intégrée de la personnalisation des barres d'outils et des menus par l'utilisateur, du glisser-déplacer entre les barres d'outils et les menus, des boutons de zone de liste modifiable, des boutons de zone d'édition, des sélecteurs de couleurs et des boutons de regroupement.
@@ -537,7 +537,7 @@ class CMFCToolBar : public CMFCBaseToolBar
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtoolbar.h  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -563,7 +563,7 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Spécifie la commande à ajouter.  
   
 ### <a name="remarks"></a>Notes  
@@ -579,7 +579,7 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCommand`  
+ [in] *uiCommand*  
  Spécifie le compteur de commande à incrémenter.  
   
 ### <a name="remarks"></a>Notes  
@@ -603,26 +603,26 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiResID`  
+ [in] *uiResID*  
  ID de ressource d’une barre d’outils avec images à charger.  
   
- [in] `uiBmpResID`  
+ [in] *uiBmpResID*  
  ID de ressource d’une image bitmap avec des images de barre d’outils.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  ID de ressource d’une image bitmap avec des images de barre d’outils « froid ».  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  ID de ressource d’une image bitmap avec les images de menu.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  ID de ressource d’une image bitmap avec des images de barre d’outils désactivées.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  ID de ressource d’une image bitmap avec les images de menu désactivées.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode réussit ; `FALSE` si `uiResID` ou `uiBmpResID` ne spécifiez pas de ressources valides, ou une autre erreur se produit.  
+ `TRUE` Si la méthode réussit ; `FALSE` si *uiResID* ou *uiBmpResID* ne spécifiez pas de ressources valides, ou une autre erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour charger une image bitmap avec les images de barre d’outils et l’ajouter à la collection d’images de barre d’outils. Cette méthode crée un objet temporaire de barre d’outils et les appels [CMFCToolBar::LoadToolBar](#loadtoolbar).  
@@ -709,19 +709,19 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui spécifie s’il faut dim images inactifs. Si ce paramètre est `TRUE`, images inactives sont estompés. Dans le cas contraire, les images inactives ne sont pas estompés.  
   
- [in] `nGrayImagePercentage`  
- Spécifie le pourcentage de luminance pour les images inactifs. Si `bEnable` est `FALSE`, cette valeur est ignorée.  
+ [in] *nGrayImagePercentage*  
+ Spécifie le pourcentage de luminance pour les images inactifs. Si *bActivez* est `FALSE`, cette valeur est ignorée.  
   
- [in] `bRedrawAllToolbars`  
+ [in] *bRedrawAllToolbars*  
  Valeur booléenne qui spécifie s’il faut redessiner les barres d’outils dans l’application. Si ce paramètre est `TRUE`, cette méthode redessine toutes barres d’outils.  
   
 ### <a name="remarks"></a>Notes  
- Si `bEnable` est `TRUE`, l’infrastructure utilise `nGrayImagePercentage` pour générer des images inactives à partir des images régulières. Dans le cas contraire, vous devez fournir l’ensemble d’images inactives à l’aide de la [CMFCToolBar::GetColdImages](#getcoldimages) (méthode). Par défaut, cette option est désactivée.  
+ Si *bActivez* est `TRUE`, l’infrastructure utilise *nGrayImagePercentage* pour générer des images inactives à partir des images régulières. Dans le cas contraire, vous devez fournir l’ensemble d’images inactives à l’aide de la [CMFCToolBar::GetColdImages](#getcoldimages) (méthode). Par défaut, cette option est désactivée.  
   
- Pour plus d’informations sur la `nGrayImagePercentage` paramètre, consultez [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
+ Pour plus d’informations sur la *nGrayImagePercentage* paramètre, consultez [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
   
 ##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
  Retourne l’index d’un [CMFCToolBarButton classe](../../mfc/reference/cmfctoolbarbutton-class.md) objet dans cette barre d’outils.  
@@ -731,11 +731,11 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers l’objet bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de `pButton` dans la liste interne des boutons de barre d’outils ; ou -1 si le bouton spécifié n’est pas dans cette barre d’outils.  
+ Index de *pButton* dans la liste interne des boutons de barre d’outils ; ou -1 si le bouton spécifié n’est pas dans cette barre d’outils.  
   
 ##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
  Calcule la taille horizontale de la barre d’outils.  
@@ -747,17 +747,17 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bStretch`  
+ [in] *bStretch*  
  `TRUE` pour étendre la barre d’outils à la taille du frame parent.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Pour orienter horizontalement ; de la barre d’outils `FALSE` d’orientation de la barre d’outils verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  A `CSize` objet qui spécifie la taille de la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode calcule la taille de la barre d’outils à l’aide de la `CMFCToolBar::CalcLayout` (méthode). Il transmet le `LM_STRETCH` indicateur pour le `dwMode` paramètre si `bStretch` est `TRUE`. Il transmet le `LM_HORZ` indicateur si `bHorz` est `TRUE`.  
+ Cette méthode calcule la taille de la barre d’outils à l’aide de la `CMFCToolBar::CalcLayout` (méthode). Il transmet le `LM_STRETCH` indicateur pour le *dwMode* paramètre si *bStretch* est `TRUE`. Il transmet le `LM_HORZ` indicateur si *bHorz* est `TRUE`.  
   
  Consultez l’exemple VisualStudioDemo pour obtenir un exemple qui utilise cette méthode.  
   
@@ -784,7 +784,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bVertDock`  
+ [in] *bVertDock*  
  `TRUE` Pour spécifier que la barre d’outils est ancré verticalement ; `FALSE` pour spécifier que la barre d’outils est ancré horizontalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -887,10 +887,10 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIDFind`  
+ [in] *nIDFind*  
  Spécifie l’ID de commande.  
   
- [in] `iIndexFirst`  
+ [in] *iIndexFirst*  
  Spécifie l’index initial à partir du.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -899,7 +899,7 @@ int CommandToIndex(
 ### <a name="remarks"></a>Notes  
  A `CMFCToolBar` objet conserve une liste interne des boutons de la barre d’outils. Appelez cette fonction pour récupérer l’index d’un bouton dans la liste en fonction de l’ID de commande du bouton.  
   
- Si `iIndex` est supérieur à 0, cette méthode ignore un bouton de la barre d’outils qui possède un index moins `iIndex`.  
+ Si *iIndex* est supérieur à 0, cette méthode ignore un bouton de la barre d’outils qui possède un index moins *iIndex*.  
   
 ##  <a name="create"></a>  CMFCToolBar::Create  
  Crée un objet `CMFCToolBar`.  
@@ -912,13 +912,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente de la barre d’outils.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Le style de la barre d’outils. Consultez [contrôle de barre d’outils et les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb760439) dans le SDK Windows pour obtenir la liste des styles.  
   
- [in] `nID`  
+ [in] *nID*  
  L’ID de la fenêtre enfant de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -943,19 +943,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente de la barre d’outils.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Styles supplémentaires pour la création de l’objet de barre de contrôle incorporé.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Le style de la barre d’outils. Consultez [contrôle de barre d’outils et les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb760439) pour obtenir la liste des styles appropriés.  
   
- [in] `rcBorders`  
+ [in] *rcBorders*  
  A `CRect` objet qui spécifie la largeur des bordures de la fenêtre de barre d’outils.  
   
- [in] `nID`  
+ [in] *nID*  
  L’ID de la fenêtre enfant de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -964,7 +964,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Notes  
  Cette méthode crée une barre de contrôle et l’attache à la barre d’outils.  
   
- Appelez cette méthode à la place de [CMFCToolBar::Create](#create) lorsque vous souhaitez fournir des styles spécifiques. Par exemple, définissez `dwCtrlStyle` à `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` pour créer une barre d’outils qui ressemble à ce qui les barres d’outils qui sont utilisés par Internet Explorer 4.  
+ Appelez cette méthode à la place de [CMFCToolBar::Create](#create) lorsque vous souhaitez fournir des styles spécifiques. Par exemple, définissez *dwCtrlStyle* à `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` pour créer une barre d’outils qui ressemble à ce qui les barres d’outils qui sont utilisés par Internet Explorer 4.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `CreateEx` méthode de la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’insertion/éjection](../../visual-cpp-samples.md).  
@@ -990,7 +990,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
@@ -1011,19 +1011,19 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers un bouton à dessiner.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Pointeur vers les images de barre d’outils.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Si le bouton est mis en surbrillance ; dans le cas contraire `FALSE`.  
   
- [in] `bDrawDisabledImages`  
+ [in] *bDrawDisabledImages*  
  `TRUE` Si les boutons désactivés sont estompés ; dans le cas contraire `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1045,13 +1045,13 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant de l’emplacement où le séparateur est dessiné, en pixels.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Si le séparateur est horizontal, `FALSE` si le séparateur est vertical.  
   
 ### <a name="remarks"></a>Notes  
@@ -1078,27 +1078,27 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Active ou désactive le bouton Personnaliser.  
   
- [in] `iCustomizeCmd`  
+ [in] *iCustomizeCmd*  
  L’ID de commande du bouton Personnaliser.  
   
- [in] `strCustomizeText`  
+ [in] *strCustomizeText*  
  L’étiquette de texte du bouton Personnaliser.  
   
- [in] `uiCustomizeTextResId`  
+ [in] *uiCustomizeTextResId*  
  L’ID de chaîne de ressource de l’étiquette du bouton Personnaliser.  
   
- [in] `bQuickCustomize`  
+ [in] *bQuickCustomize*  
  Active ou désactive le **ajouter ou supprimer des boutons** option dans le menu déroulant à partir du bouton.  
   
 ### <a name="remarks"></a>Notes  
- Si `iCustomizeCmd` est -1, le bouton de la personnaliser lorsque plusieurs boutons de barre d’outils ne tiennent pas dans la zone de la barre d’outils s’affiche framework. La flèche orientée vers le bouton affiche une double pointant vers la gauche ou chevron, ce qui indique qu’il n’y a plus de boutons.  
+ Si *iCustomizeCmd* est -1, le bouton de la personnaliser lorsque plusieurs boutons de barre d’outils ne tiennent pas dans la zone de la barre d’outils s’affiche framework. La flèche orientée vers le bouton affiche une double pointant vers la gauche ou chevron, ce qui indique qu’il n’y a plus de boutons.  
   
- Si `iCustomizeCmd` spécifie un ID de commande valide, et `bEnable` est `TRUE`, le bouton Personnaliser est toujours affiché. Le bouton a une petite flèche bas et ouvre un menu contenant une commande. Cette commande utilise l’étiquette de texte spécifiée par `strCustomizeText`. Si `bQuickCustomize` est également `TRUE`, le menu affiche les **ajouter ou supprimer des boutons** option.  
+ Si *iCustomizeCmd* spécifie un ID de commande valide, et *bActivez* est `TRUE`, le bouton Personnaliser est toujours affiché. Le bouton a une petite flèche bas et ouvre un menu contenant une commande. Cette commande utilise l’étiquette de texte spécifiée par *strCustomizeText*. Si *bQuickCustomize* est également `TRUE`, le menu affiche les **ajouter ou supprimer des boutons** option.  
   
- Le framework ajoute dynamiquement dans le menu des boutons qui ne tiennent pas dans la zone de la barre d’outils avant de l’élément spécifié par `iCustomizeCmd`. Le chevron s’affiche en regard de la flèche vers le bas.  
+ Le framework ajoute dynamiquement dans le menu des boutons qui ne tiennent pas dans la zone de la barre d’outils avant de l’élément spécifié par *iCustomizeCmd*. Le chevron s’affiche en regard de la flèche vers le bas.  
   
 ##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
  Permet d’ancrage du volet vers le frame principal.  
@@ -1108,11 +1108,11 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Spécifie l’alignement d’ancrage à activer.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode étend l’implémentation de la classe de base, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), en définissant le `CBasePane::m_dwControlBarStyle` membre de données `AFX_CBRS_FLOAT`. Cette méthode passe ensuite `dwAlignment` à l’implémentation de classe de base.  
+ Cette méthode étend l’implémentation de la classe de base, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), en définissant le `CBasePane::m_dwControlBarStyle` membre de données `AFX_CBRS_FLOAT`. Cette méthode passe ensuite *dwAlignment* à l’implémentation de classe de base.  
   
 ##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
  Active ou désactive les grandes icônes sur les boutons de barre d’outils.  
@@ -1122,7 +1122,7 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer les grandes icônes, `FALSE` pour désactiver les grandes icônes.  
   
 ### <a name="remarks"></a>Notes  
@@ -1136,7 +1136,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer la personnalisation rapide, `FALSE` de désactiver la personnalisation rapide.  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
@@ -1147,7 +1147,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer la réflexion de commande ; `FALSE` désactiver la réflexion de la commande.  
   
 ### <a name="remarks"></a>Notes  
@@ -1163,7 +1163,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bEnable`  
+ *bActivez*  
  `TRUE` Si les étiquettes de texte s’affichent sous les images de bouton de barre d’outils ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1177,7 +1177,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hwnd`  
+ [in] *hwnd*  
  Le handle de fenêtre à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1227,7 +1227,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Spécifie l’index du bouton à retourner.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1245,22 +1245,22 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index du bouton dans la liste des boutons de la barre d’outils.  
   
- [out] `nID`  
+ [out] *nID*  
  L’ID d’un bouton de commande.  
   
- [out] `nStyle`  
+ [out] *nStyle*  
  Le style du bouton.  
   
- [out] `iImage`  
+ [out] *iImage*  
  L’index de l’image du bouton.  
   
 ### <a name="remarks"></a>Notes  
  Le `GetButtonInfo` méthode trouve un bouton de barre d’outils à l’index spécifié et récupère l’index d’ID, de style et d’image de commande du bouton.  
   
- Si le bouton à l’index spécifié n’existe pas, le framework définit `nID` et `nStyle` à 0, et `iImage` -1 lorsque la méthode retourne.  
+ Si le bouton à l’index spécifié n’existe pas, le framework définit *nID* et *nStyle* à 0, et *iImage* -1 lorsque la méthode retourne.  
   
 ##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
  Retourne les dimensions de chaque bouton sur la barre d’outils.  
@@ -1283,7 +1283,7 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index d’un bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1304,10 +1304,10 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  L’index d’un bouton de barre d’outils.  
   
- [out] `rString`  
+ [out] *rString*  
  Le texte de l’étiquette du bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1352,10 +1352,10 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  L’ID de commande des boutons.  
   
- [out] `listButtons`  
+ [out] *listButtons*  
  Une référence à un [CObList classe](../../mfc/reference/coblist-class.md) objet qui reçoit la liste des boutons de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1394,7 +1394,7 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
  Spécifie l’ID de commande du bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1437,14 +1437,14 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `pIndex`  
+ [out] *pIndex*  
  Reçoit l’index du bouton dans la collection de boutons de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’objet bouton de menu qui affiche son sous-menu ou `NULL` si aucun menu n’affiche son sous-menu.  
   
 ### <a name="remarks"></a>Notes  
- Si cette méthode retourne un non - `NULL` valeur et `pIndex` n’est pas `NULL`, la valeur pointée par `pIndex` est définie à l’index du bouton de menu dans la collection de boutons de barre d’outils.  
+ Si cette méthode retourne un non - `NULL` valeur et *pIndex* n’est pas `NULL`, la valeur pointée par *pIndex* est définie à l’index du bouton de menu dans la collection de boutons de barre d’outils.  
   
 ##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
  Spécifie si les images des boutons désactivés sont estompées versions des images bouton normal, ou à partir de la collection d’images de bouton désactivé.  
@@ -1573,14 +1573,14 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  L’index du bouton pour lequel récupérer la zone cliente.  
   
- [out] `lpRect`  
+ [out] *lpRect*  
  Un pointeur vers un `RECT` objet qui reçoit la région de la zone cliente.  
   
 ### <a name="remarks"></a>Notes  
- Le `lpRect` paramètre ne doit pas être `NULL`. Si aucun bouton n’existe à l’index fourni, `lpRect` reçoit un `RECT` objet qui est initialisée à zéro.  
+ Le *lpRect* paramètre ne doit pas être `NULL`. Si aucun bouton n’existe à l’index fourni, *lpRect* reçoit un `RECT` objet qui est initialisée à zéro.  
   
 ##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
  Retourne l’ID de commande du bouton de barre d’outils à l’index spécifié.  
@@ -1590,7 +1590,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index du bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1606,14 +1606,14 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index d’un bouton de barre d’outils.  
   
- [out] `lpRect`  
+ [out] *lpRect*  
  Un pointeur vers `CRect` objet qui reçoit les coordonnées de l’image du rectangle englobant.  
   
 ### <a name="remarks"></a>Notes  
- Le `CRect` objet auquel `lpRect` points est définie sur 0, si un bouton à l’index spécifié n’existe pas.  
+ Le `CRect` objet auquel *lpRect* points est définie sur 0, si un bouton à l’index spécifié n’existe pas.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `GetItemRect` méthode de la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’insertion/éjection](../../visual-cpp-samples.md).  
@@ -1904,7 +1904,7 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Le point à tester, en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1925,17 +1925,17 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `button`  
+ [in] *bouton*  
  Spécifie le bouton à insérer.  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Spécifie la position de base zéro pour le bouton à insérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Position à laquelle le bouton a été inséré, ou -1 si une erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
- Si `iInsertAt` est -1, cette méthode ajoute le bouton à la fin de la liste des boutons de barre d’outils.  
+ Si *iInsertAt* est -1, cette méthode ajoute le bouton à la fin de la liste des boutons de barre d’outils.  
   
  Appelez le [CMFCToolBar::InsertSeparator](#insertseparator) méthode pour insérer un séparateur dans la barre d’outils.  
   
@@ -1947,14 +1947,14 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Spécifie la position de base zéro pour insérer le séparateur à. Ce paramètre doit être supérieur à 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Position à laquelle le séparateur a été inséré, ou -1 si une erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour insérer un séparateur entre deux boutons existants. Si `iInsertAt` est -1, cette méthode ajoute le séparateur à la fin de la liste des boutons de barre d’outils.  
+ Appelez cette méthode pour insérer un séparateur entre deux boutons existants. Si *iInsertAt* est -1, cette méthode ajoute le séparateur à la fin de la liste des boutons de barre d’outils.  
   
  Vous ne pouvez pas utiliser cette méthode pour ajouter un séparateur à une barre d’outils vide.  
   
@@ -1968,7 +1968,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de base zéro du bouton dans la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2022,14 +2022,14 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Spécifie la commande à vérifier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si la commande spécifiée appartient à la liste des commandes de base ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode statique détermine si la commande spécifiée par `uiCmd` appartient à la liste globale des commandes de base. Vous pouvez modifier la liste des commandes de base en appelant [CMFCToolBar::AddBasicCommand](#addbasiccommand) ou [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
+ Cette méthode statique détermine si la commande spécifiée par *uiCmd* appartient à la liste globale des commandes de base. Vous pouvez modifier la liste des commandes de base en appelant [CMFCToolBar::AddBasicCommand](#addbasiccommand) ou [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
  Détermine si la barre d’outils peut afficher des boutons que vous avez étendu les bordures.  
@@ -2054,7 +2054,7 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iButton`  
+ [in] *iButton*  
  Spécifie l’index d’un bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2070,14 +2070,14 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Spécifie la commande à vérifier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si la commande spécifiée n’est autorisée ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode statique détermine si la commande spécifiée par `uiCmd` appartient à la liste globale des commandes de non autorisée.  
+ Cette méthode statique détermine si la commande spécifiée par *uiCmd* appartient à la liste globale des commandes de non autorisée.  
   
  Vous pouvez modifier la liste des commandes de non autorisée en appelant [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
   
@@ -2089,7 +2089,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Spécifie la commande à vérifier.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2131,7 +2131,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers un bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2187,11 +2187,11 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur sur le bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la dernière commande a été envoyée à partir du bouton qui `pButton` spécifie ; sinon `FALSE`.  
+ `TRUE` Si la dernière commande a été envoyée à partir du bouton qui *pButton* spécifie ; sinon `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode obtient un pointeur vers un [MSG, Structure](../../mfc/reference/msg-structure1.md) en appelant `CWnd::GetCurrentMessage`. Il compare ensuite le `HWND` du bouton avec le `MSG::lParam` et `MSG::hwnd` membres pour déterminer si le bouton a la source de la commande.  
@@ -2272,22 +2272,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiResID`  
+ [in] *uiResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils réactives.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils non réactives.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de menu normales.  
   
- [in] `bLocked`  
+ [in] *bloqué*  
  `TRUE` Pour verrouiller la barre d’outils ; dans le cas contraire `FALSE`.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils désactivées.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de menu désactivées.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `params`  
- [in] `bLocked`  
+ [in] *params*  
+ [in] *bloqué*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -2323,7 +2323,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -2337,7 +2337,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Spécifie le chemin d’accès relatif de la clé de Registre Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2359,13 +2359,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Spécifie le chemin d’accès relatif de la clé de Registre Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’ID de contrôle de la barre d’outils.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Spécifie l’ID de ressource de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2389,25 +2389,25 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiResID`  
+ [in] *uiResID*  
  L’ID de ressource de la barre d’outils.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils non réactives.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de menu normales.  
   
- [in] `bLocked`  
- Valeur booléenne qui spécifie si la barre d’outils est verrouillée ou non. Si ce paramètre est `TRUE`, la barre d’outils est verrouillée. Dans le cas contraire, la barre d’outils n’est pas verrouillé.  
+ [in] *bloqué*  
+ Valeur booléenne qui spécifie si la barre d’outils est verrouillée ou non. Si ce paramètre est *TRUE*, la barre d’outils est verrouillée. Dans le cas contraire, la barre d’outils n’est pas verrouillé.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils désactivées.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de menu désactivées.  
   
- [in] `uiHotResID`  
+ [in] *uiHotResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils réactives.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2433,13 +2433,13 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiToolbarResID`  
+ [in] *uiToolbarResID*  
  L’ID de ressource de la barre d’outils.  
   
- [in] `params`  
+ [in] *params*  
  Une référence à un `CMFCToolBarInfo` objet qui contient l’ID de ressource pour les images de barre d’outils.  
   
- [in] `bLocked`  
+ [in] *bloqué*  
  Valeur booléenne qui spécifie si la barre d’outils est verrouillée ou non. Si ce paramètre est `TRUE`, la barre d’outils est verrouillée. Dans le cas contraire, la barre d’outils n’est pas verrouillé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2481,10 +2481,10 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Non utilisé.  
   
- [in] `dropEffect`  
+ [in] *dropEffect*  
  Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2499,7 +2499,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iHot`  
+ [in] *iHot*  
  Spécifie l’index du bouton de barre d’outils qui est sélectionné ; ou -1 si aucun bouton de barre d’outils n’est sélectionné.  
   
 ### <a name="remarks"></a>Notes  
@@ -2522,7 +2522,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
@@ -2559,7 +2559,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lVal`  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -2573,7 +2573,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointe vers un bouton, dont le texte est en cours.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2594,17 +2594,17 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointe vers un bouton de barre d’outils pour laquelle une info-bulle doit être affichée.  
   
- [out] `strTTText`  
+ [out] *strTTText*  
  Une référence à `CString` objet qui reçoit le texte de l’info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si `strTTText` a été rempli avec le texte d’info-bulle ; sinon `FALSE`.  
+ `TRUE` Si *strTTText* a été rempli avec le texte d’info-bulle ; sinon `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure appelle cette méthode lorsque l’info-bulle pour un bouton de barre d’outils est sur le point d’être affiché. Si `OnUserToolTip` retourne `TRUE`, l’infrastructure affiche une info-bulle qui contient le texte retourné par `OnUserToolTip` dans `strTTText`. Sinon, l’info-bulle contient le texte du bouton.  
+ L’infrastructure appelle cette méthode lorsque l’info-bulle pour un bouton de barre d’outils est sur le point d’être affiché. Si `OnUserToolTip` retourne `TRUE`, l’infrastructure affiche une info-bulle qui contient le texte retourné par `OnUserToolTip` dans *strTTText*. Sinon, l’info-bulle contient le texte du bouton.  
   
  Substituer `OnUserToolTip` pour personnaliser les info-bulles des boutons de barre d’outils. L’implémentation par défaut appelle [CMFCToolBar::OnUserToolTip](#onusertooltip) pour obtenir le texte d’info-bulle.  
   
@@ -2620,23 +2620,23 @@ virtual BOOL PrevMenu();
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
- Publications un `WM_COMMAND` message dans la fenêtre propriétaire de la barre d’outils.  
+ Publie un message WM_COMMAND à la fenêtre propriétaire de la barre d’outils.  
   
 ```  
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers un bouton de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode doit toujours renvoyer `TRUE`. MFC utilise `FALSE` valeurs en interne.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode publie un `WM_COMMAND` message dans la fenêtre propriétaire de la barre d’outils en appelant [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) et en passant l’ID de commande du bouton spécifié en tant que le `wParam` paramètre.  
+ Cette méthode publie un message WM_COMMAND à la fenêtre propriétaire de la barre d’outils en appelant [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) et en passant l’ID de commande du bouton spécifié en tant que le `wParam` paramètre.  
   
- Utilisez le [ON_COMMAND](message-map-macros-mfc.md#on_command) macro pour mapper le `WM_COMMAND` message à une fonction membre.  
+ Utilisez le [ON_COMMAND](message-map-macros-mfc.md#on_command) macro pour mapper le message WM_COMMAND à une fonction membre.  
   
 ##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
  Supprime tous les boutons et des séparateurs de la barre d’outils.  
@@ -2656,7 +2656,7 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Spécifie l’index de base zéro du bouton à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2678,13 +2678,13 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Spécifie la clé de Registre où se trouve les informations d’état.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  L’ID de contrôle de la barre d’outils.  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID de ressource de la barre d’outils. Si ce paramètre est -1, cette méthode utilise le [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) méthode pour récupérer l’ID de ressource.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2706,14 +2706,14 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  L’ID de commande du bouton à remplacer.  
   
- [in] `button`  
+ [in] *bouton*  
  Une référence à la `CMFCToolBarButton` à insérer.  
   
- [in] `bAll`  
- Valeur booléenne qui spécifie s’il faut remplacer tous les boutons qui ont l’ID de commande spécifié par `uiCmd`. Si ce paramètre est `TRUE`, tous les boutons qui ont l’ID de commande spécifiée sont remplacés. Sinon, le premier bouton est remplacé.  
+ [in] *boule*  
+ Valeur booléenne qui spécifie s’il faut remplacer tous les boutons qui ont l’ID de commande spécifié par *uiCmd*. Si ce paramètre est `TRUE`, tous les boutons qui ont l’ID de commande spécifiée sont remplacés. Sinon, le premier bouton est remplacé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de boutons qui sont remplacés. Cette méthode retourne 0 si un bouton avec l’ID de commande spécifié n’existe pas dans la barre d’outils.  
@@ -2788,7 +2788,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -2805,13 +2805,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Spécifie le chemin d’accès relatif de la clé de Registre Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  L’ID de contrôle de la barre d’outils.  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID de ressource de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2828,7 +2828,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Une référence à un `CList` objet qui contient une collection de commandes.  
   
 ### <a name="remarks"></a>Notes  
@@ -2850,22 +2850,22 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de base zéro du bouton dont les propriétés sont définies.  
   
- [in] `nID`  
+ [in] *nID*  
  L’ID de commande du bouton.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Le style du bouton. Consultez [les Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md) pour la liste des styles de bouton de barre d’outils disponibles.  
   
- [in] `iImage`  
+ [in] *iImage*  
  L’index d’image de base zéro du bouton (autrement dit, l’index dans la collection d’images de barre d’outils).  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir les propriétés d’un bouton de barre d’outils.  
   
- Dans les versions Debug, cette méthode génère un échec d’assertion si l’index spécifié par `nIndex` n’est pas valide.  
+ Dans les versions Debug, cette méthode génère un échec d’assertion si l’index spécifié par *nIndex* n’est pas valide.  
   
  Appelez le [CMFCToolBar::SetButtonStyle](#setbuttonstyle) pour définir uniquement le style du bouton.  
   
@@ -2880,13 +2880,13 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpIDArray`  
+ [in] *lpIDArray*  
  Pointeur vers le tableau d’ID de commande des boutons à insérer.  
   
- [in] `nIDCount`  
- Le nombre d’éléments dans `lpIDArray`.  
+ [in] *nIDCount*  
+ Le nombre d’éléments dans *lpIDArray*.  
   
- [in] `bRemapImages`  
+ [in] *bRemapImages*  
  Valeur booléenne qui spécifie s’il faut associer les images de boutons existant avec les boutons insérés. Si ce paramètre est `TRUE`, les images sont remappés.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2895,7 +2895,7 @@ virtual BOOL SetButtons(
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour supprimer des boutons existants à partir d’une barre d’outils et d’insérer une collection de nouveaux boutons.  
   
- Cette méthode ajoute la **personnaliser** bouton à la barre d’outils et les envoie le `AFX_WM_RESETTOOLBAR` message à la fenêtre parente de la barre d’outils. Pour plus d’informations sur la **personnaliser** bouton, consultez [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
+ Cette méthode ajoute la **personnaliser** bouton à la barre d’outils et les envoie le AFX_WM_RESETTOOLBAR un message à la fenêtre parente de la barre d’outils. Pour plus d’informations sur la **personnaliser** bouton, consultez [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
 ##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
  Définit le style du bouton de barre d’outils à l’index spécifié.  
@@ -2907,10 +2907,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de base zéro du bouton de barre d’outils dont le style doit être défini.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Le style du bouton. Consultez [les Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md) pour la liste des styles de bouton de barre d’outils disponibles.  
   
 ### <a name="remarks"></a>Notes  
@@ -2926,10 +2926,10 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  L’index du bouton de barre d’outils.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  L’étiquette de texte du bouton de barre d’outils. Doit être non - `NULL`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2948,14 +2948,14 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nStartCount`  
+ [in] *nStartCount*  
  Spécifie le nombre de fois que des commandes doit être exécuté avant que l’infrastructure affiche uniquement les commandes de base et récemment utilisés.  
   
- [in] `nMinUsagePercentage`  
+ [in] *nMinUsagePercentage*  
  Le pourcentage de fois où une commande doit être exécutée pour être considérée comme une commande récemment utilisés.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `FALSE` Si `nMinUsagePercentage` est égal à ou supérieur à 100 ; sinon `TRUE`.  
+ `FALSE` Si *nMinUsagePercentage* est égal à ou supérieur à 100 ; sinon `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour personnaliser l’algorithme apparaissant dans le framework utilise pour déterminer les éléments de menu comment simples et récemment utilisés. Pour plus d’informations sur les commandes de base, consultez [CMFCToolBar::AddBasicCommand](#addbasiccommand).  
@@ -2970,7 +2970,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  Valeur booléenne qui spécifie s’il faut activer ou désactiver le mode de personnalisation. Définissez ce paramètre sur `TRUE` pour activer le mode de personnalisation ou `FALSE` pour la désactiver.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2987,7 +2987,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  Valeur booléenne qui spécifie comment afficher des boutons non disponible. Si ce paramètre est `TRUE`, le framework estompe les boutons. Sinon, le framework utilise la collection d’images indisponible de bouton.  
   
 ### <a name="remarks"></a>Notes  
@@ -3001,7 +3001,7 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `cyHeight`  
+ [in] *cyHeight*  
  La hauteur de la barre d’outils, en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -3015,7 +3015,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bOn`  
+ [in] *bOn*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -3027,7 +3027,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -3041,7 +3041,7 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShowHotBorder`  
+ [in] *bShowHotBorder*  
  Valeur booléenne qui spécifie s’il faut suivre les boutons de barre d’outils. Si ce paramètre est `TRUE`, les barre d’outils à chaud-pistes ses boutons. Dans le cas contraire, la barre d’outils ne pas suivre ses boutons.  
   
 ### <a name="remarks"></a>Notes  
@@ -3057,7 +3057,7 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clrText`  
+ [in] *clrText*  
  Spécifie la couleur du texte pour les boutons de barre d’outils qui sont suivis attentivement.  
   
 ### <a name="remarks"></a>Notes  
@@ -3071,7 +3071,7 @@ void SetIgnoreSetText(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bValue`  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -3083,7 +3083,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bLargeIcons`  
+ [in] *bLargeIcons*  
  Valeur booléenne qui spécifie les icônes à utiliser. Si ce paramètre est `TRUE`, le framework affiche de grandes icônes. Dans le cas contraire, l’infrastructure affiche des icônes régulières.  
   
 ### <a name="remarks"></a>Notes  
@@ -3104,13 +3104,13 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `sizeButton`  
+ [in] *sizeButton*  
  Spécifie la taille des boutons de barre d’outils verrouillées.  
   
- [in] `sizeImage`  
+ [in] *sizeImage*  
  Spécifie la taille des images de barre d’outils verrouillées.  
   
- `bDontScale`  
+ *bDontScale*  
  Spécifie si à l’échelle ou non verrouillée des images de barre d’outils en mode PPP élevé.  
   
 ### <a name="remarks"></a>Notes  
@@ -3126,7 +3126,7 @@ void SetMaskMode(BOOL bMasked);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bMasked`  
+ [in] *bMasked*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -3140,10 +3140,10 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `sizeButton`  
+ [in] *sizeButton*  
  Spécifie la taille des boutons de barre d’outils, en pixels.  
   
- [in] `sizeImage`  
+ [in] *sizeImage*  
  Spécifie la taille des images de barre d’outils, en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -3161,7 +3161,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Une référence à un `CList` objet qui contient les commandes qui ne peut pas être exécutées par l’utilisateur.  
   
 ### <a name="remarks"></a>Notes  
@@ -3191,7 +3191,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lstOrigButtons`  
+ [in] *lstOrigButtons*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -3203,7 +3203,7 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bPermament`  
+ [in] *bPermament*  
  Valeur booléenne qui spécifie si un utilisateur peut fermer la barre d’outils. Si ce paramètre est `TRUE`, un utilisateur ne peut pas fermer la barre d’outils. Sinon, un utilisateur peut fermer la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
@@ -3219,7 +3219,7 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bValue`  
+ [in] *bValue*  
  Si ce paramètre est `TRUE`, le frame parent envoie des commandes à la barre d’outils. Sinon, le propriétaire envoie des commandes à la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
@@ -3233,7 +3233,7 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bValue`  
+ [in] *bValue*  
  Si ce paramètre est `TRUE`, l’infrastructure affiche des info-bulles. Sinon, le framework masque les info-bulles.  
   
 ### <a name="remarks"></a>Notes  
@@ -3249,7 +3249,7 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBrotherToolbar`  
+ [in] *pBrotherToolbar*  
  Pointeur vers la barre d’outils frères.  
   
 ### <a name="remarks"></a>Notes  
@@ -3269,10 +3269,10 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `sizeButton`  
+ [in] *sizeButton*  
  La taille des boutons de barre d’outils, en pixels.  
   
- [in] `sizeImage`  
+ [in] *sizeImage*  
  La taille des images de bouton de barre d’outils, en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -3292,22 +3292,22 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nBtnIndex`  
+ [in] *nBtnIndex*  
  Index de base zéro du bouton de barre d’outils dans la liste des boutons de barre d’outils.  
   
- [in] `szText`  
+ [in] *szText*  
  Spécifie l’étiquette de texte du bouton de barre d’outils.  
   
- [in] `bShowText`  
+ [in] *bShowText*  
  Si ce paramètre est `TRUE`, l’infrastructure affiche l’étiquette de texte. Sinon, le framework masque l’étiquette de texte.  
   
- [in] `bShowImage`  
+ [in] *bShowImage*  
  Si ce paramètre est `TRUE`, l’infrastructure affiche l’image de bouton de barre d’outils. Sinon, le framework masque l’image de bouton de barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, l’infrastructure affiche les images des boutons de barre d’outils, mais n’affiche pas de l’étiquette de texte des boutons de barre d’outils.  
   
- Dans les versions Debug, cette méthode génère un échec d’assertion si `nBtnIndex` ne fait pas référence à une barre d’outils valide bouton ou le bouton de barre d’outils est un séparateur.  
+ Dans les versions Debug, cette méthode génère un échec d’assertion si *nBtnIndex* ne fait pas référence à une barre d’outils valide bouton ou le bouton de barre d’outils est un séparateur.  
   
 ##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling  
  Positionne la barre d’outils et son frère sur des lignes distinctes.  
@@ -3331,14 +3331,14 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pUserImages`  
+ [in] *pUserImages*  
  Pointeur vers la collection d’images de défini par l’utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode réussit ; Sinon, 0 si le texte spécifié `CMFCToolBarImages` objet n’est pas valide ou a une taille d’image qui diffère de la taille de l’image par défaut de la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
- Le framework utilise des images de défini par l’utilisateur pour dessiner des boutons de barre d’outils qui sont personnalisés par l’utilisateur. La liste d’images spécifiée par `pUserImages` est partagé entre les barres d’outils dans l’application.  
+ Le framework utilise des images de défini par l’utilisateur pour dessiner des boutons de barre d’outils qui sont personnalisés par l’utilisateur. La liste d’images spécifiée par *pUserImages* est partagé entre les barres d’outils dans l’application.  
   
  Cette méthode génère un échec d’assertion dans les versions Debug si spécifié `CMFCToolBarImages` objet n’est pas valide ou a une taille d’image qui diffère de la taille de l’image par défaut de la barre d’outils.  
   
@@ -3356,10 +3356,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nLength`  
+ [in] *nLength*  
  Quantité, en pixels, à utiliser étendre le volet.  
   
- [in] `bVert`  
+ [in] *bVert*  
  Si `TRUE`, agrandit le volet verticalement. Si `FALSE`, s’étend horizontalement sur le volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -3378,7 +3378,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nChar`  
+ [in] *nChar*  
  Spécifie un code de touche virtuelle. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -3395,7 +3395,7 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index de base zéro du bouton Mettre à jour.  
   
 ### <a name="remarks"></a>Notes  
@@ -3413,19 +3413,19 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nWidth`  
+ [in] *nWidth*  
  Largeur maximale de la barre d’outils.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Hauteur maximale de la barre d’outils. Pas utilisé si la barre d’outils est flottant.  
   
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique. Si NULL, le contexte de périphérique pour la barre d’outils est utilisé.  
   
- [in] `nColumnWidth`  
+ [in] *nColumnWidth*  
  Largeur du bouton. Si la valeur-1, la largeur actuelle est utilisée.  
   
- [in] m `nRowHeight`  
+ [in] m *nRowHeight*  
  Hauteur du bouton. Si la valeur-1, la hauteur actuelle est utilisée.  
   
 ### <a name="return-value"></a>Valeur de retour  

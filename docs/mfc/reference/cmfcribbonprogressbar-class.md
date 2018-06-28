@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369334"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040218"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe de CMFCRibbonProgressBar
 Implémente un contrôle qui affiche l'avancement d'une opération de longue durée.  
@@ -89,7 +89,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
   
  [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonProgressBar.h  
   
 ##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  Spécifie l’ID de commande de la barre de progression du ruban.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Spécifie la largeur, en pixels, de la barre de progression du ruban.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Spécifie la hauteur, en pixels, de la barre de progression du ruban.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Pour spécifier que la barre de progression est en mode infini ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nPos`  
+ [in] *nPos*  
  Spécifie la position à laquelle la barre de progression est définie.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Spécifie si la barre de progression doit être redessinée.  
   
 ### <a name="remarks"></a>Notes  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nMin`  
+ [in] *nMin*  
  Spécifie la valeur minimale de la plage.  
   
- [in] `nMax`  
+ [in] *nombre maximal*  
  Spécifie la valeur maximale de la plage.  
   
 ### <a name="remarks"></a>Notes  

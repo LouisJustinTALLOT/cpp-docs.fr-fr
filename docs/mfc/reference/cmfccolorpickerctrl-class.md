@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374813"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042041"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe de CMFCColorPickerCtrl
 La `CMFCColorPickerCtrl` classe fournit une fonctionnalité pour un contrôle qui est utilisé pour sélectionner des couleurs.  
@@ -134,7 +134,7 @@ class CMFCColorPickerCtrl : public CButton
   
  [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcolorpickerctrl.h  
   
 ##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl  
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Spécifie une zone rectangulaire autour de la couleur sélectionnée.  
   
 ### <a name="remarks"></a>Notes  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `hue`  
+ [out] *teinte*  
  Pointeur vers une variable de type double qui reçoit des informations de la teinte.  
   
- [out] `luminance`  
+ [out] *luminance*  
  Pointeur vers une variable de type double qui reçoit des informations de luminance.  
   
- [out] `saturation`  
+ [out] *saturation*  
  Pointeur vers une variable de type double qui reçoit des informations de saturation.  
   
 ### <a name="remarks"></a>Notes  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `R`  
+ [in] *R*  
  Le composant de couleur rouge.  
   
- [in] `G`  
+ [in] *G*  
  Le composant de couleur verte.  
   
- [in] `B`  
+ [in] *B*  
  Le composant bleu.  
   
- [in] `x`  
+ [in] *x*  
  Coordonnée x du curseur, qui pointe vers un hexagone de cellule.  
   
- [in] `y`  
+ [in] *y*  
  Coordonnée y du curseur, qui pointe vers un hexagone de cellule.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `Color`  
+ [in] *Couleur*  
  Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hue`  
+ [in] *teinte*  
  Une valeur de teinte.  
   
- [in] `luminance`  
+ [in] *luminance*  
  Une valeur de luminance.  
   
- [in] `saturation`  
+ [in] *saturation*  
  Une valeur de saturation.  
   
- [in] `bInvalidate`  
+ [in] *bInvalidate*  
  `TRUE` Pour forcer la fenêtre à mettre à jour immédiatement la nouvelle couleur ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `Hue`  
+ [in] *Teinte*  
  Une valeur de teinte.  
   
 ### <a name="remarks"></a>Notes  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `Luminance`  
+ [in] *Luminance*  
  Une valeur de luminance.  
   
 ### <a name="remarks"></a>Notes  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `w`  
+ [in] *w*  
  La largeur de la barre de luminance en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour redimensionner la barre de luminance, qui se trouve sur le **personnalisé** onglet de contrôle de sélecteur de couleurs. Le `w` paramètre spécifie la nouvelle largeur de la barre de luminance. La valeur de la largeur est ignorée si elle dépasse trois quarts de la largeur de la zone cliente.  
+ Utilisez cette méthode pour redimensionner la barre de luminance, qui se trouve sur le **personnalisé** onglet de contrôle de sélecteur de couleurs. Le *w* paramètre spécifie la nouvelle largeur de la barre de luminance. La valeur de la largeur est ignorée si elle dépasse trois quarts de la largeur de la zone cliente.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Définit la couleur sélectionnée initiale.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ref`  
+ [in] *ref*  
  Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pPalette`  
+ [in] *pPalette*  
  Pointeur vers une palette de couleurs.  
   
 ### <a name="remarks"></a>Notes  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `Saturation`  
+ [in] *Saturation*  
  Une valeur de saturation.  
   
 ### <a name="remarks"></a>Notes  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `colorType`  
+ [in] *colorType*  
  Un type de contrôle de sélecteur de couleurs.  
   
  Les types sont définis par le `CMFCColorPickerCtrl::COLORTYPE` énumération. Les types possibles sont `LUMINANCE`, `PICKER`, `HEX` et `HEX_GREYSCALE`. Le type par défaut est `PICKER`.  

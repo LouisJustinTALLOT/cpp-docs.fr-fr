@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367667"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041011"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe de CMenuTearOffManager
 Gère les menus détachables. Un menu détachable est un menu de la barre de menus. L'utilisateur peut supprimer un menu détachable de la barre de menus, provoquant ainsi son flottement.  
@@ -86,7 +86,7 @@ class CMenuTearOffManager : public CObject
   
  `CMenuTearOffManager`   
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmenutearoffmanager.h  
   
 ##  <a name="build"></a>  CMenuTearOffManager::Build  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [in] *uiTearOffBarID*  
+ [in] *%{strText/}*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Chaîne qui contient le chemin d’accès d’une entrée de Registre. Vos applications stocke les paramètres pour les barres de détachable dans cette entrée de Registre.  
   
- [in] `uiTearOffMenuFirst`  
+ [in] *uiTearOffMenuFirst*  
  Le premier ID de menu pour un menu détachable.  
   
- [in] `uiTearOffMenuLast`  
+ [in] *uiTearOffMenuLast*  
  Le dernier ID de menu pour un menu détachable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- La plage d’ID de menu à partir de `uiTearOffMenuFirst` à `uiTearOffMenuLast` doit être un intervalle continu. L’intervalle définit le nombre de menus détachables qui peuvent s’afficher en même temps dans l’application.  
+ La plage d’ID de menu à partir de *uiTearOffMenuFirst* à *uiTearOffMenuLast* doit être un intervalle continu. L’intervalle définit le nombre de menus détachables qui peuvent s’afficher en même temps dans l’application.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `str`  
+ [in] *str*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hmenu`  
+ [in] *hmenu*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [in] *uiCmdId*  
+ [in] *bUtiliser*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hMenu`  
+ [in] *hMenu*  
   
 ### <a name="remarks"></a>Notes  
   

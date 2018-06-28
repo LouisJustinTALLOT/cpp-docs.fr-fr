@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368005"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040673"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Classe de CMFCRibbonCustomizePropertyPage
 Implémente une page personnalisée pour le **personnaliser** boîte de dialogue dans les applications basées sur le ruban.  
@@ -81,7 +81,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribboncustomizedialog.h  
   
 ##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `lpszName`|Spécifie le nom de la catégorie personnalisée.|  
-|[in] `lstIDS`|Contient l’ID de commandes du ruban à afficher dans la catégorie personnalisée.|  
+|[in] *le caractère*|Spécifie le nom de la catégorie personnalisée.|  
+|[in] *lstIDS*|Contient l’ID de commandes du ruban à afficher dans la catégorie personnalisée.|  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode ajoute une catégorie nommée `lpszName` à la **commandes** zone de liste déroulante. Lorsque l’utilisateur sélectionne la catégorie, les commandes spécifiées dans `lstIDS` s’affichent dans la liste de commandes.  
+ Cette méthode ajoute une catégorie nommée *le caractère* à la **commandes** zone de liste déroulante. Lorsque l’utilisateur sélectionne la catégorie, les commandes spécifiées dans *lstIDS* s’affichent dans la liste de commandes.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Construit un objet `CMFCRibbonCustomizePropertyPage`.  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Un pointeur vers un contrôle de ruban pour lequel les options de personnalisation.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bcac3c7ce4658ec7dafeaa1cac45b5f2450298
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370732"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040192"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo, structure
 Le `CODBCFieldInfo` structure contient des informations sur les champs dans une source de données ODBC.  
@@ -41,7 +41,7 @@ struct CODBCFieldInfo
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `m_strName`  
+ *m_strName*  
  Nom du champ.  
   
  *m_nSQLType*  
@@ -59,7 +59,7 @@ struct CODBCFieldInfo
 ## <a name="remarks"></a>Notes  
  Pour récupérer ces informations, appelez [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb.h  
   
 ## <a name="see-also"></a>Voir aussi  

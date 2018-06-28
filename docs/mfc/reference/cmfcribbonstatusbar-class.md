@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374663"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038101"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe de CMFCRibbonStatusBar
 La `CMFCRibbonStatusBar` classe implémente un contrôle de barre d’état qui peut afficher les éléments de ruban.  
@@ -138,7 +138,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
  [CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonstatusbar.h  
   
 ##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement  
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElement`  
+ [in] *pElement*  
  Pointeur vers un élément dynamique.  
   
 ### <a name="remarks"></a>Notes  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElement`  
+ [in] *pElement*  
  Pointeur vers l’élément ajouté.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Une étiquette de texte de l’élément.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Si vous souhaitez ajouter l’élément comme visible, `FALSE` si vous souhaitez ajouter l’élément est masqué.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElement`  
+ [in] *pElement*  
  Pointeur vers l’élément ajouté.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  L’étiquette de texte de l’élément.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Si vous souhaitez ajouter l’élément comme visible, `FALSE` si vous souhaitez ajouter l’élément est masqué.  
   
 ### <a name="remarks"></a>Notes  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Combinaison OR logique de styles de contrôle.  
   
- [in] `nID`  
+ [in] *nID*  
  L’ID de contrôle de la barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Combinaison OR logique des styles supplémentaires pour la création de l’objet de barre d’état.  
   
- `dwStyle`  
+ *dwStyle*  
  Le style du contrôle de la barre d’état.  
   
- `nID`  
+ *nID*  
  L’ID de contrôle de la barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
- [in] `BOOL`  
+ [in] *uiCmdID*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
  L’ID de l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie un index de base zéro d’un élément qui se trouve dans la zone principale du contrôle de barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l'index de base zéro d'un élément qui se trouve dans la zone étendue du contrôle de barre d'état.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l'élément situé à l'index spécifié dans la zone étendue de la barre d'état du ruban. `NULL` si `nIndex` est négatif ou supérieur au nombre d'éléments dans la zone étendue de la barre d'état du ruban.  
+ Pointeur vers l'élément situé à l'index spécifié dans la zone étendue de la barre d'état du ruban. `NULL` Si *nIndex* est un nombre négatif ou est supérieur au nombre d’éléments dans la zone étendue de la barre d’état du ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElement`  
+ [in] *pElement*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `strInfo`  
+ [in] *strInfo*  
  La chaîne d’informations.  
   
- [in] `rectInfo`  
+ [in] *rectInfo*  
  Rectangle englobant.  
   
 ### <a name="remarks"></a>Notes  
- Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser l’apparence de la chaîne d’informations sur la barre d’état. Utilisez le [CMFCRibbonStatusBar::SetInformation](#setinformation) méthode permettant de placer la barre d’état dans le mode d’informations. Dans ce mode, la barre d’état masque tous les volets et affiche la chaîne d’informations spécifiée par `strInfo`.  
+ Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser l’apparence de la chaîne d’informations sur la barre d’état. Utilisez le [CMFCRibbonStatusBar::SetInformation](#setinformation) méthode permettant de placer la barre d’état dans le mode d’informations. Dans ce mode, la barre d’état masque tous les volets et affiche la chaîne d’informations spécifiée par *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
  L’ID de l’élément à supprimer de la barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si un élément avec l’objet `uiID` est supprimé. Sinon, `FALSE`.  
+ `TRUE` Si un élément avec l’objet *uiID* est supprimé. Sinon, `FALSE`.  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Active ou désactive le mode d’informations pour la barre d’état du ruban.  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszInfo`  
+ [in] *lpszInfo*  
  La chaîne d’informations.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour placer la barre d’état dans le mode d’informations. Dans ce mode, la barre d’état masque tous les volets et affiche la chaîne d’informations spécifiée par `lpszInfo`.  
+ Utilisez cette méthode pour placer la barre d’état dans le mode d’informations. Dans ce mode, la barre d’état masque tous les volets et affiche la chaîne d’informations spécifiée par *lpszInfo*.  
   
  Lorsque lpszInfo est `NULL`, la barre d’état revienne au mode normal.  
   

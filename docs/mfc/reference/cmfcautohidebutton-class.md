@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375309"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038297"
 ---
 # <a name="cmfcautohidebutton-class"></a>Cmfcautohidebutton, classe
 Bouton qui affiche ou masque une [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurée pour être masquée.  
@@ -121,7 +121,7 @@ class CMFCAutoHideButton : public CObject
   
  `CMFCAutoHideButton`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxautohidebutton.h  
   
 ##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentBar`  
+ [in] *pParentBar*  
  Pointeur vers la barre d’outils parente.  
   
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Un pointeur vers un [CDockablePane](../../mfc/reference/cdockablepane-class.md) objet. Ce bouton Masquer automatiquement masque et montre que `CDockablePane`.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Une valeur qui spécifie l’alignement du bouton avec la fenêtre frame principale.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Notes  
  Lorsque vous créez un `CMFCAutoHideButton` de l’objet, vous devez associer le bouton Masquer automatiquement un spécifique `CDockablePane`. L’utilisateur peut utiliser le bouton Masquer automatiquement pour masquer et afficher les informations associé `CDockablePane`.  
   
- Le paramètre `dwAlignment` indique l’emplacement du bouton Masquer automatiquement dans l’application. Le paramètre peut avoir l’une des valeurs suivantes :  
+ Le *dwAlignment* paramètre indique où le bouton Masquer automatiquement réside dans l’application. Le paramètre peut avoir l’une des valeurs suivantes :  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  Le rectangle englobant du bouton Masquer automatiquement.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  L’épaisseur de la bordure de chaque côté du bouton Masquer automatiquement.  
   
 ### <a name="remarks"></a>Notes  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant du bouton Masquer automatiquement.  
   
 ### <a name="remarks"></a>Notes  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShow`  
+ [in] *bShow*  
  Valeur booléenne qui spécifie si cette méthode affiche le fichier joint `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bShow`  
+ [in] *bShow*  
  Valeur booléenne qui spécifie s’il faut afficher le bouton Masquer automatiquement.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pNewBar`  
+ [in] *pNewBar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pFirstBarInGroup`  
+ [in] *pFirstBarInGroup*  
  Pointeur vers la première barre du groupe.  
   
 ### <a name="remarks"></a>Notes  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bHighlight`  
+ *bHighlight*  
  Spécifie l’état du bouton de masquer nouvelle. `TRUE` Indique le bouton est mis en surbrillance, `FALSE` indique le bouton n’est pas mis en surbrillance.  
   
 ### <a name="remarks"></a>Notes  

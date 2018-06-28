@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239422"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039153"
 ---
 # <a name="cmap-class"></a>CMap (classe)
 Classe de collection de dictionnaires qui mappe des clés uniques à des valeurs.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `KEY`  
+ *KEY*  
  Classe de l’objet utilisé comme clé pour la carte.  
   
- `ARG_KEY`  
- Type de données utilisé pour `KEY` arguments ; généralement une référence à `KEY`.  
+ *ARG_KEY*  
+ Type de données utilisé pour *clé* arguments ; généralement une référence à *clé*.  
   
- `VALUE`  
+ *VALEUR*  
  Classe de l’objet stocké dans le mappage.  
   
- `ARG_VALUE`  
- Type de données utilisé pour `VALUE` arguments ; généralement une référence à `VALUE`.  
+ *ARG_VALUE*  
+ Type de données utilisé pour *valeur* arguments ; généralement une référence à *valeur*.  
   
 ## <a name="members"></a>Membres  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBlockSize`  
+ *nBlockSize*  
  Spécifie la granularité d’allocation de mémoire pour l’extension de la carte.  
   
 ### <a name="remarks"></a>Notes  
- À mesure que la carte augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
+ À mesure que la carte augmente, la mémoire est allouée en unités de *nBlockSize* entrées.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rNextPosition`  
+ *rNextPosition*  
  Spécifie une référence à un **POSITION** valeur retournée par une précédente `GetNextAssoc` ou `GetStartPosition` appeler.  
   
  *KEY*  
  Paramètre de modèle qui spécifie le type de clé de la carte.  
   
- `rKey`  
+ *rKey*  
  Spécifie la clé retournée de l’élément récupéré.  
   
  *VALEUR*  
  Paramètre de modèle qui spécifie le type de valeur de la carte.  
   
- `rValue`  
+ *rValue*  
  Spécifie la valeur retournée de l’élément récupéré.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction est particulièrement utile pour l’itération au sein de tous les éléments dans le mappage. Notez que la séquence de position n’est pas nécessairement identique à la séquence de la valeur de clé.  
   
- Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de `rNextPosition` a la valeur **NULL**.  
+ Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de *rNextPosition* a la valeur **NULL**.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CMap::SetAt](#setat).  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hashSize`  
+ *hashSize*  
  Nombre d’entrées dans la table de hachage.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Si **TRUE**, alloue de la table de hachage lors de l’initialisation ; sinon, la table est allouée lorsque nécessaire.  
   
 ### <a name="remarks"></a>Notes  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_KEY`  
- Paramètre de modèle qui spécifie le type de la `key` valeur.  
+ *ARG_KEY*  
+ Paramètre de modèle qui spécifie le type de la *clé* valeur.  
   
- `key`  
+ *key*  
  Spécifie la clé qui identifie l’élément à rechercher.  
   
  *VALEUR*  
  Spécifie le type de la valeur à rechercher.  
   
- `rValue`  
+ *rValue*  
  Reçoit la valeur recherchée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *VALEUR*  
  Paramètre de modèle qui spécifie le type de la valeur de la carte.  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  Paramètre de modèle qui spécifie le type de la valeur de clé.  
   
- `key`  
+ *key*  
  La clé utilisée pour récupérer la valeur de la carte.  
   
 ### <a name="remarks"></a>Notes  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- Récupère l’élément de mappage vers lequel pointé `pAssocRec`.  
+ Récupère l’élément de mappage vers lequel pointé *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `key`  
+ *key*  
  Clé de l’élément à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_KEY`  
+ *ARG_KEY*  
  Paramètre de modèle qui spécifie le type de la clé.  
   
- `key`  
+ *key*  
  Clé de l’élément à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_KEY`  
- Paramètre de modèle qui spécifie le type de le `key` paramètre.  
+ *ARG_KEY*  
+ Paramètre de modèle qui spécifie le type de la *clé* paramètre.  
   
- `key`  
+ *key*  
  Spécifie la clé du nouvel élément.  
   
- `ARG_VALUE`  
- Paramètre de modèle qui spécifie le type de le `newValue` paramètre.  
+ *ARG_VALUE*  
+ Paramètre de modèle qui spécifie le type de la *newValue* paramètre.  
   
- `newValue`  
+ *nouvelle valeur*  
  Spécifie la valeur du nouvel élément.  
   
 ### <a name="remarks"></a>Notes  

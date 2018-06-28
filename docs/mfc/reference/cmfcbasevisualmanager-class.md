@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369149"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040725"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe de CMFCBaseVisualManager
 Une couche entre dérivée gestionnaires visuels et de l’API de thème Windows.  
@@ -100,7 +100,7 @@ class CMFCBaseVisualManager: public CObject
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxvisualmanager.h  
   
 ##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Un pointeur vers un contexte de périphérique  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant de la case à cocher.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Spécifie si la case à cocher est mis en surbrillance.  
   
- [in] `nState`  
+ [in] *nState*  
  0 pour est désactivé, 1 pour activé normal,  
   
  2 pour mixte normal.  
   
- [in] `bEnabled`  
+ [in] *case d’option bActivé*  
  Spécifie si la case à cocher est activée.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Spécifie si la case à cocher est activée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Les valeurs de `nState` correspondent aux styles de case à cocher suivante.  
+ Les valeurs de *nState* correspondent aux styles de case à cocher suivante.  
   
 |nState|Style de la case à cocher|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectangle englobant de la bordure de zone de liste déroulante.  
   
- [in] `bDisabled`  
+ [in] *bDésactiver*  
  Spécifie si la bordure de zone de liste déroulante est désactivée.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Spécifie si la bordure de zone de liste déroulante est déroulée.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Spécifie si la bordure de zone de liste déroulante est mis en surbrillance.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `pDC`|Pointeur vers un contexte de périphérique.|  
-|[in] `rect`|Le rectangle englobant du bouton de liste déroulante de zone de liste déroulante.|  
-|[in] `bDisabled`|Spécifie si le bouton de liste déroulante de zone de liste déroulante est désactivé.|  
-|[in] `bIsDropped`|Spécifie si le bouton de liste déroulante de zone de liste déroulante est déroulé.|  
-|[in] `bIsHighlighted`|Spécifie si le bouton de liste déroulante de zone de liste déroulante est mis en surbrillance.|  
+|[in] *contrôleur de domaine principal*|Pointeur vers un contexte de périphérique.|  
+|[in] *rect*|Le rectangle englobant du bouton de liste déroulante de zone de liste déroulante.|  
+|[in] *bDésactiver*|Spécifie si le bouton de liste déroulante de zone de liste déroulante est désactivé.|  
+|[in] *bIsDropped*|Spécifie si le bouton de liste déroulante de zone de liste déroulante est déroulé.|  
+|[in] *bIsHighlighted*|Spécifie si le bouton de liste déroulante de zone de liste déroulante est mis en surbrillance.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si le thème API est activée ; dans le cas contraire `FALSE`.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant du bouton push.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un pointeur vers le [CMFCButton classe](../../mfc/reference/cmfcbutton-class.md) objet à dessiner.  
   
- [in] `uiState`  
- Ignoré. L’état est extraite de `pButton`.  
+ [in] *uiState*  
+ Ignoré. L’état est extraite *pButton*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si le thème API est activée ; dans le cas contraire `FALSE`.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant de la case d’option.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Spécifie si la case d’option est mis en surbrillance.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  Spécifie si la case d’option est activée.  
   
- [in] `bEnabled`  
+ [in] *case d’option bActivé*  
  Spécifie si la case d’option est activée.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Spécifie si la case d’option est activée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  Pointeur vers la barre d’état. Cette valeur est ignorée.  
   
- [in] `rectProgress`  
- Le rectangle englobant de la barre de progression dans `pDC` coordonnées.  
+ [in] *rectProgress*  
+ Le rectangle englobant de la barre de progression dans *pDC* coordonnées.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  La valeur de l’avancement total.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  La valeur de progression actuel.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  La couleur de début. `CMFCBaseVisualManager` il ignore. Les classes dérivées peuvent utiliser pour les dégradés de couleur.  
   
- [in] `clrProgressBarDest`  
+ [in] *clrProgressBarDest*  
  Couleur de fin. `CMFCBaseVisualManager` il ignore. Les classes dérivées peuvent utiliser pour les dégradés de couleur.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Couleur du texte de progression. `CMFCBaseVisualManager` il ignore. La couleur du texte est définie par `afxGlobalData.clrBtnText`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Spécifie s’il faut afficher le texte de progression.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Pointeur vers un volet dont en arrière-plan doit être dessiné.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Le rectangle englobant de la zone à remplir.  
   
 ### <a name="return-value"></a>Valeur de retour  

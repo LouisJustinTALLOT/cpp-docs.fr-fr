@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371671"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041748"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe de CMFCRibbonMiniToolBar
 Implémente une barre d'outils contextuelle.  
@@ -85,7 +85,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
  [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonMiniToolBar.h  
   
 ##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  La barre du ruban qui consiste à rechercher la mini-barre d’outils pour les boutons à afficher.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  La liste des commandes à afficher sur la mini-barre d’outils. Toutes les catégories de ruban sont explorés pour rechercher les boutons associés.  
   
 ### <a name="remarks"></a>Notes  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `x`  
+ [in] *x*  
  Spécifie la position horizontale de la mini-barre d’outils en coordonnées d’écran.  
   
- [in] `y`  
+ [in] *y*  
  Spécifie la position verticale de la mini-barre d’outils en coordonnées d’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `x`  
+ [in] *x*  
  Spécifie la position horizontale du menu contextuel en coordonnées d’écran.  
   
- [in] `y`  
+ [in] *y*  
  Spécifie la position verticale du menu contextuel en coordonnées d’écran.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Spécifie l’ID de ressource du menu contextuel à afficher.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Identifie la fenêtre qui reçoit des messages dans le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378380"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038580"
 ---
 # <a name="cminiframewnd-class"></a>Classe de CMiniFrameWnd
 Représente une fenêtre frame de demi-hauteur généralement visible autour de barres d'outils flottantes.  
@@ -71,7 +71,7 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpClassName`  
+ *lpClassName*  
  Pointe vers une chaîne de caractères terminée par null que les noms de la classe Windows. Le nom de classe peut être n’importe quel nom inscrit avec global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) (fonction). Si **NULL**, la classe de fenêtre sera inscrit pour vous par l’infrastructure. MFC fournit la classe par défaut, les styles et les attributs suivants :  
   
 -   Jeux de bit de style **CS_DBLCLKS**, qui envoie des messages à la procédure de fenêtre de double quand l’utilisateur double-clique sur la souris.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Définit la fenêtre à la taille par défaut et la position, comme indiqué par Windows.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Pointe vers une chaîne de caractères terminée par null qui contient le nom de la fenêtre.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie les attributs de style de fenêtre. Celles-ci peuvent inclure des styles de fenêtre standard et un ou plusieurs des styles spéciaux suivants :  
   
 - **MFS_MOVEFRAME** permet la fenêtre mini-frame doit être déplacé en cliquant sur le bord de la fenêtre, pas seulement la légende.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  Consultez [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pour obtenir une description des valeurs de style de fenêtre possible. La combinaison classique utilisée pour les fenêtres mini-frame est **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
- `rect`  
+ *Rect*  
  A `RECT` structure qui spécifie les dimensions souhaitées de la fenêtre.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers la fenêtre parente. Utilisez **NULL** pour les fenêtres de niveau supérieur.  
   
- `nID`  
+ *nID*  
  Si la fenêtre mini-frame est créée comme une fenêtre enfant, il s’agit de l’identificateur du contrôle enfant ; Sinon, 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwExStyle`  
+ *dwExStyle*  
  Spécifie le style étendu de la `CMiniFrameWnd` en cours de création. Appliquer de la [les styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) à la fenêtre.  
   
- `lpClassName`  
+ *lpClassName*  
  Pointe vers une chaîne de caractères terminée par null que les noms de la classe Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure). Le nom de classe peut être n’importe quel nom inscrit avec global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction ou les noms de classe de contrôle prédéfini. Il ne doit pas être **NULL**.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Pointe vers une chaîne de caractères terminée par null qui contient le nom de la fenêtre.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie les attributs de style de fenêtre. Consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pour obtenir une description des valeurs possibles.  
   
- `rect`  
- La taille et la position de la fenêtre, en coordonnées clientes de `pParentWnd`.  
+ *Rect*  
+ La taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parent.  
   
- `nID`  
+ *nID*  
  Identificateur de la fenêtre enfant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  Substituer davantage **sur *** Message* gestionnaires pour ajouter d’autres fonctionnalités à votre classe dérivée de messages.  
   
- Si le **WS_VISIBLE** style est fourni, Windows envoie à la fenêtre de tous les messages qui sont requises pour activer et afficher la fenêtre. Si le style de fenêtre spécifie une barre de titre, le titre de la fenêtre vers laquelle pointe le `lpszWindowName` paramètre est affiché dans la barre de titre.  
+ Si le **WS_VISIBLE** style est fourni, Windows envoie à la fenêtre de tous les messages qui sont requises pour activer et afficher la fenêtre. Si le style de fenêtre spécifie une barre de titre, le titre de la fenêtre vers laquelle pointe le *lpszWindowName* paramètre est affiché dans la barre de titre.  
   
- Le `dwStyle` paramètre peut être n’importe quelle combinaison de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ Le *dwStyle* paramètre peut être n’importe quelle combinaison de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  Les fenêtres de boîte à outils de Palette style ancien ne sont plus prises en charge. Le style ancien, qui n’avait pas d’un bouton de fermeture « X », a été pris en charge lors de l’exécution d’une application MFC dans les versions précédentes de Windows, mais n’est plus pris en charge dans Visual C++ .NET. La nouvelle `WS_EX_TOOLWINDOW` style est désormais prise en charge ; pour obtenir une description de ce style, consultez [Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   

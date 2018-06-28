@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372374"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037302"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe de CMFCColorPopupMenu
 Représente un menu contextuel qui utilisent des utilisateurs à sélectionner des couleurs dans un document ou une application.  
@@ -88,7 +88,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
  [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcolorpopupmenu.h  
   
 ##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu  
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `colors`  
+ [in] *couleurs*  
  Un tableau de couleurs affichée par l’infrastructure dans le menu contextuel.  
   
- [in] `color`  
+ [in] *couleur*  
  La couleur sélectionnée par défaut.  
   
- [in] `lpszAutoColor`  
+ [in] *lpszAutoColor*  
  L’étiquette de texte de la *automatique* bouton de couleur (par défaut), ou `NULL`.  
   
  L’étiquette standard pour le bouton automatique est **automatique**.  
   
- [in] `lpszOtherColor`  
+ [in] *lpszOtherColor*  
  L’étiquette de texte de la *autres* bouton qui affiche d’autres options de couleur, ou `NULL`.  
   
  L’étiquette standard pour l’autre bouton est **autres couleurs...** .  
   
- [in] `lpszDocColors`  
+ [in] *lpszDocColors*  
  L’étiquette de texte du bouton de couleurs de document. La palette de couleurs du document répertorie toutes les couleurs que le document utilise actuellement.  
   
- [in] `lstDocColors`  
+ [in] *lstDocColors*  
  Une liste de couleurs que le document utilise actuellement.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Le nombre de colonnes qui a le groupe de couleurs.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  Le nombre de lignes de la barre de couleur lorsqu’il est ancré horizontalement.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  Le nombre de colonnes de la barre de couleur lorsqu’il est ancré verticalement.  
   
- [in] `colorAutomatic`  
+ [in] *automatiqueCouleur*  
  La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  ID de la commande de contrôle de barre de couleur.  
   
- [in] `bStdColorDlg`  
+ [in] *bStdColorDlg*  
  Valeur booléenne qui indique s’il faut afficher la boîte de dialogue couleur système standard ou [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue.  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Pointeur vers un bouton parent.  
   
- [in] `nID`  
+ [in] *nID*  
  ID de la commande.  
   
 ### <a name="remarks"></a>Notes  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWndMain`|Pointeur vers la fenêtre parente de la barre détachable.|  
-|[in] `uiID`|L’ID de commande de la barre détachable.|  
-|[in] `lpszName`|Texte de la fenêtre de la barre détachable.|  
+|[in] *pWndMain*|Pointeur vers la fenêtre parente de la barre détachable.|  
+|[in] *uiID*|L’ID de commande de la barre détachable.|  
+|[in] *le caractère*|Texte de la fenêtre de la barre détachable.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le nouvel objet de barre de contrôle détachable.  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndList`  
+ [in] *pWndList*  
  Pointeur vers un objet de contrôle de grille de propriété.  
   
 ## <a name="see-also"></a>Voir aussi  

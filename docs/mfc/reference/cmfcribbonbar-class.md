@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5d2a65e1f75fb084c2878dc1231f0dffc12102
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378238"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042389"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 La classe `CMFCRibbonBar` implémente une barre de ruban similaire à celle utilisée dans Office 2007.  
@@ -342,7 +342,7 @@ class CMFCRibbonBar : public CPane
   
  [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonbar.h  
   
 ##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory  
@@ -353,11 +353,11 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  L’ID de catégorie de contexte.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si une catégorie de contexte avec `uiContextID` est trouvé et activée ; sinon `FALSE`.  
+ `TRUE` Si une catégorie de contexte avec *uiContextID* est trouvé et activée ; sinon `FALSE`.  
   
 ##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  Crée et initialise une nouvelle catégorie de ruban de la barre du ruban.  
@@ -376,32 +376,32 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszName`  
+ [in] *le caractère*  
  Nom de la catégorie de ruban.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID de ressource de la liste d’images miniatures pour la catégorie de ruban.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID de ressource de la liste d’images de grande taille pour la catégorie de ruban.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Spécifie la taille de petites images pour la catégorie de ruban.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Spécifie la taille des images de grande taille pour la catégorie de ruban.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  Index de base zéro de l’emplacement de la catégorie.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Pointeur vers un [CMFCRibbonCategory classe](../../mfc/reference/cmfcribboncategory-class.md) classe d’exécution pour créer dynamiquement une catégorie de ruban au moment de l’exécution.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la nouvelle catégorie de ruban si la méthode a réussi ; dans le cas contraire, `NULL`.  
   
 ### <a name="remarks"></a>Notes  
- Si le `pRTI` paramètre n’est pas `NULL`, la nouvelle catégorie de ruban est créée dynamiquement à l’aide de la classe d’exécution.  
+ Si le *pRTI* paramètre n’est pas `NULL`, la nouvelle catégorie de ruban est créée dynamiquement à l’aide de la classe d’exécution.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `AddCategory` méthode dans la `CMFCRibbonBar` classe.  
@@ -427,35 +427,35 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszName`  
+ [in] *le caractère*  
  Nom de la catégorie.  
   
- [in] `lpszContextName`  
+ [in] *lpszContextName*  
  Nom de la légende de catégorie de contexte.  
   
- [in] `uiContextID`  
+ [in] *uiContextID*  
  ID de contexte.  
   
- [in] `clrContext`  
+ [in] *clrContext*  
  Couleur de la légende de catégorie de contexte.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID de ressource de l’image d’une catégorie de contexte.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID de ressource d’une grande image d’une catégorie de contexte.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Taille d’une petite image.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Taille d’une image de grande taille.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Pointeur vers une classe d’exécution.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur à la catégorie nouvellement créé, ou `NULL` si le `CreateObject` méthode `pRTI` ne peut pas créer la catégorie spécifiée.  
+ Un pointeur à la catégorie nouvellement créé, ou `NULL` si le `CreateObject` méthode *pRTI* Impossible de créer la catégorie spécifiée.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction permet d’ajouter une catégorie de contexte. Catégories de contexte sont un type spécial de catégorie qui peut être affiché ou masqué lors de l’exécution, en fonction du contexte d’application actuel. Par exemple, lorsque l’utilisateur sélectionne un objet, vous pouvez afficher des onglets spéciales avec les catégories de contexte qui vous permet de modifier l’objet sélectionné.  
@@ -493,19 +493,19 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszName`  
+ [in] *le caractère*  
  Nom de la catégorie de ruban principale.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID de ressource de petites images.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID de ressource d’images de grande taille.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  La taille de petites images.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  La taille des images de grande taille.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -544,13 +544,13 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszName`  
+ [in] *le caractère*  
  Nom de la catégorie.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID de ressource de la liste d’images pour la catégorie.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Taille des images pour les éléments de ruban dans la catégorie.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -567,7 +567,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pElement`  
+ [in] *pElement*  
  Pointeur vers un élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -581,7 +581,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bReplaceFrameCaption`  
+ [in] *bReplaceFrameCaption*  
  `TRUE` pour la barre du ruban remplacer la légende de la fenêtre frame principale. `FALSE` pour localiser la barre du ruban dans la légende de la fenêtre frame principale.  
   
 ### <a name="remarks"></a>Notes  
@@ -597,13 +597,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente de la barre du ruban.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Combinaison logique de styles pour la nouvelle fenêtre.  
   
- [in] `nID`  
+ [in] *nID*  
  ID de la nouvelle fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -628,16 +628,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente de la barre du ruban.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Combinaison logique de styles pour la nouvelle fenêtre.  
   
- [in] `nID`  
+ [in] *nID*  
  ID de la nouvelle fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -653,7 +653,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Pour définir le focus à la fenêtre parente de la barre du ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -669,13 +669,13 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour le bouton de menu.  
   
- [in] `pMenuItem`  
+ [in] *pMenuItem*  
  Pointeur vers un bouton de menu de barre d’outils.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Le rectangle d’affichage pour un bouton de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -700,7 +700,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer la fonctionnalité des touches d’accès ; `FALSE` pour désactiver la fonctionnalité d’info-bulles.  
   
 ### <a name="remarks"></a>Notes  
@@ -714,11 +714,11 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer la **Aperçu avant impression** fonctionnalité ; `FALSE` pour désactiver la **Aperçu avant impression** fonctionnalité.  
   
 ### <a name="remarks"></a>Notes  
- Si `bEnable` est `FALSE` et une catégorie de l’aperçu avant impression existe, il est supprimé.  
+ Si *bActivez* est `FALSE` et une catégorie de l’aperçu avant impression existe, il est supprimé.  
   
  Par défaut le **Aperçu avant impression** fonctionnalité est activée.  
   
@@ -732,14 +732,14 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer les info-bulles sur la barre du ruban. `FALSE` pour désactiver les info-bulles sur la barre du ruban.  
   
- [in] `bEnableDescr`  
+ [in] *bEnableDescr*  
  `TRUE` Pour activer les descriptions d’info-bulle sur l’info-bulle ; `FALSE` pour désactiver la descriptions d’info-bulle sur l’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
- Le `bEnable` paramètre détermine si les info-bulles sont affichées lorsque la souris pointe sur un élément de ruban. Le `bEnableDescr` paramètre détermine si un texte descriptif supplémentaire s’affiche avec le texte d’info-bulle.  
+ Le *bActivez* paramètre détermine si les info-bulles sont affichées lorsque la souris pointe sur un élément de ruban. Le *bEnableDescr* paramètre détermine si un texte descriptif supplémentaire s’affiche avec le texte d’info-bulle.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  Récupère un pointeur vers un élément de ruban s’il possède les données spécifiées et la visibilité.  
@@ -751,10 +751,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwData`  
+ [in] *dwData*  
  Les données associées à un élément de ruban.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` Rechercher des éléments de ruban visibles uniquement. `FALSE` pour rechercher tous les éléments de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -774,13 +774,13 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de commande pour un élément de ruban.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` Rechercher des éléments de ruban visibles uniquement. `FALSE` pour rechercher tous les éléments de ruban.  
   
- [in] `bExcludeQAT`  
+ [in] *bExcludeQAT*  
  `TRUE` Pour exclure des éléments de barre d’outils Accès rapide à partir de la recherche ; dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -799,7 +799,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwData`  
+ [in] *dwData*  
  Les données associées à une catégorie de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -859,11 +859,11 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de base zéro d’une catégorie de ruban dans la liste des catégories de ruban qui est contenue dans la barre du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la catégorie de ruban à l’index spécifié ; dans le cas contraire, `NULL` si `nIndex` était hors limites.  
+ Un pointeur vers la catégorie de ruban à l’index spécifié ; dans le cas contraire, `NULL` si *nIndex* était hors limites.  
   
 ##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  Récupère le nombre de catégories de ruban dans la barre du ruban.  
@@ -896,11 +896,11 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pCategory`  
+ [in] *pCategory*  
  Pointeur vers une catégorie de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro d’une catégorie de ruban spécifiée par `pCategory`; ou -1 si la catégorie de ruban est introuvable.  
+ Index de base zéro d’une catégorie de ruban spécifiée par *pCategory*; ou -1 si la catégorie de ruban est introuvable.  
   
 ##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  Récupère le nom de la légende de catégorie de contexte spécifié par un ID de contexte.  
@@ -912,14 +912,14 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Un ID de contexte de catégorie du ruban.  
   
- [out] `strName`  
+ [out] *strName*  
  Le nom d’une légende de catégorie de contexte.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode a réussi ; dans le cas contraire, `FALSE` si `uiContextID` était zéro ou de la légende de catégorie de contexte n’a pas été trouvée.  
+ `TRUE` Si la méthode a réussi ; dans le cas contraire, `FALSE` si *uiContextID* était zéro ou de la légende de catégorie de contexte n’a pas été trouvée.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  Récupère l’élément de ruban qui est actuellement supprimée vers le bas.  
@@ -943,10 +943,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de commande d’un élément de ruban.  
   
- [out] `arButtons`  
+ [out] *arButtons*  
  Tableau de pointeurs vers les éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -980,10 +980,10 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `lstItems`  
+ [out] *lstItems*  
  La liste des ID de commande pour les éléments de ruban qui sont contenus dans la barre du ruban.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Pour exclure des éléments de ruban qui sont affichées ; `FALSE` pour inclure tous les éléments de ruban dans la barre du ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1081,7 +1081,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `lstCommands`  
+ [out] *lstCommands*  
  La liste des ID de commande pour les éléments de ruban dans la barre d’outils Accès rapide.  
   
 ### <a name="remarks"></a>Notes  
@@ -1183,20 +1183,20 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Coordonnées de l’emplacement du point dans la barre du ruban.  
   
- [in] `bCheckActiveCategory`  
+ [in] *bCheckActiveCategory*  
  `TRUE` Pour rechercher la catégorie active ; `FALSE` ne pas à rechercher la catégorie active.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Pour tester la légende du Panneau de ruban avec le point situé dans `FALSE` ne pas de tester la légende du Panneau de ruban avec le point qu’il contient. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’élément de ruban situé au point spécifié ; dans le cas contraire `NULL` si le point se trouve pas dans un élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
- La légende du Panneau de ruban avec le point qu’il contient n’est pas testée, sauf si le `bCheckActiveCategory` paramètre est `TRUE`.  
+ La légende du Panneau de ruban avec le point qu’il contient n’est pas testée, sauf si le *bCheckActiveCategory* paramètre est `TRUE`.  
   
 ##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Indique si la fonctionnalité de touches d’accès est activée.  
@@ -1325,10 +1325,10 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers le bouton l’utilisateur a cliqué.  
   
- [in] `point`  
+ [in] *point*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pEdit`  
- [in] `point`  
+ [in] *pEdit*  
+ [in] *point*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1356,7 +1356,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Si la disposition est de droite à gauche ; `FALSE` si la disposition est de gauche à droite.  
   
 ### <a name="remarks"></a>Notes  
@@ -1370,7 +1370,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- Long `lVal`  
+ long *lVal*  
  Index de l’objet accessible.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1431,13 +1431,13 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Pointeur vers la fenêtre frame principale de parent de la barre du ruban.  
   
- [in] `wParam`  
+ [in] *wParam*  
  Code de touche virtuelle de la touche est enfoncée.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Indicateurs de l’état du clavier lors de la touche a été activée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1456,13 +1456,13 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Pointeur vers la fenêtre frame principale de parent de la barre du ruban.  
   
- [in] `wParam`  
+ [in] *wParam*  
  Code de touche virtuelle de la clé est libérée.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1487,7 +1487,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMsg`  
+ [in] *pMsg*  
  Pointeur vers un message.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1533,7 +1533,7 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de base zéro d’une catégorie dans la liste des catégories de ruban qui est contenue dans la barre du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1552,10 +1552,10 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pCategory`  
+ [in] *pCategory*  
  Une catégorie de ruban qui est contenue dans la barre du ruban.  
   
- [in] `bForceRestore`  
+ [in] *bForceRestore*  
  `TRUE` Pour optimiser la barre du ruban si elle est réduite ; `FALSE` pour afficher la catégorie active dans une fenêtre indépendante, si la barre du ruban est réduite.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1564,7 +1564,7 @@ BOOL SetActiveCategory(
 ### <a name="remarks"></a>Notes  
  La catégorie de ruban principale ne peut pas être la catégorie active.  
   
- Si la catégorie spécifiée par `pCategory` est ne pas affichée, elle ne peut pas être définie en tant que la catégorie active.  
+ Si la catégorie spécifiée par *pCategory* est ne pas affichée, elle ne peut pas être définie en tant que la catégorie active.  
   
 ##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  Associe les boutons système sur la barre du ruban qui appartiennent à une fenêtre enfant de l’interface multidocument (MDI) à la fenêtre MDI enfant spécifiée.  
@@ -1574,7 +1574,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
+ [in] *pWnd*  
  Pointeur vers une fenêtre enfant MDI.  
   
 ### <a name="remarks"></a>Notes  
@@ -1589,10 +1589,10 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
  Pointeur vers le bouton de ruban d’application.  
   
- [in] `sizeButton`  
+ [in] *sizeButton*  
  La taille du bouton du ruban d’application.  
   
 ### <a name="remarks"></a>Notes  
@@ -1614,13 +1614,13 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  L’ID de commande d’un élément de ruban.  
   
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  La touche d’accès.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  La touche d’accès menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1639,10 +1639,10 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pLevel`  
+ [in] *pLevel*  
  Pointeur vers l’objet de navigation de clavier actuel.  
   
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Pour définir le focus clavier sur la barre du ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1658,10 +1658,10 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bMax`  
+ [in] *bMax*  
  `TRUE` Pour afficher les boutons système pour une fenêtre enfant MDI sur la barre du ruban. `FALSE` pour supprimer les boutons système pour une fenêtre enfant MDI à partir de la barre du ruban.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Pointeur vers la fenêtre frame principale pour la barre du ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1677,10 +1677,10 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  La liste des commandes doit être placé sur la barre d’outils Accès rapide.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Si à redessiner le ruban après avoir ajouté les éléments de ruban ; `FALSE` dans le cas contraire.  
   
 ### <a name="example"></a>Exemple  
@@ -1696,7 +1696,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `state`  
+ [in] *état*  
  L’état par défaut de barre d’outils Accès rapide.  
   
 ### <a name="remarks"></a>Notes  
@@ -1715,7 +1715,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` Pour positionner la barre d’outils Accès rapide au-dessus de la barre du ruban. `FALSE` pour positionner la barre d’outils Accès rapide sous la barre du ruban.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
@@ -1728,10 +1728,10 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nWidthRegular`  
+ [in] *nWidthRegular*  
  La largeur, en pixels, d’une régulier info-bulle taille fixe.  
   
- [in] `nWidthLargeImage`  
+ [in] *nWidthLargeImage*  
  La largeur, en pixels, d’une grande fixe une taille d’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
@@ -1747,10 +1747,10 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de la catégorie de ruban.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Si `TRUE`, afficher la catégorie de ruban ; sinon, masquer la catégorie de ruban.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
@@ -1763,10 +1763,10 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  L’ID de catégorie de contexte.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Si `TRUE`, afficher les catégories qui ont l’ID spécifié ; sinon, masquer les catégories qui ont l’ID spécifié.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
@@ -1798,7 +1798,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nChar`  
+ [in] *nChar*  
  Un code de caractère de séquence de touches utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1848,16 +1848,16 @@ virtual BOOL LoadFromResource(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `uiXMLResID`  
+ *uiXMLResID*  
  Spécifie la ressource chaîne ID de XML avec les informations de la barre du ruban.  
   
- `lpszResType`  
- Spécifie le type de la ressource à `uiXMLResID`.  
+ *lpszResType*  
+ Spécifie le type de la ressource à *uiXMLResID*.  
   
- `hInstance`  
- Handle vers le module dont le fichier exécutable contient la ressource. Si `hInstance` est `NULL`, le système charge la ressource à partir du module qui a été utilisé pour créer le processus en cours.  
+ *hInstance*  
+ Handle vers le module dont le fichier exécutable contient la ressource. Si *hInstance* est `NULL`, le système charge la ressource à partir du module qui a été utilisé pour créer le processus en cours.  
   
- `lpszXMLResID`  
+ *lpszXMLResID*  
  Spécifie l’ID de ressource (sous forme de chaîne) avec les informations de la barre du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1873,8 +1873,8 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ppBuffer`  
- Lorsque cette fonction est retournée, `ppBuffer` pointe vers une mémoire tampon alloué par cette méthode et contient des informations de barre de ruban au format XML.  
+ *ppBuffer*  
+ Cette fonction retourne *ppBuffer* pointe vers une mémoire tampon alloué par cette méthode et contient des informations de barre de ruban au format XML.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` en cas de réussite ; sinon, `FALSE`.  
@@ -1889,7 +1889,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFilePath`  
+ *lpszFilePath*  
  Spécifie le fichier de sortie.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1907,10 +1907,10 @@ void SetWindows7Look(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bWindows7Look`  
+ *bWindows7Look*  
  `TRUE` définit l’apparence de Windows 7 ; `FALSE` dans le cas contraire.  
   
- `bRecalc`  
+ *bRecalc*  
  `TRUE` recalcule la disposition du ruban ; `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  

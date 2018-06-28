@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369347"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040845"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
 Fournit les fonctionnalités d'une fenêtre enfant d'interface multidocument (MDI) Windows, ainsi que des membres permettant de gérer la fenêtre.  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  Il existe trois manières de construire une fenêtre enfant MDI :  
   
--   Construire directement à l’aide de **créer**.  
+-   Construire directement à l’aide de `Create`.  
   
 -   Construire directement à l’aide de `LoadFrame`.  
   
 -   Construire indirectement via un modèle de document.  
   
- Avant d’appeler **créer** ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide de C++ **nouveau** opérateur. Avant d’appeler **créer** vous pouvez également enregistrer une classe de fenêtre avec le [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction globale pour définir les styles d’icône et de la classe pour le frame.  
+ Avant d’appeler `Create` ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide de C++ **nouveau** opérateur. Avant d’appeler `Create` vous pouvez également enregistrer une classe de fenêtre avec le [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction globale pour définir les styles d’icône et de la classe pour le frame.  
   
- Utilisez le **créer** fonction membre pour passer des paramètres de création du frame immédiats comme arguments.  
+ Utilisez le `Create` fonction membre pour passer des paramètres de création du frame immédiats comme arguments.  
   
- `LoadFrame` nécessite moins d’arguments que **créer**et récupère à la place de la plupart de ses valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu. Pour être accessible aux `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, **IDR_MAINFRAME**).  
+ `LoadFrame` nécessite moins d’arguments que `Create`et récupère à la place de la plupart de ses valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu. Pour être accessible aux `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, **IDR_MAINFRAME**).  
   
  Lorsqu’un `CMDIChildWnd` objet contient des vues et des documents, elles sont créées indirectement par le framework au lieu de directement par le programmeur. Le `CDocTemplate` objet orchestre la création de l’image, la création des vues contenant et la connexion des vues de document approprié. Les paramètres de la `CDocTemplate` constructeur spécifie la `CRuntimeClass` des trois classes impliquées (document, le frame et vue). A `CRuntimeClass` objet est utilisé par l’infrastructure pour créer dynamiquement les nouvelles images lorsque spécifié par l’utilisateur (par exemple, en utilisant la commande fichier nouveau ou la commande Nouveau de fenêtre MDI).  
   
@@ -112,7 +112,7 @@ class CMDIChildWnd : public CFrameWnd
   
  `CMDIChildWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd  
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszClassName`  
+ *lpszClassName*  
  Pointe vers une chaîne de caractères terminée par null que les noms de la classe Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure). Le nom de classe peut être n’importe quel nom inscrit avec le [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction globale. Doit être **NULL** pour une norme `CMDIChildWnd`.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Pointe vers une chaîne de caractères terminée par null qui représente le nom de la fenêtre. Utilisé en tant que texte de la barre de titre.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie la fenêtre [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributs. Le **WS_CHILD** style est requis.  
   
- `rect`  
+ *Rect*  
  Contient la taille et la position de la fenêtre. Le `rectDefault` permet à Windows pour spécifier la taille et la position de la nouvelle valeur `CMDIChildWnd`.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie le parent de la fenêtre. Si **NULL**, la fenêtre principale de l’application est utilisée.  
   
- `pContext`  
+ *pContext*  
  Spécifie un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. Ce paramètre peut être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Notes  
  La fenêtre de frame enfant MDI actuellement active peut déterminer la légende de la fenêtre frame parente. Cette fonctionnalité est désactivée en désactivant le **FWS_ADDTOTITLE** bit de style de la fenêtre frame enfant.  
   
- L’infrastructure appelle cette fonction membre en réponse à une commande de l’utilisateur pour créer une fenêtre enfant, et l’infrastructure utilise le `pContext` paramètre pour se connecter correctement la fenêtre enfant à l’application. Lorsque vous appelez **créer**, `pContext` peut être **NULL**.  
+ L’infrastructure appelle cette fonction membre en réponse à une commande de l’utilisateur pour créer une fenêtre enfant, et l’infrastructure utilise le *pContext* paramètre pour se connecter correctement la fenêtre enfant à l’application. Lorsque vous appelez `Create`, *pContext* peut être **NULL**.  
   
 ### <a name="example"></a>Exemple  
  Exemple 1 :  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hMenu`  
+ *hMenu*  
  Le handle d’une ressource de menu.  
   
- `hAccel`  
+ *hAccel*  
  Le handle d’une ressource de l’accélérateur.  
   
 ### <a name="remarks"></a>Notes  

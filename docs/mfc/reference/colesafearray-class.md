@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376875"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041631"
 ---
 # <a name="colesafearray-class"></a>Classe de COleSafeArray
 Classe pour utiliser des tableaux de type et de dimension arbitraires.  
@@ -143,7 +143,7 @@ class COleSafeArray : public tagVARIANT
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="accessdata"></a>  COleSafeArray::AccessData  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ppvData`  
+ *ppvData*  
  Pointeur vers un pointeur vers les données de tableau.  
   
 ### <a name="remarks"></a>Notes  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwDims`  
+ *dwDims*  
  Nombre de dimensions dans le tableau sécurisé.  
   
 ### <a name="remarks"></a>Notes  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `saSrc`  
+ *saSrc*  
  Existant `COleSafeArray` objet ou **SAFEARRAY** à copier dans le nouveau `COleSafeArray` objet.  
   
- `vtSrc`  
+ *vtSrc*  
  Le **VARTYPE** du nouveau `COleSafeArray` objet.  
   
- `psaSrc`  
+ *psaSrc*  
  Un pointeur vers un **SAFEARRAY** à copier dans le nouveau `COleSafeArray` objet.  
   
  *varSrc*  
  Existant **VARIANT** ou `COleVariant` à copier dans le nouvel objet `COleSafeArray` objet.  
   
- `pSrc`  
+ *pSrc*  
  Un pointeur vers un **VARIANT** à copier dans le nouvel objet `COleSafeArray` objet.  
   
 ### <a name="remarks"></a>Notes  
- Toutes ces constructeurs créent de nouveaux `COleSafeArray` objets. S’il n’existe aucun paramètre, vide `COleSafeArray` objet est créé ( `VT_EMPTY`). Si le `COleSafeArray` est copié à partir d’un autre tableau dont [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) est appelée implicitement (un `COleSafeArray`, `COleVariant`, ou **VARIANT**), la **VARTYPE** de le tableau source est conservé et ne doive pas être spécifié. Si le `COleSafeArray` est copié à partir d’un autre tableau dont **VARTYPE** n’est pas connu ( **SAFEARRAY**), la **VARTYPE** doit être spécifié dans le `vtSrc` paramètre.  
+ Toutes ces constructeurs créent de nouveaux `COleSafeArray` objets. S’il n’existe aucun paramètre, vide `COleSafeArray` objet est créé ( `VT_EMPTY`). Si le `COleSafeArray` est copié à partir d’un autre tableau dont [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) est appelée implicitement (un `COleSafeArray`, `COleVariant`, ou **VARIANT**), la **VARTYPE** de le tableau source est conservé et ne doive pas être spécifié. Si le `COleSafeArray` est copié à partir d’un autre tableau dont **VARTYPE** n’est pas connu ( **SAFEARRAY**), la **VARTYPE** doit être spécifié dans le *vtSrc* paramètre.  
   
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `vtSrc`  
- Le type de base du tableau (autrement dit, le **VARTYPE** de chaque élément du tableau). Le **VARTYPE** est limité à un sous-ensemble des types variants. Ni le **VT_ARRAY** ni le **VT_BYREF** indicateur peut être défini. `VT_EMPTY` et **VT_NULL** ne sont pas des types de base valides pour le tableau. Tous les autres types sont autorisés.  
+ *vtSrc*  
+ Le type de base du tableau (autrement dit, le **VARTYPE** de chaque élément du tableau). Le **VARTYPE** est limité à un sous-ensemble des types variants. Ni le **VT_ARRAY** ni le **VT_BYREF** indicateur peut être défini. **VT_EMPTY** et **VT_NULL** ne sont pas des types de base valides pour le tableau. Tous les autres types sont autorisés.  
   
- `dwDims`  
+ *dwDims*  
  Nombre de dimensions dans le tableau. Cela peut être modifié une fois que le tableau est créé avec [Redim](#redim).  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `vtSrc`  
+ *vtSrc*  
  Le type de base du tableau (autrement dit, le **VARTYPE** de chaque élément du tableau).  
   
- `dwElements`  
+ *dwElements*  
  Nombre d’éléments dans le tableau. Cela peut être modifié une fois que le tableau est créé avec [ResizeOneDim](#resizeonedim).  
   
- `pvSrcData`  
+ *pvSrcData*  
  Pointeur vers les données à copier dans le tableau.  
   
  *nLBound*  
  La limite inférieure du tableau.  
   
 ### <a name="remarks"></a>Notes  
- La fonction alloue et initialise les données pour le tableau, en copiant les données spécifiées si le pointeur `pvSrcData` n’est pas **NULL**.  
+ La fonction alloue et initialise les données pour le tableau, en copiant les données spécifiées si le pointeur *pvSrcData* n’est pas **NULL**.  
   
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bytes`  
+ *Octets*  
  Une référence à un [CByteArray](../../mfc/reference/cbytearray-class.md) objet.  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rgIndices`  
+ *rgIndices*  
  Pointeur vers un tableau d'index pour chaque dimension du tableau.  
   
- `pvData`  
+ *pvData*  
  Pointeur vers l’emplacement pour placer l’élément du tableau.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction appelle automatiquement les fonctions windows `SafeArrayLock` et `SafeArrayUnlock` avant et après la récupération de l’élément. Si l’élément de données est une chaîne, un objet ou un variant, la fonction de copie l’élément dans la méthode correcte. Le paramètre `pvData` doit pointer vers une mémoire tampon insuffisante pour contenir l’élément.  
+ Cette fonction appelle automatiquement les fonctions windows `SafeArrayLock` et `SafeArrayUnlock` avant et après la récupération de l’élément. Si l’élément de données est une chaîne, un objet ou un variant, la fonction de copie l’élément dans la méthode correcte. Le paramètre *pvData* doit pointer vers une mémoire tampon insuffisante pour contenir l’élément.  
   
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwDim`  
+ *dwDim*  
  La dimension du tableau pour lequel obtenir la limite inférieure.  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwDim`  
+ *dwDim*  
  La dimension du tableau pour lequel obtenir la limite supérieure.  
   
  *pUBound*  
@@ -581,11 +581,11 @@ void PtrOfIndex (long * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (long * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements) ;
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

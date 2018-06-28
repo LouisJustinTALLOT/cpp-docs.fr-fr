@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373890"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038004"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Classe de CMultiPageDHtmlDialog
 Une boîte de dialogue multipage affiche plusieurs pages HTML de manière séquentielle et gère les événements de chaque page.  
@@ -78,7 +78,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
  `CMultiPageDHtmlDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdhtml.h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  La chaîne se terminant par null qui est le nom d’une ressource de modèle de boîte de dialogue.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  La chaîne se terminant par null qui est le nom d’une ressource HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un pointeur vers l’objet de fenêtre parente ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Contient le numéro d’ID d’une ressource HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog :: ~ CMultiPageDHtmlDialog  

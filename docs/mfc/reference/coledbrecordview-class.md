@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372204"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037855"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 Vue qui affiche des enregistrements de base de données dans des contrôles.  
@@ -80,7 +80,7 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxoledb.h  
   
 ##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contient une chaîne se terminant par null qui est le nom d’une ressource de modèle de boîte de dialogue.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Valeur `HRESULT` standard.  
   
 ### <a name="remarks"></a>Notes  
- Vous devez substituer cette fonction membre pour créer ou obtenir un objet d’ensemble de lignes et de retourner un handle à ce dernier. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le handle de l’ensemble de lignes stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet d’ensemble de lignes du type que vous avez spécifié avec ClassWizard et appelle son **ouvrir** membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un handle vers l’objet.  
+ Vous devez substituer cette fonction membre pour créer ou obtenir un objet d’ensemble de lignes et de retourner un handle à ce dernier. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le handle de l’ensemble de lignes stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet d’ensemble de lignes du type que vous avez spécifié avec ClassWizard et appelle son `Open` membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un handle vers l’objet.  
   
 > [!NOTE]
 >  Antérieures à MFC 7.0, `OnGetRowset` retourné un pointeur vers `CRowset`. Si vous avez le code qui appelle `OnGetRowset`, vous devez modifier le type de retour à la classe modélisée **CRowset <>**.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Une des valeurs d’ID de commande standard suivantes :  
   
 - `ID_RECORD_FIRST` : Permet de déplacer vers le premier enregistrement dans le jeu d’enregistrements.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Différent de zéro si le déplacement a réussi ; 0 dans le cas contraire, si la demande de déplacement a été refusée.  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut appelle approprié **déplacer** fonction membre de la `CRowset` objet associé à la vue de l’enregistrement.  
+ L’implémentation par défaut appelle approprié `Move` fonction membre de la `CRowset` objet associé à la vue de l’enregistrement.  
   
  Par défaut, `OnMove` met à jour l’enregistrement en cours sur la source de données si l’utilisateur a été modifié dans la vue de l’enregistrement.  
   

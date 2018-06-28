@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366640"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042080"
 ---
 # <a name="cmfcpropertypage-class"></a>Classe de CMFCPropertyPage
 La `CMFCPropertyPage` classe prend en charge l’affichage des menus contextuels sur une page de propriétés.  
@@ -70,7 +70,7 @@ class CMFCPropertyPage : public CPropertyPage
   
  [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpropertypage.h  
   
 ##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID de ressource du modèle pour cette page.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID de ressource de l’étiquette à placer dans l’onglet de cette page. Si 0, le nom est obtenu à partir de la boîte de dialogue modèle de cette page. La valeur par défaut est 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Pointe vers le nom du modèle pour cette page. Ne peut pas être `NULL`.  
   
 ### <a name="return-value"></a>Valeur de retour  

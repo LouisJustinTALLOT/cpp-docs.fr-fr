@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375935"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038206"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 Implémente la fabrique de classes OLE, qui crée des objets OLE tels que des serveurs, des objets Automation et des documents.  
@@ -114,7 +114,7 @@ class COleObjectFactory : public CCmdTarget
   
  `COleObjectFactory`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clsid`  
+ *clsid*  
  Référence à l’ID de classe OLE cette fabrique d’objet représente.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  Pointeur vers la classe d’exécution des objets C++ que cette fabrique peut créer.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Indique si une seule instance de l’application peut prendre en charge plusieurs instanciations. Si **TRUE**, plusieurs instances de l’application sont lancées pour chaque demande de création d’un objet.  
   
- `nFlags`  
+ *nIndicateurs*  
  Contient un ou plusieurs des indicateurs suivants :  
   
 - **afxRegDefault** définit le modèle de thread à ThreadingModel = cloisonnement.  
   
 - **afxRegInsertable** permet le contrôle s’affiche dans le **insérer un objet** boîte de dialogue pour les objets OLE.  
   
-- `afxRegApartmentThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = cloisonnement.  
+- **afxRegApartmentThreading** définit le modèle de thread dans le Registre pour ThreadingModel = cloisonnement.  
   
 - **afxRegFreeThreading** définit le modèle de thread dans le Registre pour ThreadingModel = libre.  
   
      Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = les deux. Consultez [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Pointeur vers une chaîne contenant un identificateur de programme verbaux, telle que « Microsoft Excel ».  
   
 ### <a name="remarks"></a>Notes  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- Demande une clé de licence unique à partir de la DLL du contrôle et le stocke dans le `BSTR` vers lequel pointe `pbstrKey`.  
+ Demande une clé de licence unique à partir de la DLL du contrôle et le stocke dans le `BSTR` vers lequel pointe *pbstrKey*.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwReserved`  
+ *dwReserved*  
  Réservé à un usage ultérieur.  
   
- `pbstrKey`  
+ *pbstrKey*  
  Pointeur vers un `BSTR` qui stocke la clé de licence.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszProgID`  
+ *lpszProgID*  
  Pointeur vers une chaîne contenant l’identificateur de programme explicite, comme « Excel.Document.5 ».  
   
- `bRegister`  
+ *bRegister*  
  Détermine si la fabrique d’objet de la classe du contrôle doit être enregistré.  
   
 ### <a name="remarks"></a>Notes  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** enregistre cette fabrique d’objet du Registre du système OLE. Cette fonction est généralement appelée par [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) lorsque l’application est lancée.  
   
-- **UpdateRegistry (** `bRegister` **)** cette forme de la fonction est substituable. Si `bRegister` est **TRUE**, cette fonction enregistre la classe de contrôle du Registre système. Dans le cas contraire, il annule l’inscription de la classe.  
+- **UpdateRegistry (** `bRegister` **)** cette forme de la fonction est substituable. Si *bRegister* est **TRUE**, cette fonction enregistre la classe de contrôle du Registre système. Dans le cas contraire, il annule l’inscription de la classe.  
   
      Si vous utilisez MFC ActiveX ControlWizard pour créer votre projet, ControlWizard fournit une substitution de cette fonction virtuelle pure.  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bRegister`  
+ *bRegister*  
  Détermine si la fabrique d’objet de la classe du contrôle doit être enregistré.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bstrKey`  
+ *bstrKey*  
  A `BSTR` le stockage de la version du conteneur de la chaîne de licence.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la licence d’exécution n’est valide. Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- La version par défaut appelle [GetLicenseKey](#getlicensekey) pour obtenir une copie du contrôle de la chaîne de licence et la compare à la chaîne dans `bstrKey`. Si les deux chaînes sont identiques, la fonction retourne une valeur différente de zéro ; Sinon, elle retourne 0.  
+ La version par défaut appelle [GetLicenseKey](#getlicensekey) pour obtenir une copie du contrôle de la chaîne de licence et la compare à la chaîne dans *bstrKey*. Si les deux chaînes sont identiques, la fonction retourne une valeur différente de zéro ; Sinon, elle retourne 0.  
   
  Vous pouvez substituer cette fonction pour fournir une vérification personnalisée de la licence.  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375387"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040166"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton, classe
 Bouton qui affiche un menu contextuel et signale les sélections de l'utilisateur dans les menus.  
@@ -97,7 +97,7 @@ class CMFCMenuButton : public CMFCButton
   
  [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmenubutton.h  
   
 ##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMsg`  
+ [in] *pMsg*  
  Pointe vers un [MSG](../../mfc/reference/msg-structure1.md) structure qui contient le message à traiter.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Un paramètre booléen qui indique si cette méthode redimensionne le bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui spécifie la nouvelle taille pour le bouton.  
   
 ### <a name="remarks"></a>Notes  
- Si vous appelez cette fonction et `bCalcOnly` est `TRUE`, `SizeToContent` calculera uniquement la nouvelle taille du bouton.  
+ Si vous appelez cette fonction et *bCalcOnly* est `TRUE`, `SizeToContent` calculera uniquement la nouvelle taille du bouton.  
   
  La nouvelle taille du bouton est calculée en fonction de flèche, l’image et le texte du bouton. Le framework ajoute également des marges prédéfinies de 10 pixels du bord horizontal et 5 pixels du bord vertical.  
   

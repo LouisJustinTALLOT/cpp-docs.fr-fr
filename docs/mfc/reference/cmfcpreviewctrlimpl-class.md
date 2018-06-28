@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370410"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040075"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl, classe
 Cette classe implémente une fenêtre qui est placée dans une fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.  
@@ -100,7 +100,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|Police utilisée pour afficher le texte dans la fenêtre d’aperçu.|  
 |[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Pointeur vers un document dont le contenu est affiché dans le contrôle.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h    
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWndParent`  
+ *hWndParent*  
  Handle vers la fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.  
   
- `prc`  
+ *République populaire de Chine*  
  Spécifie la taille initiale et la position de la fenêtre.  
   
- `pContext`  
+ *pContext*  
  Pointeur vers un contexte de la création.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour la peinture.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDocument`  
+ *pDocument*  
  Pointeur vers l’implémentation d’un document.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWndParent`  
+ *hWndParent*  
  Handle vers la nouvelle fenêtre parent.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clrBack`  
+ *clrBack*  
  Couleur d’arrière-plan de la fenêtre d’aperçu.  
   
- `clrText`  
+ *clrText*  
  Couleur du texte de la fenêtre d’aperçu.  
   
- `plf`  
+ *FLP*  
  Police utilisée pour afficher le texte dans la fenêtre d’aperçu. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `prc`  
+ *République populaire de Chine*  
  Spécifie la nouvelle taille et la position du contrôle de version préliminaire.  
   
- `bRedraw`  
+ *bRedraw*  
  Spécifie si le contrôle doit être redessiné.  
   
 ### <a name="remarks"></a>Notes  

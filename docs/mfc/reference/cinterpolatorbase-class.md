@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367758"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041271"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase, classe
 Implémente un rappel, qui est appelé par l'API d'animation lorsqu'elle doit calculer la nouvelle valeur d'une variable de l'animation.  
@@ -84,7 +84,7 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
   
  `CInterpolatorBase`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pInterpolator`  
+ *pInterpolator*  
  Pointeur vers l’interpolateur personnalisé.  
   
- `ppHandler`  
+ *ppHandler*  
  Sortie. Contient un pointeur vers une instance de CInterpolatorBase lorsque la fonction retourne.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Sortie. Aspects de l’interpolateur qui dépendent de la valeur initiale transmise à SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Sortie. Aspects de l’interpolateur qui dépendent de la rapidité initiale transmise à SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Sortie. Aspects de l’interpolateur qui dépendent de la durée transmise à SetDuration.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `duration`  
+ *Durée*  
  Sortie. La durée de la transition, en secondes.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `value`  
+ *valeur*  
  Sortie. La valeur finale d’une variable à la fin de la transition.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `offset`  
+ *offset*  
  Le décalage à partir du début de la transition. L’offset est toujours supérieur ou égal à zéro et inférieur à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égale à zéro.  
   
- `value`  
+ *valeur*  
  Sortie. La valeur interpolée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `offset`  
+ *offset*  
  Le décalage à partir du début de la transition. L’offset est toujours supérieur ou égal à zéro et inférieure ou égale à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égale à zéro.  
   
- `velocity`  
+ *rapidité*  
  Sortie. La rapidité de la variable à l’offset.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pInterpolator`  
+ *pInterpolator*  
  Pointeur vers l’interpolateur personnalisé.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `duration`  
+ *Durée*  
  La durée de la transition.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `initialValue`  
+ *initialValue*  
  La valeur de la variable au début de la transition.  
   
- `initialVelocity`  
+ *initialVelocity*  
  La rapidité de la variable au début de la transition.  
   
 ### <a name="return-value"></a>Valeur de retour  

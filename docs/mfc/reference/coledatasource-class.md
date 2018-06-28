@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376705"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038553"
 ---
 # <a name="coledatasource-class"></a>Classe de COleDataSource
 Agit comme un cache dans lequel une application place les données qu’elle proposera pendant les opérations de transfert de données, par exemple les opérations du Presse-papiers ou de glisser-déposer.  
@@ -103,7 +103,7 @@ class COleDataSource : public CCmdTarget
   
  `COleDataSource`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="cachedata"></a>  COleDataSource::CacheData  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format de Presse-papiers dans lequel les données doit être proposé. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Pointe vers un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure contenant les données dans le format spécifié.  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="remarks"></a>Notes  
  Vous devez fournir les données, car cette fonction fournit à l’aide de rendu immédiat. Les données sont mis en cache jusqu'à ce que nécessaire.  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format de Presse-papiers dans lequel les données doit être proposé. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
  *hGlobal*  
  Handle vers le bloc de mémoire globale qui contient les données dans le format spécifié.  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction fournit les données à l’aide de rendu immédiate, vous devez fournir les données lors de l’appel de la fonction ; les données sont mis en cache jusqu'à ce que nécessaire. Utilisez le `CacheData` fonction membre si vous fournissez une grande quantité de données ou si vous avez besoin d’un support de stockage structuré.  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format de Presse-papiers dans lequel les données doit être proposé. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction fournit les données à l’aide de rendu retardé, les données ne sont pas fournies immédiatement. Le [se](#onrenderdata) ou [OnRenderGlobalData](#onrenderglobaldata) fonction membre est appelée pour demander les données.  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format de Presse-papiers dans lequel les données doit être proposé. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction fournit les données à l’aide de rendu retardé, les données ne sont pas fournies immédiatement. Le [OnRenderFileData](#onrenderfiledata) fonction membre est appelée pour demander les données.  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format de Presse-papiers dans lequel les données doit être placé. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être remplacé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être remplacé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="remarks"></a>Notes  
  [OnSetData](#onsetdata) sera appelé par le framework lorsque cela se produit. Il est utilisé uniquement lorsque le framework retourne la source de données à partir de [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` n’est pas appelée, votre `OnSetData` fonction ne sera jamais appelée. `DelaySetData` doit être appelée pour chaque Presse-papiers ou **FORMATETC** format pris en charge.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwEffects`  
+ *dwEffects*  
  Glisser-déplacer les opérations autorisées sur cette source de données. Peut être une ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_COPY` Une opération de copie peut être effectuée.  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` Indique qu’une opération de glissement de défilement peut se produire.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Pointeur vers le rectangle qui définit où commence l’opération glisser. Pour plus d'informations, consultez la section Notes qui suit.  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  Effet généré par l’opération de glisser-déplacer ; dans le cas contraire `DROPEFFECT_NONE` si l’opération commence jamais, car l’utilisateur a relâché le bouton de la souris avant de quitter le rectangle fourni.  
   
 ### <a name="remarks"></a>Notes  
- L’opération de glisser-déposer ne commence pas immédiatement. Il attend jusqu'à ce que le curseur de la souris quitte le rectangle spécifié par `lpRectStartDrag` ou jusqu'à ce qu’un nombre spécifié de millisecondes écoulées. Si `lpRectStartDrag` est **NULL**, la taille du rectangle est un pixel.  
+ L’opération de glisser-déposer ne commence pas immédiatement. Il attend jusqu'à ce que le curseur de la souris quitte le rectangle spécifié par *lpRectStartDrag* ou jusqu'à ce qu’un nombre spécifié de millisecondes écoulées. Si *lpRectStartDrag* est **NULL**, la taille du rectangle est un pixel.  
   
  Délai d’attente est spécifié par un paramètre de clé de Registre. Vous pouvez modifier le délai d’attente en appelant [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) ou [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Si vous ne spécifiez pas de délai d’attente, 200 millisecondes comme valeur par défaut est utilisée. Faites glisser retarder l’heure est stockée comme suit :  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Pointe vers le [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui spécifie le format dans lequel les informations sont demandées.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Pointe vers un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure dans laquelle les données sont à retourner.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Notes  
  Le format spécifié est un auparavant placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction appelle [OnRenderFileData](#onrenderfiledata) ou [OnRenderGlobalData](#onrenderglobaldata) si le support de stockage fourni est un fichier ou la mémoire, respectivement. Si aucune de ces formats sont fournis, l’implémentation par défaut retourne 0 et ne rien faire. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Si `lpStgMedium` ->  *tymed* est **TYMED_NULL**, le **STGMEDIUM** doit être alloué et rempli comme spécifié par *lpFormatEtc -> TYMED*. Si elle n’est pas **TYMED_NULL**, le **STGMEDIUM** devrait normalement être en place avec les données.  
+ Si *lpStgMedium*-> *tymed* est **TYMED_NULL**, le **STGMEDIUM** doit être alloué et rempli comme spécifié par *lpFormatEtc -> tymed*. Si elle n’est pas **TYMED_NULL**, le **STGMEDIUM** devrait normalement être en place avec les données.  
   
  Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez substituer l’une des autres versions de cette fonction à la place. Si vos données soient petite et une taille fixe, substituez `OnRenderGlobalData`. Si vos données sont dans un fichier, ou de taille variable, substituez `OnRenderFileData`.  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Pointe vers le [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui spécifie le format dans lequel les informations sont demandées.  
   
- `pFile`  
+ *pFile*  
  Pointe vers un [CFile](../../mfc/reference/cfile-class.md) objet dans lequel les données doivent être rendus.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Pointe vers le [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui spécifie le format dans lequel les informations sont demandées.  
   
- `phGlobal`  
+ *phGlobal*  
  Pointe vers un handle de mémoire globale dans laquelle les données sont à retourner. Si un n’a pas encore été alloué, ce paramètre peut être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Notes  
  Le format spécifié est un auparavant placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction retourne simplement **FALSE**.  
   
- Si `phGlobal` est **NULL**, puis une nouvelle `HGLOBAL` doit être allouée et retournée dans `phGlobal`. Dans le cas contraire, le `HGLOBAL` spécifié par `phGlobal` doit être rempli avec les données. La quantité de données placées dans le `HGLOBAL` ne doit pas dépasser la taille actuelle du bloc de mémoire. En outre, le bloc ne peut pas être réaffecté à une plus grande taille.  
+ Si *phGlobal* est **NULL**, puis une nouvelle `HGLOBAL` doit être allouée et retournée dans *phGlobal*. Dans le cas contraire, le `HGLOBAL` spécifié par *phGlobal* doit être rempli avec les données. La quantité de données placées dans le `HGLOBAL` ne doit pas dépasser la taille actuelle du bloc de mémoire. En outre, le bloc ne peut pas être réaffecté à une plus grande taille.  
   
  Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez substituer l’une des autres versions de cette fonction à la place. Si vous souhaitez gérer plusieurs supports de stockage, remplacez [se](#onrenderdata). Si vos données sont dans un fichier, ou de taille variable, substituez [OnRenderFileData](#onrenderfiledata). Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Pointe vers le [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui spécifie le format dans lequel les données sont remplacées.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Pointe vers le [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure contenant les données qui remplacent le contenu actuel de la `COleDataSource` objet.  
   
- `bRelease`  
- Indique qui a la propriété du support de stockage de la fin de l’appel de fonction. L’appelant décide qui est responsable de la libération des ressources allouées pour le compte au support de stockage. L’appelant en définissant ne `bRelease`. Si `bRelease` est différent de zéro, la source de données prend possession, la libération du support lorsqu’il est terminé. Lorsque `bRelease` est 0, l’appelant conserve la propriété et la source de données peut utiliser le support de stockage uniquement pendant la durée de l’appel.  
+ *bRelease*  
+ Indique qui a la propriété du support de stockage de la fin de l’appel de fonction. L’appelant décide qui est responsable de la libération des ressources allouées pour le compte au support de stockage. L’appelant en définissant ne *bRelease*. Si *bRelease* est différent de zéro, la source de données prend possession, la libération du support lorsqu’il est terminé. Lorsque *bRelease* est 0, l’appelant conserve la propriété et la source de données peut utiliser le support de stockage uniquement pendant la durée de l’appel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  

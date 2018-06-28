@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372912"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040985"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe de CMFCTabDropTarget
 Fournit le mécanisme de communication entre un contrôle onglet et les bibliothèques OLE.  
@@ -81,7 +81,7 @@ class CMFCTabDropTarget : public COleDropTarget
   
  [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbasetabctrl.h  
   
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWnd`|Non utilisé.|  
-|[in] `pDataObject`|Pointeur vers l’objet que l’utilisateur fait glisser.|  
-|[in] `dwKeyState`|Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, et `MK_RBUTTON`.|  
-|[in] `point`|L’emplacement du curseur en coordonnées clientes.|  
+|[in] *pWnd*|Non utilisé.|  
+|[in] *pDataObject*|Pointeur vers l’objet que l’utilisateur fait glisser.|  
+|[in] *dwKeyState*|Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, et `MK_RBUTTON`.|  
+|[in] *point*|L’emplacement du curseur en coordonnées clientes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’effet qui se produit si la suppression se produit à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
+ L’effet qui se produit si la suppression se produit à l’emplacement spécifié par *point*. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWnd`|Non utilisé.|  
+|[in] *pWnd*|Non utilisé.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle la `CMFCBaseTabCtrl::OnDragLeave` méthode pour effectuer l’opération de glissement.  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWnd`|Non utilisé.|  
-|[in] `pDataObject`|Pointeur vers l’objet que l’utilisateur fait glisser.|  
-|[in] `dwKeyState`|Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, et `MK_RBUTTON`.|  
-|[in] `point`|L’emplacement du pointeur de souris en coordonnées clientes.|  
+|[in] *pWnd*|Non utilisé.|  
+|[in] *pDataObject*|Pointeur vers l’objet que l’utilisateur fait glisser.|  
+|[in] *dwKeyState*|Contient l’état des touches de modification. Il s’agit d’une combinaison de plusieurs des opérations suivantes : `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, et `MK_RBUTTON`.|  
+|[in] *point*|L’emplacement du pointeur de souris en coordonnées clientes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’effet qui se produit si la suppression se produit à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
+ L’effet qui se produit si la suppression se produit à l’emplacement spécifié par *point*. Il peut être un ou plusieurs des opérations suivantes :  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pWnd`|Non utilisé.|  
-|[in] `pDataObject`|Pointeur vers l’objet que l’utilisateur fait glisser.|  
-|[in] `dropEffect`|L’opération de suppression par défaut.|  
-|[in] `dropList`|Non utilisé.|  
-|[in] `point`|L’emplacement du pointeur de souris en coordonnées clientes.|  
+|[in] *pWnd*|Non utilisé.|  
+|[in] *pDataObject*|Pointeur vers l’objet que l’utilisateur fait glisser.|  
+|[in] *dropEffect*|L’opération de suppression par défaut.|  
+|[in] *liste déroulante*|Non utilisé.|  
+|[in] *point*|L’emplacement du pointeur de souris en coordonnées clientes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’effet obtenu. Il peut être un ou plusieurs des opérations suivantes :  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode appelle `CMFCBaseTabCtrl::OnDrop` si le cadre de la barre d’outils est en mode de personnalisation et le format de données du Presse-papiers est disponible. Si l’appel à `CMFCBaseTabCtrl::OnDrop` retourne une valeur différente de zéro, cette méthode retourne l’effet de dépôt par défaut spécifié par `dropEffect`. Sinon, cette méthode retourne `DROPEFFECT_NONE`. Pour plus d’informations sur les effets de déplacement, consultez [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Cette méthode appelle `CMFCBaseTabCtrl::OnDrop` si le cadre de la barre d’outils est en mode de personnalisation et le format de données du Presse-papiers est disponible. Si l’appel à `CMFCBaseTabCtrl::OnDrop` retourne une valeur différente de zéro, cette méthode retourne l’effet de dépôt par défaut spécifié par *dropEffect*. Sinon, cette méthode retourne `DROPEFFECT_NONE`. Pour plus d’informations sur les effets de déplacement, consultez [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Pour plus d’informations sur le mode de personnalisation, consultez [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Pour plus d’informations sur les formats de données du Presse-papiers, consultez [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `pOwner`|Le contrôle onglet à inscrire comme une cible de dépôt.|  
+|[in] *pOwner*|Le contrôle onglet à inscrire comme une cible de dépôt.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’inscription a réussi ; Sinon, 0.  

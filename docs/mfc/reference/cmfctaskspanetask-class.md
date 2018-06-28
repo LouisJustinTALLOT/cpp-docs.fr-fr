@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371330"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040699"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask, classe
 Le `CMFCTasksPaneTask` classe est une classe d’assistance qui représente des tâches pour le contrôle de volet de tâches ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L’objet tâche représente un élément dans le groupe de tâches ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Chaque tâche peut avoir une commande exécutée par l’infrastructure lorsqu’un utilisateur clique sur la tâche et une icône qui apparaît à gauche du nom de la tâche.  
@@ -99,7 +99,7 @@ class CMFCTasksPaneTask : public CObject
   
  [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxTasksPane.h  
   
 ##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pGroup`  
+ *pGroup*  
  Spécifie le [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) à laquelle la tâche appartient.  
   
- `lpszName`  
+ *Caractère*  
  Spécifie le nom de la tâche.  
   
- `nIcon`  
+ *nIcon*  
  Spécifie l’index de l’image de la tâche dans la liste d’images.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Spécifie l’ID de commande de la commande est exécutée lorsque vous cliquez sur la tâche.  
   
- `dwUserData`  
+ *dwUserData*  
  Données définies par l’utilisateur.  
   
- `hwndTask`  
+ *hwndTask*  
  Spécifie le handle à la fenêtre des tâches.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Si `TRUE`, sera détruite automatiquement la fenêtre des tâches.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Spécifie la hauteur de la fenêtre de la tâche.  
   
 ### <a name="remarks"></a>Notes  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParent`  
+ [in] *pParent*  
  Représente la fenêtre parente de la tâche en cours.  
   
- [out] `data`  
+ [out] *données*  
  Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité de la tâche actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le `data` paramètre a été correctement remplis avec les données d’accessibilité de la tâche en cours ; sinon, `FALSE`.  
+ `TRUE` Si le *données* paramètre a été correctement remplis avec les données d’accessibilité de la tâche en cours ; sinon, `FALSE`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

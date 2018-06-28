@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373727"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037481"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Structure de CMFCTabToolTipInfo
 Cette structure fournit des informations sur l’onglet MDI qui pointe sur l’utilisateur.  
@@ -43,7 +43,7 @@ struct CMFCTabToolTipInfo
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|Le texte info-bulle.|  
   
 ## <a name="remarks"></a>Notes  
- Un pointeur vers un `CMFCTabToolTipInfo` structure est passée en tant que paramètre de la `AFX_WM_ON_GET_TAB_TOOLTIP` message. Ce message est généré lorsque les onglets MDI sont activés et que l’utilisateur pointe sur un contrôle onglet.  
+ Un pointeur vers un `CMFCTabToolTipInfo` structure est passée en tant que paramètre du message AFX_WM_ON_GET_TAB_TOOLTIP. Ce message est généré lorsque les onglets MDI sont activés et que l’utilisateur pointe sur un contrôle onglet.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment `CMFCTabToolTipInfo` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../visual-cpp-samples.md).  
@@ -53,7 +53,7 @@ struct CMFCTabToolTipInfo
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbasetabctrl.h  
   
 ##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex  

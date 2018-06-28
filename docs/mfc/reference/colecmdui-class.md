@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370755"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040712"
 ---
 # <a name="colecmdui-class"></a>Classe de COleCmdUI
 Implémente une méthode pour que MFC mette à jour l'état des objets d'interface utilisateur associés aux fonctionnalités pilotées par `IOleCommandTarget`de votre application.  
@@ -68,7 +68,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdocobj.h  
   
 ##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rgCmds`  
+ *rgCmds*  
  Liste des commandes prises en charge, associé au GUID spécifié. Le **OLECMD** structure associe les commandes avec des indicateurs de commande.  
   
  *cCmds*  
- Le nombre de commandes dans `rgCmds`.  
+ Le nombre de commandes dans *rgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Pointeur vers un GUID qui identifie un ensemble de commandes.  
   
 ### <a name="remarks"></a>Notes  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bOn`  
+ *bOn*  
  Indique si la commande associée à la `COleCmdUI` objet doit être activé ou désactivé. NonZero Active la commande ; 0 désactive la commande.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nCheck`  
+ *nVérifiez*  
  Une valeur qui détermine l’état à définir un bouton bascule activé/désactivé commande. Les valeurs possibles sont :  
   
 |Value|Description|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszText`  
+ *lpszText*  
  Pointeur vers le texte à utiliser avec la commande.  
   
 ## <a name="see-also"></a>Voir aussi  

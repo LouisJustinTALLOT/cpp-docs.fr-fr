@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370807"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041979"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Classe de CMFCCustomColorsPropertyPage
 Représente une page de propriétés que vous pouvez sélectionner des couleurs personnalisées dans une boîte de dialogue couleur.  
@@ -73,7 +73,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
  [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcustomcolorspropertypage.h  
   
 ##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
@@ -91,9 +91,9 @@ void Setup(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `R`|La composante rouge de la valeur RVB.|  
-|[in] `G`|La composante verte de la valeur RVB.|  
-|[in] `B`|La composante bleue de la valeur RVB.|  
+|[in] *R*|La composante rouge de la valeur RVB.|  
+|[in] *G*|La composante verte de la valeur RVB.|  
+|[in] *B*|La composante bleue de la valeur RVB.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode met à jour le RVB actuel et TSL (teinte, luminosité et saturation) couleur valeurs associées de la page de propriétés. Le [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) méthode appelle cette méthode lorsque le framework initialise la boîte de dialogue couleur ou l’utilisateur appuie sur le bouton gauche de la souris. Pour plus d’informations sur `CMFCColorDialog`, consultez [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  

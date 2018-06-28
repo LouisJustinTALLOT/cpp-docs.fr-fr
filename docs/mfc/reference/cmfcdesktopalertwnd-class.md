@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370654"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039984"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 La `CMFCDesktopAlertWnd` classe implémente les fonctionnalités d’une boîte de dialogue non modale qui apparaît à l’écran pour informer l’utilisateur sur un événement.  
@@ -140,7 +140,7 @@ class CMFCDesktopAlertWnd : public CWnd
   
  [CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxDesktopAlertWnd.h  
   
 ##  <a name="create"></a>  CMFCDesktopAlertWnd::Create  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  Spécifie le propriétaire de la fenêtre d’alerte. Ce propriétaire reçoit ensuite toutes les notifications de la fenêtre d’alerte de bureau. Cette valeur ne peut pas être `NULL`.  
   
- [in] `uiDlgResID`  
+ [in] *uiDlgResID*  
  Spécifie l’ID de ressource de la fenêtre d’alerte.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Spécifie le menu qui s’affiche lorsque l’utilisateur clique sur le bouton de menu. Si `NULL`, le bouton de menu n’est pas affiché.  
   
- [in] `ptPos`  
+ [in] *ptPos*  
  Spécifie la position initiale, où la fenêtre d’alerte s’affiche, à l’aide des coordonnées d’écran. Si ce paramètre est (-1, -1), la fenêtre d’alerte s’affiche dans le coin inférieur droit de l’écran.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  Informations de classe runtime pour une classe de boîte de dialogue personnalisée qui couvre la zone cliente de la fenêtre alerte.  
   
- [in] `params`  
+ [in] *params*  
  Spécifie les paramètres qui sont utilisés pour créer une fenêtre d’alerte.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  Spécifie la vitesse d’animation nouvelle, en millisecondes.  
   
 ### <a name="remarks"></a>Notes  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `type`  
+ [in] *type*  
  Spécifie le type de l’animation.  
   
 ### <a name="remarks"></a>Notes  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nTime`  
+ [in] *nTime*  
  La durée, en millisecondes, qui s’écoule avant que la fenêtre d’alerte se ferme automatiquement.  
   
 ### <a name="remarks"></a>Notes  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` Pour spécifier que la fenêtre d’alerte affiche une barre de titre réduite ; dans le cas contraire, `FALSE` pour spécifier que la fenêtre d’alerte affiche une légende de la taille normale.  
   
 ### <a name="remarks"></a>Notes  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  Spécifie le niveau de transparence. Cette valeur doit être comprise entre 0 et 255, inclus. Plus la valeur, la partie la plus opaque la fenêtre.  
   
 ### <a name="remarks"></a>Notes  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370027"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037659"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 La `CMFCHeaderCtrl` classe prend en charge le tri de plusieurs colonnes dans un contrôle header.  
@@ -106,7 +106,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxheaderctrl.h  
   
 ##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
@@ -137,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le mode de tri sur plusieurs colonnes ; `FALSE` pour désactiver le mode de trier plusieurs colonnes et pour supprimer des colonnes dans la liste des colonnes triées. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -151,7 +151,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iColumn`  
+ [in] *iColumn*  
  Index de base zéro d’une colonne.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -227,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `iItem`  
+ [in] *iItem*  
  Index de base zéro de l’élément à dessiner.  
   
- [in] `rect`  
+ [in] *rect*  
  Le rectangle englobant de l’élément à dessiner.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` Pour dessiner l’élément dans l’état enfoncé ; dans le cas contraire, `FALSE`.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` Pour dessiner l’élément dans l’état mis en surbrillance ; dans le cas contraire, `FALSE`.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -252,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectArrow`  
+ [in] *rectArrow*  
  Le rectangle englobant de la flèche de tri.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -266,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
@@ -279,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iColumn`  
+ [in] *iColumn*  
  Index de base zéro de la colonne à supprimer.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iColumn`  
+ [in] *iColumn*  
  Index de base zéro d’une colonne de contrôle d’en-tête. Si ce paramètre est inférieur à zéro, cette méthode supprime toutes les colonnes de la liste des colonnes de tri.  
   
- [in] `bAscending`  
- Spécifie l’ordre de tri de la colonne qui le `iColumn` paramètre spécifie. `TRUE` Pour définir l’ordre croissant ; `FALSE` pour définir l’ordre décroissant. La valeur par défaut est `TRUE`.  
+ [in] *bAscending*  
+ Spécifie l’ordre de tri de la colonne qui le *iColumn* paramètre spécifie. `TRUE` Pour définir l’ordre croissant ; `FALSE` pour définir l’ordre décroissant. La valeur par défaut est `TRUE`.  
   
- [in] `bAdd`  
- `TRUE` Pour définir l’ordre de tri de la colonne qui le `iColumn` paramètre spécifie.  
+ [in] *bAjouter*  
+ `TRUE` Pour définir l’ordre de tri de la colonne qui le *iColumn* paramètre spécifie.  
   
  Si le contrôle header actuel se trouve dans *tri sur plusieurs colonnes* mode, cette méthode ajoute la colonne spécifiée à la liste des colonnes de tri. Utilisez [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) pour définir le mode de tri plusieurs colonnes.  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371726"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038352"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe de CMFCLinkCtrl
 La `CMFCLinkCtrl` classe affiche un bouton sous la forme d’un lien hypertexte et appelle la cible du lien lorsque le bouton est activé.  
@@ -78,7 +78,7 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxlinkctrl.h  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Un rectangle qui englobe le contrôle de lien.  
   
 ### <a name="remarks"></a>Notes  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszURL`  
+ [in] *lpszURL*  
  Le texte du bouton à afficher.  
   
 ### <a name="remarks"></a>Notes  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  Le préfixe du protocole d’URL.  
   
 ### <a name="remarks"></a>Notes  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` Pour centrer le texte et bouton bitmap verticalement entre le haut et bas du contrôle de lien ; dans le cas contraire, `FALSE`. La valeur par défaut est `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` Pour centrer le texte et bouton bitmap horizontalement entre les côtés gauche et droit du contrôle de lien ; dans le cas contraire, `FALSE`. La valeur par défaut est `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  

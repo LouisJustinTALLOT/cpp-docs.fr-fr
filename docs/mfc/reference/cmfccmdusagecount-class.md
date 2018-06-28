@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369240"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037341"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe de CMFCCmdUsageCount
 Effectue le suivi du nombre d’utilisations des messages Windows, tels que lorsque l’utilisateur sélectionne un élément dans un menu.  
@@ -89,7 +89,7 @@ class CMFCCmdUsageCount : public CObject
   
  [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmdusagecount.h  
   
 ##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `uiCmd`|Spécifie le compteur de commande à incrémenter.|  
+|[in] *uiCmd*|Spécifie le compteur de commande à incrémenter.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode ajoute une nouvelle entrée à la structure de mappage des nombres de la commande, de `m_CmdUsage`, si l’entrée n’existe pas déjà.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   L’infrastructure de la barre d’outils est en mode de personnalisation (le [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) méthode retourne une valeur différente de zéro).  
   
--   La commande fait référence à un séparateur de menu ou sous-menu ( `uiCmd` est égal à 0 ou -1).  
+-   La commande fait référence à un séparateur de menu ou sous-menu ( *uiCmd* est égal à 0 ou -1).  
   
-- `uiCmd` fait référence à une commande standard (global `IsStandardCommand` fonction retourne une valeur différente de zéro).  
+- *uiCmd* fait référence à une commande standard (global `IsStandardCommand` fonction retourne une valeur différente de zéro).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Récupère le nombre total d’utilisation qui est associé à l’ID de commande donné.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `uiCmd`|ID du compteur de commande à récupérer.|  
+|[in] *uiCmd*|ID du compteur de commande à récupérer.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte d’utilisation qui est associé à l’ID de commande donné.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `uiCmd`|Spécifie la commande à vérifier.|  
+|[in] *uiCmd*|Spécifie la commande à vérifier.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la commande est fréquemment utilisée ; Sinon, 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `ar`|A `CArchive` objet à sérialiser depuis ou vers.|  
+|[in] *ar*|A `CArchive` objet à sérialiser depuis ou vers.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode sérialise des nombres de la commande, de la structure du plan `m_CmdUsage`et l’utilisation de la commande total, `m_nTotalUsage`, compteur ou de l’archive spécifiée.  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] `nStartCount`|Le nouveau nombre initial de commandes de tous les suivis.|  
-|[in] `nMinUsagePercentage`|Le nouveau pourcentage minimal d’utilisation.|  
+|[in] *nStartCount*|Le nouveau nombre initial de commandes de tous les suivis.|  
+|[in] *nMinUsagePercentage*|Le nouveau pourcentage minimal d’utilisation.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode réussit, `FALSE` si le `nMinUsagePercentage` paramètre est supérieure ou égale à 100.  
+ `TRUE` Si la méthode réussit, `FALSE` si le *nMinUsagePercentage* paramètre est supérieure ou égale à 100.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode définit le partagé `CMFCCmdUsageCount` données membres de classe `m_nStartCount` et `m_nMinUsagePercentage` à `nStartCount` et `nMinUsagePercentage`, respectivement. `m_nStartCount` est utilisé par le [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) méthode pour déterminer si cet objet a collecté la quantité minimale de données de suivi. `m_nMinUsagePercentage` est utilisé par le [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) méthode pour déterminer si une commande donnée est fréquemment utilisée.  
+ Cette méthode définit le partagé `CMFCCmdUsageCount` données membres de classe `m_nStartCount` et `m_nMinUsagePercentage` à *nStartCount* et *nMinUsagePercentage*, respectivement. `m_nStartCount` est utilisé par le [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) méthode pour déterminer si cet objet a collecté la quantité minimale de données de suivi. `m_nMinUsagePercentage` est utilisé par le [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) méthode pour déterminer si une commande donnée est fréquemment utilisée.  
   
  Dans les versions Debug cette méthode génère un échec d’assertion si le `nMinUsagePercentage` paramètre est supérieure ou égale à 100.  
   

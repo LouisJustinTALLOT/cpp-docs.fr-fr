@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372695"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037723"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe de CMFCRibbonSlider
 La `CMFCRibbonSlider` classe implémente un contrôle de curseur que vous pouvez ajouter à une barre de ruban ou la barre d’état du ruban. Le contrôle Slider de ruban ressemble aux curseurs de zoom présents dans les applications Office 2007.  
@@ -99,7 +99,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
  [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonslider.h  
   
 ##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  ID de curseur.  
   
- [in]. `nWidth`  
+ [in]. *nWidth*  
  Largeur du curseur en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Construit un slider de ruban est `nWidth` pixels en larges dans la catégorie du Panneau de configuration où le curseur est ajouté. Par défaut, le curseur est horizontal.  
+ Construit un slider de ruban est *nWidth* pixels en larges dans la catégorie du Panneau de configuration où le curseur est ajouté. Par défaut, le curseur est horizontal.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Retourne la position actuelle du contrôle slider.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nPos`  
+ [in] *nPos*  
  Spécifie la position à définir pour le curseur. La position est relatif au début du curseur.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Si `TRUE`, le curseur est redessiné.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nMin`  
+ [in] *nMin*  
  Spécifie la valeur minimale du contrôle slider.  
   
- [in] `nMax`  
+ [in] *nombre maximal*  
  Spécifie la valeur maximale du contrôle slider.  
   
 ### <a name="remarks"></a>Notes  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in]. `bSet`  
+ [in]. *bSet*  
  `TRUE` Pour afficher les boutons de zoom ; `FALSE` pour les masquer.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  Spécifie l’incrément de zoom du contrôle slider.  
   
 ## <a name="see-also"></a>Voir aussi  

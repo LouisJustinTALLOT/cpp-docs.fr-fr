@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377860"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039321"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
 Implémente les galeries de ruban de style Office 2007.  
@@ -150,7 +150,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Définit le nombre d’éléments par ligne dans la galerie.|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Définit le texte info-bulle pour un élément dans la galerie.|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|Attache une palette à la galerie du ruban.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Définit l’ID de commande qui est envoyé dans le `WM_COMMAND` message lorsqu’un élément de la galerie a été sélectionné.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Définit l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un élément de la galerie a été sélectionné.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
@@ -159,7 +159,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Appelé par le framework lorsqu’une icône de la galerie est dessinée.|  
   
 ## <a name="remarks"></a>Notes  
- Un bouton de la galerie se comporte comme un bouton de menu standard, à ceci près qu’il affiche une galerie lorsqu’un utilisateur l’ouvre. Lorsque vous sélectionnez un élément dans une galerie, le framework envoie le `WM_COMMAND` message avec l’ID de commande du bouton. Lorsque vous gérez le message, vous devez appeler [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) pour déterminer l’élément qui a été sélectionné à partir de la galerie.  
+ Un bouton de la galerie se comporte comme un bouton de menu standard, à ceci près qu’il affiche une galerie lorsqu’un utilisateur l’ouvre. Lorsque vous sélectionnez un élément dans une galerie, le framework envoie le message WM_COMMAND avec l’ID de commande du bouton. Lorsque vous gérez le message, vous devez appeler [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) pour déterminer l’élément qui a été sélectionné à partir de la galerie.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonGallery` classe permettant de configurer un `CMFCRibbonGallery` objet. L’exemple montre comment spécifier le nombre d’éléments par ligne dans la galerie, activer le redimensionnement du Panneau de menu, activer la barre latérale à gauche du menu contextuel et afficher la galerie du ruban en tant qu’une palette directement sur la barre du ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).  
@@ -171,7 +171,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
  [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxRibbonPaletteGallery.h  
   
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup  
@@ -195,19 +195,19 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Spécifie le nom du groupe.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Spécifie l’ID de la liste d’images qui contient les images pour le groupe de ressources.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Spécifie la largeur en pixels d’une image.  
   
- [in] `imagesGroup`  
+ [in] *imagesGroup*  
  Une référence à la liste d’images qui contient des images de groupe.  
   
- [in] `nIconsNum`  
+ [in] *nIconsNum*  
  Spécifie le nombre d’icônes dans le groupe. Ce paramètre doit être spécifié uniquement pour personnalisé (owner-drawn) groupes.  
   
 ### <a name="remarks"></a>Notes  
@@ -224,22 +224,22 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Pointeur vers l’élément à ajouter au menu.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index de base zéro d’un emplacement où insérer l’élément.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` Pour spécifier que l’élément doit être inséré avant la galerie du ruban ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez combiner des galeries de fenêtre contextuelle avec les éléments de menu contextuel en appelant cette méthode. Éléments de menu peuvent être placés avant ou après la galerie.  
   
- Pour insérer l’élément avant de la galerie, définissez `bOnTop` à `TRUE`. Définissez `bOnTop` à `FALSE` pour insérer l’élément sous la galerie.  
+ Pour insérer l’élément avant de la galerie, définissez *bOnTop* à `TRUE`. Définissez *bOnTop* à `FALSE` pour insérer l’élément sous la galerie.  
   
 > [!NOTE]
->  Le paramètre `nIndex` Spécifie l’index d’insertion à la fois en haut de la galerie et en bas de la galerie. Par exemple, si vous avez besoin insérer un élément d’une position avant de la galerie, définir `nIndex` 1 et `bOnTop` à `TRUE`. De même, si vous avez besoin insérer un élément d’une position au-dessous de la galerie, définir `nIndex` 1 et `bOnTop` à `FALSE`.  
+>  Le paramètre *nIndex* Spécifie l’index d’insertion à la fois en haut de la galerie et en bas de la galerie. Par exemple, si vous avez besoin insérer un élément d’une position avant de la galerie, définir *nIndex* 1 et *bOnTop* à `TRUE`. De même, si vous avez besoin insérer un élément d’une position au-dessous de la galerie, définir *nIndex* 1 et *bOnTop* à `FALSE`.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Efface le contenu de la galerie.  
@@ -283,34 +283,34 @@ CMFCRibbonGallery (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  Spécifie l’ID de commande de la commande à exécuter quand un utilisateur clique sur le bouton.  
   
- `lpszText`  
+ *lpszText*  
  Spécifie le texte à afficher sur le bouton.  
   
- `nSmallImageIndex`  
+ *nSmallImageIndex*  
  Index de base zéro de la petite image à afficher sur le bouton.  
   
- `nLargeImageIndex`  
+ *nLargeImageIndex*  
  Index de base zéro d’une grande image à afficher sur le bouton.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Une référence à la [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) objet qui contient les images pour qu’il apparaisse dans la galerie.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  L’ID de ressource de la liste des images à afficher dans la galerie.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Spécifie la largeur, en pixels, de l’image dans la galerie.  
   
- `sizeIcon`  
+ *sizeIcon*  
  Spécifie la taille, en pixels, de l’image de la galerie.  
   
- `nIconsNum`  
+ *nIconsNum*  
  Spécifie le nombre d’icônes dans la galerie.  
   
- `bDefaultButtonStyle`  
+ *bDefaultButtonStyle*  
  Spécifie s’il faut utiliser la valeur par défaut ou le style de bouton owner-drawn.  
   
 ### <a name="remarks"></a>Notes  
@@ -325,10 +325,10 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour activer le redimensionnement du menu ; dans le cas contraire, `FALSE`.  
   
- [in] `bVertcalOnly`  
+ [in] *bVertcalOnly*  
  `TRUE` Pour spécifier que la galerie peut être redimensionnée uniquement verticalement ; `FALSE` pour spécifier que la galerie peut être redimensionné à la fois verticalement et horizontalement.  
   
 ### <a name="remarks"></a>Notes  
@@ -342,7 +342,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  `TRUE` Pour spécifier que la barre latérale est activée ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -381,7 +381,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  Spécifie l’index de base zéro pour le groupe dont vous souhaitez récupérer le nom.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -420,7 +420,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  Spécifie l’index de base zéro de l’élément pour lequel récupérer le texte d’info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -436,11 +436,11 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Spécifie l’ID de commande de l’élément de menu qui a ouvert la galerie du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Lorsque l’utilisateur sélectionne un élément dans la galerie du ruban, la bibliothèque envoie le `WM_COMMAND` message avec l’ID de commande du bouton de menu qui a ouvert la galerie du ruban.  
+ Lorsque l’utilisateur sélectionne un élément dans la galerie du ruban, la bibliothèque envoie le message WM_COMMAND avec l’ID de commande du bouton de menu qui a ouvert la galerie du ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -559,7 +559,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -576,19 +576,19 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique qui est utilisé pour le dessin.  
   
- [in] `rectIcon`  
+ [in] *rectIcon*  
  Spécifie le rectangle englobant de l’icône à dessiner.  
   
- [in] `nIconIndex`  
+ [in] *nIconIndex*  
  Spécifie l’index de base zéro dans la liste d’images des icônes de la galerie de l’icône à dessiner.  
   
- [in] `pIcon`  
+ [in] *pIcon*  
  Pointeur vers l’icône qui est dessiné.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Spécifie la couleur du texte de l’élément à dessiner.  
   
 ### <a name="remarks"></a>Notes  
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -614,7 +614,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -645,7 +645,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -659,10 +659,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParent`  
+ [in] *pParent*  
  La fenêtre parente de la fenêtre de la galerie du ruban.  
   
- [out] `data`  
+ [out] *données*  
  Un objet `CAccessibilityData` qui reçoit les données d’accessibilité de la galerie du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -678,7 +678,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Pour afficher la galerie du ruban comme un bouton de menu déroulant ; `FALSE` pour afficher le contenu de la galerie du ruban directement sur le ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -693,10 +693,10 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  Spécifie l’index de base zéro pour le groupe pour lequel le nom est en cours de modification.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Spécifie le nouveau nom pour le groupe.  
   
 ### <a name="remarks"></a>Notes  
@@ -710,7 +710,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIconsInRow`  
+ [in] *nIconsInRow*  
  Spécifie le nombre d’éléments à afficher dans chaque ligne de la galerie.  
   
 ### <a name="remarks"></a>Notes  
@@ -726,10 +726,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  Index de base zéro de l’élément de palette avec lequel associer l’info-bulle.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  Le texte à afficher sur l’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
@@ -747,27 +747,27 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `imagesPalette`  
+ [in] *imagesPalette*  
  Spécifie la liste d’images qui contient les icônes pour qu’il apparaisse dans la galerie.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Spécifie l’ID de ressource de la liste d’images qui contient les icônes pour qu’il apparaisse dans la galerie.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Spécifie la largeur, en pixels, d’une image dans la galerie.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Définit l’ID de commande qui est envoyé dans le **WM_COMMAND** message lorsqu’un utilisateur sélectionne un élément de la galerie.  
+ Définit l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la galerie.  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
- Spécifie l’ID de commande qui est envoyé dans le **WM_COMMAND** message lorsqu’un utilisateur sélectionne un élément de la galerie.  
+ [in] *nID*  
+ Spécifie l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la galerie.  
   
 ### <a name="remarks"></a>Notes  
  Pour déterminer l’élément sélectionné d’un utilisateur à partir de la galerie, appelez le [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) méthode statique.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367914"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040231"
 ---
 # <a name="cmfccolordialog-class"></a>Classe de CMFCColorDialog
 La `CMFCColorDialog` classe représente une boîte de dialogue de sélection de couleur.  
@@ -110,7 +110,7 @@ class CMFCColorDialog : public CDialogEx
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcolordialog.h  
   
 ##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clrInit`  
+ [in] *clrInit*  
  La sélection de couleur par défaut. Si aucune valeur n’est spécifiée, la valeur par défaut est RGB(0,0,0) (noir).  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  (Réservé).  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
   
- [in] `hPal`  
+ [in] *hPal*  
  Handle vers une palette de couleurs.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rgb`  
+ [in] *RVB*  
  Une valeur de couleur RVB  
   
 ### <a name="remarks"></a>Notes  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rgb`  
+ [in] *RVB*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) qui spécifie une couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `R`  
+ [in] *R*  
  Spécifie la composante rouge de la valeur RVB.  
   
- [in] `G`  
+ [in] *G*  
  Spécifie la composante verte de la valeur RVB.  
   
- [in] `B`  
+ [in] *B*  
  Spécifie la composante bleue de la valeur RVB.  
   
 ### <a name="remarks"></a>Notes  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `R`  
+ [in] *R*  
  Spécifie un composant rouge de la valeur RVB  
   
- [in] `G`  
+ [in] *G*  
  Spécifie un composant vert d’une valeur RVB  
   
- [in] `B`  
+ [in] *B*  
  Spécifie un composant bleu d’une valeur RVB  
   
 ### <a name="remarks"></a>Notes  

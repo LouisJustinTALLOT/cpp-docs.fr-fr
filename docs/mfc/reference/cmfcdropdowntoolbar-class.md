@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369806"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042116"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe de CMFCDropDownToolBar
 Barre d'outils qui s'affiche lorsque l'utilisateur appuie sur un bouton de barre d'outils de niveau supérieur et le maintient enfoncé.  
@@ -105,7 +105,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdropdowntoolbar.h  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu  
@@ -133,22 +133,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiResID`  
+ [in] *uiResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils réactives.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils non réactives.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de menu normales.  
   
- [in] `bLocked`  
+ [in] *bloqué*  
  `TRUE` Pour verrouiller la barre d’outils ; dans le cas contraire `FALSE`.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de barre d’outils désactivées.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  L’ID de ressource de la bitmap qui fait référence aux images de menu désactivées.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiResID`  
- [in] `uiColdResID`  
- [in] `uiMenuResID`  
- [in] `BOOL`  
- [in] `uiDisabledResID`  
- [in] `uiMenuDisabledResID`  
- [in] `uiHotResID`  
+ [in] *uiResID*  
+ [in] *uiColdResID*  
+ [in] *uiMenuResID*  
+ [in] *BOOL*  
+ [in] *uiDisabledResID*  
+ [in] *uiMenuDisabledResID*  
+ [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nIndicateurs*  
+ [in] *point*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nIndicateurs*  
+ [in] *point*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Notes  
   

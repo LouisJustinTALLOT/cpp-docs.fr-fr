@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372458"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038075"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 Représente un « mutex », un objet de synchronisation qui permet à un thread l’accès mutuellement exclusif à une ressource.  
@@ -60,7 +60,7 @@ class CMutex : public CSyncObject
   
  `CMutex`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmt.h  
   
 ##  <a name="cmutex"></a>  CMutex::CMutex  
@@ -74,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  Spécifie si la création du thread du `CMutex` objet a initialement l’accès à la ressource contrôlée par le mutex.  
   
- `lpszName`  
- Nom de l'objet `CMutex`. Si un autre mutex portant le même nom existe, `lpszName` doit être fournie si l’objet doit être utilisé au-delà des limites de processus. Si **NULL**, l’exclusion mutuelle est sans nom. Si le nom correspond à un mutex existant, le constructeur crée un nouveau `CMutex` objet qui fait référence à l’exclusion mutuelle de ce nom. Si le nom correspond à un objet de synchronisation existant n’est pas un mutex, la construction échoue.  
+ *Caractère*  
+ Nom de l'objet `CMutex`. Si un autre mutex portant le même nom existe, *le caractère* doit être fournie si l’objet doit être utilisé au-delà des limites de processus. Si **NULL**, l’exclusion mutuelle est sans nom. Si le nom correspond à un mutex existant, le constructeur crée un nouveau `CMutex` objet qui fait référence à l’exclusion mutuelle de ce nom. Si le nom correspond à un objet de synchronisation existant n’est pas un mutex, la construction échoue.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Attributs de sécurité pour l’objet mutex. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) dans le Kit de développement logiciel Windows.  
   
 ### <a name="remarks"></a>Notes  

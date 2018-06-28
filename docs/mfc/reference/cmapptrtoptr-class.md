@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b3af1336c35fe9520834018d9c668005048db82
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366822"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037756"
 ---
 # <a name="cmapptrtoptr-class"></a>Classe de CMapPtrToPtr
 Prend en charge les mappages de pointeurs void indexés par des pointeurs void.  
@@ -61,7 +61,7 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CMapPtrToPtr` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers `void`. Chaque fois que vous voyez un `CString` ou un **const** pointeur vers `char` en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers `void`.  
+ Les fonctions membres de `CMapPtrToPtr` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**. Chaque fois que vous voyez un `CString` ou un **const** pointeur vers `char` en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -115,7 +115,7 @@ class CMapPtrToPtr : public CObject
   
  `CMapPtrToPtr`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

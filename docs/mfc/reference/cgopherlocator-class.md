@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366920"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041284"
 ---
 # <a name="cgopherlocator-class"></a>Classe d’objet CGopherLocator
 Obtient un « localisateur » d’un serveur gopher, détermine le type du localisateur et rend le localisateur accessible à [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -73,7 +73,7 @@ class CGopherLocator : public CObject
   
  `CGopherLocator`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
@@ -84,7 +84,7 @@ CGopherLocator(const CGopherLocator& ref);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ref`  
+ *ref*  
  Une référence à une constante `CGopherLocator` objet.  
   
 ### <a name="remarks"></a>Notes  

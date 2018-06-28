@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376416"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040036"
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton, classe
 La classe `CMFCRibbonButton` implémente des boutons que vous pouvez placer sur des éléments de barre de ruban, tels que les volets, les barres d'outils Accès rapide et les menus contextuels.  
@@ -248,7 +248,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
   
  [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonbutton.h  
   
 ##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem  
@@ -261,10 +261,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Spécifie un pointeur vers le nouvel élément à ajouter.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index au niveau duquel ajouter l’élément dans le tableau d’éléments de menu du bouton ; -1 pour ajouter l’élément à la fin du tableau d’éléments de menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
@@ -318,19 +318,19 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  Spécifie l’ID de commande du bouton.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Spécifie l’étiquette de texte du bouton.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Spécifie un index de base zéro de l’image du bouton petit dans la liste d’images de la catégorie parente.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Spécifie un index de base zéro de l’image du bouton volumineux dans la liste d’images de la catégorie parente.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Spécifie un handle de l’icône de l’application utilise l’image du bouton.  
   
 ### <a name="example"></a>Exemple  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [in] *contrôleur de domaine principal*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -366,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [in] *contrôleur de domaine principal*  
+ [in] *type*  
+ [in] *rectImage*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -385,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [in] *contrôleur de domaine principal*  
+ [in] *%{strText/}*  
+ [in] *rectText*  
+ [in] *uiDTFlags*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -403,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
  Spécifie l’ID de commande de l’élément de menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro de l’élément de sous-menu qui est associé à le `uiID`. -1 si aucun élément de sous-menu telle.  
+ Index de base zéro de l’élément de sous-menu qui est associé à la *uiID*. -1 si aucun élément de sous-menu telle.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -428,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -442,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bLargeIcon`  
+ [in] *bLargeIcon*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -456,7 +456,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  Si `TRUE`, retourne l’index d’image dans la liste d’images qui contient les images de grande taille ; sinon, retourne l’index d’image dans la liste d’images qui contient les petites images.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -470,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `type`  
+ [in] *type*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -484,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -519,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -751,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -763,7 +763,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Spécifie la position de la souris.  
   
 ### <a name="remarks"></a>Notes  
@@ -777,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -789,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -801,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -822,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index de base zéro de l’élément de menu que vous souhaitez supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’élément spécifié a été supprimé avec succès ; dans le cas contraire `FALSE` si `nIndex` est un nombre négatif ou est supérieur au nombre d’éléments de menu dans le menu contextuel.  
+ `TRUE` Si l’élément spécifié a été supprimé avec succès ; dans le cas contraire `FALSE` si *nIndex* est un nombre négatif ou est supérieur au nombre d’éléments de menu dans le menu contextuel.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
  Définit les données d’accessibilité du bouton de ruban.  
@@ -838,10 +838,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParent`  
+ *pParent*  
  La fenêtre parente de l’élément ruban.  
   
- `data`  
+ *data*  
  Les données d’accessibilité de l’élément ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -857,7 +857,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  Si `TRUE`, le bouton affiche une grande image. Sinon, le bouton affiche une petite image.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
@@ -868,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  Si `TRUE`, le bouton exécuter sa commande par défaut. Si `FALSE`, le bouton ne peut pas exécuter la commande par défaut.  
   
 ### <a name="remarks"></a>Notes  
- `bSet` s’applique uniquement lorsque le bouton a un menu. Si `bSet` est `TRUE`, le bouton exécuter sa commande par défaut et le menu contextuel affecté apparaît uniquement lorsqu’un utilisateur clique sur la flèche située à droite du bouton. Sinon, le bouton ne peut pas exécuter la commande par défaut, et le menu contextuel s’affiche, quelle que soit la zone du bouton de l’utilisateur clique sur.  
+ *bSet* s’applique uniquement lorsque le bouton a un menu. Si *bSet* est `TRUE`, le bouton exécuter sa commande par défaut et le menu contextuel affecté apparaît uniquement lorsqu’un utilisateur clique sur la flèche située à droite du bouton. Sinon, le bouton ne peut pas exécuter la commande par défaut, et le menu contextuel s’affiche, quelle que soit la zone du bouton de l’utilisateur clique sur.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -882,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -896,10 +896,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nIndex`  
+ [in] *nIndex*  
  Spécifie l’index d’image.  
   
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  Si `TRUE`, l’index spécifié fait référence à la liste des images de grande taille. Sinon, l’index fait référence à la liste des images petites.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
@@ -918,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hMenu`  
+ *hMenu*  
  Handle vers un menu Windows.  
   
- `bIsDefaultCommand`  
+ *bIsDefaultCommand*  
  Si `TRUE`, le bouton exécuter sa commande par défaut ; sinon, le bouton affiche un menu contextuel.  
   
- `bRightAlign`  
+ *bRightAlign*  
  Si `TRUE`, le menu est aligné à droite. Sinon, le menu est aligné à gauche.  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  Un ID de ressource de menu.  
   
 ### <a name="remarks"></a>Notes  
- Lorsque l’application attribue le menu pour le bouton, le bouton affiche une flèche sur le côté droit. Si `bIsDefaultCommand` est `TRUE`, le menu s’affiche uniquement lorsque l’utilisateur clique sur la flèche. Si l’utilisateur clique sur le bouton, la commande par défaut est exécutée. Si `bIsDefaultCommand` est `FALSE`, le menu s’affiche en cliquant n’importe où sur le bouton.  
+ Lorsque l’application attribue le menu pour le bouton, le bouton affiche une flèche sur le côté droit. Si *bIsDefaultCommand* est `TRUE`, le menu s’affiche uniquement lorsque l’utilisateur clique sur la flèche. Si l’utilisateur clique sur le bouton, la commande par défaut est exécutée. Si *bIsDefaultCommand* est `FALSE`, le menu s’affiche en cliquant n’importe où sur le bouton.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -941,7 +941,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParent`  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -953,7 +953,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bSet`  
+ [in] *bSet*  
  Si `TRUE`, le menu est aligné à droite. Sinon, le menu est aligné à gauche  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
@@ -964,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Notes  
   

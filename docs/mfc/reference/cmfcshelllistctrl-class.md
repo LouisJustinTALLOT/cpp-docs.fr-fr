@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374961"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040819"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Classe de CMFCShellListCtrl affichant
 La `CMFCShellListCtrl` classe fournit les fonctionnalités de contrôle de liste Windows et les étend en incluant la possibilité d’afficher une liste des éléments du shell.  
@@ -118,7 +118,7 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
  `CMFCShellListCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxshelllistCtrl.h  
   
 ##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Chaîne qui contient le chemin d’accès d’un dossier.  
   
- [in] `lpItemInfo`  
+ [in] *lpItemInfo*  
  Un pointeur vers un `LPAFX_SHELLITEMINFO` structure qui décrit un dossier à afficher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui spécifie si le framework Active le menu contextuel.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `strPath`  
+ [out] *strPath*  
  Une référence à un paramètre de chaîne dans laquelle la méthode écrit le chemin d’accès.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `strName`  
+ [out] *strName*  
  Une référence à un paramètre de chaîne dans laquelle la méthode écrit le nom.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `strPath`  
+ [out] *strPath*  
  Une référence à une chaîne qui reçoit le chemin d’accès.  
   
- [in] `iItem`  
+ [in] *iItem*  
  Index de l’élément de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` en cas de réussite ; `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- L’index fourni par `iItem` est basée sur les éléments actuellement affichés par le [CMFCShellListCtrl affichant classe](../../mfc/reference/cmfcshelllistctrl-class.md) objet.  
+ L’index fourni par *iItem* est basée sur les éléments actuellement affichés par le [CMFCShellListCtrl affichant classe](../../mfc/reference/cmfcshelllistctrl-class.md) objet.  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  Retourne le type d’éléments affichés par le [CMFCShellListCtrl affichant](../../mfc/reference/cmfcshelllistctrl-class.md) objet.  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [in] *lParam1*  
+ [in] *lParam2*  
+ [in] *iColumn*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `tmFile`  
+ [in] *tmFile*  
  La date associée à un fichier.  
   
- [out] `str`  
+ [out] *str*  
  Chaîne qui contient la date du fichier de mise en forme.  
   
 ### <a name="remarks"></a>Notes  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lFileSize`  
+ [in] *lFileSize*  
  La taille du fichier qui affiche l’infrastructure.  
   
- [out] `str`  
+ [out] *str*  
  Chaîne qui contient la taille du fichier de mise en forme.  
   
 ### <a name="remarks"></a>Notes  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iItem`  
+ [in] *iItem*  
  L’index de l’élément.  
   
- [in] `pItem`  
+ [in] *pItem*  
  A `LPAFX_SHELLITEMINFO` paramètre qui décrit l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>Notes  
  L’index d’image icône repose sur la liste d’images système.  
   
- Par défaut, cette méthode s’appuie sur la `pItem` paramètre. La valeur de `iItem` n’est pas utilisé dans l’implémentation par défaut. Vous pouvez utiliser `iItem` pour implémenter un comportement personnalisé.  
+ Par défaut, cette méthode s’appuie sur le *pItem* paramètre. La valeur de *iItem* n’est pas utilisé dans l’implémentation par défaut. Vous pouvez utiliser *iItem* pour implémenter un comportement personnalisé.  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  L’infrastructure appelle cette méthode lorsqu’il doit récupérer le texte d’un élément de l’interpréteur de commandes.  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iItem`  
+ [in] *iItem*  
  L’index de l’élément.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  La colonne concernée.  
   
- [in] `pItem`  
+ [in] *pItem*  
  A `LPAFX_SHELLITEMINFO` paramètre qui décrit l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>Notes  
  Chaque élément dans le `CMFCShellListCtrl` objet peut avoir de texte dans une ou plusieurs colonnes. Lorsque l’infrastructure appelle cette méthode, il spécifie la colonne qui l’intéressent. Si vous appelez cette fonction manuellement, vous devez également spécifier la colonne qui vous intéressez.  
   
- Par défaut, cette méthode s’appuie sur la `pItem` paramètre pour déterminer quel élément au processus. La valeur de `iItem` n’est pas utilisé dans l’implémentation par défaut.  
+ Par défaut, cette méthode s’appuie sur le *pItem* paramètre pour déterminer quel élément au processus. La valeur de *iItem* n’est pas utilisé dans l’implémentation par défaut.  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  L’infrastructure appelle cette méthode lorsqu’elle définit les noms des colonnes.  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nTypes`  
+ [in] *nTypes*  
  Les types d’élément de liste qui le `CMFCShellListCtrl` prend en charge de l’objet.  
   
 ### <a name="remarks"></a>Notes  

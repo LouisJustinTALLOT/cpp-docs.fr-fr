@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376247"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040767"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe de CMFCImageEditorDialog
 La `CMFCImageEditorDialog` classe prend en charge une image de boîte de dialogue de l’éditeur.  
@@ -72,7 +72,7 @@ class CMFCImageEditorDialog : public CDialogEx
   
  [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afximageeditordialog.h  
   
 ##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBitmap`  
+ *pBitmap*  
  Pointeur vers une image.  
   
- `pParent`  
+ *pParent*  
  Pointeur vers la fenêtre parente de la boîte de dialogue Éditeur image actuelle.  
   
- `nBitsPixel`  
- Le nombre de bits utilisés pour représenter la couleur d’un pixel, qui est également appelé profondeur de couleur.  Si le `nBitsPixel` paramètre est -1, la profondeur de couleur est dérivée de l’image spécifiée par la `pBitmap` paramètre. La valeur par défaut est -1.  
+ *nBitsPixel*  
+ Le nombre de bits utilisés pour représenter la couleur d’un pixel, qui est également appelé profondeur de couleur.  Si le *nBitsPixel* paramètre est -1, la profondeur de couleur est dérivée de l’image spécifiée par la *pBitmap* paramètre. La valeur par défaut est -1.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pour modifier une image, passer un pointeur d’image pour le `CMFCImageEditorDialog` constructeur. Appelez ensuite la `DoModal` méthode pour ouvrir la boîte de dialogue modale. Lorsque la `DoModal` méthode est retournée, la bitmap contient la nouvelle image.  

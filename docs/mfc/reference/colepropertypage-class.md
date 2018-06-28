@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376208"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042545"
 ---
 # <a name="colepropertypage-class"></a>Classe de COlePropertyPage
 Utilisée pour afficher les propriétés d'un contrôle personnalisé dans une interface graphique, similaire à une boîte de dialogue.  
@@ -110,7 +110,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
  `COlePropertyPage`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
   
 ##  <a name="colepropertypage"></a>  COlePropertyPage::COlePropertyPage  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  ID de ressource d’un contrôle de page de propriété.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pnObjects`  
+ *pnObjects*  
  Pointeur vers un entier long non signé qui reçoit le nombre d’objets en cours de modification par la page.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un tableau de `IDispatch` des pointeurs, qui sont utilisés pour accéder aux propriétés de chaque contrôle sur la page de propriétés. L’appelant ne doit pas libérer ces pointeurs d’interface.  
   
 ### <a name="remarks"></a>Notes  
- Chaque objet de page de propriétés gère un tableau de pointeurs vers les `IDispatch` interfaces des objets en cours de modification par la page. Cette fonction affecte ses `pnObjects` argument au nombre d’éléments dans ce tableau et retourne un pointeur vers le premier élément du tableau.  
+ Chaque objet de page de propriétés gère un tableau de pointeurs vers les `IDispatch` interfaces des objets en cours de modification par la page. Cette fonction affecte ses *pnObjects* argument au nombre d’éléments dans ce tableau et retourne un pointeur vers le premier élément du tableau.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Obtient un pointeur vers la page de propriétés `IPropertyPageSite` interface.  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  ID du contrôle doivent être ignorés.  
   
 ### <a name="remarks"></a>Notes  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dispid`  
+ *DISPID*  
  ID de dispatch de la propriété en cours de modification.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nID`  
+ *nID*  
  Contient l’ID d’un contrôle de page de propriété.  
   
- `bDirty`  
+ *bDirty*  
  Spécifie si un champ de la page de propriété a été modifié. La valeur **TRUE** si le champ a été modifié, **FALSE** s’il n’a pas été modifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  Chaîne contenant les informations d’aide succincte pour l’affichage dans une barre d’état ou un autre emplacement.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Nom de la page de propriétés fichier d’aide.  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bModified`  
+ *bModified*  
  Spécifie la nouvelle valeur de l’indicateur de modification de la page de propriétés.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

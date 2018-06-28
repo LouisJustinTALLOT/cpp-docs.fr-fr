@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369620"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037727"
 ---
 # <a name="cmfclistctrl-class"></a>Classe de CMFCListCtrl
 Le `CMFCListCtrl` classe étend les fonctionnalités de [CListCtrl (classe)](../../mfc/reference/clistctrl-class.md) classe en prenant en charge la fonctionnalité de contrôle d’en-tête avancées de la [classe CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -92,7 +92,7 @@ class CMFCListCtrl : public CListCtrl
   
  [CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxlistctrl.h  
   
 ##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bMark`  
+ [in] *bMark*  
  Un paramètre booléen qui détermine s’il faut activer une couleur d’arrière-plan.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Un paramètre booléen qui détermine s’il faut redessiner le contrôle immédiatement.  
   
 ### <a name="remarks"></a>Notes  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui spécifie s’il faut activer le mode de tri basé sur plusieurs colonnes.  
   
 ### <a name="remarks"></a>Notes  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lParam1`  
+ [in] *lParam1*  
  Premier élément à comparer.  
   
- [in] `lParam2`  
+ [in] *lParam2*  
  Deuxième élément à comparer.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  L’index de la colonne du tri de cette méthode.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nRow`  
+ [in] *nRow*  
  La ligne de la cellule en question.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  La colonne de la cellule en question.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Données définies par l’utilisateur. L’implémentation par défaut n’utilise pas ce paramètre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nRow`  
+ [in] *nRow*  
  La ligne de la cellule en question.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  La colonne de la cellule en question.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iColumn`  
+ [in] *iColumn*  
  La colonne à supprimer.  
   
 ### <a name="remarks"></a>Notes  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iColumn`  
+ [in] *iColumn*  
  La colonne à trier.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Valeur booléenne qui spécifie l’ordre de tri.  
   
- [in] `bAdd`  
- Valeur booléenne qui spécifie si la méthode ajoute la colonne indiquée par `iColumn` à la liste des colonnes de tri.  
+ [in] *bAjouter*  
+ Valeur booléenne qui spécifie si la méthode ajoute la colonne indiquée par *iColumn* à la liste des colonnes de tri.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode passe les paramètres d’entrée au contrôle d’en-tête à l’aide de la méthode [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iColumn`  
+ [in] *iColumn*  
  La colonne à trier.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Valeur booléenne qui spécifie l’ordre de tri.  
   
- [in] `bAdd`  
- Valeur booléenne qui spécifie si cette méthode ajoute la colonne indiquée par `iColumn` à la liste des colonnes de tri.  
+ [in] *bAjouter*  
+ Valeur booléenne qui spécifie si cette méthode ajoute la colonne indiquée par *iColumn* à la liste des colonnes de tri.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

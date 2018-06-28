@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366562"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042095"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Classe de CMFCWindowsManagerDialog
 Le `CMFCWindowsManagerDialog` objet permet à un utilisateur gérer les fenêtres enfants MDI dans une application MDI.  
@@ -63,7 +63,7 @@ class CMFCWindowsManagerDialog : public CDialog
   
  [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxWindowsManagerDialog.h  
   
 ##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
@@ -76,10 +76,10 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMDIFrame`  
+ [in] *pMDIFrame*  
  Pointeur vers la fenêtre parente ou propriétaire.  
   
- [in] `bHelpButton`  
+ [in] *bHelpButton*  
  Un paramètre booléen qui indique si le framework affiche un **aide** bouton.  
   
 ### <a name="remarks"></a>Notes  

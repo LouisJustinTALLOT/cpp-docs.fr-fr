@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374355"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039161"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe de la classe COlePasteSpecialDialog
 Utilisée pour la boîte de dialogue OLE Collage spécial.  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Ajoute des formats personnalisés à la liste des formats de que votre application peut coller.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Ajoute une nouvelle entrée à la liste des formats de Presse-papiers pris en charge.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Ajoute **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`et éventuellement `CF_LINKSOURCE` à la liste des formats de votre application peut coller.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Ajoute **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**et éventuellement **CF_LINKSOURCE** à la liste des formats de votre application peut coller .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Crée l’élément dans le document conteneur à l’aide du format spécifié.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Affiche la boîte de dialogue OLE Collage spécial.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Indique s’il faut dessiner élément sous forme d’icône ou non.|  
@@ -104,7 +104,7 @@ class COlePasteSpecialDialog : public COleDialog
   
  `COlePasteSpecialDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
@@ -130,22 +130,22 @@ void AddFormat(
  *FMT*  
  Référence au type de données à ajouter.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Chaîne qui décrit le format à l’utilisateur.  
   
  *lpszResult*  
  Chaîne qui décrit le résultat si ce format est choisi dans la boîte de dialogue.  
   
- `flags`  
+ *flags*  
  L’autre liaison et incorporation options disponibles pour ce format. Cet indicateur est une combinaison d’un ou plusieurs des valeurs différentes dans les **OLEUIPASTEFLAG** type énuméré.  
   
- `cf`  
+ *CF*  
  Le format du Presse-papiers à ajouter.  
   
  *TYMED*  
  Les types de média disponibles dans ce format. Il s’agit d’une combinaison d’une ou plusieurs des valeurs dans le **TYMED** type énuméré.  
   
- `nFormatID`  
+ *nFormatID*  
  L’ID de la chaîne qui identifie ce format. Le format de cette chaîne est de deux chaînes séparées par un caractère « \n ». La première chaîne est celle qui est passée dans le *lpstrFormat* paramètre et le deuxième est le même que le *lpstrResult* paramètre.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cf`  
+ *CF*  
  Le format du Presse-papiers à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **« L’objet incorporé »**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Indicateur de création, contient un ou plusieurs indicateurs suivants associés à l’aide de l’opérateur OR au niveau du bit :  
   
 - `PSF_SELECTPASTE` Spécifie que la case d’option Coller est vérifiée initialement lors de la boîte de dialogue est appelée. Ne peut pas être utilisé en association avec `PSF_SELECTPASTELINK`. Il s'agit de la valeur par défaut.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Spécifie que le bouton d’aide s’affichera lorsque la boîte de dialogue est appelée.  
   
- `pDataObject`  
+ *pDataObject*  
  Pointe vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) de collage. Si cette valeur est **NULL**, il obtient le `COleDataObject` à partir du Presse-papiers.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  

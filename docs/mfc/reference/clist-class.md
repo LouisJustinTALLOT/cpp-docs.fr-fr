@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372519"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039137"
 ---
 # <a name="clist-class"></a>CList (classe)
 Prend en charge les listes ordonnées d'objets non uniques accessibles séquentiellement ou par valeur.  
@@ -139,7 +139,7 @@ class CList : public CObject
   
  `CList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtempl.h  
   
 ##  <a name="addhead"></a>  CList::AddHead  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type de l’élément de liste (peut être une référence).  
   
- `newElement`  
+ *newElement*  
  Le nouvel élément.  
   
- `pNewList`  
- Un pointeur vers un autre `CList` liste. Les éléments de `pNewList` sera ajouté à cette liste.  
+ *pNewList*  
+ Un pointeur vers un autre `CList` liste. Les éléments de *pNewList* sera ajouté à cette liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La première version retourne le **POSITION** valeur de l’élément nouvellement inséré.  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type de l’élément de liste (peut être une référence).  
   
- `newElement`  
+ *newElement*  
  Élément à ajouter à cette liste.  
   
- `pNewList`  
- Un pointeur vers un autre `CList` liste. Les éléments de `pNewList` sera ajouté à cette liste.  
+ *pNewList*  
+ Un pointeur vers un autre `CList` liste. Les éléments de *pNewList* sera ajouté à cette liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La première version retourne le **POSITION** valeur de l’élément nouvellement inséré.  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBlockSize`  
+ *nBlockSize*  
  La granularité d’allocation de mémoire pour l’extension de la liste.  
   
 ### <a name="remarks"></a>Notes  
- À mesure que la liste augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
+ À mesure que la liste augmente, la mémoire est allouée en unités de *nBlockSize* entrées.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- Recherche dans la liste après l’autre pour rechercher le premier élément correspondant spécifié `searchValue`.  
+ Recherche dans la liste après l’autre pour rechercher le premier élément correspondant spécifié *searchValue*.  
   
 ```  
 POSITION Find(
@@ -223,13 +223,13 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type de l’élément de liste (peut être une référence).  
   
- `searchValue`  
+ *searchValue*  
  La valeur à trouver dans la liste.  
   
- `startAfter`  
+ *startAfter*  
  La position de début de la recherche. Si aucune valeur n’est spécifiée, la recherche commence par l’élément head.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -239,18 +239,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- Utilise la valeur de `nIndex` en tant qu’index dans la liste.  
+ Utilise la valeur de *nIndex* comme un index dans la liste.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de base zéro de l’élément de liste doit être trouvé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui peut être utilisée pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si `nIndex` est négatif ou trop grande.  
+ A **POSITION** valeur qui peut être utilisée pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si *nIndex* est négatif ou trop grande.  
   
 ### <a name="remarks"></a>Notes  
  Il démarre une analyse séquentielle du début de la liste, l’arrêt sur la *n*élément th.  
@@ -338,7 +338,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à la **POSITION** valeur de l’entrée suivante dans la liste.  
+ Obtient l’élément de liste identifié par *rPosition*, puis définit *rPosition* à la **POSITION** valeur de l’entrée suivante dans la liste.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,7 +349,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *TYPE*  
  Paramètre de modèle spécifiant le type des éléments dans la liste.  
   
- `rPosition`  
+ *rPosition*  
  Une référence à un **POSITION** valeur retournée par une précédente `GetNext`, [GetHeadPosition](#getheadposition), ou un autre appel de fonction membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -358,7 +358,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  Si la liste n’est pas **const**, `GetNext` retourne une référence à un élément de la liste. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez utiliser `GetNext` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à `GetHeadPosition` ou **trouver**.  
+ Vous pouvez utiliser `GetNext` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à `GetHeadPosition` ou `Find`.  
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
@@ -379,7 +379,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *TYPE*  
  Paramètre de modèle spécifiant le type des éléments dans la liste.  
   
- `rPosition`  
+ *rPosition*  
  Une référence à un **POSITION** valeur retournée par une précédente `GetPrev` ou un autre appel de fonction membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -388,11 +388,11 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  Si la liste n’est pas **const**, `GetPrev` retourne une référence à un élément de la liste. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez utiliser `GetPrev` dans une boucle d’itération inverse si vous établissez la position initiale avec un appel à `GetTailPosition` ou **trouver**.  
+ Vous pouvez utiliser `GetPrev` dans une boucle d’itération inverse si vous établissez la position initiale avec un appel à `GetTailPosition` ou `Find`.  
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
- Si l’élément récupéré est le premier dans la liste, puis la nouvelle valeur de `rPosition` a la valeur **NULL**.  
+ Si l’élément récupéré est le premier dans la liste, puis la nouvelle valeur de *rPosition* a la valeur **NULL**.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -456,12 +456,12 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Paramètres  
  *Position*  
- Une valeur **POSITION** retournée par un appel précédent de `GetNext`, `GetPrev`ou de la fonction membre **Find** .  
+ A **POSITION** valeur retournée par une précédente `GetNext`, `GetPrev`, ou `Find` appel de fonction membre.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type de l’élément de liste.  
   
- `newElement`  
+ *newElement*  
  Élément à ajouter à cette liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Paramètres  
  *Position*  
- Une valeur **POSITION** retournée par un appel précédent de `GetNext`, `GetPrev`ou de la fonction membre **Find** .  
+ A **POSITION** valeur retournée par une précédente `GetNext`, `GetPrev`, ou `Find` appel de fonction membre.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type de l’élément de liste (peut être une référence).  
   
- `newElement`  
+ *newElement*  
  Élément à ajouter à cette liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -587,13 +587,13 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pos`  
+ *bons de commande*  
  Le **POSITION** de l’élément à définir.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Paramètre de modèle qui spécifie le type de l’élément de liste (peut être une référence).  
   
- `newElement`  
+ *newElement*  
  L’élément à ajouter à la liste.  
   
 ### <a name="remarks"></a>Notes  

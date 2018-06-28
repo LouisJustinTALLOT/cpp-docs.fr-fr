@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ee30d461bac43831bf59c19f5aac95884057eea
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378452"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042233"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implémente les fonctionnalités de base pour les fenêtres à onglets.  
@@ -423,7 +423,7 @@ class CMFCBaseTabCtrl : public CWnd
   
  [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxbasetabctrl.h  
   
 ##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon  
@@ -436,10 +436,10 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hIcon`  
+ [in] *hIcon*  
  Handle vers l’icône doit être ajouté.  
   
- [in] `iIcon`  
+ [in] *iIcon*  
  Index de base zéro de l’icône dans la méthode protégée `CImageList m_Images` membre.  
   
 ### <a name="remarks"></a>Notes  
@@ -463,23 +463,23 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Pointeur vers la fenêtre de cette méthode représente sous la forme d’un nouvel onglet.  
   
- [in] `lpszTabLabel`  
+ [in] *lpszTabLabel*  
  Chaîne qui contient l’étiquette pour le nouvel onglet.  
   
- [in] `uiImageId`  
+ [in] *uiImageId*  
  ID d’une image à partir de la liste d’images. Le contrôle onglet utilise cette image comme icône du nouvel onglet.  
   
- [in] `uiResTabLabel`  
+ [in] *uiResTabLabel*  
  L’ID de ressource de l’étiquette.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Un paramètre booléen qui détermine si le nouvel onglet est détachable.  
   
 ### <a name="remarks"></a>Notes  
- Si `pTabWnd` pointe vers un objet qui n’est pas dérivé de la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) et si `bDetachable` est `TRUE`, l’infrastructure crée automatiquement un wrapper pour le `pTabWnd` objet. Le wrapper permet le `pTabWnd` objet détachable. Par défaut, le wrapper est une instance de la [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Si les fonctionnalités offertes par le wrapper par défaut sont inacceptable, utilisez le [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) méthode pour spécifier un autre wrapper.  
+ Si *pTabWnd* pointe vers un objet qui n’est pas dérivé de la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) et si *bDetachable* est `TRUE`, l’infrastructure crée automatiquement un wrapper pour le *pTabWnd* objet. Le wrapper permet la *pTabWnd* objet détachable. Par défaut, le wrapper est une instance de la [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Si les fonctionnalités offertes par le wrapper par défaut sont inacceptable, utilisez le [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) méthode pour spécifier un autre wrapper.  
   
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
@@ -489,7 +489,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -501,7 +501,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -513,7 +513,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectEdit`  
+ [in] *rectEdit*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -546,24 +546,24 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndToWrap`  
+ [in] *pWndToWrap*  
  Pointeur vers la fenêtre frame qui est encapsulé.  
   
- [in] `lpszTabLabel`  
+ [in] *lpszTabLabel*  
  Chaîne qui contient l’étiquette de la fenêtre.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Un paramètre booléen qui indique si la fenêtre est détachable.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un wrapper dérivé le `CDockablePane` classe si `CreateWrapper` crée avec succès une classe wrapper pour `pWndToWrap`. Si la méthode échoue, elle retourne `pWndToWrap`.  
+ Un pointeur vers un wrapper dérivé le `CDockablePane` classe si `CreateWrapper` crée avec succès une classe wrapper pour *pWndToWrap*. Si la méthode échoue, elle retourne *pWndToWrap*.  
   
 ### <a name="remarks"></a>Notes  
  Une fenêtre à onglets pouvez ancrer n’importe quel objet dérivé de `CWnd`. Toutefois, dans l’ordre pour un `CMFCBaseTabCtrl Class` objet soit ancrable, chaque objet sur le `CMFCBaseTabCtrl` doit être détachables. Par conséquent, `CMFCBaseTabCtrl` encapsule automatiquement tous les objets qui ne sont pas dérivés de `CDockablePane`.  
   
  Par défaut, le `CMFCBaseTabCtrl` crée des instances de la [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Pour modifier la classe de valeur par défaut du wrapper, appelez [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
- Si `pWndToWrap` est dérivée de `CDockablePane`, cette méthode ne crée pas de wrapper. Au lieu de cela, il échouera et renverra `pWndToWrap`.  
+ Si *pWndToWrap* est dérivée de `CDockablePane`, cette méthode ne crée pas de wrapper. Au lieu de cela, il échouera et renverra *pWndToWrap*.  
   
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  L’infrastructure appelle cette méthode pour détacher un onglet du contrôle onglet.  
@@ -576,20 +576,20 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Type de données énuméré fourni par le [CBasePane classe](../../mfc/reference/cbasepane-class.md). Ce type de données spécifie la méthode utilisée pour détacher de l’onglet.  
   
- [in] `nTabNum`  
+ [in] *nTabNum*  
  Index de base zéro de l’onglet à être détaché.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Un paramètre booléen qui indique si l’infrastructure doit masquer l’onglet détaché.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Si l’onglet spécifié par `nTabNum` est non détachables, cette fonction échoue et retourne `FALSE`.  
+ Si l’onglet spécifié par *nTabNum* est non détachables, cette fonction échoue et retourne `FALSE`.  
   
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
@@ -599,7 +599,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bLastActive`  
+ [in] *bLastActive*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -611,7 +611,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Un paramètre booléen qui détermine si l’infrastructure utilise les couleurs automatiques.  
   
 ### <a name="remarks"></a>Notes  
@@ -627,7 +627,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui détermine s’il faut utiliser des info-bulles personnalisées.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -644,7 +644,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Un paramètre booléen qui spécifie s’il faut activer la modification directe des étiquettes d’onglet.  
   
 ### <a name="remarks"></a>Notes  
@@ -664,10 +664,10 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet.  
   
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui indique s’il faut afficher l’onglet détachable.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -681,7 +681,7 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
+ [in] *bActivez*  
  Valeur booléenne qui indique s’il faut activer le remplacement de l’onglet.  
   
 ### <a name="remarks"></a>Notes  
@@ -695,14 +695,14 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode n’a aucun effet si l’onglet indiquée par `iTab` est déjà visible.  
+ Cette méthode n’a aucun effet si l’onglet indiquée par *iTab* est déjà visible.  
   
  Par défaut, cette méthode ne prend pas en charge la `CMFCBaseTabCtrl Class`. Vous devez implémenter cette fonction dans une classe personnalisée dérivée de `CMFCBaseTabCtrl` si ce contrôle onglet personnalisé prend en charge le défilement de l’onglet. Cette méthode est prise en charge par le [cmfctabctrl, classe](../../mfc/reference/cmfctabctrl-class.md).  
   
@@ -723,7 +723,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pt`  
+ [in] *pt*  
  Coordonnées d’un point qui est défini en utilisant la zone cliente de la [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -740,7 +740,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nNewTab`  
+ [in] *nNewTab*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -752,7 +752,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nNewTab`  
+ [in] *nNewTab*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -830,19 +830,19 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `iTabNum`  
+ [out] *iTabNum*  
  Une référence à un entier. Cette méthode écrit des index de base zéro du premier onglet visible à ce paramètre.  
   
- [in] `iStartFrom`  
+ [in] *iStartFrom*  
  Index de base zéro du premier onglet à vérifier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le premier onglet visible en cas de réussite ; dans le cas contraire `NULL`.  
   
 ### <a name="remarks"></a>Notes  
- Si cette méthode échoue, il écrit la valeur -1 pour `iStartFrom`.  
+ Si cette méthode échoue, il écrit la valeur -1 pour *iStartFrom*.  
   
- Si `iStartFrom` est supérieure ou égale au nombre d’onglets dans le contrôle onglet, `GetFirstVisibleTab` automatiquement échoue.  
+ Si *iStartFrom* est supérieure ou égale au nombre d’onglets dans le contrôle onglet, `GetFirstVisibleTab` automatiquement échoue.  
   
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
@@ -895,7 +895,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTabNum`  
+ [in] *iTabNum*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -935,10 +935,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectTabAreaTop`  
+ [in] *rectTabAreaTop*  
  Référence à un objet `CRect`. `GetTabArea` utilise cet objet pour stocker la taille et la position de la zone d’onglet supérieur.  
   
- [in] `rectTabAreaBottom`  
+ [in] *rectTabAreaBottom*  
  Référence à un objet `CRect`. `GetTabArea` utilise cet objet pour stocker la taille et la position de la zone d’onglet en bas.  
   
 ### <a name="remarks"></a>Notes  
@@ -954,11 +954,11 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui indique la couleur d’arrière-plan de l’onglet spécifié, -1 si `iTab` est hors limites.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui indique la couleur d’arrière-plan de l’onglet spécifié, -1 si *iTab* est hors limites.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Récupère la taille des bordures d’onglet dans le contrôle onglet.  
@@ -981,7 +981,7 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `id`  
+ [in] *id*  
  Un ID d’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1009,11 +1009,11 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hwnd`  
+ [in] *hwnd*  
  Un handle de fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro de l’onglet en cas de réussite ; -1 si aucun onglet ne contient `hwnd`.  
+ Index de base zéro de l’onglet en cas de réussite ; -1 si aucun onglet ne contient *hwnd*.  
   
 ##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  Récupère l’onglet qui contient un point spécifié.  
@@ -1023,11 +1023,11 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pt`  
+ [in] *pt*  
  Un point en coordonnées clientes du contrôle onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’index de l’onglet qui contient `pt`; -1 si aucun onglet ne contient `pt`.  
+ L’index de l’onglet qui contient *pt*; -1 si aucun onglet ne contient *pt*.  
   
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
@@ -1037,7 +1037,7 @@ virtual int GetTabFullWidth(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1051,7 +1051,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1065,7 +1065,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1082,11 +1082,11 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un ID de l’onglet ou -1 si `iTab` est hors limites.  
+ Un ID de l’onglet ou -1 si *iTab* est hors limites.  
   
 ##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  Récupère le texte d’une étiquette d’onglet.  
@@ -1098,17 +1098,17 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
- [out] `strLabel`  
+ [out] *strLabel*  
  Référence à un objet `CString`. Cette méthode stocke l’étiquette de l’onglet dans ce paramètre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` en cas de réussite ; `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode échoue si l’index `iTab` n’est pas valide.  
+ Cette méthode échoue si l’index *iTab* n’est pas valide.  
   
  Vous affectez à l’étiquette d’un onglet lors de la création à l’aide de l’onglet [CMFCBaseTabCtrl::AddTab](#addtab). Vous pouvez également modifier l’étiquette après sa création avec la méthode [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
@@ -1122,10 +1122,10 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
- [out] `rect`  
+ [out] *rect*  
  Référence à un objet `CRect`. Cette méthode stocke la taille et la position de l’onglet dans ce paramètre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1160,7 +1160,7 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1172,11 +1172,11 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) de paramètre qui indique la couleur du texte de l’onglet spécifié ; -1 si `iTab` est hors limites.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) de paramètre qui indique la couleur du texte de l’onglet spécifié ; -1 si *iTab* est hors limites.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Retourne le pointeur vers le volet qui réside sur l’onglet spécifié.  
@@ -1186,11 +1186,11 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet qui réside sur l’onglet qui `iTab` spécifie. `NULL` Si `iTab` n’est pas valide.  
+ Un pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet qui réside sur l’onglet qui *iTab* spécifie. `NULL` Si *iTab* n’est pas valide.  
   
 ### <a name="remarks"></a>Notes  
  L’objet retourné est celui qui a ajouté l’application lorsqu’elle appelée soit [CMFCBaseTabCtrl::AddTab](#addtab) ou [CMFCBaseTabCtrl::InsertTab](#inserttab).  
@@ -1205,11 +1205,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet qui réside sur l’onglet spécifié ; `NULL` si `iTab` n’est pas valide.  
+ Un pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet qui réside sur l’onglet spécifié ; `NULL` si *iTab* n’est pas valide.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode récupère un pointeur direct vers le `CWnd` de l’objet que vous avez ajouté à l’aide de la méthode [CMFCBaseTabCtrl::AddTab](#addtab) ou [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` Récupère un pointeur vers la `CWnd`, même si l’infrastructure ajouté un wrapper pour l’objet. Pour plus d’informations sur les wrappers et [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), consultez [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
@@ -1244,7 +1244,7 @@ virtual BOOL HasImage(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1258,7 +1258,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bHide`  
+ [in] *bHide*  
  Valeur booléenne qui spécifie s’il faut activer le masquage des onglets uniques.  
   
 ### <a name="remarks"></a>Notes  
@@ -1285,26 +1285,26 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pNewWnd`  
+ [in] *pNewWnd*  
  Pointeur vers la fenêtre de cette méthode ajoute en tant qu’un nouvel onglet.  
   
- [in] `lpszTabLabel`  
+ [in] *lpszTabLabel*  
  Chaîne qui contient l’étiquette pour le nouvel onglet.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  Index de base zéro du nouvel onglet.  
   
- [in] `uiImageId`  
+ [in] *uiImageId*  
  ID d’une image à partir de la liste d’images. Le contrôle onglet utilise cette image comme icône du nouvel onglet.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Un paramètre booléen qui détermine si le nouvel onglet est détachable.  
   
- [in] `uiResTabLabel`  
+ [in] *uiResTabLabel*  
  L’ID de ressource de l’étiquette.  
   
 ### <a name="remarks"></a>Notes  
- Si l’objet indiqué par `pNewWnd` n’est pas dérivée de la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) et si le `bDetachable` paramètre est `TRUE`, l’infrastructure crée un wrapper spéciale pour le nouvel onglet. Par défaut, le wrapper est une instance de la [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Utilisez le [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) méthode pour créer une classe wrapper différents. Toute classe wrapper personnalisé doit être dérivé de `CDockablePaneAdapter`.  
+ Si l’objet indiqué par *pNewWnd* n’est pas dérivée de la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) et si le *bDetachable* paramètre est `TRUE`, l’infrastructure crée un wrapper spéciale pour le nouvel onglet. Par défaut, le wrapper est une instance de la [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Utilisez le [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) méthode pour créer une classe wrapper différents. Toute classe wrapper personnalisé doit être dérivé de `CDockablePaneAdapter`.  
   
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
@@ -1314,7 +1314,7 @@ void InvalidateTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hIcon`  
- [in] `iIcon`  
+ [in] *hIcon*  
+ [in] *iIcon*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1500,7 +1500,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Point à tester.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1539,7 +1539,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet à vérifier.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1556,7 +1556,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1586,7 +1586,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet à vérifier.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nSource`  
- [in] `nDest`  
+ [in] *source*  
+ [in] *nDest*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1659,9 +1659,9 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `COleDataObject*`  
- [in] `DROPEFFECT`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DROPEFFECT*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1678,9 +1678,9 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DWORD*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1706,9 +1706,9 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DWORD*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `int`  
- [in] `CString&`  
+ [in] *int*  
+ [in] *CString &*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1737,7 +1737,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1773,10 +1773,10 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Un paramètre booléen qui spécifie s’il faut recalculer la disposition de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1811,7 +1811,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1823,7 +1823,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet `SetActiveTab` rend cet index de l’onglet actif.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1840,7 +1840,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clr`  
+ [in] *clr*  
  Spécifie la couleur d’arrière-plan.  
   
 ### <a name="remarks"></a>Notes  
@@ -1854,7 +1854,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `clr`  
+ [in] *clr*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui spécifie la couleur du texte.  
   
 ### <a name="remarks"></a>Notes  
@@ -1868,11 +1868,11 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `arColors`  
+ [in] *arColors*  
  Tableau de couleurs RVB.  
   
 ### <a name="remarks"></a>Notes  
- Si vous fournissez un tableau personnalisé de couleurs, le tableau de couleurs par défaut est ignoré. Si le paramètre `arColors` est vide, le framework revient au tableau de couleurs par défaut.  
+ Si vous fournissez un tableau personnalisé de couleurs, le tableau de couleurs par défaut est ignoré. Si le paramètre *arColors* est vide, le framework revient au tableau de couleurs par défaut.  
   
  Pour activer le mode couleur automatique, utilisez le [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) (méthode).  
   
@@ -1884,7 +1884,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pRTC`  
+ [in] *pRTC*  
  Les informations de classe runtime pour la nouvelle classe de wrapper.  
   
 ### <a name="remarks"></a>Notes  
@@ -1900,10 +1900,10 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bNoPrefix`  
+ [in] *bNoPrefix*  
  `TRUE` Si vous souhaitez traiter des caractères de préfixe ; dans le cas contraire `FALSE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Si vous voulez redessiner la fenêtre à onglets. dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1922,16 +1922,16 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `uiID`  
+ [in] *uiID*  
  Un ID de ressource bitmap. `SetImageList` charge la liste d’images à partir de cette ressource.  
   
- [in] `cx`  
+ [in] *cx*  
  La largeur de chaque image en pixels.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur transparente de l’image.  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  Handle vers une liste d’images préchargé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1940,7 +1940,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>Notes  
  Les images à partir de la liste d’images icône sont affichées en même temps que les étiquettes de l’onglet. Pour afficher une icône, vous devez spécifier son index lorsque vous appelez [CMFCBaseTabCtrl::AddTab](#addtab).  
   
- `SetImageList` échoue si le contrôle onglet a été créé avec un style à deux dimensions. Elle échoue également si le framework ne peut pas charger l’image indiquée par `uiID`.  
+ `SetImageList` échoue si le contrôle onglet a été créé avec un style à deux dimensions. Elle échoue également si le framework ne peut pas charger l’image indiquée par *uiID*.  
   
  Cette méthode recalcule la hauteur de l’onglet en fonction de la taille de l’image et texte.  
   
@@ -1952,7 +1952,7 @@ virtual void SetLocation(Location location);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `location`  
+ [in] *emplacement*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1966,10 +1966,10 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
- [in] `color`  
+ [in] *couleur*  
  Couleur à définir.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1985,10 +1985,10 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nTabBorderSize`  
+ [in] *nTabBorderSize*  
  La nouvelle taille de bordure en pixels.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  Un paramètre booléen qui indique si le framework redessine le contrôle.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
@@ -2001,10 +2001,10 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro d’un onglet. Cette méthode modifie l’icône de cet onglet.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Un handle d’une icône.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2020,10 +2020,10 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet mettre à jour.  
   
- [in] `uiIcon`  
+ [in] *uiIcon*  
  L’ID d’icône pour l’icône Nouveau. Cet ID fait référence à la liste interne [CImageList](../../mfc/reference/cimagelist-class.md) objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2040,13 +2040,13 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet à modifier.  
   
- [in] `bIconOnly`  
+ [in] *bIconOnly*  
  Un paramètre booléen qui détermine s’il faut afficher seulement les icônes.  
   
- [in] `bShowTooltipAlways`  
+ [in] *bShowTooltipAlways*  
  Un paramètre booléen qui détermine si le framework affiche des info-bulles pour une étiquette d’onglet qui affiche uniquement les icônes.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2065,10 +2065,10 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet mettre à jour.  
   
- [in] `strLabel`  
+ [in] *strLabel*  
  Une référence à une chaîne qui contient le nouveau texte de l’étiquette d’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2091,14 +2091,14 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `arOrder`  
+ [in] *arOrder*  
  Tableau d’index de base zéro qui définit le nouvel ordre de tabulation.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` en cas de réussite ; `FAIL` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- La taille de la `arOrder` tableau doit être égal au nombre d’onglets dans le contrôle onglet.  
+ La taille de la *arOrder* tableau doit être égal au nombre d’onglets dans le contrôle onglet.  
   
 ##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  Définit la couleur du texte d’un onglet spécifique.  
@@ -2110,10 +2110,10 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  Index de base zéro de l’onglet.  
   
- [in] `color`  
+ [in] *couleur*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2131,23 +2131,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
  L’index de l’onglet qui `ShowTab` s’afficher ou masquer.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Un paramètre booléen qui indique s’il faut afficher l’onglet.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Un paramètre booléen qui indique s’il faut immédiatement recalculer la disposition de fenêtre.  
   
- [in] `bActivate`  
- Un paramètre booléen qui indique s’il faut sélectionner l’onglet spécifié par `iTab`.  
+ [in] *bActivate*  
+ Un paramètre booléen qui indique s’il faut sélectionner l’onglet spécifié par *iTab*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Le paramètre `bActivate` s’applique uniquement si `bShow` est `TRUE`. Si `bActivate` est `TRUE` et si `ShowTab` est réussie, `ShowTab` envoie le message AFX_WM_CHANGE_ACTIVE_TAB au parent de la fenêtre de l’onglet.  
+ Le paramètre *bActivate* s’applique uniquement si *bShow* est `TRUE`. Si *bActivate* est `TRUE` et si `ShowTab` est réussie, `ShowTab` envoie le message AFX_WM_CHANGE_ACTIVE_TAB au parent de la fenêtre de l’onglet.  
   
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
@@ -2157,7 +2157,7 @@ virtual BOOL StartRenameTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nFisrtTabID`  
- [in] `nSecondTabID`  
+ [in] *nFisrtTabID*  
+ [in] *nSecondTabID*  
   
 ### <a name="remarks"></a>Notes  
   

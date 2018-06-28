@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58469086089dafe2447446723e06d6aa20a845c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1788e5f3938cc496e66aa24d6d1b6a37603e7d7b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369750"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039945"
 ---
 # <a name="cmousemanager-class"></a>Classe de CMouseManager
 Permet à un utilisateur d’associer différentes commandes à un particulier [CView](../../mfc/reference/cview-class.md) lorsque l’utilisateur double-clique dans cette vue de l’objet.  
@@ -64,7 +64,7 @@ class CMouseManager : public CObject
 |[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|Associe la commande fournie et la vue fournie.|  
   
 ## <a name="remarks"></a>Notes  
- Le `CMouseManager` classe maintient une collection de `CView` objets. Chaque vue est identifié par un nom et par un code. Ces vues sont affichés dans le **personnalisation** boîte de dialogue. L’utilisateur peut modifier la commande qui est associée à n’importe quelle vue via la **personnalisation** boîte de dialogue. La commande associée est exécutée lorsque l’utilisateur double-clique dans cet affichage. Pour prendre en charge ce point de vue de codage, vous devez traiter le `WM_LBUTTONDBLCLK` message et appeler le [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) fonction dans le code qui `CView` objet...  
+ Le `CMouseManager` classe maintient une collection de `CView` objets. Chaque vue est identifié par un nom et par un code. Ces vues sont affichés dans le **personnalisation** boîte de dialogue. L’utilisateur peut modifier la commande qui est associée à n’importe quelle vue via la **personnalisation** boîte de dialogue. La commande associée est exécutée lorsque l’utilisateur double-clique dans cet affichage. Pour prendre en charge ce point de vue de codage, vous devez traiter le message WM_LBUTTONDBLCLK et appelez le [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) fonction dans le code qui `CView` objet...  
   
  Vous ne devez pas créer un `CMouseManager` objet manuellement. Il est créé par l’infrastructure de votre application. Il sera également détruit automatiquement lorsque l’utilisateur quitte l’application. Pour obtenir un pointeur vers le Gestionnaire de la souris pour votre application, appelez [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager).  
   
@@ -73,7 +73,7 @@ class CMouseManager : public CObject
   
  `CMouseManager`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmousemanager.h  
   
 ##  <a name="addview"></a>  CMouseManager::AddView  
@@ -93,19 +93,19 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iViewId`  
+ [in] *iViewId*  
  Un ID de la vue.  
   
- [in] `uiViewNameResId`  
+ [in] *uiViewNameResId*  
  Un ID de chaîne de ressource qui fait référence au nom de la vue.  
   
- [in] `uiIconId`  
+ [in] *uiIconId*  
  Un ID d’icône de vue.  
   
- [in] `iId`  
+ [in] *iId*  
  Un ID de la vue.  
   
- [in] `lpszViewName`  
+ [in] *lpszViewName*  
  Un nom de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -114,7 +114,7 @@ BOOL AddView(
 ### <a name="remarks"></a>Notes  
  Pour prendre en charge du comportement personnalisé de la souris, une vue doit être enregistrée avec le `CMouseManager` objet. N’importe quel objet dérivé de la `CView` classe peut être inscrit avec le Gestionnaire de la souris. La chaîne et l’icône associée à une vue s’affichent dans le **souris** onglet de la **personnaliser** boîte de dialogue.  
   
- Il incombe au programmeur de créer et maintenir telles que les ID de vue `iViewId` et `iId`.  
+ Il incombe au programmeur de créer et maintenir telles que les ID de vue *iViewId* et *iId*.  
   
  Pour plus d’informations sur la façon de fournir un comportement personnalisé de la souris, consultez [personnalisation du clavier et souris](../../mfc/keyboard-and-mouse-customization.md).  
   
@@ -131,7 +131,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iId`  
+ [in] *iId*  
  L’ID de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -145,7 +145,7 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iViewId`  
+ [in] *iViewId*  
  L’ID de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -162,7 +162,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszName`  
+ [in] *le caractère*  
  Le nom de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -179,7 +179,7 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `listOfNames`  
+ [out] *listOfNames*  
  Une référence à `CStringList` objet.  
   
 ### <a name="remarks"></a>Notes  
@@ -193,14 +193,14 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Un chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Les informations d’état chargées à partir du Registre incluent les vues inscrits, afficher les identificateurs et les commandes associées. Si le paramètre `lpszProfileName` est `NULL`, cette fonction charge la `CMouseManager` les données à partir de l’emplacement de Registre par défaut contrôlé par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md).  
+ Les informations d’état chargées à partir du Registre incluent les vues inscrits, afficher les identificateurs et les commandes associées. Si le paramètre *lpszProfileName* est `NULL`, cette fonction charge la `CMouseManager` les données à partir de l’emplacement de Registre par défaut contrôlé par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md).  
   
  Dans la plupart des cas, il est inutile d’appeler cette fonction directement. Il est appelé dans le cadre du processus d’initialisation de l’espace de travail. Pour plus d’informations sur le processus d’initialisation de l’espace de travail, consultez [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
@@ -212,14 +212,14 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Un chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Les informations d’état écrites dans le Registre incluent inscrits toutes les vues, les identificateurs d’affichage et les commandes associées. Si le paramètre `lpszProfileName` est `NULL`, cette fonction écrit le `CMouseManager` données à l’emplacement de Registre par défaut contrôlé par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md).  
+ Les informations d’état écrites dans le Registre incluent inscrits toutes les vues, les identificateurs d’affichage et les commandes associées. Si le paramètre *lpszProfileName* est `NULL`, cette fonction écrit le `CMouseManager` données à l’emplacement de Registre par défaut contrôlé par le [CWinAppEx classe](../../mfc/reference/cwinappex-class.md).  
   
  Dans la plupart des cas, il est inutile d’appeler cette fonction directement. Il est appelé dans le cadre du processus de sérialisation d’espace de travail. Pour plus d’informations sur le processus de sérialisation d’espace de travail, consultez [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
@@ -233,16 +233,16 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iViewId`  
+ [in] *iViewId*  
  L’identificateur de la vue.  
   
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identificateur de commande.  
   
 ### <a name="remarks"></a>Notes  
- Pour associer une commande personnalisée à une vue, vous devez d’abord inscrire l’affichage à l’aide de [CMouseManager::AddView](#addview). Le `AddView` méthode requiert un identificateur d’affichage en tant que paramètre d’entrée. Une fois que vous enregistrez une vue, vous pouvez appeler `CMouseManager::SetCommandForDblClk` avec la même vue identificateur paramètre d’entrée que vous avez fournies à `AddView`. Par la suite, lorsque l’utilisateur double-clique sur la souris dans la vue inscrite, l’application exécute la commande indiquée par `uiCmd.` pour prendre en charge le comportement personnalisé de la souris, vous devez également personnaliser l’affichage inscrit auprès du Gestionnaire de la souris. Pour plus d’informations sur le comportement personnalisé de la souris, consultez [personnalisation du clavier et souris](../keyboard-and-mouse-customization.md).  
+ Pour associer une commande personnalisée à une vue, vous devez d’abord inscrire l’affichage à l’aide de [CMouseManager::AddView](#addview). Le `AddView` méthode requiert un identificateur d’affichage en tant que paramètre d’entrée. Une fois que vous enregistrez une vue, vous pouvez appeler `CMouseManager::SetCommandForDblClk` avec la même vue identificateur paramètre d’entrée que vous avez fournies à `AddView`. Par la suite, lorsque l’utilisateur double-clique sur la souris dans la vue inscrite, l’application exécute la commande indiquée par *uiCmd.* Pour prendre en charge le comportement personnalisé de la souris, vous devez également personnaliser l’affichage inscrit auprès du Gestionnaire de la souris. Pour plus d’informations sur le comportement personnalisé de la souris, consultez [personnalisation du clavier et souris](../keyboard-and-mouse-customization.md).  
   
- Si `uiCmd` a la valeur 0, la vue spécifiée n’est plus associée avec une commande.  
+ Si *uiCmd* a la valeur 0, la vue spécifiée n’est plus associée avec une commande.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

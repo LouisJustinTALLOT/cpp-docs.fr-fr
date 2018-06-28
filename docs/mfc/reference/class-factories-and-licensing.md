@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367072"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038229"
 ---
 # <a name="class-factories-and-licensing"></a>Fabriques de classes et gestion des licences
 Pour créer une instance de votre contrôle OLE, une application conteneur appelle une fonction membre de la fabrique de classe du contrôle. Étant donné que votre contrôle est un objet OLE réel, la fabrique de classe est responsable de la création d’instances de votre contrôle. Chaque classe de contrôle OLE doit avoir une fabrique de classe.  
@@ -58,7 +58,7 @@ DECLARE_OLECREATE_EX(class_name)
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
@@ -94,7 +94,7 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="remarks"></a>Notes  
  Cette macro doit apparaître dans le fichier d’implémentation pour les classes de contrôle qui utilisent le `DECLARE_OLECREATE_EX` macro ou `BEGIN_OLEFACTORY` et `END_OLEFACTORY` macros. Le nom externe est l’identificateur du contrôle OLE qui est exposé à d’autres applications. Conteneurs utilisent ce nom pour demander un objet de cette classe de contrôle.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
@@ -111,7 +111,7 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="remarks"></a>Notes  
  Les déclarations de fonctions de gestion de licences de fabrique de classe doivent commencer immédiatement après `BEGIN_OLEFACTORY`.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="end_olefactory"></a>  END_OLEFACTORY  
@@ -125,7 +125,7 @@ END_OLEFACTORY(class_name)
  *CLASS_NAME*  
  Le nom de la classe de contrôle dont il s’agit de fabrique de classe.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
   
 ##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
@@ -140,27 +140,27 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hInstance`  
+ *hInstance*  
  Le handle d’instance de la DLL associée au contrôle sous licence.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Pointe vers une chaîne de caractères terminée par null qui contient le nom de fichier de licence.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Pointe vers une séquence d’octets qui doit correspondre à la séquence figure au début du fichier de licence.  
   
- `cch`  
- Nombre de caractères dans `pszLicFileContents`.  
+ *CCH*  
+ Nombre de caractères dans *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le fichier de licence existe et qu’il commence par la séquence de caractères dans `pszLicFileContents`; sinon, 0.  
+ Différent de zéro si le fichier de licence existe et qu’il commence par la séquence de caractères dans *pszLicFileContents*; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Si `cch` est -1, cette fonction utilise :  
+ Si *cch* est -1, cette fonction utilise :  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  
 
 ## <a name="see-also"></a>Voir aussi  

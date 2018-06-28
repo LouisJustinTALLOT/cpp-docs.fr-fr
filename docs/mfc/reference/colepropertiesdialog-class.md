@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371684"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040179"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe de COlePropertiesDialog
 Encapsule la boîte de dialogue Propriétés d'objet OLE courante Windows.  
@@ -97,7 +97,7 @@ class COlePropertiesDialog : public COleDialog
   
  `COlePropertiesDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointeur vers l’élément de document dont les propriétés sont en cours d’accès.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Maximum de pourcentage de l’image d’élément de document de mise à l’échelle.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers le parent ou le propriétaire de la boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointeur vers l’élément de document dont les propriétés sont en cours d’accès.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Valeur numérique de l’échelle de la boîte de dialogue.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  L'implémentation par défaut n'exécute aucune opération. Vous devez substituer cette fonction pour activer les contrôles de mise à l’échelle.  
   
 > [!NOTE]
->  Avant l’affichage de la boîte de dialogue Propriétés de l’objet OLE, l’infrastructure appelle cette fonction avec un **NULL** pour `pItem` et - 1 pour `nCurrentScale`. Cela est effectuée pour déterminer si les contrôles de mise à l’échelle doivent être activés.  
+>  Avant l’affichage de la boîte de dialogue Propriétés de l’objet OLE, l’infrastructure appelle cette fonction avec un **NULL** pour *pItem* et - 1 pour *nCurrentScale*. Cela est effectuée pour déterminer si les contrôles de mise à l’échelle doivent être activés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC CIRC](../../visual-cpp-samples.md)   

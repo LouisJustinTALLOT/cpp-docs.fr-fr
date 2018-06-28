@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374508"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038330"
 ---
 # <a name="coledataobject-class"></a>Classe de COleDataObject
 Utilisée dans les transferts de données pour récupérer des données dans divers formats depuis le Presse-papiers, par glisser-déposer ou depuis un élément OLE incorporé.  
@@ -91,7 +91,7 @@ class COleDataObject
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `COleDataObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="attach"></a>  COleDataObject::Attach  
@@ -107,7 +107,7 @@ void Attach(
  *objet lpDataObject*  
  Pointe vers un objet de données OLE.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **TRUE** si l’objet de données OLE doit être libérée lorsque la `COleDataObject` objet est détruite ; sinon **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format dans lequel les données sont à retourner. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Pointe vers un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure qui recevront des données.  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données sont à retourner. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données sont à retourner. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format dans lequel les données sont à retourner. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données sont à retourner. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données sont à retourner. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la nouvelle `CFile` ou `CFile`-dérivée objet contenant les données de cas de réussite ; **NULL**.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
+ *cfFormat*  
  Le format dans lequel les données sont à retourner. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données sont à retourner. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données sont à retourner. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le handle du bloc de mémoire globale qui contient les données en cas de réussite ; dans le cas contraire **NULL**.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Pointe vers le [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui reçoit les informations de format lors de l’appel de fonction retourne.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cfFormat`  
- Le format de données du Presse-papiers pour être utilisé dans la structure vers laquelle pointe `lpFormatEtc`. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
+ *cfFormat*  
+ Le format de données du Presse-papiers pour être utilisé dans la structure vers laquelle pointe *lpFormatEtc*. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows natif [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
   
- `lpFormatEtc`  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format désiré. Indiquez une valeur pour ce paramètre uniquement si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
+ *lpFormatEtc*  
+ Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format désiré. Indiquez une valeur pour ce paramètre uniquement si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. S’il s’agit **NULL**, les valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les données sont disponibles dans le format spécifié ; Sinon, 0.  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le `IDataObject` a été associé à la `COleDataObject` en appelant **attacher** ou `AttachClipboard` ou explicitement par l’infrastructure. Si le `bAutoRelease` paramètre de **Attach** est **FALSE**, le `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est responsable de la libération du `IDataObject` en appelant [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ Le `IDataObject` a été associé à la `COleDataObject` en appelant `Attach` ou `AttachClipboard` ou explicitement par l’infrastructure. Si le `bAutoRelease` paramètre de `Attach` est **FALSE**, le `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est responsable de la libération du `IDataObject` en appelant [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC HIERSVR](../../visual-cpp-samples.md)   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368912"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042155"
 ---
 # <a name="cipaddressctrl-class"></a>Classe de CIPAddressCtrl
 Fournit les fonctionnalités du contrôle commun d'adresse IP Windows.  
@@ -87,7 +87,7 @@ class CIPAddressCtrl : public CWnd
   
  `CIPAddressCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
@@ -119,16 +119,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Adresse IP style du contrôle. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le **WS_CHILD** de style, car le contrôle doit être une fenêtre enfant. Consultez [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour obtenir la liste des styles de windows.  
   
- `rect`  
+ *Rect*  
  Une référence à la taille et la position du contrôle d’adresse IP. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre du parent du contrôle d’adresse IP. Il ne doit pas être **NULL.**  
   
- `nID`  
+ *nID*  
  ID. du contrôle d’adresse IP  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -139,9 +139,9 @@ virtual BOOL Create(
   
 1.  Appelez le constructeur, ce qui crée le `CIPAddressCtrl` objet.  
   
-2.  Appelez **créer**, ce qui crée le contrôle d’adresse IP.  
+2.  Appelez `Create`, ce qui crée le contrôle d’adresse IP.  
   
- Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de **créer**.  
+ Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de `Create`.  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Appelez cette fonction pour créer un contrôle (une fenêtre enfant) et y associer la `CIPAddressCtrl` objet.  
@@ -156,19 +156,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwExStyle`  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ *dwExStyle*  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Adresse IP style du contrôle. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le **WS_CHILD** de style, car le contrôle doit être une fenêtre enfant. Consultez [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour obtenir la liste des styles de windows.  
   
- `rect`  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de `pParentWnd`.  
+ *Rect*  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. du contrôle  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -191,26 +191,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nField0`  
+ *nField0*  
  Une référence à la valeur du champ 0 à partir d’une adresse IP compressée.  
   
- `nField1`  
+ *nField1*  
  Une référence à la valeur du champ de 1 à partir d’une adresse IP compressée.  
   
- `nField2`  
+ *nField2*  
  Une référence à la valeur du champ 2 à partir d’une adresse IP compressée.  
   
- `nField3`  
+ *nField3*  
  Une référence à la valeur du champ 3 à partir d’une adresse IP compressée.  
   
- `dwAddress`  
- Une référence à l’adresse d’un `DWORD` valeur qui reçoit l’adresse IP. Consultez **remarques** pour une table qui montre comment `dwAddress` est remplie.  
+ *dwAddress*  
+ Une référence à l’adresse d’un `DWORD` valeur qui reçoit l’adresse IP. Consultez **remarques** pour une table qui montre comment *dwAddress* est remplie.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de champs non vide dans le contrôle d’adresse IP.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), comme décrit dans le Kit de développement logiciel Windows. Dans le premier prototype ci-dessus, les numéros de 0 à 3 du contrôle, les champs de lecture de gauche à droite respectivement, remplir les quatre paramètres. Dans le deuxième prototype ci-dessus, `dwAddress` est rempli comme suit.  
+ Cette fonction membre implémente le comportement du message Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), comme décrit dans le Kit de développement logiciel Windows. Dans le premier prototype ci-dessus, les numéros de 0 à 3 du contrôle, les champs de lecture de gauche à droite respectivement, remplir les quatre paramètres. Dans le deuxième prototype ci-dessus, *dwAddress* est rempli comme suit.  
   
 |Champ|Contenant la valeur du champ de bits|  
 |-----------|-------------------------------------|  
@@ -246,23 +246,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nField0`  
+ *nField0*  
  La valeur du champ 0 à partir d’une adresse IP compressée.  
   
- `nField1`  
+ *nField1*  
  La valeur du champ de 1 à partir d’une adresse IP compressée.  
   
- `nField2`  
+ *nField2*  
  La valeur du champ 2 à partir d’une adresse IP compressée.  
   
- `nField3`  
+ *nField3*  
  La valeur du champ 3 à partir d’une adresse IP compressée.  
   
- `dwAddress`  
+ *dwAddress*  
  A `DWORD` valeur qui contient la nouvelle adresse IP. Consultez **remarques** pour une table qui montre comment la `DWORD` la valeur est indiquée.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), comme décrit dans le Kit de développement logiciel Windows. Dans le premier prototype ci-dessus, les numéros de 0 à 3 du contrôle, les champs de lecture de gauche à droite respectivement, remplir les quatre paramètres. Dans le deuxième prototype ci-dessus, `dwAddress` est rempli comme suit.  
+ Cette fonction membre implémente le comportement du message Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), comme décrit dans le Kit de développement logiciel Windows. Dans le premier prototype ci-dessus, les numéros de 0 à 3 du contrôle, les champs de lecture de gauche à droite respectivement, remplir les quatre paramètres. Dans le deuxième prototype ci-dessus, *dwAddress* est rempli comme suit.  
   
 |Champ|Contenant la valeur du champ de bits|  
 |-----------|-------------------------------------|  
@@ -279,7 +279,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nField`  
+ *nChamp*  
  Index du champ de base zéro auquel le focus doit être défini. Si cette valeur est supérieure au nombre de champs, est activé pour le premier champ vide. Si tous les champs sont non vide, est activé sur le premier champ.  
   
 ### <a name="remarks"></a>Notes  
@@ -296,17 +296,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nField`  
+ *nChamp*  
  Index des champs de base zéro auquel la plage s’appliqueront.  
   
- `nLower`  
+ *nLower*  
  Une référence à un entier de réception de la limite inférieure du champ spécifié dans ce contrôle d’adresse IP.  
   
- `nUpper`  
+ *nUpper*  
  Une référence à un entier de réception de la limite supérieure du champ spécifié dans ce contrôle d’adresse IP.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), comme décrit dans le Kit de développement logiciel Windows. Utilisez les deux paramètres, `nLower` et `nUpper`, pour indiquer les limites inférieures et supérieures du champ, à la place de la *wRange* paramètre utilisé avec le message Win32.  
+ Cette fonction membre implémente le comportement du message Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), comme décrit dans le Kit de développement logiciel Windows. Utilisez les deux paramètres, *nLower* et *nUpper*, pour indiquer les limites inférieures et supérieures du champ, à la place de la *wRange* paramètre utilisé avec le message Win32.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
