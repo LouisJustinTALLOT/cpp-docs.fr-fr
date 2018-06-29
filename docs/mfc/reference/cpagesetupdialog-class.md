@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374647"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079181"
 ---
 # <a name="cpagesetupdialog-class"></a>Classe de CPageSetupDialog
 Encapsule les services fournis par la boîte de dialogue Mise en page OLE courante Windows avec une prise en charge supplémentaire pour définir et modifier les marges d'impression.  
@@ -110,7 +110,7 @@ class CPageSetupDialog : public CCommonDialog
   
  `CPageSetupDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue. Les valeurs peuvent être combinées à l’aide de l’opérateur OR au niveau du bit. Ces valeurs ont les significations suivantes :  
   
 - **PSD_DEFAULTMINMARGINS** définit la largeur minimale autorisée pour les marges de page être le même que les valeurs minimales de l’imprimante. Cet indicateur est ignoré si le **PSD_MARGINS** et **PSD_MINMARGINS** indicateurs sont également spécifiées.  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** désactive la zone de dessin de la boîte de dialogue.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers le parent ou le propriétaire de la boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nom du périphérique utilisé par le **CPageSetupDialog** objet.  
+ Le nom du périphérique utilisé par le `CPageSetupDialog` objet.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Appelez cette fonction après avoir appelé `DoModal` pour récupérer des informations sur le contexte de périphérique de la `CPageSetupDialog` objet.  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers le contexte de périphérique d’imprimante.  
   
- `nMessage`  
+ *%nmessage*  
  Spécifie un message indiquant la zone de la page en cours de saisie. Il peut s'agir d'une des valeurs suivantes :  
   
 - **WM_PSD_FULLPAGERECT** la zone de page entière.  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** zone pour la représentation d’une adresse de retour. Cette zone s’étend sur les bords de la zone de page d’exemple.  
   
- `lpRect`  
+ *lpRect*  
  Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) objet qui contient les coordonnées de la zone de dessin.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>Notes  
  Cette image est ensuite affichée dans le cadre de la boîte de dialogue Mise en Page OLE courante. L’implémentation par défaut Dessine une image d’une page de texte.  
   
- Remplacez cette fonction pour personnaliser le dessin d’une zone spécifique de l’image ou l’image entière. Vous pouvez pour cela à l’aide un `switch` instruction avec **cas** instructions vérifiant la valeur de `nMessage`. Par exemple, pour personnaliser le rendu du contenu de l’image de page, vous pouvez utiliser l’exemple de code suivant :  
+ Remplacez cette fonction pour personnaliser le dessin d’une zone spécifique de l’image ou l’image entière. Procéder à l’aide un **commutateur** instruction avec **cas** instructions vérifiant la valeur de *%nmessage*. Par exemple, pour personnaliser le rendu du contenu de l’image de page, vous pouvez utiliser l’exemple de code suivant :  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Notez que vous n’avez pas besoin de gérer tous les cas de `nMessage`. Vous pouvez choisir de gérer un composant de l’image, plusieurs composants de l’image ou la zone entière.  
+ Notez que vous n’avez pas besoin de gérer tous les cas de *%nmessage*. Vous pouvez choisir de gérer un composant de l’image, plusieurs composants de l’image ou la zone entière.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Appelé par l’infrastructure avant de dessiner l’image d’une page imprimée.  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  Spécifie une valeur qui indique le format du papier. Cette valeur peut s’agir de la **DMPAPER_** valeurs répertoriées dans la description de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure.  
   
- `wFlags`  
+ *wFlags*  
  Indique l’orientation du papier ou d’enveloppe, et si l’imprimante est un matricielle ou un périphérique HPPCL (Hewlett Packard Printer Control Language). Ce paramètre peut prendre l'une des valeurs suivantes :  
   
 -   0 x 001 papier en mode paysage (matricielle)  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f enveloppe en mode portrait (matricielle)  
   
- `pPSD`  
+ *pPSD*  
  Pointeur vers un **PAGESETUPDLG** structure. Pour plus d’informations sur [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), consultez le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  

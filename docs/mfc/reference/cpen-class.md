@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376377"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079588"
 ---
 # <a name="cpen-class"></a>CPen (classe)
 Encapsule un stylet GDI (Graphics Device Interface) Windows.  
@@ -78,7 +78,7 @@ class CPen : public CGdiObject
   
  `CPen`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cpen"></a>  CPen::CPen  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPenStyle`  
+ *nPenStyle*  
  Spécifie le style du stylet. Ce paramètre dans la première version du constructeur peut être une des valeurs suivantes :  
   
 - **PS_SOLID** crée un stylet continu.  
@@ -118,7 +118,7 @@ CPen(
   
 - **PS_NULL** crée un stylet null.  
   
-- **PS_INSIDEFRAME** crée un stylet qui dessine une ligne dans le cadre des formes fermées produites par les fonctions de sortie Windows GDI qui spécifient un rectangle englobant (par exemple, le **Ellipse**, **Rectangle** , `RoundRect`, `Pie`, et `Chord` fonctions membres). Lorsque ce style est utilisé avec les fonctions de sortie Windows GDI qui ne spécifient pas d’un rectangle englobant (par exemple, le `LineTo` fonction membre), la zone de dessin du stylet n’est pas limitée par un frame.  
+- **PS_INSIDEFRAME** crée un stylet qui dessine une ligne dans le cadre des formes fermées produites par les fonctions de sortie Windows GDI qui spécifient un rectangle englobant (par exemple, le `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, et `Chord` fonctions membres). Lorsque ce style est utilisé avec les fonctions de sortie Windows GDI qui ne spécifient pas d’un rectangle englobant (par exemple, le `LineTo` fonction membre), la zone de dessin du stylet n’est pas limitée par un frame.  
   
  La deuxième version de la `CPen` constructeur spécifie une combinaison de type, le style, extrémité de fin et les attributs de jointure. Les valeurs de chaque catégorie doivent être combinées à l’aide de l’opérateur OR au niveau du bit (&#124;). Le type du stylet peut être une des valeurs suivantes :  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC** crée un stylet.  
   
-     La deuxième version de la `CPen` constructeur ajoute les styles suivants de stylet pour `nPenStyle`:  
+     La deuxième version de la `CPen` constructeur ajoute les styles suivants de stylet pour *nPenStyle*:  
   
 - **PS_ALTERNATE** crée un stylet qui définit tous les autres pixels. (Ce style est applicable uniquement pour les stylets cosmétiques.)  
   
@@ -148,24 +148,24 @@ CPen(
   
 - **PS_JOIN_ROUND** jointures sont arrondis.  
   
- `nWidth`  
+ *nWidth*  
  Spécifie la largeur du stylet.  
   
 -   Pour la première version du constructeur, si cette valeur est 0, la largeur en unités de périphérique est toujours 1 pixel, quel que soit le mode de mappage.  
   
--   Pour la deuxième version du constructeur si `nPenStyle` est **PS_GEOMETRIC**, la largeur est exprimée en unités logiques. Si `nPenStyle` est **PS_COSMETIC**, la largeur doit être définie sur 1.  
+-   Pour la deuxième version du constructeur si *nPenStyle* est **PS_GEOMETRIC**, la largeur est exprimée en unités logiques. Si *nPenStyle* est **PS_COSMETIC**, la largeur doit être définie sur 1.  
   
- `crColor`  
+ *crColor*  
  Contient une couleur RVB pour le stylet.  
   
- `pLogBrush`  
- Pointe vers un `LOGBRUSH` structure. Si `nPenStyle` est **PS_COSMETIC**, le `lbColor` membre de la `LOGBRUSH` structure spécifie la couleur du stylet et la `lbStyle` membre de la `LOGBRUSH` structure doit être définie sur **BS_ SOLIDE**. Si `nPenStyle` est **PS_GEOMETRIC**, tous les membres doivent être utilisées pour spécifier les attributs de pinceau du stylet.  
+ *pLogBrush*  
+ Pointe vers un `LOGBRUSH` structure. Si *nPenStyle* est **PS_COSMETIC**, le *lbColor* membre de la `LOGBRUSH` structure spécifie la couleur du stylet et *lbStyle*membre de la `LOGBRUSH` structure doit être définie sur **BS_SOLID**. Si *nPenStyle* est **PS_GEOMETRIC**, tous les membres doivent être utilisées pour spécifier les attributs de pinceau du stylet.  
   
- `nStyleCount`  
- Spécifie la longueur, en unités de mot double de la `lpStyle` tableau. Cette valeur doit être égal à zéro si `nPenStyle` n’est pas **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Spécifie la longueur, en unités de mot double de la *lpStyle* tableau. Cette valeur doit être égal à zéro si *nPenStyle* n’est pas **PS_USERSTYLE**.  
   
- `lpStyle`  
- Pointe vers un tableau de valeurs de mot double. La première valeur spécifie la longueur de la première ligne dans un style défini par l’utilisateur, la deuxième valeur spécifie la longueur de la première espace et ainsi de suite. Ce pointeur doit être **NULL** si `nPenStyle` n’est pas **PS_USERSTYLE**.  
+ *lpStyle*  
+ Pointe vers un tableau de valeurs de mot double. La première valeur spécifie la longueur de la première ligne dans un style défini par l’utilisateur, la deuxième valeur spécifie la longueur de la première espace et ainsi de suite. Ce pointeur doit être **NULL** si *nPenStyle* n’est pas **PS_USERSTYLE**.  
   
 ### <a name="remarks"></a>Notes  
  Si vous utilisez le constructeur sans arguments, vous devez initialiser résultant `CPen` de l’objet avec la `CreatePen`, `CreatePenIndirect`, ou `CreateStockObject` fonctions membres.  
@@ -194,27 +194,27 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPenStyle`  
- Spécifie le style pour le stylet. Pour obtenir la liste des valeurs possibles, consultez la `nPenStyle` paramètre dans le [CPen](#cpen) constructeur.  
+ *nPenStyle*  
+ Spécifie le style pour le stylet. Pour obtenir la liste des valeurs possibles, consultez la *nPenStyle* paramètre dans le [CPen](#cpen) constructeur.  
   
- `nWidth`  
+ *nWidth*  
  Spécifie la largeur du stylet.  
   
 -   Pour la première version de `CreatePen`, si cette valeur est 0, la largeur en unités de périphérique est toujours 1 pixel, quel que soit le mode de mappage.  
   
--   Pour la deuxième version de `CreatePen`si `nPenStyle` est **PS_GEOMETRIC**, la largeur est exprimée en unités logiques. Si `nPenStyle` est **PS_COSMETIC**, la largeur doit être définie sur 1.  
+-   Pour la deuxième version de `CreatePen`si *nPenStyle* est **PS_GEOMETRIC**, la largeur est exprimée en unités logiques. Si *nPenStyle* est **PS_COSMETIC**, la largeur doit être définie sur 1.  
   
- `crColor`  
+ *crColor*  
  Contient une couleur RVB pour le stylet.  
   
- `pLogBrush`  
- Pointe vers un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure. Si `nPenStyle` est **PS_COSMETIC**, le **lbColor** membre de la `LOGBRUSH` structure spécifie la couleur du stylet et la `lbStyle` membre de la `LOGBRUSH` structure doit être la valeur **BS_SOLID**. Si **nPenStyle** est **PS_GEOMETRIC**, tous les membres doivent être utilisées pour spécifier les attributs de pinceau du stylet.  
+ *pLogBrush*  
+ Pointe vers un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure. Si *nPenStyle* est **PS_COSMETIC**, le **lbColor** membre de la `LOGBRUSH` structure spécifie la couleur du stylet et *lbStyle*membre de la `LOGBRUSH` structure doit être définie sur **BS_SOLID**. Si **nPenStyle** est **PS_GEOMETRIC**, tous les membres doivent être utilisées pour spécifier les attributs de pinceau du stylet.  
   
- `nStyleCount`  
- Spécifie la longueur, en unités de mot double de la `lpStyle` tableau. Cette valeur doit être égal à zéro si `nPenStyle` n’est pas **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Spécifie la longueur, en unités de mot double de la *lpStyle* tableau. Cette valeur doit être égal à zéro si *nPenStyle* n’est pas **PS_USERSTYLE**.  
   
- `lpStyle`  
- Pointe vers un tableau de valeurs de mot double. La première valeur spécifie la longueur de la première ligne dans un style défini par l’utilisateur, la deuxième valeur spécifie la longueur de la première espace et ainsi de suite. Ce pointeur doit être **NULL** si `nPenStyle` n’est pas **PS_USERSTYLE**.  
+ *lpStyle*  
+ Pointe vers un tableau de valeurs de mot double. La première valeur spécifie la longueur de la première ligne dans un style défini par l’utilisateur, la deuxième valeur spécifie la longueur de la première espace et ainsi de suite. Ce pointeur doit être **NULL** si *nPenStyle* n’est pas **PS_USERSTYLE**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, ou zéro si la méthode échoue.  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  La deuxième version de `CreatePen` Initialise un stylet logique cosmétique ou géométrique qui est spécifiés, de largeur, style et attributs de forme. La largeur d’un stylet est toujours 1 ; la largeur d’un stylet géométrique est toujours spécifiée en unités universelles. Une fois une application crée un stylet logique, elle peut sélectionner ce stylet dans un contexte de périphérique en appelant le [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) (fonction). Une fois un stylet est activée dans un contexte de périphérique, il peut être utilisé pour dessiner des lignes et des courbes.  
   
--   Si `nPenStyle` est **PS_COSMETIC** et **PS_USERSTYLE**, les entrées dans le `lpStyle` tableau spécifie les longueurs des tirets et des espaces dans les unités de style. Une unité de style est définie par le périphérique dans lequel le stylet est utilisé pour dessiner une ligne.  
+-   Si *nPenStyle* est **PS_COSMETIC** et **PS_USERSTYLE**, les entrées dans le *lpStyle* tableau spécifie les longueurs des tirets et des espaces dans unités de style. Une unité de style est définie par le périphérique dans lequel le stylet est utilisé pour dessiner une ligne.  
   
--   Si `nPenStyle` est **PS_GEOMETRIC** et **PS_USERSTYLE**, les entrées dans le `lpStyle` tableau spécifie les longueurs des tirets et des espaces dans les unités logiques.  
+-   Si *nPenStyle* est **PS_GEOMETRIC** et **PS_USERSTYLE**, les entrées dans le *lpStyle* tableau spécifie les longueurs des tirets et des espaces dans unités logiques.  
   
--   Si `nPenStyle` est **PS_ALTERNATE**, l’unité de style est ignorée et tous les autres pixels est définie.  
+-   Si *nPenStyle* est **PS_ALTERNATE**, l’unité de style est ignorée et tous les autres pixels est définie.  
   
  Lorsqu’une application ne requiert plus un stylet donné, il doit appeler la [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) membre de fonction ou de détruire le `CPen` afin de la ressource n’est plus en cours d’utilisation de l’objet. Une application ne doit pas supprimer un stylet lorsque le stylet est sélectionné dans un contexte de périphérique.  
   
@@ -240,14 +240,14 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- Initialise un stylet qui a le style, la largeur et la couleur indiquée dans la structure vers laquelle pointe `lpLogPen`.  
+ Initialise un stylet qui a le style, la largeur et la couleur indiquée dans la structure vers laquelle pointe *lpLogPen*.  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpLogPen`  
+ *lpLogPen*  
  Pointe vers les fenêtres [LOGPEN](../../mfc/reference/logpen-structure.md) structure qui contient des informations sur le stylet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -289,7 +289,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLogPen`  
+ *pLogPen*  
  Pointe vers une [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) structure qui contient des informations sur le stylet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -321,7 +321,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLogPen`  
+ *pLogPen*  
  Pointe vers un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure pour contenir des informations sur le stylet.  
   
 ### <a name="return-value"></a>Valeur de retour  

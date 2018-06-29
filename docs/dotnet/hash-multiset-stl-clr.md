@@ -105,12 +105,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 02678db98c40927114adf1b061482d9e8304aa30
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 3e5db2aafb10ad6d95fe50d073085041a1016cac
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305837"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079862"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `hash_multiset` pour gérer une séquence d’éléments comme une table de hachage, chaque entrée de table stockant un bidirectionnel lié à la liste des nœuds et chaque nœud de stocker un élément. La valeur de chaque élément est utilisée comme clé pour le classement de la séquence.  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Touche  
  Le type du composant clé d’un élément dans la séquence contrôlée.  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **Namespace :** cliext  
   
-## <a name="members"></a>Membres  
+## <a name="declarations"></a>Déclarations  
   
 |Définition de types|Description|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
 |IHash\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-### <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels dans une liste liée bidirectionnelle. Pour accélérer l’accès, l’objet conserve un tableau de longueur variable de pointeurs dans la liste (la table de hachage), gestion efficace de l’intégralité de la liste comme une séquence de sous-listes, ou compartiments. Elle insère des éléments dans un compartiment il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
  Chaque compartiment qu’il contrôle en appelant un objet délégué stocké de type des commandes de l’objet [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez l’objet hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<=(key_type, key_type)`.  
@@ -240,6 +240,8 @@ template<typename Key>
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
+## <a name="members"></a>Membres
+
 ## <a name="begin"></a> hash_multiset::Begin (STL/CLR)
 Désigne le début de la séquence contrôlée.  
   

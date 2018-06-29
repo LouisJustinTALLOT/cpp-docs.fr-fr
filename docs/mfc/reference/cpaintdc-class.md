@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f83c36a9c1a0d334e3b4a75724521d5711123e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 496c06fe7550598eeeb4136b233f39079d7425e9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376533"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078217"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 Une classe de contexte de périphérique dérivée de [CDC](../../mfc/reference/cdc-class.md).  
@@ -72,7 +72,7 @@ class CPaintDC : public CDC
   
  `CPaintDC`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
@@ -83,7 +83,7 @@ explicit CPaintDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Pointe vers le `CWnd` objet auquel le `CPaintDC` objet appartient.  
   
 ### <a name="remarks"></a>Notes  
@@ -100,7 +100,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `m_hWnd` est une variable protégée de type `HWND`.  
+ *m_hWnd* protégé variable de type `HWND`.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  

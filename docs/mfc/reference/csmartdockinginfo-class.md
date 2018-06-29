@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b787828c59535f0e3008816df6f4ab209e1d882c
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373665"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079132"
 ---
 # <a name="csmartdockinginfo-class"></a>Classe de CSmartDockingInfo
 Définit l'apparence des marqueurs d'ancrage intelligents.  
@@ -108,7 +108,7 @@ class CSmartDockingInfo : public CObject
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxDockingManager.h  
   
 ##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
@@ -119,7 +119,7 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `params`  
+ [out] *params*  
  Un objet de type `CSmartDockingInfo` qui est remplie avec les paramètres d’ancrage intelligents.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  

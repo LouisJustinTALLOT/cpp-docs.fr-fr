@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376289"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079542"
 ---
 # <a name="cruntimeclass-structure"></a>Structure de CRuntimeClass
 Chaque classe dérivée de `CObject` est associé un `CRuntimeClass` structure que vous pouvez utiliser pour obtenir des informations sur un objet ou de sa classe de base au moment de l’exécution.  
@@ -68,7 +68,7 @@ struct CRuntimeClass
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CRuntimeClass`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszClassName`  
+ *lpszClassName*  
  Le nom familier de la classe à créer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszClassName`  
+ *lpszClassName*  
  Le nom connu d’une classe dérivée de `CObject`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un `CRuntimeClass` objet, correspondant au nom comme réussi dans `lpszClassName`. La fonction retourne **NULL** si aucun nom de classe correspondant a été trouvé.  
+ Un pointeur vers un `CRuntimeClass` objet, correspondant au nom comme réussi dans *lpszClassName*. La fonction retourne **NULL** si aucun nom de classe correspondant a été trouvé.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  La relation est déterminée par le « parcours » à partir de la classe du membre haut de la chaîne de classes dérivées tout en haut. Cette fonction retourne uniquement **FALSE** si aucune correspondance n’est trouvée pour la classe de base.  
   
 > [!NOTE]
->  Pour utiliser le `CRuntimeClass` structure, vous devez inclure le `IMPLEMENT_DYNAMIC`, `IMPLEMENT_DYNCREATE`, ou `IMPLEMENT_SERIAL` macro dans l’implémentation de la classe pour laquelle vous souhaitez récupérer les informations de l’objet d’exécution.  
+>  Pour utiliser le `CRuntimeClass` structure, vous devez inclure la macro IMPLEMENT_SERIAL, IMPLEMENT_DYNCREATE ou IMPLEMENT_DYNAMIC dans l’implémentation de la classe pour laquelle vous souhaitez récupérer les informations de l’objet d’exécution.  
   
  Pour plus d’informations sur l’utilisation de `CRuntimeClass`, consultez l’article [classe CObject : l’accès aux informations de classe d’exécution](../../mfc/accessing-run-time-class-information.md).  
   

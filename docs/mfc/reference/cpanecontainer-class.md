@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81f516d92777583d54f5e0071ad54012dc43bb81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378166"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079473"
 ---
 # <a name="cpanecontainer-class"></a>Classe de CPaneContainer
 La `CPaneContainer` classe est un composant de base du modèle d’ancrage implémenté par MFC. Un objet de cette classe stocke des pointeurs vers deux volets d'ancrage ou deux instances `CPaneContainer.` . Il stocke aussi un pointeur vers le séparateur qui sépare les volets (ou les conteneurs). En imbriquant des conteneurs dans des conteneurs, l’infrastructure peut générer un arbre binaire qui représente des dispositions d’ancrage complexes. La racine de l’arborescence binaire est stockée dans un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objet.  
@@ -231,7 +231,7 @@ class CPaneContainer : public CObject
   
  [CPaneContainer](../../mfc/reference/cpanecontainer-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpanecontainer.h  
   
 ##  <a name="addpane"></a>  CPaneContainer::AddPane  
@@ -242,7 +242,7 @@ CDockablePane* AddPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -267,8 +267,8 @@ BOOL AddSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pContainer`  
- [in] `bRightNodeNew`  
+ [in] *pContainer*  
+ [in] *bRightNodeNew*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -286,10 +286,10 @@ virtual int CalcAvailablePaneSpace(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nRequiredOffset`  
- [in] `pBar`  
- [in] `pContainer`  
- [in] `bLeftBar`  
+ [in] *nRequiredOffset*  
+ [in] *pBar*  
+ [in] *pContainer*  
+ [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -305,8 +305,8 @@ virtual CSize CalcAvailableSpace(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `sizeStretch`  
- [in] `bLeftBar`  
+ [in] *sizeStretch*  
+ [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -338,7 +338,7 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pParentContainer`  
+ [in] *pParentContainer*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -356,10 +356,10 @@ CPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pManager`  
- [in] `pLeftBar`  
- [in] `pRightBar`  
- [in] `pSlider`  
+ [in] *pManager*  
+ [in] *pLeftBar*  
+ [in] *pRightBar*  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -373,8 +373,8 @@ virtual void DeletePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `barType`  
+ [in] *pBar*  
+ [in] *barType*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -388,8 +388,8 @@ CPaneContainer* FindSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pObject`  
- [in] `findCriteria`  
+ [in] *pObject*  
+ [in] *findCriteria*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -403,7 +403,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -417,7 +417,7 @@ CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -453,7 +453,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `size`  
+ [in] *taille*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -465,7 +465,7 @@ virtual void GetMinSizeLeft(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `size`  
+ [in] *taille*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -477,7 +477,7 @@ virtual void GetMinSizeRight(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `size`  
+ [in] *taille*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -612,8 +612,8 @@ virtual void GetWindowRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
- [in] `bIgnoreVisibility`  
+ [in] *rect*  
+ [in] *bIgnoreVisibility*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -647,7 +647,7 @@ BOOL IsLeftPane(CDockablePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -672,7 +672,7 @@ BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -686,7 +686,7 @@ BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -711,7 +711,7 @@ virtual void Move(CPoint ptNewLeftTop);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ptNewLeftTop`  
+ [in] *ptNewLeftTop*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -725,8 +725,8 @@ void OnDeleteHidePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -740,8 +740,8 @@ virtual int OnMoveInternalPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
- [in] `hdwp`  
+ [in] *nOffset*  
+ [in] *hdwp*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -757,8 +757,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `bShow`  
+ [in] *pBar*  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -799,7 +799,7 @@ virtual void RemovePane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -814,9 +814,9 @@ virtual void Resize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
- [in] `hdwp`  
- [in] `bRedraw`  
+ [in] *rect*  
+ [in] *hdwp*  
+ [in] *bRedraw*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -834,12 +834,12 @@ virtual void ResizePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
- [in] `pBar`  
- [in] `pContainer`  
- [in] `bHorz`  
- [in] `bLeftBar`  
- [in] `hdwp`  
+ [in] *nOffset*  
+ [in] *pBar*  
+ [in] *pContainer*  
+ [in] *bHorz*  
+ [in] *bLeftBar*  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -854,9 +854,9 @@ virtual void ResizePartOfPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
- [in] `bLeftPart`  
- [in] `hdwp`  
+ [in] *nOffset*  
+ [in] *bLeftPart*  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -868,7 +868,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -882,8 +882,8 @@ void SetPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `bLeft`  
+ [in] *pBar*  
+ [in] *bLeft*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -897,8 +897,8 @@ void SetPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pContainer`  
- [in] `bLeft`  
+ [in] *pContainer*  
+ [in] *bLeft*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -910,7 +910,7 @@ void SetPaneDivider(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pSlider`  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -922,7 +922,7 @@ void SetParentPaneContainer(CPaneContainer* p);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -934,7 +934,7 @@ void SetRecentPercent(int nRecentPercent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nRecentPercent`  
+ [in] *nRecentPercent*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -948,8 +948,8 @@ BOOL SetUpByID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
- [in] `pBar`  
+ [in] *nID*  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -963,7 +963,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -980,11 +980,11 @@ virtual int StretchPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
- [in] `bStretchHorz`  
- [in] `bLeftBar`  
- [in] `bMoveSlider`  
- [in] `hdwp`  
+ [in] *nOffset*  
+ [in] *bStretchHorz*  
+ [in] *bLeftBar*  
+ [in] *bMoveSlider*  
+ [in] *hdwp*  
   
 ### <a name="return-value"></a>Valeur de retour  
   

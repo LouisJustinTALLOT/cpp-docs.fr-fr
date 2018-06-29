@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376172"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079627"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (classe)
 Représente des pages individuelles d'une feuille de propriétés, aussi connu sous le nom de boîte de dialogue d'onglet.  
@@ -118,7 +118,7 @@ class CPropertyPage : public CDialog
   
  `CPropertyPage`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID de modèle utilisé pour cette page.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID du nom est placé dans l’onglet de cette page. Si 0, le nom s’affichera dans le modèle de boîte de dialogue pour cette page.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contient une chaîne se terminant par null qui est le nom d’une ressource de modèle.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  ID du nom est placé dans l’emplacement du titre de l’en-tête de page de propriété. Par défaut, 0.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  ID du nom est placé dans l’emplacement de sous-titre de l’en-tête de page de propriété. Par défaut, 0.  
   
 ### <a name="remarks"></a>Notes  
@@ -189,9 +189,9 @@ void Construct(
   
 -   L’utilisateur a sélectionné (à onglets pour) cette page.  
   
- Appelez **construire** si un des autres constructeurs de classe n’a pas été appelé. Le `Construct` fonction membre est flexible, car vous pouvez laisser l’instruction de paramètre vide et puis spécifier plusieurs paramètres et la construction à tout moment dans votre code.  
+ Appeler `Construct` si un des autres constructeurs de classe n’a pas été appelé. Le `Construct` fonction membre est flexible, car vous pouvez laisser l’instruction de paramètre vide et puis spécifier plusieurs paramètres et la construction à tout moment dans votre code.  
   
- Vous devez utiliser `Construct` lorsque vous travaillez avec des tableaux, et vous devez appeler **construire** pour chaque membre du tableau afin que les membres de données sont affectées des valeurs appropriées.  
+ Vous devez utiliser `Construct` lorsque vous travaillez avec des tableaux, et vous devez appeler `Construct` pour chaque membre du tableau afin que les membres de données sont affectées des valeurs appropriées.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID de modèle utilisé pour cette page.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID du nom est placé dans l’onglet de cette page. Si 0, le nom s’affichera dans le modèle de boîte de dialogue pour cette page.  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  Pointe vers une chaîne contenant le nom du modèle pour cette page. Ne peut pas être **NULL**.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  ID du nom est placé dans l’emplacement du titre de l’en-tête de page de propriété.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  ID du nom est placé dans l’emplacement de sous-titre de l’en-tête de page de propriété.  
   
 ### <a name="remarks"></a>Notes  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `wParam`  
+ *wParam*  
  Spécifie des informations de message dépendant supplémentaires.  
   
- `lParam`  
+ *lParam*  
  Spécifie des informations supplémentaires dépendant de message  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bChanged`  
+ *bChanged*  
  **TRUE** pour indiquer que les paramètres de la page de propriété ont été modifiés depuis la dernière fois qu’ils ont été appliquées ; **FALSE** pour indiquer que les paramètres de la page de propriété ont été appliquées, ou doivent être ignorées.  
   
 ### <a name="remarks"></a>Notes  

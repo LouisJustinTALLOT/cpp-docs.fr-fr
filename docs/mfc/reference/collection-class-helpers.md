@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374836"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078154"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
-Les classes de collection `CMap`, `CList`, et `CArray` utiliser les fonctions d’assistance globales basé sur un modèle fins telles que la comparaison, la copie et sérialiser des éléments. Dans le cadre de votre implémentation de classes basées sur `CMap`, `CList`, et `CArray`, vous devez remplacer ces fonctions selon les besoins avec des versions adaptées au type de données stockées dans votre carte, une liste ou un tableau. Pour plus d’informations sur les fonctions d’assistance de substitution comme `SerializeElements`, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md). Notez que **ConstructElements** et **DestructElements** ont été déconseillées.  
+Les classes de collection `CMap`, `CList`, et `CArray` utiliser les fonctions d’assistance globales basé sur un modèle fins telles que la comparaison, la copie et sérialiser des éléments. Dans le cadre de votre implémentation de classes basées sur `CMap`, `CList`, et `CArray`, vous devez remplacer ces fonctions selon les besoins avec des versions adaptées au type de données stockées dans votre carte, une liste ou un tableau. Pour plus d’informations sur les fonctions d’assistance de substitution comme `SerializeElements`, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md). Notez que `ConstructElements` et `DestructElements` ont été déconseillées.  
   
  La bibliothèque Microsoft Foundation Class fournit les fonctions globales suivantes dans afxtempl.h pour vous aider à personnaliser vos classes de collection :  
   
@@ -57,26 +57,26 @@ CompareElements(
  *TYPE*  
  Le type du premier élément à comparer.  
   
- `pElement1`  
+ *pElement1*  
  Pointeur vers le premier élément à comparer.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Le type du deuxième élément à comparer.  
   
- `pElement2`  
+ *pElement2*  
  Pointeur vers le deuxième élément à comparer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’objet pointé par `pElement1` est égal à l’objet vers lequel pointé `pElement2`; sinon, 0.  
+ Différent de zéro si l’objet pointé par *pElement1* est égal à l’objet vers lequel pointé *pElement2*; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Le `CMap` appelle utiliser le `CMap` les paramètres de modèle *clé* et `ARG_KEY`.  
   
  L’implémentation par défaut retourne le résultat de la comparaison de  *\*pElement1* et  *\*pElement2*. Remplacez cette fonction pour qu’elle compare les éléments d’une manière qui convient à votre application.  
   
- Le langage C++ définit l’opérateur de comparaison ( `==`) pour les types simples ( `char`, `int`, **float**, et ainsi de suite) mais ne définit ne pas un opérateur de comparaison pour les classes et structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou de surcharge `CompareElements` avec une version qui renvoie les valeurs appropriées.  
+ Le langage C++ définit l’opérateur de comparaison ( `==`) pour les types simples ( **char**, **int**, **float**, et ainsi de suite) mais ne définit ne pas un opérateur de comparaison pour les classes et structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou de surcharge `CompareElements` avec une version qui renvoie les valeurs appropriées.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
    **En-tête :** afxtempl.h   
   
 ##  <a name="copyelements"></a>  CopyElements  
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *TYPE*  
  Paramètre de modèle spécifiant le type d’éléments à copier.  
   
- `pDest`  
+ *pDest*  
  Pointeur vers la destination où les éléments sont copiés.  
   
- `pSrc`  
+ *pSrc*  
  Pointeur vers la source des éléments à copier.  
   
- `nCount`  
+ *nCount*  
  Nombre d’éléments à copier.  
   
 ### <a name="remarks"></a>Notes  
@@ -108,7 +108,7 @@ void AFXAPI CopyElements(
   
  Pour plus d’informations sur l’implémentation cela et les autres fonctions d’assistance, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h  
   
 ##  <a name="dumpelements"></a>  DumpElements  
@@ -123,25 +123,25 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dc`  
+ *dc*  
  Vider le contexte pour le vidage des éléments.  
   
  *TYPE*  
  Paramètre de modèle qui spécifie le type des éléments.  
   
- `pElements`  
+ *pElements*  
  Pointeur vers les éléments à être vidées.  
   
- `nCount`  
+ *nCount*  
  Nombre d’éléments à être vidées.  
   
 ### <a name="remarks"></a>Notes  
- Le **CArray::Dump**, **CList::Dump**, et **CMap::Dump** fonctions appellent cela si la profondeur de l’image mémoire est supérieure à 0.  
+ Le `CArray::Dump`, `CList::Dump`, et `CMap::Dump` fonctions appellent cela si la profondeur de l’image mémoire est supérieure à 0.  
   
  L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject`, votre remplacement sera généralement une itération au sein des éléments de la collection, l’appel `Dump` pour chaque élément à son tour.  
   
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h  
   
 ##  <a name="hashkey"></a>  HashKey  
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ARG_KEY`  
+ *ARG_KEY*  
  Paramètre de modèle qui spécifie le type de données permet d’accéder aux clés de carte.  
   
- `key`  
+ *key*  
  Clé dont la valeur de hachage doit être calculé.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>Notes  
  Cette fonction est appelée directement par [CMap::RemoveKey](cmap-class.md#removekey) et indirectement par [CMap::Lookup](cmap-class.md#lookup) et [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- L’implémentation par défaut crée une valeur de hachage en migrant `key` vers la droite de quatre positions. Remplacez cette fonction afin qu’elle retourne des valeurs de hachage appropriée pour votre application.  
+ L’implémentation par défaut crée une valeur de hachage en migrant *clé* vers la droite de quatre positions. Remplacez cette fonction afin qu’elle retourne des valeurs de hachage appropriée pour votre application.  
   
 ### <a name="example"></a>Exemple
  ```cpp  
@@ -177,7 +177,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h 
   
 ##  <a name="serializeelements"></a>  SerializeElements  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *TYPE*  
  Paramètre de modèle qui spécifie le type des éléments.  
   
- `ar`  
+ *ar*  
  Objet archiver pour archiver vers ou depuis.  
   
- `pElements`  
+ *pElements*  
  Pointeur vers les éléments archivés.  
   
- `nCount`  
+ *nCount*  
  Nombre d’éléments archivés  
   
 ### <a name="remarks"></a>Notes  
@@ -209,7 +209,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="example"></a>Exemple  
  Consultez l’exemple dans l’article [Collections : comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).  
  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h 
     
 ## <a name="see-also"></a>Voir aussi  

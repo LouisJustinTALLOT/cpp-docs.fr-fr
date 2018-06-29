@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370205"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078681"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange, classe
 Encapsule une transition de plage sinusoïdale comportant une plage d'oscillation donnée.  
@@ -80,7 +80,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
   
  [CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLibrary`  
+ *pLibrary*  
  Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `duration`  
+ *Durée*  
  La durée de la transition.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  La valeur de la variable d’animation à un bac de l’onde sinusoïdale.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  La valeur de la variable d’animation à une crête de l’onde sinusoïdale.  
   
- `period`  
+ *période*  
  La période d’oscillation de l’onde sinusoïdale en secondes.  
   
- `slope`  
+ *pente*  
  La courbe au début de la transition.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

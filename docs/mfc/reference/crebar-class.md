@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371140"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078765"
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 Barre de contrôles qui fournit des informations de disposition, de persistance et d'état pour les contrôles rebar.  
@@ -56,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Contrôle rebar  
  Un objet rebar se comporte comme un objet de barre d’outils. Un contrôle rebar utilise le mécanisme de cliquez et faites glisser pour redimensionner ses bandes. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande disposant de n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant. Toutefois, les bandes ne peut pas contenir plus d’une fenêtre enfant.  
   
- **CReBar** utilise le [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe afin de fournir son implémentation. Vous pouvez accéder à du contrôle rebar via [GetReBarCtrl](#getrebarctrl) pour tirer parti des options de personnalisation du contrôle. Pour plus d’informations sur les contrôles rebar, consultez `CReBarCtrl`. Pour plus d’informations sur l’utilisation de contrôles rebar, consultez [à l’aide de CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ `CReBar` utilise le [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe afin de fournir son implémentation. Vous pouvez accéder à du contrôle rebar via [GetReBarCtrl](#getrebarctrl) pour tirer parti des options de personnalisation du contrôle. Pour plus d’informations sur les contrôles rebar, consultez `CReBarCtrl`. Pour plus d’informations sur l’utilisation de contrôles rebar, consultez [à l’aide de CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Rebar et objets de contrôle rebar ne gèrent pas la barre d’ancrage de contrôles MFC. Si **CRebar::EnableDocking** est appelée, votre application sera évaluée.  
+>  Rebar et objets de contrôle rebar ne gèrent pas la barre d’ancrage de contrôles MFC. Si `CRebar::EnableDocking` est appelée, votre application sera évaluée.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +72,7 @@ class CReBar : public CControlBar
   
  `CReBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="addbar"></a>  CReBar::AddBar  
@@ -95,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pBar`  
+ *pBar*  
  Un pointeur vers un `CWnd` objet qui est la fenêtre enfant à insérer dans le contrôle rebar. L’objet référencé doit avoir un **WS_CHILD**.  
   
- `lpszText`  
- Un pointeur vers une chaîne contenant le texte à afficher sur le contrôle rebar. **NULL** par défaut. Le texte contenu dans `lpszText` ne fait pas partie de la fenêtre enfant ; il se trouve sur le rebar lui-même.  
+ *lpszText*  
+ Un pointeur vers une chaîne contenant le texte à afficher sur le contrôle rebar. **NULL** par défaut. Le texte contenu dans *lpszText* ne fait pas partie de la fenêtre enfant ; il se trouve sur le rebar lui-même.  
   
- `pbmp`  
+ *pbmp*  
  Un pointeur vers un `CBitmap` objet à afficher sur l’arrière-plan du contrôle rebar. **NULL** par défaut.  
   
- `dwStyle`  
+ *dwStyle*  
  A `DWORD` contenant le style à appliquer pour le rebar. Consultez le **fStyle** description de la structure Win32 de fonction [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) pour une liste complète des styles de la bande.  
   
  *clrFore*  
@@ -131,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers le `CWnd` objet dont la fenêtre Windows est le parent de la barre d’état. Normalement votre fenêtre frame.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Le style du contrôle rebar. Par défaut, **RBS_BANDBORDERS**, qui affiche limiter les lignes entre les bandes contiguës dans le contrôle rebar. Consultez [Styles de contrôle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) dans le SDK Windows pour obtenir la liste des styles.  
   
- `dwStyle`  
+ *dwStyle*  
  Les styles de fenêtre rebar.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. du rebar  
   
 ### <a name="return-value"></a>Valeur de retour  

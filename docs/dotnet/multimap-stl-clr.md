@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305876"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079718"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `multimap` pour gérer une séquence d’éléments sous forme d’arborescence triée à charge équilibrée (presque) des nœuds, chacun stocker un élément. Un élément est constitué d’une clé, pour le classement de la séquence et une valeur mappée, qui aborde le long de la conduite.  
@@ -127,7 +127,7 @@ La classe de modèle décrit un objet qui contrôle une séquence de longueur va
   
  `GMapped` est le même que `Mapped` , sauf si ce dernier est un type référence, auquel cas il est `Mapped^`  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key,  
@@ -144,11 +144,11 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Touche  
  Le type du composant clé d’un élément dans la séquence contrôlée.  
   
- mappé  
+ Mappé  
  Le type du composant supplémentaire d’un élément dans la séquence contrôlée.  
   
 ## <a name="requirements"></a>Configuration requise  
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
 |ITree\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-### <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Il insère des éléments dans une arborescence à charge équilibrée (presque) il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
  L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lors de la construction du mappage multiple ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  

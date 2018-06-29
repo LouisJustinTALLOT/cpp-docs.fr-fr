@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368629"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078256"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT, structure
 Le `COMPAREITEMSTRUCT` structure fournit les identificateurs et les données de fournie par l’application pour les deux éléments dans une zone de liste triée, owner-drawn ou d’une zone de liste déroulante.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `CtlType`  
+ *CtlType*  
  **Odt_combobox** (qui spécifie une zone de liste owner-draw) ou **ODT_COMBOBOX** (qui spécifie une zone de liste déroulante owner-draw).  
   
- `CtlID`  
+ *CtlID*  
  L’ID de contrôle pour la zone de liste ou zone de liste déroulante.  
   
- `hwndItem`  
+ *hwndItem*  
  Le handle de fenêtre du contrôle.  
   
  *itemID1*  
@@ -63,9 +63,9 @@ typedef struct tagCOMPAREITEMSTRUCT {
  Données fournie par l’application pour le second élément comparé. Cette valeur a été passée dans l’appel qui a ajouté l’élément à la zone de liste déroulante ou liste.  
   
 ## <a name="remarks"></a>Notes  
- Chaque fois qu’une application ajoute un nouvel élément à une zone de liste owner-drawn ou zone de liste modifiable est créé avec le **CBS_SORT** ou **LBS_SORT** style, Windows envoie le propriétaire une `WM_COMPAREITEM` message. Le `lParam` paramètre du message contient un pointeur long vers un `COMPAREITEMSTRUCT` structure. Lorsqu’il reçoit le message, le propriétaire compare les deux éléments et retourne une valeur qui indique quel élément trie avant l’autre.  
+ Chaque fois qu’une application ajoute un nouvel élément à une zone de liste owner-drawn ou zone de liste modifiable est créé avec le **CBS_SORT** ou **LBS_SORT** style, Windows envoie le propriétaire un message WM_COMPAREITEM. Le *lParam* paramètre du message contient un pointeur long vers un `COMPAREITEMSTRUCT` structure. Lorsqu’il reçoit le message, le propriétaire compare les deux éléments et retourne une valeur qui indique quel élément trie avant l’autre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

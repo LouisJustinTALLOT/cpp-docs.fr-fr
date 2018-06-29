@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8b14a4941a280d34e29de80f343981a0f6d20e5
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305850"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079888"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `hash_multimap` pour gérer une séquence d’éléments comme une table de hachage, chaque entrée de table stockant un bidirectionnel lié à la liste des nœuds et chaque nœud de stocker un élément. Un élément est constitué d’une clé, pour le classement de la séquence et une valeur mappée, qui aborde le long de la conduite.  
@@ -145,11 +145,11 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Touche  
  Le type du composant clé d’un élément dans la séquence contrôlée.  
   
- mappé  
+ Mappé  
  Le type du composant supplémentaire d’un élément dans la séquence contrôlée.  
 
 ## <a name="requirements"></a>Configuration requise  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377225"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079646"
 ---
 # <a name="cprintdialog-class"></a>Classe de CPrintDialog
 Encapsule les services fournis par la boîte de dialogue courante d'impression Windows.  
@@ -145,7 +145,7 @@ class CPrintDialog : public CCommonDialog
   
  `CPrintDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bPrintSetupOnly`  
- Spécifie si la boîte de dialogue d’impression Windows standard ou de la boîte de dialogue Configuration de l’impression est affiché. Définissez ce paramètre sur **TRUE** pour afficher la boîte de dialogue Configuration de l’impression Windows standard. Affectez-lui la valeur **FALSE** pour afficher la boîte de dialogue d’impression Windows. Si `bPrintSetupOnly` est **FALSE**, une case d’option de configuration de l’impression est toujours affichée dans la boîte de dialogue Imprimer.  
+ *bPrintSetupOnly*  
+ Spécifie si la boîte de dialogue d’impression Windows standard ou de la boîte de dialogue Configuration de l’impression est affiché. Définissez ce paramètre sur **TRUE** pour afficher la boîte de dialogue Configuration de l’impression Windows standard. Affectez-lui la valeur **FALSE** pour afficher la boîte de dialogue d’impression Windows. Si *bPrintSetupOnly* est **FALSE**, une case d’option de configuration de l’impression est toujours affichée dans la boîte de dialogue Imprimer.  
   
- `dwFlags`  
+ *dwFlags*  
  Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. Par exemple, le **PD_ALLPAGES** indicateur définit la plage d’impression par défaut pour toutes les pages du document. Consultez le [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Après avoir appelé `DoModal`, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations saisies par l’utilisateur dans la boîte de dialogue autres membres.  
   
- Notez que lorsque vous appelez le constructeur avec `bPrintSetupOnly` la valeur **FALSE**, le **PD_RETURNDC** indicateur est automatiquement utilisé. Après avoir appelé `DoModal`, `GetDefaults`, ou `GetPrinterDC`, une contrôleur de domaine de l’imprimante sera retournée dans `m_pd.hDC`. Ce contrôleur de domaine doit être libérée avec un appel à [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) par l’appelant de `CPrintDialog`.  
+ Notez que lorsque vous appelez le constructeur avec *bPrintSetupOnly* la valeur **FALSE**, le **PD_RETURNDC** indicateur est automatiquement utilisé. Après avoir appelé `DoModal`, `GetDefaults`, ou `GetPrinterDC`, une contrôleur de domaine de l’imprimante sera retournée dans `m_pd.hDC`. Ce contrôleur de domaine doit être libérée avec un appel à [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) par l’appelant de `CPrintDialog`.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Notes  
  Les valeurs extraites sont placées dans le `m_pd` structure.  
   
- Dans certains cas, un appel à cette fonction appelle le [constructeur](#cprintdialog) pour `CPrintDialog` avec `bPrintSetupOnly` la valeur **FALSE**. Dans ce cas, un contrôleur de domaine de l’imprimante et **hDevNames** et **hDevMode** (deux poignées se trouve dans le `m_pd` membre de données) sont automatiquement alloués.  
+ Dans certains cas, un appel à cette fonction appelle le [constructeur](#cprintdialog) pour `CPrintDialog` avec *bPrintSetupOnly* la valeur **FALSE**. Dans ce cas, un contrôleur de domaine de l’imprimante et **hDevNames** et **hDevMode** (deux poignées se trouve dans le `m_pd` membre de données) sont automatiquement alloués.  
   
  Si le constructeur de `CPrintDialog` a été appelée avec `bPrintSetupOnly` la valeur **FALSE**, cette fonction ne retourne pas uniquement **hDevNames** et **hDevMode** (situé dans **m_pd.hDevNames** et **m_pd.hDevMode**) à l’appelant, mais retourne également un périphérique d’impression dans **m_pd.hDC**. Il incombe à l’appelant de supprimer le contrôleur de domaine de l’imprimante et appeler les fenêtres [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) fonction sur les poignées lorsque vous avez terminé avec le `CPrintDialog` objet.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Un handle vers le contexte de l’imprimante en cas de réussite ; dans le cas contraire **NULL**.  
   
 ### <a name="remarks"></a>Notes  
- Si le `bPrintSetupOnly` paramètre de la `CPrintDialog` constructeur était **FALSE** (ce qui indique que la boîte de dialogue Imprimer s’affiche), puis `GetPrinterDC` retourne un handle vers le contexte de périphérique d’imprimante. Vous devez appeler les fenêtres [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) afin de supprimer le contexte de périphérique lorsque vous avez terminé de l’utiliser.  
+ Si le *bPrintSetupOnly* paramètre de la `CPrintDialog` constructeur était **FALSE** (ce qui indique que la boîte de dialogue Imprimer s’affiche), puis `GetPrinterDC` retourne un handle vers le périphérique d’impression contexte. Vous devez appeler les fenêtres [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) afin de supprimer le contexte de périphérique lorsque vous avez terminé de l’utiliser.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

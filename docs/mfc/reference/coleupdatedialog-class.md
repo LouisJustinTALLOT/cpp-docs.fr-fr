@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373049"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079972"
 ---
 # <a name="coleupdatedialog-class"></a>Classe de COleUpdateDialog
 Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.  
@@ -70,7 +70,7 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDoc`  
+ *pDoc*  
  Pointe vers le document qui contient les liens qui peuvent nécessiter une mise à jour.  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  Indicateur qui détermine si les objets incorporés sont à jour.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue sera définie sur la fenêtre principale de l’application.  
   
 ### <a name="remarks"></a>Notes  

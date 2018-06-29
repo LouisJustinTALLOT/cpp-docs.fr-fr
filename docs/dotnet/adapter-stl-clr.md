@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305538"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079434"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle (`collection_adapter` et `range_adapter`) et la fonction de modèle `make_collection`.  
@@ -80,7 +80,7 @@ L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle (`coll
   
  **Namespace :** cliext 
   
-## <a name="members"></a>Membres  
+## <a name="declarations"></a>Déclarations  
   
 |Classe|Description|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle (`coll
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Crée une carte de la plage à l’aide d’une paire d’itérateur.|   
   
+## <a name="members"></a>Membres
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 Encapsule une collection de .NET à utiliser comme un conteneur STL/CLR. A `collection_adapter` est une classe de modèle qui décrit un objet de conteneur STL/CLR simple. Il inclut une interface de bibliothèque de classes de Base (BCL) et retourne une paire itérateur qui vous permet de manipuler la séquence contrôlée.  
   

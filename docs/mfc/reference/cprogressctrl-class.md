@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317ce9484cc471611762d10e6f1482f24c2742a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ccc4acfdfd618bf0fa11f4a49c1e0b78f009ca
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378319"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079388"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre de progression Windows.  
@@ -114,7 +114,7 @@ class CProgressCtrl : public CWnd
   
  `CProgressCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="cprogressctrl"></a>  CProgressCtrl::CProgressCtrl  
@@ -142,27 +142,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de stylesdescribed fenêtre dans [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le Kit de développement logiciel Windows, en plus de la barre des styles de contrôle, au contrôle de progression suivante :  
   
 - `PBS_VERTICAL` Affiche des informations de progression verticalement, de haut en bas. Sans cet indicateur, le contrôle de barre de progression affiche horizontalement, de gauche à droite.  
   
 - `PBS_SMOOTH` Affiche progressive, lisse remplissage dans le contrôle de barre de progression. Sans cet indicateur, le contrôle remplit avec des blocs.  
   
- `rect`  
- Spécifie la taille et la position du contrôle de barre de progression. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Étant donné que le contrôle doit être une fenêtre enfant, les coordonnées spécifiées sont par rapport à la zone cliente de la `pParentWnd`.  
+ *Rect*  
+ Spécifie la taille et la position du contrôle de barre de progression. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Étant donné que le contrôle doit être une fenêtre enfant, les coordonnées spécifiées sont par rapport à la zone cliente de la *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Spécifie l’état d’avancement de la fenêtre parente du contrôle barre généralement un `CDialog`. Il ne doit pas être **NULL.**  
   
- `nID`  
+ *nID*  
  Spécifie l’ID de. du contrôle de barre de progression  
   
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si le `CProgressCtrl` objet est correctement créé ; sinon **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CProgressCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, ce qui crée le `CProgressCtrl` de l’objet, puis appelez **créer**, ce qui crée le contrôle de barre de progression.  
+ Vous construisez un `CProgressCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, ce qui crée le `CProgressCtrl` de l’objet, puis appelez `Create`, ce qui crée le contrôle de barre de progression.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
@@ -180,19 +180,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwExStyle`  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ *dwExStyle*  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de styles de fenêtre décrit dans [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le Kit de développement logiciel Windows.  
   
- `rect`  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de `pParentWnd`.  
+ *Rect*  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. du contrôle  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -253,14 +253,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLower`  
+ *nLower*  
  Une référence à un entier de réception de la limite inférieure du contrôle de barre de progression.  
   
- `nUpper`  
+ *nUpper*  
  Une référence à un entier de réception de la limite supérieure du contrôle de barre de progression.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction copie les valeurs des limites inférieures et supérieures pour les entiers référencés par `nLower` et `nUpper`, respectivement.  
+ Cette fonction copie les valeurs des limites inférieures et supérieures pour les entiers référencés par *nLower* et *nUpper*, respectivement.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
@@ -320,14 +320,14 @@ int GetStep() const;
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
 ##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
- Avance l’incrément spécifié par la barre la position actuelle du contrôle de progression `nPos` et redessine la barre pour refléter la nouvelle position.  
+ Avance l’incrément spécifié par la barre la position actuelle du contrôle de progression *nPos* et redessine la barre pour refléter la nouvelle position.  
   
 ```  
 int OffsetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Quantité d’avancer la position.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `clrBar`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui spécifie la nouvelle couleur de la barre de progression. Spécifiez `CLR_DEFAULT` pour provoquer la barre de progression utiliser la couleur par défaut.|  
+|[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui spécifie la nouvelle couleur de la barre de progression. Spécifiez `CLR_DEFAULT` pour provoquer la barre de progression utiliser la couleur par défaut.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La couleur précédente de la barre de progression, représenté sous la forme un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur, ou `CLR_DEFAULT` si la couleur de la barre de progression est la couleur par défaut.  
@@ -375,7 +375,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clrNew`  
+ *clrNew*  
  A **COLORREF** valeur qui spécifie la couleur d’arrière-plan. Spécifiez le `CLR_DEFAULT` valeur à utiliser la couleur d’arrière-plan par défaut pour la barre de progression.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -397,8 +397,8 @@ BOOL SetMarquee(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `fMarqueeMode`|`true` Pour activer le mode de sélection, ou `false` pour désactiver le mode de sélection.|  
-|[in] `nInterval`|Durée en millisecondes entre les mises à jour de l’animation du texte défilant.|  
+|[in] *fMarqueeMode*|`true` Pour activer le mode de sélection, ou `false` pour désactiver le mode de sélection.|  
+|[in] *%n%nintervalle*|Durée en millisecondes entre les mises à jour de l’animation du texte défilant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne toujours la valeur `true`.  
@@ -419,14 +419,14 @@ BOOL SetMarquee(
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
 ##  <a name="setpos"></a>  CProgressCtrl::SetPos  
- Définit la progression de la barre position actuelle du contrôle tel que spécifié par `nPos` et redessine la barre pour refléter la nouvelle position.  
+ Définit la progression de la barre position actuelle du contrôle tel que spécifié par *nPos* et redessine la barre pour refléter la nouvelle position.  
   
 ```  
 int SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Nouvelle position du contrôle de barre de progression.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -453,10 +453,10 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLower`  
+ *nLower*  
  Spécifie la limite inférieure de la plage (valeur par défaut est égale à zéro).  
   
- `nUpper`  
+ *nUpper*  
  Spécifie la limite supérieure de la plage (valeur par défaut est 100).  
   
 ### <a name="remarks"></a>Notes  
@@ -476,7 +476,7 @@ int SetState(int iState);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `iState`|État pour définir la barre de progression. Utilisez l'une des valeurs suivantes :<br /><br /> - `PBST_NORMAL` -En cours<br />- `PBST_ERROR` -Erreur<br />- `PBST_PAUSED` -En pause|  
+|[in] *iState*|État pour définir la barre de progression. Utilisez l'une des valeurs suivantes :<br /><br /> - `PBST_NORMAL` -En cours<br />- `PBST_ERROR` -Erreur<br />- `PBST_PAUSED` -En pause|  
   
 ### <a name="return-value"></a>Valeur de retour  
  État précédent du contrôle de barre de progression actuel.  

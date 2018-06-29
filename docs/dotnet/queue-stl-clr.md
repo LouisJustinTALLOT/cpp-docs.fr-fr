@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305551"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079705"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments qui dispose d’un accès premier sorti. Utilisation de l’adaptateur de conteneur `queue` pour gérer un conteneur sous-jacent comme une file d’attente.  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Value  
  Type d'un élément dans la séquence contrôlée.  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Dupliquer un objet.|  
 |IErreur\<valeur, le conteneur >|Mettre à jour la carte de conteneur générique.|  
   
-### <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke `Value` éléments et à la demande. L’objet restreint l’accès au fait d’appuyer uniquement le premier élément et dépilé le dernier élément, en implémentant un premier sorti file d’attente (également appelé une file d’attente FIFO, ou simplement une file d’attente).  
   
 ## <a name="members"></a>Membres

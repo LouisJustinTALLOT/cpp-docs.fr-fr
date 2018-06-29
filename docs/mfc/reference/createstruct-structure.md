@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370869"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078465"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT, structure
 Le `CREATESTRUCT` structure définit les paramètres d’initialisation passés à la procédure de fenêtre d’une application.  
@@ -46,43 +46,43 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `lpCreateParams`  
+ *lpCreateParams*  
  Points de données à utiliser pour créer la fenêtre.  
   
- `hInstance`  
+ *hInstance*  
  Identifie le handle d’instance du module du module qui possède la nouvelle fenêtre.  
   
- `hMenu`  
+ *hMenu*  
  Identifie le menu pour être utilisé par la nouvelle fenêtre. Si une fenêtre enfant, contient l’ID d’entier.  
   
- `hwndParent`  
+ *hwndParent*  
  Identifie la fenêtre propriétaire de la nouvelle fenêtre. Ce membre est **NULL** si la nouvelle fenêtre est une fenêtre de niveau supérieur.  
   
- `cy`  
+ *CY*  
  Spécifie la hauteur de la nouvelle fenêtre.  
   
- `cx`  
+ *CX*  
  Spécifie la largeur de la nouvelle fenêtre.  
   
- `y`  
+ *y*  
  Spécifie la coordonnée y de l’angle supérieur gauche de la nouvelle fenêtre. Coordonnées sont exprimées par rapport à la fenêtre parente si la nouvelle fenêtre est une fenêtre enfant ; Sinon, les coordonnées sont par rapport à l’origine de l’écran.  
   
- `x`  
+ *x*  
  Spécifie la coordonnée x de l’angle supérieur gauche de la nouvelle fenêtre. Coordonnées sont exprimées par rapport à la fenêtre parente si la nouvelle fenêtre est une fenêtre enfant ; Sinon, les coordonnées sont par rapport à l’origine de l’écran.  
   
- `style`  
+ *style*  
  Spécifie la nouvelle fenêtre [style](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
+ *Caractère*  
  Pointe vers une chaîne se terminant par null qui spécifie le nom de la nouvelle fenêtre.  
   
- `lpszClass`  
+ *lpszClass*  
  Pointe vers une chaîne se terminant par null qui spécifie le nom de la classe de la nouvelle fenêtre Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure ; pour plus d’informations, consultez le Kit de développement).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Spécifie le [style étendu](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) pour la nouvelle fenêtre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

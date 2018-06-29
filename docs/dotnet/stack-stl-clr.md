@@ -69,12 +69,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305525"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079731"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments qui dispose d’un accès dernier sorti. Utilisation de l’adaptateur de conteneur `stack` pour gérer un conteneur sous-jacent comme une pile de transmission de type push.  
@@ -93,7 +93,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Value  
  Type d'un élément dans la séquence contrôlée.  
   

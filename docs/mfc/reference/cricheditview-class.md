@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353a45cad513e9c862b6ae6c15ab5383d3d65d48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06793ae544b76ac959a51224aae754ad58e1af78
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378954"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079849"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 Avec [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) et [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte du document architecture vue de MFC.  
@@ -217,7 +217,7 @@ class CRichEditView : public CCtrlView
   
  `CRichEditView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrich.h  
   
 ##  <a name="adjustdialogposition"></a>  CRichEditView::AdjustDialogPosition  
@@ -259,19 +259,19 @@ void DoPaste(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dataobj`  
+ *dataobj*  
  Le [COleDataObject](../../mfc/reference/coledataobject-class.md) contenant les données à coller.  
   
- `cf`  
+ *CF*  
  Le format de Presse-papiers souhaité.  
   
- `hMetaPict`  
+ *hMetaPict*  
  Le métafichier qui représente l’élément à coller.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette fonction dans le cadre de l’implémentation par défaut de [QueryAcceptData](#queryacceptdata).  
   
- Cette fonction détermine le type de collage basée sur les résultats du Gestionnaire de collage spécial. Si `cf` est 0, le nouvel élément utilise la représentation sous forme d’icône actuelle. Si `cf` est différente de zéro et `hMetaPict` n’est pas **NULL**, le nouvel élément utilise `hMetaPict` pour sa représentation sous forme.  
+ Cette fonction détermine le type de collage basée sur les résultats du Gestionnaire de collage spécial. Si *cf* est 0, le nouvel élément utilise la représentation sous forme d’icône actuelle. Si *cf* est différente de zéro et *hMetaPict* n’est pas **NULL**, le nouvel élément utilise *hMetaPict* pour sa représentation sous forme.  
   
 ##  <a name="findtext"></a>  CRichEditView::FindText  
  Appelez cette fonction pour rechercher le texte spécifié et la définir à la sélection actuelle.  
@@ -285,20 +285,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Contient la chaîne à rechercher.  
   
- `bCase`  
+ *bCase*  
  Indique si la recherche respecte la casse.  
   
- `bWord`  
+ *bWord*  
  Indique si la recherche doit correspondre au mot entier uniquement, pas les parties de mots.  
   
- `bNext`  
+ *bsuivant*  
  Indique la direction de la recherche. Si **TRUE**, la direction de recherche est vers la fin de la mémoire tampon. Si **FALSE**, le sens de la recherche est vers le début de la mémoire tampon.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la `lpszFind` texte est trouvé ; sinon, 0.  
+ Différent de zéro si la *lpszFind* texte est trouvé ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction affiche le curseur d’attente pendant l’opération de recherche.  
@@ -318,20 +318,20 @@ BOOL FindTextSimple(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Contient la chaîne à rechercher.  
   
- `bCase`  
+ *bCase*  
  Indique si la recherche respecte la casse.  
   
- `bWord`  
+ *bWord*  
  Indique si la recherche doit correspondre au mot entier uniquement, pas les parties de mots.  
   
- `bNext`  
+ *bsuivant*  
  Indique la direction de la recherche. Si **TRUE**, la direction de recherche est vers la fin de la mémoire tampon. Si **FALSE**, le sens de la recherche est vers le début de la mémoire tampon.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la `lpszFind` texte est trouvé ; sinon, 0.  
+ Différent de zéro si la *lpszFind* texte est trouvé ; sinon, 0.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CRichEditView::FindText](#findtext).  
@@ -364,10 +364,10 @@ virtual HRESULT GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpchrg`  
- Pointeur vers le [structure CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure qui spécifie la plage de caractères (et les éléments OLE) à copier vers l’objet de données spécifié par `lplpdataobj`.  
+ *lpchrg*  
+ Pointeur vers le [structure CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure qui spécifie la plage de caractères (et les éléments OLE) pour copier l’objet de données spécifié par *lplpdataobj*.  
   
- `dwReco`  
+ *dwReco*  
  Indicateur d’opération du Presse-papiers. Peut être une des valeurs suivantes.  
   
 - **RECO_COPY** copier dans le Presse-papiers.  
@@ -380,17 +380,17 @@ virtual HRESULT GetClipboardData(
   
 - **RECO_PASTE** coller à partir du Presse-papiers.  
   
- `lpRichDataObj`  
+ *lpRichDataObj*  
  Pointeur vers un [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objet contenant les données du Presse-papiers à partir de la riche contrôle d’édition ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)).  
   
- `lplpdataobj`  
- Pointeur vers la variable pointeur qui reçoit l’adresse de la `IDataObject` objet représentant la plage spécifiée dans le `lpchrg` paramètre. La valeur de `lplpdataobj` est ignoré si une erreur est retournée.  
+ *lplpdataobj*  
+ Pointeur vers la variable pointeur qui reçoit l’adresse de la `IDataObject` objet représentant la plage spécifiée dans le *lpchrg* paramètre. La valeur de *lplpdataobj* est ignoré si une erreur est retournée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `HRESULT` valeur la réussite de l’opération de création de rapports. Pour plus d’informations sur `HRESULT`, consultez [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) dans le Kit de développement logiciel Windows.  
   
 ### <a name="remarks"></a>Notes  
- Si la valeur de retour indique la réussite, **IRichEditOleCallback::GetClipboardData** retourne le `IDataObject` accessibles par `lplpdataobj`; sinon, elle retourne l’accessibles par `lpRichDataObj`. Remplacez cette fonction pour fournir vos propres données du Presse-papiers. L’implémentation par défaut de cette fonction retourne **E_NOTIMPL**.  
+ Si la valeur de retour indique la réussite, **IRichEditOleCallback::GetClipboardData** retourne le `IDataObject` accessibles par *lplpdataobj*; sinon, elle retourne l’accessibles par  *lpRichDataObj*. Remplacez cette fonction pour fournir vos propres données du Presse-papiers. L’implémentation par défaut de cette fonction retourne **E_NOTIMPL**.  
   
  Il s’agit d’une avancée substituable.  
   
@@ -410,10 +410,10 @@ virtual HMENU GetContextMenu(
  *seltyp*  
  Le type de sélection. Les valeurs de type de sélection sont décrites dans la section Notes.  
   
- `lpoleobj`  
- Pointeur vers un **OLEOBJECT** structure spécifiant le premier objet OLE sélectionné si la sélection contient un ou plusieurs éléments OLE. Si la sélection ne contient aucun élément, `lpoleobj` est **NULL**. Le **OLEOBJECT** structure conserve un pointeur vers une objet OLE v-table.  
+ *lpoleobj*  
+ Pointeur vers un **OLEOBJECT** structure spécifiant le premier objet OLE sélectionné si la sélection contient un ou plusieurs éléments OLE. Si la sélection ne contient aucun élément, *lpoleobj* est **NULL**. Le **OLEOBJECT** structure conserve un pointeur vers une objet OLE v-table.  
   
- `lpchrg`  
+ *lpchrg*  
  Pointeur vers un [structure CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure contenant la sélection actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -575,14 +575,14 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Valeur qui spécifie la méthode à utiliser pour déterminer la longueur du texte. Ce membre peut être une ou plusieurs des valeurs répertoriées dans le membre d’indicateurs de [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) décrites dans le SDK Windows.  
   
- `uCodePage`  
+ *uCodePage*  
  Page de codes pour la traduction (CP_ACP pour la Page de codes ANSI, 1200 pour Unicode).  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre de caractères ou d’octets dans le contrôle d’édition. Si les indicateurs incompatibles ont été définis `dwFlags`, cette fonction membre retourne `E_INVALIDARG`.  
+ Le nombre de caractères ou d’octets dans le contrôle d’édition. Si les indicateurs incompatibles ont été définis *dwFlags*, cette fonction membre retourne `E_INVALIDARG`.  
   
 ### <a name="remarks"></a>Notes  
  `GetTextLengthEx` Fournit des méthodes supplémentaires permettant de déterminer la longueur du texte. Il prend en charge la fonctionnalité Rich Edit 2.0. Pour plus d’informations, consultez [sur les contrôles RichEdit](http://msdn.microsoft.com/library/windows/desktop/bb787873) dans le Kit de développement logiciel Windows.  
@@ -595,7 +595,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFileName`  
+ *lpszFileName*  
  Chaîne contenant le nom du fichier à insérer.  
   
 ##  <a name="insertitem"></a>  CRichEditView::InsertItem  
@@ -606,7 +606,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pItem`  
+ *pItem*  
  Pointeur vers l’élément à insérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -616,18 +616,18 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
  Pour plus d’informations sur `HRESULT`, consultez [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
- Appelez cette fonction pour déterminer si `cf` est un format de Presse-papiers est texte, texte enrichi ou texte enrichi avec les éléments OLE.  
+ Appelez cette fonction pour déterminer si *cf* est un format de Presse-papiers est texte, texte enrichi ou texte enrichi avec les éléments OLE.  
   
 ```  
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cf`  
+ *CF*  
  Le format de Presse-papiers dignes d’intérêt.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si `cf` est un format de Presse-papiers Édition ou de texte enrichi.  
+ Différent de zéro si *cf* est un format de Presse-papiers Édition ou de texte enrichi.  
   
 ##  <a name="isselected"></a>  CRichEditView::IsSelected  
  Appelez cette fonction pour déterminer si l’élément OLE spécifié est actuellement sélectionné dans cette vue.  
@@ -637,7 +637,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDocItem`  
+ *pDocItem*  
  Pointeur vers un objet dans la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -682,16 +682,16 @@ void OnCharEffect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwMask`  
+ *dwMask*  
  Le caractère de mise en forme des effets à modifier dans la sélection actuelle.  
   
- `dwEffect`  
+ *dwEffect*  
  La liste souhaitée des effets pour activer/désactiver la mise en forme de caractère.  
   
 ### <a name="remarks"></a>Notes  
  Chaque appel à cette fonction active ou désactive les effets de mise en forme spécifiées pour la sélection actuelle.  
   
- Pour plus d’informations sur la `dwMask` et `dwEffect` paramètres et leurs valeurs potentielles, consultez les membres de données correspondants de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations sur la *dwMask* et *dwEffect* paramètres et leurs valeurs potentielles, consultez les membres de données correspondants de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
@@ -708,16 +708,16 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Chaîne à rechercher.  
   
- `bNext`  
+ *bsuivant*  
  La direction à rechercher : **TRUE** indique ; **FALSE**, jusqu'à.  
   
- `bCase`  
+ *bCase*  
  Indique si la recherche doit respecter la casse.  
   
- `bWord`  
+ *bWord*  
  Indique si la recherche doit rechercher des mots entiers uniquement ou non.  
   
 ### <a name="remarks"></a>Notes  
@@ -731,7 +731,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut de cette fonction appelle le [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) fonction membre sans aucune information d’indicateur (autrement dit, en utilisant les valeurs par défaut de 0 pour le `lHint` paramètre et **NULL** pour le `pHint` paramètre). Remplacez cette fonction pour exécuter toute initialisation à usage unique qui requiert des informations sur le document. Par exemple, si votre application comporte des documents de taille fixe, vous pouvez utiliser cette fonction pour initialiser les limites de défilement d’un affichage en fonction de la taille du document. Si votre application prend en charge les documents de taille variable, utilisez `OnUpdate` mettre à jour le défilement limite chaque fois que les modifications de document.  
+ L’implémentation par défaut de cette fonction appelle le [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) fonction membre sans aucune information d’indicateur (autrement dit, en utilisant les valeurs par défaut de 0 pour le *lHint* paramètre et **NULL**  pour le *pHint* paramètre). Remplacez cette fonction pour exécuter toute initialisation à usage unique qui requiert des informations sur le document. Par exemple, si votre application comporte des documents de taille fixe, vous pouvez utiliser cette fonction pour initialiser les limites de défilement d’un affichage en fonction de la taille du document. Si votre application prend en charge les documents de taille variable, utilisez `OnUpdate` mettre à jour le défilement limite chaque fois que les modifications de document.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CRichEditView::m_nWordWrap](#m_nwordwrap).  
@@ -765,7 +765,7 @@ void OnParaAlign(WORD wAlign);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `wAlign`  
+ *wAlign*  
  Alignement du paragraphe souhaité. Une des valeurs suivantes :  
   
 - `PFA_LEFT` Aligner les paragraphes avec la marge de gauche.  
@@ -785,11 +785,11 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dcPrinter`  
+ *dcPrinter*  
  A [CDC](../../mfc/reference/cdc-class.md) objet pour la nouvelle imprimante.  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut définit le format du papier à la hauteur physique et la largeur du périphérique de sortie (imprimante). S’il existe aucun contexte de périphérique n’associé à `dcPrinter`, l’implémentation par défaut définit le format du papier à 8,5 par 11 pouces.  
+ L’implémentation par défaut définit le format du papier à la hauteur physique et la largeur du périphérique de sortie (imprimante). S’il existe aucun contexte de périphérique n’associé *dcPrinter*, l’implémentation par défaut définit le format du papier à 8,5 par 11 pouces.  
   
 ##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll  
  Appelé par l’infrastructure lors du traitement de remplacer toutes les commandes à partir de la boîte de dialogue Remplacer.  
@@ -803,16 +803,16 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Texte à remplacer.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Le texte de remplacement.  
   
- `bCase`  
+ *bCase*  
  Indique si la recherche respecte la casse.  
   
- `bWord`  
+ *bWord*  
  Indique si la recherche doit sélectionner des mots entiers ou non.  
   
 ### <a name="remarks"></a>Notes  
@@ -834,19 +834,19 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Texte à remplacer.  
   
- `bNext`  
+ *bsuivant*  
  Indique la direction de la recherche : **TRUE** est arrêté ; **FALSE**, jusqu'à.  
   
- `bCase`  
+ *bCase*  
  Indique si la recherche respecte la casse.  
   
- `bWord`  
+ *bWord*  
  Indique si la recherche doit sélectionner des mots entiers ou non.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Le texte de remplacement.  
   
 ### <a name="remarks"></a>Notes  
@@ -860,7 +860,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Le texte qui n’a été trouvé.  
   
 ### <a name="remarks"></a>Notes  
@@ -882,19 +882,19 @@ void OnUpdateCharEffect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pCmdUI`  
+ *pCmdUI*  
  Pointeur vers un [CCmdUI](../../mfc/reference/ccmdui-class.md) objet.  
   
- `dwMask`  
+ *dwMask*  
  Indique le caractère de masque de mise en forme.  
   
- `dwEffect`  
+ *dwEffect*  
  Indique le caractère de mise en forme d’effet.  
   
 ### <a name="remarks"></a>Notes  
- Le masque `dwMask` Spécifie le caractère de mise en forme d’attributs à vérifier. Les indicateurs `dwEffect` le formatage des attributs à enlever ou supprimer des caractères de la liste.  
+ Le masque *dwMask* Spécifie le caractère de mise en forme d’attributs à vérifier. Les indicateurs *dwEffect* le formatage des attributs à enlever ou supprimer des caractères de la liste.  
   
- Pour plus d’informations sur la `dwMask` et `dwEffect` paramètres et leurs valeurs potentielles, consultez les membres de données correspondants de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations sur la *dwMask* et *dwEffect* paramètres et leurs valeurs potentielles, consultez les membres de données correspondants de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
@@ -909,10 +909,10 @@ void OnUpdateParaAlign(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pCmdUI`  
+ *pCmdUI*  
  Pointeur vers un [CCmdUI](../../mfc/reference/ccmdui-class.md) objet.  
   
- `wAlign`  
+ *wAlign*  
  L’alignement du paragraphe à vérifier. Une des valeurs suivantes :  
   
 - `PFA_LEFT` Aligner les paragraphes avec la marge de gauche.  
@@ -925,7 +925,7 @@ void OnUpdateParaAlign(
  [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
 ##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect  
- Appelez cette fonction pour mettre en forme une plage de texte dans un contrôle RichEdit pour s’ajuster au *rectLayout* pour le périphérique spécifié par `pDC`.  
+ Appelez cette fonction pour mettre en forme une plage de texte dans un contrôle RichEdit pour s’ajuster au *rectLayout* pour le périphérique spécifié par *pDC*.  
   
 ```  
 long PrintInsideRect(
@@ -937,16 +937,16 @@ long PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour la zone de sortie.  
   
  *rectLayout*  
  [RECT](../../mfc/reference/rect-structure1.md) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) qui définit la zone de sortie.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Index de base zéro du premier caractère à mettre en forme.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Index de base zéro du dernier caractère à mettre en forme.  
   
  *bOutput*  
@@ -962,7 +962,7 @@ long PrintInsideRect(
   Consultez l’exemple de [CRichEditView::GetPaperSize](#getpapersize).  
   
 ##  <a name="printpage"></a>  CRichEditView::PrintPage  
- Appelez cette fonction pour mettre en forme une plage de texte dans un contrôle RichEdit pour le périphérique de sortie spécifié par `pDC`.  
+ Appelez cette fonction pour mettre en forme une plage de texte dans un contrôle RichEdit pour le périphérique de sortie spécifié par *pDC*.  
   
 ```  
 long PrintPage(
@@ -972,13 +972,13 @@ long PrintPage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique pour la sortie de page.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Index de base zéro du premier caractère à mettre en forme.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Index de base zéro du dernier caractère à mettre en forme.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1008,13 +1008,13 @@ virtual HRESULT QueryAcceptData(
  *lpcfFormat*  
  Pointeur vers le format de données acceptables.  
   
- `dwReco`  
+ *dwReco*  
  Non utilisé.  
   
  *bReally*  
  Indique si l’opération de collage doit continuer ou non.  
   
- `hMetaFile`  
+ *hMetaFile*  
  Un handle de métafichier utilisé pour dessiner l’icône de l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1036,11 +1036,11 @@ void SetCharFormat(CHARFORMAT2 cf);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cf`  
+ *CF*  
  [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure qui contient le caractère de la nouvelle valeur par défaut mise en forme d’attributs.  
   
 ### <a name="remarks"></a>Notes  
- Seuls les attributs spécifiés par le **dwMask** membre `cf` sont modifiés par cette fonction.  
+ Seuls les attributs spécifiés par le **dwMask** membre *cf* sont modifiés par cette fonction.  
   
  Pour plus d’informations, consultez [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) message et [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure dans le SDK Windows.  
   
@@ -1091,14 +1091,14 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pf`  
+ *PF*  
  [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) structure qui contient la nouvelle valeur par défaut des attributs de mise en forme de paragraphe.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Seuls les attributs spécifiés par le **dwMask** membre `pf` sont modifiés par cette fonction.  
+ Seuls les attributs spécifiés par le **dwMask** membre *pf* sont modifiés par cette fonction.  
   
  Pour plus d’informations, consultez [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) message et [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) structure dans le SDK Windows.  
   
@@ -1113,13 +1113,13 @@ void TextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszFind`  
+ *lpszFind*  
  Contient la chaîne de texte qui n’a été trouvée.  
   
 ### <a name="remarks"></a>Notes  
  Il est recommandé que cette méthode est appelée immédiatement après les appels ayant échouées à [FindText](#findtext) afin que l’état de la recherche interne du contrôle est correctement réinitialisé.  
   
- Le `lpszFind` paramètre doit inclure le même contenu que la chaîne fournie pour [FindText](#findtext). Après la réinitialisation de l’état de la recherche interne, cette méthode appelle la [OnTextNotFound](#ontextnotfound) méthode avec la chaîne de recherche fourni.  
+ Le *lpszFind* paramètre doit inclure le même contenu que la chaîne fournie pour [FindText](#findtext). Après la réinitialisation de l’état de la recherche interne, cette méthode appelle la [OnTextNotFound](#ontextnotfound) méthode avec la chaîne de recherche fourni.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CRichEditView::FindText](#findtext).  

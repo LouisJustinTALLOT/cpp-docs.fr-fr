@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374381"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077976"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer classe
 Utilisée pour les serveurs d'édition visuelle OLE, les serveurs Automation et les conteneurs de lien (applications qui prennent en charge les liaisons aux incorporations).  
@@ -72,7 +72,7 @@ class COleTemplateServer : public COleObjectFactory
   
  `COleTemplateServer`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clsid`  
+ *clsid*  
  Référence à l’ID de classe qui le modèle de demande.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Pointeur vers le modèle de document.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Indique si une seule instance de l’application peut prendre en charge plusieurs instanciations. Si **TRUE**, plusieurs instances de l’application sont lancées pour chaque demande de création d’un objet.  
   
 ### <a name="remarks"></a>Notes  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nAppType`  
+ *nAppType*  
  Une valeur à partir de la **OLE_APPTYPE** énumération, qui est définie dans AFXDISP. H. Il peut avoir l’une des valeurs suivantes :  
   
 - `OAT_INPLACE_SERVER` Serveur a interface utilisateur complète du serveur.  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` L’objet est `IDispatch`-compatibles.  
   
-- **OAT_DOC_OBJECT_SERVER** Server prend en charge l’incorporation et le modèle objet de Document du composant.  
+- `OAT_DOC_OBJECT_SERVER` Serveur prend en charge l’incorporation et le modèle objet de Document du composant.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Une liste d’entrées qui est écrites dans le Registre uniquement si aucune entrée n’existe.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Une liste d’entrées qui est écrites dans le Registre, quelle que soit l’existent de toutes les entrées précédentes.  
   
- `bRegister`  
- Détermine si la classe doit être enregistré. Si `bRegister` est **TRUE**, la classe est inscrite dans le Registre système. Dans le cas contraire, il annule l’inscription de la classe.  
+ *bRegister*  
+ Détermine si la classe doit être enregistré. Si *bRegister* est **TRUE**, la classe est inscrite dans le Registre système. Dans le cas contraire, il annule l’inscription de la classe.  
   
 ### <a name="remarks"></a>Notes  
  Les informations d’inscription sont chargées au moyen d’un appel à [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Les sous-chaînes de récupérer sont ceux identifiés par les index **regFileTypeId**, **regFileTypeName**, et **fileNewName**, comme décrit dans la `GetDocString` pages de référence.  
   
  Si le **regFileTypeId** sous-chaîne est vide ou si l’appel à `GetDocString` échoue pour une raison quelconque, cette fonction échoue et les informations de fichier ne sont pas entrées dans le Registre.  
   
- Les informations contenues dans les arguments `rglpszRegister` et `rglpszOverwrite` est écrit dans le Registre via un appel à [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Les informations par défaut, qui sont enregistrées lorsque les deux arguments sont **NULL**, est appropriée pour la plupart des applications. Pour plus d’informations sur la structure des informations dans ces arguments, consultez `AfxOleRegisterServerClass`.  
+ Les informations contenues dans les arguments *rglpszRegister* et *rglpszOverwrite* est écrit dans le Registre via un appel à [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Les informations par défaut, qui sont enregistrées lorsque les deux arguments sont **NULL**, est appropriée pour la plupart des applications. Pour plus d’informations sur la structure des informations dans ces arguments, consultez `AfxOleRegisterServerClass`.  
   
- Pour plus d'informations, consultez [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Pour plus d’informations, consultez [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC HIERSVR](../../visual-cpp-samples.md)   

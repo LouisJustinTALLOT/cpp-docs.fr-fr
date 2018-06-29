@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 03c41bc17b6d8e5853203533a2d20d81063316a1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954745"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079287"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap, classe
 Wrapper pour ID2D1Bitmap.  
@@ -152,7 +152,7 @@ virtual ~CD2DBitmap();
 ```  
   
 ##  <a name="attach"></a>  CD2DBitmap::Attach  
- Attache existant à l’objet interface de la ressource  
+ Attache existant à l’objet interface de la ressource.  
   
 ```  
 void Attach(ID2D1Bitmap* pResource);
@@ -160,7 +160,7 @@ void Attach(ID2D1Bitmap* pResource);
   
 ### <a name="parameters"></a>Paramètres  
  *pResource*  
- Interface de la ressource existante. Ne peut pas être NULL  
+ Interface de la ressource existante. Ne peut pas être Null.  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  Construit un objet CD2DBitmap à partir de la ressource.  
@@ -216,14 +216,14 @@ CD2DBitmap(
  Handle vers l’image bitmap.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
- Initialise l’objet  
+ Initialise l’objet.  
   
 ```  
 void CommonInit();
 ```  
   
 ##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
- Copie la région spécifiée à partir de la bitmap spécifiée dans l’image bitmap actuelle  
+ Copie la région spécifiée à partir de la bitmap spécifiée dans l’image bitmap actuelle.  
   
 ```  
 HRESULT CopyFromBitmap(
@@ -234,19 +234,19 @@ HRESULT CopyFromBitmap(
   
 ### <a name="parameters"></a>Paramètres  
  *pBitmap*  
- L’image bitmap à copier à partir de  
+ L’image bitmap d’origine.  
   
  *destPoint*  
- Dans l’image bitmap actuelle, l’angle supérieur gauche de la zone à laquelle la région spécifiée par srcRect est copiée  
+ Dans l’image bitmap actuelle, l’angle supérieur gauche de la zone à laquelle la région spécifiée par srcRect est copiée.  
   
  *srcRect*  
- La zone d’image bitmap à copier  
+ La zone d’image bitmap à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- Copie la région spécifiée de la mémoire dans l’image bitmap actuelle  
+ Copie la région spécifiée de la mémoire dans l’image bitmap actuelle.  
   
 ```  
 HRESULT CopyFromMemory(
@@ -257,19 +257,19 @@ HRESULT CopyFromMemory(
   
 ### <a name="parameters"></a>Paramètres  
  *srcData*  
- Les données à copier  
+ Les données à copier.  
   
  *espacement*  
- La longueur ou tonalité, de la bitmap source stockée dans srcData. Cette valeur est le nombre d’octets d’une ligne de numérisation (une ligne de pixels en mémoire). La largeur de numérisation peut être calculée à partir de la formule suivante : largeur en pixels * octets par pixel + remplissage de la mémoire  
+ La longueur ou tonalité, de la bitmap source stockée dans srcData. Cette valeur est le nombre d’octets d’une ligne de numérisation (une ligne de pixels en mémoire). La largeur de numérisation peut être calculée à partir de la formule suivante : largeur en pixels * octets par pixel + remplissage de la mémoire.  
   
  *destRect*  
- Dans l’image bitmap actuelle, l’angle supérieur gauche de la zone à laquelle la région spécifiée par srcRect est copiée  
+ Dans l’image bitmap actuelle, l’angle supérieur gauche de la zone à laquelle la région spécifiée par srcRect est copiée. 
   
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- Copie la région spécifiée de la cible de rendu dans l’image bitmap actuelle  
+ Copie la région spécifiée à partir du spécifié cible de rendu dans l’image bitmap actuelle.  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -280,13 +280,13 @@ HRESULT CopyFromRenderTarget(
   
 ### <a name="parameters"></a>Paramètres  
  *pRenderTarget*  
- La cible de rendu qui contient la zone à copier  
+ La cible de rendu qui contient la zone à copier.  
   
  *destPoint*  
- Dans l’image bitmap actuelle, l’angle supérieur gauche de la zone à laquelle la région spécifiée par srcRect est copiée  
+ Dans l’image bitmap actuelle, l’angle supérieur gauche de la zone à laquelle la région spécifiée par srcRect est copiée.  
   
  *srcRect*  
- La zone de la cible de rendu à copier.  
+ Zone de la cible de rendu à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
@@ -313,7 +313,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBitmap::Detach  
- Détache l’interface de la ressource à partir de l’objet  
+ Détache l’interface de la ressource à partir de l’objet.  
   
 ```  
 ID2D1Bitmap* Detach();
@@ -323,7 +323,7 @@ ID2D1Bitmap* Detach();
  Pointeur vers l’interface de la ressource détaché.  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
- Renvoie l’interface ID2D1Bitmap  
+ Renvoie l’interface ID2D1Bitmap.  
   
 ```  
 ID2D1Bitmap* Get();
@@ -333,7 +333,7 @@ ID2D1Bitmap* Get();
  Pointeur vers une interface de ID2D1Bitmap ou NULL si l’objet n’est pas encore initialisé.  
   
 ##  <a name="getdpi"></a>  CD2DBitmap::GetDPI  
- Retourner la taille en points par pouce (PPP) de l’image bitmap  
+ Retourne la taille en points par pouce (PPP) de l’image bitmap.  
   
 ```  
 CD2DSizeF GetDPI() const;  
@@ -353,7 +353,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
  Mode d’alpha et le format de pixel de l’image bitmap.  
   
 ##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
- Retourne la taille, en unités de dépendantes du périphérique (pixels), de l’image bitmap  
+ Retourne la taille, en unités de dépendantes du périphérique (pixels), de l’image bitmap.  
   
 ```  
 CD2DSizeU GetPixelSize() const;  
@@ -363,7 +363,7 @@ CD2DSizeU GetPixelSize() const;
  La taille, en pixels, de la bitmap...  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
- Retourne la taille, en pixels d’indépendants du périphérique (DIP), de l’image bitmap  
+ Retourne la taille, en pixels d’indépendants du périphérique (DIP), de l’image bitmap.  
   
 ```  
 CD2DSizeF GetSize() const;  
@@ -373,7 +373,7 @@ CD2DSizeF GetSize() const;
  La taille, en DIP, de l’image bitmap.  
   
 ##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
- Vérifications de validité des ressources  
+ Vérifie la validité de la ressource.  
   
 ```  
 virtual BOOL IsValid() const;  

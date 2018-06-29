@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370153"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078419"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Création d'une application MFC de style Explorateur de fichiers
 De nombreuses applications de système de Windows utilisent l’interface utilisateur (IU) de l’Explorateur de fichiers. Lorsque vous démarrez l’Explorateur de fichiers, par exemple, vous consultez une application avec un séparateur vertical de la barre séparant la zone cliente. Fournit des fonctionnalités de navigation et le côté gauche de la zone cliente et à droite de la zone cliente affiche des détails relatifs à la sélection dans le volet gauche. Lorsqu’un utilisateur clique sur un élément dans le volet gauche, l’application remplit à nouveau le volet de droite. Dans une application MDI, vous pouvez utiliser des commandes sur le **vue** menu pour modifier la quantité de détail affiché dans le volet droit. (Dans un SDI ou plusieurs documents de niveau supérieur, vous pouvez modifier le détail en utilisant les boutons de barre d’outils uniquement.)  
@@ -32,7 +32,7 @@ De nombreuses applications de système de Windows utilisent l’interface utilis
   
  L’Assistant crée les classes suivantes pour vous :  
   
--   Le **CLeftView** classe définit la partie gauche de la zone cliente. Il est toujours dérivé [CTreeView](../../mfc/reference/ctreeview-class.md).  
+-   La `CLeftView` classe définit la partie gauche de la zone cliente. Il est toujours dérivé [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
 -   C*NomProj*classe View définit le volet droit de la zone cliente. Par défaut, elle est dérivée de [CListView](../../mfc/reference/clistview-class.md) mais peut être un autre type de vue en fonction de la classe que vous spécifiez à partir de la **classe de Base** liste dans le [Classes générées](../../mfc/reference/generated-classes-mfc-application-wizard.md) page de la Assistant.  
   

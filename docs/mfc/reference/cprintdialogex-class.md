@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376644"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079096"
 ---
 # <a name="cprintdialogex-class"></a>Classe de CPrintDialogEx
 Encapsule les services fournis par la feuille de propriétés d’impression Windows.  
@@ -133,7 +133,7 @@ class CPrintDialogEx : public CCommonDialog
   
  `CPrintDialogEx`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. Par exemple, le **PD_ALLPAGES** indicateur définit la plage d’impression par défaut pour toutes les pages du document. Consultez le [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  A `CString` en spécifiant le nom du pilote de définies par le système.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez un pointeur vers le `CString` objet retourné par `GetDriverName` comme valeur de `lpszDriverName` dans un appel à [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Utilisez un pointeur vers le `CString` objet retourné par `GetDriverName` comme valeur de *lpszDriverName* dans un appel à [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) ou [GetDefaults](#getdefaults) pour récupérer le nom du port imprimante actuellement sélectionnée.  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370973"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078893"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration, classe
 Encapsule une transition d'accélération parabolique.  
@@ -74,7 +74,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
   
  [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
@@ -88,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dblFinalValue`  
+ *dblFinalValue*  
  La valeur de la variable à la fin de la transition de l’animation.  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  La rapidité de la variable à la fin de la transition de l’animation.  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  L’accélération de la variable de l’animation pendant la transition.  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLibrary`  
+ *pLibrary*  
  Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  

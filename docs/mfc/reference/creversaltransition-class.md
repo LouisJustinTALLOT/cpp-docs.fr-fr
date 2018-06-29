@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21ec3a9491054ac6ecd0cdb4aad0c4c91d13dbd6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373464"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079048"
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition, classe
 Encapsule une transition inverse.  
@@ -68,7 +68,7 @@ class CReversalTransition : public CBaseTransition;
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="create"></a>  CReversalTransition::Create  
@@ -81,7 +81,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pLibrary`  
+ *pLibrary*  
  Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -95,7 +95,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `duration`  
+ *Durée*  
  La durée de la transition.  
   
 ##  <a name="m_duration"></a>  CReversalTransition::m_duration  

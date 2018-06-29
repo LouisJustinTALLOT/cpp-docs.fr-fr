@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377251"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079014"
 ---
 # <a name="crecentfilelist-class"></a>Classe de CRecentFileList
 Prend en charge le contrôle de la liste des derniers fichiers utilisés (MRU).  
@@ -84,7 +84,7 @@ class CRecentFileList
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CRecentFileList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxadv.h  
   
 ##  <a name="add"></a>  CRecentFileList::Add  
@@ -115,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPathName`  
+ *lpszPathName*  
  Spécifie le chemin d’accès à ajouter à la liste.  
   
- `lpszAppID`  
+ *lpszAppID*  
  Spécifie l’ID de modèle d’Application utilisateur pour l’application.  
   
- `pItem`  
+ *pItem*  
  Spécifie un pointeur vers l’élément de l’interpréteur de commandes à ajouter à la liste.  
   
- `pLink`  
+ *pLink*  
  Spécifie un pointeur vers le lien d’interpréteur de commandes à ajouter à la liste.  
   
- `pidl`  
+ *PIDL*  
  Spécifie le conjointe pour l’élément de l’interpréteur de commandes qui doit être ajouté dans le dossier de documents récents.  
   
 ### <a name="remarks"></a>Notes  
@@ -146,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStart`  
+ *Début*  
  Décalage de la numérotation dans l’affichage du menu de la liste des fichiers MRU (le plus récemment utilisé).  
   
- `lpszSection`  
+ *lpszSection*  
  Pointe vers le nom de la section du Registre ou de l’application. Fichier INI dans lequel la liste des fichiers MRU est lu et/ou écrite.  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  Pointe vers une chaîne de format à utiliser pour les noms des entrées stockées dans le Registre ou l’application. Fichier INI.  
   
- `nSize`  
+ *nSize*  
  Nombre maximal de fichiers dans la liste des derniers fichiers utilisés.  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  Longueur maximale, en caractères, disponibles pour l’affichage du menu d’un nom de fichier dans la liste des derniers fichiers utilisés.  
   
 ### <a name="remarks"></a>Notes  
- La chaîne de format vers lequel pointe `lpszEntryFormat` doit contenir « %d », qui sera utilisé pour la substitution de l’index de chaque élément des derniers fichiers utilisés. Par exemple, si la chaîne de format est `"file%d"` ensuite les entrées sont nommées `file0`, `file1`, et ainsi de suite.  
+ La chaîne de format vers lequel pointe *lpszEntryFormat* doit contenir « %d », qui sera utilisé pour la substitution de l’index de chaque élément des derniers fichiers utilisés. Par exemple, si la chaîne de format est `"file%d"` ensuite les entrées sont nommées `file0`, `file1`, et ainsi de suite.  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Obtient un nom d’affichage d’un fichier dans la liste des fichiers des derniers fichiers utilisés, pour une utilisation dans l’affichage du menu de la liste des derniers fichiers utilisés.  
@@ -177,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `strName`  
+ *strName*  
  Chemin d’accès complet du fichier dont le nom est affiché dans la liste de menu des fichiers de la liste des fichiers.  
   
- `nIndex`  
+ *nIndex*  
  Index de base zéro du fichier dans la liste des derniers fichiers utilisés.  
   
  *lpszCurDir*  
@@ -189,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  Longueur de la chaîne du répertoire en cours.  
   
- `bAtLeastName`  
- Si elle est différente de zéro, indique que le nom du fichier de base doit être retourné, même si elle dépasse la longueur maximale d’affichage (passée en tant que le `nMaxDispLen` paramètre à la `CRecentFileList` constructeur).  
+ *bAtLeastName*  
+ Si elle est différente de zéro, indique que le nom du fichier de base doit être retourné, même si elle dépasse la longueur maximale d’affichage (passée en tant que le *nMaxDispLen* paramètre à la `CRecentFileList` constructeur).  
   
 ### <a name="return-value"></a>Valeur de retour  
  **FALSE** si il n’existe aucun nom de fichier à l’index spécifié dans la liste des fichiers récemment utilisée (MRU).  
   
 ### <a name="remarks"></a>Notes  
- Si le fichier est dans le répertoire actif, la fonction laisse le répertoire désactive l’affichage. Si le nom de fichier est trop long, le répertoire et l’extension sont supprimés. Si le nom de fichier est toujours trop long, le nom d’affichage est défini sur une chaîne vide, sauf si `bAtLeastName` est différente de zéro.  
+ Si le fichier est dans le répertoire actif, la fonction laisse le répertoire désactive l’affichage. Si le nom de fichier est trop long, le répertoire et l’extension sont supprimés. Si le nom de fichier est toujours trop long, le nom d’affichage est défini sur une chaîne vide, sauf si *bAtLeastName* est différente de zéro.  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Récupère le nombre de fichiers dans la liste des derniers fichiers utilisés.  
@@ -209,14 +209,14 @@ int GetSize() const;
  Le nombre de fichiers en cours plus récemment (MRU) fichiers utilisés.  
   
 ##  <a name="operator_at"></a>  [] De CRecentFileList::operator  
- L’indice surchargé ( `[]`) opérateur retourne une seule `CString` spécifié par l’index de base zéro dans `nIndex`.  
+ L’indice surchargé ( `[]`) opérateur retourne une seule `CString` spécifié par l’index de base zéro dans *nIndex*.  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de base zéro d’un `CString` dans un ensemble de `CString`s.  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -234,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de base zéro du fichier à supprimer de la liste des fichiers récemment utilisée (MRU).  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -245,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pCmdUI`  
+ *pCmdUI*  
  Un pointeur vers le [CCmdUI](../../mfc/reference/ccmdui-class.md) objet pour le menu de liste des derniers fichiers utilisé (MRU) fichier.  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

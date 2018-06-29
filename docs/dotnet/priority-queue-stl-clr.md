@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306032"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079529"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une longueur variable ordonné séquence d’éléments qui a un accès limité. Utilisation de l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent comme une file d’attente de priorité.  
   
  Dans la description ci-dessous, `GValue` est identique à `Value` , sauf si ce dernier est un type référence, auquel cas il est `Value^`. De même, `GContainer` est identique à `Container` , sauf si ce dernier est un type référence, auquel cas il est `Container^`.  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Value  
  Type d'un élément dans la séquence contrôlée.  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Dupliquer un objet.|  
 |IPriorityQueue\<valeur, le conteneur >|Mettre à jour la carte de conteneur générique.|  
   
-### <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke `Value` éléments et à la demande. Il conserve la séquence ordonnée en tant que segment, avec l’élément de priorité la plus élevée (l’élément supérieur) facilement accessible et amovible. L’objet limite l’accès en exécutant un push de nouveaux éléments et dépilé simplement l’élément de priorité la plus élevée, mise en œuvre d’une file d’attente de priorité.  
   
  L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez le priority_queue ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(value_type, value_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376044"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078697"
 ---
 # <a name="csettingsstoresp-class"></a>Classe de CSettingsStoreSP
 Le `CSettingsStoreSP` est une classe d’assistance que vous pouvez utiliser pour créer des instances de la [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
@@ -75,7 +75,7 @@ class CSettingsStoreSP
   
  `CSettingsStoreSP::SetRuntimeClass` utilise une variable statique globale. Par conséquent, qu’un seul magasin personnalisé est disponible à la fois.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxsettingsstore.h  
   
 ##  <a name="create"></a>  CSettingsStoreSP::Create  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bAdmin`  
+ [in] *bCheminAdmin*  
  Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé en mode administrateur.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé pour l’accès en lecture seule.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  Si vous créez un `CSettingsStore` de l’objet en mode administrateur, l’emplacement par défaut pour tous les accès de Registre est HKEY_LOCAL_MACHINE. Sinon, l’emplacement par défaut pour tous les accès de Registre est HKEY_CURRENT_USER.  
   
- Si `bAdmin` est `TRUE`, l’application doit disposer des droits d’administration. Dans le cas contraire, il échoue lorsqu’il tente d’accéder au Registre.  
+ Si *bCheminAdmin* est `TRUE`, l’application doit disposer des droits d’administration. Dans le cas contraire, il échoue lorsqu’il tente d’accéder au Registre.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `Create` méthode de la `CSettingsStoreSP` classe.  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Défini par l’utilisateur qui le `CSettingsStoreSP` stocke l’objet.  
   
 ### <a name="remarks"></a>Notes  
- Le `CSettingsStoreSP` objet stocke les données à partir de `dwUserData` dans la variable membre protégé `m_dwUserData`.  
+ Le `CSettingsStoreSP` objet stocke les données à partir de *dwUserData* dans la variable membre protégé `m_dwUserData`.  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Définit la classe d’exécution. La méthode [CSettingsStoreSP::Create](#create) utilise la classe d’exécution pour déterminer le type d’objet à créer.  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pRTI`  
+ [in] *pRTI*  
  Un pointeur vers les informations de classe runtime pour une classe dérivée de la [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` en cas de réussite ; `FALSE` si la classe identifiée par `pRTI` n’est pas dérivée de `CSettingsStore`.  
+ `TRUE` en cas de réussite ; `FALSE` si la classe identifiée par *pRTI* n’est pas dérivée de `CSettingsStore`.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez utiliser la [CSettingsStoreSP classe](../../mfc/reference/csettingsstoresp-class.md) pour dériver des classes de `CSettingsStore`. Utilisez la méthode `SetRuntimeClass` si vous souhaitez créer des objets d’une classe personnalisée dérivée de `CSettingsStore`.  

@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305889"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079875"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `set` pour gérer une séquence d’éléments sous forme d’arborescence triée à charge équilibrée (presque) des nœuds, chacun stocker un élément.  
   
  Dans la description ci-dessous, `GValue` est identique à `GKey`, qui à son tour est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est `Key^`.  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Touche  
  Le type du composant clé d’un élément dans la séquence contrôlée.  
   
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/set >  
+  
+ **Namespace :** cliext  
+
 ## <a name="declarations"></a>Déclarations  
   
 |Définition de types|Description|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
 |ITree\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-### <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Il insère des éléments dans une arborescence à charge équilibrée (presque) il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
  L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez le jeu ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
@@ -228,11 +233,6 @@ template<typename Key>
  Un itérateur ensemble stocke un handle vers son nœud de jeu associé, qui à son tour stocke un handle à son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec les objets du conteneur associé. Un itérateur ensemble reste valide tant que son nœud de jeu associé est associé à un ensemble. En outre, un itérateur valide est dereferencable : vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne--tant qu’il n’est pas égal à `end()`.  
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<cliext/set >  
-  
- **Namespace :** cliext  
  
 ## <a name="members"></a>Membres
 

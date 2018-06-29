@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399021"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070075"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -72,11 +72,11 @@ Le **feclearexcept** fonction tente d’effacer flottante point d’indicateurs 
 |FE_INVALID|Une erreur de domaine s’est produite pendant une opération à virgule flottante précédente.|
 |FE_OVERFLOW|Une erreur de plage s’est produite ; le résultat d’une opération à virgule flottante précédente était trop grand pour être représenté.|
 |FE_UNDERFLOW|Le résultat d’une opération à virgule flottante précédente était trop petit pour être représenté avec une précision complète ; une valeur dénormalisée a été créée.|
-|FE_ALLEXCEPT|Opération OR au niveau du bit de toutes les exceptions de virgule flottante prises en charge.|
+|FE_ALL_EXCEPT|Opération OR au niveau du bit de toutes les exceptions de virgule flottante prises en charge.|
 
 Le *, sauf* argument peut être zéro ou l’OR au niveau du bit d’un ou plusieurs des macros d’exception prise en charge. Le résultat de toute autre valeur d’argument est indéfini.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

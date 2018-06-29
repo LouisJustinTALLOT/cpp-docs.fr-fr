@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373483"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079145"
 ---
 # <a name="crecordview-class"></a>CRecordView (classe)
 Vue qui affiche des enregistrements de base de données dans des contrôles.  
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  `CRecordView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb.h  
   
 ##  <a name="crecordview"></a>  CRecordView::CRecordView  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contient une chaîne se terminant par null qui est le nom d’une ressource de modèle de boîte de dialogue.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
 ### <a name="remarks"></a>Notes  
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** appelle `UpdateData`, qui appelle `DoDataExchange`. Cet appel initial à `DoDataExchange` se connecte `CRecordView` contrôle (indirectement) de `CRecordset` créés par ClassWizard de données membres de champ. Ces membres de données ne peut pas être utilisés tant qu’après l’appel de la classe de base **CFormView::OnInitialUpdate** fonction membre.  
   
 > [!NOTE]
->  Si vous utilisez ClassWizard, l’Assistant définit un `enum` valeur `CRecordView::IDD`, il spécifie dans la déclaration de classe et l’utilise dans la liste d’initialisation de membre pour le constructeur.  
+>  Si vous utilisez ClassWizard, l’Assistant définit un **enum** valeur `CRecordView::IDD`, il spécifie dans la déclaration de classe et l’utilise dans la liste d’initialisation de membre pour le constructeur.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  Cette fonction est utile pour écrire vos propres implémentations de la valeur par défaut des gestionnaires de mise à jour des commandes qui ClassWizard écrit pour prendre en charge une interface utilisateur pour le déplacement d’un enregistrement à l’autre.  
   
 > [!CAUTION]
->  Le résultat de cette fonction est fiable, à ceci près que la vue ne peut pas détecter la fin de l’objet recordset jusqu'à ce que l’utilisateur a été déplacé au-delà de celle-ci. L’utilisateur doit passer au-delà du dernier enregistrement, avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur permettant de passer à l’enregistrement suivant ou la dernière. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement. `IsOnLastRecord` est également peu fiable après un appel à la fonction de mise en œuvre **OnRecordLast**, qui gère le `ID_RECORD_LAST` commande, ou `CRecordset::MoveLast`.  
+>  Le résultat de cette fonction est fiable, à ceci près que la vue ne peut pas détecter la fin de l’objet recordset jusqu'à ce que l’utilisateur a été déplacé au-delà de celle-ci. L’utilisateur doit passer au-delà du dernier enregistrement, avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur permettant de passer à l’enregistrement suivant ou la dernière. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement. `IsOnLastRecord` est également peu fiable après un appel à la fonction de mise en œuvre `OnRecordLast`, qui gère le `ID_RECORD_LAST` commande, ou `CRecordset::MoveLast`.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Retourne un pointeur vers le `CRecordset`-dérivée d’objet associé à la vue de l’enregistrement.  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  Un pointeur vers un `CRecordset`-objet dérivé si l’objet a été correctement créé ; sinon une **NULL** pointeur.  
   
 ### <a name="remarks"></a>Notes  
- Vous devez substituer cette fonction membre pour construire ou obtenir un objet recordset et retournent un pointeur vers elle. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet de jeu d’enregistrements du type que vous avez spécifié avec ClassWizard et appelle son **ouvrir** membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.  
+ Vous devez substituer cette fonction membre pour construire ou obtenir un objet recordset et retournent un pointeur vers elle. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet de jeu d’enregistrements du type que vous avez spécifié avec ClassWizard et appelle son `Open` membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.  
   
  Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Différent de zéro si le déplacement a réussi ; 0 dans le cas contraire, si la demande de déplacement a été refusée.  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut appelle approprié **déplacer** fonction membre de la `CRecordset` objet associé à la vue de l’enregistrement.  
+ L’implémentation par défaut appelle approprié `Move` fonction membre de la `CRecordset` objet associé à la vue de l’enregistrement.  
   
  Par défaut, `OnMove` met à jour l’enregistrement en cours sur la source de données si l’utilisateur a été modifié dans la vue de l’enregistrement.  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Si vous déplacez au-delà du dernier enregistrement du jeu d’enregistrements, la vue de l’enregistrement continue d’afficher le dernier enregistrement. Si vous déplacez vers l’arrière au-delà du premier enregistrement, la vue de l’enregistrement continue à afficher le premier enregistrement.  
   
 > [!CAUTION]
->  Appel de `OnMove` lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. Appelez la fonction de gestionnaire de mise à jour interface utilisateur appropriée : **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, ou  **OnUpdateRecordPrev** — avant correspondants opération de déplacement pour déterminer si le jeu d’enregistrements dispose de tous les enregistrements.  
+>  Appel de `OnMove` lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. Appelez la fonction de gestionnaire de mise à jour interface utilisateur appropriée : `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, ou `OnUpdateRecordPrev` — avant correspondants opération de déplacement pour déterminer si le jeu d’enregistrements dispose de tous les enregistrements.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CFormView, classe](../../mfc/reference/cformview-class.md)   

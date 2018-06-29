@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305863"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079823"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `deque` pour gérer une séquence d’éléments qui ressemble à un bloc contigu de stockage, mais qui peuvent augmenter ou réduire à chaque extrémité sans avoir besoin de copier les éléments restants. Par conséquent, elle peut implémenter efficacement un `double-ended queue`. (Par conséquent, le nom.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace :** cliext  
 
-## <a name="members"></a>Membres  
+## <a name="declarations"></a>Déclarations  
   
 |Définition de types|Description|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
  
-## <a name="member-definitions"></a>Définitions de membre
+## <a name="members"></a>Membres
 
 ## <a name="assign"></a> deque::Assign (STL/CLR)
 Remplace tous les éléments.  

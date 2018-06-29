@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble du Marshaling dans C++ | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,19 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137132"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079158"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Vue d’ensemble du marshaling dans C++
-En mode mixte, vous devez parfois marshaler des données entre les types managés et natifs. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] a introduit la bibliothèque de marshaling pour aider à marshaler et de convertir les données d’une manière simple.  
-  
+En mode mixte, vous devez parfois marshaler des données entre les types managés et natifs. Visual Studio 2008 a introduit le *bibliothèque de marshaling* pour aider à marshaler et de convertir les données d’une manière simple.  La bibliothèque de marshaling se compose d’un ensemble de fonctions et une `marshal_context` classe qui effectuent le marshaling pour les types courants. La bibliothèque est définie dans ces en-têtes dans le **inclure/msclr** répertoire pour votre édition de Visual Studio :
+
+|Header|Description|  
+|---------------|-----------------|
+|Marshal.h|`marshal_context` classe et des fonctions de marshaling sans contexte|
+|marshal_atl.h| Fonctions de marshaling des types d’ATL|
+|marshal_cppstd.h|Fonctions pour le marshaling des types C++ standard|
+|marshal_windows.h|Fonctions de marshaling des types de Windows|
+
+
+Le chemin d’accès par défaut pour **msclr** dossier est quelque chose comme ceci selon la version et le numéro de build :
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  Vous pouvez utiliser la bibliothèque de marshaling avec ou sans un [marshal_context, classe](../dotnet/marshal-context-class.md). Certaines conversions nécessitent un contexte. D’autres conversions peuvent être implémentées à l’aide de la [marshal_as](../dotnet/marshal-as.md) (fonction). Le tableau suivant répertorie les conversions actuels pris en charge, si elles nécessitent un contexte et quel fichier marshal, vous devez inclure :  
   
-|À partir du type|Au type|Marshaler (méthode)|Fichier Include|  
+|À partir du type|Au type|Marshaler (méthode)|fichier Include|  
 |---------------|-------------|--------------------|------------------|  
 |System::String ^|const char *|marshal_context|Marshal.h|  
 |const char *|System::String ^|marshal_as|Marshal.h|  
@@ -62,7 +76,7 @@ En mode mixte, vous devez parfois marshaler des données entre les types managé
 > [!NOTE]
 >  Si vous avez incorporé `NULL`s dans votre chaîne, le résultat du marshaling de la chaîne n’est pas garanti. Le texte incorporé `NULL`s peut entraîner la chaîne à tronquer ou elles peuvent être conservées.  
   
- Les en-têtes de bibliothèque de marshaling sont situés dans le répertoire include dans le sous-répertoire msclr. Cet exemple montre comment inclure le répertoire msclr dans une déclaration d’en-tête include :  
+Cet exemple montre comment inclure le répertoire msclr dans une déclaration d’en-tête include :  
   
  `#include "msclr\marshal_cppstd.h"`  
   

@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b764777f33b0ae8ea1521e931ee45740f7057ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8de4afadd51d9446a57b8d68fbcda337a650e984
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378439"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079914"
 ---
 # <a name="cpane-class"></a>CPane Class
 Le `CPane` classe est une amélioration de la [CControlBar (classe)](../../mfc/reference/ccontrolbar-class.md). Si vous mettez à niveau un projet MFC existant, remplacez toutes les occurrences de `CControlBar` avec `CPane`.  
@@ -267,7 +267,7 @@ class CPane : public CBasePane
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxPane.h  
   
 ##  <a name="adjustsizeimmediate"></a>  CPane::AdjustSizeImmediate  
@@ -278,7 +278,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Pour recalculer automatiquement la disposition du volet. dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -294,10 +294,10 @@ BOOL AllocElements(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nElements`  
+ [in] *nElements*  
  Le nombre d’éléments pour lesquels allouer le stockage.  
   
- [in] `cbElement`  
+ [in] *cbElement*  
  La taille, en octets, d’un élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -324,11 +324,11 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectRequired`  
+ [in] *rectRequired*  
  Le rectangle requis.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La différence de largeur et hauteur entre `rectRequired` et le rectangle de la fenêtre en cours.  
+ La différence de largeur et hauteur entre *rectRequired* et le rectangle de la fenêtre en cours.  
   
 ##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect  
  Calcule l’intérieur rectangle d’un volet, y compris les bordures et les barres de défilement.  
@@ -340,14 +340,14 @@ void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `rect`  
+ [out] *rect*  
  Contient la taille et le décalage de la zone cliente du volet.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Si le volet est orienté horizontalement ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode est appelée par l’infrastructure lorsqu’elle doit recalculer la disposition d’un volet. Le `rect` paramètre est rempli avec la taille et le décalage de la zone cliente du volet. Cela inclut ses bordures et des barres de défilement.  
+ Cette méthode est appelée par l’infrastructure lorsqu’elle doit recalculer la disposition d’un volet. Le *rect* paramètre est rempli avec la taille et le décalage de la zone cliente du volet. Cela inclut ses bordures et des barres de défilement.  
   
 ##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect  
  Calcule le rectangle récemment ancré.  
@@ -367,7 +367,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bVertDock`  
+ [in] *bVertDock*  
  `TRUE` Si le volet est en cours ancré verticalement, `FALSE` dans le cas contraire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -384,7 +384,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDockBar`  
+ [in] *pDockBar*  
  Spécifie le volet sur lequel ce volet est ancrée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -416,7 +416,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  N’est pas utilisée dans `CPane::ConvertToTabbedDocument`.  
   
 ### <a name="remarks"></a>Notes  
@@ -430,11 +430,11 @@ virtual void CopyState(CPane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pOrgBar`  
+ [in] *pOrgBar*  
  Pointeur vers un volet.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode copie l’état de `pOrgBar` dans le volet en cours.  
+ Cette méthode copie l’état de *pOrgBar* dans le volet en cours.  
   
 ##  <a name="create"></a>  CPane::Create  
  Crée une barre de contrôle et l’attache à la [CPane](../../mfc/reference/cpane-class.md) objet.  
@@ -451,25 +451,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszClassName`  
+ [in] *lpszClassName*  
  Spécifie le nom de la classe Windows.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Spécifie les attributs de style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Spécifie la taille initiale et la position de la `pParentWnd` fenêtre, en coordonnées clientes.  
+ [in] *rect*  
+ Spécifie la taille initiale et la position de la *pParentWnd* fenêtre, en coordonnées clientes.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Spécifie la fenêtre parente de ce volet.  
   
- [in] `nID`  
+ [in] *nID*  
  Spécifie l’ID du volet.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Spécifie le style pour le volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Spécifie le contexte de la création du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -478,7 +478,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Notes  
  Cette méthode crée un volet de Windows et l’attache à le `CPane` objet.  
   
- Si vous n’avez pas explicitement initialisé [CPane::m_recentDockInfo](#m_recentdockinfo) avant d’appeler `Create`, le paramètre `rect` sera utilisé comme le rectangle lorsque flottant ou le volet d’ancrage.  
+ Si vous n’avez pas explicitement initialisé [CPane::m_recentDockInfo](#m_recentdockinfo) avant d’appeler `Create`, le paramètre *rect* sera utilisé comme le rectangle lorsque flottant ou le volet d’ancrage.  
   
 ##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe  
  Crée une fenêtre mini-frame pour un volet flottant.  
@@ -488,7 +488,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectInitial`  
+ [in] *rectInitial*  
  Spécifie la taille initiale et la position, en coordonnées d’écran, de la fenêtre mini-frame à créer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -515,28 +515,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Spécifie les attributs de style de fenêtre étendus. Pour plus d’informations, consultez [Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
- [in] `lpszClassName`  
+ [in] *lpszClassName*  
  Spécifie le nom de la classe Windows.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Spécifie les attributs de style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Spécifie la taille initiale et la position de la `pParentWnd` fenêtre, en coordonnées clientes.  
+ [in] *rect*  
+ Spécifie la taille initiale et la position de la *pParentWnd* fenêtre, en coordonnées clientes.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Spécifie la fenêtre parente de ce volet.  
   
- [in] `nID`  
+ [in] *nID*  
  Spécifie l’ID du volet.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Spécifie le style pour le volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Spécifie le contexte de création du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -545,7 +545,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Notes  
  Cette méthode crée un volet de Windows et l’attache à le `CPane` objet.  
   
- Si vous n’avez pas explicitement initialisé [CPane::m_recentDockInfo](#m_recentdockinfo) avant d’appeler `CreateEx`, le paramètre `rect` sera utilisé comme le rectangle lorsque flottant ou le volet d’ancrage.  
+ Si vous n’avez pas explicitement initialisé [CPane::m_recentDockInfo](#m_recentdockinfo) avant d’appeler `CreateEx`, le paramètre *rect* sera utilisé comme le rectangle lorsque flottant ou le volet d’ancrage.  
   
 ##  <a name="dockbymouse"></a>  CPane::DockByMouse  
  Ancre un volet à l’aide de la souris.  
@@ -555,7 +555,7 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDockBar`  
+ [in] *pDockBar*  
  Spécifie le volet base auquel vous souhaitez ancrer ce volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -572,13 +572,13 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pDockBar`  
+ [in] [out] *pDockBar*  
  Spécifie le volet de base pour l’ancrer ce volet pour.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Spécifie le rectangle dans le volet de base où ce volet est ancrée.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Spécifie la méthode d’ancrage à utiliser. Les options disponibles sont les suivantes :  
   
 |Option|Description|  
@@ -587,14 +587,14 @@ virtual BOOL DockPane(
 |`DM_MOUSE`|Utilisé en interne.|  
 |`DM_DBL_CLICK`|Cette option est utilisée lorsque l’utilisateur double-clique sur la barre de redimensionnement. Le volet est repositionné à sa position d’ancrage plus récent. Si le volet est non ancré en double-cliquant dessus, le volet est repositionné à sa position flottante plus récente.|  
 |`DM_SHOW`|Cette option peut être utilisée pour par programmation ancrer le volet. Le volet stocke la dernière position flottante.|  
-|`DM_RECT`|Le volet est ancré dans la région spécifiée par `lpRect`.|  
+|`DM_RECT`|Le volet est ancré dans la région spécifiée par *lpRect*.|  
 |`DM_STANDARD`|Lorsque vous utilisez cette option, le framework Dessine le volet en tant qu’une trame de plan pendant son déplacement.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si le volet est ancré avec succès ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode ancre le volet vers le volet de base qui est spécifié par la `pDockBar` paramètre. Vous devez d’abord activer ancrage en appelant [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
+ Cette méthode ancre le volet vers le volet de base qui est spécifié par le *pDockBar* paramètre. Vous devez d’abord activer ancrage en appelant [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
 ##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard  
  Ancre un volet à l’aide de plan de la station d’accueil (standard).  
@@ -604,11 +604,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bWasDocked`  
+ [in] *bWasDocked*  
  `TRUE` Si le volet est ancré avec succès ; dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Cette méthode retourne toujours la `this` pointeur.  
+ Cette méthode retourne toujours la **cela** pointeur.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est utilisée uniquement pour les volets qui sont dérivés de la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md). Pour plus d’informations, consultez [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).  
@@ -627,23 +627,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Le côté du frame parent que vous souhaitez ancrer le volet à.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  La taille spécifiée.  
   
- [in] `dwDockFlags`  
+ [in] *dwDockFlags*  
  Ignoré.  
   
- [in] `pRelativeBar`  
+ [in] *pRelativeBar*  
  Ignoré.  
   
- [in] `nRelativeIndex`  
+ [in] *nRelativeIndex*  
  Ignoré.  
   
- [in] `bOuterEdge`  
- Si `TRUE` et d’autres volets ancrables situé sur le côté qui sont spécifiées par `dwAlignment`, le volet est ancré à l’extérieur d’autres volets, le bord du frame parent plus proche. Si `FALSE`, le volet est ancré proche au centre de la zone cliente.  
+ [in] *bOuterEdge*  
+ Si `TRUE` et d’autres volets ancrables situé sur le côté qui sont spécifiées par *dwAlignment*, le volet est ancré à l’extérieur d’autres volets, le bord du frame parent plus proche. Si `FALSE`, le volet est ancré proche au centre de la zone cliente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `FALSE` Si une barre de séparation ( [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md)) ne peut pas être créé ; sinon, `TRUE`.  
@@ -676,20 +676,20 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectFloat`  
+ [in] *rectFloat*  
  Spécifie l’emplacement, en coordonnées d’écran, pour positionner le volet lorsqu’elle est affichée.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Spécifie la méthode d’ancrage à utiliser lorsque le volet est flottante. Pour obtenir la liste des valeurs possibles, consultez [CPane::DockPane](#dockpane).  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Pour afficher le volet lorsque flottante ; dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE` Si le volet a été correctement flottante ou si le volet ne peut pas être affichée, car [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) retourne `FALSE`; sinon, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour détacher le volet à la position spécifiée par la `rectFloat` paramètre. Cette méthode crée automatiquement une fenêtre mini-frame parent du volet.  
+ Appelez cette méthode pour détacher le volet à la position spécifiée par le *rectFloat* paramètre. Cette méthode crée automatiquement une fenêtre mini-frame parent du volet.  
   
 ##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize  
  Retourne la quantité, en pixels, le volet capable d’évoluer.  
@@ -784,7 +784,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `size`  
+ [out] *taille*  
  A `CSize` objet rempli avec la valeur minimale autorisée.  
   
 ### <a name="remarks"></a>Notes  
@@ -797,7 +797,7 @@ virtual void GetPaneName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `strName`  
+ [out] *strName*  
  A `CString` objet rempli avec le nom de légende.  
   
 ### <a name="remarks"></a>Notes  
@@ -811,7 +811,7 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `rectVirtual`  
+ [out] *rectVirtual*  
  A `CRect` objet rempli avec le rectangle virtuel.  
   
 ### <a name="remarks"></a>Notes  
@@ -829,11 +829,11 @@ virtual AFX_CS_STATUS IsChangeState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nOffset`  
- Spécifie le respect de la station d’accueil. Par exemple, un volet qui est déplacé dans `nOffset` pixels à partir d’une ligne d’ancrage seront ancrés.  
+ [in] *nOffset*  
+ Spécifie le respect de la station d’accueil. Par exemple, un volet qui est déplacé dans *nOffset* pixels à partir d’une ligne d’ancrage seront ancrés.  
   
- [in] `ppTargetBar`  
- Lorsque la méthode retourne, `ppTargetBar` contient soit un pointeur vers l’objet auquel le volet actif doit être ancré, ou `NULL` si aucun ancrage ne doit se produire.  
+ [in] *ppTargetBar*  
+ Lorsque la méthode retourne, *ppTargetBar* contient soit un pointeur vers l’objet auquel le volet actif doit être ancré, ou `NULL` si aucun ancrage ne doit se produire.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs suivantes `AFX_CS_STATUS` valeurs :  
@@ -880,16 +880,16 @@ bool IsLeftOf(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
+ [in] *rect*  
  A `CRect` objet qui est utilisé pour la comparaison.  
   
- [in] `bWindowRect`  
- Si `TRUE`, `rect` est censé pour contenir les coordonnées d’écran ; si `FALSE`, `rect` est supposé pour contenir les coordonnées clientes.  
+ [in] *bWindowRect*  
+ Si `TRUE`, *rect* est censé pour contenir les coordonnées d’écran ; si `FALSE`, *rect* est supposé pour contenir les coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
 ### <a name="remarks"></a>Notes  
- Si le volet est ancré horizontalement, cette méthode vérifie si son emplacement est laissé de `rect`. Sinon, cette méthode vérifie si l’emplacement est au-dessus de `rect`.  
+ Si le volet est ancré horizontalement, cette méthode vérifie si son emplacement est laissé de *rect*. Sinon, cette méthode vérifie si l’emplacement est au-dessus de *rect*.  
   
 ##  <a name="isresizable"></a>  CPane::IsResizable  
  Spécifie si le volet est redimensionnable.  
@@ -932,13 +932,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nom du profil.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de profil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  ID de volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -981,16 +981,16 @@ BOOL MoveByAlignment(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Spécifie l’alignement du volet.  
   
- [in] `nOffset`  
+ [in] *nOffset*  
  Quantité, en pixels, par lequel vous souhaitez déplacer le volet et le rectangle virtuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
 ### <a name="remarks"></a>Notes  
- `dwAlignment` peut être une des valeurs suivantes :  
+ *dwAlignment* peut être une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -1000,7 +1000,7 @@ BOOL MoveByAlignment(
 |`CBRS_ALIGN_RIGHT`|Active le volet être ancrés au côté droit de la zone cliente d’une fenêtre frame.|  
 |`CBRS_ALIGN_ANY`|Active le volet pour être ancrés dans n’importe quel côté de la zone cliente d’une fenêtre frame.|  
   
- Si `dwAlignment` contient le `CBRS_ALIGN_LEFT` ou `CBRS_ALIGN_RIGHT` indicateur, le volet et le rectangle virtuel sont déplacés horizontalement ; sinon, si `dwAlignment` contient le `CBRS_ALIGN_TOP` ou `CBRS_ALIGN_BOTTOM` indicateur, le volet et le rectangle virtuel sont déplacés. verticalement.  
+ Si *dwAlignment* contient le `CBRS_ALIGN_LEFT` ou `CBRS_ALIGN_RIGHT` indicateur, le volet et le rectangle virtuel sont déplacés horizontalement ; sinon, si *dwAlignment* contient le `CBRS_ALIGN_TOP` ou `CBRS_ALIGN_BOTTOM` indicateur, le volet et le rectangle virtuel sont déplacés verticalement.  
   
 ##  <a name="movepane"></a>  CPane::MovePane  
  Déplace le volet dans le rectangle spécifié.  
@@ -1013,17 +1013,17 @@ virtual CSize MovePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectNew`  
+ [in] *rectNew*  
  Spécifie le nouveau rectangle pour le volet.  
   
- [in] `bForceMove`  
+ [in] *bForceMove*  
  Si `TRUE`, cette méthode ignore la taille minimale autorisée du volet ( [CPane::GetMinSize](#getminsize)) ; sinon, le volet est ajusté, si nécessaire, pour vous assurer qu’il s’agit d’au moins la valeur minimale autorisée.  
   
- [in] `hdwp`  
+ [in] *hdwp*  
  Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `CSize` objet qui contient les différences de largeur et hauteur entre les rectangles anciennes et nouvelles (ancien rectangle - `rectNew`).  
+ A `CSize` objet qui contient les différences de largeur et hauteur entre les rectangles anciennes et nouvelles (ancien rectangle - *rectNew*).  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est utilisée uniquement pour les volets ancrables.  
@@ -1036,7 +1036,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pWndOldParent`  
+ [in] [out] *pWndOldParent*  
  Fenêtre parente de la précédente du volet.  
   
 ### <a name="remarks"></a>Notes  
@@ -1053,13 +1053,13 @@ virtual void OnAfterDock(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Ce paramètre n'est pas utilisé.  
   
 ##  <a name="onafterfloat"></a>  CPane::OnAfterFloat  
@@ -1082,10 +1082,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pWndNewParent`  
+ [in] [out] *pWndNewParent*  
  Spécifie la nouvelle fenêtre parent.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` pour différer l’ajustement de mise en page d’accueil global ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1104,13 +1104,13 @@ virtual BOOL OnBeforeDock(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `ppDockBar`  
+ [in] [out] *ppDockBar*  
  Spécifie le volet d’accueil de ce volet.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Spécifie le rectangle d’ancrage.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Spécifie la méthode d’ancrage.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1129,10 +1129,10 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rectFloat`  
+ [in] *rectFloat*  
  Spécifie la position et la taille du volet lorsqu’il est dans un état flottant.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Spécifie la méthode d’ancrage du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1159,7 +1159,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Spécifie l’emplacement du menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1191,13 +1191,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nom du profil.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Index de profil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  ID de volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1216,7 +1216,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bActive`  
+ [in] *bActive*  
  Un `BOOL` qui spécifie si le volet est marqué comme active.  
   
 ### <a name="remarks"></a>Notes  
@@ -1240,19 +1240,19 @@ void SetBorders(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `cxLeft`  
+ [in] *cxLeft*  
  Spécifie la largeur, en pixels, de la bordure gauche du volet.  
   
- [in] `cyTop`  
+ [in] *cyTop*  
  Spécifie la largeur, en pixels, de la bordure supérieure du volet.  
   
- [in] `cxRight`  
+ [in] *cxRight*  
  Spécifie la largeur, en pixels, de la bordure droite du volet.  
   
- [in] `cyBottom`  
+ [in] *cyBottom*  
  Spécifie la largeur, en pixels, de la bordure inférieure du volet.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui contient la largeur, en pixels, de chaque bordure du volet.  
   
 ### <a name="remarks"></a>Notes  
@@ -1266,7 +1266,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ptNew`  
+ [in] *ptNew*  
  A `CPoint` objet qui spécifie la nouvelle zone réactive.  
   
 ### <a name="remarks"></a>Notes  
@@ -1280,7 +1280,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDockManager`  
+ [in] *pDockManager*  
  Pointeur vers le Gestionnaire d’ancrage de la fenêtre frame principale.  
   
 ### <a name="remarks"></a>Notes  
@@ -1296,7 +1296,7 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bExclusive`  
+ [in] *bExclusive*  
  `TRUE` Pour activer le mode de ligne exclusifs ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
@@ -1312,7 +1312,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `size`  
+ [in] *taille*  
  A `CSize` objet qui contient la valeur minimale autorisée pour le volet.  
   
 ### <a name="remarks"></a>Notes  
@@ -1327,11 +1327,11 @@ void SetVirtualRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `rect`  
+ [in] *rect*  
  A `CRect` objet qui spécifie le rectangle virtuel à définir.  
   
  [in] `bMapToParent`  
- Spécifiez `TRUE` si `rect` contient des points, par rapport à la fenêtre parente.  
+ Spécifiez `TRUE` si *rect* contient des points, par rapport à la fenêtre parente.  
   
 ### <a name="remarks"></a>Notes  
  A *rectangle virtuel* stocke la position d’origine d’un volet lorsqu’il est déplacé. L’infrastructure peut utiliser le rectangle virtuel pour restaurer la position d’origine.  
@@ -1346,7 +1346,7 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] [out] `pClass`  
+ [in] [out] *pClass*  
  Spécifie les informations de classe runtime pour la fenêtre mini-frame.  
   
 ### <a name="remarks"></a>Notes  
@@ -1362,17 +1362,17 @@ virtual int StretchPaneDeferWndPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nStretchSize`  
+ [in] *nStretchSize*  
  Quantité, en pixels, d’étendre le volet. Utilisez une valeur négative pour réduire le volet.  
   
- [in] `hdwp`  
+ [in] *hdwp*  
  Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La quantité réelle, en pixels, que le volet a été étendue.  
   
 ### <a name="remarks"></a>Notes  
- Si nécessaire, cette méthode modifie les `nStretchSize` pour vous assurer que le volet ne dépasse pas les limites de taille. Ces limites sont obtenus en appelant [CPane::GetAvailableStretchSize](#getavailablestretchsize) et [CPane::GetAvailableExpandSize](#getavailableexpandsize).  
+ Si nécessaire, cette méthode modifie les *nStretchSize* pour vous assurer que le volet ne dépasse pas les limites de taille. Ces limites sont obtenus en appelant [CPane::GetAvailableStretchSize](#getavailablestretchsize) et [CPane::GetAvailableExpandSize](#getavailableexpandsize).  
   
 ##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide  
  Active ou désactive automatiquement le mode de masquage.  
@@ -1392,7 +1392,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bDelay`  
+ [in] *bDelay*  
  Si `FALSE`, le framework appelle [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) pour ajuster la disposition d’ancrage.  
   
 ### <a name="remarks"></a>Notes  
@@ -1408,18 +1408,18 @@ void UpdateVirtualRect(CPoint ptOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ptOffset`  
+ [in] *ptOffset*  
  A `CPoint` objet qui spécifie un offset de décalage du volet.  
   
- [in] `sizeNew`  
+ [in] *hachagetaille, nouvelle*  
  A `CSize` objet qui spécifie une nouvelle taille pour le volet.  
   
 ### <a name="remarks"></a>Notes  
  La première surcharge définit le rectangle virtuel à l’aide de la position actuelle et la taille du volet.  
   
- La deuxième surcharge décale la quantité spécifiée par le rectangle virtuel `ptOffset`.  
+ La deuxième surcharge décale la quantité spécifiée par le rectangle virtuel *ptOffset*.  
   
- La troisième surcharge définit le rectangle virtuel à l’aide de la position actuelle du volet et la taille spécifiée par `sizeNew`.  
+ La troisième surcharge définit le rectangle virtuel à l’aide de la position actuelle du volet et la taille spécifiée par *hachagetaille, nouvelle*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

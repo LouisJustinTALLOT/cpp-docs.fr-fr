@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370179"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078281"
 ---
 # <a name="csharedfile-class"></a>Classe CSharedFile
 Le [CMemFile](../../mfc/reference/cmemfile-class.md)-classe dérivée qui prend en charge de fichiers de mémoire partagé.  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Notes  
  Fichiers de mémoire se comportent comme les fichiers de disque, sauf que le fichier est stocké dans la mémoire RAM, plutôt que sur le disque. Un fichier de mémoire est utile pour le stockage temporaire rapide ou le transfert d’octets bruts ou objets sérialisés entre des processus indépendants.  
   
- Les fichiers de mémoire partagée diffèrent des autres fichiers de mémoire que mémoire leur est allouée avec le [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) fonction Windows. Le `CSharedFile` classe stocke les données dans un bloc de mémoire alloués globalement (créé à l’aide de **GlobalAlloc**), et ce bloc de mémoire peut être partagé à l’aide de DDE, le Presse-papiers ou autres opérations de transfert OLE/COM de données uniforme, par exemple, à l’aide de `IDataObject`.  
+ Les fichiers de mémoire partagée diffèrent des autres fichiers de mémoire que mémoire leur est allouée avec le [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) fonction Windows. Le `CSharedFile` classe stocke les données dans un bloc de mémoire alloués globalement (créé à l’aide de `GlobalAlloc`), et ce bloc de mémoire peut être partagé à l’aide de DDE, le Presse-papiers ou autres opérations de transfert OLE/COM de données uniforme, par exemple, à l’aide de `IDataObject`.  
   
- **GlobalAlloc** retourne un `HGLOBAL` gérer au lieu d’un pointeur vers la mémoire, telles que le pointeur retourné par [malloc](../../c-runtime-library/reference/malloc.md). Le `HGLOBAL` handle n’est nécessaire dans certaines applications. Par exemple, pour placer des données le Presse-papiers vous devez un `HGLOBAL` gérer.  
+ `GlobalAlloc` Retourne un `HGLOBAL` gérer au lieu d’un pointeur vers la mémoire, telles que le pointeur retourné par [malloc](../../c-runtime-library/reference/malloc.md). Le `HGLOBAL` handle n’est nécessaire dans certaines applications. Par exemple, pour placer des données le Presse-papiers vous devez un `HGLOBAL` gérer.  
   
  Notez que `CSharedFile` ne pas les utiliser mappé en mémoire et les données ne peut pas être partagées directement entre les processus.  
   
@@ -75,7 +75,7 @@ class CSharedFile : public CMemFile
   
  `CSharedFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxadv.h  
   
 ##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  Indicateurs indiquant comment la mémoire doit être allouée. Consultez [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) pour obtenir la liste de valeurs d’indicateur valide.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  L’incrément de l’allocation de mémoire en octets.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  Handle vers la mémoire globale à joindre à la `CSharedFile`.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  Spécifie si le bloc de mémoire est autorisé à croître.  
   
 ### <a name="remarks"></a>Notes  
- Si `bAllowGrow` est différent de zéro, la taille du bloc de mémoire est augmentée si nécessaire, par exemple, si une tentative est effectuée pour écrire des octets dans le fichier que vous ont été alloués pour le bloc de mémoire.  
+ Si *bAllowGrow* est différent de zéro, la taille du bloc de mémoire est augmentée si nécessaire, par exemple, si une tentative est effectuée pour écrire des octets dans le fichier que vous ont été alloués pour le bloc de mémoire.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classe CMemFile](../../mfc/reference/cmemfile-class.md)   

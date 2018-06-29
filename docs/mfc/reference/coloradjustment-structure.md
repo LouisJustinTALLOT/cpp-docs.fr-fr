@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb0ec0233edd968ad121b84f9e1d584a26f3387
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369962"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077953"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT, structure
-Le `COLORADJUSTMENT` structure définit les valeurs d’ajustement de couleur utilisés par Windows `StretchBlt` et **StretchDIBits** fonctions lors de la `StretchBlt` mode est **demi-teintes**.  
+Le `COLORADJUSTMENT` structure définit les valeurs d’ajustement de couleur utilisés par Windows `StretchBlt` et `StretchDIBits` fonctions lors de la `StretchBlt` mode est **demi-teintes**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -112,7 +112,7 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  *caRedGreenTint*  
  Spécifie la quantité d’ajustement rouges ou verts teinte à appliquer à l’objet source. La valeur doit être comprise entre -100 à 100. Les nombres positifs seraient ajustez vers le rouge, et celle de nombres négatifs vers le vert. 0 ne signifie aucun ajustement de la teinte.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

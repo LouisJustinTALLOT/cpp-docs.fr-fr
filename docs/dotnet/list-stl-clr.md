@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305915"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079784"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `list` pour gérer une séquence d’éléments comme une liste liée bidirectionnelle de nœuds, chacun stocker un élément.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Value  
  Type d'un élément dans la séquence contrôlée.  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace :** cliext 
 
-## <a name="members"></a>Membres  
+## <a name="declarations"></a>Déclarations  
   
 |Définition de types|Description|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
+## <a name="members"></a>Membres
+
 ## <a name="assign"></a> List::Assign (STL/CLR)
 Remplace tous les éléments.  
   

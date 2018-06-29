@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305769"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079810"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `vector` pour gérer une séquence d’éléments comme un bloc contigu de stockage. Le bloc est implémenté comme un tableau dont la taille augmente à la demande.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  Value  
  Type d'un élément dans la séquence contrôlée.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Notez, toutefois, qu’un conteneur de handles ne détruit pas ses éléments.  
   
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<cliext/vector >  
-  
- **Namespace :** cliext  
+## <a name="members"></a>Membres
 
 ## <a name="assign"></a> Vector::Assign (STL/CLR)
 Remplace tous les éléments.  

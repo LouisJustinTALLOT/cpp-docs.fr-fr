@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378785"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079692"
 ---
 # <a name="cpaneframewnd-class"></a>Classe de CPaneFrameWnd
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -260,7 +260,7 @@ class CPaneFrameWnd : public CWnd
   
  `CPaneFrameWnd`   
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxPaneFrameWnd.h  
   
 ##  <a name="addpane"></a>  CPaneFrameWnd::AddPane  
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
+ [in] *pWnd*  
  Le volet à ajouter.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,10 +284,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
+ [in] *pWnd*  
  Le volet pour ajouter ou supprimer.  
   
- [in] `bAdd`  
+ [in] *bAjouter*  
  Si différente de zéro, ajoutez le volet. Si 0, supprimez le volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -317,7 +317,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `rectBorderSize`  
+ [out] *rectBorderSize*  
  Contient la taille, en pixels, de la bordure de la fenêtre mini-frame.  
   
 ### <a name="remarks"></a>Notes  
@@ -336,23 +336,23 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWndToDock`  
+ [in] *pWndToDock*  
  Pointeur vers la fenêtre pour l’ancrer.  
   
- [in] `ptMouse`  
+ [in] *ptMouse*  
  L’emplacement de la souris.  
   
- [out] `rectResult`  
+ [out] *rectResult*  
  Rectangle calculé.  
   
- [out] `bDrawTab`  
+ [out] *bDrawTab*  
  Si `TRUE`, dessinez un onglet. Si `FALSE`, ne pas utiliser un onglet.  
   
- [out] `ppTargetBar`  
+ [out] *ppTargetBar*  
  Pointeur vers le volet cible.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode calcule le rectangle une fenêtre occuperait si un utilisateur a fait glisser la fenêtre au point spécifié par `ptMouse` et il ancré il.  
+ Cette méthode calcule le rectangle une fenêtre occuperait si un utilisateur a fait glisser la fenêtre au point spécifié par *ptMouse* et il ancré il.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Détermine si le volet actif peut être ancré à un autre volet ou à une fenêtre frame.  
@@ -372,11 +372,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
  Un volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le mini-frame peut être ancré sur `pDockingBar`; sinon, 0.  
+ Différent de zéro si le mini-frame peut être ancré sur *pDockingBar*; sinon, 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -407,19 +407,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Spécifie le texte à afficher dans la fenêtre mini-frame.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Spécifie le style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Spécifie la taille initiale et la position de la fenêtre mini-frame.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Spécifie le contexte défini par l’utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -442,22 +442,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Spécifie le style de fenêtre étendus. Pour plus d’informations, consultez [Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Spécifie le texte à afficher dans la fenêtre mini-frame.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Spécifie le style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Spécifie la taille initiale et la position de la fenêtre mini-frame.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Spécifie le contexte défini par l’utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -474,7 +474,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `bWasDocked`  
+ [out] *bWasDocked*  
  `TRUE` Si le volet est ancré déjà ; dans le cas contraire `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -488,7 +488,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nID`  
+ [in] *nID*  
  Représente l’ID de contrôle du volet à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pt`  
+ [in] *pt*  
  Le point, en coordonnées d’écran.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  À cette taille, augmenter la zone de recherche de la fenêtre mini-frame. Une fenêtre mini-frame satisfait les critères de recherche si le point donné se situe dans la zone accrue.  
   
- [in] `pFrameToExclude`  
+ [in] *pFrameToExclude*  
  Spécifie une fenêtre mini-frame à exclure de la recherche.  
   
- [in] `bFloatMultiOnly`  
+ [in] *bFloatMultiOnly*  
  Si `TRUE`, recherche uniquement dans les fenêtres mini-frame qui ont le `CBRS_FLOAT_MULTI` style. Si `FALSE`, rechercher toutes les fenêtres mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la fenêtre mini-frame contenant `pt`; sinon `NULL`.  
+ Un pointeur vers la fenêtre mini-frame contenant *pt*; sinon `NULL`.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Retourne la hauteur de la légende de fenêtre mini-frame.  
@@ -542,7 +542,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `rectCaption`  
+ [out] *rectCaption*  
  Contient la taille et la position de la légende de fenêtre mini-frame, en coordonnées d’écran.  
   
 ### <a name="remarks"></a>Notes  
@@ -688,10 +688,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Point à tester.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  Si `TRUE`, vérifiez le point par rapport à la légende. Si `FALSE`, ignorer la légende.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -780,10 +780,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nom du profil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Le contexte de périphérique utilisé pour dessiner la bordure.  
   
 ### <a name="remarks"></a>Notes  
@@ -859,10 +859,10 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
  Pointeur vers un volet (ignoré).  
   
- [in] `ptOffset`  
+ [in] *ptOffset*  
  Le décalage par lequel vous souhaitez déplacer le volet.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
@@ -894,10 +894,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
  Le volet qui est affichée ou masquée.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Si le volet est affiché ; `FALSE` si le volet est masqué.  
   
 ### <a name="remarks"></a>Notes  
@@ -911,7 +911,7 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bPin`  
+ [in] *bPin*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -926,13 +926,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `point`  
+ [in] *point*  
  Le point sur lequel l’utilisateur a cliqué, en coordonnées d’écran.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Ce paramètre n'est pas utilisé.  
   
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
  `TRUE` Pour spécifier que seuls les volets visibles doivent être renvoyés ; dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pWnd`  
+ [in] *pWnd*  
  Pointeur vers le volet à supprimer.  
   
- [in] `bDestroy`  
- Spécifie ce qui se passe dans la fenêtre mini-frame. Si `bDestroy` est `TRUE`, cette méthode détruit la fenêtre mini-frame immédiatement. S’il est `FALSE`, cette méthode détruit la fenêtre mini-frame après un certain délai.  
+ [in] *bDestroy*  
+ Spécifie ce qui se passe dans la fenêtre mini-frame. Si *bDestroy* est `TRUE`, cette méthode détruit la fenêtre mini-frame immédiatement. S’il est `FALSE`, cette méthode détruit la fenêtre mini-frame après un certain délai.  
   
- [in] `bNoDelayedDestroy`  
+ [in] *bNoDelayedDestroy*  
  Si `TRUE`, différées destruction est désactivée. Si `FALSE`, différées destruction est activée.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure peut détruire des fenêtres mini-frame immédiatement ou après un certain délai. Si vous voulez retarder la destruction des fenêtres mini-frame, passer `FALSE` dans le `bNoDelayedDestroy` paramètre. Retardée destruction se produit lorsque le framework traite les `AFX_WM_CHECKEMPTYMINIFRAME` message.  
+ L’infrastructure peut détruire des fenêtres mini-frame immédiatement ou après un certain délai. Si vous voulez retarder la destruction des fenêtres mini-frame, passer `FALSE` dans les *bNoDelayedDestroy* paramètre. Retardée destruction se produit lorsque le framework traite les `AFX_WM_CHECKEMPTYMINIFRAME` message.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Remplace un volet par un autre.  
@@ -991,10 +991,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBarOrg`  
+ [in] *pBarOrg*  
  Pointeur vers le volet d’origine.  
   
- [in] `pBarReplaceWith`  
+ [in] *pBarReplaceWith*  
  Pointeur vers le volet qui remplace le volet d’origine.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
@@ -1007,10 +1007,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nom du profil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1024,7 +1024,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `dwButtons`  
+ [in] *dwButtons*  
  Combinaison de bits OR des valeurs suivantes :  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1043,7 +1043,7 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bDelayShow`  
+ [in] *bDelayShow*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1055,7 +1055,7 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pManager`  
+ [in] *pManager*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1067,7 +1067,7 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `nTimeOut`  
+ [in] *%ndélai*  
  Valeur de délai d’attente en millisecondes.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
@@ -1078,7 +1078,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDockManager`  
+ [in] *pDockManager*  
  Pointeur vers un gestionnaire d’ancrage.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
@@ -1089,7 +1089,7 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ptNew`  
+ [in] *ptNew*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1104,7 +1104,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `preDockState`  
+ [in] *preDockState*  
  Valeurs possibles :  
   
 - `PDS_NOTHING`,  
@@ -1113,10 +1113,10 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in] `pBarToDock`  
+ [in] *pBarToDock*  
  Pointeur vers le volet pour ancrer.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  La méthode d’ancrage. (Ce paramètre est ignoré.)  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1140,7 +1140,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pMenu`  
+ [in] *pMenu*  
  Pointeur vers un menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1154,7 +1154,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Notes  
   

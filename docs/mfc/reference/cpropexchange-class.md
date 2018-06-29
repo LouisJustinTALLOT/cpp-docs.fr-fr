@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377338"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078406"
 ---
 # <a name="cpropexchange-class"></a>Classe de CPropExchange
 Prend en charge l'implémentation de la persistance de vos contrôles OLE.  
@@ -81,7 +81,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CPropExchange`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
   
 ##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pszPropName`  
+ *pszPropName*  
  Le nom de la propriété qui est échangé.  
   
- `phBlob`  
+ *phBlob*  
  Pointeur vers une variable pointant vers le stockage de la propriété (la variable est en général, un membre de votre classe).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Valeur par défaut pour la propriété.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’échange a réussi ; 0 en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de propriété est lu ou écrite en, selon le cas, la variable référencée par `phBlob`. Si `hBlobDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, la sérialisation du contrôle échoue.  
+ La valeur de propriété est lu ou écrite en, selon le cas, la variable référencée par *phBlob*. Si *hBlobDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, la sérialisation du contrôle échoue.  
   
  Les fonctions **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, et **CPropsetPropExchange::ExchangeBlobProp** remplacer Cette fonction virtuelle pure.  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pszPropName`  
+ *pszPropName*  
  Le nom de la propriété qui est échangé.  
   
- `font`  
+ *Police*  
  Une référence à un [CFontHolder](../../mfc/reference/cfontholder-class.md) objet qui contient la propriété de police.  
   
- `pFontDesc`  
- Un pointeur vers un [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) structure contenant les valeurs pour l’initialisation de l’état par défaut de la propriété de police lorsque `pFontDispAmbient` est **NULL**.  
+ *pFontDesc*  
+ Un pointeur vers un [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) structure contenant les valeurs pour l’initialisation de l’état par défaut de la propriété de police lorsque *pFontDispAmbient* est **NULL**.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Un pointeur vers le **IFontDisp** interface d’une police à utiliser pour l’initialisation de l’état par défaut de la propriété de police.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’échange a réussi ; 0 en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Si la propriété de police est chargée à partir du support pour le contrôle, les caractéristiques de la police sont récupérées à partir du support et la `CFontHolder` objet référencé par `font` est initialisé avec eux. Si la propriété font est stockée, les caractéristiques de l’objet de police sont écrites sur le support.  
+ Si la propriété de police est chargée à partir du support pour le contrôle, les caractéristiques de la police sont récupérées à partir du support et la `CFontHolder` objet référencé par *police* est initialisé avec eux. Si la propriété font est stockée, les caractéristiques de l’objet de police sont écrites sur le support.  
   
  Les fonctions **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, et **CPropsetPropExchange::ExchangeFontProp** remplacer Cette fonction virtuelle pure.  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pszPropName`  
+ *pszPropName*  
  Le nom de la propriété qui est échangé.  
   
- `ppUnk`  
+ *ppUnk*  
  Un pointeur vers une variable qui contient un pointeur vers la propriété **IUnknown** interface (cette variable est généralement un membre de votre classe).  
   
- `iid`  
+ *IID*  
  ID de l’interface de la propriété qui utilise le contrôle.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Valeur par défaut pour la propriété.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pszPropName`  
+ *pszPropName*  
  Le nom de la propriété qui est échangé.  
   
- `vtProp`  
+ *vtProp*  
  Un symbole qui spécifie le type de la propriété qui est échangé. Les valeurs possibles sont :  
   
 |Symbole|Type de propriété|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  Pointeur vers la valeur de propriété.  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  Différent de zéro si l’échange a réussi ; 0 en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Si la propriété est chargée à partir du support pour le contrôle, la valeur de propriété est récupérée à partir du support et stockée dans l’objet vers lequel pointé `pvProp`. Si la propriété est stockée sur le support, la valeur de l’objet vers lequel pointe `pvProp` sont écrites sur le support.  
+ Si la propriété est chargée à partir du support pour le contrôle, la valeur de propriété est récupérée à partir du support et stockée dans l’objet vers lequel pointé *pvProp*. Si la propriété est stockée sur le support, la valeur de l’objet vers lequel pointe *pvProp* sont écrites sur le support.  
   
  Les fonctions **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, et **CPropsetPropExchange::ExchangeProp** remplacement ce pure fonction virtuelle.  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  Référence à une variable où sera stocké le numéro de version des données persistantes en cours de chargement.  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  Le numéro de version actuel du contrôle.  
   
- `bConvert`  
+ *bConvert*  
  Indique s’il faut convertir les données persistantes vers la version actuelle ou de conserver la même version que celle qui a été chargée.  
   
 ### <a name="return-value"></a>Valeur de retour  

@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305512"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079038"
 ---
 # <a name="numeric-stlclr"></a>numériques (STL/CLR)
 Définit les fonctions de modèle de conteneur qui exécutent des algorithmes fournis pour le traitement numérique.  
@@ -57,7 +57,7 @@ Définit les fonctions de modèle de conteneur qui exécutent des algorithmes fo
 |[inner_product (STL/CLR)](#inner_product)|Calcule la somme du produit d’éléments de deux plages et l’ajoute à une valeur initiale spécifiée, ou calcule le résultat d’une procédure généralisée dans laquelle les opérations binaires de somme et de produit sont remplacées par d’autres opérations binaires spécifiées.|  
 |[partial_sum (STL/CLR)](#partial_sum)|Calcule une série de sommes dans une plage d’entrée du premier élément via le `i`élément th et stocke le résultat de chaque somme dans `i`ième élément d’une plage de destination ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacé par une autre opération binaire spécifiée.|  
  
-## <a name="functions"></a>Fonctions
+## <a name="members"></a>Membres
 
 ## <a name="accumulate"></a> accumuler (STL/CLR)
 Calcule la somme de tous les éléments d’une plage spécifiée incluant une valeur initiale en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme.  

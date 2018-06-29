@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375540"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079565"
 ---
 # <a name="cscrollview-class"></a>CScrollView (classe)
 A [CView](../../mfc/reference/cview-class.md) avec les possibilités de défilement.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  Avant du `OnDraw` fonction membre de votre classe d’affichage dérivée est appelée, `CScrollView` ajuste automatiquement l’origine de la fenêtre d’affichage pour le `CPaintDC` objet de contexte de périphérique qu’il transmet au `OnDraw`.  
   
- Pour ajuster l’origine de la fenêtre d’affichage de la fenêtre de défilement `CScrollView` substitue [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Cet ajustement est automatique pour le `CPaintDC` contexte de périphérique qui `CScrollView` passe à `OnDraw`, mais vous devez appeler **CScrollView::OnPrepareDC** vous-même pour toutes les autres contextes de périphérique vous utilisez, par exemple un `CClientDC`. Vous pouvez substituer **CScrollView::OnPrepareDC** pour définir le stylet, couleur d’arrière-plan et d’autres attributs de dessin, mais appelle la classe de base pour effectuer la mise à l’échelle.  
+ Pour ajuster l’origine de la fenêtre d’affichage de la fenêtre de défilement `CScrollView` substitue [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Cet ajustement est automatique pour le `CPaintDC` contexte de périphérique qui `CScrollView` passe à `OnDraw`, mais vous devez appeler `CScrollView::OnPrepareDC` vous-même pour toutes les autres contextes de périphérique vous utilisez, comme un `CClientDC`. Vous pouvez substituer `CScrollView::OnPrepareDC` pour définir le stylet, couleur d’arrière-plan et d’autres attributs de dessin, mais appelle la classe de base pour effectuer la mise à l’échelle.  
   
  Barres de défilement peuvent apparaître dans trois emplacements par rapport à une vue, comme indiqué dans les cas suivants :  
   
@@ -123,7 +123,7 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Contexte de périphérique dans lequel le remplissage doit être effectué.  
   
- `pBrush`  
+ *pBrush*  
  Pinceau à laquelle la zone doit être rempli.  
   
 ### <a name="remarks"></a>Notes  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nMapMode`  
+ *nMapMode*  
  Retourne le mode de mappage en cours pour cette vue. Pour obtenir la liste des valeurs possibles, consultez `SetScrollSizes`.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Retourne la taille totale actuelle de la vue de défilement en unités de périphérique.  
   
- `sizePage`  
+ *cachetaille de page*  
  Retourne les montants horizontales et verticales pour faire défiler dans chaque direction en réponse à une souris cliquez dans un arbre de la barre de défilement. Le **cx** membre contient la quantité horizontale. Le **cy** membre contient la quantité verticale.  
   
- `sizeLine`  
+ *sizeLine*  
  Retourne les montants horizontales et verticales pour faire défiler dans chaque direction en réponse à une souris cliquez dans une flèche de défilement. Le **cx** membre contient la quantité horizontale. Le **cy** membre contient la quantité verticale.  
   
 ### <a name="remarks"></a>Notes  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pt`  
+ *pt*  
  Le point de défilement, en unités logiques. Le **x** membre doit être une valeur positive (supérieure ou égale à 0, jusqu'à la taille totale de la vue). Est de même pour le **y** membre quand le mode de mappage est `MM_TEXT`. Le **y** membre est négatif dans le mappage des modes autres que `MM_TEXT`.  
   
 ### <a name="remarks"></a>Notes  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `sizeTotal`  
+ *sizeTotal*  
  Les tailles horizontales et verticales à laquelle la vue est à l’échelle. Taille de la vue défilement est mesurée en unités logiques. La taille horizontale est contenue dans le **cx** membre. La taille verticale est contenue dans le **cy** membre. Les deux **cx** et **cy** doit être supérieur ou égal à 0.  
   
 ### <a name="remarks"></a>Notes  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nMapMode`  
+ *nMapMode*  
  Le mode de mappage à définir pour cette vue. Les valeurs possibles sont les suivantes :  
   
 |Mode de mappage|Unité logique|Axe des ordonnées positives étend...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  Chacun de ces modes sont définis par Windows. Deux modes de mappage standard, `MM_ISOTROPIC` et `MM_ANISOTROPIC`, ne sont pas utilisés pour `CScrollView`. La bibliothèque de classes fournit le `SetScaleToFitSize` fonction membre pour la mise à l’échelle de la vue à la taille de la fenêtre. Colonne trois dans le tableau ci-dessus décrit l’orientation de la coordonnée.  
   
- `sizeTotal`  
+ *sizeTotal*  
  La taille totale de la vue de défilement. Le **cx** membre contient la mesure horizontale. Le **cy** membre contient l’étendue verticale. Les tailles sont en unités logiques. Les deux **cx** et **cy** doit être supérieur ou égal à 0.  
   
- `sizePage`  
+ *cachetaille de page*  
  Les quantités horizontales et verticales pour faire défiler dans chaque direction en réponse à une souris cliquez dans un arbre de la barre de défilement. Le **cx** membre contient la quantité horizontale. Le **cy** membre contient la quantité verticale.  
   
- `sizeLine`  
+ *sizeLine*  
  Les quantités horizontales et verticales pour faire défiler dans chaque direction en réponse à une souris cliquez sur une flèche de défilement. Le **cx** membre contient la quantité horizontale. Le **cy** membre contient la quantité verticale.  
   
 ### <a name="remarks"></a>Notes  

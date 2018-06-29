@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377460"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079771"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 Représente des feuilles de propriétés, également appelées boîtes de dialogue à onglets.  
@@ -164,7 +164,7 @@ class CPropertySheet : public CWnd
   
  `CPropertySheet`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="addpage"></a>  CPropertySheet::AddPage  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pPage`  
+ *pPage*  
  Pointe vers la page à ajouter à la feuille de propriétés. Ne peut pas être **NULL**.  
   
 ### <a name="remarks"></a>Notes  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDCaption`  
+ *nIDCaption*  
  ID de la légende à utiliser pour la feuille de propriétés.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente de la feuille de propriétés. Si **NULL**, la fenêtre parente sera la fenêtre principale de l’application.  
   
- `iSelectPage`  
+ *iSelectPage*  
  L’index de la page qui sera initialement le premier. Valeur par défaut est la première page ajoutée à la feuille.  
   
- `pszCaption`  
+ *pszCaption*  
  Pointeur vers une chaîne qui contient la légende à utiliser pour la feuille de propriétés. Ne peut pas être **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Handle vers le bitmap de la limite de la page de propriétés.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Handle vers la palette de la bitmap de filigrane et/ou la bitmap de l’en-tête.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Handle vers le bitmap de l’en-tête de la page de propriétés.  
   
 ### <a name="remarks"></a>Notes  
@@ -253,7 +253,7 @@ void Construct(
   
  Pour afficher la feuille de propriétés, appelez [DoModal](#domodal) ou [créer](#create). La chaîne contenue dans le premier paramètre sera placée dans la barre de légende pour la feuille de propriétés.  
   
- Vous pouvez afficher des images en filigrane et/ou d’en-tête automatiquement si vous utilisez les prototypes troisième ou quatrième de `Construct`, répertoriés ci-dessus et que vous transmettez les valeurs valides pour le `hbmWatermark`, `hpalWatermark`, et/ou `hbmHeader` paramètres.  
+ Vous pouvez afficher des images en filigrane et/ou d’en-tête automatiquement si vous utilisez les prototypes troisième ou quatrième de `Construct`, répertoriés ci-dessus et que vous transmettez les valeurs valides pour le *hbmWatermark*, *hpalWatermark* , et/ou *hbmHeader* paramètres.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre dans quelles circonstances vous appelleriez `Construct`.  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDCaption`  
+ *nIDCaption*  
  ID de la légende à utiliser pour la feuille de propriétés.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers la fenêtre parente de la feuille de propriétés. Si **NULL**, la fenêtre parente sera la fenêtre principale de l’application.  
   
- `iSelectPage`  
+ *iSelectPage*  
  L’index de la page qui sera initialement le premier. Valeur par défaut est la première page ajoutée à la feuille.  
   
- `pszCaption`  
+ *pszCaption*  
  Pointe vers une chaîne qui contient la légende à utiliser pour la feuille de propriétés. Ne peut pas être **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Handle vers l’image d’arrière-plan de la feuille de propriétés.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Handle vers la palette de la bitmap de filigrane et/ou la bitmap de l’en-tête.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Handle vers le bitmap de l’en-tête de la page de propriétés.  
   
 ### <a name="remarks"></a>Notes  
@@ -324,7 +324,7 @@ CPropertySheet(
   
  Si vous avez plusieurs paramètres (par exemple, si vous utilisez un tableau), utilisez [construire](#construct) au lieu de `CPropertySheet`.  
   
- Vous pouvez afficher des images en filigrane et/ou d’en-tête automatiquement si vous utilisez les prototypes troisième ou quatrième de `CPropertySheet`ci-dessus, et vous transmettez les valeurs valides pour le `hbmWatermark`, `hpalWatermark`, et/ou `hbmHeader` paramètres.  
+ Vous pouvez afficher des images en filigrane et/ou d’en-tête automatiquement si vous utilisez les prototypes troisième ou quatrième de `CPropertySheet`ci-dessus, et vous transmettez les valeurs valides pour le *hbmWatermark*, *hpalWatermark*, et / ou *hbmHeader* paramètres.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
@@ -339,26 +339,26 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Pointe vers la fenêtre parente. Si **NULL**, le bureau est le parent.  
   
- `dwStyle`  
+ *dwStyle*  
  Styles de fenêtre pour la feuille de propriétés. Pour obtenir une liste complète des styles disponibles, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Styles de fenêtre étendus pour la feuille de propriétés. Pour obtenir une liste complète des styles disponibles, consultez [Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la feuille de propriétés est créée avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- L’appel à **créer** peut se trouver dans le constructeur, ou vous pouvez l’appeler une fois que le constructeur est appelé.  
+ L’appel à `Create` peut se trouver dans le constructeur, ou vous pouvez l’appeler une fois que le constructeur est appelé.  
   
- Le style par défaut, exprimé en passant la valeur -1 comme `dwStyle`, est en réalité **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_ VISIBLE**. La valeur par défaut extended style de fenêtre, exprimée en passant 0 comme `dwExStyle`, est en réalité **WS_EX_DLGMODALFRAME**.  
+ Le style par défaut, exprimé en passant la valeur -1 comme *dwStyle*, est en réalité **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;SD CONTEXTHELP&#124;WS_VISIBLE**. La valeur par défaut extended style de fenêtre, exprimée en passant 0 comme *dwExStyle*, est en réalité **WS_EX_DLGMODALFRAME**.  
   
- Le **créer** fonction membre retourne immédiatement après la création de la feuille de propriétés. Pour détruire la feuille de propriétés, appelez [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
+ Le `Create` fonction membre retourne immédiatement après la création de la feuille de propriétés. Pour détruire la feuille de propriétés, appelez [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
   
- Feuilles de propriétés non modale affichées par un appel à **créer** n’ont pas de boutons OK, Annuler, appliquer et aide comme des feuilles de propriétés modale. Boutons de votre choix doit être créé par l’utilisateur.  
+ Feuilles de propriétés non modale affichées par un appel à `Create` n’ont pas de boutons OK, Annuler, appliquer et aide comme des feuilles de propriétés modale. Boutons de votre choix doit être créé par l’utilisateur.  
   
  Pour afficher une feuille de propriétés modale, appelez [DoModal](#domodal) à la place.  
   
@@ -418,13 +418,13 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bStacked`  
- Indique si les onglets empilées sont activés dans la feuille de propriétés. Désactiver des lignes empilées de balises en définissant `bStacked` à **FALSE**.  
+ *bStacked*  
+ Indique si les onglets empilées sont activés dans la feuille de propriétés. Désactiver des lignes empilées de balises en définissant *bStacked* à **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, si une feuille de propriétés comporte plusieurs onglets que ceux qui tiennent dans une ligne unique de la largeur de la feuille de propriétés, les onglets seront empileront sur plusieurs lignes. Pour utiliser le défilement des onglets plutôt que des onglets empilement, appelez `EnableStackedTabs` avec `bStacked` la valeur **FALSE** avant d’appeler [DoModal](#domodal) ou [créer](#create).  
+ Par défaut, si une feuille de propriétés comporte plusieurs onglets que ceux qui tiennent dans une ligne unique de la largeur de la feuille de propriétés, les onglets seront empileront sur plusieurs lignes. Pour utiliser le défilement des onglets plutôt que des onglets empilement, appelez `EnableStackedTabs` avec *bStacked* la valeur **FALSE** avant d’appeler [DoModal](#domodal) ou [créer](#create).  
   
- Vous devez appeler `EnableStackedTabs` lorsque vous créez une modale ou une feuille de propriétés non modale. Pour intégrer ce style dans un `CPropertySheet`-la classe dérivée, écrivez un gestionnaire de messages pour `WM_CREATE`. Dans la version substituée de [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), appelez **EnableStackedTabs (FALSE)** avant d’appeler l’implémentation de classe de base.  
+ Vous devez appeler `EnableStackedTabs` lorsque vous créez une modale ou une feuille de propriétés non modale. Pour intégrer ce style dans un `CPropertySheet`-la classe dérivée, écrivez un gestionnaire de messages pour WM_CREATE. Dans la version substituée de [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), appelez **EnableStackedTabs (FALSE)** avant d’appeler l’implémentation de classe de base.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
@@ -485,11 +485,11 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPage`  
+ *nPage*  
  Index de la page souhaitée, en commençant à 0. Doit être entre 0 et inférieur au nombre de pages dans la feuille de propriétés, incluse.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le pointeur vers la page correspondant à la `nPage` paramètre.  
+ Le pointeur vers la page correspondant à la *nPage* paramètre.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pPage`  
+ *pPage*  
  Pointe vers la page avec l’index doit être recherché. Ne peut pas être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -547,7 +547,7 @@ CTabCtrl* GetTabControl() const;
  Une structure dont les membres stockent les caractéristiques de [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
 ### <a name="remarks"></a>Notes  
- Utiliser cette structure pour initialiser l’apparence de la feuille de propriétés une fois qu’il est construit mais avant qu’il est affiché avec la [DoModal](#domodal) fonction membre. Par exemple, définissez la `dwSize` membre `m_psh` à la taille souhaitée pour que la feuille de propriétés.  
+ Utiliser cette structure pour initialiser l’apparence de la feuille de propriétés une fois qu’il est construit mais avant qu’il est affiché avec la [DoModal](#domodal) fonction membre. Par exemple, définissez la *dwSize* membre `m_psh` à la taille souhaitée pour que la feuille de propriétés.  
   
  Pour plus d’informations sur cette structure, y compris une liste de ses membres, consultez **PROPSHEETHEADER** dans le Kit de développement logiciel Windows.  
   
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpRect`  
+ *lpRect*  
  Pointe vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) coordonne l’objet qui contient la boîte de dialogue à convertir.  
   
 ### <a name="remarks"></a>Notes  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  Le [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) fonction Windows retourne des informations sur la taille de la police système, mais vous pouvez spécifier une police différente pour chaque feuille de propriétés si vous utilisez la **DS_SETFONT** de style dans le fichier de définition de ressource. Le [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) fonction Windows, décrite dans le SDK Windows et utilise la police appropriée pour cette boîte de dialogue.  
   
- Le `MapDialogRect` fonction membre remplace les unités de boîte de dialogue de `lpRect` avec écran unités (pixels) afin que le rectangle peut être utilisé pour créer une boîte de dialogue ou de positionner un contrôle dans une zone.  
+ Le `MapDialogRect` fonction membre remplace les unités de boîte de dialogue de *lpRect* avec écran unités (pixels) afin que le rectangle peut être utilisé pour créer une boîte de dialogue ou de positionner un contrôle dans une zone.  
   
 ##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog  
  Les remplacements pour augmenter l’initialisation feuille des propriétés.  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Spécifie si l’application a défini le focus d’entrée à un des contrôles dans la feuille de propriétés. Si **OnInitDialog** retourne différente de zéro, Windows définit le focus d’entrée sur le premier contrôle dans la feuille de propriétés. L’application peut retourner 0 uniquement si elle a défini explicitement le focus d’entrée à un des contrôles dans la feuille de propriétés.  
+ Spécifie si l’application a défini le focus d’entrée à un des contrôles dans la feuille de propriétés. Si `OnInitDialog` retourne différente de zéro, Windows définit le focus d’entrée sur le premier contrôle dans la feuille de propriétés. L’application peut retourner 0 uniquement si elle a défini explicitement le focus d’entrée à un des contrôles dans la feuille de propriétés.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre est appelée en réponse à la **WM_INITDIALOG** message. Ce message est envoyé à la feuille de propriétés lors de la [créer](#create) ou [DoModal](#domodal) appels, qui se produisent immédiatement avant l’affichage de la feuille de propriétés.  
+ Cette fonction membre est appelée en réponse au message WM_INITDIALOG. Ce message est envoyé à la feuille de propriétés lors de la [créer](#create) ou [DoModal](#domodal) appels, qui se produisent immédiatement avant l’affichage de la feuille de propriétés.  
   
  Remplacez cette fonction membre, si vous avez besoin effectuer un traitement spécial lors de l’initialisation de la feuille de propriétés. Dans la version substituée, commencer par appeler la classe de base `OnInitDialog` mais ne pas tenir compte de sa valeur de retour. Vous allez normalement retourner **TRUE** à partir de votre fonction membre substitué.  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nButton`  
+ *nButton*  
  nButton : identifie le bouton. Ce paramètre peut être une des valeurs suivantes :  
   
 - **PSBTN_BACK** choisit le bouton précédent.  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pPage`  
+ *pPage*  
  Pointe vers la page à supprimer de la feuille de propriétés. Ne peut pas être `NULL`.  
   
- `nPage`  
+ *nPage*  
  Index de la page à supprimer. Doit être entre 0 et inférieur au nombre de pages dans la feuille de propriétés, incluse.  
   
 ### <a name="remarks"></a>Notes  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPage`  
+ *nPage*  
  Index de la page à définir. Doit être comprise entre 0 et inférieur au nombre de pages dans la feuille de propriétés, incluse.  
   
- `pPage`  
+ *pPage*  
  Pointe vers la page pour définir dans la feuille de propriétés. Il ne peut pas être **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -672,7 +672,7 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszText`  
+ *lpszText*  
  Pointe vers le texte à afficher sur le bouton de commande de fin.  
   
 ### <a name="remarks"></a>Notes  
@@ -691,10 +691,10 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nStyle`  
+ *nStyle*  
  Spécifie le style de titre de la feuille de propriétés. Le style doit être spécifié à 0 ou en tant que **PSH_PROPTITLE**. Si le style est défini en tant que **PSH_PROPTITLE**, le mot « Propriétés » s’affiche après le texte spécifié comme légende. Par exemple, l’appel `SetTitle`(« Simple », **PSH_PROPTITLE**) entraîne une légende de feuille de propriétés de « Propriétés Simple ».  
   
- `lpszText`  
+ *lpszText*  
  Pointe vers le texte à utiliser en tant que la légende dans la barre de titre de la feuille de propriétés.  
   
 ### <a name="remarks"></a>Notes  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
+ *dwFlags*  
  Un ensemble d’indicateurs permettant de personnaliser la fonction et l’apparence des boutons de l’Assistant. Ce paramètre peut être une combinaison des valeurs suivantes :  
   
 - **PSWIZB_BACK** bouton précédent  

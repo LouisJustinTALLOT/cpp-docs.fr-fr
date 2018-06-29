@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371619"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079063"
 ---
 # <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
 Définit un modèle de document qui implémente l'interface monodocument (SDI).  
@@ -45,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Un modèle de document définit la relation entre les trois types de classes :  
   
--   Une classe de document, vous dérivez de **CDocument**.  
+-   Une classe de document, vous dérivez de `CDocument`.  
   
 -   Une classe d’affichage, qui affiche des données à partir de la classe de document répertoriée ci-dessus. Vous pouvez dériver de cette classe à partir de `CView`, `CScrollView`, `CFormView`, ou `CEditView`. (Vous pouvez également utiliser `CEditView` directement.)  
   
@@ -66,7 +66,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  `CSingleDocTemplate`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
@@ -81,10 +81,10 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDResource`  
+ *nIDResource*  
  Spécifie l’ID des ressources utilisées avec le type de document. Cela peut inclure le menu, icône, table d’accélérateurs et ressources de type chaîne.  
   
- La ressource de chaîne se compose de sous-chaînes jusqu'à sept séparés par le caractère « \n » (le caractère « \n » est nécessaire comme espace réservé, si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources de l’application. Par exemple :  
+ La ressource de chaîne se compose de sous-chaînes jusqu'à sept séparés par le caractère « \n » (le caractère « \n » est nécessaire comme espace réservé, si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources de l’application. Exemple :  
   
  `// MYCALC.RC`  
   
@@ -100,13 +100,13 @@ CSingleDocTemplate(
   
  Pour plus d’informations sur ces types de ressources, consultez le [éditeur de chaînes](../../windows/string-editor.md).  
   
- `pDocClass`  
- Pointe vers le `CRuntimeClass` objet de la classe de document. Cette classe est un **CDocument**-dérivée la classe que vous définissez pour représenter vos documents.  
+ *pDocClass*  
+ Pointe vers le `CRuntimeClass` objet de la classe de document. Cette classe est un `CDocument`-dérivée la classe que vous définissez pour représenter vos documents.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Pointe vers le `CRuntimeClass` objet de la classe de fenêtre frame. Cette classe peut être un `CFrameWnd`-classe dérivée, ou il peut être `CFrameWnd` elle-même si vous souhaitez le comportement par défaut pour votre fenêtre frame principale.  
   
- `pViewClass`  
+ *pViewClass*  
  Pointe vers le `CRuntimeClass` objet de la classe d’affichage. Cette classe est un `CView`-dérivée la classe que vous définissez pour afficher vos documents.  
   
 ### <a name="remarks"></a>Notes  

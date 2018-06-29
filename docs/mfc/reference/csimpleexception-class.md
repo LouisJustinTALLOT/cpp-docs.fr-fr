@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369923"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078234"
 ---
 # <a name="csimpleexception-class"></a>Classe de CSimpleException
 Cette classe est une classe de base pour les exceptions MFC critiques pour les ressources.  
@@ -72,7 +72,7 @@ class AFX_NOVTABLE CSimpleException : public CException
   
  `CSimpleException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bAutoDelete`  
- Spécifiez **TRUE** si la mémoire pour le `CSimpleException` objet a été alloué sur le tas. Cela entraîne le `CSimpleException` objet doit être supprimé quand le **supprimer** fonction membre est appelée pour supprimer l’exception. Spécifiez **FALSE** si le `CSimpleException` objet est sur la pile ou est un objet global. Dans ce cas, le `CSimpleException` objet ne sera pas supprimé lorsque la **supprimer** fonction membre est appelée.  
+ *bAutoDelete*  
+ Spécifiez **TRUE** si la mémoire pour le `CSimpleException` objet a été alloué sur le tas. Cela entraîne le `CSimpleException` objet doit être supprimé quand le `Delete` fonction membre est appelée pour supprimer l’exception. Spécifiez **FALSE** si le `CSimpleException` objet est sur la pile ou est un objet global. Dans ce cas, le `CSimpleException` objet ne sera pas supprimé lorsque la `Delete` fonction membre est appelée.  
   
 ### <a name="remarks"></a>Notes  
  Vous devez normalement jamais appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’un `CException`-classe dérivée et appeler son constructeur, ou il doit utiliser un des MFC lever les fonctions, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), lever un type prédéfini.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszError`  
+ *lpszError*  
  Pointeur vers une mémoire tampon qui reçoit un message d’erreur.  
   
- `nMaxError`  
+ *nMaxError*  
  Le nombre maximal de caractères de la mémoire tampon peut contenir, y compris le **NULL** marque de fin.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  L’adresse d’un **UINT** qui recevra l’ID de contexte d’aide. Si **NULL**, aucun ID ne sera retourné.  
   
 ### <a name="return-value"></a>Valeur de retour  
