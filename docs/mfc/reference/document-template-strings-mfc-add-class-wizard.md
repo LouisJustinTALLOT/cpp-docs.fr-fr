@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371929"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121511"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Chaînes du modèle de document, Assistant Ajouter une classe MFC
 Cette page de l’Assistant est disponible uniquement pour les classes répondant aux critères suivants :  
@@ -43,7 +43,7 @@ Cette page de l’Assistant est disponible uniquement pour les classes répondan
  S’applique aux applications qui créent des documents utilisateur. Les utilisateurs peuvent ouvrir et enregistrer des documents plus facilement si le type de document a une extension de fichier et un ID de type de fichier. Ces éléments ne sont pas localisés, car ils sont utilisés par le système plutôt que par l’utilisateur.  
   
  **Extension de fichier**  
- Définit l’extension de fichier associée au type de document pour cette application de formulaires. La valeur par défaut extension fichier basé sur le nom de classe. Par exemple, si la nouvelle classe MFC est nommée **CWidget**, par défaut, l’extension de fichier est. WID. L’extension de fichier est utilisée dans les filtres de fichier et le **ouvrir** et **enregistrer en tant que** boîtes de dialogue.  
+ Définit l’extension de fichier associée au type de document pour cette application de formulaires. La valeur par défaut extension fichier basé sur le nom de classe. Par exemple, si la nouvelle classe MFC est nommée `CWidget`, par défaut, l’extension de fichier est. WID. L’extension de fichier est utilisée dans les filtres de fichier et le **ouvrir** et **enregistrer en tant que** boîtes de dialogue.  
   
  Si vous modifiez l’extension de fichier, la modification est répercutée dans le **nom de filtre** boîte.  
   
@@ -63,10 +63,10 @@ Cette page de l’Assistant est disponible uniquement pour les classes répondan
  Définit le nom que les utilisateurs peuvent indiquer pour rechercher des fichiers du type de fichier spécifié. Cette option est disponible à partir de la **types de fichiers** et **enregistrer en tant que type** options dans les fenêtres standards **ouvrir** et **enregistrer en tant que** boîtes de dialogue. Par défaut, le nom est basé sur le nom du projet, ainsi que des fichiers, suivis de l’extension indiquée dans **Extension de fichier**. Par exemple, si votre projet est nommé Widget, et l’extension de fichier est .wid, le **nom de filtre** par défaut est Widget Files (*.wid).  
   
  **Nom court de nouveau fichier**  
- Définit le nom apparaissant dans les fenêtres standards `New` boîte de dialogue, si le projet possède plusieurs modèles de document. Si votre application est un [serveur Automation](../../mfc/automation-servers.md), ce nom est utilisé en tant que le nom court de votre objet Automation. Par défaut, ce nom est basé sur le nom de classe.  
+ Définit le nom apparaissant dans les fenêtres standards **nouveau** boîte de dialogue, si le projet possède plusieurs modèles de document. Si votre application est un [serveur Automation](../../mfc/automation-servers.md), ce nom est utilisé en tant que le nom court de votre objet Automation. Par défaut, ce nom est basé sur le nom de classe.  
   
  **Nom de type de fichier long**  
- Définit le nom de type de fichier dans le Registre système. Si votre application est un serveur Automation, ce nom est utilisé en tant que le nom long de votre objet Automation. Par défaut, ce nom est basé sur le nom de classe plu. Document. Par exemple, si le nom de classe est **CWidget**, le **type de fichier nom long** est Widget Document.  
+ Définit le nom de type de fichier dans le Registre système. Si votre application est un serveur Automation, ce nom est utilisé en tant que le nom long de votre objet Automation. Par défaut, ce nom est basé sur le nom de classe plu. Document. Par exemple, si le nom de classe est `CWidget`, le **type de fichier nom long** est Widget Document.  
   
  **Classe de document**  
  Indique la classe de document du projet. Par défaut, cette classe est la classe de document de l’application principale, comme indiqué dans le [Classes générées](../../mfc/reference/generated-classes-mfc-application-wizard.md) page de l’Assistant Application MFC. Vous pouvez sélectionner une autre classe de document dans la liste, si vous avez ajouté des autres classes de documents dans le projet.  

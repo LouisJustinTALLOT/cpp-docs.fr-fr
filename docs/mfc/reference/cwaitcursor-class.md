@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372506"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122669"
 ---
 # <a name="cwaitcursor-class"></a>Classe de CWaitCursor
 Permet en une ligne d'afficher un curseur d'attente, généralement sous forme de sablier, pendant que vous effectuez une longue opération.  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  En raison de leurs constructeurs et les destructeurs fonctionnement, `CWaitCursor` toujours, les objets sont déclarés comme variables locales, elles ne sont jamais déclarées comme des variables globales ni alloués avec **nouveau**.  
   
- Si vous effectuez une opération qui peut entraîner le curseur à modifier, comme l’affichage d’une boîte de message ou la boîte de dialogue, l’appel de la [restaurer](#restore) fonction membre pour restaurer le curseur d’attente. Il s’agit d’appeler OK **restaurer** même lorsqu’un curseur d’attente est affiché.  
+ Si vous effectuez une opération qui peut entraîner le curseur à modifier, comme l’affichage d’une boîte de message ou la boîte de dialogue, l’appel de la [restaurer](#restore) fonction membre pour restaurer le curseur d’attente. Il s’agit d’appeler OK `Restore` même lorsqu’un curseur d’attente est affiché.  
   
  Un autre pour afficher un curseur d’attente consiste à utiliser la combinaison de [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)et, éventuellement, [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Toutefois, `CWaitCursor` est plus facile à utiliser, car vous n’avez pas besoin de définir le curseur jusqu’au curseur précédent lorsque vous avez terminé avec l’opération de longue durée.  
   
@@ -72,7 +72,7 @@ class CWaitCursor
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CWaitCursor`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ## <a name="example"></a>Exemple  
@@ -106,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Il s’agit d’appeler OK **restaurer** même lorsque le curseur d’attente est affiché.  
+ Il s’agit d’appeler OK `Restore` même lorsque le curseur d’attente est affiché.  
   
  Si vous devez restaurer le curseur d’attente dans une fonction différente de celle dans laquelle le `CWaitCursor` objet est déclaré, vous pouvez appeler [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368873"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121648"
 ---
 # <a name="csplitterwndex-class"></a>Classe de CSplitterWndEx
 
@@ -66,7 +66,7 @@ class CSplitterWndEx : public CSplitterWnd
   
  [CSplitterWnd](csplitterwnd-class.md)  
    
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxsplitterwndex.h  
   
 ##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
@@ -81,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
- Pointeur vers le contexte de périphérique. Si ce paramètre est `NULL`, le framework redessine la fenêtre active.  
+ [in] *contrôleur de domaine principal*  
+ Pointeur vers le contexte de périphérique. Si ce paramètre est NULL, le framework redessine la fenêtre active.  
   
- [in] `nType`  
+ [in] *%nLes*  
  Parmi les `CSplitterWnd::ESplitType` des valeurs d’énumération qui spécifie l’élément de la fenêtre fractionnée à dessiner. Les valeurs valides sont `splitBox`, `splitBar`, `splitIntersection` et `splitBorder`.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectangle englobant qui spécifie les dimensions et l’emplacement pour dessiner l’élément de fenêtre de fractionnement spécifiée.  
   
 ### <a name="remarks"></a>Notes  

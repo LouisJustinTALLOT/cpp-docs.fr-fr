@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375971"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121823"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Fonctions d'échange de données de boîtes de dialogue pour contrôles OLE
 Cette rubrique répertorie les fonctions DDX_OC utilisées pour échanger des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, mode formulaire ou un objet de vue de contrôle et un membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
@@ -48,8 +48,8 @@ Cette rubrique répertorie les fonctions DDX_OC utilisées pour échanger des do
 |[DDX_OCColorRO](#ddx_occolorro)|Gère le transfert de **OLE_COLOR** des données entre une propriété en lecture seule d’un contrôle OLE et un **OLE_COLOR** membre de données.|  
 |[DDX_OCFloat](#ddx_ocfloat)|Gère le transfert de **float** (ou **double**) des données entre une propriété d’un contrôle OLE et un **float** (ou **double**) membre de données.|  
 |[DDX_OCFloatRO](#ddx_ocfloatro)|Gère le transfert de **float** (ou **double**) des données entre une propriété en lecture seule d’un contrôle OLE et un **float** (ou **double**) données membre.|  
-|[DDX_OCInt](#ddx_ocint)|Gère le transfert de `int` (ou **long**) des données entre une propriété d’un contrôle OLE et un `int` (ou **long**) membre de données.|  
-|[DDX_OCIntRO](#ddx_ocintro)|Gère le transfert de `int` (ou **long**) des données entre une propriété en lecture seule d’un contrôle OLE et un `int` (ou **long**) membre de données.|  
+|[DDX_OCInt](#ddx_ocint)|Gère le transfert de **int** (ou **long**) des données entre une propriété d’un contrôle OLE et un **int** (ou **long**) membre de données.|  
+|[DDX_OCIntRO](#ddx_ocintro)|Gère le transfert de **int** (ou **long**) des données entre une propriété en lecture seule d’un contrôle OLE et un **int** (ou **long**) membre de données.|  
 |[DDX_OCShort](#ddx_ocshort)|Gère le transfert de **court** des données entre une propriété d’un contrôle OLE et un **court** membre de données.|  
 |[DDX_OCShortRO](#ddx_ocshortro)|Gère le transfert de **court** des données entre une propriété en lecture seule d’un contrôle OLE et un **court** membre de données.|  
 |[DDX_OCText](#ddx_octext)|Gère le transfert de **CString** des données entre une propriété d’un contrôle OLE et un **CString** membre de données.|  
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -82,7 +82,7 @@ void AFXAPI DDX_OCBool(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête :** afxdisp.h  
   
 ##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -112,11 +112,11 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  DDX_OCColor  
- Le `DDX_OCColor` fonction gère le transfert de **OLE_COLOR** des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **OLE_COLOR** membre de données de la boîte de dialogue mode formulaire, ou un objet de vue de contrôle.  
+ Le `DDX_OCColor` fonction gère le transfert de données OLE_COLOR entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire, ou objet de vue de contrôle et un membre de données OLE_COLOR de la boîte de dialogue mode formulaire, ou objet de vue de contrôle.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -142,11 +142,11 @@ void AFXAPI DDX_OCColor(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
- Le `DDX_OCColorRO` fonction gère le transfert de **OLE_COLOR** des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **OLE_COLOR** membre de données de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle.  
+ Le `DDX_OCColorRO` fonction gère le transfert de données OLE_COLOR entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire, ou objet de vue de contrôle et un membre de données OLE_COLOR de la boîte de dialogue mode formulaire, ou objet de vue de contrôle.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -172,7 +172,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -208,7 +208,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -244,11 +244,11 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  DDX_OCInt  
- Le `DDX_OCInt` fonction gère le transfert de `int` (ou **long**) des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un `int` (ou **long**) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
+ Le `DDX_OCInt` fonction gère le transfert de **int** (ou **long**) des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **int**(ou **long**) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -280,11 +280,11 @@ void AFXAPI DDX_OCInt(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
- Le `DDX_OCIntRO` fonction gère le transfert de `int` (ou **long**) des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un `int` (ou **long** ) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
+ Le `DDX_OCIntRO` fonction gère le transfert de **int** (ou **long**) des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **int** (ou **long**) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -316,7 +316,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocshort"></a>  DDX_OCShort  
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -346,7 +346,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -376,7 +376,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_octext"></a>  DDX_OCText  
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Un pointeur vers un **CDataExchange** objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -406,7 +406,7 @@ void AFXAPI DDX_OCText(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDX`  
+ *pDX*  
  Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- `nIDC`  
+ *nIDC*  
  ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
- `dispid`  
+ *DISPID*  
  ID de distribution d’une propriété du contrôle.  
   
  *valeur*  
@@ -436,7 +436,7 @@ void AFXAPI DDX_OCTextRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h
     
 ## <a name="see-also"></a>Voir aussi  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374751"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121314"
 ---
 # <a name="cusertool-class"></a>Classe de CUserTool
 Un outil utilisateur est un élément de menu qui exécute une application externe. Le **outils** onglet de la **personnaliser** boîte de dialogue ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permet à l’utilisateur d’ajouter des outils de l’utilisateur et pour spécifier le nom, les commandes, les arguments, et répertoire initial de chaque outil utilisateur.  
@@ -98,7 +98,7 @@ class CUserTool : public CObject
   
  [CUserTool](../../mfc/reference/cusertool-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxusertool.h  
   
 ##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pDC`  
+ [in] *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Spécifie les coordonnées de la zone pour afficher l’icône.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un handle vers l’icône chargé ( `HICON`), ou `NULL` si l’icône par défaut ne peut pas être chargé.  
+ Handle vers l’icône chargé (HICON), ou NULL si l’icône par défaut ne peut pas être chargé.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsqu’il est impossible de charger une icône pour un outil défini par l’utilisateur à partir du fichier exécutable de l’outil.  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -223,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `lpszCmd`  
+ [in] *lpszCmd*  
  Spécifie la nouvelle application à associer à l’outil utilisateur.  
   
 ### <a name="remarks"></a>Notes  

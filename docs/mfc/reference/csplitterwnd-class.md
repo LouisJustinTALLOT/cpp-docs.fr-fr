@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d2b44c4e854a27bcc753c1403ea058b03906a8
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377847"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123147"
 ---
 # <a name="csplitterwnd-class"></a>Classe de CSplitterWnd
 Fournit les fonctionnalités d'une fenêtre fractionnée, qui est une fenêtre contenant plusieurs volets.  
@@ -159,9 +159,9 @@ class CSplitterWnd : public CWnd
   
 3.  À partir de dans la `OnCreateClient`, appelez le [créer](#create) ou [CreateStatic](#createstatic) fonction membre de `CSplitterWnd`.  
   
- Appelez le **créer** fonction membre pour créer une fenêtre fractionnée dynamique. Une fenêtre fractionnée dynamique est généralement utilisée pour créer et de faire défiler un nombre de volets individuels ou des vues, d’un même document. L’infrastructure crée automatiquement un volet initial pour le séparateur ; le framework crée, redimensionne et supprime des volets supplémentaires de façon que l’utilisateur les contrôles de la fenêtre fractionnée.  
+ Appelez le `Create` fonction membre pour créer une fenêtre fractionnée dynamique. Une fenêtre fractionnée dynamique est généralement utilisée pour créer et de faire défiler un nombre de volets individuels ou des vues, d’un même document. L’infrastructure crée automatiquement un volet initial pour le séparateur ; le framework crée, redimensionne et supprime des volets supplémentaires de façon que l’utilisateur les contrôles de la fenêtre fractionnée.  
   
- Lorsque vous appelez **créer**, vous spécifiez une largeur de colonnes et la hauteur minimale des lignes qui déterminent quand les volets sont trop petits pour être complètement affichée. Après avoir appelé **créer**, vous pouvez ajuster ces valeurs minimales en appelant le [SetColumnInfo](#setcolumninfo) et [SetRowInfo](#setrowinfo) fonctions membres.  
+ Lorsque vous appelez `Create`, vous spécifiez une largeur de colonnes et la hauteur minimale des lignes qui déterminent quand les volets sont trop petits pour être complètement affichée. Après avoir appelé `Create`, vous pouvez ajuster ces valeurs minimales en appelant le [SetColumnInfo](#setcolumninfo) et [SetRowInfo](#setrowinfo) fonctions membres.  
   
  Utilisez également le `SetColumnInfo` et `SetRowInfo` des fonctions membres pour définir une largeur « idéale » pour une colonne et une hauteur « idéale » pour une ligne. Lorsque l’infrastructure affiche une fenêtre fractionnée, elle affiche d’abord le frame parent, puis dans la fenêtre fractionnée. Le framework présente ensuite les volets disponibles dans les colonnes et lignes en fonction de leurs dimensions idéale, chargé à partir de l’angle supérieur gauche de l’angle inférieur droit de la zone cliente de la fenêtre fractionnée.  
   
@@ -171,13 +171,13 @@ class CSplitterWnd : public CWnd
   
  Vous devez spécifiquement créer tous les statiques de volets de fractionnement lorsque vous créez la fractionnées statiques. Veillez à créer tous les volets avant du frame parent `OnCreateClient` retours de fonction membre, ou le framework ne pas afficher correctement la fenêtre.  
   
- Le `CreateStatic` fonction membre initialise automatiquement un séparateur statique avec une largeur de colonnes et la hauteur minimale des lignes de 0. Après avoir appelé **créer**, ajuster ces valeurs minimales en appelant le [SetColumnInfo](#setcolumninfo) et [SetRowInfo](#setrowinfo) fonctions membres. Utilisez également `SetColumnInfo` et `SetRowInfo` après avoir appelé `CreateStatic` pour indiquer souhaitée dimensions du volet idéale.  
+ Le `CreateStatic` fonction membre initialise automatiquement un séparateur statique avec une largeur de colonnes et la hauteur minimale des lignes de 0. Après avoir appelé `Create`, ajuster ces valeurs minimales en appelant le [SetColumnInfo](#setcolumninfo) et [SetRowInfo](#setrowinfo) fonctions membres. Utilisez également `SetColumnInfo` et `SetRowInfo` après avoir appelé `CreateStatic` pour indiquer souhaitée dimensions du volet idéale.  
   
  Souvent, les volets individuels d’un séparateur statique appartiennent à différentes classes. Pour obtenir des exemples de fenêtres fractionnées statiques, consultez l’éditeur d’images et le Gestionnaire de fichiers Windows.  
   
  Une fenêtre fractionnée prend en charge des barres de défilement spécial (sauf les barres de défilement qui peuvent avoir des volets). Ces barres de défilement sont des enfants de le `CSplitterWnd` de l’objet et qui sont partagées avec les volets.  
   
- Vous créez ces barres de défilement spécial lors de la création de la fenêtre fractionnée. Par exemple, un `CSplitterWnd` qui a une ligne, deux colonnes et le **WS_VSCROLL** style affiche une barre de défilement verticale est partagée par les deux volets. Lorsque l’utilisateur déplace la barre de défilement `WM_VSCROLL` messages sont envoyés dans les deux volets. Lorsque les volets de définir la position de la barre de défilement, la barre de défilement partagé est définie.  
+ Vous créez ces barres de défilement spécial lors de la création de la fenêtre fractionnée. Par exemple, un `CSplitterWnd` qui a une ligne, deux colonnes et le style WS_VSCROLL affiche une barre de défilement verticale est partagée par les deux volets. Lorsque l’utilisateur déplace la barre de défilement, WM_VSCROLL sont envoyés pour les deux volets. Lorsque les volets de définir la position de la barre de défilement, la barre de défilement partagé est définie.  
   
  Pour plus d’informations sur les fenêtres fractionnées, consultez :  
   
@@ -200,7 +200,7 @@ class CSplitterWnd : public CWnd
   
  `CSplitterWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext  
@@ -211,7 +211,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bPrev`  
+ *bPrev*  
  Indique la fenêtre à activer. **TRUE** pour le précédent. **FALSE** suivant.  
   
 ### <a name="remarks"></a>Notes  
@@ -225,7 +225,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bPrev`  
+ *bPrev*  
  Indique la fenêtre à activer. **TRUE** pour le précédent. **FALSE** suivant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -249,7 +249,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  La fenêtre frame parente de la fenêtre fractionnée.  
   
  *nMaxRows*  
@@ -258,17 +258,17 @@ virtual BOOL Create(
  *nMaxCols*  
  Le nombre maximal de colonnes dans la fenêtre fractionnée. Cette valeur ne doit pas dépasser 2.  
   
- `sizeMin`  
+ *sizeMin*  
  Spécifie la taille minimale à laquelle un volet peut être affiché.  
   
- `pContext`  
- Un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. Dans la plupart des cas, il peut s’agir du `pContext` passé à la fenêtre frame parente.  
+ *pContext*  
+ Un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. Dans la plupart des cas, il peut s’agir du *pContext* passé à la fenêtre frame parente.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style de fenêtre.  
   
- `nID`  
- L’ID de fenêtre enfant de la fenêtre. L’ID peut être **AFX_IDW_PANE_FIRST** , sauf si la fenêtre fractionnée est imbriquée dans une autre fenêtre fractionnée.  
+ *nID*  
+ L’ID de fenêtre enfant de la fenêtre. L’ID peut être AFX_IDW_PANE_FIRST, sauf si la fenêtre fractionnée est imbriquée dans une autre fenêtre fractionnée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -280,11 +280,11 @@ virtual BOOL Create(
   
 2.  Remplacement du frame parent [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) fonction membre.  
   
-3.  Appelez le **créer** fonction membre dans la `OnCreateClient`.  
+3.  Appelez le `Create` fonction membre dans la `OnCreateClient`.  
   
- Lorsque vous créez une fenêtre fractionnée à partir d’un frame parent, passez du frame parent `pContext` paramètre à la fenêtre fractionnée. Dans le cas contraire, ce paramètre peut être **NULL**.  
+ Lorsque vous créez une fenêtre fractionnée à partir d’un frame parent, passez du frame parent *pContext* paramètre à la fenêtre fractionnée. Dans le cas contraire, ce paramètre peut être NULL.  
   
- La largeur de colonnes et la hauteur minimale de ligne initiale d’une fenêtre fractionnée dynamique sont définies par le `sizeMin` paramètre. Ces valeurs minimales, qui déterminent si un volet est trop petit pour être indiqué dans son intégralité, peuvent être modifiés avec la [SetRowInfo](#setrowinfo) et [SetColumnInfo](#setcolumninfo) fonctions membres.  
+ La largeur de colonnes et la hauteur minimale de ligne initiale d’une fenêtre fractionnée dynamique sont définies par le *sizeMin* paramètre. Ces valeurs minimales, qui déterminent si un volet est trop petit pour être indiqué dans son intégralité, peuvent être modifiés avec la [SetRowInfo](#setrowinfo) et [SetColumnInfo](#setcolumninfo) fonctions membres.  
   
  Pour plus d’informations sur les fenêtres fractionnées dynamiques, consultez « Fenêtres fractionnées » dans l’article [plusieurs Types de documents, vues et fenêtres Frame](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technical Note 29](../../mfc/tn029-splitter-windows.md)et le `CSplitterWnd` vue d’ensemble de la classe.  
   
@@ -301,11 +301,11 @@ virtual BOOL CreateScrollBarCtrl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style de fenêtre.  
   
- `nID`  
- L’ID de fenêtre enfant de la fenêtre. L’ID peut être **AFX_IDW_PANE_FIRST** , sauf si la fenêtre fractionnée est imbriquée dans une autre fenêtre fractionnée.  
+ *nID*  
+ L’ID de fenêtre enfant de la fenêtre. L’ID peut être AFX_IDW_PANE_FIRST, sauf si la fenêtre fractionnée est imbriquée dans une autre fenêtre fractionnée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -326,20 +326,20 @@ virtual BOOL CreateStatic(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  La fenêtre frame parente de la fenêtre fractionnée.  
   
- `nRows`  
+ *nRows*  
  Nombre de lignes. Cette valeur ne doit pas dépasser 16.  
   
  *nCols*  
  Nombre de colonnes. Cette valeur ne doit pas dépasser 16.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style de fenêtre.  
   
- `nID`  
- L’ID de fenêtre enfant de la fenêtre. L’ID peut être **AFX_IDW_PANE_FIRST** , sauf si la fenêtre fractionnée est imbriquée dans une autre fenêtre fractionnée.  
+ *nID*  
+ L’ID de fenêtre enfant de la fenêtre. L’ID peut être AFX_IDW_PANE_FIRST, sauf si la fenêtre fractionnée est imbriquée dans une autre fenêtre fractionnée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -359,7 +359,7 @@ virtual BOOL CreateStatic(
   
  La largeur de colonnes et la hauteur minimale de ligne initiale d’une fenêtre fractionnée statique est 0. Ces valeurs minimales, qui déterminent quand un volet est trop petit pour être indiqué dans son intégralité, peuvent être modifiés avec la [SetRowInfo](#setrowinfo) et [SetColumnInfo](#setcolumninfo) fonctions membres.  
   
- Pour ajouter des barres de défilement dans une fenêtre fractionnée statique, ajoutez le **WS_HSCROLL** et **WS_VSCROLL** styles à `dwStyle`.  
+ Pour ajouter des barres de défilement dans une fenêtre fractionnée statique, ajoutez les styles WS_HSCROLL et WS_VSCROLL à *dwStyle*.  
   
  Consultez « Fenêtres fractionnées » dans l’article [plusieurs Types de documents, vues et fenêtres Frame](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technical Note 29](../../mfc/tn029-splitter-windows.md)et le `CSplitterWnd` vue d’ensemble de la classe pour plus d’informations sur les fenêtres fractionnées statiques.  
   
@@ -376,20 +376,20 @@ virtual BOOL CreateView(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
+ *Ligne*  
  Spécifie la ligne de la fenêtre fractionnée dans lequel placer la nouvelle vue.  
   
- `col`  
+ *col*  
  Spécifie la colonne de la fenêtre fractionnée dans lequel placer la nouvelle vue.  
   
- `pViewClass`  
+ *pViewClass*  
  Spécifie le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) de la nouvelle vue.  
   
  *sizeInit*  
  Spécifie la taille initiale de la nouvelle vue.  
   
- `pContext`  
- Un pointeur vers un contexte de création utilisé pour créer la vue (généralement le `pContext` passé dans le cadre de parent substituée [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) fonction membre dans lequel la fenêtre fractionnée est créée).  
+ *pContext*  
+ Un pointeur vers un contexte de création utilisé pour créer la vue (généralement le *pContext* passé dans le cadre de parent substituée [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) fonction membre dans lequel la fenêtre fractionnée en cours de création).  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -424,7 +424,7 @@ virtual void DeleteColumn(int colDelete);
  Spécifie la colonne à supprimer.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
+ Cette fonction membre est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a le style SPLS_DYNAMIC_SPLIT). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
   
 ##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  Supprime une ligne de la fenêtre fractionnée.  
@@ -438,7 +438,7 @@ virtual void DeleteRow(int rowDelete);
  Spécifie la ligne à supprimer.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
+ Cette fonction membre est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a le style SPLS_DYNAMIC_SPLIT). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
   
 ##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  Supprime une vue de la fenêtre fractionnée.  
@@ -450,16 +450,16 @@ virtual void DeleteView(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
+ *Ligne*  
  Spécifie la ligne de la fenêtre fractionnée à partir duquel supprimer la vue.  
   
- `col`  
+ *col*  
  Spécifie la colonne de la fenêtre fractionnée à partir duquel supprimer la vue.  
   
 ### <a name="remarks"></a>Notes  
  Si la vue active est en cours de suppression, la vue suivante devient active. L’implémentation par défaut suppose que la vue est automatiquement supprimer dans [PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy).  
   
- Cette fonction membre est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
+ Cette fonction membre est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a le style SPLS_DYNAMIC_SPLIT). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
   
 ##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  Effectue le clavier fractionner la commande, généralement « fractionnement de la fenêtre ».  
@@ -485,26 +485,26 @@ virtual BOOL DoScroll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pViewFrom`  
+ *pViewFrom*  
  Pointeur vers la vue d'où provient le message de défilement.  
   
- `nScrollCode`  
+ *nScrollCode*  
  Un code de la barre de défilement qui indique l’utilisateur de défilement de demande. Ce paramètre est composé de deux parties : un octet de poids faible, qui détermine le type du défilement horizontal, et un octet de poids fort, qui détermine le type du défilement vertical :  
   
-- **SB_BOTTOM** fait défiler vers le bas.  
+- SB_BOTTOM se déplace vers le bas.  
   
-- **SB_LINEDOWN** fait défiler une ligne vers le bas.  
+- SB_LINEDOWN défiler une ligne vers le bas.  
   
-- **SB_LINEUP** remonter le texte ligne par ligne.  
+- SB_LINEUP défiler jusqu'à la ligne.  
   
-- **SB_PAGEDOWN** fait défiler une page vers le bas.  
+- SB_PAGEDOWN défiler une page vers le bas.  
   
-- **SB_PAGEUP** fait défiler une page de configuration.  
+- SB_PAGEUP défiler une page de.  
   
-- **SB_TOP** fait défiler vers le haut.  
+- SB_TOP se déplace vers le haut.  
   
- `bDoScroll`  
- Détermine si l’action de défilement spécifiée se produit. Si `bDoScroll` est **TRUE** (autrement dit, si une fenêtre enfant existe et si les fenêtres fractionnées ont une plage de défilement), puis l’action de défilement spécifiée peut avoir lieu ; si `bDoScroll` est **FALSE** (autrement dit, si aucune fenêtre enfant existe, ou les affichages fractionnés n’ont aucune plage de défilement), puis le défilement ne se produit pas.  
+ *bDoScroll*  
+ Détermine si l’action de défilement spécifiée se produit. Si *bDoScroll* est « True » (autrement dit, si une fenêtre enfant existe et si les fenêtres fractionnées ont une plage de défilement), puis l’action de défilement spécifiée peut avoir lieu ; si *bDoScroll* a la valeur FALSE (autrement dit, si aucune fenêtre enfant Il existe, ou les affichages fractionnés n’ont aucune plage de défilement), puis le défilement ne se produit pas.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le défilement synchronisé se produit ; Sinon, 0.  
@@ -523,20 +523,20 @@ virtual BOOL DoScrollBy(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pViewFrom`  
+ *pViewFrom*  
  Pointeur vers la vue d'où provient le message de défilement.  
   
- `sizeScroll`  
+ *sizeScroll*  
  Nombre de pixels utilisés pour faire défiler horizontalement et verticalement.  
   
- bDoScroll  
- Détermine si l’action de défilement spécifiée se produit. Si `bDoScroll` est **TRUE** (autrement dit, si une fenêtre enfant existe et si les fenêtres fractionnées ont une plage de défilement), puis l’action de défilement spécifiée peut avoir lieu ; si `bDoScroll` est **FALSE** (autrement dit, si aucune fenêtre enfant existe, ou les affichages fractionnés n’ont aucune plage de défilement), puis le défilement ne se produit pas.  
+ *bDoScroll*  
+ Détermine si l’action de défilement spécifiée se produit. Si *bDoScroll* est « True » (autrement dit, si une fenêtre enfant existe et si les fenêtres fractionnées ont une plage de défilement), puis l’action de défilement spécifiée peut avoir lieu ; si *bDoScroll* a la valeur FALSE (autrement dit, si aucune fenêtre enfant Il existe, ou les affichages fractionnés n’ont aucune plage de défilement), puis le défilement ne se produit pas.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le défilement synchronisé se produit ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre est appelée par l’infrastructure en réponse à un message de défilement, pour effectuer synchronisé le défilement des fenêtres de fractionnement par la quantité, en pixels, indiquée par `sizeScroll`. Les valeurs positives indiquent le défilement vers le bas et vers la droite. les valeurs négatives indiquent le défilement de haut et vers la gauche.  
+ Cette fonction membre est appelée par l’infrastructure en réponse à un message de défilement, pour effectuer synchronisé le défilement des fenêtres de fractionnement par la quantité, en pixels, indiquée par *sizeScroll*. Les valeurs positives indiquent le défilement vers le bas et vers la droite. les valeurs négatives indiquent le défilement de haut et vers la gauche.  
   
  Substituez pour demander une action de l’utilisateur avant d’autoriser le défilement.  
   
@@ -550,14 +550,14 @@ virtual CWnd* GetActivePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pRow`  
+ *pRow*  
  Un pointeur vers un **int** pour récupérer le numéro de ligne du volet actif.  
   
- `pCol`  
+ *pCol*  
  Un pointeur vers un **int** pour récupérer le nombre de colonnes du volet actif.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le volet actif. **NULL** si aucun volet actif n’existe.  
+ Pointeur vers le volet actif. NULL si aucun volet actif n’existe.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée par l’infrastructure pour déterminer le volet actif dans une fenêtre fractionnée. Substituez pour demander une action de l’utilisateur avant d’obtenir le volet actif.  
@@ -583,14 +583,14 @@ void GetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `col`  
+ *col*  
  Spécifie une colonne.  
   
  *cxCur*  
- Une référence à un `int` à définir pour la largeur actuelle de la colonne.  
+ Une référence à un **int** à définir pour la largeur actuelle de la colonne.  
   
- `cxMin`  
- Une référence à un `int` à définir à la largeur minimale en cours de la colonne.  
+ *cxMin*  
+ Une référence à un **int** à définir à la largeur minimale en cours de la colonne.  
   
 ##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  Retourne le volet à la ligne spécifiée et la colonne.  
@@ -602,10 +602,10 @@ CWnd* GetPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
+ *Ligne*  
  Spécifie une ligne.  
   
- `col`  
+ *col*  
  Spécifie une colonne.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -632,17 +632,17 @@ void GetRowInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
+ *Ligne*  
  Spécifie une ligne.  
   
- `cyCur`  
- Référence à `int` à définir pour la hauteur actuelle de la ligne en pixels.  
+ *cyCur*  
+ Référence à **int** à définir pour la hauteur actuelle de la ligne en pixels.  
   
- `cyMin`  
- Référence à `int` à définir à la hauteur minimale en cours de la ligne en pixels.  
+ *cyMin*  
+ Référence à **int** à définir à la hauteur minimale en cours de la ligne en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette fonction membre pour obtenir des informations sur la ligne spécifiée. Le `cyCur` paramètre est rempli avec la hauteur actuelle de la ligne spécifiée, et `cyMin` est rempli avec la hauteur minimale de la ligne.  
+ Appelez cette fonction membre pour obtenir des informations sur la ligne spécifiée. Le *cyCur* paramètre est rempli avec la hauteur actuelle de la ligne spécifiée, et *cyMin* est rempli avec la hauteur minimale de la ligne.  
   
 ##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  Retourne le style de barre de défilement partagé pour la fenêtre fractionnée.  
@@ -654,9 +654,9 @@ DWORD GetScrollStyle() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un ou plusieurs des fenêtres suivantes de style flags, en cas de réussite :  
   
-- **WS_HSCROLL** si le séparateur gère actuellement des barres de défilement horizontale partagé.  
+- WS_HSCROLL si que le séparateur gère actuellement partagé des barres de défilement horizontale.  
   
-- **WS_VSCROLL** si le séparateur gère actuellement des barres de défilement verticale partagé.  
+- WS_VSCROLL si que le séparateur gère actuellement partagé des barres de défilement verticale.  
   
  Si zéro, la fenêtre fractionnée ne gère pas actuellement toutes les barres de défilement partagé.  
   
@@ -670,10 +670,10 @@ int IdFromRowCol(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
+ *Ligne*  
  Spécifie la ligne de la fenêtre fractionnée.  
   
- `col`  
+ *col*  
  Spécifie la colonne de la fenêtre fractionnée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -686,7 +686,7 @@ int IdFromRowCol(
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
 ##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
- Détermine si `pWnd` est actuellement un volet enfant de cette fenêtre fractionnée.  
+ Détermine si *pWnd* est actuellement un volet enfant de cette fenêtre fractionnée.  
   
 ```  
 BOOL IsChildPane(
@@ -696,17 +696,17 @@ BOOL IsChildPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWnd`  
+ *pWnd*  
  Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet à tester.  
   
- `pRow`  
- Un pointeur vers un `int` dans lequel stocker le numéro de ligne.  
+ *pRow*  
+ Un pointeur vers un **int** dans lequel stocker le numéro de ligne.  
   
- `pCol`  
- Un pointeur vers un `int` dans lequel stocker un numéro de colonne.  
+ *pCol*  
+ Un pointeur vers un **int** dans lequel stocker un numéro de colonne.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si elle est différente de zéro, `pWnd` est actuellement un volet enfant de cette fenêtre fractionnée, et `pRow` et `pCol` sont renseignés avec la position du volet dans la fenêtre fractionnée. Si `pWnd` n’est pas un volet enfant de cette fenêtre fractionnée, 0 est retourné.  
+ Si elle est différente de zéro, *pWnd* est actuellement un volet enfant de cette fenêtre fractionnée, et *pRow* et *pCol* sont renseignés avec la position du volet dans la fenêtre fractionnée. Si *pWnd* n’est pas un volet enfant de cette fenêtre fractionnée, 0 est retourné.  
   
 ### <a name="remarks"></a>Notes  
  Dans les versions de Visual C++ antérieures à 6.0, cette fonction a été définie en tant que  
@@ -736,21 +736,21 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
- Pointeur vers le contexte de périphérique dans lequel dessiner. Si `pDC` est **NULL**, puis [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) est appelée par l’infrastructure et aucun fractionnement fenêtre est dessiné.  
+ *contrôleur de domaine principal*  
+ Pointeur vers le contexte de périphérique dans lequel dessiner. Si *pDC* est NULL, puis [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) est appelée par l’infrastructure et aucun fractionnement fenêtre est dessiné.  
   
- `nType`  
- Une valeur de la **enum ESplitType**, ce qui peut prendre l’une des opérations suivantes :  
+ *%nLes*  
+ Une valeur de la `enum ESplitType`, ce qui peut prendre l’une des opérations suivantes :  
   
-- **splitBox** le séparateur et faites glisser la zone.  
+- `splitBox` La zone de glisser fractionnées.  
   
 - `splitBar` La barre qui apparaît entre les fenêtres de fractionnement de deux.  
   
-- **splitIntersection** l’intersection entre les fenêtres fractionnées. Cet élément ne sera pas appelé lors de l’exécution sous Windows 95/98.  
+- `splitIntersection` L’intersection des fenêtres de fractionnement. Cet élément ne sera pas appelé lors de l’exécution sous Windows 95/98.  
   
-- **splitBorder** bordures de la fenêtre de fractionnement.  
+- `splitBorder` Bordures de la fenêtre de fractionnement.  
   
- `rect`  
+ *Rect*  
  Une référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet spécifiant la taille et forme des fenêtres de fractionnement.  
   
 ### <a name="remarks"></a>Notes  
@@ -766,7 +766,7 @@ virtual void OnInvertTracker(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rect`  
+ *Rect*  
  Référence à un `CRect` objet qui spécifie le rectangle de suivi.  
   
 ### <a name="remarks"></a>Notes  
@@ -800,19 +800,19 @@ virtual void SetActivePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
- Si `pWnd` est **NULL**, spécifie la ligne dans le volet qui est actif.  
+ *Ligne*  
+ Si *pWnd* est NULL, spécifie la ligne dans le volet qui est actif.  
   
- `col`  
- Si `pWnd` est **NULL**, spécifie la colonne dans le volet qui est actif.  
+ *col*  
+ Si *pWnd* est NULL, spécifie la colonne dans le volet qui est actif.  
   
- `pWnd`  
- Un pointeur vers un `CWnd` objet. Si **NULL**, le volet spécifié par `row` et `col` a la valeur active. Si ce n’est pas **NULL**, spécifie le volet a la valeur actif.  
+ *pWnd*  
+ Un pointeur vers un `CWnd` objet. Si NULL, le volet spécifié par *ligne* et *col* a la valeur active. Si non NULL, spécifie le volet a la valeur actif.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée par l’infrastructure pour définir un volet active lorsque l’utilisateur met le focus sur un volet dans la fenêtre frame. Vous pouvez appeler explicitement `SetActivePane` pour déplacer le focus vers la vue spécifiée.  
   
- Spécifiez le volet en fournissant une ligne et colonne, **ou** en fournissant `pWnd`.  
+ Spécifiez le volet en fournissant une ligne et colonne, **ou** en fournissant *pWnd*.  
   
 ##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  L’appel à définir les informations de la colonne spécifiée.  
@@ -825,13 +825,13 @@ void SetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `col`  
+ *col*  
  Spécifie une colonne de la fenêtre fractionnée.  
   
  *cxIdeal*  
  Spécifie une largeur idéale de la colonne de la fenêtre séparateur en pixels.  
   
- `cxMin`  
+ *cxMin*  
  Spécifie la largeur minimale de la colonne de la fenêtre fractionnée en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -853,13 +853,13 @@ void SetRowInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `row`  
+ *Ligne*  
  Spécifie une ligne de la fenêtre fractionnée.  
   
  *cyIdeal*  
  Spécifie une hauteur idéale de la ligne de la fenêtre séparateur en pixels.  
   
- `cyMin`  
+ *cyMin*  
  Spécifie la hauteur minimale de la ligne de la fenêtre fractionnée en pixels.  
   
 ### <a name="remarks"></a>Notes  
@@ -875,12 +875,12 @@ void SetScrollStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Le nouveau style de défilement de la fenêtre de fractionnement partagé prise en charge de barre de défilement, qui peut prendre l’une des valeurs suivantes :  
   
-- **WS_HSCROLL** créer/afficher horizontal partagé des barres de défilement.  
+- Barres de défilement partagé horizontale WS_HSCROLL créer/afficher.  
   
-- **WS_VSCROLL** créer/afficher vertical partagé des barres de défilement.  
+- Barres de défilement partagé WS_VSCROLL créer/afficher.  
   
 ### <a name="remarks"></a>Notes  
  Une fois qu’une barre de défilement est créée. il n’est pas détruit même si `SetScrollStyle` est appelée sans ce style ; à la place les barres de défilement sont masquées. Ainsi, les barres de défilement à conserver leur état, même si elles sont masquées. Après avoir appelé `SetScrollStyle` qu’il est nécessaire d’appeler [RecalcLayout](#recalclayout) pour toutes les modifications prennent effet.  
@@ -902,7 +902,7 @@ virtual BOOL SplitColumn(int cxBefore);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée lors de la création d’une fenêtre de ligne de séparation. `SplitColumn` Indique l’emplacement par défaut où la division se produit.  
   
- `SplitColumn` est appelé par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
+ `SplitColumn` est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a le style SPLS_DYNAMIC_SPLIT). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
   
 ##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  Indique où du fractionnement horizontal d’une fenêtre frame.  
@@ -921,7 +921,7 @@ virtual BOOL SplitRow(int cyBefore);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée lorsqu’une fenêtre de fractionnement horizontal est créée. `SplitRow` Indique l’emplacement par défaut où la division se produit.  
   
- `SplitRow` est appelé par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
+ `SplitRow` est appelée par le framework pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a le style SPLS_DYNAMIC_SPLIT). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter plus avancées de fenêtres fractionnées dynamiques.  
   
 ##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  Appelé par l’infrastructure pour dessiner la fenêtre fractionnée.  
@@ -931,7 +931,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pDC`  
+ *contrôleur de domaine principal*  
  Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  

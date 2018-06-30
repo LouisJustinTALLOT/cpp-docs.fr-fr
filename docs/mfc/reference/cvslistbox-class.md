@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372993"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122635"
 ---
 # <a name="cvslistbox-class"></a>Classe de CVSListBox
 La `CVSListBox` classe prend en charge un contrôle de liste modifiable.  
@@ -110,7 +110,7 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxvslistbox.h  
   
 ##  <a name="additem"></a>  CVSListBox::AddItem  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `strIext`  
+ [in] *strIext*  
  Une référence à une chaîne.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Une valeur spécifique à l’application 32 bits qui est associée à la chaîne. La valeur par défaut est 0.  
   
- [in] `iIndex`  
- Index de base zéro de la position qui conserve la chaîne. Si le `iIndex` paramètre est -1, la chaîne est ajoutée à la fin de la liste. La valeur par défaut est -1.  
+ [in] *iIndex*  
+ Index de base zéro de la position qui conserve la chaîne. Si le *iIndex* paramètre est -1, la chaîne est ajoutée à la fin de la liste. La valeur par défaut est -1.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la position de la chaîne dans le contrôle de liste.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez le [CVSListBox::GetItemData](#getitemdata) méthode pour récupérer la valeur spécifiée par la `dwData` paramètre. Cette valeur peut être un entier spécifiques à l’application ou un pointeur vers d’autres données.  
+ Utilisez le [CVSListBox::GetItemData](#getitemdata) méthode pour récupérer la valeur spécifiée par la *dwData* paramètre. Cette valeur peut être un entier spécifiques à l’application ou un pointeur vers d’autres données.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Construit un objet `CVSListBox`.  
@@ -158,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément de contrôle de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’opération de modification démarre avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si l’opération de modification démarre avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  L’utilisateur commence une opération de modification en double-cliquant sur l’étiquette d’un élément, ou en appuyant sur la **F2** ou **espace** clé lorsqu’un élément a le focus.  
@@ -188,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -246,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’élément spécifié est supprimé ; dans le cas contraire, `FALSE`.  
+ TRUE si l’élément spécifié est supprimé ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -262,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iItem`  
+ [in] *iItem*  
  Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode sélectionne l’élément spécifié et si nécessaire, fait défiler l’élément dans la vue.  
@@ -281,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
+ [in] *iIndex*  
  Index de base zéro d’un élément de contrôle de liste modifiable.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Une valeur 32 bits. Cette valeur peut être un entier spécifiques à l’application ou un pointeur vers d’autres données.  
   
 ### <a name="remarks"></a>Notes  
