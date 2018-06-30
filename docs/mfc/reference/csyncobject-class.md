@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374095"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122067"
 ---
 # <a name="csyncobject-class"></a>CSyncObject (classe)
 Classe virtuelle pure qui fournit une fonctionnalité commune aux objets de synchronisation dans Win32.  
@@ -77,7 +77,7 @@ class CSyncObject : public CObject
   
  `CSyncObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmt.h  
   
 ##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
@@ -89,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pstrName`  
- Nom de l'objet. Si **NULL**, *pstrName* sera null.  
+ *pstrName*  
+ Nom de l'objet. Si NULL, *pstrName* sera null.  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  Appelez cette fonction pour accéder à la ressource contrôlée par l’objet de synchronisation.  
@@ -100,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwTimeout`  
- Spécifie la quantité de temps en millisecondes d’attente de l’objet de synchronisation soit disponible (signalée). Si **infinie**, `Lock` attendra jusqu'à ce que l’objet est signalé avant de retourner.  
+ *dwTimeout*  
+ Spécifie la quantité de temps en millisecondes d’attente de l’objet de synchronisation soit disponible (signalée). Si INFINITE, `Lock` attendra jusqu'à ce que l’objet est signalé avant de retourner.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi ; Sinon, 0.  
@@ -124,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- En cas de réussite, le handle de l’objet de synchronisation. dans le cas contraire, **NULL**.  
+ En cas de réussite, le handle de l’objet de synchronisation. Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez utiliser le handle d’appeler directement des API Windows.  
@@ -139,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lCount`  
+ *lCount*  
  Pas utilisé par l’implémentation par défaut.  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  Pas utilisé par l’implémentation par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Par défaut implémentation retourne toujours **TRUE**.  
+ Par défaut implémentation retourne toujours la valeur TRUE.  
   
 ### <a name="remarks"></a>Notes  
- L’implémentation par défaut de la déclaration avec deux paramètres toujours retourne **TRUE**. Cette fonction est appelée pour libérer l’accès à l’objet de synchronisation détenu par le thread appelant. La seconde déclaration est fournie pour les objets de synchronisation tels que les sémaphores qui permettent de plusieurs accéder d’une ressource contrôlée.  
+ L’implémentation par défaut de la déclaration avec deux paramètres toujours retourne la valeur TRUE. Cette fonction est appelée pour libérer l’accès à l’objet de synchronisation détenu par le thread appelant. La seconde déclaration est fournie pour les objets de synchronisation tels que les sémaphores qui permettent de plusieurs accéder d’une ressource contrôlée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CObject (classe)](../../mfc/reference/cobject-class.md)   

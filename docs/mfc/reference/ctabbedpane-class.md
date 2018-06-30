@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373812"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121836"
 ---
 # <a name="ctabbedpane-class"></a>Classe de CTabbedPane
 Implémente les fonctionnalités d'un volet à onglets détachables.  
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Notes  
  L'infrastructure crée automatiquement une instance de cette classe quand un utilisateur attache un volet à un autre en pointant vers la légende du deuxième volet. Tous les volets à onglets créés par l'infrastructure ont un ID égal à -1.  
   
- Pour spécifier des onglets normaux au lieu des onglets de style Outlook, passez le `AFX_CBRS_REGULAR_TABS` de style pour le [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) (méthode).  
+ Pour spécifier des onglets normaux au lieu des onglets de style Outlook, passez le style AFX_CBRS_REGULAR_TABS à la [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) (méthode).  
   
  Si vous créez un volet à onglets avec des onglets détachables, le volet risque d’être détruit automatiquement par l’infrastructure. Il est donc déconseillé de stocker le pointeur. Pour obtenir un pointeur vers le volet à onglets, appelez la méthode `CBasePane::GetParentTabbedPane`.  
   
@@ -164,7 +164,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
   
  [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxTabbedPane.h  
   
 ##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
@@ -177,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -192,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `bEnable`  
- `TRUE` Pour activer la coloration automatique des onglets ; dans le cas contraire, `FALSE`.  
+ [in] *bActivez*  
+ TRUE pour activer la coloration automatique des onglets ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode statique pour activer ou désactiver la coloration automatique des onglets dans tous les volets à onglets dans l’application. Lorsque cette fonctionnalité est activée, chaque onglet est rempli par sa propre couleur. Vous trouverez la liste des couleurs qui sont utilisées pour les onglets de couleur en appelant le [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) (méthode).  
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *dockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -233,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Contient la taille et position, en coordonnées d’écran, de la zone d’onglet supérieur.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Contient la taille et position, en coordonnées d’écran, de la zone d’onglet en bas.  
   
 ### <a name="remarks"></a>Notes  
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la zone d’onglet se trouve en bas de la fenêtre à onglets. dans le cas contraire, `FALSE`.  
+ TRUE si la zone d’onglet est située au bas de la fenêtre à onglets. Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -286,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre statique `TRUE` pour forcer tous les onglets dans l’application à afficher en haut du volet à onglets.  
+ Définissez ce membre statique à True pour forcer tous les onglets dans l’application à afficher en haut du volet à onglets.  
   
  Vous devez définir cette valeur avant la création d’un volet à onglets.  
   
- La valeur par défaut est `FALSE`.  
+ La valeur par défaut est FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informations de classe runtime pour un objet dérivé de `CMFCTabCtrl` personnalisé.  
@@ -320,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `arColors`  
+ [in] *arColors*  
  Contient le tableau de couleurs à définir.  
   
 ### <a name="remarks"></a>Notes  

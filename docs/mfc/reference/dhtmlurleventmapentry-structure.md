@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d038fa188ac431f20b0b19ca8ad8bf675943954c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee629d9dcffc80ce20306989cad72d466722af87
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370056"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123329"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry, structure
 Le `DHtmlUrlEventMapEntry` structure fournit la prise en charge des cartes URL plusieurs événements.  
@@ -37,13 +37,13 @@ const DHtmlEventMapEntry *pEventMap;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `szUrl`  
+ *szUrl*  
  L’URL.  
   
  *pEventMap*  
  La table d’événements associée à l’URL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdhtml.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375276"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121635"
 ---
 # <a name="cwinformscontrol-class"></a>Classe de CWinFormsControl
 Fournit les fonctionnalités de base pour l'hébergement d'un contrôle Windows Forms.  
@@ -78,7 +78,7 @@ class CWinFormsControl : public CWnd
 > [!NOTE]
 >  Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui se lient dynamiquement avec MFC (dans lesquels AFXDLL est défini).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwinforms.h  
   
 ##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pType`  
+ *PTapez*  
  Le type de données du contrôle à créer. Doit être un [Type](https://msdn.microsoft.com/en-us/library/system.type) type de données.  
   
- `dwStyle`  
+ *dwStyle*  
  Le style de fenêtre à appliquer au contrôle. Spécifier une combinaison de [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actuellement, seuls les styles suivants sont pris en charge : WS_TABSTOP, WS_VISIBLE, WS_DISABLED et WS_GROUP.  
   
- `rect`  
+ *Rect*  
  A [Rect, Structure](../../mfc/reference/rect-structure1.md) qui définit les coordonnées des angles supérieur gauche et à droite du contrôle (tout d’abord surcharge uniquement).  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  Le handle du contrôle statique titulaire placé dans l’éditeur de ressources. Le contrôle Windows Forms nouvellement créé remplace le contrôle statique, en supposant que sa position, ordre de plan et des styles (seconde surcharge uniquement).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre parente.  
   
- `nID`  
+ *nID*  
  Le numéro d’ID de ressource à affecter au contrôle nouvellement créé.  
   
- `pControl`  
+ *pControl*  
  Une instance d’un contrôle Windows Forms à associer à la [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) (surcharge quatrième uniquement) de l’objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Notes  
  Cette méthode instancie un contrôle Windows Forms .NET Framework dans un conteneur de MFC.  
   
- La première surcharge de la méthode accepte un type de données .NET Framework `pType` pour que MFC pouvez instancier un nouvel objet de ce type. `pType` doit être un [Type](https://msdn.microsoft.com/en-us/library/system.type) type de données.  
+ La première surcharge de la méthode accepte un type de données .NET Framework *PTapez* pour que MFC pouvez instancier un nouvel objet de ce type. *PTapez* doit être un [Type](https://msdn.microsoft.com/en-us/library/system.type) type de données.  
   
- La deuxième surcharge de la méthode crée un contrôle Windows Forms en fonction de la `TManagedControl` paramètre de modèle de la `CWinFormsControl` classe. La taille et la position du contrôle est basé sur le `RECT` structure passée à la méthode. Uniquement `dwStyle` est importante pour les styles.  
+ La deuxième surcharge de la méthode crée un contrôle Windows Forms en fonction de la `TManagedControl` paramètre de modèle de la `CWinFormsControl` classe. La taille et la position du contrôle est basé sur le `RECT` structure passée à la méthode. Uniquement *dwStyle* est importante pour les styles.  
   
- La troisième surcharge de la méthode crée un contrôle Windows Forms qui remplace un contrôle statique, détruire et en supposant que sa position, ordre de plan et des styles. Le contrôle statique sert uniquement un espace réservé pour le contrôle Windows Forms. Lorsque vous créez le contrôle, cette surcharge combine les styles de `dwStyle` avec des styles de ressource d' un contrôle statique.  
+ La troisième surcharge de la méthode crée un contrôle Windows Forms qui remplace un contrôle statique, détruire et en supposant que sa position, ordre de plan et des styles. Le contrôle statique sert uniquement un espace réservé pour le contrôle Windows Forms. Lorsque vous créez le contrôle, cette surcharge combine les styles de *dwStyle* avec des styles de ressource d' un contrôle statique.  
   
- La quatrième surcharge de la méthode vous permet de passer d’un contrôle Windows Forms déjà instancié `pControl` qui encapsule MFC. Elle doit être du même type que le `TManagedControl` paramètre de modèle de la `CWinFormsControl` classe.  
+ La quatrième surcharge de la méthode vous permet de passer d’un contrôle Windows Forms déjà instancié *pControl* qui encapsule MFC. Elle doit être du même type que le `TManagedControl` paramètre de modèle de la `CWinFormsControl` classe.  
   
  Consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) pour obtenir des exemples sur l’utilisation de Windows Form contrôle.  
   

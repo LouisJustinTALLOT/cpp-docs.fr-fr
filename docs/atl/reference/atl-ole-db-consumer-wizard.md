@@ -1,7 +1,7 @@
 ---
 title: Assistant consommateur Oledb ATL | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364948"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121687"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de données nécessaire pour accéder à la source de données spécifié via le fournisseur OLE DB spécifié.  
@@ -52,7 +52,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
   
      Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. Dans cette boîte de dialogue, sélectionnez la table, vue ou procédure stockée qui permettent au consommateur.  
   
- **Fournisseur**  
+ **fournisseur**  
      Sélectionnez un fournisseur approprié pour gérer la connexion à la source de données. Le type de fournisseur est généralement déterminé par le type de base de données à laquelle vous vous connectez. Cliquez sur le `Next` bouton ou cliquez sur le **connexion** onglet.  
   
  **Connexion**  
@@ -111,7 +111,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
  `Class`  
  Après avoir sélectionné une source de données, cette zone est remplie avec un nom de classe par défaut basé sur la table ou la procédure stockée que vous avez sélectionnée (consultez **sélectionner une source de données** ci-dessous). Vous pouvez modifier le nom de classe.  
   
- **fichier .h**  
+ **Fichier .h**  
  Après avoir sélectionné une source de données, cette zone est remplie avec un nom de classe d’en-tête par défaut basé sur la table ou la procédure stockée que vous avez sélectionnée (consultez **sélectionner une source de données** ci-dessous). Vous pouvez modifier le nom du fichier d’en-tête, ou sélectionnez un fichier d’en-tête existant.  
   
  **Attribué**  
@@ -133,7 +133,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  

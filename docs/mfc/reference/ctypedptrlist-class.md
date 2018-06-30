@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f74782241ec69d77ec55b8613c59f87adb40fb
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374586"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122828"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList (classe)
 Fournit un « wrapper » de type sécurisé pour les objets de la classe `CPtrList`.  
@@ -54,10 +54,10 @@ class CTypedPtrList : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de liste de pointeurs typés. doit être une classe de liste de pointeur ( `CObList` ou `CPtrList`).  
   
- `TYPE`  
+ *TYPE*  
  Type des éléments stockés dans la liste de la classe de base.  
   
 ## <a name="members"></a>Membres  
@@ -104,7 +104,7 @@ class CTypedPtrList : public BASE_CLASS
   
  `CTypedPtrList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtempl.h  
   
 ##  <a name="addhead"></a>  CTypedPtrList::AddHead  
@@ -119,17 +119,17 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYPE*  
  Type des éléments stockés dans la liste de la classe de base.  
   
- `newElement`  
- Le pointeur d’objet à ajouter à cette liste. A **NULL** la valeur est autorisée.  
+ *newElement*  
+ Le pointeur d’objet à ajouter à cette liste. Une valeur NULL est autorisée.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de liste de pointeurs typés. doit être une classe de liste de pointeur ( [CObList](../../mfc/reference/coblist-class.md) ou [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- Un pointeur vers un autre [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objet. Les éléments de `pNewList` sera ajouté à cette liste.  
+ *pNewList*  
+ Un pointeur vers un autre [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objet. Les éléments de *pNewList* sera ajouté à cette liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La première version retourne le **POSITION** valeur de l’élément nouvellement inséré.  
+ La première version retourne la valeur POSITION de l’élément nouvellement inséré.  
   
 ### <a name="remarks"></a>Notes  
  La première version ajoute un nouvel élément avant le début de la liste. La deuxième version ajoute une autre liste d’éléments avant le début.  
@@ -146,23 +146,23 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYPE*  
  Type des éléments stockés dans la liste de la classe de base.  
   
- `newElement`  
- Le pointeur d’objet à ajouter à cette liste. A **NULL** la valeur est autorisée.  
+ *newElement*  
+ Le pointeur d’objet à ajouter à cette liste. Une valeur NULL est autorisée.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de liste de pointeurs typés. doit être une classe de liste de pointeur ( [CObList](../../mfc/reference/coblist-class.md) ou [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- Un pointeur vers un autre [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objet. Les éléments de `pNewList` sera ajouté à cette liste.  
+ *pNewList*  
+ Un pointeur vers un autre [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objet. Les éléments de *pNewList* sera ajouté à cette liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La première version retourne le **POSITION** valeur de l’élément nouvellement inséré.  
+ La première version retourne la valeur POSITION de l’élément nouvellement inséré.  
   
 ### <a name="remarks"></a>Notes  
  La première version ajoute un nouvel élément après la fin de la liste. La deuxième version ajoute une autre liste d’éléments après la fin de la liste.  
   
 ##  <a name="getat"></a>  CTypedPtrList::GetAt  
- Une variable de type **POSITION** est une clé pour la liste.  
+ Une variable de type de POSITION est une clé pour la liste.  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -174,17 +174,17 @@ TYPE GetAt(POSITION position) const;
  Paramètre de modèle qui spécifie le type des éléments stockés dans la liste.  
   
  *Position*  
- A **POSITION** valeur retournée par une précédente `GetHeadPosition` ou **trouver** appel de fonction membre.  
+ Une valeur POSITION renvoyée par une précédente `GetHeadPosition` ou `Find` appel de fonction membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est accessible via un pointeur vers un **CTypedPtrList const**, puis `GetAt` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
+ Si la liste est accessible via un pointeur vers un `const CTypedPtrList`, puis `GetAt` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
   
  Si la liste est accessible directement ou via un pointeur à une `CTypedPtrList`, puis `GetAt` retourne une référence à un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Notes  
- Il n’est pas identique à un index, et vous ne pouvez pas utiliser un **POSITION** valeur vous-même. `GetAt` Récupère le `CObject` pointeur associé à une position donnée.  
+ Il n’est pas identique à un index, et vous ne peut pas opérer sur une valeur POSITION vous-même. `GetAt` Récupère le `CObject` pointeur associé à une position donnée.  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ Vous devez vous assurer que votre valeur POSITION représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
  Cette fonction inline s’appelle `BASE_CLASS` **:: GetAt**.  
   
@@ -201,7 +201,7 @@ TYPE GetHead() const;
  Paramètre de modèle qui spécifie le type des éléments stockés dans la liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est accessible via un pointeur vers un **CTypedPtrList const**, puis `GetHead` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
+ Si la liste est accessible via un pointeur vers un `const CTypedPtrList`, puis `GetHead` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
   
  Si la liste est accessible directement ou via un pointeur à une `CTypedPtrList`, puis `GetHead` retourne une référence à un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
@@ -209,7 +209,7 @@ TYPE GetHead() const;
  Vous devez vous assurer que la liste n’est pas vide avant d’appeler `GetHead`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](../../mfc/reference/coblist-class.md#isempty) pour vérifier que la liste contient des éléments.  
   
 ##  <a name="getnext"></a>  CTypedPtrList::GetNext  
- Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à la **POSITION** valeur de l’entrée suivante dans la liste.  
+ Obtient l’élément de liste identifié par *rPosition*, puis définit *rPosition* à la valeur de la POSITION de l’entrée suivante dans la liste.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -220,25 +220,25 @@ TYPE GetNext(POSITION& rPosition) const;
  *TYPE*  
  Paramètre de modèle qui spécifie le type d’éléments contenus dans cette liste.  
   
- `rPosition`  
- Une référence à un **POSITION** valeur retournée par une précédente `GetNext`, `GetHeadPosition`, ou un autre appel de fonction membre.  
+ *rPosition*  
+ Une référence à une valeur POSITION renvoyée par une précédente `GetNext`, `GetHeadPosition`, ou un autre appel de fonction membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est accessible via un pointeur vers un **CTypedPtrList const**, puis `GetNext` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
+ Si la liste est accessible via un pointeur vers un `const CTypedPtrList`, puis `GetNext` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
   
  Si la liste est accessible directement ou via un pointeur à une `CTypedPtrList`, puis `GetNext` retourne une référence à un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez utiliser `GetNext` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à `GetHeadPosition` ou [CPtrList::Find](../../mfc/reference/coblist-class.md#find).  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ Vous devez vous assurer que votre valeur POSITION représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
- Si l’élément récupéré est le dernier dans la liste, puis la nouvelle valeur de `rPosition` a la valeur **NULL**.  
+ Si l’élément récupéré est le dernier dans la liste, puis la nouvelle valeur de *rPosition* a la valeur NULL.  
   
  Il est possible de supprimer un élément lors d’une itération. Consultez l’exemple de [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
 ##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
- Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à la **POSITION** valeur de l’entrée précédente dans la liste.  
+ Obtient l’élément de liste identifié par *rPosition*, puis définit *rPosition* à la valeur de la POSITION de l’entrée précédente dans la liste.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -249,20 +249,20 @@ TYPE GetPrev(POSITION& rPosition) const;
  *TYPE*  
  Paramètre de modèle qui spécifie le type d’éléments contenus dans cette liste.  
   
- `rPosition`  
- Une référence à un **POSITION** valeur retournée par une précédente `GetPrev` ou un autre appel de fonction membre.  
+ *rPosition*  
+ Une référence à une valeur POSITION renvoyée par une précédente `GetPrev` ou un autre appel de fonction membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est accessible via un pointeur vers un **CTypedPtrList const**, puis `GetPrev` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
+ Si la liste est accessible via un pointeur vers un `const CTypedPtrList`, puis `GetPrev` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
   
  Si la liste est accessible directement ou via un pointeur à une `CTypedPtrList`, puis `GetPrev` retourne une référence à un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez utiliser `GetPrev` dans une boucle d’itération inverse si vous établissez la position initiale avec un appel à `GetTailPosition` ou **trouver**.  
+ Vous pouvez utiliser `GetPrev` dans une boucle d’itération inverse si vous établissez la position initiale avec un appel à `GetTailPosition` ou `Find`.  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ Vous devez vous assurer que votre valeur POSITION représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
- Si l’élément récupéré est le premier dans la liste, puis la nouvelle valeur de `rPosition` a la valeur **NULL**.  
+ Si l’élément récupéré est le premier dans la liste, puis la nouvelle valeur de *rPosition* a la valeur NULL.  
   
 ##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Obtient le pointeur qui représente l’élément principal de cette liste.  
@@ -277,7 +277,7 @@ TYPE GetTail() const;
  Paramètre de modèle qui spécifie le type des éléments stockés dans la liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est accessible via un pointeur vers un **CTypedPtrList const**, puis `GetTail` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
+ Si la liste est accessible via un pointeur vers un `const CTypedPtrList`, puis `GetTail` retourne un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège donc la liste à partir de la modification.  
   
  Si la liste est accessible directement ou via un pointeur à une `CTypedPtrList`, puis `GetTail` retourne une référence à un pointeur du type spécifié par le paramètre de modèle *TYPE*. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
@@ -326,19 +326,19 @@ void SetAt(POSITION pos, TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pos`  
- Le **POSITION** de l’élément à définir.  
+ *bons de commande*  
+ La POSITION de l’élément à définir.  
   
  *TYPE*  
  Type des éléments stockés dans la liste de la classe de base.  
   
- `newElement`  
+ *newElement*  
  Le pointeur d’objet à écrire dans la liste.  
   
 ### <a name="remarks"></a>Notes  
- Une variable de type **POSITION** est une clé pour la liste. Il n’est pas identique à un index, et vous ne pouvez pas utiliser un **POSITION** valeur vous-même. `SetAt` écrit le pointeur d’objet à la position spécifiée dans la liste.  
+ Une variable de type de POSITION est une clé pour la liste. Il n’est pas identique à un index, et vous ne peut pas opérer sur une valeur POSITION vous-même. `SetAt` écrit le pointeur d’objet à la position spécifiée dans la liste.  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ Vous devez vous assurer que votre valeur POSITION représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
  Pour plus de la section Notes, consultez [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).  
   

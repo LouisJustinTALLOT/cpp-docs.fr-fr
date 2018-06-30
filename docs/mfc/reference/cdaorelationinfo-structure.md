@@ -1,7 +1,7 @@
 ---
 title: Cdaorelationinfo, Structure | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951290"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122606"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo, structure
 Le `CDaoRelationInfo` structure contient des informations sur une relation définie entre les champs de deux tables dans un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *m_strName*  
+*m_strName*  
  Identifie l’objet de relation. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
  *m_strTable*  
@@ -70,11 +71,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** suppressions seront produisent en cascade.  
   
- *m_pFieldInfos*  
- Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le *m_nFields* donnée membre donne le nombre d’éléments du tableau.  
+*m_pFieldInfos*  
+ Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le `m_nFields` donnée membre donne le nombre d’éléments du tableau.  
   
- *m_nFields*  
- Le nombre de `CDaoRelationFieldInfo` des objets dans le *m_pFieldInfos* membre de données.  
+*m_nFields*  
+ Le nombre de `CDaoRelationFieldInfo` des objets dans le `m_pFieldInfos` membre de données.  
   
 ## <a name="remarks"></a>Notes  
  Les références aux principaux et secondaires ci-dessus indiquent la façon dont les informations sont retournées par la [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre dans la classe `CDaoDatabase`.  

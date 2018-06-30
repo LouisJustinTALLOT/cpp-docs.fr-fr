@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372403"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121622"
 ---
 # <a name="cuintarray-class"></a>Classe de CUIntArray
 Prend en charge des tableaux d'entiers non signés.  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CUIntArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou de valeur de retour, remplacez un **UINT**.  
+ Les fonctions membres de `CUIntArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez UINT.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libère toute la mémoire inutilisée au-dessus de la limite supérieure actuelle.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retourne la valeur à un index donné.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtient le nombre d'éléments dans ce tableau.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtient le nombre d'éléments dans ce tableau.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retourne le plus grand index valide.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|  
@@ -112,7 +112,7 @@ class CUIntArray : public CObject
 |[[] De CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
   
 ## <a name="remarks"></a>Notes  
- Entier non signé, ou **UINT**, diffère de mots et de mots doubles dans qui la taille physique d’un **UINT** peut changer en fonction de la cible de système d’exploitation. A **UINT** est la même taille qu’un mot double.  
+ Entier non signé, ou UINT, diffère de mots et de mots doubles dans la mesure où la taille physique du UINT peut changer en fonction de la cible de système d’exploitation. UINT est la même taille qu’un mot double.  
   
  `CUIntArray` incorpore la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objet. Si vous avez besoin d’un vidage d’éléments de l’entier non signé individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur. Tableaux d’entiers non signés ne peut pas être sérialisés.  
   
@@ -126,7 +126,7 @@ class CUIntArray : public CObject
   
  `CUIntArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

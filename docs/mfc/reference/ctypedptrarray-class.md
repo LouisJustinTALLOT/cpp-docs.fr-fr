@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375818"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122913"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray (classe)
 Fournit un « wrapper » de type sécurisé pour les objets de la classe `CPtrArray` ou `CObArray`.  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de tableau de pointeurs typés. doit être une classe array ( `CObArray` ou `CPtrArray`).  
   
- `TYPE`  
+ *TYPE*  
  Type des éléments stockés dans le tableau de classe de base.  
   
 ## <a name="members"></a>Membres  
@@ -91,7 +91,7 @@ class CTypedPtrArray : public BASE_CLASS
   
  `CTypedPtrArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtempl.h  
   
 ##  <a name="add"></a>  CTypedPtrArray::Add  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *TYPE*  
  Paramètre de modèle spécifiant le type d’élément à ajouter au tableau.  
   
- `newElement`  
+ *newElement*  
  L’élément à ajouter à ce tableau.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  Pour plus de la section Notes, consultez [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- Cette fonction membre appelle `BASE_CLASS` **:: Append**.  
+ Cette fonction membre appelle `BASE_CLASS`:: Append **.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de tableau de pointeurs typés. doit être une classe array ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYPE*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de tableau de pointeurs typés. doit être une classe array ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYPE*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *TYPE*  
  Paramètre de modèle qui spécifie le type des éléments stockés dans ce tableau.  
   
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence temporaire à l’élément à l’emplacement spécifié par `nIndex`. Cet élément est du type spécifié par le paramètre de modèle *TYPE*.  
+ Une référence temporaire à l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le paramètre de modèle *TYPE*.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus de la section Notes, consultez [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *TYPE*  
  Paramètre de modèle qui spécifie le type des éléments stockés dans le tableau.  
   
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une copie de l’élément à l’emplacement spécifié par `nIndex`. Cet élément est du type spécifié par le paramètre de modèle *TYPE*.  
+ Une copie de l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le paramètre de modèle *TYPE*.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus de la section Notes, consultez [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui peut être supérieur à la valeur retournée par [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYPE*  
  Type des éléments stockés dans le tableau de classe de base.  
   
- `newElement`  
- Le pointeur d’objet doit être placé dans ce tableau. A `newElement` de valeur **NULL** est autorisée.  
+ *newElement*  
+ Le pointeur d’objet doit être placé dans ce tableau. A *newElement* de valeur **NULL** est autorisée.  
   
- `nCount`  
+ *nCount*  
  Le nombre de fois que cet élément doit être inséré (par défaut 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un index entier qui peut être supérieur à la valeur retournée par `CObArray::GetUpperBound`.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe de tableau de pointeurs typés. doit être une classe array ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- `pNewArray`  
+ *pNewArray*  
  Un autre tableau qui contient les éléments à ajouter à ce tableau.  
   
 ### <a name="remarks"></a>Notes  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *TYPE*  
  Paramètre de modèle qui spécifie le type des éléments stockés dans le tableau.  
   
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="remarks"></a>Notes  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYPE*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Un index entier qui est supérieur ou égal à 0.  
   
  *TYPE*  
  Type des éléments stockés dans le tableau de classe de base.  
   
- `newElement`  
+ *newElement*  
  Le pointeur d’objet à ajouter à ce tableau. A **NULL** la valeur est autorisée.  
   
 ### <a name="remarks"></a>Notes  

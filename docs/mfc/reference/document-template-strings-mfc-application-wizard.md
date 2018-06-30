@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373538"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122194"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Chaînes modèles de document, Assistant Application MFC
 Dans cette page de l’Assistant Application MFC, fournir ou d’affiner les options suivantes pour faciliter la localisation et gestion des documents. Chaînes modèles de document sont disponibles pour les applications qui incluent **prise en charge d’architecture Document/vue** dans les [Type d’Application](../../mfc/reference/application-type-mfc-application-wizard.md). Ils ne sont pas disponibles pour les boîtes de dialogue. Étant donné que la plupart des chaînes modèles de document sont visibles et employées par les utilisateurs de l’application, elles sont traduites dans la **langue de ressource** indiqué dans le **Type d’Application** page de l’Assistant.  
@@ -43,7 +43,7 @@ Dans cette page de l’Assistant Application MFC, fournir ou d’affiner les opt
 |**Titre du frame principal**|Définit le texte qui apparaît en haut du frame de l’application principale. Par défaut, le nom du projet.|  
 |**Nom de type de document**|Identifie le type de document sous lequel un document de l’application peut être regroupé. Par défaut, le nom du projet. Modification de la valeur par défaut ne change pas toutes les autres options dans cette boîte de dialogue.|  
 |**Nom de filtre**|Définit le nom de que vos utilisateurs peuvent indiquer pour rechercher les fichiers de votre type de fichier. Cette option est disponible à partir de la **types de fichiers** et **enregistrer en tant que type** options dans les fenêtres standards **ouvrir** et **enregistrer en tant que** boîtes de dialogue. Par défaut, le nom du projet plus Files, suivi de l’extension fournie dans **extension de fichier**. Par exemple, si votre projet se nomme Widget et que l’extension de fichier est .wgt, le **nom de filtre** par défaut est Widget Files (*.wgt).|  
-|**Nom court de nouveau fichier**|Définit le nom apparaissant dans les fenêtres standards `New` boîte de dialogue, s’il existe plus d’un nouveau modèle de document. Si votre application est un [serveur Automation](../../mfc/automation-servers.md), ce nom est utilisé en tant que le nom court de votre objet Automation. Par défaut, le nom du projet.|  
+|**Nom court de nouveau fichier**|Définit le nom apparaissant dans les fenêtres standards **nouveau** boîte de dialogue, s’il existe plus d’un nouveau modèle de document. Si votre application est un [serveur Automation](../../mfc/automation-servers.md), ce nom est utilisé en tant que le nom court de votre objet Automation. Par défaut, le nom du projet.|  
 |**Nom de type de fichier long**|Définit le nom de type de fichier dans le Registre système. Si votre application est un serveur Automation, ce nom est utilisé en tant que le nom long de votre objet Automation. Par défaut, le nom du projet plu. Document.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 562f0eff1470a4754d3eaac15a94d08fefb95951
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376683"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123017"
 ---
 # <a name="cwordarray-class"></a>Classe de CWordArray
 Prend en charge des tableaux de mots de 16 bits.  
@@ -69,7 +69,7 @@ class CWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CWordArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un [CObject](../../mfc/reference/cobject-class.md) pointeur en tant que paramètre de fonction ou de valeur de retour, remplacez un **WORD**.  
+ Les fonctions membres de `CWordArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un [CObject](../../mfc/reference/cobject-class.md) pointeur en tant que paramètre de fonction ou valeur de retour, remplacer un mot.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libère toute la mémoire inutilisée au-dessus de la limite supérieure actuelle.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retourne la valeur à un index donné.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtient le nombre d'éléments dans ce tableau.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtient le nombre d'éléments dans ce tableau.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retourne le plus grand index valide.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|  
@@ -126,7 +126,7 @@ class CWordArray : public CObject
   
  `CWordArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ##  <a name="icommandsource_interface"></a>  Interface de ICommandSource  
@@ -153,14 +153,14 @@ void AddCommandHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdID`  
+ *cmdID*  
  ID de la commande.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Handle vers la méthode de gestionnaire de commandes.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode ajoute le Gestionnaire de commandes `cmdHandler` à l’objet de source de commande et des mappages de gestionnaire à `cmdID`.  
+ Cette méthode ajoute le Gestionnaire de commandes *cmdHandler* à l’objet de source de commande et des mappages de gestionnaire à *cmdID*.  
   
  Consultez [Comment : ajouter routage des commandes pour le contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `AddCommandHandler`.  
   
@@ -175,13 +175,13 @@ void AddCommandRangeHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdIDMin`  
+ *cmdIDMin*  
  L’index de début de la plage d’ID de commande.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Index de fin de la plage d’ID de commande.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Handle vers la méthode de gestionnaire de message à laquelle les commandes sont mappées.  
   
 ### <a name="remarks"></a>Notes  
@@ -198,13 +198,13 @@ void AddCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdIDMin`  
+ *cmdIDMin*  
  L’index de début de la plage d’ID de commande.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Index de fin de la plage d’ID de commande.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Handle vers la méthode de gestionnaire de message à laquelle les commandes sont mappées.  
   
 ### <a name="remarks"></a>Notes  
@@ -220,14 +220,14 @@ void AddCommandUIHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdID`  
+ *cmdID*  
  ID de la commande.  
   
- `cmdUIHandler`  
+ *cmdUIHandler*  
  Handle vers la méthode de gestionnaire de message de commande utilisateur interface.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode ajoute le Gestionnaire de messages de commande interface utilisateur `cmdHandler` à l’objet de source de commande et des mappages de gestionnaire à `cmdID`.  
+ Cette méthode ajoute le Gestionnaire de messages de commande interface utilisateur *cmdHandler* à l’objet de source de commande et des mappages de gestionnaire à *cmdID*.  
   
 ##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  Publie un message sans attendre qu’il soit traité.  
@@ -237,11 +237,11 @@ void PostCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `command`  
+ *command*  
  L’ID de commande du message à valider.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode publie asynchrone du message mappé à l’ID spécifié par `command`. Il appelle [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) pour placer le message dans la fenêtre file d’attente, puis renvoie sans attendre la fenêtre correspondante traiter le message.  
+ Cette méthode publie asynchrone du message mappé à l’ID spécifié par *commande*. Il appelle [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) pour placer le message dans la fenêtre file d’attente, puis renvoie sans attendre la fenêtre correspondante traiter le message.  
   
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  Supprime un gestionnaire de commandes à partir d’un objet de source de commande.  
@@ -251,11 +251,11 @@ void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdID`  
+ *cmdID*  
  ID de la commande.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode supprime le Gestionnaire de commandes mappé à `cmdID` à partir de l’objet de source de commande.  
+ Cette méthode supprime le Gestionnaire de commandes mappé à *cmdID* à partir de l’objet de source de commande.  
   
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  Supprime un groupe de gestionnaires de commandes à partir d’un objet de source de commande.  
@@ -267,14 +267,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdIDMin`  
+ *cmdIDMin*  
  L’index de début de la plage d’ID de commande.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Index de fin de la plage d’ID de commande.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode supprime un groupe de gestionnaires de messages, mappé la spécifiée d’ID de commande par `cmdIDMin` et `cmdIDMax`, à partir de l’objet de source de commande.  
+ Cette méthode supprime un groupe de gestionnaires de messages, mappé la spécifiée d’ID de commande par *cmdIDMin* et *cmdIDMax*, à partir de l’objet de source de commande.  
   
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  Supprime un groupe de gestionnaires de messages de commande interface utilisateur à partir d’un objet de source de commande.  
@@ -286,14 +286,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdIDMin`  
+ *cmdIDMin*  
  L’index de début de la plage d’ID de commande.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Index de fin de la plage d’ID de commande.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé la spécifiée d’ID de commande par `cmdIDMin` et `cmdIDMax`, à partir de l’objet de source de commande.  
+ Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé la spécifiée d’ID de commande par *cmdIDMin* et *cmdIDMax*, à partir de l’objet de source de commande.  
   
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  Supprime un gestionnaire de messages de commande interface utilisateur à partir d’un objet de source de commande.  
@@ -303,11 +303,11 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdID`  
+ *cmdID*  
  ID de la commande.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode supprime le Gestionnaire de messages de commande d’interface utilisateur mappé à `cmdID` à partir de l’objet de source de commande.  
+ Cette méthode supprime le Gestionnaire de messages de commande d’interface utilisateur mappé à *cmdID* à partir de l’objet de source de commande.  
   
 ##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  Envoie un message et attend qu’il soit traité avant de retourner.  
@@ -317,11 +317,11 @@ void SendCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `command`  
+ *command*  
  L’ID de commande du message à envoyer.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie de façon synchrone le message mappé à l’ID spécifié par `command`. Il appelle [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) pour placer le message dans la fenêtre file d’attente et attend jusqu'à ce que cette procédure de fenêtre a traité le message avant de retourner.  
+ Cette méthode envoie de façon synchrone le message mappé à l’ID spécifié par *commande*. Il appelle [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) pour placer le message dans la fenêtre file d’attente et attend jusqu'à ce que cette procédure de fenêtre a traité le message avant de retourner.  
   
 ##  <a name="icommandtarget_interface"></a>  Interface de ICommandTarget  
  Fournit un contrôle utilisateur avec une interface pour recevoir des commandes à partir d’un objet de source de commande.  
@@ -345,13 +345,13 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `cmdSource`  
+ *cmdSource*  
  Handle vers l’objet de source de commande.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque vous hébergez un contrôle utilisateur dans une vue de MFC, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) commandes d’itinéraires et mise à jour de commande des messages de l’interface utilisateur pour le contrôle utilisateur pour lui permettre de gérer les commandes MFC.  
   
- Cette méthode initialise l’objet cible de commande et l’associe à l’objet de source de commande spécifiée `cmdSource`. Elle doit être appelée dans l’implémentation de classe du contrôle utilisateur. Lors de l’initialisation, vous devez inscrire les gestionnaires de commandes avec l’objet de source de commande en appelant [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) dans le `Initialize` implémentation. Consultez [Comment : ajouter routage des commandes pour le contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `Initialize` pour ce faire.  
+ Cette méthode initialise l’objet cible de commande et l’associe à l’objet de source de commande spécifiée *cmdSource*. Elle doit être appelée dans l’implémentation de classe du contrôle utilisateur. Lors de l’initialisation, vous devez inscrire les gestionnaires de commandes avec l’objet de source de commande en appelant [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) dans le `Initialize` implémentation. Consultez [Comment : ajouter routage des commandes pour le contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `Initialize` pour ce faire.  
   
 ##  <a name="icommandui_interface"></a>  Interface de ICommandUI  
  Gère les commandes de l’interface utilisateur.  
@@ -395,7 +395,7 @@ void ContinueRouting();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) gestionnaire retourne `FALSE`. Pour plus d’informations, consultez la Note technique [TN006 : tables des messages](../../mfc/tn006-message-maps.md).  
+ Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) gestionnaire qui renvoie la valeur FALSE. Pour plus d’informations, consultez la Note technique [TN006 : tables des messages](../../mfc/tn006-message-maps.md).  
   
 ##  <a name="enabled"></a>  ICommandUI::Enabled  
  Active ou désactive l’élément d’interface utilisateur pour cette commande.  
@@ -405,7 +405,7 @@ property bool Enabled;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette propriété Active ou désactive l’élément d’interface utilisateur pour cette commande. Définissez `Enabled` à `TRUE` pour activer l’élément, `FALSE` pour la désactiver.  
+ Cette propriété Active ou désactive l’élément d’interface utilisateur pour cette commande. Définissez `Enabled` sur TRUE pour activer l’élément, FALSE pour la désactiver.  
   
 ##  <a name="id"></a>  ICommandUI::ID  
  Obtient l’ID de l’objet d’interface utilisateur représenté par le `ICommandUI` objet.  
@@ -435,7 +435,7 @@ property bool Radio;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée. Définissez `Radio` à `TRUE` pour activer l’élément ; sinon `FALSE`.  
+ Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée. Définissez `Radio` sur TRUE pour activer l’élément ; sinon, FALSE.  
   
 ##  <a name="text"></a>  ICommandUI::Text  
  Définit le texte de l’élément d’interface utilisateur pour cette commande.  
@@ -469,7 +469,7 @@ void OnActivateView(bool activate);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `activate`  
+ *Activer*  
  Indique si la vue est activée ou désactivée.  
   
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  

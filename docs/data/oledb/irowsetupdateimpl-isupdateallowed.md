@@ -1,7 +1,7 @@
 ---
 title: IRowsetUpdateImpl::IsUpdateAllowed | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d39c726e4131b17d1dbdd76418e6da7985e4404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 363626cedddea3da57e829a43c21c63b5c2b05cd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105346"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122002"
 ---
 # <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
 Substituez cette méthode pour contrôler la sécurité, l’intégrité, et ainsi de suite avant les mises à jour.  
@@ -32,9 +32,9 @@ Substituez cette méthode pour contrôler la sécurité, l’intégrité, et ain
 ## <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] *//* status */,  
-   HROW /* [in] *//* hRowUpdate */,  
-   DBROWSTATUS* /* [out] *//* pRowStatus */);  
+HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,  
+   HROW /* [in] */ /* hRowUpdate */,  
+   DBROWSTATUS* /* [out] */ /* pRowStatus */);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -50,7 +50,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] *//* status */,
 ## <a name="remarks"></a>Notes  
  Si vous déterminez qu’une mise à jour doit être autorisé, retourne `S_OK`; sinon, retourne **E_FAIL**. Si vous autorisez une mise à jour, vous devez également définir le **DBROWSTATUS** dans [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) aux [état de la ligne](https://msdn.microsoft.com/en-us/library/ms722752.aspx).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

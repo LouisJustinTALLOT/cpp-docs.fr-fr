@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374297"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122939"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
 Barre de contrôles avec une ligne de volets de sortie de texte ou « indicateurs ».  
@@ -110,7 +110,7 @@ class CStatusBar : public CControlBar
   
 1.  Appelez [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) pour mettre à jour le texte dans le volet 0.  
   
-2.  Appelez [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) dans la barre d’état `ON_UPDATE_COMMAND_UI` gestionnaire.  
+2.  Appelez [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) dans le gestionnaire ON_UPDATE_COMMAND_UI de la barre d’état.  
   
 3.  Appelez [SetPaneText](#setpanetext) pour mettre à jour le texte d’un volet.  
   
@@ -129,7 +129,7 @@ class CStatusBar : public CControlBar
   
  `CStatusBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="commandtoindex"></a>  CStatusBar::CommandToIndex  
@@ -140,7 +140,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIDFind`  
+ *nIDFind*  
  ID de chaîne de l’indicateur dont l’index doit être récupéré.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -160,19 +160,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet dont la fenêtre Windows est le parent de la barre d’état.  
   
- `dwStyle`  
+ *dwStyle*  
  Le style de la barre d’état. Outre les fenêtres standards [styles](../../mfc/reference/styles-used-by-mfc.md#window-styles), ces styles sont pris en charge.  
   
-- `CBRS_TOP` Barre de contrôle est en haut de la fenêtre frame.  
+- Barre de contrôle de CBRS_TOP est en haut de la fenêtre frame.  
   
-- `CBRS_BOTTOM` Barre de contrôle est en bas de la fenêtre frame.  
+- Barre de CBRS_BOTTOM contrôle figure au bas de la fenêtre frame.  
   
-- `CBRS_NOALIGN` Barre de contrôle n’est pas repositionné lorsque le parent est redimensionné.  
+- Barre de contrôle de CBRS_NOALIGN n’est pas repositionné lorsque le parent est redimensionné.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. de la barre d’outils  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -193,22 +193,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet dont la fenêtre Windows est le parent de la barre d’état.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Styles supplémentaires pour la création de l’élément incorporé [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objet. La valeur par défaut spécifie une barre d’état sans une poignée de dimensionnement ou l’info-bulle prend en charge. Styles de barre d’état pris en charge sont :  
   
-- **SBARS_SIZEGRIP** le contrôle de barre d’état inclut une poignée de dimensionnement à l’extrémité droite de la barre d’état. Une poignée de dimensionnement est similaire à une bordure de redimensionnement ; Il s’agit d’une zone rectangulaire que l’utilisateur peut cliquer et faites glisser pour redimensionner la fenêtre parente.  
+- SBARS_SIZEGRIP le contrôle de barre d’état inclut une poignée de dimensionnement à l’extrémité droite de la barre d’état. Une poignée de dimensionnement est similaire à une bordure de redimensionnement ; Il s’agit d’une zone rectangulaire que l’utilisateur peut cliquer et faites glisser pour redimensionner la fenêtre parente.  
   
-- **SBT_TOOLTIPS** la barre d’état prend en charge les info-bulles.  
+- SBT_TOOLTIPS la barre d’état prend en charge les info-bulles.  
   
  Pour plus d’informations sur ces styles, consultez [paramètres de l’objet CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
- `dwStyle`  
+ *dwStyle*  
  Le style de barre d’état. La valeur par défaut Spécifie qu’une barre d’état visible être créé en bas de la fenêtre frame. Appliquer n’importe quelle combinaison de styles de contrôle répertoriés dans la barre d’état [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Toutefois, ce paramètre doit toujours inclure les styles WS_CHILD et WS_VISIBLE.  
   
- `nID`  
+ *nID*  
  ID de la fenêtre la barre d’état enfant.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -217,7 +217,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Notes  
  Cette fonction définit la police initiale également et définit l’état de la hauteur de la barre à la valeur par défaut.  
   
- Utilisez `CreateEx`, au lieu de [créer](#create), lorsque certains styles doivent être présentes au cours de la création du contrôle de barre d’état incorporée. Par exemple, définissez `dwCtrlStyle` à **SBT_TOOLTIPS** pour afficher des info-bulles dans un objet de barre d’état.  
+ Utilisez `CreateEx`, au lieu de [créer](#create), lorsque certains styles doivent être présentes au cours de la création du contrôle de barre d’état incorporée. Par exemple, définissez *dwCtrlStyle* à SBT_TOOLTIPS pour afficher des info-bulles dans un objet de barre d’état.  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  Construit un `CStatusBar` objet, crée une police de barre d’état par défaut, si nécessaire et définit les caractéristiques de la police pour les valeurs par défaut.  
@@ -234,28 +234,28 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un pointeur vers un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure qui contient des informations sur le type de dessin nécessaire.  
   
 ### <a name="remarks"></a>Notes  
- Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CStatusBar` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
+ Le `itemAction` membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CStatusBar` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans *lpDrawItemStruct* avant l’arrêt de cette fonction membre.  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- Retourne l’ID de l’indicateur spécifié par `nIndex`.  
+ Retourne l’ID de l’indicateur spécifié par *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de l’indicateur dont l’ID doit être récupéré.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’ID de l’indicateur spécifié par `nIndex`.  
+ L’ID de l’indicateur spécifié par *nIndex*.  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- Copie les coordonnées de l’indicateur spécifié par `nIndex` dans la structure vers laquelle pointée `lpRect`.  
+ Copie les coordonnées de l’indicateur spécifié par *nIndex* dans la structure vers laquelle pointée *lpRect*.  
   
 ```  
 void GetItemRect(
@@ -264,17 +264,17 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de l’indicateur dont coordonnées du rectangle doivent être récupérés.  
   
- `lpRect`  
- Pointe vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées de l’indicateur spécifié par `nIndex`.  
+ *lpRect*  
+ Pointe vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées de l’indicateur spécifié par *nIndex*.  
   
 ### <a name="remarks"></a>Notes  
  Coordonnées sont exprimées en pixels par rapport au coin supérieur gauche de la barre d’état.  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- Jeux de `nID`, `nStyle`, et `cxWidth` à l’ID, le style et la largeur du volet d’indicateur à l’emplacement spécifié par `nIndex`.  
+ Jeux de *nID*, *nStyle*, et *cxWidth* à l’ID, le style et la largeur du volet d’indicateur à l’emplacement spécifié par *nIndex*.  
   
 ```  
 void GetPaneInfo(
@@ -285,16 +285,16 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index du volet dont les informations sont à récupérer.  
   
- `nID`  
- Référence à un **UINT** qui est définie sur l’ID du volet.  
+ *nID*  
+ Référence à un UINT est défini sur l’ID du volet.  
   
- `nStyle`  
- Référence à un **UINT** qui est défini sur le style du volet.  
+ *nStyle*  
+ Référence à un UINT est défini sur le style du volet.  
   
- `cxWidth`  
+ *cxWidth*  
  Référence à un entier qui est défini sur la largeur du volet.  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
@@ -305,11 +305,11 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index du volet dont le style doit être récupéré.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le style du volet de barre d’état spécifié par `nIndex`.  
+ Le style du volet de barre d’état spécifié par *nIndex*.  
   
 ### <a name="remarks"></a>Notes  
  Les style d’un volet détermine comment le volet s’affiche.  
@@ -324,10 +324,10 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index du volet dont le texte doit être récupéré.  
   
- `rString`  
+ *rString*  
  Une référence à un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet qui contient le texte doit être récupéré.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -352,7 +352,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  Pour plus d’informations sur les contrôles communs, consultez [contrôles communs](http://msdn.microsoft.com/library/windows/desktop/bb775493) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- Définit les ID de chaque indicateur à la valeur spécifiée par l’élément correspondant du tableau `lpIDArray`, charge la ressource de chaîne spécifiée par chaque ID et définit le texte de l’indicateur sur la chaîne.  
+ Définit les ID de chaque indicateur à la valeur spécifiée par l’élément correspondant du tableau *lpIDArray*, charge la ressource de chaîne spécifiée par chaque ID et définit le texte de l’indicateur sur la chaîne.  
   
 ```  
 BOOL SetIndicators(
@@ -361,11 +361,11 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpIDArray`  
+ *lpIDArray*  
  Pointeur vers un tableau d’ID.  
   
- `nIDCount`  
- Nombre d’éléments dans le tableau vers lequel pointe `lpIDArray`.  
+ *nIDCount*  
+ Nombre d’éléments dans le tableau vers lequel pointe *lpIDArray*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -382,30 +382,30 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index du volet indicateur dont le style doit être défini.  
   
- `nID`  
+ *nID*  
  Nouvel ID pour le volet de l’indicateur.  
   
- `nStyle`  
+ *nStyle*  
  Nouveau style pour le volet de l’indicateur.  
   
- `cxWidth`  
+ *cxWidth*  
  Nouvelle largeur du volet de l’indicateur.  
   
 ### <a name="remarks"></a>Notes  
  Les styles d’indicateur suivants sont pris en charge :  
   
-- **SBPS_NOBORDERS** aucune bordure 3D autour du volet.  
+- SBPS_NOBORDERS pas 3D de bordure autour du volet.  
   
-- **SBPS_POPOUT** inverse de la bordure afin que le texte « dépile. »  
+- SBPS_POPOUT inverse de la bordure afin que le texte « dépile. »  
   
-- **SBPS_DISABLED** pas dessiner du texte.  
+- SBPS_DISABLED faire pas dessiner du texte.  
   
-- **SBPS_STRETCH** volet Stretch pour remplir l’espace inutilisé. Un seul volet par la barre d’état peut avoir ce style.  
+- Volet SBPS_STRETCH Stretch pour remplir l’espace inutilisé. Un seul volet par la barre d’état peut avoir ce style.  
   
-- **SBPS_NORMAL** aucun stretch, les bordures ou contextuelle.  
+- Étirement de SBPS_NORMAL non, les bordures ou contextuelle.  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  Appelez cette fonction membre pour définir le style du volet d’une barre état.  
@@ -417,10 +417,10 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index du volet dont le style doit être défini.  
   
- `nStyle`  
+ *nStyle*  
  Style du volet dont le style doit être défini.  
   
 ### <a name="remarks"></a>Notes  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  Pour obtenir la liste des styles disponibles pour les barres d’état, consultez [SetPaneInfo](#setpaneinfo).  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- Appelez cette fonction membre pour définir le texte du volet de la chaîne pointée par `lpszNewText`.  
+ Appelez cette fonction membre pour définir le texte du volet de la chaîne pointée par *lpszNewText*.  
   
 ```  
 BOOL SetPaneText(
@@ -439,14 +439,14 @@ BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index du volet dont le texte doit être défini.  
   
- `lpszNewText`  
+ *lpszNewText*  
  Pointeur vers le nouveau texte du volet.  
   
  *bUpdate*  
- Si **TRUE**, le volet est invalidé après le texte est défini.  
+ Si la valeur est TRUE, le volet est invalidé après que le texte est défini.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  

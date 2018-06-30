@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375221"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121755"
 ---
 # <a name="ctabview-class"></a>Classe de CTabView
 Le `CTabView` classe simplifie l’utilisation de la classe du contrôle onglet ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) dans les applications qui utilisent l’architecture document/vue de MFC.  
@@ -80,7 +80,7 @@ class CTabbedView : public CView
   
  [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxTabView.h  
   
 ##  <a name="addview"></a>  CTabView::AddView  
@@ -95,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `pViewClass`  
+ [in] *pViewClass*  
  Pointeur vers une classe d’exécution de la vue insérée.  
   
- [in] `strViewLabel`  
+ [in] *strViewLabel*  
  Spécifie le texte de l’onglet.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Spécifie la position de base zéro au niveau duquel insérer la vue. Si la position est -1, le nouvel onglet est inséré à la fin.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Un pointeur vers le `CCreateContext` de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -121,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `hWndView`  
+ [in] *hWndView*  
  Le handle de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur valide vers la vue active, ou `NULL` s’il n’existe aucune vue active.  
+ Obtenir un pointeur valide vers la vue active, ou NULL s’il n’existe aucune vue active.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -160,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la vue de l’onglet doit être créée avec une barre de défilement partagé. Sinon, `FALSE`.  
+ TRUE si la vue de l’onglet doit être créée avec une barre de défilement partagé. Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure appelle cette méthode lorsqu’un `CTabView` objet est créé.  
+ L’infrastructure appelle cette méthode lorsqu’un *CTabView* objet est créé.  
   
- Remplacer la `IsScrollBar` méthode dans un `CTabView`-classe et retour dérivés `TRUE` si vous souhaitez créer une vue qui a une barre de défilement horizontale partagé.  
+ Remplacer la *IsScrollBar* méthode dans un *CTabView*-classe dérivée et renvoie la valeur TRUE si vous souhaitez créer une vue qui a une barre de défilement horizontale partagé.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Appelé par le framework lorsque la vue de l’onglet devient actif ou inactif.  
@@ -175,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `view`  
+ [in] *affichage*  
  Pointeur vers la vue.  
   
 ### <a name="remarks"></a>Notes  
@@ -189,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Index de la vue à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -205,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Index de base zéro de la vue de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la vue spécifiée devient active, `FALSE` si l’index de vue n’est pas valide.  
+ TRUE si la vue spécifiée devient active, FALSE si l’index de vue n’est pas valide.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

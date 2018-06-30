@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374689"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122965"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de bouton toupie (spin) Windows.  
@@ -105,7 +105,7 @@ class CSpinButtonCtrl : public CWnd
   
  `CSpinButtonCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="create"></a>  CSpinButtonCtrl::Create  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de bouton toupie (spin). S’applique à n’importe quelle combinaison de styles de contrôle de bouton toupie (spin) pour le contrôle. Ces styles sont décrites dans [Styles de contrôle Up-Down](http://msdn.microsoft.com/library/windows/desktop/bb759885) dans le Kit de développement logiciel Windows.  
   
- `rect`  
+ *Rect*  
  Spécifie la taille et la position du contrôle de bouton toupie (spin). Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure  
   
- `pParentWnd`  
- Un pointeur vers la fenêtre de parent du contrôle de bouton toupie (spin), généralement un `CDialog`. Il ne doit pas être **NULL.**  
+ *pParentWnd*  
+ Un pointeur vers la fenêtre de parent du contrôle de bouton toupie (spin), généralement un `CDialog`. Il ne doit pas être NULL.  
   
- `nID`  
+ *nID*  
  Spécifie l’ID. du contrôle de bouton toupie (spin)  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation a réussi ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CSpinButtonCtrl` tout d’abord l’objet en deux étapes, appelez le constructeur, puis appelez **créer**, ce qui crée le contrôle de bouton toupie (spin) et l’attache à le `CSpinButtonCtrl` objet.  
+ Vous construisez un `CSpinButtonCtrl` tout d’abord l’objet en deux étapes, appelez le constructeur, puis appelez `Create`, ce qui crée le contrôle de bouton toupie (spin) et l’attache à le `CSpinButtonCtrl` objet.  
   
- Pour créer un contrôle de bouton toupie (spin) avec les styles de fenêtre étendus, appelez [CSpinButtonCtrl::CreateEx](#createex) au lieu de **créer**.  
+ Pour créer un contrôle de bouton toupie (spin) avec les styles de fenêtre étendus, appelez [CSpinButtonCtrl::CreateEx](#createex) au lieu de `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Crée un contrôle (une fenêtre enfant) et l’associe le `CSpinButtonCtrl` objet.  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwExStyle`  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ *dwExStyle*  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Spécifie le style du contrôle de bouton toupie (spin). S’applique à n’importe quelle combinaison de styles de contrôle de bouton toupie (spin) pour le contrôle. Ces styles sont décrites dans [Styles de contrôle Up-Down](http://msdn.microsoft.com/library/windows/desktop/bb759885) dans le Kit de développement logiciel Windows.  
   
- `rect`  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de `pParentWnd`.  
+ *Rect*  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
   
- `nID`  
+ *nID*  
  ID de fenêtre enfant. du contrôle  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
+ Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles de Windows étendus, spécifiés par la préface de style étendu Windows WS_EX_.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Construit un objet `CSpinButtonCtrl`.  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nAccel`  
- Nombre d’éléments dans le tableau spécifié par `pAccel`.  
+ *nAccel*  
+ Nombre d’éléments dans le tableau spécifié par *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Pointeur vers un tableau de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures qui reçoit des informations de l’accélération.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Paramètres  
  *lpbError*  
- Un pointeur vers une valeur booléenne qui a la valeur zéro si la valeur est récupérée et différent de zéro si une erreur se produit. Si ce paramètre est défini sur **NULL**, les erreurs ne sont pas signalées.  
+ Un pointeur vers une valeur booléenne qui a la valeur zéro si la valeur est récupérée et différent de zéro si une erreur se produit. Si ce paramètre est défini avec la valeur NULL, les erreurs ne sont pas signalées.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La première version retourne la position actuelle de 16 bits dans le mot de poids faible. Le mot de poids fort est différent de zéro si une erreur s’est produite.  
@@ -255,7 +255,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *Inférieure*  
+ *inférieure*  
  Référence à un entier qui reçoit la limite inférieure pour le contrôle.  
   
  *supérieur*  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nAccel`  
- Nombre de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures spécifié par `pAccel`.  
+ *nAccel*  
+ Nombre de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures spécifié par *pAccel*.  
   
- `pAccel`  
- Pointeur vers un tableau de `UDACCEL` structures qui contiennent des informations de l’accélération. Les éléments doivent être triés dans l’ordre croissant selon la **nSec** membre.  
+ *pAccel*  
+ Pointeur vers un tableau de structures UDACCEL, qui contiennent des informations de l’accélération. Les éléments doivent être triés dans l’ordre croissant selon le `nSec` membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBase`  
+ *nBase*  
  Nouvelle valeur de base pour le contrôle. Il peut être de 10 pour les décimales ou 16 pour les nombres hexadécimaux.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pWndBuddy`  
+ *pWndBuddy*  
  Pointeur vers la nouvelle fenêtre associée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nPos`  
+ *nPos*  
  Nouvelle position du contrôle. Cette valeur doit être dans la plage spécifiée par les limites supérieures et inférieures pour le contrôle.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLower` et `nUpper`  
- Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à **UD_MAXVAL** ou inférieur à **UD_MINVAL**; en outre, la différence entre les deux limites ne peut pas dépasser **UD_MAXVAL**. `SetRange32` n’impose aucune restriction sur les limites ; utiliser des entiers.  
+ *nLower* et *nUpper*  
+ Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à UD_MAXVAL ou inférieur à UD_MINVAL ; en outre, la différence entre les deux limites ne peut pas dépasser UD_MAXVAL. `SetRange32` n’impose aucune restriction sur les limites ; utiliser des entiers.  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre `SetRange32` définit la plage de 32 bits pour le contrôle de bouton toupie (spin).  

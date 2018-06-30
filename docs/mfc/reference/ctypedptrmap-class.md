@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376393"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121862"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap (classe)
 Fournit un « wrapper » de type sécurisé pour les objets des classes de mappage de pointeur `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`et `CMapStringToPtr`.  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe de base de la classe map de pointeurs typés ; doit être une classe de mappage de pointeur ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, ou `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Classe de l’objet utilisé comme clé pour la carte.  
   
- `VALUE`  
+ *VALEUR*  
  Classe de l’objet stocké dans le mappage.  
   
 ## <a name="members"></a>Membres  
@@ -80,7 +80,7 @@ class CTypedPtrMap : public BASE_CLASS
   
  `CTypedPtrMap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtempl.h  
   
 ##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rPosition`  
- Spécifie une référence à un **POSITION** valeur retournée par une précédente `GetNextAssoc` ou `BASE_CLASS` **:: GetStartPosition** appeler.  
+ *rPosition*  
+ Spécifie une référence à une valeur POSITION renvoyée par une précédente `GetNextAssoc` ou `BASE_CLASS` **:: GetStartPosition** appeler.  
   
  *KEY*  
  Paramètre de modèle qui spécifie le type des clés de la carte.  
   
- `rKey`  
+ *rKey*  
  Spécifie la clé retournée de l’élément récupéré.  
   
  *VALEUR*  
  Paramètre de modèle qui spécifie le type des valeurs de la carte.  
   
- `rValue`  
+ *rValue*  
  Spécifie la valeur retournée de l’élément récupéré.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction est particulièrement utile pour l’itération au sein de tous les éléments dans le mappage. Notez que la séquence de position n’est pas nécessairement identique à la séquence de la valeur de clé.  
   
- Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de `rNextPosition` a la valeur **NULL**.  
+ Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de `rNextPosition` est définie sur NULL.  
   
  Cette fonction inline s’appelle `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.  
   
- `key`  
+ *key*  
  La clé de l’élément à rechercher.  
   
  *VALEUR*  
  Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.  
   
- `rValue`  
+ *rValue*  
  Spécifie la valeur retournée de l’élément récupéré.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *VALEUR*  
  Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.  
   
- `key`  
+ *key*  
  La clé de l’élément de recherche ou la création du mappage.  
   
 ### <a name="remarks"></a>Notes  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Paramètre de modèle qui spécifie le type des clés de la carte.  
   
- `key`  
+ *key*  
  Clé de l’élément à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Paramètre de modèle qui spécifie le type des clés de la carte.  
   
- `key`  
+ *key*  
  Spécifie la valeur de clé de la nouvelle valeur.  
   
- `newValue`  
+ *nouvelle valeur*  
  Spécifie le pointeur d’objet qui est la valeur du nouvel élément.  
   
 ### <a name="remarks"></a>Notes  

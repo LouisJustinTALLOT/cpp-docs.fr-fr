@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e82dce1d80ee241c8bffae99457c2e25555818
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370547"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121713"
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 Fournit les fonctionnalités génériques pour l'hébergement d'un contrôle Windows Forms en tant que vue MFC.  
@@ -67,7 +67,7 @@ class CWinFormsView : public CView;
 > [!NOTE]
 >  CWinFormsView ne prend pas en charge la fenêtre fractionnée MFC ( [CSplitterWnd classe](../../mfc/reference/csplitterwnd-class.md)). Actuellement uniquement la Splitter Windows Forms contrôle est pris en charge.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwinforms.h  
   
 ##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
@@ -78,7 +78,7 @@ CWinFormsView(System::Type^ pManagedViewType);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pManagedViewType`  
+ *pManagedViewType*  
  Pointeur vers le type de données du contrôle utilisateur Windows Forms.   
   
 ### <a name="example"></a>Exemple  

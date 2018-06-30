@@ -1,7 +1,7 @@
 ---
 title: Création d’une Application MFC de Style navigateur Web | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374521"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122551"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Création d'une application MFC de style navigateur Web
 Une application de style navigateur Web peut accéder aux informations à partir d’Internet (tels que HTML ou documents actifs) ou un intranet, ainsi que des dossiers du système de fichiers local et sur un réseau. En dérivant la classe d’affichage de l’application de [CHtmlView](../../mfc/reference/chtmlview-class.md)et vous rendre à l’application un navigateur Web en fournissant l’affichage avec le contrôle WebBrowser.  
@@ -50,30 +50,30 @@ Une application de style navigateur Web peut accéder aux informations à partir
   
  `CHtmlView` sert de wrapper pour le contrôle de navigateur Web, ce qui donne une vue sur un site Web ou une page HTML à votre application. L’Assistant crée une substitution de la [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) fonction dans la classe d’affichage, en fournissant un lien de navigation vers le site Web de Microsoft Visual C++ :  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+Vous pouvez remplacer ce site par celle de votre choix, ou vous pouvez utiliser la [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) fonction membre pour ouvrir une page HTML qui réside dans le script de ressources du projet en tant que le contenu par défaut pour la vue. Exemple :  
   
- Vous pouvez remplacer ce site par celle de votre choix, ou vous pouvez utiliser la [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) fonction membre pour ouvrir une page HTML qui réside dans le script de ressources du projet en tant que le contenu par défaut pour la vue. Par exemple :  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -82,5 +82,5 @@ void CWebView::OnInitialUpdate()
  [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)   
  [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
  [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)   
- [Déploiement d’Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Déploiement d’applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

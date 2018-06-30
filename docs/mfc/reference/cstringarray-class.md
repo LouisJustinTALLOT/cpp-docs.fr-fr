@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da29c1b3c62769157735bca556eedc7557a4268d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375504"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121810"
 ---
 # <a name="cstringarray-class"></a>Classe de CStringArray
 Prend en charge les tableaux de [CString](../../atl-mfc-shared/using-cstring.md) objets.  
@@ -120,7 +120,7 @@ class CStringArray : public CObject
 |[[] De CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
   
 ## <a name="remarks"></a>Notes  
- `CStringArray` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau d'objets `CString` est stocké dans une archive, soit avec un opérateur d'insertion surchargé, soit avec la fonction membre `Serialize`, chaque élément est sérialisé l'un après l'autre.  
+ `CStringArray` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau d'objets `CString` est stocké dans une archive, soit avec un opérateur d'insertion surchargé, soit avec la fonction membre `Serialize`, chaque élément est sérialisé l'un après l'autre.  
   
 > [!NOTE]
 >  Avant d'utiliser un tableau, utilisez `SetSize` pour définir sa taille et lui allouer la mémoire nécessaire. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  
@@ -136,7 +136,7 @@ class CStringArray : public CObject
   
  `CStringArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

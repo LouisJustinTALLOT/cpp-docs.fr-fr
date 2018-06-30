@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb7daba666e8aaf983eadc77417cad46180e7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff4596a52170d0c6d197a0bda431963b5f0e9344
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378267"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120932"
 ---
 # <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT (structure)
 La structure `DRAWITEMSTRUCT` fournit les informations que doit posséder la fenêtre propriétaire pour savoir comment dessiner un contrôle ou un élément de menu de type owner-drawn.  
@@ -43,65 +43,65 @@ typedef struct tagDRAWITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `CtlType`  
+ *CtlType*  
  Type du contrôle. Les valeurs pour les types de contrôle sont les suivantes :  
   
-- **ODT_BUTTON** : bouton de type owner-drawn.  
+- Bouton ODT_BUTTON Owner-drawn  
   
-- **ODT_COMBOBOX** : zone de liste modifiable de type owner-drawn.  
+- Zone de liste déroulante Owner-drawn ODT_COMBOBOX  
   
-- **ODT_COMBOBOX** : zone de liste de type owner-drawn.  
+- Zone de liste Owner-drawn odt_combobox  
   
-- **ODT_MENU** : menu de type owner-drawn.  
+- Menu ODT_MENU Owner-drawn  
   
-- **ODT_LISTVIEW** : contrôle de d’affichage de liste.  
+- Contrôle ListView ODT_LISTVIEW  
   
-- **ODT_STATIC** : contrôle statique de type owner-drawn.  
+- ODT_STATIC contrôle statique Owner-drawn  
   
-- **ODT_TAB** : contrôle Onglet.  
+- Contrôle onglet de ODT_TAB  
   
- `CtlID`  
+ *CtlID*  
  ID de contrôle pour une zone de liste modifiable, une zone de liste ou un bouton. Ce membre n’est pas utilisé pour un menu.  
   
- `itemID`  
- ID d’élément de menu pour un menu ou index de l’élément d’une zone de liste ou d’une zone de liste modifiable. Pour une zone de liste ou une zone de liste modifiable vide, ce membre est une valeur négative, ce qui permet à l’application de dessiner uniquement le rectangle de focus aux coordonnées spécifiées par le membre **rcItem** , même s’il n’y a aucun élément dans le contrôle. L’utilisateur peut donc voir si la zone de liste ou la zone de liste modifiable a le focus d’entrée. Le paramètre des bits dans le membre **itemAction** détermine si le rectangle doit être dessiné comme si la zone de liste ou la zone de liste modifiable avait le focus d’entrée.  
+ *ID d’élément*  
+ ID d’élément de menu pour un menu ou index de l’élément d’une zone de liste ou d’une zone de liste modifiable. Pour une zone de liste vide ou une zone de liste modifiable, ce membre est une valeur négative, ce qui permet à l’application dessiner uniquement le rectangle de focus aux coordonnées spécifiées par le `rcItem` membre même s’il y a aucun élément dans le contrôle. L’utilisateur peut donc voir si la zone de liste ou la zone de liste modifiable a le focus d’entrée. Le paramètre des bits dans le `itemAction` membre détermine si le rectangle doit être dessiné comme si la zone de liste ou zone de liste modifiable a le focus.  
   
- `itemAction`  
+ *ItemAction*  
  Définit l’action de dessin nécessaire. Ce sera un ou plusieurs des bits suivants :  
   
-- **ODA_DRAWENTIRE** : ce bit est défini quand le contrôle doit être dessiné entièrement.  
+- ODA_DRAWENTIRE ce bit est défini lors de l’ensemble du contrôle doit être dessiné.  
   
-- **ODA_FOCUS** : ce bit est défini quand le contrôle obtient ou perd le focus d’entrée. Le membre **itemState** doit être vérifié pour déterminer si le contrôle a le focus.  
+- ODA_FOCUS ce bit est défini lorsque le contrôle Obtient ou perd le focus d’entrée. Le `itemState` membre doit être vérifié pour déterminer si le contrôle a le focus.  
   
-- **ODA_SELECT** : ce bit n’est défini qu’à l’occasion du changement de l’état de sélection. Le membre **itemState** doit être vérifié pour déterminer le nouvel état de sélection.  
+- ODA_SELECT ce bit est défini lorsque seul l’état de sélection a été modifiée. Le `itemState` membre doit être vérifié pour déterminer le nouvel état de sélection.  
   
  *itemState*  
- Spécifie l’état visuel de l’élément à l’issue de l’action de dessin en cours. Autrement dit, si un élément de menu doit être estompé, l’indicateur d’état **ODS_GRAYED** est défini. Les indicateurs d’état sont les suivants :  
+ Spécifie l’état visuel de l’élément à l’issue de l’action de dessin en cours. Autrement dit, si un élément de menu doit être estompé, l’état indicateur ODS_GRAYED a la valeur. Les indicateurs d’état sont les suivants :  
   
-- **ODS_CHECKED** : ce bit est défini si l’élément de menu doit être vérifié. Ce bit est utilisé uniquement dans un menu.  
+- ODS_CHECKED ce bit est défini si l’élément de menu doit être vérifiée. Ce bit est utilisé uniquement dans un menu.  
   
-- **ODS_DISABLED** : ce bit est défini si l’élément doit être dessiné comme étant désactivé.  
+- ODS_DISABLED ce bit est défini si l’élément doit être dessiné comme étant désactivé.  
   
-- **ODS_FOCUS** : ce bit est défini si l’élément a le focus d’entrée.  
+- ODS_FOCUS ce bit est défini si l’élément a le focus d’entrée.  
   
-- **ODS_GRAYED** : ce bit est défini si l’élément doit être estompé. Ce bit est utilisé uniquement dans un menu.  
+- ODS_GRAYED ce bit est défini si l’élément doit être estompé. Ce bit est utilisé uniquement dans un menu.  
   
-- **ODS_SELECTED** : ce bit est défini si l’état de l’élément est sélectionné.  
+- ODS_SELECTED ce bit est défini si l’état de l’élément est sélectionné.  
   
-- **ODS_COMBOBOXEDIT** : le dessin est tracé dans le champ de sélection (contrôle d’édition) d’une zone de liste modifiable de type owner-drawn.  
+- ODS_COMBOBOXEDIT le dessin prend place dans le champ de sélection (contrôle d’édition) d’une zone de liste modifiable de type owner-drawn.  
   
-- **ODS_DEFAULT** l’élément est l’élément par défaut.  
+- ODS_DEFAULT l’élément est l’élément par défaut.  
   
- `hwndItem`  
- Spécifie le handle de fenêtre du contrôle pour les zones de liste modifiable, les zones de liste et les boutons. Spécifie le handle du menu (`HMENU`) qui contient l’élément pour les menus.  
+ *hwndItem*  
+ Spécifie le handle de fenêtre du contrôle pour les zones de liste modifiable, les zones de liste et les boutons. Spécifie le handle du menu (HMENU) qui contient l’élément pour les menus.  
   
- `hDC`  
+ *hDC*  
  Identifie un contexte de périphérique. Le contexte de périphérique doit être utilisé au moment d’effectuer des opérations de dessin sur le contrôle.  
   
  *rcItem*  
- Rectangle dans le contexte de périphérique spécifié par le membre `hDC` qui définit les limites du contrôle à dessiner. Windows détoure automatiquement tout ce que le propriétaire dessine dans le contexte de périphérique pour les zones de liste modifiable, les zones de liste et les boutons, mais il ne détoure pas les éléments de menu. Le propriétaire ne doit pas dessiner les éléments de menu en dehors des limites du rectangle défini par le membre **rcItem** .  
+ Un rectangle dans le contexte de périphérique spécifié par le *hDC* membre qui définit les limites du contrôle à dessiner. Windows détoure automatiquement tout ce que le propriétaire dessine dans le contexte de périphérique pour les zones de liste modifiable, les zones de liste et les boutons, mais il ne détoure pas les éléments de menu. Lors du dessin des éléments de menu, le propriétaire ne doit pas dessiner hors des limites du rectangle défini par le `rcItem` membre.  
   
- `itemData`  
+ *itemData*  
  Pour une zone de liste modifiable ou une zone de liste, ce membre contient la valeur qui été passée à la zone de liste par l’une des méthodes suivantes :  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -121,9 +121,9 @@ typedef struct tagDRAWITEMSTRUCT {
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
 ## <a name="remarks"></a>Notes  
- La fenêtre propriétaire du contrôle ou de l’élément de menu de type owner-drawn reçoit un pointeur vers cette structure en tant que paramètre `lParam` du message `WM_DRAWITEM` .  
+ La fenêtre propriétaire de l’élément de contrôle ou du menu owner-drawn reçoit un pointeur vers cette structure comme le *lParam* paramètre du message WM_DRAWITEM.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

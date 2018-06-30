@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322281"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122978"
 ---
 # <a name="dispatch-maps"></a>Tables de dispatch
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Utilisez le `DECLARE_DISPATCH_MAP` (macro) à la fin de votre déclaration de classe. Puis, dans le. Les fonctions de fichier CPP qui définit le membre de la classe, utilisez le `BEGIN_DISPATCH_MAP` (macro). Puis inclure les entrées de la macro pour chacun de votre classe d’exposée de méthodes et propriétés ( `DISP_FUNCTION`, `DISP_PROPERTY`, et ainsi de suite). Enfin, utilisez la `END_DISPATCH_MAP` (macro).
+Utilisez la macro DECLARE_DISPATCH_MAP à la fin de votre déclaration de classe. Puis, dans le. Fichier CPP qui définit les fonctions membres pour la classe, utilisez la macro BEGIN_DISPATCH_MAP. Ensuite inclure les entrées de la macro pour chacune des méthodes de votre classe et de propriétés (DISP_FUNCTION DISP_PROPERTY et ainsi de suite). Enfin, utilisez la macro END_DISPATCH_MAP.
 
 > [!NOTE]
-> Si vous déclarez des membres après `DECLARE_DISPATCH_MAP`, vous devez spécifier un nouveau type d’accès ( **public**, **privé**, ou **protégé**) pour eux.
+> Si vous déclarez des membres après DECLARE_DISPATCH_MAP, vous devez spécifier un nouveau type d’accès ( **public**, **privé**, ou **protégé**) pour eux.
 
 Les Assistants code et Assistant Application aident à créer des classes Automation et maintenance des tables de dispatch. Pour plus d’informations sur les tables de dispatch, consultez [serveurs Automation](../../mfc/automation-servers.md).
 
@@ -84,7 +84,7 @@ Spécifie le nom de la classe de base de *theClass*.
 
 ### <a name="remarks"></a>Notes
 
-Dans le fichier d’implémentation (.cpp) qui définit les fonctions membres pour votre classe, démarrez la table de dispatch avec la `BEGIN_DISPATCH_MAP` (macro), ajouter des entrées de la macro pour chacun de vos fonctions de distribution et les propriétés et terminer la table de dispatch avec la `END_DISPATCH_MAP` (macro).
+Dans le fichier d’implémentation (.cpp) qui définit les fonctions membres pour votre classe, Démarrer de la table de dispatch avec la macro BEGIN_DISPATCH_MAP, ajouter des entrées de la macro pour chacun de vos fonctions de distribution et les propriétés et terminer la table de dispatch avec la END_DISPATCH_ Macros de mappage.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Il doit être utilisé conjointement avec `BEGIN_DISPATCH_MAP`.
+Il doit être utilisé conjointement avec BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -138,23 +138,23 @@ Une liste séparée par des espaces d’une ou plusieurs des constantes en spéc
 
 ### <a name="remarks"></a>Notes
 
-Le *vtRetVal* argument est de type **VARTYPE**. Les valeurs possibles suivantes pour cet argument sont effectuées à partir de la `VARENUM` énumération :
+Le *vtRetVal* argument est de type VARTYPE. Les valeurs possibles suivantes pour cet argument sont effectuées à partir de la `VARENUM` énumération :
 
 |Symbole|Type de retour|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 Le *vtsParams* argument est une liste séparée par des espaces, des valeurs à partir de la `VTS_*` constantes. Un ou plusieurs de ces valeurs séparées par des espaces (non par des virgules) spécifie la liste des paramètres de la fonction. Par exemple :
 
@@ -166,31 +166,31 @@ Le `VTS_` constantes et leurs significations sont les suivants :
 
 |Symbole|type de paramètre|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` ou `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` ou `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__courte\*__|
-|`VTS_PI4`|__Long\*__|
-|`VTS_PR4`|__float\*__|
-|`VTS_PR8`|__double\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|Aucun paramètre|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` ou `CY*`|
+|VTS_DATE|DATE|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*` ou `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__courte\*__|
+|VTS_PI4|__Long\*__|
+|VTS_PR4|__float\*__|
+|VTS_PR8|__double\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|Aucun paramètre|
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -224,22 +224,22 @@ Valeur qui spécifie le type de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Le *vtPropType* argument est de type **VARTYPE**. Les valeurs possibles pour cet argument sont tirées de la `VARENUM` énumération :
+Le *vtPropType* argument est de type **VARTYPE**. Les valeurs possibles pour cet argument sont extraites à partir de l’énumération VARENUM :
 
 |Symbole|Type de propriété|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 Quand un client externe modifie la propriété, la valeur de la variable de membre spécifiée par *memberName* change ; il n’existe aucune notification de la modification.
 
@@ -281,7 +281,7 @@ Valeur qui spécifie le type de propriété.
 
 Le *memberGet* et *memberSet* fonctions ont des signatures déterminés par le *vtPropType* argument. Le *memberGet* fonction n’accepte aucun argument et retourne une valeur du type spécifié par *vtPropType*. Le *memberSet* fonction accepte un argument de type spécifié par *vtPropType* et ne retourne rien.
 
-Le *vtPropType* argument est de type `VARTYPE`. Les valeurs possibles pour cet argument sont tirées de la `VARENUM` énumération. Pour obtenir la liste de ces valeurs, consultez la section Notes pour le *vtRetVal* paramètre dans [DISP_FUNCTION](#disp_function). Notez que `VT_EMPTY`, mentionné dans le `DISP_FUNCTION` Remarques, n’est pas autorisée en tant que type de données de propriété.
+Le *vtPropType* argument est de type VARTYPE. Les valeurs possibles pour cet argument sont extraites de l’énumération VARENUM. Pour obtenir la liste de ces valeurs, consultez la section Notes pour le *vtRetVal* paramètre dans [DISP_FUNCTION](#disp_function). Notez que VT_EMPTY, répertoriés dans la section Notes DISP_FUNCTION, n’est pas autorisée en tant que type de données de propriété.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -319,24 +319,24 @@ Valeur qui spécifie le type de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Contrairement aux propriétés définies avec `DISP_PROPERTY`, une propriété définie avec `DISP_PROPERTY_NOTIFY` appelle automatiquement la fonction spécifiée par *pfnAfterSet* lorsque la propriété est modifiée.
+Contrairement aux propriétés définies avec DISP_PROPERTY, une propriété définie avec DISP_PROPERTY_NOTIFY appelle automatiquement la fonction spécifiée par *pfnAfterSet* lorsque la propriété est modifiée.
 
-Le *vtPropType* argument est de type `VARTYPE`. Les valeurs possibles pour cet argument sont tirées de la `VARENUM` énumération :
+Le *vtPropType* argument est de type VARTYPE. Les valeurs possibles pour cet argument sont extraites à partir de l’énumération VARENUM :
 
 |Symbole|Type de propriété|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -378,7 +378,7 @@ Une chaîne séparée par des espaces `VTS_*` variant les types de paramètres, 
 
 ### <a name="remarks"></a>Notes
 
-Contrairement à la `DISP_PROPERTY_EX` macro, cette macro vous permet de spécifier une liste de paramètres pour la propriété. Cela est utile pour implémenter des propriétés qui sont indexées ou paramétrées.
+Contrairement à DISP_PROPERTY_EX (macro), cette macro vous permet de spécifier une liste de paramètres pour la propriété. Cela est utile pour implémenter des propriétés qui sont indexées ou paramétrées.
 
 ### <a name="example"></a>Exemple
 
@@ -386,7 +386,7 @@ Prenons la déclaration suivante d’obtenir et définir des fonctions qui perme
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Ces éléments correspondent à ce qui suit `DISP_PROPERTY_PARAM` macro dans la table de dispatch de contrôle :
+Ces éléments correspondent à la macro DISP_PROPERTY_PARAM suivante dans la table de dispatch de contrôle :
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ Comme autre exemple, considérez la méthode get suivante et définir des foncti
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Ces éléments correspondent à ce qui suit `DISP_PROPERTY_PARAM` macro dans la table de dispatch de contrôle :
+Ces éléments correspondent à la macro DISP_PROPERTY_PARAM suivante dans la table de dispatch de contrôle :
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

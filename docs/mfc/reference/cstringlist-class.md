@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375146"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122713"
 ---
 # <a name="cstringlist-class"></a>Classe de CStringList
 Prend en charge des listes d'objets `CString` .  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Notes  
  Toutes les comparaisons sont effectuées par valeur, qui signifie que les caractères de la chaîne sont comparés à la place les adresses des chaînes.  
   
- `CStringList` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si une liste de `CString` objets est stocké dans une archive, avec un opérateur d’insertion surchargés ou avec le `Serialize` fonction membre, chaque `CString` élément est sérialisé à son tour.  
+ `CStringList` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Si une liste de `CString` objets est stocké dans une archive, avec un opérateur d’insertion surchargés ou avec le `Serialize` fonction membre, chaque `CString` élément est sérialisé à son tour.  
   
  Si vous avez besoin d’un vidage de personne `CString` éléments, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
@@ -139,7 +139,7 @@ class CStringList : public CObject
   
  `CStringList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  
