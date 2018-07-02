@@ -1,6 +1,6 @@
 ---
 title: Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ | Microsoft Docs
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253878"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322366"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Guide pratique pour signaler un problème avec la documentation ou l’ensemble d’outils Visual C++
 
@@ -358,7 +358,7 @@ Créez votre reproduction comme un projet IDE minimal, puis empaquetez-la en com
 Pour nous faire parvenir votre rapport, deux options s’offrent à vous. Vous pouvez utiliser les pages intégrées de Visual Studio [Outil Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) ou [Communauté de développeurs Visual Studio](https://developercommunity.visualstudio.com/). Vous pouvez également accéder directement aux pages de la communauté de développeurs en choisissant le bouton **Commentaires sur le produit** en bas de cette page. Votre choix dépend de ce que vous voulez faire : soit utiliser les outils intégrés à l’IDE pour capturer des écrans et organiser votre rapport en vue de sa publication sur les pages de la communauté des développeurs, soit utiliser le site web directement.
 
 > [!NOTE]
-> Quelle que soit la manière dont vous envoyez votre rapport, Microsoft respecte votre vie privée. Microsoft s’engage à respecter toutes les lois et réglementations relatives à la confidentialité des données. Pour plus d’informations sur la façon dont nous utilisons les données que vous nous envoyez, consultez la [Déclaration de confidentialité Microsoft](https://www.visualstudio.com/dn948229).
+> Quelle que soit la manière dont vous envoyez votre rapport, Microsoft respecte votre vie privée. Microsoft s’engage à respecter toutes les lois et réglementations relatives à la confidentialité des données. Pour plus d’informations sur la façon dont nous utilisons les données que vous nous envoyez, consultez la [Déclaration de confidentialité Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Utiliser l’outil Signaler un problème
 

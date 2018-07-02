@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705603"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271394"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -1585,7 +1585,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 
 - Ajoute le point-virgule pour les types de classe.
 - Effectue une saisie semi-automatique des parenthèses pour les littéraux de chaîne bruts.
-- Effectue une saisie semi-automatique des commentaires multilignes (/* */)
+- Effectue une saisie semi-automatique des commentaires multilignes (/\* \*/)
 
 **Rechercher toutes les références** résout maintenant automatiquement les références et les filtre en arrière-plan après avoir affiché la liste des correspondances textuelles.
 

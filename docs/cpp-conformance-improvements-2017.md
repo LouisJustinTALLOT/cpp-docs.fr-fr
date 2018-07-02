@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7c6a3c3384debb33a9192dc2e887725088bc3f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238589"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042327"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Améliorations de la conformité de C++ dans Visual Studio 2017 versions 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) et [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Améliorations de la conformité de C++ dans Visual Studio 2017 versions 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157)
 
 Avec la prise en charge des expressions constexpr généralisées et de NSDMI pour les agrégats, le compilateur Microsoft Visual C++ est désormais complet pour les fonctionnalités ajoutées à la norme C++14. Notez que le compilateur ne dispose pas encore de certaines fonctionnalités des normes C++11 et C++98. Consultez [Conformité du langage Visual C++](visual-cpp-language-conformance.md) pour obtenir un tableau affichant l’état actuel du compilateur.
 
@@ -339,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Changements apportés aux fonctions membres `std::traits_type` `length`, `compare` et `find` pour rendre `std::string_view` utilisable dans les expressions constantes. (Dans Visual Studio 2017 version 15.6, prise en charge pour Clang/LLVM uniquement. Dans la version 15.7 Preview 2, la prise en charge est presque complète pour ClXX.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Correctifs de bogues dans Visual Studio versions 15.0, [15.3](#update_153), [15.5](#update_155) et [15.7](#update_157)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Correctifs de bogues dans Visual Studio versions 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157) et [15.8](#update_158)
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -1621,6 +1621,211 @@ int main() {
     return 0;
 }
 
+```
+
+## <a name="update_158"></a> Correctifs de bogues et changements de comportement dans Visual Studio 2017 version 15.8
+
+### <a name="typename-on-unqualified-identifiers"></a>typename sur les identificateurs non qualifiés
+
+Dans le mode [/permissive-](build/reference/permissive-standards-conformance.md), les mots clés `typename` parasites sur les identificateurs non qualifiés dans les définitions de modèle d’alias ne sont plus acceptés par le compilateur. Le code suivant génère désormais l’erreur C7511 *'T' : le mot clé 'typename' doit être suivi d’un nom qualifié* :
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+Pour corriger cette erreur, remplacez simplement la deuxième ligne par `using  X = T;`.
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>__declspec() dans la partie droite des définitions de modèle d’alias
+
+[__declspec](cpp/declspec.md) n’est plus autorisé dans la partie droite d’une définition de modèle d’alias. Même si cette décision a déjà été acceptée par le compilateur, elle a été complètement ignorée. Aucun avertissement de dépréciation n’était donc généré quand l’alias était utilisé.
+
+Vous pouvez utiliser l’attribut C++ standard [\[\[deprecated\]\]](cpp/attributes.md) à la place. Celui-ci sera pris en compte à compter de Visual Studio 2017 version 15.6. Le code suivant génère désormais l’erreur C2760 *erreur de syntaxe : jeton inattendu '__declspec', attendu 'type specifier'* :
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+Pour corriger cette erreur, remplacez le code par ce qui suit (attribut placé avant le signe '=' de la définition d’alias) :
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>Diagnostics de la recherche de nom en deux phases
+
+La recherche de nom en deux phases nécessite que les noms non dépendants utilisés dans les corps de modèle soient visibles par le modèle au moment de la définition. Avant, le compilateur Microsoft C++ ne procédait pas à la recherche d’un nom introuvable avant les phases d’instanciation. Il exige désormais que les noms non dépendants soient liés dans le corps du modèle.
+
+Cela peut notamment se manifester par une recherche dans les classes de base dépendantes. Le compilateur autorisait précédemment l’utilisation de noms définis dans des classes de base dépendantes, car ils faisaient l’objet d’une recherche au moment de l’instanciation (une fois tous les types résolus). Ce code est désormais traité comme une erreur. Dans ces cas, vous pouvez forcer la recherche de la variable au moment de l’instanciation en la qualifiant avec le type de classe de base ou en la rendant dépendante, par exemple en ajoutant un pointeur `this->`.
+
+Dans le mode **/permissive-**, le code suivant génère désormais l’erreur C3861 *'base_value' : identificateur introuvable* :
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+Pour corriger cette erreur, remplacez l’instruction `return` par `return this->base_value;`.
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>définitions et déclarations anticipées dans l’espace de noms std
+
+La norme C++ ne permet pas à un utilisateur d’ajouter des définitions ou des déclarations anticipées dans l’espace de noms `std`. L’ajout de définitions ou de déclarations à l’espace de noms `std` ou à un espace de noms dans l’espace de noms std donne désormais lieu à un comportement non défini.
+
+Il est prévu que Microsoft affecte la définition de certains types STL à un autre emplacement. Ce changement entraînera l’arrêt de tout code existant qui ajoute des déclarations anticipées à l’espace de noms `std`. Un nouvel avertissement, C4643, vous aide à identifier de tels problèmes liés la source. Cet avertissement est activé dans le mode **/default** (il est désactivé par défaut). Il impacte les programmes compilés avec **/Wall** ou **/WX**. 
+
+Le code suivant génère désormais l’erreur C4643 *La déclaration anticipée de 'vector' dans l’espace de noms std n’est pas autorisée par la norme C++*. 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+Pour corriger cette erreur, utilisez une directive **include** plutôt qu’une déclaration anticipée :
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>Constructeurs déléguant à eux-mêmes
+
+La norme C++ suggère qu’un compilateur doit émettre un diagnostic quand un constructeur de délégation délègue à lui-même. Le compilateur Microsoft C++ dans les modes [/std:c++17](build/reference/std-specify-language-standard-version.md) et [/std:c++latest](build/reference/std-specify-language-standard-version.md) génère désormais l’erreur C7535 : *'X::X': le constructeur de délégation s'appelle lui-même*.
+
+Sans cette erreur, la compilation du programme suivant aboutit, mais une boucle infinie est générée :
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+Pour éviter la boucle infinie, déléguez à un autre constructeur :
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>offsetof avec des expressions constantes
+
+[offsetof](c-runtime-library/reference/offsetof-macro.md) est habituellement implémenté à l’aide d’une macro qui nécessite un [reinterpret_cast](cpp/reinterpret-cast-operator.md). Même si cette approche n’est pas conforme dans les contextes nécessitant une expression constante, le compilateur Microsoft C++ l’a toujours autorisée. La macro offsetof fournie dans le cadre de la bibliothèque STL utilise correctement une fonction intrinsèque du compilateur (**__builtin_offsetof**), mais de nombreuses personnes utilisent l’astuce de la macro pour définir leur propre **offsetof**.  
+
+Dans Visual Studio 2017 version 15.8, le compilateur contraint les zones dans lesquelles ces reinterpret_casts peuvent apparaître dans le mode par défaut pour améliorer la conformité du code au comportement C++ standard. Sous [/permissive-](build/reference/permissive-standards-conformance.md), les contraintes sont encore plus strictes. L’utilisation du résultat d’un offsetof dans les emplacements qui nécessitent des expressions constantes peut générer du code qui émet l’avertissement C4644 (*utilisation non standard du modèle offsetof de type macro dans les expressions constantes ; utilisez plutôt l’offsetof défini dans la bibliothèque standard C++*) ou C2975 (*argument template non valide, expression constante évaluée au moment de la compilation attendue*).
+
+Le code suivant génère l’erreur C4644 dans les modes **/default** et **/std:c++17**, et l’erreur C2975 dans le mode **/permissive-** : 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+Pour corriger cette erreur, utilisez **offsetof** tel que défini par le biais de \<cstddef> :
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>qualificateurs cv sur les classes de base soumises à une expansion de pack
+
+Les versions précédentes du compilateur Microsoft C++ ne détectaient pas la présence de qualificateurs cv dans une classe de base si celle-ci était également soumise à une expansion de pack. 
+
+Dans Visual Studio 2017 version 15.8, dans le mode **/permissive-**, le code suivant génère l’erreur C3770 *'const S' : n’est pas une classe de base valide* : 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>mot clé template et spécificateurs de noms imbriqués
+
+Dans le mode **/permissive-**, le compilateur exige désormais que le mot clé `template` précède un nom de modèle quand celui-ci se situe après un spécificateur de nom imbriqué dépendant. 
+
+Le code suivant dans le mode **/permissive-** génère désormais l’erreur C7510 *'foo' : un nom de modèle dépendant doit être précédé de 'template'. Remarque : voir la référence à l’instanciation du modèle de classe 'X<T>' en cours de compilation* :
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+Pour corriger cette erreur, ajoutez le mot clé `template` à l’instruction `Base<T>::foo<int>();`, comme illustré dans l’exemple suivant :
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
 ```
 
 ## <a name="see-also"></a>Voir aussi
