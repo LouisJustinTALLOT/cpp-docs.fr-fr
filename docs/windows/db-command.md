@@ -145,7 +145,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="example"></a>Exemple  
  Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par un Assistant, telles que [OpenAll et CloseAll](../data/oledb/consumer-wizard-generated-methods.md), ainsi que des fonctions membres `CRowset` telles que [MoveNext](../data/oledb/crowset-movenext.md).  
   
- Notez que ce code vous oblige à fournir votre propre chaîne de connexion qui se connecte à la base de données pubs. Pour plus d’informations sur la façon de procéder dans l’environnement de développement, consultez [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) et [How to: Add New Data Connections in Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
+ Notez que ce code vous oblige à fournir votre propre chaîne de connexion qui se connecte à la base de données pubs. Pour plus d’informations sur la façon de procéder dans l’environnement de développement, consultez [Comment : se connecter à une base de données à partir de l’Explorateur de serveurs](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) et [Comment : ajouter de nouvelles connexions de données dans l’Explorateur de serveurs/base de données de l’Explorateur de](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
   
 ```  
 // db_command.h  
