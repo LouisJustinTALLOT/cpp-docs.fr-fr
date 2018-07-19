@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCPropertyGridFileProperty | Documents Microsoft
+title: Cmfcpropertygridfileproperty, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038911"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851598"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>Classe de CMFCPropertyGridFileProperty
-La `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de fichier.  
+# <a name="cmfcpropertygridfileproperty-class"></a>Cmfcpropertygridfileproperty, classe
+Le `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de fichier.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,22 +82,22 @@ CMFCPropertyGridFileProperty(
  Nom de la propriété.  
   
  [in] *bOpenFileDialog*  
- `TRUE` Pour ouvrir un **ouvrir un fichier** boîte de dialogue. `FALSE` pour ouvrir un **enregistrer le fichier** boîte de dialogue.  
+ True pour ouvrir un **ouvrir un fichier** boîte de dialogue ; FALSE pour ouvrir un **enregistrer le fichier** boîte de dialogue.  
   
  [in] *strFileName*  
  Nom de fichier initial.  
   
  [in] *lpszDefExt*  
- Chaîne d’une ou plusieurs extensions de nom de fichier. La valeur par défaut est `NULL`.  
+ Chaîne d’une ou plusieurs extensions de nom de fichier. La valeur par défaut est NULL.  
   
  [in] *dwFlags*  
- Indicateurs de boîte de dialogue. La valeur par défaut est une combinaison (OR) au niveau du bit de `OFN_HIDEREADONLY` et `OFN_OVERWRITEPROMPT`.  
+ Indicateurs de boîte de dialogue. La valeur par défaut est une combinaison (OR) au niveau du bit de OFN_HIDEREADONLY et OFN_OVERWRITEPROMPT.  
   
  [in] *lpszFilter*  
- Chaîne d'un ou plusieurs filtres de fichiers. La valeur par défaut est `NULL`.  
+ Chaîne d'un ou plusieurs filtres de fichiers. La valeur par défaut est NULL.  
   
  [in] *lpszDescr*  
- Description d'élément de propriété. La valeur par défaut est `NULL`.  
+ Description d'élément de propriété. La valeur par défaut est NULL.  
   
  [in] *dwData*  
  Données propres à l'application associées à l'élément de propriété. Par exemple, un entier 32 bits ou un pointeur vers d'autres données. La valeur par défaut est 0.  

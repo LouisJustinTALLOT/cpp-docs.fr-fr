@@ -1,5 +1,5 @@
 ---
-title: Classe de CPagerCtrl | Documents Microsoft
+title: CPagerCtrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,14 +58,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 56b00604f57c67ba2555f667e41501451d06fed4
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079642"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853821"
 ---
-# <a name="cpagerctrl-class"></a>Classe de CPagerCtrl
+# <a name="cpagerctrl-class"></a>CPagerCtrl, classe
 La classe `CPagerCtrl` inclut dans un wrapper le contrôle pager Windows, qui peut afficher une fenêtre contenue qui ne tient pas dans la fenêtre conteneur.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -86,31 +86,31 @@ class CPagerCtrl : public CWnd
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|Crée un contrôle pager avec des styles spécifiés et l’attache à actuel `CPagerCtrl` objet.|  
-|[CPagerCtrl::CreateEx](#createex)|Crée un contrôle pager avec les styles étendus spécifiés et l’attache à actuel `CPagerCtrl` objet.|  
+|[CPagerCtrl::Create](#create)|Crée un contrôle de pagineur avec des styles spécifiés et l’attache à actuel `CPagerCtrl` objet.|  
+|[CPagerCtrl::CreateEx](#createex)|Crée un contrôle de pagineur avec des styles étendus spécifiés et l’attache à actuel `CPagerCtrl` objet.|  
 |[CPagerCtrl::ForwardMouse](#forwardmouse)|Active ou désactive le transfert [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages dans la fenêtre qui est contenue dans le contrôle pager actuel.|  
-|[CPagerCtrl::GetBkColor](#getbkcolor)|Récupère la couleur d’arrière-plan du contrôle pager actuel.|  
-|[CPagerCtrl::GetBorder](#getborder)|Récupère la taille de bordure du contrôle pager actuel.|  
-|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Récupère la taille des boutons du contrôle pager actuel.|  
+|[CPagerCtrl::GetBkColor](#getbkcolor)|Récupère la couleur d’arrière-plan du contrôle de pagineur actuel.|  
+|[CPagerCtrl::GetBorder](#getborder)|Récupère la taille de bordure du contrôle de pagineur actuel.|  
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Récupère la taille des boutons du contrôle de pagineur actuel.|  
 |[CPagerCtrl::GetButtonState](#getbuttonstate)|Récupère l’état du bouton spécifié dans le contrôle pager actuel.|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|Récupère le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface pour le contrôle pager actuel.|  
-|[CPagerCtrl::GetScrollPos](#getscrollpos)|Récupère la position de défilement du contrôle pager actuel.|  
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indique si le bouton spécifié du contrôle pager actuel est en `pressed` état.|  
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indique si le bouton spécifié du contrôle pager actuel est en `grayed` état.|  
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Indique si le bouton spécifié du contrôle pager actuel est en `hot` état.|  
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Indique si le bouton spécifié du contrôle pager actuel est en `invisible` état.|  
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Indique si le bouton spécifié du contrôle pager actuel est en `normal` état.|  
-|[CPagerCtrl::RecalcSize](#recalcsize)|Force le contrôle pager actuel recalculer la taille de la fenêtre contenue.|  
-|[CPagerCtrl::SetBkColor](#setbkcolor)|Définit la couleur d’arrière-plan du contrôle pager actuel.|  
-|[CPagerCtrl::SetBorder](#setborder)|Définit la taille de bordure du contrôle pager actuel.|  
-|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Définit la taille des boutons du contrôle pager actuel.|  
-|[CPagerCtrl::SetChild](#setchild)|Définit la fenêtre de relation contenant-contenue pour le contrôle pager actuel.|  
-|[CPagerCtrl::SetScrollPos](#setscrollpos)|Définit la position de défilement du contrôle pager actuel.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Récupère le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface pour le contrôle de pagineur actuel.|  
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Récupère la position de défilement du contrôle de pagineur actuel.|  
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indique si le bouton spécifié du contrôle de pagineur actuel est dans `pressed` état.|  
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indique si le bouton spécifié du contrôle de pagineur actuel est dans `grayed` état.|  
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Indique si le bouton spécifié du contrôle de pagineur actuel est dans `hot` état.|  
+|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Indique si le bouton spécifié du contrôle de pagineur actuel est dans `invisible` état.|  
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Indique si le bouton spécifié du contrôle de pagineur actuel est dans `normal` état.|  
+|[CPagerCtrl::RecalcSize](#recalcsize)|Force le contrôle de pagineur actuel à recalculer la taille de la fenêtre de relation contenant-contenue.|  
+|[CPagerCtrl::SetBkColor](#setbkcolor)|Définit la couleur d’arrière-plan du contrôle de pagineur actuel.|  
+|[CPagerCtrl::SetBorder](#setborder)|Définit la taille de bordure du contrôle de pagineur actuel.|  
+|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Définit la taille des boutons du contrôle de pagineur actuel.|  
+|[CPagerCtrl::SetChild](#setchild)|Définit la fenêtre de relation contenant-contenue pour le contrôle de pagineur actuel.|  
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Définit la position de défilement du contrôle de pagineur actuel.|  
   
 ## <a name="remarks"></a>Notes  
- Un contrôle pager est une fenêtre qui contient une autre fenêtre linéaire et est supérieure à la fenêtre conteneur, et vous permet de faire défiler la fenêtre contenue dans la vue. Le contrôle pager affiche deux boutons de défilement disparaissent automatiquement lorsque vous faites défiler la fenêtre contenue dans sa mesure plus éloignée et réapparaître dans le cas contraire. Vous pouvez créer un contrôle pager qui défile horizontalement ou verticalement.  
+ Un contrôle de pagineur est une fenêtre qui contient une autre fenêtre qui est linéaire et supérieure à la fenêtre conteneur et vous permet de faire défiler la fenêtre de relation contenant-contenue dans la vue. Le contrôle de pagineur affiche deux boutons de défilement qui disparaissent automatiquement lorsque vous faites défiler la fenêtre de relation contenant-contenue à son étendue plus éloignée et réapparaître dans le cas contraire. Vous pouvez créer un contrôle de pagineur qui fait défiler horizontalement ou verticalement.  
   
- Par exemple, si votre application comporte une barre d’outils n’est pas assez large pour afficher tous ses éléments, vous pouvez affecter la barre d’outils à un contrôle pager et vous pourrez faire défiler la barre d’outils vers la gauche ou la droite pour accéder à tous les éléments. Microsoft Internet Explorer Version 4.0 (version commctrl.dll 4.71) introduit le contrôle pager.  
+ Par exemple, si votre application comporte une barre d’outils n’est pas assez large pour afficher tous ses éléments, vous pouvez affecter la barre d’outils à un contrôle de pagineur et les utilisateurs pourront faire défiler la barre d’outils à gauche ou droite pour accéder à tous les éléments. Microsoft Internet Explorer Version 4.0 (version commctrl.dll 4.71) présente le contrôle de pagineur.  
   
  Le `CPagerCtrl` classe est dérivée de la [CWnd](../../mfc/reference/cwnd-class.md) classe. Pour plus d’informations et obtenir une illustration d’un contrôle de pagineur, consultez [contrôles Pager](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
@@ -134,10 +134,10 @@ CPagerCtrl();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Utilisez le [CPagerCtrl::Create](#create) ou [CPagerCtrl::CreateEx](#createex) méthode pour créer un contrôle pager et l’attacher à la `CPagerCtrl` objet.  
+ Utilisez le [CPagerCtrl::Create](#create) ou [CPagerCtrl::CreateEx](#createex) méthode pour créer un contrôle de pagineur et l’attacher à la `CPagerCtrl` objet.  
   
 ##  <a name="create"></a>  CPagerCtrl::Create  
- Crée un contrôle pager avec des styles spécifiés et l’attache à actuel `CPagerCtrl` objet.  
+ Crée un contrôle de pagineur avec des styles spécifiés et l’attache à actuel `CPagerCtrl` objet.  
   
 ```  
 virtual BOOL Create(
@@ -151,24 +151,24 @@ virtual BOOL Create(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Combinaison de bits de (OR) [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) à appliquer au contrôle.|  
-|[in] *rect*|Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle en coordonnées clientes.|  
-|[in] *pParentWnd*|Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parente du contrôle. Ce paramètre ne peut pas être `NULL`.|  
+|[in] *dwStyle*|Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859) à appliquer au contrôle.|  
+|[in] *rect*|Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|  
+|[in] *pParentWnd*|Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|  
 |[in] *nID*|L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Pour créer un contrôle pager, déclarez un `CPagerCtrl` variable, puis appelez le [CPagerCtrl::Create](#create) ou [CPagerCtrl::CreateEx](#createex) méthode sur cette variable.  
+ Pour créer un contrôle de pagineur, déclarez un `CPagerCtrl` variable, puis appelez le [CPagerCtrl::Create](#create) ou [CPagerCtrl::CreateEx](#createex) méthode sur cette variable.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant crée un contrôle pager, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode permet d’associer un contrôle bouton très longue avec le contrôle pager. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) pour définir la hauteur du contrôle pager 20 pixels et le [CPagerCtrl::SetBorder](#setborder) pour définir l’épaisseur de bordure de 1 pixel.  
+ L’exemple suivant crée un contrôle de pagineur, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode pour associer un contrôle de bouton très longue avec le contrôle de pagineur. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) méthode pour définir la hauteur du contrôle de pagineur à 20 pixels et le [CPagerCtrl::SetBorder](#setborder) méthode pour définir l’épaisseur de bordure de 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CPagerCtrl::CreateEx  
- Crée un contrôle pager avec les styles étendus spécifiés et l’attache à actuel `CPagerCtrl` objet.  
+ Crée un contrôle de pagineur avec des styles étendus spécifiés et l’attache à actuel `CPagerCtrl` objet.  
   
 ```  
 virtual BOOL CreateEx(
@@ -183,17 +183,17 @@ virtual BOOL CreateEx(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Combinaison de bits de styles étendus à appliquer au contrôle. Pour plus d’informations, consultez la *dwExStyle* paramètre de la [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) (fonction).|  
-|[in] *dwStyle*|Combinaison de bits de (OR) [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) à appliquer au contrôle.|  
-|[in] *rect*|Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle en coordonnées clientes.|  
-|[in] *pParentWnd*|Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parente du contrôle. Ce paramètre ne peut pas être `NULL`.|  
+|[in] *dwExStyle*|Une combinaison au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) (fonction).|  
+|[in] *dwStyle*|Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859) à appliquer au contrôle.|  
+|[in] *rect*|Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|  
+|[in] *pParentWnd*|Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|  
 |[in] *nID*|L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Pour créer un contrôle pager, déclarez un `CPagerCtrl` variable, puis appelez le [CPagerCtrl::Create](#create) ou [CPagerCtrl::CreateEx](#createex) méthode sur cette variable.  
+ Pour créer un contrôle de pagineur, déclarez un `CPagerCtrl` variable, puis appelez le [CPagerCtrl::Create](#create) ou [CPagerCtrl::CreateEx](#createex) méthode sur cette variable.  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
  Active ou désactive le transfert [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages dans la fenêtre qui est contenue dans le contrôle pager actuel.  
@@ -206,13 +206,13 @@ void ForwardMouse(BOOL bForward);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *bForward*|`true` pour transférer les messages de la souris, ou `false` pour ne pas transférer les messages de la souris.|  
+|[in] *bForward*|True pour les messages de la souris vers l’avant, ou FALSE pour ne pas transférer les messages de la souris.|  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
- Récupère la taille de bordure du contrôle pager actuel.  
+ Récupère la taille de bordure du contrôle de pagineur actuel.  
   
 ```  
 int GetBorder() const;  
@@ -222,33 +222,33 @@ int GetBorder() const;
  La taille actuelle de la bordure, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant utilise le [CPagerCtrl::GetBorder](#getborder) méthode pour récupérer l’épaisseur de bordure du contrôle de la radiomessagerie.  
+ L’exemple suivant utilise le [CPagerCtrl::GetBorder](#getborder) méthode pour récupérer l’épaisseur de bordure du contrôle de pagineur.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
 ##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
- Récupère la couleur d’arrière-plan du contrôle pager actuel.  
+ Récupère la couleur d’arrière-plan du contrôle de pagineur actuel.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient la couleur d’arrière-plan actuelle du contrôle pager.  
+ Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient la couleur d’arrière-plan actuelle du contrôle de pagineur.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant utilise le [CPagerCtrl::SetBkColor](#setbkcolor) pour définir la couleur d’arrière-plan du contrôle pager en rouge et la [CPagerCtrl::GetBkColor](#getbkcolor) méthode pour vérifier que la modification a été apportée.  
+ L’exemple suivant utilise le [CPagerCtrl::SetBkColor](#setbkcolor) méthode pour définir la couleur d’arrière-plan du contrôle de pagineur en rouge et la [CPagerCtrl::GetBkColor](#getbkcolor) méthode pour vérifier que la modification a été apportée.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
- Récupère la taille des boutons du contrôle pager actuel.  
+ Récupère la taille des boutons du contrôle de pagineur actuel.  
   
 ```  
 int GetButtonSize() const;  
@@ -258,9 +258,9 @@ int GetButtonSize() const;
  La taille actuelle du bouton, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) message, qui est décrite dans le SDK Windows.  
   
- Si le contrôle pager a la `PGS_HORZ` style, la taille du bouton détermine la largeur des boutons du pagineur, et si le contrôle pager a la `PGS_VERT` style, la taille du bouton détermine la hauteur des boutons du pagineur. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Si le contrôle de pagineur a le style PGS_HORZ, la taille du bouton détermine la largeur des boutons du pagineur et si le contrôle de pagineur a le style PGS_VERT, la taille du bouton détermine la hauteur des boutons du pagineur. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  Récupère l’état du bouton de défilement spécifiée dans le contrôle pager actuel.  
@@ -273,31 +273,31 @@ DWORD GetButtonState(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style du contrôle pager est `PGS_HORZ`, spécifiez `PGB_TOPORLEFT` pour le bouton gauche et `PGB_BOTTOMORRIGHT` pour le bouton droit. Si le style du contrôle pager est `PGS_VERT`, spécifiez `PGB_TOPORLEFT` pour le bouton du haut et `PGB_BOTTOMORRIGHT` pour le bouton bas. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’état du bouton spécifié par le *iButton* paramètre. L’état est `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, ou `PGF_HOT`. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
+ L’état du bouton spécifié par le *iButton* paramètre. L’état est PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED ou PGF_HOT. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
- Récupère le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface pour le contrôle pager actuel.  
+ Récupère le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface pour le contrôle de pagineur actuel.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `IDropTarget` interface pour le contrôle pager actuel.  
+ Un pointeur vers le `IDropTarget` interface pour le contrôle de pagineur actuel.  
   
 ### <a name="remarks"></a>Notes  
- `IDropTarget` est une des interfaces que vous implémentez pour prendre en charge les opérations de glisser-déplacer dans votre application.  
+ `IDropTarget` est une des interfaces vous implémenter pour prendre en charge les opérations de glisser-déplacer dans votre application.  
   
- Cette méthode envoie le [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) message, ce qui est décrit dans le Kit de développement logiciel Windows. L’appelant de cette méthode est chargée d’appeler le `Release` membre de la [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface lorsque l’interface n’est plus nécessaire.  
+ Cette méthode envoie le [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) message, qui est décrite dans le SDK Windows. L’appelant de cette méthode est chargée d’appeler le `Release` membre de la [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface lors de l’interface n’est plus nécessaire.  
   
 ##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
- Récupère la position de défilement du contrôle pager actuel.  
+ Récupère la position de défilement du contrôle de pagineur actuel.  
   
 ```  
 int GetScrollPos() const;  
@@ -307,15 +307,15 @@ int GetScrollPos() const;
  La position de défilement actuelle, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant utilise le [CPagerCtrl::GetScrollPos](#getscrollpos) pour récupérer la position de défilement actuelle du contrôle pager. Si le contrôle pager n’est pas atteint à zéro, la position à l’extrême gauche, l’exemple utilise le [CPagerCtrl::SetScrollPos](#setscrollpos) pour définir la position de défilement à zéro.  
+ L’exemple suivant utilise le [CPagerCtrl::GetScrollPos](#getscrollpos) méthode pour récupérer la position de défilement actuelle du contrôle de pagineur. Si le contrôle pager ne défile pas déjà à zéro, la position à l’extrême gauche, l’exemple utilise le [CPagerCtrl::SetScrollPos](#setscrollpos) méthode pour définir la position de défilement à zéro.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
 ##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
- Indique si le bouton de défilement spécifiée du contrôle pager actuel est dans l’état enfoncé.  
+ Indique si le bouton de défilement spécifié du contrôle de pagineur actuel est dans un état appuyé.  
   
 ```  
 BOOL IsButtonDepressed(int iButton) const;  
@@ -325,16 +325,16 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style du contrôle pager est `PGS_HORZ`, spécifiez `PGB_TOPORLEFT` pour le bouton gauche et `PGB_BOTTOMORRIGHT` pour le bouton droit. Si le style du contrôle pager est `PGS_VERT`, spécifiez `PGB_TOPORLEFT` pour le bouton du haut et `PGB_BOTTOMORRIGHT` pour le bouton bas. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si le bouton spécifié est dans l’état enfoncé ; dans le cas contraire, `false`.  
+ TRUE si le bouton spécifié est dans l’état enfoncé ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, ce qui est décrit dans le Kit de développement logiciel Windows. Il vérifie ensuite si l’état renvoyé est `PGF_DEPRESSED`. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
+ Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, qui est décrite dans le SDK Windows. Il vérifie ensuite si l’état renvoyé est PGF_DEPRESSED. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
- Indique si le bouton de défilement spécifiée du contrôle pager actuel est en état grisé.  
+ Indique si le bouton de défilement spécifié du contrôle de pagineur actuel est dans un état grisé.  
   
 ```  
 BOOL IsButtonGrayed(int iButton) const;  
@@ -344,16 +344,16 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style du contrôle pager est `PGS_HORZ`, spécifiez `PGB_TOPORLEFT` pour le bouton gauche et `PGB_BOTTOMORRIGHT` pour le bouton droit. Si le style du contrôle pager est `PGS_VERT`, spécifiez `PGB_TOPORLEFT` pour le bouton du haut et `PGB_BOTTOMORRIGHT` pour le bouton bas. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si le bouton spécifié est dans un état grisé ; dans le cas contraire, `false`.  
+ TRUE si le bouton spécifié est dans un état grisé ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, ce qui est décrit dans le Kit de développement logiciel Windows. Il vérifie ensuite si l’état renvoyé est `PGF_GRAYED`. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
+ Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, qui est décrite dans le SDK Windows. Il vérifie ensuite si l’état renvoyé est PGF_GRAYED. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
- Indique si le bouton de défilement spécifiée du contrôle pager actuel est dans un état actif.  
+ Indique si le bouton de défilement spécifié du contrôle de pagineur actuel est dans un état actif.  
   
 ```  
 BOOL IsButtonHot(int iButton) const;  
@@ -363,16 +363,16 @@ BOOL IsButtonHot(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style du contrôle pager est `PGS_HORZ`, spécifiez `PGB_TOPORLEFT` pour le bouton gauche et `PGB_BOTTOMORRIGHT` pour le bouton droit. Si le style du contrôle pager est `PGS_VERT`, spécifiez `PGB_TOPORLEFT` pour le bouton du haut et `PGB_BOTTOMORRIGHT` pour le bouton bas. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si le bouton spécifié est dans un état actif ; dans le cas contraire, `false`.  
+ TRUE si le bouton spécifié est dans un état actif ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, ce qui est décrit dans le Kit de développement logiciel Windows. Il vérifie ensuite si l’état renvoyé est `PGF_HOT`. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
+ Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, qui est décrite dans le SDK Windows. Il vérifie ensuite si l’état renvoyé est PGF_HOT. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
- Indique si le bouton de défilement spécifiée du contrôle pager actuel est en état invisible.  
+ Indique si le bouton de défilement spécifié du contrôle de pagineur actuel est dans un état invisible.  
   
 ```  
 BOOL IsButtonInvisible(int iButton) const;  
@@ -382,15 +382,15 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style du contrôle pager est `PGS_HORZ`, spécifiez `PGB_TOPORLEFT` pour le bouton gauche et `PGB_BOTTOMORRIGHT` pour le bouton droit. Si le style du contrôle pager est `PGS_VERT`, spécifiez `PGB_TOPORLEFT` pour le bouton du haut et `PGB_BOTTOMORRIGHT` pour le bouton bas. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si le bouton spécifié est dans un état invisible ; dans le cas contraire, `false`.  
+ TRUE si le bouton spécifié est dans un état invisible ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Windows rend le bouton de défilement dans une direction particulière invisible lorsque le défilement de la fenêtre contenue dans sa plus éloignée mesure, car en cliquant sur le bouton supplémentaire ne peut pas afficher de plus de la fenêtre contenue dans la vue.  
+ Windows rend le bouton de défilement dans une direction particulière invisible lorsque la fenêtre de relation contenant-contenue défile à son étendue plus éloigné, car en cliquant sur le bouton supplémentaire ne peut pas afficher de plus de la fenêtre contenue dans la vue.  
   
- Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, ce qui est décrit dans le Kit de développement logiciel Windows. Il vérifie ensuite si l’état renvoyé est `PGF_INVISIBLE`. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
+ Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, qui est décrite dans le SDK Windows. Il vérifie ensuite si l’état renvoyé est PGF_INVISIBLE. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant utilise le [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) méthode pour déterminer si le contrôle pager left et boutons de défilement vers la droite sont visibles.  
@@ -398,7 +398,7 @@ BOOL IsButtonInvisible(int iButton) const;
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
 ##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
- Indique si le bouton de défilement spécifiée du contrôle pager actuel est dans un état normal.  
+ Indique si le bouton de défilement spécifié du contrôle de pagineur actuel est dans un état normal.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
@@ -408,23 +408,23 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style du contrôle pager est `PGS_HORZ`, spécifiez `PGB_TOPORLEFT` pour le bouton gauche et `PGB_BOTTOMORRIGHT` pour le bouton droit. Si le style du contrôle pager est `PGS_VERT`, spécifiez `PGB_TOPORLEFT` pour le bouton du haut et `PGB_BOTTOMORRIGHT` pour le bouton bas. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true` Si le bouton spécifié se trouve dans un état normal ; dans le cas contraire, `false`.  
+ TRUE si le bouton spécifié est dans un état normal ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, ce qui est décrit dans le Kit de développement logiciel Windows. Il vérifie ensuite si l’état renvoyé est `PGF_NORMAL`. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
+ Cette méthode envoie le [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, qui est décrite dans le SDK Windows. Il vérifie ensuite si l’état renvoyé est PGF_NORMAL. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
- Force le contrôle pager actuel recalculer la taille de la fenêtre contenue.  
+ Force le contrôle de pagineur actuel à recalculer la taille de la fenêtre de relation contenant-contenue.  
   
 ```  
 void RecalcSize();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) message, ce qui est décrit dans le Kit de développement logiciel Windows. Par conséquent, le contrôle pager envoie le [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification pour obtenir les dimensions déroulantes de la fenêtre contenue.  
+ Cette méthode envoie le [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) message, qui est décrite dans le SDK Windows. Par conséquent, le contrôle pager envoie le [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification pour obtenir les dimensions déroulantes de la fenêtre de relation contenant-contenue.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant utilise le [CPagerCtrl::RecalcSize](#recalcsize) méthode pour demander le contrôle pager actuel à recalculer sa taille.  
@@ -432,12 +432,12 @@ void RecalcSize();
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant utilise [réflexion de message](../../mfc/tn062-message-reflection-for-windows-controls.md) pour activer le contrôle pager recalculer sa taille au lieu de demander la boîte de dialogue du contrôle parent pour effectuer le calcul. Dérive de l’exemple le `MyPagerCtrl` classe à partir de la [CPagerCtrl classe](../../mfc/reference/cpagerctrl-class.md), puis utilise une table des messages pour associer le [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification avec le `OnCalcsize` Gestionnaire de notification. Dans cet exemple, le Gestionnaire de notification définit la largeur et la hauteur du contrôle par radiomessagerie à des valeurs fixes.  
+ L’exemple suivant utilise [réflexion de message](../../mfc/tn062-message-reflection-for-windows-controls.md) pour activer le contrôle de pagineur à recalculer sa propre taille au lieu de demander la boîte de dialogue du contrôle parent pour effectuer le calcul. L’exemple dérive le `MyPagerCtrl` classe à partir de la [CPagerCtrl, classe](../../mfc/reference/cpagerctrl-class.md), utilise ensuite une table des messages à associer le [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification avec le `OnCalcsize` Gestionnaire de notification. Dans cet exemple, le Gestionnaire de notification définit la largeur et la hauteur du contrôle de pagineur à des valeurs fixes.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
 ##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
- Définit la couleur d’arrière-plan du contrôle pager actuel.  
+ Définit la couleur d’arrière-plan du contrôle de pagineur actuel.  
   
 ```  
 COLORREF SetBkColor(COLORREF clrBk);
@@ -447,21 +447,21 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient la nouvelle couleur d’arrière-plan du contrôle pager.|  
+|[in] *clrBk*|Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient la nouvelle couleur d’arrière-plan du contrôle de pagineur.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient la couleur d’arrière-plan précédente du contrôle pager.  
+ Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient la couleur précédente de l’arrière-plan du contrôle de pagineur.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant utilise le [CPagerCtrl::SetBkColor](#setbkcolor) pour définir la couleur d’arrière-plan du contrôle pager en rouge et la [CPagerCtrl::GetBkColor](#getbkcolor) méthode pour vérifier que la modification a été apportée.  
+ L’exemple suivant utilise le [CPagerCtrl::SetBkColor](#setbkcolor) méthode pour définir la couleur d’arrière-plan du contrôle de pagineur en rouge et la [CPagerCtrl::GetBkColor](#getbkcolor) méthode pour vérifier que la modification a été apportée.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
- Définit la taille de bordure du contrôle pager actuel.  
+ Définit la taille de bordure du contrôle de pagineur actuel.  
   
 ```  
 int SetBorder(int iBorder);
@@ -471,21 +471,21 @@ int SetBorder(int iBorder);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iBorder*|La nouvelle taille de bordure en pixels. Si le *iBorder* paramètre est négatif, la taille de la bordure est définie sur zéro.|  
+|[in] *iBorder*|La nouvelle taille de bordure, en pixels. Si le *iBorder* paramètre est négatif, la taille de la bordure est définie à zéro.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- La taille de bordure précédente, en pixels.  
+ La taille précédente de la bordure, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant crée un contrôle pager, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode permet d’associer un contrôle bouton très longue avec le contrôle pager. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) pour définir la hauteur du contrôle pager 20 pixels et le [CPagerCtrl::SetBorder](#setborder) pour définir l’épaisseur de bordure de 1 pixel.  
+ L’exemple suivant crée un contrôle de pagineur, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode pour associer un contrôle de bouton très longue avec le contrôle de pagineur. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) méthode pour définir la hauteur du contrôle de pagineur à 20 pixels et le [CPagerCtrl::SetBorder](#setborder) méthode pour définir l’épaisseur de bordure de 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
- Définit la taille des boutons du contrôle pager actuel.  
+ Définit la taille des boutons du contrôle de pagineur actuel.  
   
 ```  
 int SetButtonSize(int iButtonSize);
@@ -495,23 +495,23 @@ int SetButtonSize(int iButtonSize);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButtonSize*|La taille du bouton Nouveau, en pixels.|  
+|[in] *iButtonSize*|La nouvelle taille du bouton, en pixels.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille du bouton précédent, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, qui est décrite dans le SDK Windows.  
   
- Si le contrôle pager a la `PGS_HORZ` style, la taille du bouton détermine la largeur des boutons du pagineur, et si le contrôle pager a la `PGS_VERT` style, la taille du bouton détermine la hauteur des boutons du pagineur. La taille du bouton par défaut est trois quarts de la largeur de la barre de défilement, et la taille de bouton minimale est de 12 pixels. Pour plus d’informations, consultez [Styles de contrôle Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Si le contrôle de pagineur a le style PGS_HORZ, la taille du bouton détermine la largeur des boutons du pagineur et si le contrôle de pagineur a le style PGS_VERT, la taille du bouton détermine la hauteur des boutons du pagineur. La taille du bouton par défaut est trois quarts de la largeur de la barre de défilement, et la taille de bouton minimale est de 12 pixels. Pour plus d’informations, consultez [Styles de contrôle de pagineur](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant crée un contrôle pager, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode permet d’associer un contrôle bouton très longue avec le contrôle pager. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) pour définir la hauteur du contrôle pager 20 pixels et le [CPagerCtrl::SetBorder](#setborder) pour définir l’épaisseur de bordure de 1 pixel.  
+ L’exemple suivant crée un contrôle de pagineur, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode pour associer un contrôle de bouton très longue avec le contrôle de pagineur. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) méthode pour définir la hauteur du contrôle de pagineur à 20 pixels et le [CPagerCtrl::SetBorder](#setborder) méthode pour définir l’épaisseur de bordure de 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setchild"></a>  CPagerCtrl::SetChild  
- Définit la fenêtre de relation contenant-contenue pour le contrôle pager actuel.  
+ Définit la fenêtre de relation contenant-contenue pour le contrôle de pagineur actuel.  
   
 ```  
 void SetChild(HWND hwndChild);
@@ -521,20 +521,20 @@ void SetChild(HWND hwndChild);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hwndChild*|Handle vers la fenêtre doit être contenu.|  
+|[in] *hwndChild*|Handle de la fenêtre doit être contenu.|  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) message, qui est décrite dans le SDK Windows.  
   
- Cette méthode ne modifie pas le parent de la fenêtre de relation contenant-contenu. Il affecte uniquement un handle de fenêtre pour le contrôle pager pour le défilement. Dans la plupart des cas, la fenêtre de contenu est une fenêtre enfant du contrôle pager.  
+ Cette méthode ne modifie pas le parent de la fenêtre de relation contenant-contenu. Il affecte uniquement un handle de fenêtre pour le contrôle de pagineur pour le défilement. Dans la plupart des cas, la fenêtre de relation contenant-contenue sera une fenêtre enfant du contrôle de pagineur.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant crée un contrôle pager, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode permet d’associer un contrôle bouton très longue avec le contrôle pager. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) pour définir la hauteur du contrôle pager 20 pixels et le [CPagerCtrl::SetBorder](#setborder) pour définir l’épaisseur de bordure de 1 pixel.  
+ L’exemple suivant crée un contrôle de pagineur, puis utilise le [CPagerCtrl::SetChild](#setchild) méthode pour associer un contrôle de bouton très longue avec le contrôle de pagineur. L’exemple utilise ensuite la [CPagerCtrl::SetButtonSize](#setbuttonsize) méthode pour définir la hauteur du contrôle de pagineur à 20 pixels et le [CPagerCtrl::SetBorder](#setborder) méthode pour définir l’épaisseur de bordure de 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
- Définit la position de défilement du contrôle pager actuel.  
+ Définit la position de défilement du contrôle de pagineur actuel.  
   
 ```  
 void SetScrollPos(int iPos);
@@ -547,12 +547,12 @@ void SetScrollPos(int iPos);
 |[in] *iPos*|La nouvelle position de défilement, en pixels.|  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
+ Cette méthode envoie le [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, qui est décrite dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)   
+ [CPagerCtrl, classe](../../mfc/reference/cpagerctrl-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Contrôles de récepteur de radiomessagerie](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+ [Contrôles de pagination](http://msdn.microsoft.com/library/windows/desktop/bb760855)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de COleDialog | Documents Microsoft
+title: COleDialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368658"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853619"
 ---
-# <a name="coledialog-class"></a>Classe de COleDialog
+# <a name="coledialog-class"></a>COleDialog, classe
 Fournit les fonctionnalités communes aux boîtes de dialogue pour OLE.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -63,7 +63,7 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,11 +78,11 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- Appelez le `GetLastError` fonction membre pour obtenir des informations d’erreur supplémentaires lorsque `DoModal` retourne **IDABORT**.  
+ Appelez le `GetLastError` fonction membre pour obtenir des informations d’erreur supplémentaires lorsque `DoModal` retourne IDABORT.  
   
 ```  
 UINT GetLastError() const;  
@@ -95,7 +95,7 @@ UINT GetLastError() const;
  Consultez le `DoModal` fonction membre dans les classes dérivées pour plus d’informations sur les messages d’erreur spécifiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
+ [Ccommondialog, classe](../../mfc/reference/ccommondialog-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
 
 

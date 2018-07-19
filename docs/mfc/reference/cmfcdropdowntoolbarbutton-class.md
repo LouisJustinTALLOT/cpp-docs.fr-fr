@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCDropDownToolbarButton | Documents Microsoft
+title: Cmfcdropdowntoolbarbutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c894ff57bbbee59842f56dbfef0ec06a6c7899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 42ea64180a9f7abf37f379e3e8feccc4ee41fd44
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041693"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850194"
 ---
-# <a name="cmfcdropdowntoolbarbutton-class"></a>Classe de CMFCDropDownToolbarButton
-Type de bouton de barre d'outils qui se comporte comme un bouton normal lorsque l'utilisateur clique dessus. Toutefois, il ouvre une barre d’outils déroulante ( [CMFCDropDownToolBar classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) si l’utilisateur appuie et appuie sur le bouton de barre d’outils.  
+# <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton, classe
+Type de bouton de barre d'outils qui se comporte comme un bouton normal lorsque l'utilisateur clique dessus. Toutefois, il ouvre une barre d’outils déroulante ( [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) si l’utilisateur appuie sur et maintient le bouton de barre d’outils.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,21 +81,21 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copie les propriétés d’un autre bouton de barre d’outils sur le bouton en cours. (Substitue [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copie les propriétés d’un autre bouton de barre d’outils pour le bouton en cours. (Substitue [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
 |`CMFCDropDownToolbarButton::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
 |[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Ouvre une barre d’outils de la liste déroulante.|  
-|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copie le texte à partir du bouton de barre d’outils à un menu. (Substitue [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
-|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Récupère la barre d’outils de liste déroulante qui est associé au bouton.|  
+|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copie le texte à partir du bouton de barre d’outils dans un menu. (Substitue [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
+|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Récupère la barre d’outils de liste déroulante qui est associée au bouton.|  
 |`CMFCDropDownToolbarButton::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Détermine si la barre d’outils de la liste déroulante est actuellement ouverte.|  
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Détermine si le bouton peut être affiché avec une bordure étendue. (Substitue [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Appelé par l’infrastructure pour calculer la taille du bouton pour le contexte de périphérique spécifié et l’état d’ancrage. (Substitue [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |`CMFCDropDownToolbarButton::OnCancelMode`|Appelé par l’infrastructure pour gérer la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message. (Substitue `CMCToolBarButton::OnCancelMode`.)|  
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Appelé par le framework lorsque le bouton est inséré dans une barre d’outils. (Substitue [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Appelé par le framework lorsque le bouton est inséré dans une nouvelle barre d’outils. (Substitue [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|Appelé par le framework lorsque l’utilisateur clique sur le bouton de la souris. (Substitue [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Appelé par le framework lorsque l’utilisateur relâche le bouton de la souris. (Substitue [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Appelé par l’infrastructure lors de la barre d’outils parent gère un `WM_HELPHITTEST` message. (Substitue [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
-|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modifie le menu fourni lors de l’application affiche un menu contextuel dans la barre d’outils parente. (Substitue [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
+|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Appelé par l’infrastructure lorsque l’utilisateur relâche le bouton de la souris. (Substitue [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
+|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Appelé par l’infrastructure lors de la barre d’outils parent gère un message WM_HELPHITTEST. (Substitue [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
+|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modifie le menu fourni lorsque l’application affiche un menu contextuel dans la barre d’outils parent. (Substitue [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
 |[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Appelé par l’infrastructure pour dessiner le bouton en utilisant les options et les styles spécifiés. (Substitue [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
 |[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Appelé par l’infrastructure pour dessiner le bouton dans le **commandes** volet de la **personnaliser** boîte de dialogue. (Substitue [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCDropDownToolbarButton::Serialize](#serialize)|Lit de cet objet à partir d’une archive ou écrit dans une archive. (Substitue [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
@@ -108,11 +108,11 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Spécifie la durée pendant laquelle un utilisateur doit maintenez le bouton de la souris avant que la barre d’outils de la liste déroulante s’affiche.|  
   
 ## <a name="remarks"></a>Notes  
- A `CMFCDropDownToolBarButton` diffère d’un bouton ordinaire car il a une petite flèche dans le coin inférieur droit du bouton. Une fois que l’utilisateur sélectionne un bouton dans la barre d’outils de la liste déroulante, l’infrastructure affiche son icône sur le bouton de barre d’outils de niveau supérieur (le bouton avec la flèche située dans le coin inférieur droit).  
+ Un `CMFCDropDownToolBarButton` diffère d’un bouton ordinaire doté d’une petite flèche située dans le coin inférieur droit du bouton. Une fois que l’utilisateur sélectionne un bouton à partir de la barre d’outils de la liste déroulante, l’infrastructure affiche son icône sur le bouton de barre d’outils de niveau supérieur (le bouton avec la flèche située dans le coin inférieur droit).  
   
- Pour plus d’informations sur la façon d’implémenter une barre d’outils de la liste déroulante, consultez [CMFCDropDownToolBar classe](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
+ Pour plus d’informations sur la façon d’implémenter une barre d’outils de la liste déroulante, consultez [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
- Le `CMFCDropDownToolBarButton` objet peut être exporté vers un [CMFCToolBarMenuButton classe](../../mfc/reference/cmfctoolbarmenubutton-class.md) de l’objet et affiché sous la forme d’un bouton de menu avec un menu contextuel.  
+ Le `CMFCDropDownToolBarButton` objet peut être exporté vers un [cmfctoolbarmenubutton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md) de l’objet et affiché sous la forme d’un bouton de menu avec un menu contextuel.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,7 +125,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
  **En-tête :** afxdropdowntoolbar.h  
   
 ##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
- Copie les propriétés d’un autre bouton de barre d’outils sur le bouton en cours.  
+ Copie les propriétés d’un autre bouton de barre d’outils pour le bouton en cours.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -133,10 +133,10 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *src*  
- Une référence au bouton source à partir duquel copier.  
+ Une référence au bouton de la source à partir duquel copier.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour copier un autre bouton de barre d’outils pour ce bouton de barre d’outils. *src* doit être de type `CMFCDropDownToolbarButton`.  
+ Appelez cette méthode pour copier un autre bouton de barre d’outils sur ce bouton de barre d’outils. *src* doit être de type `CMFCDropDownToolbarButton`.  
   
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  Construit un objet `CMFCDropDownToolbarButton`.  
@@ -152,7 +152,7 @@ CMFCDropDownToolbarButton(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *le caractère*  
- Texte du bouton par défaut.  
+ Le texte par défaut du bouton.  
   
  [in] *pToolBar*  
  Un pointeur vers le `CMFCDropDownToolBar` objet s’affiche lorsque l’utilisateur appuie sur le bouton.  
@@ -160,7 +160,7 @@ CMFCDropDownToolbarButton(
 ### <a name="remarks"></a>Notes  
  La deuxième surcharge du constructeur de copie sur le bouton de liste déroulante le premier bouton à partir de la barre d’outils qui *pToolBar* spécifie.  
   
- En règle générale, un bouton de barre d’outils de la liste déroulante utilise le texte à partir du bouton des derniers fichiers utilisé dans la barre d’outils qui *pToolBar* spécifie. Elle utilise le texte spécifié par *le caractère* lorsque le bouton est converti en un bouton de menu ou s’affiche dans le **commandes** onglet de la **personnaliser** boîte de dialogue. Pour plus d’informations sur la **personnaliser** boîte de dialogue, consultez [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ En règle générale, un bouton de barre d’outils déroulante utilise le texte à partir du bouton des derniers fichiers utilisé dans la barre d’outils qui *pToolBar* spécifie. Elle utilise le texte spécifié par *le caractère* lorsque le bouton est converti en un bouton de menu ou s’affiche dans le **commandes** onglet de la **personnaliser** boîte de dialogue. Pour plus d’informations sur la **personnaliser** boîte de dialogue, consultez [cmfctoolbarscustomizedialog, classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment construire un objet de la `CMFCDropDownToolbarButton` classe. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).  
@@ -176,20 +176,20 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWnd*  
- La fenêtre parente de l’image de la liste déroulante, ou `NULL` à utiliser la fenêtre parente du bouton de barre d’outils de la liste déroulante.  
+ La fenêtre parente du cadre de la liste déroulante, ou NULL pour utiliser la fenêtre parent du bouton de barre d’outils de la liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la méthode a réussi ; Sinon, 0.  
+ Différent de zéro si la méthode réussit ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Le [CMFCDropDownToolbarButton::OnClick](#onclick) appelle cette méthode pour ouvrir la barre d’outils de la liste déroulante lorsque l’utilisateur appuie sur et appuie sur le bouton de barre d’outils.  
+ Le [CMFCDropDownToolbarButton::OnClick](#onclick) méthode appelle cette méthode pour ouvrir la barre d’outils de la liste déroulante lorsque l’utilisateur appuie sur et maintient le bouton de barre d’outils.  
   
- Cette méthode crée la barre d’outils de la liste déroulante à l’aide de la [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) (méthode). Si la barre d’outils parent est ancré verticalement, cette méthode positionne la barre d’outils de la liste déroulante soit vers le côté gauche ou droit de la barre d’outils parent, en fonction de l’ajustement. Sinon, cette méthode positionne la barre d’outils de la liste déroulante située sous la barre d’outils parent.  
+ Cette méthode crée la barre d’outils de la liste déroulante à l’aide de la [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) (méthode). Si la barre d’outils parent est ancré verticalement, cette méthode positionne la barre d’outils déroulante soit sur le côté gauche ou droit de la barre d’outils parent, en fonction de l’ajuster. Sinon, cette méthode positionne la barre d’outils de liste déroulante en dessous de la barre d’outils parent.  
   
- Cette méthode échoue si *pWnd* est `NULL` et le bouton de barre d’outils de la liste déroulante n’est pas une fenêtre parente.  
+ Cette méthode échoue si *pWnd* a la valeur NULL et le bouton de barre d’outils de la liste déroulante n’a pas d’une fenêtre parente.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
- Copie le texte à partir du bouton de barre d’outils à un menu.  
+ Copie le texte à partir du bouton de barre d’outils dans un menu.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
@@ -203,19 +203,19 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
  Différent de zéro si la méthode réussit ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode appelle l’implémentation de classe de base ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)), puis les ajoute au bouton de menu cible un menu contextuel qui contient chaque élément de menu de barre d’outils de ce bouton. Cette méthode n’ajoute pas les sous-menus dans le menu contextuel.  
+ Cette méthode appelle l’implémentation de classe de base ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)), puis les ajoute au bouton de menu cible un menu contextuel qui contient chaque élément de menu de barre d’outils de ce bouton. Cette méthode n’ajoute pas les sous-menus au menu contextuel.  
   
- Cette méthode échoue si la barre d’outils parent, `m_pToolBar`, est `NULL` ou l’implémentation de classe de base retourne `FALSE`.  
+ Cette méthode échoue si la barre d’outils parent, `m_pToolBar`, a la valeur NULL ou que l’implémentation de classe de base retourne FALSE.  
   
 ##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
- Récupère la barre d’outils de liste déroulante qui est associé au bouton.  
+ Récupère la barre d’outils de liste déroulante qui est associée au bouton.  
   
 ```  
 CMFCToolBar* GetDropDownToolBar() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- La barre d’outils de liste déroulante qui est associé au bouton.  
+ La barre d’outils de liste déroulante qui est associée au bouton.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode retourne le `m_pToolBar` membre de données.  
@@ -228,7 +228,7 @@ BOOL IsDropDown() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la barre d’outils de la liste déroulante est actuellement ouvert ; Sinon, 0.  
+ Différent de zéro si la barre d’outils de la liste déroulante est actuellement ouvert ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure ouvre la barre d’outils de la liste déroulante à l’aide de la [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) (méthode). Le framework ferme la barre d’outils de la liste déroulante lorsque l’utilisateur appuie sur le bouton gauche de la souris dans la zone non cliente de la barre d’outils de la liste déroulante.  
@@ -241,7 +241,7 @@ virtual BOOL IsExtraSize() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le bouton de barre d’outils peut être affiché avec une bordure étendue ; Sinon, 0.  
+ Différent de zéro si le bouton de barre d’outils peut être affiché avec une bordure étendue ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les bordures étendus, consultez [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
@@ -254,7 +254,7 @@ static UINT m_uiShowBarDelay;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Délai d’attente est mesuré en millisecondes. La valeur par défaut est de 500 ms. Vous pouvez définir un autre délai en modifiant la valeur de ce membre de données partagée.  
+ Le délai est mesuré en millisecondes. La valeur par défaut est de 500 ms. Vous pouvez définir un autre délai en modifiant la valeur de ce membre de données partagée.  
   
 ##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
  Appelé par l’infrastructure pour calculer la taille du bouton pour le contexte de périphérique spécifié et l’état d’ancrage.  
@@ -267,23 +267,23 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Le contexte de périphérique qui affiche le bouton.  
   
  [in] *sizeDefault*  
  La taille par défaut du bouton.  
   
  [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parente. Ce paramètre est `TRUE` si la barre d’outils est ancré horizontalement ou est flottant, ou `FALSE` si la barre d’outils est ancré verticalement.  
+ L’état d’ancrage de la barre d’outils parent. Ce paramètre est TRUE si la barre d’outils est ancrée horizontalement ou est flottant, ou FALSE si la barre d’outils est ancrée verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `SIZE` structure qui contient les dimensions du bouton, en pixels.  
+ Un `SIZE` structure qui contient les dimensions du bouton, en pixels.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) en ajoutant la largeur de la flèche déroulante à la dimension horizontale de la taille du bouton.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
- Appelé par le framework lorsque le bouton est inséré dans une barre d’outils.  
+ Appelé par le framework lorsque le bouton est inséré dans une nouvelle barre d’outils.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -291,10 +291,10 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndParent*  
- La nouvelle fenêtre parent.  
+ La nouvelle fenêtre parente.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode substitue l’implémentation de classe de base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) en désactivant l’étiquette de texte ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) et en définissant le [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) et [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) membres de données `FALSE`.  
+ Cette méthode substitue l’implémentation de classe de base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) en désactivant l’étiquette de texte ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) et en définissant le [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) et [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) sur FALSE, les membres de données.  
   
 ##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
  Appelé par le framework lorsque l’utilisateur clique sur le bouton de la souris.  
@@ -307,13 +307,13 @@ virtual BOOL OnClick(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWnd*  
- La fenêtre parente de la barre d’outils.  
+ La fenêtre parent du bouton de barre d’outils.  
   
  [in] *bDelay*  
- `TRUE` Si le message doit être géré avec un délai.  
+ TRUE si le message doit être géré avec un délai.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le bouton traite le message de clic. Sinon, 0.  
+ Différent de zéro si le bouton traite le message de clic ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode étend l’implémentation de la classe de base, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), en mettant à jour l’état de la barre d’outils de la liste déroulante.  
@@ -321,24 +321,24 @@ virtual BOOL OnClick(
  Lorsqu’un utilisateur clique sur le bouton de barre d’outils, cette méthode crée un minuteur qui attend le délai spécifié par le [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) membre de données, puis de barre d’outils s’ouvre la liste déroulante à l’aide de la [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) (méthode). Cette méthode ferme la barre d’outils de la liste déroulante de la deuxième fois que l’utilisateur clique sur le bouton de barre d’outils.  
   
 ##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
- Appelé par le framework lorsque l’utilisateur relâche le bouton de la souris.  
+ Appelé par l’infrastructure lorsque l’utilisateur relâche le bouton de la souris.  
   
 ```  
 virtual BOOL OnClickUp();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le bouton traite le message de clic. Sinon, 0.  
+ Différent de zéro si le bouton traite le message de clic ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode étend l’implémentation de la classe de base, [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), en mettant à jour l’état de la barre d’outils de la liste déroulante.  
   
- Cette méthode arrête la minuterie de la barre d’outils de la liste déroulante si elle est active. Il ferme la barre d’outils de la liste déroulante si elle est ouverte.  
+ Cette méthode arrête le minuteur de la barre d’outils de la liste déroulante si elle est active. Il ferme la barre d’outils de la liste déroulante si elle est ouverte.  
   
  Pour plus d’informations sur la barre d’outils de la liste déroulante et le minuteur de la barre d’outils de la liste déroulante, consultez [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
 ##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
- Appelé par l’infrastructure lors de la barre d’outils parent gère un `WM_HELPHITTEST` message.  
+ Appelé par l’infrastructure lors de la barre d’outils parent gère un message WM_HELPHITTEST.  
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -346,18 +346,18 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWnd*  
- La fenêtre parente de la barre d’outils.  
+ La fenêtre parent du bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le bouton traite le message d’aide ; Sinon, 0.  
+ Différent de zéro si le bouton traite le message d’aide ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) en appelant le [CMFCDropDownToolbarButton::OnClick](#onclick) méthode avec *bDelay*la valeur `FALSE`. Cette méthode retourne la valeur retournée par [CMFCDropDownToolbarButton::OnClick](#onclick).  
+ Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) en appelant le [CMFCDropDownToolbarButton::OnClick](#onclick) méthode avec *bDelay*défini sur FALSE. Cette méthode retourne la valeur retournée par [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
- Pour plus d’informations sur la `WM_HELPHITTEST message, see` [TN028 : prise en charge d’aide contextuelle](../../mfc/tn028-context-sensitive-help-support.md).  
+ Pour plus d’informations sur le message WM_HELPHITTEST, consultez [TN028 : prise en charge d’aide contextuelle](../../mfc/tn028-context-sensitive-help-support.md).  
   
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
- Modifie le menu fourni lors de l’application affiche un menu contextuel dans la barre d’outils parente.  
+ Modifie le menu fourni lorsque l’application affiche un menu contextuel dans la barre d’outils parent.  
   
 ```  
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
@@ -365,10 +365,10 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pMenu*  
- Le menu à personnaliser.  
+ Menu Personnaliser.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Cette méthode retourne `TRUE`.  
+ Cette méthode retourne la valeur TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) en désactivant les éléments suivants :  
@@ -401,7 +401,7 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Le contexte de périphérique qui affiche le bouton.  
   
  [in] *rect*  
@@ -411,19 +411,19 @@ virtual void OnDraw(
  La collection d’images de barre d’outils qui est associée au bouton.  
   
  [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parente. Ce paramètre est `TRUE` lorsque le bouton est ancré horizontalement et `FALSE` lorsque le bouton est ancré verticalement.  
+ L’état d’ancrage de la barre d’outils parent. Ce paramètre a la valeur TRUE lorsque le bouton est ancré horizontalement et FALSE lorsque le bouton est ancré verticalement.  
   
  [in] *bCustomizeMode*  
- Spécifie si la barre d’outils est en mode de personnalisation. Ce paramètre est `TRUE` lorsque la barre d’outils est en mode de personnalisation et `FALSE` lorsque la barre d’outils n’est pas en mode de personnalisation.  
+ Spécifie si la barre d’outils est en mode de personnalisation. Ce paramètre a la valeur TRUE lorsque la barre d’outils est en mode de personnalisation et FALSE lorsque la barre d’outils n’est pas en mode de personnalisation.  
   
  [in] *bHighlight*  
- Spécifie si le bouton est mis en surbrillance. Ce paramètre est `TRUE` lorsque le bouton est mis en surbrillance et `FALSE` lorsque le bouton n’est pas mis en surbrillance.  
+ Spécifie si le bouton est mis en surbrillance. Ce paramètre est la valeur TRUE lorsque le bouton est mis en surbrillance et FALSE lorsque le bouton n’est pas mis en surbrillance.  
   
  [in] *bDrawBorder*  
- Spécifie si le bouton doit afficher sa bordure. Ce paramètre est `TRUE` lorsque le bouton doit afficher sa bordure et `FALSE` lorsque le bouton ne doit pas afficher sa bordure.  
+ Spécifie si le bouton doit afficher sa bordure. Ce paramètre a la valeur TRUE lorsque le bouton doit afficher sa bordure et la valeur FALSE lorsque le bouton ne doit pas afficher sa bordure.  
   
  [in] *bGrayDisabledButtons*  
- Spécifie s’il faut assombrissent boutons désactivés ou utiliser la collection d’images désactivé. Ce paramètre est `TRUE` lorsque les boutons désactivés doit être grisé et `FALSE` lorsque cette méthode doit utiliser la collection d’images désactivé.  
+ Spécifie s’il faut ombrer les boutons désactivés ou utiliser la collection d’images désactivé. Ce paramètre a la valeur TRUE lorsque les boutons désactivés doivent être grisée et FALSE lorsque cette méthode doit utiliser la collection d’images désactivé.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode pour personnaliser le dessin de bouton de barre d’outils.  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Le contexte de périphérique qui affiche le bouton.  
   
  [in] *rect*  
  Le rectangle englobant du bouton.  
   
  [in] *bSelected*  
- Indique si le bouton est sélectionné. Si ce paramètre est `TRUE`, le bouton est sélectionné. Si ce paramètre est `FALSE`, le bouton n’est pas sélectionné.  
+ Indique si le bouton est sélectionné. Si ce paramètre est TRUE, le bouton est sélectionné. Si ce paramètre est FALSE, le bouton n’est pas sélectionné.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La largeur, en pixels, du bouton sur le contexte de périphérique spécifié.  
@@ -454,7 +454,7 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée par la boîte de dialogue de personnalisation ( **commandes** onglet) lorsque le bouton doit s’afficher sur la zone de liste owner-draw.  
   
- Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) en modifiant l’étiquette de texte du bouton pour le nom du bouton (autrement dit, la valeur de le `lpszName` paramètre que vous avez transmise le constructeur).  
+ Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) en modifiant l’étiquette de texte du bouton sur le nom du bouton (autrement dit, la valeur de la *le caractère* paramètre que vous avez passé au constructeur).  
   
 ##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
  Lit de cet objet à partir d’une archive ou écrit dans une archive.  
@@ -465,10 +465,10 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *ar*  
- Le `CArchive` objet à partir duquel ou auquel vous souhaitez sérialiser.  
+ Le `CArchive` objet à partir duquel ou de sérialisation.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) par la sérialisation de l’ID de ressource de la barre d’outils parente. Lorsque l’archive est le chargement ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) retourne une valeur différente de zéro), cette méthode définit le `m_pToolBar` membre de données pour la barre d’outils qui contient l’ID de ressource sérialisé.  
+ Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) en sérialisant l’ID de ressource de la barre d’outils parent. Lorsque l’archive est cours de chargement ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) retourne une valeur différente de zéro), cette méthode définit le `m_pToolBar` données membres à la barre d’outils qui contient l’ID de ressource sérialisée.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
  Définit la commande par défaut par le framework lorsqu’un utilisateur clique sur le bouton.  
@@ -482,14 +482,14 @@ void SetDefaultCommand(UINT uiCmd);
  ID de la commande par défaut.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour spécifier une commande par défaut exécutée par l’infrastructure lorsque l’utilisateur clique sur le bouton. Un élément avec l’ID de commande spécifié par *uiCmd* doit se trouver dans la barre d’outils de la liste déroulante parente.  
+ Appelez cette méthode pour spécifier une commande par défaut exécutée par l’infrastructure lorsque l’utilisateur clique sur le bouton. Un élément avec l’ID de commande spécifié par *uiCmd* doit se trouver dans la barre d’outils de la liste déroulante parent.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [Classe de CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
- [Classe de CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
+ [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)   
+ [Cmfctoolbarmenubutton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
  [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 

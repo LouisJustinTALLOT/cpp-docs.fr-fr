@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCImageEditorPaletteBar | Documents Microsoft
+title: Cmfcimageeditorpalettebar, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370040"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851455"
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>Classe de CMFCImageEditorPaletteBar
-Fournit des fonctionnalités de barre de palette pour une image de boîte de dialogue de l’éditeur.  
+# <a name="cmfcimageeditorpalettebar-class"></a>Cmfcimageeditorpalettebar, classe
+Fournit des fonctionnalités à une image de boîte de dialogue Éditeur de la barre de palette.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |-|-|  
 |Nom|Description|  
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Retourne la hauteur des boutons de barre d’outils. (Substitue [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Détermine si la barre d’outils peut afficher des boutons que vous avez étendu les bordures. (Substitue [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Détermine si la barre d’outils peut afficher des boutons qui ont étendu les bordures. (Substitue [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
 ### <a name="remarks"></a>Notes  
- Cette classe n’est pas destinée à être utilisée directement depuis votre code.  
+ Cette classe n’est pas destinée à être utilisée directement à partir de votre code.  
   
- Le framework utilise cette classe pour afficher une barre de palette dans une boîte de dialogue Éditeur image. Pour plus d’informations sur la boîte de dialogue Éditeur image, consultez [CMFCImageEditorDialog classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Le framework utilise cette classe pour afficher une barre de palette dans une image de boîte de dialogue Éditeur. Pour plus d’informations sur l’image de boîte de dialogue Éditeur, consultez [CMFCImageEditorDialog, classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -68,7 +68,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
   
  [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afximageeditordialog.h  
   
 ##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
@@ -82,14 +82,14 @@ virtual int GetRowHeight() const;
  La hauteur de chaque bouton de la barre d’outils.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Détermine si la barre d’outils peut afficher des boutons que vous avez étendu les bordures.  
+ Détermine si la barre d’outils peut afficher des boutons qui ont étendu les bordures.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Cette méthode retourne `FALSE`.  
+ Cette méthode retourne FALSE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

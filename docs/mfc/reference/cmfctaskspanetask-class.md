@@ -1,5 +1,5 @@
 ---
-title: Cmfctaskspanetask, classe | Documents Microsoft
+title: Cmfctaskspanetask, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040699"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853967"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask, classe
-Le `CMFCTasksPaneTask` classe est une classe d’assistance qui représente des tâches pour le contrôle de volet de tâches ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L’objet tâche représente un élément dans le groupe de tâches ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Chaque tâche peut avoir une commande exécutée par l’infrastructure lorsqu’un utilisateur clique sur la tâche et une icône qui apparaît à gauche du nom de la tâche.  
+Le `CMFCTasksPaneTask` est une classe d’assistance qui représente des tâches pour le contrôle de volet de tâches ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L’objet tâche représente un élément dans le groupe de tâches ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Chaque tâche peut avoir une commande exécutée par l’infrastructure lorsqu’un utilisateur clique sur la tâche et une icône qui apparaît à gauche du nom de la tâche.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +69,7 @@ class CMFCTasksPaneTask : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Détermine l’accessibilité des données pour la tâche actuelle.|  
+|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Détermine les données d’accessibilité pour la tâche actuelle.|  
   
 ### <a name="data-members"></a>Membres de données  
   
@@ -77,10 +77,10 @@ class CMFCTasksPaneTask : public CObject
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Détermine si la fenêtre de la tâche est automatiquement détruite.|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Détermine si le framework Dessine une étiquette de la tâche en gras.|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contient des données définies par l’utilisateur, le framework associe à la tâche. La valeur zéro si la tâche ne comporte pas de données.|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contient des données définies par l’utilisateur, le framework associe à la tâche. La valeur zéro si la tâche ne comporte aucune donnée associée.|  
 |[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Handle vers la fenêtre des tâches.|  
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|Index dans la liste d’images de l’image affichée par l’infrastructure en regard de la tâche.|  
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|La hauteur de la fenêtre des tâches. Si la tâche a aucune fenêtre de la tâche, cette valeur est zéro.|  
+|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|L’index dans la liste d’images de l’image affichée par l’infrastructure en regard de la tâche.|  
+|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|La hauteur de la fenêtre des tâches. Si la tâche a aucune fenêtre de tâche, cette valeur est zéro.|  
 |[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|Un pointeur vers le `CMFCTasksPaneTaskGroup` appartenant à cette tâche.|  
 |[CMFCTasksPaneTask::m_rect](#m_rect)|Spécifie le rectangle englobant de la tâche.|  
 |[CMFCTasksPaneTask::m_strName](#m_strname)|Le nom de la tâche.|  
@@ -119,25 +119,25 @@ CMFCTasksPaneTask(
   
 ### <a name="parameters"></a>Paramètres  
  *pGroup*  
- Spécifie le [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) à laquelle la tâche appartient.  
+ Spécifie le [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) auquel appartient la tâche.  
   
  *Caractère*  
  Spécifie le nom de la tâche.  
   
  *nIcon*  
- Spécifie l’index de l’image de la tâche dans la liste d’images.  
+ Spécifie l’index d’image de la tâche dans la liste d’images.  
   
  *uiCommandID*  
- Spécifie l’ID de commande de la commande est exécutée lorsque vous cliquez sur la tâche.  
+ Spécifie l’ID de commande de la commande est exécutée lorsque l’utilisateur clique sur la tâche.  
   
  *dwUserData*  
  Données définies par l’utilisateur.  
   
  *hwndTask*  
- Spécifie le handle à la fenêtre des tâches.  
+ Spécifie le handle vers la fenêtre des tâches.  
   
  *bAutoDestroyWindow*  
- Si `TRUE`, sera détruite automatiquement la fenêtre des tâches.  
+ Si la valeur est TRUE, la fenêtre des tâches est détruite automatiquement.  
   
  *nWindowHeight*  
  Spécifie la hauteur de la fenêtre de la tâche.  
@@ -152,7 +152,7 @@ BOOL m_bAutoDestroyWindow;
 ```  
   
 ### <a name="remarks"></a>Notes  
- La valeur `TRUE` pour spécifier que la fenêtre des tâches ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) doit être détruit automatiquement ; sinon, `FALSE`.  
+ Défini sur TRUE pour spécifier que la fenêtre des tâches ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) doit être détruit automatiquement ; sinon, FALSE.  
   
 ##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
  Détermine si une étiquette de la tâche est dessinée dans le texte en gras.  
@@ -162,7 +162,7 @@ BOOL m_bIsBold;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre `TRUE` pour afficher le texte en gras pour l’étiquette de la tâche.  
+ Définissez ce membre sur True pour afficher gras au texte de l’étiquette de la tâche.  
   
 ##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
  Contient des données définies par l’utilisateur qui sont associées à la tâche. La valeur zéro si aucune donnée n’est associée à la tâche.  
@@ -184,7 +184,7 @@ HWND m_hwndTask;
  Pour ajouter une fenêtre de tâche, appelez [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
 ##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
- La position d’index dans une liste d’images qui identifie une image qui s’affiche en regard de la tâche spécifiée.  
+ Position d’index dans une liste d’images qui identifie une image qui est affichée en regard de la tâche spécifiée.  
   
 ```  
 int m_nIcon;  
@@ -193,10 +193,10 @@ int m_nIcon;
 ### <a name="remarks"></a>Notes  
  La liste d’images est définie par [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
   
- Définissez `m_nIcon` à -1 si vous souhaitez afficher la tâche sans une image.  
+ Définissez `m_nIcon` sur -1 si vous souhaitez afficher la tâche sans une image.  
   
 ##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
- La hauteur de la fenêtre des tâches. Si la tâche a aucune fenêtre de la tâche, cette valeur est zéro.  
+ La hauteur de la fenêtre des tâches. Si la tâche a aucune fenêtre de tâche, cette valeur est zéro.  
   
 ```  
 int m_nWindowHeight;  
@@ -212,7 +212,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Chaque tâche doit posséder un groupe parent. Ajouter des groupes à un volet de tâches en appelant [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Chaque tâche doit avoir un groupe parent. Ajouter des groupes à un volet de tâches en appelant [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
  Spécifie le rectangle englobant de la tâche.  
@@ -243,7 +243,7 @@ UINT m_uiCommandID;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData  
- Détermine l’accessibilité des données pour la tâche actuelle.  
+ Détermine les données d’accessibilité pour la tâche actuelle.  
   
 ```  
 virtual BOOL SetACCData(
@@ -256,10 +256,10 @@ virtual BOOL SetACCData(
  Représente la fenêtre parente de la tâche en cours.  
   
  [out] *données*  
- Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité de la tâche actuelle.  
+ Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de la tâche en cours.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le *données* paramètre a été correctement remplis avec les données d’accessibilité de la tâche en cours ; sinon, `FALSE`.  
+ TRUE si le *données* paramètre a été correctement remplis avec les données d’accessibilité de la tâche en cours ; sinon, FALSE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

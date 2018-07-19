@@ -1,5 +1,5 @@
 ---
-title: Classe de CPtrList | Documents Microsoft
+title: CPtrList, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078619"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853892"
 ---
-# <a name="cptrlist-class"></a>Classe de CPtrList
+# <a name="cptrlist-class"></a>CPtrList, classe
 Prend en charge des listes de pointeurs void.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CPtrList` sont similaires aux fonctions membres de classe [CObList](../../mfc/reference/coblist-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObList` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**.  
+ Les fonctions membres de `CPtrList` sont similaires aux fonctions membres de classe [CObList](../../mfc/reference/coblist-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObList` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**.  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -44,11 +44,11 @@ class CPtrList : public CObject
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Notes  
- `CPtrList` incorpore la `IMPLEMENT_DYNAMIC` macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage de pointeur individuels des éléments de liste, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
+ `CPtrList` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge d’accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments de liste individuels de pointeur, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
  Listes de pointeur ne peut pas être sérialisés.  
   
- Lorsqu’un `CPtrList` objet est supprimé, ou lorsque ses éléments sont supprimés, seuls les pointeurs sont supprimées, pas les entités qu’ils référencent.  
+ Quand un `CPtrList` objet est supprimé, ou lorsque ses éléments sont supprimés, seuls les pointeurs sont supprimées, pas les entités qu’elles référencent.  
   
  Pour plus d’informations sur l’utilisation de `CPtrList`, consultez l’article [Collections](../../mfc/collections.md).  
   

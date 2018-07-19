@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCColorDialog | Documents Microsoft
+title: Cmfccolordialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040231"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849735"
 ---
-# <a name="cmfccolordialog-class"></a>Classe de CMFCColorDialog
-La `CMFCColorDialog` classe représente une boîte de dialogue de sélection de couleur.  
+# <a name="cmfccolordialog-class"></a>Cmfccolordialog, classe
+Le `CMFCColorDialog` classe représente une boîte de dialogue de sélection de couleur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Retourne la couleur sélectionnée en cours.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Retourne la palette de la couleur.|  
-|`CMFCColorDialog::PreTranslateMessage`|Convertit les messages de fenêtre avant d’être distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Dérive une palette de la palette système.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Définit la couleur sélectionnée en cours.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Définit la couleur plus équivalent à une valeur RVB spécifiée.|  
@@ -74,23 +74,23 @@ class CMFCColorDialog : public CDialogEx
   
 |Name|Description|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE` Si la boîte de dialogue de sélection de couleur utilise sa propre palette de couleurs, ou `FALSE` si la boîte de dialogue utilise une palette est spécifiée dans le `CMFCColorDialog` constructeur.|  
-|`m_bPickerMode`|`TRUE` pendant que l’utilisateur sélectionne une couleur à partir de la boîte de dialogue de sélection ; dans le cas contraire, `FALSE`.|  
+|`m_bIsMyPalette`|TRUE si la boîte de dialogue de sélection de couleur utilise sa propre palette de couleurs, ou FALSE si la boîte de dialogue utilise une palette est spécifiée dans le `CMFCColorDialog` constructeur.|  
+|`m_bPickerMode`|TRUE si l’utilisateur sélectionne une couleur à partir de la boîte de dialogue de sélection ; Sinon, FALSE.|  
 |`m_btnColorSelect`|Le bouton de couleur que l’utilisateur a sélectionnée.|  
 |`m_CurrentColor`|La couleur actuellement sélectionnée.|  
 |`m_hcurPicker`|Le curseur qui est utilisé pour choisir une couleur.|  
-|`m_NewColor`|Couleur sélectionnée potentiel, qui peut être sélectionnée définitivement ou restauration de la couleur d’origine.|  
+|`m_NewColor`|Couleur sélectionnée potentiel, qui peut être définitivement sélectionnée ou restauration de la couleur d’origine.|  
 |`m_pColourSheetOne`|Pointeur vers la première page de propriété de la feuille de propriétés de sélection de couleur.|  
-|`m_pColourSheetTwo`|Pointeur vers la deuxième page de propriétés de la feuille de propriétés de sélection de couleur.|  
+|`m_pColourSheetTwo`|Pointeur vers la deuxième page de propriété de la feuille de propriétés de sélection de couleur.|  
 |`m_pPalette`|La palette logique en cours.|  
-|`m_pPropSheet`|Pointeur vers la feuille de propriétés de la boîte de dialogue de sélection de couleur.|  
-|`m_wndColors`|Un objet de contrôle de sélecteur de couleurs.|  
-|`m_wndStaticPlaceHolder`|Un contrôle statique est un espace réservé pour la feuille de propriétés de sélecteur de couleurs.|  
+|`m_pPropSheet`|Pointeur vers la feuille de propriétés pour la boîte de dialogue de sélection de couleur.|  
+|`m_wndColors`|Un objet de contrôle de sélecteur de couleur.|  
+|`m_wndStaticPlaceHolder`|Un contrôle statique est un espace réservé pour la feuille de propriétés de sélecteur de couleur.|  
   
 ## <a name="remarks"></a>Notes  
- La boîte de dialogue de sélection de couleur s’affiche en tant qu’une feuille de propriétés avec deux pages. Sur la première page, vous sélectionnez une couleur standard à partir de la palette système ; dans la deuxième page, sélectionnez une couleur personnalisée.  
+ La boîte de dialogue de sélection de couleur s’affiche comme une feuille de propriétés avec deux pages. Sur la première page, vous sélectionnez une couleur standard à partir de la palette système ; dans la deuxième page, vous sélectionnez une couleur personnalisée.  
   
- Vous pouvez construire un `CMFCColorDialog` de l’objet sur la pile, puis appelez `DoModal`, en passant la couleur initiale en tant que paramètre à la `CMFCColorDialog` constructeur. La boîte de dialogue de sélection de couleur, puis crée plusieurs [CMFCColorPickerCtrl classe](../../mfc/reference/cmfccolorpickerctrl-class.md) objets à gérer chaque palette de couleurs.  
+ Vous pouvez construire un `CMFCColorDialog` de l’objet sur la pile, puis appelez `DoModal`, en passant la couleur initiale en tant que paramètre à la `CMFCColorDialog` constructeur. La boîte de dialogue de sélection de couleur, puis crée plusieurs [CMFCColorPickerCtrl, classe](../../mfc/reference/cmfccolorpickerctrl-class.md) objets pour traiter chaque palette de couleurs.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -106,7 +106,7 @@ class CMFCColorDialog : public CDialogEx
  [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment configurer une boîte de dialogue couleur à l’aide de différentes méthodes de la `CMFCColorDialog` classe. L’exemple montre comment définir actuel et les nouvelles couleurs de la boîte de dialogue et comment définir les composants rouges, verts et bleus d’une couleur sélectionnée sur les pages de propriétés de deux de la boîte de dialogue couleur. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment configurer une boîte de dialogue couleur à l’aide de différentes méthodes de la `CMFCColorDialog` classe. L’exemple montre comment définir actuel et les nouvelles couleurs de la boîte de dialogue et comment définir les composants rouges, vert et bleus de la couleur sélectionnée sur les pages de deux propriétés de la boîte de dialogue couleur. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
@@ -149,10 +149,10 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient les informations RVB pour la couleur sélectionnée dans la boîte de dialogue couleur.  
+ Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient les informations de RVB pour la couleur sélectionnée dans la boîte de dialogue couleur.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette fonction après avoir appelé la `DoModal` (méthode).  
+ Appelez cette fonction une fois que vous appelez le `DoModal` (méthode).  
   
 ##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  Récupère la palette de couleurs qui est disponible dans la boîte de dialogue couleur actuelle.  
@@ -188,7 +188,7 @@ void SetCurrentColor(COLORREF rgb);
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
- Définit la couleur actuelle à la couleur de la palette en cours est le plus proche.  
+ Définit la couleur actuelle à la couleur de la palette actuelle est la plus proche.  
   
 ```  
 void SetNewColor(COLORREF rgb);
@@ -196,12 +196,12 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *RVB*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) qui spécifie une couleur RVB.  
+ Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) qui spécifie une couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
- Spécifie explicitement les composants rouges, verts et bleus d’une couleur sélectionnée sur la première page de propriété de boîte de dialogue couleur.  
+ Spécifie explicitement les composants rouges, vert et bleus de la couleur sélectionnée sur la première page de propriété d’une boîte de dialogue couleur.  
   
 ```  
 void SetPageOne(
@@ -223,7 +223,7 @@ void SetPageOne(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
- Spécifie explicitement les composants rouges, verts et bleus d’une couleur sélectionnée sur la deuxième page de propriété de boîte de dialogue couleur.  
+ Spécifie explicitement les composants rouges, vert et bleus de la couleur sélectionnée dans la deuxième page de propriété d’une boîte de dialogue couleur.  
   
 ```  
 void SetPageTwo(
@@ -237,10 +237,10 @@ void SetPageTwo(
  Spécifie un composant rouge de la valeur RVB  
   
  [in] *G*  
- Spécifie un composant vert d’une valeur RVB  
+ Spécifie un composant vert de la valeur RVB  
   
  [in] *B*  
- Spécifie un composant bleu d’une valeur RVB  
+ Spécifie un composant bleu de la valeur RVB  
   
 ### <a name="remarks"></a>Notes  
   

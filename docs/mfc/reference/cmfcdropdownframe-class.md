@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCDropDownFrame | Documents Microsoft
+title: Cmfcdropdownframe, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041992"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849446"
 ---
-# <a name="cmfcdropdownframe-class"></a>Classe de CMFCDropDownFrame
-Fournit une fonctionnalité de fenêtre frame de la liste déroulante pour les barres d’outils de la liste déroulante et les boutons de barre d’outils de la liste déroulante.  
+# <a name="cmfcdropdownframe-class"></a>Cmfcdropdownframe, classe
+Fournit des fonctionnalités de fenêtre frame de la liste déroulante pour les barres d’outils de la liste déroulante et les boutons de barre d’outils de la liste déroulante.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,19 +59,19 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |Nom|Description|  
 |[CMFCDropDownFrame::Create](#create)|Crée un objet `CMFCDropDownFrame`.|  
 |`CMFCDropDownFrame::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Récupère la barre de menus de parent de l’image de la liste déroulante.|  
+|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Récupère la barre de menu parent de l’image de la liste déroulante.|  
 |[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Récupère le menu contextuel du parent de l’image de la liste déroulante.|  
 |`CMFCDropDownFrame::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
-|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Repositionne le cadre de la liste déroulante.|  
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Définit si la fenêtre de la barre d’outils de la liste déroulante enfant est supprimée automatiquement.|  
+|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Repositionne le frame de la liste déroulante.|  
+|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Définit si la fenêtre de la barre d’outils déroulante enfant est supprimée automatiquement.|  
   
 ### <a name="remarks"></a>Notes  
- Cette classe n’est pas destinée à être utilisée directement depuis votre code.  
+ Cette classe n’est pas destinée à être utilisée directement à partir de votre code.  
   
- L’infrastructure utilise cette classe pour fournir un comportement de frame pour le `CMFCDropDownToolbar` et `CMFCDropDownToolbarButton` classes. Pour plus d’informations sur ces classes, consultez [CMFCDropDownToolBar classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) et [CMFCDropDownToolbarButton classe](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
+ L’infrastructure utilise cette classe pour fournir un comportement frame le `CMFCDropDownToolbar` et `CMFCDropDownToolbarButton` classes. Pour plus d’informations sur ces classes, consultez [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) et [cmfcdropdowntoolbarbutton, classe](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment récupérer un pointeur vers un `CMFCDropDownFrame` de l’objet d’un `CFrameWnd` classe et comment définir les enfants fenêtre de la barre d’outils de la liste déroulante le point d’être détruit automatiquement.  
+ L’exemple suivant montre comment récupérer un pointeur vers un `CMFCDropDownFrame` de l’objet à partir d’un `CFrameWnd` classe et comment définir l’enfant de fenêtre de la barre d’outils de la liste déroulante d’être détruit automatiquement.  
   
  [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]  
   
@@ -110,28 +110,28 @@ virtual BOOL Create(
 |[in] *pWndParent*|La fenêtre parente de l’image de la liste déroulante.|  
 |[in] *x*|Coordonnée d’écran horizontale pour l’emplacement de l’image du bas vers le bas.|  
 |[in] *y*|Coordonnée d’écran verticale pour l’emplacement de l’image du bas vers le bas.|  
-|[in] *pWndOriginToolbar*|La barre d’outils qui affiche les boutons de liste déroulante par cette méthode pour remplir le nouvel objet de frame de la liste déroulante.|  
+|[in] *pWndOriginToolbar*|La barre d’outils qui affiche les boutons de liste déroulante que cette méthode utilise pour remplir le nouvel objet de frame de la liste déroulante.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le cadre de la liste déroulante a été créé avec succès ; dans le cas contraire `FALSE`.  
+ TRUE si le frame de la liste déroulante a été créé avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode appelle la base de [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) méthode pour créer la fenêtre frame de la liste déroulante avec la `WS_POPUP` style. La fenêtre frame de la liste déroulante s’affiche en coordonnées d’écran spécifiées. Cette méthode échoue si le [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) méthode renvoie `FALSE`.  
+ Cette méthode appelle la base de [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) pour créer la fenêtre frame de la liste déroulante avec le style WS_POPUP (méthode). La fenêtre frame de la liste déroulante apparaît en coordonnées d’écran spécifiées. Cette méthode échoue si le [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) méthode retourne FALSE.  
   
- Le `CMFCDropDownFrame` classe crée une copie de le `CMFCDropDownToolBar` paramètre. Cette méthode copie les images des boutons et les États de bouton à partir de la `pWndOriginToolbar` paramètre à la `m_pWndOriginToolbar` membre de données.  
+ Le `CMFCDropDownFrame` classe crée une copie de la liste fournie `CMFCDropDownToolBar` paramètre. Cette méthode copie les images des boutons et les États de bouton à partir de la `pWndOriginToolbar` paramètre à la `m_pWndOriginToolbar` membre de données.  
   
 ##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
- Récupère la barre de menus de parent de l’image de la liste déroulante.  
+ Récupère la barre de menu parent de l’image de la liste déroulante.  
   
 ```  
 CMFCMenuBar* GetParentMenuBar() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la barre de menus de parent de l’image de la liste déroulante, ou `NULL` si le frame n’a aucun parent.  
+ Pointeur vers la barre de menu parent du cadre de la liste déroulante, ou NULL si le frame n’a aucun parent.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode récupère la barre de menus du parent à partir du bouton parent. Cette méthode retourne `NULL` si le cadre de la liste déroulante n’a pas de bouton parent ou le bouton parent aucune barre de menu parent.  
+ Cette méthode récupère la barre de menus du parent à partir du bouton parent. Cette méthode retourne NULL si le frame de la liste déroulante n’a pas de bouton parent ou le bouton parent aucune barre de menu parent.  
   
 ##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
  Récupère le menu contextuel du parent de l’image de la liste déroulante.  
@@ -141,13 +141,13 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le menu déroulant parent de l’image de la liste déroulante, ou `NULL` si le frame n’a aucun parent.  
+ Pointeur vers le menu déroulant parent du cadre de la liste déroulante, ou NULL si le frame n’a aucun parent.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode récupère le menu parent à partir du bouton parent. Cette méthode retourne `NULL` si le cadre de la liste déroulante n’a pas de bouton parent ou le bouton parent aucun menu parent.  
+ Cette méthode récupère le menu parent à partir du bouton parent. Cette méthode retourne NULL si le frame de la liste déroulante n’a pas de bouton parent ou le bouton parent aucun menu parent.  
   
 ##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
- Repositionne le cadre de la liste déroulante.  
+ Repositionne le frame de la liste déroulante.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -161,10 +161,10 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |[in] *bNotify*|Non utilisé.|  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure appelle cette méthode lorsque le frame de la liste déroulante est créé ou la fenêtre parente est redimensionnée. Cette méthode calcule la position et la taille de l’image de la liste déroulante à l’aide de la position et la taille de la fenêtre parente.  
+ L’infrastructure appelle cette méthode lorsque le frame de la liste déroulante est créé, ou la fenêtre parent est redimensionnée. Cette méthode calcule la position et la taille de l’image de la liste déroulante à l’aide de la position et la taille de la fenêtre parente.  
   
 ##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
- Définit si la fenêtre de la barre d’outils de la liste déroulante enfant est supprimée automatiquement.  
+ Définit si la fenêtre de la barre d’outils déroulante enfant est supprimée automatiquement.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -172,13 +172,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bAutoDestroy*  
- `TRUE` Pour détruire automatiquement de la fenêtre de la barre d’outils de liste déroulante associée. dans le cas contraire, `FALSE`.  
+ TRUE pour détruire automatiquement la fenêtre de la barre d’outils de liste déroulante associée. Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Si *bAutoDestroy* est `TRUE`, puis le `CMFCDropDownFrame` destructeur détruit la fenêtre de la barre d’outils de liste déroulante associée. La valeur par défaut est `TRUE`.  
+ Si *bAutoDestroy* a la valeur TRUE, le `CMFCDropDownFrame` destructeur détruit la fenêtre de la barre d’outils de liste déroulante associée. La valeur par défaut est TRUE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
  [CMFCDropDownToolbarButton, classe](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)

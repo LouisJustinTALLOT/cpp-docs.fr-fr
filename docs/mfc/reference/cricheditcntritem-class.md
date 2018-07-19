@@ -1,5 +1,5 @@
 ---
-title: Classe de CRichEditCntrItem | Documents Microsoft
+title: CRichEditCntrItem, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078606"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849325"
 ---
-# <a name="cricheditcntritem-class"></a>Classe de CRichEditCntrItem
-Avec [CRichEditView](../../mfc/reference/cricheditview-class.md) et [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte du document architecture vue de MFC.  
+# <a name="cricheditcntritem-class"></a>CRichEditCntrItem, classe
+Avec [CRichEditView](../../mfc/reference/cricheditview-class.md) et [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte de l’architecture document / vue de MFC.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,13 +51,13 @@ class CRichEditCntrItem : public COleClientItem
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Active l’élément dans un autre type.|  
   
 ## <a name="remarks"></a>Notes  
- Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte de caractère et de mise en forme peut être alloué et peut inclure des objets OLE incorporés. Les contrôles RichEdit fournissent une interface de programmation pour la mise en forme de texte. Toutefois, une application doit implémenter tous les composants d’interface utilisateur nécessaires pour effectuer les opérations de mise en forme disponibles à l’utilisateur.  
+ Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte peut avoir de caractère et de mise en forme de paragraphe et peut inclure des objets OLE incorporés. Les contrôles RichEdit fournissent une interface de programmation pour la mise en forme de texte. Toutefois, une application doit implémenter les composants d’interface utilisateur nécessaires pour rendre les opérations de mise en forme disponibles à l’utilisateur.  
   
- `CRichEditView` conserve le texte et les caractéristiques de mise en forme du texte. `CRichEditDoc` gère la liste des éléments de client OLE qui se trouvent dans la vue. `CRichEditCntrItem` fournit l’accès côté conteneur à l’élément client OLE.  
+ `CRichEditView` gère le texte et les caractéristiques de mise en forme du texte. `CRichEditDoc` gère la liste des éléments de client OLE qui se trouvent dans la vue. `CRichEditCntrItem` fournit l’accès côté conteneur à l’élément client OLE.  
   
- Ce contrôle commun de Windows (et par conséquent la [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et des classes connexes) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.  
+ Ce contrôle commun de Windows (et par conséquent le [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et les classes associées) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.  
   
- Pour obtenir un exemple d’utilisation des éléments de conteneur RichEdit dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.  
+ Pour obtenir un exemple d’utilisation des éléments de conteneur d’édition enrichi dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,15 +84,15 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>Paramètres  
  *preo*  
- Pointeur vers un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure qui décrit un élément OLE. La nouvelle `CRichEditCntrItem` objet est construit autour de cet élément OLE. Si *preo* est **NULL**, l’élément client est vide.  
+ Pointeur vers un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure qui décrit un élément OLE. La nouvelle `CRichEditCntrItem` objet est construit autour de cet élément OLE. Si *preo* est NULL, l’élément client est vide.  
   
  *pContainer*  
- Pointeur vers le document conteneur qui contiendra cet élément. Si *pContainer* est **NULL**, vous devez appeler explicitement [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) pour ajouter cet élément client à un document.  
+ Pointeur vers le document conteneur qui contiendra cet élément. Si *pContainer* est NULL, vous devez appeler explicitement [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) à ajouter cet élément de client à un document.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction n’effectue pas de toute initialisation d’OLE.  
+ Cette fonction n’effectue pas de toute initialisation OLE.  
   
- Pour plus d’informations, consultez la [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure dans le SDK Windows.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
  Appelez cette fonction pour synchroniser l’aspect de l’appareil, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), de ce `CRichEditCntrltem` à celle spécifiée par *REO ne possèdent*.  
@@ -106,11 +106,11 @@ void SyncToRichEditObject(REOBJECT& reo);
  Référence à un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure qui décrit un élément OLE.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations, consultez [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC WORDPAD](../../visual-cpp-samples.md)   
- [Classe de COleClientItem](../../mfc/reference/coleclientitem-class.md)   
+ [COleClientItem, classe](../../mfc/reference/coleclientitem-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [CRichEditDoc (classe)](../../mfc/reference/cricheditdoc-class.md)   
  [CRichEditView, classe](../../mfc/reference/cricheditview-class.md)

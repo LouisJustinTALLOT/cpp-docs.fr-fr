@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCOutlookBarPane | Documents Microsoft
+title: Cmfcoutlookbarpane, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,17 +50,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037900"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851340"
 ---
-# <a name="cmfcoutlookbarpane-class"></a>Classe de CMFCOutlookBarPane
+# <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane, classe
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- Un contrôle dérivé [CMFCToolBar classe](../../mfc/reference/cmfctoolbar-class.md) qui peuvent être insérées dans une barre Outlook ( [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)). Le volet de barre Outlook contient une colonne de grands boutons. L'utilisateur peut faire défiler vers le haut ou vers le bas la liste des boutons si elle est plus grande que le volet. Lorsque l'utilisateur détache un volet de barre Outlook de la barre Outlook, il peut flotter ou s'ancrer à la fenêtre frame principale.  
+ Un contrôle dérivé [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md) qui peut être inséré dans une barre Outlook ( [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)). Le volet de barre Outlook contient une colonne de grands boutons. L'utilisateur peut faire défiler vers le haut ou vers le bas la liste des boutons si elle est plus grande que le volet. Lorsque l'utilisateur détache un volet de barre Outlook de la barre Outlook, il peut flotter ou s'ancrer à la fenêtre frame principale.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,25 +83,25 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |----------|-----------------|  
 |[CMFCOutlookBarPane::AddButton](#addbutton)|Ajoute un bouton dans le volet de barre Outlook.|  
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Détermine si le volet peut être ancré à un autre volet ou une fenêtre frame. (Substitue [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|  
-|`CMFCOutlookBarPane::CanBeRestored`|Détermine si le système peut restaurer une barre d’outils à son état d’origine après la personnalisation. (Substitue [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
+|`CMFCOutlookBarPane::CanBeRestored`|Détermine si le système peut être restauré une barre d’outils à son état d’origine après la personnalisation. (Substitue [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
 |[CMFCOutlookBarPane::ClearAll](#clearall)|Libère les ressources utilisées par les images dans le volet de barre Outlook.|  
 |[CMFCOutlookBarPane::Create](#create)|Crée le volet de barre Outlook.|  
 |`CMFCOutlookBarPane::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
 |`CMFCOutlookBarPane::Dock`|Appelé par l’infrastructure pour ancrer le volet de barre Outlook. (Substitue `CPane::Dock`.)|  
-|[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Spécifie si les flèches de défilement dans le volet de barre Outlook passer de la liste des boutons de page, ou par le bouton.|  
-|[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Retourne la couleur de texte normal de (non sélectionnées) du volet de barre Outlook.|  
+|[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Spécifie si les flèches de défilement dans le volet de barre Outlook passer la liste des boutons de page, ou bouton.|  
+|[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Retourne la couleur de texte (non sélectionné) standard du volet de barre Outlook.|  
 |`CMFCOutlookBarPane::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
 |[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Détermine s’il existe une image d’arrière-plan chargée pour le volet de barre Outlook.|  
 |`CMFCOutlookBarPane::IsChangeState`|Détermine si un volet flottant peut être ancré. (Substitue `CPane::IsChangeState`.)|  
 |[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|Détermine si la bordure du bouton est grisée lorsqu’un bouton est mis en surbrillance et une image d’arrière-plan est affichée.|  
-|`CMFCOutlookBarPane::OnBeforeFloat`|Appelé par l’infrastructure lorsqu’un volet est sur float. (Substitue [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|  
-|[CMFCOutlookBarPane::RemoveButton](#removebutton)|Supprime le bouton qui a un ID de commande spécifiée.|  
+|`CMFCOutlookBarPane::OnBeforeFloat`|Appelé par le framework lorsqu’un volet est sur le type float. (Substitue [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|  
+|[CMFCOutlookBarPane::RemoveButton](#removebutton)|Supprime le bouton qui a un ID de commande spécifié.|  
 |`CMFCOutlookBarPane::RestoreOriginalstate`|Restaure l'état initial d'une barre d'outils. (Substitue [CMFCToolBar::RestoreOriginalState](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate).)|  
 |[CMFCOutlookBarPane::SetBackColor](#setbackcolor)|Définit la couleur d’arrière-plan.|  
 |[CMFCOutlookBarPane::SetBackImage](#setbackimage)|Définit l’image d’arrière-plan.|  
-|[CMFCOutlookBarPane::SetDefaultState](#setdefaultstate)|Réinitialise le volet de barre Outlook à l’ensemble d’origine des boutons.|  
-|[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Définit le nombre de pixels de la marge intérieure qui entoure les boutons dans le volet de barre Outlook.|  
-|[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Définit les couleurs de texte standard et mis en surbrillance dans le volet de barre Outlook.|  
+|[CMFCOutlookBarPane::SetDefaultState](#setdefaultstate)|Réinitialise le volet de barre Outlook pour le jeu initial de boutons.|  
+|[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Définit le nombre de pixels de remplissage utilisé autour des boutons dans le volet de barre Outlook.|  
+|[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Définit les couleurs de texte standard et en surbrillance dans le volet de barre Outlook.|  
 |[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Définit la couleur transparente pour le volet de barre Outlook.|  
 |`CMFCOutlookBarPane::SmartUpdate`|Utilisé en interne pour mettre à jour de la barre Outlook. (Substitue `CMFCToolBar::SmartUpdate`.)|  
   
@@ -109,8 +109,8 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Spécifie les éléments de menu contextuel sont affichées dans le mode de personnalisation.|  
-|[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Supprime tous les boutons du volet de barre Outlook. (Substitue [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|  
+|[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Spécifie les éléments de menu de raccourci sont affichées dans le mode de personnalisation.|  
+|[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Supprime tous les boutons dans le volet de barre Outlook. (Substitue [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la façon d’implémenter une barre Outlook, consultez [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md).  
@@ -118,7 +118,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
  Pour obtenir un exemple d’une barre Outlook, consultez l’exemple de projet OutlookDemo.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCOutlookBarPane` classe. L’exemple montre comment créer un volet de barre Outlook, activer le mode de défilement de la page, activez l’ancrage et définir la couleur d’arrière-plan de la barre Outlook. Cet extrait de code fait partie de la [Outlook plusieurs vues, exemple](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCOutlookBarPane` classe. L’exemple montre comment créer un volet de barre Outlook, activer le mode de défilement, activez l’ancrage et définir la couleur d’arrière-plan de la barre Outlook. Cet extrait de code fait partie de la [Outlook plusieurs vues, exemple](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]  
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]  
@@ -194,28 +194,28 @@ BOOL AddButton(
  Spécifie l’ID. du contrôle de bouton  
   
  [in] *iInsertAt*  
- Spécifie l’index de base zéro dans la page de la barre outlook au niveau duquel insérer le bouton.  
+ Spécifie l’index de base zéro sur la page de la barre outlook au niveau duquel insérer le bouton.  
   
  [in] *uiLabel*  
  Un ID de ressource de chaîne.  
   
  [in] *szBmpFileName*  
- Spécifie le nom du fichier d’image de disque à charger.  
+ Spécifie le nom du fichier d’image disque à charger.  
   
  [in] *szLabel*  
  Spécifie le texte du bouton.  
   
  [in] *hBmp*  
- Un descripteur de bitmap d’un bouton.  
+ Handle vers une image bitmap d’un bouton.  
   
  [in] *hIcon*  
- Handle vers l’icône d’un boutons.  
+ Handle vers l’icône d’un bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si un bouton a été ajouté avec succès ; dans le cas contraire `FALSE`.  
+ TRUE si un bouton a été ajouté avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour insérer un nouveau bouton dans la page d’une barre Outlook. L’image du bouton peut être chargé à partir des ressources d’application ou à partir d’un fichier de disque.  
+ Utilisez cette méthode pour insérer un nouveau bouton de la page d’une barre Outlook. L’image du bouton peut être chargée à partir des ressources d’application ou à partir d’un fichier de disque.  
   
  Si l’ID de page spécifiée par *uiPageID* est -1, le bouton est inséré dans la première page.  
   
@@ -255,7 +255,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pParentWnd*  
- Spécifie la fenêtre parente du contrôle de volet de barre Outlook. Ne doit pas être `NULL`.  
+ Spécifie la fenêtre parente du contrôle de volet de barre Outlook. Ne doit pas être NULL.  
   
  [in] *dwStyle*  
  Style de fenêtre.  Pour obtenir la liste des styles de fenêtre, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
@@ -267,15 +267,15 @@ virtual BOOL Create(
  Spécifie les styles spéciaux qui définissent le comportement du contrôle de volet de barre Outlook lorsqu’elle est détachée de la barre Outlook.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode a réussi ; dans le cas contraire `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Pour construire un `CMFCOutlookBarPane` de l’objet, d’abord appeler le constructeur, puis appelez `Create`, qui crée le contrôle de volet de barre Outlook et l’attache à le `CMFCOutlookBarPane` objet.  
+ Pour construire un `CMFCOutlookBarPane` de l’objet, tout d’abord appeler le constructeur, puis appelez `Create`, qui crée le contrôle de volet de barre Outlook et l’attache à la `CMFCOutlookBarPane` objet.  
   
  Pour plus d’informations sur `dwControlBarStyle` consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
 ##  <a name="enablecontextmenuitems"></a>  CMFCOutlookBarPane::EnableContextMenuItems  
- Spécifie les éléments de menu contextuel sont affichées dans le mode de personnalisation.  
+ Spécifie les éléments de menu de raccourci sont affichées dans le mode de personnalisation.  
   
 ```  
 virtual BOOL EnableContextMenuItems(
@@ -291,18 +291,18 @@ virtual BOOL EnableContextMenuItems(
  Pointeur vers le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `TRUE` si le menu contextuel doit être affichée ; sinon `FALSE`.  
+ Retourne la valeur TRUE si le menu contextuel doit être affiché ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode pour modifier le menu contextuel standard framework affichée par l’infrastructure dans le mode de personnalisation.  
   
- L’implémentation par défaut vérifie le mode de personnalisation ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)) et si elle est définie sur `TRUE`, désactive tous les éléments de menu de raccourci, à l’exception **supprimer**. Ensuite, il le transmet simplement les paramètres d’entrée `CMFCToolBar::EnableContextMenuItems`.  
+ L’implémentation par défaut vérifie le mode de personnalisation ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)) et si elle est définie sur TRUE, elle désactive le raccourci de tous les éléments de menu à l’exception **supprimer**. Ensuite, il passe simplement les paramètres d’entrée `CMFCToolBar::EnableContextMenuItems`.  
   
 > [!NOTE]
 > *Menu contextuel* est un synonyme de menu contextuel.  
   
 ##  <a name="enablepagescrollmode"></a>  CMFCOutlookBarPane::EnablePageScrollMode  
- Spécifie si les flèches de défilement dans le volet de barre Outlook passer à la liste des boutons de page par page, ou en bouton.  
+ Spécifie si les flèches de défilement dans le volet de barre Outlook passer à la liste des boutons de page par page ou par bouton.  
   
 ```  
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
@@ -310,10 +310,10 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bPageScroll*  
- Si `TRUE`, activer le mode de défilement de la page. Si `FALSE`, désactiver le mode de défilement de la page.  
+ Si la valeur est TRUE, activer le mode de défilement de page. Si la valeur est FALSE, désactivez le mode de défilement.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
- Retourne la mise à jour (autrement dit, non sélectionnées) couleur du texte du volet de barre Outlook.  
+ Retourne l’opération standard (autrement dit, non sélectionné) couleur du texte du volet de barre Outlook.  
   
 ```  
 DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  La couleur de texte actuelle avec une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez [CMFCOutlookBarPane::SetTextColor](#settextcolor) pour définir la couleur de texte (régulière et sélectionné) en cours de la barre Outlook. Vous pouvez obtenir la couleur du texte par défaut en appelant le [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) fonctionne avec le `COLOR_WINDOW` index.  
+ Utilisez [CMFCOutlookBarPane::SetTextColor](#settextcolor) pour définir la couleur de texte (réguliers et sélectionné) en cours de la barre Outlook. Vous pouvez obtenir la couleur du texte par défaut en appelant le [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) fonction avec l’index COLOR_WINDOW.  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Détermine s’il existe une image d’arrière-plan chargée pour le volet de barre Outlook.  
@@ -333,7 +333,7 @@ BOOL IsBackgroundTexture() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` s’il existe image d’arrière-plan à afficher ; dans le cas contraire `FALSE`.  
+ TRUE si l’image d’arrière-plan à afficher ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez ajouter une image d’arrière-plan en appelant [CMFCOutlookBarPane::SetBackImage](#setbackimage) (fonction).  
@@ -348,17 +348,17 @@ BOOL IsDrawShadedHighlight() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si les bordures du bouton sont grisées ; dans le cas contraire `FALSE`.  
+ TRUE si les bordures du bouton sont grisées ; Sinon, FALSE.  
   
 ##  <a name="removeallbuttons"></a>  CMFCOutlookBarPane::RemoveAllButtons  
- Supprime tous les boutons du volet de barre Outlook.  
+ Supprime tous les boutons dans le volet de barre Outlook.  
   
 ```  
 virtual void RemoveAllButtons();
 ```  
   
 ##  <a name="removebutton"></a>  CMFCOutlookBarPane::RemoveButton  
- Supprime le bouton qui a un ID de commande spécifiée.  
+ Supprime le bouton qui a un ID de commande spécifié.  
   
 ```  
 BOOL RemoveButton(UINT iIdCommand);
@@ -369,7 +369,7 @@ BOOL RemoveButton(UINT iIdCommand);
  Spécifie l’ID de commande d’un bouton à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le bouton a été supprimé avec succès ; `FALSE` si l’ID de commande spécifié n’est pas valide.  
+ TRUE si le bouton a été supprimé avec succès ; FALSE si l’ID de commande spécifié n’est pas valide.  
   
 ##  <a name="setbackcolor"></a>  CMFCOutlookBarPane::SetBackColor  
  Définit la couleur d’arrière-plan de la barre Outlook.  
@@ -380,10 +380,10 @@ void SetBackColor(COLORREF color);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *couleur*  
- Spécifie la couleur d’arrière-plan.  
+ Spécifie la nouvelle couleur d’arrière-plan.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette fonction pour définir la couleur d’arrière-plan actuelle de la barre Outlook. La couleur d’arrière-plan est utilisée uniquement si aucune image d’arrière-plan.  
+ Appelez cette fonction pour définir la couleur d’arrière-plan actuelle de la barre Outlook. La couleur d’arrière-plan est utilisée uniquement s’il n’existe aucune image d’arrière-plan.  
   
 ##  <a name="setbackimage"></a>  CMFCOutlookBarPane::SetBackImage  
  Définit l’image d’arrière-plan.  
@@ -397,27 +397,27 @@ void SetBackImage(UINT uiImageID);
  Spécifie l’ID de ressource d’image.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour définir l’Outlook image d’arrière-plan de la barre. La liste des images d’arrière-plan est gérée par l’embedded [CMFCToolBarImages classe](../../mfc/reference/cmfctoolbarimages-class.md) objet.  
+ Appelez cette méthode pour définir l’Outlook image d’arrière-plan de la barre. La liste des images d’arrière-plan est gérée par l’embedded [cmfctoolbarimages, classe](../../mfc/reference/cmfctoolbarimages-class.md) objet.  
   
 ##  <a name="setdefaultstate"></a>  CMFCOutlookBarPane::SetDefaultState  
- Réinitialise le volet de barre Outlook à l’ensemble d’origine des boutons.  
+ Réinitialise le volet de barre Outlook pour le jeu initial de boutons.  
   
 ```  
 void SetDefaultState();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode restaure les boutons de barre Outlook dans le jeu d’origine. Cette méthode est comparable à `CMFCOutlookBarPane::RestoreOriginalstate`, mais elle ne déclenche pas d’un nouveau dessin du volet de barre Outlook.  
+ Cette méthode restaure les boutons de barre Outlook dans le jeu d’origine. Cette méthode est comparable à `CMFCOutlookBarPane::RestoreOriginalstate`, sauf qu’elle ne déclenche pas d’un nouveau dessin du volet de barre Outlook.  
   
 ##  <a name="setextraspace"></a>  CMFCOutlookBarPane::SetExtraSpace  
- Définit le nombre de pixels de la marge intérieure qui entoure les boutons dans le volet de barre Outlook.  
+ Définit le nombre de pixels de remplissage utilisé autour des boutons dans le volet de barre Outlook.  
   
 ```  
 void SetExtraSpace()  
 ```  
   
 ##  <a name="settextcolor"></a>  CMFCOutlookBarPane::SetTextColor  
- Définit les couleurs de texte standard et mis en surbrillance dans le volet de barre Outlook.  
+ Définit les couleurs de texte standard et en surbrillance dans le volet de barre Outlook.  
   
 ```  
 void SetTextColor(
@@ -427,7 +427,7 @@ void SetTextColor(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *clrRegText*  
- Spécifie la nouvelle couleur non sélectionné.  
+ Spécifie la nouvelle couleur du texte non sélectionné.  
   
  [in] *clrSelText*  
  Spécifie la nouvelle couleur pour le texte sélectionné.  
@@ -444,11 +444,11 @@ void SetTransparentColor(COLORREF color);
  Spécifie la nouvelle couleur transparente.  
   
 ### <a name="remarks"></a>Notes  
- Couleur transparente est nécessaire pour afficher des images transparentes. Toute occurrence de cette couleur dans une image est peint avec la couleur d’arrière-plan à la place.  Il n’existe aucune fusion des images d’arrière-plan et de premier plan.  
+ Couleur transparente est requis pour afficher des images transparentes. Toute occurrence de cette couleur dans une image est peinte avec la couleur d’arrière-plan à la place.  Il n’existe aucune fusion des images d’arrière-plan et de premier plan.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
+ [Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)   
  [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)   
  [CMFCOutlookBarTabCtrl, classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md)

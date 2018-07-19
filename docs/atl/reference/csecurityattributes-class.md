@@ -1,5 +1,5 @@
 ---
-title: Classe de CSecurityAttributes | Documents Microsoft
+title: CSecurityAttributes, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357504"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879337"
 ---
-# <a name="csecurityattributes-class"></a>Classe de CSecurityAttributes
-Cette classe est un wrapper mince pour la structure d’attributs de sécurité.  
+# <a name="csecurityattributes-class"></a>CSecurityAttributes, classe
+Cette classe est un simple wrapper pour la structure d’attributs de sécurité.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,16 +53,16 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[CSecurityAttributes::Set](#set)|Appelez cette méthode pour définir les attributs de la `CSecurityAttributes` objet.|  
   
 ## <a name="remarks"></a>Notes  
- Le **SECURITY_ATTRIBUTES** structure contient un [descripteur de sécurité](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilisé pour la création d’un objet et spécifie si le handle récupéré en spécifiant cette structure peut être hérité.  
+ Le `SECURITY_ATTRIBUTES` structure contient un [descripteur de sécurité](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilisée pour la création d’un objet et spécifie si le handle extrait en spécifiant cette structure peut être hérité.  
   
- Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
+ Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le SDK Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `SECURITY_ATTRIBUTES`  
   
  `CSecurityAttributes`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
@@ -74,10 +74,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Référence à un descripteur de sécurité.  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  Spécifie si le handle retourné est hérité quand un nouveau processus est créé. Si ce membre a la valeur true, le nouveau processus hérite du handle.  
   
 ##  <a name="set"></a>  CSecurityAttributes::Set  
@@ -88,10 +88,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Référence à un descripteur de sécurité.  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  Spécifie si le handle retourné est hérité quand un nouveau processus est créé. Si ce membre a la valeur true, le nouveau processus hérite du handle.  
   
 ### <a name="remarks"></a>Notes  

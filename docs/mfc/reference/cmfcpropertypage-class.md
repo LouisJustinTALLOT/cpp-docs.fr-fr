@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCPropertyPage | Documents Microsoft
+title: Cmfcpropertypage, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042080"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848734"
 ---
-# <a name="cmfcpropertypage-class"></a>Classe de CMFCPropertyPage
-La `CMFCPropertyPage` classe prend en charge l’affichage des menus contextuels sur une page de propriétés.  
+# <a name="cmfcpropertypage-class"></a>Cmfcpropertypage, classe
+Le `CMFCPropertyPage` classe prend en charge l’affichage des menus contextuels sur une page de propriétés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,10 +50,10 @@ class CMFCPropertyPage : public CPropertyPage
 |`CMFCPropertyPage::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
 |`CMFCPropertyPage::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
 |`CMFCPropertyPage::OnSetActive`|Cette fonction membre est appelée par le framework lorsque la page est choisie par l’utilisateur et devient la page active. (Substitue [notifications CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Convertit les messages de fenêtre avant d’être distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions Windows. Pour plus d’informations et la syntaxe de méthode, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CPropertyPage::PreTranslateMessage`.)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. Pour plus d’informations et de syntaxe de méthode, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CPropertyPage::PreTranslateMessage`.)|  
   
 ## <a name="remarks"></a>Notes  
- La `CMFCPropertyPage` classe représente des pages individuelles d’une feuille de propriétés, également appelée boîte de dialogue à onglets.  
+ Le `CMFCPropertyPage` classe représente des pages individuelles d’une feuille de propriétés, également appelé un onglet de boîte de dialogue.  
   
  Utilisez le `CMFCPropertyPage` classe avec le [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) classe. Pour utiliser les menus sur une page de propriétés, remplacez toutes les occurrences de la `CPropertyPage` classe avec la `CMFCPropertyPage` classe.  
   
@@ -92,10 +92,10 @@ CMFCPropertyPage(
  ID de ressource du modèle pour cette page.  
   
  *nIDCaption*  
- ID de ressource de l’étiquette à placer dans l’onglet de cette page. Si 0, le nom est obtenu à partir de la boîte de dialogue modèle de cette page. La valeur par défaut est 0.  
+ ID de ressource de l’étiquette à placer dans l’onglet de cette page. Si 0, le nom est obtenu à partir du modèle de boîte de dialogue pour cette page. La valeur par défaut est 0.  
   
  *lpszTemplateName*  
- Pointe vers le nom du modèle pour cette page. Ne peut pas être `NULL`.  
+ Pointe vers le nom du modèle pour cette page. Ne peut pas être Null.  
   
 ### <a name="return-value"></a>Valeur de retour  
   

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCToolBarEditBoxButton | Documents Microsoft
+title: Cmfctoolbareditboxbutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -62,14 +62,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6c4493239030380ab935d473af48d4107556d4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041420"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853808"
 ---
-# <a name="cmfctoolbareditboxbutton-class"></a>Classe de CMFCToolBarEditBoxButton
+# <a name="cmfctoolbareditboxbutton-class"></a>Cmfctoolbareditboxbutton, classe
 Un bouton de barre d’outils qui contient un contrôle d’édition ( [classe CEdit](../../mfc/reference/cedit-class.md)).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -92,10 +92,10 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |Nom|Description|  
 |----------|-----------------|  
 |[CMFCToolBarEditBoxButton::CanBeStretched](#canbestretched)|Spécifie si un utilisateur permet d’étendre le bouton au cours de personnalisation. (Substitue [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
-|[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|Copie les propriétés d’un autre bouton de barre d’outils sur le bouton en cours. (Substitue [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|Copie les propriétés d’un autre bouton de barre d’outils pour le bouton en cours. (Substitue [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
 |`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::CreateEdit](#createedit)|Crée un nouveau contrôle d’édition dans le bouton.|  
 |`CMFCToolBarEditBoxButton::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
-|[CMFCToolBarEditBoxButton::GetByCmd](#getbycmd)|Récupère le premier `CMFCToolBarEditBoxButton` objet dans l’application ayant l’ID de commande spécifiée.|  
+|[CMFCToolBarEditBoxButton::GetByCmd](#getbycmd)|Récupère le premier `CMFCToolBarEditBoxButton` objet dans l’application qui possède l’ID de commande spécifiée.|  
 |[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)|Récupère le texte du premier contrôle de barre d’outils de la zone Modifier ayant l’ID de commande spécifiée.|  
 |[CMFCToolBarEditBoxButton::GetContextMenuID](#getcontextmenuid)|Récupère l’ID de ressource du menu contextuel qui est associé au bouton.|  
 |[CMFCToolBarEditBoxButton::GetEditBorder](#geteditborder)|Récupère le rectangle englobant de la partie de modifier l’édition du bouton de zone.|  
@@ -103,42 +103,42 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |[CMFCToolBarEditBoxButton::GetHwnd](#gethwnd)|Récupère le handle de fenêtre qui est associé au bouton de barre d’outils. (Substitue [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
 |[CMFCToolBarEditBoxButton::GetInvalidateRect](#getinvalidaterect)|Récupère la région de la zone cliente du bouton qui doit être redessiné. (Substitue [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect).)|  
 |`CMFCToolBarEditBoxButton::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
-|[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Détermine si une bordure du bouton est affichée quand un utilisateur clique sur le bouton. (Substitue [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
+|[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Détermine si une bordure du bouton est affichée lorsqu’un utilisateur clique sur le bouton. (Substitue [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Détermine si les boutons de zone d’édition ont un style à deux dimensions.|  
 |[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Spécifie si le bouton traite le [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message. (Substitue [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Appelé par le framework lorsque le bouton est ajouté à un **personnaliser** boîte de dialogue. (Substitue [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Appelé par l’infrastructure pour calculer la taille du bouton pour le contexte de périphérique spécifié et l’état d’ancrage. (Substitue [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Appelé par le framework lorsque le bouton est inséré dans une barre d’outils. (Substitue [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Appelé par le framework lorsque le bouton est inséré dans une nouvelle barre d’outils. (Substitue [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarEditBoxButton::OnClick](#onclick)|Appelé par le framework lorsque l’utilisateur clique sur le bouton de la souris. (Substitue [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Appelé par l’infrastructure lors de la barre d’outils parent gère un WM_CTLCOLOR (message). (Substitue [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Appelé par l’infrastructure lors de la barre d’outils parent gère un message WM_CTLCOLOR. (Substitue [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
 |`CMFCToolBarEditBoxButton::OnDraw`|Appelé par l’infrastructure pour dessiner le bouton en utilisant les options et les styles spécifiés. (Substitue [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
 |`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|Appelé par l’infrastructure pour dessiner le bouton dans le **commandes** volet de la **personnaliser** boîte de dialogue. (Substitue [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|Appelé par le framework lorsque la police globale a été modifiée. (Substitue [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
 |[CMFCToolBarEditBoxButton::OnMove](#onmove)|Appelé par le framework lorsque la barre d’outils parent se déplace. (Substitue [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
 |[CMFCToolBarEditBoxButton::OnShow](#onshow)|Appelé par le framework lorsque le bouton est visible ou invisible. (Substitue [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
-|[CMFCToolBarEditBoxButton::OnSize](#onsize)|Appelé par l’infrastructure lors de la barre d’outils du parent change de taille ou de position et cette modification entraîne le bouton Modifier la taille. (Substitue [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
+|[CMFCToolBarEditBoxButton::OnSize](#onsize)|Appelé par l’infrastructure lors de la barre d’outils parent change sa taille ou la position et cette modification entraîne le bouton Modifier la taille. (Substitue [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
 |[CMFCToolBarEditBoxButton::OnUpdateToolTip](#onupdatetooltip)|Appelé par l’infrastructure lors de la barre d’outils parent met à jour son texte d’info-bulle. (Substitue [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
 |`CMFCToolBarEditBoxButton::Serialize`|Lit de cet objet à partir d’une archive ou écrit dans une archive. (Substitue [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|`CMFCToolBarEditBoxButton::SetACCData`|Remplit le `CAccessibilityData` objet avec l’accessibilité des données à partir du bouton de barre d’outils. (Substitue [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|  
-|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContents](#setcontents)|Définit le texte du contrôle d’édition du bouton.|  
+|`CMFCToolBarEditBoxButton::SetACCData`|Remplit le fourni `CAccessibilityData` objet avec les données d’accessibilité à partir du bouton de barre d’outils. (Substitue [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContents](#setcontents)|Définit le texte dans le contrôle d’édition du bouton.|  
 |`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)|Recherche le bouton de contrôle d’édition qui possède un ID de commande spécifié et définit le texte dans le contrôle d’édition de ce bouton.|  
 |[CMFCToolBarEditBoxButton::SetContextMenuID](#setcontextmenuid)|Spécifie l’ID de ressource du menu contextuel qui est associé au bouton.|  
-|[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)|Spécifie l’apparence de style à deux dimensions de boutons de zone de modification dans l’application.|  
+|[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)|Spécifie l’apparence de style à deux dimensions de boutons de zone d’édition dans l’application.|  
 |`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetStyle](#setstyle)|Spécifie le style du bouton. (Substitue [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
   
 ## <a name="remarks"></a>Notes  
- Pour ajouter un bouton de la zone de modification à une barre d’outils, procédez comme suit :  
+ Pour ajouter un bouton de zone de modification à une barre d’outils, procédez comme suit :  
   
  1. Réservez un ID de ressource factice pour le bouton dans la ressource de la barre d'outils parente.  
   
  2. Construire un `CMFCToolBarEditBoxButton` objet.  
   
- 3. Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacer le bouton factice avec le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacez le bouton fictif avec le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Pour plus d’informations, consultez [procédure pas à pas : placement le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
+ Pour plus d’informations, consultez [procédure pas à pas : placer le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarEditBoxButton` classe. L’exemple montre comment spécifier qu’un utilisateur peut étendre le bouton au cours de personnalisation, spécifier qu’une bordure du bouton s’affiche lorsqu’un utilisateur clique sur le bouton, définir le texte dans le contrôle de zone de texte, spécifier l’apparence de style à deux dimensions de boutons de zone d’édition dans les applications cement et spécifiez le style d’une barre d’outils de contrôle zone d’édition.  
+ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarEditBoxButton` classe. L’exemple montre comment spécifier qu’un utilisateur peut étirer le bouton au cours de personnalisation, spécifier qu’une bordure du bouton s’affiche lorsqu’un utilisateur clique sur le bouton, définir le texte dans le contrôle de zone de texte, spécifier l’apparence de style à deux dimensions de boutons de zone d’édition dans l’appli cations et spécifiez le style d’une barre d’outils de contrôle zone d’édition.  
   
  [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]  
   
@@ -160,10 +160,10 @@ virtual BOOL CanBeStretched() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Cette méthode retourne `TRUE`.  
+ Cette méthode retourne la valeur TRUE.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, le framework n’autorise pas l’utilisateur d’étendre un bouton de barre d’outils au cours de personnalisation. Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) en permettant à l’utilisateur d’étendre un bouton de barre d’outils de zone Modifier au cours de personnalisation.  
+ Par défaut, le framework n’autorise pas l’utilisateur étirer un bouton de barre d’outils au cours de personnalisation. Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) en autorisant l’utilisateur étirer un bouton de barre d’outils de zone Modifier au cours de personnalisation.  
   
 ##  <a name="cmfctoolbareditboxbutton"></a>  CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
  Construit un [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) objet.  
@@ -181,7 +181,7 @@ CMFCToolBarEditBoxButton(
  Spécifie l’ID de contrôle.  
   
  [in] *iImage*  
- Spécifie l’index de base zéro d’une image de la barre d’outils. L’image se trouve dans le [CMFCToolBarImages classe](../../mfc/reference/cmfctoolbarimages-class.md) objet [CMFCToolBar classe](../../mfc/reference/cmfctoolbar-class.md) classe conserve.  
+ Spécifie l’index de base zéro d’une image de la barre d’outils. L’image se trouve dans le [cmfctoolbarimages, classe](../../mfc/reference/cmfctoolbarimages-class.md) objet [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md) classe conserve.  
   
  [in] *dwStyle*  
  Spécifie le style de contrôle d’édition.  
@@ -190,14 +190,14 @@ CMFCToolBarEditBoxButton(
  Spécifie la largeur en pixels du contrôle d’édition.  
   
 ### <a name="remarks"></a>Notes  
- Le constructeur par défaut définit le style de contrôle d’édition pour la combinaison suivante :  
+ Le constructeur par défaut définit le style de contrôle d’édition à la combinaison suivante :  
   
- `WS_CHILD | WS_VISIBLE | ES_AUTOHSCROLL`  
+ WS_CHILD | WS_VISIBLE | ES_AUTOHSCROLL  
   
  La largeur par défaut du contrôle est 150 pixels.  
   
 ##  <a name="copyfrom"></a>  CMFCToolBarEditBoxButton::CopyFrom  
- Copie les propriétés d’un autre bouton de barre d’outils sur le bouton en cours.  
+ Copie les propriétés d’un autre bouton de barre d’outils pour le bouton en cours.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -205,10 +205,10 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *src*  
- Une référence au bouton source à partir duquel copier.  
+ Une référence au bouton de la source à partir duquel copier.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour copier un autre bouton de barre d’outils pour ce bouton de barre d’outils. *src* doit être de type `CMFCToolBarEditBoxButton`.  
+ Appelez cette méthode pour copier un autre bouton de barre d’outils sur ce bouton de barre d’outils. *src* doit être de type `CMFCToolBarEditBoxButton`.  
   
 ##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
  Crée un nouveau contrôle d’édition dans le bouton.  
@@ -227,13 +227,13 @@ virtual CEdit* CreateEdit(
  Spécifie la taille et la position du contrôle d’édition.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le contrôle d’édition qui vient d’être créé ; Il est `NULL` cas d’échouent de la création du contrôle et la pièce jointe.  
+ Un pointeur vers le contrôle d’édition qui vient d’être créé ; sa valeur est NULL si la création et la pièce jointe du contrôle échouent.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CMFCToolBarEditBoxButton` objet en deux étapes. Tout d’abord appeler le constructeur, puis appelez `CreateEdit`, ce qui crée le contrôle d’édition Windows et l’attache à le `CMFCToolBarEditBoxButton` objet.  
+ Vous construisez un `CMFCToolBarEditBoxButton` objet en deux étapes. Tout d’abord appeler le constructeur, puis appelez `CreateEdit`, ce qui crée le contrôle d’édition Windows et l’attache à la `CMFCToolBarEditBoxButton` objet.  
   
 ##  <a name="getbycmd"></a>  CMFCToolBarEditBoxButton::GetByCmd  
- Récupère le premier `CMFCToolBarEditBoxButton` objet dans l’application ayant l’ID de commande spécifiée.  
+ Récupère le premier `CMFCToolBarEditBoxButton` objet dans l’application qui possède l’ID de commande spécifiée.  
   
 ```  
 static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
@@ -244,10 +244,10 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
  ID de commande du bouton à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La première `CMFCToolBarEditBoxButton` objet dans l’application qui a l’ID de la commande spécifiée, ou `NULL` si aucun objet n’existe.  
+ Le premier `CMFCToolBarEditBoxButton` objet dans l’application qui a l’ID de commande spécifié, ou NULL si aucun objet n’existe.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode utilitaire partagé est utilisée par les méthodes telles que [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall) et [CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall) pour définir ou obtenir le texte de la première barre d’outils de zone Modifier contrôle ayant l’ID de commande spécifiée.  
+ Cette méthode d’utilitaire partagé est utilisée par les méthodes telles que [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall) et [CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall) pour définir ou obtenir le texte de la barre d’outils de zone première édition contrôle ayant l’ID de commande spécifiée.  
   
 ##  <a name="getcontentsall"></a>  CMFCToolBarEditBoxButton::GetContentsAll  
  Récupère le texte du premier contrôle de barre d’outils de la zone Modifier ayant l’ID de commande spécifiée.  
@@ -261,10 +261,10 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
  L’ID de commande du bouton à partir duquel récupérer le contenu.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `CString` objet qui contient le texte du premier contrôle de barre d’outils de la zone Modifier ayant l’ID de commande spécifiée.  
+ Un `CString` objet qui contient le texte du premier contrôle de barre d’outils de la zone Modifier ayant l’ID de commande spécifiée.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode retourne une chaîne vide si aucun `CMFCToolBarEditBoxButton` objets ont l’ID de commande spécifiée.  
+ Cette méthode retourne une chaîne vide si aucun `CMFCToolBarEditBoxButton` objets ont des ID de commande spécifié.  
   
 ##  <a name="getcontextmenuid"></a>  CMFCToolBarEditBoxButton::GetContextMenuID  
  Récupère l’ID de ressource du menu contextuel qui est associé au bouton.  
@@ -291,9 +291,9 @@ virtual void GetEditBorder(CRect& rectBorder);
  Une référence à la `CRect` objet qui reçoit le rectangle englobant.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode récupère le rectangle englobant du contrôle d’édition dans les coordonnées clientes. Il s’étend à la taille du rectangle dans chaque direction d’un pixel.  
+ Cette méthode récupère le rectangle englobant du contrôle d’édition dans les coordonnées clientes. Il étend la taille du rectangle dans chaque direction d’un pixel.  
   
- Le [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder) méthode appelle cette méthode lorsqu’il dessine la bordure qui entoure un `CMFCToolBarEditBoxButton` objet.  
+ Le [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder) méthode appelle cette méthode lorsqu’il dessine la bordure autour d’un `CMFCToolBarEditBoxButton` objet.  
   
 ##  <a name="geteditbox"></a>  CMFCToolBarEditBoxButton::GetEditBox  
  Retourne un pointeur vers le [classe CEdit](../../mfc/reference/cedit-class.md) contrôle qui est incorporé dans le bouton.  
@@ -303,7 +303,7 @@ CEdit* GetEditBox() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le [classe CEdit](../../mfc/reference/cedit-class.md) contrôle contenant le bouton. Il s’agit de `NULL` si le `CEdit` contrôle n’a pas encore été créé.  
+ Un pointeur vers le [classe CEdit](../../mfc/reference/cedit-class.md) contrôle qui contient le bouton. Sa valeur est NULL si le `CEdit` contrôle n’a pas encore été créé.  
   
 ### <a name="remarks"></a>Notes  
  Vous créez le `CEdit` contrôle en appelant [CMFCToolBarEditBoxButton::CreateEdit](#createedit).  
@@ -319,7 +319,7 @@ virtual HWND GetHwnd();
  Le handle de fenêtre qui est associé au bouton.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode remplace la [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) méthode en retournant le handle de fenêtre de la partie du contrôle de modifier l’édition du bouton de zone.  
+ Cette méthode remplace la [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) méthode en retournant le handle de fenêtre de la partie de contrôle d’édition du bouton de zone de modification.  
   
 ##  <a name="getinvalidaterect"></a>  CMFCToolBarEditBoxButton::GetInvalidateRect  
  Récupère la région de la zone cliente du bouton qui doit être redessiné.  
@@ -329,20 +329,20 @@ virtual const CRect GetInvalidateRect() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `CRect` objet qui spécifie la région qui doit être redessinée.  
+ Un `CRect` objet qui spécifie la région qui doit être redessinée.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode étend l’implémentation de la classe de base, [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect), en incluant dans la région de la zone de l’étiquette de texte.  
   
 ##  <a name="havehotborder"></a>  CMFCToolBarEditBoxButton::HaveHotBorder  
- Détermine si une bordure du bouton est affichée quand un utilisateur clique sur le bouton.  
+ Détermine si une bordure du bouton est affichée lorsqu’un utilisateur clique sur le bouton.  
   
 ```  
 virtual BOOL HaveHotBorder() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si un bouton affiche sa bordure lorsque sélectionné ; Sinon, 0.  
+ Différent de zéro si un bouton affiche sa bordure lorsque sélectionné ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode étend l’implémentation de la classe de base, [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder), en retournant une valeur différente de zéro si le contrôle est visible.  
@@ -358,7 +358,7 @@ static BOOL __stdcall IsFlatMode();
  Différent de zéro si les boutons ont un style à deux dimensions ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, les boutons de zone d’édition ont un style à deux dimensions. Utilisez le [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) méthode pour modifier l’apparence de style à deux dimensions de votre application.  
+ Par défaut, les boutons de zone d’édition ont un style à deux dimensions. Utilisez le [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) méthode pour modifier l’apparence de style à deux dimensions pour votre application.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
  Spécifie si le bouton traite le [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message.  
@@ -372,10 +372,10 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Le message de notification qui est associé à la commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le bouton traite le message WM_COMMAND, ou `FALSE` pour indiquer que le message doit être géré par la barre d’outils parente.  
+ TRUE si le bouton traite le message WM_COMMAND, ou FALSE pour indiquer que le message doit être géré par la barre d’outils parent.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure appelle cette méthode lorsqu’il est sur le point d’envoyer un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message à la fenêtre parente.  
+ L’infrastructure appelle cette méthode lorsqu’il est sur le point d’envoyer un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message vers la fenêtre parente.  
   
  Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) en traitant le [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) notification. Pour chaque zone d’édition avec le même ID de commande en tant que cet objet, il définit son étiquette de texte à l’étiquette de texte de cet objet.  
   
@@ -387,12 +387,12 @@ virtual void OnAddToCustomizePage();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)) en copiant les propriétés à partir de ce contrôle dans une barre d’outils qui possède le même ID de commande en tant que cet objet. Cette méthode ne fait rien si aucune barre d’outils n’a un contrôle de zone d’édition qui possède le même ID de commande en tant que cet objet.  
+ Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)) en copiant les propriétés à partir de ce contrôle dans la barre d’outils quelconque qui a le même ID de commande en tant que cet objet. Cette méthode ne fait rien si aucune barre d’outils n’a un contrôle de zone d’édition qui possède le même ID de commande en tant que cet objet.  
   
- Pour plus d’informations sur la **personnaliser** boîte de dialogue, consultez [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ Pour plus d’informations sur la **personnaliser** boîte de dialogue, consultez [cmfctoolbarscustomizedialog, classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarEditBoxButton::OnChangeParentWnd  
- Appelé par le framework lorsque le bouton est inséré dans une barre d’outils.  
+ Appelé par le framework lorsque le bouton est inséré dans une nouvelle barre d’outils.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -400,7 +400,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndParent*  
- Pointeur vers la nouvelle fenêtre parent.  
+ Pointeur vers la nouvelle fenêtre parente.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode substitue l’implémentation de classe de base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) en recréant interne `CEdit` objet.  
@@ -422,13 +422,13 @@ virtual BOOL OnClick(
  Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le bouton traite le message de clic. Sinon, 0.  
+ Différent de zéro si le bouton traite le message de clic ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode substitue l’implémentation de classe de base ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) en retournant une valeur différente de zéro si le texte interne `CEdit` objet est visible.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
- Appelé par l’infrastructure lors de la barre d’outils parent gère un WM_CTLCOLOR (message).  
+ Appelé par l’infrastructure lors de la barre d’outils parent gère un message WM_CTLCOLOR.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -437,17 +437,17 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Le contexte de périphérique qui affiche le bouton.  
   
  [in] *nCtlColor*  
  Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Handle vers le pinceau de la fenêtre global.  
+ Handle vers le pinceau de fenêtre global.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode substitue l’implémentation de classe de base ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) en définissant les couleurs de texte et d’arrière-plan du contexte de périphérique fourni globale du texte et les couleurs d’arrière-plan, respectivement.  
+ Cette méthode substitue l’implémentation de classe de base ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) en définissant les couleurs de texte et d’arrière-plan du contexte de périphérique fourni globale de texte et les couleurs d’arrière-plan, respectivement.  
   
  Pour plus d’informations sur les options globales qui sont disponibles pour votre application, consultez [afx_global_data, Structure](../../mfc/reference/afx-global-data-structure.md).  
   
@@ -482,13 +482,13 @@ virtual void OnShow(BOOL bShow);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bShow*  
- Spécifie si le bouton est visible. Si ce paramètre est `TRUE`, le bouton est visible. Sinon, le bouton n’est pas visible.  
+ Spécifie si le bouton est visible. Si ce paramètre est TRUE, le bouton est visible. Sinon, le bouton n’est pas visible.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) en affichant le bouton si *bShow* est `TRUE`. Sinon, cette méthode masque le bouton.  
+ Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) en affichant le bouton si *bShow* a la valeur TRUE. Sinon, cette méthode masque le bouton.  
   
 ##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
- Appelé par l’infrastructure lors de la barre d’outils du parent change de taille ou de position et cette modification entraîne le bouton Modifier la taille.  
+ Appelé par l’infrastructure lors de la barre d’outils parent change sa taille ou la position et cette modification entraîne le bouton Modifier la taille.  
   
 ```  
 virtual void OnSize(int iSize);
@@ -523,13 +523,13 @@ virtual BOOL OnUpdateToolTip(
  Le contrôle qui affiche le texte d’info-bulle.  
   
  [out] *str*  
- A `CString` objet qui reçoit le texte d’info-bulle mis à jour.  
+ Un `CString` objet qui reçoit le texte d’info-bulle mis à jour.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la méthode met à jour le texte d’info-bulle ; Sinon, 0.  
+ Différent de zéro si la méthode met à jour le texte d’info-bulle ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) en affichant le texte d’info-bulle associé à la partie d’édition du bouton. Si le texte interne `CEdit` objet est `NULL` ou le handle de fenêtre de la `CEdit` objet n’identifie pas une fenêtre existante, cette méthode ne fait rien et retourne `FALSE`.  
+ Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) en affichant le texte d’info-bulle associé à la partie d’édition du bouton. Si le texte interne `CEdit` objet est NULL ou un handle de fenêtre de la `CEdit` objet n’identifie pas une fenêtre existante, cette méthode ne fait rien et retourne FALSE.  
   
 ##  <a name="setcontents"></a>  CMFCToolBarEditBoxButton::SetContents  
  Définit le texte dans le contrôle de zone de texte.  
@@ -573,10 +573,10 @@ void SetContextMenuID(UINT uiResID);
  L’ID de ressource du menu contextuel.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure utilise l’ID de ressource pour créer le menu contextuel lorsque l’utilisateur clique sur le bouton de barre d’outils.  
+ L’infrastructure utilise l’ID de ressource pour créer le menu contextuel quand l’utilisateur clique sur le bouton de barre d’outils.  
   
 ##  <a name="setflatmode"></a>  CMFCToolBarEditBoxButton::SetFlatMode  
- Spécifie l’apparence de style à deux dimensions de boutons de zone de modification dans l’application.  
+ Spécifie l’apparence de style à deux dimensions de boutons de zone d’édition dans l’application.  
   
 ```  
 static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
@@ -584,10 +584,10 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bFlat*  
- Le style à deux dimensions pour modifier les boutons de zone. Si ce paramètre est `TRUE`, l’apparence de style à deux dimensions est activée ; sinon, l’apparence de style à deux dimensions est désactivé.  
+ Le style plat pour les boutons de zone d’édition. Si ce paramètre est TRUE, l’apparence de style à deux dimensions est activé ; Sinon, l’apparence de style à deux dimensions est désactivée.  
   
 ### <a name="remarks"></a>Notes  
- Le style plat par défaut pour les boutons de zone d’édition est `TRUE`. Utilisez le [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) méthode pour récupérer l’apparence de style à deux dimensions de votre application.  
+ Le style plat par défaut pour les boutons de zone d’édition est TRUE. Utilisez le [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) méthode pour récupérer l’apparence de style à deux dimensions pour votre application.  
   
 ##  <a name="setstyle"></a>  CMFCToolBarEditBoxButton::SetStyle  
  Spécifie le style d’une barre d’outils de contrôle zone d’édition.  
@@ -601,12 +601,12 @@ virtual void SetStyle(UINT nStyle);
  Un nouveau style à définir.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode définit [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) à *nStyle* il désactive également la zone de texte lorsque l’application est en mode de personnalisation et lui permet de lors de l’application n’est pas en mode de personnalisation (voir [ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) et [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Consultez [les Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md) pour obtenir la liste des indicateurs de style valide.  
+ Cette méthode définit [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) à *nStyle* il désactive également la zone de texte lorsque l’application est en mode de personnalisation et l’active lorsque l’application n’est pas en mode personnaliser (voir [ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) et [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Consultez [Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md) pour obtenir la liste des indicateurs de style valide.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Cmfctoolbarbutton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [Classe CEdit](../../mfc/reference/cedit-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
  [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)

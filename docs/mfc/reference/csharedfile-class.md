@@ -1,5 +1,5 @@
 ---
-title: Classe CSharedFile | Documents Microsoft
+title: CSharedFile, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078281"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853726"
 ---
-# <a name="csharedfile-class"></a>Classe CSharedFile
-Le [CMemFile](../../mfc/reference/cmemfile-class.md)-classe dérivée qui prend en charge de fichiers de mémoire partagé.  
+# <a name="csharedfile-class"></a>CSharedFile, classe
+Le [CMemFile](../../mfc/reference/cmemfile-class.md)-classe dérivée qui prend en charge les fichiers de la mémoire partagée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,17 +54,17 @@ class CSharedFile : public CMemFile
 |[CSharedFile::SetHandle](#sethandle)|Joint le fichier de mémoire partagée à un bloc de mémoire.|  
   
 ## <a name="remarks"></a>Notes  
- Fichiers de mémoire se comportent comme les fichiers de disque, sauf que le fichier est stocké dans la mémoire RAM, plutôt que sur le disque. Un fichier de mémoire est utile pour le stockage temporaire rapide ou le transfert d’octets bruts ou objets sérialisés entre des processus indépendants.  
+ Fichiers de mémoire se comportent comme les fichiers de disque, à ceci près que le fichier est stocké dans la mémoire RAM, plutôt que sur le disque. Un fichier de mémoire est utile pour un stockage temporaire rapide ou pour transférer les octets bruts ou objets sérialisés entre processus indépendants.  
   
- Les fichiers de mémoire partagée diffèrent des autres fichiers de mémoire que mémoire leur est allouée avec le [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) fonction Windows. Le `CSharedFile` classe stocke les données dans un bloc de mémoire alloués globalement (créé à l’aide de `GlobalAlloc`), et ce bloc de mémoire peut être partagé à l’aide de DDE, le Presse-papiers ou autres opérations de transfert OLE/COM de données uniforme, par exemple, à l’aide de `IDataObject`.  
+ Les fichiers de mémoire partagée la différence des autres fichiers de mémoire mémoire leur est allouée à la [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) (fonction) Windows. Le `CSharedFile` classe stocke les données dans un bloc de mémoire alloué dans le monde entier (créé à l’aide `GlobalAlloc`), et ce bloc de mémoire peut être partagé à l’aide de DDE, le Presse-papiers ou autres opérations de transfert OLE/COM de données uniforme, par exemple, à l’aide de `IDataObject`.  
   
- `GlobalAlloc` Retourne un `HGLOBAL` gérer au lieu d’un pointeur vers la mémoire, telles que le pointeur retourné par [malloc](../../c-runtime-library/reference/malloc.md). Le `HGLOBAL` handle n’est nécessaire dans certaines applications. Par exemple, pour placer des données le Presse-papiers vous devez un `HGLOBAL` gérer.  
+ `GlobalAlloc` Retourne un HGLOBAL gérer au lieu d’un pointeur vers la mémoire, telles que le pointeur retourné par [malloc](../../c-runtime-library/reference/malloc.md). Le descripteur HGLOBAL est nécessaire dans certaines applications. Par exemple, pour placer des données dans le Presse-papiers, vous devez descripteur HGLOBAL.  
   
- Notez que `CSharedFile` ne pas les utiliser mappé en mémoire et les données ne peut pas être partagées directement entre les processus.  
+ Veuillez noter que `CSharedFile` ne pas les fichiers d’utilisation mappé en mémoire et les données ne peuvent pas être partagées directement entre les processus.  
   
- `CSharedFile` objets peuvent allouer automatiquement leur propre mémoire, ou vous pouvez attacher votre propre bloc de mémoire à la `CSharedFile` objet en appelant [CSharedFile::SetHandle](#sethandle). Dans les deux cas, la mémoire pour la croissance d’automatiquement le fichier de mémoire est allouée dans `nGrowBytes`-taille par incréments si `nGrowBytes` n’est pas zéro.  
+ `CSharedFile` objets peuvent allouer automatiquement leur propre mémoire, ou vous pouvez attacher votre propre bloc de mémoire à la `CSharedFile` objet en appelant [CSharedFile::SetHandle](#sethandle). Dans les deux cas, la mémoire pour la croissance d’automatiquement le fichier de la mémoire est allouée dans `nGrowBytes`-taille par incréments si `nGrowBytes` n’est pas égal à zéro.  
   
- Pour plus d’informations, consultez l’article [fichiers dans MFC](../../mfc/files-in-mfc.md) et [gestion des fichiers](../../c-runtime-library/file-handling.md) dans les *Run-Time Library Reference*.  
+ Pour plus d’informations, consultez l’article [fichiers dans MFC](../../mfc/files-in-mfc.md) et [gestion des fichiers](../../c-runtime-library/file-handling.md) dans le *Run-Time Library Reference*.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -79,7 +79,7 @@ class CSharedFile : public CMemFile
  **En-tête :** afxadv.h  
   
 ##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
- Construit un `CSharedFile` de l’objet et alloue de la mémoire pour celle-ci.  
+ Construit un `CSharedFile` de l’objet et alloue la mémoire pour elle.  
   
 ```  
 CSharedFile(
@@ -124,9 +124,9 @@ void SetHandle(
  Spécifie si le bloc de mémoire est autorisé à croître.  
   
 ### <a name="remarks"></a>Notes  
- Si *bAllowGrow* est différent de zéro, la taille du bloc de mémoire est augmentée si nécessaire, par exemple, si une tentative est effectuée pour écrire des octets dans le fichier que vous ont été alloués pour le bloc de mémoire.  
+ Si *bAllowGrow* est différent de zéro, la taille du bloc de mémoire est augmentée en fonction des besoins, par exemple, si une tentative est effectuée pour écrire des octets dans le fichier qu’ont été alloués pour le bloc de mémoire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe CMemFile](../../mfc/reference/cmemfile-class.md)   
+ [CMemFile, classe](../../mfc/reference/cmemfile-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [CMemFile, classe](../../mfc/reference/cmemfile-class.md)

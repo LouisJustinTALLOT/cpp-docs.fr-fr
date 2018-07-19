@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonUndoButton | Documents Microsoft
+title: Cmfcribbonundobutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041245"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848766"
 ---
-# <a name="cmfcribbonundobutton-class"></a>Classe de CMFCRibbonUndoButton
-La `CMFCRibbonUndoButton` classe implémente un bouton de liste déroulante qui contient les commandes d’utilisateur les plus récentes. Les utilisateurs peuvent sélectionner un ou plusieurs des commandes les plus récentes à partir de la liste déroulante pour les annuler ou rétablir.  
+# <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton, classe
+Le `CMFCRibbonUndoButton` classe implémente un bouton de liste déroulante qui contient les commandes utilisateur plus récente. Les utilisateurs peuvent sélectionner un ou plusieurs des commandes plus récente dans la liste déroulante de restauration par progression ou les annuler.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,22 +48,22 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construit un nouveau `CMFCRibbonUndoButton` objet à l’aide de l’ID de commande que vous spécifiez, étiquette de texte et des images à partir de la liste d’images de l’objet parent.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construit un nouvel `CMFCRibbonUndoButton` objet à l’aide de l’ID de commande que vous spécifiez, étiquette de texte et des images à partir de la liste d’images de l’objet parent.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Ajoute une nouvelle action à la liste d’actions.|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Efface la liste des actions, qui est la liste déroulante.|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Efface la liste d’actions, qui est la liste déroulante.|  
 |[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Détermine le nombre d’éléments dont un utilisateur a sélectionné dans la liste déroulante.|  
-|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indique si l’objet contienne un menu.|  
+|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indique si l’objet contient un menu.|  
   
 ## <a name="remarks"></a>Notes  
- La `CMFCRibbonUndoButton` classe utilise une pile pour représenter la liste déroulante.  
+ Le `CMFCRibbonUndoButton` classe utilise une pile pour représenter la liste déroulante.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButton` classe et ajoutez une nouvelle action à la liste des actions. Cet extrait de code fait partie de la [exemple de Gadgets de ruban](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButton` classe et ajoutez une nouvelle action à la liste des actions. Cet extrait de code fait partie de la [exemples de Gadgets de ruban](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -93,14 +93,14 @@ void AddUndoAction(LPCTSTR lpszLabel);
  L’étiquette d’action qui s’affichera dans la liste déroulante.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
- Efface la liste des actions, qui est la liste déroulante.  
+ Efface la liste d’actions, qui est la liste déroulante.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
 ##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- Construit un nouveau `CMFCRibbonUndoButton` objet à l’aide de l’ID de commande que vous spécifiez, étiquette de texte et des images à partir de la liste d’images de l’objet parent.  
+ Construit un nouvel `CMFCRibbonUndoButton` objet à l’aide de l’ID de commande que vous spécifiez, étiquette de texte et des images à partir de la liste d’images de l’objet parent.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -124,7 +124,7 @@ CMFCRibbonUndoButton(
  Spécifie l’étiquette de texte du bouton.  
   
  [in] *nSmallImageIndex*  
- Index de base zéro dans la liste d’images de l’objet parent de l’image du bouton petit.  
+ Index de base zéro dans la liste d’images de l’objet parent pour l’image du bouton petit.  
   
  [in] *nLargeImageIndex*  
  Index de base zéro dans la liste d’images de l’objet parent pour le d’image de grande taille du bouton.  
@@ -140,17 +140,17 @@ int GetActionNumber() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre d’éléments qu’un utilisateur sélectionnés.  
+ Le nombre d’éléments sélectionné par un utilisateur.  
   
 ##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
- Indique si l’objet contienne un menu.  
+ Indique si l’objet contient un menu.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours `TRUE`.  
+ Renvoie toujours TRUE.  
   
 ### <a name="remarks"></a>Notes  
   

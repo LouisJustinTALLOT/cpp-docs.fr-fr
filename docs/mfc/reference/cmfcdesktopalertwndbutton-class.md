@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCDesktopAlertWndButton | Documents Microsoft
+title: Cmfcdesktopalertwndbutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f9993f33386f93ef696213c1721bac5172a2436
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370332"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853593"
 ---
-# <a name="cmfcdesktopalertwndbutton-class"></a>Classe de CMFCDesktopAlertWndButton
-Permet de boutons à ajouter à une boîte de dialogue alerte sur le bureau.  
+# <a name="cmfcdesktopalertwndbutton-class"></a>Cmfcdesktopalertwndbutton, classe
+Permet de boutons à ajouter à une boîte de dialogue Alerte bureau.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,12 +63,12 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valeur booléenne qui spécifie si le bouton ferme la boîte de dialogue d’alerte.|  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, le constructeur affecte la `m_bIsCaptionButton` et `m_bIsCloseButton` membres de données `FALSE`. Le parent `CMFCDesktopAlertDialog` jeux d’objets `m_bIsCaptionButton` à `TRUE` si le bouton est placé dans la zone de légende de la boîte de dialogue d’alerte. Le `CMFCDesktopAlertDialog` classe crée un `CMFCDesktopAlertWndButton` objet qui sert de bouton qui ferme la boîte de dialogue Alerte de zone et définit `m_bIsCloseButton` à `TRUE`.  
+ Par défaut, le constructeur affecte la `m_bIsCaptionButton` et `m_bIsCloseButton` sur FALSE, les membres de données. Le parent `CMFCDesktopAlertDialog` jeux d’objets `m_bIsCaptionButton` sur TRUE si le bouton est placé dans la zone de légende de la boîte de dialogue d’alerte. Le `CMFCDesktopAlertDialog` classe crée un `CMFCDesktopAlertWndButton` objet qui sert le bouton qui ferme la boîte de dialogue Alerte de zone et définit `m_bIsCloseButton` sur TRUE.  
   
- Ajouter `CMFCDesktopAlertWndButton` des objets sur un `CMFCDesktopAlertDialog` que vous devez ajouter un bouton de l’objet. Pour plus d’informations sur `CMFCDesktopAlertDialog`, consultez [CMFCDesktopAlertDialog classe](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+ Ajouter `CMFCDesktopAlertWndButton` des objets sur un `CMFCDesktopAlertDialog` que vous ajoutez un bouton de l’objet. Pour plus d’informations sur `CMFCDesktopAlertDialog`, consultez [cmfcdesktopalertdialog, classe](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le `SetImage` méthode dans la `CMFCDesktopAlertWndButton` classe. Cet extrait de code fait partie de la [exemple de démonstration d’alerte bureau](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser le `SetImage` méthode dans la `CMFCDesktopAlertWndButton` classe. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
@@ -86,7 +86,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdesktopalertwnd.h  
   
 ##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  

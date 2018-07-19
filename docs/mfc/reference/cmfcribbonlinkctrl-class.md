@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonLinkCtrl | Documents Microsoft
+title: Cmfcribbonlinkctrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,14 +42,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039009"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851494"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>Classe de CMFCRibbonLinkCtrl
+# <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl, classe
 Implémente un lien hypertexte qui est positionné sur un ruban. Le lien hypertexte ouvre une page web lorsque vous cliquez dessus.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -85,7 +85,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|Définit la valeur du lien hypertexte.|  
   
 ## <a name="remarks"></a>Notes  
- Après avoir créé un lien hypertexte, ajoutez-le à un panneau en appelant [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Une fois que vous créez un lien hypertexte, ajoutez-le à un panneau en appelant [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -96,7 +96,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
  **En-tête :** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- Construit et initialise un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objet.  
+ Crée et initialise un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objet.  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -116,7 +116,7 @@ CMFCRibbonLinkCtrl(
  Spécifie le lien hypertexte associé au contrôle de lien.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le constructeur de la `CMFCRibbonLinkCtrl` classe. Cet extrait de code fait partie de la [exemple de Gadgets de ruban](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser le constructeur de la `CMFCRibbonLinkCtrl` classe. Cet extrait de code fait partie de la [exemples de Gadgets de ruban](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -250,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la page Web associée a été ouvert avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si la page Web associée a été ouvert avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Ouvre une page web à l’aide du lien hypertexte associé à la `CMFCRibbonLinkCtrl` objet.  
+ Ouvre une page Web à l’aide du lien hypertexte associé à la `CMFCRibbonLinkCtrl` objet.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Définit la valeur du lien hypertexte.  
@@ -264,7 +264,7 @@ void SetLink(LPCTSTR lpszLink);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *lpszLink*  
- Spécifie le texte de lien hypertexte.  
+ Spécifie le texte du lien hypertexte.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

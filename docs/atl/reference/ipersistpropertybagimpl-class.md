@@ -1,5 +1,5 @@
 ---
-title: Classe de IPersistPropertyBagImpl | Documents Microsoft
+title: Ipersistpropertybagimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f214a112c1baedd507a9eeeca02e955aeceedd3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363429"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879213"
 ---
-# <a name="ipersistpropertybagimpl-class"></a>Classe de IPersistPropertyBagImpl
-Cette classe implémente **IUnknown** et permet à un objet enregistrer ses propriétés à un jeu de propriétés de fourni par le client.  
+# <a name="ipersistpropertybagimpl-class"></a>Ipersistpropertybagimpl, classe
+Cette classe implémente `IUnknown` et permet à un objet enregistrer ses propriétés dans un sac de propriétés fourni par le client.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Votre classe, dérivée de `IPersistPropertyBagImpl`.  
   
 ## <a name="members"></a>Membres  
@@ -52,14 +52,14 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |Nom|Description|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Récupère le CLSID de l’objet.|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Initialise un objet nouvellement créé. L’implémentation ATL retourne `S_OK`.|  
-|[IPersistPropertyBagImpl::Load](#load)|Charge les propriétés de l’objet à partir d’un jeu de propriétés de fourni par le client.|  
-|[IPersistPropertyBagImpl::Save](#save)|Enregistre les propriétés de l’objet dans un jeu de propriétés de fourni par le client.|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|Initialise un objet nouvellement créé. L’implémentation de ATL retourne S_OK.|  
+|[IPersistPropertyBagImpl::Load](#load)|Charge les propriétés de l’objet à partir d’un jeu de propriétés fourni par le client.|  
+|[IPersistPropertyBagImpl::Save](#save)|Enregistre les propriétés de l’objet dans un conteneur de propriétés fourni par le client.|  
   
 ## <a name="remarks"></a>Notes  
- Le [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permet à un objet enregistrer ses propriétés à un jeu de propriétés de fourni par le client. Classe `IPersistPropertyBagImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
+ Le [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permet à un objet enregistrer ses propriétés dans un sac de propriétés fourni par le client. Classe `IPersistPropertyBagImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
   
- **IPersistPropertyBag** fonctionne conjointement avec [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) et [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Ces deux interfaces ce dernier doivent être implémentées par le client. Via `IPropertyBag`, le client enregistre et charge les propriétés individuelles de l’objet. Via **IErrorLog**, l’objet et le client peuvent signaler les erreurs rencontrées.  
+ `IPersistPropertyBag` fonctionne en association avec [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) et [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Ces deux interfaces ce dernier doivent être implémentées par le client. Via `IPropertyBag`, le client enregistre et charge les propriétés individuelles de l’objet. Via `IErrorLog`, l’objet et le client peuvent signaler toutes les erreurs rencontrées.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -68,7 +68,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
  `IPersistPropertyBagImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID  
@@ -89,25 +89,25 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK`.  
+ Retourne S_OK.  
   
 ### <a name="remarks"></a>Notes  
  Consultez [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load  
- Charge les propriétés de l’objet à partir d’un jeu de propriétés de fourni par le client.  
+ Charge les propriétés de l’objet à partir d’un jeu de propriétés fourni par le client.  
   
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ```  
   
 ### <a name="remarks"></a>Notes  
- ATL utilise le mappage des propriétés de l’objet pour récupérer ces informations.  
+ ATL utilise le mappage des propriétés de l’objet à récupérer ces informations.  
   
  Consultez [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save  
- Enregistre les propriétés de l’objet dans un jeu de propriétés de fourni par le client.  
+ Enregistre les propriétés de l’objet dans un conteneur de propriétés fourni par le client.  
   
 ```
 STDMETHOD(Save)(

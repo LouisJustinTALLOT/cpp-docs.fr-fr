@@ -1,5 +1,5 @@
 ---
-title: Cmfctaskspanetaskgroup, classe | Documents Microsoft
+title: Cmfctaskspanetaskgroup, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037494"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849159"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup, classe
-Le `CMFCTasksPaneTaskGroup` est une classe d’assistance utilisée par le [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) contrôle. Les objets de type `CMFCTasksPaneTaskGroup` représentent un *groupe de tâches*. Le groupe de tâches est une liste d'éléments affichée par l'infrastructure dans une zone séparée comportant un bouton de réduction. La zone peut avoir une légende facultative (nom de groupe). Si un groupe est réduit, la liste de tâches n’est pas visible.  
+Le `CMFCTasksPaneTaskGroup` classe est une classe d’assistance utilisée par le [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) contrôle. Les objets de type `CMFCTasksPaneTaskGroup` représentent un *groupe de tâches*. Le groupe de tâches est une liste d'éléments affichée par l'infrastructure dans une zone séparée comportant un bouton de réduction. La zone peut avoir une légende facultative (nom de groupe). Si un groupe est réduit, la liste de tâches n’est pas visible.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,10 +69,10 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 |Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Détermine si le groupe de tâches est aligné au bas du contrôle de volet de tâches.|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Détermine si le groupe de tâches est aligné en bas du contrôle de volet de tâches.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Détermine si le groupe de tâches est réduit.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Détermine si le groupe de tâches est *spéciale.* L’infrastructure affiche les légendes spéciaux dans une couleur différente.|  
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contient la liste de tâches interne.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Détermine si le groupe de tâches est *spécial.* L’infrastructure affiche des légendes spéciales dans une couleur différente.|  
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contient la liste interne des tâches.|  
 |[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Spécifie le rectangle englobant de la légende du groupe.|  
 |[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Spécifie le rectangle englobant du groupe.|  
 |[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Spécifie le nom du groupe.|  
@@ -90,7 +90,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  ![Groupe de tâches sans légende](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- L’illustration suivante montre deux groupes de tâches. Le premier groupe de tâches est marqué comme étant spéciaux en définissant le `m_bIsSpecial` indicateur `TRUE`, tandis que le deuxième groupe de tâches n’est pas spécial. Notez comment la légende du premier groupe de tâches est plus sombre que le deuxième groupe de tâches :  
+ L’illustration suivante montre deux groupes de tâches. Le premier groupe de tâches est marqué comme étant spéciaux en définissant le `m_bIsSpecial` indicateur sur TRUE, alors que le deuxième groupe de tâches n’est pas spécial. Notez que la légende du premier groupe de tâches plus sombre que le deuxième groupe de tâches :  
   
  ![Groupe de tâches spéciales](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
@@ -120,10 +120,10 @@ CMFCTasksPaneTaskGroup(
  Spécifie le nom du groupe dans la légende du groupe.  
   
  *bIsBottom*  
- Spécifie si le groupe est aligné au bas du contrôle de volet de tâches.  
+ Spécifie si le groupe est aligné en bas du contrôle de volet de tâches.  
   
  *bIsSpecial*  
- Spécifie si le groupe est désigné en tant que *spéciale* et par conséquent, si la légende du groupe est remplie avec une couleur différente.  
+ Spécifie si le groupe est désigné comme *spéciale* et par conséquent, si la légende de groupe est remplie avec une couleur différente.  
   
  *bIsCollapsed*  
  Spécifie si le groupe est réduit.  
@@ -137,14 +137,14 @@ CMFCTasksPaneTaskGroup(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
- Détermine si le groupe de tâches est aligné au bas du contrôle de volet de tâches.  
+ Détermine si le groupe de tâches est aligné en bas du contrôle de volet de tâches.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Qu’un seul groupe peut être aligné au bas du contrôle de volet de tâches. Ce groupe de tâches doit être ajouté en dernier. Pour plus d’informations, consultez [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Qu’un seul groupe peut être aligné en bas du contrôle de volet de tâches. Ce groupe de tâches doit être ajouté en dernier. Pour plus d’informations, consultez [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Détermine si le groupe de tâches est réduit.  
@@ -154,7 +154,7 @@ BOOL m_bIsCollapsed;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez activer ou désactiver la possibilité de réduire les groupes dans le volet de tâches en appelant [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
+ Vous pouvez activer ou désactiver la possibilité de réduire les groupes dans le volet Office en appelant [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
 ##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
  Détermine si le groupe de tâches est *spéciale* et indique si la légende pour un groupe de tâches spéciales doit être identifiée par une couleur différente.  
@@ -164,10 +164,10 @@ BOOL m_bIsSpecial;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si votre application utilise le thème visuel de Windows XP et `m_bIsSpecial` est `FALSE`, le framework appelle `DrawThemeBackground` avec la `EBP_NORMALGROUPBACKGROUND` indicateur. Si `m_bIsSpecial` est `TRUE`, le framework appelle `DrawThemeBackground` avec la `EBP_SPECIALGROUPBACKGROUND` indicateur.  
+ Si votre application utilise le thème visuel de Windows XP et `m_bIsSpecial` est FALSE, le framework appelle `DrawThemeBackground` avec l’indicateur EBP_NORMALGROUPBACKGROUND. Si `m_bIsSpecial` a la valeur TRUE, le framework appelle `DrawThemeBackground` avec l’indicateur EBP_SPECIALGROUPBACKGROUND.  
   
 ##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
- Contient la liste de tâches interne.  
+ Contient la liste interne des tâches.  
   
 ```  
 CObList m_lstTasks;  
@@ -217,18 +217,18 @@ virtual BOOL SetACCData(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pParent*  
- Représente la fenêtre parente du groupe de tâches en cours.  
+ Représente la fenêtre parent du groupe de tâches en cours.  
   
  [out] *données*  
- Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité du groupe de tâches en cours.  
+ Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité du groupe de tâches en cours.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le *données* paramètre a été correctement remplis avec les données d’accessibilité du groupe de tâches en cours ; sinon, `FALSE`.  
+ TRUE si le *données* paramètre a été correctement remplis avec les données d’accessibilité du groupe de tâches en cours ; sinon, FALSE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)   
+ [Cmfctaskspane, classe](../../mfc/reference/cmfctaskspane-class.md)   
  [Cmfctaskspanetask, classe](../../mfc/reference/cmfctaskspanetask-class.md)   
  [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)   
  [CObject, classe](../../mfc/reference/cobject-class.md)

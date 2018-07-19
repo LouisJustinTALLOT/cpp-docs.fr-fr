@@ -1,5 +1,5 @@
 ---
-title: CommandHandler | Documents Microsoft
+title: CommandHandler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355136"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850639"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` est la fonction identifiée par le troisième paramètre de la `COMMAND_HANDLER` macro dans votre table des messages.  
+`CommandHandler` la fonction est identifiée par le troisième paramètre de la macro COMMAND_HANDLER dans votre table des messages.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,23 +40,23 @@ ms.locfileid: "32355136"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `wNotifyCode`  
+ *wNotifyCode*  
  Le code de notification.  
   
  *wID*  
- Identificateur de l’élément de menu, le contrôle ou l’accélérateur.  
+ L’identificateur de l’élément de menu, un contrôle ou un accélérateur.  
   
  *hWndCtl*  
  Handle vers un contrôle de fenêtre.  
   
- `bHandled`  
- Les jeux de mappage de message `bHandled` à **TRUE** avant `CommandHandler` est appelée. Si `CommandHandler` ne gère pas entièrement le message, il doit définir `bHandled` à **FALSE** pour indiquer le message nécessite un traitement supplémentaire.  
+ *bHandled*  
+ Les jeux de mappage de message *bHandled* sur TRUE avant `CommandHandler` est appelée. Si `CommandHandler` ne gère pas entièrement le message, il doit définir *bHandled* sur FALSE pour indiquer que le message nécessite un traitement supplémentaire.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Le résultat du traitement du message. 0 en cas de réussite.  
+ Le résultat du traitement de message. 0 si l’opération réussit.  
   
 ## <a name="remarks"></a>Notes  
- Pour obtenir un exemple d’utilisation de ce gestionnaire de messages dans une table des messages, consultez [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
+ Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans une table des messages, consultez [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une fenêtre](../atl/implementing-a-window.md)   

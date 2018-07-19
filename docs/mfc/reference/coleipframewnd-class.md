@@ -1,5 +1,5 @@
 ---
-title: Classe de COleIPFrameWnd | Documents Microsoft
+title: COleIPFrameWnd, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ee4a9d3156a4d5efecd74406b92a1a7bcec48d1f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040023"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849144"
 ---
-# <a name="coleipframewnd-class"></a>Classe de COleIPFrameWnd
+# <a name="coleipframewnd-class"></a>COleIPFrameWnd, classe
 Base pour la fenêtre de modification sur place de votre application.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,11 +50,11 @@ class COleIPFrameWnd : public CFrameWnd
   
 |Nom|Description|  
 |----------|-----------------|  
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Appelé par l’infrastructure lorsqu’un élément est activé pour la modification sur place.|  
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Appelé par l’infrastructure pour repositionner la fenêtre de modification sur place.|  
+|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Appelé par le framework lorsqu’un élément est activé pour la modification sur place.|  
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Appelé par l’infrastructure pour repositionner la fenêtre d’édition sur place.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe crée et les positions des barres dans la fenêtre de document de l’application conteneur de contrôles. Il gère également les notifications générées par incorporé [COleResizeBar](../../mfc/reference/coleresizebar-class.md) lorsque l’utilisateur redimensionne la fenêtre de modification sur place de l’objet.  
+ Cette classe crée et positions des barres dans la fenêtre de document de l’application de conteneur de contrôle. Il gère également les notifications générées par un embedded [COleResizeBar](../../mfc/reference/coleresizebar-class.md) quand l’utilisateur redimensionne la fenêtre d’édition sur place de l’objet.  
   
  Pour plus d’informations sur l’utilisation de `COleIPFrameWnd`, consultez l’article [Activation](../../mfc/activation-cpp.md).  
   
@@ -73,17 +73,17 @@ class COleIPFrameWnd : public CFrameWnd
  **En-tête :** afxole.h  
   
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
- Construit un `COleIPFrameWnd` de l’objet et initialise ses informations d’état de la place, ce qui sont stockées dans une structure de type **OLEINPLACEFRAMEINFO**.  
+ Construit un `COleIPFrameWnd` de l’objet et initialise ses informations d’état de la place, ce qui sont stockées dans une structure de type oleinplaceframeinfo que.  
   
 ```  
 COleIPFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations, consultez [oleinplaceframeinfo que](http://msdn.microsoft.com/library/windows/desktop/ms693737) dans le SDK Windows.  
   
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
- Le framework appelle la `OnCreateControlBars` lorsqu’un élément est activé pour la modification sur place de la fonction.  
+ Le framework appelle la `OnCreateControlBars` fonctionner lorsqu’un élément est activé pour la modification sur place.  
   
 ```  
 virtual BOOL OnCreateControlBars(
@@ -98,10 +98,10 @@ virtual BOOL OnCreateControlBars(
   
 ### <a name="parameters"></a>Paramètres  
  *pWndFrame*  
- Pointeur vers la fenêtre frame de l’application conteneur.  
+ Pointeur vers la fenêtre frame de l’application de conteneur.  
   
  *pWndDoc*  
- Pointeur vers la fenêtre du conteneur au niveau du document. Peut être **NULL** si le conteneur est une application SDI.  
+ Pointeur vers la fenêtre du conteneur au niveau du document. Peut d’être NULL si le conteneur est une application SDI.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite ; Sinon, 0.  
@@ -110,7 +110,7 @@ virtual BOOL OnCreateControlBars(
  L'implémentation par défaut n'exécute aucune opération. Remplacez cette fonction pour effectuer tout traitement spécial requis lors de la création de barres de contrôles.  
   
 ##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
- Le framework appelle la `RepositionFrame` fonction membre pour disposer les barres de contrôles et repositionner la fenêtre de modification sur place sont visibles.  
+ Le framework appelle la `RepositionFrame` fonction membre pour présenter les barres de contrôle et repositionner la fenêtre d’édition sur place pour que tout cela soit visible.  
   
 ```  
 virtual void RepositionFrame(
@@ -120,13 +120,13 @@ virtual void RepositionFrame(
   
 ### <a name="parameters"></a>Paramètres  
  *lpPosRect*  
- Pointeur vers un `RECT` structure ou un `CRect` objet contenant l’à la place frame actuelle coordonnées de position de fenêtre, en pixels, par rapport à la zone cliente.  
+ Pointeur vers un `RECT` structure ou un `CRect` objet contenant l’emplacement dans le frame actuelle coordonnées de position de fenêtre, en pixels, par rapport à la zone cliente.  
   
  *lpClipRect*  
- Pointeur vers un `RECT` structure ou un `CRect` objet contenant l’à la place frame rectangle de découpage coordonnées actuelles de fenêtre, en pixels, par rapport à la zone cliente.  
+ Pointeur vers un `RECT` structure ou un `CRect` objet contenant l’emplacement dans le frame actuelle rectangle de découpage coordonnées de fenêtre, en pixels, par rapport à la zone cliente.  
   
 ### <a name="remarks"></a>Notes  
- Diffère de la disposition des barres de contrôles dans la fenêtre de conteneur qui effectuées par une fenêtre frame de non-OLE. La fenêtre frame de non-OLE calcule les positions des barres de contrôles et d’autres objets à partir d’une taille de fenêtre frame donné, comme dans un appel à [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). La zone cliente est ce qui reste après la soustraction de l’espace pour les barres de contrôles et d’autres objets. A `COleIPFrameWnd` fenêtre, positionne quant à eux, les barres d’outils conformément à une zone client donné. En d’autres termes, `CFrameWnd::RecalcLayout` fonctionne « depuis l’extérieur, », tandis que `COleIPFrameWnd::RepositionFrame` fonctionne « de l’intérieur. »  
+ Diffère de la disposition des barres de contrôle dans la fenêtre du conteneur qui émane d’une fenêtre frame de non-OLE. La fenêtre frame de non-OLE calcule les positions des barres de contrôles et d’autres objets à partir d’une taille de fenêtre frame donné, comme dans un appel à [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). La zone cliente est ce qui reste après la soustraction de l’espace pour les barres de contrôles et d’autres objets. Un `COleIPFrameWnd` fenêtre, positionne quant à eux, les barres d’outils conformément à une zone cliente donnée. En d’autres termes, `CFrameWnd::RecalcLayout` fonctionne « depuis l’extérieur, », tandis que `COleIPFrameWnd::RepositionFrame` fonctionne « de l’intérieur. »  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC HIERSVR](../../visual-cpp-samples.md)   

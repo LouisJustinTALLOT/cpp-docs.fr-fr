@@ -1,5 +1,5 @@
 ---
-title: Classe de CMultiPageDHtmlDialog | Documents Microsoft
+title: CMultiPageDHtmlDialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 51e9b34252b2a3fa7d097914360b9ee24baa8301
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038004"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850863"
 ---
-# <a name="cmultipagedhtmldialog-class"></a>Classe de CMultiPageDHtmlDialog
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog, classe
 Une boîte de dialogue multipage affiche plusieurs pages HTML de manière séquentielle et gère les événements de chaque page.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -40,16 +40,16 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construit un objet de boîte de dialogue multipage (de type Assistant) DHTML.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construit un objet de boîte de dialogue multipage (Assistant-style) DHTML.|  
 |[CMultiPageDHtmlDialog :: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Détruit un objet de boîte de dialogue multipage DHTML.|  
   
 ## <a name="remarks"></a>Notes  
- Le mécanisme de cette opération est un [table d’événements DHTML et l’URL](dhtml-event-maps.md), tables d’événements pour chaque page contenant des images.  
+ Le mécanisme pour effectuer cette opération est un [table d’événements DHTML et URL](dhtml-event-maps.md), tables d’événements pour chaque page contenant des images.  
   
 ## <a name="example"></a>Exemple  
- Cette boîte de dialogue multipage suppose trois ressources HTML qui définissent des fonctionnalités de type Assistant simple. La première page a un `Next` bouton, le second une **Prev** et `Next` bouton et le troisième une **Prev** bouton. Lorsqu’un des boutons est activé, une fonction de gestionnaire appelle [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) pour charger la nouvelle page appropriée.  
+ Cette boîte de dialogue multipage part du principe que les trois ressources HTML qui définissent des fonctionnalités de type Assistant simples. La première page a un **suivant** bouton, le second une **Prev** et **suivant** bouton et le troisième un **Prev** bouton. Lorsqu’un des boutons est activé, une fonction de gestionnaire appelle [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) pour charger la nouvelle page appropriée.  
   
- Les parties pertinentes de la déclaration de classe (dans CMyMultiPageDlg.h) :  
+ Les parties pertinentes de la déclaration de classe (CMyMultiPageDlg.h) :  
   
  [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
@@ -82,7 +82,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
  **En-tête :** afxdhtml.h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Construit un objet de boîte de dialogue multipage (de type Assistant) DHTML.  
+ Construit un objet de boîte de dialogue multipage (Assistant-style) DHTML.  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -107,7 +107,7 @@ CMultiPageDHtmlDialog();
  La chaîne se terminant par null qui est le nom d’une ressource HTML.  
   
  *pParentWnd*  
- Un pointeur vers l’objet de fenêtre parente ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
+ Un pointeur vers l’objet de fenêtre parente ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. Si sa valeur est NULL, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
   
  *nIDTemplate*  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
