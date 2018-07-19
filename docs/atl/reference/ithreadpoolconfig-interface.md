@@ -1,5 +1,5 @@
 ---
-title: Interface de l’interface IThreadPoolConfig | Documents Microsoft
+title: IThreadPoolConfig, Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363727"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880152"
 ---
-# <a name="ithreadpoolconfig-interface"></a>Interface de l’interface IThreadPoolConfig
-Cette interface fournit des méthodes pour la configuration d’un pool de threads.  
+# <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig, Interface
+Cette interface fournit des méthodes pour configurer un pool de threads.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,14 +48,14 @@ __interface
 |||  
 |-|-|  
 |[GetSize](#getsize)|Appelez cette méthode pour obtenir le nombre de threads dans le pool.|  
-|[GetTimeout](#gettimeout)|Appelez cette méthode pour obtenir le temps maximal en millisecondes d’attente du pool de threads d’un thread pour l’arrêter.|  
+|[GetTimeout](#gettimeout)|Appelez cette méthode pour obtenir la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.|  
 |[SetSize](#setsize)|Appelez cette méthode pour définir le nombre de threads dans le pool.|  
-|[SetTimeout](#settimeout)|Appelez cette méthode pour définir le délai maximal en millisecondes d’attente du pool de threads d’un thread pour l’arrêter.|  
+|[SetTimeout](#settimeout)|Appelez cette méthode pour définir le temps maximal en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.|  
   
 ## <a name="remarks"></a>Notes  
  Cette interface est implémentée par [CThreadPool](../../atl/reference/cthreadpool-class.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlutil.h  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
@@ -66,28 +66,28 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pnNumThreads`  
+ *pnNumThreads*  
  [out] Adresse de la variable qui, en cas de réussite, reçoit le nombre de threads dans le pool.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Appelez cette méthode pour obtenir le temps maximal en millisecondes d’attente du pool de threads d’un thread pour l’arrêter.  
+ Appelez cette méthode pour obtenir la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pdwMaxWait`  
- [out] Adresse de la variable qui, en cas de réussite, reçoit la durée maximale en millisecondes d’attente du pool de threads d’un thread pour l’arrêter.  
+ *pdwMaxWait*  
+ [out] Adresse de la variable recevant, en cas de réussite, la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="example"></a>Exemple  
  Consultez [IThreadPoolConfig::GetSize](#getsize).  
@@ -100,32 +100,32 @@ STDMETHOD(SetSize)int nNumThreads);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nNumThreads`  
+ *nNumThreads*  
  Le nombre demandé de threads dans le pool.  
   
- Si `nNumThreads` est négatif, sa valeur absolue sera multiplié par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.  
+ Si *nNumThreads* est négatif, sa valeur absolue sera multipliée par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.  
   
- Si `nNumThreads` est égal à zéro, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) sera multiplié par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.  
+ Si *nNumThreads* est égal à zéro, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) sera multiplié par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="example"></a>Exemple  
  Consultez [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Appelez cette méthode pour définir le délai maximal en millisecondes d’attente du pool de threads d’un thread pour l’arrêter.  
+ Appelez cette méthode pour définir le temps maximal en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwMaxWait`  
- L’heure demandée maximal en millisecondes d’attente du pool de threads d’un thread pour l’arrêter.  
+ *dwMaxWait*  
+ La durée maximale demandée en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="example"></a>Exemple  
  Consultez [IThreadPoolConfig::GetSize](#getsize).  

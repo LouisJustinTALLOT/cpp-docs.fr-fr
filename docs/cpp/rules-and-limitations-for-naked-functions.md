@@ -1,5 +1,5 @@
 ---
-title: Règles et Limitations pour les fonctions Naked | Documents Microsoft
+title: Règles et Limitations des fonctions Naked | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942717"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Règles et limitations concernant les fonctions naked
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
  Les règles et les limitations suivantes s'appliquent aux fonctions naked :  
   
--   L'instruction `return` n'est pas autorisée.  
+-   Le **retourner** instruction n’est pas autorisée.  
   
 -   Les constructions de gestion structurée des exceptions et de gestion des exceptions C++ ne sont pas autorisées, car elles doivent se dérouler sur le frame de pile.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Vous ne pouvez pas déclarer d'objets de classe C++ dans la portée lexicale de fonction. Vous pouvez toutefois déclarer des objets dans un bloc imbriqué.  
   
--   Le `naked` mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
+-   Le **naked** mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de pile pour cette variable. Par exemple :  
+-   Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de la pile pour cette variable. Exemple :  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

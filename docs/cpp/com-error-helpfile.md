@@ -1,5 +1,5 @@
 ---
-title: _com_error::HelpFile | Documents Microsoft
+title: _com_error::HelpFile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1f02238d228b5de4302812bacf4f9ad5cf1300c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acd909224d6a682a210e15eebf04d2c8429a8a3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409785"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939556"
 ---
 # <a name="comerrorhelpfile"></a>_com_error::HelpFile
 **Section spécifique à Microsoft**  
   
- Appels **IErrorInfo::GetHelpFile** (fonction).  
+ Appels `IErrorInfo::GetHelpFile` (fonction).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ _bstr_t HelpFile() const;
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne le résultat de **IErrorInfo::GetHelpFile** pour le **IErrorInfo** enregistré dans le `_com_error` objet. Le BSTR résultant est encapsulé dans un objet `_bstr_t`. Si aucun **IErrorInfo** est enregistré, il retourne vide `_bstr_t`.  
+ Retourne le résultat de `IErrorInfo::GetHelpFile` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le BSTR résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.  
   
 ## <a name="remarks"></a>Notes  
- Tout échec lors de l’appel du **IErrorInfo::GetHelpFile** méthode est ignorée.  
+ Tout échec lors de l’appel la `IErrorInfo::GetHelpFile` méthode est ignorée.  
   
  **FIN de la section spécifique à Microsoft**  
   

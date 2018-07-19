@@ -1,5 +1,5 @@
 ---
-title: Structure de _ATL_BASE_MODULE70 | Documents Microsoft
+title: _Atl_base_module70, structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484fc4a68d0421cb12e901b2d56f30e95f6cb79b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: d48d863cdbe8e5528824b3ffbad10e1117277e0c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256416"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885338"
 ---
-# <a name="atlbasemodule70-structure"></a>Structure de _ATL_BASE_MODULE70
-Utilisé par aucun projet qui utilise ATL.  
+# <a name="atlbasemodule70-structure"></a>_Atl_base_module70, structure
+Utilisé par n’importe quel projet qui utilise ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,33 +46,33 @@ struct _ATL_BASE_MODULE70 {
   
 ## <a name="members"></a>Membres  
  `cbSize`  
- La taille de la structure utilisée pour le contrôle de version.  
+ La taille de la structure, utilisée pour le contrôle de version.  
   
  `m_hInst`  
- Le **hInstance** pour ce module (exe ou dll).  
+ Le `hInstance` pour ce module (exe ou dll).  
   
  `m_hInstResource`  
  Handle de ressource d’instance par défaut.  
   
- **m_bNT5orWin98**  
+ `m_bNT5orWin98`  
  Informations de version du système d’exploitation. Utilisé en interne par ATL.  
   
- **dwAtlBuildVer**  
- Stocke la version d’ATL. Actuellement 0x0700.  
+ `dwAtlBuildVer`  
+ Stocke la version de l’ATL. Actuellement 0x0700.  
   
- **pguidVer**  
- GUID d’interne d’ATL.  
+ `pguidVer`  
+ GUID interne d’ATL.  
   
- **m_csResource**  
- Utilisé pour synchroniser l’accès à la **m_rgResourceInstance** tableau. Utilisé en interne par ATL.  
+ `m_csResource`  
+ Utilisé pour synchroniser l’accès à la `m_rgResourceInstance` tableau. Utilisé en interne par ATL.  
   
- **m_rgResourceInstance**  
+ `m_rgResourceInstance`  
  Tableau utilisé pour rechercher des ressources dans toutes les instances de ressources dont est prenant en charge ATL. Utilisé en interne par ATL.  
   
 ## <a name="remarks"></a>Notes  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) est défini comme un typedef de `_ATL_BASE_MODULE70`.  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) est défini comme un typedef de _ATL_BASE_MODULE70.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ## <a name="see-also"></a>Voir aussi  

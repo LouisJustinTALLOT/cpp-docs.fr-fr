@@ -1,5 +1,5 @@
 ---
-title: Unions | Documents Microsoft
+title: Unions | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425697"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939207"
 ---
 # <a name="unions"></a>Unions
-Une `union` est un type défini par l'utilisateur dans lequel tous les membres partagent le même emplacement de mémoire. Cela signifie qu'à un moment donné une union ne peut pas contenir plusieurs objets de sa liste de membres. Cela signifie également que, quel que soit le nombre de membres dans une union, elle utilise toujours uniquement assez de mémoire pour stocker le plus grand membre.  
+Un **union** est un type défini par l’utilisateur dans lequel tous les membres partagent le même emplacement de mémoire. Cela signifie qu'à un moment donné une union ne peut pas contenir plusieurs objets de sa liste de membres. Cela signifie également que, quel que soit le nombre de membres dans une union, elle utilise toujours uniquement assez de mémoire pour stocker le plus grand membre.  
   
  Les unions peuvent être utiles pour économiser la mémoire lorsque vous avez un grand nombre d'objets et/ou une mémoire limitée. Toutefois, elles nécessitent une attention particulière pour une utilisation correcte, car vous êtes chargé de vérifier que vous accédez toujours au dernier membre qui a été écrit. Si des types de membres ont un constructeur non trivial, vous devez écrire un code supplémentaire pour construire et détruire ce membre explicitement. Avant d'utiliser une union, déterminez si le problème que vous essayez de résoudre pourrait être mieux exprimé à l'aide d'une classe de base et de classes dérivées.  
   
@@ -36,16 +36,16 @@ union [name]  { member-list };
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `name`  
+ *name*  
  Nom du type donné à l'union.  
   
- `member-list`  
+ *liste des membres*  
  Membres que l'union peut contenir. Consultez la section Notes.  
   
 ## <a name="remarks"></a>Notes  
   
 ## <a name="declaring-a-union"></a>Déclaration d'une union  
- Commencez la déclaration d'une union avec le mot clé `union` et placez la liste des membres entre accolades :  
+ Commencez la déclaration d’une union avec la **union** mot clé et placez la liste des membres entre accolades :  
   
 ```cpp  
 // declaring_a_union.cpp  
@@ -67,7 +67,7 @@ int main()
 ```  
   
 ## <a name="using-unions"></a>Utilisation d'unions  
- Dans l'exemple précédent, tout code qui accède à l'union doit connaître le membre qui détient les données. La solution la plus courante à ce problème consiste à placer l'union dans un struct avec un membre enum supplémentaire qui indique le type de données actuellement stockées dans l'union. Cela s’appelle un *union discriminée* et l’exemple suivant montre le modèle de base.  
+ Dans l'exemple précédent, tout code qui accède à l'union doit connaître le membre qui détient les données. La solution la plus courante à ce problème consiste à placer l'union dans un struct avec un membre enum supplémentaire qui indique le type de données actuellement stockées dans l'union. Il s’agit une *union discriminée* et l’exemple suivant montre le modèle de base.  
   
 ```cpp  
 #include "stdafx.h"  
@@ -642,7 +642,7 @@ int main()
 Stockage de données dans l'union NumericType  
   
 ## <a name="anonymous_unions"></a> Unions anonymes  
- Les unions anonymes sont des unions déclarées sans un *-nom de la classe* ou *declarator-list*.  
+ Les unions anonymes sont des unions déclarées sans un *nom de la classe* ou *declarator-list*.  
   
 ```cpp  
 union  {  member-list  }    
@@ -652,7 +652,7 @@ Les noms déclarés dans une union anonyme sont utilisés directement comme les 
   
 Outre les restrictions pour les unions nommées, les unions anonymes sont soumis aux restrictions suivantes :  
   
--   Ils doivent également être déclarés en tant que **statique** si déclaré dans la portée de fichier ou l’espace de noms.  
+-   Ils doivent également être déclarés en tant que **statique** si déclaré dans la portée de fichier ou un espace de noms.  
   
 -   Elles ne peuvent avoir que des membres publics. Les membres privés et protégés des unions anonymes génèrent des erreurs.  
   

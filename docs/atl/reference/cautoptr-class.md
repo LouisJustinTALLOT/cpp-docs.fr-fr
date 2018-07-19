@@ -1,5 +1,5 @@
 ---
-title: Classe de CAutoPtr | Documents Microsoft
+title: Cautoptr, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edf1baff50541dd5f16c27205f300558558d6f92
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 118e303fe176684ea837861ef3855dd6c03fb04e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363198"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881134"
 ---
-# <a name="cautoptr-class"></a>Classe de CAutoPtr
+# <a name="cautoptr-class"></a>Cautoptr, classe
 Cette classe représente un objet pointeur intelligent.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ class CAutoPtr
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Le type de pointeur.  
   
 ## <a name="members"></a>Membres  
@@ -61,7 +61,7 @@ class CAutoPtr
 |----------|-----------------|  
 |[CAutoPtr::Attach](#attach)|Appelez cette méthode pour prendre possession d’un pointeur existant.|  
 |[CAutoPtr::Detach](#detach)|Appelez cette méthode pour libérer la possession d’un pointeur.|  
-|[CAutoPtr::Free](#free)|Appelez cette méthode pour supprimer un objet vers lequel pointé une `CAutoPtr`.|  
+|[CAutoPtr::Free](#free)|Appelez cette méthode pour supprimer un objet vers lequel pointé un `CAutoPtr`.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -69,7 +69,7 @@ class CAutoPtr
 |----------|-----------------|  
 |[CAutoPtr::operator T *](#operator_t_star)|L’opérateur de cast.|  
 |[CAutoPtr::operator =](#operator_eq)|L’opérateur d’assignation.|  
-|[CAutoPtr::operator ->](#operator_ptr)|Opérateur pointeur vers membre.|  
+|[CAutoPtr::operator ->](#operator_ptr)|L’opérateur pointeur vers membre.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
@@ -78,17 +78,17 @@ class CAutoPtr
 |[CAutoPtr::m_p](#m_p)|La variable de membre de données de pointeur.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe fournit des méthodes pour créer et gérer un pointeur intelligent, ce qui aidera à protéger contre des fuites de mémoire par automatiquement la libération des ressources lorsqu’elle se trouve hors de portée.  
+ Cette classe fournit des méthodes pour créer et gérer un pointeur intelligent, ce qui permet de se protéger contre les fuites de mémoire en libérant les ressources d’automatiquement lorsqu’elle se trouve hors de portée.  
   
- En outre, `CAutoPtr`du constructeur de copie et de transférer la propriété opérateur de l’attribution du pointeur, copie le pointeur de la source vers le pointeur de la destination et le pointeur de la source avec la valeur NULL. Il est donc impossible d’avoir deux `CAutoPtr` chacun stockant le même pointeur, et qu’il réduit la possibilité de supprimer le même pointeur à deux reprises.  
+ En outre, `CAutoPtr`du constructeur de copie transférer la propriété opérateur de l’attribution du pointeur, le pointeur de la source vers le pointeur de la destination et en copiant le pointeur de la source de la définir sur NULL. Il est donc impossible d’avoir deux `CAutoPtr` chacun stockant le même pointeur, et qu’il réduit la possibilité de la suppression de deux fois le même pointeur.  
   
- `CAutoPtr` simplifie également la création de collections de pointeurs. Au lieu de dériver une classe de collection et en remplaçant le destructeur, il est plus simple de créer une collection de `CAutoPtr` objets. Lorsque la collection est supprimée, le `CAutoPtr` objets seront sont hors de portée et supprimer automatiquement eux-mêmes.  
+ `CAutoPtr` simplifie également la création de collections de pointeurs. Au lieu de dériver une classe de collection et en remplaçant le destructeur, il est plus simple de définir une collection de `CAutoPtr` objets. Lorsque la collection est supprimée, le `CAutoPtr` objets seront hors de portée et supprimer automatiquement eux-mêmes.  
   
- [CHeapPtr](../../atl/reference/cheapptr-class.md) et variantes fonctionnent de la même façon que `CAutoPtr`, sauf qu’elles allouer et libérer de la mémoire à l’aide des fonctions du tas différents au lieu de C++ **nouveau** et **supprimer** opérateurs. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) est similaire à `CAutoPtr`, la seule différence étant qu’il utilise **vector new []** et **vecteur delete []** pour allouer et libérer de la mémoire.  
+ [CHeapPtr](../../atl/reference/cheapptr-class.md) et variantes fonctionnent de la même façon que `CAutoPtr`, sauf qu’elles allouer et libérer de la mémoire à l’aide des fonctions du tas différents au lieu du C++ **nouveau** et **supprimer** opérateurs. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) est similaire à `CAutoPtr`, la seule différence étant qu’il utilise **vector new []** et **delete [], vecteur** pour allouer et libérer de la mémoire.  
   
- Voir aussi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) et [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) lorsque des tableaux ou listes de pointeurs intelligents sont requises.  
+ Voir aussi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) et [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) lorsque les tableaux ou les listes de pointeurs intelligents sont requises.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="example"></a>Exemple  
@@ -102,13 +102,13 @@ void Attach(T* p) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Le `CAutoPtr` objet prendra possession de ce pointeur.  
   
 ### <a name="remarks"></a>Notes  
- Lorsqu’un `CAutoPtr` objet prend possession du pointeur, il la supprime automatiquement le pointeur et les données allouées lorsqu’il devient hors de portée. Si [CAutoPtr::Detach](#detach) est appelée, le programmeur à nouveau donné responsabilité pour libérer les ressources est alloué.  
+ Quand un `CAutoPtr` objet prend possession d’un pointeur, il supprime automatiquement le pointeur et les données allouées lorsqu’il devient hors de portée. Si [CAutoPtr::Detach](#detach) est appelée, le programmeur à nouveau compte tenu de la responsabilité de libérer les ressources est alloué.  
   
- Dans les versions debug, un échec d’assertion se produit si le [CAutoPtr::m_p](#m_p) membre de données pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
+ Dans les versions debug, un échec d’assertion se produit si le [CAutoPtr::m_p](#m_p) membre de données pointe actuellement vers une valeur existante ; autrement dit, il n’est pas égal à NULL.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).  
@@ -128,11 +128,11 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Un pointeur existant.  
   
- `TSrc`  
- Le type géré par un autre `CAutoPtr`, utilisée pour initialiser l’objet actif.  
+ *TSrc*  
+ Le type géré par un autre `CAutoPtr`, utilisé pour initialiser l’objet actif.  
   
 ### <a name="remarks"></a>Notes  
  Le `CAutoPtr` objet peut être créé à l’aide d’un pointeur existant, auquel cas il transfère la propriété du pointeur.  
@@ -148,7 +148,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Libère les ressources allouées. Appels [CAutoPtr::Free](#free).  
+ Libère toutes les ressources allouées. Appels [CAutoPtr::Free](#free).  
   
 ##  <a name="detach"></a>  CAutoPtr::Detach  
  Appelez cette méthode pour libérer la possession d’un pointeur.  
@@ -161,13 +161,13 @@ T* Detach() throw();
  Retourne une copie du pointeur.  
   
 ### <a name="remarks"></a>Notes  
- Libère la propriété d’un pointeur, définit le [CAutoPtr::m_p](#m_p) variable de membre de données avec la valeur NULL et retourne une copie du pointeur. Après avoir appelé **détachement**, il jusqu’au programmeur de libérer les ressources est allouée sur lequel le `CAutoPtr` objet peut avoir précédemment supposé reponsibility.  
+ Libère la propriété d’un pointeur, définit le [CAutoPtr::m_p](#m_p) variable de membre de données avec la valeur NULL et retourne une copie du pointeur. Après avoir appelé `Detach`, il jusqu'à le programmeur pour libérer les ressources est allouée sur laquelle le `CAutoPtr` objet peut avoir précédemment supposé reponsibility.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="free"></a>  CAutoPtr::Free  
- Appelez cette méthode pour supprimer un objet vers lequel pointé une `CAutoPtr`.  
+ Appelez cette méthode pour supprimer un objet vers lequel pointé un `CAutoPtr`.  
   
 ```
 void Free() throw();
@@ -198,23 +198,23 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Un pointeur.  
   
- `TSrc`  
+ *TSrc*  
  Un type de classe.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à un **CAutoPtr\< T >**.  
   
 ### <a name="remarks"></a>Notes  
- Détache de l’opérateur d’assignation le `CAutoPtr` objet à partir de n’importe quel pointeur actuel et l’attache le nouveau pointeur, `p`, à la place.  
+ L’opérateur d’assignation détache le `CAutoPtr` objet à partir de n’importe quel pointeur actuel et attache le nouveau pointeur, *p*, à la place.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;  
- Opérateur pointeur vers membre.  
+ L’opérateur pointeur vers membre.  
   
 ```
 T* operator->() const throw();
@@ -243,6 +243,6 @@ operator T* () const throw();
  Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CHeapPtr](../../atl/reference/cheapptr-class.md)   
- [Classe de CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
+ [Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
+ [Cautovectorptr, classe](../../atl/reference/cautovectorptr-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

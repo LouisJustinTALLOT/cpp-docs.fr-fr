@@ -1,5 +1,5 @@
 ---
-title: 'Opérateurs d’égalité : == et ! = | Documents Microsoft'
+title: 'Opérateurs d’égalité : == et ! = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e4a85f31777581df1a138de6d50b1057253e5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaf0c52cc9811e84fab026e333ee3c0808d4effd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943804"
 ---
 # <a name="equality-operators--and-"></a>Opérateurs d'égalité : == et !=
 ## <a name="syntax"></a>Syntaxe  
@@ -41,16 +42,16 @@ expression != expression
 ## <a name="remarks"></a>Notes  
  Les opérateurs d’égalité binaires comparent l’égalité ou l’inégalité stricte de leurs opérandes.  
   
- Les opérateurs d'égalité, égal à (`==`) et différent de (`!=`), ont une priorité inférieure aux opérateurs relationnels, mais ils se comportent de la même manière. Le type de résultat pour ces opérateurs est `bool`.  
+ Les opérateurs d'égalité, égal à (`==`) et différent de (`!=`), ont une priorité inférieure aux opérateurs relationnels, mais ils se comportent de la même manière. Le type de résultat de ces opérateurs est **bool**.  
   
  L’opérateur égal à (`==`) renvoie **true** (1) si les deux opérandes ont la même valeur ; sinon, elle retourne **false** (0). L’opérateur non-égal à (`!=`) renvoie **true** si les opérandes n’ont pas la même valeur ; sinon, elle retourne **false**.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé d'opérateur pour !=  
- L'opérateur `not_eq` est l'équivalent textuel de `!=`. Il existe deux moyens d’accéder à la `not_eq` opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+ L'opérateur `not_eq` est l'équivalent textuel de `!=`. Il existe deux façons d’accéder à la `not_eq` opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // expre_Equality_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -70,5 +71,5 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs binaires](../cpp/expressions-with-binary-operators.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs relationnels et d’égalité C](../c-language/c-relational-and-equality-operators.md)

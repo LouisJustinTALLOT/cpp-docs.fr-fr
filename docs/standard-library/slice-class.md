@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965875"
 ---
 # <a name="slice-class"></a>slice, classe
 
@@ -61,7 +61,7 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 |[start](#start)|Recherche l'index de départ d'un secteur d'un `valarray`.|
 |[stride](#stride)|Recherche la distance entre des éléments dans un secteur d'un `valarray`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<valarray>
 
@@ -146,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>Paramètres
 
-`_StartIndex` Index du premier élément dans le sous-ensemble valarray.
+*_StartIndex* l’index valarray du premier élément dans le sous-ensemble.
 
-`_Len` Le nombre d’éléments dans le sous-ensemble.
+*_Len* le nombre d’éléments dans le sous-ensemble.
 
-`stride` La distance entre des éléments dans le sous-ensemble.
+*STRIDE* la distance entre les éléments dans le sous-ensemble.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke `_StartIndex` pour l’index de départ, `_Len` pour la longueur totale et `stride` pour le stride.
+Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_Len* pour la longueur totale, et *stride* pour le stride.
 
 ### <a name="remarks"></a>Notes
 

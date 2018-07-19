@@ -1,5 +1,5 @@
 ---
-title: Uniforme d’initialisation et constructeurs de délégation | Documents Microsoft
+title: Glyphes de largeurs uniformes d’initialisation et de délégation de constructeurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423520"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939830"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Constructeurs d'initialisation uniforme et de délégation
-En C++ moderne, vous pouvez utiliser *accolade initialisation* pour n’importe quel type, sans le signe égal. En outre, vous pouvez utiliser les constructeurs de délégation pour simplifier votre code lorsque vous avez plusieurs constructeurs qui effectuent le travail similaire.  
+En C++ moderne, vous pouvez utiliser *accolade initialisation* pour n’importe quel type, sans le signe égal. En outre, vous pouvez utiliser les constructeurs de délégation pour simplifier votre code lorsque vous avez plusieurs constructeurs qui effectuent un travail similaire.  
   
 ## <a name="brace-initialization"></a>Initialisation de l’accolade  
- Vous pouvez utiliser des accolades pour toute classe, struct ou union. Si un type a un constructeur par défaut, implicitement ou explicitement déclaré, vous pouvez utiliser des accolades par défaut (avec accolades vides). Par exemple, la classe suivante peut être initialisée à l’aide de la valeur par défaut et non définies par défaut des accolades :  
+ Vous pouvez utiliser des accolades pour toute classe, un struct ou une union. Si un type a un constructeur par défaut, implicitement ou explicitement déclaré, vous pouvez utiliser des accolades par défaut (avec accolades vides). Par exemple, la classe suivante peut être initialisée à l’aide de la valeur par défaut et les accolades non définis par défaut :  
   
 ```cpp  
 #include <string>  
@@ -53,7 +53,7 @@ int main()
   
 ```  
   
- Si une classe possède les constructeurs par défaut, l’ordre dans la classe membres apparaissent dans l’initialiseur accolade est l’ordre dans lequel les paramètres correspondants apparaissent dans le constructeur, pas l’ordre dans lequel les membres sont déclarés (comme avec `class_a` dans le exemple précédent). Sinon, si le type ne possède aucun constructeur déclaré, l’ordre dans lequel les membres dans l’initialiseur accolade est identique à l’ordre dans lequel ils sont déclarés. Dans ce cas, vous pouvez initialiser autant de membres publics que vous le souhaitez, mais vous ne pouvez pas ignorer tous les membres. L’exemple suivant montre l’ordre utilisé dans les accolades quand il n’existe aucun constructeur déclaré :  
+ Si une classe a des constructeurs non définis par défaut, l’ordre dans la classe que les membres apparaissent dans l’initialiseur accolade est l’ordre dans lequel les paramètres correspondants dans le constructeur, pas l’ordre dans lequel les membres sont déclarés (comme avec `class_a` dans le exemple précédent). Sinon, si le type ne possède aucun constructeur déclaré, l’ordre dans lequel les membres dans l’initialiseur accolade est identique à l’ordre dans lequel ils sont déclarés. Dans ce cas, vous pouvez initialiser autant de membres publics comme vous le souhaitez, mais vous ne pouvez pas ignorer tous les membres. L’exemple suivant montre l’ordre qui est utilisé dans les accolades quand il n’existe aucun constructeur déclaré :  
   
 ```cpp  
 class class_d {  
@@ -75,7 +75,7 @@ int main()
 }   
 ```  
   
- Si le constructeur par défaut est explicitement déclaré mais marqué comme supprimée, accolades par défaut ne peut pas être utilisé :  
+ Si le constructeur par défaut n’est explicitement déclaré mais est marqué comme supprimé, accolades par défaut ne peut pas être utilisé :  
   
 ```cpp  
 class class_f {  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- Vous pouvez utiliser des accolades n’importe où vous le feriez d’initialisation, par exemple, un paramètre de fonction ou une valeur de retour, ou avec la `new` (mot clé) :  
+ Vous pouvez utiliser des accolades n’importe où vous le feriez d’initialisation, par exemple, comme un paramètre de fonction ou une valeur de retour, ou avec la **nouveau** mot clé :  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -101,7 +101,7 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list constructeurs  
- Le [initializer_list, classe](../standard-library/initializer-list-class.md) représente une liste d’objets d’un type spécifié qui peut être utilisé dans un constructeur et dans d’autres contextes. Vous pouvez construire une initializer_list à l’aide d’accolades :  
+ Le [initializer_list, classe](../standard-library/initializer-list-class.md) représente une liste d’objets d’un type spécifié qui peut être utilisé dans un constructeur et dans d’autres contextes. Vous pouvez construire un objet initializer_list à l’aide d’accolades :  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
@@ -130,7 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>Constructeurs qui effectuent une délégation  
- De nombreuses classes possèdent plusieurs constructeurs qui effectuent des opérations similaires : par exemple, pour valider les paramètres :  
+ De nombreuses classes possèdent plusieurs constructeurs qui faire des choses similaires, par exemple, valider les paramètres :  
   
 ```cpp  
 class class_c {  
@@ -155,7 +155,7 @@ public:
 };  
 ```  
   
- Vous pouvez réduire le code répétitif en ajoutant une fonction qui effectue toutes les de la validation, mais le code de `class_c` serait plus facile à comprendre et à gérer si un constructeur peut déléguer une partie du travail à un autre. Pour ajouter les constructeurs de délégation, utilisez le `constructor (. . .) : constructor (. . .)` syntaxe :  
+ Vous pouvez réduire le code répétitif en ajoutant une fonction qui effectue tout de la validation, mais le code pour `class_c` serait plus facile à comprendre et à gérer si un constructeur peut déléguer une partie du travail à un autre. Pour ajouter les constructeurs de délégation, utilisez le `constructor (. . .) : constructor (. . .)` syntaxe :  
   
 ```cpp  
 class class_c {  
@@ -181,9 +181,9 @@ int main() {
   
 ```  
   
- À mesure que vous parcourez l’exemple précédent, notez que le constructeur `class_c(int, int, int)` appelle d’abord le constructeur `class_c(int, int)`, qui à son tour appelle `class_c(int)`. Chacun des constructeurs effectue uniquement le travail qui n’est pas effectué par les autres constructeurs.  
+ À mesure que vous parcourez l’exemple précédent, notez que le constructeur `class_c(int, int, int)` appelle d’abord le constructeur `class_c(int, int)`, qui appelle à son tour `class_c(int)`. Chacun des constructeurs effectue uniquement le travail qui n’est pas effectué par les autres constructeurs.  
   
- Le premier constructeur est appelé initialise l’objet afin que tous ses membres sont initialisés à ce stade. Vous ne peut pas effectuer l’initialisation d’un membre dans un constructeur qui délègue à un autre constructeur, comme indiqué ici :  
+ Le premier constructeur est appelé initialise l’objet afin que tous ses membres sont initialisés à ce stade. Vous ne pouvez pas faire d’initialisation de membre dans un constructeur qui délègue à un autre constructeur, comme illustré ici :  
   
 ```cpp  
 class class_a {  
@@ -204,7 +204,7 @@ public:
   
 ```  
   
- L’exemple suivant illustre l’utilisation d’initialiseurs de membres de données non statiques. Notez que si un constructeur initialise également un membre de données spécifique, l’initialiseur de membre est remplacée :  
+ L’exemple suivant illustre l’utilisation d’initialiseurs de membre de données non statiques. Notez que si un constructeur initialise également un membre de données donné, l’initialiseur de membre est remplacée :  
   
 ```cpp  
 class class_a {  
@@ -222,7 +222,7 @@ int main() {
 }  
 ```  
   
- La syntaxe de délégation constructeur n’empêche pas la création accidentelle de récursivité de constructeur — Constructor1 appelle Constructor2 qui appelle Constructor1, et aucune erreur n’est levée jusqu'à ce qu’un débordement de pile. Il vous incombe d’éviter les cycles.  
+ La syntaxe de délégation du constructeur n’empêche pas la création accidentelle de récursivité de constructeur — Constructor1 appelle Constructor2 qui appelle Constructor1 — et qu’aucune erreur n’est levée jusqu'à ce qu’un dépassement de capacité de pile. Il vous incombe d’éviter les cycles.  
   
 ```cpp  
 class class_f{  

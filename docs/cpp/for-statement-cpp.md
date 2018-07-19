@@ -1,5 +1,5 @@
 ---
-title: instruction (C++) | Documents Microsoft
+title: for, instruction (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417182"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940817"
 ---
 # <a name="for-statement-c"></a>for, instruction (C++)
-Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur la plage pour l’instruction, consultez [Range-based d’instruction (C++)](../cpp/range-based-for-statement-cpp.md).  
+Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur la plage-basé sur une instruction, consultez [Range-based pour instruction (C++)](../cpp/range-based-for-statement-cpp.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,9 +32,9 @@ for ( init-expression ; cond-expression ; loop-expression )
 ```  
   
 ## <a name="remarks"></a>Notes  
- Utilisez l'instruction `for` pour créer des boucles qui doivent être exécutées un certain nombre de fois.  
+ Utilisez le **pour** instruction pour créer des boucles qui doivent exécuter un nombre spécifié de fois.  
   
- L'instruction `for` se compose de trois parties facultatives, comme indiqué dans le tableau suivant.  
+ Le **pour** instruction se compose de trois parties facultatives, comme indiqué dans le tableau suivant.  
   
 ### <a name="for-loop-elements"></a>Éléments de boucle For  
   
@@ -44,7 +44,7 @@ for ( init-expression ; cond-expression ; loop-expression )
 |`cond-expression`|Avant l'exécution de chaque itération de `statement`, y compris la première itération. `statement` est exécuté uniquement si `cond-expression` a la valeur true (valeur différente de zéro).|Expression qui correspond à un type intégral ou à un type de classe avec une conversion non ambiguë en type intégral. Normalement utilisée pour déterminer les critères d'arrêts de boucles.|  
 |`loop-expression`|À la fin de chaque itération de `statement`. `loop-expression` est évalué après l'exécution de `cond-expression`.|Normalement utilisée pour incrémenter les index de boucle.|  
   
- Les exemples suivants montrent diverses façons d'utiliser l'instruction `for`.  
+ Les exemples suivants montrent différentes façons d’utiliser le **pour** instruction.  
   
 ```cpp  
 #include <iostream>  
@@ -71,7 +71,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` et `loop-expression` peuvent contenir plusieurs instructions séparées par des virgules. Par exemple :  
+ `init-expression` et `loop-expression` peuvent contenir plusieurs instructions séparées par des virgules. Exemple :  
   
 ```cpp  
 #include <iostream>  
@@ -106,11 +106,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18  
 ```  
   
- A `for` boucle termine lorsqu’un [saut](../cpp/break-statement-cpp.md), [retourner](../cpp/return-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md) (à une instruction étiquetée extérieure le **pour** boucle) dans `statement` est exécutée. A [continuer](../cpp/continue-statement-cpp.md) instruction dans un `for` boucle termine uniquement l’itération actuelle.  
+ A **pour** boucle termine quand un [saut](../cpp/break-statement-cpp.md), [retourner](../cpp/return-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md) (pour une instruction étiquetée extérieure le **pour**boucle) au sein de `statement` est exécutée. Un [continuer](../cpp/continue-statement-cpp.md) instruction dans un **pour** boucle termine uniquement l’itération actuelle.  
   
- Si `cond-expression` est omis, il est considéré comme true et la **pour** boucle ne se terminera pas sans une `break`, `return`, ou `goto` dans `statement`.  
+ Si `cond-expression` est omis, il est considéré comme true et le **pour** boucle ne se terminera pas sans une **saut**, **retourner**, ou **goto** dans `statement`.  
   
- Bien que les trois champs de l'instruction `for` soient normalement utilisés pour l'initialisation, les tests de fin et l'incrémentation, ils ne sont pas limités à ces applications. Par exemple, le code suivant affiche les nombres 0 à 4. Dans ce cas, `statement` est l'instruction null :  
+ Bien que les trois champs de la **pour** instruction sont normalement utilisés pour l’initialisation, les tests de fin, et s’incrémenter, ils ne sont pas limités à ces applications. Par exemple, le code suivant affiche les nombres 0 à 4. Dans ce cas, `statement` est l'instruction null :  
   
 ```cpp  
 #include <iostream>  
@@ -126,7 +126,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>Boucles for et norme C++  
- Selon la norme C++, une variable déclarée dans une boucle `for` passe hors de portée lorsque la boucle `for` est terminée. Par exemple :  
+ La norme C++ indique qu’une variable déclarée dans une **pour** boucle passe hors de portée après la **pour** boucle se termine. Exemple :  
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
@@ -135,11 +135,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope  
 ```  
   
- Par défaut, sous [/Ze](../build/reference/za-ze-disable-language-extensions.md), une variable déclarée dans une `for` boucle reste dans la portée jusqu'à ce que le `for` se termine la portée englobante de la boucle.  
+ Par défaut, sous [/Ze](../build/reference/za-ze-disable-language-extensions.md), une variable déclarée dans une **pour** boucle reste dans la portée jusqu'à ce que le **pour** extrémités de la portée englobante de la boucle.  
   
- [/ Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Active le comportement standard des variables déclarées dans des boucles sans avoir à spécifier /Za.  
+ [/ Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Active le comportement standard de variables déclarées dans des boucles sans avoir à spécifier/Za.  
   
- Il est également possible d'utiliser les différences de portée de la boucle `for` pour redéclarer des variables sous /Ze comme suit :  
+ Il est également possible d’utiliser les différences d’étendue de la **pour** boucle pour redéclarer des variables sous /Ze comme suit :  
   
 ```cpp  
 // for_statement5.cpp  
@@ -151,7 +151,7 @@ int main(){
 }  
 ```  
   
- Cela reproduit plus fidèlement le comportement standard d'une variable déclarée dans une boucle `for`, qui requiert des variables déclarées dans une boucle `for` pour sortir de la portée lorsque la boucle est terminée. Lorsqu'une variable est déclarée dans une boucle `for`, le compilateur la convertit en interne en variable locale dans la portée englobante de la boucle `for`, même s'il existe déjà une variable locale du même nom.  
+ Cela reproduit plus fidèlement le comportement standard d’une variable déclarée dans une **pour** boucle, ce qui requiert des variables déclarées dans un **pour** boucle pour sortir de la portée après la boucle est terminée. Quand une variable est déclarée dans un **pour** boucle, le compilateur en interne le promeut à une variable locale dans le **pour** boucle portée englobante de la même s’il existe déjà une variable locale avec le même nom.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instructions d’itération](../cpp/iteration-statements-cpp.md)   

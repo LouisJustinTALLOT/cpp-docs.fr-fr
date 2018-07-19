@@ -1,5 +1,5 @@
 ---
-title: public (C++) | Documents Microsoft
+title: public (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c7f113aa234a5e682576ff509199c0223b7cc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa6d4abf9423df29d59f375b825a815404a3c76c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943692"
 ---
 # <a name="public-c"></a>public (C++)
 ## <a name="syntax"></a>Syntaxe  
@@ -34,16 +35,16 @@ public base-class
 ## <a name="remarks"></a>Notes  
  Lorsqu’il précède une liste de membres de classe, le **public** mot clé indique que ces membres sont accessibles à partir de n’importe quelle fonction. Cela s'applique à tous les membres déclarés jusqu'au spécificateur d'accès suivant de la classe.  
   
- En faisant précéder le nom de classe de base, le **public** mot clé spécifie que les membres publics et protégés de la classe de base sont publics et les membres protégés, respectivement, de la classe dérivée.  
+ Lorsqu’il précède le nom de classe de base, le **public** mot clé spécifie que les membres publics et protégés de la classe de base sont publiques et les membres protégés, respectivement, de la classe dérivée.  
   
  L'accès par défaut des membres d'une classe est privé. L'accès par défaut des membres d'une structure ou d'une union est public.  
   
  L'accès par défaut d'une classe de base est privé pour les classes et public pour les structures. Les unions ne peuvent pas avoir de classes de base.  
   
- Pour plus d’informations, consultez [privé](../cpp/private-cpp.md), [protégé](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)et la table d’accès aux membres de [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) .  
+ Pour plus d’informations, consultez [privé](../cpp/private-cpp.md), [protégé](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)et accès aux membres de la [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) .  
   
 ## <a name="clr-specific"></a>Spécifique /clr  
- Dans les types CLR, mots clés de spécificateur d’accès C++ (**public**, `private`, et `protected`) peuvent affecter la visibilité des types et méthodes quant aux assemblys. Pour plus d’informations, consultez [contrôle d’accès de membre](member-access-control-cpp.md).  
+ Dans les types CLR, mots clés de spécificateur d’accès le C++ (**public**, **privé**, et **protégé**) peuvent affecter la visibilité des types et méthodes quant aux assemblys. Pour plus d’informations, consultez [contrôle d’accès de membre](member-access-control-cpp.md).  
   
 > [!NOTE]
 >  Fichiers compilés avec [/LN](../build/reference/ln-create-msil-module.md) ne sont pas affectés par ce comportement. Dans ce cas, toutes les classes managées (public ou privées) seront visibles.  
@@ -52,7 +53,7 @@ public base-class
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // keyword_public.cpp  
 class BaseClass {  
 public:  
@@ -72,5 +73,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôle de l’accès aux membres de classe](member-access-control-cpp.md)   
+ [Contrôler l’accès aux membres de classe](member-access-control-cpp.md)   
  [Mots clés](../cpp/keywords-cpp.md)

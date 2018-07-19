@@ -1,5 +1,5 @@
 ---
-title: Smart pointeurs (C++ moderne) | Documents Microsoft
+title: Intelligente des pointeurs (C++ moderne) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d532a693414fee7845c45fd548b7513ed99b38d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424350"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939882"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (Modern C++)
-Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives pointeurs*, qui sont utilisés pour garantir que les programmes sont exempts de la mémoire et les fuites de ressources et sont contre les exceptions.  
+Dans la programmation C++ moderne, la bibliothèque Standard inclut *intelligente des pointeurs*, qui sont utilisées pour garantir que les programmes sont libres de mémoire et les fuites de ressources et sont protégé contre les exceptions.  
   
 ## <a name="uses-for-smart-pointers"></a>Utilisations pour les pointeurs intelligents  
  Pointeurs intelligents sont définis dans le `std` espace de noms dans le [ \<mémoire >](../standard-library/memory.md) fichier d’en-tête. Ils sont essentiels à la [RAII](../cpp/objects-own-resources-raii.md) ou *Resource Acquisition Is Initialization* idiome de programmation. L'objectif principal de cet idiome est de garantir que l'acquisition des ressources se produit en même temps que l'initialisation de l'objet, afin que toutes les ressources de l'objet soient créées et préparées en une seule ligne de code. En pratique, le grand principe de RAII est de donner la propriété de toute ressource allouée par tas, par exemple la mémoire allouée dynamiquement ou les handles d'objet système, à un objet alloué par la pile dont le destructeur contient le code de suppression ou de libération de la ressource ainsi que le code de nettoyage associé.  
@@ -40,17 +40,17 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives poi
 > [!IMPORTANT]
 >  Veillez à toujours créer les pointeurs intelligents sur une ligne distincte de code et jamais dans une liste de paramètres, afin qu'une fuite de ressource subtile ne se produise pas suite à certaines règles d'allocation de liste de paramètres.  
   
- L’exemple suivant montre comment un `unique_ptr` type de pointeur intelligent à partir de la bibliothèque C++ Standard peut être utilisé pour encapsuler un pointeur vers un objet volumineux.  
+ L’exemple suivant montre comment un `unique_ptr` type pointeur intelligent à partir de la bibliothèque C++ Standard peut être utilisé pour encapsuler un pointeur vers un objet volumineux.  
   
  [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
  L'exemple illustre les étapes essentielles suivantes pour utiliser les pointeurs intelligents.  
   
-1.  Déclarez le pointeur intelligent comme variable automatique (locale). (N'utilisez pas l'expression `new` ou `malloc` sur le pointeur intelligent lui-même.)  
+1.  Déclarez le pointeur intelligent comme variable automatique (locale). (N’utilisez pas le **nouveau** ou `malloc` expression sur le pointeur intelligent lui-même.)  
   
 2.  Dans le paramètre de type, spécifiez le type pointé du pointeur encapsulé.  
   
-3.  Passez un pointeur brut à un objet `new` dans le constructeur de pointeur intelligent. (Certaines fonctions utilitaires ou certains constructeurs de pointeur intelligent le font à votre place.)  
+3.  Passez un pointeur brut à un **nouveau**-objet dans le constructeur de pointeur intelligent. (Certaines fonctions utilitaires ou certains constructeurs de pointeur intelligent le font à votre place.)  
   
 4.  Utilisez les opérateurs `->` et `*` surchargés pour accéder à l'objet.  
   
@@ -58,11 +58,11 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives poi
   
  Les pointeurs intelligents sont conçus pour être aussi efficaces que possible, aussi bien en termes de mémoire que de performances. Par exemple, la seule donnée membre dans `unique_ptr` est le pointeur encapsulé. Cela signifie que `unique_ptr` a exactement la même taille que ce pointeur, soit quatre octets ou huit octets. Accéder au pointeur encapsulé en utilisant les opérateurs de pointeur intelligent surchargé * et -> n'est pas beaucoup plus lent que d'accéder directement aux pointeurs bruts.  
   
- Les pointeurs intelligents ont leurs propres fonctions membres, accessibles à l'aide de la notation par « point ». Par exemple, certains pointeurs intelligents de bibliothèque C++ Standard ont une fonction membre de réinitialisation qui libère la propriété du pointeur. C'est utile lorsque vous souhaitez libérer la mémoire possédée par le pointeur intelligent avant que celui-ci ne passe hors de portée, comme illustré dans l'exemple suivant.  
+ Les pointeurs intelligents ont leurs propres fonctions membres, accessibles à l'aide de la notation par « point ». Par exemple, certains pointeurs intelligents de bibliothèque Standard C++ ont une fonction de membre de réinitialisation qui libère la propriété du pointeur. C'est utile lorsque vous souhaitez libérer la mémoire possédée par le pointeur intelligent avant que celui-ci ne passe hors de portée, comme illustré dans l'exemple suivant.  
   
  [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- Les pointeurs intelligents permettent généralement d'accéder directement à leur pointeur brut. Pointeurs intelligents de bibliothèque C++ Standard ont une `get` fonction membre à cette fin, et `CComPtr` a publique `p` membre de classe. En assurant l'accès direct au pointeur sous-jacent, vous pouvez utiliser le pointeur intelligent pour gérer la mémoire dans votre propre code et continuer à passer le pointeur brut au code qui ne prend pas en charge les pointeurs intelligents.  
+ Les pointeurs intelligents permettent généralement d'accéder directement à leur pointeur brut. Pointeurs intelligents de bibliothèque C++ Standard ont un `get` fonction membre à cet effet, et `CComPtr` a un public `p` membre de classe. En assurant l'accès direct au pointeur sous-jacent, vous pouvez utiliser le pointeur intelligent pour gérer la mémoire dans votre propre code et continuer à passer le pointeur brut au code qui ne prend pas en charge les pointeurs intelligents.  
   
  [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
@@ -73,7 +73,7 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives poi
  Utilisez ces pointeurs intelligents comme premier choix pour encapsuler les pointeurs vers les objets C++ anciens ordinaires (POCO).  
   
 -   `unique_ptr`   
-     Autorise exactement un propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr` est petit et efficace ; la taille est un pointeur, et il prend en charge les références rvalue pour une insertion rapide et une récupération à partir des collections de la bibliothèque C++ Standard. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) et [unique_ptr, classe](../standard-library/unique-ptr-class.md).  
+     Autorise exactement un propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr` est petite et efficace ; la taille est un pointeur, et il prend en charge les références rvalue pour une insertion rapide et l’extraction des collections de la bibliothèque C++ Standard. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) et [unique_ptr, classe](../standard-library/unique-ptr-class.md).  
   
 -   `shared_ptr`   
      Pointeur intelligent de références comptabilisées. À utiliser lorsque vous souhaitez affecter un pointeur brut à plusieurs propriétaires, par exemple, lorsque vous retournez la copie d'un pointeur à partir d'un conteneur, mais que vous souhaitez conserver l'original. Le pointeur brut n'est pas supprimé tant que tous les propriétaires `shared_ptr` ne sont pas hors de portée ou n'ont pas abandonné la propriété. La taille contient deux pointeurs ; un pour l'objet et un pour le bloc de contrôle partagé qui contient le nombre de références. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) et [shared_ptr, classe](../standard-library/shared-ptr-class.md).  
@@ -85,10 +85,10 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives poi
  Lorsque vous travaillez avec les objets COM, encapsulez les pointeurs d'interface dans un type de pointeur intelligent approprié. La bibliothèque ATL (Active Template Library) définit plusieurs pointeurs intelligents pour différents besoins. Vous pouvez également utiliser le type pointeur intelligent `_com_ptr_t`, que le compilateur utilise lorsqu'il crée des classes wrapper à partir de fichiers .tlb. C'est le meilleur choix lorsque vous ne souhaitez pas inclure les fichiers d'en-tête ATL.  
   
  [CComPtr, classe](../atl/reference/ccomptr-class.md)  
- Procédez ainsi à moins que vous ne puissiez pas utiliser ATL. Effectue un décompte des références à l'aide des méthodes `AddRef` et `Release`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances CComPtr et CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
+ Procédez ainsi à moins que vous ne puissiez pas utiliser ATL. Effectue un décompte des références à l'aide des méthodes `AddRef` et `Release`. Pour plus d’informations, consultez [Comment : créer et utiliser Instances CComPtr et CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComQIPtr, classe](../atl/reference/ccomqiptr-class.md)  
- Ressemble à `CComPtr`, mais fournit également une syntaxe simplifiée pour appeler `QueryInterface` sur les objets COM. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances CComPtr et CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
+ Ressemble à `CComPtr`, mais fournit également une syntaxe simplifiée pour appeler `QueryInterface` sur les objets COM. Pour plus d’informations, consultez [Comment : créer et utiliser Instances CComPtr et CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr, classe](../atl/reference/ccomheapptr-class.md)  
  Pointeur intelligent vers des objets qui utilisent `CoTaskMemFree` pour libérer de la mémoire.  
@@ -100,13 +100,13 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives poi
  Ressemble à `CComQIPtr` en termes de fonctionnalités mais ne dépend pas d'en-têtes ATL.  
   
  **Pointeurs intelligents ATL pour objets POCO**  
- En plus des pointeurs intelligents pour objets COM, ATL définit également des pointeurs intelligents et des collections de pointeurs intelligents pour les objets POD (Plain Old Data) de C++. Dans la programmation Windows classique, ces types sont des alternatives utiles aux collections de la bibliothèque C++ Standard, en particulier lorsque la portabilité du code n’est pas nécessaire ou lorsque vous ne souhaitez pas combiner les modèles de programmation de la bibliothèque Standard C++ et ATL.  
+ En plus des pointeurs intelligents pour objets COM, ATL définit également des pointeurs intelligents et des collections de pointeurs intelligents pour les objets POD (Plain Old Data) de C++. Dans la programmation Windows classique, ces types sont des alternatives utiles pour les collections de la bibliothèque C++ Standard, en particulier lorsque la portabilité du code n’est pas nécessaire ou lorsque vous ne souhaitez pas mélanger les modèles de programmation de la bibliothèque Standard C++ et ATL.  
   
  [CAutoPtr, classe](../atl/reference/cautoptr-class.md)  
  Pointeur intelligent qui applique une propriété unique en transférant la propriété lors de la copie. Comparable à la classe `std::auto_ptr` déconseillée.  
   
  [CHeapPtr, classe](../atl/reference/cheapptr-class.md)  
- Pointeur intelligent pour les objets qui sont alloués à l’aide de C [malloc](../c-runtime-library/reference/malloc.md) (fonction).  
+ Pointeur intelligent pour les objets qui sont alloués à l’aide de la C [malloc](../c-runtime-library/reference/malloc.md) (fonction).  
   
  [CAutoVectorPtr, classe](../atl/reference/cautovectorptr-class.md)  
  Pointeur intelligent pour les tableaux alloués à l'aide de `new[]`.  
@@ -119,5 +119,5 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *actives poi
   
 ## <a name="see-also"></a>Voir aussi  
  [Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)   
  [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843598"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966444"
 ---
 # <a name="isclass-class"></a>is_class, classe
 
@@ -37,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type défini comme `class` ou `struct`, ou comme une forme `cv-qualified` de l'un d'eux. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type défini comme un **classe** ou un **struct**, ou un `cv-qualified` forme d’un d’eux, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -73,7 +73,7 @@ is_class<trivial> == true
 is_class<int> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -1,5 +1,5 @@
 ---
-title: Arrêt du programme | Documents Microsoft
+title: Arrêt du programme | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fa65e0c1d910791bed416a1b31f9de46dfb2299
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643718dc0b58f74fbb1ed957c8dc3212a4408073
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419951"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939921"
 ---
 # <a name="program-termination"></a>Terminaison du programme
 En C++, il existe plusieurs façons de quitter un programme :  
@@ -31,7 +31,7 @@ En C++, il existe plusieurs façons de quitter un programme :
   
 -   Appelez le [abandonner](../cpp/abort-function.md) (fonction).  
   
--   Exécuter un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction à partir de **principal**.  
+-   Exécuter un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction à partir de `main`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [main : démarrage du programme](../cpp/main-program-startup.md)

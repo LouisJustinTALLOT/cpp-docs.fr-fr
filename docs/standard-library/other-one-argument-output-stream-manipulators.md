@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853321"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953824"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Autres manipulateurs de flux de sortie à un argument
 
-L’exemple suivant utilise une classe `money`, qui est un type `long`. Le manipulateur `setpic` attache une chaîne « image » mise en forme à la classe qui peut être utilisée par l’opérateur d’insertion de flux surchargé de la classe `money`. La chaîne image est stockée comme variable statique dans la classe `money` au lieu d’être stockée comme membre d’une classe stream. Vous n’avez donc pas à dériver une nouvelle classe output stream.
+L’exemple suivant utilise une classe `money`, qui est un **long** type. Le manipulateur `setpic` attache une chaîne « image » mise en forme à la classe qui peut être utilisée par l’opérateur d’insertion de flux surchargé de la classe `money`. La chaîne image est stockée comme variable statique dans la classe `money` au lieu d’être stockée comme membre d’une classe stream. Vous n’avez donc pas à dériver une nouvelle classe output stream.
 
 ## <a name="example"></a>Exemple
 

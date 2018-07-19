@@ -1,5 +1,5 @@
 ---
-title: _com_error::HRESULTToWCode | Documents Microsoft
+title: _com_error::HRESULTToWCode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3955fcda665e08e5415652a1e8f1f232d0fe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412262"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941715"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Section spécifique à Microsoft**  
   
- Mappe les 32 bits `HRESULT` à 16 bits `wCode`.  
+ Mappe le HRESULT de 32 bits à 16 bits `wCode`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,11 +38,11 @@ ms.locfileid: "32412262"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `hr`  
- 32 bits `HRESULT` soit mappé à 16 bits `wCode`.  
+ *ressources humaines*  
+ Le HRESULT de 32 bits à 16 bits `wCode`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- 16 bits `wCode` mappé à partir de 32 bits `HRESULT`.  
+ 16 bits `wCode` mappé à partir de la valeur HRESULT 32 bits.  
   
 ## <a name="remarks"></a>Notes  
  Consultez [_com_error::WCode](../cpp/com-error-wcode.md) pour plus d’informations.  

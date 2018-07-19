@@ -1,5 +1,5 @@
 ---
-title: align (C++) | Documents Microsoft
+title: align (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418248"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940726"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -42,15 +42,15 @@ L'écriture d'applications qui utilisent les dernières instructions du processe
 
 \# est la valeur d’alignement. Les entrées valides sont des puissances entières de deux comprises entre 1 et 8192 (octets), telles que 2, 4, 8, 16, 32 ou 64. `declarator` correspond aux données que vous déclarez comme alignées.
 
-Pour plus d’informations sur la façon de retourner une valeur de type `size_t` qui représente la spécification d’alignement du type, consultez [__alignof](../cpp/alignof-operator.md). Pour plus d’informations sur la façon de déclarer des pointeurs non alignés lors du ciblage de processeurs 64 bits, consultez [__unaligned](../cpp/unaligned.md).
+Pour plus d’informations sur la façon de retourner une valeur de type `size_t` qui est la spécification d’alignement du type, consultez [__alignof](../cpp/alignof-operator.md). Pour plus d’informations sur la façon de déclarer des pointeurs non alignés lors du ciblage de processeurs 64 bits, consultez [__unaligned](../cpp/unaligned.md).
 
-Vous pouvez utiliser `__declspec(align(#))` lorsque vous définissez `struct`, `union` ou `class`, ou lorsque vous déclarez une variable.
+Vous pouvez utiliser `__declspec(align(#))` lorsque vous définissez un **struct**, **union**, ou **classe**, ou lorsque vous déclarez une variable.
 
-Le compilateur ne garantit pas et ne tente pas de préserver l'attribut d'alignement des données durant une opération de copie ou de transformation de données. Par exemple, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) peut copier un struct déclaré avec `__declspec(align(#))` à n’importe quel emplacement. Notez qu’ordinaire allocateurs — par exemple, [malloc](../c-runtime-library/reference/malloc.md), C++ [new, opérateur](new-operator-cpp.md)et les allocateurs Win32, retournent une mémoire qui est généralement pas suffisamment alignée pour `__declspec(align(#))` structures ou des tableaux de structures. Pour garantir que la destination d’une opération de transformation de copie ou de données, utilisez [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), ou écrivez votre propre allocateur.
+Le compilateur ne garantit pas et ne tente pas de préserver l'attribut d'alignement des données durant une opération de copie ou de transformation de données. Par exemple, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) peut copier un struct déclaré avec `__declspec(align(#))` à n’importe quel emplacement. Notez qu’ordinaire allocateurs — par exemple, [malloc](../c-runtime-library/reference/malloc.md), C++ [opérateur new](new-operator-cpp.md)et les allocateurs Win32 — retournent une mémoire qui est généralement pas suffisamment alignée pour `__declspec(align(#))` structures ou des tableaux de structures. Pour garantir que la destination d’une opération de transformation de copie ou de données est correctement alignée, utilisez [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), ou écrivez votre propre allocateur.
 
 Vous ne pouvez pas spécifier d'alignement des paramètres de fonction. Quand des données qui ont un attribut d'alignement sont passées par valeur dans la pile, leur alignement est contrôlé par la convention d'appel. Si l'alignement des données est important dans la fonction appelée, copiez le paramètre dans la mémoire correctement alignée avant de l'utiliser.
 
-Sans `__declspec(align(#))`, le compilateur aligne généralement les données sur les frontières naturelles en fonction du processeur cible et la taille des données, jusqu'à des limites de 4 octets sur les processeurs 32 bits et les limites de 8 octets sur les processeurs 64 bits. Données dans les classes ou structures sont alignées dans la classe ou structure au minimum de son alignement naturel et le paramètre actuel de compression (à partir du #pragma `pack` ou **/Zp** option du compilateur).
+Sans `__declspec(align(#))`, le compilateur aligne généralement les données sur les frontières naturelles en fonction du processeur cible et la taille des données, jusqu'à des limites de 4 octets sur les processeurs 32 bits et les limites de 8 octets sur les processeurs 64 bits. Les données dans les classes ou structures sont alignées dans la classe ou structure au minimum de son alignement naturel et du paramètre de compression actuel (à partir du #pragma **pack** ou **/Zp** option du compilateur).
 
 Cet exemple illustre l'utilisation de `__declspec(align(#))` :
 
@@ -62,7 +62,7 @@ __declspec(align(32)) struct Str1{
 
 Ce type a maintenant un attribut d'alignement de 32 octets. Cela signifie que toutes les instances statiques et automatiques commencent à une frontière de 32 octets. Autres types de structure déclarés avec ce type en tant que membre conservent l’attribut d’alignement de ce type, autrement dit, toute structure avec `Str1` comme un élément a un attribut d’alignement d’au moins 32.
 
-Notez que `sizeof(struct Str1)` est égal à 32. Cela implique que si un tableau d'objets Str1 est créé et si la base du tableau est alignée sur 32 octets, chaque membre du tableau est également aligné sur 32 octets. Pour créer un tableau dont la base est correctement alignée dans la mémoire dynamique, utilisez [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), ou écrivez votre propre allocateur.
+Notez que `sizeof(struct Str1)` est égal à 32. Cela implique que si un tableau d'objets Str1 est créé et si la base du tableau est alignée sur 32 octets, chaque membre du tableau est également aligné sur 32 octets. Pour créer un tableau dont la base est correctement alignée en mémoire dynamique, utilisez [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), ou écrivez votre propre allocateur.
 
 La valeur `sizeof` d'une structure quelconque est le décalage du membre final, plus la taille de ce membre, arrondie au multiple le plus proche de la plus grande valeur membre d'alignement du membre ou de la valeur d'alignement de la structure entière, quelle que soit la valeur la plus grande.
 
@@ -86,7 +86,7 @@ Pour plus d'informations, voir :
 
 - [Alignement des données dans le stockage Local des threads](#vclrfthreadlocalstorageallocation)
 
-- [Comment aligner des travaux avec une compression de données](#vclrfhowalignworkswithdatapacking)
+- [Comment aligner des travaux avec compression de données](#vclrfhowalignworkswithdatapacking)
 
 - [Exemples d’alignement de Structure](../build/examples-of-structure-alignment.md) (x64 spécifique)
 
@@ -99,7 +99,7 @@ Les exemples suivants montrent comment `__declspec(align(#))` affecte la taille 
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-Dans cet exemple, la structure `S1` est définie à l'aide de `__declspec(align(32))`. Toutes les utilisations de `S1` pour une définition de variable ou dans d'autres types de déclaration sont alignées sur 32 octets. `sizeof(struct S1)` retourne 32, et `S1` a 16 octets de remplissage après les 16 octets requis pour contenir les quatre entiers. Chaque membre `int` a besoin d'un alignement sur 4 octets, mais l'alignement de la structure elle-même est déclaré sur 32 octets. Ainsi, l'alignement global est sur 32 octets.
+Dans cet exemple, la structure `S1` est définie à l'aide de `__declspec(align(32))`. Toutes les utilisations de `S1` pour une définition de variable ou dans d'autres types de déclaration sont alignées sur 32 octets. `sizeof(struct S1)` retourne 32, et `S1` a 16 octets de remplissage après les 16 octets requis pour contenir les quatre entiers. Chaque **int** membre nécessite un alignement de 4 octets, mais l’alignement de la structure elle-même est déclaré comme étant 32. Ainsi, l'alignement global est sur 32 octets.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -179,13 +179,13 @@ void fn() {
 }
 ```
 
-Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez `malloc`, le résultat dépend de la taille d'opérande. Si *arg* > = 8, la mémoire retournée est alignée sur 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée est la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
+Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez **malloc**, le résultat dépend de la taille d’opérande. Si *arg* > = 8, la mémoire retournée est alignée de 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée représente la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Définition de nouveaux Types avec __declspec(align(#))
 
 Vous pouvez définir un type avec une caractéristique d'alignement.
 
-Par exemple, vous pouvez définir un `struct` avec un alignement de la valeur de cette manière :
+Par exemple, vous pouvez définir un `struct` avec un valeur d’alignement de cette façon :
 
 ```cpp
 struct aType {int a; int b;};
@@ -217,9 +217,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Comment aligner des travaux avec une compression de données
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Comment aligner des travaux avec compression de données
 
-Le **/Zp** option du compilateur et le `pack` pragma ont pour effet de compresser les données pour les membres de structure et d’union. Cet exemple montre comment **/Zp** et `__declspec(align(#))` fonctionnent ensemble :
+Le **/Zp** option du compilateur et le **pack** pragma ont pour effet de compresser les données pour les membres de structure et d’union. Cet exemple montre comment **/Zp** et `__declspec(align(#))` fonctionnent ensemble :
 
 ```c[[]]
 struct S {
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-Le tableau suivant répertorie le décalage de chaque membre sous diverses **/Zp** (ou #pragma `pack`) montrant l’interagissent entre les deux valeurs.
+Le tableau suivant répertorie le décalage de chaque membre dans diverses **/Zp** (ou #pragma **pack**) valeurs, en montrant comment les deux interagissent.
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|

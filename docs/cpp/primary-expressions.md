@@ -1,5 +1,5 @@
 ---
-title: Expressions primaires | Documents Microsoft
+title: Expressions primaires | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c419bf65a02d13359335bc6cb527fc189d596d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966942"
 ---
 # <a name="primary-expressions"></a>Expressions primaires
 Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s'agit de littéraux, de noms et de noms qualifiés par l'opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :  
   
 ```  
   
-      literal  
-      this  
-:: namename( expression )  
+literal  
+this
+name  
+::name ( expression )  
 ```  
   
- A *littéral* est une expression primaire constante. Son type dépend de la forme de sa spécification. Consultez [littéraux](../cpp/numeric-boolean-and-pointer-literals-cpp.md) pour plus d’informations sur la spécification des littéraux.  
+ Un *littéral* est une expression primaire constante. Son type dépend de la forme de sa spécification. Consultez [littéraux](../cpp/numeric-boolean-and-pointer-literals-cpp.md) pour plus d’informations sur la spécification des littéraux.  
   
- Le **cela** (mot clé) est un pointeur vers un objet de classe. Il est disponible dans les fonctions membres non statiques et pointe vers l'instance de la classe pour laquelle la fonction est appelée. Le **cela** mot clé ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.  
+ Le **cela** mot clé est un pointeur vers un objet de classe. Il est disponible dans les fonctions membres non statiques et pointe vers l'instance de la classe pour laquelle la fonction est appelée. Le **cela** mot clé ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.  
   
- Le type de la **cela** pointeur est `type`  **\*const** (où `type` est le nom de classe) dans les fonctions de modification ne sont pas spécifiquement le **cette** pointeur. L’exemple suivant affiche des membres, déclarations de fonction et les types de **cela**:  
+ Le type de la **cela** pointeur est `type`  **\*const** (où `type` est le nom de classe) dans les fonctions ne modifient pas spécifiquement le **cette** pointeur. L’exemple suivant montre les membres des déclarations de fonction et les types de **cela**:  
   
-```  
+```cpp 
 // expre_Primary_Expressions.cpp  
 // compile with: /LD  
 class Example  
@@ -58,11 +60,9 @@ public:
   
  Une expression placée entre parenthèses est une expression principale dont le type et la valeur sont identiques à ceux de l'expression qui n'est pas entre parenthèses. Il s'agit d'une l-value si l'expression qui n'est pas entre parenthèses est une l-value.  
   
- Dans le contexte de la syntaxe d’expression primaire ci-dessus, *nom* signifie que n’importe où dans la syntaxe décrite pour [noms](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db), bien que lorsque à l’aide de l’opérateur de résolution de portée avant le nom, les types de noms qui peut se produire uniquement dans une classe ne sont pas autorisés.  Cela inclut les noms de fonctions de conversion définies par l'utilisateur, et les noms de destructeur.  
-  
  Les exemples d'expressions principaux incluent :  
   
-```  
+```cpp 
 100 // literal  
 'c' // literal  
 this // in a member function, a pointer to the class instance  
@@ -72,9 +72,9 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- Les exemples ci-dessous sont tous considérés comme *noms*et des expressions primaires par conséquent, dans différentes formes :  
+ Les exemples ci-dessous sont toutes considérées comme *noms*et des expressions primaires par conséquent, sous diverses formes :  
   
-```  
+```cpp 
 MyClass // a identifier  
 MyClass::f // a qualified name  
 operator = // an operator function name  

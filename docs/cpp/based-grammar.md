@@ -1,5 +1,5 @@
 ---
-title: syntaxe __based | Documents Microsoft
+title: __based, grammaire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad00244be53a2eebe4a02b99c6368333f3daf23
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409535"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939362"
 ---
 # <a name="based-grammar"></a>Syntaxe __based
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
  L'adressage est utile lorsque vous avez besoin d'exercer un contrôle précis sur le segment dans lequel les objets sont alloués (données statiques et dynamiques).  
   
- Le seul type d'adressage acceptable dans les compilations 32 et 64 bits est l'adressage « basé sur un pointeur » qui définit un type contenant un déplacement 32 ou 64 bits vers une base 32 ou 64 bits ou basé sur `void`.  
+ La seule forme d’adressage acceptable dans les compilations 32 bits et 64 bits est « basé sur un pointeur » qui définit un type contient un déplacement 32 bits ou 64 bits à une base 32 bits ou 64 bits ou basés sur **void**.  
   
 ## <a name="grammar"></a>Grammaire  
  *en fonction de modificateur de plage*:  
- **__based (***base-expression***)**   
+ **__based (***expression de base***)**   
   
- *expression de la base de*:  
+ *expression de base*:  
  *based-variablebased-abstract-declaratorsegment-namesegment-cast*  
   
  *variable en fonction*:  
  *identifier*  
   
- *base-abstract-declarator*:  
+ *en fonction-abstract-declarator*:  
  *abstract-declarator*  
   
  *type de base*:  

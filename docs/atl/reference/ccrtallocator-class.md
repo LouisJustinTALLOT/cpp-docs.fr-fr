@@ -1,5 +1,5 @@
 ---
-title: Classe de CCRTAllocator | Documents Microsoft
+title: Ccrtallocator, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f026610469c75f37e49df6f42358a3ff378cb0e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363445"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879583"
 ---
-# <a name="ccrtallocator-class"></a>Classe de CCRTAllocator
+# <a name="ccrtallocator-class"></a>Ccrtallocator, classe
 Cette classe fournit des méthodes pour la gestion de la mémoire à l’aide des routines de mémoire CRT.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,14 +42,14 @@ class ATL::CCRTAllocator
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CCRTAllocator::Allocate](#allocate)|(Statique) Appelez cette méthode pour allouer de mémoire.|  
+|[CCRTAllocator::Allocate](#allocate)|(Statique) Appelez cette méthode pour allouer de la mémoire.|  
 |[CCRTAllocator::Free](#free)|(Statique) Appelez cette méthode pour libérer de la mémoire.|  
-|[CCRTAllocator::Reallocate](#reallocate)|(Statique) Appelez cette méthode pour réallouer la mémoire.|  
+|[CCRTAllocator::Reallocate](#reallocate)|(Statique) Appelez cette méthode pour réallouer de la mémoire.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe est utilisée par [CHeapPtr](../../atl/reference/cheapptr-class.md) pour fournir des routines d’allocation de la mémoire CRT. La classe équivalent, [CComAllocator](../../atl/reference/ccomallocator-class.md), fournit les mêmes méthodes que l’utilisation de COM routines.  
+ Cette classe est utilisée par [CHeapPtr](../../atl/reference/cheapptr-class.md) pour fournir des routines d’allocation de la mémoire CRT. La classe équivalent, [CComAllocator](../../atl/reference/ccomallocator-class.md), fournit les mêmes méthodes à l’aide des routines de COM.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="allocate"></a>  CCRTAllocator::Allocate  
@@ -60,7 +60,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBytes`  
+ *nBytes*  
  Nombre d'octets à allouer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -77,11 +77,11 @@ static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire allouée.  
   
 ### <a name="remarks"></a>Notes  
- Libère la mémoire allouée. Consultez [libre](../../c-runtime-library/reference/free.md) pour plus d’informations.  
+ Libère la mémoire allouée. Consultez [gratuit](../../c-runtime-library/reference/free.md) pour plus d’informations.  
   
 ##  <a name="reallocate"></a>  CCRTAllocator::Reallocate  
  Appelez cette fonction statique pour réallouer de la mémoire.  
@@ -91,10 +91,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire allouée.  
   
- `nBytes`  
+ *nBytes*  
  Nombre d'octets à réallouer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -104,6 +104,6 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
  Redimensionne la quantité de mémoire allouée. Consultez [realloc](../../c-runtime-library/reference/realloc.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CHeapPtr](../../atl/reference/cheapptr-class.md)   
- [Classe de CComAllocator](../../atl/reference/ccomallocator-class.md)   
+ [Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
+ [Ccomallocator, classe](../../atl/reference/ccomallocator-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

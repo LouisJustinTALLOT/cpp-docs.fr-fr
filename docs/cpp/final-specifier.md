@@ -1,5 +1,5 @@
 ---
-title: Spécificateur final | Documents Microsoft
+title: Spécificateur final | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942638"
 ---
 # <a name="final-specifier"></a>Spécificateur final
-Vous pouvez utiliser le mot clé `final` pour désigner les fonctions virtuelles qui ne peuvent pas être remplacées dans une classe dérivée. Vous pouvez également l'utiliser pour désigner les classes qui ne peuvent pas être héritées.  
+Vous pouvez utiliser la **finale** mot clé pour désigner les fonctions virtuelles qui ne peut pas être substituées dans une classe dérivée. Vous pouvez également l'utiliser pour désigner les classes qui ne peuvent pas être héritées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>Notes  
- `final` est contextuel et a une signification spéciale uniquement lorsqu'il est utilisé après une déclaration de fonction ou un nom de classe ; sinon, ce n'est pas un mot clé réservé.  
+ **finale** est contextuel et a une signification spéciale uniquement lorsqu’il est utilisé après une déclaration de fonction ou le nom de classe ; sinon, il n’est pas un mot clé réservé.  
   
- Lorsque `final` est utilisé dans les déclarations de classes, `base-classes` est une partie facultative de la déclaration.  
+ Lorsque **finale** est utilisé dans les déclarations de classe, `base-classes` est une partie facultative de la déclaration.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant utilise le mot clé `final` pour spécifier qu'une fonction virtuelle ne peut pas être remplacée.  
+ L’exemple suivant utilise le **finale** mot clé pour spécifier qu’une fonction virtuelle ne peut pas être substituée.  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- Pour plus d’informations sur la façon de spécifier que les fonctions de membre peuvent être substituées, consultez [spécificateur de substitution](../cpp/override-specifier.md).  
+ Pour plus d’informations sur la façon de spécifier que les fonctions membres peuvent être remplacées, consultez [spécificateur de substitution](../cpp/override-specifier.md).  
   
- L'exemple suivant utilise le mot clé `final` pour spécifier qu'une classe ne peut pas être héritée.  
+ L’exemple suivant utilise le **finale** mot clé pour spécifier qu’une classe ne peut pas être héritée.  
   
 ```cpp  
 class BaseClass final   

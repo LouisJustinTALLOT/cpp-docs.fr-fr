@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850305"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954321"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc, classe
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Sz`|Nombre d’éléments du tableau à allouer.|
+|*sz*|Nombre d’éléments du tableau à allouer.|
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle cache_suballoc stocke les blocs de mémoire désalloués dans une liste de libération avec une longueur illimitée, à l’aide de `freelist<sizeof(Type), max_unbounded>`, et sous-alloue des blocs de mémoire d’un segment plus grand alloué avec `operator new` quand la liste de libération est vide.
+La classe de modèle cache_suballoc stocke les blocs de mémoire désalloués dans une liste de libération avec une longueur illimitée, à l’aide de `freelist<sizeof(Type), max_unbounded>`et sous-alloue des blocs de mémoire à partir d’un segment plus grand alloué avec **opérateur new** lorsque la liste de libération est vide.
 
-Chaque segment contient `Sz * Nelts` octets de mémoire utilisable et les données dont `operator new` et `operator delete` ont besoin. Les segments alloués ne sont jamais libérés.
+Chaque segment contient `Sz * Nelts` octets de mémoire utilisable et les données qui **opérateur new** et **opérateur delete** nécessitent. Les segments alloués ne sont jamais libérés.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -63,7 +63,7 @@ Chaque segment contient `Sz * Nelts` octets de mémoire utilisable et les donn�
 |[allocate](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 

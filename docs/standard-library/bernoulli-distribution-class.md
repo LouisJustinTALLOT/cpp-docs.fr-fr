@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953232"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution, classe
 
@@ -80,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit une distribution qui produit des valeurs de type `bool`, distribuées selon la fonction de probabilité discrète de distribution de Bernoulli. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe décrit une distribution qui produit des valeurs de type **bool**, distribuées selon la fonction de probabilité discrète de distribution de Bernoulli. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -161,7 +161,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  true :::::::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -178,9 +178,9 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*p* stockées `p` paramètre de distribution.
+*p* stocké `p` paramètre de distribution.
 
-*paramètre de* le `param_type` structure utilisée pour construire la distribution.
+*parm* le `param_type` structure utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -200,7 +200,7 @@ struct param_type {typedef bernoulli_distribution distribution_type ; param_typ
 
 ### <a name="parameters"></a>Paramètres
 
-*p* stockées `p` paramètre de distribution.
+*p* stocké `p` paramètre de distribution.
 
 ### <a name="remarks"></a>Notes
 

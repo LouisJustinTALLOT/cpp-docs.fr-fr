@@ -1,5 +1,5 @@
 ---
-title: Littéraux de chaîne et caractères (C++) | Documents Microsoft
+title: Littéraux de chaîne et caractère (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,14 +26,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424600"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942092"
 ---
-# <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractères (C++)
+# <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractère (C++)
 C++ prend en charge divers types de chaîne et de caractère, et fournit les moyens d'exprimer les valeurs littérales de chacun de ces types. Dans votre code source, vous exprimez le contenu de vos littéraux de caractère et de chaîne à l’aide d’un jeu de caractères. Les noms de caractères universels et les caractères d’échappement vous permettent d’exprimer une chaîne en utilisant uniquement le jeu de caractères sources de base. Un littéral de chaîne brut vous permet d'éviter d'utiliser des caractères d'échappement et peut servir à exprimer tous les types de littéral de chaîne. Vous pouvez également créer des littéraux std::string sans avoir à effectuer d’étapes de conversion ou de construction supplémentaires.  
   
 ```cpp  
@@ -79,35 +79,35 @@ int main()
 }  
 ```  
   
- Il est possible que les littéraux de chaîne n’aient aucun préfixe, ou qu’ils aient les préfixes `u8`, `L`, `u`et  `U` pour désigner un caractère étroit (codé sur un ou plusieurs octets), UTF-8, un caractère large (UCS-2 ou UTF-16), ainsi que les encodages UTF-16 et UTF-32, respectivement. Un littéral de chaîne brut peut avoir les préfixes `R`, `u8R`, `LR`, `uR` et `UR` pour les équivalents en version brute de ces encodages.  Pour créer des valeurs std::string temporaires ou statiques, vous pouvez utiliser des littéraux de chaîne ou des littéraux de chaîne bruts avec un suffixe `s` . Pour plus d’informations, consultez la section Littéraux de chaîne ci-dessous. Pour plus d’informations sur le caractère de la source de base définie, les noms de caractères universels et l’utilisation de caractères à partir des pages de codes étendues dans votre code source, consultez [jeux de caractères](../cpp/character-sets.md).  
+ Il est possible que les littéraux de chaîne n’aient aucun préfixe, ou qu’ils aient les préfixes `u8`, `L`, `u`et  `U` pour désigner un caractère étroit (codé sur un ou plusieurs octets), UTF-8, un caractère large (UCS-2 ou UTF-16), ainsi que les encodages UTF-16 et UTF-32, respectivement. Un littéral de chaîne brut peut avoir les préfixes `R`, `u8R`, `LR`, `uR` et `UR` pour les équivalents en version brute de ces encodages.  Pour créer des valeurs std::string temporaires ou statiques, vous pouvez utiliser des littéraux de chaîne ou des littéraux de chaîne bruts avec un suffixe `s` . Pour plus d’informations, consultez la section Littéraux de chaîne ci-dessous. Pour plus d’informations sur les caractères sources de base définie, les noms de caractères universels et l’utilisation de caractères à partir de pages de codes étendues dans votre code source, consultez [jeux de caractères](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Littéraux de caractère  
  Un *littéral de caractère* est composé d'une constante caractère. Elle est représentée par le caractère entouré de guillemets-apostrophes. Il existe cinq types de littéraux de caractère :  
   
--   Littéraux de caractère ordinaire de type `char`, par exemple `'a'`  
+-   Littéraux de caractère ordinaire de type **char**, par exemple `'a'`  
   
--   Littéraux de caractères UTF-8 de type `char`, par exemple `u8'a'`  
+-   Littéraux de caractères UTF-8 de type **char**, par exemple `u8'a'`  
   
 -   Littéraux de caractères étendus de type `wchar_t`, par exemple `L'a'`  
   
 -   Littéraux de caractère UTF-16 de type `char16_t`, par exemple `u'a'`  
   
--   Littéraux de caractères UTF-32 de type `char32_t`, par exemple `U'a'`  
+-   Littéraux de caractère UTF-32 de type `char32_t`, par exemple `U'a'`  
   
- Le caractère utilisé pour un littéral de caractère peut être n’importe quel caractère, à l’exception de la barre oblique inverse les caractères réservés ('\\'), guillemet simple ('), ou une nouvelle ligne. Les caractères réservés peuvent être spécifiés à l’aide d’une séquence d’échappement. Vous pouvez spécifier des caractères à l’aide des noms de caractères universels, tant que le type est suffisamment grand pour contenir le caractère.  
+ Le caractère utilisé pour un littéral de caractère peut être n’importe quel caractère, à l’exception de la barre oblique inverse les caractères réservés ('\\'), guillemet-apostrophe ('), ou nouvelle ligne. Les caractères réservés peuvent être spécifiés à l’aide d’une séquence d’échappement. Vous pouvez spécifier des caractères à l’aide des noms de caractères universels, tant que le type est suffisamment grand pour contenir le caractère.  
   
 ### <a name="encoding"></a>Encodage  
  Littéraux de caractère sont codés différemment en fonction de leur préfixe.  
   
--   Un caractère littéral sans préfixe est un littéral de caractère ordinaire. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère ordinaire ou nom de caractère universel pouvant être représenté dans le jeu de caractères d’exécution a une valeur égale à la valeur numérique de l’encodage dans le jeu de caractères d’exécution. Un littéral de caractère ordinaire qui contient plusieurs caractères, séquence d’échappement ou nom de caractère universel est un *multicharacter littéral*. Un littéral à multiples ou un littéral de caractère ordinaire qui ne peut pas être représenté dans le jeu de caractères d’exécution est conditionnellement pris en charge, est de type int et sa valeur est définie par l’implémentation.  
+-   Un caractère littéral sans préfixe est un littéral de caractère ordinaire. La valeur d’un littéral de caractère ordinaire contenant un seul caractère, séquence d’échappement, ou nom de caractère universel qui peut être représenté dans le jeu de caractères d’exécution a une valeur égale à la valeur numérique de son encodage dans le jeu de caractères d’exécution. Un littéral de caractère ordinaire qui contient plusieurs caractères, séquence d’échappement ou nom de caractère universel est un *à multiples caractères littérale*. Un littéral à multiples caractères ou un littéral de caractère ordinaire qui ne peut pas être représenté dans le jeu de caractères d’exécution est conditionnelle pris en charge, est de type int, et sa valeur est définie par l’implémentation.  
   
--   Un littéral de caractère qui commence par le préfixe L est un littéral de caractère large. La valeur d’un littéral de caractère large qui contient un caractère unique, la séquence d’échappement ou le nom de caractère universel a une valeur égale à la valeur numérique de l’encodage de l’exécution à l’échelle-jeu de caractères, sauf si le littéral de caractère n’a aucune représentation le caractères larges d’exécution définie, auquel cas la valeur est définie par l’implémentation. La valeur d’un littéral de caractère large contenant plusieurs caractères, des séquences d’échappement ou des noms de caractères universels est défini par l’implémentation.  
+-   Un littéral de caractère qui commence par le préfixe L est un littéral de caractère large. La valeur d’un littéral de caractère large qui contient un caractère unique, la séquence d’échappement ou le nom de caractère universel a une valeur égale à la valeur numérique de son encodage dans l’exécution à l’échelle-jeu de caractères, sauf si le littéral de caractère n’a aucune représentation le l’exécution à l’échelle-jeu de caractères, auquel cas la valeur est définie par l’implémentation. La valeur d’un littéral de caractère large contenant plusieurs caractères, des séquences d’échappement ou des noms de caractères universels est défini par l’implémentation.  
   
--   Un littéral de caractère qui commence par le préfixe u8 est un littéral de caractère UTF-8. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère UTF-8, ou nom de caractère universel a une valeur égale à sa valeur de point de code ISO 10646 si elle peut être représentée par une seule unité de code UTF-8 (correspondant aux contrôles de C0 et Latin de base Bloc Unicode). Si la valeur ne peut pas être représentée par une seule unité de code UTF-8, le programme est incorrect. Un littéral contenant plusieurs caractères, séquence d’échappement ou nom de caractère universel de caractères UTF-8 est mal formé.  
+-   Un littéral de caractère qui commence par le préfixe u8 est un littéral de caractère UTF-8. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère UTF-8, ou nom de caractère universel a une valeur égale à sa valeur de point de code ISO 10646 si elle peut être représentée par une seule unité de code UTF-8 (correspondant aux contrôles de C0 et Latin de base Bloc Unicode). Si la valeur ne peut pas être représentée par une seule unité de code UTF-8, le programme est incorrect. Un littéral contenant plusieurs caractères, séquence d’échappement ou nom de caractère universel de caractères UTF-8 est incorrect.  
   
--   Un littéral de caractère qui commence par le préfixe u est un littéral de caractère UTF-16. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère UTF-16 ou nom de caractère universel a une valeur égale à sa valeur de point de code ISO 10646 si elle peut être représentée par une seule unité de code UTF-16 (correspondant au plan de base multilingue ). Si la valeur ne peut pas être représentée par une seule unité de code UTF-16, le programme est incorrect. Un caractère UTF-16 littéral contenant plusieurs caractères, séquence d’échappement ou nom de caractère universel est mal formé.  
+-   Un littéral de caractère qui commence par le préfixe u est un littéral de caractère UTF-16. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère UTF-16 ou nom de caractère universel a une valeur égale à sa valeur de point de code ISO 10646 si elle peut être représentée par une seule unité de code UTF-16 (correspondant au plan multilingue de base ). Si la valeur ne peut pas être représentée par une seule unité de code UTF-16, le programme est incorrect. Un caractère UTF-16 littéral contenant plusieurs caractères, séquence d’échappement ou nom de caractère universel est incorrect.  
   
--   Un littéral de caractère qui commence par le préfixe U est un littéral de caractère UTF-32. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère UTF-32, ou nom de caractère universel a une valeur égale à sa valeur de point de code ISO 10646. Un littéral contenant plusieurs caractères, séquence d’échappement ou nom de caractère universel de caractères UTF-8 est mal formé.  
+-   Un littéral de caractère qui commence par le préfixe U est un littéral de caractère UTF-32. Séquence d’échappement contenant un seul caractère, la valeur d’un littéral de caractère UTF-32, ou nom de caractère universel a une valeur égale à sa valeur de point de code ISO 10646. Un littéral contenant plusieurs caractères, séquence d’échappement ou nom de caractère universel de caractères UTF-8 est incorrect.  
   
 ###  <a name="bkmk_Escape"></a> Séquences d'échappement  
  Il existe trois types de séquence d’échappement : simple, octal et hexadécimal. Les séquences d'échappement peuvent être de l'une des formes suivantes :  
@@ -122,7 +122,7 @@ int main()
 |saut de page|\f|octal|\ooo|  
 |alerte (clochette)|\a|hexadécimal|\xhhh|  
   
- Le code suivant montre des exemples de caractères d’échappement à l’aide de littéraux de caractère ordinaire. La même syntaxe de séquence d’échappement est valide pour les autres types de littéral caractères.  
+ Le code suivant présente quelques exemples de caractères d’échappement à l’aide de littéraux de caractère ordinaire. La même syntaxe de séquence d’échappement est valide pour les autres types de littéral caractères.  
   
 ```cpp  
 #include <iostream>  
@@ -146,21 +146,21 @@ int main() {
   
  **Section spécifique à Microsoft**  
   
- Pour créer une valeur à partir d’un littéral de caractère ordinaire (celles sans préfixe), le compilateur convertit le caractère ou une séquence de caractères entre guillemets simples en valeurs 8 bits au sein d’un entier 32 bits. Plusieurs caractères dans le littéral remplissent les octets correspondants selon les besoins, des octets de poids fort aux octets poids faible. Pour créer une valeur `char` , le compilateur prend l’octet de poids faible. Pour créer une valeur `wchar_t` ou `char16_t` , le compilateur prend le mot de poids faible. Le compilateur avertit que le résultat est tronqué si tous les bits sont définis au-dessus de l’octet ou du mot assigné.  
+ Pour créer une valeur à partir d’un littéral de caractère ordinaire (celles sans préfixe), le compilateur convertit le caractère ou une séquence de caractères entre guillemets simples en valeurs 8 bits au sein d’un entier 32 bits. Plusieurs caractères dans le littéral remplissent les octets correspondants selon les besoins, des octets de poids fort aux octets poids faible. Pour créer un **char** valeur, le compilateur prend l’octet de poids faible. Pour créer une valeur `wchar_t` ou `char16_t` , le compilateur prend le mot de poids faible. Le compilateur avertit que le résultat est tronqué si tous les bits sont définis au-dessus de l’octet ou du mot assigné.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- Une séquence d'échappement octale est une barre oblique inverse suivie de trois chiffres octaux maximum. Une séquence d’échappement octale qui contient plus de trois chiffres est considérée comme une séquence octale à 3 chiffres suivie de caractères. Cela peut entraîner des résultats inattendus. Par exemple :  
+ Une séquence d'échappement octale est une barre oblique inverse suivie de trois chiffres octaux maximum. Une séquence d’échappement octale qui contient plus de trois chiffres est considérée comme une séquence octale à 3 chiffres suivie de caractères. Cela peut entraîner des résultats inattendus. Exemple :  
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- Les séquences d’échappement qui contiennent des caractères non octaux sont évaluées sous forme de séquences octales jusqu’au dernier caractère octal, suivi des caractères restants. Par exemple :  
+ Les séquences d’échappement qui contiennent des caractères non octaux sont évaluées sous forme de séquences octales jusqu’au dernier caractère octal, suivi des caractères restants. Exemple :  
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -223,7 +223,7 @@ const char *escaped = "yes\\no";
   
 #### <a name="utf-8-encoded-strings"></a>Chaînes encodées UTF-8  
   
- Une chaîne encodée en UTF-8 est un préfixe u8 guillemet double délimité et se terminant par null, tableau de type `const char[n]`, où n est la longueur du tableau encodé en octets. Un littéral de chaîne ayant le préfixe u8 peut contenir n’importe quel caractère graphique à l’exception du guillemet double (`"`), de la barre oblique inverse (`\`) ou du caractère de nouvelle ligne. Un littéral de chaîne ayant le préfixe u8 peut également contenir les séquences d’échappement répertoriées ci-dessus, ainsi que des noms de caractères universels.  
+ Une chaîne encodée en UTF-8 est un tableau de délimité et se terminant par null, le préfixe u8, le guillemet double de type `const char[n]`, où n est la longueur du tableau encodé en octets. Un littéral de chaîne ayant le préfixe u8 peut contenir n’importe quel caractère graphique à l’exception du guillemet double (`"`), de la barre oblique inverse (`\`) ou du caractère de nouvelle ligne. Un littéral de chaîne ayant le préfixe u8 peut également contenir les séquences d’échappement répertoriées ci-dessus, ainsi que des noms de caractères universels.  
   
 ```cpp  
 const char* str1 = u8"Hello World";  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Littéraux de chaîne bruts (C++11)  
- Un littéral de chaîne brut est un tableau se terminant par null, de tout type de caractère, qui contient tout caractère graphique, y compris le guillemet double («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article suivant : [Forum aux questions de Bjarne Stroustrup C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Un littéral de chaîne brut est un tableau se terminant par null, de n’importe quel type de caractère, qui contient tout caractère graphique, y compris les guillemets doubles («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article suivant : [Forum aux questions de Bjarne Stroustrup sur C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -303,7 +303,7 @@ u32string str6{ UR"(She said "hello.")"s };
  les littéraux std::String sont définis dans l’espace de noms `std::literals::string_literals` dans le \<chaîne > fichier d’en-tête. Étant donné que `std::literals::string_literals`et `std::literals` sont tous deux déclarés comme [espaces de noms inline](../cpp/namespaces-cpp.md), `std::literals::string_literals` est automatiquement traité comme s'il appartenait directement à l'espace de noms `std`.  
   
 ### <a name="size-of-string-literals"></a>Taille des littéraux de chaîne  
- Pour un caractère ANSI\* chaînes et autres encodages sur un octet (non UTF-8), la taille (en octets) d’un littéral de chaîne est le nombre de caractères plus 1 pour le caractère null de fin. Pour tous les autres types de chaîne, la taille n'est pas strictement liée au nombre de caractères. UTF-8 utilise jusqu’à quatre éléments char pour encoder certaines *unités de code*. Par ailleurs, char16_t ou wchar_t encodés au format UTF-16 peuvent utiliser deux éléments (pour un total de quatre octets) pour encoder une seule *unité de code*.   Cet exemple illustre la taille d’un littéral de chaîne large en octets :  
+ Pour le caractère ANSI\* chaînes et autres encodages d’un octet (non UTF-8), la taille (en octets) d’un littéral de chaîne est le nombre de caractères plus 1 pour le caractère null de fin. Pour tous les autres types de chaîne, la taille n'est pas strictement liée au nombre de caractères. UTF-8 utilise jusqu’à quatre éléments char pour encoder certaines *unités de code*. Par ailleurs, char16_t ou wchar_t encodés au format UTF-16 peuvent utiliser deux éléments (pour un total de quatre octets) pour encoder une seule *unité de code*.   Cet exemple illustre la taille d’un littéral de chaîne large en octets :  
   
 ```cpp  
 const wchar_t* str = L"Hello!";  
@@ -319,14 +319,14 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Section spécifique à Microsoft**  
   
- Dans Visual C++, vous pouvez utiliser un littéral de chaîne pour initialiser un pointeur vers un `char` ou `wchar_t`non const. Cela est autorisé en code C99, mais est déconseillé en C++98 et supprimé en C++11. Toute tentative de modification de la chaîne provoque une violation d'accès, comme dans cet exemple :  
+ Dans Visual C++, vous pouvez utiliser un littéral de chaîne pour initialiser un pointeur non const **char** ou `wchar_t`. Cela est autorisé en code C99, mais est déconseillé en C++98 et supprimé en C++11. Toute tentative de modification de la chaîne provoque une violation d'accès, comme dans cet exemple :  
   
 ```cpp  
 wchar_t* str = L"hello";  
 str[2] = L'a'; // run-time error: access violation  
 ```  
   
- Vous pouvez contraindre le compilateur à émettre une erreur lorsqu’un littéral de chaîne est converti en un pointeur de caractère non_const lorsque vous définissez la [/Zc : strictstrings (désactiver la conversion de type de littéral chaîne)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) option du compilateur. Nous vous recommandons de procéder ainsi pour que la portabilité du code soit conforme aux normes. Il est également recommandé d’utiliser le mot clé `auto` pour déclarer les pointeurs initialisés par des littéraux de chaîne, car il est résolu en type (const) correct. Par exemple, cet exemple de code intercepte une tentative d’écriture dans un littéral de chaîne au moment de la compilation :  
+ Vous pouvez contraindre le compilateur à émettre une erreur lorsqu’un littéral de chaîne est converti en un pointeur de caractère non_const lorsque vous définissez la [/Zc : strictstrings (désactiver la conversion de type de littéral chaîne)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) option du compilateur. Nous vous recommandons de procéder ainsi pour que la portabilité du code soit conforme aux normes. Il est également conseillé d’utiliser le **automatique** mot clé pour déclarer les pointeurs initialisés de littéral, chaîne car il est résolu en type (const) correct. Par exemple, cet exemple de code intercepte une tentative d’écriture dans un littéral de chaîne au moment de la compilation :  
   
 ```cpp  
 auto str = L"hello";  
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Littéraux de chaîne avec des noms de caractères universels  
- Les littéraux de chaîne natifs (non bruts) peuvent utiliser des noms de caractères universels pour représenter un caractère, du moment que le nom de caractère universel peut être encodé sous forme d’un ou de plusieurs caractères dans le type de chaîne.  Par exemple, un nom de caractère universel représentant un caractère étendu ne peut pas être encodé dans une chaîne étroite à l’aide de la page de codes ANSI. Toutefois, il peut être encodé dans les chaînes étroites de certaines pages de codes multioctets, dans les chaînes UTF-8 ou dans une chaîne large. Dans C ++ 11, prise en charge Unicode est étendue par char16_t * et char32_t\* types de chaînes :  
+ Les littéraux de chaîne natifs (non bruts) peuvent utiliser des noms de caractères universels pour représenter un caractère, du moment que le nom de caractère universel peut être encodé sous forme d’un ou de plusieurs caractères dans le type de chaîne.  Par exemple, un nom de caractère universel représentant un caractère étendu ne peut pas être encodé dans une chaîne étroite à l’aide de la page de codes ANSI. Toutefois, il peut être encodé dans les chaînes étroites de certaines pages de codes multioctets, dans les chaînes UTF-8 ou dans une chaîne large. Dans C ++ 11, prise en charge Unicode est étendu par char16_t * et char32_t\* types de chaînes :  
   
 ```cpp  
 // ASCII smiling face  

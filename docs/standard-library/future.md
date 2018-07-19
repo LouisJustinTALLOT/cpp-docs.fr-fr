@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954016"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -48,7 +48,7 @@ Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchron
 
 La fonction de modèle `async` et les classes de modèle `promise` et `packaged_task` sont des fournisseurs asynchrones. Les classes de modèle `future` et `shared_future` décrivent des objets de retour asynchrones.
 
-Chacune des classes de modèle `promise`, `future` et `shared_future` a une spécialisation pour le type `void` et une spécialisation partielle pour le stockage et la récupération d’une valeur par référence. Ces spécialisations diffèrent du modèle principal uniquement dans les signatures et la sémantique des fonctions qui stockent et récupèrent la valeur retournée.
+Chacune des classes de modèle `promise`, `future`, et `shared_future` a une spécialisation pour le type **void** et une spécialisation partielle pour stocker et récupérer une valeur par référence. Ces spécialisations diffèrent du modèle principal uniquement dans les signatures et la sémantique des fonctions qui stockent et récupèrent la valeur retournée.
 
 Les classes de modèle `future` et `shared_future` ne se bloquent jamais dans leurs destructeurs, sauf dans un cas conservé pour la compatibilité descendante : contrairement à toutes les autres classes future, pour un `future` (ou le dernier `shared_future`) attaché à une tâche démarrée avec `std::async`, le destructeur se bloque si la tâche n’est pas terminée ; autrement dit, il se bloque si ce thread n’a pas encore appelé `.get()` ou `.wait()` et que la tâche est encore en cours d’exécution. La note d’utilisation suivante a été ajoutée à la description de `std::async` dans le projet de norme : « [Remarque : Si un objet future obtenu à partir de std::async est déplacé en dehors de la portée locale, tout autre code qui utilise l’objet future doit être conscient que le destructeur de cet objet peut empêcher l’état partagé d’être prêt. Fin de la remarque] ». Dans tous les autres cas, les destructeurs `future` et `shared_future` sont nécessaires et ne se bloquent jamais.
 
@@ -87,7 +87,7 @@ Les classes de modèle `future` et `shared_future` ne se bloquent jamais dans le
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fournit des noms symboliques pour toutes les erreurs signalées par la classe `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Fournit les noms symboliques pour les raisons qu’une fonction d’attente chronométrée peut retourner.|
-|[Lancement](../standard-library/future-enums.md#launch)|Représente un type de masque de bits qui décrit les modes possibles pour la fonction de modèle `async`.|
+|[lancement](../standard-library/future-enums.md#launch)|Représente un type de masque de bits qui décrit les modes possibles pour la fonction de modèle `async`.|
 
 ## <a name="see-also"></a>Voir aussi
 

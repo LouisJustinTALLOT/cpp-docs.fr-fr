@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56c5ef5f8cc5a3061b18ec2ffcdc83bf850d641
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965728"
 ---
 # <a name="plus-struct"></a>plus, struct
 
@@ -49,11 +49,11 @@ struct plus<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type`, `T`, `U` Un type qui prend en charge un fichier binaire `operator+` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U* un type qui prend en charge un fichier binaire `operator+` qui accepte des opérandes des types spécifiés ou inférés.
 
-`Left` L’opérande gauche de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.
+*Gauche* l’opérande gauche de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-`Right` L’opérande de droite de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.
+*Droite* l’opérande droit de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -109,7 +109,7 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797bc6353bd7396d409de073cc412480a803117f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95e2713f3c73a3dc35c11be8d245ede94b2c3bba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953977"
 ---
 # <a name="inputiteratortag-struct"></a>input_iterator_tag, struct
 
-Classe qui fournit un type de retour pour une fonction **iterator_category** représentant un itérateur d’entrée.
+Une classe qui fournit un type de retour pour `iterator_category` (fonction) qui représente un itérateur d’entrée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,13 +36,13 @@ struct input_iterator_tag {};
 
 Les classes de balise de catégorie sont utilisées comme balises de compilation pour la sélection de l’algorithme. La fonction de modèle doit rechercher la catégorie la plus spécifique de son argument d’itérateur, pour pouvoir utiliser l’algorithme le plus efficace au moment de la compilation. Pour chaque itérateur de type `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** doit être défini comme étant la balise de catégorie la plus spécifique qui décrit le comportement de l’itérateur.
 
-Le type est identique à **iterator**\< **Iter**> **::iterator_category** quand **Iter** décrit un objet pouvant servir d’itérateur d’entrée.
+Le type est identique à **itérateur** \< **Iter**> **:: iterator_category** lorsque `Iter` décrit un objet pouvant servir un itérateur d’entrée.
 
 ## <a name="example"></a>Exemple
 
-Consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) pour obtenir un exemple montrant comment utiliser des balises **iterator_tag**.
+Consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) pour obtenir un exemple montrant comment utiliser `iterator_tag`s.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 

@@ -1,5 +1,5 @@
 ---
-title: Gestion des événements COM | Documents Microsoft
+title: Gestion des événements dans COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,34 +26,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942702"
 ---
 # <a name="event-handling-in-com"></a>Gestion des événements dans COM
-Dans Gestion des événements de COM, vous configurez un récepteur d’événement source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = **com**. Ces attributs injectent le code approprié pour les interfaces personnalisées, de dispatch et doubles afin d'autoriser les classes auxquelles ils sont appliqués à déclencher et gérer des événements via des points de connexion COM.  
+Dans Gestion des événements de COM, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `com`. Ces attributs injectent le code approprié pour les interfaces personnalisées, de dispatch et doubles afin d'autoriser les classes auxquelles ils sont appliqués à déclencher et gérer des événements via des points de connexion COM.  
   
 ## <a name="declaring-events"></a>Déclaration d'événements  
- Dans une classe source d’événements, utilisez le [__event](../cpp/event.md) mot clé dans une déclaration d’interface pour déclarer les méthodes d’interface en tant qu’événements. Les événements de cette interface sont déclenchés lorsqu'ils sont appelés comme méthodes d'interface. Les méthodes sur les interfaces d’événements peuvent avoir zéro ou plusieurs paramètres (qui doit être **dans** paramètres). Le type de retour peut être void ou un type intégral.  
+ Dans une classe de source d’événement, utilisez le [__event](../cpp/event.md) mot clé dans une déclaration d’interface pour déclarer des méthodes d’interface en tant qu’événements. Les événements de cette interface sont déclenchés lorsqu'ils sont appelés comme méthodes d'interface. Les méthodes sur les interfaces d’événement peuvent avoir zéro ou plusieurs paramètres (qui doit être `in` paramètres). Le type de retour peut être void ou un type intégral.  
   
 ## <a name="defining-event-handlers"></a>Définition de gestionnaires d'événements  
- Dans une classe de récepteur d’événements, vous définissez des gestionnaires d’événements, qui sont des méthodes avec signatures (types de retour, conventions d’appel et arguments) qui correspondent à l’événement qu’ils doivent gérer. Pour les événements COM, des conventions d’appel est inutile faire correspondre ; consultez [événements COM dépendant des dispositions](#vcconeventhandlingincomanchorlayoutdependentcomevents) ci-dessous pour plus d’informations.  
+ Dans une classe de récepteur d’événements, vous définissez des gestionnaires d’événements, qui sont des méthodes avec signatures (types de retour, conventions d’appel et arguments) qui correspondent à l’événement qu’ils doivent gérer. Pour les événements COM, les conventions d’appel n’ont pas faire correspondre ; consultez [événements COM dépendant des dispositions](#vcconeventhandlingincomanchorlayoutdependentcomevents) ci-dessous pour plus d’informations.  
   
 ## <a name="hooking-event-handlers-to-events"></a>Raccordement de gestionnaires d'événements à des événements  
- Également dans une classe de récepteur d’événements, vous utilisez la fonction intrinsèque [__hook](../cpp/hook.md) pour associer des événements à des gestionnaires d’événements et [__unhook](../cpp/unhook.md) pour dissocier des événements à partir des gestionnaires d’événements. Vous pouvez raccorder plusieurs événements à un gestionnaire d'événements, ou plusieurs gestionnaires d'événements à un événement.  
+ Également dans une classe de récepteur d’événements, vous utilisez la fonction intrinsèque [__hook](../cpp/hook.md) pour associer des événements et gestionnaires d’événements et [__unhook](../cpp/unhook.md) pour dissocier des événements à partir des gestionnaires d’événements. Vous pouvez raccorder plusieurs événements à un gestionnaire d'événements, ou plusieurs gestionnaires d'événements à un événement.  
   
 > [!NOTE]
->  En général, il existe deux techniques pour permettre à un récepteur d'événements COM d'accéder aux définitions de l'interface de source d'événements. La première, comme indiqué ci-dessous, consiste à partager un fichier d'en-tête commun. La seconde consiste à utiliser [#import](../preprocessor/hash-import-directive-cpp.md) avec la `embedded_idl` qualificateur, d’importation, afin que la bibliothèque de types d’événement source est écrit dans le fichier .tlh avec le code généré par attributs est conservé.  
+>  En général, il existe deux techniques pour permettre à un récepteur d'événements COM d'accéder aux définitions de l'interface de source d'événements. La première, comme indiqué ci-dessous, consiste à partager un fichier d'en-tête commun. La seconde consiste à utiliser [#import](../preprocessor/hash-import-directive-cpp.md) avec la `embedded_idl` qualificateur, d’importation afin que la bibliothèque de types d’événement source est écrite dans le fichier .tlh avec le code généré par l’attribut.  
   
 ## <a name="firing-events"></a>Déclenchement d'événements  
- Pour déclencher un événement, il vous suffit d'appeler la méthode dans l'interface déclarée avec le mot clé `__event` dans la classe de source d'événement. Si des gestionnaires ont été raccordés à l'événement, les gestionnaires sont appelés.  
+ Pour déclencher un événement, il vous suffit d’appeler une méthode dans l’interface déclarée avec le **__event** mot clé de source de l’événement de classe. Si des gestionnaires ont été raccordés à l'événement, les gestionnaires sont appelés.  
   
 ### <a name="com-event-code"></a>Code d'événement COM  
  L'exemple suivant montre comment déclencher un événement dans une classe COM. Pour compiler et exécuter l'exemple, consultez les commentaires du code.  
   
-```  
+```cpp 
 // evh_server.h  
 #pragma once  
   
@@ -72,7 +73,7 @@ class DECLSPEC_UUID("530DF3AD-6936-3214-A83B-27B63C7997C4") CSource;
   
  Puis le serveur :  
   
-```  
+```cpp 
 // evh_server.cpp  
 // compile with: /LD  
 // post-build command: Regsvr32.exe /s evh_server.dll  
@@ -97,7 +98,7 @@ public:
   
  Puis le client :  
   
-```  
+```cpp 
 // evh_client.cpp  
 // compile with: /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES 1  
@@ -155,7 +156,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 MyHandler1 was called with value 123.  
 MyHandler2 was called with value 123.  
 ```  
@@ -163,20 +164,20 @@ MyHandler2 was called with value 123.
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Événements COM dépendant des dispositions  
  La dépendance aux dispositions représente un problème uniquement dans le cadre de la programmation COM. Dans la gestion des événements natifs et managés, les signatures (type de retour, convention d’appel et arguments) des gestionnaires doivent correspondre aux événements, mais il n’est pas nécessaire que les noms des gestionnaires correspondent aux événements.  
   
- Toutefois, dans la gestion des événements COM, lorsque vous définissez la *layout_dependent* paramètre de **event_receiver** à **true**, le nom et la correspondance de signature est appliquée. Cela signifie que les noms et les signatures des gestionnaires dans le récepteur d'événements doivent correspondre exactement aux noms et aux signatures des événements auxquels ils sont raccordés.  
+ Toutefois, dans la gestion des événements COM, lorsque vous définissez la *layout_dependent* paramètre de `event_receiver` à **true**, le nom et la correspondance de signature est appliquée. Cela signifie que les noms et les signatures des gestionnaires dans le récepteur d'événements doivent correspondre exactement aux noms et aux signatures des événements auxquels ils sont raccordés.  
   
- Lorsque *layout_dependent* a la valeur **false**, la classe de stockage et la convention d’appel (virtuelle, statique et ainsi de suite) peut être mélangée et mis en correspondance entre le déclenchement de la méthode d’événement et les méthodes de raccordement (ses délégués). Il est légèrement plus efficace d’avoir *layout_dependent*=**true**.  
+ Lorsque *layout_dependent* a la valeur **false**, la classe stockage et de la convention d’appel (virtuelle, statique et ainsi de suite) peut être mélangée et mis en correspondance entre le déclenchement de la méthode d’événement et les méthodes de raccordement (ses délégués). Il est légèrement plus efficace d’avoir *layout_dependent*=**true**.  
   
  Par exemple, supposons que `IEventSource` est défini pour disposer des méthodes suivantes :  
   
-```  
+```cpp 
 [id(1)] HRESULT MyEvent1([in] int value);  
 [id(2)] HRESULT MyEvent2([in] int value);  
 ```  
   
  Supposez que la source d'événement a la forme suivante :  
   
-```  
+```cpp 
 [coclass, event_source(com)]  
 class CSource : public IEventSource {  
 public:  
@@ -192,7 +193,7 @@ public:
   
  Ensuite, dans le récepteur d'événements, tout gestionnaire raccordé à une méthode dans `IEventSource` doit correspondre au nom et à la signature, comme indiqué :  
   
-```  
+```cpp 
 [coclass, event_receiver(com, true)]  
 class CReceiver {  
 public:  

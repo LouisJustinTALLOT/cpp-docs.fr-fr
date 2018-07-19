@@ -1,5 +1,5 @@
 ---
-title: 'Comment : conception pour la sécurité des exceptions | Documents Microsoft'
+title: 'Comment : conception pour la sécurité de l’Exception | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417966"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940317"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Comment : conception pour la sécurité des exceptions
 Un des avantages du mécanisme d'exception est que l'exécution, associée aux données sur l'exception, passe directement de l'instruction qui lève l'exception à la première instruction catch qui la gère. Le gestionnaire peut concerner n'importe quels niveaux de la pile des appels. Les fonctions qui sont appelées entre l'instruction try et l'instruction throw n'ont pas besoin de connaître quoi que ce soit concernant l'exception levée.  Toutefois, elles doivent être conçues afin qu'elles puissent être "inopinément" mises hors de portée lorsqu'une exception peut se propager en remontant. Il faut donc veiller à ne pas laisser des objets, de la mémoire perdue, ou des structures de données partiellement créés qui seraient inutilisables.  
@@ -28,7 +28,7 @@ Un des avantages du mécanisme d'exception est que l'exécution, associée aux d
  Peu importe comment une fonction gère une exception, afin de garantir qu'elle soit protégée contre les exceptions, elle doit être conçue selon les principes de base suivants.  
   
 ### <a name="keep-resource-classes-simple"></a>Conservez les classes de ressources simples  
- Lorsque vous encapsulez la gestion manuelle des ressources dans des classes, utilisez une classe qui ne fait rien d'autre que gérer chaque ressource ; sinon, vous pouvez créer des fuites. Utilisez [actives pointeurs](../cpp/smart-pointers-modern-cpp.md) lorsque cela est possible, comme indiqué dans l’exemple suivant. Cet exemple est intentionnellement artificiel et simpliste afin de mettre en évidence les différences lorsque `shared_ptr` est utilisé.  
+ Lorsque vous encapsulez la gestion manuelle des ressources dans des classes, utilisez une classe qui ne fait rien d'autre que gérer chaque ressource ; sinon, vous pouvez créer des fuites. Utilisez [intelligente des pointeurs](../cpp/smart-pointers-modern-cpp.md) lorsque cela est possible, comme indiqué dans l’exemple suivant. Cet exemple est intentionnellement artificiel et simpliste afin de mettre en évidence les différences lorsque `shared_ptr` est utilisé.  
   
 ```cpp  
 // old-style new/delete version  
@@ -90,10 +90,10 @@ public:
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Utilisez l'idiome RAII pour gérer des ressources  
- Pour être protégée contre les exceptions, une fonction doit garantir que les objets qu'elle a alloués à l'aide de `malloc` ou de `new` soient détruits, et que toutes les ressources telles que les handles de fichiers soient fermés ou libérés et cela même si une exception est levée. Le *Resource Acquisition Is Initialization* idiome (RAII) lie la gestion de ces ressources à la durée de vie des variables automatiques. Lorsqu'une fonction est hors de portée, soit en retournant normalement ou alors suite à une exception, les destructeurs pour toutes les variables automatiques entièrement construites sont appelés. Un objet wrapper RAII tel qu'un pointeur intelligent appelle la fonction appropriée, de suppression ou de fermeture, dans son destructeur. Dans un code protégée contre les exceptions, il est extrêmement important de passer la propriété de chaque ressource immédiatement à un certain type d'objet RAII. Notez que la `vector`, `string`, `make_shared`, `fstream`, et gèrent les classes semblables d’acquisition de la ressource pour vous.  Toutefois, `unique_ptr` et traditionnel `shared_ptr` constructions sont spéciale car l’acquisition des ressources est effectuée par l’utilisateur au lieu de l’objet ; par conséquent, ils comptent comme *Resource Release Is Destruction* mais sont douteux comme RAII.  
+ Pour être protégé contre les exceptions, une fonction doit garantir que les objets qu’elle a alloués à l’aide de `malloc` ou **nouveau** sont détruits, et toutes les ressources telles que les handles de fichier soient fermés ou libérés même si une exception est levée. Le *Resource Acquisition Is Initialization* idiome (RAII) lie la gestion de la durée de vie des variables automatiques de ces ressources. Lorsqu'une fonction est hors de portée, soit en retournant normalement ou alors suite à une exception, les destructeurs pour toutes les variables automatiques entièrement construites sont appelés. Un objet wrapper RAII tel qu'un pointeur intelligent appelle la fonction appropriée, de suppression ou de fermeture, dans son destructeur. Dans un code protégée contre les exceptions, il est extrêmement important de passer la propriété de chaque ressource immédiatement à un certain type d'objet RAII. Notez que le `vector`, `string`, `make_shared`, `fstream`, et les classes similaires gèrent la saisie de la ressource pour vous.  Toutefois, `unique_ptr` et traditionnel `shared_ptr` constructions sont spéciale car l’acquisition de ressources est effectuée par l’utilisateur au lieu de l’objet ; par conséquent, elles comptent comme *Resource Release Is Destruction* mais sont incertains comme RAII.  
   
 ## <a name="the-three-exception-guarantees"></a>Les trois garanties d'exception  
- En règle générale, les sécurité des exceptions est décrite en termes des trois garanties d’exception qui a une fonction peut fournir : la *garantie sans échec*, le *garantie forte*et le *garantie de base* .  
+ En règle générale, sécurité des exceptions est décrite en termes de trois garanties d’exception qui a une fonction peut proposer : la *garantie sans échec*, le *garantie forte*et le *garantie de base* .  
   
 ### <a name="no-fail-guarantee"></a>Garantie sans échec  
  La garantie sans échec est la garantie la plus puissante qu'une fonction puisse fournir. Elle indique que la fonction ne lèvera pas d'exception ou n'autorisera aucune propagation. Toutefois, vous ne pouvez pas de manière fiable fournir une telle garantie sauf si (a) vous savez que toutes les fonctions que cette fonction appelle sont également sans échec, ou (b) vous savez que toutes les exceptions levées seront interceptées avant qu'elles n'atteignent cette fonction, ou (c) vous savez comment intercepter et gérer correctement toutes les exceptions pouvant atteindre cette fonction.  
@@ -120,5 +120,5 @@ public:
 -   Ne permettez à aucune exception d'échapper à un destructeur. Un axiome de base C++ est que les destructeurs ne doivent jamais permettre à une exception de se propager vers le haut de la pile des appels. Si un destructeur doit effectuer une opération qui pourrait être un levage d'exception, il doit le faire dans un bloc Try Catch et avaler l'exception. La bibliothèque standard fournit cette garantie pour tous les destructeurs qu'elle définit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Erreurs et la gestion des exceptions](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Erreurs et exceptions](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Guide pratique pour établir une interface entre le code exceptionnel et le code non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

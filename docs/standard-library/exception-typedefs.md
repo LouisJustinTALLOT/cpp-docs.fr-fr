@@ -8,12 +8,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 68f95407fe22c7e8b70426e555f46eb0a4c80338
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954123"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt;, typedefs
 
@@ -37,7 +37,7 @@ Utilisez un objet `exception_ptr` pour référencer l'exception actuelle ou une 
 
 Lorsque vous déclarez une variable `exception_ptr`, la variable n'est associée à aucune exception. Autrement dit, son champ de référence d'exception est NULL. Ce type d’objet `exception_ptr` est appelé *exception_ptr null*.
 
-Utilisez la fonction `current_exception` ou `make_exception_ptr` pour assigner une exception à un objet `exception_ptr`. Lorsque vous assignez une exception à une variable `exception_ptr`, le champ de référence de l'exception de la variable pointe vers une copie de l'exception. Si la mémoire est insuffisante pour copier l’exception, le champ de référence d’exception pointe vers une copie d’une exception [std::bad_alloc](../standard-library/bad-alloc-class.md). Si la fonction `current_exception` ou `make_exception_ptr` ne peut pas copier l’exception pour une autre raison, elle appelle la fonction CRT **terminate** pour quitter le processus actuel.
+Utilisez la fonction `current_exception` ou `make_exception_ptr` pour assigner une exception à un objet `exception_ptr`. Lorsque vous assignez une exception à une variable `exception_ptr`, le champ de référence de l'exception de la variable pointe vers une copie de l'exception. Si la mémoire est insuffisante pour copier l’exception, le champ de référence d’exception pointe vers une copie d’une exception [std::bad_alloc](../standard-library/bad-alloc-class.md). Si le `current_exception` ou `make_exception_ptr` fonction ne peut pas copier l’exception pour toute autre raison, la fonction appelle le `terminate` fonction CRT pour quitter le processus en cours.
 
 En dépit de son nom, un objet `exception_ptr` n'est pas lui-même un pointeur. Il ne respecte pas la sémantique des pointeurs et ne peut pas être utilisé avec les accès des membres pointeurs (`->`) ou des opérateurs d’indirection (*). L'objet `exception_ptr` n'a aucune donnée membre ou fonction membre publique.
 

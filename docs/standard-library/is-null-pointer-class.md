@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1686900fe876d1fd884c8321654b7a7f866647
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966535"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer, classe
 
@@ -37,13 +37,13 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est `std::nullptr_t`. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est `std::nullptr_t`, sinon, sa valeur est false.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

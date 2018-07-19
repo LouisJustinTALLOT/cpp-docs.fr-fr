@@ -1,5 +1,5 @@
 ---
-title: Surcharge de fonction | Documents Microsoft
+title: Surcharge de fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 1/25/2018
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942722"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ils sont appelés *surchargé* fonctions. Les fonctions surchargées permettent de fournir une sémantique différente pour une fonction, selon les types et le nombre d’arguments. 
   
- Par exemple, un **imprimer** fonction qui accepte un **std::string** argument peut effectuer des tâches très différentes de celles qui prend un argument de type **double**. La surcharge vous évite d’avoir à utiliser des noms tels que `print_string` ou `print_double`. Au moment de la compilation, le compilateur choisit à quelle surcharge à utiliser en fonction du type d’arguments passés par l’appelant.  Si vous appelez **print(42.0)** le **void impression (double d)** fonction sera appelée. Si vous appelez **(« hello world ») d’impression** le **void print(std::string)** surcharge sera appelée.
+ Par exemple, un `print` fonction qui accepte un `std::string` argument peut effectuer des tâches très différents à une fonction qui accepte un argument de type **double**. La surcharge vous évite d’avoir à utiliser des noms tels que `print_string` ou `print_double`. Au moment de la compilation, le compilateur choisit quelle surcharge à utiliser en fonction du type des arguments passés par l’appelant.  Si vous appelez `print(42.0)` le `void print(double d)` fonction sera appelée. Si vous appelez `print("hello world")` le `void print(std::string)` surcharge sera appelée.
 
-Vous pouvez surcharger des fonctions membres et les fonctions non membres. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.  
+Vous pouvez surcharger des fonctions membres et des fonctions non-membres. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.  
   
 ### <a name="overloading-considerations"></a>Considérations en matière de surcharge  
   
@@ -37,15 +38,15 @@ Vous pouvez surcharger des fonctions membres et les fonctions non membres. Le ta
 |Nombre d'arguments|Oui|  
 |Type d’arguments|Oui|  
 |Présence ou absence de points de suspension|Oui|  
-|Utilisation de noms `typedef`|Non|  
+|Utilisation de **typedef** noms|Non|  
 |Limites de tableau non spécifiées|Non|  
-|**const** ou `volatile`|Oui, quand il est appliqué à la fonction entière|
+|**const** ou **volatile**|Oui, lorsqu’il est appliqué à la fonction entière|
 |[ref-qualifier](#ref-qualifier)|Oui|  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre comment utiliser la surcharge.  
   
-```  
+```cpp 
 // function_overloading.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -146,17 +147,17 @@ int print(double dvalue, int prec)
   
  Prenons les déclarations suivantes (les fonctions sont marquées `Variant 1`, `Variant 2` et `Variant 3`, afin de les identifier dans la discussion suivante) :  
   
-```  
+```cpp 
 Fraction &Add( Fraction &f, long l );       // Variant 1  
 Fraction &Add( long l, Fraction &f );       // Variant 2  
 Fraction &Add( Fraction &f, Fraction &f );  // Variant 3  
   
 Fraction F1, F2;  
-```  
+```
   
  Prenons l'instruction suivante :  
   
-```  
+```cpp 
 F1 = Add( F2, 23 );  
 ```  
   
@@ -164,14 +165,14 @@ F1 = Add( F2, 23 );
   
 |Ensemble 1 : Fonctions candidates qui comportent le premier argument de type fraction|Ensemble 2 : Fonctions candidates dont le second argument peut être converti en type int|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|Variant 1|Variant 1 (`int` peut être converti en `long` via une conversion standard)|  
+|Variant 1|Variant 1 (**int** peut être converti en **long** à l’aide d’une conversion standard)|  
 |Variant 3||  
   
  Les fonctions dans l'ensemble 2 sont des fonctions pour lesquelles il existe des conversions implicites du type de paramètre réel au type de paramètre formel, et parmi ces fonctions, il en existe une pour laquelle le « coût » de conversion du type de paramètre réel en type de paramètre formel est le plus petit.  
   
  L'intersection de ces deux ensembles est Variant 1. Voici un exemple d'appel de fonction ambigu :  
   
-```  
+```cpp 
 F1 = Add( 3, 6 );  
 ```  
   
@@ -179,7 +180,7 @@ F1 = Add( 3, 6 );
   
 |Ensemble 1 : Fonctions candidates qui comportent le premier argument de type int|Ensemble 2 : Fonctions candidates qui comportent le second argument de type int|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
-|Variant 2 (`int` peut être converti en `long` via une conversion standard)|Variant 1 (`int` peut être converti en `long` via une conversion standard)|  
+|Variant 2 (**int** peut être converti en **long** à l’aide d’une conversion standard)|Variant 1 (**int** peut être converti en **long** à l’aide d’une conversion standard)|  
   
  Notez que l'intersection entre ces deux ensembles est vide. Par conséquent, le compilateur génère un message d'erreur.  
   
@@ -193,11 +194,11 @@ F1 = Add( 3, 6 );
 ## <a name="argument-type-differences"></a>Différences de type d’argument  
  Les fonctions surchargées distinguent les types d’arguments qui acceptent différents initialiseurs. Par conséquent, un argument d’un type donné et une référence à ce type sont considérés comme identiques pour les besoins de la surcharge. Ils sont considérés comme identiques car ils acceptent les mêmes initialiseurs. Par exemple, `max( double, double )` est considéré comme identique à `max( double &, double & )`. La déclaration de deux de ces fonctions provoque une erreur.  
   
- Pour la même raison, arguments de fonction d’un type modifié par **const** ou `volatile` ne sont pas traités différemment que le type de base pour les besoins de la surcharge.  
+ Pour la même raison, arguments de fonction d’un type modifié par **const** ou **volatile** ne sont pas traités différemment le type de base pour les besoins de la surcharge.  
   
- Toutefois, la mécanisme de surcharge de fonction peut faire la distinction entre les références qui sont qualifiées par **const** et `volatile` et les références au type de base. Cela rend possible le code similaire au code suivant :  
+ Toutefois, la mécanisme de surcharge de fonction peut distinguer les références sont qualifiés par **const** et **volatile** et les références au type de base. Cela rend possible le code similaire au code suivant :  
   
-```  
+```cpp 
 // argument_type_differences.cpp  
 // compile with: /EHsc /W3  
 // C4521 expected  
@@ -224,7 +225,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 Over default constructor  
 Over&  
 Over default constructor  
@@ -233,7 +234,7 @@ Over default constructor
 volatile Over&  
 ```  
   
- Pointeurs vers **const** et `volatile` objets sont également considérés comme différents des pointeurs vers le type de base pour les besoins de la surcharge.  
+ Pointeurs vers **const** et **volatile** objets sont également considérés comme différents des pointeurs vers le type de base pour les besoins de la surcharge.  
   
 ## <a name="argument-matching-and-conversions"></a>Correspondance et conversions d’argument  
  Lorsque le compilateur tente de mettre en correspondance les arguments réels et les arguments des déclarations de fonction, il peut fournir des conversions standard ou définies par l'utilisateur pour obtenir le type correct si aucune correspondance exacte n'est trouvée. L'application des conversions est soumise aux règles ci-dessous.  
@@ -242,11 +243,11 @@ volatile Over&
   
 -   Les séquences de conversions qui peuvent être abrégées en supprimant les conversions intermédiaires ne sont pas prises en compte.  
   
- La séquence de conversions résultante éventuelle est qualifiée de meilleure séquence correspondante. Il existe plusieurs façons pour convertir un objet de type `int` au type `unsigned long` avec des conversions standard (décrites dans [Conversions Standard](../cpp/standard-conversions.md)) :  
+ La séquence de conversions résultante éventuelle est qualifiée de meilleure séquence correspondante. Il existe plusieurs moyens de convertir un objet de type **int** à taper **long non signé** avec des conversions standard (décrites dans [Conversions Standard](../cpp/standard-conversions.md)) :  
   
--   Convertissez `int` en `long` puis `long` en `unsigned long`.  
+-   Convertir à partir de **int** à **long** dans **long** à **long non signé**.  
   
--   Convertissez `int` en `unsigned long`.  
+-   Convertir à partir de **int** à **unsigned long**.  
   
  Bien que la première séquence atteigne l'objectif voulu, ce n'est pas la meilleure séquence correspondante. Il existe une séquence plus courte.  
   
@@ -258,34 +259,34 @@ volatile Over&
 |-----------------------|---------------------|  
 |*type-name*|*nom de type* **&**|  
 |*nom de type* **&**|*type-name*|  
-|*type-name* **[ ]**|*type-name\***|  
-|*type-name* **(** *argument-list* **)**|**(**  *\*-nom du type* **) (** *-liste d’arguments* **)**|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(**  *\*type-name* **) (** *liste d’arguments* **)**|  
 |*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *nom de type*|  
+|*type-name*|**volatile** *type-name*|  
 |*type-name\***|**const** *type-name\***|  
-|*type-name\***|`volatile` *nom de type\**|  
+|*type-name\***|**volatile** *type-name\**|  
   
  La séquence dans laquelle les conversions sont tentées est la suivante :  
   
 1.  Correspondance exacte. Une correspondance exacte entre les types avec lesquels la fonction est appelée et les types déclarés dans le prototype de fonction est toujours la meilleure correspondance. Les séquences de conversions ordinaires sont classées comme correspondances exactes. Toutefois, les séquences qui n'effectuent aucune de ces conversions sont considérées meilleures que les séquences qui convertissent :  
   
-    -   À partir du pointeur en pointeur vers **const** (`type` **\*** à **const** `type` **\*** ).  
+    -   À partir du pointeur, vers **const** (`type` **\*** à **const** `type` **\*** ).  
   
-    -   À partir du pointeur en pointeur vers `volatile` (`type` **\*** à `volatile` `type` **\***).  
+    -   À partir du pointeur, vers **volatile** (`type` **\*** à **volatile** `type` **\***).  
   
-    -   À partir de la référence, à la référence à **const** (`type` **&** à **const** `type` **&**).  
+    -   À partir de la référence, vers la référence à **const** (`type` **&** à **const** `type` **&**).  
   
-    -   À partir de la référence, à la référence à `volatile` (`type` **&** à `volatile` `type` **&**).  
+    -   À partir de la référence, vers la référence à **volatile** (`type` **&** à **volatile** `type` **&**).  
   
 2.  Correspondance avec des promotions. Toute séquence non classée comme correspondance exacte qui contient uniquement des promotions intégrales, les conversions de **float** à **double**, et des conversions ordinaires est classée comme correspondance avec des promotions. Bien qu'elle ne soit pas aussi appropriée qu'une correspondance exacte, une correspondance avec des promotions est meilleure qu'une correspondance avec des conversions standard.  
   
 3.  Correspondance avec des conversions standard. Toute séquence non classée comme correspondance exacte ou correspondance avec des promotions et qui contient uniquement des conversions standard et des conversions ordinaires est classée comme correspondance avec des conversions standard. Dans cette catégorie, les règles ci-dessous s'appliquent.  
   
-    -   Conversion d’un pointeur vers une classe dérivée, vers un pointeur vers une classe de base directe ou indirecte est préférable à une conversion vers **void \***  ou **const void \*** .  
+    -   Conversion d’un pointeur vers une classe dérivée, vers un autre pointeur vers une classe de base directe ou indirecte est préférable à la conversion en **void \***  ou **const void \*** .  
   
     -   La conversion d'un pointeur vers une classe dérivée, vers un pointeur vers une classe de base génère une correspondance d'autant meilleure que la classe de base est proche d'une classe de base directe. Supposons que la hiérarchie de classes s'apparente à celle de l'illustration ci-dessous.  
   
- ![Conversions de préférence](../cpp/media/vc391t1.gif "vc391T1")  
+ ![Préféré conversions](../cpp/media/vc391t1.gif "vc391T1")  
 Graphique illustrant les conversions préférées  
   
  La conversion du type `D*` vers le type `C*` est préférable à une conversion du type `D*` vers le type `B*`. De même, la conversion du type `D*` vers le type `B*` est préférable à une conversion du type `D*` vers le type `A*`.  
@@ -307,7 +308,7 @@ Graphique d'héritages multiples illustrant les conversions préférées
   
  Les conversions définies par l'utilisateur sont appliquées s'il n'existe aucune promotion ou conversion intégrée. Ces conversions sont sélectionnées en fonction du type de l'argument qui est mis en correspondance. Examinons le code ci-dessous.  
   
-```  
+```cpp 
 // argument_matching1.cpp  
 class UDC  
 {  
@@ -331,22 +332,22 @@ int main()
 }  
 ```  
   
- Les conversions définies par l’utilisateur pour la classe `UDC` sont de type `int` et type **long**. Par conséquent, le compilateur considère les conversions pour le type de l'objet qui est mis en correspondance : `UDC`. Une conversion vers `int` existe et elle est sélectionnée.  
+ Les conversions définies par l’utilisateur pour la classe `UDC` sont de type **int** et type **long**. Par conséquent, le compilateur considère les conversions pour le type de l'objet qui est mis en correspondance : `UDC`. Une conversion vers **int** existe, et elle est sélectionnée.  
   
- Pendant le processus de mise en correspondance d'arguments, les conversions standard peuvent être appliquées à l'argument et au résultat d'une conversion définie par l'utilisateur. Par conséquent, le code suivant fonctionne :  
+ Pendant le processus de mise en correspondance d’arguments, les conversions standard peuvent être appliquées à l’argument et au résultat d’une conversion définie par l’utilisateur. Par conséquent, le code suivant fonctionne :  
   
-```  
+```cpp 
 void LogToFile( long l );  
 ...  
 UDC udc;  
 LogToFile( udc );  
 ```  
   
- Dans l’exemple précédent, la conversion définie par l’utilisateur, **opérateur long**, est appelée pour convertir `udc` au type **long**. Si aucune conversion définie par l’utilisateur à taper **long** avait été défini, la conversion aurait été comme suit : Type `UDC` serait ont été converties en type `int` à l’aide de la conversion définie par l’utilisateur. Ensuite, la conversion standard du type `int` au type **long** aurait été appliquée pour correspondre à l’argument de la déclaration.  
+ Dans l’exemple précédent, la conversion définie par l’utilisateur, **long (opérateur)**, est appelée pour convertir `udc` à taper **long**. Si aucune conversion définie par l’utilisateur vers le type **long** avait été défini, la conversion aurait été la comme suit : Type `UDC` serait ont été converties en type **int** à l’aide de défini par l’utilisateur conversion. Puis la conversion standard du type **int** à taper **long** aurait été appliquée pour correspondre à l’argument dans la déclaration.  
   
- Si les conversions définies par l’utilisateur sont requises pour mettre un argument en correspondance, les conversions standard ne sont pas utilisées lors de l’évaluation de la meilleure correspondance. Cette règle est valable même si plusieurs fonctions candidates requièrent une conversion définie par l'utilisateur. Dans ce cas, les fonctions sont considérées comme égales. Par exemple :  
+ Si les conversions définies par l’utilisateur sont requises pour mettre un argument en correspondance, les conversions standard ne sont pas utilisées lors de l’évaluation de la meilleure correspondance. Cette règle est valable même si plusieurs fonctions candidates requièrent une conversion définie par l'utilisateur. Dans ce cas, les fonctions sont considérées comme égales. Exemple :  
   
-```  
+```cpp 
 // argument_matching2.cpp  
 // C2668 expected  
 class UDC1  
@@ -370,29 +371,29 @@ int main()
 }  
 ```  
   
- Les deux versions de `Func` nécessitent une conversion définie par l'utilisateur pour convertir le type `int` vers l'argument de type classe. Les conversions possibles sont indiquées ci-dessous.  
+ Les deux versions de `Func` nécessitent une conversion définie par l’utilisateur à convertir le type **int** à l’argument de type de classe. Les conversions possibles sont indiquées ci-dessous.  
   
--   Convertissez le type `int` vers le type `UDC1` (une conversion définie par l'utilisateur).  
+-   Convertit du type **int** à taper `UDC1` (une conversion définie par l’utilisateur).  
   
--   Conversion de type `int` au type **long**; puis convertissez en type `UDC2` (conversion en deux étapes).  
+-   Convertit du type **int** à taper **long**; puis le convertir en type `UDC2` (une conversion en deux étapes).  
   
  Bien que le second type nécessite une conversion standard, ainsi que la conversion définie par l'utilisateur, les deux conversions sont encore considérées comme égales.  
   
 > [!NOTE]
 >  Les conversions définies par l'utilisateur sont considérées comme des conversions par construction ou des conversions par initialisation (fonction de conversion). Les deux méthodes sont considérées comme égales lorsqu'il s'agit d'évaluer la meilleure correspondance.  
   
-## <a name="argument-matching-and-the-this-pointer"></a>Correspondance d'argument et pointeur this  
- Les fonctions membres de classe sont gérées différemment selon qu'elles sont déclarées ou non comme `static`. Comme les fonctions non statiques possèdent un argument implicite qui fournit le pointeur `this`, elles sont considérées comme ayant un argument de plus que les fonctions statiques. Sinon, elles sont déclarées de façon identique.  
+## <a name="argument-matching-and-the-this-pointer"></a>Correspondance d’argument et pointeur this  
+ Fonctions membres de classe sont traitées différemment, selon qu’elles sont déclarées en tant que **statique**. Étant donné que les fonctions non statiques possèdent un argument implicite qui fournit le **cela** pointeur, sont considérés comme des fonctions non statiques ont un argument de plus que les fonctions statiques ; sinon, elles sont déclarées de façon identique.  
   
- Ces fonctions membres non statiques exigent que le pointeur `this` implicite corresponde au type d'objet via lequel la fonction est appelée ou, pour les opérateurs surchargés, elles exigent que le premier argument corresponde à l'objet auquel l'opérateur est appliqué. (Pour plus d’informations sur les opérateurs surchargés, consultez [opérateurs surchargés](../cpp/operator-overloading.md).)  
+ Ces fonctions membres non statiques exigent que l’implicite **cela** pointeur correspond à la fonction est appelée par le biais duquel le type d’objet, ou, pour les opérateurs surchargés, elles nécessitent que le premier argument correspond à l’objet sur lequel le opérateur est appliqué. (Pour plus d’informations sur les opérateurs surchargés, consultez [opérateurs surchargés](../cpp/operator-overloading.md).)  
   
- Contrairement aux autres arguments dans les fonctions surchargées, aucun objet temporaire n'est introduit et aucune conversion n'est tentée en essayant de trouver une correspondance à l'argument de pointeur `this`.  
+ Contrairement aux autres arguments dans les fonctions surchargées, aucun des objets temporaires ne sont introduites et aucune conversion n’est tentée lorsque vous essayez de faire correspondre le **cela** argument de pointeur.  
   
- Lorsque le `->` opérateur de sélection de membre est utilisé pour accéder à une fonction membre de classe `class_name`, le `this` argument de pointeur a un type de `class_name * const`. Si les membres sont déclarés en tant que `const` ou `volatile`, les types sont `const class_name * const` et `volatile class_name * const`, respectivement.  
+ Lorsque le `->` opérateur de sélection de membre est utilisé pour accéder à une fonction membre de classe `class_name`, le **cela** argument de pointeur a un type de `class_name * const`. Si les membres sont déclarés en tant que **const** ou **volatile**, les types sont `const class_name * const` et `volatile class_name * const`, respectivement.  
   
  L'opérateur de sélection de membres `.` fonctionne exactement de la même façon, sauf qu'un opérateur (d'adresse) `&` implicite est préfixé au nom de l'objet. L'exemple suivant illustre cela :  
   
-```  
+```cpp 
 // Expression encountered in code  
 obj.name  
   
@@ -402,8 +403,8 @@ obj.name
   
  L'opérande gauche des opérateurs (pointeur vers membre) `->*` et `.*` est traité de la même façon que les opérateurs (sélection de membres) `.` et `->` en ce qui concerne la correspondance d'arguments.  
 
-## <a name="ref-qualifiers"></a> Ces qualificateurs ref sur les fonctions membres  
-Ces qualificateurs REF permettent de surcharger une fonction membre après que l’objet vers lequel pointe `this` est une rvalue ou une lvalue.  Cette fonctionnalité peut être utilisée pour éviter les opérations de copie inutiles dans les scénarios où vous choisissez de ne pas fournir l’accès à un pointeur vers les données. Par exemple, supposons que la classe **C** initialise des données dans son constructeur et retourne une copie de ces données dans la fonction membre **get_data()**. Si un objet de type **C** est une rvalue est sur le point d’être détruit, le compilateur choisit le **get_data() & &** de surcharge, ce qui déplace les données au lieu de le copier. 
+## <a name="ref-qualifiers"></a> Qualificateurs ref sur les fonctions membres  
+Qualificateurs REF permettent de surcharger une fonction membre en fonction de si l’objet vers lequel pointe **cela** est une rvalue ou lvalue.  Cette fonctionnalité peut être utilisée pour éviter les opérations de copie inutiles dans les scénarios où vous choisissez de ne pas fournir un accès aux données de pointeur. Par exemple, supposons que la classe `C` initialise des données dans son constructeur et retourne une copie de ces données dans la fonction membre `get_data()`. Si un objet de type `C` est une rvalue qui va être détruit, puis le compilateur choisit la `get_data() &&` qui déplace les données de la surcharge plutôt que de le copier. 
 
 ```cpp
 #include <iostream>
@@ -450,15 +451,15 @@ int main()
   
      **Section spécifique à Microsoft**  
   
- Vous pouvez surcharger **new, opérateur** uniquement sur la base du type de retour, en particulier, en fonction du modificateur de modèle de mémoire spécifié.  
+ Vous pouvez surcharger **opérateur new** uniquement en fonction du type de retour, en particulier, en fonction du modificateur de modèle de mémoire spécifié.  
   
 **FIN de la section spécifique à Microsoft**  
   
 -   Les fonctions membres ne peuvent pas être surchargées uniquement sur la base d'une étant statique et l'autre non statique.  
   
--   Les déclarations `typedef` ne définissent pas de nouveaux types ; elles introduisent des synonymes pour les types existants. Elles n'ont aucune incidence sur le mécanisme de surcharge. Examinons le code ci-dessous.  
+-   **typedef** déclarations ne définissent pas de nouveaux types ; elles introduisent des synonymes des types existants. Elles n'ont aucune incidence sur le mécanisme de surcharge. Examinons le code ci-dessous.  
   
-    ```  
+    ```cpp 
     typedef char * PSTR;  
   
     void Print( char *szToPrint );  
@@ -471,14 +472,14 @@ int main()
   
 -   Les types « array » et « pointer to » sont considérés comme identiques pour établir une distinction entre les fonctions surchargées. Ceci est vrai uniquement pour les tableaux dimensionnés séparément. Par conséquent, les fonctions surchargées suivantes sont en conflit et génèrent un message d'erreur :  
   
-    ```  
+    ```cpp 
     void Print( char *szToPrint );  
     void Print( char szToPrint[] );  
     ```  
   
      Pour les tableaux dimensionnés de façon multiple, la deuxième et toutes les dimensions suivantes sont considérées comme faisant partie du type. Par conséquent, elles sont utilisées pour établir une distinction entre les fonctions surchargées :  
   
-    ```  
+    ```cpp 
     void Print( char szToPrint[] );  
     void Print( char szToPrint[][7] );  
     void Print( char szToPrint[][9][42] );  
@@ -490,11 +491,11 @@ int main()
   
  La portée de classe est strictement observée ; par conséquent, une fonction déclarée dans une classe de base n'est pas dans la même portée qu'une fonction déclarée dans une classe dérivée. Si une fonction dans une classe dérivée est déclarée avec le même nom qu’une fonction virtuelle dans la classe de base, la fonction de la classe dérivée *substitue* la fonction de la classe de base. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).
 
-Si la fonction de la classe de base n’est pas déclarée comme 'virtual', alors que la fonction de la classe dérivée est dite *masquer* il. Remplacement et le masquage sont distincts de la surcharge.  
+Si la fonction de la classe de base n’est pas déclarée comme 'virtual', alors que la fonction de la classe dérivée est dite *masquer* il. Remplacement et le masquage sont distincts de surcharge.  
   
- La portée de bloc est strictement observée ; par conséquent, une fonction déclarée dans la portée du fichier n’est pas dans la même portée qu’une fonction déclarée localement. Si une fonction déclarée localement a le même nom qu'une fonction déclarée avec portée de fichier, la fonction déclarée localement masque la fonction déclarée avec portée de fichier au lieu de provoquer la surcharge. Par exemple :  
+ La portée de bloc est strictement observée ; par conséquent, une fonction déclarée dans la portée du fichier n’est pas dans la même portée qu’une fonction déclarée localement. Si une fonction déclarée localement a le même nom qu'une fonction déclarée avec portée de fichier, la fonction déclarée localement masque la fonction déclarée avec portée de fichier au lieu de provoquer la surcharge. Exemple :  
   
-```  
+```cpp 
 // declaration_matching1.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -520,7 +521,7 @@ int main()
 }  
 ```  
   
- Le code précédent montre deux définitions de la fonction `func`. La définition qui accepte un argument de type `char *` est locale à `main` à cause de l'instruction `extern`. Par conséquent, la définition qui accepte un argument de type `int` est masquée et le premier appel à `func` provoque une erreur.  
+ Le code précédent montre deux définitions de la fonction `func`. La définition qui accepte un argument de type `char *` est local à `main` raison de la **extern** instruction. Par conséquent, la définition qui accepte un argument de type **int** est masquée et le premier appel à `func` est erroné.  
   
  Pour les fonctions membres surchargées, différents privilèges d'accès peuvent être accordés à différentes versions de la fonction. Elles sont encore considérées comme étant dans la portée de la classe englobante et sont donc des fonctions surchargées. Prenons le code suivant, dans lequel la fonction membre `Deposit` est surchargée ; une version est publique, l'autre privée.  
   
@@ -528,7 +529,7 @@ int main()
   
  Notez que l'appel à `Deposit` dans `Account::Deposit` appelle la fonction membre privée. Cet appel est correct car `Account::Deposit` est une fonction membre et dispose par conséquent d'un accès aux membres privés de la classe.  
   
-```  
+```cpp 
 // declaration_matching2.cpp  
 class Account  
 {  

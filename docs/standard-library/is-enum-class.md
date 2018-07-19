@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493c3dc0faf42e0f08f88afd3ac405cfbd7404aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960997"
 ---
 # <a name="isenum-class"></a>is_enum, classe
 
@@ -37,11 +37,11 @@ struct is_enum;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type énumération ou une forme `cv-qualified` d'un type énumération. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type d’énumération ou un `cv-qualified` forme d’un type d’énumération, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -79,7 +79,7 @@ is_enum<color> == true
 is_enum<int> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de CHeapPtrBase | Documents Microsoft
+title: Cheapptrbase, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d847c83fce13ea39c3032e7db638a91b1cb7ad85
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364566"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880318"
 ---
-# <a name="cheapptrbase-class"></a>Classe de CHeapPtrBase
-Cette classe constitue la base pour plusieurs classes de pointeur de segment de mémoire actives.  
+# <a name="cheapptrbase-class"></a>Cheapptrbase, classe
+Cette classe constitue la base pour plusieurs classes de pointeur intelligent de segment de mémoire.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +44,11 @@ class CHeapPtrBase
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Le type d’objet à stocker sur le tas.  
   
- `Allocator`  
- La classe de l’allocation de mémoire à utiliser. Par défaut, les routines CRT sont utilisés pour allouer et libérer de la mémoire.  
+ *Allocateur*  
+ La classe d’allocation de mémoire à utiliser. Par défaut, les routines CRT sont utilisés pour allouer et libérer de la mémoire.  
   
 ## <a name="members"></a>Membres  
   
@@ -62,19 +62,19 @@ class CHeapPtrBase
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CHeapPtrBase::AllocateBytes](#allocatebytes)|Appelez cette méthode pour allouer de mémoire.|  
+|[CHeapPtrBase::AllocateBytes](#allocatebytes)|Appelez cette méthode pour allouer de la mémoire.|  
 |[CHeapPtrBase::Attach](#attach)|Appelez cette méthode pour prendre possession d’un pointeur existant.|  
 |[CHeapPtrBase::Detach](#detach)|Appelez cette méthode pour libérer la possession d’un pointeur.|  
-|[CHeapPtrBase::Free](#free)|Appelez cette méthode pour supprimer un objet vers lequel pointé une `CHeapPtrBase`.|  
-|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Appelez cette méthode pour réallouer la mémoire.|  
+|[CHeapPtrBase::Free](#free)|Appelez cette méthode pour supprimer un objet vers lequel pointé un `CHeapPtrBase`.|  
+|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Appelez cette méthode pour réallouer de la mémoire.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
 |[CHeapPtrBase::operator T *](#operator_t_star)|L’opérateur de cast.|  
-|[CHeapPtrBase::operator &](#operator_amp)|Le & (opérateur).|  
-|[CHeapPtrBase::operator ->](#operator_ptr)|Opérateur pointeur vers membre.|  
+|[CHeapPtrBase::operator &](#operator_amp)|Le & opérateur.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|L’opérateur pointeur vers membre.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -84,27 +84,27 @@ class CHeapPtrBase
 |[CHeapPtrBase::m_pData](#m_pdata)|La variable de membre de données de pointeur.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe constitue la base pour plusieurs classes de pointeur de segment de mémoire actives. Les classes dérivées, par exemple, [CHeapPtr](../../atl/reference/cheapptr-class.md) et [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), ajouter leurs propres constructeurs et des opérateurs. Consultez ces classes pour les exemples d’implémentation.  
+ Cette classe constitue la base pour plusieurs classes de pointeur intelligent de segment de mémoire. Les classes dérivées, par exemple, [CHeapPtr](../../atl/reference/cheapptr-class.md) et [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), ajouter leurs propres constructeurs et des opérateurs. Consultez ces classes pour des exemples d’implémentation.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
- Appelez cette méthode pour allouer de mémoire.  
+ Appelez cette méthode pour allouer de la mémoire.  
   
 ```
 bool AllocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBytes`  
+ *nBytes*  
  Le nombre d’octets de mémoire à allouer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si la mémoire est correctement alloué, false dans le cas contraire.  
+ Retourne la valeur true si la mémoire est correctement alloué, false sinon.  
   
 ### <a name="remarks"></a>Notes  
- Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
+ Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement vers une valeur existante ; autrement dit, il n’est pas égal à NULL.  
   
 ##  <a name="attach"></a>  CHeapPtrBase::Attach  
  Appelez cette méthode pour prendre possession d’un pointeur existant.  
@@ -114,13 +114,13 @@ void Attach(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pData`  
+ *pData*  
  Le `CHeapPtrBase` objet prendra possession de ce pointeur.  
   
 ### <a name="remarks"></a>Notes  
- Lorsqu’un `CHeapPtrBase` objet prend possession du pointeur, il la supprime automatiquement le pointeur et les données allouées lorsqu’il devient hors de portée.  
+ Quand un `CHeapPtrBase` objet prend possession d’un pointeur, il supprime automatiquement le pointeur et les données allouées lorsqu’il devient hors de portée.  
   
- Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
+ Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement vers une valeur existante ; autrement dit, il n’est pas égal à NULL.  
   
 ##  <a name="dtor"></a>  CHeapPtrBase :: ~ CHeapPtrBase  
  Destructeur.  
@@ -130,7 +130,7 @@ void Attach(T* pData) throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Libère toutes les ressources attribuées.  
+ Libère toutes les ressources allouées.  
   
 ##  <a name="detach"></a>  CHeapPtrBase::Detach  
  Appelez cette méthode pour libérer la possession d’un pointeur.  
@@ -143,17 +143,17 @@ T* Detach() throw();
  Retourne une copie du pointeur.  
   
 ### <a name="remarks"></a>Notes  
- Libère la propriété d’un pointeur, définit le [CHeapPtrBase::m_pData](#m_pdata) variable membre avec la valeur NULL et retourne une copie du pointeur.  
+ Libère la propriété d’un pointeur, définit le [CHeapPtrBase::m_pData](#m_pdata) variable de membre avec la valeur NULL et retourne une copie du pointeur.  
   
 ##  <a name="free"></a>  CHeapPtrBase::Free  
- Appelez cette méthode pour supprimer un objet vers lequel pointé une `CHeapPtrBase`.  
+ Appelez cette méthode pour supprimer un objet vers lequel pointé un `CHeapPtrBase`.  
   
 ```
 void Free() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- L’objet vers lequel pointe le `CHeapPtrBase` est libéré et la [CHeapPtrBase::m_pData](#m_pdata) variable membre a la valeur NULL.  
+ L’objet vers lequel pointe le `CHeapPtrBase` est libéré et la [CHeapPtrBase::m_pData](#m_pdata) variable membre est définie sur NULL.  
   
 ##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  La variable de membre de données de pointeur.  
@@ -166,7 +166,7 @@ T* m_pData;
  Cette variable membre conserve les informations de pointeur.  
   
 ##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
- Le & (opérateur).  
+ Le & opérateur.  
   
 ```
 T** operator&() throw();
@@ -178,7 +178,7 @@ T** operator&() throw();
 
 ##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
- Opérateur pointeur vers membre.  
+ L’opérateur pointeur vers membre.  
   
 ```
 T* operator->() const throw();
@@ -201,20 +201,20 @@ operator T*() const throw();
  Retourne [CHeapPtrBase::m_pData](#m_pdata).  
   
 ##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
- Appelez cette méthode pour réallouer la mémoire.  
+ Appelez cette méthode pour réallouer de la mémoire.  
   
 ```
 bool ReallocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBytes`  
+ *nBytes*  
  La nouvelle quantité de mémoire à allouer, en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si la mémoire est correctement alloué, false dans le cas contraire.  
+ Retourne la valeur true si la mémoire est correctement alloué, false sinon.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CHeapPtr](../../atl/reference/cheapptr-class.md)   
- [Classe de CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+ [Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
+ [CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

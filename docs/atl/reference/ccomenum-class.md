@@ -1,5 +1,5 @@
 ---
-title: Classe de CComEnum | Documents Microsoft
+title: CComEnum, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362861"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885387"
 ---
-# <a name="ccomenum-class"></a>Classe de CComEnum
+# <a name="ccomenum-class"></a>CComEnum, classe
 Cette classe définit un objet d’énumérateur COM basé sur un tableau.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -39,19 +39,19 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `Base`  
+ *base de*  
  Un énumérateur COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interface.  
   
- `piid`  
- Pointeur vers l’ID de l’interface de l’énumérateur.  
+ *piid*  
+ Pointeur vers l’ID d’interface de l’interface de l’énumérateur.  
   
- `T`  
+ *T*  
  Le type d’élément exposé par l’interface de l’énumérateur.  
   
- `Copy`  
- Un homogène [copier la classe de stratégie](../../atl/atl-copy-policy-classes.md).  
+ *Copier*  
+ Un homogènes [copier la classe de stratégie](../../atl/atl-copy-policy-classes.md).  
   
- `ThreadModel`  
+ *ThreadModel*  
  Le modèle de thread de la classe. Ce paramètre par défaut est le modèle de thread d’objet global utilisé dans votre projet.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,15 +59,15 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
 ## <a name="to-use-this-class"></a>Pour utiliser cette classe :  
   
-- `typedef` une spécialisation de cette classe.  
+- **typedef** une spécialisation de cette classe.  
   
--   Utilisez le `typedef` comme argument template dans une spécialisation de `CComObject`.  
+-   Utilisez le **typedef** comme argument de modèle dans une spécialisation de `CComObject`.  
   
 -   Créez une instance de la `CComObject` spécialisation.  
   
 -   Initialiser l’objet énumérateur en appelant [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).  
   
--   Retourne l’interface de l’énumérateur au client.  
+-   Retourner l’interface de l’énumérateur au client.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CComObjectRootBase`  
@@ -80,11 +80,11 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  `CComEnum`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ## <a name="example"></a>Exemple  
- Le code ci-dessous fournit une fonction réutilisable pour la création et l’initialisation d’un objet énumérateur.  
+ Le code ci-dessous fournit une fonction réutilisable pour la création et initialisation d’un objet énumérateur.  
   
  [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]  
   
@@ -92,10 +92,10 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]  
   
- Ce code crée un `typedef` pour `CComEnum` qui expose un vecteur de **VARIANT**s via le **IEnumVariant** interface. Le **CVariantArrayCollection** classe spécialisée simplement **CreateEnumerator** pour utiliser des objets d’énumérateur de ce type et la transmet les arguments nécessaires.  
+ Ce code crée un **typedef** pour `CComEnum` qui expose un vecteur de variantes via le `IEnumVariant` interface. Le `CVariantArrayCollection` classe spécialisée simplement `CreateEnumerator` pour travailler avec des objets d’énumérateur de ce type et la transmet les arguments nécessaires.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
- [Classe de CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)   
+ [CComEnumImpl, classe](../../atl/reference/ccomenumimpl-class.md)   
  [CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)

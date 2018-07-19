@@ -1,5 +1,5 @@
 ---
-title: Classe de CAtlComModule | Documents Microsoft
+title: Catlcommodule, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e85f3aab75f8fafb76977847ce36d37808af60
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b553a6b99afd2de34c11aa0ad8a979580177d042
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364790"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885060"
 ---
-# <a name="catlcommodule-class"></a>Classe de CAtlComModule
-Cette classe implémente un module COM de serveur.  
+# <a name="catlcommodule-class"></a>Catlcommodule, classe
+Cette classe implémente un module de serveur COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,16 +57,16 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Appelez cette méthode pour annuler l’inscription d’une bibliothèque de types.|  
   
 ## <a name="remarks"></a>Notes  
- `CAtlComModule` implémente un module de serveur COM, ce qui permet un client accéder aux composants du module.  
+ `CAtlComModule` implémente un module de serveur COM, ce qui permet un client d’accéder aux composants du module.  
   
- Cette classe remplace l’obsolète [CComModule](../../atl/reference/ccommodule-class.md) classe utilisée dans les versions antérieures d’ATL. Consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.  
+ Cette classe remplace obsolète [CComModule](../../atl/reference/ccommodule-class.md) classe utilisée dans les versions antérieures de l’ATL. Consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)  
   
  `CAtlComModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule  
@@ -87,7 +87,7 @@ CAtlComModule() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Libère toutes les fabriques de classe.  
+ Libère toutes les fabriques de classes.  
   
 ##  <a name="registerserver"></a>  CAtlComModule::RegisterServer  
  Appelez cette méthode pour mettre à jour le Registre système pour chaque objet du mappage d’objets.  
@@ -97,14 +97,14 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bRegTypeLib`  
+ *bRegTypeLib*  
  TRUE si la bibliothèque de types doit être enregistré. La valeur par défaut est FALSE.  
   
- `pCLSID`  
+ *pCLSID*  
  Pointe vers le CLSID de l’objet à inscrire. Si NULL (la valeur par défaut), tous les objets du mappage d’objets sera inscrit.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
  Appelle la fonction globale [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
@@ -118,14 +118,14 @@ HRESULT RegisterTypeLib();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszIndex`  
- Chaîne au format «\\\N », où N est l’index d’entiers de la ressource de bibliothèque de types.  
+ *lpszIndex*  
+ Chaîne au format «\\\N », où N est l’index d’entier de la ressource TYPELIB.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Ajoute des informations sur une bibliothèque de types dans le Registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier le type de bibliothèque doit être utilisé.  
+ Ajoute des informations sur une bibliothèque de types dans le Registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier la bibliothèque de type doit être utilisée.  
   
 ##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer  
  Appelez cette méthode pour annuler l’inscription de chaque objet du mappage d’objets.  
@@ -137,14 +137,14 @@ HRESULT UnregisterServer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `bRegTypeLib`  
+ *bRegTypeLib*  
  TRUE si la bibliothèque de types doit être annulée. La valeur par défaut est FALSE.  
   
- `pCLSID`  
- Pointe vers le CLSID de l’objet doit être annulée. Si la valeur NULL (valeur par défaut), tous les objets du mappage d’objets sera annulée.  
+ *pCLSID*  
+ Pointe vers le CLSID de l’objet doit être annulée. Si la valeur NULL (la valeur par défaut), tous les objets du mappage d’objets sera annulée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
  Appelle la fonction globale [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
@@ -158,14 +158,14 @@ HRESULT UnRegisterTypeLib();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszIndex`  
- Chaîne au format «\\\N », où N est l’index d’entiers de la ressource de bibliothèque de types.  
+ *lpszIndex*  
+ Chaîne au format «\\\N », où N est l’index d’entier de la ressource TYPELIB.  
   
 ### <a name="remarks"></a>Notes  
- Supprime les informations sur une bibliothèque de types à partir du Registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier le type de bibliothèque doit être utilisé.  
+ Supprime les informations sur une bibliothèque de types à partir du Registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier la bibliothèque de type doit être utilisée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ## <a name="see-also"></a>Voir aussi  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   

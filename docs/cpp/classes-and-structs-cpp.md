@@ -1,5 +1,5 @@
 ---
-title: Les classes et Structs (C++) | Documents Microsoft
+title: Classes et Structs (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413243"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954175"
 ---
 # <a name="classes-and-structs-c"></a>Classes et structs (C++)
 Cette section présente les classes et structs C++. Les deux constructions sont identiques en C++ sauf que l'accessibilité par défaut est publique dans les structs, alors qu'elle est privée dans les classes.  
@@ -58,15 +58,15 @@ Cette section présente les classes et structs C++. Les deux constructions sont 
   
 -   [Champs de bits C++](../cpp/cpp-bit-fields.md)  
   
- Les trois types de classes sont la structure, la classe et l'union. Ils sont déclarés à l’aide de la [struct](../cpp/struct-cpp.md), [classe](../cpp/class-cpp.md), et [union](../cpp/unions.md) mots clés (consultez [définition des Types de classe](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)). Le tableau suivant montre les différences entre les trois types de classes.  
+ Les trois types de classes sont la structure, la classe et l'union. Ils sont déclarés à l’aide de la [struct](../cpp/struct-cpp.md), [classe](../cpp/class-cpp.md), et [union](../cpp/unions.md) mots clés. Le tableau suivant montre les différences entre les trois types de classes.  
   
- Pour plus d’informations sur les unions, consultez [Unions](../cpp/unions.md). Pour plus d’informations sur les classes et structs, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Pour plus d’informations sur les unions, consultez [Unions](../cpp/unions.md). Pour plus d’informations sur les classes et structures managées, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Contrôle d'accès et contraintes de structures, de classes et d'unions  
   
 |Structures|Classes|Unions|  
 |----------------|-------------|------------|  
-|la clé de la classe est `struct`|clé de la classe est **classe**|clé de la classe est **union**|  
+|clé de classe est **struct**|clé de classe est **classe**|clé de classe est **union**|  
 |L'accès par défaut est public|L'accès par défaut est privé|L'accès par défaut est public|  
 |Aucune contrainte d'utilisation|Aucune contrainte d'utilisation|Utilisation d'un seul membre à la fois|  
   

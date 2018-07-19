@@ -1,5 +1,5 @@
 ---
-title: Classe de CComHeapPtr | Documents Microsoft
+title: CComHeapPtr, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359056"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884780"
 ---
-# <a name="ccomheapptr-class"></a>Classe de CComHeapPtr
-Une classe de pointeur intelligent pour la gestion des pointeurs de segment de mémoire.  
+# <a name="ccomheapptr-class"></a>CComHeapPtr, classe
+Une classe de pointeur intelligent pour la gestion des pointeurs de tas.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Le type d’objet à stocker sur le tas.  
   
 ## <a name="members"></a>Membres  
@@ -48,7 +48,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Constructeur.|  
   
 ## <a name="remarks"></a>Notes  
- `CComHeapPtr` dérive de `CHeapPtr`, mais utilise [CComAllocator](../../atl/reference/ccomallocator-class.md) pour allouer de la mémoire à l’aide des routines de COM. Consultez [CHeapPtr](../../atl/reference/cheapptr-class.md) et [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) pour les méthodes disponibles.  
+ `CComHeapPtr` dérive de `CHeapPtr`, mais utilise [CComAllocator](../../atl/reference/ccomallocator-class.md) d’allocation de mémoire à l’aide des routines de COM. Consultez [CHeapPtr](../../atl/reference/cheapptr-class.md) et [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) pour les méthodes disponibles.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -57,7 +57,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
   
  `CComHeapPtr`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr  
@@ -69,14 +69,14 @@ explicit CComHeapPtr(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pData`  
+ *pData*  
  Objet `CComHeapPtr` existant.  
   
 ### <a name="remarks"></a>Notes  
- Le pointeur du tas peut être éventuellement créé à l’aide d’un existant `CComHeapPtr` objet. Dans ce cas, la nouvelle `CComHeapPtr` objet assume la responsabilité de gérer les ressources et le nouveau pointeur.  
+ Le pointeur de segment de mémoire peut éventuellement être créé à l’aide d’un existant `CComHeapPtr` objet. Dans ce cas, la nouvelle `CComHeapPtr` objet assume la responsabilité de gérer le nouveau pointeur et les ressources.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CHeapPtr](../../atl/reference/cheapptr-class.md)   
- [Classe de CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
- [Classe de CComAllocator](../../atl/reference/ccomallocator-class.md)   
+ [Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
+ [Cheapptrbase, classe](../../atl/reference/cheapptrbase-class.md)   
+ [Ccomallocator, classe](../../atl/reference/ccomallocator-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

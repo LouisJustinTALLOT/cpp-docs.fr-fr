@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966576"
 ---
 # <a name="ostrstream-class"></a>ostrstream, classe
 
@@ -61,7 +61,7 @@ L'objet stocke un objet de classe `strstreambuf`.
 |[rdbuf](#rdbuf)|Retourne un pointeur vers l'objet `strstreambuf` associé au flux.|
 |[str](#str)|Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<strstream>
 
@@ -77,7 +77,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Freezeit` Un `bool` qui indique si vous souhaitez que le flux à être figé.
+*_Freezeit* A **bool** indiquant si vous souhaitez que le flux soit gelé.
 
 ### <a name="remarks"></a>Notes
 
@@ -85,7 +85,7 @@ La fonction membre appelle [rdbuf](#rdbuf) -> [freeze](../standard-library/strst
 
 ### <a name="example"></a>Exemple
 
-Consultez la page [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui utilise **freeze**.
+Consultez [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui utilise `freeze`.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -101,19 +101,19 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Paramètres
 
-`ptr` La mémoire tampon.
+*PTR* la mémoire tampon.
 
-`count` La taille de la mémoire tampon en octets.
+*nombre* la taille de la mémoire tampon en octets.
 
-`_Mode` Le mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De* le mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Notes
 
-Les deux constructeurs initialisent la classe de base en appelant [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**), où **sb** est l’objet stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Le premier constructeur initialise également **sb** en appelant `strstreambuf`. Le deuxième constructeur initialise la classe de base d’une des deux façons suivantes :
+Les deux constructeurs initialisent la classe de base en appelant [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), où `sb` est l’objet stocké de classe [strstreambuf](../standard-library/strstreambuf-class.md). Le premier constructeur initialise également `sb` en appelant `strstreambuf`. Le deuxième constructeur initialise la classe de base d’une des deux façons suivantes :
 
-- Si `_Mode` & **ios_base::app**== 0, `ptr` doit désigner le premier élément d’un tableau d’éléments `count`, et le constructeur appelle `strstreambuf`( `ptr`, `count`, `ptr`).
+- Si `_Mode`  &  **ios_base::app**== 0, puis `ptr` doit désigner le premier élément d’un tableau de `count` éléments et le constructeur appelle `strstreambuf`(`ptr`, `count`, `ptr`).
 
-- Sinon, `ptr` doit désigner le premier élément d’un tableau d’éléments count qui contient une chaîne C dont le premier élément est désigné par `ptr`, et le constructeur appelle `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- Sinon, `ptr` doit désigner le premier élément d’un tableau d’éléments count qui contient une chaîne C dont le premier élément est désigné par `ptr`et le constructeur appelle `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -149,7 +149,7 @@ Un pointeur vers l’objet strstreambuf associé au flux.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type pointeur (**pointer**) vers [strstreambuf](../standard-library/strstreambuf-class.md).
+La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Exemple
 
@@ -173,7 +173,7 @@ La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstre
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise **str**, consultez [strstream::str](../standard-library/strstreambuf-class.md#str).
+Consultez [strstream::str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui utilise `str`.
 
 ## <a name="see-also"></a>Voir aussi
 

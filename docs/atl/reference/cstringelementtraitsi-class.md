@@ -1,5 +1,5 @@
 ---
-title: Classe de CStringElementTraitsI | Documents Microsoft
+title: Cstringelementtraitsi, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d523c882754a69239ebbbfad1adcb0e91c0c4ca6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362103"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879886"
 ---
-# <a name="cstringelementtraitsi-class"></a>Classe de CStringElementTraitsI
-Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Il est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons sans respecter la casse.  
+# <a name="cstringelementtraitsi-class"></a>Cstringelementtraitsi, classe
+Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Elle est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons de non-respect de la casse.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Le type de données à stocker dans la collection.  
   
 ## <a name="members"></a>Membres  
@@ -56,39 +56,39 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CStringElementTraitsI::CompareElements](#compareelements)|Appelez cette fonction statique pour comparer deux éléments de chaîne sont égales, en ignorant les différences de casse.|  
+|[CStringElementTraitsI::CompareElements](#compareelements)|Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité, en ignorant les différences de casse.|  
 |[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Appelez cette fonction statique pour comparer deux éléments de chaîne, en ignorant les différences de casse.|  
 |[CStringElementTraitsI::Hash](#hash)|Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe fournit des fonctions statiques pour la comparaison de chaînes et pour la création d’une valeur de hachage. Ces fonctions sont utiles lors de l’utilisation d’une classe de collection pour stocker les données de type chaîne. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets de chaîne sont avec agira en tant que références.  
+ Cette classe fournit des fonctions statiques pour la comparaison de chaînes et pour la création d’une valeur de hachage. Ces fonctions sont utiles lorsque vous utilisez une classe de collection pour stocker des données basé sur chaîne. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets de chaîne sont avec agira en tant que références.  
   
- Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
   
  `CStringElementTraitsI`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
- Appelez cette fonction statique pour comparer deux éléments de chaîne sont égales, en ignorant les différences de casse.  
+ Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité, en ignorant les différences de casse.  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `str1`  
- Le premier élément de chaîne.  
+ *str1*  
+ La première chaîne d’élément.  
   
- `str2`  
+ *str2*  
  Le deuxième élément de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si les éléments sont égaux, false dans le cas contraire.  
+ Retourne la valeur true si les éléments sont égaux, sinon false.  
   
 ### <a name="remarks"></a>Notes  
  Les comparaisons respectent la casse.  
@@ -101,14 +101,14 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `str1`  
- Le premier élément de chaîne.  
+ *str1*  
+ La première chaîne d’élément.  
   
- `str2`  
+ *str2*  
  Le deuxième élément de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Zéro si les chaînes sont identiques, < 0 si `str1` est inférieure à `str2`, ou 0 > Si `str1` est supérieur à `str2`. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour effectuer des comparaisons.  
+ Zéro si les chaînes sont identiques, < 0 si *str1* est inférieure à *str2*, ou 0 > Si *str1* est supérieur à *str2*. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour exécuter les comparaisons.  
 
   
 ### <a name="remarks"></a>Notes  
@@ -122,7 +122,7 @@ static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `str`  
+ *str*  
  L’élément de la chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -143,6 +143,6 @@ typedef T& OUTARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
+ [Celementtraitsbase, classe](../../atl/reference/celementtraitsbase-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [CStringElementTraits, classe](../../atl/reference/cstringelementtraits-class.md)

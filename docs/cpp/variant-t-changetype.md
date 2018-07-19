@@ -1,5 +1,5 @@
 ---
-title: _variant_t::ChangeType | Documents Microsoft
+title: _variant_t::ChangeType | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fd73fc9606053dda6f8c143618373ad9bb7e4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d9e4d7193755f70e3463f4da60d88a7bd832c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942834"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Section spécifique à Microsoft**  
   
- Modifie le type de la `_variant_t` objet au **VARTYPE**.  
+ Change le type de la `_variant_t` objet au `VARTYPE`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      void ChangeType(  
+void ChangeType(  
    VARTYPE vartype,  
    const _variant_t* pSrc = NULL   
 );  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `vartype`  
- Le **VARTYPE** pour ce `_variant_t` objet.  
+ *VarType*  
+ Le `VARTYPE` pour ce `_variant_t` objet.  
   
- `pSrc`  
- Pointeur vers l'objet `_variant_t` à convertir. Si cette valeur est **NULL**, conversion s’effectue sur place.  
+ *pSrc*  
+ Pointeur vers l'objet `_variant_t` à convertir. Si cette valeur est NULL, la conversion est effectuée en place.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction membre convertit un `_variant_t` objet indiqué **VARTYPE**. Si `pSrc` est **NULL**, la conversion s’effectue sur place, sinon cet `_variant_t` objet est copié à partir de `pSrc` , puis converti.  
+ Cette fonction membre convertit un `_variant_t` objet dans le texte indiqué `VARTYPE`. Si *pSrc* est NULL, la conversion s’effectue sur place, sinon cela `_variant_t` objet est copié à partir de *pSrc* , puis sont converties.  
   
  **FIN de la section spécifique à Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: decltype (C++) | Documents Microsoft
+title: decltype (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418037"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941286"
 ---
 # <a name="decltype--c"></a>decltype (C++)
-Le spécificateur de type `decltype` génère le type d'une expression spécifiée. Le `decltype` spécificateur de type avec la [auto, mot clé](../cpp/auto-cpp.md), est particulièrement utile pour les développeurs qui écrivent des bibliothèques de modèles. Utilisez `auto` et `decltype` pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template. Sinon, utilisez `auto` et `decltype` pour déclarer une fonction de modèle qui encapsule un appel à une autre fonction, puis retourne le type de retour de la fonction encapsulée.  
+Le spécificateur de type `decltype` génère le type d'une expression spécifiée. Le `decltype` spécificateur, de type avec le [auto, mot clé](../cpp/auto-cpp.md), est particulièrement utile pour les développeurs qui écrivent des bibliothèques de modèles. Utilisez **automatique** et `decltype` pour déclarer une fonction de modèle dont retour type dépend des types de ses arguments template. Ou, utilisez **automatique** et `decltype` pour déclarer une fonction de modèle qui encapsule un appel à une autre fonction, puis retourne le type de retour de la fonction encapsulée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,21 @@ decltype( expression )
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|`expression`|d'une expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).|  
+|*Expression*|d'une expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).|  
   
 ## <a name="return-value"></a>Valeur de retour  
- Type du paramètre `expression`.  
+ Le type de la *expression* paramètre.  
   
 ## <a name="remarks"></a>Notes  
  Le spécificateur de type `decltype` est pris en charge dans Visual C++ 2010 ou versions ultérieures et peut être utilisé avec le code natif ou managé. `decltype(auto)` (C++14) est pris en charge dans Visual Studio 2015 et versions ultérieures.  
   
- Le compilateur utilise les règles suivantes pour déterminer le type du paramètre `expression`.  
+ Le compilateur utilise les règles suivantes pour déterminer le type de la *expression* paramètre.  
   
--   Si le `expression` paramètre est un identificateur ou un [accès aux membres de classe](../cpp/member-access-operators-dot-and.md), `decltype(expression)` est le type de l’entité nommée par `expression`. Si cette entité n'existe pas ou si le paramètre `expression` nomme un ensemble de fonctions surchargées, le compilateur génère un message d'erreur.  
+-   Si le *expression* paramètre est un identificateur ou un [accès aux membres de classe](../cpp/member-access-operators-dot-and.md), `decltype(expression)` est le type de l’entité nommée par *expression*. S’il n’existe aucune entité n’ou *expression* paramètre nomme un ensemble de fonctions surchargées, le compilateur génère un message d’erreur.  
   
--   Si le `expression` paramètre est un appel à une fonction ou une fonction d’opérateur surchargé, `decltype(expression)` est le type de retour de la fonction. Les parenthèses autour d'un opérateur surchargé sont ignorées.  
+-   Si le *expression* paramètre est un appel à une fonction ou une fonction d’opérateur surchargées, `decltype(expression)` est le type de retour de la fonction. Les parenthèses autour d'un opérateur surchargé sont ignorées.  
   
--   Si le `expression` paramètre est un [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` est le type de `expression`. Si le `expression` paramètre est un [lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` est un [référence lvalue](../cpp/lvalue-reference-declarator-amp.md) pour le type de `expression`.  
+-   Si le *expression* paramètre est un [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` est le type de *expression*. Si le *expression* paramètre est un [lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` est un [référence lvalue](../cpp/lvalue-reference-declarator-amp.md) au type de *expression*.  
   
  L'exemple de code suivant montre certaines utilisations du spécificateur de type `decltype`. Tout d'abord, supposez que vous avez codé les instructions suivantes.  
   
@@ -68,24 +68,24 @@ const A* a = new A();
   
 |Instruction du langage|Type|Notes|  
 |---------------|----------|-----------|  
-|`decltype(fx());`|`const int&&`|Un [référence rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) à un `const int`.|  
-|`decltype(var);`|`int`|Type de la variable `var`.|  
-|`decltype(a->x);`|`double`|Type de l'accès au membre.|  
-|`decltype((a->x));`|`const double&`|Les parenthèses internes provoquent l'évaluation de l'instruction en tant qu'expression plutôt qu'en tant qu'accès au membre. Étant donné que `a` est déclaré comme pointeur `const`, le type est une référence à `const double`.|  
+|`decltype(fx());`|`const int&&`|Un [référence rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) à un **const int**.|  
+|`decltype(var);`|**int**|Type de la variable `var`.|  
+|`decltype(a->x);`|**double**|Type de l'accès au membre.|  
+|`decltype((a->x));`|`const double&`|Les parenthèses internes provoquent l'évaluation de l'instruction en tant qu'expression plutôt qu'en tant qu'accès au membre. Et parce que `a` est déclaré comme un `const` pointeur, le type est une référence à **double const**.|  
   
 ## <a name="decltype-and-auto"></a>Decltype et Auto  
- Dans C ++ 14, vous pouvez utiliser `decltype(auto)` sans type de retour de fin pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template.  
+ Dans C ++ 14, vous pouvez utiliser `decltype(auto)` avec aucun type de retour de fin pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template.  
   
- En C++11, vous pouvez utiliser le spécificateur de type `decltype` sur un type de retour de fin avec le mot clé `auto` pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template. Considérez l’exemple de code suivant dans lequel le type de retour de la fonction de modèle dépend des types des arguments template. Dans l’exemple de code, la *inconnu* espace réservé indique que le type de retour ne peut pas être spécifié.  
+ Dans C ++ 11, vous pouvez utiliser la `decltype` tapez spécificateur sur un type de retour de fin, conjointement avec le **automatique** mot clé, pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template. Considérez l’exemple de code suivant dans lequel le type de retour de la fonction de modèle dépend des types des arguments template. Dans l’exemple de code, le *inconnu* espace réservé indique que le type de retour ne peut pas être spécifié.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- L'introduction du spécificateur de type `decltype` permet à un développeur d'obtenir le type de l'expression retournée par la fonction de modèle. Utilisez le *syntaxe de déclaration de fonction autre* qui est illustrée plus loin, le `auto` (mot clé) et le `decltype` pour déclarer spécificateur de type un *spécifié à la fin* type de retour. Le type de retour spécifié à la fin est déterminé lors de la compilation de la déclaration, plutôt que lors de son codage.  
+ L'introduction du spécificateur de type `decltype` permet à un développeur d'obtenir le type de l'expression retournée par la fonction de modèle. Utilisez le *syntaxe de déclaration de fonction autre* qui est présenté plus loin, le **automatique** mot clé et le `decltype` spécificateur pour déclarer de type un *spécifié à la fin* type de retour. Le type de retour spécifié à la fin est déterminé lors de la compilation de la déclaration, plutôt que lors de son codage.  
   
- Le prototype suivant illustre la syntaxe d'une autre déclaration de fonction. Notez que la `const` et `volatile` qualificateurs et le `throw` [spécification d’exception](../cpp/exception-specifications-throw-cpp.md) sont facultatifs. Le *function_body* espace réservé représente une instruction composée qui spécifie ce que fait la fonction. En matière de codage pratique, le *expression* espace réservé dans le `decltype` instruction doit correspondre à l’expression spécifiée par le `return` instruction, le cas échéant, dans le *function_body*.  
+ Le prototype suivant illustre la syntaxe d'une autre déclaration de fonction. Notez que le **const** et **volatile** qualificateurs et le **lever** [spécification d’exception](../cpp/exception-specifications-throw-cpp.md) sont facultatifs. Le *function_body* espace réservé représente une instruction composée qui spécifie ce que fait la fonction. En matière de codage pratique, le *expression* espace réservé dans le `decltype` instruction doit correspondre à l’expression spécifiée par le **retourner** instruction, le cas échéant, dans le *function_body* .  
   
  **Auto** *function_name* **(** *paramètres*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *expression* **)** **lever**<sub>opt</sub> **{** *function_body* **};**  
   
@@ -183,7 +183,7 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>Exemple
-**Visual Studio 2017 et versions ultérieur :** le compilateur analyse decltype arguments lorsque les modèles sont déclarés et non instanciés. Ainsi, si une spécialisation non dépendante est trouvée dans l’argument decltype, elle n’est pas reportée à l’instanciation et est traitée immédiatement, et toute erreur résultante est diagnostiquée à ce moment-là.
+**Visual Studio 2017 et versions ultérieur :** le compilateur analyse les arguments decltype quand les modèles sont déclarés et non instanciés. Ainsi, si une spécialisation non dépendante est trouvée dans l’argument decltype, elle n’est pas reportée à l’instanciation et est traitée immédiatement, et toute erreur résultante est diagnostiquée à ce moment-là.
 
 L’exemple suivant montre une erreur de compilateur de ce type générée au moment de la déclaration :
 
@@ -206,8 +206,8 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Visual C++ 2010 ou versions ultérieures.  
   
- `decltype(auto)` requiert Visual Studio 2015 ou version ultérieure.  
+ `decltype(auto)` nécessite Visual Studio 2015 ou version ultérieure.  
   

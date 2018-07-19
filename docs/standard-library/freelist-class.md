@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954110"
 ---
 # <a name="freelist-class"></a>freelist, classe
 
@@ -43,12 +43,12 @@ class freelist
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Sz`|Nombre d’éléments du tableau à allouer.|
-|`Max`|Classe max représentant le nombre maximal d’éléments à stocker dans la liste de libération. La classe max peut être [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) ou[max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|Nombre d’éléments du tableau à allouer.|
+|*Max*|Classe max représentant le nombre maximal d’éléments à stocker dans la liste de libération. La classe max peut être [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) ou[max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle gère une liste de blocs de mémoire de taille `Sz` avec la longueur maximale de la liste déterminée par la classe max passée dans `Max`.
+Cette classe de modèle gère une liste de blocs de mémoire de taille *Sz* avec la longueur maximale de la liste déterminée par la classe max passée dans *Max*.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -63,7 +63,7 @@ Cette classe de modèle gère une liste de blocs de mémoire de taille `Sz` avec
 |[pop](#pop)|Supprime le premier bloc de mémoire de la liste de libération.|
 |[push](#push)|Ajoute un bloc de mémoire à la liste.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -93,7 +93,7 @@ Retourne un pointeur vers le bloc de mémoire supprimé de la liste.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `NULL` si la liste est vide. Sinon, elle supprime le premier bloc de mémoire de la liste.
+La fonction membre retourne NULL si la liste est vide. Sinon, elle supprime le premier bloc de mémoire de la liste.
 
 ## <a name="push"></a>  freelist::push
 
@@ -107,15 +107,15 @@ bool push(void* ptr);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le bloc de mémoire à ajouter à la liste de libération.|
+|*ptr*|Pointeur vers le bloc de mémoire à ajouter à la liste de libération.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la fonction `full` de la classe max retourne `false` ; sinon, la fonction `push` retourne `false`.
+**true** si le `full` fonction de la classe max retourne **false**; sinon, le `push` fonction renvoie **false**.
 
 ### <a name="remarks"></a>Notes
 
-Si la fonction `full` de la classe max retourne `false`, cette fonction membre ajoute le bloc de mémoire désigné par `ptr` au début de la liste.
+Si le `full` fonction de la classe max retourne **false**, cette fonction membre ajoute le bloc de mémoire vers lequel pointé *ptr* au début de la liste.
 
 ## <a name="see-also"></a>Voir aussi
 

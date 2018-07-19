@@ -1,5 +1,5 @@
 ---
-title: Classe de CComAllocator | Documents Microsoft
+title: Ccomallocator, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358275"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881921"
 ---
-# <a name="ccomallocator-class"></a>Classe de CComAllocator
+# <a name="ccomallocator-class"></a>Ccomallocator, classe
 Cette classe fournit des méthodes pour la gestion de la mémoire à l’aide des routines de mémoire COM.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -43,13 +43,13 @@ class CComAllocator
 |Nom|Description|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|Appelez cette méthode statique pour allouer de mémoire.|  
-|[CComAllocator::Free](#free)|Appelez cette méthode statique pour libérer de la mémoire allouée.|  
+|[CComAllocator::Free](#free)|Appelez cette méthode statique pour libérer la mémoire allouée.|  
 |[CComAllocator::Reallocate](#reallocate)|Appelez cette méthode statique pour réallouer la mémoire.|  
   
 ## <a name="remarks"></a>Notes  
  Cette classe est utilisée par [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) pour fournir des routines d’allocation de la mémoire COM. La classe équivalent, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fournit les mêmes méthodes à l’aide des routines CRT.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="allocate"></a>  CComAllocator::Allocate  
@@ -60,7 +60,7 @@ static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBytes`  
+ *nBytes*  
  Nombre d'octets à allouer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -70,14 +70,14 @@ static void* Allocate(size_t nBytes) throw();
  Alloue de la mémoire. Consultez [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) pour plus d’informations.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
- Appelez cette fonction statique pour libérer de la mémoire allouée.  
+ Appelez cette fonction statique pour libérer la mémoire allouée.  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire allouée.  
   
 ### <a name="remarks"></a>Notes  
@@ -91,10 +91,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire allouée.  
   
- `nBytes`  
+ *nBytes*  
  Nombre d'octets à réallouer.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -104,6 +104,6 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Redimensionne la quantité de mémoire allouée. Consultez [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
- [Classe de CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+ [CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)   
+ [Ccrtallocator, classe](../../atl/reference/ccrtallocator-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

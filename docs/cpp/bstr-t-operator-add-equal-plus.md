@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::operator +=, + | Documents Microsoft
+title: _bstr_t::operator +=, + | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942690"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Section spécifique à Microsoft**  
@@ -33,42 +34,32 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator+=(  
-   const _bstr_t& s1   
-);  
-_bstr_t operator+(  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const char* s2,  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const wchar_t* s3,  
-   const _bstr_t& s1   
-);  
+_bstr_t& operator+=( const _bstr_t& s1 );  
+_bstr_t operator+( const _bstr_t& s1 );  
+friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
+friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *S1*  
+ *s1*  
  Objet `_bstr_t`.  
   
- *S2*  
+ *s2*  
  Chaîne multioctet.  
   
- `s3`  
+ *S3*  
  Chaîne Unicode.  
   
 ## <a name="remarks"></a>Notes  
  Ces opérateurs exécutent une concaténation de chaînes :  
   
--   **opérateur += (***s1***)** ajoute caractères encapsulé `BSTR` de *s1* à la fin de encapsuléedel’objet`BSTR`.      
+-   **operator += (***s1***)** ajoute les caractères dans encapsulé `BSTR` de *s1* à la fin de encapsulédecetobjet`BSTR`.      
   
--   **operator + (***s1***)** retourne le nouvel `_bstr_t` qui est formé en concaténant de cet objet `BSTR` avec celle de *s1*.      
+-   **operator + (***s1***)** retourne le nouvel `_bstr_t` qui est formé en concaténant de cet objet `BSTR` avec celui de *s1*.      
   
--   **operator + (***s2***&#124;***s1***)** retourne un nouveau `_bstr_t` qui est formé en concaténant une chaîne multioctet *s2*, il est converti au format Unicode, avec la `BSTR` encapsulé dans *s1*.          
+-   **operator + (***s2***&#124;***s1***)** retourne un nouvel `_bstr_t` qui est formé en concaténant une chaîne multioctet *s2*, converti en Unicode, avec le `BSTR` encapsulé dans *s1*.          
   
--   **operator + (** `s3` **,***s1***)** retourne un nouveau `_bstr_t` qui est formé en concaténant une chaîne Unicode `s3` avec le `BSTR` encapsulé dans *s1*.        
+-   **operator + (***s3* **,***s1***)** retourne un nouvel `_bstr_t` formé en concaténant une chaîne Unicode *s3* avec la `BSTR` encapsulé dans *s1*.        
   
  **FIN de la section spécifique à Microsoft**  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844131"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954029"
 ---
 # <a name="isintegral-class"></a>is_integral, classe
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est l'un des types intégraux ou une forme `cv-qualified` de l'un des types intégraux. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un des types intégraux, ou un `cv-qualified` formulaire d’un des types intégraux, sinon, sa valeur est false.
 
-`bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` et `unsigned long` sont des types intégraux. En outre, avec les compilateurs qui les fournissent, un type intégral peut être `long long`, `unsigned long long`, `__int64` ou `unsigned __int64`.
+Un type intégral est un des **bool**, **char**, **unsigned char**, **signé char**, **wchar_t**, **court**, **unsigned short**, **int**, **unsigned int**, **long**et **long non signé**. En outre, avec les compilateurs qui les fournissent, un type intégral peut s’agir de **longue**, **unsigned long long**, **__int64**, et **unsigned __int64**.
 
 ## <a name="example"></a>Exemple
 
@@ -78,7 +78,7 @@ is_integral<int> == true
 is_integral<float> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

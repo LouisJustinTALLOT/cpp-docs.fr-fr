@@ -1,5 +1,5 @@
 ---
-title: Comportement non standard | Documents Microsoft
+title: Comportement non standard | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420293"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941796"
 ---
 # <a name="nonstandard-behavior"></a>Comportement non standard
 Les sections suivantes répertorient certaines des situations dans lesquelles l'implémentation Visual C++ n'est pas conforme à la norme C++. Les numéros de section ci-dessous correspondent aux numéros de section de la norme C++11 (ISO/IEC 14882:2011(E)).  
   
- Donne la liste des limites du compilateur qui diffèrent de ceux définis dans la norme C++ [limites du compilateur](../cpp/compiler-limits.md).  
+ La liste des limites du compilateur qui diffèrent de celles définies dans la norme C++ est indiquée dans [limites du compilateur](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Types de retour covariant  
- Les classes de base virtuelle ne sont pas prises en charge en tant que types de retour covariants lorsque la fonction virtuelle a un nombre d'arguments variable. Ceci n'est pas conforme à la section 10.3, paragraphe 7 de la spécification ISO C++. L’exemple suivant ne se compile pas, donnant l’erreur du compilateur [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Les classes de base virtuelle ne sont pas prises en charge en tant que types de retour covariants lorsque la fonction virtuelle a un nombre d'arguments variable. Ceci n'est pas conforme à la section 10.3, paragraphe 7 de la spécification ISO C++. L’exemple suivant n’est pas compilé, ce qui donne d’erreur du compilateur [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -71,7 +71,7 @@ int main() {
 ```  
   
 ## <a name="function-exception-specifiers"></a>Spécificateurs d'exceptions de fonctions  
- Les spécificateurs d'exceptions de fonction autres que `throw()` sont analysés, mais pas utilisés. Ceci n'est pas conforme à la section 15.4 de la spécification ISO C++. Par exemple :  
+ Les spécificateurs d'exceptions de fonction autres que `throw()` sont analysés, mais pas utilisés. Ceci n'est pas conforme à la section 15.4 de la spécification ISO C++. Exemple :  
   
 ```cpp  
 void f() throw(int); // parsed but not used  
@@ -81,7 +81,7 @@ void g() throw();    // parsed and used
  Pour plus d’informations sur les spécifications d’exceptions, consultez [les spécifications d’exceptions](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- La norme C++ [char_traits::eof](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à un serveur valide `char_type` valeur. Le compilateur Visual C++ applique cette contrainte pour le type `char`, mais pas pour le type `wchar_t`. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.  
+ La norme C++ stipule que [char_traits::eof](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à un valide `char_type` valeur. Le compilateur Visual C++ applique cette contrainte de type **char**, mais pas pour le type `wchar_t`. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.  
   
 ```cpp  
 #include <iostream>  

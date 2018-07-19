@@ -1,5 +1,5 @@
 ---
-title: Classe de CInterfaceArray | Documents Microsoft
+title: Cinterfacearray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359460"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882711"
 ---
-# <a name="cinterfacearray-class"></a>Classe de CInterfaceArray
+# <a name="cinterfacearray-class"></a>Cinterfacearray, classe
 Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs d’interface COM.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `I`  
- Une interface COM en spécifiant le type de pointeur à stocker.  
+ *I*  
+ Une interface COM qui spécifie le type de pointeur à stocker.  
   
- `piid`  
- Un pointeur vers l’IID de `I`.  
+ *piid*  
+ Un pointeur vers l’IID de *je*.  
   
 ## <a name="members"></a>Membres  
   
@@ -50,19 +50,19 @@ class CInterfaceArray :
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Le constructeur pour le tableau de l’interface.|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Le constructeur pour le tableau d’interfaces.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe fournit un constructeur et les méthodes dérivées pour la création d’un tableau de pointeurs d’interface COM. Utilisez [CInterfaceList](../../atl/reference/cinterfacelist-class.md) lorsqu’une liste est requise.  
+ Cette classe fournit un constructeur et les méthodes dérivées pour la création d’un tableau de pointeurs d’interface COM. Utilisez [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quand une liste est requise.  
   
- Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CAtlArray`  
   
  `CInterfaceArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray  
@@ -76,7 +76,7 @@ CInterfaceArray() throw();
  Initialise le tableau de pointeurs intelligents.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe CAtlArray](../../atl/reference/catlarray-class.md)   
- [Classe de CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [Classe de CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+ [CAtlArray, classe](../../atl/reference/catlarray-class.md)   
+ [CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)   
+ [Ccomqiptrelementtraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

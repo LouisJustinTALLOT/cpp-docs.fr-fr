@@ -1,5 +1,5 @@
 ---
-title: Classe de CComHeap | Documents Microsoft
+title: Ccomheap, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359861"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881602"
 ---
-# <a name="ccomheap-class"></a>Classe de CComHeap
-Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions d’allocation de mémoire COM.  
+# <a name="ccomheap-class"></a>Ccomheap, classe
+Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) en utilisant les fonctions d’allocation de mémoire COM.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class CComHeap : public IAtlMemMgr
 |[CComHeap::Reallocate](#reallocate)|Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.|  
   
 ## <a name="remarks"></a>Notes  
- `CComHeap` implémente des fonctions d’allocation de mémoire à l’aide des fonctions d’allocation du COM, y compris [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)et [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). La quantité maximale de mémoire pouvant être allouée est égale à **INT_MAX** (2147483647) octets.  
+ `CComHeap` implémente les fonctions d’allocation de mémoire à l’aide des fonctions d’allocation du COM, y compris [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)et [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). La quantité maximale de mémoire pouvant être allouée est égale à INT_MAX (2147483647) octets.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -62,7 +62,7 @@ class CComHeap : public IAtlMemMgr
   
  `CComHeap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ATLComMem.h  
   
 ##  <a name="allocate"></a>  CComHeap::Allocate  
@@ -73,7 +73,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBytes`  
+ *nBytes*  
  Nombre demandé d'octets dans le nouveau bloc de mémoire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -82,7 +82,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Notes  
  Appelez [CComHeap::Free](#free) ou [CComHeap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.  
   
- Implémentation à l’aide [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
+ Implémenté à l’aide [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
 ##  <a name="free"></a>  CComHeap::Free  
  Appelez cette méthode pour libérer un bloc de mémoire allouée par ce gestionnaire de mémoire.  
@@ -92,11 +92,11 @@ virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire. NULL est une valeur valide et ne fait rien.  
   
 ### <a name="remarks"></a>Notes  
- Implémentation à l’aide [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
+ Implémenté à l’aide [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
  Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.  
@@ -106,14 +106,14 @@ virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la taille du bloc de mémoire allouée en octets.  
+ Retourne la taille de bloc de mémoire alloué en octets.  
   
 ### <a name="remarks"></a>Notes  
- Implémentation à l’aide [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
+ Implémenté à l’aide [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
 ##  <a name="reallocate"></a>  CComHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
@@ -123,10 +123,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire.  
   
- `nBytes`  
+ *nBytes*  
  Nombre demandé d'octets dans le nouveau bloc de mémoire.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -135,13 +135,13 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Notes  
  Appelez [CComHeap::Free](#free) pour libérer la mémoire allouée par cette méthode.  
   
- Implémentation à l’aide [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
+ Implémenté à l’aide [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
   
 ## <a name="see-also"></a>Voir aussi  
- [DynamicConsumer, exemple](../../visual-cpp-samples.md)   
+ [Exemple DynamicConsumer](../../visual-cpp-samples.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Classe de CWin32Heap](../../atl/reference/cwin32heap-class.md)   
- [Classe de CLocalHeap](../../atl/reference/clocalheap-class.md)   
- [Classe de CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
- [Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+ [Clocalheap, classe](../../atl/reference/clocalheap-class.md)   
+ [Cglobalheap, classe](../../atl/reference/cglobalheap-class.md)   
+ [Ccrtheap, classe](../../atl/reference/ccrtheap-class.md)   
  [IAtlMemMgr, classe](../../atl/reference/iatlmemmgr-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Classe de CAtlBaseModule | Documents Microsoft
+title: Catlbasemodule, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,14 +25,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07f1252fe993ff2f2e646528996c1a53d25c5a63
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bb470030984f83eaf7949f0889546129e96c40
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360317"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880766"
 ---
-# <a name="catlbasemodule-class"></a>Classe de CAtlBaseModule
+# <a name="catlbasemodule-class"></a>Catlbasemodule, classe
 Cette classe est instanciée dans chaque projet ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -67,16 +67,16 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Une variable qui indique si l’initialisation du module a échoué.|  
   
 ## <a name="remarks"></a>Notes  
- Une instance de `CAtlBaseModule` _AtlBaseModule nommé est présent dans chaque projet ATL, qui contient un handle vers l’instance de module, un handle vers le module qui contient les ressources (par défaut, sont les mêmes) et un tableau de handles aux modules fournissant principal ressources. `CAtlBaseModule` rendre accessible à partir de plusieurs threads.  
+ Une instance de `CAtlBaseModule` _AtlBaseModule nommé est présent dans chaque projet ATL, qui contient un pointeur vers l’instance de module, un handle vers le module contenant les ressources (par défaut, sont les mêmes) et un tableau de handles aux modules fournissant principal ressources. `CAtlBaseModule` être accessibles en toute sécurité à partir de plusieurs threads.  
   
- Cette classe remplace l’obsolète [CComModule](../../atl/reference/ccommodule-class.md) classe utilisée dans les versions antérieures d’ATL.  
+ Cette classe remplace obsolète [CComModule](../../atl/reference/ccommodule-class.md) classe utilisée dans les versions antérieures de l’ATL.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)  
   
  `CAtlBaseModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance  
@@ -87,11 +87,11 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hInst`  
+ *hInst*  
  L’instance de la ressource à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si la ressource a été correctement ajouté, false dans le cas contraire.  
+ Retourne la valeur true si la ressource a été correctement ajouté, false sinon.  
   
 ##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule  
  Constructeur.  
@@ -112,7 +112,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
   
 ### <a name="parameters"></a>Paramètres  
  *i*  
- Le numéro de l’instance de la ressource.  
+ Le nombre de l’instance de ressource.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le handle vers l’instance de la ressource, ou NULL si aucune instance de ressource correspondant n’existe.  
@@ -155,11 +155,11 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hInst`  
+ *hInst*  
  L’instance de la ressource à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si la ressource a été supprimée avec succès.  
+ Retourne la valeur true si la ressource a été supprimé avec succès.  
   
 ##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance  
  Définit l’instance de ressource d’un `CAtlBaseModule` objet.  
@@ -169,7 +169,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hInst`  
+ *hInst*  
  La nouvelle instance de la ressource.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -177,4 +177,4 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
- [Module (Classes)](../../atl/atl-module-classes.md)
+ [Classes de module](../../atl/atl-module-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: À l’aide de sortie ou de retour | Documents Microsoft
+title: À l’aide de sortie ou de retour | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942666"
 ---
 # <a name="using-exit-or-return"></a>Utilisation d'exit ou return
-Lorsque vous appelez **quitter** ou exécuter un `return` instruction à partir de **principal**, les objets statiques sont détruits dans l’ordre inverse de leur initialisation. L'exemple suivant montre comment ce type d'initialisation et de nettoyage fonctionne.  
+Lorsque vous appelez **quitter** ou exécuter un **retourner** instruction à partir de `main`, les objets statiques sont détruits dans l’ordre inverse de leur initialisation. L'exemple suivant montre comment ce type d'initialisation et de nettoyage fonctionne.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- Dans l'exemple précédent, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l'entrée dans `main`. Une fois ce programme terminé avec l'instruction `return`, le premier objet `sd2` est détruit, puis `sd1`. Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques.   
+ Dans l'exemple précédent, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l'entrée dans `main`. Après la fin de ce programme à l’aide de la **retourner** instruction, première `sd2` est détruite, puis `sd1`. Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques.   
   
  Une autre façon d'écrire ce code consiste à déclarer les objets `ShowData` avec portée de bloc, ce qui permet leur description lorsqu'ils sont hors de portée :  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

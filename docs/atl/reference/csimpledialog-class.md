@@ -1,5 +1,5 @@
 ---
-title: Classe de CSimpleDialog | Documents Microsoft
+title: CSimpleDialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0c713781ff6c780e63fdf19545f83bf693a081b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362385"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881657"
 ---
-# <a name="csimpledialog-class"></a>CSimpleDialog (classe)
+# <a name="csimpledialog-class"></a>CSimpleDialog, classe
 Cette classe implémente une boîte de dialogue modale base.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -44,7 +44,7 @@ class CSimpleDialog : public CDialogImplBase
  L’ID de ressource de la ressource de modèle de boîte de dialogue.  
   
  *t_bCenter*  
- **TRUE** si l’objet de la boîte de dialogue est centrée sur la fenêtre propriétaire ; sinon **FALSE**.  
+ TRUE si l’objet de la boîte de dialogue doit être centrée sur la fenêtre propriétaire ; Sinon, FALSE.  
   
 ## <a name="members"></a>Membres  
   
@@ -55,7 +55,7 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Crée une boîte de dialogue modale.|  
   
 ## <a name="remarks"></a>Notes  
- Implémente une boîte de dialogue modale avec les fonctionnalités de base. `CSimpleDialog` prend en charge uniquement les contrôles communs Windows. Pour créer et afficher une boîte de dialogue modale, créez une instance de cette classe, en fournissant le nom d’un modèle de ressource existant pour la boîte de dialogue. L’objet de boîte de dialogue se ferme lorsque l’utilisateur clique sur un contrôle avec une valeur prédéfinie (par exemple, IDOK ou IDCANCEL).  
+ Implémente une boîte de dialogue modale avec les fonctionnalités de base. `CSimpleDialog` prend en charge uniquement les contrôles communs Windows. Pour créer et afficher une boîte de dialogue modale, créez une instance de cette classe, en fournissant le nom d’un modèle de ressource existant pour la boîte de dialogue. L’objet de boîte de dialogue se ferme lorsque l’utilisateur clique sur n’importe quel contrôle avec une valeur prédéfinie (par exemple, IDOK ou IDCANCEL).  
   
  `CSimpleDialog` vous permet de créer uniquement des boîtes de dialogue modales. `CSimpleDialog` Fournit la procédure de boîte de dialogue, qui utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.  
   
@@ -66,7 +66,7 @@ class CSimpleDialog : public CDialogImplBase
   
  `CSimpleDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="domodal"></a>  CSimpleDialog::DoModal  
@@ -77,8 +77,8 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWndParent`  
- Handle vers le parent de la boîte de dialogue. Si aucune valeur n’est fournie, le parent est défini à la fenêtre active.  
+ *hWndParent*  
+ Handle vers le parent de la boîte de dialogue. Si aucune valeur n’est fournie, le parent est défini à la fenêtre actuellement active.  
   
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, la valeur de retour est l’ID de ressource du contrôle qui a fermé la boîte de dialogue.  

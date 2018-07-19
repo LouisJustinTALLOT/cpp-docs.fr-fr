@@ -1,5 +1,5 @@
 ---
-title: Classe de CAtlFileMappingBase | Documents Microsoft
+title: Catlfilemappingbase, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364442"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883243"
 ---
-# <a name="catlfilemappingbase-class"></a>Classe de CAtlFileMappingBase
+# <a name="catlfilemappingbase-class"></a>Catlfilemappingbase, classe
 Cette classe représente un fichier mappé en mémoire.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,24 +61,24 @@ class CAtlFileMappingBase
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Appelez cette méthode pour copier à partir d’un objet de mappage de fichier.|  
 |[CAtlFileMappingBase::GetData](#getdata)|Appelez cette méthode pour obtenir les données à partir d’un objet de mappage de fichier.|  
 |[CAtlFileMappingBase::GetHandle](#gethandle)|Appelez cette méthode pour retourner le handle de fichier.|  
-|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Appelez cette méthode pour obtenir la taille du mappage d’un objet de mappage de fichier.|  
+|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Appelez cette méthode pour obtenir la taille de mappage à partir d’un objet de mappage de fichier.|  
 |[CAtlFileMappingBase::MapFile](#mapfile)|Appelez cette méthode pour créer un objet de mappage de fichier.|  
 |[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Appelez cette méthode pour créer un objet de mappage de fichier qui permet un accès total à tous les processus.|  
-|[CAtlFileMappingBase::OpenMapping](#openmapping)|Appelez cette méthode pour retourner un handle vers l’objet de mappage de fichier.|  
+|[CAtlFileMappingBase::OpenMapping](#openmapping)|Appelez cette méthode pour retourner un handle à l’objet de mappage de fichier.|  
 |[CAtlFileMappingBase::Unmap](#unmap)|Appelez cette méthode pour annuler le mappage d’un objet de mappage de fichier.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::operator =](#operator_eq)|Définit l’objet de mappage de fichier actuel dans un autre objet de mappage de fichier.|  
+|[CAtlFileMappingBase::operator =](#operator_eq)|Définit l’objet de mappage de fichier en cours à un autre objet de mappage de fichier.|  
   
 ## <a name="remarks"></a>Notes  
- Le mappage de fichier est l’association du contenu d’un fichier avec une partie de l’espace d’adressage virtuel d’un processus. Cette classe fournit des méthodes pour la création d’objets de mappage de fichier qui autorise les programmes d’accéder facilement et partager des données.  
+ Mappage de fichier est l’association du contenu d’un fichier avec une partie de l’espace d’adressage virtuel d’un processus. Cette classe fournit des méthodes permettant de créer des objets de mappage de fichier qui autorisent des programmes d’accéder facilement et partager des données.  
   
- Pour plus d’informations, consultez [mappage de fichier](http://msdn.microsoft.com/library/windows/desktop/aa366556) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations, consultez [fichier mappage](http://msdn.microsoft.com/library/windows/desktop/aa366556) dans le SDK Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlfile.h  
   
 ##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
@@ -90,11 +90,11 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `orig`  
+ *orig*  
  L’objet de mappage de fichier d’origine à copier pour créer le nouvel objet.  
   
 ### <a name="remarks"></a>Notes  
- Crée un nouvel objet de mappage de fichier, si vous le souhaitez à l’aide d’un objet existant. Il est toujours nécessaire d’appeler [CAtlFileMappingBase::MapFile](#mapfile) à ouvrir ou créer l’objet de mappage de fichier pour un fichier particulier.  
+ Crée un nouvel objet de mappage de fichier, éventuellement à l’aide d’un objet existant. Il est toujours nécessaire d’appeler [CAtlFileMappingBase::MapFile](#mapfile) à ouvrir ou créer l’objet de mappage de fichier pour un fichier particulier.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
@@ -107,7 +107,7 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Libère les ressources allouées par la classe et les appels de la [CAtlFileMappingBase::Unmap](#unmap) (méthode).  
+ Libère toutes les ressources allouées par la classe et appelle le [CAtlFileMappingBase::Unmap](#unmap) (méthode).  
   
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  Appelez cette méthode pour copier à partir d’un objet de mappage de fichier.  
@@ -117,11 +117,11 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `orig`  
+ *orig*  
  L’objet de mappage de fichier d’origine à copier à partir de.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Appelez cette méthode pour obtenir les données à partir d’un objet de mappage de fichier.  
@@ -134,7 +134,7 @@ void* GetData() const throw();
  Retourne un pointeur vers les données.  
   
 ##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
- Appelez cette méthode pour retourner un handle vers l’objet de mappage de fichier.  
+ Appelez cette méthode pour retourner un handle à l’objet de mappage de fichier.  
   
 ```
 HANDLE GetHandle() throw ();
@@ -144,7 +144,7 @@ HANDLE GetHandle() throw ();
  Retourne un handle vers l’objet de mappage de fichier.  
   
 ##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
- Appelez cette méthode pour obtenir la taille du mappage d’un objet de mappage de fichier.  
+ Appelez cette méthode pour obtenir la taille de mappage à partir d’un objet de mappage de fichier.  
   
 ```
 SIZE_T GetMappingSize() throw();
@@ -169,26 +169,26 @@ HRESULT MapFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hFile`  
- Handle vers le fichier à partir duquel créer un objet de mappage. `hFile` doit être valide et ne peut pas être définie à INVALID_HANDLE_VALUE.  
+ *hFile*  
+ Handle au fichier à partir duquel créer un objet de mappage. *hFile* doit être valide et ne peut pas être définie sur INVALID_HANDLE_VALUE.  
   
- `nMappingSize`  
+ *nMappingSize*  
  La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle du fichier identifié par *hFile.*  
   
- `nOffset`  
- Le décalage du fichier où la correspondance doit commencer. La valeur de décalage doit être un multiple de la granularité d’allocation de mémoire du système.  
+ *nOffset*  
+ Le décalage de fichier dans lequel le mappage doit commencer. La valeur de décalage doit être un multiple de granularité d’allocation de mémoire du système.  
   
- `dwMappingProtection`  
- La protection souhaitée pour l’affichage des fichiers lorsque le fichier est mappé. Consultez `flProtect` dans [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) dans le Kit de développement logiciel Windows.  
+ *dwMappingProtection*  
+ La protection souhaitée pour l’affichage des fichiers quand le fichier est mappé. Consultez *flProtect* dans [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) dans le SDK Windows.  
   
- `dwViewDesiredAccess`  
- Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez `dwDesiredAccess` dans [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le Kit de développement logiciel Windows.  
+ *dwViewDesiredAccess*  
+ Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Après avoir créé un objet de mappage de fichier, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichier. Si c’est le cas, pas tous le contenu du fichier sera disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) et [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le Kit de développement logiciel Windows.  
+ Une fois un objet de mappage de fichier a été créé, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichier ; le cas échéant, tous le contenu du fichier sera disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) et [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -207,29 +207,29 @@ HRESULT MapSharedMem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nMappingSize`  
- La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par `szName.`  
+ *nMappingSize*  
+ La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par *szName*.  
   
- `szName`  
+ *szName*  
  Le nom de l’objet de mappage.  
   
  *pbAlreadyExisted*  
- Pointe vers une valeur Booléenne qui a la valeur TRUE si l’objet de mappage déjà existé.  
+ Pointe vers une valeur BOOL qui a la valeur TRUE si l’objet de mappage déjà existé.  
   
- `lpsa`  
- Le pointeur vers un **SECURITY_ATTRIBUTES** structure qui détermine si le handle retourné peut être hérité par les processus enfants. Consultez *lpAttributes* dans [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) dans le Kit de développement logiciel Windows.  
+ *lpsa*  
+ Le pointeur vers un `SECURITY_ATTRIBUTES` structure qui détermine si le handle retourné peut être hérité par les processus enfants. Consultez *lpAttributes* dans [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) dans le SDK Windows.  
   
- `dwMappingProtection`  
- La protection souhaitée pour l’affichage des fichiers, lorsque le fichier est mappé. Consultez `flProtect` dans **CreateFileMapping** dans le Kit de développement logiciel Windows.  
+ *dwMappingProtection*  
+ La protection souhaitée pour l’affichage des fichiers, quand le fichier est mappé. Consultez *flProtect* dans `CreateFileMapping` dans le SDK Windows.  
   
- `dwViewDesiredAccess`  
- Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez `dwDesiredAccess` dans [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le Kit de développement logiciel Windows.  
+ *dwViewDesiredAccess*  
+ Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- **MapShareMem** permet à un objet de mappage de fichier existant, créé par [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), pour être partagées entre les processus.  
+ `MapShareMem` permet à un objet de mappage de fichier existant, créé par [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), pour être partagés entre les processus.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Appelez cette méthode pour ouvrir un objet de mappage de fichier nommé pour le fichier spécifié.  
@@ -243,33 +243,33 @@ HRESULT OpenMapping(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `szName`  
- Le nom de l’objet de mappage. Si un handle est ouvert à un objet de mappage de fichier de ce nom et le descripteur de sécurité sur l’objet de mappage n’est pas en conflit avec le `dwViewDesiredAccess` paramètre, l’opération d’ouverture aboutisse.  
+ *szName*  
+ Le nom de l’objet de mappage. Si un handle est ouvert à un objet de mappage de fichier à ce nom et le descripteur de sécurité sur l’objet de mappage n’est pas en conflit avec le *dwViewDesiredAccess* paramètre, l’opération d’ouverture aboutisse.  
   
- `nMappingSize`  
- La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par `szName.`  
+ *nMappingSize*  
+ La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par *szName*.  
   
- `nOffset`  
- Le décalage du fichier où la correspondance doit commencer. La valeur de décalage doit être un multiple de la granularité d’allocation de mémoire du système.  
+ *nOffset*  
+ Le décalage de fichier dans lequel le mappage doit commencer. La valeur de décalage doit être un multiple de granularité d’allocation de mémoire du système.  
   
- `dwViewDesiredAccess`  
- Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez `dwDesiredAccess` dans [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le Kit de développement logiciel Windows.  
+ *dwViewDesiredAccess*  
+ Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produira si les paramètres d’entrée ne sont pas valides.  
   
 ##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
- Définit l’objet de mappage de fichier actuel dans un autre objet de mappage de fichier.  
+ Définit l’objet de mappage de fichier en cours à un autre objet de mappage de fichier.  
   
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `orig`  
+ *orig*  
  L’objet de mappage de fichier actuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -283,11 +283,11 @@ HRESULT Unmap() throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) dans le SDK Windows pour plus de détails.  
+ Consultez [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) dans le SDK Windows pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   
+ [Catlfilemapping, classe](../../atl/reference/catlfilemapping-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

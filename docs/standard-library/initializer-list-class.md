@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954052"
 ---
 # <a name="initializerlist-class"></a>initializer_list, classe
 
@@ -44,7 +44,7 @@ class initializer_list
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Type`|Type de données d'élément à stocker dans le `initializer_list`.|
+|*Type*|Type de données d'élément à stocker dans le `initializer_list`.|
 
 
 ## <a name="remarks"></a>Notes
@@ -82,7 +82,7 @@ Le compilateur transforme les listes d'initialiseurs entre accolades avec des é
 |[end](#end)|Retourne un pointeur vers la position au-delà du dernier élément dans un `initializer_list`.|
 |[size](#size)|Retourne le nombre d'éléments d'un `initializer_list`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<initializer_list>
 
@@ -127,8 +127,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`First`|Position du premier élément de la plage d'éléments à copier.|
-|`Last`|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*Premier*|Position du premier élément de la plage d'éléments à copier.|
+|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
 
 ### <a name="remarks"></a>Notes
 

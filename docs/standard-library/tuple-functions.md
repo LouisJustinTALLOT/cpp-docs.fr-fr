@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858810"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966405"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt;, fonctions
 
@@ -64,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Paramètres
 
-`Index` Index de l’élément à obtenir.
+*Index*  
+ Index de l’élément à obtenir.
 
-`Types` La séquence de types déclarés dans le tuple dans l’ordre de déclaration.
+*Types*  
+ Séquence de types déclarés dans le tuple dans l’ordre de déclaration.
 
-`T` Le type de l’élément à obtenir.
+*T*  
+ Type de l’élément à obtenir.
 
-`Tuple` Std::tuple contenant n’importe quel nombre d’éléments.
+*Tuple*  
+ Std::tuple contenant n’importe quel nombre d’éléments.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions de modèle retournent une référence à la valeur à l'index `Index`ou de type `T` dans l'objet `tuple` .
+Les fonctions de modèle retournent une référence à la valeur à l’index *Index*, ou de type *T* dans le `tuple` objet.
 
 L'appel de `get<T>(Tuple)` génère une erreur de compilation si le Tuple ne contient pas un seul élément de type T.
 
@@ -118,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Paramètres
 
-`TN` Le type du paramètre Nth (fonction).
+*TN*  
+ Type du N-ième paramètre de fonction.
 
-`tN` La valeur du paramètre Nth (fonction).
+*tN*  
+ Valeur du N-ième paramètre de fonction.
 
 ### <a name="remarks"></a>Notes
 
@@ -174,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Paramètres
 
-`TN` Le type de base du nième élément de tuple.
+*TN*  
+ Type de base du N-ième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 

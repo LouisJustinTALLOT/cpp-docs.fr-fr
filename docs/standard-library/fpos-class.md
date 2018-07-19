@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848633"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966600"
 ---
 # <a name="fpos-class"></a>fpos, classe
 
@@ -34,7 +34,7 @@ La classe de modèle décrit un objet qui peut stocker toutes les informations n
 
 - Un décalage d’octet de type [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Un état de conversion utilisable par un objet de classe basic_filebuf de type **St**, généralement `mbstate_t`.
+- Un état de conversion, utilisable par un objet de classe basic_filebuf, de type `St`, généralement `mbstate_t`.
 
 Il peut également stocker une position de fichier arbitraire, utilisable par un objet de classe [basic_filebuf](../standard-library/basic-filebuf-class.md) de type `fpos_t`. Cependant, pour un environnement avec une taille de fichier limitée, `streamoff` et `fpos_t` peuvent parfois être utilisés de manière interchangeable. Pour un environnement où aucun flux de données n'a un encodage de dépendance d'état, `mbstate_t` peut être inutilisé. Ainsi, le nombre d'objets membres stockés peut varier.
 
@@ -74,7 +74,7 @@ class fpos
 |[operator==](#op_eq_eq)|Teste l'égalité d'indicateurs de position de fichier.|
 |[operator streamoff](#op_streamoff)|Convertit un objet de type `fpos` en objet de type `streamoff`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<ios>
 
@@ -92,17 +92,17 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Offset dans le flux de données.
+*_Off* offset dans le flux de données.
 
-`_State` L’état de départ de la `fpos` objet.
+*_State* l’état de départ de la `fpos` objet.
 
 *_Filepos* offset dans le flux de données.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur stocke le décalage `_Off` par rapport au début du fichier et dans l’état de conversion initial (si c’est important). Si `_Off` est -1, l’objet résultant représente une position de flux non valide.
+Le premier constructeur stocke le décalage *_Off*, par rapport au début du fichier et dans l’état de conversion initial (si c’est important). Si *_Off* est -1, l’objet résultant représente une position de flux non valide.
 
-Le deuxième constructeur stocke un décalage de zéro et l’objet `_State`.
+Le deuxième constructeur stocke un décalage de zéro et de l’objet *_State*.
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -114,7 +114,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` L’indicateur de position de fichier avec lequel comparer.
+*droit* l’indicateur de position de fichier avec lequel comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -186,7 +186,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Le décalage en fonction duquel vous voulez incrémenter l’indicateur de position de fichier.
+*_Off* le décalage en fonction duquel vous voulez incrémenter l’indicateur de position de fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -210,7 +210,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Le décalage en fonction duquel vous voulez incrémenter l’indicateur de position de fichier.
+*_Off* le décalage en fonction duquel vous voulez incrémenter l’indicateur de position de fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -218,7 +218,7 @@ Position dans le fichier.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre ajoute `_Off` à l’objet membre de décalage stocké et retourne ensuite **\*this**. Pour le positionnement dans un fichier, le résultat est généralement valide uniquement pour les flux binaires qui n’ont pas de codage dépendant de l’état.
+La fonction membre ajoute *_Off* à l’objet de membre de décalage stocké et renvoie ensuite  **\*cela**. Pour le positionnement dans un fichier, le résultat est généralement valide uniquement pour les flux binaires qui n’ont pas de codage dépendant de l’état.
 
 ### <a name="example"></a>Exemple
 
@@ -236,9 +236,9 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Position de fichier.
+*droit* position de fichier.
 
-`_Off` Décalage de flux.
+*_Off* décalage de Stream.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -258,7 +258,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Décalage de flux.
+*_Off* décalage de Stream.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` L’indicateur de position de fichier avec lequel comparer.
+*droit* l’indicateur de position de fichier avec lequel comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -355,7 +355,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Paramètres
 
-`_State` Le nouvel état de conversion.
+*_State* le nouvel état de conversion.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -363,7 +363,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre retourne la valeur stockée dans l’objet membre **St**. La deuxième fonction de membre stocke `_State` dans l’objet membre **St**.
+La première fonction membre retourne la valeur stockée dans le `St` objet membre. La deuxième fonction membre stocke *_State* dans le `St` objet membre.
 
 ### <a name="example"></a>Exemple
 

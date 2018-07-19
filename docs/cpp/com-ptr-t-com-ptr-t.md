@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t | Documents Microsoft
+title: _com_ptr_t::_com_ptr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413932"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939069"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Section spécifique à Microsoft**  
@@ -143,31 +143,31 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `pInterface`  
+ *pInterface*  
  Pointeur d'interface brut.  
   
- `fAddRef`  
- Si **true**, `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.  
+ *fAddRef*  
+ Si la valeur est TRUE, `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.  
   
  *CP*  
  Objet `_com_ptr_t`.  
   
- `p`  
+ *p*  
  Pointeur d'interface brut dont le type est différent du type de pointeur intelligent de cet objet `_com_ptr_t`.  
   
  *varSrc*  
  Objet `_variant_t`.  
   
- `clsid`  
- Le **CLSID** d’une coclasse.  
+ *clsid*  
+ Le `CLSID` d’une coclasse.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Contexte d'exécution du code exécutable.  
   
  *lpcStr*  
- Chaîne multioctet qui contient un **CLSID** (en commençant par «**{**») ou un **ProgID**.  
+ Une chaîne multioctet qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.  
   
- `pOuter`  
+ *pOuter*  
  Inconnu externe pour [agrégation](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Voir aussi  

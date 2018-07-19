@@ -1,5 +1,5 @@
 ---
-title: Opérateurs de multiplication et opérateur modulo | Documents Microsoft
+title: Opérateurs de multiplication et opérateur modulo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943860"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Opérateurs de multiplication et opérateur modulo
 ## <a name="syntax"></a>Syntaxe  
@@ -51,17 +52,17 @@ expression % expression
   
  Ces opérateurs binaires ont une associativité de droite à gauche.  
   
- Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L'opérateur Modulo (`%`) a une exigence plus stricte dans le sens où ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division à virgule flottante, utilisez la fonction de l’exécution, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.  
+ Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L'opérateur Modulo (`%`) a une exigence plus stricte dans le sens où ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division à virgule flottante, utilisez la fonction de l’exécution, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions abordées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.  
   
  L’opérateur de multiplication montre le résultat de la multiplication du premier opérande par le second.  
   
  L’opérateur de division montre le résultat de la division du premier opérande par le second.  
   
- L’opérateur modulo Obtient le reste donné par l’expression suivante, où *e1* est le premier opérande et *e2* est le deuxième : *e1* -(*e1*  /  *e2*) \* *e2*, où les deux opérandes sont de types intégraux.  
+ L’opérateur modulo Obtient le reste donné par l’expression suivante, où *e1* est le premier opérande et *e2* est le deuxième : *e1* -(*e1*  /  *e2*) \* *e2*, où les deux opérandes sont des types intégraux.  
   
  La division par 0 dans une division ou une expression de modulo est éliminée et provoque une erreur d'exécution. Par conséquent, les expressions suivantes génèrent des résultats indéterminés et erronés :  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -80,9 +81,9 @@ f / 0.0
  La relation entre les opérateurs de multiplication est indiquée par l’identité (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
 ## <a name="example"></a>Exemple  
- Le programme suivant montre les opérateurs de multiplication. Notez que des opérandes de `10 / 3` doit être explicitement converti en type `float` pour éviter toute troncation afin que les deux opérandes sont de type `float` avant la division.  
+ Le programme suivant montre les opérateurs de multiplication. Notez que des opérandes de `10 / 3` doit être explicitement converti en type **float** pour éviter la troncation afin que les deux opérandes sont de type **float** avant la division.  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs binaires](../cpp/expressions-with-binary-operators.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs de multiplication C](../c-language/c-multiplicative-operators.md)

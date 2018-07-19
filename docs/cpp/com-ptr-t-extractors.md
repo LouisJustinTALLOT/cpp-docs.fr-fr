@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t, extracteurs | Documents Microsoft
+title: _com_ptr_t, extracteurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942938"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t, extracteurs
 **Section spécifique à Microsoft**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,17 +56,17 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Notes  
   
--   **Interface d’opérateur\***  retourne le pointeur d’interface encapsulé, qui peut être **NULL**.  
+-   **operator Interface\***  retourne le pointeur d’interface encapsulé, ce qui peut être NULL.  
   
--   **operator Interface &** retourne une référence au pointeur d’interface encapsulé et émet une erreur si le pointeur est **NULL**.  
+-   **operator Interface &** retourne une référence au pointeur d’interface encapsulé et émet une erreur si le pointeur est NULL.  
   
 -   **opérateur\***  permet à un objet pointeur intelligent d’agir comme s’il s’agissait de l’interface encapsulée réelle fois déréférencé.  
   
 -   **operator ->** permet à un objet pointeur intelligent d’agir comme s’il s’agissait de l’interface encapsulée réelle fois déréférencé.  
   
--   **opérateur &** libère tout pointeur d’interface encapsulé en le remplaçant par **NULL**et retourne l’adresse du pointeur encapsulé. Ainsi, le pointeur intelligent à passer par adresse à une fonction qui a un **hors** paramètre par le biais duquel elle retourne un pointeur d’interface.  
+-   **opérateur &** libère tout pointeur d’interface encapsulé, en la remplaçant par une valeur NULL et retourne l’adresse du pointeur encapsulé. Ainsi, le pointeur intelligent à passer par adresse à une fonction qui a un *out* paramètre par le biais duquel elle retourne un pointeur d’interface.  
   
--   **opérateur bool** permet à un objet pointeur intelligent à utiliser dans une expression conditionnelle. Cet opérateur retourne **true** si le pointeur n’est pas **NULL**.  
+-   **opérateur bool** permet à un objet pointeur intelligent à utiliser dans une expression conditionnelle. Cet opérateur retourne TRUE si le pointeur n’est pas NULL.  
   
  **FIN de la section spécifique à Microsoft**  
   

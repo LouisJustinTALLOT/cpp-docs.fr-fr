@@ -1,5 +1,5 @@
 ---
-title: Classe de CComSimpleThreadAllocator | Documents Microsoft
+title: Ccomsimplethreadallocator, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360918"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884663"
 ---
-# <a name="ccomsimplethreadallocator-class"></a>Classe de CComSimpleThreadAllocator
+# <a name="ccomsimplethreadallocator-class"></a>Ccomsimplethreadallocator, classe
 Cette classe gère la sélection de thread pour la classe `CComAutoThreadModule`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -46,9 +46,9 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Sélectionne un thread.|  
   
 ## <a name="remarks"></a>Notes  
- `CComSimpleThreadAllocator` gère la sélection de thread pour [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplement parcourt chaque thread et retourne le suivant dans la séquence.  
+ `CComSimpleThreadAllocator` gère la sélection de thread pour [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplement parcourt chaque thread, puis retourne le suivant dans la séquence.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
@@ -59,20 +59,20 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pApt`  
- Pas utilisé dans l’implémentation par défaut ATL.  
+ *pApt*  
+ Pas utilisé dans l’implémentation par défaut de d’ATL.  
   
- `nThreads`  
+ *nThreads*  
  Le nombre maximal de threads dans le module EXE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un entier compris entre zéro et ( `nThreads` - 1). Identifie un des threads dans le module EXE.  
+ Un entier compris entre zéro et (*nThreads* - 1). Identifie un des threads dans le module EXE.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez substituer `GetThread` pour fournir une autre méthode de sélection ou utiliser le `pApt` paramètre.  
+ Vous pouvez remplacer `GetThread` pour fournir une autre méthode de sélection ou utiliser le *pApt* paramètre.  
   
  `GetThread` est appelée par [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CComApartment](../../atl/reference/ccomapartment-class.md)   
+ [Ccomapartment, classe](../../atl/reference/ccomapartment-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

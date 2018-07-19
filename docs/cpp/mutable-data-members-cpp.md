@@ -1,5 +1,5 @@
 ---
-title: Données membres mutables (C++) | Documents Microsoft
+title: Données membres mutables (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943883"
 ---
 # <a name="mutable-data-members-c"></a>Membres de données mutables (C++)
-Ce mot clé peut être appliqué uniquement aux données membres non statiques et non constantes d'une classe. Si un membre de données est déclaré `mutable`, il est permis d’affecter une valeur à ce membre de données à partir d’un **const** fonction membre.  
+Ce mot clé peut être appliqué uniquement aux données membres non statiques et non constantes d'une classe. Si un membre de données est déclaré **mutable**, puis il est permis d’assigner une valeur à ce membre de données à partir d’un **const** fonction membre.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,9 +34,9 @@ mutable member-variable-declaration;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Par exemple, le code suivant est compilé sans erreur car `m_accessCount` a été déclaré comme étant `mutable` et peut donc être modifié par `GetFlag` bien que `GetFlag` soit une fonction membre const.  
+ Par exemple, le code suivant sera compilé sans erreur, car `m_accessCount` a été déclarée comme étant **mutable**et peut donc être modifié par `GetFlag` même si `GetFlag` est une fonction membre const.  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

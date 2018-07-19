@@ -1,5 +1,5 @@
 ---
-title: Les membres statiques (C++) | Documents Microsoft
+title: Membres statiques (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca75d2e54c951e20de842b984f8619dc6639dc00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421069"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941978"
 ---
 # <a name="static-members-c"></a>Membres statiques (C++)
 Les classes peuvent contenir des données membres et des fonctions membres statiques. Lorsqu’un membre de données est déclaré en tant que **statique**, qu’une seule copie des données est conservée pour tous les objets de la classe.
@@ -72,7 +72,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Pour que le membre statique existe, il n'est pas nécessaire que des objets du type classe existent. Les membres statiques qui sont également accessibles à l’aide de la sélection de membre (**.** et **->**) opérateurs. Par exemple :  
+ Pour que le membre statique existe, il n'est pas nécessaire que des objets du type classe existent. Les membres statiques qui sont également accessibles à l’aide de la sélection de membre (**.** et **->**) opérateurs. Exemple :  
   
 ```cpp  
 BufferedOutput Console;  
@@ -82,9 +82,9 @@ long nBytes = Console.bytecount;
   
  Dans le cas précédent, la référence à l'objet (`Console`) n'est pas évaluée ; la valeur retournée est celle de l'objet statique `bytecount`.  
   
- Les données membres statiques étant soumises à des règles d'accès de membre de classe, l'accès privé à ces données est autorisé uniquement pour les fonctions membres de classe et friend. Ces règles sont décrites dans [le contrôle d’accès de membre](../cpp/member-access-control-cpp.md). L'exception est que les données membres statiques doivent être définies dans la portée de fichier quelles que soient les restrictions d'accès. Si les données membres doivent être explicitement initialisées, un initialiseur doit être fourni avec la définition.  
+ Les données membres statiques étant soumises à des règles d'accès de membre de classe, l'accès privé à ces données est autorisé uniquement pour les fonctions membres de classe et friend. Ces règles sont décrites dans [contrôle d’accès de membre](../cpp/member-access-control-cpp.md). L'exception est que les données membres statiques doivent être définies dans la portée de fichier quelles que soient les restrictions d'accès. Si les données membres doivent être explicitement initialisées, un initialiseur doit être fourni avec la définition.  
   
- Le type d'un membre statique n'est pas qualifié par son nom de classe. Par conséquent, le type de `BufferedOutput::bytecount` est `long`.  
+ Le type d'un membre statique n'est pas qualifié par son nom de classe. Par conséquent, le type de `BufferedOutput::bytecount` est **long**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes et structs](../cpp/classes-and-structs-cpp.md)

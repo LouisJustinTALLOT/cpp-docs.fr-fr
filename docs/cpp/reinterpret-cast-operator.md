@@ -1,5 +1,5 @@
 ---
-title: Opérateur reinterpret_cast | Documents Microsoft
+title: reinterpret_cast, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942865"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast, opérateur
 Autorise la conversion de tout pointeur en tout autre type pointeur. Autorise également la conversion de tout type entier en tout type pointeur et vice versa.  
@@ -32,19 +33,19 @@ reinterpret_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>Notes  
- L'utilisation incorrecte de l'opérateur `reinterpret_cast` peut facilement présenter un risque. À moins que la conversion souhaitée soit fondamentalement de bas niveau, vous devez utiliser l'un des autres opérateurs de cast.  
+ Utilisation incorrecte de la **reinterpret_cast** opérateur peut facilement être unsafe. À moins que la conversion souhaitée soit fondamentalement de bas niveau, vous devez utiliser l'un des autres opérateurs de cast.  
   
- L'opérateur `reinterpret_cast` peut être utilisé pour des conversions comme `char*` en `int*`, ou `One_class*` en `Unrelated_class*`, qui sont fondamentalement risquées.  
+ Le **reinterpret_cast** opérateur peut être utilisé pour les conversions comme `char*` à `int*`, ou `One_class*` à `Unrelated_class*`, qui sont fondamentalement risquées.  
   
- Le résultat de `reinterpret_cast` ne peut pas être utilisé sans risque pour autre chose qu'une reconversion vers son type d'origine. Les autres utilisations sont, au mieux, non portables.  
+ Le résultat d’une **reinterpret_cast** ne peut pas être utilisé sans risque pour autre chose que la reconversion vers son type d’origine. Les autres utilisations sont, au mieux, non portables.  
   
- Le `reinterpret_cast` opérateur ne peut pas caster la **const**, `volatile`, ou **__unaligned** attributs. Consultez [opérateur const_cast](../cpp/const-cast-operator.md) pour plus d’informations sur la suppression de ces attributs.  
+ Le **reinterpret_cast** opérateur ne peut pas caster le **const**, **volatile**, ou **__unaligned** attributs. Consultez [const_cast, opérateur](../cpp/const-cast-operator.md) pour plus d’informations sur la suppression de ces attributs.  
   
- L'opérateur `reinterpret_cast` convertit une valeur de pointeur null en la valeur de pointeur null du type de destination.  
+ Le **reinterpret_cast** opérateur convertit une valeur de pointeur null à la valeur de pointeur null du type de destination.  
   
- L'une des utilisations pratiques de `reinterpret_cast` concerne les fonctions de hachage, qui mappent une valeur à un index de telle sorte que deux valeurs distinctes finissent rarement avec le même index.  
+ Une utilisation pratique de **reinterpret_cast** est dans une fonction de hachage, qui mappent une valeur à un index de telle sorte que deux distinctes des valeurs rarement fin inscrire avec le même index.  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` permet de traiter le pointeur comme un type intégral. Le résultat binaire est alors déplacé et soumis à une opération XOR avec lui-même pour produire un index unique (à un niveau de probabilité élevé). L’index est ensuite tronqué par un cast de style C standard en type de retour de la fonction.  
+ Le **reinterpret_cast** permet le pointeur est traitée comme un type intégral. Le résultat binaire est alors déplacé et soumis à une opération XOR avec lui-même pour produire un index unique (à un niveau de probabilité élevé). L’index est ensuite tronqué par un cast de style C standard en type de retour de la fonction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs de casting](../cpp/casting-operators.md)   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857813"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961056"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible, classe
 
@@ -37,13 +37,13 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est un type destructible et que le destructeur est connu du compilateur comme n’utilisant aucune opération non triviale. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est un type destructible et que le destructeur est connu au compilateur de n’utiliser aucune opération non triviale. Sinon, sa valeur est false.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

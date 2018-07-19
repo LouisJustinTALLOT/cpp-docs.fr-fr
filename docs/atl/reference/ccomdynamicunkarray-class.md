@@ -1,5 +1,5 @@
 ---
-title: Classe de CComDynamicUnkArray | Documents Microsoft
+title: Ccomdynamicunkarray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363921"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879807"
 ---
-# <a name="ccomdynamicunkarray-class"></a>Classe de CComDynamicUnkArray
-Cette classe stocke un tableau de **IUnknown** pointeurs.  
+# <a name="ccomdynamicunkarray-class"></a>Ccomdynamicunkarray, classe
+Cette classe stocke un tableau de `IUnknown` des pointeurs.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ class CComDynamicUnkArray
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Constructeur. Initialise les valeurs de la collection **NULL** et la taille de la collection à zéro.|  
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Constructeur. Initialise les valeurs NULL de la collection et la taille de la collection à zéro.|  
 |[CComDynamicUnkArray :: ~ CComDynamicUnkArray](#dtor)|Destructeur.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -60,28 +60,28 @@ class CComDynamicUnkArray
 |[CComDynamicUnkArray::Add](#add)|Appelez cette méthode pour ajouter un `IUnknown` pointeur vers le tableau.|  
 |[CComDynamicUnkArray::begin](#begin)|Retourne un pointeur vers le premier `IUnknown` pointeur dans la collection.|  
 |[CComDynamicUnkArray::clear](#clear)|Vide le tableau.|  
-|[CComDynamicUnkArray::end](#end)|Retourne un pointeur vers la position au-delà de la dernière **IUnknown** pointeur dans la collection.|  
+|[CComDynamicUnkArray::end](#end)|Retourne un pointeur vers la position au-delà de la dernière `IUnknown` pointeur dans la collection.|  
 |[CComDynamicUnkArray::GetAt](#getat)|Récupère l’élément à l’index spécifié.|  
-|[CComDynamicUnkArray::GetCookie](#getcookie)|Appelez cette méthode pour obtenir le cookie associé à une donnée **IUnknown** pointeur.|  
+|[CComDynamicUnkArray::GetCookie](#getcookie)|Appelez cette méthode pour obtenir le cookie associé à une donnée `IUnknown` pointeur.|  
 |[CComDynamicUnkArray::GetSize](#getsize)|Retourne la longueur d’un tableau.|  
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|Appelez cette méthode pour obtenir le **IUnknown** pointeur associé à un cookie donné.|  
-|[CComDynamicUnkArray::Remove](#remove)|Appelez cette méthode pour supprimer un **IUnknown** pointeur à partir du tableau.|  
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|Appelez cette méthode pour obtenir le `IUnknown` pointeur associé à un cookie donné.|  
+|[CComDynamicUnkArray::Remove](#remove)|Appelez cette méthode pour supprimer un `IUnknown` pointeur à partir du tableau.|  
   
 ## <a name="remarks"></a>Notes  
- **CComDynamicUnkArray** contient un tableau alloué dynamiquement de **IUnknown** pointeurs, chaque point d’interface sur une connexion. **CComDynamicUnkArray** peut être utilisé en tant que paramètre à la [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modèle.  
+ `CComDynamicUnkArray` contient un tableau alloué dynamiquement de `IUnknown` des pointeurs, chaque point d’interface sur une connexion. `CComDynamicUnkArray` peut être utilisé en tant que paramètre à la [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modèle.  
   
- Le **CComDynamicUnkArray** méthodes [commencer](#begin) et [fin](#end) peut être utilisé pour parcourir tous les points de connexion (par exemple, lorsqu’un événement est déclenché).  
+ Le `CComDynamicUnkArray` méthodes [commencer](#begin) et [fin](#end) peut être utilisé pour itérer sur tous les points de connexion (par exemple, lorsqu’un événement est déclenché).  
   
  Consultez [Ajout des Points de connexion à un objet](../../atl/adding-connection-points-to-an-object.md) pour plus d’informations sur l’automatisation de la création d’une connexion point proxys.  
   
 > [!NOTE]
-> **Remarque** la classe **CComDynamicUnkArray** est utilisé par le **ajouter une classe** Assistant lors de la création d’un contrôle qui a des Points de connexion. Si vous souhaitez spécifier le nombre de Points de connexion manuellement, modifiez la référence à partir de **CComDynamicUnkArray** à `CComUnkArray<` *n* `>`, où *n*est le nombre de points de connexion requises.  
+> **Remarque** la classe `CComDynamicUnkArray` est utilisé par le **ajouter une classe** Assistant lors de la création d’un contrôle qui a des Points de connexion. Si vous souhaitez spécifier manuellement le nombre de Points de connexion, modifiez la référence à partir de `CComDynamicUnkArray` à `CComUnkArray<` *n* `>`, où *n* est le nombre de points de connexion Obligatoire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="add"></a>  CComDynamicUnkArray::Add  
- Appelez cette méthode pour ajouter un **IUnknown** pointeur vers le tableau.  
+ Appelez cette méthode pour ajouter un `IUnknown` pointeur vers le tableau.  
   
 ```
 DWORD Add(IUnknown* pUnk);
@@ -89,13 +89,13 @@ DWORD Add(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Paramètres  
  *pUnk*  
- Le **IUnknown** pointeur à ajouter au tableau.  
+ Le `IUnknown` pointeur à ajouter au tableau.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le cookie associé avec le pointeur qui vient d’être ajouté.  
+ Retourne le cookie associé le pointeur qui vient d’être ajouté.  
   
 ##  <a name="begin"></a>  CComDynamicUnkArray::begin  
- Retourne un pointeur vers le début de la collection de **IUnknown** des pointeurs d’interface.  
+ Retourne un pointeur vers le début de la collection de `IUnknown` pointeurs d’interface.  
   
 ```
 IUnknown**
@@ -103,12 +103,12 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un **IUnknown** pointeur d’interface.  
+ Un pointeur vers un `IUnknown` pointeur d’interface.  
   
 ### <a name="remarks"></a>Notes  
- La collection contient des pointeurs aux interfaces stockées localement en tant que **IUnknown**. Vous effectuez un cast **IUnknown** de l’interface pour le type d’interface réelle, puis appelez par son biais. Vous n’avez pas besoin interroger tout d’abord pour l’interface.  
+ La collection contient des pointeurs aux interfaces stockés localement sous `IUnknown`. Vous effectuez un cast `IUnknown` interface pour le type d’interface réelle et puis appel via celui-ci. Il est inutile d’interroger tout d’abord pour l’interface.  
   
- Avant d’utiliser le **IUnknown** interface, vous devez vérifier qu’il n’est pas **NULL**.  
+ Avant d’utiliser le `IUnknown` interface, vous devez vérifier qu’il n’est pas NULL.  
   
 ##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Vide le tableau.  
@@ -125,7 +125,7 @@ CComDynamicUnkArray();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Définit la taille de la collection à zéro et initialise les valeurs à **NULL**. Le destructeur libère de la collection, si nécessaire.  
+ Définit la taille de la collection à zéro et initialise les valeurs NULL. Le destructeur libère la collection, si nécessaire.  
   
 ##  <a name="dtor"></a>  CComDynamicUnkArray :: ~ CComDynamicUnkArray  
  Destructeur.  
@@ -138,7 +138,7 @@ CComDynamicUnkArray();
  Libère les ressources allouées par le constructeur de classe.  
   
 ##  <a name="end"></a>  CComDynamicUnkArray::end  
- Retourne un pointeur vers la position au-delà de la dernière **IUnknown** pointeur dans la collection.  
+ Retourne un pointeur vers la position au-delà de la dernière `IUnknown` pointeur dans la collection.  
   
 ```
 IUnknown**
@@ -146,7 +146,7 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un **IUnknown** pointeur d’interface.  
+ Un pointeur vers un `IUnknown` pointeur d’interface.  
   
 ##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  Récupère l’élément à l’index spécifié.  
@@ -156,28 +156,28 @@ IUnknown* GetAt(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nIndex`  
+ *nIndex*  
  Index de l'élément à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface.  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
- Appelez cette méthode pour obtenir le cookie associé à une donnée **IUnknown** pointeur.  
+ Appelez cette méthode pour obtenir le cookie associé à une donnée `IUnknown` pointeur.  
   
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `ppFind`  
- Le **IUnknown** pointeur pour laquelle le cookie associé est requis.  
+ *ppFind*  
+ Le `IUnknown` pointeur pour lequel le cookie associé est requis.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le cookie associé à la **IUnknown** pointeur, ou zéro si aucune correspondance **IUnknown** pointeur est trouvé.  
+ Retourne le cookie associé à la `IUnknown` pointeur, ou zéro si aucune correspondance `IUnknown` pointeur est trouvé.  
   
 ### <a name="remarks"></a>Notes  
- S’il existe plus d’une instance du même **IUnknown** pointeur, cette fonction retourne le cookie pour le.  
+ S’il existe plusieurs instances du même `IUnknown` pointeur, cette fonction retourne le cookie pour le premier.  
   
 ##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Retourne la longueur d’un tableau.  
@@ -190,33 +190,33 @@ int GetSize() const;
  Longueur du tableau.  
   
 ##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
- Appelez cette méthode pour obtenir le **IUnknown** pointeur associé à un cookie donné.  
+ Appelez cette méthode pour obtenir le `IUnknown` pointeur associé à un cookie donné.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwCookie`  
- Le cookie pour lequel associé **IUnknown** pointeur est requis.  
+ *dwCookie*  
+ Le cookie pour lequel associé `IUnknown` pointeur est requis.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le **IUnknown** pointeur, ou NULL si aucun cookie correspondant est trouvé.  
+ Retourne le `IUnknown` pointeur, ou NULL si aucun cookie n’est trouvée.  
   
 ##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
- Appelez cette méthode pour supprimer un **IUnknown** pointeur à partir du tableau.  
+ Appelez cette méthode pour supprimer un `IUnknown` pointeur à partir du tableau.  
   
 ```
 BOOL Remove(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwCookie`  
- Le référencement de cookie la **IUnknown** pointeur à supprimer du tableau.  
+ *dwCookie*  
+ Le référencement de cookie le `IUnknown` pointeur à supprimer à partir du tableau.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le pointeur est supprimé ; Sinon, FALSE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CComUnkArray (classe)](../../atl/reference/ccomunkarray-class.md)   
+ [CComUnkArray, classe](../../atl/reference/ccomunkarray-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

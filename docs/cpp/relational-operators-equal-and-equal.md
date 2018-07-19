@@ -1,5 +1,5 @@
 ---
-title: 'Les opérateurs relationnels : &lt;, &gt;, &lt;=, et &gt;= | Documents Microsoft'
+title: 'Opérateurs relationnels : &lt;, &gt;, &lt;=, et &gt;= | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,13 +25,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea629afbe975e60e9fc4f25e51d757eb3f0f8728
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942858"
 ---
-# <a name="relational-operators-lt-gt-lt-and-gt"></a>Les opérateurs relationnels : &lt;, &gt;, &lt;=, et &gt;=
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>Opérateurs relationnels : &lt;, &gt;, &lt;=, et &gt;=
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -52,11 +53,11 @@ expression >= expression
   
 -   Supérieur ou égal à (**>=**)  
   
- Les opérateurs relationnels ont une associativité de gauche à droite. Les deux opérandes des opérateurs relationnels doivent être de type arithmétique ou pointeur. Ils génèrent des valeurs de type `bool`. La valeur retournée est **false** (0) si la relation dans l’expression est false ; sinon, la valeur retournée est **true** (1).  
+ Les opérateurs relationnels ont une associativité de gauche à droite. Les deux opérandes des opérateurs relationnels doivent être de type arithmétique ou pointeur. Ils génèrent des valeurs de type **bool**. La valeur retournée est **false** (0) si la relation dans l’expression est false ; sinon, la valeur retournée est **true** (1).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // expre_Relational_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -73,14 +74,14 @@ int main() {
   
  Les expressions dans l’exemple précédent doivent être placées entre parenthèses, car l’opérateur d’insertion de flux (**<<**) a une priorité plus élevée que les opérateurs relationnels. Par conséquent, la première expression sans parenthèses est évaluée comme suit :  
   
-```  
+```cpp 
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");  
 ```  
   
- Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes de types arithmétiques.  
+ Les conversions arithmétiques habituelles traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes de types arithmétiques.  
   
 ## <a name="comparing-pointers"></a>Comparaison des pointeurs  
- Lorsque deux pointeurs vers des objets du même type sont comparés, le résultat est déterminé par l'emplacement des objets pointés figurant dans l'espace d'adressage du programme. Les pointeurs peuvent également être comparés à une expression constante qui correspond à 0 ou à un pointeur de type void *. Si une comparaison de pointeur est effectuée par rapport à un pointeur de type void \*, l’autre pointeur est implicitement converti en type void \*. Ensuite la comparaison est effectuée.  
+ Lorsque deux pointeurs vers des objets du même type sont comparés, le résultat est déterminé par l'emplacement des objets pointés figurant dans l'espace d'adressage du programme. Les pointeurs peuvent également être comparés à une expression constante qui correspond à 0 ou à un pointeur de type void *. Si une comparaison de pointeur est effectuée avec un pointeur de type void \*, l’autre pointeur est implicitement converti en type void \*. Ensuite la comparaison est effectuée.  
   
  Deux pointeurs de types différents ne peuvent pas être comparés à moins que :  
   
@@ -90,7 +91,7 @@ int main() {
   
  Deux pointeurs du même type qui pointent vers le même objet ont la garantie d'être de comparer une valeur égale. Si deux pointeurs vers des membres non statique d'un objet sont comparés, les règles suivantes s'appliquent :  
   
--   Si le type de classe n’est pas une union, et si les deux membres ne sont pas séparés par un *spécificateur d’accès*, public, protégé ou privé, le pointeur vers le membre déclaré dernier fera une comparaison supérieure à celle du pointeur vers le membre déclaré plus haut.  
+-   Si le type de classe n’est pas une union, et si les deux membres ne sont pas séparés par un *spécificateur d’accès*, tels que public, protected ou private, le pointeur vers le membre déclaré dernier fera une comparaison supérieure à celle du pointeur vers le membre déclaré précédemment.  
   
 -   Si les deux membres sont séparés par un *spécificateur d’accès*, les résultats sont indéfinis.  
   
@@ -100,5 +101,5 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs binaires](../cpp/expressions-with-binary-operators.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs relationnels et d’égalité C](../c-language/c-relational-and-equality-operators.md)

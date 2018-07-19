@@ -1,5 +1,5 @@
 ---
-title: _com_error::operator = | Documents Microsoft
+title: _com_error::operator = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744a4b344a336ec502e184e9be9ffb236c863708
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b358bc38ad055ed5e485dea566238de06242e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410630"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942027"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
 **Section spécifique à Microsoft**  
@@ -40,7 +40,7 @@ ms.locfileid: "32410630"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `that`  
+ *qui*  
  Objet `_com_error`.  
   
  **FIN de la section spécifique à Microsoft**  

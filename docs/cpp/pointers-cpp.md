@@ -1,5 +1,5 @@
 ---
-title: Pointeurs (C++) | Documents Microsoft
+title: Pointeurs (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942862"
 ---
 # <a name="pointers-c"></a>Pointeurs (C++)
 Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.  
@@ -39,25 +40,25 @@ Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.
   
  1. Les spécificateurs de déclaration :  
   
--   Spécificateur de classe de stockage facultatif. Pour plus d’informations, consultez [spécificateurs](../cpp/specifiers.md).  
+    - Spécificateur de classe de stockage facultatif. Pour plus d’informations, consultez [spécificateurs](../cpp/specifiers.md).  
   
--   Mot clé `const` ou `volatile` facultatif appliqué au type de l'objet à pointer.  
+    - Facultatif **const** ou **volatile** mot clé appliqué au type de l’objet à pointer.  
   
--   Le spécificateur de type : le nom d'un type représentant le type de l'objet à pointer.  
+    - Le spécificateur de type : le nom d'un type représentant le type de l'objet à pointer.  
   
  2. Déclarateur :  
   
--   Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   opérateur `*`,  
+    - opérateur `*`,  
   
--   Mot clé `const` ou `volatile` facultatif appliqué au pointeur lui-même.  
+    - Facultatif **const** ou **volatile** mot clé appliqué au pointeur lui-même.  
   
--   Identificateur.  
+    - Identificateur.  
   
--   Initialiseur facultatif.  
+    - Initialiseur facultatif.  
   
- Le déclarateur d'un pointeur vers une fonction ressemble à ceci :  
+     Le déclarateur d'un pointeur vers une fonction ressemble à ceci :  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.
   
  Voici un exemple simple de déclaration de pointeur :  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- La déclaration précédente spécifie que `pch` pointe vers un objet de type `char`.  
+ La déclaration précédente spécifie que `pch` pointe vers un objet de type **char**.  
   
  Voici un exemple plus complexe  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- La déclaration précédente spécifie que `ptr` est un pointeur constant vers un objet de type `unsigned` `int` avec une durée de stockage statique.  
+ La déclaration précédente spécifie que `ptr` est un pointeur constant vers un objet de type **non signé** **int** avec une durée de stockage statique.  
   
  L'exemple suivant montre comment plusieurs pointeurs sont déclarés et initialisés :  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- Dans l'exemple précédent, les pointeurs p et q pointent tous les deux vers des objets de type `int` et sont initialisés vers les adresses de i et de j respectivement.  Le spécificateur de classe de stockage `static` s'applique aux deux pointeurs.  
+ Dans l’exemple précédent, pointeurs p et q pointent vers des objets de type **int** et sont initialisés vers les adresses de i et de j respectivement.  Le spécificateur de classe de stockage **statique** s’applique aux deux pointeurs.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>Exemple  
  Un autre exemple illustre l'utilisation des pointeurs dans des structures de données. Dans ce cas, il s'agit d'une liste liée.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

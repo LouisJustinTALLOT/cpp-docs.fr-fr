@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99b7416339350ae7e5f8d342974a750584acdd73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960041"
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 
@@ -184,7 +184,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 crée l'objet `ai` qui contient quatre valeurs entières, initialise les trois premiers éléments respectivement aux valeurs 1, 2 et 3, et initialise le quatrième élément à la valeur 0.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<array>
 
@@ -202,7 +202,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* objet ou la plage à insérer.
+*droit* objet ou plage à insérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -257,11 +257,11 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Paramètres
 
-`val` Valeur à affecter.
+*Val* la valeur à assigner.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre remplace la séquence contrôlée par `*this` par une répétition de `N` éléments ayant la valeur `val`.
+La fonction membre remplace la séquence contrôlée par `*this` par une répétition de `N` éléments ayant la valeur *val*.
 
 ### <a name="example"></a>Exemple
 
@@ -313,11 +313,11 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`off` Position de l’élément auquel accéder.
+*désactiver* Position d’élément pour accéder à.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions membres retournent une référence à l'élément de la séquence contrôlée à la position `off`. Si cet emplacement n'est pas valide, la fonction lève un objet de classe `out_of_range`.
+Les fonctions membres retournent une référence à l’élément de la séquence contrôlée à la position *hors*. Si cet emplacement n'est pas valide, la fonction lève un objet de classe `out_of_range`.
 
 ### <a name="example"></a>Exemple
 
@@ -444,7 +444,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-Retourne un itérateur `const` qui traite le premier élément d'une plage.
+Retourne un **const** itérateur qui traite le premier élément dans la plage.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -452,13 +452,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur d'accès aléatoire `const` qui pointe vers le premier élément de la plage, ou vers l'emplacement situé juste après la fin d'une plage vide (pour une plage vide : `cbegin() == cend()`).
+Un **const** itérateur à accès aléatoire qui pointe vers le premier élément de la plage ou l’emplacement juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Notes
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -470,7 +470,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-Retourne un itérateur `const` qui traite l'emplacement situé immédiatement après le dernier élément d'une plage.
+Retourne un **const** itérateur qui traite l’emplacement juste après le dernier élément dans une plage.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -484,7 +484,7 @@ Itérateur d'accès aléatoire qui pointe juste après la fin de la plage.
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -983,7 +983,7 @@ void fill(const Type& val);
 
 |Paramètre|Description|
 |-|-|
-|`val`|Valeur de l'élément inséré dans le tableau.|
+|*Val*|Valeur de l'élément inséré dans le tableau.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1173,13 +1173,13 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`off` Position de l’élément auquel accéder.
+*désactiver* Position d’élément pour accéder à.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions membres retournent une référence à l'élément de la séquence contrôlée à la position `off`. Si cette position n'est pas valide, le comportement est indéfini.
+Les fonctions membres retournent une référence à l’élément de la séquence contrôlée à la position *hors*. Si cette position n'est pas valide, le comportement est indéfini.
 
-Il existe également une fonction non-membre [get](array-functions.md#get) disponible pour obtenir une référence à un élément d’un `array`.
+Il existe également un membre non [obtenir](array-functions.md#get) fonction disponible pour obtenir une référence à un élément d’un **tableau**.
 
 ### <a name="example"></a>Exemple
 
@@ -1225,11 +1225,11 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Paramètres
 
-Conteneur de droite à copier.
+*droit* conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre attribue chaque élément de `right` à l’élément correspondant de la séquence contrôlée, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans `right`.
+L’opérateur membre attribue chaque élément de *droit* à l’élément correspondant de la séquence contrôlée, puis retourne `*this`. Utilisez-le pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -1602,13 +1602,13 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Tableau d’échange de contenu avec.
+*droit* tableau à échanger le contenu avec.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `*this` et `right`. Il effectue un nombre d’assignations d’élément et d’appels de constructeur proportionnel à `N`.
+La fonction membre échange les séquences contrôlées entre `*this` et *droit*. Il effectue un nombre d’assignations d’élément et d’appels de constructeur proportionnel à `N`.
 
-Il existe également une fonction non-membre [swap](array-functions.md#swap) disponible pour échanger deux instances d’`array`.
+Il existe également un membre non [échange](array-functions.md#swap) fonction disponible pour échanger deux **tableau** instances.
 
 ### <a name="example"></a>Exemple
 

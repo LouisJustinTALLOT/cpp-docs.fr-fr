@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::GetActiveObject | Documents Microsoft
+title: _com_ptr_t::GetActiveObject | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca25ca31475d2870e62d00676e7bf3717c10fa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414742"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940366"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Section spécifique à Microsoft**  
   
- Joint à une instance existante d’un objet avec un **CLSID** ou **ProgID**.  
+ S’attache à une instance existante d’un objet doté d’un `CLSID` ou `ProgID`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,23 +44,23 @@ HRESULT GetActiveObject(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `rclsid`  
- Le **CLSID** d’un objet.  
+ *rclsid*  
+ Le `CLSID` d’un objet.  
   
- `clsidString`  
- Une chaîne Unicode qui contient un **CLSID** (en commençant par «**{**») ou un **ProgID**.  
+ *clsidString*  
+ Une chaîne Unicode qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.  
   
- `clsidStringA`  
- Chaîne multioctet, à l’aide de la page de codes ANSI, qui contient un **CLSID** (en commençant par «**{**») ou un **ProgID**.  
+ *clsidStringA*  
+ Chaîne multioctet, à l’aide de la page de codes ANSI, qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.  
   
 ## <a name="remarks"></a>Notes  
- Ces fonctions membres appellent `GetActiveObject` pour récupérer un pointeur vers un objet en cours d'exécution qui a été inscrit avec OLE, puis des requêtes pour le type d'interface de ce pointeur intelligent. Le pointeur résultant est alors encapsulé dans cet objet `_com_ptr_t`. **Version** est appelé pour décrémenter le décompte de références du pointeur précédemment encapsulé. Cette routine retourne l'objet `HRESULT` pour indiquer un succès ou un échec.  
+ Ces fonctions membres appellent `GetActiveObject` pour récupérer un pointeur vers un objet en cours d'exécution qui a été inscrit avec OLE, puis des requêtes pour le type d'interface de ce pointeur intelligent. Le pointeur résultant est alors encapsulé dans cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.  
   
--   **GetActiveObject (**`rclsid`**)** joint à une instance existante d’un objet avec un **CLSID**.      
+-   **GetActiveObject (**`rclsid`**)** s’attache à une instance existante d’un objet doté d’un `CLSID`.      
   
--   **GetActiveObject (**`clsidString`**)** joint à une instance existante d’un objet avec une chaîne Unicode qui contient un **CLSID** (en commençant par «**{**») ou un **ProgID**.      
+-   **GetActiveObject (**`clsidString`**)** s’attache à une instance existante d’un objet doté d’une chaîne Unicode qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.      
   
--   **GetActiveObject (**`clsidStringA`**)** joint à une instance existante d’un objet avec une chaîne de caractères multioctets qui contient un **CLSID** (en commençant par «**{}** ») ou un **ProgID**.     Appels [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), qui suppose que la chaîne figure dans la page de codes ANSI plutôt que sur une page de codes OEM.  
+-   **GetActiveObject (**`clsidStringA`**)** s’attache à une instance existante d’un objet doté d’une chaîne de caractères multioctets qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.     Appels [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), ce qui suppose que la chaîne est dans la page de codes ANSI plutôt que dans une page de codes OEM.  
   
  **FIN de la section spécifique à Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: __fastcall | Documents Microsoft
+title: __fastcall | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
-ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
+ms.openlocfilehash: f50239d42c164e2f9c6876e26389eb60e710ed34
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34153117"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940093"
 ---
 # <a name="fastcall"></a>__fastcall
 **Section spécifique à Microsoft**  
   
- La convention d'appel `__fastcall` spécifie que les arguments des fonctions doivent être passés dans les registres, lorsque cela est possible. Cette convention d’appel s’applique uniquement à l’architecture x86. La liste suivante illustre l’implémentation de cette convention d’appel.  
+ Le **__fastcall** convention d’appel spécifie que les arguments des fonctions doivent être passés dans les registres, lorsque cela est possible. Cette convention d’appel s’applique uniquement à l’architecture x86. La liste suivante illustre l’implémentation de cette convention d’appel.  
   
 |Élément|Implémentation|  
 |-------------|--------------------|  
@@ -38,9 +38,9 @@ ms.locfileid: "34153117"
 > [!NOTE]
 >  Les futures versions du compilateur peuvent utiliser des registres pour stocker les paramètres.  
   
- À l’aide de la [/GR](../build/reference/gd-gr-gv-gz-calling-convention.md) option du compilateur, chaque fonction dans le module pour compiler en `__fastcall` à moins que la fonction est déclarée à l’aide d’un attribut en conflit, ou le nom de la fonction `main`.  
+ À l’aide de la [/GR](../build/reference/gd-gr-gv-gz-calling-convention.md) option du compilateur provoque de chaque fonction dans le module pour compiler en **__fastcall** à moins que la fonction est déclarée à l’aide d’un attribut en conflit, ou le nom de la fonction `main` .  
   
- Le mot clé `__fastcall` est accepté et ignoré par les compilateurs qui ciblent les architectures ARM et x64 ; sur un processeur x64, par convention, les quatre premiers arguments sont transmis dans les registres si possible, et les arguments supplémentaires sont transmis sur la pile. Pour plus d’informations, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Sur un processeur ARM, jusqu’à quatre arguments entiers et huit arguments à virgule flottante peuvent être transmis dans les registres, et des arguments supplémentaires sont transmis sur la pile.  
+ Le **__fastcall** mot clé est accepté et ignoré par les compilateurs qui ciblent ARM et x64 architectures ; sur un x64 de processeur, par convention, les quatre premiers arguments sont passés dans les registres quand cela est possible, et les arguments supplémentaires sont passés sur la pile. Pour plus d’informations, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Sur un processeur ARM, jusqu’à quatre arguments entiers et huit arguments à virgule flottante peuvent être transmis dans les registres, et des arguments supplémentaires sont transmis sur la pile.  
   
  Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :  
   
@@ -77,5 +77,5 @@ typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fl
 **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Passage des arguments et Conventions d’affectation de noms](../cpp/argument-passing-and-naming-conventions.md)   
+ [Passage des arguments et Conventions de nommage](../cpp/argument-passing-and-naming-conventions.md)   
  [Mots clés](../cpp/keywords-cpp.md)

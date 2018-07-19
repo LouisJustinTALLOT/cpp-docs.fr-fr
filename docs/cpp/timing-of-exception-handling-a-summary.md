@@ -1,5 +1,5 @@
 ---
-title: 'Minutage de la gestion des exceptions : résumé | Documents Microsoft'
+title: 'Minutage de la gestion des exceptions : un résumé | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422174"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939414"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Synchronisation de la gestion des exceptions : Résumé
-Un gestionnaire de terminaisons est exécuté quelle que soit la raison pour laquelle le bloc d'instructions `__try` est arrêté. Les causes incluent la sortie du bloc `__try`, une instruction `longjmp` qui transfère le contrôle à l'extérieur du bloc et le déroulement de la pile en raison de la gestion des exceptions.  
+Un gestionnaire de terminaisons est exécuté quelle que soit la façon dont le **__try** bloc d’instructions est terminé. Causes incluent hors de la **__try** bloc, un `longjmp` instruction qui transfère le contrôle hors du bloc et le déroulement de la pile en raison de la gestion des exceptions.  
   
 > [!NOTE]
 >  Visual C++ prend en charge deux formes des instructions `setjmp` et `longjmp`. La version rapide ignore la gestion du bloc de fin mais est plus efficace. Pour utiliser cette version, incluez le fichier \<setjmp.h >. L'autre version prend en charge la gestion du bloc de fin, comme il est décrit dans le paragraphe précédent. Pour utiliser cette version, incluez le fichier \<setjmpex.h >. L'augmentation des performances de la version rapide dépend de la configuration matérielle.  
@@ -57,5 +57,5 @@ Un gestionnaire de terminaisons est exécuté quelle que soit la raison pour laq
     -   La ligne de code prend la main après la fin de ce gestionnaire d'exceptions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)   
+ [Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)   
  [Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

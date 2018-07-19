@@ -1,5 +1,5 @@
 ---
-title: Classe de CComClassFactory2 | Documents Microsoft
+title: CComClassFactory2, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42ee8ab5fe6e410cf812c7c147f4673803b81903
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363514"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880188"
 ---
-# <a name="ccomclassfactory2-class"></a>Classe de CComClassFactory2
-Cette classe implémente la [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface.  
+# <a name="ccomclassfactory2-class"></a>CComClassFactory2, classe
+Cette classe implémente le [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +42,14 @@ class CComClassFactory2 : public IClassFactory2,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Licence*  
+ *licence*  
  Une classe qui implémente les fonctions statiques suivantes :  
   
 - **statique BOOL VerifyLicenseKey (BSTR** `bstr` **) ;**  
   
 - **statique BOOL GetLicenseKey (DWORD** `dwReserved` **, BSTR\***  `pBstr` **) ;**  
   
-- **(de) BOOL IsLicenseValid statiques ;**  
+- **(de) BOOL IsLicenseValid statique ;**  
   
 ## <a name="members"></a>Membres  
   
@@ -64,17 +64,17 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Crée et retourne une clé de licence.|  
   
 ## <a name="remarks"></a>Notes  
- `CComClassFactory2` implémente le [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, qui est une extension de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** contrôles création une licence par le biais d’un objet. Une fabrique de classe s’exécutant sur un ordinateur sous licence peut fournir une clé de licence d’exécution. Cette clé de licence permet à une application instancier des objets lorsqu’il n’existe pas d’une licence de l’ordinateur complet.  
+ `CComClassFactory2` implémente le [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, qui est une extension de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` Création d’objet de contrôles avec une licence. Une fabrique de classe s’exécutant sur un ordinateur sous licence peut fournir une clé de licence de l’exécution. Cette clé de licence permet à une application instancier des objets lorsqu’il n’existe pas d’une licence de la totalité de la machine.  
   
- Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactory2`, spécifiez la [macro DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) macro dans la définition de classe de votre objet. Par exemple :  
+ Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactory2`, spécifiez la [macro DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) macro dans la définition de classe de votre objet. Exemple :  
   
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
- **CMyLicense**, le paramètre de modèle `CComClassFactory2`, doivent implémenter les fonctions statiques `VerifyLicenseKey`, `GetLicenseKey`, et `IsLicenseValid`. Voici un exemple d’une classe simple de licence :  
+ `CMyLicense`, le paramètre de modèle à `CComClassFactory2`, doivent implémenter les fonctions statiques `VerifyLicenseKey`, `GetLicenseKey`, et `IsLicenseValid`. Voici un exemple d’une classe de licence simple :  
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2` dérive de deux **CComClassFactory2Base** et *licence*. **CComClassFactory2Base**, à son tour, dérive **IClassFactory2** et **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` dérive les deux `CComClassFactory2Base` et *licence*. `CComClassFactory2Base`, à son tour, dérive `IClassFactory2` et `CComObjectRootEx< CComGlobalsThreadModel >`.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CComObjectRootBase`  
@@ -87,34 +87,34 @@ class CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
- Crée un objet du CLSID spécifié et récupère un pointeur d’interface à cet objet.  
+ Crée un objet du CLSID spécifié et récupère un pointeur d’interface vers cet objet.  
   
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pUnkOuter`  
- [in] Si l’objet est créé dans le cadre d’un agrégat, puis `pUnkOuter` doit être inconnu externe. Dans le cas contraire, `pUnkOuter` doit être **NULL**.  
+ *pUnkOuter*  
+ [in] Si l’objet est créé dans le cadre d’un agrégat, puis *pUnkOuter* doit être inconnu externe. Sinon, *pUnkOuter* doit être NULL.  
   
- `riid`  
- [in] IID de l’interface demandée. Si `pUnkOuter` est non - **NULL**, `riid` doit être **IID_IUnknown**.  
+ *riid*  
+ [in] IID de l’interface demandée. Si *pUnkOuter* n’est pas NULL, *riid* doit être `IID_IUnknown`.  
   
- `ppvObj`  
- [out] Un pointeur vers le pointeur d’interface identifié par `riid`. Si l’objet ne prend pas en charge cette interface, `ppvObj` a la valeur **NULL**.  
+ *ppvObj*  
+ [out] Un pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppvObj* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- Nécessite que l’ordinateur entièrement requiert une licence. Si une licence de l’ordinateur complet n’existe pas, appelez [CreateInstanceLic](#createinstancelic).  
+ Nécessite que la machine être sous licence. Si une licence de la totalité de la machine n’existe pas, appelez [CreateInstanceLic](#createinstancelic).  
   
 ##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
- Semblable à [CreateInstance](#createinstance), sauf que `CreateInstanceLic` requiert une clé de licence.  
+ Semblable à [CreateInstance](#createinstance), sauf que `CreateInstanceLic` nécessite une clé de licence.  
   
 ```
 STDMETHOD(CreateInstanceLic)(
@@ -127,23 +127,23 @@ STDMETHOD(CreateInstanceLic)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pUnkOuter`  
- [in] Si l’objet est créé dans le cadre d’un agrégat, puis `pUnkOuter` doit être inconnu externe. Dans le cas contraire, `pUnkOuter` doit être **NULL**.  
+ *pUnkOuter*  
+ [in] Si l’objet est créé dans le cadre d’un agrégat, puis *pUnkOuter* doit être inconnu externe. Sinon, *pUnkOuter* doit être NULL.  
   
  *pUnkReserved*  
- [in] Non utilisé. Doit être **NULL**.  
+ [in] Non utilisé. Doit être NULL.  
   
- `riid`  
- [in] IID de l’interface demandée. Si `pUnkOuter` est non - **NULL**, `riid` doit être **IID_IUnknown**.  
+ *riid*  
+ [in] IID de l’interface demandée. Si *pUnkOuter* n’est pas NULL, *riid* doit être `IID_IUnknown`.  
   
- `bstrKey`  
- [in] Obtenu à partir d’un appel à la clé de licence d’exécution `RequestLicKey`. Cette clé est requise pour créer l’objet.  
+ *bstrKey*  
+ [in] La clé de licence de l’exécution obtenue précédemment à partir d’un appel à `RequestLicKey`. Cette clé est nécessaire pour créer l’objet.  
   
- `ppvObject`  
- [out] Un pointeur vers le pointeur d’interface spécifié par `riid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a la valeur **NULL**.  
+ *ppvObject*  
+ [out] Un pointeur vers le pointeur d’interface spécifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez obtenir une clé de licence à l’aide [RequestLicKey](#requestlickey). Pour créer un objet sur un ordinateur sans licence, vous devez appeler `CreateInstanceLic`.  
@@ -157,58 +157,58 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
   
 ### <a name="parameters"></a>Paramètres  
  *pLicInfo*  
- [out] Pointeur vers un **LICINFO** structure.  
+ [out] Pointeur vers un `LICINFO` structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- Le `fRuntimeKeyAvail` membre de cette structure indique si, avec une clé de licence, la fabrique de classe permet aux objets d’être créé sur un ordinateur sans licence. Le *fLicVerified* membre indique l’existence d’une licence de l’ordinateur complet.  
+ Le `fRuntimeKeyAvail` membre de cette structure indique si, étant donné une clé de licence, la fabrique de classe permet aux objets d’être créé sur un ordinateur sans licence. Le *fLicVerified* membre indique l’existence d’une licence de la totalité de la machine.  
   
 ##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
- Incrémente et décrémente le module nombre de verrous en appelant **_Module::Lock** et **_Module::Unlock**, respectivement.  
+ Incrémente et décrémente le module nombre de verrous en appelant `_Module::Lock` et `_Module::Unlock`, respectivement.  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `fLock`  
- [in] Si **TRUE**, le nombre de verrous est incrémenté ; sinon, le nombre de verrous est décrémenté.  
+ *Troupeau*  
+ [in] Si la valeur est TRUE, le nombre de verrous est incrémenté ; Sinon, le nombre de verrous est décrémenté.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- **_Module** fait référence à l’instance globale de [CComModule](../../atl/reference/ccommodule-class.md) ou à une classe dérivée.  
+ `_Module` fait référence à l’instance globale de [CComModule](../../atl/reference/ccommodule-class.md) ou une classe dérivée à partir de celui-ci.  
   
- Appel de `LockServer` permet à un client à maintenir une fabrique de classe afin que plusieurs objets peuvent être créés rapidement.  
+ Appel `LockServer` permet à un client à maintenir une fabrique de classe afin que plusieurs objets peuvent être créés rapidement.  
   
 ##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
- Crée et retourne une clé de licence, à condition que la `fRuntimeKeyAvail` membre de la [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) structure est **TRUE**.  
+ Crée et retourne une clé de licence, à condition que le `fRuntimeKeyAvail` membre de la [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) structure a la valeur TRUE.  
   
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwReserved`  
+ *dwReserved*  
  [in] Non utilisé. Doit être égal à zéro.  
   
- `pbstrKey`  
+ *pbstrKey*  
  [out] Pointeur vers la clé de licence.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- Une clé de licence est nécessaire pour appeler [CreateInstanceLic](#createinstancelic) pour créer un objet sur un ordinateur sans licence. Si `fRuntimeKeyAvail` est **FALSE**, puis objets ne peuvent être créés sur un ordinateur sous licence complète.  
+ Une clé de licence est nécessaire pour appeler [CreateInstanceLic](#createinstancelic) pour créer un objet sur un ordinateur sans licence. Si `fRuntimeKeyAvail` a la valeur FALSE, puis les objets peuvent uniquement être créés sur un ordinateur sous licence complète.  
   
  Appelez [GetLicInfo](#getlicinfo) pour récupérer la valeur de `fRuntimeKeyAvail`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)   
- [Classe de CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
- [CComObjectRootEx (classe)](../../atl/reference/ccomobjectrootex-class.md)   
+ [Ccomclassfactoryautothread, classe](../../atl/reference/ccomclassfactoryautothread-class.md)   
+ [Ccomclassfactorysingleton, classe](../../atl/reference/ccomclassfactorysingleton-class.md)   
+ [CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

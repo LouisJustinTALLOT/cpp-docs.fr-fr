@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: aac2aaa09f609cd88c2bfab0e3fb66f4edade293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857036"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966330"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt;, fonctions
 
@@ -31,13 +31,13 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le jeu qui fournit les éléments à permuter, ou le jeu dont les éléments doivent être échangés avec ceux du jeu de `left`.
+*droit* set qui fournit les éléments à échanger ou set dont les éléments doivent être échangés avec ceux du jeu de *gauche*.
 
-`left` Le jeu dont les éléments doivent être échangés avec ceux du jeu de `right`.
+*gauche* set dont les éléments doivent être échangés avec ceux du jeu de *droit*.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle est un algorithme spécialisé sur la classe de conteneur set pour exécuter la fonction membre `left.`[swap](../standard-library/set-class.md#swap)( `right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
+La fonction de modèle est un algorithme spécialisé sur la classe de conteneur set pour exécuter la fonction membre `left.` [échange](../standard-library/set-class.md#swap)(`right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
 
 `template` \< **classT**> **void swap**( **T&**, **T&**)
 
@@ -58,13 +58,13 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-`right` La classe multiset qui fournit les éléments à permuter, ou la classe multiset dont les éléments doivent être échangés avec ceux de la classe multiset `left`.
+*droit* multiset qui fournit les éléments à échanger ou multiset dont les éléments doivent être échangés avec ceux du multiset *gauche*.
 
-`left` La classe multiset dont les éléments doivent être échangés avec ceux de la classe multiset `right`.
+*gauche* multiset dont les éléments doivent être échangés avec ceux du multiset *droit*.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle est un algorithme spécialisé sur la classe de conteneur multiset pour exécuter la fonction membre `left.`[swap](../standard-library/multiset-class.md#swap)( `right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
+La fonction de modèle est un algorithme spécialisé sur la classe de conteneur multiset pour exécuter la fonction membre `left.` [échange](../standard-library/multiset-class.md#swap)(`right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
 
 `template` \< **classT**> **void swap**( **T&**, **T&**)
 

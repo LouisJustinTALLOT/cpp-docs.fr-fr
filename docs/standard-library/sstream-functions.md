@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: f98e5fc9521165d5599f904975e348276f346ea4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 354632a3c001f2352821d9a1d0b493291c21a337
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953935"
 ---
 # <a name="ltsstreamgt-functions"></a>&lt;sstream&gt;, fonctions
 
@@ -49,8 +49,8 @@ void swap(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Référence à un objet `sstream`.|
-|`right`|Référence à un objet `sstream`.|
+|*left*|Référence à un objet `sstream`.|
+|*right*|Référence à un objet `sstream`.|
 
 ### <a name="remarks"></a>Notes
 

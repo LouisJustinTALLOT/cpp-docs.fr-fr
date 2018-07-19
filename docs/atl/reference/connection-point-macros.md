@@ -1,5 +1,5 @@
 ---
-title: Macros de Point de connexion | Documents Microsoft
+title: Macros de Point de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88789bef4bbcce3df99d90d736974377c9bca5fd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362928"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882934"
 ---
 # <a name="connection-point-macros"></a>Macros de Point de connexion
 Ces macros définissent les mappages de point de connexion et les entrées.  
@@ -31,10 +31,10 @@ Ces macros définissent les mappages de point de connexion et les entrées.
 |-|-|  
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Marque le début des entrées de mappage de point de connexion.|  
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Entre les points de connexion dans la classe map.|  
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Similaire à CONNECTION_POINT_ENTRY mais prend un pointeur vers un iid.|
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Mais, comme dans CONNECTION_POINT_ENTRY prend un pointeur vers l’iid.|
 |[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marque la fin des entrées de mappage de point de connexion.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h 
    
 ##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP  
@@ -49,15 +49,15 @@ BEGIN_CONNECTION_POINT_MAP(x)
  [in] Le nom de la classe contenant les points de connexion.  
   
 ### <a name="remarks"></a>Notes  
- Démarrer votre mappage de point de connexion avec le `BEGIN_CONNECTION_POINT_MAP` (macro), ajouter des entrées pour chacun de vos points de connexion avec le [CONNECTION_POINT_ENTRY](#connection_point_entry) (macro) et effectuer un mappage avec le [END_CONNECTION_POINT_MAP](#end_connection_point_map) (macro).  
+ Démarrez votre mappage de point de connexion avec la macro BEGIN_CONNECTION_POINT_MAP, ajoutez des entrées pour chacun de vos points de connexion avec le [CONNECTION_POINT_ENTRY](#connection_point_entry) (macro) et effectuer un mappage avec le [END_CONNECTION_ POINT_MAP](#end_connection_point_map) (macro).  
   
- Pour plus d’informations sur les points de connexion dans les ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
+ Pour plus d’informations sur les points de connexion ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
 ##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY et CONNECTION_POINT_ENTRY_P  
- Ajoute un point de connexion pour l’interface spécifiée dans le mappage de point de connexion afin qu’il est accessible.  
+ Affiche un point de connexion de l’interface spécifiée dans le mappage de point de connexion afin qu’il soit accessible.  
   
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -65,18 +65,18 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iid`  
- [in] Le GUID de l’interface ajoutée à la carte de point de connexion. 
+ *IID*  
+ [in] Le GUID de l’interface qui est ajoutée à la carte de point de connexion. 
  
- `piid`  
- [in] Pointeur vers le GUID de l’interface en cours enregistrées.   
+ *piid*  
+ [in] Pointeur vers le GUID de l’interface en cours adde.   
   
 ### <a name="remarks"></a>Notes  
- Entrées de point de connexion de la table sont utilisées par [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). La classe contenant le mappage de point de connexion doit hériter de `IConnectionPointContainerImpl`.  
+ Entrées de point de connexion dans le mappage sont utilisées par [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). La classe contenant le mappage de point de connexion doit hériter `IConnectionPointContainerImpl`.  
   
- Démarrer votre mappage de point de connexion avec le [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) (macro), ajouter des entrées pour chacun de vos points de connexion avec le `CONNECTION_POINT_ENTRY` (macro) et effectuer un mappage avec le [END_CONNECTION_POINT_MAP ](#end_connection_point_map) (macro).  
+ Démarrez votre mappage de point de connexion avec le [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) (macro), ajouter des entrées pour chacun de vos points de connexion avec la macro CONNECTION_POINT_ENTRY et effectuer un mappage avec le [END_CONNECTION_ POINT_MAP](#end_connection_point_map) (macro).  
   
- Pour plus d’informations sur les points de connexion dans les ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
+ Pour plus d’informations sur les points de connexion ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
@@ -89,9 +89,9 @@ END_CONNECTION_POINT_MAP()
 ```  
   
 ### <a name="remarks"></a>Notes  
- Démarrer votre mappage de point de connexion avec le [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) (macro), ajouter des entrées pour chacun de vos points de connexion avec le [CONNECTION_POINT_ENTRY](#connection_point_entry) (macro) et effectuer un mappage avec le `END_CONNECTION_POINT_MAP` (macro).  
+ Démarrer votre mappage de point de connexion avec le [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) (macro), ajouter des entrées pour chacun de vos points de connexion avec le [CONNECTION_POINT_ENTRY](#connection_point_entry) (macro) et effectuer un mappage avec le END_ Macro CONNECTION_POINT_MAP.  
   
- Pour plus d’informations sur les points de connexion dans les ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
+ Pour plus d’informations sur les points de connexion ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]  

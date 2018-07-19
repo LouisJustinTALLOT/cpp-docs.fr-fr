@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953060"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function, classe
 
@@ -43,23 +43,23 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`pfunc` La fonction binaire à convertir.
+*pfunc* la fonction binaire à convertir.
 
-`left` L’objet qui le  *\*pfunc* est appelée.
+*gauche* l’objet qui le  *\*pfunc* est appelée sur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La classe de modèle stocke une copie de **pfunc**. Elle définit sa fonction membre `operator()` comme retournant (\* **pfunc**)(_ *Left*).
+La classe de modèle stocke une copie de `pfunc`. Elle définit sa fonction membre `operator()` comme retournant (\* **pfunc**)(_ *Left*).
 
 ## <a name="remarks"></a>Notes
 
-Un pointeur de fonction unaire est un objet de fonction. Il peut être passé à n’importe quel algorithme de la bibliothèque standard C++ qui attend une fonction unaire comme paramètre, mais il n’est pas adaptable. Pour utiliser ce pointeur avec un adaptateur, en le liant à une valeur ou en l’utilisant avec une négation, vous devez également fournir les types imbriqués **argument_type** et **result_type** pour rendre l’adaptation possible. Grâce à la conversion par `pointer_to_unary_function`, les pointeurs de fonction binaire peuvent utiliser les adaptateurs de fonction.
+Un pointeur de fonction unaire est un objet de fonction. Il peut être passé à n’importe quel algorithme de la bibliothèque standard C++ qui attend une fonction unaire comme paramètre, mais il n’est pas adaptable. Pour l’utiliser avec un adaptateur, en le liant à une valeur ou l’utiliser avec une négation, vous devez également fournir les types imbriqués `argument_type` et `result_type` que rendre l’adaptation possible. Grâce à la conversion par `pointer_to_unary_function`, les pointeurs de fonction binaire peuvent utiliser les adaptateurs de fonction.
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `pointer_to_unary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_unary_function`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

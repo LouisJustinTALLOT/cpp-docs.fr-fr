@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953073"
 ---
 # <a name="gslicearray-class"></a>gslice_array, classe
 
@@ -76,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit un objet qui stocke une référence à un objet **va** de la classe [valarray](../standard-library/valarray-class.md)**\<Type>**, ainsi qu’un objet **gs** de la classe [gslice](../standard-library/gslice-class.md), qui décrit la séquence d’éléments à sélectionner à partir de l’objet **valarray\<Type>**.
+La classe décrit un objet qui stocke une référence à un objet `va` de classe [valarray](../standard-library/valarray-class.md)**\<Type >**, ainsi qu’un objet `gs` de classe [ gslice](../standard-library/gslice-class.md) qui décrit la séquence d’éléments à sélectionner à partir de la `valarray<Type>` objet.
 
-Vous construisez un objet **gslice_array\<Type>** uniquement en écrivant une expression sous la forme [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnés est affectée.
+Vous construisez un `gslice_array<Type>` objet uniquement en écrivant une expression sous la forme [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée.
 
 La classe de modèle est créée indirectement par certaines opérations valarray et ne peut pas être utilisée directement dans le programme. Une classe de modèle interne auxiliaire est utilisée à la place par l’opérateur d’indice slice :
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).
 
-Vous construisez un objet **gslice_array\<Type>** uniquement en écrivant une expression sous la forme **va[gsl]**, pour une section **gsl** de valarray **va**. Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnés est affectée. La séquence contrôlée par le gslice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément de la première section, le nombre d’éléments dans chaque section et la distance entre les éléments de chaque section.
+Vous construisez un `gslice_array<Type>` objet uniquement en écrivant une expression sous la forme `va[gsl]`, pour une tranche `gsl` de valarray `va`. Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée. La séquence contrôlée par le gslice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément de la première section, le nombre d’éléments dans chaque section et la distance entre les éléments de chaque section.
 
 Dans l’exemple suivant :
 
@@ -103,7 +103,7 @@ Les index doivent être valides pour que la procédure soit valide.
 
 Consultez l’exemple relatif à [gslice::gslice](../standard-library/gslice-class.md#gslice) pour savoir comment déclarer et utiliser un slice_array.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<valarray>
 

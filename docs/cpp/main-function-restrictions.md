@@ -1,5 +1,5 @@
 ---
-title: les Restrictions de fonction principale | Documents Microsoft
+title: restrictions relatives à fonction main | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419683"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941744"
 ---
 # <a name="main-function-restrictions"></a>Restrictions relatives à la fonction main
-Plusieurs restrictions s’appliquent à la **principal** fonction qui ne s’appliquent pas à d’autres fonctions C++. Le **principal** fonction :  
+Plusieurs restrictions s’appliquent à la `main` fonction qui ne s’appliquent pas à toutes les autres fonctions C++. Le `main` (fonction) :  
   
--   Ne peut pas être surchargé (voir [surcharge de fonction](function-overloading.md)).  
+-   Ne peut pas être surchargé (consultez [surcharge de fonction](function-overloading.md)).  
   
 -   Ne peut pas être déclaré en tant que **inline**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Fichiers d’en-tête (C++) | Documents Microsoft
+title: Fichiers d’en-tête (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/20/2018
 ms.reviewer: ''
@@ -17,29 +17,29 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b571cd2836e66ebef21898af27cf2a6d7082e0e5
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 746b0829be6f66203d22cae4072dded9f6be32d8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261051"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939700"
 ---
 # <a name="header-files-c"></a>Fichiers d’en-tête (C++)
 
-Les noms d’éléments de programme tels que des variables, des fonctions, des classes et ainsi de suite doivent être déclarés avant de pouvoir être utilisés. Par exemple, vous ne pouvez pas écrivent simplement `x = 42` sans déclarer d’abord « x ». 
+Les noms d’éléments de programme tels que des variables, fonctions, classes et ainsi de suite doivent être déclarés avant de pouvoir être utilisés. Par exemple, vous ne pouvez pas simplement écrire `x = 42` sans déclarer d’abord « x ». 
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- La déclaration indique au compilateur qu’est un **int**, un **double**, un **fonction**, un **classe** ou une autre chose.  En outre, chaque nom doit être déclaré (directement ou indirectement) de chaque fichier .cpp dans lequel elle est utilisée. Lorsque vous compilez un programme, chaque fichier .cpp est compilé séparément dans une unité de compilation. Le compilateur connaît pas les noms sont déclarés dans d’autres unités de compilation. Cela signifie que si vous définissez une classe, une fonction ou une variable globale, vous devez fournir une déclaration de cette opération dans chaque fichier .cpp supplémentaires qui l’utilise. Chaque déclaration de cet élément doit être exactement identique dans tous les fichiers. Une incohérence légère sera provoquer des erreurs, ou un comportement inattendu, lors de l’éditeur de liens tente de fusionner toutes les unités de compilation d’un programme unique.
+ La déclaration indique au compilateur qu’est un **int**, un **double**, un **fonction**, un **classe** ou certaines autres chose.  En outre, chaque nom doit être déclaré (directement ou indirectement) dans chaque fichier .cpp dans lequel elle est utilisée. Lorsque vous compilez un programme, chaque fichier .cpp est compilé en indépendamment dans une unité de compilation. Le compilateur connaît pas les noms sont déclarés dans d’autres unités de compilation. Cela signifie que si vous définissez une classe ou la fonction ou la variable globale, vous devez fournir une déclaration de ceci dans chaque fichier .cpp supplémentaires qui l’utilise. Chaque déclaration de ceci doit être exactement identique dans tous les fichiers. Une incohérence légère sera provoquer des erreurs, ou un comportement inattendu, lorsque l’éditeur de liens tente de fusionner toutes les unités de compilation dans un seul programme.
 
-Pour réduire le risque d’erreurs, C++ a adopté la convention de l’utilisation de *fichiers d’en-tête* pour contenir les déclarations. Vous rendre les déclarations dans un fichier d’en-tête, puis utilisez le #include (directive) dans chaque fichier .cpp ou autre fichier d’en-tête requiert cette déclaration. Le #include directive insère une copie du fichier d’en-tête directement dans le fichier .cpp avant la compilation. 
+Pour réduire le risque d’erreurs, C++ a adopté la convention de l’utilisation de *fichiers d’en-tête* pour contenir les déclarations. Vous effectuez les déclarations dans un fichier d’en-tête, puis utiliser le #include, directive dans chaque fichier .cpp ou autre fichier d’en-tête nécessite cette déclaration. Le #include directive insère une copie du fichier d’en-tête directement dans le fichier .cpp avant la compilation. 
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre une manière courante de déclarer une classe et l’utiliser dans un fichier source différent. Nous allons commencer par le fichier d’en-tête **my_class.h**. Il contient une définition de classe, mais notez que la définition est incomplet. la fonction membre `do_something` n’est pas défini :
+L’exemple suivant montre une méthode courante pour déclarer une classe et l’utiliser dans un autre fichier source. Nous allons commencer par le fichier d’en-tête, `my_class.h`. Elle contient une définition de classe, mais notez que la définition est incomplète ; la fonction membre `do_something` n’est pas défini :
 
 ```cpp
 // my_class.h
@@ -54,9 +54,9 @@ namespace N
 }
 ```
 
-Ensuite, créez un fichier d’implémentation (généralement avec un .cpp ou une extension similaire). Nous appeler le my_class.cpp de fichier et fournir une définition de la déclaration de membre. Nous ajoutons une `#include` directive pour le fichier « my_class.h » pour que la déclaration ma_classe insérée à ce stade dans .cpp fichier et nous incluent  **\<iostream >** à extraire dans la déclaration de `std::cout`. Notez que les guillemets sont utilisés pour les fichiers d’en-tête dans le même répertoire que le fichier source, et les crochets pointus sont utilisés pour les en-têtes de bibliothèque standard. En outre, plusieurs en-têtes de bibliothèque standard n’aient pas .h ou une autre extension de fichier.
+Ensuite, créez un fichier d’implémentation (généralement avec une .cpp ou une extension similaire). Nous appeler le fichier my_class.cpp et fournir une définition pour la déclaration de membre. Nous ajoutons un `#include` directive pour le fichier « my_class.h » afin de disposer de la déclaration de ma_classe insérée à ce stade dans le .cpp fichier et nous incluent `<iostream>` à extraire dans la déclaration pour `std::cout`. Notez que les guillemets doubles sont utilisés pour les fichiers d’en-tête dans le même répertoire que le fichier source, et ces crochets sont utilisés pour les en-têtes de bibliothèque standard. En outre, plusieurs en-têtes de bibliothèque standard n’ont pas .h ou une autre extension de fichier.
 
-Dans le fichier d’implémentation, nous pouvons éventuellement utiliser un **à l’aide de** instruction pour éviter d’avoir à qualifier chaque mention du « ma_classe » ou « cout » avec « N: : » ou « std :: ».  Ne placez pas **à l’aide de** instructions dans vos fichiers d’en-tête !
+Dans le fichier d’implémentation, nous pouvons éventuellement utiliser un **à l’aide de** instruction afin d’éviter de devoir qualifier chaque mention du « ma_classe » ou « cout » avec « N: : » ou « std :: ».  Ne placez pas **à l’aide de** instructions dans vos fichiers d’en-tête !
 
 ```cpp
 // my_class.cpp
@@ -72,7 +72,7 @@ void my_class::do_something()
 }
 ```
 
-Nous pouvons maintenant utiliser `my_class` dans un autre fichier .cpp. Nous #include le fichier d’en-tête afin que le compilateur extrait dans la déclaration. Tous les besoins du compilateur savoir est que ma_classe est une classe qui a une fonction membre publique appelée `do_something()`.
+Maintenant, nous pouvons utiliser `my_class` dans un autre fichier .cpp. Nous #include le fichier d’en-tête afin que le compilateur extrait dans la déclaration. Tous les besoins du compilateur savoir est que ma_classe est une classe qui a une fonction membre publique appelée `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -88,11 +88,11 @@ int main()
 }
 ```
 
-Une fois que le compilateur a terminé la compilation de chaque fichier .cpp dans les fichiers .obj, il transmet les fichiers .obj à l’éditeur de liens. Lorsque l’éditeur de liens fusionne les fichiers de l’objet qu’il trouve une seule définition pour my_class ; Il est dans le fichier .obj produit pour my_class.cpp, et la génération terminée.
+Une fois que le compilateur a terminé la compilation de chaque fichier .cpp dans les fichiers .obj, il transmet les fichiers .obj à l’éditeur de liens. Lorsque l’éditeur de liens fusionne les fichiers objets qu’il trouve une seule définition pour my_class ; Il se trouve dans le fichier .obj produit pour my_class.cpp, et la génération réussit.
 
-## <a name="include-guards"></a>Inclure les gardes
+## <a name="include-guards"></a>Protections de type include
 
-En règle générale, les fichiers d’en-tête ont un *#include guard* ou un **#pragma une fois** la directive pour vous assurer qu’ils ne sont pas insérées de plusieurs fois dans un fichier .cpp unique. 
+En règle générale, les fichiers d’en-tête ont un *#include guard* ou un **#pragma once** directive pour vous assurer qu’ils ne sont pas insérés plusieurs fois dans un fichier .cpp unique. 
 
 my_class.h
 #<a name="ifndef-myclassh--include-guard"></a>ifndef MY_CLASS_H / / #include guard
@@ -105,18 +105,18 @@ espace de noms N {classe ma_classe {public : void do_something() ;} ;
 
 #<a name="endif--myclassh-"></a>endif / * MY_CLASS_H * /
 
-## <a name="what-to-put-in-a-header-file"></a>Les éléments à placer dans un fichier d’en-tête
+## <a name="what-to-put-in-a-header-file"></a>Les éléments à ajouter dans un fichier d’en-tête
 
-Un fichier d’en-tête peut potentiellement être inclus par plusieurs fichiers, il ne peut pas contenir de définitions qui peuvent produire plusieurs définitions du même nom. Les éléments suivants ne sont pas autorisées ou sont considérés comme très mauvaise pratique :
+Un fichier d’en-tête peut potentiellement être inclus par plusieurs fichiers, il ne peut pas contenir les définitions qui peuvent produire plusieurs définitions du même nom. Les éléments suivants ne sont pas autorisées, ou sont considérées comme très mauvaise pratique :
 
-- définitions de type intégré à l’espace de noms ou de la portée globale
+- définitions de type intégré à l’espace de noms ou portée globale
 - définitions de fonction non inline 
-- définitions de variables non const
+- définitions de variable non const
 - définitions d’agrégation
 - espaces de noms sans nom
 - Directives using
 
-Utilisation de la **à l’aide de** directive ne provoquera pas nécessairement une erreur, mais peut provoquer un problème, car il place l’espace de noms dans la portée de chaque fichier .cpp qui directement ou indirectement inclut cet en-tête. 
+Utilisation de la **à l’aide de** directive pas nécessairement provoque une erreur, mais peut entraîner un problème, car il place l’espace de noms dans la portée dans chaque fichier .cpp qui directement ou indirectement inclut cet en-tête. 
 
 ## <a name="sample-header-file"></a>Exemple de fichier en-tête
 

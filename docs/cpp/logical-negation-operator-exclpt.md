@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c8ad17195954feeeccb47896fa013302b6d7e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942861"
 ---
 # <a name="logical-negation-operator-"></a>Opérateur de négation logique : !
 ## <a name="syntax"></a>Syntaxe  
@@ -34,16 +35,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Notes  
- L’opérateur de négation logique (**!**) inverse la signification de son opérande. L’opérande doit être de type arithmétique ou pointeur (ou une expression qui a pour valeur le type arithmétique ou pointeur). L'opérande est implicitement converti en type `bool`. Le résultat est **true** si l’opérande converti est **false**; le résultat est **false** si l’opérande converti est **true**. Le résultat est de type `bool`.  
+ L’opérateur de négation logique (**!**) inverse la signification de son opérande. L’opérande doit être de type arithmétique ou pointeur (ou une expression qui a pour valeur le type arithmétique ou pointeur). L’opérande est converti implicitement en type **bool**. Le résultat est TRUE si l’opérande converti est FALSE ; le résultat est FALSE si l’opérande converti est TRUE. Le résultat est de type **bool**.  
   
  Pour une expression *e*, l’expression unaire **! *** e* est équivalente à l’expression **(*** e* `==` 0), sauf si les opérateurs surchargés sont impliqués.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé Operator pour !  
- Le **pas** opérateur est l’équivalent textuel de **!**. Il existe deux moyens d’accéder à la **pas** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+ Le **pas** opérateur est l’équivalent textuel de **!**. Il existe deux façons d’accéder à la **pas** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // expre_Logical_NOT_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -58,5 +59,5 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md)

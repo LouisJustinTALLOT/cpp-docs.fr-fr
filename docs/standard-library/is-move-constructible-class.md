@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87eac720b205560993a7d6995be8a8fe6ad6194
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 979e726e1374ac37844472d9e2f9ae8ddd5ddf4d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843520"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965800"
 ---
 # <a name="ismoveconstructible-class"></a>is_move_constructible, classe
 
@@ -36,13 +36,13 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-T le type à évaluer
+*T* le type doit être évaluée
 
 ## <a name="remarks"></a>Notes
 
-Prédicat de type qui a la valeur true si le type `T` est constructible par une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.
+Un prédicat de type qui prend la valeur true si le type *T* peut être construite à l’aide d’une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

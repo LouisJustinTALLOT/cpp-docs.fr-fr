@@ -1,5 +1,5 @@
 ---
-title: Classe de CAtlPreviewCtrlImpl | Documents Microsoft
+title: Catlpreviewctrlimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d0d1e35e3c2a7d9467024afdf3d415478cd7de1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362185"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884975"
 ---
-# <a name="catlpreviewctrlimpl-class"></a>Classe de CAtlPreviewCtrlImpl
-Cette classe est une implémentation d’une fenêtre qui est placée dans une fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche d’ATL.  
+# <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl, classe
+Cette classe est une implémentation ATL d’une fenêtre qui est placée sur une fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,13 +62,13 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::Create](#create)|Appelée par un gestionnaire d’aperçu riche pour créer la fenêtre Windows.|  
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Appelée par un gestionnaire d’aperçu riche lorsqu’il a besoin détruire ce contrôle.|  
+|[CAtlPreviewCtrlImpl::Create](#create)|Appelé par un gestionnaire d’aperçus de riches pour créer la fenêtre de Windows.|  
+|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Appelé par un gestionnaire d’aperçus de riches lorsqu’il a besoin détruire ce contrôle.|  
 |[CAtlPreviewCtrlImpl::Focus](#focus)|Définit le focus à ce contrôle.|  
 |[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Gère le message WM_PAINT.|  
 |[CAtlPreviewCtrlImpl::Redraw](#redraw)|Indique à ce contrôle à redessiner.|  
 |[CAtlPreviewCtrlImpl::SetHost](#sethost)|Définit un nouveau parent pour ce contrôle.|  
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Appelée par un gestionnaire d’aperçu riche lorsqu’il a besoin définir les éléments visuels de l’aperçu riche contenu.|  
+|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Appelé par un gestionnaire d’aperçus de riches lorsqu’il a besoin définir les éléments visuels d’Aperçu riche contenu.|  
 |[CAtlPreviewCtrlImpl::SetRect](#setrect)|Définit un nouveau rectangle englobant pour ce contrôle.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
@@ -81,7 +81,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 |Name|Description|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Police utilisée pour afficher le texte dans la fenêtre d’aperçu.|  
+|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Police utilisée pour afficher du texte dans la fenêtre d’aperçu.|  
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
@@ -108,7 +108,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
  `ATL::CAtlPreviewCtrlImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlpreviewctrlimpl.h  
   
 ##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
@@ -131,26 +131,26 @@ virtual ~CAtlPreviewCtrlImpl(void);
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
- Appelée par un gestionnaire d’aperçu riche pour créer la fenêtre Windows.  
+ Appelé par un gestionnaire d’aperçus de riches pour créer la fenêtre de Windows.  
   
 ```
 virtual BOOL Create(HWND hWndParent, const RECT* prc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWndParent`  
+ *hWndParent*  
  Handle vers la fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.  
   
- `prc`  
+ *République populaire de Chine*  
  Spécifie la taille initiale et la position de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` en cas de réussite ; sinon, `FALSE`.  
+ TRUE en cas de réussite, sinon FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
- Appelée par un gestionnaire d’aperçu riche lorsqu’il a besoin détruire ce contrôle.  
+ Appelé par un gestionnaire d’aperçus de riches lorsqu’il a besoin détruire ce contrôle.  
   
 ```
 virtual void Destroy();
@@ -166,7 +166,7 @@ virtual void DoPaint(HDC hdc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hdc`  
+ *HDC*  
  Handle vers un contexte de périphérique pour la peinture.  
   
 ### <a name="remarks"></a>Notes  
@@ -199,7 +199,7 @@ COLORREF m_clrText;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
- Police utilisée pour afficher le texte dans la fenêtre d’aperçu.  
+ Police utilisée pour afficher du texte dans la fenêtre d’aperçu.  
   
 ```
 const LOGFONTW* m_plf;
@@ -219,17 +219,17 @@ LRESULT OnPaint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nMsg`  
+ *nMsg indique*  
  La valeur WM_PAINT.  
   
- `wParam`  
+ *wParam*  
  Ce paramètre n'est pas utilisé.  
   
- `lParam`  
+ *lParam*  
  Ce paramètre n'est pas utilisé.  
   
- `bHandled`  
- Lorsque cette fonction est retournée, elle contient `TRUE`.  
+ *bHandled*  
+ Lorsque cette fonction est retournée, contient la valeur TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours 0.  
@@ -253,13 +253,13 @@ virtual void SetHost(HWND hWndParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hWndParent`  
- Handle vers la nouvelle fenêtre parent.  
+ *hWndParent*  
+ Handle vers la nouvelle fenêtre parente.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
- Appelée par un gestionnaire d’aperçu riche lorsqu’il a besoin définir les éléments visuels de l’aperçu riche contenu.  
+ Appelé par un gestionnaire d’aperçus de riches lorsqu’il a besoin définir les éléments visuels d’Aperçu riche contenu.  
   
 ```
 virtual void SetPreviewVisuals(
@@ -269,14 +269,14 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `clrBack`  
+ *clrBack*  
  Couleur d’arrière-plan de la fenêtre d’aperçu.  
   
- `clrText`  
+ *clrText*  
  Couleur du texte de la fenêtre d’aperçu.  
   
- `plf`  
- Police utilisée pour afficher le texte dans la fenêtre d’aperçu.  
+ *FLP*  
+ Police utilisée pour afficher du texte dans la fenêtre d’aperçu.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -288,10 +288,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `prc`  
+ *République populaire de Chine*  
  Spécifie la nouvelle taille et la position du contrôle de version préliminaire.  
   
- `bRedraw`  
+ *bRedraw*  
  Spécifie si le contrôle doit être redessiné.  
   
 ### <a name="remarks"></a>Notes  

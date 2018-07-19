@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965413"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable, classe
 
-Teste si une valeur de type `From` peut être assignée au type `To` et si l’assignation est connue comme ne levant pas d’exception.
+Teste si une valeur de *de* type peut être affecté à *à* type et l’affectation ne connaît ne pas lever.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,15 +37,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-Pour le type de l’objet qui reçoit l’assignation.
+*Pour* le type de l’objet qui reçoit l’assignation.
 
-À partir du type de l’objet qui fournit la valeur.
+*À partir de* le type de l’objet qui fournit la valeur.
 
 ## <a name="remarks"></a>Notes
 
-L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. `From` et `To` doivent tous deux être des types complets, `void`, ou des tableaux de limite inconnue.
+L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. Les deux *de* et *à* doivent être des types complets, **void**, ou des tableaux de limite inconnue.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

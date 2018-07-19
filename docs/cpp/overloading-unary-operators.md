@@ -1,5 +1,5 @@
 ---
-title: Surcharge des opérateurs unaires | Documents Microsoft
+title: Surcharge des opérateurs unaires | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421056"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941689"
 ---
 # <a name="overloading-unary-operators"></a>Surcharge des opérateurs unaires
 Les opérateurs unaires qui peuvent être surchargés sont les suivants :  
   
 1.  `!` ([NOT logique](../cpp/logical-negation-operator-exclpt.md))  
   
-2.  `&` ([d’adresse](../cpp/address-of-operator-amp.md))  
+2.  `&` ([adresse](../cpp/address-of-operator-amp.md))  
   
 3.  `~` ([complément](../cpp/one-s-complement-operator-tilde.md))  
   
@@ -49,9 +49,9 @@ Les opérateurs unaires qui peuvent être surchargés sont les suivants :
   
 9. opérateurs de conversion  
   
- L’incrément suffixé et opérateurs de décrémentation (`++` et **--**) sont traités séparément dans [incrémenter ou décrémenter](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
+ L’incrément postfix et opérateurs de décrémentation (`++` et `--`) sont traités séparément dans [incrémenter et décrémenter](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
- Les opérateurs de conversion sont également abordées dans une rubrique distincte ; consultez [des Conversions de types définis par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md).  
+ Les opérateurs de conversion sont également traités dans une rubrique distincte ; consultez [les Conversions de types définis par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md).  
   
  Les règles suivantes s'appliquent à tous les autres opérateurs unaires. Pour déclarer une fonction d'opérateur unaire en tant que membre non statique, vous devez la déclarer comme suit :  
   

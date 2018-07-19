@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b034b0179985d684df93575cc8ff934e5381554b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfe7f0c579e0e22e3de98a9e5edf3abee6cfc2b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953167"
 ---
-# <a name="lessequal-struct"></a>less_equal, struct
+# <a name="lessequal-struct"></a>less_equal (struct)
 
-Prédicat binaire qui effectue l’opération Inférieur ou égal à ( `operator<=`) sur ses arguments.
+Un prédicat binaire qui effectue l’opération inférieur à ou égal à (`operator<=`) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,11 +49,11 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type`, `T`, `U` N’importe quel type qui prend en charge un `operator<=` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator<=` qui accepte des opérandes des types spécifiés ou inférés.
 
-`Left` L’opérande gauche de l’opération inférieur à ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.
+*Gauche* l’opérande gauche de l’opération inférieur à ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-`Right` L’opérande de droite de l’opération inférieur à ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.
+*Droite* l’opérande de droite de l’opération inférieur à ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -61,7 +61,7 @@ Résultat de `Left <= Right`. Le modèle spécialisé effectue un transfert parf
 
 ## <a name="remarks"></a>Notes
 
-Le prédicat binaire `less_equal`< `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’élément de type `Type` dans des classes d’équivalence, si et seulement si ce type remplit les conditions mathématiques standard pour être ordonné de cette façon. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
+Le prédicat binaire `less_equal` <  `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
 
 ## <a name="example"></a>Exemple
 
@@ -124,7 +124,7 @@ Original vector v1 = (31247 37154 48755 15251 6205 2836 2836 2836)
 Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

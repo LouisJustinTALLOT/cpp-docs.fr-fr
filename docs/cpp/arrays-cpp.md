@@ -1,5 +1,5 @@
 ---
-title: Tableaux (C++) | Documents Microsoft
+title: Tableaux (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942878"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 Un tableau est une collection d’objets similaires. Le cas le plus simple d'un tableau est celui d'un vecteur, qui peut être déclaré par la séquence suivante :  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   Spécificateur de classe de stockage facultatif.  
   
--   Facultatif **const** et/ou `volatile` spécificateurs.  
+-   Facultatif **const** et/ou **volatile** spécificateurs.  
   
 -   Nom de type des éléments du tableau.  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   Identificateur.  
   
--   Une expression constante de type intégral placée entouré crochets, **[].** Si plusieurs dimensions sont déclarées à l’aide de crochets supplémentaires, l’expression constante peut être omise sur le premier jeu de crochets.  
+-   Une expression constante de type intégral placée entouré crochets, **[]**. Si plusieurs dimensions sont déclarées à l’aide de crochets supplémentaires, l’expression constante peut être omise sur le premier jeu de crochets.  
   
 -   Crochets supplémentaires facultatifs englobant des expressions constantes.  
   
  3. Initialiseur facultatif.  Consultez [initialiseurs](../cpp/initializers.md).  
   
- Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où *n* est le nombre d’éléments du tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est autorisé uniquement lorsque le tableau est le dernier champ dans un `struct` ou **union** et que les extensions Microsoft (/Ze) sont activées.  
+ Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où *n* est le nombre d’éléments que le tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est reconnu uniquement lorsque le tableau est le dernier champ dans un **struct** ou **union** et lorsque les extensions Microsoft (/Ze) sont activées.  
   
  L'exemple suivant montre comment définir un tableau au moment de l'exécution :  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- Les tableaux sont des types dérivés et peuvent donc être construits à partir de tout autre type dérivé ou principal, excepté les fonctions, les références et `void`.  
+ Les tableaux sont des types dérivés et peuvent donc être construits à partir de n’importe quel autre type dérivé ou principal à l’exception des fonctions, les références et **void**.  
   
  Les tableaux construits à partir d'autres tableaux sont des tableaux multidimensionnels. Ces tableaux multidimensionnels sont spécifiés en plaçant dans l'ordre plusieurs expressions de constantes entre accolades. Par exemple, observez cette déclaration :  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- Elle spécifie un tableau de type `int`, organisé conceptuellement selon une matrice à deux dimensions de cinq lignes et sept colonnes, comme indiqué dans l'illustration suivante :  
+ Il spécifie un tableau de type **int**, organisé conceptuellement selon une matrice à deux dimensions de cinq lignes et sept colonnes, comme indiqué dans la figure suivante :  
   
  ![Disposition conceptuelle d’un multiple&#45;tableau unidimensionnel](../cpp/media/vc38rc1.gif "vc38RC1")  
 Disposition conceptuelle d'un tableau multidimensionnel  
   
- Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Par exemple :  
+ Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Exemple :  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>Exemple  
  La technique d'omission des spécifications de limites de la première dimension d'un tableau multidimensionnel peut également être utilisée dans les déclarations de fonction comme suit :  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

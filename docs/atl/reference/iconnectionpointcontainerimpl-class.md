@@ -1,5 +1,5 @@
 ---
-title: Classe de IConnectionPointContainerImpl | Documents Microsoft
+title: IConnectionPointContainerImpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af5e8b1bc1af0a515cc8fad0500c3f7d040b1eb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d70989be8e8535336c831cb59fb9422c6e2c63e0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361168"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886230"
 ---
-# <a name="iconnectionpointcontainerimpl-class"></a>Classe de IConnectionPointContainerImpl
+# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl, classe
 Cette classe implémente un conteneur de point de connexion pour gérer une collection de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objets.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Votre classe, dérivée de `IConnectionPointContainerImpl`.  
   
 ## <a name="members"></a>Membres  
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="remarks"></a>Notes  
  `IConnectionPointContainerImpl` implémente un conteneur de point de connexion pour gérer une collection de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objets. `IConnectionPointContainerImpl` propose deux méthodes qu’un client peut appeler pour récupérer des informations sur un objet connectable :  
   
-- `EnumConnectionPoints` permet au client déterminer quels sortant interfaces de l’objet prend en charge.  
+- `EnumConnectionPoints` permet au client déterminer les sortant des interfaces le prend en charge de l’objet.  
   
 - `FindConnectionPoint` permet au client déterminer si l’objet prend en charge une interface sortante spécifique.  
   
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
   
  `IConnectionPointContainerImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints  

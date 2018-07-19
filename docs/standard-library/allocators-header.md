@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847310"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965741"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -87,7 +87,7 @@ Utilisez la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#a
 
 _Lst1 alloue des nœuds avec `allocator_chunklist` et le filtre de synchronisation [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
-Un allocateur de blocs est un cache ou un filtre. Un cache est une classe de modèle qui accepte un argument de type std::size_t. Il définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique. Il doit obtenir de la mémoire à l’aide de l’opérateur `new`, mais il n’a pas besoin d’effectuer un appel distinct à l’opérateur `new` pour chaque bloc. Il peut, par exemple, sous-allouer la mémoire d’un bloc plus grand ou mettre en cache des blocs désalloués en vue d’une réallocation ultérieure.
+Un allocateur de blocs est un cache ou un filtre. Un cache est une classe de modèle qui accepte un argument de type std::size_t. Il définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique. Il doit obtenir de mémoire à l’aide d’opérateur **nouveau**, mais il devez apporte un appel séparé à l’opérateur **nouveau** pour chaque bloc. Il peut, par exemple, sous-allouer la mémoire d’un bloc plus grand ou mettre en cache des blocs désalloués en vue d’une réallocation ultérieure.
 
 Avec un compilateur qui ne peut pas compiler rebind, la valeur de l’argument std::size_t utilisé quand le modèle a été instancié n’est pas nécessairement la valeur de l’argument _Sz passé aux fonctions membres allocate et deallocate d’un cache.
 
@@ -151,7 +151,7 @@ Le modèle de cache `cache_freelist` accepte un argument de classe max qui déte
 |[allocator_base](../standard-library/allocator-base-class.md)|Définit la classe de base et les fonctions communes nécessaires à la création d’un allocateur défini par l’utilisateur à partir d’un filtre de synchronisation.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets à l’aide d’un cache de type [cache_chunklist](../standard-library/cache-chunklist-class.md).|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_fixed_size](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implémente un allocateur qui utilise `operator delete` pour désallouer un bloc de mémoire et `operator new` pour allouer un bloc de mémoire.|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implémente un allocateur qui utilise **opérateur delete** de libérer un bloc et **opérateur new** pour allouer un bloc de mémoire.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_unbounded](../standard-library/max-unbounded-class.md).|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_variable_size](../standard-library/max-variable-size-class.md).|
@@ -169,7 +169,7 @@ Le modèle de cache `cache_freelist` accepte un argument de classe max qui déte
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|Décrit un filtre de synchronisation qui fournit un objet de cache distinct pour chaque thread.|
 |[sync_shared](../standard-library/sync-shared-class.md)|Décrit un filtre de synchronisation qui utilise un mutex pour contrôler l’accès à un objet de cache partagé par tous les allocateurs.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 

@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetAddress | Documents Microsoft
+title: _bstr_t::GetAddress | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88accb8b614a5a07a7abf688790a80786f465607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409968"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941195"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Section spécifique à Microsoft**  
@@ -40,10 +40,10 @@ BSTR* GetAddress( );
  Pointeur désignant le `BSTR` encapsulé par l'objet `_bstr_t`.  
   
 ## <a name="remarks"></a>Notes  
- `GetAddress` affecte tous les objets `_bstr_t` qui partagent un `BSTR`. Plusieurs objets `_bstr_t` peuvent partager un `BSTR` en utilisant le constructeur de copie et `operator=`.  
+ `GetAddress` affecte tous les objets `_bstr_t` qui partagent un `BSTR`. Plusieurs `_bstr_t` peuvent partager un `BSTR` en utilisant le constructeur de copie et et **opérateur =**.  
   
 ## <a name="example"></a>Exemple  
- Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour un exemple utilisant `GetAddress`.  
+ Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant `GetAddress`.  
   
  **FIN de la section spécifique à Microsoft**  
   

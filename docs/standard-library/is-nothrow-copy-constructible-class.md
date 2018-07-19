@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3a9818b6334ddd2d2769fc79c55fc8fd72e6dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc4f839ed955048b96f6327c63cd2cc82fef8aca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953770"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible, classe
 
@@ -36,13 +36,13 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` a un constructeur de copie nothrow. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* a un constructeur de copie nothrow, sinon, sa valeur est false.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409759"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940227"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Section spécifique à Microsoft**  
   
- Vérifie si encapsulé `BSTR` est un **NULL** chaîne.  
+ Vérifie si encapsulé `BSTR` est une chaîne NULL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Elle retourne **true** si Oui, **false** si ce n’est pas le cas.  
+ Elle retourne TRUE si Oui, FALSE dans le cas contraire.  
   
  **FIN de la section spécifique à Microsoft**  
   

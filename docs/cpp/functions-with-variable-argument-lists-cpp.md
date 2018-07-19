@@ -1,5 +1,5 @@
 ---
-title: Fonctions avec listes d’arguments variables (C++) | Documents Microsoft
+title: Fonctions avec listes d’arguments variables (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942645"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Répertorie les fonctions avec des arguments de Variable (C++)
-Les déclarations de fonction dans lesquelles le dernier membre d’argument-declaration-list est représenté par les points de suspension (...) peuvent prendre une quantité variable d’arguments. Dans ces cas-là, C++ fournit une vérification du type uniquement pour les arguments déclarés explicitement. Vous pouvez utiliser des listes d’arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier. La famille de fonctions est un exemple de fonctions qui utilisent des listes d’arguments variables. `printf` *argument-declaration-list.*  
+Les déclarations de fonction dans lesquelles le dernier membre d’argument-declaration-list est représenté par les points de suspension (...) peuvent prendre une quantité variable d’arguments. Dans ces cas-là, C++ fournit une vérification du type uniquement pour les arguments déclarés explicitement. Vous pouvez utiliser des listes d’arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier. La famille de fonctions est un exemple de fonctions qui utilisent des listes d’arguments variables. `printf` *argument-declaration-list*  
   
 ## <a name="functions-with-variable-arguments"></a>Fonctions avec des arguments de variables  
- Pour accéder aux arguments après ceux qui sont déclarés, utilisez les macros contenues dans le fichier include standard \<stdarg.h > comme décrit ci-dessous.  
+ Pour accéder aux arguments après ceux déclarés, utilisez les macros contenues dans le fichier include standard \<stdarg.h > comme décrit ci-dessous.  
   
  **Section spécifique à Microsoft**  
   
@@ -39,13 +40,13 @@ Les déclarations de fonction dans lesquelles le dernier membre d’argument-dec
   
  La déclaration d’une fonction qui accepte une quantité variable d’arguments nécessite au moins un argument d’espace réservé, même si elle n’est pas utilisée. Si cet argument d’espace réservé n’est pas fourni, il est impossible d’accéder aux arguments restants.  
   
- Lorsque des arguments de type `char` sont passés comme arguments variables, ils sont convertis en type `int`. De même, lorsque les arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**. Les arguments d'autres types sont soumis aux promotions intégrales et à virgule flottante classiques. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations.  
+ Lorsque les arguments de type **char** sont passés comme arguments variables, ils sont convertis en type **int**. De même, lorsque les arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**. Les arguments d'autres types sont soumis aux promotions intégrales et à virgule flottante classiques. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations.  
   
- Les fonctions qui requièrent des listes de variables sont déclarées avec des points de suspension (...) dans la liste d’arguments. Utiliser les types et les macros qui sont décrites dans le \<stdarg.h > fichier include pour accéder aux arguments qui sont passés à une liste de variables. Pour plus d’informations sur ces macros, consultez [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). dans la documentation de la bibliothèque Runtime C.  
+ Les fonctions qui requièrent des listes de variables sont déclarées avec des points de suspension (...) dans la liste d’arguments. Utiliser les types et les macros sont décrits dans le \<stdarg.h > fichier include pour accéder aux arguments qui sont passés à une liste de variables. Pour plus d’informations sur ces macros, consultez [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). dans la documentation de la bibliothèque Runtime C.  
   
  L’exemple suivant montre comment les macros fonctionnent avec le type (déclaré dans \<stdarg.h >) : 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

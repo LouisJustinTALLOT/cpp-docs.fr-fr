@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842818"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960779"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable, classe
 
@@ -36,13 +36,13 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un opérateur d'assignation de copie. Sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un copie opérateur d’assignation, sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

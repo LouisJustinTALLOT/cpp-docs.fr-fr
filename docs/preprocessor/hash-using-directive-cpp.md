@@ -1,5 +1,5 @@
 ---
-title: '#using, Directive (C + c++ / CLR) | Documents Microsoft'
+title: '#using, Directive (C + c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2255f5de9cc26505bb07110da6368a039009c6c
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840734"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093031"
 ---
-# <a name="using-directive-cclr"></a>#using, Directive (C + c++ / CLR)
+# <a name="using-directive-ccli"></a>#using, Directive (C + c++ / CLI)
 Importe des métadonnées dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,20 +48,20 @@ Importe des métadonnées dans un programme compilé avec [/CLR](../build/refere
  Spécifie que tous les types dans `file` sont accessibles.  Pour plus d’informations, consultez [assemblys Friend (C++)](../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="remarks"></a>Notes  
- `file` peut être un fichier MSIL (Microsoft Intermediate Language) que vous importez pour ses données et constructions managées. Si un fichier .dll contient un manifeste d’assembly, puis toutes les DLL référencé dans le manifeste sont importés et répertorie l’assembly que vous générez *fichier* dans les métadonnées comme une référence d’assembly.  
+ `file` peut être un fichier MSIL (Microsoft Intermediate Language) que vous importez pour ses données et constructions managées. Si un fichier .dll contient un manifeste d’assembly, puis tous les fichiers .dll référencés dans le manifeste sont importées et que l’assembly que vous générez répertorie *fichier* dans les métadonnées comme une référence d’assembly.  
   
- Si `file` ne contient pas d’assembly (si `file` est un module) et si vous n’avez pas l’intention d’utiliser les informations de type à partir du module de l’application (assembly) actuelle, vous avez la possibilité d’indiquer simplement que le module fait partie de l’assembly ; utilisez [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Les types du module sont ensuite accessibles à toute application qui a référencé l'assembly.  
+ Si `file` ne contient pas d’assembly (si `file` est un module) et si vous ne souhaitez pas utiliser les informations de type à partir du module dans l’application (assembly) actuelle, vous avez la possibilité d’indiquer simplement que le module fait partie de l’assembly ; utilisez [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Les types du module sont ensuite accessibles à toute application qui a référencé l'assembly.  
   
  Une alternative à utiliser `#using` est la [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur.  
   
- les assemblys .exe passés à `#using` doit être compilée à l’aide d’un des compilateurs .NET de Visual Studio (Visual Basic ou Visual c#, par exemple).  Une tentative d’importation de métadonnées à partir d’un assembly .exe compilé avec **/CLR** entraîne une exception de chargement du fichier.  
+ assemblys .exe passés à `#using` doit être compilée à l’aide d’un des compilateurs .NET Visual Studio (Visual Basic ou Visual c#, par exemple).  Une tentative d’importation de métadonnées à partir d’un assembly .exe compilé avec **/CLR** entraîne une exception de chargement de fichier.  
   
 > [!NOTE]
 >  Un composant référencé avec `#using` peut être exécuté avec une version différente du fichier importé au moment de la compilation, ce qui provoque des résultats inattendus d'une application cliente.  
   
- Pour que le compilateur de reconnaître un type dans un assembly (pas un module), il doit être forcé à résoudre le type, vous pouvez faire, par exemple, en définissant une instance du type. Autres façons de résoudre les noms de types dans un assembly pour le compilateur, par exemple, si vous héritez d’un type dans un assembly, le nom du type sera deviennent connu du compilateur.  
+ Pour que le compilateur reconnaisse un type dans un assembly (pas un module), il doit être forcé à résoudre le type, vous pouvez faire, par exemple, en définissant une instance du type. Autres façons de résoudre les noms de type dans un assembly pour le compilateur, par exemple, si vous héritez d’un type dans un assembly, le nom de type sera deviennent connu du compilateur.  
   
- Lors de l’importation de métadonnées générées à partir de code source utilisé [__declspec (thread)](../cpp/thread.md), la sémantique de thread n’est pas conservée dans les métadonnées. Par exemple, une variable déclarée avec **__declspec (thread)**, compilée dans un programme qui est générée pour le common language runtime du .NET Framework, puis importé `#using`, n’aura plus **__declspec () thread)** une sémantique de la variable.  
+ Lors de l’importation de métadonnées générées à partir de code source utilisé [__declspec (thread)](../cpp/thread.md), la sémantique de thread n’est pas conservée dans les métadonnées. Par exemple, une variable déclarée avec **__declspec (thread)**, compilée dans un programme qui est la build pour le common language runtime du .NET Framework et puis importée via `#using`, n’aura plus **__declspec () thread)** sémantique sur la variable.  
   
  Tous les types importés (managés et natifs) dans un fichier référencé par `#using` sont disponibles, mais le compilateur traite les types natifs comme des déclarations, et non comme des définitions.  
   

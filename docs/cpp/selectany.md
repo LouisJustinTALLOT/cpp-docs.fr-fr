@@ -1,5 +1,5 @@
 ---
-title: selectany | Documents Microsoft
+title: selectany | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb4f4ccd3cbfb5bb26e9f58a862eaa87dba3c538
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942930"
 ---
 # <a name="selectany"></a>selectany
 **Section spécifique à Microsoft**  
@@ -39,17 +40,17 @@ __declspec( selectany ) declarator
   
  Les constructeurs et l'assignation par fonction globale ou méthodes statiques dans la déclaration ne créent pas de référence et n'empêchent pas la suppression /OPT:REF. Les effets secondaires d'un tel code ne doivent pas créer de dépendances quand il n'existe aucune autre référence à des données.  
   
- Pour les objets dynamiquement initialisés et globaux, `selectany` ignorera le code d'initialisation d'un objet non référencé, également.  
+ Pour les objets dynamiquement initialisés et globaux, **selectany** supprimera le code d’initialisation d’un objet non référencé, également.  
   
- Un élément de données global ne peut généralement être initialisé qu'une seule fois dans un projet EXE ou DLL. `selectany` peut être utilisé en initialisant les données globales définies par les en-têtes, lorsque le même en-tête apparaît dans plusieurs fichiers source. `selectany` est disponible dans les compilateurs C et C++.  
+ Un élément de données global ne peut généralement être initialisé qu'une seule fois dans un projet EXE ou DLL. **selectany** peuvent être utilisées pour initialiser des données globales définies par les en-têtes, lorsque le même en-tête apparaît dans plusieurs fichiers source. **selectany** est disponible dans les compilateurs C et C++.  
   
 > [!NOTE]
->  `selectany` peut être appliqué à l'initialisation actuelle des éléments de données globaux qui sont visibles.  
+>  **selectany** peut uniquement être appliqué à l’initialisation réelle global des éléments de données qui sont visibles.  
   
 ## <a name="example"></a>Exemple  
- Ce code indique comment utiliser l'attribut `selectany` :  
+ Ce code montre comment utiliser le **selectany** attribut :  
   
-```  
+```cpp 
 //Correct - x1 is initialized and externally visible   
 __declspec(selectany) int x1=1;  
   
@@ -80,9 +81,9 @@ __declspec(selectany) X x(1);
 ```  
   
 ## <a name="example"></a>Exemple  
- Ce code montre comment utiliser le `selectany` attribut pour garantir le pliage des données COMDAT lorsque vous utilisez également le [/OPT : ICF](../build/reference/opt-optimizations.md) option de l’éditeur de liens. Notez que les données doivent être marquées avec `selectany` et placée dans un **const** section (en lecture seule). Vous devez spécifier explicitement la section en lecture seule.  
+ Ce code montre comment utiliser le **selectany** attribut pour garantir le pliage des données COMDAT lorsque vous utilisez également le [/OPT : ICF](../build/reference/opt-optimizations.md) option de l’éditeur de liens. Notez que les données doivent être marquées avec **selectany** et placé dans un **const** section (en lecture seule). Vous devez spécifier explicitement la section en lecture seule.  
   
-```  
+```cpp 
 // selectany2.cpp  
 // in the following lines, const marks the variables as read only  
 __declspec(selectany) extern const int ix = 5;  

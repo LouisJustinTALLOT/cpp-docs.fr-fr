@@ -1,5 +1,5 @@
 ---
-title: Virtual (C++) | Documents Microsoft
+title: Virtual (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 909fd3fde92479b2e5407608026cb01ec17fced2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421794"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939118"
 ---
 # <a name="virtual-c"></a>virtual (C++)
-Le mot clé `virtual` déclare une fonction virtuelle ou une classe de base virtuelle.  
+Le **virtuel** mot clé déclare une fonction virtuelle ou une classe de base virtuelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +38,16 @@ virtual [access-specifier] base-class-name
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `type-specifiers`  
+ *spécificateurs de type*  
  Spécifie le type de retour de la fonction membre virtuelle.  
   
- `member-function-declarator`  
+ *déclarateur de fonction membre*  
  Déclare une fonction membre.  
   
- `access-specifier`  
- Définit le niveau d'accès à la classe de base, `public`, `protected` ou `private`. Peut apparaître avant ou après le mot clé `virtual`.  
+ *spécificateur d’accès*  
+ Définit le niveau d’accès à la classe de base, **public**, **protégé** ou **privé**. Peut apparaître avant ou après le **virtuel** mot clé.  
   
- `base-class-name`  
+ *nom de classe de base*  
  Identifie un type de classe déclaré précédemment.  
   
 ## <a name="remarks"></a>Notes  

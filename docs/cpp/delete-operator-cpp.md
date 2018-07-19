@@ -1,5 +1,5 @@
 ---
-title: Delete (opérateur) (C++) | Documents Microsoft
+title: DELETE, opérateur (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b523f5c10cbd28dfb2d584ea8241bc1518cf925
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942693"
 ---
 # <a name="delete-operator-c"></a>delete, opérateur (C++)
 Libère un bloc de mémoire.  
@@ -35,19 +36,19 @@ Libère un bloc de mémoire.
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le *cast-expression* l’argument doit être un pointeur vers un bloc de mémoire précédemment alloué pour un objet créé avec le [nouvel opérateur](../cpp/new-operator-cpp.md). Le **supprimer** opérateur a un résultat de type `void` et par conséquent, ne retourne pas de valeur. Par exemple :  
+ Le *cast-expression* argument doit être un pointeur vers un bloc de mémoire précédemment alloué pour un objet créé avec le [nouvel opérateur](../cpp/new-operator-cpp.md). Le **supprimer** opérateur a un résultat de type **void** et par conséquent, ne retourne pas de valeur. Exemple :  
   
-```  
+```cpp 
 CDialog* MyDialog = new CDialog;  
 // use MyDialog  
 delete MyDialog;  
 ```  
   
- À l’aide de **supprimer** sur un pointeur vers un objet non alloué avec **nouveau** donne des résultats imprévisibles. Toutefois, vous pouvez utiliser **supprimer** sur un pointeur avec la valeur 0. Cette configuration signifie que, lors de la **nouveau** retourne 0 en cas d’échec, la suppression du résultat d’un échec **nouveau** opération ne présente aucun danger. Consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md) pour plus d’informations.  
+ À l’aide de **supprimer** sur un pointeur vers un objet non alloué avec **nouveau** donne des résultats imprévisibles. Vous pouvez, toutefois, utiliser **supprimer** sur un pointeur avec la valeur 0. Cette configuration signifie que, lorsque **nouveau** retourne 0 en cas d’échec, la suppression du résultat d’un échec **nouveau** opération ne présente aucun danger. Consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md) pour plus d’informations.  
   
  Le **nouveau** et **supprimer** opérateurs peuvent également être utilisés pour les types intégrés, y compris les tableaux. Si `pointer` fait référence à un tableau, placez des crochets vides avant `pointer` :  
   
-```  
+```cpp 
 int* set = new int[100];  
 //use set[]  
 delete [] set;  
@@ -55,14 +56,14 @@ delete [] set;
   
  À l’aide de la **supprimer** opérateur sur un objet libère sa mémoire. Un programme qui déréférence un pointeur après la suppression de l'objet peut avoir des résultats imprévisibles ou se bloquer.  
   
- Lorsque **supprimer** est utilisée pour libérer la mémoire pour un objet de classe C++, destructeur de l’objet est appelé avant que la mémoire de l’objet est libérée (si l’objet a un destructeur).  
+ Lorsque **supprimer** est utilisé pour libérer la mémoire pour un objet de classe C++, destructeur de l’objet est appelé avant la libération de la mémoire de l’objet (si l’objet a un destructeur).  
   
  Si l’opérande de le **supprimer** opérateur est une l-value modifiable, sa valeur n’est pas définie une fois que l’objet est supprimé.  
   
 ## <a name="using-delete"></a>Utilisation de delete  
- Il existe deux variantes syntaxiques pour le [opérateur delete](../cpp/delete-operator-cpp.md): une pour les objets uniques et l’autre pour les tableaux d’objets. Le fragment de code suivant illustre les différences entre ces variantes :  
+ Il existe deux variantes syntaxiques pour le [opérateur delete](../cpp/delete-operator-cpp.md): un pour les objets uniques et l’autre pour les tableaux d’objets. Le fragment de code suivant illustre les différences entre ces variantes :  
   
-```  
+```cpp 
 // expre_Using_delete.cpp  
 struct UDType   
 {  
@@ -94,7 +95,7 @@ int main()
 ## <a name="how-delete-works"></a>Fonctionnement de delete  
  L’opérateur delete appelle la fonction **opérateur delete**.  
   
- Pour les objets pas de type de classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md), ou [union](../cpp/unions.md)), l’opérateur delete global est appelé. Pour les objets de type classe, le nom de la fonction de désallocation est résolu dans la portée globale si l’expression de suppression commence par l’opérateur de résolution de portée unaire (::). Sinon, l'opérateur delete appelle le destructeur pour un objet avant de désallouer la mémoire (si le pointeur n'est pas null). L'opérateur delete peut être défini pour chaque classe ; si cette définition n'existe pas pour une classe donnée, l'opérateur de suppression global est appelé. Si l'expression de suppression est utilisée pour désallouer un objet de classe dont le type statique a un destructeur virtuel, la fonction de désallocation est résolue par l'intermédiaire du destructeur virtuel du type dynamique de l'objet.  
+ Pour les objets pas du type de classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md), ou [union](../cpp/unions.md)), l’opérateur delete global est appelé. Pour les objets de type classe, le nom de la fonction de désallocation est résolu dans la portée globale si l’expression de suppression commence par l’opérateur de résolution de portée unaire (::). Sinon, l'opérateur delete appelle le destructeur pour un objet avant de désallouer la mémoire (si le pointeur n'est pas null). L'opérateur delete peut être défini pour chaque classe ; si cette définition n'existe pas pour une classe donnée, l'opérateur de suppression global est appelé. Si l'expression de suppression est utilisée pour désallouer un objet de classe dont le type statique a un destructeur virtuel, la fonction de désallocation est résolue par l'intermédiaire du destructeur virtuel du type dynamique de l'objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)   

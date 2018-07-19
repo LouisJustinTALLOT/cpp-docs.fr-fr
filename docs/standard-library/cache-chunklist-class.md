@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953258"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist, classe
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Sz`|Nombre d’éléments du tableau à allouer.|
+|*sz*|Nombre d’éléments du tableau à allouer.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle utilise `operator new` pour allouer des segments de mémoire brute et sous-alloue des blocs pour allouer du stockage à un bloc de mémoire si nécessaire ; elle stocke des blocs de mémoire désalloués dans une liste de libération séparée pour chaque segment et utilise `operator delete` pour désallouer un segment quand aucun de ses blocs de mémoire n’est utilisé.
+Cette classe de modèle utilise **opérateur new** pour allouer des segments de mémoire brute, sous-alloue des blocs pour allouer le stockage pour un bloc de mémoire si nécessaire ; il stocke des blocs de mémoire désalloués dans une liste de libération séparée pour chaque segment et utilise **opérateur delete** pour désallouer un segment quand aucun de ses blocs de mémoire est en cours d’utilisation.
 
-Chaque bloc de mémoire contient `Sz` octets de mémoire utilisable et un pointeur vers le segment auquel il appartient. Chaque segment contient `Nelts` blocs de mémoire, trois pointeurs, un entier et les données dont `operator new` et `operator delete` ont besoin.
+Chaque bloc de mémoire contient *Sz* octets de mémoire utilisable et un pointeur vers le segment auquel il appartient. Chaque segment contient `Nelts` blocs de mémoire, trois pointeurs, int et les données qui **opérateur new** et **opérateur delete** nécessitent.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -63,7 +63,7 @@ Chaque bloc de mémoire contient `Sz` octets de mémoire utilisable et un point
 |[allocate](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 

@@ -1,5 +1,5 @@
 ---
-title: CUrl classe | Documents Microsoft
+title: CUrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,18 +45,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb0f7abc079d699cfcf682356b88b9cc8aa2bb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 323645a0949ddf6797f36ad9b530920ca24ffe44
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366232"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885687"
 ---
-# <a name="curl-class"></a>Classe de cUrl
-Cette classe représente une URL. Il vous permet de manipuler chaque élément de l’URL indépendamment des autres si l’analyse des URL existante de chaîne ou de génération d’une chaîne à partir de zéro.  
+# <a name="curl-class"></a>CUrl, classe
+Cette classe représente une URL. Il vous permet de manipuler chaque élément de l’URL indépendamment des autres si l’analyse une URL existante de chaîne ou de création d’une chaîne à partir de zéro.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,9 +90,9 @@ class CUrl
 |[CUrl::GetPortNumber](#getportnumber)|Appelez cette méthode pour obtenir le numéro de port en termes de ATL_URL_PORT.|  
 |[CUrl::GetScheme](#getscheme)|Appelez cette méthode pour obtenir le schéma d’URL.|  
 |[CUrl::GetSchemeName](#getschemename)|Appelez cette méthode pour obtenir le nom de schéma d’URL.|  
-|[CUrl::GetSchemeNameLength](#getschemenamelength)|Appelez cette méthode pour obtenir la longueur du nom du schéma de l’URL.|  
+|[CUrl::GetSchemeNameLength](#getschemenamelength)|Appelez cette méthode pour obtenir la longueur du nom de schéma d’URL.|  
 |[CUrl::GetUrlLength](#geturllength)|Appelez cette méthode pour obtenir la longueur d’URL.|  
-|[CUrl::GetUrlPath](#geturlpath)|Appelez cette méthode pour obtenir le chemin d’accès d’URL.|  
+|[CUrl::GetUrlPath](#geturlpath)|Appelez cette méthode pour obtenir le chemin d’URL.|  
 |[CUrl::GetUrlPathLength](#geturlpathlength)|Appelez cette méthode pour obtenir la longueur de chemin d’accès d’URL.|  
 |[CUrl::GetUserName](#getusername)|Appelez cette méthode pour obtenir le nom d’utilisateur à partir de l’URL.|  
 |[CUrl::GetUserNameLength](#getusernamelength)|Appelez cette méthode pour obtenir la longueur du nom d’utilisateur.|  
@@ -102,7 +102,7 @@ class CUrl
 |[CUrl::SetPortNumber](#setportnumber)|Appelez cette méthode pour définir le numéro de port en termes de ATL_URL_PORT.|  
 |[CUrl::SetScheme](#setscheme)|Appelez cette méthode pour définir le schéma d’URL.|  
 |[CUrl::SetSchemeName](#setschemename)|Appelez cette méthode pour définir le nom de schéma d’URL.|  
-|[CUrl::SetUrlPath](#seturlpath)|Appelez cette méthode pour définir le chemin d’accès d’URL.|  
+|[CUrl::SetUrlPath](#seturlpath)|Appelez cette méthode pour définir le chemin d’URL.|  
 |[CUrl::SetUserName](#setusername)|Appelez cette méthode pour définir le nom d’utilisateur.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -112,7 +112,7 @@ class CUrl
 |[CUrl::operator =](#operator_eq)|Assigne le texte spécifié `CUrl` objet actuel `CUrl` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CUrl` vous permet de manipuler les champs d’une URL, tels que le numéro de port ou de chemin d’accès. `CUrl` comprend l’URL de la forme suivante :  
+ `CUrl` vous permet de manipuler les champs d’une URL, tels que le numéro de port ou de chemin d’accès. `CUrl` comprend les URL sous la forme suivante :  
   
  \<Schéma >  ://\<nom d’utilisateur > :\<mot de passe > @\<nom d’hôte > :\<numéro_port > /\<UrlPath >\<ExtraInfo >  
   
@@ -124,21 +124,21 @@ class CUrl
   
 -   Schéma : « http » ou [ATL_URL_SCHEME_HTTP](atl-url-scheme-enum.md)  
   
--   Nom d’utilisateur : « un »  
+-   Nom d’utilisateur : « quelqu'un »  
   
 -   Mot de passe : « secret »  
   
 -   Nom d’hôte : « www.microsoft.com »  
   
--   Numéro_port : 80  
+-   Numéro de port : 80  
   
 -   UrlPath : « visualc/stuff.htm »  
   
 -   ExtraInfo : « #contents »  
   
- Pour manipuler le champ UrlPath (par exemple), vous utiliseriez [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), et [SetUrlPath](#seturlpath). Vous devez utiliser [CreateUrl](#createurl) pour créer la chaîne URL complète.  
+ Pour manipuler le champ UrlPath (par exemple), vous utiliseriez [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), et [SetUrlPath](#seturlpath). Vous utiliseriez [CreateUrl](#createurl) pour créer la chaîne URL complète.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlutil.h  
   
 ##  <a name="canonicalize"></a>  CUrl::Canonicalize  
@@ -149,14 +149,14 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `dwFlags`  
- Les indicateurs qui contrôlent la canonisation. Si aucun indicateur n’est spécifiée ( `dwFlags` = 0), la méthode convertit tous les caractères non sécurisés et les séquences de métadonnées (tel que \\., \.., et \\...) pour échapper les séquences. `dwFlags` Peut prendre l’une des valeurs suivantes :  
+ *dwFlags*  
+ Les indicateurs qui contrôlent la canonisation. Si aucun indicateur n’est spécifié (*dwFlags* = 0), la méthode convertit tous les caractères sécurisés et les séquences de métadonnées (tel que \\., \.., et \\...) pour échapper les séquences. *dwFlags* peut prendre l’une des valeurs suivantes :  
   
 -   ATL_URL_BROWSER_MODE : Ne pas encoder ou décoder les caractères après « # » ou « » et ne supprime pas l’espace blanc de fin après « ». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et espace blanc de fin est supprimé.  
   
--   ATL_URL _DECODE : convertit toutes les séquences de XX % caractères, y compris les séquences d’échappement, avant que l’URL est analysée.  
+-   ATL_URL _DECODE : convertit toutes les séquences XX % en caractères, y compris les séquences d’échappement, avant que l’URL est analysée.  
   
--   ATL_URL _ENCODE_PERCENT : encode des signes de pourcentage rencontrés. Par défaut, les signes de pourcentage ne sont pas encodés.  
+-   ATL_URL _ENCODE_PERCENT : encode les signes de pourcentage rencontrées. Par défaut, les signes de pourcentage ne sont pas encodés.  
   
 -   ATL_URL _ENCODE_SPACES_ONLY : encode des espaces uniquement.  
   
@@ -168,7 +168,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Conversion au format canonique implique la conversion des caractères non sécurisés et les espaces de séquences d’échappement.  
+ Conversion au format canonique consiste à convertir des caractères sécurisés et les espaces de séquences d’échappement.  
   
 ##  <a name="clear"></a>  CUrl::Clear  
  Appelez cette méthode pour effacer tous les champs URL.  
@@ -185,17 +185,17 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszUrl`  
+ *lpszUrl*  
  L’URL.  
   
- `dwFlags`  
- Spécifier ATL_URL_DECODE ou ATL_URL_ESCAPE pour convertir tous les caractères d’échappement `lpszUrl` rétablit les valeurs réelles après l’analyse. (Avant Visual C++ 2005, ATL_URL_DECODE convertir tous les caractères d’échappement avant l’analyse.)  
+ *dwFlags*  
+ Spécifier ATL_URL_DECODE ou ATL_URL_ESCAPE pour convertir tous les caractères d’échappement dans *lpszUrl* à leurs valeurs réelles après l’analyse. (Avant Visual C++ 2005, ATL_URL_DECODE convertie tous les caractères d’échappement avant l’analyse.)  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ##  <a name="createurl"></a>  CUrl::CreateUrl  
- Cette méthode construit une chaîne d’URL à partir des champs d’un objet CUrl.  
+ Cette méthode construit une chaîne d’URL à partir des champs de composant d’un objet de CUrl.  
   
 ```
 inline BOOL CreateUrl(
@@ -208,24 +208,24 @@ inline BOOL CreateUrl(
  *lpszUrl*  
  Un mémoire tampon de chaîne pour contenir la chaîne URL complète.  
   
- `pdwMaxLength`  
+ *pdwMaxLength*  
  La longueur maximale de la *lpszUrl* mémoire tampon de chaîne.  
   
- `dwFlags`  
- Spécifiez ATL_URL_ESCAPE pour convertir tous les caractères d’échappement *lpszUrl* rétablit les valeurs réelles.  
+ *dwFlags*  
+ Spécifiez ATL_URL_ESCAPE pour convertir tous les caractères d’échappement dans *lpszUrl* à leurs valeurs réelles.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode ajoute des champs individuels afin de construire la chaîne URL complète en utilisant le format suivant :  
+ Cette méthode ajoute des champs individuels pour construire la chaîne URL complète en utilisant le format suivant :  
   
  **\<schéma >  ://\<utilisateur > :\<passer > @\<domaine > :\<port >\<chemin d’accès >\<supplémentaires >**  
   
- Lors de l’appel de cette méthode, le `pdwMaxLength` le paramètre doit contenir initialement la longueur maximale de la mémoire tampon de chaîne référencée par le *lpszUrl* paramètre. La valeur de le `pdwMaxLength` paramètre sera mise à jour avec la longueur réelle de la chaîne d’URL.  
+ Lors de l’appel de cette méthode, le *pdwMaxLength* le paramètre doit contenir initialement la longueur maximale de la mémoire tampon de chaîne référencée par le *lpszUrl* paramètre. La valeur de la *pdwMaxLength* paramètre sera actualisée avec la longueur réelle de la chaîne d’URL.  
   
 ### <a name="example"></a>Exemple  
- Cet exemple illustre la création d’un objet CUrl et la récupération de la chaîne d’URL  
+ Cet exemple illustre la création d’un objet de CUrl et de récupération de sa chaîne d’URL  
   
  [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
   
@@ -238,7 +238,7 @@ CUrl(const CUrl& urlThat) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `urlThat`  
+ *URL qui*  
  Le `CUrl` objet à copier pour créer l’URL.  
   
 ##  <a name="dtor"></a>  CUrl :: ~ CUrl  
@@ -266,7 +266,7 @@ inline DWORD GetExtraInfoLength() const throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la longueur de la chaîne qui contient les informations supplémentaires.  
+ Retourne la longueur de la chaîne contenant les informations supplémentaires.  
   
 ##  <a name="gethostname"></a>  CUrl::GetHostName  
  Appelez cette méthode pour obtenir le nom d’hôte de l’URL.  
@@ -339,7 +339,7 @@ inline LPCTSTR GetSchemeName() const throw();
  Retourne le nom de schéma d’URL (par exemple, « http » ou « ftp »).  
   
 ##  <a name="getschemenamelength"></a>  CUrl::GetSchemeNameLength  
- Appelez cette méthode pour obtenir la longueur du nom du schéma de l’URL.  
+ Appelez cette méthode pour obtenir la longueur du nom de schéma d’URL.  
   
 ```
 inline DWORD GetSchemeNameLength() const throw();
@@ -359,14 +359,14 @@ inline DWORD GetUrlLength() const throw();
  Retourne la longueur d’URL.  
   
 ##  <a name="geturlpath"></a>  CUrl::GetUrlPath  
- Appelez cette méthode pour obtenir le chemin d’accès d’URL.  
+ Appelez cette méthode pour obtenir le chemin d’URL.  
   
 ```
 inline LPCTSTR GetUrlPath() const throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le chemin d’accès d’URL.  
+ Retourne le chemin d’URL.  
   
 ##  <a name="geturlpathlength"></a>  CUrl::GetUrlPathLength  
  Appelez cette méthode pour obtenir la longueur de chemin d’accès d’URL.  
@@ -406,7 +406,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `urlThat`  
+ *URL qui*  
  Le `CUrl` objet à copier dans l’objet actuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -434,7 +434,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszHost`  
+ *lpszHost*  
  Le nom d’hôte.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -462,7 +462,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *IP-HTTPS*  
+ *nPrt*  
  Le numéro de port.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -476,7 +476,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nScheme`  
+ *nScheme*  
  Parmi les [ATL_URL_SCHEME](atl-url-scheme-enum.md) valeurs pour le schéma.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -494,23 +494,23 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
   
 ### <a name="parameters"></a>Paramètres  
  *lpszSchm*  
- Nom du schéma de l’URL.  
+ Le nom de schéma d’URL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez également définir le schéma en utilisant un [ATL_URL_SCHEME](atl-url-scheme-enum.md) constant (consultez [CUrl::SetScheme](#setscheme)).  
+ Vous pouvez également définir le schéma à l’aide un [ATL_URL_SCHEME](atl-url-scheme-enum.md) constante (consultez [CUrl::SetScheme](#setscheme)).  
   
 ##  <a name="seturlpath"></a>  CUrl::SetUrlPath  
- Appelez cette méthode pour définir le chemin d’accès d’URL.  
+ Appelez cette méthode pour définir le chemin d’URL.  
   
 ```
 inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpszPath`  
+ *lpszPath*  
  Le chemin d’accès URL.  
   
 ### <a name="return-value"></a>Valeur de retour  

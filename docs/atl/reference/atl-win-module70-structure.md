@@ -1,5 +1,5 @@
 ---
-title: Structure de _ATL_WIN_MODULE70 | Documents Microsoft
+title: _Atl_win_module70, structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256078"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883032"
 ---
-# <a name="atlwinmodule70-structure"></a>Structure de _ATL_WIN_MODULE70
+# <a name="atlwinmodule70-structure"></a>_Atl_win_module70, structure
 Utilisé par le code de fenêtrage dans ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,21 +42,21 @@ struct _ATL_WIN_MODULE70 {
   
 ## <a name="members"></a>Membres  
  `cbSize`  
- La taille de la structure utilisée pour le contrôle de version.  
+ La taille de la structure, utilisée pour le contrôle de version.  
   
  `m_csWindowCreate`  
  Utilisé pour sérialiser l’accès au code de l’inscription de fenêtre. Utilisé en interne par ATL.  
   
- **m_pCreateWndList**  
- Permet de lier windows à leurs objets. Utilisé en interne par ATL.  
+ `m_pCreateWndList`  
+ Utilisé pour lier windows à leurs objets. Utilisé en interne par ATL.  
   
- **m_rgWindowClassAtoms**  
- Utilisé pour effectuer le suivi des inscriptions de classe de fenêtre afin qu’ils puissent être correctement annulées à la fin. Utilisé en interne par ATL.  
+ `m_rgWindowClassAtoms`  
+ Utilisé pour le suivi des inscriptions de classe de fenêtre afin qu’ils puissent être correctement annulées à la fin. Utilisé en interne par ATL.  
   
 ## <a name="remarks"></a>Notes  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) est défini comme un typedef de `_ATL_WIN_MODULE70`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  

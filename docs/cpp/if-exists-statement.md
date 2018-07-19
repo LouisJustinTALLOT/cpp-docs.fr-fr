@@ -1,5 +1,5 @@
 ---
-title: __if_exists, instruction | Documents Microsoft
+title: __if_exists, instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942677"
 ---
 # <a name="ifexists-statement"></a>__if_exists, instruction
-L'instruction `__if_exists` vérifie si l'identificateur spécifié existe. Si l'identificateur existe, le bloc d'instructions spécifié est exécuté.  
+Le **__if_exists** instruction teste si l’identificateur spécifié existe. Si l'identificateur existe, le bloc d'instructions spécifié est exécuté.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,22 +46,22 @@ statements
 ## <a name="remarks"></a>Notes  
   
 > [!CAUTION]
->  Pour obtenir les résultats les plus fiables, utilisez l'instruction `__if_exists` sous les contraintes suivantes.  
+>  Pour obtenir des résultats plus fiables, utilisez le **__if_exists** instruction sous les contraintes suivantes.  
   
--   Appliquez l'instruction `__if_exists` uniquement aux types simples, et non aux modèles.  
+-   Appliquer le **__if_exists** instruction uniquement aux types simples, et non des modèles.  
   
--   Appliquez l'instruction `__if_exists` aux identificateurs à l'intérieur ou à l'extérieur d'une classe. N'appliquez pas l'instruction `__if_exists` aux variables locales.  
+-   Appliquer le **__if_exists** instruction aux identificateurs à la fois à l’intérieur ou en dehors d’une classe. N’appliquez pas le **__if_exists** instruction aux variables locales.  
   
--   Utilisez l'instruction `__if_exists` uniquement dans le corps d'une fonction. En dehors du corps d'une fonction, l'instruction `__if_exists` peut tester uniquement les types entièrement définis.  
+-   Utilisez le **__if_exists** instruction uniquement dans le corps d’une fonction. En dehors du corps d’une fonction, le **__if_exists** instruction peut tester uniquement les types entièrement définis.  
   
 -   Lorsque vous vérifiez la présence de fonctions surchargées, vous ne pouvez pas effectuer le test sur une forme spécifique de la surcharge.  
   
- Le complément à la `__if_exists` instruction est la [__if_not_exists](../cpp/if-not-exists-statement.md) instruction.  
+ Le complément de la **__if_exists** instruction est la [__if_not_exists](../cpp/if-not-exists-statement.md) instruction.  
   
 ## <a name="example"></a>Exemple  
  Notez que cet exemple utilise des modèles, ce qui n'est pas recommandé.  
   
-```  
+```cpp 
 // the__if_exists_statement.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -119,7 +120,7 @@ int main() {
   
 ## <a name="output"></a>Sortie  
   
-```  
+```Output  
 In X<T>::Dump()  
 In A::Dump()  
 In X<T>::Dump()  

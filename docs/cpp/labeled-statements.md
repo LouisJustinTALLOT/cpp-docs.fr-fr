@@ -1,5 +1,5 @@
 ---
-title: Intitulée instructions | Documents Microsoft
+title: Intitulée instructions | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d9456a62c97a2edf1523634268582a7f568b79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b54eb2757f4f58acd0339a058c8bee999b4c8b7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942633"
 ---
 # <a name="labeled-statements"></a>Instructions étiquetées
 Les étiquettes sont utilisées pour transférer le contrôle du programme directement à l'instruction spécifiée.  
@@ -64,13 +65,13 @@ int main() {
   
  **L’instruction goto**  
   
- L’apparence d’un *identificateur* étiquette dans le programme source déclare une étiquette. Uniquement un [goto](../cpp/goto-statement-cpp.md) instruction peut transférer le contrôle à une *identificateur* étiquette. Le fragment de code suivant illustre l’utilisation de la `goto` instruction et un *identificateur* étiquette :  
+ L’apparence d’un *identificateur* étiquette dans le programme source déclare une étiquette. Uniquement une [goto](../cpp/goto-statement-cpp.md) instruction peut transférer le contrôle à un *identificateur* étiquette. Le fragment de code suivant illustre l’utilisation de la **goto** instruction et un *identificateur* étiquette :  
   
  Une étiquette ne peut pas apparaître seule, mais doit toujours être attachée à une instruction. Si une étiquette doit apparaître seule, placez une instruction null après l'étiquette.  
   
  L'étiquette a une portée de fonction et ne peut pas être redéclarée dans la fonction. Toutefois, le même nom peut être utilisé en tant qu'étiquette dans différentes fonctions.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -89,9 +90,9 @@ int main() {
   
  **L’instruction case**  
   
- Les étiquettes qui apparaissent après le **cas** mot clé ne peut pas apparaître à l’extérieur un `switch` instruction. (Cette restriction s’applique également à la **par défaut** (mot clé).) Le fragment de code suivant illustre l’utilisation correcte des **cas** étiquettes :  
+ Les étiquettes qui apparaissent après le **cas** mot clé ne peut pas apparaître à l’extérieur un **basculer** instruction. (Cette restriction s’applique également à la **par défaut** mot clé.) Le fragment de code suivant illustre l’utilisation correcte des **cas** étiquettes :  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -118,9 +119,9 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-case-statement"></a>Étiquettes dans l'instruction case  
- Les étiquettes qui apparaissent après le **cas** mot clé ne peut pas apparaître à l’extérieur un `switch` instruction. (Cette restriction s’applique également à la **par défaut** (mot clé).) Le fragment de code suivant illustre l’utilisation correcte des **cas** étiquettes :  
+ Les étiquettes qui apparaissent après le **cas** mot clé ne peut pas apparaître à l’extérieur un **basculer** instruction. (Cette restriction s’applique également à la **par défaut** mot clé.) Le fragment de code suivant illustre l’utilisation correcte des **cas** étiquettes :  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -162,13 +163,13 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-goto-statement"></a>Étiquettes dans l'instruction goto  
- L’apparence d’un *identificateur* étiquette dans le programme source déclare une étiquette. Uniquement un [goto](../cpp/goto-statement-cpp.md) instruction peut transférer le contrôle à une *identificateur* étiquette. Le fragment de code suivant illustre l’utilisation de la `goto` instruction et un *identificateur* étiquette :  
+ L’apparence d’un *identificateur* étiquette dans le programme source déclare une étiquette. Uniquement une [goto](../cpp/goto-statement-cpp.md) instruction peut transférer le contrôle à un *identificateur* étiquette. Le fragment de code suivant illustre l’utilisation de la **goto** instruction et un *identificateur* étiquette :  
   
  Une étiquette ne peut pas apparaître seule, mais doit toujours être attachée à une instruction. Si une étiquette doit apparaître seule, placez une instruction null après l'étiquette.  
   
  L'étiquette a une portée de fonction et ne peut pas être redéclarée dans la fonction. Toutefois, le même nom peut être utilisé en tant qu'étiquette dans différentes fonctions.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  

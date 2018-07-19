@@ -1,5 +1,5 @@
 ---
-title: GoTo, instruction (C++) | Documents Microsoft
+title: GoTo, instruction (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953393"
 ---
 # <a name="goto-statement-c"></a>goto, instruction (C++)
-L'instruction `goto` transfère sans condition le contrôle à l'instruction étiquetée par l'identificateur spécifié.  
+Le **goto** instruction transfère sans condition le contrôle à l’instruction étiquetée par l’identificateur spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +35,16 @@ goto identifier;
 ## <a name="remarks"></a>Notes  
  L'instruction étiquetée indiquée par `identifier` doit se trouver dans la fonction actuelle. Tous les noms `identifier` sont membres d'un espace de noms interne et, par conséquent, n'interfèrent pas avec d'autres identificateurs.  
   
- Une étiquette d'instruction est explicite uniquement pour une instruction `goto` ; sinon, les étiquettes d'instructions sont ignorées. Les étiquettes ne peuvent pas être redéclarées.  
+ Une étiquette d’instruction est uniquement explicite pour un **goto** instruction ; sinon, les étiquettes d’instruction sont ignorés. Les étiquettes ne peuvent pas être redéclarées.  
   
- Il est conseillé d'utiliser les instructions`break`, `continue` et `return` au lieu de l'instruction `goto` dès que possible. Toutefois, comme l'instruction `break` ne termine qu'un seul niveau d'une boucle, vous devrez peut-être utiliser une instruction `goto` pour quitter une boucle fortement imbriquée.  
+ Il est conseillé d’utiliser le **saut**, **continuer**, et **retourner** instructions au lieu du **goto** instruction chaque fois que possibles. Toutefois, étant donné que le **saut** instruction se termine à partir d’un seul niveau d’une boucle, vous devrez peut-être utiliser un **goto** instruction pour quitter une boucle profondément imbriquée.  
   
- Pour plus d’informations sur les étiquettes et les `goto` instruction, consultez [instructions étiquetées](../cpp/labeled-statements.md) et [à l’aide d’étiquettes avec l’instruction goto](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe).  
+ Pour plus d’informations sur les étiquettes et la **goto** instruction, consultez [instructions étiquetées](../cpp/labeled-statements.md).  
   
 ## <a name="example"></a>Exemple  
- Dans cet exemple, une instruction `goto` transfère le contrôle au point étiqueté `stop` quand `i` est égal à 3.  
+ Dans cet exemple, un **goto** instruction transfère le contrôle au point étiqueté `stop` lorsque `i` est égal à 3.  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

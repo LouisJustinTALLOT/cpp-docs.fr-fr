@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965589"
 ---
 # <a name="isobject-class"></a>is_object, classe
 
@@ -37,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type contient la valeur false si le type `Ty` est un type référence, un type fonction ou void, ou une forme `cv-qualified` de l'un d'eux. Sinon, contient la valeur true.
+Une instance du prédicat de type conserve la valeur false si le type *Ty* est un type référence, un type de fonction ou void, ou un `cv-qualified` forme d’un d’eux, sinon contienne la valeur true.
 
 ## <a name="example"></a>Exemple
 
@@ -87,7 +87,7 @@ is_object<float()> == false
 is_object<void> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965667"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Définit la classe de modèle de conteneur **complexes** et ses modèles de prise en charge.
+Définit la classe de modèle de conteneur `complex` et ses modèles de prise en charge.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +40,7 @@ Un nombre complexe est une paire ordonnée de nombres réels. En termes purement
 
 - Addition, définie comme (*un*, *b*) + (*c*, *d*) = (*un* + *c* , *b* + *d*)
 
-- Multiplication, définie comme (*un*, *b*) \* (*c*, *d*) = (*CA*  -  *bd*, *ad* + *bc*)
+- Multiplication, définie comme (*un*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad* + *bc*)
 
 L'ensemble de nombres complexes avec les opérations d'addition complexe et de multiplication complexe est un domaine au sens algébrique standard :
 
@@ -52,21 +52,21 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
    (*un*/ (*un*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*un*<sup>2</sup> + *b*<sup>2</sup>))
 
-En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *i*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Par exemple :
+En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *je*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Exemple :
 
-   (1 + 2*i*) \* (2 + 3*i*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*i*  
-   = -4 + 7*i*
+   (1 + 2*je*) \* (2 + 3*je*)  
+   = 1 \* (2 + 3*je*) + 2*je* \* (2 + 3*je*)  
+   = (2 + 3*je*) + (4*je* + 6*je*<sup>2</sup>)  
+   = (2 - 6) + (3 + 4)*je*  
+   = -4 + 7*je*
 
-Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’existe aucun classement des nombres complexes comme c’est le champ de nombres réels et ses sous-ensembles, donc inégalités ne peut pas être appliquées aux nombres complexes lorsqu’ils sont en nombres réels.
+Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’existe aucun classement de nombres complexes qu’il existe pour le champ de nombres réels et ses sous-ensembles, donc les inégalités ne peuvent pas être appliquées aux nombres complexes, tels qu’ils sont en nombres réels.
 
 Il existe trois formes courantes de représentation d’un nombre complexe *z* :
 
 - Cartésienne : *z* = *un* + *bi*
 
-- Polaire : *z* = *r* (cos *p* + *i* sin *p*)
+- Polaire : *z* = *r* (cos *p* + *je* sin *p*)
 
 - Exponentielle : *z* = *r* \* *e*<sup>*ip*</sup>
 
@@ -80,7 +80,7 @@ Les termes utilisés dans ces représentations standard d'un nombre complexe s'e
 
 - L’argument ou angle de phase *p* en radians.
 
-Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs sont requises pour retourner une valeur principale pour leurs arguments supérieure à - π et inférieur à ou égal à + π leur à valeur unique. Tous les angles doivent être exprimées en radians, où il existe 2π radians (360 degrés) dans un cercle.
+Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs sont requises pour retourner une valeur principale pour leurs arguments supérieur à - π et inférieur à ou égal à + π laissez-les unique table. Tous les angles doivent être exprimées en radians, où il n’y 2π radians (360 degrés) dans un cercle.
 
 ### <a name="functions"></a>Fonctions
 
@@ -122,9 +122,9 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 |Classe|Description|
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, les deux de type **double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
-|[complex\<float>](../standard-library/complex-float.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, les deux de type **float**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, les deux de type **long double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
+|[complex\<double>](../standard-library/complex-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
+|[complex\<float>](../standard-library/complex-float.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **float**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
+|[complex\<long double>](../standard-library/complex-long-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **long double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
 |[complex](../standard-library/complex-class.md)|La classe de modèle décrit un objet utilisé pour représenter le système des nombres complexes et pour effectuer des opérations arithmétiques complexes.|
 
 ### <a name="literals"></a>Littéraux

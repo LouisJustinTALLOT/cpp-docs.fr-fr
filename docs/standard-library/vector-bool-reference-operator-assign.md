@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6413737b6b442313b77f0f2b2115631a260cc40b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965613"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -41,9 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` La référence d’élément dont la valeur doit être assignée au bit.
+*Droite*  
+ Référence d'élément dont la valeur doit être assignée au bit.
 
-`Val` La valeur booléenne à assigner au bit.
+*Val*  
+ Valeur booléenne à assigner au bit.
 
 ## <a name="example"></a>Exemple
 
@@ -119,7 +121,7 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<vector>
 
@@ -127,5 +129,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="see-also"></a>Voir aussi
 
-[vecteur\<bool > :: classe de référence](../standard-library/vector-bool-reference-class.md)<br/>
+[vecteur\<bool > :: reference, classe](../standard-library/vector-bool-reference-class.md)<br/>
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

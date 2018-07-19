@@ -1,5 +1,5 @@
 ---
-title: Classe de CPrivateObjectSecurityDesc | Documents Microsoft
+title: Cprivateobjectsecuritydesc, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f47adc413a0e6d3d9c820b824dec95f55924867
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96c01326056a5fd3a106e09db94d2a84435f32e3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365202"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879663"
 ---
-# <a name="cprivateobjectsecuritydesc-class"></a>Classe de CPrivateObjectSecurityDesc
+# <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc, classe
 Cette classe représente un objet de descripteur de sécurité objet privé.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -51,8 +51,8 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|Appelez cette méthode pour convertir un descripteur de sécurité et ses listes de contrôle d’accès (ACL) dans un format qui prend en charge la propagation automatique des entrées de contrôle d’accès pouvant être héritées (ACE).|  
-|[CPrivateObjectSecurityDesc::Create](#create)|Appelez cette méthode pour allouer et initialiser un descripteur de sécurité auto-relatif pour l’objet privé créé en appelant le Gestionnaire des ressources.|  
+|[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|Appelez cette méthode pour convertir un descripteur de sécurité et ses listes de contrôle d’accès (ACL) dans un format qui prend en charge la propagation automatique d’entrées pouvant être héritées de contrôle d’accès (ACE).|  
+|[CPrivateObjectSecurityDesc::Create](#create)|Appelez cette méthode pour allouer et initialiser un descripteur de sécurité auto-relatif pour l’objet privé créé par le Gestionnaire de ressources appelant.|  
 |[CPrivateObjectSecurityDesc::Get](#get)|Appelez cette méthode pour récupérer les informations de descripteur de sécurité d’un objet privé.|  
 |[CPrivateObjectSecurityDesc::Set](#set)|Appelez cette méthode pour modifier le descripteur de sécurité d’un objet privé.|  
   
@@ -65,18 +65,18 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="remarks"></a>Notes  
  Cette classe, dérivée de [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), fournit des méthodes pour créer et gérer le descripteur de sécurité d’un objet privé.  
   
- Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
+ Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le SDK Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)  
   
  `CPrivateObjectSecurityDesc`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
- Appelez cette méthode pour convertir un descripteur de sécurité et ses listes de contrôle d’accès (ACL) dans un format qui prend en charge la propagation automatique des entrées de contrôle d’accès pouvant être héritées (ACE).  
+ Appelez cette méthode pour convertir un descripteur de sécurité et ses listes de contrôle d’accès (ACL) dans un format qui prend en charge la propagation automatique d’entrées pouvant être héritées de contrôle d’accès (ACE).  
   
 ```
 bool ConvertToAutoInherit(  
@@ -87,23 +87,23 @@ bool ConvertToAutoInherit(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParent`  
- Pointeur vers un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objet référençant le conteneur parent de l’objet. S’il n’existe aucun conteneur parent, ce paramètre est NULL.  
+ *pParent*  
+ Pointeur vers un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objet référençant le conteneur parent de l’objet. S’il n’existe pas de conteneur parent, ce paramètre est NULL.  
   
- `ObjectType`  
- Pointeur vers un **GUID** structure qui identifie le type d’objet associé à l’objet actuel. Définir `ObjectType` avec la valeur NULL si l’objet n’a pas un GUID.  
+ *ObjectType*  
+ Pointeur vers un `GUID` structure qui identifie le type d’objet associé à l’objet actuel. Définissez *ObjectType* avec la valeur NULL si l’objet n’a pas un GUID.  
   
- `bIsDirectoryObject`  
+ *bIsDirectoryObject*  
  Spécifie si le nouvel objet peut contenir d’autres objets. La valeur true indique que le nouvel objet est un conteneur. La valeur false indique que le nouvel objet n’est pas un conteneur.  
   
- `GenericMapping`  
+ *GenericMapping*  
  Pointeur vers un [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) structure qui spécifie le mappage de chaque droite générique à des droits spécifiques pour l’objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode tente de déterminer si les entrées dans le contrôle d’accès discrétionnaire (DACL) de liste et une liste de contrôle d’accès système (SACL) du descripteur de sécurité en cours ont été héritées à partir du descripteur de sécurité parent. Il appelle le [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) (fonction).  
+ Cette méthode tente de déterminer si les ACE dans le contrôle d’accès discrétionnaire (DACL) de liste et de la liste de contrôle d’accès système (SACL) du descripteur de sécurité actuel ont été héritées du parent descripteur de sécurité. Il appelle le [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) (fonction).  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Constructeur.  
@@ -123,10 +123,10 @@ CPrivateObjectSecurityDesc() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le destructeur libère toutes les ressources attribuées et supprime le descripteur de sécurité de l’objet privé.  
+ Le destructeur libère toutes les ressources allouées et supprime le descripteur de sécurité de l’objet privé.  
   
 ##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
- Appelez cette méthode pour allouer et initialiser un descripteur de sécurité auto-relatif pour l’objet privé créé en appelant le Gestionnaire des ressources.  
+ Appelez cette méthode pour allouer et initialiser un descripteur de sécurité auto-relatif pour l’objet privé créé par le Gestionnaire de ressources appelant.  
   
 ```
 bool Create(  
@@ -147,29 +147,29 @@ bool Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pParent`  
+ *pParent*  
  Pointeur vers un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objet faisant référence au répertoire parent dans lequel un nouvel objet est en cours de création. La valeur NULL si aucun répertoire parent.  
   
- `pCreator`  
- Pointeur vers un descripteur de sécurité fourni par le créateur de l’objet. Si le créateur de l’objet ne passez pas explicitement les informations de sécurité pour le nouvel objet, ce paramètre la valeur NULL.  
+ *pCreator*  
+ Pointeur vers un descripteur de sécurité fourni par le créateur de l’objet. Si le créateur de l’objet ne passe pas explicitement les informations de sécurité pour le nouvel objet, définissez ce paramètre avec la valeur NULL.  
   
- `bIsDirectoryObject`  
+ *bIsDirectoryObject*  
  Spécifie si le nouvel objet peut contenir d’autres objets. La valeur true indique que le nouvel objet est un conteneur. La valeur false indique que le nouvel objet n’est pas un conteneur.  
   
- `Token`  
- Référence à la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet pour le processus client au nom duquel l’objet est créé.  
+ *Jeton*  
+ Référence à la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet pour le processus client au nom duquel l’objet est en cours de création.  
   
- `GenericMapping`  
+ *GenericMapping*  
  Pointeur vers un [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) structure qui spécifie le mappage de chaque droite générique à des droits spécifiques pour l’objet.  
   
- `ObjectType`  
- Pointeur vers un **GUID** structure qui identifie le type d’objet associé à l’objet actuel. Définir `ObjectType` avec la valeur NULL si l’objet n’a pas un GUID.  
+ *ObjectType*  
+ Pointeur vers un `GUID` structure qui identifie le type d’objet associé à l’objet actuel. Définissez *ObjectType* avec la valeur NULL si l’objet n’a pas un GUID.  
   
  *bIsContainerObject*  
  Spécifie si le nouvel objet peut contenir d’autres objets. La valeur true indique que le nouvel objet est un conteneur. La valeur false indique que le nouvel objet n’est pas un conteneur.  
   
- `AutoInheritFlags`  
- Un ensemble de bits indicateurs qui contrôlent la façon dont les entrées de contrôle d’accès (ACE) sont héritées de `pParent`. Consultez [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) pour plus d’informations.  
+ *AutoInheritFlags*  
+ Un ensemble de bits indicateurs qui contrôlent la façon dont les entrées de contrôle d’accès (ACE) sont héritées de *pParent*. Consultez [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
@@ -177,10 +177,10 @@ bool Create(
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) ou [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
- La seconde méthode permet en spécifiant le type d’objet GUID du nouvel objet ou de contrôler la façon dont les ACE sont héritées.  
+ La deuxième méthode autorise en spécifiant le type d’objet GUID du nouvel objet ou de contrôler la façon dont les ACE sont héritées.  
   
 > [!NOTE]
->  Un descripteur de sécurité auto-relatif est un descripteur de sécurité qui stocke toutes ses informations de sécurité dans un bloc contigu de mémoire.  
+>  Un descripteur de sécurité par rapport à lui-même est un descripteur de sécurité qui stocke toutes ses informations de sécurité dans un bloc contigu de mémoire.  
   
 ##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  Appelez cette méthode pour récupérer les informations de descripteur de sécurité d’un objet privé.  
@@ -192,10 +192,10 @@ bool Get(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `si`  
- Un ensemble de bits indicateurs qui indiquent les parties du descripteur de sécurité à récupérer. Cette valeur peut être une combinaison de la [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bits indicateurs.  
+ *Si*  
+ Un ensemble de bits indicateurs qui indiquent les parties du descripteur de sécurité à récupérer. Cette valeur peut être une combinaison de la [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) indicateurs binaires.  
   
- `pResult`  
+ *pResult*  
  Pointeur vers un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objet qui reçoit une copie des informations demandées à partir du descripteur de sécurité spécifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -212,7 +212,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `rhs`  
+ *terme de droite*  
  Le `CPrivateObjectSecurityDesc` objet à attribuer à l’objet actuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -237,29 +237,29 @@ bool Set(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `si`  
- Un ensemble de bits indicateurs qui indiquent les parties du descripteur de sécurité à définir. Cette valeur peut être une combinaison de la [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bits indicateurs.  
+ *Si*  
+ Un ensemble de bits indicateurs qui indiquent les parties du descripteur de sécurité à définir. Cette valeur peut être une combinaison de la [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) indicateurs binaires.  
   
  *Modification*  
- Pointeur vers un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objet. Les parties de ce descripteur de sécurité indiquaient par le `si` paramètre sont appliquées au descripteur de sécurité de l’objet.  
+ Pointeur vers un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objet. Les parties de ce descripteur de sécurité indiquée par le *si* paramètre sont appliquées au descripteur de sécurité de l’objet.  
   
- `GenericMapping`  
+ *GenericMapping*  
  Pointeur vers un [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) structure qui spécifie le mappage de chaque droite générique à des droits spécifiques pour l’objet.  
   
- `Token`  
- Référence à la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet pour le processus client au nom duquel l’objet est créé.  
+ *Jeton*  
+ Référence à la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet pour le processus client au nom duquel l’objet est en cours de création.  
   
- `AutoInheritFlags`  
- Un ensemble de bits indicateurs qui contrôlent la façon dont les entrées de contrôle d’accès (ACE) sont héritées de `pParent`. Consultez [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) pour plus d’informations.  
+ *AutoInheritFlags*  
+ Un ensemble de bits indicateurs qui contrôlent la façon dont les entrées de contrôle d’accès (ACE) sont héritées de *pParent*. Consultez [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
 ### <a name="remarks"></a>Notes  
- La seconde méthode permet en spécifiant le type d’objet GUID de l’objet ou de contrôler la façon dont les ACE sont héritées.  
+ La deuxième méthode autorise en spécifiant le type d’objet GUID de l’objet ou de contrôler la façon dont les ACE sont héritées.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
- [Fonctions de sécurité Global](../../atl/reference/security-global-functions.md)   
+ [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)   
  [CSecurityDesc, classe](../../atl/reference/csecuritydesc-class.md)

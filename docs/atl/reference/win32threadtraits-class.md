@@ -1,5 +1,5 @@
 ---
-title: Classe de Win32ThreadTraits | Documents Microsoft
+title: Classe de Win32ThreadTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362014"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883672"
 ---
 # <a name="win32threadtraits-class"></a>Classe de Win32ThreadTraits
 Cette classe fournit la fonction de création d’un thread Windows. Utilisez cette classe si le thread ne doit pas utiliser de fonctions CRT.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,17 +48,17 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Statique) Appelez cette fonction pour créer un thread qui ne doit pas utiliser les fonctions CRT.|  
   
 ## <a name="remarks"></a>Notes  
- Caractéristiques de thread sont des classes qui fournissent une fonction de création d’un type particulier de thread. La fonction de création a la même signature et la même sémantique que les fenêtres [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (fonction).  
+ Caractéristiques de thread sont des classes qui fournissent une fonction de création d’un type particulier de thread. La fonction de création a la même signature et la même sémantique que le Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (fonction).  
   
- Caractéristiques de thread sont utilisées par les classes suivantes :  
+ Caractéristiques de thread sont utilisés par les classes suivantes :  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Si le thread utilise des fonctions CRT, utilisez [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) à la place.  
+ Si le thread sera des fonctions CRT, utilisez [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) à la place.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
@@ -75,26 +75,26 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpsa`  
+ *lpsa*  
  Les attributs de sécurité pour le nouveau thread.  
   
- `dwStackSize`  
+ *dwStackSize*  
  La taille de pile pour le nouveau thread.  
   
- `pfnThreadProc`  
+ *pfnThreadProc*  
  La procédure de thread du nouveau thread.  
   
- `pvParam`  
+ *pvParam*  
  Le paramètre à passer à la procédure de thread.  
   
- `dwCreationFlags`  
+ *dwCreationFlags*  
  La création d’indicateurs (0 ou CREATE_SUSPENDED).  
   
- `pdwThreadId`  
+ *pdwThreadId*  
  [out] Adresse de la variable DWORD qui, en cas de réussite, reçoit l’ID de thread du thread nouvellement créé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le handle vers le nouveau thread ou NULL en cas d’échec. Appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour obtenir des informations d’erreur étendues.  
+ Retourne le handle vers le thread nouvellement créé ou NULL en cas d’échec. Appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour obtenir des informations d’erreur étendues.  
   
 ### <a name="remarks"></a>Notes  
  Consultez [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) pour plus d’informations sur les paramètres de cette fonction.  

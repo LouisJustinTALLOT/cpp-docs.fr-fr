@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954156"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt;, fonctions
 
@@ -31,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Paramètres
 
-`RealType` Type intégral à virgule flottante. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* type intégral à virgule flottante. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-`Bits` Le Générateur de nombres aléatoires.
+*Bits* le Générateur de nombres aléatoires.
 
-`Gen` Le Générateur de nombres aléatoires.
+*Gen* le Générateur de nombres aléatoires.
 
 ### <a name="remarks"></a>Notes
 
-La fonction avec modèle appelle l'élément `operator()` de `Gen` à plusieurs reprises et compresse les valeurs retournées dans une valeur à virgule flottante `x` de type `RealType` jusqu'à ce qu'elle ait recueilli le nombre spécifié de bits de mantisse dans `x`. Le nombre spécifié est la plus petite valeur de `Bits` (qui doit être différente de zéro) et le nombre complet de bits de mantisse dans `RealType`. Le premier appel fournit les bits d'ordre le plus bas. La fonction retourne `x`.
+Les appels de fonction de modèle `operator()` de *Gen* à plusieurs reprises et compresse les valeurs retournées en une valeur à virgule flottante `x` de type *RealType* jusqu'à ce qu’elle ait recueilli le nombre spécifié de bits de mantisse dans `x`. Le nombre spécifié est le plus petit de *Bits* (qui doit être différente de zéro) et le nombre total de bits de mantisse dans *RealType*. Le premier appel fournit les bits d'ordre le plus bas. La fonction retourne `x`.
 
 ## <a name="see-also"></a>Voir aussi
 

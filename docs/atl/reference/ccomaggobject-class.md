@@ -1,5 +1,5 @@
 ---
-title: Classe de CComAggObject | Documents Microsoft
+title: CComAggObject, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426a01c1957b276174b8b36884605b69dd501de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364217"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884991"
 ---
-# <a name="ccomaggobject-class"></a>Classe de CComAggObject
-Cette classe implémente la [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface pour un objet. Par définition, un objet est contenu dans un objet externe. Le `CComAggObject` classe est semblable à la [CComObject classe](../../atl/reference/ccomobject-class.md), à ceci près qu’il expose une interface qui est directement accessible aux clients externes.  
+# <a name="ccomaggobject-class"></a>CComAggObject, classe
+Cette classe implémente le [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface pour un objet agrégé. Par définition, un objet est contenu dans un objet externe. Le `CComAggObject` classe est semblable à la [CComObject, classe](../../atl/reference/ccomobject-class.md), à ceci près qu’il expose une interface qui est directement accessible aux clients externes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,8 +46,8 @@ class CComAggObject : public IUnknown,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `contained`  
- Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que d’autres interfaces souhaitées prendre en charge sur l’objet.  
+ *contenu*  
+ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -65,7 +65,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::AddRef](#addref)|Incrémente le décompte de références sur l’objet agrégée.|  
 |[CComAggObject::CreateInstance](#createinstance)|Cette fonction statique vous permet de créer un nouveau **CComAggObject <** `contained` **>** objet sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Effectue l’initialisation finale de `m_contained`.|  
-|[CComAggObject::FinalRelease](#finalrelease)|Effectue une destruction finale de `m_contained`.|  
+|[CComAggObject::FinalRelease](#finalrelease)|Effectue une destruction finale des `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Récupère un pointeur vers l'interface demandée.|  
 |[CComAggObject::Release](#release)|Décrémente le décompte de références sur l’objet agrégée.|  
   
@@ -76,9 +76,9 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Délégués `IUnknown` appels à inconnu externe.|  
   
 ## <a name="remarks"></a>Notes  
- `CComAggObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet. `CComAggObject` a son propre **IUnknown** interface, distinct de l’objet externe **IUnknown** interface et son propre décompte de références.  
+ `CComAggObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet agrégé. `CComAggObject` possède son propre `IUnknown` interface, distinct de l’objet externe `IUnknown` interface et gère son propre nombre de références.  
   
- Pour plus d’informations sur l’agrégation, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
+ Pour plus d’informations sur l’agrégation, consultez l’article [principes de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CComObjectRootBase`  
@@ -89,7 +89,7 @@ class CComAggObject : public IUnknown,
   
  `CComAggObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="addref"></a>  CComAggObject::AddRef  
@@ -100,7 +100,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur qui peut être utile pour les tests de diagnostic ou de test.  
+ Une valeur qui peut-être être utiles pour le diagnostic ou de test.  
   
 ##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject  
  Constructeur.  
@@ -110,13 +110,13 @@ CComAggObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pv`  
+ *PV*  
  [in] Inconnu externe.  
   
 ### <a name="remarks"></a>Notes  
  Initialise le `CComContainedObject` membre, [m_contained](#m_contained)et incrémente le nombre de verrous du module.  
   
- Le décrémente destructeur le module nombre de verrous.  
+ Le destructeur décrémente le module nombre de verrous.  
   
 ##  <a name="dtor"></a>  CComAggObject :: ~ CComAggObject  
  Destructeur.  
@@ -126,7 +126,7 @@ CComAggObject(void* pv);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Libère toutes les ressources attribuées, les appels [FinalRelease](#finalrelease), et décrémente le module nombre de verrous.  
+ Libère toutes les ressources allouées, appels [FinalRelease](#finalrelease), et décrémente le module nombre de verrous.  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
  Cette fonction statique vous permet de créer un nouveau **CComAggObject <** `contained` **>** objet sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
@@ -138,26 +138,26 @@ static HRESULT WINAPI CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pp`  
- [out] Un pointeur vers un **CComAggObject\<*** contenus* **>** pointeur. Si `CreateInstance` échoue, `pp` a la valeur **NULL**.  
+ *PP*  
+ [out] Un pointeur vers un **CComAggObject\<*** contenus* **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- L’objet retourné est un décompte de références de zéro, appelez `AddRef` immédiatement, puis utilisez **version** pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.  
+ L’objet retourné est un décompte de références de zéro, appelez `AddRef` immédiatement, utilisez `Release` pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.  
   
- Si vous n’avez besoin d’imposent pas accès à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans subir la surcharge de `CoCreateInstance`, utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.  
+ Si vous ne pas nécessitant un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans la surcharge de `CoCreateInstance`, utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.  
   
 ##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct  
- Appelée au cours des dernières étapes de la construction d’objet, cette méthode effectue une initialisation finale sur le [m_contained](#m_contained) membre.  
+ Appelée au cours des dernières étapes de la construction d’objet, cette méthode exécute toute initialisation finale sur le [m_contained](#m_contained) membre.  
   
 ```
 HRESULT FinalConstruct();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ##  <a name="finalrelease"></a>  CComAggObject::FinalRelease  
  Appelé lors de la destruction d’objets, cette méthode libère le [m_contained](#m_contained) membre.  
@@ -167,18 +167,18 @@ void FinalRelease();
 ```  
   
 ##  <a name="m_contained"></a>  CComAggObject::m_contained  
- A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objet dérivé de votre classe.  
+ Un [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objet dérivé de votre classe.  
   
 ```
 CComContainedObject<contained> m_contained;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `contained`  
- [in] Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que d’autres interfaces souhaitées prendre en charge sur l’objet.  
+ *contenu*  
+ [in] Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.  
   
 ### <a name="remarks"></a>Notes  
- Tous les **IUnknown** appelle via `m_contained` sont déléguées à inconnu externe.  
+ Tous les `IUnknown` appelle via `m_contained` sont déléguées à inconnu externe.  
   
 ##  <a name="queryinterface"></a>  CComAggObject::QueryInterface  
  Récupère un pointeur vers l'interface demandée.  
@@ -190,20 +190,20 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iid`  
- [in] Identificateur de l’interface demandée.  
+ *IID*  
+ [in] L’identificateur de l’interface demandée.  
   
- `ppvObject`  
- [out] Un pointeur vers le pointeur d’interface identifié par `iid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a la valeur **NULL**.  
+ *ppvObject*  
+ [out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.  
   
- `pp`  
- [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, `pp` a la valeur **NULL**.  
+ *PP*  
+ [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, *pp* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- Si l’interface demandée est **IUnknown**, `QueryInterface` retourne un pointeur vers l’agrégées propre à l’objet **IUnknown** et incrémente le décompte de références. Sinon, cette méthode recherche l’interface via la `CComContainedObject` membre, [m_contained](#m_contained).  
+ Si l’interface demandée est `IUnknown`, `QueryInterface` retourne un pointeur vers l’agrégées propre à l’objet `IUnknown` et incrémente le décompte de références. Sinon, cette méthode exécute une requête pour l’interface via la `CComContainedObject` membre, [m_contained](#m_contained).  
   
 ##  <a name="release"></a>  CComAggObject::Release  
  Décrémente le décompte de références sur l’objet agrégée.  
@@ -213,11 +213,11 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Dans les versions debug, **version** retourne une valeur qui peut être utile pour les tests de diagnostic ou de test. Dans les versions non debug, **version** retourne toujours 0.  
+ Dans les versions debug, `Release` retourne une valeur qui peut-être être utiles pour le diagnostic ou de test. Dans les versions non debug `Release` retourne toujours 0.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CComObject](../../atl/reference/ccomobject-class.md)   
- [CComPolyObject (classe)](../../atl/reference/ccompolyobject-class.md)   
+ [CComObject, classe](../../atl/reference/ccomobject-class.md)   
+ [CComPolyObject, classe](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   

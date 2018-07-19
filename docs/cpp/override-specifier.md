@@ -1,5 +1,5 @@
 ---
-title: Spécificateur de substitution | Documents Microsoft
+title: Spécificateur de substitution | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420179"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940652"
 ---
 # <a name="override-specifier"></a>Spécificateur de substitution
-Vous pouvez utiliser le mot clé `override` pour désigner les fonctions membres qui remplacent une fonction virtuelle dans une classe de base.  
+Vous pouvez utiliser la **remplacer** mot clé pour désigner les fonctions qui remplacent une fonction virtuelle dans une classe de base de membre.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Notes  
- `override` est contextuel et a une signification spéciale uniquement lorsqu'il est utilisé après une déclaration de fonction membre ; sinon, ce n'est pas un mot clé réservé.  
+ **substituer** est contextuel et a spéciales, ce qui signifie que lorsqu’il est utilisé après une déclaration de fonction membre ; sinon, il n’est pas un mot clé réservé.  
   
 ## <a name="example"></a>Exemple  
- Utilisez `override` pour empêcher un comportement d'héritage inopportun dans votre code. L'exemple suivant indique où, sans utiliser `override`, la fonction membre de classe dérivée ne s'est pas forcément comportée comme prévu. Le compilateur n'émet pas d'erreurs pour ce code.  
+ Utilisez **remplacer** permettant d’empêcher le comportement d’héritage inopportun dans votre code. L’exemple suivant indique où, sans utiliser **remplacer**, le comportement de la fonction membre de la classe dérivée ne peut-être pas avoir été conçu. Le compilateur n'émet pas d'erreurs pour ce code.  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Lorsque vous utilisez `override`, le compilateur génère des erreurs au lieu de créer automatiquement les nouvelles fonctions membres.  
+ Lorsque vous utilisez **remplacer**, le compilateur génère des erreurs au lieu de créer en mode silencieux à nouveau membre de fonctions.  
   
 ```cpp  
 class BaseClass  
@@ -89,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Pour spécifier que les fonctions ne peut pas être remplacées et que les classes ne peut pas être héritées, utilisez le [final](../cpp/final-specifier.md) (mot clé).  
+ Pour spécifier que les fonctions ne peut pas être substituées et que les classes ne peut pas être héritées, utilisez le [finale](../cpp/final-specifier.md) mot clé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécificateur final](../cpp/final-specifier.md)   

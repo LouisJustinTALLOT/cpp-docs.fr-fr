@@ -1,5 +1,5 @@
 ---
-title: Utilisation des tableaux (C++) | Documents Microsoft
+title: Utilisation de tableaux (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2140dbe786a5d2a2a1b86eca17912e5e06b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942673"
 ---
 # <a name="using-arrays-c"></a>Utilisation de tableaux (C++)
 Vous pouvez accéder à des éléments individuels d’un tableau à l’aide de l’opérateur d’indice de tableau (`[ ]`). Si un tableau unidimensionnel est utilisé dans une expression qui ne comporte aucun indice, le nom du tableau a la valeur un pointeur vers le premier élément du tableau.  
   
-```  
+```cpp 
 // using_arrays.cpp  
 int main() {  
    char chArray[10];  
@@ -35,7 +36,7 @@ int main() {
   
  Lorsque vous utilisez des tableaux multidimensionnels, vous pouvez utiliser différentes combinaisons dans les expressions.  
   
-```  
+```cpp 
 // using_arrays_2.cpp  
 // compile with: /EHsc /W1  
 #include <iostream>  
@@ -54,7 +55,7 @@ int main() {
 }  
 ```  
   
- Dans le code précédent, `multi` est un tableau à trois dimensions de type `double`. Le `p2multi` pointeur pointe vers un tableau de type `double` de taille de trois. Dans cet exemple, le tableau est utilisé avec un, deux et trois indices. Bien qu’il soit plus courant pour spécifier tous les indices, comme dans le `cout` instruction, il est parfois utile de sélectionner un sous-ensemble spécifique d’éléments de tableau, comme indiqué dans les instructions qui suivent `cout`.  
+ Dans le code précédent, `multi` est un tableau à trois dimensions de type **double**. Le `p2multi` pointeur pointe vers un tableau de type **double** de taille trois. Dans cet exemple, le tableau est utilisé avec un, deux et trois indices. Bien qu’il soit plus courant de spécifier tous les indices, comme dans le `cout` instruction, il est parfois utile de sélectionner un sous-ensemble spécifique d’éléments de tableau, comme indiqué dans les instructions qui suivent `cout`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tableaux](../cpp/arrays-cpp.md)

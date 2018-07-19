@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d31f30971184356374b3991fedda474ca27465
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2283e74c00867e373d2ba117fd5dfbf70f137c75
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857296"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966005"
 ---
 # <a name="using-c-library-headers"></a>Utilisation des en-têtes de bibliothèque C++
 
@@ -41,11 +41,11 @@ Un en-tête de bibliothèque C++ inclut tous les autres en-têtes de bibliothèq
 
 Chaque fonction de la bibliothèque est déclarée dans un en-tête standard. Contrairement au langage C standard, l’en-tête standard ne fournit jamais de macro de masquage du même nom que la fonction qui masque la déclaration de fonction et permet d’obtenir le même effet. Pour plus d’informations sur les macros de masquage, consultez [Conventions de la bibliothèque C++](../standard-library/cpp-library-conventions.md).
 
-Tous les noms autres que `operator delete` et `operator new` dans les en-têtes de bibliothèque C++ sont définis dans l’espace de noms `std`, ou dans un espace de noms imbriqué dans l’espace de noms `std`. Vous faites référence au nom `cin`, par exemple, en tant que `std::cin`. Notez, cependant, que les noms des macros ne sont pas soumis à la qualification d’espace de noms. Par conséquent, vous écrivez toujours `__STD_COMPLEX` sans qualificateur d’espace de noms.
+Tous les noms autres que **opérateur delete** et **opérateur new** dans la bibliothèque C++ en-têtes sont définis dans le `std` espace de noms, ou dans un espace de noms imbriqué dans le `std` espace de noms. Vous faites référence au nom `cin`, par exemple, en tant que `std::cin`. Notez, cependant, que les noms des macros ne sont pas soumis à la qualification d’espace de noms. Par conséquent, vous écrivez toujours `__STD_COMPLEX` sans qualificateur d’espace de noms.
 
-Dans certains environnements de traduction, l’insertion d’un en-tête de bibliothèque C++ peut hausser les noms externes déclarés dans l’espace de noms `std` vers l’espace de noms global, avec des déclarations `using` individuelles pour chacun de ces noms. Sinon, l’en-tête n’introduit *aucun* nom de bibliothèque dans l’espace de noms actuel.
+Dans certains environnements de traduction, notamment un en-tête de bibliothèque C++ peut hausser les noms externes déclarés dans le `std` espace de noms dans l’espace de noms global, avec personne **à l’aide de** déclarations pour chacun de ces noms. Sinon, l’en-tête n’introduit *aucun* nom de bibliothèque dans l’espace de noms actuel.
 
-Le standard C++ nécessite que les en-têtes du standard C déclarent tous les noms externes dans l’espace de noms `std`, puis les haussent vers l’espace de noms global avec des déclarations `using` individuelles pour chacun de ces noms. Mais, dans certains environnements de traduction, les en-têtes du standard C n’incluent aucune déclaration d’espace de noms, déclarant tous les noms directement dans l’espace de noms global. Par conséquent, la façon la plus portable de traiter les espaces de noms consiste à suivre deux règles :
+La norme C++ nécessite que les en-têtes Standard C déclarent tous les noms externes dans l’espace de noms `std`, puis les haussent vers l’espace de noms global avec personne **à l’aide de** déclarations pour chacun de ces noms. Mais, dans certains environnements de traduction, les en-têtes du standard C n’incluent aucune déclaration d’espace de noms, déclarant tous les noms directement dans l’espace de noms global. Par conséquent, la façon la plus portable de traiter les espaces de noms consiste à suivre deux règles :
 
 - Pour déclarer sans faute dans l’espace de noms `std` un nom externe traditionnellement déclaré dans \<stdlib.h> par exemple, incluez l’en-tête \<cstdlib>. Sachez que le nom peut également être déclaré dans l’espace de noms global.
 

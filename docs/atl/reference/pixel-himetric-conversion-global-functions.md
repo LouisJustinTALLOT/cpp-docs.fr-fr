@@ -1,5 +1,5 @@
 ---
-title: Fonctions globales de Conversion HIMETRIC de pixel | Documents Microsoft
+title: Fonctions globales de Conversion pixel-HIMETRIC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359424"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881160"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>Fonctions de Conversion de pixel/HIMETRIC Global
+# <a name="pixelhimetric-conversion-global-functions"></a>Fonctions globales de Conversion pixel/HIMETRIC
 Ces fonctions prennent en charge la conversion vers et depuis le pixel et unités HIMETRIC.  
   
 > [!IMPORTANT]
@@ -44,16 +44,16 @@ extern void AtlHiMetricToPixel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpSizeInHiMetric`  
+ *lpSizeInHiMetric*  
  [in] Pointeur vers la taille de l’objet en unités HIMETRIC.  
   
- `lpSizeInPix`  
- [out] Pointeur vers où la taille de l’objet en pixels doit être retournée.  
+ *lpSizeInPix*  
+ [out] Pointeur vers l’emplacement où la taille l’objet en pixels à retourner.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric  
@@ -66,16 +66,16 @@ extern void AtlPixelToHiMetric(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lpSizeInPix`  
+ *lpSizeInPix*  
  [in] Pointeur vers la taille de l’objet en pixels.  
   
- `lpSizeInHiMetric`  
- [out] Pointeur vers où la taille de l’objet en unités HIMETRIC doit être retournée.  
+ *lpSizeInHiMetric*  
+ [out] Pointeur vers l’emplacement où la taille l’objet en unités HIMETRIC à retourner.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
 
 ## <a name="see-also"></a>Voir aussi  

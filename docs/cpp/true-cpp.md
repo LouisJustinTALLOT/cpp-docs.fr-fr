@@ -1,5 +1,5 @@
 ---
-title: la valeur True (C++) | Documents Microsoft
+title: True (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44df8d3e9429c272d83025b600fc8d43cc8f8b73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a469b47d54cef9084ba686538219d62a2d5ec50
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942697"
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      bool-identifier = true ;  
+bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Ce mot clé est une des deux valeurs d’une variable de type [bool](../cpp/bool-cpp.md) ou une expression conditionnelle (une expression conditionnelle est maintenant une véritable expression booléenne). Si `i` est de type `bool`, puis l’instruction `i = true;` assigne **true** à `i`.  
+ Ce mot clé est une des deux valeurs d’une variable de type [bool](../cpp/bool-cpp.md) ou une expression conditionnelle (une expression conditionnelle est maintenant une véritable expression booléenne). Si `i` est de type **bool**, puis l’instruction `i = true;` attribue **true** à `i`.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // bool_true.cpp  
 #include <stdio.h>  
 int main()  

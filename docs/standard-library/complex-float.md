@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954003"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -51,11 +51,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Paramètres
 
-`_RealVal` La valeur de type **float** pour la partie réelle du nombre complexe qui est construit.
+*_RealVal* la valeur de type **float** pour la partie réelle du nombre complexe en cours de construction.
 
-`_ImagVal` La valeur de type **float** pour la partie imaginaire du nombre complexe qui est construit.
+*_ImagVal* la valeur de type **float** pour la partie imaginaire du nombre complexe en cours de construction.
 
-`complexNum` Nombre complexe de type **double** ou de type `long double` dont les parties réelles et imaginaires sont utilisés pour initialiser un nombre complexe de type **float** en cours de construction.
+*complexNum* nombre complexe de type **double** ou de type **long double** dont les parties réelles et imaginaires sont utilisées pour initialiser un nombre complexe de type **float**en cours de construction.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -63,7 +63,7 @@ Nombre complexe de type **float**.
 
 ## <a name="remarks"></a>Notes
 
-La spécialisation explicite de la classe de modèle complex en classe complex de type **float** diffère de la classe de modèle seulement par les constructeurs qu’elle définit. La conversion de **float** en **double** peut être implicite, mais la conversion moins sécurisée de **float** en `long double` doit être de type **explicit**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.
+La spécialisation explicite de la classe de modèle complex en classe complex de type **float** diffère de la classe de modèle seulement par les constructeurs qu’elle définit. La conversion de **float** à **double** est autorisé à être implicite, mais la conversion moins sécurisée de **float** à **long double** est doit être **explicite**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.
 
 Pour plus d’informations sur la classe de modèle `complex`, consultez [complex, classe](../standard-library/complex-class.md). Pour obtenir la liste des membres de la classe de modèle `complex`, consultez .
 
@@ -122,7 +122,7 @@ Argument of c3 is recovered from c3 using:
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<complex>
 

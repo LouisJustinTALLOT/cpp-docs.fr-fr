@@ -1,5 +1,5 @@
 ---
-title: Incrémentation et décrémentation surcharge d’opérateur (C++) | Documents Microsoft
+title: Opérateurs d’incrémentation et décrémentation surcharge (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943931"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Surcharge d'opérateurs d'incrémentation et de décrémentation (C++)
 Les opérateurs d'incrémentation et de décrémentation appartiennent à une catégorie spéciale car chacun comporte deux variantes :  
@@ -30,14 +31,14 @@ Les opérateurs d'incrémentation et de décrémentation appartiennent à une ca
   
 -   Décrémentation préfixée et décrémentation suffixée  
   
- Lorsque vous écrivez des fonctions d'opérateur surchargées, il peut être utile d'implémenter des versions distinctes des versions préfixées et suffixées de ces opérateurs. Pour distinguer les deux, la règle suivante est observée : la forme préfixée de l'opérateur est déclarée exactement de la même manière que tout autre opérateur unaire. La forme suffixée accepte un argument supplémentaire de type `int`.  
+ Lorsque vous écrivez des fonctions d'opérateur surchargées, il peut être utile d'implémenter des versions distinctes des versions préfixées et suffixées de ces opérateurs. Pour faire la distinction entre les deux, la règle suivante est observée : la forme préfixée de l’opérateur est déclarée exactement la même façon que n’importe quel autre opérateur unaire ; la forme suffixée accepte un argument supplémentaire de type **int**.  
   
 > [!NOTE]
->  Pour spécifier un opérateur surchargé pour la forme suffixée de l'opérateur d'incrémentation ou de décrémentation, l'argument supplémentaire doit être de type `int`. La spécification de tout autre type génère une erreur.  
+>  Lorsque vous spécifiez un opérateur surchargé pour la forme suffixée de l’opérateur d’incrémentation ou de décrémentation, l’argument supplémentaire doit être de type **int**; spécification de tout autre type génère une erreur.  
   
  L'exemple suivant indique comment définir les opérateurs d'incrémentation et de décrémentation préfixés et suffixés pour la classe `Point` :  
   
-```  
+```cpp  
 // increment_and_decrement1.cpp  
 class Point  
 {  
@@ -98,16 +99,16 @@ int main()
   
  Les mêmes opérateurs peuvent être définis dans la portée de fichier (globalement) à l'aide des en-têtes de fonction suivants :  
   
-```  
+```cpp  
 friend Point& operator++( Point& )      // Prefix increment  
 friend Point& operator++( Point&, int ) // Postfix increment  
 friend Point& operator--( Point& )      // Prefix decrement  
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- L'argument de type `int` qui désigne la forme suffixée de l'opérateur d'incrémentation ou de décrémentation n'est pas couramment utilisé pour passer des arguments. Il contient généralement la valeur 0. Toutefois, il peut être utilisé comme suit :  
+ L’argument de type **int** qui désigne la forme suffixée de l’incrément ou opérateur de décrémentation n’est pas couramment utilisé pour passer des arguments. Il contient généralement la valeur 0. Toutefois, il peut être utilisé comme suit :  
   
-```  
+```cpp  
 // increment_and_decrement2.cpp  
 class Int  
 {  

@@ -1,5 +1,5 @@
 ---
-title: Classe de CComCritSecLock | Documents Microsoft
+title: Ccomcritseclock, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358884"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880249"
 ---
-# <a name="ccomcritseclock-class"></a>Classe de CComCritSecLock
+# <a name="ccomcritseclock-class"></a>Ccomcritseclock, classe
 Cette classe fournit des méthodes de verrouillage et déverrouillage d’un objet de section critique.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -38,7 +38,7 @@ template<class TLock> class CComCritSecLock
   
 #### <a name="parameters"></a>Paramètres  
  *TLock*  
- Objet à être verrouillé et déverrouillé.  
+ Objet à être verrouillées et déverrouillées.  
   
 ## <a name="members"></a>Membres  
   
@@ -57,9 +57,9 @@ template<class TLock> class CComCritSecLock
 |[CComCritSecLock::Unlock](#unlock)|Appelez cette méthode pour déverrouiller l’objet de section critique.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez cette classe pour verrouiller et déverrouiller des objets d’une façon plus sûre qu’avec le [CComCriticalSection classe](../../atl/reference/ccomcriticalsection-class.md) ou [CComAutoCriticalSection classe](../../atl/reference/ccomautocriticalsection-class.md).  
+ Utilisez cette classe pour verrouiller et déverrouiller des objets de façon plus sûre qu’avec le [CComCriticalSection, classe](../../atl/reference/ccomcriticalsection-class.md) ou [ccomautocriticalsection, classe](../../atl/reference/ccomautocriticalsection-class.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
@@ -71,10 +71,10 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
   
 ### <a name="parameters"></a>Paramètres  
  *cs*  
- L’objet de la section critique.  
+ L’objet de section critique.  
   
- `bInitialLock`  
- L’état initial : **true** signifie verrouillé.  
+ *bInitialLock*  
+ L’état de verrouillage initial : **true** signifie verrouillé.  
   
 ### <a name="remarks"></a>Notes  
  Initialise l’objet de section critique.  
@@ -110,8 +110,8 @@ void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si l’objet est déjà déverrouillée, une erreur d’assertion se produit dans les versions debug.  
+ Si l’objet est déjà déverrouillé, une erreur d’assertion se produit dans les versions debug.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+ [CComCriticalSection, classe](../../atl/reference/ccomcriticalsection-class.md)   
  [CComAutoCriticalSection, classe](../../atl/reference/ccomautocriticalsection-class.md)

@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847258"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966652"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt;, opérateurs
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type `hash_set`.
+*gauche* un objet de type `hash_set`.
 
-`right` Un objet de type `hash_set`.
+*droit* un objet de type `hash_set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -102,9 +102,9 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type `hash_set`.
+*gauche* un objet de type `hash_set`.
 
-`right` Un objet de type `hash_set`.
+*droit* un objet de type `hash_set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -166,9 +166,9 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type `hash_multiset`.
+*gauche* un objet de type `hash_multiset`.
 
-`right` Un objet de type `hash_multiset`.
+*droit* un objet de type `hash_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -230,9 +230,9 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type `hash_multiset`.
+*gauche* un objet de type `hash_multiset`.
 
-`right` Un objet de type `hash_multiset`.
+*droit* un objet de type `hash_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 

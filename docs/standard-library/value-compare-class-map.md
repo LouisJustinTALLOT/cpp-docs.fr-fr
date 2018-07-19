@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856044"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965846"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare, classe (&lt;map&gt;)
 
@@ -45,7 +45,7 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Le critère de comparaison fourni par `value_compare` entre des **value_types** d’éléments entiers contenus par un objet map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet **comp** de type `key_compare` stocké dans l’objet de fonction fourni par `value_compare` pour comparer les composants de clé de tri de deux éléments.
+Le critère de comparaison fourni par `value_compare` entre `value_types` d’éléments entiers contenus par un mappage est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stockées dans l’objet de fonction fourni par `value_compare` pour comparer les composants de la clé de tri de deux éléments.
 
 Pour les jeux et multijeux, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, `value_compare` équivaut à `key_compare` ; pour les objets map et multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
@@ -53,7 +53,7 @@ Pour les jeux et multijeux, qui sont des conteneurs simples dans lesquels les va
 
 Consultez l’exemple relatif à [value_comp](../standard-library/map-class.md#value_comp) qui illustre comment déclarer et utiliser `value_compare`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<map>
 

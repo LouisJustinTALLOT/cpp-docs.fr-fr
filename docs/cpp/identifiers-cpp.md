@@ -1,5 +1,5 @@
 ---
-title: Identificateurs (C++) | Documents Microsoft
+title: Identificateurs (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415405"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941770"
 ---
 # <a name="identifiers-c"></a>Identificateurs (C++)
 Un identificateur est une séquence de caractères servant à désigner l'un des éléments suivants :  
@@ -102,7 +102,7 @@ int main() {
   
  Le premier caractère d'un identificateur doit être un caractère alphabétique, majuscule ou minuscule, ou un trait de soulignement ( **_** ). Comme les identificateurs C++ respectent la casse, `fileName` est différent de `FileName`.  
   
- Les identificateurs ne peuvent pas avoir exactement la même orthographe et la même casse que les mots clés. Les identificateurs contenant des mots clés sont autorisés. Par exemple, `Pint` est un identificateur autorisé, bien qu'il contienne `int`, qui est un mot clé.  
+ Les identificateurs ne peuvent pas avoir exactement la même orthographe et la même casse que les mots clés. Les identificateurs contenant des mots clés sont autorisés. Par exemple, `Pint` est un identificateur légal, bien qu’il contienne **int**, qui est un mot clé.  
   
  L'utilisation de deux traits de soulignement à la suite ( **__** ) au début d'un identificateur, ou d'un seul trait de soulignement suivi par une lettre majuscule, est réservée aux implémentations C++ dans toutes les portées. Évitez d'utiliser un seul trait de soulignement de début suivi d'une lettre minuscule pour les noms avec une portée de fichier en raison de conflits possibles avec les identificateurs réservés actuels ou futurs.  
   

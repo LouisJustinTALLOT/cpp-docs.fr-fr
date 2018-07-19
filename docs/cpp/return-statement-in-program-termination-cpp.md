@@ -1,5 +1,5 @@
 ---
-title: Instruction return dans la terminaison du programme (C++) | Documents Microsoft
+title: Instruction return dans la terminaison du programme (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942629"
 ---
 # <a name="return-statement-in-program-termination-c"></a>Instruction return dans la terminaison du programme (C++)
-Émettre un `return` instruction à partir de **principal** est fonctionnellement équivalente à l’appel le **quitter** (fonction). Prenons l'exemple suivant :  
+Émission d’un `return` instruction à partir de **principal** est fonctionnellement équivalent à l’appel le **quitter** (fonction). Prenons l'exemple suivant :  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- Le **quitter** et `return` dans l’exemple précédent, les instructions sont fonctionnellement identiques. Toutefois, C++ exige que les fonctions dont les types de retour sont différents de `void` retournent une valeur. Le `return` instruction vous permet de retourner une valeur à partir de **principal**.  
+ Le **quitter** et **retourner** dans l’exemple précédent, les instructions sont fonctionnellement identiques. Toutefois, C++ exige que fonctions dont les types de retour autre que **void** retournent une valeur. Le **retourner** instruction vous permet de retourner une valeur à partir de `main`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Terminaison du programme](../cpp/program-termination.md)

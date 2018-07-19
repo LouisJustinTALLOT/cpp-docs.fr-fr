@@ -1,5 +1,5 @@
 ---
-title: Composants de bureau COM ATL | Documents Microsoft
+title: Composants de bureau COM ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,47 +15,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953847"
 ---
 # <a name="atl-com-desktop-components"></a>Composants de bureau COM ATL
-La référence ATL documente la bibliothèque ATL (Active Template), un ensemble de classes C++ basées sur un modèle qui simplifient la programmation d’objets de modèle COM (Component Object). Pour tirer pleinement parti d’ATL, une connaissance pratique de COM est fortement recommandée.  
+La référence de ATL décrit Active Template Library (ATL), un ensemble de classes C++ basées sur modèle qui simplifient la programmation d’objets de composant COM (Object Model). Pour tirer pleinement parti d’ATL, une connaissance pratique de COM est fortement recommandée.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble des classes ATL](../atl/atl-class-overview.md)  
- Fournit des liens vers des et brèves descriptions des classes ATL organisés par catégorie.  
+ Fournit des liens vers et brèves descriptions des classes ATL organisés par catégorie.  
   
  [ATL, classes et structs](../atl/reference/atl-classes.md)  
- Fournit une documentation de référence sur les classes et les structs organisées par ordre alphabétique.  
+ Fournit une documentation de référence sur les classes et les structs classées par ordre alphabétique.  
   
  [Fonctions ATL](../atl/reference/atl-functions.md)  
- Fournit une documentation de référence sur les fonctions globales organisées par ordre alphabétique. Inclut des rubriques organiser les fonctions en catégories.  
+ Fournit des documents de référence sur les fonctions globales, classées par ordre alphabétique. Inclut des rubriques organiser les fonctions en catégories.  
   
  [Variables globales ATL](../atl/reference/atl-global-variables.md)  
- Fournit une documentation de référence sur les variables globales organisées par ordre alphabétique.  
+ Fournit des documents de référence sur les variables globales, classées par ordre alphabétique.  
   
  [Macros ATL](../atl/reference/atl-macros.md)  
- Fournit une documentation de référence sur les macros organisées par ordre alphabétique. Inclut des rubriques organiser les macros en catégories.  
+ Fournit des documents de référence sur les macros classées par ordre alphabétique. Inclut des rubriques organiser les macros en catégories.  
   
  [Typedefs ATL](../atl/reference/atl-typedefs.md)  
- Fournit des informations de référence sur les typedefs organisées par ordre alphabétique  
+ Fournit des informations de référence sur les typedefs classées par ordre alphabétique  
   
  [Archétype de travail](../atl/reference/worker-archetype.md)  
- Fournit un liens à l’archétype du travail d’ATL.  
-  
- [Rubriques ATL obsolètes](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- Fournit une documentation de référence sur les classes, les macros et les fonctions qui sont déconseillés ou obsolètes.  
+ Fournit des liens à l’archétype de travail de l’ATL.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fournit des rubriques sur la programmation à l’aide de la bibliothèque ATL (Active Template).  
+ Fournit des rubriques sur la façon de programmer à l’aide de la bibliothèque ATL (Active Template).  
   
  [Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)  
- Vous guide tout au long de la création d’un contrôle et illustre certaines notions de base ATL dans le processus.  
+ Vous guide à travers la création d’un contrôle et illustre certains principes de base ATL dans le processus.  
   
  [Exemples ATL](../visual-cpp-samples.md)  
  Exemple de code qui montre comment utiliser ATL pour écrire des objets COM.  

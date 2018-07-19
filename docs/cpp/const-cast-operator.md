@@ -1,5 +1,5 @@
 ---
-title: Opérateur const_cast | Documents Microsoft
+title: const_cast, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5daf503024b2c3f843faeeaedbd9ec9bf64b7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89ed2b161c5b8f73d68fb22eb29eb00e057d7029
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942910"
 ---
 # <a name="constcast-operator"></a>const_cast, opérateur
-Supprime la **const**, `volatile`, et **__unaligned** ou les attributs d’une classe.  
+Supprime le **const**, **volatile**, et **__unaligned** attribut (s) à partir d’une classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-const_cast <   
-type-id  
- > (   
-expression  
- )  
+const_cast <type-id> (expression)  
   
 ```  
   
 ## <a name="remarks"></a>Notes  
- Un pointeur vers n’importe quel type d’objet ou un pointeur vers un membre de données peut être explicitement converti en un type qui est identique à l’exception de la **const**, `volatile`, et **__unaligned** qualificateurs. Pour les pointeurs et des références, le résultat fait référence à l'objet d'origine. Pour les pointeurs vers des données membres, le résultat fait référence au même membre que le pointeur d'origine (sans cast) vers les données membres. Selon le type de l'objet référencé, une opération d'écriture via le pointeur résultant, la référence, ou le pointeur vers les données membres peut entraîner un comportement non défini.  
+ Un pointeur vers n’importe quel type d’objet ou un pointeur vers un membre de données peut être converti explicitement en un type qui est identique à l’exception de la **const**, **volatile**, et **__unaligned** qualificateurs. Pour les pointeurs et des références, le résultat fait référence à l'objet d'origine. Pour les pointeurs vers des données membres, le résultat fait référence au même membre que le pointeur d'origine (sans cast) vers les données membres. Selon le type de l'objet référencé, une opération d'écriture via le pointeur résultant, la référence, ou le pointeur vers les données membres peut entraîner un comportement non défini.  
   
  Vous ne pouvez pas utiliser l'opérateur `const_cast` pour substituer directement l'état constant d'une variable constante.  
   
@@ -46,7 +43,7 @@ expression
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // expre_const_cast_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -75,7 +72,7 @@ int main() {
 }  
 ```  
   
- Sur la ligne contenant `const_cast`, le type de données du pointeur `this` est `const CCTest *`. L'opérateur `const_cast` remplace le type de données du pointeur `this` par `CCTest *` en autorisant la modification du membre `number`. Le cast dure uniquement pendant le reste de l'instruction dans laquelle il apparaît.  
+ Sur la ligne contenant le `const_cast`, le type de données de la **cela** pointeur est `const CCTest *`. Le `const_cast` opérateur change le type de données de la **cela** pointeur vers `CCTest *`, ce qui permet le membre `number` à modifier. Le cast dure uniquement pendant le reste de l'instruction dans laquelle il apparaît.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs de casting](../cpp/casting-operators.md)   

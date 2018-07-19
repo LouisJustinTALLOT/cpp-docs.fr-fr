@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954258"
 ---
 # <a name="timepoint-class"></a>time_point, classe
 
@@ -71,7 +71,7 @@ class time_point;
 |[time_point::operator+=](#op_add_eq)|Ajoute une valeur spécifiée à la durée stockée.|
 |[time_point::operator-=](#operator-_eq)|Soustrait une valeur spécifiée de la durée stockée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<chrono >
 
@@ -111,7 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-`Dur` A `duration` objet.
+*Durée*  
+ Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -127,7 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-`Dur` A `duration` objet.
+*Durée*  
+ Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -148,15 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Paramètres
 
-`Dur` A [durée](../standard-library/duration-class.md) objet.
+*Durée*  
+ Objet [duration](../standard-library/duration-class.md).
 
-`Tp` A `time_point` objet.
+*TP*  
+ Objet `time_point`.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet dont la valeur `duration` stockée est égale à [duration::zero](../standard-library/duration-class.md#zero).
 
-Le deuxième constructeur construit un objet dont la valeur de durée stockée est égale à `Dur`. À moins que `is_convertible<Duration2, duration>`*n’ait la valeur true*, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
+Le deuxième constructeur construit un objet dont la valeur Durée stockée est égale à *durée*. À moins que `is_convertible<Duration2, duration>`*n’ait la valeur true*, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
 
 Le deuxième constructeur initialise sa valeur `duration` à l'aide de `Tp.time_since_epoch()`.
 

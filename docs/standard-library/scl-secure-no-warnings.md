@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854351"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965498"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-Appel à l’une des méthodes potentiellement dangereuses dans la bibliothèque Standard C++ entraîne [l’avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Pour désactiver cet avertissement, définissez la macro **_SCL_SECURE_NO_WARNINGS** dans votre code :
+Appel d’une des méthodes potentiellement dangereuses dans la bibliothèque Standard C++ entraîne [Avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Pour désactiver cet avertissement, définissez la macro _SCL_SECURE_NO_WARNINGS dans votre code :
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Si vous utilisez des en-têtes précompilés, placez cette directive dans votre fichier d’en-tête précompilé avant d’inclure n’importe quelle bibliothèque de runtime C ou en-têtes de bibliothèque standard. Si vous le placez dans un fichier de code source individuel avant d’inclure le fichier d’en-tête précompilé, il est ignoré par le compilateur.
+Si vous utilisez des en-têtes précompilés, placez cette directive dans votre fichier d’en-tête précompilé avant d’inclure les en-têtes de bibliothèque standard ou de n’importe quelle bibliothèque de runtime C. Si vous le placez dans un fichier de code source individuel avant d’inclure le fichier d’en-tête précompilé, il est ignoré par le compilateur.
 
 ## <a name="remarks"></a>Notes
 

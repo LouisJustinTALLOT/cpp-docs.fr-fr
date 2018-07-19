@@ -1,5 +1,5 @@
 ---
-title: Destructeurs (C++) | Documents Microsoft
+title: Destructeurs (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64d75946d3ae9c1de1d59d74100de68a3b27dcc8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2bbe849f8ec9d47c73b7d909734df600957f3afd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704800"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941783"
 ---
 # <a name="destructors-c"></a>Destructeurs (C++)
 
-Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est détruite explicitement par un appel à `delete`. Un destructeur a le même nom que la classe précédé d’un tilde (`~`). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`.
+Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est détruite explicitement par un appel à **supprimer**. Un destructeur a le même nom que la classe précédé par un tilde (`~`). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`.
 
-Si vous ne définissez pas un destructeur, le compilateur fournit par défaut ; Pour de nombreuses classes, cela est suffisant. Vous ne devez définir un destructeur personnalisé lors de la classe stocke des handles vers des ressources système qui doivent être libérées ou détenant la mémoire qu’ils pointent.
+Si vous ne définissez pas un destructeur, le compilateur fournit un par défaut ; Pour de nombreuses classes, cela est suffisant. Vous devez uniquement définir un destructeur personnalisé lors de la classe stocke les handles vers des ressources système qui doivent être libérées ou pointeurs qui possèdent la mémoire, ils pointent vers.
 
 Prenons la déclaration suivante d'une classe `String` :
 
@@ -72,7 +72,7 @@ int main() {
 }
 ```
 
-Dans l'exemple précédent, le destructeur `String::~String` utilise l'opérateur `delete` pour libérer l'espace dynamiquement alloué pour le stockage de texte.
+Dans l’exemple précédent, le destructeur `String::~String` utilise le **supprimer** opérateur pour libérer l’espace dynamiquement alloué pour le stockage de texte.
 
 ## <a name="declaring-destructors"></a>Déclaration des destructeurs
 
@@ -82,11 +82,11 @@ Plusieurs règles régissent la déclaration des destructeurs. Les destructeurs�
 
 - n’acceptent pas d’arguments ;
 
-- Ne retournent pas de valeur (ou `void`).
+- Ne retournent pas de valeur (ou **void**).
 
 - Ne peut pas être déclaré en tant que **const**, **volatile**, ou **statique**. Toutefois, ils peuvent être appelés pour la destruction d’objets déclarés en tant que **const**, **volatile**, ou **statique**.
 
-- Peut être déclaré comme **virtuels**. En utilisant des destructeurs virtuels, vous pouvez détruire des objets sans connaître leur type (le destructeur correct de l’objet est appelé via le mécanisme de fonction virtuelle). Notez que les destructeurs peuvent également être déclarés en tant que fonctions virtuelles pures pour les classes abstraites.
+- Peut être déclaré comme **virtuel**. En utilisant des destructeurs virtuels, vous pouvez détruire des objets sans connaître leur type (le destructeur correct de l’objet est appelé via le mécanisme de fonction virtuelle). Notez que les destructeurs peuvent également être déclarés en tant que fonctions virtuelles pures pour les classes abstraites.
 
 ## <a name="using-destructors"></a>Utilisation de destructeurs
 
@@ -108,7 +108,7 @@ Il existe deux restrictions sur l’utilisation de destructeurs :
 
 - Vous ne pouvez pas prendre son adresse.
 
-- classes dérivées n’héritent pas le destructeur de classe de base.
+- Les classes dérivées n’héritent pas du destructeur de leur classe de base.
 
 ## <a name="order-of-destruction"></a>Ordre de destruction
 
@@ -118,7 +118,7 @@ Lorsqu'un objet bascule hors de portée ou est supprimé, la séquence d'événe
 
 1. Les destructeurs des objets membres non statiques sont appelés dans l'ordre inverse dans lequel ils apparaissent dans la déclaration de classe. La liste d’initialisation de membre facultatif utilisée dans la construction de ces membres n’affecte pas l’ordre de construction ou destruction.
 
-1. Destructeurs pour les classes de base non virtuelles sont appelés dans l’ordre inverse de déclaration.
+1. Les destructeurs pour les classes de base non virtuelles sont appelés dans l’ordre inverse de déclaration.
 
 1. Les destructeurs pour les classes de base virtuelles sont appelés dans l'ordre inverse de leur déclaration.
 
@@ -230,7 +230,7 @@ Dans l'exemple précédent, le destructeur de `Base2` est appelé avant le destr
 
 ## <a name="explicit-destructor-calls"></a>Appels de destructeur explicites
 
-Appeler un destructeur explicitement est rarement nécessaire. Toutefois, il peut être utile d'effectuer un nettoyage des objets placés à des adresses absolues. Ces objets sont couramment alloués à l’aide de défini par l’utilisateur **nouveau** opérateur qui accepte un argument de positionnement. Le **supprimer** opérateur ne peut pas libérer cette mémoire, car il n’est pas allouée à partir du magasin gratuit (pour plus d’informations, consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md)). Un appel au destructeur, toutefois, permet d'effectuer un nettoyage approprié. Pour appeler explicitement le destructeur pour un objet, `s`, de classe `String`, utilisez l'une des instructions suivantes :
+Appeler un destructeur explicitement est rarement nécessaire. Toutefois, il peut être utile d'effectuer un nettoyage des objets placés à des adresses absolues. Ces objets sont couramment alloués à l’aide de défini par l’utilisateur **nouveau** opérateur qui accepte un argument de positionnement. Le **supprimer** opérateur ne peut pas libérer cette mémoire, car elle n’est pas allouée à partir du magasin gratuit (pour plus d’informations, consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md)). Un appel au destructeur, toutefois, permet d'effectuer un nettoyage approprié. Pour appeler explicitement le destructeur pour un objet, `s`, de classe `String`, utilisez l'une des instructions suivantes :
 
 ```cpp
 s.String::~String();     // non-virtual call

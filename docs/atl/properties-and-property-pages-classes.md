@@ -1,5 +1,5 @@
 ---
-title: Classes (ATL) des Pages de propriétés et propriété | Documents Microsoft
+title: Classes (ATL) des Pages de propriétés et propriété | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953798"
 ---
-# <a name="properties-and-property-pages-classes"></a>Propriétés et des Classes de Pages de propriété
+# <a name="properties-and-property-pages-classes"></a>Propriétés et des Classes de Pages de propriétés
 Les classes suivantes prennent en charge les propriétés et les pages de propriétés :  
   
--   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) récupère ou définit les propriétés d’un objet via une `IDispatch` pointeur.  
+-   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) récupère ou définit les propriétés d’un objet via un `IDispatch` pointeur.  
   
 -   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) implémente les propriétés stock prises en charge par ATL.  
   
 -   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) accède aux informations dans les pages de propriétés d’un objet.  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) stocke les propriétés d’un objet dans un jeu de propriétés de fourni par le client.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) stocke les propriétés d’un objet dans un conteneur de propriétés fourni par le client.  
   
--   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gère une page de propriétés particulière dans une feuille de propriétés.  
+-   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gère une page de propriété particulière dans une feuille de propriétés.  
   
 -   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) similaire à `IPropertyPageImpl`, mais permet également à un client sélectionner une propriété spécifique dans une page de propriétés.  
   
--   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) Obtient le CLSID pour les pages de propriétés pris en charge par un objet.  
+-   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) Obtient les CLSID pour les pages de propriétés pris en charge par un objet.  
   
 ## <a name="related-articles"></a>Articles connexes  
  [Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)  

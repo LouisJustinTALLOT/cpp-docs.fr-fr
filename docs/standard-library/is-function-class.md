@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f470f07c59860118b682784dca6c83587ee87b04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ef542ea54c0fc570443fa07908968ffa3398232
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953782"
 ---
 # <a name="isfunction-class"></a>is_function, classe
 
@@ -37,11 +37,11 @@ struct is_function;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type de fonction. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type de fonction, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -81,7 +81,7 @@ is_function<functional> == false
 is_function<float()> == true
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

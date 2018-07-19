@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d027f2c1e9d8f5d4172fd3deff179d9ec8336baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953877"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents, classe
 
@@ -40,11 +40,11 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Le type à modifier.
+*T* type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Instance de `remove_all_extents<T>` contenant un type modifié correspondant au type d'élément du type tableau `T` avec toutes les dimensions de tableau supprimées, ou `T` si `T` n'est pas un type tableau.
+Une instance de `remove_all_extents<T>` contient un type modifié qui est le type d’élément de type tableau *T* avec toutes les dimensions du tableau supprimées, ou *T* si *T* n’est pas un type tableau.
 
 ## <a name="example"></a>Exemple
 
@@ -68,7 +68,7 @@ int main()
     }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

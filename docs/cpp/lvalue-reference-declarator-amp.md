@@ -1,5 +1,5 @@
 ---
-title: 'Déclarateur de référence lvalue : &amp; | Documents Microsoft'
+title: 'Déclarateur de référence lvalue : &amp; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943900"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Déclarateur de référence lvalue : &amp;
 Contient l'adresse d'un objet mais se comporte syntaxiquement comme un objet.  
@@ -38,12 +39,12 @@ type-id & cast-expression
   
  Tout objet dont l'adresse peut être convertie en un type pointeur donné peut également être converti en type référence similaire. Par exemple, tout objet dont l'adresse peut être convertie en type `char *` peut également être converti en type `char &`.  
   
- Ne confondez pas les déclarations de référence avec l’utilisation de la [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque le `&` *identificateur* est précédé d’un type, tel que `int` ou `char`, *identificateur* est déclaré comme une référence au type. Lorsque `&` *identificateur* n’est pas précédé par un type, l’utilisation est celle de l’opérateur d’adresse.  
+ Ne confondez pas les déclarations de référence avec l’utilisation de la [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque le `&` *identificateur* est précédé d’un type, tel que **int** ou **char**, *identificateur* est déclaré comme une référence à le type. Lorsque `&` *identificateur* n’est pas précédé par un type, l’utilisation est celle de l’opérateur address-of.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre le déclarateur de référence en déclarant un objet `Person` et une référence à cet objet. `rFriend` étant une référence à `myFriend`, la mise à jour de l'une ou l'autre variable modifie le même objet.  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

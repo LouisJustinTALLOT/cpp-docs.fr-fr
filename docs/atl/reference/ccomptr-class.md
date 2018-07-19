@@ -1,5 +1,5 @@
 ---
-title: Classe CComPtr | Documents Microsoft
+title: CComPtr, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358538"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881589"
 ---
-# <a name="ccomptr-class"></a>Classe CComPtr
+# <a name="ccomptr-class"></a>CComPtr, classe
 Une classe de pointeur intelligent pour la gestion des pointeurs d’interface COM.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Une interface COM en spécifiant le type de pointeur à stocker.  
+ *T*  
+ Une interface COM qui spécifie le type de pointeur à stocker.  
   
 ## <a name="members"></a>Membres  
   
@@ -54,22 +54,22 @@ class CComPtr
 |[CComPtr::operator =](#operator_eq)|Assigne un pointeur vers le pointeur de membre.|  
   
 ## <a name="remarks"></a>Notes  
- ATL utilise `CComPtr` et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) pour gérer les pointeurs d’interface COM. Les deux sont dérivés de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), et les deux effectuant le comptage de références automatique.  
+ ATL utilise `CComPtr` et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) pour gérer les pointeurs d’interface COM. Les deux sont dérivés de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), et tous deux effectuant le comptage de références automatique.  
   
- Le **CComPtr** et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes peuvent aider à éliminer les fuites de mémoire en effectuant un comptage de références automatique.  Les fonctions suivantes à la fois effectuent les mêmes opérations logiques ; Toutefois, notez comment la deuxième version peut être moins sujet aux erreurs à l’aide de la **CComPtr** classe :  
+ Le `CComPtr` et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes peuvent aider à éliminer les fuites de mémoire en effectuant le décompte de références automatique.  Les fonctions suivantes à la fois effectuent les mêmes opérations logiques ; Toutefois, notez comment la deuxième version peut être moins sujette aux erreurs à l’aide de la `CComPtr` classe :  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- Dans les versions Debug, lier atlsd.lib pour le traçage de code.  
+ Dans les versions Debug, liez atlsd.lib pour le traçage de code.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
   
  `CComPtr`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="ccomptr"></a>  CComPtr::CComPtr  
@@ -82,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `lp`  
+ *LP*  
  Utilisé pour initialiser le pointeur d’interface.  
   
- `T`  
+ *T*  
  Une interface COM.  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  
@@ -100,7 +100,7 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Retourne un pointeur vers la mise à jour `CComPtr` objet  
   
 ### <a name="remarks"></a>Notes  
- Cette opération AddRefs le nouvel objet et libère l’objet existant, s’il existe.  
+ Cette opération AddRefs le nouvel objet et les versions l’objet existant, s’il existe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CComPtr::CComPtr](#ccomptr)   

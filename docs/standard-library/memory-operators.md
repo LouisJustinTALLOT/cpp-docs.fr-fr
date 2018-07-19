@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954233"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;, opérateurs
 
@@ -56,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un des objets à tester pour vérifier leur inégalité.
+*gauche* l’un des objets à tester pour vérifier leur inégalité.
 
-`right` Un des objets à tester pour vérifier leur inégalité.
+*droit* l’un des objets à tester pour vérifier leur inégalité.
 
-`Ty1` Type contrôlé par le pointeur partagé de gauche.
+*Ty1* type contrôlé par la gauche partagés à pointeur.
 
-`Ty2` Type contrôlé par le pointeur partagé de droite.
+*Ty2* type contrôlé par le droit partagés à pointeur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -154,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un des objets à tester l’égalité.
+*gauche* un des objets à tester pour égalité.
 
-`right` Un des objets à tester l’égalité.
+*droit* un des objets à tester pour égalité.
 
-`Ty1` Type contrôlé par le pointeur partagé de gauche.
+*Ty1* type contrôlé par la gauche partagés à pointeur.
 
-`Ty2` Type contrôlé par le pointeur partagé de droite.
+*Ty2* type contrôlé par le droit partagés à pointeur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si les objets sont égaux, `false` si les objets ne sont pas égaux.
+**true** si les objets sont égaux, **false** si les objets ne sont pas égaux.
 
 ### <a name="remarks"></a>Notes
 
 Le premier opérateur de modèle retourne true. (Tous les allocateurs par défaut sont égaux).
 
-Les deuxième et troisième opérateurs de modèle retournent ` left.get() ==  right.get()`.
+Les deuxième et troisième opérateurs de modèle retournent `left.get() ==  right.get()`.
 
 ### <a name="example"></a>Exemple
 
@@ -258,13 +258,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un des objets à comparer.
+*gauche* l’un des objets à comparer.
 
-`right` Un des objets à comparer.
+*droit* l’un des objets à comparer.
 
-`Ty1` Type contrôlé par le pointeur partagé de gauche.
+*Ty1* type contrôlé par la gauche partagés à pointeur.
 
-`Ty2` Type contrôlé par le pointeur partagé de droite.
+*Ty2* type contrôlé par le droit partagés à pointeur.
 
 ### <a name="remarks"></a>Notes
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un des objets à comparer.
+*gauche* l’un des objets à comparer.
 
-`right` Un des objets à comparer.
+*droit* l’un des objets à comparer.
 
-`Ty1` Type contrôlé par le pointeur de gauche.
+*Ty1* type contrôlé par le pointeur de gauche.
 
-`Ty2` Type contrôlé par le pointeur de droite.
+*Ty2* type contrôlé par le pointeur de droite.
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un des objets à comparer.
+*gauche* l’un des objets à comparer.
 
-`right` Un des objets à comparer.
+*droit* l’un des objets à comparer.
 
-`Ty1` Type contrôlé par le pointeur partagé de gauche.
+*Ty1* type contrôlé par la gauche partagés à pointeur.
 
-`Ty2` Type contrôlé par le pointeur partagé de droite.
+*Ty2* type contrôlé par le droit partagés à pointeur.
 
 ### <a name="remarks"></a>Notes
 
-Les opérateurs de modèle de retour `left.get() <= right.get()`
+Retournent les opérateurs de modèle `left.get() <= right.get()`
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un des objets à comparer.
+*gauche* l’un des objets à comparer.
 
-`right` Un des objets à comparer.
+*droit* l’un des objets à comparer.
 
-`Ty1` Type contrôlé par le pointeur partagé de gauche.
+*Ty1* type contrôlé par la gauche partagés à pointeur.
 
-`Ty2` Type contrôlé par le pointeur partagé de droite.
+*Ty2* type contrôlé par le droit partagés à pointeur.
 
 ## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
@@ -364,15 +364,15 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Paramètres
 
-`Elem` Le type de l’élément de flux de données.
+*Elem* le type de l’élément de flux de données.
 
-`Tr` Le type de caractéristiques d’élément de flux de données.
+*TR* le type de caractéristiques d’élément de flux de données.
 
-`Ty` Type contrôlé par le pointeur partagé.
+*Ty* type contrôlé par le pointeur partagé.
 
-`out` Le flux de sortie.
+*out* le flux de sortie.
 
-`sp` Le pointeur partagé.
+*SP* le pointeur partagé.
 
 ### <a name="remarks"></a>Notes
 

@@ -1,5 +1,5 @@
 ---
-title: opérateur __uuidof | Documents Microsoft
+title: opérateur __uuidof | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942857"
 ---
 # <a name="uuidof-operator"></a>__uuidof, opérateur
 **Section spécifique à Microsoft**  
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le *expression* peut être un nom de type, un pointeur, une référence ou un tableau de ce type, un modèle spécialisé sur ces types, ou une variable de ces types. L’argument est valide tant que le compilateur peut l’utiliser pour rechercher le GUID attaché.  
   
- Un cas spécial de cette intrinsèque est lorsque soit **0** ou **NULL** est fournie comme argument. Dans ce cas, `__uuidof` retourne un GUID composé de zéros.  
+ Un cas spécial de cette intrinsèque est lorsque deux **0** ou valeur NULL est fournie comme argument. Dans ce cas, **__uuidof** renverra un GUID composé de zéros non significatifs.  
   
- Utilisez ce mot clé pour extraire le GUID associé à :  
+ Utilisez ce mot clé pour extraire le GUID attaché à :  
   
 -   Un objet par le [uuid](../cpp/uuid-cpp.md) attributs étendus.  
   
 -   Un bloc de bibliothèque est créé avec le [module](../windows/module-cpp.md) attribut.  
   
 > [!NOTE]
->  Dans une version debug, `__uuidof` toujours Initialise un objet dynamiquement (lors de l’exécution). Dans une version Release, `__uuidof` peut initialiser statiquement (au moment de la compilation) un objet.  
+>  Dans une version debug, **__uuidof** toujours Initialise un objet dynamiquement (lors de l’exécution). Dans une version Release, **__uuidof** peut initialiser statiquement (au moment de la compilation) un objet.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant (compilé avec ole32.lib) affiche l’uuid d’un bloc de bibliothèque créé avec l’attribut de module :  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,9 +76,9 @@ int main() {
 ```  
   
 ## <a name="comments"></a>Commentaires  
- Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser __LIBID\_ au lieu de `__uuidof`. Par exemple :  
+ Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser `__LIBID_` au lieu de **__uuidof**. Exemple :  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   

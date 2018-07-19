@@ -1,5 +1,5 @@
 ---
-title: commutateur d’instruction (C++) | Documents Microsoft
+title: switch, instruction (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942914"
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une expression intégrale.  
@@ -38,23 +39,23 @@ Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une e
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le *expression* doit être de type intégral ou d’un type de classe pour laquelle il existe une conversion non ambiguë en type intégral. La promotion intégrale est exécutée comme décrit dans [Conversions Standard](standard-conversions.md).  
+ Le *expression* doit être de type intégral ou d’un type de classe pour laquelle il existe une conversion non ambiguë en type intégral. Promotion intégrale est exécutée comme décrit dans [Conversions Standard](standard-conversions.md).  
   
- Le `switch` corps d’instruction se compose d’une série de **cas** étiquettes et éventuellement un **par défaut** étiquette. Aucun deux expressions constantes dans **cas** instructions peuvent correspondre à la même valeur. Le **par défaut** étiquette peut apparaître qu’une seule fois. Les instructions étiquetées ne sont pas des exigences syntaxiques, mais sans elles l'instruction `switch` n'a pas de sens.   L'instruction par défaut n'a pas besoin d'être à la fin ; elle peut apparaître n'importe où dans le corps de l'instruction switch. Une étiquette case ou default ne peut apparaître que dans une instruction switch.  
+ Le **basculer** corps d’instruction se compose d’une série de **cas** étiquettes et éventuellement un **par défaut** étiquette. Aucun deux expressions de constante dans **cas** instructions peuvent correspondre à la même valeur. Le **par défaut** étiquette peut apparaître qu’une seule fois. Les instructions étiquetées ne sont pas des exigences syntaxiques, mais la **basculer** instruction n’a aucune signification sans eux.   L'instruction par défaut n'a pas besoin d'être à la fin ; elle peut apparaître n'importe où dans le corps de l'instruction switch. Une étiquette case ou default ne peut apparaître que dans une instruction switch.  
   
- Le *expression constante* dans chaque **cas** est converti vers le type de *expression* et comparé *expression* pour égalité. Contrôle passe à l’instruction dont **cas** *expression constante* correspond à la valeur de *expression*. Le comportement résultant est indiqué dans le tableau suivant.  
+ Le *expression constante* dans chaque **cas** est converti vers le type de *expression* et comparé *expression* pour égalité. Le contrôle passe à l’instruction dont **cas** *expression constante* correspond à la valeur de *expression*. Le comportement résultant est indiqué dans le tableau suivant.  
   
 ### <a name="switch-statement-behavior"></a>Comportement de l'instruction switch  
   
 |Condition|Action|  
 |---------------|------------|  
 |La valeur convertie correspond à celle de l'expression de contrôle promue.|Le contrôle est transféré à l'instruction qui suit cette étiquette.|  
-|Aucune des constantes correspond à l’une des constantes dans le **cas** étiquettes ; un **par défaut** étiquette n’est présente.|Le contrôle est transféré à la **par défaut** étiquette.|  
-|Aucune des constantes correspond à l’une des constantes dans le **cas** étiquettes ; **par défaut** étiquette n’est pas présente.|Le contrôle est transféré à l'instruction, après l'exécution de l'instruction `switch`.|  
+|Aucun des constantes ne correspond à l’une des constantes dans le **cas** étiquettes ; un **par défaut** étiquette n’est présente.|Le contrôle est transféré à la **par défaut** étiquette.|  
+|Aucun des constantes ne correspond à l’une des constantes dans le **cas** étiquettes ; **par défaut** étiquette n’est pas présente.|Le contrôle est transféré à l’instruction après le **basculer** instruction.|  
   
- Si une expression correspondante est trouvée, le contrôle n’est pas bloqué par les **cas** ou **par défaut** étiquettes. Le [saut](../cpp/break-statement-cpp.md) instruction est utilisée pour arrêter l’exécution et de transférer le contrôle à l’instruction après la `switch` instruction. Sans un **saut** chaque instruction, à partir de la mise en correspondance **cas** étiquette à la fin de la `switch`, y compris le **par défaut**, est exécutée. Par exemple :  
+ Si une expression correspondante est trouvée, le contrôle n’est pas bloqué par les **cas** ou **par défaut** étiquettes. Le [saut](../cpp/break-statement-cpp.md) instruction est utilisée pour arrêter l’exécution et de transférer le contrôle à l’instruction après le **basculer** instruction. Sans un **saut** chaque instruction, à partir de la mise en correspondance **cas** étiquette à la fin de la **basculer**, y compris le **par défaut**, est exécutée. Exemple :  
   
-```  
+```cpp 
 // switch_statement1.cpp  
 #include <stdio.h>  
   
@@ -83,9 +84,9 @@ int main() {
 }  
 ```  
   
- Dans l'exemple ci-dessus, `capa` est incrémenté si `c` est un `A` majuscule. L'instruction `break` après `capa++` arrête l'exécution du corps de l'instruction `switch`, et le contrôle passe à la boucle `while`. Sans le `break` instruction, l’exécution serait « passer » à l’instruction étiquetée, afin que `lettera` et `nota` seraient également incrémentés. Un objectif similaire est réalisé par l'instruction `break` pour `case 'a'`. Si `c` est une minuscule `a`, `lettera` est incrémenté et l'instruction `break` termine le corps de l'instruction `switch`. Si `c` n'est pas `a` ou `A`, l'instruction `default` est exécutée.  
+ Dans l'exemple ci-dessus, `capa` est incrémenté si `c` est un `A` majuscule. Le **saut** instruction après `capa++` termine l’exécution de la **basculer** corps d’instruction et le contrôle passe à la **tandis que** boucle. Sans le **saut** instruction, l’exécution serait « passer » à l’instruction étiquetée suivante, afin que `lettera` et `nota` seraient également incrémentés. Un objectif similaire est pris en charge par le **saut** instruction pour `case 'a'`. Si `c` est une minuscule `a`, `lettera` est incrémentée et le **saut** instruction met fin à la **basculer** corps de l’instruction. Si `c` n’est pas un `a` ou `A`, le **par défaut** instruction est exécutée.  
 
- **Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut est spécifié dans la norme C ++ 17. Il peut être utilisé dans un `switch` instruction en tant qu’indicateur du compilateur (ou à toute personne lisant le code), ce comportement passage est destiné. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement de fallthrough, afin de cet attribut n’a aucun comportement de compilateur d’effet. Notez que l’attribut est appliqué à une instruction vide au sein de l’instruction étiquetée ; en d’autres termes, le point-virgule est nécessaire.
+ **Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut est spécifié dans la norme C ++ 17. Il peut être utilisé dans un **basculer** instruction en tant qu’indicateur du compilateur (ou à toute personne lisant le code) ce comportement FallThrough est prévu. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement fallthrough, cet attribut n’a aucun effet sur le comportement du compilateur. Notez que l’attribut est appliqué à une instruction vide au sein de l’instruction étiquetée ; en d’autres termes, le point-virgule est nécessaire.
 
 ```cpp
 int main()
@@ -113,7 +114,7 @@ int main()
 }
 ```
 
- **Visual Studio 2017 15,3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : une instruction switch peut introduire et initialiser une variable dont la portée est limitée au bloc de l’instruction switch :
+ **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : une instruction switch peut introduire et initialiser une variable dont la portée est limitée au bloc de l’instruction switch :
 
 ```cpp
  switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +127,7 @@ int main()
         };
 ```
 
- Un bloc interne d'une instruction `switch` peut contenir des définitions avec des initialisations tant qu'elles sont accessibles, c'est-à-dire non contournées par tous les chemins d'exécution possibles. Les noms présentés à l'aide de ces déclarations ont une portée locale. Par exemple :  
+ Un bloc interne d’un **basculer** instruction peut contenir des définitions avec des initialisations tant qu’ils sont accessibles, c'est-à-dire non contournées par tous les chemins d’exécution possibles. Les noms présentés à l'aide de ces déclarations ont une portée locale. Exemple :  
   
 ```cpp  
 // switch_statement2.cpp  
@@ -161,11 +162,11 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- Une instruction `switch` peut être imbriquée. Dans ce cas, **cas** ou **par défaut** étiquettes associer le plus proche `switch` instruction qui les entoure.  
+ Un **basculer** instruction peut être imbriquée. Dans ce cas, **cas** ou **par défaut** étiquettes associer la plus proche **basculer** instruction qui les entoure.  
 
  
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Microsoft C ne limite pas le nombre de valeurs de cas dans une instruction `switch`. Le nombre est limité uniquement par la mémoire disponible. C ANSI requiert qu'au moins 257 étiquettes soient autorisées dans une instruction `switch`.  
+ Microsoft C ne limite pas le nombre de valeurs de cas dans un **basculer** instruction. Le nombre est limité uniquement par la mémoire disponible. C ANSI requiert qu’au moins 257 étiquettes soient autorisées dans un **basculer** instruction.  
   
  Par défaut pour Microsoft C, les extensions Microsoft sont activées. Utilisez le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur pour désactiver ces extensions.  
   

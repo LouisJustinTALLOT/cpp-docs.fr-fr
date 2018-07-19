@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966615"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference, classe
 
@@ -39,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-T type à modifier.
+*T* type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-La classe `add_rvalue_reference` a un membre nommé `type`, qui est un alias du type d’une référence rvalue au paramètre de modèle `T`. La sémantique de réduction de références implique que, pour les types non-objet et non-fonction `T`, `T&&` est un `T`. Par exemple, lorsque `T` est un type de référence lvalue, `add_rvalue_reference<T>::type` est le type de référence lvalue, pas une référence rvalue.
+Le `add_rvalue_reference` classe a un membre nommé `type`, qui est un alias pour le type d’une référence rvalue au paramètre de modèle *T*. La sémantique de réduction de références implique que, pour les types non-object et non-fonction *T*, `T&&` est un *T*. Par exemple, lorsque *T* est un type de référence lvalue, `add_rvalue_reference<T>::type` est le type de référence lvalue, pas une référence rvalue.
 
-Pour plus de commodité, \<type_traits > définit un modèle d’assistance, `add_rvalue_reference_t`, qui alias le `type` membre `add_rvalue_reference`.
+Pour des raisons pratiques, \<type_traits > définit un modèle d’assistance, `add_rvalue_reference_t`, cet alias le `type` membre de `add_rvalue_reference`.
 
 ## <a name="example"></a>Exemple
 
@@ -78,7 +78,7 @@ All static_assert tests of add_rvalue_reference passed.
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 En-tête : <type_traits> Espace de noms : std
 

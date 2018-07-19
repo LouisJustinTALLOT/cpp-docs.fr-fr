@@ -1,5 +1,5 @@
 ---
-title: continuer d’instruction (C++) | Documents Microsoft
+title: continue, instruction (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943867"
 ---
 # <a name="continue-statement-c"></a>continue, instruction (C++)
 Force le transfert de contrôle à l’expression de contrôle de la plus petite [faire](../cpp/do-while-statement-cpp.md), [pour](../cpp/for-statement-cpp.md), ou [tandis que](../cpp/while-statement-cpp.md) boucle.  
@@ -34,15 +35,15 @@ continue;
 ## <a name="remarks"></a>Notes  
  Toutes les instructions restantes dans l'itération actuelle ne sont pas exécutées. L'itération suivante de la boucle est déterminée comme suit :  
   
--   Dans une boucle `do` ou `while`, l'itération suivante démarre en réévaluant l'expression de contrôle de l'instruction `do` ou `while`.  
+-   Dans un **faire** ou **tandis que** boucle, l’itération suivante démarre en réévaluant l’expression de contrôle de la **faire** ou **tandis que** instruction.  
   
--   Dans une boucle `for` (utilisant la syntaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), la clause `loop-expr` est exécutée. Ensuite la clause `cond-expr` est réévaluée et, selon le résultat, la boucle se termine ou une autre itération a lieu.  
+-   Dans un **pour** boucle (à l’aide de la syntaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), le `loop-expr` clause est exécutée. Ensuite la clause `cond-expr` est réévaluée et, selon le résultat, la boucle se termine ou une autre itération a lieu.  
   
- L'exemple suivant montre comment l'instruction `continue` peut être utilisée pour ignorer les sections de code et démarrer l'itération suivante d'une boucle.  
+ L’exemple suivant montre comment la **continuer** instruction peut être utilisée pour ignorer les sections de code et commencer l’itération suivante d’une boucle.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

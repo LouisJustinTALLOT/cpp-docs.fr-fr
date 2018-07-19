@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966548"
 ---
 # <a name="moneyget-class"></a>money_get, classe
 
@@ -46,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-`CharType` Le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
 
-`InputIterator` Le type d’itérateur à partir de laquelle les fonctions get lisent leur entrée.
+*InputIterator* le type d’itérateur à partir de laquelle les fonctions get lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
 
@@ -75,7 +75,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[do_get](#do_get)|Fonction virtuelle appelée pour extraire une valeur numérique d'une séquence de caractères représentant une valeur monétaire.|
 |[get](#get)|Extrait une valeur numérique d'une séquence de caractères représentant une valeur monétaire.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **CharType**.
+Le type est un synonyme du paramètre de modèle *CharType*.
 
 ## <a name="do_get"></a>  money_get::do_get
 
@@ -113,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Itérateur d’entrée ciblant le début de la séquence à convertir.
+*première* itérateur d’entrée traitant le début de la séquence à convertir.
 
-`last` Itérateur d’entrée ciblant la fin de la séquence à convertir.
+*dernière* itérateur d’entrée se rapportant à la fin de la séquence à convertir.
 
-`Intl` Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si internationales, **false** si nationales.
+*Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-`Iosbase` Indicateur qui spécifie un format qui lorsque set indique que le symbole monétaire est facultatif. dans le cas contraire, il est requis.
+*Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est nécessaire.
 
-`State` Définit les éléments du masque de bits appropriés pour l’état du flux après que les opérations ont réussi ou non.
+*État* définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-`val` Une chaîne de stockage de la séquence convertie.
+*Val* chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -131,9 +131,9 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée monétaire complet et non vide. En cas de réussite, elle convertit ce champ en une séquence d’un ou plusieurs chiffres décimaux, éventuellement précédée d’un signe moins ( `-`), pour représenter le montant, et elle stocke le résultat dans l’objet [string_type](#string_type) `val`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée monétaire. Sinon, la fonction stocke une séquence vide dans `val` et définit `ios_base::failbit` dans `State`. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée monétaire valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `State`.
+La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée monétaire complet et non vide. Cas de réussite, elle convertit ce champ à une séquence d’un ou plusieurs chiffres décimaux, éventuellement précédé par un signe moins ( `-`), pour représenter la quantité et stocke le résultat dans le [string_type](#string_type) objet *val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée monétaire. Sinon, la fonction stocke une séquence vide dans *val* et définit `ios_base::failbit` dans *état*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée monétaire valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `State`.
 
-La deuxième fonction membre protégée virtuelle se comporte comme la première, sauf qu’en cas de réussite elle convertit la séquence de chiffres éventuellement signée en une valeur de type `long double` et stocke cette valeur dans `val`.
+La deuxième fonction membre protégée virtuelle comporte comme la première, à ceci près qu’en cas de réussite elle convertit la séquence de chiffres éventuellement signée en une valeur de type **long double** et stocke cette valeur dans *val*.
 
 Le format d’un champ d’entrée monétaire est déterminé par la [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class)**fac** retournée par l’appel effectif [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -189,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Itérateur d’entrée ciblant le début de la séquence à convertir.
+*première* itérateur d’entrée traitant le début de la séquence à convertir.
 
-`last` Itérateur d’entrée ciblant la fin de la séquence à convertir.
+*dernière* itérateur d’entrée se rapportant à la fin de la séquence à convertir.
 
-`Intl` Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si internationales, **false** si nationales.
+*Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-`Iosbase` Indicateur qui spécifie un format qui lorsque set indique que le symbole monétaire est facultatif. dans le cas contraire, il est requis
+*Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est obligatoire
 
-`State` Définit les éléments du masque de bits appropriés pour l’état du flux après que les opérations ont réussi.
+*État* définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi.
 
-`val` Une chaîne de stockage de la séquence convertie.
+*Val* chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -280,21 +280,21 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Refs` Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre `_Refs` et leur signification sont les suivantes :
+Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définis.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise l’objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).
+Le constructeur initialise son objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).
 
 ## <a name="string_type"></a>  money_get::string_type
 

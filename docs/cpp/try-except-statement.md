@@ -1,5 +1,5 @@
 ---
-title: Recommencez-EXCEPT, instruction | Documents Microsoft
+title: Essayez-EXCEPT, instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d490f6bfb411f5ab0147e614813f8ff2bd084ce
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942721"
 ---
 # <a name="try-except-statement"></a>try-except, instruction
 
 **Section spécifique à Microsoft**  
-Le **essayez-sauf** instruction est une extension Microsoft c et langages C++ qui prend en charge structurée des exceptions.  
+Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qui prend en charge de gestion des exceptions structurées.  
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,42 +60,42 @@ Le **essayez-sauf** instruction est une extension Microsoft c et langages C++ qu
 
 ## <a name="remarks"></a>Notes
 
-Le **essayez-sauf** instruction est une extension Microsoft c et langages C++ qui permet aux applications cibles obtenir un contrôlent lorsque des événements qui terminent normalement l’exécution du programme surviennent. Ces événements sont appelés *exceptions*, et le mécanisme des exceptions s’appelle *structurée des exceptions* (SEH).
+Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qui permet aux applications cibles obtenir des contrôlent lorsque surviennent des événements qui terminent normalement l’exécution du programme. Ces événements sont appelés *exceptions*, et le mécanisme des exceptions est appelé *structurée des exceptions* (SEH).
 
-Pour plus d’informations, consultez la [try-finally, instruction](../cpp/try-finally-statement.md).
+Pour plus d’informations, consultez le [instruction try-finally](../cpp/try-finally-statement.md).
 
 Les exceptions peuvent être basées sur le matériel ou sur des logiciels. Même quand les applications ne peuvent pas complètement récupérer à partir d'exceptions matérielles ou logicielles, la gestion structurée des exceptions permet d'afficher des informations sur l'erreur et d'intercepter l'état interne de l'application pour favoriser le diagnostic du problème. Ceci s'avère particulièrement utile pour les problèmes intermittents qui ne peuvent pas être facilement reproduits.
 
 > [!NOTE]
 > La gestion structurée des exceptions fonctionne avec Win32 pour les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, la gestion des exceptions C++ est plus souple, car elle permet de traiter des exceptions de tout type. Pour les programmes C++, il est recommandé d’utiliser le mécanisme de gestion des exceptions C++ ([try, catch et throw](../cpp/try-throw-and-catch-statements-cpp.md) instructions).
 
-L'instruction composée après la clause `__try` constitue le corps ou la section protégée. L'instruction composée après la clause `__except` constitue le gestionnaire d'exceptions. Le gestionnaire spécifie un ensemble d'actions à entreprendre si une exception est levée pendant l'exécution du corps de la section protégée. L'exécution se déroule comme suit :
+L’instruction composée après la **__try** clause est le corps ou la section protégée. L’instruction composée après la **__except** clause est le Gestionnaire d’exceptions. Le gestionnaire spécifie un ensemble d'actions à entreprendre si une exception est levée pendant l'exécution du corps de la section protégée. L'exécution se déroule comme suit :
 
 1. La section protégée est exécutée.
 
-2. Si aucune exception ne se produit pendant l'exécution de la section protégée, l'exécution se poursuit à l'instruction située après la clause `__except`.  
+2. Si aucune exception ne se produit pendant l’exécution de la section protégée, l’exécution se poursuit à l’instruction après le **__except** clause.  
 
-3. Si une exception se produit pendant l’exécution de la section protégée ou dans une routine de la section protégée appelle, les `__except` *expression* (appelée la *filtre* expression) est évaluée et la valeur Détermine comment l’exception est gérée. Il existe trois valeurs :
+3. Si une exception se produit pendant l’exécution de la section protégée ou dans toute routine de la section protégée, la **__except** *expression* (appelée la *filtre* expression) est évaluée et la valeur détermine comment l’exception est gérée. Il existe trois valeurs :
 
-   **EXCEPTION_CONTINUE_EXECUTION (-1)** Exception est fermée. Poursuivre l'exécution au point où l'exception s'est produite.
+   Exception de EXCEPTION_CONTINUE_EXECUTION (-1) a été abandonnée. Poursuivre l'exécution au point où l'exception s'est produite.
 
-   **EXCEPTION_CONTINUE_SEARCH (0)** Exception n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
+   Exception de EXCEPTION_CONTINUE_SEARCH (0) n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
 
-   **Exception_execute_handler (1)** l’Exception est reconnue. Transférer le contrôle au gestionnaire d'exceptions en exécutant l'instruction composée `__except`, puis poursuivre l'exécution après le bloc `__except`.
+   Exception_execute_handler (1) l’Exception est reconnue. Transférer le contrôle au gestionnaire d’exceptions en exécutant la **__except** une instruction composée, puis poursuivre l’exécution après le **__except** bloc.
 
-L'expression `__except` étant évaluée comme une expression C, elle est limitée à une valeur unique, l'opérateur d'expression conditionnelle, ou l'opérateur virgule. Si un traitement plus étendu est requis, l'expression peut appeler une routine qui retourne l'une des trois valeurs répertoriées ci-dessus.
+Étant donné que le **__except** expression est évaluée comme une expression C, elle est limitée à une valeur unique, l’opérateur d’expression conditionnelle ou l’opérateur virgule. Si un traitement plus étendu est requis, l'expression peut appeler une routine qui retourne l'une des trois valeurs répertoriées ci-dessus.
 
 Chaque application peut avoir son propre gestionnaire d'exceptions.
 
-Il n'est pas valide de sauter dans une instruction `__try`, mais il est valide de sauter hors d'une telle instruction. Le Gestionnaire d’exceptions n’est pas appelé si un processus est terminé au milieu de l’exécution une **essayez-sauf** instruction.  
+Il n’est pas valide de sauter dans une **__try** mais valide de sauter hors d’une instruction. Le Gestionnaire d’exceptions n’est pas appelé si un processus est terminé au milieu de l’exécution un **essayez-sauf** instruction.  
   
 Pour plus d'informations, consultez l'article de la Base de connaissances Q315937 : PROCÉDURE : interception du dépassement de capacité de la pile dans une application Visual C++.  
   
 ## <a name="the-leave-keyword"></a>Mot clé __leave
 
-Le `__leave` mot clé est valide uniquement dans la section protégée d’un **essayez-sauf** instruction et son effet consiste à accéder à la fin de la section protégée. L'exécution se poursuit à la première instruction située après le gestionnaire d'exceptions.
+Le **__leave** mot clé est valide uniquement dans la section protégée d’un **essayez-sauf** instruction et son effet consiste à accéder à la fin de la section protégée. L'exécution se poursuit à la première instruction située après le gestionnaire d'exceptions.
 
-A `goto` instruction peut également sortir de la section protégée, et sans altérer les performances comme il le fait un **try-finally** instruction, car le déroulement de pile n’a pas lieu. Toutefois, nous vous recommandons d'utiliser le mot clé `__leave` plutôt qu'une instruction `goto`, car vous êtes moins enclin à commettre une erreur de programmation si la section protégée est grande ou complexe.
+Un **goto** instruction peut également sortir de la section protégée, et il ne réduit pas les performances comme il le fait un **try-finally** instruction parce que le déroulement de pile ne figure pas. Toutefois, nous vous recommandons d’utiliser le **__leave** mot-clé au lieu d’un **goto** instruction parce que vous êtes moins enclin à commettre une erreur de programmation si la section protégée est volumineux ou complexes.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Fonctions intrinsèques de gestion structurée des exceptions
 
@@ -102,7 +103,7 @@ Gestion structurée des exceptions fournit deux fonctions intrinsèques qui sont
 
 `GetExceptionCode` Retourne le code (un entier 32 bits) de l’exception.
 
-La fonction intrinsèque `GetExceptionInformation` retourne un pointeur vers une structure contenant des informations supplémentaires sur l’exception. Ce pointeur vous permet d'accéder à l'état de l'ordinateur qui existait au moment d'une exception matérielle. La structure est la suivante :
+La fonction intrinsèque `GetExceptionInformation` retourne un pointeur vers une structure contenant des informations supplémentaires relatives à l’exception. Ce pointeur vous permet d'accéder à l'état de l'ordinateur qui existait au moment d'une exception matérielle. La structure est la suivante :
 
 ```cpp  
 typedef struct _EXCEPTION_POINTERS {
@@ -113,17 +114,17 @@ typedef struct _EXCEPTION_POINTERS {
 
 Les types pointeur `PEXCEPTION_RECORD` et `PCONTEXT` sont définis dans le fichier include \<winnt.h >, et `_EXCEPTION_RECORD` et `_CONTEXT` sont définis dans le fichier include \<excpt.h >
 
-Vous pouvez utiliser `GetExceptionCode` dans le Gestionnaire d’exceptions. Toutefois, vous pouvez utiliser `GetExceptionInformation` uniquement dans l’expression de filtre d’exception. Les informations qu'il désigne sont généralement sur la pile et ne sont plus disponibles lorsque le contrôle est transféré au gestionnaire d'exceptions.
+Vous pouvez utiliser `GetExceptionCode` dans le Gestionnaire d’exceptions. Toutefois, vous pouvez utiliser `GetExceptionInformation` uniquement au sein de l’expression de filtre d’exception. Les informations qu'il désigne sont généralement sur la pile et ne sont plus disponibles lorsque le contrôle est transféré au gestionnaire d'exceptions.
 
-La fonction intrinsèque `AbnormalTermination` est disponible dans un gestionnaire de terminaisons. Retourne 0 si le corps de la **try-finally** instruction se termine séquentiellement. Dans tous les autres cas, elle retourne 1.
+La fonction intrinsèque `AbnormalTermination` est disponible au sein d’un gestionnaire de terminaisons. Elle retourne 0 si le corps de la **try-finally** instruction se termine séquentiellement. Dans tous les autres cas, elle retourne 1.
 
 excpt.h définit d’autres noms pour ces fonctions intrinsèques :
 
-`GetExceptionCode` est équivalent à `_exception_code`
+`GetExceptionCode` équivaut à `_exception_code`
 
- `GetExceptionInformation` est équivalent à `_exception_info`
+ `GetExceptionInformation` équivaut à `_exception_info`
 
- `AbnormalTermination` est équivalent à `_abnormal_termination`
+ `AbnormalTermination` équivaut à `_abnormal_termination`
   
 ## <a name="example"></a>Exemple
 
@@ -177,7 +178,7 @@ int main()
   
 ## <a name="output"></a>Sortie  
   
-```  
+```Output 
 hello  
 in try  
 in try  
@@ -193,6 +194,6 @@ world
 
 ## <a name="see-also"></a>Voir aussi
 
-[L’écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)   
-[Exceptions structurées (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
+[Écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)   
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
 [Mots clés](../cpp/keywords-cpp.md)

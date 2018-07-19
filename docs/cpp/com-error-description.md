@@ -1,5 +1,5 @@
 ---
-title: _com_error::description | Documents Microsoft
+title: _com_error::description | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414257"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939895"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Section spécifique à Microsoft**  
   
- Appels **IErrorInfo::GetDescription** (fonction).  
+ Appels `IErrorInfo::GetDescription` (fonction).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne le résultat de **IErrorInfo::GetDescription** pour le **IErrorInfo** enregistré dans le `_com_error` objet. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucun **IErrorInfo** est enregistré, il retourne vide `_bstr_t`.  
+ Retourne le résultat de `IErrorInfo::GetDescription` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.  
   
 ## <a name="remarks"></a>Notes  
- Appelle le **IErrorInfo::GetDescription** fonction et récupère **IErrorInfo** enregistré dans le `_com_error` objet. Tout échec lors de l’appel du **IErrorInfo::GetDescription** méthode est ignorée.  
+ Appelle le `IErrorInfo::GetDescription` fonction et récupère `IErrorInfo` stocké dans le `_com_error` objet. Tout échec lors de l’appel la `IErrorInfo::GetDescription` méthode est ignorée.  
   
  **FIN de la section spécifique à Microsoft**  
   

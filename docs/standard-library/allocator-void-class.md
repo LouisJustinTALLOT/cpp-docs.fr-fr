@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953552"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt;, classe
 
-Spécialisation de la classe de modèle allocator en type `void` qui définit les types qui sont pertinents dans ce contexte.
+Une spécialisation de la classe de modèle allocator en type **void**, définir les types qui sont pertinents dans ce contexte.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Notes
 
-La classe spécialise explicitement la classe de modèle [allocator](../standard-library/allocator-class.md) pour le type *void.* Ses constructeurs et l’opérateur d’assignation se comportent de la même façon que la classe de modèle, mais elle définit uniquement les types suivants :
+La classe spécialise explicitement la classe de modèle [allocateur](../standard-library/allocator-class.md) pour le type **void**. Ses constructeurs et l’opérateur d’assignation se comportent de la même façon que la classe de modèle, mais elle définit uniquement les types suivants :
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 
@@ -61,7 +61,7 @@ La classe spécialise explicitement la classe de modèle [allocator](../standard
 
 - [rebind](../standard-library/allocator-class.md#rebind), une classe de modèle imbriquée.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<memory>
 

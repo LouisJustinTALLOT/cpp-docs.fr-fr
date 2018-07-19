@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Release | Documents Microsoft
+title: _com_ptr_t::Release | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf83b3f6ece4e8422f1ba8dbc5d1448da6bf0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409642"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939254"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Section spécifique à Microsoft**  
   
- Appelle le **version** fonction membre de **IUnknown** sur le pointeur d’interface encapsulé.  
+ Appelle le `Release` fonction membre de `IUnknown` sur le pointeur d’interface encapsulé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ void Release( );
 ```  
   
 ## <a name="remarks"></a>Notes  
- Appels `IUnknown::Release` sur le pointeur d’interface encapsulé, le déclenchement d’un `E_POINTER` erreur si ce pointeur d’interface est **NULL**.  
+ Appels `IUnknown::Release` sur le pointeur d’interface encapsulé, déclencher une erreur E_POINTER si ce pointeur d’interface est NULL.  
   
  **FIN de la section spécifique à Microsoft**  
   

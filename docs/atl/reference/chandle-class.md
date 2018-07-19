@@ -1,5 +1,5 @@
 ---
-title: Classe de CHandle | Documents Microsoft
+title: CHandle, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b57aab927380f8801c3b9cab258a695c7d8a59d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd962e32f423baba6cfabb90f1d9f7fa5d69e170
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363069"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880230"
 ---
-# <a name="chandle-class"></a>Classe de CHandle
-Cette classe fournit des méthodes pour la création et à l’aide d’un handle d’objet.  
+# <a name="chandle-class"></a>CHandle, classe
+Cette classe fournit des méthodes pour la création et utilisation d’un objet de handle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,45 +51,45 @@ class CHandle
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CHandle::Attach](#attach)|Appelez cette méthode pour attacher le `CHandle` objet à un handle existant.|  
-|[CHandle::Close](#close)|Appelez cette méthode pour fermer une `CHandle` objet.|  
-|[CHandle::Detach](#detach)|Appelez cette méthode pour détacher un handle d’un `CHandle` objet.|  
+|[CHandle::Attach](#attach)|Appelez cette méthode pour attacher le `CHandle` objet vers un handle existant.|  
+|[CHandle::Close](#close)|Appelez cette méthode pour fermer un `CHandle` objet.|  
+|[CHandle::Detach](#detach)|Appelez cette méthode pour détacher un handle à partir d’un `CHandle` objet.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CHandle::operator descripteur](#operator_handle)|Retourne la valeur du handle stockée.|  
+|[CHandle::operator HANDLE](#operator_handle)|Retourne la valeur du handle stockée.|  
 |[CHandle::operator =](#operator_eq)|Opérateur d'assignation.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CHandle::m_h](#m_h)|La variable de membre qui stocke le descripteur.|  
+|[CHandle::m_h](#m_h)|La variable de membre qui stocke le handle.|  
   
 ## <a name="remarks"></a>Notes  
- A `CHandle` objet peut être utilisé chaque fois qu’un handle est requis : la principale différence est que le `CHandle` objet sera automatiquement supprimé.  
+ Un `CHandle` objet peut être utilisé chaque fois qu’un handle est nécessaire : la principale différence est que le `CHandle` objet sera automatiquement supprimé.  
   
 > [!NOTE]
->  Certaines fonctions API utilisera NULL comme un handle non valide ou vide, alors que d’autres utilisent INVALID_HANDLE_VALUE. `CHandle` utilise NULL et ne traitez INVALID_HANDLE_VALUE comme un handle réel. Si vous appelez une API qui peut retourner INVALID_HANDLE_VALUE, vous devez rechercher cette valeur avant d’appeler [CHandle::Attach](#attach) ou en le passant à la `CHandle` constructeur et passer à la place la valeur NULL.  
+>  Certaines fonctions d’API utilise NULL comme un handle non valide ou vide, tandis que d’autres utilisent INVALID_HANDLE_VALUE. `CHandle` utilise uniquement NULL et va traite INVALID_HANDLE_VALUE comme un handle réel. Si vous appelez une API qui peut retourner INVALID_HANDLE_VALUE, vous devez rechercher cette valeur avant d’appeler [CHandle::Attach](#attach) ou en le passant à la `CHandle` constructeur et passer à la place la valeur NULL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="attach"></a>  CHandle::Attach  
- Appelez cette méthode pour attacher le `CHandle` objet à un handle existant.  
+ Appelez cette méthode pour attacher le `CHandle` objet vers un handle existant.  
   
 ```
 void Attach(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `h`  
- `CHandle` prend possession du handle `h`.  
+ *h*  
+ `CHandle` prend possession du handle *h*.  
   
 ### <a name="remarks"></a>Notes  
- Affecte le `CHandle` de l’objet à le `h` gérer. Dans les versions débogue un ATLASSERT ; sera déclenchée si `h` a la valeur NULL. Aucune autre vérification sur la validité de la poignée est effectuée.  
+ Assigne le `CHandle` de l’objet à la *h* gérer. Dans les versions débogue une ATLASSERT ; sera déclenchée si *h* a la valeur NULL. Aucune autre vérification quant à la validité de la poignée est effectuée.  
   
 ##  <a name="chandle"></a>  CHandle::CHandle  
  Constructeur.  
@@ -101,11 +101,11 @@ explicit CHandle(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `h`  
+ *h*  
  Un handle existant ou `CHandle`.  
   
 ### <a name="remarks"></a>Notes  
- Crée un nouveau `CHandle` de l’objet, si vous le souhaitez à l’aide d’un handle existant ou `CHandle` objet.  
+ Crée un `CHandle` de l’objet, si vous le souhaitez à l’aide d’un handle existant ou `CHandle` objet.  
   
 ##  <a name="dtor"></a>  CHandle :: ~ CHandle  
  Destructeur.  
@@ -118,30 +118,30 @@ explicit CHandle(HANDLE h) throw();
  Libère le `CHandle` objet en appelant [CHandle::Close](#close).  
   
 ##  <a name="close"></a>  CHandle::Close  
- Appelez cette méthode pour fermer une `CHandle` objet.  
+ Appelez cette méthode pour fermer un `CHandle` objet.  
   
 ```
 void Close() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Ferme le handle d’objet ouvert. Si le handle est NULL, ce qui sera le cas si **fermer** a déjà été appelée, une ATLASSERT ; sera déclenchée dans les versions debug.  
+ Ferme le handle d’objet ouvert. Si le handle est NULL, ce qui sera le cas si `Close` a déjà été appelée, un ATLASSERT ; sera déclenché dans les versions debug.  
   
 ##  <a name="detach"></a>  CHandle::Detach  
- Appelez cette méthode pour détacher un handle d’un `CHandle` objet.  
+ Appelez cette méthode pour détacher un handle à partir d’un `CHandle` objet.  
   
 ```
 HANDLE Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le handle qui est détaché.  
+ Retourne le handle en cours de détachement.  
   
 ### <a name="remarks"></a>Notes  
- Libère la possession de la poignée.  
+ Libère la propriété de la poignée.  
   
 ##  <a name="m_h"></a>  CHandle::m_h  
- La variable de membre qui stocke le descripteur.  
+ La variable de membre qui stocke le handle.  
   
 ```
 HANDLE m_h;
@@ -155,16 +155,16 @@ CHandle& operator=(CHandle& h) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `h`  
- `CHandle` prend possession du handle `h`.  
+ *h*  
+ `CHandle` prend possession du handle *h*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à la nouvelle `CHandle` objet.  
   
 ### <a name="remarks"></a>Notes  
- Si le `CHandle` objet contient actuellement un handle, il va être fermée. Le `CHandle` de l’objet en cours de passage aura sa référence de descripteur de la valeur NULL. Cela garantit que deux `CHandle` objets ne contient jamais le même handle actif.  
+ Si le `CHandle` objet contient actuellement un handle, il va être fermée. Le `CHandle` de l’objet passé dans aura sa référence de la poignée de la valeur NULL. Cela garantit que deux `CHandle` objets ne contiendra jamais le même handle actif.  
   
-##  <a name="operator_handle"></a>  CHandle::operator descripteur  
+##  <a name="operator_handle"></a>  CHandle::operator HANDLE  
  Retourne la valeur du handle stockée.  
   
 ```  

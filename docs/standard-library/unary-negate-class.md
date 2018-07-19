@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2529a38a7737fc45573f5c151477e0a5754cde50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960890"
 ---
 # <a name="unarynegate-class"></a>unary_negate, classe
 
@@ -42,9 +42,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`Func` La fonction unaire à inverser.
+*Func*  
+ Fonction unaire à inverser.
 
-`left` L’opérande de la fonction unaire à inverser.
+*left*  
+ Opérande de la fonction unaire à inverser.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -108,7 +110,7 @@ The number of elements in v1 not greater than 10 is: 3.
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

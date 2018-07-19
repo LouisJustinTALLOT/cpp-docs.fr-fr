@@ -1,5 +1,5 @@
 ---
-title: Types de classe anonymes | Documents Microsoft
+title: Types de classe anonymes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943916"
 ---
 # <a name="anonymous-class-types"></a>Types de classe anonymes
-Les classes peuvent être anonymes, autrement dit, ils peuvent être déclarées sans un *identificateur*. Cela est utile lorsque vous remplacez un nom de classe par un nom de `typedef`, comme dans l'exemple suivant :  
+Les classes peuvent être anonymes, autrement dit, elles peuvent être déclarées sans un *identificateur*. Cela est utile lorsque vous remplacez un nom de classe avec un **typedef** nom, comme suit :  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  L'utilisation de classes anonymes indiquée dans l'exemple précédent est utile pour conserver la compatibilité avec un code C existant. Dans du code C, l'utilisation de `typedef` conjointement aux structures anonymes est généralisée.  
+>  L'utilisation de classes anonymes indiquée dans l'exemple précédent est utile pour conserver la compatibilité avec un code C existant. Dans du code C, l’utilisation de **typedef** conjointement avec les structures anonymes est répandus.  
   
  Les classes anonymes sont également utiles lorsque vous souhaitez qu'une référence à un membre de classe apparaisse comme si elle n'était pas été contenue dans une classe distincte, comme dans l'exemple suivant :  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -53,7 +54,7 @@ PTValue ptv;
   
  Dans le code précédent, `iValue` accessibles à l’aide de l’opérateur de sélection de membre d’objet (**.**) comme suit :  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
@@ -72,7 +73,7 @@ int i = ptv.iValue;
   
  Vous pouvez accéder aux membres d'une structure anonyme comme s'ils étaient des membres de la structure conteneur.  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   

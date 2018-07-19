@@ -1,5 +1,5 @@
 ---
-title: if-else, instruction (C++) | Documents Microsoft
+title: if-else, instruction (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942634"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
-Contrôles création de branches conditionnelles. Les instructions dans le *-bloc if* sont exécutés uniquement si la *expression if* prend une valeur différente de zéro (ou `true`). Si la valeur de *expression* est différent de zéro, *statement1* et toutes les autres instructions du bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
-- `true`
+Contrôles création de branches conditionnelles. Les instructions dans le *bloc if* sont exécutés uniquement si la *-expression if* correspond à une valeur différente de zéro (ou la valeur TRUE). Si la valeur de *expression* est différent de zéro, *instruction1* et toutes les autres instructions dans le bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
+- true
 - un pointeur non null,
-- toute valeur arithmétique différente de zéro, ou 
-- type d’un type de classe qui définit une conversion non ambiguë en arithmétique, booléen ou pointeur. (Pour plus d’informations sur les conversions, consultez [Conversions Standard](../cpp/standard-conversions.md).)   
+- toute valeur arithmétique non nulle, ou 
+- type d’un type de classe qui définit une conversion non ambiguë arithmétique, valeur booléenne ou pointeur. (Pour plus d’informations sur les conversions, consultez [Conversions Standard](../cpp/standard-conversions.md).)   
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,8 +72,10 @@ else  // optional
    ...
 } 
 ```  
+
 ## <a name="example"></a>Exemple  
-```  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -118,7 +121,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>Si l’instruction avec un initialiseur
-**Visual Studio 2017 15,3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if. 
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if. 
 
 ```cpp
 ## Example  
@@ -168,10 +171,10 @@ int main()
 
  Dans toutes les formes de la **si** instruction, *expression*, qui peut avoir n’importe quelle valeur sauf une structure, est évaluée, y compris tous les effets. Le contrôle passe à partir de la **si** instruction à l’instruction suivante dans le programme, sauf si un de la *instruction*s contient un [saut](../cpp/break-statement-cpp.md), [continuer](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).  
   
- Le **else** clause d’une `if...else` instruction est associée à la plus proche précédente **si** instruction dans la même portée que ne pas correspondre à une **else** instruction.   
+ Le **else** clause d’une `if...else` instruction est associée à la plus proche précédente **si** instruction dans la même étendue qui n’a pas un correspondant **else** instruction.   
 
 ## <a name="constexpr-if-statements"></a>constexpr si les instructions
-**Visual Studio 2017 15,3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser un **constexpr si** à prendre des décisions de création de branche lors de la compilation sans instruction avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) : 
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser un `constexpr if` instruction pour prendre des décisions de branches de compilation sans avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) : 
 
 ```cpp
 template <class T, class... Rest>

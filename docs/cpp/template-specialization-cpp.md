@@ -1,5 +1,5 @@
 ---
-title: Spécialisation de modèle (C++) | Documents Microsoft
+title: Spécialisation de modèle (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422707"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941169"
 ---
 # <a name="template-specialization-c"></a>Spécialisation de modèle (C++)
 
@@ -80,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Exemple
 
- Si vous avez une classe de collection de modèle qui accepte tout type **T**, vous pouvez créer une spécialisation partielle qui accepte tout type pointeur **T***. Le code suivant illustre un modèle de classe de collection `Bag` et une spécialisation partielle pour les types pointeur dans laquelle la collection déréférence les types pointeur avant de les copier dans le tableau. La collection stocke ensuite les valeurs cibles des pointeurs. Avec le modèle d’origine, seuls les pointeurs proprement dits auraient été stockés dans la collection, laissant les données vulnérables à la suppression ou à la modification. Dans cette version de pointeur spéciale de la collection, du code vérifiant l'existence d'un pointeur null dans la méthode `add` est ajouté.  
+ Si vous avez une classe de collection de modèle qui accepte n’importe quel type `T`, vous pouvez créer une spécialisation partielle qui accepte tout type pointeur `T*`. Le code suivant illustre un modèle de classe de collection `Bag` et une spécialisation partielle pour les types pointeur dans laquelle la collection déréférence les types pointeur avant de les copier dans le tableau. La collection stocke ensuite les valeurs cibles des pointeurs. Avec le modèle d’origine, seuls les pointeurs proprement dits auraient été stockés dans la collection, laissant les données vulnérables à la suppression ou à la modification. Dans cette version de pointeur spéciale de la collection, du code vérifiant l'existence d'un pointeur null dans la méthode `add` est ajouté.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -192,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>Exemple
 
- L'exemple suivant définit une classe de modèle qui accepte des paires de deux types quelconques, puis définit une spécialisation partielle de cette classe de modèle spécialisée afin que l'un des types soit `int`. La spécialisation définit une méthode de tri supplémentaire qui implémente un tri par propagation simple sur l'entier.  
+ L’exemple suivant définit un modèle de classe qui accepte des paires de deux types, puis définit une spécialisation partielle de cette classe de modèle spécialisée afin qu’un des types est **int**. La spécialisation définit une méthode de tri supplémentaire qui implémente un tri par propagation simple sur l'entier.  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

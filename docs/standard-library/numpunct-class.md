@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa161e1eec0e02097f22bb15f825542a6928111b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965563"
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 
@@ -60,7 +60,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-`CharType` Le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
 
 ## <a name="remarks"></a>Notes
 
@@ -85,16 +85,16 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |-|-|
 |[decimal_point](#decimal_point)|Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur décimal.|
 |[do_decimal_point](#do_decimal_point)|Une fonction membre virtuelle est appelée pour retourner un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur décimal.|
-|[do_falsename](#do_falsename)|Une fonction membre virtuelle est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur `false`.|
+|[do_falsename](#do_falsename)|Une fonction membre protégée virtuelle appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **false**.|
 |[do_grouping](#do_grouping)|Fonction membre virtuelle protégée appelée pour retourner une règle spécifique aux paramètres régionaux permettant de déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.|
 |[do_thousands_sep](#do_thousands_sep)|Une fonction membre virtuelle est appelée pour retourner un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.|
-|[do_truename](#do_truename)|Une fonction membre virtuelle est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur `true`.|
-|[falsename](#falsename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur `false`.|
+|[do_truename](#do_truename)|Fonction membre virtuelle protégée qui est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **true**.|
+|[falsename](#falsename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **false**.|
 |[grouping](#grouping)|Retourne une règle spécifique aux paramètres régionaux pour déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.|
 |[thousands_sep](#thousands_sep)|Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.|
-|[truename](#truename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur `true`.|
+|[truename](#truename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **true**.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 
@@ -209,7 +209,7 @@ Cette fonction membre virtuelle protégée retourne une règle spécifique aux p
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple relatif à [grouping](#grouping), où la fonction membre virtuelle est appelée par **grouping**.
+Consultez l’exemple de [regroupement](#grouping), où la fonction membre virtuelle est appelée par `grouping`.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -225,7 +225,7 @@ Retourne un élément spécifique aux paramètres régionaux devant être utilis
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée retourne un élément propre aux paramètres régionaux de type **CharType** à utiliser comme séparateur de groupes à gauche de la virgule décimale.
+La fonction membre virtuelle protégée retourne un élément spécifique aux paramètres régionaux de type `CharType` à utiliser comme séparateur de groupes à gauche de la virgule décimale.
 
 ### <a name="example"></a>Exemple
 
@@ -259,7 +259,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne contenant une séquence de **CharType** à utiliser comme représentation textuelle de la valeur **false**.
+Une chaîne contenant une séquence de `CharType`s à utiliser comme représentation textuelle de la valeur **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -354,21 +354,21 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Refs` Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre `_Refs` et leur signification sont les suivantes :
+Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définis.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise son objet de base avec **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Le constructeur initialise son objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a>  numpunct::string_type
 

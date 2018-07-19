@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93113e64e9b6a72f40557d063f83724c5ff8da62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cdfcf3c6a562f7aab0164e3d63d468ba39ec0023
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954097"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -34,9 +34,9 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Paramètres
 
-`Elem` Le type d’élément de caractères larges.
-`Maxcode` Le nombre maximal de caractères pour la facette de paramètres régionaux.
-`Mode` Informations de configuration pour la facette de paramètres régionaux.
+*Elem* le type d’élément de caractères larges.
+*Maxcode* le nombre maximal de caractères pour la facette de paramètres régionaux.
+*Mode* informations de Configuration pour la facette de paramètres régionaux.
 
 ## <a name="remarks"></a>Notes
 
@@ -44,6 +44,6 @@ Cette classe de modèle convertit des caractères larges codés au format UCS-2 
 
 Le flux d’octets doit être écrit dans un fichier binaire. Il peut être endommagé s’il est écrit dans un fichier texte.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 En-tête : \<codecvt> Espace de noms : std

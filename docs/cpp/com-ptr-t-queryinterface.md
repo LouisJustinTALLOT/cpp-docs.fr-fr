@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::QueryInterface | Documents Microsoft
+title: _com_ptr_t::QueryInterface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c046f1b1d14b7e7dbd44ca9f5f012e632efef6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942630"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Section spécifique à Microsoft**  
   
- Appelle le `QueryInterface` fonction membre de **IUnknown** sur le pointeur d’interface encapsulé.  
+ Appelle le `QueryInterface` fonction membre de `IUnknown` sur le pointeur d’interface encapsulé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      template<typename _InterfaceType> HRESULT QueryInterface (  
+template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
 ) throw ( );  
@@ -43,14 +44,14 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `iid`  
- **IID** d’un pointeur d’interface.  
+ *IID*  
+ `IID` d’un pointeur d’interface.  
   
- `p`  
+ *p*  
  Pointeur d'interface brut.  
   
 ## <a name="remarks"></a>Notes  
- Appels **IUnknown::QueryInterface** sur le pointeur d’interface encapsulé avec l’objet **IID** et retourne le pointeur d’interface brut résultant dans `p`. Cette routine retourne l'objet `HRESULT` pour indiquer un succès ou un échec.  
+ Appels `IUnknown::QueryInterface` sur le pointeur d’interface encapsulé avec la valeur `IID` et retourne le pointeur d’interface brut résultant dans *p*. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.  
   
  **FIN de la section spécifique à Microsoft**  
   

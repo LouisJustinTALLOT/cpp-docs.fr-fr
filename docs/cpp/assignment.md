@@ -1,5 +1,5 @@
 ---
-title: Affectation | Documents Microsoft
+title: Affectation | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd08215c3849bf487578b28b1824afbec14c52
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e78f7429c4d2a0f83ff7184460eb2ae69df129
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960984"
 ---
 # <a name="assignment"></a>Attribution
-L’opérateur d’assignation (**=**) est en principe, un opérateur binaire. Sa déclaration est identique à celle de tout autre opérateur binaire, avec les exceptions suivantes :  
+L’opérateur d’assignation (**=**) est à proprement parler, un opérateur binaire. Sa déclaration est identique à celle de tout autre opérateur binaire, avec les exceptions suivantes :  
   
--   Il doit s'agir d'une fonction membre non statique. Aucun `operator=` ne peut être déclaré comme fonction non-membre.  
+-   Il doit s'agir d'une fonction membre non statique. Ne **opérateur =** peuvent être déclarées comme une fonction non membre.  
   
 -   Il n'est pas hérité par les classes dérivées.  
   
--   Une fonction `operator=` par défaut peut être générée par le compilateur pour les types de classe si aucune n'existe. (Pour plus d’informations sur la valeur par défaut `operator=` fonctions, consultez [assignation et initialisation](http://msdn.microsoft.com/en-us/94048213-8b49-4416-8069-b1b7a6f271f9).)  
+-   Une valeur par défaut **opérateur =** fonction peut être générée par le compilateur pour les types de classe si aucune n’existe.  
   
  L'exemple suivant montre comment déclarer un opérateur d'assignation :  
   
-```  
+```cpp 
 // assignment.cpp  
 class Point  
 {  
@@ -57,7 +58,7 @@ int main()
   
  Notez que l'argument fourni est du côté droit de l'expression. L'opérateur retourne l'objet pour conserver le comportement de l'opérateur d'assignation, qui retourne la valeur du côté gauche une fois l'assignation terminée. Cela permet d'écrire des instructions telles que :  
   
-```  
+```cpp 
 pt1 = pt2 = pt3;  
 ```  
   

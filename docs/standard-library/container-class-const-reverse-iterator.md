@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6346e2352eccbe0949b80b1e143eb074c60d8349
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07fce54bdbffbe2f1effda8ac5a9a17561bad1d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841256"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953435"
 ---
 # <a name="container-classconstreverseiterator"></a>Conteneur Class::const_reverse_iterator
 
@@ -37,7 +37,7 @@ typedef T8 const_reverse_iterator;
 
 ## <a name="remarks"></a>Notes
 
-Il est décrit ici comme un synonyme du type non spécifié **T8** (généralement, [reverse_iterator](../standard-library/container-class-reverse-iterator.md) <[const_iterator](../standard-library/container-class-const-iterator.md)`>`).
+Il est décrit ici comme un synonyme du type non spécifié `T8` (généralement [reverse_iterator](../standard-library/container-class-reverse-iterator.md) <[const_iterator](../standard-library/container-class-const-iterator.md)`>`).
 
 ## <a name="see-also"></a>Voir aussi
 

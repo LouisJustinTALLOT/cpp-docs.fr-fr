@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954569"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -42,14 +42,14 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 
 - tableaux de caractères se terminant par un caractère Null et souvent appelés chaînes C ;
 
-- objets de classe de modèle, de type `basic_string`, qui gèrent tous les arguments de modèle de type `char`.
+- Objets de classe de modèle, de type `basic_string`, qui gèrent tous les **char**-comme arguments template.
 
 ### <a name="typedefs"></a>Typedef
 
 |Nom de type|Description|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Type qui décrit une spécialisation de la classe de modèle `basic_string` avec des éléments de type `char` sous la forme d'un objet `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Type qui décrit une spécialisation de la classe de modèle `basic_string` avec des éléments de type `wchar_t` sous la forme d'un objet `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Un type qui décrit une spécialisation de la classe de modèle `basic_string` avec des éléments de type **char** comme un `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Un type qui décrit une spécialisation de la classe de modèle `basic_string` avec des éléments de type **wchar_t** comme un `wstring`.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Type qui décrit une spécialisation de la classe de modèle `basic_string` basée sur des éléments de type `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Type qui décrit une spécialisation de la classe de modèle `basic_string` basée sur des éléments de type `char32_t`.|
 
@@ -72,13 +72,13 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|Échange les tableaux de caractères de deux chaînes.|
-|[stod](../standard-library/string-functions.md#stod)|Convertit une séquence de caractères en `double.`.|
-|[stof](../standard-library/string-functions.md#stof)|Convertit une séquence de caractères en `float`.|
+|[stod](../standard-library/string-functions.md#stod)|Convertit une séquence de caractères à un **double**.|
+|[stof](../standard-library/string-functions.md#stof)|Convertit une séquence de caractères à un **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Convertit une séquence de caractères en entier.|
-|[stold](../standard-library/string-functions.md#stold)|Convertit une séquence de caractères en `long double`.|
-|[stoll](../standard-library/string-functions.md#stoll)|Convertit une séquence de caractères en `long long`.|
-|[stoul](../standard-library/string-functions.md#stoul)|Convertit une séquence de caractères en `unsigned long`.|
-|[stoull](../standard-library/string-functions.md#stoull)|Convertit une séquence de caractères en `unsigned long long`.|
+|[stold](../standard-library/string-functions.md#stold)|Convertit une séquence de caractères à un **long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Convertit une séquence de caractères à un **longue**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Convertit une séquence de caractères à un **unsigned long**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Convertit une séquence de caractères à un **unsigned long long**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Convertit une valeur en `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Convertit une valeur en `string` large.|
 
@@ -104,7 +104,7 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 |[char_traits<char16_t>, struct](../standard-library/char-traits-char16-t-struct.md)|Struct qui est une spécialisation du struct de modèle `char_traits`\<CharType> d’un élément de type `char16_t`.|
 |[char_traits<char32_t>, struct](../standard-library/char-traits-char32-t-struct.md)|Struct qui est une spécialisation du struct de modèle `char_traits`\<CharType> d’un élément de type `char32_t`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 - **En-tête :** \<string>
 

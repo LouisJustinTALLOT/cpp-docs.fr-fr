@@ -1,5 +1,5 @@
 ---
-title: Spécificateurs | Documents Microsoft
+title: Spécificateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953745"
 ---
 # <a name="specifiers"></a>Spécificateurs
 Cette rubrique décrit la *decl-specifiers* composant (spécificateurs de déclaration) d’un [déclaration](declarations-and-definitions-cpp.md).  
@@ -36,23 +36,21 @@ Cette rubrique décrit la *decl-specifiers* composant (spécificateurs de décla
   
  [friend](../cpp/friend-cpp.md)  
   
- [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
-  
- [__declspec](../cpp/declspec.md) `(` *extended-decl-modifier-seq* `)`  
+ [(typedef)] ( [typedef](http://msdn.microsod) `(` *extended-decl-modifier-seq* `)`  
   
 ## <a name="remarks"></a>Notes  
- Le *decl-specifiers* partie d’une déclaration est la plus longue séquence de *decl-specifiers* qui peuvent être prises pour signifier un nom de type, sans inclure le pointeur ou de modificateurs de référence. Le reste de la déclaration est la *déclarateur*, qui inclut le nom introduit.  
+ Le *decl-specifiers* partie d’une déclaration est la plus longue séquence de *decl-specifiers* pouvant être prise pour indiquer un nom de type, sans inclure le pointeur ou modificateurs de référence. Le reste de la déclaration est la *déclarateur*, qui inclut le nom introduit.  
   
- Le tableau suivant répertorie quatre déclarations et puis de chaque déclaration *decl-specifers* et *déclarateur* composant séparément.  
+ Le tableau suivant présente les quatre déclarations et la liste de chaque déclaration *decl-specifers* et *déclarateur* composant séparément.  
   
 |Déclaration|*decl-specifiers*|`declarator`|  
 |-----------------|------------------------|------------------|  
-|`char *lpszAppName;`|`char`|`*lpszAppName`|  
-|`typedef char * LPSTR;`|`char`|`*LPSTR`|  
-|`const int func1();`|`const int`|`func1`|  
-|`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
+|`char *lpszAppName;`|**char**|`*lpszAppName`|  
+|`typedef char * LPSTR;`|**char**|`*LPSTR`|  
+|`const int func1();`|**int const**|`func1`|  
+|`volatile void *pvvObj;`|**void volatile**|`*pvvObj`|  
   
- Étant donné que `signed`, `unsigned`, `long`, et `short` impliquent tous `int`, un `typedef` nom suivant une de ces mots clés est considérée comme un membre de *declarator-list,* pas de *decl-specifiers*.  
+ Étant donné que **signé**, **non signé**, **long**, et **court** impliquent tous **int**, un  **typedef** nom suivant une de ces mots clés est prise pour être membre du *declarator-list,* pas de *decl-specifiers*.  
   
 > [!NOTE]
 >  Comme un nom peut être redéclaré, sa traduction est soumise à la déclaration la plus récente de la portée actuelle. Une nouvelle déclaration peut affecter la façon dont les noms sont interprétés par le compilateur, notamment des noms `typedef`.  

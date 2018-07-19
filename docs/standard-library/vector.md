@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857634"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953860"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -83,13 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>Paramètres
 
-Tapez le paramètre de modèle pour le type de données stockées dans le vecteur.
+*Type*  
+ Paramètre de modèle pour le type de données stockées dans le vecteur.
 
-Le paramètre de modèle pour l’objet allocateur stocké responsable de l’allocation de mémoire et la libération d’allocateur.
+*Allocateur*  
+ Paramètre de modèle pour l'objet allocateur stocké qui gère l'allocation et la libération de mémoire.
 
-`left` Premier vecteur (gauche) dans une opération de comparaison
+*left*  
+ Premier vecteur (à gauche) dans une opération de comparaison.
 
-`right` Deuxième vecteur (à droite) dans une opération de comparaison.
+*right*  
+ Deuxième vecteur (à droite) dans une opération de comparaison.
 
 ### <a name="operators"></a>Opérateurs
 
@@ -114,7 +118,7 @@ Le paramètre de modèle pour l’objet allocateur stocké responsable de l’al
 |-|-|
 |[vector\<bool>, classe](../standard-library/vector-bool-class.md)|Spécialisation complète de la classe de modèle vector pour les éléments de type `bool` possédant un allocateur pour le type sous-jacent utilisé par la spécialisation.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<vector>
 

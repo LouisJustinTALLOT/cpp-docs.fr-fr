@@ -1,5 +1,5 @@
 ---
-title: '&lt;thread&gt; | Documents Microsoft'
+title: '&lt;thread&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953027"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-Incluez l’en-tête standard \<thread > pour définir la classe `thread` et diverses fonctions de prise en charge.
+Incluez l’en-tête standard \<thread > pour définir la classe **thread** et diverses fonctions de prise en charge.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ Incluez l’en-tête standard \<thread > pour définir la classe `thread` et div
 > [!NOTE]
 > Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.
 
-Le `__STDCPP_THREADS__` macro est défini comme une valeur différente de zéro pour indiquer que les threads sont pris en charge par cet en-tête.
+Le `__STDCPP_THREADS__` macro est définie comme une valeur différente de zéro pour indiquer que les threads sont pris en charge par cet en-tête.
 
 ## <a name="members"></a>Membres
 
@@ -44,7 +44,7 @@ Le `__STDCPP_THREADS__` macro est défini comme une valeur différente de zéro 
 
 |Nom|Description|
 |----------|-----------------|
-|[thread, classe](../standard-library/thread-class.md)|Définit un objet qui sert à observer et de gérer un thread d’exécution dans une application.|
+|[thread, classe](../standard-library/thread-class.md)|Définit un objet qui sert à observer et gérer un thread d’exécution dans une application.|
 
 ### <a name="public-structures"></a>Structures publiques
 
@@ -59,20 +59,20 @@ Le `__STDCPP_THREADS__` macro est défini comme une valeur différente de zéro 
 |[get_id](../standard-library/thread-functions.md#get_id)|Identifie de façon unique le thread d’exécution en cours.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Bloque le thread appelant.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|Bloque le thread appelant au moins jusqu’à l’heure spécifiée.|
-|[swap](../standard-library/thread-functions.md#swap)|Échange les États de deux `thread` objets.|
+|[swap](../standard-library/thread-functions.md#swap)|Échange les États de deux **thread** objets.|
 |[yield](../standard-library/thread-functions.md#yield)|Indique au système d’exploitation d’exécuter d’autres threads, même si le thread actuel continuerait normalement à s’exécuter.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[opérateur > = (opérateur)](../standard-library/thread-operators.md#op_gt_eq)|Détermine si un objet `thread::id` est supérieur ou égal à un autre.|
-|[opérateur > (opérateur)](../standard-library/thread-operators.md#op_gt)|Détermine si un objet `thread::id` est supérieur à un autre.|
-|[opérateur < = (opérateur)](../standard-library/thread-operators.md#op_lt_eq)|Détermine si un objet `thread::id` est inférieur ou égal à un autre.|
-|[opérateur < (opérateur)](../standard-library/thread-operators.md#op_lt)|Détermine si un objet `thread::id` est inférieur à un autre.|
+|[opérateur > =, opérateur](../standard-library/thread-operators.md#op_gt_eq)|Détermine si un objet `thread::id` est supérieur ou égal à un autre.|
+|[opérateur > opérateur](../standard-library/thread-operators.md#op_gt)|Détermine si un objet `thread::id` est supérieur à un autre.|
+|[opérateur < =, opérateur](../standard-library/thread-operators.md#op_lt_eq)|Détermine si un objet `thread::id` est inférieur ou égal à un autre.|
+|[opérateur < opérateur](../standard-library/thread-operators.md#op_lt)|Détermine si un objet `thread::id` est inférieur à un autre.|
 |[opérateur ! =, opérateur](../standard-library/thread-operators.md#op_neq)|Compare deux objets `thread::id` pour déterminer s'ils sont différents.|
-|[opérateur == (opérateur)](../standard-library/thread-operators.md#op_eq_eq)|Compare deux objets `thread::id` pour déterminer s’ils sont égaux.|
-|[opérateur << (opérateur)](../standard-library/thread-operators.md#op_lt_lt)|Insère une représentation textuelle d’un objet `thread::id` dans un flux.|
+|[opérateur ==, opérateur](../standard-library/thread-operators.md#op_eq_eq)|Compare deux objets `thread::id` pour déterminer s’ils sont égaux.|
+|[opérateur << opérateur](../standard-library/thread-operators.md#op_lt_lt)|Insère une représentation textuelle d’un objet `thread::id` dans un flux.|
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: 'Déclarateur de référence rvalue : &amp; &amp; | Documents Microsoft'
+title: 'Déclarateur de référence rvalue : &amp; &amp; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f775573693f0897122502d7ca092cfe392ebd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942886"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue : &amp;&amp;
 Contient une référence à une expression rvalue.  
@@ -40,11 +41,11 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Sémantique de déplacement  
  Références rvalue prennent en charge l’implémentation de *la sémantique de déplacement*, ce qui peut augmenter considérablement les performances de vos applications. La sémantique de déplacement vous permet d'écrire du code qui transfère des ressources (telles que la mémoire allouée de manière dynamique) d'un objet vers un autre. La sémantique de déplacement fonctionne car elle permet de transférer des ressources à partir d'objets temporaires qui ne peuvent pas être référencés ailleurs dans le programme.  
   
- Pour implémenter la sémantique de déplacement, vous fournissez généralement un *constructeur de déplacement,* et éventuellement un opérateur d’assignation move (`operator=`), à votre classe. Les opérations de copie et d'assignation dont les sources sont des rvalues profitent ensuite automatiquement de la sémantique de déplacement. Contrairement au constructeur de copie par défaut, le compilateur ne fournit pas de constructeur de déplacement par défaut. Pour plus d’informations sur la façon d’écrire un constructeur de déplacement et comment l’utiliser dans votre application, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Pour implémenter la sémantique de déplacement, vous fournissez généralement un *constructeur de déplacement,* et éventuellement un opérateur d’assignation déplacement (`operator=`), à votre classe. Les opérations de copie et d'assignation dont les sources sont des rvalues profitent ensuite automatiquement de la sémantique de déplacement. Contrairement au constructeur de copie par défaut, le compilateur ne fournit pas de constructeur de déplacement par défaut. Pour plus d’informations sur la façon d’écrire un constructeur de déplacement et comment l’utiliser dans votre application, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  Vous pouvez aussi surcharger des fonctions et des opérateurs ordinaires pour tirer parti de la sémantique de déplacement. Visual C++ 2010 introduit la sémantique de déplacement dans la bibliothèque C++ Standard. Par exemple, la classe `string` implémente des opérations qui exécutent la sémantique de déplacement. Prenons l'exemple suivant qui concatène plusieurs chaînes et affiche le résultat :  
   
-```  
+```cpp 
 // string_concatenation.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -58,7 +59,7 @@ int main()
 }  
 ```  
   
- Avant Visual C++ 2010, chaque appel à `operator+` alloue et retourne une nouvelle valeur temporaire `string` objet (une rvalue). `operator+` ne peut pas ajouter une chaîne à une autre car il ne sait pas si les chaînes sources sont des lvalues ou des rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. Si vous utilisez des références rvalue, `operator+` peut être modifié afin d'accepter des rvalues, qui ne peuvent pas être référencées ailleurs dans le programme. Par conséquent, `operator+` peut maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).  
+ Avant Visual C++ 2010, chaque appel à `operator+` alloue et retourne un nouveau temporaire `string` objet (une rvalue). `operator+` ne peut pas ajouter une chaîne à une autre car il ne sait pas si les chaînes sources sont des lvalues ou des rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. Si vous utilisez des références rvalue, `operator+` peut être modifié afin d'accepter des rvalues, qui ne peuvent pas être référencées ailleurs dans le programme. Par conséquent, `operator+` peut maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).  
   
  La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   
@@ -69,13 +70,13 @@ int main()
  Pour plus d’informations sur l’introduction de la sémantique de déplacement dans la bibliothèque Standard C++ dans Visual C++ 2010, consultez [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md).  
   
 ## <a name="perfect-forwarding"></a>Transfert parfait  
- Le transfert parfait réduit le besoin en fonctions surchargées et permet d'éviter le problème de transfert. Le *problème de transfert* peut se produire lorsque vous écrivez une fonction générique qui accepte des références comme paramètres et transmet (ou *transfère*) ces paramètres à une autre fonction. Par exemple, si la fonction générique accepte un paramètre de type `const T&`, la fonction appelée ne peut pas modifier la valeur de ce paramètre. Si la fonction générique accepte un paramètre de type `T&`, elle ne peut pas être appelée en utilisant une rvalue (telle qu'un objet temporaire ou un littéral d'entier).  
+ Le transfert parfait réduit le besoin en fonctions surchargées et permet d'éviter le problème de transfert. Le *problème de transfert* peut se produire lorsque vous écrivez une fonction générique qui accepte des références en tant que ses paramètres et de transmettre (ou *transfère*) ces paramètres à une autre fonction. Par exemple, si la fonction générique accepte un paramètre de type `const T&`, la fonction appelée ne peut pas modifier la valeur de ce paramètre. Si la fonction générique accepte un paramètre de type `T&`, elle ne peut pas être appelée en utilisant une rvalue (telle qu'un objet temporaire ou un littéral d'entier).  
   
  Normalement, pour résoudre ce problème, vous devez fournir des versions surchargées de la fonction générique qui acceptent `T&` et `const T&` pour chacun de ses paramètres. Par conséquent, le nombre de fonctions surchargées augmente de façon exponentielle avec le nombre de paramètres. Les références rvalue vous permettent d'écrire une version d'une fonction qui accepte des arguments arbitraires et les transfère à une autre fonction comme si celle-ci avait été appelée directement.  
   
- Prenez l'exemple suivant qui déclare quatre types, `W`, `X`, `Y` et `Z`. Le constructeur de chaque type accepte une combinaison différente de références lvalue `const` et non-`const` comme paramètres.  
+ Prenez l'exemple suivant qui déclare quatre types, `W`, `X`, `Y` et `Z`. Le constructeur pour chaque type accepte une combinaison différente de **const** et non-**const** références lvalue comme paramètres.  
   
-```  
+```cpp 
 struct W  
 {  
    W(int&, int&) {}  
@@ -99,30 +100,30 @@ struct Z
   
  Supposez que vous souhaitez écrire une fonction générique qui génère des objets. L'exemple suivant montre une manière d'écrire cette fonction :  
   
-```  
+```cpp 
 template <typename T, typename A1, typename A2>  
 T* factory(A1& a1, A2& a2)  
 {  
    return new T(a1, a2);  
 }  
-```  
+```
   
  L'exemple suivant montre un appel valide à la fonction `factory` :  
   
-```  
+```cpp 
 int a = 4, b = 5;  
 W* pw = factory<W>(a, b);  
 ```  
   
  Toutefois, l'exemple suivant ne contient pas d'appel valide à la fonction `factory`, car `factory` accepte des références lvalue qui sont modifiables comme paramètres, mais elle est appelée à l'aide de rvalues :  
   
-```  
+```cpp 
 Z* pz = factory<Z>(2, 2);  
 ```  
   
  Normalement, pour résoudre ce problème, vous devez créer une version surchargée de la fonction `factory` pour chaque combinaison de paramètres `A&` et `const A&`. Les références rvalue vous permettent d'écrire une version de la fonction `factory`, comme indiqué dans l'exemple suivant :  
   
-```  
+```cpp 
 template <typename T, typename A1, typename A2>  
 T* factory(A1&& a1, A2&& a2)  
 {  
@@ -134,7 +135,7 @@ T* factory(A1&& a1, A2&& a2)
   
  L'exemple suivant illustre la fonction `main` qui utilise la fonction modifiée `factory` pour créer des instances des classes `W`, `X`, `Y` et `Z`. La fonction `factory` modifiée transfère ses paramètres (lvalues ou rvalues) au constructeur de classe approprié.  
   
-```  
+```cpp 
 int main()  
 {  
    int a = 4, b = 5;  
@@ -153,9 +154,9 @@ int main()
 ## <a name="additional-properties-of-rvalue-references"></a>Propriétés supplémentaires des références rvalue  
  **Vous pouvez surcharger une fonction prenne une référence lvalue et une référence rvalue.**  
   
- En surchargeant une fonction pour qu'elle prenne une référence lvalue `const` ou une référence rvalue, vous pouvez écrire du code qui effectue la distinction entre des objets non modifiables (lvalues) et des valeurs temporaires modifiables (rvalues). Vous pouvez passer un objet à une fonction qui accepte une référence rvalue, à moins que l'objet ne soit marqué comme `const`. L'exemple suivant illustre la fonction `f`, qui est surchargée pour accepter une référence lvalue et une référence rvalue. La fonction `main` appelle `f` avec des lvalues et une rvalue.  
+ En surchargeant une fonction de prendre un **const** référence lvalue ou une référence rvalue, vous pouvez écrire du code qui fait la distinction entre des objets non modifiables (lvalues) et des valeurs temporaires modifiables (rvalues). Vous pouvez passer un objet à une fonction qui accepte une référence rvalue, sauf si l’objet est marqué comme **const**. L'exemple suivant illustre la fonction `f`, qui est surchargée pour accepter une référence lvalue et une référence rvalue. La fonction `main` appelle `f` avec des lvalues et une rvalue.  
   
-```  
+```cpp 
 // reference-overload.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -187,7 +188,7 @@ int main()
   
  Cet exemple génère la sortie suivante :  
   
-```  
+```Output  
 In f(const MemoryBlock&). This version cannot modify the parameter.  
 In f(MemoryBlock&&). This version can modify the parameter.  
 ```  
@@ -200,7 +201,7 @@ In f(MemoryBlock&&). This version can modify the parameter.
   
  L'exemple suivant illustre la fonction `g`, qui est surchargée pour accepter une référence lvalue et une référence rvalue. La fonction `f` accepte une référence rvalue comme paramètre (une référence rvalue nommée) et retourne une référence rvalue (une référence rvalue sans nom). Dans l'appel à `g` à partir de `f`, la résolution de surcharge sélectionne la version de `g` qui accepte une référence lvalue, car le corps de `f` traite son paramètre comme une lvalue. Dans l'appel à `g` à partir de `main`, la résolution de surcharge sélectionne la version de `g` qui accepte une référence rvalue car `f` retourne une référence rvalue.  
   
-```  
+```cpp 
 // named-reference.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -236,7 +237,7 @@ int main()
   
  Cet exemple génère la sortie suivante :  
   
-```  
+```cpp 
 In g(const MemoryBlock&).  
 In g(MemoryBlock&&).  
 ```  
@@ -245,9 +246,9 @@ In g(MemoryBlock&&).
   
 -   **Vous pouvez convertir une lvalue en référence rvalue.**  
   
- La bibliothèque Standard C++ [std::move](../standard-library/utility-functions.md#move) fonction vous permet de convertir un objet en une référence rvalue à cet objet. En guise d'alternative, vous pouvez utiliser le mot clé `static_cast` pour effectuer une conversion de type (transtypage) d'une lvalue en référence rvalue, comme dans l'exemple suivant :  
+ La bibliothèque Standard C++ [std::move](../standard-library/utility-functions.md#move) fonction vous permet de convertir un objet en une référence rvalue à cet objet. Vous pouvez également utiliser le **static_cast** mot clé à convertir une lvalue en référence rvalue, comme indiqué dans l’exemple suivant :  
   
-```  
+```cpp 
 // cast-reference.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -279,20 +280,20 @@ int main()
   
  Cet exemple génère la sortie suivante :  
   
-```  
+```cpp 
 In g(const MemoryBlock&).  
 In g(MemoryBlock&&).  
 ```  
   
- **Modèles de fonctions déduisent leurs types d’argument template, puis utilisent les règles de réduction de référence.**  
+ **Modèles de fonction déduire leurs types d’arguments de modèle, puis utilisent les règles de réduction de référence.**  
   
  Il est courant d’écrire un modèle de fonction qui passe (ou *transfère*) ses paramètres à une autre fonction. Il est important de comprendre comment la déduction de type de modèle fonctionne pour les modèles de fonction qui acceptent des références rvalue.  
   
- Si l'argument de fonction est une rvalue, le compilateur déduit l'argument comme étant une référence rvalue. Par exemple, si vous passez une référence rvalue à un objet de type `X` à une fonction de modèle qui accepte le type `T&&` comme paramètre, la déduction d'argument template déduit `T` comme étant `X`. Par conséquent, le paramètre est de type `X&&`. Si l'argument de fonction est une lvalue ou une lvalue `const`, le compilateur déduit son type comme étant une référence lvalue ou une référence lvalue `const` de ce type.  
+ Si l'argument de fonction est une rvalue, le compilateur déduit l'argument comme étant une référence rvalue. Par exemple, si vous passez une référence rvalue à un objet de type `X` à une fonction de modèle qui accepte le type `T&&` comme paramètre, la déduction d'argument template déduit `T` comme étant `X`. Par conséquent, le paramètre est de type `X&&`. Si l’argument de fonction est une lvalue ou **const** lvalue, le compilateur déduit son type doit être une référence lvalue ou **const** référence lvalue de ce type.  
   
  L'exemple suivant déclare un modèle de structure, puis le spécialise pour différents types de références. La fonction `print_type_and_value` accepte une référence rvalue comme paramètre et la transfère à la version spécialisée appropriée de la méthode `S::print`. La fonction `main` illustre les différentes façons d'appeler la méthode `S::print`.  
   
-```  
+```cpp 
 // template-type-deduction.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -373,7 +374,7 @@ int main()
   
  Cet exemple génère la sortie suivante :  
   
-```  
+```cpp 
 print<T&>: first  
 print<const T&>: second  
 print<T&&>: third  
@@ -382,13 +383,13 @@ print<const T&&>: fourth
   
  Pour résoudre chaque appel à la fonction `print_type_and_value`, le compilateur effectue d'abord une déduction de l'argument template. Il applique ensuite des règles de réduction de référence lorsqu'il remplace les types de paramètres par les arguments template déduits. Par exemple, le passage de la variable locale `s1` à la fonction `print_type_and_value` provoque la production par le compilateur de la signature de fonction suivante :  
   
-```  
+```cpp 
 print_type_and_value<string&>(string& && t)  
 ```  
   
  Le compilateur utilise des règles de réduction de référence pour réduire la signature comme suit :  
   
-```  
+```cpp 
 print_type_and_value<string&>(string& t)  
 ```  
   

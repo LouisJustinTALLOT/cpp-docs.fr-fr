@@ -1,5 +1,5 @@
 ---
-title: Opérateurs de casting | Documents Microsoft
+title: Opérateurs de casting | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf4204e55811cd33fa48e2b3a07d3058100729ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411645"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941623"
 ---
 # <a name="casting-operators"></a>Opérateurs de casting
 Il existe plusieurs opérateurs de cast spécifiques au langage C++. Ces opérateurs ont pour but de supprimer une partie de l'ambiguïté et du risque inhérents aux casts en langage C de style ancien. Ces opérateurs sont :  
   
--   [dynamic_cast](../cpp/dynamic-cast-operator.md) utilisées pour la conversion des types polymorphes.  
+-   [dynamic_cast](../cpp/dynamic-cast-operator.md) utilisé pour la conversion des types polymorphes.  
   
--   [static_cast](../cpp/static-cast-operator.md) utilisées pour la conversion des types non polymorphes.  
+-   [static_cast](../cpp/static-cast-operator.md) utilisé pour la conversion des types non polymorphes.  
   
--   [const_cast](../cpp/const-cast-operator.md) permet de supprimer le `const`, `volatile`, et `__unaligned` attributs.  
+-   [const_cast](../cpp/const-cast-operator.md) permet de supprimer le **const**, **volatile**, et **__unaligned** attributs.  
   
 -   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilisé pour la réinterprétation simple des bits.  
   

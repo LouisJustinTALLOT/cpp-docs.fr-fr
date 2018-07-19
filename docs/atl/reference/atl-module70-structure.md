@@ -1,5 +1,5 @@
 ---
-title: Structure de _ATL_MODULE70 | Documents Microsoft
+title: _Atl_module70, structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255464"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886217"
 ---
-# <a name="atlmodule70-structure"></a>Structure de _ATL_MODULE70
+# <a name="atlmodule70-structure"></a>_Atl_module70, structure
 Contient les données utilisées par chaque module ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,21 +42,21 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>Membres  
  `cbSize`  
- La taille de la structure utilisée pour le contrôle de version.  
+ La taille de la structure, utilisée pour le contrôle de version.  
   
  `m_nLockCnt`  
- Nombre de références pour déterminer la durée pendant laquelle le module doit rester actif.  
+ Décompte de références pour déterminer la durée pendant laquelle le module doit rester actif.  
   
- **m_pTermFuncs**  
+ `m_pTermFuncs`  
  Fonctions de pistes qui ont été inscrits pour être appelée lorsque ATL s’arrête.  
   
- **m_csStaticDataInitAndTypeInfo**  
- Permet de coordonner l’accès aux données internes dans les situations multithreads.  
+ `m_csStaticDataInitAndTypeInfo`  
+ Utilisé pour coordonner l’accès aux données internes dans les situations multithreads.  
   
 ## <a name="remarks"></a>Notes  
  [_ATL_MODULE](atl-typedefs.md#_atl_module) est défini comme un typedef de `_ATL_MODULE70`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  

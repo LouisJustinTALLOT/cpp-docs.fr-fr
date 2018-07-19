@@ -1,5 +1,5 @@
 ---
-title: novtable | Documents Microsoft
+title: novtable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283ff09c320b67686e353f0497c665828cd8b5d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942921"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- C'est un attribut étendu `__declspec`.  
+ Il s’agit d’un **__declspec** attributs étendus.  
   
- Cette forme de `__declspec` peut être appliquée à toute déclaration de classe, mais ne doit être appliquée qu'aux classes d'interface pures, c'est-à-dire aux classes qui ne seront jamais instanciées toutes seules. `__declspec` arrête la génération de code par le compilateur pour initialiser le vfptr dans le(s) constructeur(s) et le destructeur de la classe. Dans de nombreux cas, cela supprime les seules références à la vtable qui sont associés à la classe et, par conséquent, l'éditeur de liens supprimera cette vtable. L'utilisation de cette forme de `__declspec` peut entraîner une réduction considérable de la taille du code.  
+ Cette forme de **__declspec** peut être appliqué à toute déclaration de classe, mais ne doit être appliquée qu’aux classes d’interface pures, autrement dit, les classes qui ne seront jamais instanciées sur leurs propres. Le **__declspec** arrête la génération de code pour initialiser le vfptr dans l’et le destructeur de la classe par le compilateur. Dans de nombreux cas, cela supprime les seules références à la vtable qui sont associés à la classe et, par conséquent, l'éditeur de liens supprimera cette vtable. À l’aide de cette forme de **__declspec** peut entraîner une réduction significative de la taille du code.  
   
  Si vous essayez d'instancier une classe marquée avec `novtable` puis d'accéder à un membre de classe, vous recevrez une violation d'accès.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // novtable.cpp  
 #include <stdio.h>  
   

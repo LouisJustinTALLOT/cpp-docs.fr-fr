@@ -1,5 +1,5 @@
 ---
-title: Énumérations (C++) | Documents Microsoft
+title: Énumérations (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c02a7670456dff9c7e5a3dfd1583892d918d268
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943924"
 ---
 # <a name="enumerations-c"></a>Énumérations (C++)
 Une énumération est un type défini par l'utilisateur qui se compose d'un jeu de constantes intégrales nommées, appelées énumérateurs.  
   
 > [!NOTE]
->  Cet article décrit le type `enum` du langage C++ de norme ISO et le type `enum class` délimité (ou fortement typé) qui a fait son apparition dans C++11. Pour plus d’informations sur la `public enum class` ou `private enum class` types dans C + c++ / CLI et c++ / CX, consultez [classe enum](../windows/enum-class-cpp-component-extensions.md).  
+>  Cet article couvre le langage C++ de la norme ISO **enum** type et l’étendue (ou fortement typé) **classe enum** type qui a été introduit dans C ++ 11. Pour plus d’informations sur la **classe enum publique** ou **privé enum, classe** types en C / c++ / CLI et c++ / CX, consultez [enum, classe](../windows/enum-class-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +46,7 @@ enum [class|struct]
 {enum-list};  
 ```  
   
-```  
+```cpp 
 // Forward declaration of enumerations  (C++11):  
 enum A : int; // non-scoped enum must have type specified
 enum class B; // scoped enum defaults to int but ...
@@ -53,19 +54,19 @@ enum class C : short;  // ... may have any integral underlying type
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- `identifier`  
+ *identifier*  
  Nom de type donné à l'énumération.  
   
- `type`  
+ *type*  
  Type sous-jacent des énumérateurs ; tous les énumérateurs ont le même type sous-jacent. Peut être tout type intégral.  
   
- `enum-list`  
- Liste délimitée par des virgules des énumérateurs dans l'énumération. Chaque nom d'énumérateur ou de variable dans la portée doit être unique. Toutefois, les valeurs peuvent être dupliquées. Dans un enum non délimité, la portée correspond à la portée environnante ; dans un enum délimité, la portée correspond à la liste `enum-list` proprement dite.  Dans un enum limité, la liste peut être vide qui définit ce qui entraîne un nouveau type intégral.
+ *liste d’énumération*  
+ Liste délimitée par des virgules des énumérateurs dans l'énumération. Chaque nom d'énumérateur ou de variable dans la portée doit être unique. Toutefois, les valeurs peuvent être dupliquées. Dans un enum non délimité, la portée est la portée environnante ; dans un enum délimité, la portée est la *liste d’énumération* lui-même.  Dans un enum délimité, la liste peut être vide qui définit ce qui entraîne un nouveau type intégral.
   
- `class`  
- En utilisant ce mot clé dans la déclaration, vous spécifiez que l'enum est délimité et qu'un `identifier` doit être fourni. Vous pouvez aussi utiliser le mot clé `struct` à la place de `class`, car ils sont sémantiquement équivalents dans ce contexte.  
+ *class*  
+ À l’aide de ce mot clé dans la déclaration, vous spécifiez l’enum est délimité et un *identificateur* doit être fourni. Vous pouvez également utiliser le **struct** mot clé à la place de **classe**, car ils sont sémantiquement équivalentes dans ce contexte.  
   
-## <a name="enumerator-scope"></a>Portée de l’énumérateur  
+## <a name="enumerator-scope"></a>Étendue de l’énumérateur  
  Une énumération fournit un contexte pour décrire une plage de valeurs qui sont représentées en tant que constantes nommées, également appelées « énumérateurs ». Dans les types d'enum C et C++ d'origine, les énumérateurs non qualifiés sont visibles dans toute la portée dans laquelle l'enum est déclaré. Dans les enums délimités, le nom de l'énumérateur doit être qualifié par le nom du type d'enum. L'exemple suivant illustre cette différence fondamentale entre les deux genres d'enums :  
   
 ```cpp  
@@ -112,7 +113,7 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
   
  ## <a name="casting-rules"></a>Règles de transtypage  
   
- Les constantes enum non délimitées peuvent être implicitement converties en `int`, mais une valeur `int` n'est jamais implicitement convertie en valeur enum. L'exemple suivant montre ce qui se produit si vous essayez d'assigner à `hand` une valeur qui n'est pas un `Suit` :  
+ Les constantes enum non délimité peuvent être convertis implicitement en **int**, mais un **int** n’est jamais implicitement convertible en une valeur enum. L'exemple suivant montre ce qui se produit si vous essayez d'assigner à `hand` une valeur qui n'est pas un `Suit` :  
   
 ```cpp  
 int account_num = 135692;  
@@ -121,7 +122,7 @@ hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
   
 ```  
   
- Un transtypage est nécessaire pour convertir une valeur `int` en énumérateur délimité ou non délimité. Toutefois, vous pouvez promouvoir un énumérateur non délimité en valeur entière sans transtypage.  
+ Un cast est nécessaire pour convertir un **int** à un énumérateur délimité ou. Toutefois, vous pouvez promouvoir un énumérateur non délimité en valeur entière sans transtypage.  
   
 ```cpp  
 int account_num = Hearts; //OK if Hearts is in a unscoped enum  
@@ -151,15 +152,15 @@ namespace ScopedEnumConversions
   
  Notez que la ligne `hand = account_num;` provoque toujours l'erreur avec les enums non délimités, comme indiqué précédemment. Elle est autorisée avec un transtypage explicite. Toutefois, avec les enums délimités, la tentative de conversion dans l'instruction suivante, `account_num = Suit::Hearts;`, n'est plus autorisée sans transtypage explicite. 
 
-## <a name="enums-with-no-enumerators"></a>Enums avec aucune énumérateurs
-**Visual Studio 2017 15,3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (standard ou étendu) avec un type sous-jacent explicite et aucune énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a aucune conversion implicite vers un autre type. À l’aide de ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le risque d’erreurs subtiles dû à des conversions implicites par inadvertance.  
+## <a name="enums-with-no-enumerators"></a>Enums avec aucun énumérateurs
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (standard ou étendu) avec un type sous-jacent explicit et aucune énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a aucune conversion implicite en un autre type. À l’aide de ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le potentiel des erreurs subtiles provoquées par les conversions implicites par inadvertance.  
 
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-Le nouveau type est une copie exacte du type sous-jacent et par conséquent a la même convention d’appel, ce qui signifie qu’il peut être utilisé entre ABIs sans pénalité de performances. Aucune conversion n’est requise lorsque les variables de type sont initialisées à l’aide de l’initialisation de liste de direct. L’exemple suivant montre comment initialiser les enums avec aucune énumérateurs dans différents contextes :
+Le nouveau type est une copie exacte du type sous-jacent et par conséquent a la même convention d’appel, ce qui signifie qu’il peut être utilisé sur ABI sans toute altération des performances. Aucune conversion n’est requise lorsque les variables de type sont initialisées à l’aide de l’initialisation de liste de direct. L’exemple suivant montre comment initialiser les enums avec aucun énumérateurs dans différents contextes :
 
 ```cpp
 enum class byte : unsigned char { };

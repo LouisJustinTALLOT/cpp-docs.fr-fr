@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2b6c5e4847737ce0208b35a2db9fac783c225f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848074"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966457"
 ---
 # <a name="collate-class"></a>collate, classe
 
@@ -52,11 +52,11 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-`CharType` Le type utilisé dans un programme pour encoder des caractères.
+*CharType* le type utilisé dans un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
 
-Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans **id.** Dans certaines langues, plusieurs caractères peuvent être regroupés et traités comme un seul caractère, et dans d'autres, un caractère peut être traité comme un ensemble de deux caractères. Les services de classement fournis par la classe collate permettent de gérer ces cas.
+Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans `id`. Dans certaines langues, plusieurs caractères peuvent être regroupés et traités comme un seul caractère, et dans d'autres, un caractère peut être traité comme un ensemble de deux caractères. Les services de classement fournis par la classe collate permettent de gérer ces cas.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -82,7 +82,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[hash](#hash)|Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.|
 |[transform](#transform)|Convertit une séquence de caractères de paramètres régionaux en une chaîne qui peut être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères, elles aussi converties depuis les mêmes paramètres régionaux.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 
@@ -90,7 +90,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 ## <a name="char_type"></a>  collate::char_type
 
-Type qui décrit un caractère de type **CharType**.
+Type qui décrit un caractère de type `CharType`.
 
 ```cpp
 typedef CharType char_type;
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **CharType**.
+Le type est un synonyme du paramètre de modèle `CharType`.
 
 ## <a name="collate"></a>  collate::collate
 
@@ -117,21 +117,21 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-`_Refs` Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
 
-`_Locname` Le nom des paramètres régionaux.
+*_Locname* le nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre `_Refs` et leur signification sont les suivantes :
+Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définis.
+- \> 1 : ces valeurs ne sont pas définies.
 
-Le constructeur initialise l’objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Le constructeur initialise son objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a>  collate::compare
 
@@ -146,13 +146,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-`first1` Pointeur vers le premier élément dans la première séquence à comparer.
+*first1* pointeur vers le premier élément dans la première séquence à comparer.
 
-`last1` Pointeur vers le dernier élément dans la première séquence à comparer.
+*last1* pointeur vers le dernier élément dans la première séquence à comparer.
 
-`first2` Pointeur vers le premier élément dans la deuxième séquence à comparer.
+*first2* pointeur vers le premier élément dans la deuxième séquence à comparer.
 
-`last2` Pointeur vers le dernier élément dans la deuxième séquence à comparer.
+*last2* pointeur vers le dernier élément dans la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-`first1` Pointeur vers le premier élément dans la première séquence à comparer.
+*first1* pointeur vers le premier élément dans la première séquence à comparer.
 
-`last1` Pointeur vers le dernier élément dans la première séquence à comparer.
+*last1* pointeur vers le dernier élément dans la première séquence à comparer.
 
-`first2` Pointeur vers le premier élément dans la deuxième séquence à comparer.
+*first2* pointeur vers le premier élément dans la deuxième séquence à comparer.
 
-`last2` Pointeur vers le dernier élément dans la deuxième séquence à comparer.
+*last2* pointeur vers le dernier élément dans la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -228,7 +228,7 @@ La fonction membre retourne :
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée compare la séquence à [* first1, Last1) * avec la séquence à *[first2, last2*). Elle compare les valeurs en appliquant **operator<** entre les paires d’éléments correspondants du type **CharType**. La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
+La fonction membre virtuelle protégée compare la séquence à [* first1, Last1) * avec la séquence à *[first2, last2*). Il compare les valeurs en appliquant `operator<` entre les paires d’éléments correspondants de type `CharType`. La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
 
 ### <a name="example"></a>Exemple
 
@@ -244,9 +244,9 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Un pointeur vers le premier caractère dans la séquence a dont la valeur doit être déterminée.
+*première* un pointeur vers le premier caractère dans la séquence dont la valeur doit être déterminée.
 
-`last` Un pointeur vers le dernier caractère de la séquence a dont la valeur doit être déterminée.
+*dernière* un pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -270,9 +270,9 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Pointeur vers le premier caractère dans la séquence à convertir.
+*première* un pointeur vers le premier caractère dans la séquence à convertir.
 
-`last` Pointeur vers le dernier caractère de la séquence à convertir.
+*dernière* un pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -296,9 +296,9 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Un pointeur vers le premier caractère dans la séquence a dont la valeur doit être déterminée.
+*première* un pointeur vers le premier caractère dans la séquence dont la valeur doit être déterminée.
 
-`last` Un pointeur vers le dernier caractère de la séquence a dont la valeur doit être déterminée.
+*dernière* un pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -340,7 +340,7 @@ int main( )
 
 ## <a name="string_type"></a>  collate::string_type
 
-Type qui décrit une chaîne de type `basic_string` contenant des caractères de type **CharType**.
+Type qui décrit une chaîne de type `basic_string` qui contient des caractères de type `CharType`.
 
 ```cpp
 typedef basic_string<CharType> string_type;
@@ -364,9 +364,9 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Pointeur vers le premier caractère dans la séquence à convertir.
+*première* un pointeur vers le premier caractère dans la séquence à convertir.
 
-`last` Pointeur vers le dernier caractère de la séquence à convertir.
+*dernière* un pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -374,7 +374,7 @@ Chaîne qui contient la séquence de caractères transformée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [do_transform](#do_transform)( `first`, `last`).
+La fonction membre retourne [do_transform](#do_transform)(`first`, `last`).
 
 ### <a name="example"></a>Exemple
 

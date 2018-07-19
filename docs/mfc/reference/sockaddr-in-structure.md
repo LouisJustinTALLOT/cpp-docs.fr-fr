@@ -1,5 +1,5 @@
 ---
-title: Sockaddr_in, Structure | Documents Microsoft
+title: Sockaddr_in, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373636"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885736"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN, structure
 Dans la famille d’adresses Internet, le `SOCKADDR_IN` structure est utilisée par Windows Sockets pour spécifier une adresse de point de terminaison local ou distant auquel se connecter un socket.  
@@ -39,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Paramètres  
  *sin_family*  
- Famille d’adresses (doit être **AF_INET**).  
+ Famille d’adresses (doit être le AF_INET).  
   
  *sin_port*  
  Port IP.  
@@ -48,12 +48,12 @@ struct in_addr sin_addr;
  Adresse IP.  
   
  *Sin_zero*  
- Remplissage afin que structure de la même taille que `SOCKADDR`.  
+ Remplissage à donner à la même taille que la structure `SOCKADDR`.  
   
 ## <a name="remarks"></a>Notes  
- C’est la forme de la `SOCKADDR` structure spécifique pour la famille d’adresses Internet et peut être converti en `SOCKADDR`.  
+ C’est la forme de la `SOCKADDR` structure spécifique à la famille d’adresses Internet et pouvant être casté en `SOCKADDR`.  
   
- Le composant d’adresse IP de cette structure est de type **IN_ADDR**. Le **IN_ADDR** structure est définie dans le fichier d’en-tête Windows Sockets WINSOCK. H comme suit :  
+ Le composant d’adresse IP de cette structure est de type `IN_ADDR`. Le `IN_ADDR` structure est définie dans le fichier d’en-tête Windows Sockets WINSOCK. H comme suit :  
   
 ```  
 struct in_addr {
@@ -69,7 +69,7 @@ struct in_addr {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winsock2.h  
   
 ## <a name="see-also"></a>Voir aussi  

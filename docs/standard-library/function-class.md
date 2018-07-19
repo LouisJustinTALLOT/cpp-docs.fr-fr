@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847840"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959927"
 ---
 # <a name="function-class"></a>function, classe
 
@@ -89,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`Fty` Le type de fonction à encapsuler.
+*Fty* le type de fonction à encapsuler.
 
-`Ax` La fonction de l’allocateur.
+*AX* la fonction d’allocateur.
 
 ## <a name="remarks"></a>Notes
 
@@ -140,7 +140,7 @@ Un objet `function` vide ne contient pas d’objet pouvant être appelé ou de r
 |[function::operator()](#op_call)|Appelle un objet pouvant être appelé.|
 |[function::operator=](#op_eq)|Remplace l’objet pouvant être appelé stocké.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 
@@ -164,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Paramètres
 
-`_Func` Un objet pouvant être appelé.
+*_Func* un objet pouvant être appelé.
 
-`_Fnref` Un wrapper de référence qui contient un objet pouvant être appelé.
+*_Fnref* un wrapper de référence qui contient un objet pouvant être appelé.
 
-`Ax` Un objet allocateur.
+*AX* un objet allocateur.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions membres remplacent chacune le `callable object` contenu dans `*this` par l’objet pouvant être appelé passé comme `operand`. Les deux fonctions allouent du stockage avec l’objet allocateur `Ax`.
+Les fonctions membres remplacent chacune le `callable object` contenu dans `*this` par l’objet pouvant être appelé passé comme `operand`. Les deux fonctions allouent du stockage avec l’objet allocateur *Ax*.
 
 ## <a name="function"></a>  function::function
 
@@ -199,17 +199,17 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Paramètres
 
-`right` L’objet de fonction à copier.
+*droit* l’objet de fonction à copier.
 
-`Fx` Le type de l’objet peut être appelé.
+*FX* le type de l’objet pouvant être appelé.
 
-`_Func` Objet pouvant être appelé à encapsuler.
+*_Func* l’objet pouvant être appelé à encapsuler.
 
-`Alloc` Le type d’allocateur.
+*Alloc* le type d’allocateur.
 
-`Ax` L’allocateur.
+*AX* l’allocateur.
 
-`_Fnref` La référence d’objet pouvant être appelé à encapsuler.
+*_Fnref* la référence d’objet pouvant être appelé à encapsuler.
 
 ### <a name="remarks"></a>Notes
 
@@ -295,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur retourne une valeur convertible en `bool` avec une valeur true uniquement si l’objet n’est pas vide. Vous l’utilisez pour vérifier si l’objet est vide.
+L’opérateur retourne une valeur qui est convertible en **bool** avec une valeur true uniquement si l’objet n’est pas vide. Vous l’utilisez pour vérifier si l’objet est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -340,9 +340,9 @@ result_type operator()(
 
 ### <a name="parameters"></a>Paramètres
 
-`TN` Le type du nième appeler argument.
+*TN* le type de l’argument d’appel nième.
 
-`tN` L’argument d’appel nième.
+*tN* le N-ième argument de l’appel.
 
 ### <a name="remarks"></a>Notes
 
@@ -391,13 +391,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>Paramètres
 
-`npc` Une constante pointeur null.
+*NPC* une constante pointeur null.
 
-`right` L’objet de fonction à copier.
+*droit* l’objet de fonction à copier.
 
-`fn` Objet pouvant être appelé à encapsuler.
+*fn* l’objet pouvant être appelé à encapsuler.
 
-`fnref` La référence d’objet pouvant être appelé à encapsuler.
+*fnref* la référence d’objet pouvant être appelé à encapsuler.
 
 ### <a name="remarks"></a>Notes
 
@@ -506,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` L’objet de fonction à échanger.
+*droit* l’objet de fonction à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les objets cibles de `*this` et `right`. Elle le fait dans un cadre de temps fixe, et ne lève aucune exception.
+La fonction membre échange les objets cibles de `*this` et *droit*. Elle le fait dans un cadre de temps fixe, et ne lève aucune exception.
 
 ### <a name="example"></a>Exemple
 
@@ -567,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Paramètres
 
-`Fty2` Le type d’objet pouvant être appelé cible à tester.
+*Fty2* le type d’objet pouvant être appelé cible à tester.
 
 ### <a name="remarks"></a>Notes
 
-Le type `Fty2` doit pouvoir être appelé pour les types d’argument `T1, T2, ..., TN` et le type de retour `Ret`. Si `target_type() == typeid(Fty2)`, la fonction de modèle membre retourne l’adresse de l’objet cible ; sinon, elle retourne 0.
+Le type *Fty2* doit pouvoir être appelée pour les types d’arguments `T1, T2, ..., TN` et le type de retour `Ret`. Si `target_type() == typeid(Fty2)`, la fonction de modèle membre retourne l’adresse de l’objet cible ; sinon, elle retourne 0.
 
-Un type `Fty2` peut être appelé pour les types d’argument `T1, T2, ..., TN` et le type de retour `Ret` si, pour les lvalues `fn, t1, t2, ..., tN` de types `Fty2, T1, T2, ..., TN`, respectivement, `INVOKE(fn, t1, t2, ..., tN)` est correct et, si `Ret` n’est pas `void`, convertible en `Ret`.
+Un type *Fty2* peut être appelé pour les types d’arguments `T1, T2, ..., TN` et le type de retour `Ret` if, pour les lvalues `fn, t1, t2, ..., tN` de types `Fty2, T1, T2, ..., TN`, respectivement, `INVOKE(fn, t1, t2, ..., tN)` est correct et, si `Ret`n’est pas **void**, convertible en `Ret`.
 
 ### <a name="example"></a>Exemple
 

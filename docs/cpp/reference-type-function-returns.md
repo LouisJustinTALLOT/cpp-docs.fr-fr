@@ -1,5 +1,5 @@
 ---
-title: Retours de fonction de Type référence | Documents Microsoft
+title: Retours de fonction de Type référence | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942665"
 ---
 # <a name="reference-type-function-returns"></a>Retours de fonction de type référence
 Les fonctions peuvent être déclarées pour retourner un type référence. Il existe deux raisons d'effectuer une déclaration :  
@@ -31,14 +32,14 @@ Les fonctions peuvent être déclarées pour retourner un type référence. Il e
   
 -   L'objet référencé ne sort pas de la portée lors du retour de la fonction.  
   
- Tout comme il peut être plus efficace de passer de grands objets *à* fonctions par référence, elle également peut être plus efficace pour retourner des objets volumineux *de* fonctions par référence. Le protocole de retour par référence élimine le besoin de copier l'objet dans un emplacement temporaire avant de le retourner.  
+ Tout comme il peut être plus efficace de passer des objets volumineux *à* fonctions par référence, elle peut également être plus efficace pour retourner des objets volumineux *de* fonctions par référence. Le protocole de retour par référence élimine le besoin de copier l'objet dans un emplacement temporaire avant de le retourner.  
   
  Les types de retour par référence peuvent également être utiles lorsque la fonction doit prendre une l-value. La plupart des opérateurs surchargés appartiennent à cette catégorie, notamment l'opérateur d'assignation. Opérateurs surchargés sont décrits dans [opérateurs surchargés](../cpp/operator-overloading.md).  
   
 ## <a name="example"></a>Exemple  
  Prenons l'exemple de `Point` :  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>Sortie  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  Les déclarations des types référence doivent contenir des initialiseurs sauf dans les cas suivants :  
   
--   Déclaration `extern` explicite  
+-   Explicite **extern** déclaration  
   
 -   Déclaration d'une classe membre  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>Attention en retournant l'adresse d'une variable locale  
  Si vous déclarez un objet dans la portée locale, cet objet sera détruit lors du retour de la fonction. Si la fonction retourne une référence à cet objet, cette référence est susceptible de provoquer une violation d'accès lors de l'exécution si l'appelant tente d'utiliser la référence null.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  

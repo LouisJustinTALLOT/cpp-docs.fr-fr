@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c58f32847084407d19afea8f2946f8b3041efa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cd4f968543ff777b9178c8f6fa6b3c1699ee465
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861517"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965654"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -43,17 +43,17 @@ Les classes `mutex` et `recursive_mutex` sont des *types mutex*. Un type mutex a
 
 - La méthode `lock` bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du mutex. Sa valeur de retour est ignorée.
 
-- La méthode `try_lock` tente d'obtenir la propriété du mutex sans se bloquer. Son type de retour est convertible en `bool` et correspond à `true` si la méthode obtient la propriété. Sinon, il correspond à `false`.
+- La méthode `try_lock` tente d'obtenir la propriété du mutex sans se bloquer. Son type de retour est convertible en **bool** et est **true** si la méthode obtient la propriété, mais est sinon **false**.
 
 - La méthode `unlock` libère la propriété du mutex du thread appelant.
 
 Vous pouvez utiliser les types mutex comme arguments de type pour instancier les modèles `lock_guard` et `unique_lock`. Vous pouvez utiliser des objets de ces types en tant qu’arguments `Lock` des fonctions membres d’attente (wait) dans le modèle [condition_variable_any](../standard-library/condition-variable-any-class.md).
 
-Un *type mutex limité dans le temps* répond aux exigences d’un type mutex. En outre, il a les méthodes `try_lock_for` et `try_lock_until` qui doivent pouvoir être appelées à l'aide d'un seul argument, et retourner un type convertible en `bool`. Un type mutex limité dans le temps peut définir ces fonctions à l’aide d’arguments supplémentaires, à condition que ces arguments supplémentaires aient tous des valeurs par défaut.
+Un *type mutex limité dans le temps* répond aux exigences d’un type mutex. En outre, il a le `try_lock_for` et `try_lock_until` méthodes qui doivent pouvoir être appelée à l’aide d’un seul argument et doivent retourner un type convertible en **bool**. Un type mutex limité dans le temps peut définir ces fonctions à l’aide d’arguments supplémentaires, à condition que ces arguments supplémentaires aient tous des valeurs par défaut.
 
-- La méthode `try_lock_for` doit pouvoir être appelée à l’aide d’un seul argument, `Rel_time`, dont le type est une instanciation de [chrono::duration](../standard-library/duration-class.md). La méthode essaie d'obtenir la propriété du mutex. Toutefois, elle retourne une valeur dans le temps imparti désigné par `Rel_time`, indépendamment de la réussite de l'opération. La valeur de retour est convertie en `true` si la méthode obtient la propriété ; sinon, la valeur de retour est convertie en `false`.
+- La méthode `try_lock_for` doit pouvoir être appelée à l’aide d’un seul argument, `Rel_time`, dont le type est une instanciation de [chrono::duration](../standard-library/duration-class.md). La méthode essaie d'obtenir la propriété du mutex. Toutefois, elle retourne une valeur dans le temps imparti désigné par `Rel_time`, indépendamment de la réussite de l'opération. Convertit la valeur de retour **true** si la méthode obtienne la propriété ; sinon, la valeur de retour convertit **false**.
 
-- La méthode `try_lock_until` doit pouvoir être appelée à l’aide d’un seul argument, `Abs_time`, dont le type est une instanciation de [chrono::time_point](../standard-library/time-point-class.md). La méthode essaie d'obtenir la propriété du mutex. Toutefois, elle retourne une valeur dans le temps imparti désigné par `Abs_time`, indépendamment de la réussite de l'opération. La valeur de retour est convertie en `true` si la méthode obtient la propriété ; sinon, la valeur de retour est convertie en `false`.
+- La méthode `try_lock_until` doit pouvoir être appelée à l’aide d’un seul argument, `Abs_time`, dont le type est une instanciation de [chrono::time_point](../standard-library/time-point-class.md). La méthode essaie d'obtenir la propriété du mutex. Toutefois, elle retourne une valeur dans le temps imparti désigné par `Abs_time`, indépendamment de la réussite de l'opération. Convertit la valeur de retour **true** si la méthode obtienne la propriété ; sinon, la valeur de retour convertit **false**.
 
 Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas la fonction membre `try_lock`, il s’agit d’un *type verrouillable de base*. Un type mutex limité dans le temps est également appelé *type verrouillable limité dans le temps*.
 
@@ -81,8 +81,8 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 |----------|-----------------|
 |[adopt_lock_t, structure](../standard-library/adopt-lock-t-structure.md)|Représente un type utilisé pour définir `adopt_lock`.|
 |[defer_lock_t, structure](../standard-library/defer-lock-t-structure.md)|Représente un type qui définit un objet `defer_lock` permettant de sélectionner l'un des constructeurs surchargés de `unique_lock`.|
-|[once_flag, structure](../standard-library/once-flag-structure.md)|Représente un `struct` utilisé dans le cadre de la fonction avec modèle `call_once` pour garantir que le code d'initialisation est appelé une seule fois, même en présence de plusieurs threads d'exécution.|
-|[try_to_lock_t, structure](../standard-library/try-to-lock-t-structure.md)|Représente un `struct` qui définit un objet `try_to_lock` et permet de sélectionner l'un des constructeurs surchargés de `unique_lock`.|
+|[once_flag, structure](../standard-library/once-flag-structure.md)|Représente un **struct** qui est utilisé avec la fonction de modèle `call_once` pour vous assurer que l’initialisation le code est appelé une seule fois, même en présence de plusieurs threads d’exécution.|
+|[try_to_lock_t, structure](../standard-library/try-to-lock-t-structure.md)|Représente un **struct** qui définit un `try_to_lock` de l’objet et permet de sélectionner un des constructeurs surchargés de `unique_lock`.|
 
 ### <a name="variables"></a>Variables
 

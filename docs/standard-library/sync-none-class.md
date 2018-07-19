@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857335"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953008"
 ---
 # <a name="syncnone-class"></a>sync_none, classe
 
@@ -54,7 +54,7 @@ class sync_none
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="remarks"></a>Notes
 
@@ -90,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
@@ -109,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Cache`|L’objet cache du filtre de synchronisation.|
-|`Other`|Objet cache dont l’égalité est à comparer.|
+|*Cache*|L’objet cache du filtre de synchronisation.|
+|*Autre*|Objet cache dont l’égalité est à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre retourne toujours `true`.
+La fonction membre retourne toujours **true**.
 
 ### <a name="remarks"></a>Notes
 

@@ -1,5 +1,5 @@
 ---
-title: Règles générales de surcharge d’opérateur | Documents Microsoft
+title: Règles générales de surcharge d’opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814337"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942710"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Règles générales de surcharge d'opérateur
 Les règles suivantes limitent le mode d'implémentation des opérateurs surchargés. Toutefois, ils ne s’appliquent pas à la [nouveau](../cpp/new-operator-cpp.md) et [supprimer](../cpp/delete-operator-cpp.md) operators, qui sont traités séparément.  
@@ -47,9 +47,9 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
     }  
     ```  
   
-     L'exemple de code précédent déclare l'opérateur Inférieur à comme fonction membre ; toutefois, les opérateurs d'addition sont déclarés comme fonctions globales qui ont un accès ami. Notez que plusieurs implémentations peuvent être fournies pour un opérateur donné. Dans le cas de l'opérateur d'addition précédent, les deux implémentations sont fournies pour faciliter la commutativité. Il est tout aussi probable que des opérateurs qui ajoutent un `Point` à un `Point`, `int` à un `Point`, et ainsi de suite, soient implémentés.  
+     L'exemple de code précédent déclare l'opérateur Inférieur à comme fonction membre ; toutefois, les opérateurs d'addition sont déclarés comme fonctions globales qui ont un accès ami. Notez que plusieurs implémentations peuvent être fournies pour un opérateur donné. Dans le cas de l'opérateur d'addition précédent, les deux implémentations sont fournies pour faciliter la commutativité. Il est tout aussi probable que des opérateurs qui ajoutent un `Point` à un `Point`, **int** à un `Point`, et ainsi de suite, peut être implémenté.  
   
--   Les opérateurs obéissent aux règles de priorité, de regroupement et de nombre d’opérandes dictées par leur utilisation classique avec les types intégrés. Par conséquent, il n’existe aucun moyen d’exprimer le concept « ajouter 2 et 3 pour un objet de type `Point`, « attendu 2 à ajouter à la *x* coordonnée et 3 à ajouter à la *y* coordonner.  
+-   Les opérateurs obéissent aux règles de priorité, de regroupement et de nombre d’opérandes dictées par leur utilisation classique avec les types intégrés. Par conséquent, il n’existe aucun moyen d’exprimer le concept « ajouter 2 et 3 à un objet de type `Point`, » attendu 2 à ajouter à la *x* coordonnées et 3 à ajouter à la *y* coordonner.  
   
 -   Les opérateurs unaires déclarés comme fonctions membres n’acceptent pas d’argument ; s’ils sont déclarés comme fonctions globales, ils en prennent un.  
   
@@ -63,9 +63,9 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
   
 -   Le premier argument pour les opérateurs surchargés déclarés comme fonctions membres est toujours le type de classe de l’objet pour lequel l’opérateur est appelé (la classe dans laquelle l’opérateur est déclaré ou une classe dérivée de cette classe). Aucune conversion n'est fournie pour le premier argument.  
   
- Notez que la signification de n'importe quel opérateur peut être modifiée complètement. Qui inclut la signification de l’adresse de (**&**), l’attribution (**=**) et les opérateurs d’appel de fonction. En outre, les identités sur lesquelles on peut se reposer pour les types intégrés peuvent être modifiées à l'aide de la surcharge d'opérateur. Par exemple, les quatre instructions suivantes sont généralement équivalentes une fois leur évaluation terminée :  
+ Notez que la signification de n'importe quel opérateur peut être modifiée complètement. Cela comprend la signification de l’adresse de (**&**), affectation (**=**) et les opérateurs d’appel de fonction. En outre, les identités sur lesquelles on peut se reposer pour les types intégrés peuvent être modifiées à l'aide de la surcharge d'opérateur. Par exemple, les quatre instructions suivantes sont généralement équivalentes une fois leur évaluation terminée :  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

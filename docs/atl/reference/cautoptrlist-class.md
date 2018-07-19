@@ -1,5 +1,5 @@
 ---
-title: Classe de CAutoPtrList | Documents Microsoft
+title: Cautoptrlist, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357543"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883591"
 ---
-# <a name="cautoptrlist-class"></a>Classe de CAutoPtrList
+# <a name="cautoptrlist-class"></a>Cautoptrlist, classe
 Cette classe fournit des méthodes utiles lors de la construction d’une liste de pointeurs intelligents.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `E`  
+ *E*  
  Le type de pointeur.  
   
 ## <a name="members"></a>Membres  
@@ -52,16 +52,16 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Constructeur.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe fournit un constructeur et dérive des méthodes à partir de [CAtlList](../../atl/reference/catllist-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) à l’aide de la création d’un objet liste de stocker les pointeurs intelligents. La classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fournit une fonction similaire pour un objet tableau.  
+ Cette classe fournit un constructeur et est dérivée des méthodes à partir de [CAtlList](../../atl/reference/catllist-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) afin de faciliter la création d’un objet de liste stocker les pointeurs intelligents. La classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fournit une fonction similaire pour un objet de tableau.  
   
- Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CAtlList](../../atl/reference/catllist-class.md)  
   
  `CAutoPtrList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList  
@@ -72,13 +72,13 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nBlockSize`  
- La taille du bloc, avec la valeur par défaut est 10.  
+ *nBlockSize*  
+ La taille de bloc, avec une valeur par défaut de 10.  
   
 ### <a name="remarks"></a>Notes  
  La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Tailles de bloc supérieures réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CAtlList](../../atl/reference/catllist-class.md)   
- [Classe de CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+ [CAtlList, classe](../../atl/reference/catllist-class.md)   
+ [Cautoptrelementtraits, classe](../../atl/reference/cautoptrelementtraits-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

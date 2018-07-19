@@ -1,5 +1,5 @@
 ---
-title: Opérations graphiques (C + c++ / CLI) | Documents Microsoft
+title: Opérations graphiques (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,39 +13,141 @@ helpviewer_keywords:
 - images [C++], .NET Framework and
 - GDI+ [C++], about graphics operations
 - graphics [C++], .NET Framework and
+- GDI+ [C++], displaying images
+- graphics [C++], displaying images
+- GDI+, drawing shapes
+- drawing, shapes
+- shapes
+- shapes, drawing
+- GDI+ [C++], rotating images
+- graphics [C++], rotating images
+- GDI+ [C++], converting image file formats
+- graphics [C++], converting image file formats
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ab3b1a8a7333a107ed9d2b368b17b8234d25be19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd28a97b9e1b6238e4f231845282739a6d15aeb2
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109493"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39092979"
 ---
 # <a name="graphics-operations-ccli"></a>Opérations graphiques (C++/CLI)
-Illustre la manipulation d’image à l’aide du [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Illustre la manipulation d’images à l’aide du [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
- Les rubriques suivantes illustrent l’utilisation de la <xref:System.Drawing.Image?displayProperty=fullName> classe pour manipuler des images.  
+ Les rubriques suivantes illustrent l’utilisation de la <xref:System.Drawing.Image?displayProperty=fullName> classe pour effectuer une manipulation d’image.  
   
-## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour convertir des fichiers au format image avec le .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
+## <a name="display"></a> Afficher des Images avec le .NET Framework
+L’exemple de code suivant modifie le Gestionnaire d’événements OnPaint pour récupérer un pointeur vers le <xref:System.Drawing.Graphics> objet pour le formulaire principal. Le <xref:System.Windows.Forms.Form.OnPaint%2A> (fonction) est destinée à une application Windows Forms, très probablement créée avec l’Assistant application Visual Studio.  
   
- [Guide pratique pour afficher des images avec le .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  
+ L’image est représentée par la <xref:System.Drawing.Image> classe. Les données d’image sont chargées à partir d’un fichier .jpg à l’aide du <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName> (méthode). Avant que l’image est dessinée au formulaire, le formulaire est redimensionné pour s’adapter à l’image. Le dessin de l’image est effectué avec la <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName> (méthode).  
   
- [Guide pratique pour dessiner des formes avec le .NET Framework](../dotnet/how-to-draw-shapes-with-the-dotnet-framework.md)  
+ Le <xref:System.Drawing.Graphics> et <xref:System.Drawing.Image> classes sont toutes deux dans le <xref:System.Drawing?displayProperty=fullName> espace de noms.  
   
- [Guide pratique pour faire pivoter des images avec le .NET Framework](../dotnet/how-to-rotate-images-with-the-dotnet-framework.md)  
+### <a name="example"></a>Exemple  
+  
+```cpp  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+  
+protected:  
+virtual Void Form1::OnPaint(PaintEventArgs^ pe) override  
+{  
+    Graphics^ g = pe->Graphics;  
+    Image^ image = Image::FromFile("SampleImage.jpg");  
+    Form::ClientSize = image->Size;  
+    g->DrawImage( image, 0, 0, image->Size.Width, image->Size.Height );  
+}  
+```  
+
+## <a name="draw"></a> Dessiner des formes avec le .NET Framework
+Le code suivant exemple utilise le <xref:System.Drawing.Graphics> classe pour modifier le <xref:System.Windows.Forms.Form.OnPaint%2A> Gestionnaire d’événements pour récupérer un pointeur vers le <xref:System.Drawing.Graphics> objet pour le formulaire principal. Ce pointeur est ensuite utilisé pour définir la couleur d’arrière-plan du formulaire et dessiner une ligne et un à l’aide de l’arc le <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> et <xref:System.Drawing.Graphics.DrawArc%2A> méthodes.  
+  
+### <a name="example"></a>Exemple  
+  
+```cpp  
+#using <system.drawing.dll>  
+using namespace System;  
+using namespace System::Drawing;  
+// ...  
+protected:   
+virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override  
+{  
+   Graphics^ g = pe->Graphics;  
+   g->Clear(Color::AntiqueWhite);  
+  
+   Rectangle rect = Form::ClientRectangle;  
+   Rectangle smallRect;  
+   smallRect.X = rect.X + rect.Width / 4;  
+   smallRect.Y = rect.Y + rect.Height / 4;  
+   smallRect.Width = rect.Width / 2;  
+   smallRect.Height = rect.Height / 2;  
+  
+   Pen^ redPen = gcnew Pen(Color::Red);  
+   redPen->Width = 4;  
+   g->DrawLine(redPen, 0, 0, rect.Width, rect.Height);  
+  
+   Pen^ bluePen = gcnew Pen(Color::Blue);  
+   bluePen->Width = 10;  
+   g->DrawArc( bluePen, smallRect, 90, 270 );  
+}  
+```  
+
+## <a name="rotate"></a> Faire pivoter des Images avec le .NET Framework
+L’exemple de code suivant illustre l’utilisation de la <xref:System.Drawing.Image?displayProperty=fullName> classe pour charger une image à partir du disque, faire pivoter de 90 degrés et enregistrez-le en tant que nouveau fichier .jpg.  
+  
+### <a name="example"></a>Exemple  
+  
+```cpp  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+  
+int main()  
+{  
+   Image^ image = Image::FromFile("SampleImage.jpg");  
+   image->RotateFlip( RotateFlipType::Rotate90FlipNone );  
+   image->Save("SampleImage_rotated.jpg");  
+   return 0;  
+}  
+```  
+
+## <a name="convert"></a> Convertir des Formats de fichiers d’Image avec le .NET Framework
+L’exemple de code suivant montre le <xref:System.Drawing.Image?displayProperty=fullName> classe et le <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> énumération utilisée pour convertir et enregistrer des fichiers image. Le code suivant charge une image à partir d’un fichier .jpg et puis l’enregistre dans les formats de fichier .gif et .bmp.  
+  
+### <a name="example"></a>Exemple  
+  
+```cpp  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+using namespace System::Drawing::Imaging;  
+  
+int main()  
+{  
+   Image^ image = Image::FromFile("SampleImage.jpg");  
+   image->Save("SampleImage.png", ImageFormat::Png);  
+   image->Save("SampleImage.bmp", ImageFormat::Bmp);  
+  
+   return 0;  
+}  
+```  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Mise en route de la programmation graphique](/dotnet/framework/winforms/advanced/getting-started-with-graphics-programming)  
   
- [À propos du code managé GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)  
-  
- <xref:System.Drawing?displayProperty=fullName>  
+ [À propos du code managé GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)    
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+ <xref:System.Drawing>
+ 

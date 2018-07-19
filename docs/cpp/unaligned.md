@@ -1,5 +1,5 @@
 ---
-title: __unaligned | Documents Microsoft
+title: __unaligned | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420906"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940411"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Spécifique à Microsoft**. Lorsque vous déclarez un pointeur avec le modificateur `__unaligned`, le compilateur suppose que le pointeur adresse des données non alignées. Par conséquent, approprié à la plateforme de code est généré pour gérer des lectures non alignés et écrit par l’intermédiaire du pointeur.
+**Spécifique à Microsoft**. Lorsque vous déclarez un pointeur avec la **__unaligned** modificateur, le compilateur suppose que le pointeur adresse des données qui ne sont pas alignées. Par conséquent, approprié à la plateforme de code est généré pour gérer des lectures non alignés et écrit par le pointeur.
 
 ## <a name="remarks"></a>Notes
 
-Ce modificateur décrit l’alignement des données traitées par le pointeur ; le pointeur lui-même est considéré comme aligné.
+Ce modificateur décrit l’alignement des données adressées par le pointeur ; le pointeur lui-même est considéré comme aligné.
 
-La nécessité pour le `__unaligned` mot clé varie selon la plate-forme et l’environnement. Échec pour marquer des données de façon appropriée peut entraîner des problèmes, allant de trop handicaper les performances pour les défaillances matérielles. Le `__unaligned` modificateur n’est pas valide pour le x86 plateforme.
+La nécessité pour le **__unaligned** mot clé varie selon la plateforme et l’environnement. Échec pour marquer les données correctement peut entraîner des problèmes, allant de la dégradation des performances pour les défaillances matérielles. Le **__unaligned** modificateur n’est pas valide pour le x86 plateforme.
 
 Pour plus d'informations sur l'alignement, consultez :
 

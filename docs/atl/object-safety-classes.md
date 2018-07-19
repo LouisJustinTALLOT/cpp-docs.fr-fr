@@ -1,5 +1,5 @@
 ---
-title: Classes de sécurité (ATL) de l’objet | Documents Microsoft
+title: Classes de sécurité (ATL) d’objet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953702"
 ---
 # <a name="object-safety-classes"></a>Classes de sécurité d’objet
 La classe suivante prend en charge pour la sécurité de l’objet :  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) autorise un objet à être marqués comme sécurisés pour l’initialisation ou sécurisé pour le script.  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) permet à un objet à marquer comme sécurisés pour l’initialisation ou sécurisé pour le script.  
   
 ## <a name="related-articles"></a>Articles connexes  
  [Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)  

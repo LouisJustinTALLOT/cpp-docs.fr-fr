@@ -1,5 +1,5 @@
 ---
-title: Mots clés d’héritage | Documents Microsoft
+title: Mots clés d’héritage | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942837"
 ---
 # <a name="inheritance-keywords"></a>Mots clé d'héritage
 **Section spécifique à Microsoft**  
@@ -45,25 +46,25 @@ class [__virtual_inheritance] class-name;
   
  où :  
   
- *nom de classe*  
+ *nom de la classe*  
  est le nom de la variable en cours de déclaration.  
   
- C++ vous permet de déclarer un pointeur vers un membre de classe avant la définition de la classe. Par exemple :  
+ C++ vous permet de déclarer un pointeur vers un membre de classe avant la définition de la classe. Exemple :  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- Dans le code ci-dessus, `p` est déclaré comme étant un pointeur vers membre entier de la classe S. Toutefois, `class S` a n’a ne pas encore été définie dans ce code ; il a uniquement été déclaré. Lorsque le compilateur détecte ce type de pointeur, il doit créer une représentation généralisée du pointeur. La taille de la représentation dépend du modèle d'héritage spécifié. Il existe quatre façons de spécifier un modèle d'héritage au compilateur :  
+ Dans le code ci-dessus, `p` est déclaré comme étant un pointeur vers membre entier de la classe S. Toutefois, `class S` a ne pas encore été défini dans ce code ; il a uniquement été déclaré. Lorsque le compilateur détecte ce type de pointeur, il doit créer une représentation généralisée du pointeur. La taille de la représentation dépend du modèle d'héritage spécifié. Il existe quatre façons de spécifier un modèle d'héritage au compilateur :  
   
--   Dans l’IDE sous **la représentation sous forme de pointeur vers membre**  
+-   Dans l’IDE sous **représentation de pointeur vers membre**  
   
 -   À la ligne de commande à l’aide de la [/vmg](../build/reference/vmb-vmg-representation-method.md) basculer  
   
--   À l’aide de la [pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
+-   À l’aide de la [pointers_to_members](../preprocessor/pointers-to-members.md) (pragma)  
   
--   En utilisant des mots clés d'héritage `__single_inheritance`, `__multiple_inheritance` et `__virtual_inheritance`. Cette technique contrôle le modèle d'héritage pour chaque classe.  
+-   À l’aide de mots clés d’héritage **__single_inheritance**, **__multiple_inheritance**, et **__virtual_inheritance**. Cette technique contrôle le modèle d'héritage pour chaque classe.  
   
     > [!NOTE]
     >  Si vous déclarez toujours un pointeur vers un membre d'une classe après la définition de la classe, vous n'avez pas besoin d'utiliser l'une de ces options.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Si l'exemple ci-dessus est modifié comme suit :  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

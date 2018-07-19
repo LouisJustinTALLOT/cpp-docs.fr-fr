@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864084"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965686"
 ---
 # <a name="moneybase-class"></a>money_base, classe
 
@@ -38,19 +38,19 @@ struct pattern
 
 ## <a name="remarks"></a>Notes
 
-L’énumération **part** décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de **part** sont les suivantes :
+L’énumération `part` décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de `part` sont :
 
-- **none** pour faire correspondre zéro, un ou plusieurs espaces ou pour ne rien générer.
+- `none` Pour faire correspondre zéro ou plusieurs espaces ou ne rien générer.
 
-- **sign** pour faire correspondre ou générer un signe positif ou négatif.
+- `sign` Pour faire correspondre ou générer un signe positif ou négatif.
 
-- **space** pour faire correspondre zéro, un ou plusieurs espaces ou pour générer un espace.
+- `space` Pour faire correspondre zéro ou plusieurs espaces ou générer un espace.
 
-- **symbol** pour faire correspondre ou générer un symbole monétaire.
+- `symbol` Pour faire correspondre ou générer un symbole monétaire.
 
-- **value** pour faire correspondre ou générer une valeur monétaire.
+- `value` Pour faire correspondre ou générer une valeur monétaire.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 

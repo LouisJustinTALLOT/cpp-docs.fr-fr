@@ -1,5 +1,5 @@
 ---
-title: jitintrinsic | Documents Microsoft
+title: jitintrinsic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cd88882ea104275e4c1a43ccf05494a859d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418752"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939388"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 Marque la fonction comme significative pour le CLR (Common Langage Runtime) 64 bits. Ceci est utilisé pour certaines fonctions dans les bibliothèques fournies par Microsoft.  
@@ -37,7 +37,7 @@ __declspec(jitintrinsic)
 ## <a name="remarks"></a>Notes  
  `jitintrinsic` ajoute un MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) à la signature de la fonction.  
   
- Il est déconseillé aux utilisateurs d'avoir recours à ce modificateur `__declspec`, car des résultats inattendus peuvent survenir.  
+ Les utilisateurs sont déconseillés à partir de l’utilisation de cette **__declspec** modificateur, car des résultats inattendus peut se produire.  
   
 ## <a name="see-also"></a>Voir aussi  
  [__declspec](../cpp/declspec.md)   

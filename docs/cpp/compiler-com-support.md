@@ -1,5 +1,5 @@
 ---
-title: Support COM du compilateur | Documents Microsoft
+title: Prise en charge de COM du compilateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6e916cbd7cd8f5fbb259ff096159f9a49202ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412710"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941825"
 ---
 # <a name="compiler-com-support"></a>Prise en charge COM du compilateur
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
@@ -28,9 +28,9 @@ ms.locfileid: "32412710"
   
  À l’aide de la [directive de préprocesseur #import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et les convertir dans un fichier d’en-tête C++ qui décrit le modèle COM des interfaces en tant que classes. Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en-tête de la bibliothèque de types obtenus.  
   
- Vous pouvez utiliser la [__declspec](../cpp/declspec.md) attribut étendu [uuid](../cpp/uuid-cpp.md) pour affecter un identificateur global unique (GUID) à un objet COM. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet COM. Un autre `__declspec` attribut, [propriété](../cpp/property-cpp.md), peut être utilisé pour spécifier le **obtenir** et **définir** méthodes pour un membre de données d’un objet COM.  
+ Vous pouvez utiliser la [__declspec](../cpp/declspec.md) attributs étendus [uuid](../cpp/uuid-cpp.md) pour attribuer un identificateur global unique (GUID) à un objet COM. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet COM. Un autre `__declspec` attribut, [propriété](../cpp/property-cpp.md), peut être utilisé pour spécifier le **obtenir** et **définir** méthodes pour un membre de données d’un objet COM.  
   
- Un ensemble de classes et fonctions globales de prise en charge COM est fourni pour prendre en charge la **VARIANT** et `BSTR` types implémentent des pointeurs intelligents et encapsuler l’objet d’erreur levé par `_com_raise_error`:  
+ Un ensemble de classes et fonctions globales de prise en charge COM est fourni pour prendre en charge la `VARIANT` et `BSTR` types, implémenter les pointeurs intelligents et encapsuler l’objet d’erreur levé par `_com_raise_error`:  
   
 -   [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)  
   

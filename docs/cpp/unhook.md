@@ -1,5 +1,5 @@
 ---
-title: __unhook | Documents Microsoft
+title: __unhook | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943876"
 ---
 # <a name="unhook"></a>__unhook
 Dissocie une méthode de gestionnaire d'un événement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp 
   
       long  __unhook(  
    &SourceClass::EventMethod,  
@@ -56,10 +57,10 @@ long  __unhook(
   
 -   Événements managés : *SourceClass* est la classe source d’événements et *EventMethod* est l’événement.  
   
- `interface`  
- Le nom d’interface décroché à partir `receiver`, uniquement pour les récepteurs d’événements COM dans lequel le *layout_dependent* paramètre de la [event_receiver](../windows/event-receiver.md) attribut est **true**.  
+ *interface*  
+ Le nom d’interface décroché à partir *récepteur*, uniquement pour les récepteurs d’événements COM dans lequel le *layout_dependent* paramètre de la [event_receiver](../windows/event-receiver.md) attribut est **true**.  
   
- *Source*  
+ *source*  
  Pointeur vers une instance de la source d'événement. En fonction du code `type` spécifié dans **event_receiver**, *source* peut prendre l’une des opérations suivantes :  
   
 -   Un pointeur d'objet source de l'événement natif.  
@@ -69,7 +70,7 @@ long  __unhook(
 -   Un pointeur d'objet managé (pour les événements managés).  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- Pointeur vers la méthode de gestionnaire d'événements à décrocher d'un événement. Le gestionnaire est spécifié comme une méthode d'une classe ou une référence à la même ; si vous ne spécifiez pas le nom de classe, `__unhook` suppose que la classe est celle dans laquelle elle est appelée.  
+ Pointeur vers la méthode de gestionnaire d'événements à décrocher d'un événement. Le gestionnaire est spécifié en tant que méthode d’une classe ou une référence à la même ; Si vous ne spécifiez pas le nom de classe, **__unhook** part du principe que la classe est que dans lequel elle est appelée.  
   
 -   Événements natifs C++ : *ReceiverClass* est la classe de récepteur d’événements et `HandlerMethod` est le gestionnaire.  
   
@@ -77,28 +78,28 @@ long  __unhook(
   
 -   Événements managés : *ReceiverClass* est la classe de récepteur d’événements et `HandlerMethod` est le gestionnaire.  
   
- `receiver`(facultatif)  
- Pointeur vers une instance de la classe de récepteur d'événements. Si vous ne spécifiez pas de récepteur, la valeur par défaut est la classe du récepteur ou la structure dans laquelle `__unhook` est appelé.  
+ *récepteur*(facultatif)  
+ Pointeur vers une instance de la classe de récepteur d'événements. Si vous ne spécifiez pas un récepteur, la valeur par défaut est la classe de récepteur ou d’une structure dans laquelle **__unhook** est appelée.  
   
 ## <a name="usage"></a>Utilisation  
  Peut s'utiliser dans une portée de fonction quelconque, notamment Main, en dehors de la classe de récepteur d'événements.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la fonction intrinsèque `__unhook` dans un récepteur d'événements pour dissocier ou décrocher une méthode de gestionnaire d'une méthode d'événement.  
+ Utilisez la fonction intrinsèque **__unhook** dans un récepteur d’événements pour dissocier ou une méthode de gestionnaire à partir d’une méthode d’événement « décrocher ».  
   
- Il existe trois formes de `__unhook`. Vous pouvez utiliser la première forme (à quatre arguments) dans la plupart des cas. Vous pouvez utiliser la deuxième forme (à deux arguments) `__unhook` uniquement pour un récepteur d'événements COM ; cela déconnecte toute l'interface d'événement. Vous pouvez utiliser la troisième forme (un argument) pour déconnecter tous les délégués de la source spécifiée.  
+ Il existe trois formes de **__unhook**. Vous pouvez utiliser la première forme (à quatre arguments) dans la plupart des cas. Vous pouvez utiliser la deuxième forme (à deux arguments) de **__unhook** uniquement pour un récepteur d’événements COM ; cela déconnecte l’interface d’événement complet. Vous pouvez utiliser la troisième forme (un argument) pour déconnecter tous les délégués de la source spécifiée.  
   
  Une valeur de retour différente de zéro indique qu'une erreur s'est produite (les événements managés lèvent une exception).  
   
- Si vous appelez `__unhook` sur un événement et que le gestionnaire d'événements n'est pas déjà raccordé, cela n'aura aucun effet.  
+ Si vous appelez **__unhook** sur un événement et un gestionnaire d’événements qui ne sont pas déjà raccordé, il n’a aucun effet.  
   
  Au moment de la compilation, le compilateur vérifie que l'événement existe et effectue la vérification du type de paramètre avec le gestionnaire spécifié.  
   
- Avec l'exception des événements COM, `__hook` et `__unhook` peuvent être appelés en dehors du récepteur d'événements.  
+ À l’exception des événements COM, **__hook** et **__unhook** peut être appelée en dehors du récepteur d’événements.  
   
- Une alternative à `__unhook` consiste à utiliser l'opérateur -=.  
+ Une alternative à l’utilisation de **__unhook** consiste à utiliser l’opérateur-=.  
   
- Pour plus d’informations sur les événements managés dans la nouvelle syntaxe de codage, consultez [événement](../windows/event-cpp-component-extensions.md).  
+ Pour plus d’informations sur le codage des événements managés dans la nouvelle syntaxe, consultez [événement](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Une classe ou structure modélisée ne peut pas contenir d'événements.  

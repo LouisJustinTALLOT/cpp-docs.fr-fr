@@ -1,5 +1,5 @@
 ---
-title: Gestion de la mémoire avec CStringT | Documents Microsoft
+title: Gestion de la mémoire avec CStringT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354705"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886191"
 ---
 # <a name="memory-management-with-cstringt"></a>Gestion de la mémoire avec CStringT
-Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) est une classe de modèle utilisée pour manipuler des chaînes de caractères de longueur variable. La mémoire pour stocker ces chaînes est allouée et publiée via un objet de gestionnaire de chaîne, associé à chaque instance de `CStringT`. MFC et ATL fournissent des instanciations par défaut de `CStringT`, appelé `CString`, `CStringA`, et `CStringW`, qui manipulent des chaînes de différents types de caractères. Ces types de caractères sont de type **TCHAR**, `char`, et `wchar_t`, respectivement. Ces types de chaîne par défaut utilisent un gestionnaire de chaînes qui alloue la mémoire à partir du tas de processus (dans ATL) ou du tas CRT (dans MFC). Pour les applications conventionnelles, cette méthode d’allocation de mémoire est suffisante. Toutefois, pour le code qui effectue beaucoup utiliser des chaînes (ou code multithread) les gestionnaires de mémoire par défaut ne soient pas optimales. Cette rubrique décrit comment substituer le comportement de gestion de mémoire par défaut de `CStringT`, création d’allocateurs spécifiquement optimisée pour la tâche en cours.  
+Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) est une classe de modèle utilisée pour manipuler des chaînes de caractères de longueur variable. La mémoire pour stocker ces chaînes est allouée et publiée via un objet de gestionnaire de chaîne, associé à chaque instance de `CStringT`. MFC et ATL fournissent des instanciations par défaut de `CStringT`, appelé `CString`, `CStringA`, et `CStringW`, qui manipulent des chaînes de différents types de caractères. Ces types de caractères sont de type TCHAR, **char**, et `wchar_t`, respectivement. Ces types de chaîne par défaut utilisent un gestionnaire de chaînes qui alloue la mémoire du tas du processus (dans ATL) ou le tas CRT (dans MFC). Pour les applications classiques, cette méthode d’allocation de mémoire est suffisante. Toutefois, pour le code effectue beaucoup utiliser de chaînes (ou code multithread) les gestionnaires de mémoire par défaut ne soient pas optimales. Cette rubrique décrit comment substituer le comportement de gestion de mémoire par défaut de `CStringT`, création d’allocateurs spécifiquement optimisée pour la tâche en cours.  
   
 -   [Implémentation d’un gestionnaire de chaînes personnalisé (méthode élémentaire)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
   
@@ -40,7 +40,7 @@ Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) est une classe 
   
 -   [Implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
   
--   [CFixedStringT : Un exemple d’un gestionnaire de chaîne personnalisé.](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
+-   [CFixedStringT : Un exemple d’un gestionnaire de chaînes personnalisé.](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple CustomString](../visual-cpp-samples.md)

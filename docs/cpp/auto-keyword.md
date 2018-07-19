@@ -1,5 +1,5 @@
 ---
-title: auto, mot clé | Documents Microsoft
+title: auto, mot clé | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93b2f5e28dc0306a996b4c8bdb799122fe4646ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9b4b9e2526d621e9e9fee1d1f8c05c5a05d3312
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409997"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941676"
 ---
 # <a name="auto-keyword"></a>auto, mot clé
-Le mot clé `auto` est un spécificateur de déclaration. Cependant, le code C++ standard définit une signification originale et modifiée pour ce mot clé . Avant Visual C++ 2010, le `auto` mot clé déclare une variable dans le *automatique* classe de stockage ; autrement dit, une variable qui a une durée de vie locale. Depuis Visual C++ 2010, le `auto` mot clé déclare une variable dont le type est déduit à partir de l’expression d’initialisation dans sa déclaration. Le [/Zc : auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) option du compilateur contrôle la signification de la `auto` (mot clé).  
+Le **automatique** mot clé est un spécificateur de déclaration. Cependant, le code C++ standard définit une signification originale et modifiée pour ce mot clé . Avant Visual C++ 2010, le **automatique** mot clé déclare une variable dans le *automatique* classe de stockage ; autrement dit, une variable qui a une durée de vie locale. À partir de Visual C++ 2010, le **automatique** mot clé déclare une variable dont le type est déduit à partir de l’expression d’initialisation dans sa déclaration. Le [/Zc : auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) option du compilateur contrôle la signification de la **automatique** mot clé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,14 +30,14 @@ auto declarator initializer;
 ```  
   
 ## <a name="remarks"></a>Notes  
- La définition du mot clé `auto` change dans le langage de programmation C++, mais pas dans le langage de programmation C.  
+ La définition de la **automatique** les modifications de mot clé dans le langage de programmation C++, mais pas dans le langage de programmation C.  
   
- Les rubriques suivantes décrivent le mot clé `auto` et l'option du compilateur correspondante :  
+ Les rubriques suivantes décrivent les **automatique** mot clé et l’option du compilateur correspondante :  
   
--   [Auto](../cpp/auto-cpp.md) décrit la nouvelle définition de la `auto` (mot clé).  
+-   [Auto](../cpp/auto-cpp.md) décrit la nouvelle définition de la **automatique** mot clé.  
   
   
--   [/ Zc : auto (déduire le Type de Variable)](../build/reference/zc-auto-deduce-variable-type.md) décrit l’option du compilateur qui indique au compilateur de la définition du `auto` mot clé à utiliser.  
+-   [/ Zc : auto (déduire le Type de Variable)](../build/reference/zc-auto-deduce-variable-type.md) décrit l’option du compilateur qui indique au compilateur quelle définition de la **automatique** mot clé à utiliser.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mots clés](../cpp/keywords-cpp.md)

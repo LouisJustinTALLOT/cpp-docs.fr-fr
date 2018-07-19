@@ -1,5 +1,5 @@
 ---
-title: 'Plus unaire et les opérateurs de négation : + et - | Documents Microsoft'
+title: 'Opérateurs de négation Plus et unaires : + et - | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943923"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Opérateurs plus et de négation unaires : + et -
 ## <a name="syntax"></a>Syntaxe  
@@ -33,20 +34,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 + cast-expression  
-```  
-  
-```  
-  
 - cast-expression  
 ```  
   
 ## <a name="-operator"></a>+ (opérateur)  
  Le résultat de l’opérateur plus unaire (**+**) est la valeur de son opérande. L’opérande de l’opérateur plus unaire doit être d’un type arithmétique.  
   
- La promotion d’un intégral est exécutée sur des opérandes intégraux. Le type résultant est le type vers lequel l’opérande est promu. Ainsi, l'expression `+ch`, où `ch` est de type `char`, produit un résultat de type `int` ; la valeur est inchangée. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations sur la façon dont la promotion est effectuée.  
+ La promotion d’un intégral est exécutée sur des opérandes intégraux. Le type résultant est le type vers lequel l’opérande est promu. Par conséquent, l’expression `+ch`, où `ch` est de type **char**, dans le type des résultats **int**; la valeur est inchangée. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations sur la façon dont la promotion est effectuée.  
   
 ## <a name="--operator"></a>- (opérateur)  
- L’opérateur de négation unaire (**-**) produit la valeur négative de son opérande. L’opérande de l’opérateur de négation unaire doit être un type arithmétique.  
+ L’opérateur de négation unaire (**-**) produit la partie négative de son opérande. L’opérande de l’opérateur de négation unaire doit être un type arithmétique.  
   
  La promotion intégrale est exécutée sur les opérandes intégraux et le type résultant est le type vers lequel l’opérande est promu. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations sur la façon dont la promotion est effectuée.  
   
