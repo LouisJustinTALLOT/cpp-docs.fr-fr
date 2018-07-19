@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957358"
 ---
 # <a name="isfundamental-class"></a>is_fundamental, classe
 
@@ -37,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type fondamental, autrement dit `void`, un type intégral, un type à virgule flottante ou une forme `cv-qualified` de l'un d'eux. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type fondamental, autrement dit, **void**, un type intégral, un flottante type à virgule ou un `cv-qualified` forme d’un d’eux, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -79,7 +79,7 @@ is_fundamental<const float> == true
 is_fundamental<void> == true
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

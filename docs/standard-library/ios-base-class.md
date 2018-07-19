@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 818d6fad62ec4d506215a82f2faa1e3aa58d1654
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849039"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956453"
 ---
 # <a name="iosbase-class"></a>ios_base, classe
 
@@ -135,13 +135,13 @@ Un objet de la classe ios_base stocke des informations de mise en forme, qui com
 
 - Un masque d’exception dans un objet de type [iostate](#iostate).
 
-- Une largeur de champ dans un objet de type `int`.
+- Une largeur de champ dans un objet de type **int**.
 
-- Une précision d'affichage dans un objet de type `int`.
+- Une précision d’affichage dans un objet de type **int**.
 
-- Un objet de paramètres régionaux dans un objet de type **locale**.
+- Un objet de paramètres régionaux dans un objet de type `locale`.
 
-- Deux tableaux extensibles, avec des éléments de type **long** et un pointeur `void`.
+- Deux tableaux extensibles, avec des éléments de type **long** et **void** pointeur.
 
 Un objet de la classe ios_base stocke également des informations d’état de flux dans un objet de type [iostate](#iostate) et une pile des rappels.
 
@@ -178,7 +178,7 @@ Un objet de la classe ios_base stocke également des informations d’état de f
 |[basefield](#fmtflags)|Masque de bits défini comme `dec` &#124; `hex` &#124; `oct`.|
 |[beg](#seekdir)|Spécifie qu'une recherche doit être effectuée relativement au début d'une séquence.|
 |[binary](#openmode)|Spécifie qu'un fichier doit être lu comme un flux binaire, et non pas comme un flux de texte.|
-|[boolalpha](#fmtflags)|Spécifie l'insertion ou l'extraction d'objets de type `bool` en tant que noms (comme `true` et `false`) et non pas en tant que valeurs numériques.|
+|[boolalpha](#fmtflags)|Spécifie l’insertion ou l’extraction d’objets de type **bool** en tant que noms (tel que **true** et **false**) plutôt que comme des valeurs numériques.|
 |[cur](#seekdir)|Spécifie qu'une recherche doit être effectuée relativement à la position actuelle dans une séquence.|
 |[dec](#fmtflags)|Spécifie l'insertion ou l'extraction de valeurs entières au format décimal.|
 |[end](#seekdir)|Spécifie qu'une recherche doit être effectuée relativement à la fin d'une séquence.|
@@ -228,7 +228,7 @@ Un objet de la classe ios_base stocke également des informations d’état de f
 |-|-|
 |[operator=](#op_eq)|Opérateur d'affectation pour les objets `ios_base`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<ios>
 
@@ -249,11 +249,11 @@ enum event {
 
 Le type est un type énuméré qui décrit un objet capable de stocker l’événement de rappel utilisé comme argument d’une fonction inscrite avec [register_callback](#register_callback). Les valeurs d’événements distinctes sont les suivantes :
 
-- **copyfmt_event**, pour identifier un rappel qui se produit près de la fin d’un appel à [copyfmt](../standard-library/basic-ios-class.md#copyfmt), juste avant la copie du [masque d’exception](../standard-library/ios-base-class.md).
+- `copyfmt_event`, pour identifier un rappel qui se produit à la fin d’un appel à [copyfmt](../standard-library/basic-ios-class.md#copyfmt), juste avant la [masque d’exception](../standard-library/ios-base-class.md) est copié.
 
-- **erase_event**, pour identifier un rappel qui se produit au début d’un appel à [copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou au début d’un appel au destructeur de **\*this**.
+- `erase_event`, pour identifier un rappel qui se produit au début d’un appel à [copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou au début d’un appel au destructeur de  **\*cela**.
 
-- **imbue_event**, pour identifier un rappel qui se produit à la fin d’un appel à [imbue](#imbue), juste avant le retour de la fonction.
+- `imbue_event`, pour identifier un rappel qui se produit à la fin d’un appel à [imbue](#imbue), juste avant que la fonction retourne.
 
 ### <a name="example"></a>Exemple
 
@@ -272,11 +272,11 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Paramètres
 
-*Serveur* le [événement](#event).
+*Adr_esse* le [événement](#event).
 
-`_Base` Flux dans lequel l’événement a été appelé.
+*_Base* le flux dans lequel l’événement a été appelé.
 
-*J’a_i* un nombre défini par l’utilisateur.
+*_I* un nombre défini par l’utilisateur.
 
 ### <a name="remarks"></a>Notes
 
@@ -349,7 +349,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Paramètres
 
-`fmtfl` La nouvelle `fmtflags` paramètre.
+*fmtfl* le nouveau `fmtflags` paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -359,7 +359,7 @@ Paramètre `fmtflags` précédent ou actif.
 
 Pour obtenir la liste des indicateurs, consultez [ios_base::fmtflags](#fmtflags).
 
-La première fonction membre retourne les indicateurs de format stockés. La deuxième fonction membre stocke `fmtfl` dans les indicateurs de format et retourne sa précédente valeur stockée.
+La première fonction membre retourne les indicateurs de format stockés. La deuxième fonction membre stocke *fmtfl* dans les indicateurs de format et retourne sa précédente valeur stockée.
 
 ### <a name="example"></a>Exemple
 
@@ -433,7 +433,7 @@ Le type est un type de masque de bits qui décrit un objet pouvant stocker des i
 
 - `right`, pour compléter une largeur de champ selon les besoins, en insérant des caractères de remplissage au début d'un champ généré (justification à droite).
 
-- `boolalpha`, pour insérer ou extraire des objets de type `bool` comme des noms (tels que `true` et `false`), et non pas comme des valeurs numériques.
+- `boolalpha`, pour insérer ou extraire des objets de type **bool** en tant que noms (tel que **true** et **false**) plutôt que comme des valeurs numériques.
 
 - `fixed`, pour insérer des valeurs à virgule flottante dans un format à virgule fixe (sans champ d'exposant).
 
@@ -499,7 +499,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Loc` Les nouveaux paramètres régionaux.
+*_Loc* nouveaux paramètres régionaux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -507,7 +507,7 @@ Paramètres régionaux précédents.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre stocke `_Loc` dans l’objet de paramètres régionaux, puis signale l’événement de rappel et `imbue_event`. Elle retourne la valeur stockée précédente.
+La fonction membre stocke *_Loc* dans l’objet de paramètres régionaux, puis signale l’événement de rappel et `imbue_event`. Elle retourne la valeur stockée précédente.
 
 ### <a name="example"></a>Exemple
 
@@ -563,7 +563,7 @@ Le type est un type de masque de bits qui décrit un objet pouvant stocker des i
 
 - `failbit`, pour enregistrer un échec d’extraction d’un champ valide à partir d’un flux.
 
-`goodbit` est également une valeur utile, où aucun des bits mentionnés précédemment n’est défini ( `goodbit` est garanti comme étant égal à zéro).
+En outre, une valeur utile est `goodbit`, où aucun des bits mentionnés précédemment sont définis (`goodbit` est garanti être égal à zéro).
 
 ## <a name="iword"></a>  ios_base::iword
 
@@ -575,13 +575,13 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Paramètres
 
-`idx` L’index de la valeur à stocker en tant qu’un `iword`.
+*IDX* l’index de la valeur à stocker comme un `iword`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une référence à l’élément `idx` du tableau extensible avec des éléments de type **long**. Tous les éléments sont effectivement présents et contiennent initialement la valeur zéro. La référence retournée n’est pas valide après l’appel suivant à `iword` pour l’objet, après que l’objet a été modifié par un appel à **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) ou après sa destruction.
+La fonction membre retourne une référence à l’élément *idx* du tableau extensible avec des éléments de type **long**. Tous les éléments sont effectivement présents et contiennent initialement la valeur zéro. La référence retournée n’est pas valide après l’appel suivant à `iword` pour l’objet, après que l’objet a été modifié par un appel à **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) ou après sa destruction.
 
-Si `idx` est négatif ou si aucun stockage unique n’est disponible pour l’élément, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** et retourne une référence susceptible de ne pas être unique.
+Si *idx* est négatif ou si le stockage unique n’est pas disponible pour l’élément, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** et retourne une référence qui ne peut pas être unique.
 
 Pour obtenir un index unique, pour une utilisation parmi tous les objets de type `ios_base`, appelez [xalloc](#xalloc).
 
@@ -609,17 +609,17 @@ public:
 
 Le type est un `bitmask type` qui décrit un objet capable de stocker le mode d’ouverture de plusieurs objets iostreams. Les valeurs distinctes des indicateurs (éléments) sont :
 
-- **app**, pour rechercher jusqu’à la fin d’un flux avant chaque insertion.
+- `app`, pour rechercher jusqu'à la fin d’un flux avant chaque insertion.
 
-- **ate**, pour rechercher jusqu’à la fin d’un flux quand son objet de contrôle est créé initialement.
+- `ate`, pour rechercher jusqu'à la fin d’un flux lorsque son objet de contrôle est créé.
 
-- **binary**, pour lire un fichier comme un flux binaire, plutôt que comme un flux de texte.
+- `binary`, pour lire un fichier comme un flux binaire, plutôt que comme un flux de texte.
 
-- **in**, pour autoriser l’extraction à partir d’un flux.
+- `in`, pour autoriser l’extraction à partir d’un flux de données.
 
-- **out**, pour autoriser l’insertion dans un flux.
+- `out`, pour autoriser l’insertion dans un flux de données.
 
-- **trunc**, pour supprimer le contenu d’un fichier existant lors de la création de son objet de contrôle.
+- `trunc`, pour supprimer le contenu d’un fichier existant lors de son objet de contrôle est créé.
 
 ### <a name="example"></a>Exemple
 
@@ -649,7 +649,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un objet de type `ios_base`.
+*droit* un objet de type `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -672,11 +672,11 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Prec` Le nombre de chiffres significatifs à afficher, ou le nombre de chiffres après la virgule décimale à virgule fixe.
+*_Prec* le nombre de chiffres significatifs à afficher, ou le nombre de chiffres après la virgule décimale dans la notation fixe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première fonction membre retourne la [précision d’affichage](../standard-library/ios-base-class.md) stockée. La deuxième fonction membre stocke `_Prec` dans la précision d’affichage et retourne sa précédente valeur stockée.
+La première fonction membre retourne la [précision d’affichage](../standard-library/ios-base-class.md) stockée. La deuxième fonction membre stocke *_Prec* dans la précision d’affichage et retourne sa précédente valeur stockée.
 
 ### <a name="remarks"></a>Notes
 
@@ -716,11 +716,11 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Idx` L’index de la valeur à stocker en tant qu’un `pword`.
+*IDX* l’index de la valeur à stocker comme un `pword`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une référence à l’élément _ *Idx* du tableau extensible avec des éléments de type pointeur `void`. Tous les éléments sont effectivement présents et contiennent initialement le pointeur Null. La référence retournée n’est pas valide après l’appel suivant à `pword` pour l’objet, après que l’objet a été modifié par un appel à **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) ou après sa destruction.
+La fonction membre retourne une référence à l’élément _ *Idx* du tableau extensible avec des éléments de type **void** pointeur. Tous les éléments sont effectivement présents et contiennent initialement le pointeur Null. La référence retournée n’est pas valide après l’appel suivant à `pword` pour l’objet, après que l’objet a été modifié par un appel à **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) ou après sa destruction.
 
 Si _ *Idx* est négatif ou si aucun stockage unique n’est disponible pour l’élément, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** et retourne une référence susceptible de ne pas être unique.
 
@@ -741,13 +741,13 @@ void register_callback(
 
 ### <a name="parameters"></a>Paramètres
 
-`pfn` Pointeur vers la fonction de rappel.
+*NFP* pointeur vers la fonction de rappel.
 
-`idx` Un nombre défini par l’utilisateur.
+*IDX* un nombre défini par l’utilisateur.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre exécute un push de la paire `{pfn, idx}` dans la pile de rappel stockée [pile de rappel](../standard-library/ios-base-class.md). Lorsqu’un événement de rappel **ev** est signalée, les fonctions sont appelées dans l’ordre inverse du Registre, par l’expression `(*pfn)(ev, *this, idx)`.
+La fonction membre exécute un push de la paire `{pfn, idx}` dans la pile de rappels stockée [pile de rappel](../standard-library/ios-base-class.md). Lorsqu’un événement de rappel **ev** est signalée, les fonctions sont appelées dans l’ordre inverse du Registre, par l’expression `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Exemple
 
@@ -857,11 +857,11 @@ namespace std {
 
 Le type est un type énuméré qui décrit un objet qui peut stocker le mode de recherche utilisé en tant qu’argument pour les fonctions membres de plusieurs classes iostream. Les valeurs distinctes des indicateurs sont :
 
-- **beg**, pour effectuer une recherche (modifier la position d’écriture ou de lecture actuelle) par rapport au début d’une séquence (tableau, flux ou fichier).
+- `beg`, à rechercher (alter actuelle en lecture ou écriture position) par rapport au début d’une séquence (tableau, un flux ou un fichier).
 
-- **cur**, pour effectuer une recherche par rapport à la position actuelle dans une séquence.
+- `cur`, effectuer une recherche par rapport à la position actuelle dans une séquence.
 
-- **end**, pour effectuer une recherche par rapport à la fin d’une séquence.
+- `end`, effectuer une recherche par rapport à la fin d’une séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -901,7 +901,7 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Paramètres
 
-`_Mask` Indicateurs à activer.
+*_Mask* les indicateurs à activer.
 
 *_Unset* les indicateurs à désactiver.
 
@@ -949,7 +949,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Paramètres
 
-`_Sync` Indique si tous les flux sont synchronisés avec **stdio**.
+*_Sync* si tous les flux sont synchronisés avec `stdio`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>Notes
 
-    The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,7 +971,7 @@ void unsetf(
 
 ### <a name="parameters"></a>Paramètres
 
-`_Mask` Les indicateurs que vous souhaitez désactiver.
+*_Mask* les indicateurs que vous souhaitez désactiver.
 
 ### <a name="remarks"></a>Notes
 
@@ -994,7 +994,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Paramètres
 
-`_Wide` La taille souhaitée du flux de sortie.
+*_Wide* la taille souhaitée du flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1002,7 +1002,7 @@ streamsize width(
 
 ### <a name="remarks"></a>Notes
 
-    The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.
+    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
 
 ### <a name="example"></a>Exemple
 

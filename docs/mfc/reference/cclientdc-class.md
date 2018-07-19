@@ -1,5 +1,5 @@
 ---
-title: CClientDC (classe) | Documents Microsoft
+title: CClientDC, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338579"
 ---
 # <a name="cclientdc-class"></a>CClientDC (classe)
 Prend en charge de l’appel de fonctions Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) au moment de la construction et [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) au moment de la destruction.  
@@ -48,7 +48,7 @@ class CClientDC : public CDC
   
 |Name|Description|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|Le `HWND` de la fenêtre pour laquelle ce `CClientDC` est valide.|  
+|[CClientDC::m_hWnd](#m_hwnd)|Le HWND de la fenêtre pour lequel ce `CClientDC` est valide.|  
   
 ## <a name="remarks"></a>Notes  
  Cela signifie que le contexte de périphérique associé à un `CClientDC` objet est la zone cliente d’une fenêtre.  
@@ -74,12 +74,12 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Paramètres  
  *pWnd*  
- La fenêtre dont l’objet de contexte de périphérique sera accéder à la zone cliente.  
+ La fenêtre dont la zone cliente accède à l’objet de contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
  Le constructeur appelle la fonction Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- Une exception (de type `CResourceException`) est levée si les fenêtres `GetDC` appel échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué à tous ses contextes de périphérique disponible. Votre application en concurrence pour les contextes d’affichage courantes cinq disponibles à un moment donné sous Windows.  
+ Une exception (de type `CResourceException`) est levée si le Windows `GetDC` appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  

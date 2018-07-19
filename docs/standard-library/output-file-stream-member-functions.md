@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1cba80b18f94d5a833b238e19be8190a442146
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858459"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959931"
 ---
 # <a name="output-file-stream-member-functions"></a>Fonctions membres de flux de fichiers de sortie
 
@@ -27,9 +27,9 @@ Les fonctions membres de flux de sortie ont trois types : celles qui sont équi
 
 ## <a name="the-open-function-for-output-streams"></a>Fonction open pour les flux de sortie
 
-Pour utiliser un flux de fichier de sortie ([ofstream](../standard-library/basic-ofstream-class.md)), vous devez associer ce flux à un fichier sur disque spécifique dans le constructeur ou la fonction **open**. Si vous utilisez la fonction **open**, vous pouvez réutiliser le même objet de flux avec une série de fichiers. Dans les deux cas, les arguments décrivant le fichier sont identiques.
+Pour utiliser un flux de fichier de sortie ([ofstream](../standard-library/basic-ofstream-class.md)), vous devez associer ce flux de données à un fichier de disque spécifique dans le constructeur ou la `open` (fonction). Si vous utilisez le `open` (fonction), vous pouvez réutiliser le même objet de flux de données avec une série de fichiers. Dans les deux cas, les arguments décrivant le fichier sont identiques.
 
-Quand vous ouvrez le fichier associé à un flux de sortie, vous spécifiez généralement un indicateur **open_mode**. Vous pouvez combiner ces indicateurs, définis comme énumérateurs dans la classe `ios`, avec l’opérateur OR ( &#124; ) au niveau du bit. Consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode) pour obtenir la liste des énumérateurs.
+Lorsque vous ouvrez le fichier associé à un flux de sortie, vous spécifiez généralement un `open_mode` indicateur. Vous pouvez combiner ces indicateurs, définis comme énumérateurs dans la classe `ios`, avec l’opérateur OR ( &#124; ) au niveau du bit. Consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode) pour obtenir la liste des énumérateurs.
 
 Trois situations de flux de sortie courantes impliquent des options de mode :
 
@@ -75,7 +75,7 @@ cout <<'A'; // Format arguments 'width' and 'fill' apply
 
 ## <a name="the-write"></a>L’écriture
 
-La fonction **write** écrit un bloc de mémoire dans un flux de fichier de sortie. L’argument de longueur spécifie le nombre d’octets écrits. Cet exemple crée un flux de fichier de sortie et y écrit la valeur binaire de la structure `Date` :
+Le `write` fonction écrit un bloc de mémoire dans un flux de fichier de sortie. L’argument de longueur spécifie le nombre d’octets écrits. Cet exemple crée un flux de fichier de sortie et y écrit la valeur binaire de la structure `Date` :
 
 ```cpp
 // write_function.cpp
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-La fonction **write** ne s’arrête pas quand elle atteint un caractère Null, de sorte que la structure de classe complète est écrite. La fonction accepte deux arguments : un pointeur `char` et un nombre de caractères à écrire. Notez le cast requis à **char\*** avant l’adresse de l’objet de structure.
+Le `write` fonction n’arrête pas lorsqu’elle atteint un caractère null, de sorte que la structure de classe complète est écrite. La fonction accepte deux arguments : un **char** pointeur et le nombre de caractères à écrire. Notez le cast requis à **char\*** avant l’adresse de l’objet de structure.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Fonctions seekp et tellp
 
@@ -104,9 +104,9 @@ Un flux de fichier de sortie conserve un pointeur interne qui pointe vers l'empl
 
 ## <a name="the-close-function-for-output-streams"></a>Fonction close pour les flux de sortie
 
-La fonction membre **close** ferme le fichier sur disque associé à un flux de fichier de sortie. Le fichier doit être fermé pour effectuer la sortie sur disque. Si nécessaire, le destructeur `ofstream` ferme le fichier automatiquement, mais vous pouvez utiliser la fonction **close** si vous devez ouvrir un autre fichier pour le même objet de flux.
+Le `close` fonction membre ferme le fichier de disque associé à un flux de fichier de sortie. Le fichier doit être fermé pour effectuer la sortie sur disque. Si nécessaire, le `ofstream` destructeur ferme le fichier pour vous, mais vous pouvez utiliser le `close` fonctionner si vous devez ouvrir un autre fichier pour le même objet de flux de données.
 
-Le destructeur de flux de sortie ferme automatiquement le fichier d’un flux uniquement si le constructeur ou la fonction membre **open** a ouvert le fichier. Si vous passez au constructeur le descripteur d’un fichier déjà ouvert ou si vous utilisez la fonction membre **attach**, vous devez fermer le fichier explicitement.
+Le destructeur de flux de sortie ferme automatiquement fichier uniquement si d’un flux le constructeur ou la `open` fonction membre ouvert le fichier. Si vous passez au constructeur un descripteur de fichier pour un fichier déjà ouvert ou le `attach` fonction membre, vous devez fermer le fichier explicitement.
 
 ## <a name="vclrferrorprocessingfunctionsanchor10"></a> Fonctions de traitement des erreurs
 
@@ -115,13 +115,13 @@ Utilisez les fonctions membres ci-après pour tester les erreurs lors de l'écri
 |Fonction|Valeur de retour|
 |--------------|------------------|
 |[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Retourne **true** s’il se produit une erreur irrécupérable.|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Retourne **true** s’il se produit une erreur irrécupérable ou une condition « attendue », par exemple une erreur de conversion, ou si le fichier est introuvable. Le traitement peut souvent reprendre après un appel à **clear** avec un argument zéro.|
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Retourne **true** s’il se produit une erreur irrécupérable ou une condition « attendue », par exemple une erreur de conversion, ou si le fichier est introuvable. Le traitement peut souvent reprendre après un appel à `clear` avec un argument zéro.|
 |[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Retourne **true** s’il n’y a pas de condition d’erreur (irrécupérable ou autre) et si l’indicateur de fin de fichier n’est pas défini.|
 |[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Retourne **true** sur la condition de fin de fichier.|
 |[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Définit l'état d'erreur interne. Si la fonction est appelée avec les arguments par défaut, elle efface tous les bits d’erreur.|
 |[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Retourne l'état d'erreur actuel.|
 
-L’opérateur **!** est surchargé pour exécuter la même fonction que la fonction **fail**. Ainsi, l'expression :
+L’opérateur **!** opérateur est surchargé pour exécuter la même fonction que le `fail` (fonction). Ainsi, l'expression :
 
 ```cpp
 if(!cout)...
@@ -145,7 +145,7 @@ est égale à :
 if(!cout.fail())...
 ```
 
-L’opérateur **void\*()** n’est pas équivalent à **good**, car il ne teste pas la fin de fichier.
+Le **void\*()** opérateur n’est pas équivalent à `good` , car il ne teste pas la fin du fichier.
 
 ## <a name="see-also"></a>Voir aussi
 

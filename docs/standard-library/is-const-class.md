@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956083"
 ---
 # <a name="isconst-class"></a>is_const, classe
 
@@ -37,11 +37,11 @@ struct is_const;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si `Ty` est `const-qualified`.
+Une instance du prédicat de type a la valeur true si *Ty* est `const-qualified`.
 
 ## <a name="example"></a>Exemple
 
@@ -79,7 +79,7 @@ is_const<int> == false
 is_const<const int> == true
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

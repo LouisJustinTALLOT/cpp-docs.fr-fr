@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: ff6d6066d90fe5049b89586ce657e62860c12f9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955829"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt;, fonctions
 
@@ -44,7 +44,7 @@ ms.locfileid: "33861092"
 
 ## <a name="is_assignable"></a>  is_assignable
 
-Teste si une valeur de type `From` peut être assignée à un type `To`.
+Teste si une valeur de *de* type peut être affecté à un *à* type.
 
 ```cpp
 template <class To, class From>
@@ -53,13 +53,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-Pour le type de l’objet qui reçoit l’assignation.
+*To*  
+ Type de l'objet qui reçoit l'assignation.
 
-À partir du type de l’objet qui fournit la valeur.
+*From*  
+ Type de l'objet qui fournit la valeur.
 
 ### <a name="remarks"></a>Notes
 
-L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. `From` et `To` doivent tous deux être des types complets, `void` ou des tableaux de limite inconnue.
+L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. Les deux *de* et *à* doivent être des types complets, **void**, ou des tableaux de limite inconnue.
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -72,11 +74,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un opérateur d'assignation de copie. Sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un copie opérateur d’assignation, sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -89,11 +92,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un constructeur de copie. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de copie, sinon, sa valeur est false.
 
 ### <a name="example"></a>Exemple
 
@@ -141,11 +145,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est un type de classe qui a un constructeur par défaut. Sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Le type `T` doit être un type complet, `void`, ou un tableau ayant des limites d’index inconnues.
+Une instance du prédicat de type a la valeur true si le type *T* est un type de classe qui a un constructeur par défaut, sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Type *T* doit être un type complet, **void**, ou un tableau de limite inconnue.
 
 ### <a name="example"></a>Exemple
 
@@ -193,7 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -210,11 +216,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-T le type à évaluer
+*T*  
+ Type à évaluer
 
 ### <a name="remarks"></a>Notes
 
-Prédicat de type qui a la valeur true si le type `T` est constructible par une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.
+Un prédicat de type qui prend la valeur true si le type *T* peut être construite à l’aide d’une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -227,11 +234,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` a un opérateur d'assignation de déplacement nothrow. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* a un nothrow déplacement opérateur d’assignation, sinon, sa valeur est false.
 
 ## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable
 
@@ -244,13 +252,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est une classe qui a un opérateur d'assignation de copie trivial. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est une classe qui a un copie trivial opérateur d’assignation, sinon, sa valeur est false.
 
-Un constructeur d’assignation d’une classe `T` est trivial s’il est fourni implicitement, si la classe `T` n’a aucune fonction virtuelle, si la classe `T` n’a aucune base virtuelle, si les classes de toutes les données membres non statiques de type classe ont des opérateurs d’assignation triviaux et si les classes de toutes les données membres non statiques de type tableau de classe ont des opérateurs d’assignation triviaux.
+Un constructeur d’assignation pour une classe *T* est trivial s’il est fourni implicitement, la classe *T* n’a aucune fonction virtuelle, la classe *T* n’a aucune bases virtuelles, les classes de tous les membres de données non statiques de type de classe possèdent des opérateurs d’assignation triviaux, et les classes de tous les membres de données non statiques de type tableau de classe possèdent des opérateurs d’assignation triviaux.
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -263,19 +272,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un opérateur d'assignation de déplacement trivial. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un déplacement trivial opérateur d’assignation, sinon, sa valeur est false.
 
-Un opérateur d'assignation de déplacement pour une classe `Ty` est trivial si :
+Un opérateur d’assignation de déplacement pour une classe *Ty* est trivial si :
 
 il est fourni implicitement ;
 
-la classe `Ty` n'a aucune fonction virtuelle ;
+la classe *Ty* n’a aucune fonction virtuelle
 
-la classe `Ty` n'a aucune base virtuelle ;
+la classe *Ty* n’a aucune base virtuelle ;
 
 les classes de tous les membres de données non statiques de type classe possèdent des opérateurs d'assignation de déplacement triviaux ;
 
@@ -292,25 +302,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty*  
+ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un constructeur de déplacement trivial. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de déplacement triviaux, sinon, sa valeur est false.
 
-Un constructeur de déplacement pour une classe `Ty` est trivial si :
+Un constructeur de déplacement pour une classe *Ty* est trivial si :
 
 il est déclaré implicitement ;
 
 ses types de paramètres sont équivalents à ceux d'une déclaration implicite ;
 
-la classe `Ty` n'a aucune fonction virtuelle ;
+la classe *Ty* n’a aucune fonction virtuelle
 
-la classe `Ty` n'a aucune base virtuelle ;
+la classe *Ty* n’a aucune base virtuelle ;
 
 la classe n'a aucun membre de données non statique volatile ;
 
-toutes les bases directes de la classe `Ty` ont des constructeurs de déplacement triviaux ;
+toutes les bases directes de la classe *Ty* possèdent des constructeurs de déplacement triviaux.
 
 les classes de tous les membres de données non statiques de type de classe ont des constructeurs de déplacement triviaux ;
 

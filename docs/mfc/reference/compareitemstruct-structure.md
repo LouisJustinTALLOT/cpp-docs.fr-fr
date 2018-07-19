@@ -1,5 +1,5 @@
 ---
-title: COMPAREITEMSTRUCT (Structure) | Documents Microsoft
+title: Compareitemstruct, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6c42f356cb323bb7690b6c39b1fc7bd9ce0485f3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078256"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850587"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT, structure
-Le `COMPAREITEMSTRUCT` structure fournit les identificateurs et les données de fournie par l’application pour les deux éléments dans une zone de liste triée, owner-drawn ou d’une zone de liste déroulante.  
+Le `COMPAREITEMSTRUCT` structure fournit les identificateurs et les données de fournie par l’application pour les deux éléments dans une zone de liste triée, owner-drawn ou de la zone de liste déroulante.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,28 +42,28 @@ typedef struct tagCOMPAREITEMSTRUCT {
   
 #### <a name="parameters"></a>Paramètres  
  *CtlType*  
- **Odt_combobox** (qui spécifie une zone de liste owner-draw) ou **ODT_COMBOBOX** (qui spécifie une zone de liste déroulante owner-draw).  
+ Odt_combobox (qui spécifie une zone de liste owner-draw) ou ODT_COMBOBOX (qui spécifie une zone de liste déroulante owner-draw).  
   
  *CtlID*  
- L’ID de contrôle pour la zone de liste ou zone de liste déroulante.  
+ L’ID de contrôle pour la zone de liste ou une zone de liste déroulante.  
   
  *hwndItem*  
  Le handle de fenêtre du contrôle.  
   
  *itemID1*  
- L’index du premier élément dans la zone de liste ou zone de liste déroulante qui sont comparés.  
+ L’index du premier élément dans la zone de liste ou une zone de liste déroulante qui est comparée.  
   
  *itemData1*  
  Données fournie par l’application pour le premier élément qui est comparée. Cette valeur a été passée dans l’appel qui a ajouté l’élément à la zone de liste déroulante ou liste.  
   
  *itemID2*  
- Index du deuxième élément dans la zone de liste ou zone de liste déroulante qui sont comparés.  
+ Index du deuxième élément dans la zone de liste ou une zone de liste déroulante qui est comparée.  
   
  *itemData2*  
- Données fournie par l’application pour le second élément comparé. Cette valeur a été passée dans l’appel qui a ajouté l’élément à la zone de liste déroulante ou liste.  
+ Données fournie par l’application pour le deuxième élément qui est comparée. Cette valeur a été passée dans l’appel qui a ajouté l’élément à la zone de liste déroulante ou liste.  
   
 ## <a name="remarks"></a>Notes  
- Chaque fois qu’une application ajoute un nouvel élément à une zone de liste owner-drawn ou zone de liste modifiable est créé avec le **CBS_SORT** ou **LBS_SORT** style, Windows envoie le propriétaire un message WM_COMPAREITEM. Le *lParam* paramètre du message contient un pointeur long vers un `COMPAREITEMSTRUCT` structure. Lorsqu’il reçoit le message, le propriétaire compare les deux éléments et retourne une valeur qui indique quel élément trie avant l’autre.  
+ Chaque fois qu’une application ajoute un nouvel élément à une zone de liste owner-drawn ou d’une zone de liste déroulante créée avec le style CBS_SORT ou LBS_SORT, Windows envoie un message WM_COMPAREITEM au propriétaire. Le *lParam* paramètre du message contient un pointeur long désignant un `COMPAREITEMSTRUCT` structure. Lorsqu’il reçoit le message, le propriétaire compare les deux éléments et retourne une valeur indiquant quel élément trie avant les autres.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  

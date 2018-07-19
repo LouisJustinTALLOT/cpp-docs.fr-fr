@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954862"
 ---
 # <a name="weakptr-class"></a>weak_ptr, classe
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type contrôlé par le pointeur faible.
+*Ty*  
+ Type contrôlé par le pointeur faible.
 
 ## <a name="remarks"></a>Notes
 
@@ -104,7 +105,7 @@ Un cycle se produit quand plusieurs ressources contrôlées par des objets `shar
 |[element_type](#element_type)|Type de l'élément.|
 |[expired](#expired)|Teste si la propriété a expiré.|
 |[lock](#lock)|Obtient la propriété exclusive d'une ressource.|
-|[owner_before](#owner_before)|Retourne `true` si ce `weak_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).|
+|[owner_before](#owner_before)|Retourne **true** si ce `weak_ptr` est classé avant (ou inférieur à) le pointeur fourni.|
 |[reset](#reset)|Libère la ressource détenue.|
 |[swap](#swap)|Échange deux objets `weak_ptr`.|
 |[use_count](#use_count)|Compte le nombres d'objets `shared_ptr` désignés.|
@@ -115,7 +116,7 @@ Un cycle se produit quand plusieurs ressources contrôlées par des objets `shar
 |-|-|
 |[operator=](#op_eq)|Remplace la ressource détenue.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<memory>
 
@@ -168,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `true` si `*this` a expiré, sinon `false`.
+La fonction membre retourne **true** si `*this` a expiré, sinon **false**.
 
 ### <a name="example"></a>Exemple
 
@@ -289,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-`Other` Type contrôlé par le pointeur partagé/faible d’argument.
+*Autre*  
+ Type contrôlé par le pointeur partagé/faible d’argument.
 
-`wp` Pointeur faible à copier.
+*WP*  
+ Pointeur faible à copier.
 
-`sp` Le pointeur partagé à copier.
+*SP*  
+ Pointeur partagé à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>  owner_before
 
-Retourne `true` si ce `weak_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).
+Retourne **true** si ce `weak_ptr` est classé avant (ou inférieur à) le pointeur fourni.
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-`ptr` Un `lvalue` référence à un `shared_ptr` ou `weak_ptr`.
+*ptr*  
+ Référence `lvalue` à un `shared_ptr` ou à un `weak_ptr`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre de modèle retourne `true` si `*this` est `ordered before` `ptr`.
+La fonction membre de modèle retourne **true** si `*this` est `ordered before` `ptr`.
 
 ## <a name="reset"></a>  reset
 
@@ -404,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Paramètres
 
-`wp` Le pointeur faible à échanger.
+*WP*  
+ Pointeur faible à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre laisse la ressource désignée à l’origine par `*this` être ensuite désignée par `wp`, et la ressource désignée à l’origine par `wp` être ensuite désignée par `*this`. La fonction ne change pas les décomptes de références pour les deux ressources, et ne lève aucune exception.
+La fonction membre laisse la ressource à l’origine vers lequel pointée `*this` par la suite vers lequel pointe *wp*et la ressource à l’origine vers lequel pointé *wp* par la suite vers lequel pointe `*this`. La fonction ne change pas les décomptes de références pour les deux ressources, et ne lève aucune exception.
 
 ### <a name="example"></a>Exemple
 
@@ -523,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-`Other` Type contrôlé par le pointeur partagé/faible d’argument.
+*Autre*  
+ Type contrôlé par le pointeur partagé/faible d’argument.
 
-`wp` Pointeur faible à copier.
+*WP*  
+ Pointeur faible à copier.
 
-`sp` Le pointeur partagé à copier.
+*SP*  
+ Pointeur partagé à copier.
 
 ### <a name="remarks"></a>Notes
 

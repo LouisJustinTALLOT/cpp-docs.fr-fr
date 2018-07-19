@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e7220d2710465dc8d155cf35ec7d47db4e3c08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84a6b685501927d9fbd79fa7c82a90c5671f70b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958943"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex, classe (Bibliothèque standard C++)
 
@@ -61,7 +61,7 @@ class mutex;
 |[try_lock](#try_lock)|Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.|
 |[unlock](#unlock)|Libère la propriété du `mutex`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<mutex >
 
@@ -121,7 +121,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.
+**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

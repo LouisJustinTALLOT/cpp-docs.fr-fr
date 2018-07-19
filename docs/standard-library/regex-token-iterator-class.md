@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52b5d47908fd2889452a6c517b510930cbe2a10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862142"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960965"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator, classe
 
@@ -87,11 +87,11 @@ private:
 
 ### <a name="parameters"></a>Paramètres
 
-`BidIt` Type d’itérateur pour les sous-correspondances.
+*BidIt* le type d’itérateur pour les sous-correspondances.
 
-`Elem` Le type des éléments à faire correspondre.
+*Elem* le type des éléments à faire correspondre.
 
-`RXtraits` Classe traits des éléments.
+*RXtraits* classe Traits des éléments.
 
 ## <a name="remarks"></a>Notes
 
@@ -99,7 +99,7 @@ Cette classe de modèle décrit un objet itérateur forward constant. D’un poi
 
 La valeur d’index -1 désigne la séquence de caractères qui commence immédiatement après la fin de la correspondance d’expression régulière précédente, ou le début de la séquence de caractères en l’absence de correspondance d’expression régulière précédente. Par ailleurs, la séquence s’étend jusqu’au premier caractère (sans l’inclure) de la correspondance d’expression régulière actuelle, ou jusqu’à la fin de la séquence de caractères en l’absence de correspondance actuelle. Toute autre valeur d’index `idx` désigne le contenu du groupe de capture situé dans `it.match[idx]`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -335,7 +335,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Itérateur auquel comparer.
+*droit* l’itérateur à comparer à.
 
 ### <a name="remarks"></a>Notes
 
@@ -679,7 +679,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-L’itérateur à comparer à la droite.
+*droit* l’itérateur à comparer à.
 
 ### <a name="remarks"></a>Notes
 
@@ -1144,13 +1144,13 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Début de la séquence pour faire correspondre.
+*première* début de la séquence pour faire correspondre.
 
-`last` Fin de séquence pour faire correspondre.
+*dernière* fin de séquence pour faire correspondre.
 
-`re` Expression régulière pour les correspondances.
+*Re* une expression régulière pour les correspondances.
 
-`f` Indicateurs pour les correspondances.
+*f* indicateurs pour les correspondances.
 
 ### <a name="remarks"></a>Notes
 

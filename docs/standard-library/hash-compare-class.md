@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956575"
 ---
 # <a name="hashcompare-class"></a>hash_compare, classe
 
@@ -33,21 +33,21 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Notes
 
-Chaque conteneur associatif de hachage stocke un objet de caractéristiques de hachage de type **Traits** (un paramètre de modèle). Vous pouvez dériver une classe d’une spécialisation de hash_compare pour remplacer de manière sélective certaines fonctions et certains objets, ou vous pouvez fournir votre propre version de cette classe si vous répondez à certaines exigences minimales. En particulier, pour un objet hash_comp de type **hash_compare\<Key, Traits>**, le comportement suivant est requis par les conteneurs ci-dessus :
+Chaque conteneur associatif de hachage stocke un objet de hachage de caractéristiques de type `Traits` (un paramètre de modèle). Vous pouvez dériver une classe d’une spécialisation de hash_compare pour remplacer de manière sélective certaines fonctions et certains objets, ou vous pouvez fournir votre propre version de cette classe si vous répondez à certaines exigences minimales. En particulier, pour un objet hash_comp de type `hash_compare<Key, Traits>`, le comportement suivant est requis par les conteneurs ci-dessus :
 
-- Pour toutes les valeurs `key` de type **Key**, l’appel **hash_comp**( `key`) sert de fonction de hachage, ce qui produit une distribution des valeurs de **type size_t**. La fonction fournie par hash_compare retourne `key`.
+- Pour toutes les valeurs `key` de type `Key`, l’appel **hash_comp**(`key`) sert de fonction de hachage, ce qui produit une distribution de valeurs de type `size_t`. La fonction fournie par hash_compare retourne `key`.
 
-- Pour toutes les valeurs `key1` de type **Key** précédant `key2` dans la séquence et ayant la même valeur de hachage (la valeur retournée par la fonction de hachage), **hash_comp**( `key2`, `key1`) a la valeur false. La fonction doit imposer un ordonnancement total sur les valeurs de type **Key**. La fonction fournie par hash_compare retourne *comp*( `key2`, `key1`) `,` où *comp* est un objet stocké de type **Traits** que vous pouvez spécifier lors de la construction de l’objet hash_comp. Pour le type de paramètre **Traits** **less\<Key>**, la valeur des clés de tri ne va jamais en diminuant.
+- Pour toute valeur `key1` de type `Key` qui précède `key2` dans la séquence et ayant la même valeur de hachage (valeur retournée par la fonction de hachage), **hash_comp**(`key2`, `key1`) a la valeur false. La fonction doit imposer un ordonnancement total sur les valeurs de type `Key`. La fonction fournie par hash_compare retourne *comp*(`key2`, `key1`) `,` où *comp* est un objet stocké de type `Traits` que vous pouvez spécifier lorsque vous construire l’objet hash_comp. Pour la valeur par défaut `Traits` type de paramètre `less<Key>`, clés de tri va jamais en diminuant valeur.
 
-- La constante entière **bucket_size** spécifie le nombre moyen d’éléments par « compartiment » (entrée de table de hachage) que le conteneur doit essayer de ne pas dépasser. La valeur doit être supérieure à zéro. La valeur fournie par hash_compare est 4.
+- La constante entière `bucket_size` Spécifie le nombre moyen d’éléments par « compartiment » (entrée de table de hachage) que le conteneur doit essayer de ne pas dépasser. La valeur doit être supérieure à zéro. La valeur fournie par hash_compare est 4.
 
-- La constante entière **min_buckets** spécifie le nombre minimal de compartiments à conserver dans la table de hachage. Il doit s'agir d'une puissance de deux et sa valeur doit être supérieure à zéro. La valeur fournie par hash_compare est 8.
+- La constante entière `min_buckets` Spécifie le nombre minimal de compartiments à conserver dans la table de hachage. Il doit s'agir d'une puissance de deux et sa valeur doit être supérieure à zéro. La valeur fournie par hash_compare est 8.
 
 ## <a name="example"></a>Exemple
 
 Consultez les exemples pour [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) et [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset) pour voir comment déclarer et utiliser hash_compare.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<hash_map>
 

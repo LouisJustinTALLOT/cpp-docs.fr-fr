@@ -1,5 +1,5 @@
 ---
-title: Classe de CComObjectNoLock | Documents Microsoft
+title: Ccomobjectnolock, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7f9fa0ac67592c5fca805eaa4bb4ec4b0ca153
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361473"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884114"
 ---
-# <a name="ccomobjectnolock-class"></a>Classe de CComObjectNoLock
-Cette classe implémente **IUnknown** pour un objet brutes et non agrégée, mais ne pas les incrément le module nombre de verrous dans le constructeur.  
+# <a name="ccomobjectnolock-class"></a>Ccomobjectnolock, classe
+Cette classe implémente `IUnknown` pour un objet non regroupées en agrégats, mais ne pas incrémenter le module nombre de verrous dans le constructeur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,8 +39,8 @@ class CComObjectNoLock : public Base
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `Base`  
- Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que de toute autre interface souhaitées prendre en charge sur l’objet.  
+ *base de*  
+ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que toute autre interface souhaitées prendre en charge sur l’objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Décrémente le décompte de références sur l’objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CComObjectNoLock` est semblable à [CComObject](../../atl/reference/ccomobject-class.md) dans la mesure où il implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet brutes et non agrégée ; Toutefois, `CComObjectNoLock` ne pas incrémenter le verrou du module compte dans le constructeur.  
+ `CComObjectNoLock` est similaire à [CComObject](../../atl/reference/ccomobject-class.md) car il implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet non regroupées en agrégats ; Toutefois, `CComObjectNoLock` ne pas incrémenter le verrou du module compte dans le constructeur.  
   
  ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En règle générale, vous ne serez pas utiliser cette classe directement.  
   
@@ -69,7 +69,7 @@ class CComObjectNoLock : public Base
   
  `CComObjectNoLock`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef  
@@ -80,7 +80,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur qui peut être utile pour les tests de diagnostic ou de test.  
+ Une valeur qui peut-être être utiles pour le diagnostic ou de test.  
   
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
  Constructeur. Contrairement aux [CComObject](../../atl/reference/ccomobject-class.md), n’incrémente pas le nombre de verrous du module.  
@@ -101,7 +101,7 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Libère toutes les ressources attribuées et les appels [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+ Libère toutes les ressources allouées et appels [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface  
@@ -112,14 +112,14 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `iid`  
- [in] Identificateur de l’interface demandée.  
+ *IID*  
+ [in] L’identificateur de l’interface demandée.  
   
- `ppvObject`  
- [out] Un pointeur vers le pointeur d’interface identifié par `iid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a la valeur **NULL**.  
+ *ppvObject*  
+ [out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ##  <a name="release"></a>  CComObjectNoLock::Release  
  Décrémente le décompte de références sur l’objet.  
@@ -129,7 +129,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Dans les versions debug, **version** retourne une valeur qui peut être utile pour les tests de diagnostic ou de test. Dans les versions non debug, **version** retourne toujours 0.  
+ Dans les versions debug, `Release` retourne une valeur qui peut-être être utiles pour le diagnostic ou de test. Dans les versions non debug `Release` retourne toujours 0.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

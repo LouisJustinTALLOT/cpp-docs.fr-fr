@@ -1,5 +1,5 @@
 ---
-title: Classe de CComGITPtr | Documents Microsoft
+title: CComGITPtr, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363624"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884172"
 ---
-# <a name="ccomgitptr-class"></a>Classe de CComGITPtr
-Cette classe fournit des méthodes pour traiter les pointeurs d’interface et le tableau global d’interface (GIT).  
+# <a name="ccomgitptr-class"></a>CComGITPtr, classe
+Cette classe fournit des méthodes pour la gestion des pointeurs d’interface et la table d’interface globale (GIT).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ class CComGITPtr
   
 #### <a name="parameters"></a>Paramètres  
  `T`  
- Le type du pointeur d’interface à stocker dans le GIT.  
+ Le type de pointeur d’interface à stocker dans le GIT.  
   
 ## <a name="members"></a>Membres  
   
@@ -58,11 +58,11 @@ class CComGITPtr
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CComGITPtr::Attach](#attach)|Appelez cette méthode pour inscrire le pointeur d’interface dans le tableau global d’interface (GIT).|  
+|[CComGITPtr::Attach](#attach)|Appelez cette méthode pour inscrire le pointeur d’interface dans la table d’interface globale (GIT).|  
 |[CComGITPtr::CopyTo](#copyto)|Appelez cette méthode pour copier l’interface à partir de la table d’interface globale (GIT) pour le pointeur passé.|  
 |[CComGITPtr::Detach](#detach)|Appelez cette méthode pour dissocier l’interface à partir de la `CComGITPtr` objet.|  
 |[CComGITPtr::GetCookie](#getcookie)|Appelez cette méthode pour retourner le cookie à partir de la `CComGITPtr` objet.|  
-|[CComGITPtr::Revoke](#revoke)|Appelez cette méthode pour supprimer l’interface de la table d’interface globale (GIT).|  
+|[CComGITPtr::Revoke](#revoke)|Appelez cette méthode pour supprimer l’interface à partir de la table d’interface globale (GIT).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -78,16 +78,16 @@ class CComGITPtr
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|Le cookie.|  
   
 ## <a name="remarks"></a>Notes  
- Les objets qui agrègent FTM et qui doivent utiliser des pointeurs d’interface obtenus à partir d’autres objets doivent suivre des étapes supplémentaires pour garantir que les interfaces sont correctement marshalés. En général, cela implique de stocker les pointeurs d’interface dans le GIT et l’obtention du pointeur de la GIT chaque fois qu’il est utilisé. La classe `CComGITPtr` est fourni pour vous aider à utiliser des pointeurs d’interface stockés dans le GIT.  
+ Les objets qui agrègent FTM et doivent utiliser des pointeurs d’interface obtenus à partir d’autres objets doivent suivre des étapes supplémentaires pour garantir que les interfaces sont correctement marshalées. En général, cela implique de stocker les pointeurs d’interface dans le GIT et le pointeur de la GIT chaque fois qu’il est utilisé. La classe `CComGITPtr` est fourni pour vous aider à utiliser des pointeurs d’interface stockés dans le GIT.  
   
 > [!NOTE]
->  La fonctionnalité de tableau global d’interface est uniquement disponible sur Windows 95 avec DCOM version 1.1 et ultérieure, Windows 98, Windows NT 4.0 avec Service Pack 3 et versions ultérieures et Windows 2000.  
+>  La fonctionnalité de tableau global d’interface est uniquement disponible sur Windows 95 avec DCOM version 1.1 et versions ultérieures, Windows 98, Windows NT 4.0 avec Service Pack 3 et versions ultérieures et Windows 2000.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="attach"></a>  CComGITPtr::Attach  
- Appelez cette méthode pour inscrire le pointeur d’interface dans le tableau global d’interface (GIT).  
+ Appelez cette méthode pour inscrire le pointeur d’interface dans la table d’interface globale (GIT).  
   
 ```
 HRESULT Attach(T* p) throw();
@@ -96,14 +96,14 @@ HRESULT Attach(DWORD dwCookie) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `p`  
+ *p*  
  Le pointeur d’interface à ajouter à la GIT.  
   
- `dwCookie`  
+ *dwCookie*  
  Le cookie est utilisé pour identifier le pointeur d’interface.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si le GIT n’est pas valide, ou si le cookie est égal à NULL.  
@@ -120,22 +120,22 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `p`  
- Un pointeur d’interface à stocker dans le tableau global d’interface (GIT).  
+ [in] *p*  
+ Un pointeur d’interface à stocker dans la table d’interface globale (GIT).  
   
- [in] `git`  
- Une référence à un fichier `CComGITPtr` objet.  
+ [in] *git*  
+ Une référence à un existant `CComGITPtr` objet.  
   
- [in] `dwCookie`  
+ [in] *dwCookie*  
  Un cookie est utilisé pour identifier le pointeur d’interface.  
   
- [in] `rv`  
- La source `CComGITPtr` pour déplacer des données d’objet.  
+ [in] *rv*  
+ La source `CComGITPtr` objet à déplacer des données à partir de.  
   
 ### <a name="remarks"></a>Notes  
- Crée un nouveau `CComGITPtr` de l’objet, en utilisant un existant `CComGITPtr` objet.  
+ Crée un `CComGITPtr` de l’objet, en utilisant éventuellement un existant `CComGITPtr` objet.  
   
- L’utilisation du constructeur `rv` est un constructeur de déplacement. Les données sont déplacées de la source, `rv`, puis `rv` est désactivée.  
+ Le constructeur utilisant *rv* est un constructeur de déplacement. Les données sont déplacées à partir de la source, *rv*, puis *rv* est désactivée.  
   
 ##  <a name="dtor"></a>  CComGITPtr :: ~ CComGITPtr  
  Destructeur.  
@@ -155,14 +155,14 @@ HRESULT CopyTo(T** pp) const throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pp`  
+ *PP*  
  Le pointeur qui doit recevoir l’interface.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- L’interface de le GIT est copié vers le pointeur passé. Le pointeur doit être libéré par l’appelant quand il n’est plus nécessaire.  
+ L’interface à partir du GIT est copié vers le pointeur passé. Le pointeur doit être libéré par l’appelant lorsqu’elle n’est plus nécessaire.  
   
 ##  <a name="detach"></a>  CComGITPtr::Detach  
  Appelez cette méthode pour dissocier l’interface à partir de la `CComGITPtr` objet.  
@@ -175,7 +175,7 @@ DWORD Detach() throw();
  Retourne le cookie à partir de la `CComGITPtr` objet.  
   
 ### <a name="remarks"></a>Notes  
- C’est à l’appelant de supprimer l’interface de le GIT, à l’aide de [CComGITPtr::Revoke](#revoke).  
+ C’est à l’appelant de supprimer l’interface à partir de la GIT, à l’aide de [CComGITPtr::Revoke](#revoke).  
   
 ##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
  Appelez cette méthode pour retourner le cookie à partir de la `CComGITPtr` objet.  
@@ -211,26 +211,26 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `p`  
+ [in] *p*  
  Pointeur vers une interface.  
   
- [in] `git`  
+ [in] *git*  
  Référence à un objet `CComGITPtr`.  
   
- [in] `dwCookie`  
+ [in] *dwCookie*  
  Un cookie est utilisé pour identifier le pointeur d’interface.  
   
- [in] `rv`  
+ [in] *rv*  
  Le `CComGITPtr` pour déplacer des données à partir de.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la mise à jour `CComGITPtr` objet.  
   
 ### <a name="remarks"></a>Notes  
- Affecte une nouvelle valeur à un `CComGITPtr` objet, à partir d’un objet existant ou à partir d’une référence à un tableau global d’interface.  
+ Assigne une nouvelle valeur à un `CComGITPtr` objet, à partir d’un objet existant ou à partir d’une référence à un tableau global d’interface.  
   
 ##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
- Retourne le cookie associé à le `CComGITPtr` objet.  
+ Retourne le cookie associé à la `CComGITPtr` objet.  
   
 ```  
 operator DWORD() const;
@@ -247,13 +247,13 @@ HRESULT Revoke() throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
+ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Supprime l’interface de le GIT.  
+ Supprime l’interface à partir de la GIT.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Marshaleur libre](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [L’accès à des Interfaces entre les cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
+ [FTM](../../atl/atl-and-the-free-threaded-marshaler.md)   
+ [Accès aux Interfaces entre les cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
  [Quand utiliser le tableau Global d’Interface](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

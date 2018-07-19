@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840587"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958141"
 ---
 # <a name="addcv-class"></a>add_cv, classe
 
-Crée un type volatile const à partir d’un type.
+Rend **volatile const** type à partir du type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,7 +44,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>Notes
 
-Une instance du type modifié `add_cv<T>` a un typedef de membre `type` équivalent à *T* modifié par [add_volatile](../standard-library/add-volatile-class.md) et [add_const](../standard-library/add-const-class.md), sauf si *T* a déjà les qualificateurs cv, est une référence ou une fonction.
+Une instance du type modifié `add_cv<T>` a un `type` membre **typedef** équivalent à *T* modifiée par les deux [add_volatile](../standard-library/add-volatile-class.md) et [ add_const](../standard-library/add-const-class.md), sauf si *T* déjà a les qualificateurs cv, est une référence, ou est une fonction.
 
 Le type d’assistance `add_cv_t<T>` est un raccourci pour accéder au typedef de membre de `add_cv<T>` `type`.
 
@@ -93,7 +93,7 @@ invoked volatile S.f()
 invoked const volatile S.f()
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits > **Namespace :** std
 

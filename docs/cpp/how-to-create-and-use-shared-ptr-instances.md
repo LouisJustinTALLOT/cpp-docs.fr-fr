@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer et utiliser des Instances shared_ptr | Documents Microsoft'
+title: 'Comment : créer et utiliser des Instances shared_ptr | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -13,11 +13,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38102896"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Comment : créer et utiliser des instances shared_ptr
 Le type `shared_ptr` est un pointeur intelligent de la bibliothèque standard C++ conçu pour des scénarios dans lesquels plusieurs propriétaires peuvent devoir gérer la durée de vie de l'objet en mémoire. Après avoir initialisé `shared_ptr`, vous pouvez le copier, le passer par valeur dans des arguments de fonction et l'assigner à d'autres instances `shared_ptr`. Toutes les instances pointent vers le même objet et partagent l'accès à un "bloc de contrôle" qui incrémente et décrémente le nombre de références chaque fois qu'un nouvel `shared_ptr` est ajouté, est hors de portée ou est réinitialisé. Lorsque le nombre de références atteint zéro, le bloc de contrôle supprime la ressource mémoire et lui-même.  
@@ -27,7 +27,7 @@ Le type `shared_ptr` est un pointeur intelligent de la bibliothèque standard C+
  [![Pointeur partagé](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
 ## <a name="example"></a>Exemple  
- Si possible, utilisez le [make_shared](../standard-library/memory-functions.md#make_shared) fonction permettant de créer un `shared_ptr` lorsque la ressource de mémoire est créée pour la première fois. `make_shared` est protégé contre les exceptions. Il utilise le même appel pour allouer de la mémoire pour le bloc de contrôle et pour la ressource, et réduit de ce fait la charge mémoire de construction. Si vous n'utilisez pas `make_shared`, vous devrez alors utiliser une nouvelle expression explicite pour créer l'objet avant de la passer au constructeur `shared_ptr`. L'exemple suivant indique différentes façons de déclarer et d'initialiser `shared_ptr` avec un nouvel objet.  
+ Si possible, utilisez le [make_shared](../standard-library/memory-functions.md#make_shared) fonction permettant de créer un `shared_ptr` lorsque la ressource mémoire est créée pour la première fois. `make_shared` est protégé contre les exceptions. Il utilise le même appel pour allouer de la mémoire pour le bloc de contrôle et pour la ressource, et réduit de ce fait la charge mémoire de construction. Si vous n'utilisez pas `make_shared`, vous devrez alors utiliser une nouvelle expression explicite pour créer l'objet avant de la passer au constructeur `shared_ptr`. L'exemple suivant indique différentes façons de déclarer et d'initialiser `shared_ptr` avec un nouvel objet.  
   
  [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]  
   
@@ -37,7 +37,7 @@ Le type `shared_ptr` est un pointeur intelligent de la bibliothèque standard C+
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
 ## <a name="example"></a>Exemple  
- `shared_ptr` est également utile dans les conteneurs de bibliothèque C++ Standard lorsque vous utilisez des algorithmes qui copient des éléments. Vous pouvez encapsuler des éléments dans un `shared_ptr`, puis le copier dans d'autres conteneurs à condition que la mémoire sous-jacente soit valide tant que cela est nécessaire, et pas plus longtemps. L'exemple suivant montre comment utiliser les algorithmes `replace_copy_if` sur des instances `shared_ptr` au sein d'un vecteur.  
+ `shared_ptr` est également utile dans des conteneurs de bibliothèque C++ Standard lorsque vous utilisez des algorithmes qui copient des éléments. Vous pouvez encapsuler des éléments dans un `shared_ptr`, puis le copier dans d'autres conteneurs à condition que la mémoire sous-jacente soit valide tant que cela est nécessaire, et pas plus longtemps. L'exemple suivant montre comment utiliser les algorithmes `replace_copy_if` sur des instances `shared_ptr` au sein d'un vecteur.  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   

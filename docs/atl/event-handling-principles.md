@@ -1,5 +1,5 @@
 ---
-title: Principes (ATL) de la gestion des événements | Documents Microsoft
+title: Événements de gestion des principes (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7577dc7d9fb58f43ee67d5e5b8f00393dca1bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355446"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852534"
 ---
-# <a name="event-handling-principles"></a>Principes de la gestion des événements
-Il existe trois étapes communes à la gestion des événements. Vous devez :  
+# <a name="event-handling-principles"></a>Principes de gestion des événements
+Il existe trois étapes communes à la gestion des événements. Vous devrez :  
   
 -   Implémentez l’interface d’événement sur votre objet.  
   
--   Informer la source d’événements que votre objet souhaite recevoir des événements.  
+-   Avertir la source d’événements que votre objet souhaite recevoir des événements.  
   
--   Déconseiller la source d’événements lorsque votre objet n’a plus besoin de recevoir des événements.  
+-   Unadvise sur la source d’événements lorsque votre objet n’a plus besoin de recevoir des événements.  
   
- La méthode que vous allez implémenter l’interface d’événement dépend de son type. Une interface d’événement peut être vtable, double ou une dispinterface. Il incombe au Concepteur de la source d’événements pour définir l’interface ; C’est à vous pour implémenter cette interface.  
+ La façon que vous allez implémenter l’interface d’événement dépend de son type. Une interface d’événement peut être vtable, double ou une dispinterface. Il incombe au Concepteur de la source d’événement pour définir l’interface ; C’est à vous permettent d’implémenter cette interface.  
   
 > [!NOTE]
->  Bien qu’il n’y a pas d’ordre technique et une interface d’événement ne doit pas être en double, il existe de nombreuses raisons d’une bonne conception pour éviter l’utilisation de duals. Toutefois, c’est une décision effectuée par le concepteur/implémenteur de l’événement *source*. Étant donné que vous travaillez à partir de la perspective de l’événement `sink`, vous avez besoin pour permettre la possibilité que vous n’êtes pas un choix mais pour implémenter une interface d’événement double. Pour plus d’informations sur les interfaces doubles, consultez [Interfaces doubles et ATL](../atl/dual-interfaces-and-atl.md).  
+>  Bien qu’il n’y a aucune raison technique une interface d’événement ne peut pas être double, il existe de nombreuses raisons d’une bonne conception afin d’éviter l’utilisation de duals. Toutefois, il s’agit une décision prise par le concepteur/implémenteur de l’événement *source*. Dans la mesure où vous travaillez à partir de la perspective de l’événement `sink`, vous devez tenir compte du fait que vous ne disposez pas de n’importe quel choix mais pour implémenter une interface d’événement double. Pour plus d’informations sur les interfaces doubles, consultez [Interfaces doubles et ATL](../atl/dual-interfaces-and-atl.md).  
   
- Avertissement de la source d’événement peut être répartie en trois étapes :  
+ Avertissement de la source d’événement peut être divisé en trois étapes :  
   
 -   Interroger l’objet source pour [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
   
 -   Appelez [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) en passant l’IID de l’interface d’événement qui vous intéresse. Si réussie, elle retournera le [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interface sur un objet de point de connexion.  
   
--   Appelez [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) en passant le **IUnknown** du récepteur d’événements. Si réussie, elle retournera un `DWORD` cookie qui représente la connexion.  
+-   Appelez [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) en passant le `IUnknown` du récepteur d’événements. Si réussie, elle retournera un `DWORD` cookie représentant la connexion.  
   
- Une fois que vous avez correctement inscrit votre intérêt de recevoir des événements, méthodes sur l’interface d’événement de votre objet sont appelées selon les événements déclenchés par l’objet source. Lorsque vous n’avez plus besoin de recevoir des événements, vous pouvez passer le cookie au point de connexion via [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Cela rompt la connexion entre la source et le récepteur.  
+ Une fois que vous avez correctement enregistré votre intérêt pour la réception d’événements, les méthodes sur votre interface de l’objet événement sont appelées selon les événements déclenchés par l’objet source. Lorsque vous n’avez plus besoin de recevoir des événements, vous pouvez transmettre le cookie au point de connexion par le biais de [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Cela arrêtera la connexion entre la source et récepteur.  
   
- Soyez prudent afin d’éviter de référence des cycles de la gestion des événements.  
+ Veillez à éviter de référence des cycles de traitement des événements.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des événements](../atl/event-handling-and-atl.md)

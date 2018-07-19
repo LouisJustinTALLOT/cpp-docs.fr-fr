@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58700d1f52189afb1d8baf3456bac4ed84920fab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960737"
 ---
 # <a name="integersequence-class"></a>integer_sequence, classe
 
@@ -44,9 +44,9 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Paramètres
 
-T le type des valeurs ; doit être un type intégral : bool, char, char16_t, char32_t, wchar_t, signé ou entier non signé.
+*T* le type des valeurs ; doit être un type intégral : bool, char, char16_t, char32_t, wchar_t, signé ou types d’entiers non signés.
 
-Pack de paramètre sans type ourbes A qui représente une séquence de valeurs de type intégral T.
+*Ourbes* un pack de paramètre sans type qui représente une séquence de valeurs de type intégral T.
 
 ## <a name="members"></a>Membres
 
@@ -127,7 +127,7 @@ int main()
 
 Pour créer un `index_sequence` pour un pack de paramètres, utilisez `index_sequence_for`\<T...>, qui est un alias pour `make_index_sequence`\<sizeof...(T)>
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 En-tête : <type_traits>
 

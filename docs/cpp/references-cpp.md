@@ -1,5 +1,5 @@
 ---
-title: Références (C++) | Documents Microsoft
+title: Références (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956591"
 ---
 # <a name="references-c"></a>Références (C++)
-Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs dans la mémoire. Contrairement à un pointeur, une référence après son initialisation ne peut pas être définie pour faire référence à un autre objet ni prendre la valeur null. Il existe deux types de références : les références lvalue qui font référence à un nommé variable et les références rvalue qui font référence à un [objet temporaire](../cpp/temporary-objects.md). L'opérateur & désigne une référence lvalue et l'opérateur && désigne une référence rvalue ou une référence universelle (rvalue ou lvalue) en fonction du contexte.  
+Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs dans la mémoire. Contrairement à un pointeur, une référence après son initialisation ne peut pas être définie pour faire référence à un autre objet ni prendre la valeur null. Il existe deux types de références : références lvalue qui font référence à un nommé variable et les références rvalue qui font référence à un [objet temporaire](../cpp/temporary-objects.md). L'opérateur & désigne une référence lvalue et l'opérateur && désigne une référence rvalue ou une référence universelle (rvalue ou lvalue) en fonction du contexte.  
   
  Les références peuvent être déclarées à l'aide de la syntaxe suivante :  
   
@@ -48,7 +49,7 @@ Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs 
   
 -   Spécificateur de classe de stockage facultatif.  
   
--   Facultatif **const** et/ou `volatile` qualificateurs.  
+-   Facultatif **const** et/ou **volatile** qualificateurs.  
   
 -   Spécificateur de type : nom d'un type.  
   
@@ -58,24 +59,24 @@ Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs 
   
 -   Opérateur & ou &&  
   
--   Facultatif **const** et/ou `volatile` qualificateurs.  
+-   Facultatif **const** et/ou **volatile** facultatifs.  
   
 -   Identificateur.  
   
  3. Initialiseur facultatif.  
   
- Les formulaires de déclarateurs plus complexes pour des pointeurs vers des tableaux et les fonctions s’appliquent également aux références à des tableaux et les fonctions, consultez [pointeurs](../cpp/pointers-cpp.md) et [déclarateurs](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Les formulaires de déclarateurs plus complexes pour des pointeurs vers des tableaux et aux fonctions s’appliquent également aux références à des tableaux et aux fonctions, consultez [pointeurs](../cpp/pointers-cpp.md).  
   
- Plusieurs déclarateurs et initialiseurs peuvent apparaître dans une liste séparée par des virgules après un spécificateur de déclaration unique. Par exemple :  
+ Plusieurs déclarateurs et initialiseurs peuvent apparaître dans une liste séparée par des virgules après un spécificateur de déclaration unique. Exemple :  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  Les références, les pointeurs et les objets peuvent être déclarés ensemble :  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

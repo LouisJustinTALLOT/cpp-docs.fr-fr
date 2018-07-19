@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451561"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960929"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -92,15 +92,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`Elem` Pour décrire le type d’élément caractère.
+*Elem* le type d’élément caractère à décrire.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit différents traits d’expressions régulières pour le type `Elem`. La classe de modèle [basic_regex](../standard-library/basic-regex-class.md) utilise ces informations pour manipuler les éléments de type `Elem`.
+La classe de modèle décrit différentes caractéristiques d’expression régulière pour le type *Elem*. La classe de modèle [basic_regex, classe](../standard-library/basic-regex-class.md) utilise ces informations pour manipuler les éléments de type *Elem*.
 
 Chaque objet `regex_traits` a un objet de type `regex_traits::locale` qui est utilisé par certaines de ses fonctions membres. Les paramètres régionaux par défaut sont une copie de `regex_traits::locale()`. La fonction membre `imbue` remplace l’objet de paramètres régionaux , et la fonction membre `getloc` retourne une copie de l’objet de paramètres régionaux.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Paramètres
 
-`loc` Objet de paramètres régionaux à stocker.
+*loc* l’objet de paramètres régionaux à stocker.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre copie `loc` vers l’objet `locale` stocké et retourne une copie de la valeur précédente de l’objet `locale` stocké.
+La fonction membre copie *loc* à stocké `locale` de l’objet et retourne une copie de la valeur précédente de stocké `locale` objet.
 
 ### <a name="example"></a>Exemple
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`ch` Élément à tester.
+*CH* l’élément à tester.
 
-`cls` Les classes à tester.
+*CLS* les classes à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true uniquement si le caractère `ch` fait partie de la classe de caractères désignée par `cls`.
+La fonction membre retourne true uniquement si le caractère *ch* est dans la classe de caractères désignée par *cls*.
 
 ### <a name="example"></a>Exemple
 
@@ -541,7 +541,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str`
+*str*
 
 La séquence se terminant par null.
 
@@ -714,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Début de la séquence à rechercher.
+*première* début de la séquence à rechercher.
 
-`last` Fin de la séquence à rechercher.
+*dernière* fin de séquence à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -808,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Début de la séquence à rechercher.
+*première* début de la séquence à rechercher.
 
-`last` Fin de la séquence à rechercher.
+*dernière* fin de séquence à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1149,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Début de la séquence à transformer.
+*première* début de la séquence à transformer.
 
-`last` Fin de la séquence à transformer.
+*dernière* fin de séquence à transformer.
 
 ### <a name="remarks"></a>Notes
 
@@ -1239,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Début de la séquence à transformer.
+*première* début de la séquence à transformer.
 
-`last` Fin de la séquence à transformer.
+*dernière* fin de séquence à transformer.
 
 ### <a name="remarks"></a>Notes
 
@@ -1328,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`ch` L’élément à convertir.
+*CH* l’élément à convertir.
 
 ### <a name="remarks"></a>Notes
 
@@ -1415,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`ch` L’élément à convertir.
+*CH* l’élément à convertir.
 
 ### <a name="remarks"></a>Notes
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`ch` L’élément à convertir.
+*CH* l’élément à convertir.
 
-`radix` Base arithmétique à utiliser.
+*radix* base arithmétique à utiliser.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur représentée par le caractère `ch` dans la base `radix`, ou -1 si `ch` n’est pas un chiffre valide dans la base `radix`. La fonction est uniquement appelée avec un argument `radix` dont la valeur est 8, 10 ou 16.
+La fonction membre retourne la valeur représentée par le caractère *ch* dans la base de *radix*, ou -1 si *ch* n’est pas un chiffre valide dans la base de *radix*. La fonction sera uniquement appelée avec un *radix* argument 8, 10 ou 16.
 
 ### <a name="example"></a>Exemple
 

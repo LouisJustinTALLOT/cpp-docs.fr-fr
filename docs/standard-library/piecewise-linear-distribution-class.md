@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959470"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution, classe
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`RealType` La virgule flottante par défaut du type de résultat `double`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* type de résultat, valeur par défaut est de virgule flottante **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -222,7 +222,7 @@ Distribution for 100 samples:
    14-15 :::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -268,13 +268,13 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *nombre de* le nombre d’éléments dans la plage de distribution.
 
-*XMIN* la valeur la plus basse dans la plage de distribution.
+*XMIN* la plus petite valeur dans la plage de distribution.
 
 *XMAX* la valeur la plus élevée dans la plage de distribution. Doit être supérieure à *xmin*.
 
-*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent tous deux être convertibles en `double`.
+*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*paramètre de* structure de paramètre utilisée pour construire la distribution.
+*parm* la structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-construit un objet de distribution avec des intervalles à partir des itérateurs sur la séquence [ `firstI`, `lastI`) et une séquence de poids correspondante commençant à `firstW`.
+Construit un objet de distribution avec des intervalles à partir des itérateurs sur la séquence [ `firstI`, `lastI`) et une poids correspondante commençant par séquence *firstW*.
 
 Le constructeur de listes d'initialiseurs
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-construit un objet de distribution avec des intervalles à partir de la valeur `intervals` de la liste d'initialiseurs et des poids générés à partir de la fonction `weightfunc`.
+Construit un objet de distribution avec des intervalles à partir de la liste d’initialiseurs *intervalles* et poids générés à partir de la fonction *weightfunc*.
 
 Le constructeur défini en tant que
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-construit un objet de distribution avec `count` intervalles distribués uniformément sur [ `xmin,xmax`], en assignant à chaque intervalle des poids d’après la fonction `weightfunc`, et `weightfunc` doit accepter un seul paramètre et avoir une valeur de retour, tous deux étant convertibles en `double`. **Condition préalable :**`xmin < xmax`
+Construit un objet de distribution avec *nombre* intervalles distribués uniformément sur [ `xmin,xmax`], assignant à chaque intervalle des poids d’après la fonction *weightfunc*, et  *weightfunc* doit accepter un paramètre et avoir une valeur de retournée, qui sont tous deux convertibles en `double`. **Condition préalable :**`xmin < xmax`
 
 Le constructeur défini en tant que
 
@@ -322,7 +322,7 @@ Le constructeur défini en tant que
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-construit un objet de distribution en utilisant `parm` en tant que structure de paramètre stocké.
+Construit un objet de distribution à l’aide *parm* en tant que structure de paramètre stockée.
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 

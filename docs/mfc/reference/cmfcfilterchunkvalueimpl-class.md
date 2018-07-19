@@ -1,5 +1,5 @@
 ---
-title: Cmfcfilterchunkvalueimpl, classe | Documents Microsoft
+title: Cmfcfilterchunkvalueimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,15 +56,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040127"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852573"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl, classe
-Il s’agit d’une classe qui simplifie la logique de paire de valeur à la fois des segments et des propriétés.  
+Il s’agit d’une classe qui simplifie la logique de paire valeur segment et de propriété.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,22 +86,22 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |Nom|Description|  
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl::Clear](#clear)|Efface le ChunkValue.|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copie ce segment vers une structure qui décrit les caractéristiques d’un segment.|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Initialise cette valeur de bloc à partir de l’autre valeur.|  
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copie ce segment dans une structure qui décrit les caractéristiques d’un segment.|  
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Initialise cette valeur de segment à partir de l’autre valeur.|  
 |[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Récupère le GUID du segment.|  
 |[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Récupère le segment PID (ID de propriété).|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Obtient les type de bloc.|  
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Obtient segment type.|  
 |[CMFCFilterChunkValueImpl::GetString](#getstring)|Récupère la valeur de chaîne.|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Récupère la valeur en un propvariant alloué.|  
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Récupère la valeur comme un propvariant alloué.|  
 |[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Retourne non alloué (valeur interne) la valeur.|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Vérifie si la valeur de cette propriété est valide ou non.|  
 |[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Surchargé. Définit la propriété par clé à une valeur booléenne.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Définit la propriété par clé vers un DWORD.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Définit la propriété par clé vers une valeur DWORD.|  
 |[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Définit la propriété par clé en filetime.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Définit la propriété par clé pour un int64.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Définit la propriété à une clé à un entier.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Définit la propriété par clé pour une longue durée.|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Définit la propriété par clé pour un objet SystemTime.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Définit la propriété par clé en int64.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Définit la propriété par clé à un entier.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Définit la propriété par clé à la valeur de type LONG.|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Définit la propriété par clé à un SystemTime.|  
 |[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Définit la propriété par clé en une chaîne Unicode.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
@@ -159,7 +159,7 @@ virtual ~CMFCFilterChunkValueImpl();
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
- Copie ce segment vers une structure qui décrit les caractéristiques d’un segment.  
+ Copie ce segment dans une structure qui décrit les caractéristiques d’un segment.  
   
 ```  
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
@@ -170,12 +170,12 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
  Pointeur vers la valeur de destination qui décrivent les caractéristiques du segment.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
- Initialise cette valeur de bloc à partir de l’autre valeur.  
+ Initialise cette valeur de segment à partir de l’autre valeur.  
   
 ```  
 void CopyFrom (IFilterChunkValue* pValue);
@@ -183,7 +183,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="parameters"></a>Paramètres  
  *pValue*  
- Spécifie la valeur de la source d’origine.  
+ Spécifie la valeur source à copier à partir de.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -207,7 +207,7 @@ DWORD GetChunkPID() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur DWORD qui contient l’ID de propriété.  
+ Une valeur DWORD contenant l’ID de propriété.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -236,7 +236,7 @@ CString &GetString();
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
- Récupère la valeur en un propvariant alloué.  
+ Récupère la valeur comme un propvariant alloué.  
   
 ```  
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
@@ -247,7 +247,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
  Lorsque la fonction est retournée, ce paramètre contient la valeur du segment.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK si PROPVARIANT a été alloué correctement et que la valeur du segment a été copiée correctement dans *ppPropVariant*; sinon un code d’erreur.  
+ S_OK si PROPVARIANT a été allouée avec succès et que la valeur de segment a été copiée correctement dans *ppPropVariant*; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -271,7 +271,7 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la valeur de segment actuel est valide ; dans le cas contraire `FALSE`.  
+ TRUE si la valeur de segment actuel est valide ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -307,22 +307,22 @@ HRESULT SetBoolValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -344,16 +344,16 @@ HRESULT SetChunk(
  Spécifie une clé de propriété.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
@@ -364,7 +364,7 @@ HRESULT SetChunk(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
- Définir la propriété par clé vers un DWORD.  
+ Définissez la propriété par clé vers une valeur DWORD.  
   
 ```  
 HRESULT SetDwordValue(
@@ -385,27 +385,27 @@ HRESULT SetDwordValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
- Définir la propriété par clé en filetime.  
+ Définissez la propriété par clé en filetime.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -426,27 +426,27 @@ HRESULT SetFileTimeValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
- Définir la propriété par clé pour un int64.  
+ Définissez la propriété par clé en int64.  
   
 ```  
 HRESULT SetInt64Value(
@@ -467,27 +467,27 @@ HRESULT SetInt64Value(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
- Définir la propriété à une clé à un entier.  
+ Définissez la propriété par clé à un entier.  
   
 ```  
 HRESULT SetIntValue(
@@ -508,27 +508,27 @@ HRESULT SetIntValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
- Définir la propriété par clé pour une longue durée.  
+ Définissez la propriété par clé à la valeur de type LONG.  
   
 ```  
 HRESULT SetLongValue(
@@ -549,27 +549,27 @@ HRESULT SetLongValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
- Définit la propriété par clé pour un objet SystemTime.  
+ Définit la propriété par clé à un SystemTime.  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -590,22 +590,22 @@ HRESULT SetSystemTimeValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -631,22 +631,22 @@ HRESULT SetTextValue(
  Spécifie la valeur du segment à définir.  
   
  *chunkType*  
- Indique si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur proviennent de l’énumération CHUNKSTATE.  
+ Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type de valeur. Valeurs d’indicateur sont tirés de l’énumération CHUNKSTATE.  
   
  *locale*  
- La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux du segment sont utilisé par les indexeurs de document pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
+ La langue et la sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de documents pour effectuer lexicale correcte du texte. Si le segment est de type texte, ni un type valeur avec le type de données VT_LPWSTR, VT_LPSTR ou VT_BSTR, ce champ est ignoré.  
   
  *cwcLenSource*  
- La longueur en caractères du texte source à partir de laquelle le bloc actuel a été dérivé. Une valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. La valeur zéro signifie la correspondance de caractère par caractère entre le texte source et le texte dérivé. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
   
  *cwcStartSource*  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ Le décalage à partir de laquelle le texte source pour un segment dérivé démarre dans le bloc de code source.  
   
  *chunkBreakType*  
  Le type de saut qui sépare le segment précédent le segment actuel. Les valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un code d’erreur.  
+ S_OK en cas de réussite ; sinon un code d’erreur.  
   
 ### <a name="remarks"></a>Notes  
   

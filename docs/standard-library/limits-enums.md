@@ -7,12 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858157"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960646"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt;, énumérations
 
@@ -35,11 +35,11 @@ enum float_denorm_style {
 
 L’énumération retourne :
 
-- **denorm_indeterminate** si la présence ou l’absence de formes dénormalisées ne peut pas être déterminée au moment de la traduction.
+- `denorm_indeterminate` Si la présence ou l’absence de formes dénormalisées ne peut pas être déterminée au moment de la traduction.
 
-- **denorm_absent** en l’absence de formes dénormalisées.
+- `denorm_absent` Si les formes dénormalisées sont absents.
 
-- **denorm_present** en présence de formes dénormalisées.
+- `denorm_present` Si les formes dénormalisées sont présents.
 
 ### <a name="example"></a>Exemple
 
@@ -62,15 +62,15 @@ enum float_round_style {
 
 L’énumération retourne :
 
-- **round_indeterminate** si le mode d’arrondi ne peut pas être déterminé.
+- `round_indeterminate` Si le mode d’arrondi ne peut pas être déterminé.
 
-- **round_toward_zero** en cas d’arrondi vers zéro.
+- `round_toward_zero` Si l’arrondi vers zéro.
 
-- **round_to_nearest** en cas d’arrondi à l’entier le plus proche.
+- `round_to_nearest` Si l’arrondi à l’entier le plus proche.
 
-- **round_toward_infinity** en cas d’arrondi vers l’infini.
+- `round_toward_infinity` Si l’arrondi.
 
-- **round_toward_neg_infinity** en cas d’arrondi vers l’entier le plus négatif.
+- `round_toward_neg_infinity` Si l’arrondi au nombre entier plus négative.
 
 ### <a name="example"></a>Exemple
 

@@ -1,5 +1,5 @@
 ---
-title: Structure BITMAP | Documents Microsoft
+title: Structure BITMAP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339345"
 ---
 # <a name="bitmap-structure"></a>Structure BITMAP
 Le **BITMAP** structure définit la hauteur, largeur, format de couleur et les valeurs de bit d’une image bitmap logique **.**  
@@ -42,16 +42,16 @@ typedef struct tagBITMAP {  /* bm */
   
 #### <a name="parameters"></a>Paramètres  
  *bmType*  
- Spécifie le type d’image bitmap. Pour les images bitmap logiques, ce membre doit être 0.  
+ Spécifie le type d’image bitmap. Pour les bitmaps de logiques, ce membre doit être 0.  
   
  *bmWidth*  
  Spécifie la largeur de l’image bitmap en pixels. La largeur doit être supérieure à 0.  
   
  *bmHeight*  
- Spécifie la hauteur de la bitmap dans les lignes de la trame. La hauteur doit être supérieure à 0.  
+ Spécifie la hauteur de l’image bitmap en lignes raster. La hauteur doit être supérieure à 0.  
   
  *bmWidthBytes*  
- Spécifie le nombre d’octets dans chaque ligne raster. Cette valeur doit être un nombre pair, car l’interface GDI (GDI) suppose que les valeurs de bit d’une image bitmap forment un tableau d’entiers de (2 octets). En d’autres termes, *bmWidthBytes* \* 8 doit être au prochain multiple de 16 supérieure ou égale à la valeur obtenue lorsque le *bmWidth* membre est multiplié par la *bmBitsPixel*  membre.  
+ Spécifie le nombre d’octets dans chaque ligne raster. Cette valeur doit être un nombre pair, car l’interface graphique (GDI) suppose que les valeurs de bit d’une image bitmap forment un tableau d’entiers de (2 octets). En d’autres termes, *bmWidthBytes* \* 8 doit être au prochain multiple de 16 supérieure ou égale à la valeur obtenue lorsque le *bmWidth* membre est multiplié par la *bmBitsPixel*  membre.  
   
  *bmPlanes*  
  Spécifie le nombre de plans de couleur de l’image bitmap.  
@@ -60,10 +60,10 @@ typedef struct tagBITMAP {  /* bm */
  Spécifie le nombre de bits de couleur adjacent sur chaque plan nécessaire à la définition d’un pixel.  
   
  *bmBits*  
- Pointe vers l’emplacement des valeurs de bits de l’image bitmap. Le *bmBits* membre doit être un pointeur long vers un tableau de valeurs de 1 octet.  
+ Pointe vers l’emplacement des valeurs de bit de l’image bitmap. Le *bmBits* membre doit être un pointeur long désignant un tableau de valeurs de 1 octet.  
   
 ## <a name="remarks"></a>Notes  
- Les formats bitmap actuellement utilisés sont monochrome et couleur. L’image bitmap monochrome utilise un format de bits 1, 1-plan. Chaque analyse est un multiple de 16 bits.  
+ Les formats de bitmap actuellement utilisés sont monochrome et couleur. L’image bitmap monochrome utilise un format de 1 bit, 1-plan. Chaque analyse est un multiple de 16 bits.  
   
  Les analyses sont organisées comme suit pour une image bitmap monochrome de hauteur *n*:  
   
@@ -81,11 +81,11 @@ typedef struct tagBITMAP {  /* bm */
   
  `Scan n-1`  
   
- Les pixels sur un périphérique monochrome sont noir ou blanc. Si le bit correspondant dans la bitmap est 1, le pixel est activé (blanc). Si le bit correspondant dans la bitmap est 0, le pixel est désactivé (noir).  
+ Les pixels sur un appareil monochrome sont soit noir ou blanc. Si le bit correspondant dans la bitmap est 1, le pixel est activé (blanc). Si le bit correspondant dans l’image bitmap est 0, le pixel est désactivé (noir).  
   
- Tous les périphériques prennent en charge les images bitmap qui ont le **RC_BITBLT** bit défini dans le **RASTERCAPS** index de la [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) fonction membre.  
+ Tous les périphériques prennent en charge les bitmaps qui ont le jeu RC_BITBLT bit dans l’index RASTERCAPS de la [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) fonction membre.  
   
- Chaque périphérique possède son propre format couleur unique. Pour transférer une image bitmap d’un périphérique à un autre, utilisez la [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) et [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) fonctions Windows.  
+ Chaque périphérique possède son propre format de couleur unique. Afin de transférer une image bitmap à partir d’un périphérique vers un autre, utilisez la [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) et [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) des fonctions de Windows.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  

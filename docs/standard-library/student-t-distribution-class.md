@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858898"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961010"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution, classe
 
@@ -74,11 +74,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, `double`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type `double` si aucun type n’est fourni, distribuées selon la distribution *T* de Student. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur type ou type **double** si aucun n’est fourni, distribuées selon une loi de Student *t*-Distribution. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -166,7 +166,7 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -183,9 +183,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*n* le `n` paramètre de distribution.
+*n*  
+ Paramètre de distribution `n`.
 
-*parm* package de paramètres utilisé pour construire la distribution.
+*parm* le package de paramètres utilisé pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -212,9 +213,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*n* le `n` paramètre de distribution.
+*n*  
+Paramètre de distribution `n`.
 
-*droit* le `param_type` à comparer à cet objet.
+*right*  
+Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 

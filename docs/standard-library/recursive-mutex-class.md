@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955892"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex, classe
 
@@ -58,7 +58,7 @@ class recursive_mutex;
 |[try_lock](#try_lock)|Tente d’obtenir la propriété du mutex sans bloquer le thread.|
 |[unlock](#unlock)|Libère la propriété du mutex.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<mutex >
 
@@ -106,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la méthode réussit à obtenir la propriété du `mutex` ou si le thread appelant possède déjà le `mutex`. Sinon, `false`.
+**true** si la méthode obtient correctement la propriété de la `mutex` ou si le thread appelant possède déjà le `mutex**; otherwise, **false`.
 
 ### <a name="remarks"></a>Notes
 
-Si le thread appelant possède déjà le `mutex`, la fonction retourne immédiatement `true`, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex`, la fonction retourne immédiatement **true**, et le verrou précédent reste en vigueur.
 
 ## <a name="unlock"></a>  unlock
 

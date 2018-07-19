@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCImagePaintArea | Documents Microsoft
+title: Cmfcimagepaintarea, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037370"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852475"
 ---
-# <a name="cmfcimagepaintarea-class"></a>Classe de CMFCImagePaintArea
-Fournit la zone d’image qui vous permet de modifier une image dans une boîte de dialogue Éditeur image.  
+# <a name="cmfcimagepaintarea-class"></a>Cmfcimagepaintarea, classe
+Fournit la zone d’image que vous utilisez pour modifier une image dans une image de boîte de dialogue Éditeur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,16 +59,16 @@ class CMFCImagePaintArea : public CButton
 |Nom|Description|  
 |[CMFCImagePaintArea::GetMode](#getmode)|Récupère le mode de dessin en cours.|  
 |[CMFCImagePaintArea::SetBitmap](#setbitmap)|Définit l’image bitmap de la zone d’image.|  
-|[CMFCImagePaintArea::SetColor](#setcolor)|Définit la couleur de dessin en cours.|  
+|[CMFCImagePaintArea::SetColor](#setcolor)|Définit la couleur de dessin actuelle.|  
 |[CMFCImagePaintArea::SetMode](#setmode)|Définit le mode de dessin en cours.|  
   
 ### <a name="remarks"></a>Notes  
- Cette classe n’est pas destinée à être utilisée directement depuis votre code.  
+ Cette classe n’est pas destinée à être utilisée directement à partir de votre code.  
   
- Le framework utilise cette classe pour afficher la zone d’image dans une boîte de dialogue Éditeur image. Pour plus d’informations sur la boîte de dialogue Éditeur image, consultez [CMFCImageEditorDialog classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Le framework utilise cette classe pour afficher la zone d’image dans une image de boîte de dialogue Éditeur. Pour plus d’informations sur l’image de boîte de dialogue Éditeur, consultez [CMFCImageEditorDialog, classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment construire un objet de la `CMFCImagePaintArea` de classe, définissez actuel couleur de dessin, de définir le mode de dessin en cours et définir l’image bitmap de la zone d’image.  
+ L’exemple suivant montre comment construire un objet de la `CMFCImagePaintArea` classe, définissez des cours couleur de dessin, de définir le mode de dessin en cours et de définir l’image bitmap de la zone d’image.  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
   
@@ -125,10 +125,10 @@ void SetBitmap(CBitmap* pBitmap);
 |[in] *pBitmap*|La nouvelle image bitmap à afficher.|  
   
 ### <a name="remarks"></a>Notes  
- Si *pBitmap* est `NULL`, cette méthode définit la taille de la zone de peinture modifiable à zéro. Dans le cas contraire, il définit la taille de la zone modifiable de peinture à la taille de l’image bitmap fournis.  
+ Si *pBitmap* est NULL, cette méthode définit la taille de la zone modifiable de peinture à zéro. Sinon, il définit la taille de la zone modifiable de peinture à la taille de l’image bitmap fournis.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
- Définit la couleur de dessin en cours.  
+ Définit la couleur de dessin actuelle.  
   
 ```  
 void SetColor(COLORREF color);
@@ -142,9 +142,9 @@ void SetColor(COLORREF color);
 |[in] *couleur*|La nouvelle couleur de dessin.|  
   
 ### <a name="remarks"></a>Notes  
- Lorsque vous sélectionnez une couleur dans la barre d’outils image éditeur palette ou sélecteur de couleurs, l’infrastructure appelle cette méthode pour mettre à jour la couleur de dessin en cours. La couleur de dessin initiale est noire (un `COLORREF` la valeur 0).  
+ Lorsque vous sélectionnez une couleur dans la barre de palette éditeur image ou un sélecteur de couleurs, l’infrastructure appelle cette méthode pour mettre à jour de la couleur de dessin actuelle. La couleur de dessin initiale est noire (valeur COLORREF 0).  
   
- La couleur de dessin est utilisée par la boîte de dialogue Éditeur image pour tous les modes de dessin à l’exception de `IMAGE_EDIT_MODE_COLOR`. Pour plus d’informations sur les modes de dessin, consultez [CMFCImagePaintArea::IMAGE_EDIT_MODE énumération](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
+ La couleur de dessin est utilisée par la boîte de dialogue Éditeur image pour tous les modes dessins à l’exception de IMAGE_EDIT_MODE_COLOR. Pour plus d’informations sur les modes de dessin, consultez [cmfcimagepaintarea::image_edit_mode, énumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  Définit le mode de dessin en cours.  

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac125b068de5111a2b98800956c12a0c979737f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954992"
 ---
 # <a name="sharedfuture-class"></a>shared_future, classe
 
@@ -76,7 +76,7 @@ Les objets `shared_future` ne sont pas synchronisés. L’appel de méthodes sur
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|Assigne un nouvel état asynchrone associé.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<future >
 
@@ -102,7 +102,7 @@ Avant de récupérer le résultat, cette méthode bloque le thread actuel jusqu�
 
 Pour la spécialisation partielle `shared_future<Ty&>`, la valeur stockée est une référence à l’objet qui a été passé au *fournisseur asynchrone* comme valeur de retour.
 
-Comme il n’y a pas de valeur stockée pour la spécialisation `shared_future<void>`, la méthode retourne `void`.
+Car il n’existe aucune valeur stockée pour la spécialisation `shared_future<void>`, la méthode retourne **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -115,7 +115,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` A `shared_future` objet.
+*Droite* A `shared_future` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -123,9 +123,9 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>Notes
 
-Pour le premier opérateur, `Right` n’a plus d’état asynchrone associé après l’opération.
+Pour le premier opérateur *droite* n’a plus d’état asynchrone associé après l’opération.
 
-Pour la deuxième méthode, `Right` conserve son état asynchrone associé.
+Pour la deuxième méthode, *droite* conserve son état asynchrone associé.
 
 ## <a name="shared_future"></a>  shared_future::shared_future, constructeur
 
@@ -140,15 +140,15 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` A [futures](../standard-library/future-class.md) ou `shared_future` objet.
+*Droite* A [futures](../standard-library/future-class.md) ou `shared_future` objet.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet `shared_future` sans *état asynchrone associé*.
 
-Les deuxième et troisième constructeurs construisent un objet `shared_future`, et transfèrent l’état asynchrone associé à partir de `Right`. `Right` n’a plus d’état asynchrone associé.
+Les deuxième et troisième constructeurs construisent un `shared_future` de l’objet et transférer l’état asynchrone associé à partir de *droite*. *Droite* n’a plus d’état asynchrone associé.
 
-Le quatrième constructeur construit un objet `shared_future` qui a le même état asynchrone associé que `Right`.
+Le quatrième constructeur construit un `shared_future` objet ayant le même état asynchrone associé que *droite*.
 
 ## <a name="valid"></a>  shared_future::Valid
 
@@ -160,7 +160,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'objet possède un état asynchrone associé ; sinon, `false`.
+**true** si l’objet a un état asynchrone associé ; sinon, **false**.
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -186,7 +186,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Paramètres
 
-`Rel_time` A [chrono::duration](../standard-library/duration-class.md) objet qui spécifie un intervalle de temps maximal que le thread se bloque.
+*Rel_time* A [chrono::duration](../standard-library/duration-class.md) objet qui spécifie un intervalle de temps maximal que le thread se bloque.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -208,7 +208,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Paramètres
 
-`Abs_time` A [chrono::time_point](../standard-library/time-point-class.md) objet qui spécifie une durée après laquelle le thread peut débloquer.
+*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objet qui spécifie une heure après laquelle le thread peut être débloqué.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959590"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -155,7 +155,7 @@ Notez que cet exemple utilise l’expression lambda `[] (int& elem) { elem *= 2;
 
 ## <a name="example"></a>Exemple
 
-La vérification des itérateur de débogage provoque également une variable d’itérateur déclarée dans une boucle `for` comme étant hors de portée quand la portée de la boucle `for` se termine.
+Vérification des itérateur de débogage provoque également une variable d’itérateur qui est déclarée dans un **pour** boucle comme étant hors de l’étendue lorsque le **pour** boucle se termine de portée.
 
 ```cpp
 // iterator_debugging_4.cpp

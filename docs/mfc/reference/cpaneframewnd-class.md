@@ -1,5 +1,5 @@
 ---
-title: Classe de CPaneFrameWnd | Documents Microsoft
+title: Cpaneframewnd, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -142,14 +142,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079692"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854120"
 ---
-# <a name="cpaneframewnd-class"></a>Classe de CPaneFrameWnd
+# <a name="cpaneframewnd-class"></a>Cpaneframewnd, classe
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
  Implémente une fenêtre mini-frame qui contient un volet. Le volet remplit la zone cliente de la fenêtre.  
@@ -240,14 +240,14 @@ class CPaneFrameWnd : public CWnd
   
 |Name|Description|  
 |----------|-----------------|  
-|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Spécifie si la classe de fenêtre doit être inscrite avec le style de classe `CS_SAVEBITS`.|  
+|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Spécifie s’il faut inscrire la classe de fenêtre avec le style de classe CS_SAVEBITS.|  
   
 ## <a name="remarks"></a>Notes  
  L'infrastructure crée automatiquement un objet `CPaneFrameWnd` quand un volet passe de l'état ancré à l'état flottant.  
   
  Vous pouvez faire glisser une fenêtre mini-frame avec son contenu visible (ancrage immédiat) ou en utilisant un rectangle de glissement (ancrage standard). Le mode d'ancrage du volet conteneur du mini-frame détermine le comportement de glissement du mini-frame. Pour plus d’informations, consultez [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
   
- Une fenêtre mini-frame présente des boutons sur la légende en fonction du style du volet contenu. Si le volet peut être fermé ( [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), il affiche un bouton Fermer. Si le volet a la style `AFX_CBRS_AUTO_ROLLUP`, il affiche une épingle.  
+ Une fenêtre mini-frame présente des boutons sur la légende en fonction du style du volet contenu. Si le volet peut être fermé ( [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), il affiche un bouton Fermer. Si le volet a le style AFX_CBRS_AUTO_ROLLUP, il affiche un code confidentiel.  
   
  Si vous faites dériver une classe de `CPaneFrameWnd`, vous devez indiquer à l'infrastructure comment la créer. Créez la classe en substituant [CPane::CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe), ou définir le `CPane::m_pMiniFrameRTC` membre afin qu’il pointe vers les informations de classe runtime pour votre classe.  
   
@@ -288,10 +288,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
  Le volet pour ajouter ou supprimer.  
   
  [in] *bAjouter*  
- Si différente de zéro, ajoutez le volet. Si 0, supprimez le volet.  
+ Si non nul, ajouter le volet. Si 0, supprimer le volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la méthode a réussi ; Sinon, 0.  
+ Différent de zéro si la méthode a réussi ; sinon 0.  
   
 ##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
  Ajuste la disposition de la fenêtre mini-frame.  
@@ -337,7 +337,7 @@ virtual void CalcExpectedDockedRect(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndToDock*  
- Pointeur vers la fenêtre pour l’ancrer.  
+ Pointeur vers la fenêtre à ancrer.  
   
  [in] *ptMouse*  
  L’emplacement de la souris.  
@@ -346,13 +346,13 @@ virtual void CalcExpectedDockedRect(
  Rectangle calculé.  
   
  [out] *bDrawTab*  
- Si `TRUE`, dessinez un onglet. Si `FALSE`, ne pas utiliser un onglet.  
+ Si la valeur est TRUE, dessinez un onglet. Si la valeur est FALSE, ne pas dessiner un onglet.  
   
  [out] *ppTargetBar*  
  Pointeur vers le volet cible.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode calcule le rectangle une fenêtre occuperait si un utilisateur a fait glisser la fenêtre au point spécifié par *ptMouse* et il ancré il.  
+ Cette méthode calcule le rectangle une fenêtre occuperait si un utilisateur fait glisser la fenêtre au point spécifié par *ptMouse* et il ancré il.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Détermine si le volet actif peut être ancré à un autre volet ou à une fenêtre frame.  
@@ -362,7 +362,7 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le volet peut être ancré à un autre volet ou une fenêtre frame ; dans le cas contraire `FALSE`.  
+ TRUE si le volet peut être ancré à un autre volet ou une fenêtre frame ; Sinon, FALSE.  
   
 ##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
  Détermine si la fenêtre mini-frame peut être ancrée à un volet.  
@@ -376,7 +376,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
  Un volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le mini-frame peut être ancré sur *pDockingBar*; sinon, 0.  
+ Différent de zéro si le mini-frame peut être ancré à *pDockingBar*; sinon, 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -417,16 +417,16 @@ virtual BOOL Create(
  Spécifie la taille initiale et la position de la fenêtre mini-frame.  
   
  [in] [out] *pParentWnd*  
- Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être `NULL`.  
+ Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être NULL.  
   
  [in] [out] *pContext*  
  Spécifie le contexte défini par l’utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre a été créée avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si la fenêtre a été créée avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Une fenêtre mini-frame est créée en deux étapes. Tout d’abord, l’infrastructure crée un `CPaneFrameWnd` objet. Ensuite, il appelle `Create` pour créer la fenêtre mini-frame Windows et l’attacher à la `CPaneFrameWnd` objet.  
+ Une fenêtre mini-frame est créée en deux étapes. Tout d’abord, l’infrastructure crée un `CPaneFrameWnd` objet. Ensuite, il appelle `Create` pour créer la fenêtre mini-frame de Windows et l’attacher à la `CPaneFrameWnd` objet.  
   
 ##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
  Crée une fenêtre mini-frame et l’attache à la [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) objet.  
@@ -455,16 +455,16 @@ virtual BOOL CreateEx(
  Spécifie la taille initiale et la position de la fenêtre mini-frame.  
   
  [in] [out] *pParentWnd*  
- Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être `NULL`.  
+ Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être NULL.  
   
  [in] [out] *pContext*  
  Spécifie le contexte défini par l’utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre a été créée avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si la fenêtre a été créée avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Une fenêtre mini-frame est créée en deux étapes. Tout d’abord, l’infrastructure crée un `CPaneFrameWnd` objet. Ensuite, il appelle `Create` pour créer la fenêtre mini-frame Windows et l’attacher à la `CPaneFrameWnd` objet.  
+ Une fenêtre mini-frame est créée en deux étapes. Tout d’abord, l’infrastructure crée un `CPaneFrameWnd` objet. Ensuite, il appelle `Create` pour créer la fenêtre mini-frame de Windows et l’attacher à la `CPaneFrameWnd` objet.  
   
 ##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  Ancre le volet.  
@@ -475,10 +475,10 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
   
 ### <a name="parameters"></a>Paramètres  
  [out] *bWasDocked*  
- `TRUE` Si le volet est ancré déjà ; dans le cas contraire `FALSE`.  
+ TRUE si le volet a été déjà ancré ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si l’opération a réussi, le `CDockablePane` que le volet est ancré ; sinon `NULL`.  
+ Si l’opération a réussi, le `CDockablePane` que le volet a été ancrée à ; sinon, NULL.  
   
 ##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
  Recherche un volet à partir de l'ID de contrôle spécifié dans la liste globale des volets flottants.  
@@ -492,7 +492,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
  Représente l’ID de contrôle du volet à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le volet avec l’ID du contrôle spécifié ; dans le cas contraire, `NULL`, si aucun volet n’a l’ID de contrôle spécifié.  
+ Le volet avec l’ID du contrôle spécifié ; Sinon, NULL, si aucun volet n’a l’ID de contrôle spécifié.  
   
 ##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
  Recherche la fenêtre mini-frame qui contient le point spécifié.  
@@ -510,16 +510,16 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
  Le point, en coordonnées d’écran.  
   
  [in] *nSensitivity*  
- À cette taille, augmenter la zone de recherche de la fenêtre mini-frame. Une fenêtre mini-frame satisfait les critères de recherche si le point donné se situe dans la zone accrue.  
+ Augmenter la zone de recherche de la fenêtre mini-frame par cette taille. Une fenêtre mini-frame satisfait les critères de recherche si le point donné se trouve dans la zone accrue.  
   
  [in] *pFrameToExclude*  
  Spécifie une fenêtre mini-frame à exclure de la recherche.  
   
  [in] *bFloatMultiOnly*  
- Si `TRUE`, recherche uniquement dans les fenêtres mini-frame qui ont le `CBRS_FLOAT_MULTI` style. Si `FALSE`, rechercher toutes les fenêtres mini-frame.  
+ Si la valeur est TRUE, ne rechercher que les fenêtres mini-frame qui ont le style CBRS_FLOAT_MULTI. Si la valeur est FALSE, rechercher toutes les fenêtres mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la fenêtre mini-frame contenant *pt*; sinon `NULL`.  
+ Un pointeur vers la fenêtre mini-frame contenant *pt*; sinon, NULL.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Retourne la hauteur de la légende de fenêtre mini-frame.  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  La hauteur, en pixels, de la fenêtre mini-frame.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour déterminer la hauteur d’une fenêtre mini-frame. Par défaut, la hauteur est définie `SM_CYSMCAPTION`. Pour plus d’informations, consultez [GetSystemMetrics fonction](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Appelez cette méthode pour déterminer la hauteur d’une fenêtre mini-frame. Par défaut, la hauteur est définie à SM_CYSMCAPTION. Pour plus d’informations, consultez [GetSystemMetrics fonction](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Calcule le rectangle englobant d'une légende de fenêtre mini-frame.  
@@ -556,7 +556,7 @@ virtual CString GetCaptionText();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le texte de légende de la fenêtre mini-frame.  
+ Texte de légende de la fenêtre mini-frame.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée par l’infrastructure lorsqu’il affiche le texte de légende.  
@@ -582,11 +582,11 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le mode d’ancrage. Une des valeurs suivantes :  
   
-- `DT_STANDARD`  
+- DT_STANDARD  
   
-- `DT_IMMEDIATE`  
+- DT_IMMEDIATE  
   
-- `DT_SMART`  
+- DT_SMART  
   
 ##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
  Retourne le premier volet visible contenu dans une fenêtre mini-frame.  
@@ -596,7 +596,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le premier volet dans la fenêtre mini-frame, ou `NULL` si la fenêtre mini-frame ne contient aucun volets.  
+ Le premier volet dans la fenêtre mini-frame, ou NULL si la fenêtre mini-frame ne contient aucun volets.  
   
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
@@ -617,7 +617,7 @@ virtual CWnd* GetPane() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le volet de contenu dans le mini-frame, ou `NULL` si la fenêtre mini-frame ne contient aucun volets.  
+ Le volet de contenu dans le mini-frame, ou NULL si la fenêtre mini-frame ne contient aucun volets.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -692,24 +692,24 @@ virtual LRESULT HitTest(
  Point à tester.  
   
  [in] *bDetectCaption*  
- Si `TRUE`, vérifiez le point par rapport à la légende. Si `FALSE`, ignorer la légende.  
+ Si la valeur est TRUE, vérifiez le point par rapport à la légende. Si la valeur est FALSE, ignorer la légende.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs suivantes :  
   
 |Value|Signification|  
 |-----------|-------------|  
-|`HTNOWHERE`|Le point est à l’extérieur de la fenêtre mini-frame.|  
-|`HTCLIENT`|Le point est dans la zone cliente.|  
-|`HTCAPTION`|Le point se trouve sur la légende.|  
-|`HTTOP`|Le point est en haut.|  
-|`HTTOPLEFT`|Le point est en haut à gauche.|  
-|`HTTOPRIGHT`|Le point est en haut à droite.|  
-|`HTLEFT`|Le point est situé à gauche.|  
-|`HTRIGHT`|Le point est à droite.|  
-|`HTBOTTOM`|Le point est en bas.|  
-|`HTBOTTOMLEFT`|Le point est en bas à gauche.|  
-|`HTBOTTOMRIGHT`|Le point est en bas à droite.|  
+|HTNOWHERE|Le point est en dehors de la fenêtre mini-frame.|  
+|HTCLIENT|Le point est dans la zone cliente.|  
+|HTCAPTION|Le point se trouve sur la légende.|  
+|HTTOP|Le point est en haut.|  
+|HTTOPLEFT|Le point est en haut à gauche.|  
+|HTTOPRIGHT|Le point est en haut à droite.|  
+|HTLEFT|Le point se trouve à gauche.|  
+|HTRIGHT|Le point se trouve à droite.|  
+|HTBOTTOM|Le point est en bas.|  
+|HTBOTTOMLEFT|Le point est en bas à gauche.|  
+|HTBOTTOMRIGHT|Le point est en bas à droite.|  
   
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
@@ -741,12 +741,12 @@ virtual BOOL IsRollDown() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre mini-frame doit être répercutée ; dans le cas contraire, `FALSE`.  
+ TRUE si la fenêtre mini-frame doit être répercutée ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode est appelée par l’infrastructure pour déterminer si une fenêtre mini-frame doit être appliquée. La fonctionnalité de cumul/répercussion est activée pour une fenêtre mini-frame s’il contient au moins un volet qui a le `AFX_CBRS_AUTO_ROLLUP` indicateur. Cet indicateur est défini lors de la création d’un volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
+ Cette méthode est appelée par l’infrastructure pour déterminer si une fenêtre mini-frame doit être masquée. La fonctionnalité de cumul/répercussion est activée pour une fenêtre mini-frame s’il contient au moins un volet qui a l’indicateur AFX_CBRS_AUTO_ROLLUP. Cet indicateur est défini lors de la création d’un volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- Par défaut, l’infrastructure vérifie si le pointeur de la souris est à l’intérieur du rectangle englobant de la fenêtre mini-frame pour déterminer si la fenêtre doit être appliquée. Vous pouvez substituer ce comportement dans une classe dérivée.  
+ Par défaut, le framework vérifie si le pointeur de la souris est dans le rectangle englobant de la fenêtre mini-frame pour déterminer si la fenêtre doit être restaurée vers le bas. Vous pouvez remplacer ce comportement dans une classe dérivée.  
   
 ##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp  
  Détermine si une fenêtre mini-frame doit être affichée.  
@@ -756,12 +756,12 @@ virtual BOOL IsRollUp() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre mini-frame doit être reportée ; dans le cas contraire, `FALSE`.  
+ TRUE si la fenêtre mini-frame doit être reportée ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode est appelée par l’infrastructure pour déterminer si une fenêtre mini-frame doit être cumulée. La fonctionnalité de cumul/répercussion est activée pour une fenêtre mini-frame s’il contient au moins un volet qui a le `AFX_CBRS_AUTO_ROLLUP` indicateur. Cet indicateur est défini lors de la création d’un volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
+ Cette méthode est appelée par l’infrastructure pour déterminer si une fenêtre mini-frame doit être reportée. La fonctionnalité de cumul/répercussion est activée pour une fenêtre mini-frame s’il contient au moins un volet qui a l’indicateur AFX_CBRS_AUTO_ROLLUP. Cet indicateur est défini lors de la création d’un volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- Par défaut, l’infrastructure vérifie si le pointeur de la souris est à l’intérieur du rectangle englobant de la fenêtre mini-frame pour déterminer si la fenêtre doit être cumulées. Vous pouvez substituer ce comportement dans une classe dérivée.  
+ Par défaut, le framework vérifie si le pointeur de la souris est à l’intérieur du rectangle englobant de la fenêtre mini-frame pour déterminer si la fenêtre doit être cumulée. Vous pouvez remplacer ce comportement dans une classe dérivée.  
   
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
  Arrête le minuteur d'ancrage.  
@@ -787,17 +787,17 @@ virtual BOOL LoadState(
  L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’état du volet a été chargée avec succès ; dans le cas contraire `FALSE`.  
+ TRUE si l’état du volet a été chargé avec succès ; Sinon, FALSE.  
   
 ##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
- Spécifie s’il faut inscrire la classe de fenêtre qui a le `CS_SAVEBITS` style de classe.  
+ Spécifie s’il faut inscrire la classe de fenêtre qui a le style de classe CS_SAVEBITS.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre statique `TRUE` pour inscrire la classe de fenêtre mini-frame qui a le `CS_SAVEBITS` style. Cela permet de réduire le scintillement lorsqu’un utilisateur fait glisser la fenêtre mini-frame.  
+ Définissez ce membre statique à True pour inscrire la classe de fenêtre mini-frame qui a le style CS_SAVEBITS. Cela permet de réduire le scintillement lorsqu’un utilisateur fait glisser la fenêtre mini-frame.  
   
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
  Détermine si l'ancrage est possible.  
@@ -807,7 +807,7 @@ virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’ancrage est possible ; dans le cas contraire, `FALSE`.  
+ TRUE si l’ancrage est possible ; Sinon, FALSE.  
   
 ##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
  Détermine si une fenêtre mini-frame doit être masquée ou affichée.  
@@ -817,9 +817,9 @@ virtual void OnCheckRollState();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode est appelée par l’infrastructure pour déterminer si une fenêtre mini-frame doit être restaurée vers le haut ou vers le bas.  
+ Cette méthode est appelée par l’infrastructure pour déterminer si une fenêtre mini-frame doit être masquée ou affichée.  
   
- Par défaut, le framework appelle [CPaneFrameWnd::IsRollUp](#isrollup) et [CPaneFrameWnd::IsRollDown](#isrolldown) et simplement s’étire ou restaure la fenêtre mini-frame. Vous pouvez substituer cette méthode dans une classe dérivée à utiliser un autre effet visuel.  
+ Par défaut, le framework appelle [CPaneFrameWnd::IsRollUp](#isrollup) et [CPaneFrameWnd::IsRollDown](#isrolldown) et simplement étire ou restaure la fenêtre mini-frame. Vous pouvez substituer cette méthode dans une classe dérivée à utiliser un effet visuel différent.  
   
 ##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos  
  Ancre la fenêtre mini-frame à sa dernière position.  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Le contexte de périphérique utilisé pour dessiner la bordure.  
   
 ### <a name="remarks"></a>Notes  
@@ -863,7 +863,7 @@ virtual void OnMovePane(
  Pointeur vers un volet (ignoré).  
   
  [in] *ptOffset*  
- Le décalage par lequel vous souhaitez déplacer le volet.  
+ Le décalage de laquelle déplacer le volet.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Ajuste la disposition d’un volet à l’intérieur d’une fenêtre mini-frame.  
@@ -895,13 +895,13 @@ virtual void OnShowPane(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pBar*  
- Le volet qui est affichée ou masquée.  
+ Le volet qui est affiché ou masqué.  
   
  [in] *bShow*  
- `TRUE` Si le volet est affiché ; `FALSE` si le volet est masqué.  
+ TRUE si le volet est affiché ; FALSE si le volet est masqué.  
   
 ### <a name="remarks"></a>Notes  
- Appelé par l’infrastructure lorsqu’un volet dans la fenêtre mini-frame est affiché ou masqué. L'implémentation par défaut n'exécute aucune opération.  
+ Appelé par l’infrastructure quand un volet dans la fenêtre mini-frame est affiché ou masqué. L'implémentation par défaut n'exécute aucune opération.  
   
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
@@ -933,10 +933,10 @@ virtual CBasePane* PaneFromPoint(
  Ce paramètre n'est pas utilisé.  
   
  [in] *bCheckVisibility*  
- `TRUE` Pour spécifier que seuls les volets visibles doivent être renvoyés ; dans le cas contraire, `FALSE`.  
+ TRUE pour spécifier que seuls les volets visibles doivent être renvoyés ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le volet sur lequel l’utilisateur a cliqué, ou `NULL` si aucun volet n’existe à cet emplacement.  
+ Le volet de l’utilisateur a cliqué, ou NULL si aucun volet n’existe à cet emplacement.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour obtenir un volet qui contient le point donné.  
@@ -973,13 +973,13 @@ virtual void RemovePane(
  Pointeur vers le volet à supprimer.  
   
  [in] *bDestroy*  
- Spécifie ce qui se passe dans la fenêtre mini-frame. Si *bDestroy* est `TRUE`, cette méthode détruit la fenêtre mini-frame immédiatement. S’il est `FALSE`, cette méthode détruit la fenêtre mini-frame après un certain délai.  
+ Spécifie que se passe-t-il à la fenêtre mini-frame. Si *bDestroy* a la valeur TRUE, cette méthode détruit la fenêtre mini-frame immédiatement. Si la valeur est FALSE, cette méthode détruit la fenêtre mini-frame après un certain délai.  
   
  [in] *bNoDelayedDestroy*  
- Si `TRUE`, différées destruction est désactivée. Si `FALSE`, différées destruction est activée.  
+ Si la valeur est TRUE, la destruction différée est désactivée. Si la valeur est FALSE, destruction différée est activée.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure peut détruire des fenêtres mini-frame immédiatement ou après un certain délai. Si vous voulez retarder la destruction des fenêtres mini-frame, passer `FALSE` dans les *bNoDelayedDestroy* paramètre. Retardée destruction se produit lorsque le framework traite les `AFX_WM_CHECKEMPTYMINIFRAME` message.  
+ Le framework peut détruire des fenêtres mini-frame immédiatement ou après un certain délai. Si vous souhaitez différer la destruction des fenêtres mini-frame, passez FALSE dans le *bNoDelayedDestroy* paramètre. Retardée destruction se produit lorsque le framework traite le message AFX_WM_CHECKEMPTYMINIFRAME.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Remplace un volet par un autre.  
@@ -1014,7 +1014,7 @@ virtual BOOL SaveState(
  L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’état du volet a été enregistré avec succès ; dans le cas contraire `FALSE`.  
+ TRUE si l’état du volet a été enregistré avec succès ; Sinon, FALSE.  
   
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  Définit les boutons de légende.  
@@ -1025,15 +1025,15 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *dwButtons*  
- Combinaison de bits OR des valeurs suivantes :  
+ Combinaison OR au niveau du bit des valeurs suivantes :  
   
-- `AFX_CAPTION_BTN_CLOSE`  
+- AFX_CAPTION_BTN_CLOSE  
   
-- `AFX_CAPTION_BTN_PIN`  
+- AFX_CAPTION_BTN_PIN  
   
-- `AFX_CAPTION_BTN_MENU`  
+- AFX_CAPTION_BTN_MENU  
   
-- `AFX_CAPTION_BTN_CUSTOMIZE`  
+- AFX_CAPTION_BTN_CUSTOMIZE  
   
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
@@ -1068,7 +1068,7 @@ void SetDockingTimer(UINT nTimeOut);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *%ndélai*  
- Valeur de délai d’attente en millisecondes.  
+ Valeur de délai d’expiration en millisecondes.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  Définit l'état d'ancrage.  
@@ -1107,20 +1107,20 @@ virtual BOOL SetPreDockState(
  [in] *preDockState*  
  Valeurs possibles :  
   
-- `PDS_NOTHING`,  
+- PDS_NOTHING,  
   
-- `PDS_DOCK_REGULAR`,  
+- PDS_DOCK_REGULAR,  
   
-- `PDS_DOCK_TO_TAB`  
+- PDS_DOCK_TO_TAB  
   
  [in] *pBarToDock*  
- Pointeur vers le volet pour ancrer.  
+ Un pointeur vers le volet pour ancrer.  
   
  [in] *dockMethod*  
  La méthode d’ancrage. (Ce paramètre est ignoré.)  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre mini-frame est déconnectée ; `FALSE` si elle est ancrée.  
+ TRUE si la fenêtre mini-frame est détachée ; FALSE si elle est ancrée.  
   
 ##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
  Ajuste la taille d’une fenêtre mini-frame afin qu’elle soit équivalente à un volet contenu.  
@@ -1130,7 +1130,7 @@ virtual void SizeToContent();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour ajuster la taille d’une fenêtre mini-frame à la taille d’un volet contenu.  
+ Appelez cette méthode pour ajuster la taille d’une fenêtre mini-frame à la taille d’un volet de relation contenant-contenu.  
   
 ##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
  Détache un menu.  
@@ -1144,7 +1144,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  Pointeur vers un menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` si la méthode a réussi ; sinon, `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 

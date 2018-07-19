@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959230"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any, classe
 
@@ -63,7 +63,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.|
 |[wait_until](#wait_until)|Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<condition_variable >
 
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Paramètres
 
-`Lck` A `mutex` objet de tout type.
+*Lck* A `mutex` objet de tout type.
 
-`Pred` Toute expression qui retourne `true` ou `false`.
+*Pred* toute expression qui retourne **true** ou **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Paramètres
 
-`Lck` A `mutex` objet de tout type.
+*Lck* A `mutex` objet de tout type.
 
-`Rel_time` A `chrono::duration` objet qui spécifie la quantité de temps avant que le thread sort de veille.
+*Rel_time* A `chrono::duration` objet qui spécifie la quantité de temps avant que le thread sort de veille.
 
-`Pred` Toute expression qui retourne `true` ou `false`.
+*Pred* toute expression qui retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première méthode retourne `cv_status::timeout` si l’attente se termine quand `Rel_time` est écoulé. Dans le cas contraire, la méthode retourne `cv_status::no_timeout`.
+La première méthode retourne `cv_status::timeout` si l’attente termine quand *Rel_time* s’est écoulé. Dans le cas contraire, la méthode retourne `cv_status::no_timeout`.
 
-La deuxième méthode retourne la valeur de `Pred`.
+La deuxième méthode retourne la valeur de *Pred*.
 
 ### <a name="remarks"></a>Notes
 
-La première méthode se bloque jusqu’à ce que l’objet `condition_variable_any` soit signalé par un appel à [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all), ou jusqu’à ce que l’intervalle de temps `Rel_time` soit écoulé. Elle peut également s’éveiller sans motif.
+La première méthode se bloque jusqu'à ce que le `condition_variable_any` objet est signalé par un appel à [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all), ou jusqu'à ce que l’intervalle de temps *Rel_time* s’est écoulé. Elle peut également s’éveiller sans motif.
 
 La deuxième méthode exécute le code suivant.
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>Paramètres
 
-`Lck` Un objet mutex.
+*Lck* un objet mutex.
 
-`Abs_time` A [chrono::time_point](../standard-library/time-point-class.md) objet.
+*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objet.
 
-`Pred` Toute expression qui retourne `true` ou `false`.
+*Pred* toute expression qui retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les méthodes qui retournent un type `cv_status` retournent `cv_status::timeout` si l’attente se termine quand `Abs_time` est écoulé. Sinon, les méthodes retournent `cv_status::no_timeout`.
+Les méthodes qui retournent un `cv_status` tapez retour `cv_status::timeout` si l’attente termine quand *Abs_time* s’écoule. Sinon, les méthodes retournent `cv_status::no_timeout`.
 
-Les méthodes qui retournent `bool` retournent la valeur de `Pred`.
+Les méthodes qui retournent un `bool` retournent la valeur de *Pred*.
 
 ### <a name="remarks"></a>Notes
 
-La première méthode se bloque jusqu’à ce que l’objet `condition_variable` soit signalé par un appel à [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all), ou jusqu’à `Abs_time`. Elle peut également s’éveiller sans motif.
+La première méthode se bloque jusqu'à ce que le `condition_variable` objet est signalé par un appel à [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all), ou jusqu'à ce que *Abs_time*. Elle peut également s’éveiller sans motif.
 
 La deuxième méthode exécute le code suivant.
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCPropertyGridFontProperty | Documents Microsoft
+title: Cmfcpropertygridfontproperty, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039037"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852979"
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>Classe de CMFCPropertyGridFontProperty
-La `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de police.  
+# <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty, classe
+Le `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de police.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 |Nom|Description|  
 |----------|-----------------|  
 |`CMFCPropertyGridFontProperty::FormatProperty`|Met en forme la représentation textuelle d'une valeur de propriété. (Substitue [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Récupère la couleur de police que l’utilisateur sélectionne dans la boîte de dialogue Police.|  
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Récupère la couleur de police que l’utilisateur sélectionne à partir de la boîte de dialogue Police.|  
 |[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Récupère la police de l’utilisateur sélectionne dans la boîte de dialogue Police.|  
 |`CMFCPropertyGridFontProperty::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
 |`CMFCPropertyGridFontProperty::OnClickButton`|Appelé par l'infrastructure quand l'utilisateur clique sur un bouton contenu dans une propriété. (Substitue [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
@@ -90,19 +90,19 @@ CMFCPropertyGridFontProperty(
  Une structure de police logique qui spécifie les attributs de la police.  
   
  [in] *dwFontDialogFlags*  
- Styles qui sont appliqués à la boîte de dialogue Police qui s’affiche lorsque vous cliquez sur le bouton de liste déroulante de valeur de propriété. La valeur par défaut est la combinaison d’opérations de bits (OR) de CF_EFFECTS et CF_SCREENFONTS. Pour plus d’informations, consultez la *indicateurs* paramètre de la [CHOOSEFONT Structure](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Styles sont appliqués à la boîte de dialogue de police qui s’affiche lorsque vous cliquez sur le bouton de liste déroulante de valeur de propriété. La valeur par défaut est la combinaison au niveau du bit (ou) de CF_EFFECTS et CF_SCREENFONTS. Pour plus d’informations, consultez le *indicateurs* paramètre de la [CHOOSEFONT Structure](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
  [in] *lpszDescr*  
- Description de la propriété de police. La valeur par défaut est `NULL`.  
+ Description de la propriété de police. La valeur par défaut est NULL.  
   
  [in] *dwData*  
- Données spécifiques à l’application, comme un entier ou un pointeur vers d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
+ Données spécifiques à l’application, par exemple un entier ou un pointeur à d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
   
  [in] *couleur*  
  La couleur de la police. La valeur par défaut est la couleur par défaut.  
   
 ### <a name="remarks"></a>Notes  
- A `CMFCPropertyGridFontProperty` objet représente une propriété de police dans un contrôle de police de grille de propriétés.  
+ Un `CMFCPropertyGridFontProperty` objet représente une propriété de police dans un contrôle de police de grille de propriétés.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment construire un objet de la `CMFCPropertyGridFontProperty` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).  
@@ -110,14 +110,14 @@ CMFCPropertyGridFontProperty(
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
 ##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
- Récupère la couleur de police que l’utilisateur sélectionne dans la boîte de dialogue Police.  
+ Récupère la couleur de police que l’utilisateur sélectionne à partir de la boîte de dialogue Police.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur de couleur RVB qui représente la couleur de police sélectionnée.  
+ Valeur de couleur RVB qui représente la couleur de police sélectionnée.  
   
 ### <a name="remarks"></a>Notes  
   

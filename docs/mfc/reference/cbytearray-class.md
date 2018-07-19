@@ -1,5 +1,5 @@
 ---
-title: Classe CByteArray | Documents Microsoft
+title: CByteArray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,14 +52,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 22e138b586070a0e47ffa399d2c76d086fd4b951
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335852"
 ---
-# <a name="cbytearray-class"></a>Classe CByteArray
+# <a name="cbytearray-class"></a>CByteArray, classe
 Prend en charge les tableaux d'octets dynamiques.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -69,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CByteArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou de valeur de retour, remplacez un **octets**.  
+ Les fonctions membres de `CByteArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez un octet.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CByteArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libère toute la mémoire inutilisée au-dessus de la limite supérieure actuelle.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retourne la valeur à un index donné.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtient le nombre d'éléments dans ce tableau.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtient le nombre d'éléments dans ce tableau.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retourne le plus grand index valide.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|  
@@ -109,15 +109,15 @@ class CByteArray : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[[] De CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
+|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
   
 ## <a name="remarks"></a>Notes  
- `CByteArray` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau d’octets est stocké dans une archive, soit à l’insertion surchargée ( **<<**) (opérateur) ou avec la `Serialize` la fonction membre, chaque élément est, à son tour, sérialisé.  
+ `CByteArray` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau d’octets est stocké dans une archive, soit avec l’insertion surchargée ( **<<**) opérateur ou avec le `Serialize` fonction membre, chaque élément est, à son tour, sérialisé.  
   
 > [!NOTE]
 >  Avant d'utiliser un tableau, utilisez `SetSize` pour définir sa taille et lui allouer la mémoire nécessaire. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  
   
- Si vous devez déboguer des éléments individuels dans le tableau, vous devez définir la profondeur de la `CDumpContext` objet à 1 ou supérieur.  
+ Si vous avez besoin de la sortie à partir des éléments individuels dans le tableau de débogage, vous devez définir la profondeur de la `CDumpContext` objet à 1 ou supérieur.  
   
  Pour plus d’informations sur l’utilisation de `CByteArray`, consultez l’article [Collections](../../mfc/collections.md).  
   

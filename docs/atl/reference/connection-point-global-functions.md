@@ -1,5 +1,5 @@
 ---
-title: Fonctions globales de Point de connexion | Documents Microsoft
+title: Fonctions globales de Point de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b85da5991357f1b67c6d2249d854e6084ee48c23
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362789"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884059"
 ---
 # <a name="connection-point-global-functions"></a>Fonctions globales de Point de connexion
-Ces fonctions prennent en charge les points de connexion et le récepteur de cartes.  
+Ces fonctions prennent en charge des points de connexion et le récepteur maps.  
   
 > [!IMPORTANT]
 >  Les fonctions répertoriées dans le tableau suivant ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -35,9 +35,9 @@ Ces fonctions prennent en charge les points de connexion et le récepteur de car
 |-|-|  
 |[AtlAdvise](#atladvise)|Crée une connexion entre le point de connexion d'un objet et le récepteur d'un client.|  
 |[AtlUnadvise](#atlunadvise)|Met fin à la connexion établie via `AtlAdvise`.|  
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Indique qu’il contient ou avertit les entrées dans une table de récepteur d’événements.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Conseille ou avertit des entrées dans une table de récepteur d’événements.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
    
 ##  <a name="atladvise"></a>  AtlAdvise  
@@ -55,23 +55,23 @@ HRESULT    AtlAdvise(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pUnkCP`  
- [in] Un pointeur vers le **IUnknown** de l’objet, le client souhaite se connecter avec.  
+ *pUnkCP*  
+ [in] Un pointeur vers le `IUnknown` de l’objet, le client souhaite se connecter avec.  
   
  *pUnk*  
- [in] Un pointeur vers du client **IUnknown**.  
+ [in] Un pointeur vers le client `IUnknown`.  
   
- `iid`  
- [in] Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante gérée par le point de connexion.  
+ *IID*  
+ [in] Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.  
   
- `pdw`  
+ *PDW*  
  [out] Pointeur vers le cookie qui identifie de façon unique la connexion.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
 ### <a name="remarks"></a>Notes  
- Le récepteur implémente l’interface sortante pris en charge par le point de connexion. Le client utilise le `pdw` cookie pour supprimer la connexion en le passant à [AtlUnadvise](#atlunadvise).  
+ Le récepteur implémente l’interface sortante pris en charge par le point de connexion. Le client utilise le *pdw* cookie à supprimer de la connexion en le passant à [AtlUnadvise](#atlunadvise).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
@@ -90,13 +90,13 @@ HRESULT    AtlUnadvise(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pUnkCP`  
- [in] Un pointeur vers le **IUnknown** de l’objet auquel le client est connecté avec.  
+ *pUnkCP*  
+ [in] Un pointeur vers le `IUnknown` de l’objet auquel le client est connecté avec.  
   
- `iid`  
- [in] Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante gérée par le point de connexion.  
+ *IID*  
+ [in] Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.  
   
- `dw`  
+ *entrepôt de données*  
  [in] Le cookie qui identifie de façon unique la connexion.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -119,8 +119,8 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
  *pT*  
  [in] Pointeur vers l’objet qui contient la table de récepteur.  
   
- `bAdvise`  
- [in] **true** si toutes les entrées de récepteur doivent être avertie ; **false** si toutes les entrées de récepteur doivent être cessent d’être averties.  
+ *bAdvise*  
+ [in] TRUE si toutes les entrées de récepteur doivent être avertie ; FALSE si toutes les entrées de récepteur doivent être arrêter.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  

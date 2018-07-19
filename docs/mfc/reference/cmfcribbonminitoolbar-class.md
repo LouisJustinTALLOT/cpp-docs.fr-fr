@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonMiniToolBar | Documents Microsoft
+title: Cmfcribbonminitoolbar, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,14 +26,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041748"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852885"
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>Classe de CMFCRibbonMiniToolBar
+# <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar, classe
 Implémente une barre d'outils contextuelle.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -105,7 +105,7 @@ void SetCommands(
  La liste des commandes à afficher sur la mini-barre d’outils. Toutes les catégories de ruban sont explorés pour rechercher les boutons associés.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction pour définir la liste des commandes à afficher dans la barre d’outils.  
+ Utilisez cette fonction pour définir la liste des commandes à afficher dans la mini-barre d’outils.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `SetCommands` méthode de la `CMFCRibbonMiniToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).  
@@ -129,7 +129,7 @@ BOOL Show(
  Spécifie la position verticale de la mini-barre d’outils en coordonnées d’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la mini-barre d’outils a été affiché avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si la mini-barre d’outils a été affiché avec succès ; Sinon, FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Affiche la mini-barre d'outils avec un menu contextuel.  
@@ -156,10 +156,10 @@ BOOL ShowWithContextMenu(
  Identifie la fenêtre qui reçoit des messages dans le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le menu contextuel s’affiche avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si le menu contextuel a été affiché avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction pour afficher une barre d’outils miniature qui possède un menu contextuel. Le menu contextuel se trouve à 15 pixels ci-dessous la mini-barre d’outils.  
+ Utilisez cette fonction pour afficher une mini-barre d’outils qui a un menu contextuel. Le menu contextuel est positionnés 15 pixels sous la mini barre d’outils.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

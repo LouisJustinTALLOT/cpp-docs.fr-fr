@@ -1,5 +1,5 @@
 ---
-title: Classe de CHtmlEditCtrl | Documents Microsoft
+title: CHtmlEditCtrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338566"
 ---
-# <a name="chtmleditctrl-class"></a>Classe de CHtmlEditCtrl
+# <a name="chtmleditctrl-class"></a>CHtmlEditCtrl, classe
 Fournit les fonctionnalités du contrôle ActiveX WebBrowser dans une fenêtre MFC.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -53,12 +53,12 @@ class CHtmlEditCtrl: public CWnd,
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::Create](#create)|Crée un contrôle WebBrowser ActiveX et l’attache à le `CHtmlEditCtrl` objet. Cette fonction met automatiquement le contrôle WebBrowser ActiveX en mode édition.|  
+|[CHtmlEditCtrl::Create](#create)|Crée un contrôle WebBrowser ActiveX et l’attache à la `CHtmlEditCtrl` objet. Cette fonction place automatiquement le contrôle WebBrowser ActiveX en mode édition.|  
 |[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Récupère le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface sur le document actuellement chargé dans le contrôle WebBrowser relation contenant-contenu.|  
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Récupère l’URL d’un document par défaut à charger dans le contrôle WebBrowser relation contenant-contenu.|  
   
 ## <a name="remarks"></a>Notes  
- Le WebBrowser hébergé contrôle est automatiquement mis en mode d’édition après sa création.  
+ Mode d’édition WebBrowser hébergé contrôle est automatiquement placé dans après sa création.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- Crée un contrôle WebBrowser ActiveX et l’attache à le `CHtmlEditCtrl` objet. Le WebBrowser ActiveX contrôle accède automatiquement à un document par défaut et puis est placée en mode édition par cette fonction.  
+ Crée un contrôle WebBrowser ActiveX et l’attache à la `CHtmlEditCtrl` objet. Le WebBrowser ActiveX contrôle navigue automatiquement vers un document par défaut et est placé dans le mode édition par cette fonction.  
   
 ```  
 virtual BOOL Create(
@@ -105,7 +105,7 @@ virtual BOOL Create(
  Spécifie la taille et la position du contrôle.  
   
  *pParentWnd*  
- Spécifie la fenêtre du contrôle parent. Il ne doit pas être **NULL**.  
+ Spécifie la fenêtre du contrôle parent. Il ne doit pas être NULL.  
   
  *nID*  
  Spécifie l’ID. du contrôle  
@@ -114,7 +114,7 @@ virtual BOOL Create(
  Ce paramètre est inutilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
+ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
  Récupère le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface sur le document actuellement chargé dans le contrôle WebBrowser relation contenant-contenu  

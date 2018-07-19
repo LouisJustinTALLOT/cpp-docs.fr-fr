@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861501"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954914"
 ---
 # <a name="queue-class"></a>queue, classe
 
@@ -54,15 +54,15 @@ class queue
 
 *Type* type de données de l’élément à stocker dans la file d’attente
 
-`Container` Le type du conteneur sous-jacent utilisé pour implémenter la file d’attente.
+*Conteneur* le type du conteneur sous-jacent utilisé pour implémenter la file d’attente.
 
 ## <a name="remarks"></a>Notes
 
-Les éléments de la classe **Type** stipulés dans le premier paramètre de modèle d’un objet queue sont synonymes de [value_type](#value_type) et doivent correspondre au type d’élément de la classe de conteneur sous-jacent **Container** stipulé par le deuxième paramètre de modèle. La classe **Type** doit pouvoir faire l’objet d’une assignation, pour qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.
+Les éléments de classe `Type` stipulés dans le modèle de paramètre d’un objet de file d’attente sont synonymes de [value_type](#value_type) et doit correspondre au type d’élément de la classe de conteneur sous-jacent `Container` stipulé par le deuxième paramètre de modèle. Le `Type` doit être assignable, afin qu’il soit possible de copier des objets de ce type et d’affecter des valeurs aux variables de ce type.
 
-Les classes de conteneur sous-jacent appropriées pour la classe queue incluent [deque](../standard-library/deque-class.md) et [list](../standard-library/list-class.md) ou tout autre conteneur de séquence qui prend en charge les opérations `front`, **back**, `push_back` et `pop_front`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
+Classes de conteneur sous-jacent appropriées pour la file d’attente incluent [deque](../standard-library/deque-class.md) et [liste](../standard-library/list-class.md), ou tout autre conteneur de séquence qui prend en charge les opérations de `front`, `back`, `push_back`, et `pop_front`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
 
-Les objets queue sont comparables quant à l’égalité si et seulement si les éléments de la classe **Type** sont comparables quant à l’égalité, et ils sont comparables avec l’opérateur « inférieur à » si et seulement si les éléments de la classe **Type** sont comparables avec l’opérateur « inférieur à ».
+Les objets queue sont comparables à l’égalité si et seulement si les éléments de classe `Type` sont l’égalité comparables, et ils inférieur-que comparable si et seulement si les éléments de classe `Type` sont inférieurs-que comparable.
 
 Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque standard C++ : stack, queue et priority_queue. Chaque type limite les fonctionnalités d’une classe de conteneur sous-jacent pour fournir une interface contrôlée de façon précise à une structure de données standard.
 
@@ -97,7 +97,7 @@ Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque s
 |[push](#push)|Ajoute un élément à l’arrière de l’objet `queue`.|
 |[size](#size)|Retourne le nombre d'éléments d'un `queue`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<queue>
 
@@ -119,7 +119,7 @@ Dernier élément de l’objet queue. Si l’objet queue est vide, la valeur de 
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de **back** est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour de **back** est assignée à une **reference**, l’objet queue peut être modifié.
+Si la valeur de retour de `back` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour de `back` est affecté à un `reference`, l’objet de file d’attente peut être modifié.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément dans un objet queue vide.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
 
@@ -229,9 +229,9 @@ Premier élément de l’objet queue. Si l’objet queue est vide, la valeur de 
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `front` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour de `front` est assignée à une **reference**, l’objet queue peut être modifié.
+Si la valeur de retour de `front` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour de `front` est affecté à un `reference`, l’objet de file d’attente peut être modifié.
 
-La fonction membre retourne une **reference** au premier élément de la séquence contrôlée, qui ne doit pas être vide.
+La fonction membre retourne un `reference` vers le premier élément de la séquence contrôlée, qui doit être non vide.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément dans un objet queue vide.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
 
@@ -331,7 +331,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-`val` L’élément est ajouté à la fin de la file d’attente.
+*Val* l’élément ajouté à l’arrière de la file d’attente.
 
 ### <a name="remarks"></a>Notes
 
@@ -381,7 +381,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le **const** conteneur dont la file d’attente construit doit être une copie.
+*droit* le **const** conteneur sur lequel l’objet queue construit doit être une copie.
 
 ### <a name="remarks"></a>Notes
 

@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862505"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957507"
 ---
 # <a name="moneypunct-class"></a>moneypunct, classe
 
-Cette classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour décrire les séquences de type `CharType` utilisées pour représenter un champ d'entrée monétaire ou un champ de sortie monétaire. Si le paramètre de modèle `Intl` est `true`, les conventions internationales sont respectées.
+La classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour décrire les séquences de type *CharType* utilisé pour représenter un champ d’entrée monétaire ou un champ de sortie monétaire. Si le paramètre de modèle *Intl* est *true*, conventions internationales sont respectées.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Paramètres
 
-`CharType` Le type utilisé dans un programme pour encoder des caractères.
+*CharType* le type utilisé dans un programme pour encoder des caractères.
 
-`Intl` Indicateur spécifiant si les conventions internationales doivent être respectées.
+*Intl* un indicateur qui spécifie si les conventions internationales doivent être respectées.
 
 ## <a name="remarks"></a>Notes
 
 Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans **id.**
 
-L’objet statique const intl stocke la valeur du paramètre de modèle **Intl**.
+L’objet statique const intl stocke la valeur du paramètre de modèle *Intl*.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -122,7 +122,7 @@ L’objet statique const intl stocke la valeur du paramètre de modèle **Intl**
 |[positive_sign](#positive_sign)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe positif.|
 |[thousands_sep](#thousands_sep)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole de séparateur des milliers.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 
@@ -285,7 +285,7 @@ Règle propre aux paramètres régionaux pour déterminer comment les chiffres s
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple relatif à [grouping](#grouping), où la fonction membre virtuelle est appelée par **grouping**.
+Consultez l’exemple de [regroupement](#grouping), où la fonction membre virtuelle est appelée par `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -297,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant négatif. Chacun des quatre éléments de **pattern::field** peut avoir les valeurs suivantes :
+La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant négatif. Chacun des quatre éléments de `pattern::field` peut avoir les valeurs :
 
-- **none** pour faire correspondre zéro, un ou plusieurs espaces ou pour ne rien générer.
+- `none` Pour faire correspondre zéro ou plusieurs espaces ou ne rien générer.
 
-- **sign** pour faire correspondre ou générer un signe positif ou négatif.
+- `sign` Pour faire correspondre ou générer un signe positif ou négatif.
 
-- **space** pour faire correspondre zéro, un ou plusieurs espaces ou pour générer un espace.
+- `space` Pour faire correspondre zéro ou plusieurs espaces ou générer un espace.
 
-- **symbol** pour faire correspondre ou générer un symbole monétaire.
+- `symbol` Pour faire correspondre ou générer un symbole monétaire.
 
-- **value** pour faire correspondre ou générer une valeur monétaire.
+- `value` Pour faire correspondre ou générer une valeur monétaire.
 
-Les composants d’un champ de sortie monétaire sont générés et les composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre dans lequel ces éléments apparaissent dans **pattern::field**. Chacune des valeurs **sign**, **symbol**, **value**, et **none** ou **space** doit apparaître une seule fois. La valeur **none** ne doit pas apparaître en premier. La valeur space **ne doit pas** apparaître en premier ou en dernier. Si **Intl** a la valeur true, l’ordre est **symbol**, **sign**, **none**, puis **value**.
+Les composants d’un champ de sortie monétaire sont générés et composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre dans lequel ces éléments apparaissent dans `pattern::field`. Chacune des valeurs `sign`, `symbol`, `value`et la valeur `none` ou `space` doit apparaître une seule fois. La valeur `none` ne doit pas apparaître en premier. La valeur space **ne doit pas** apparaître en premier ou en dernier. Si `Intl` a la valeur true, l’ordre est `symbol`, `sign`, `none`, puis `value`.
 
 La version de modèle de `moneypunct`\< **CharType**, **Intl**> retourne `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -531,17 +531,17 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Refs` Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre `_Refs` et leur signification sont les suivantes :
+Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définis.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

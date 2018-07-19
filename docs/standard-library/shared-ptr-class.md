@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957520"
 ---
 # <a name="sharedptr-class"></a>shared_ptr, classe
 
@@ -67,7 +67,7 @@ Un `shared_ptr` cesse de posséder une ressource quand il est réaffecté ou ré
 
 L'argument de modèle `T` peut être un type incomplet, sauf comme mentionné pour certaines fonctions membres.
 
-Quand un objet `shared_ptr<T>` est construit à partir d'un pointeur de ressource de type `G*` ou à partir d'un `shared_ptr<G>`, le type de pointeur `G*` doit être convertible en `T*`. Si ce n'est pas le cas, le code n'est pas compilé. Par exemple :
+Quand un objet `shared_ptr<T>` est construit à partir d'un pointeur de ressource de type `G*` ou à partir d'un `shared_ptr<G>`, le type de pointeur `G*` doit être convertible en `T*`. Si ce n'est pas le cas, le code n'est pas compilé. Exemple :
 
 ```cpp
 #include <memory>
@@ -170,7 +170,7 @@ Plusieurs threads peuvent lire et écrire différents objets `shared_ptr` simult
 |[shared_ptr::operator=](#op_eq)|Remplace la ressource détenue.|
 |[shared_ptr::operator-&gt;](#op_arrow)|Obtient un pointeur vers la valeur désignée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<memory>
 
@@ -261,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur retourne une valeur de `true` lorsque `get() != nullptr`, sinon `false`.
+L’opérateur retourne une valeur de **true** lorsque `get() != nullptr`, sinon **false**.
 
 ### <a name="example"></a>Exemple
 
@@ -351,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Paramètres
 
-`sp` Le pointeur partagé à copier.
+*SP* pointeur partagé à copier.
 
-`ap` Pointeur automatique à copier.
+*AP* pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -441,7 +441,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-`ptr` Un `lvalue` référence à un `shared_ptr` ou `weak_ptr`.
+*PTR* un `lvalue` référence soit un `shared_ptr` ou un `weak_ptr`.
 
 ### <a name="remarks"></a>Notes
 
@@ -466,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Paramètres
 
-`Other` Type contrôlé par le pointeur d’argument.
+*Autres* type contrôlé par le pointeur d’argument.
 
-`D` Le type de la suppression.
+*D* le type du SUPPRESSEUR.
 
-`ptr` Le pointeur à copier.
+*PTR* le pointeur à copier.
 
-`dtor` La suppression à copier.
+*DTOR* SUPPRESSEUR à copier.
 
-`A` Le type de l’allocateur.
+*Un* le type de l’allocateur.
 
-`alloc` L’allocateur à copier.
+*Alloc* allocateur à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -581,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Paramètres
 
-`Other` Type contrôlé par le pointeur d’argument.
+*Autres* type contrôlé par le pointeur d’argument.
 
-`ptr` Le pointeur à copier.
+*PTR* le pointeur à copier.
 
-`D` Le type de la suppression.
+*D* le type du SUPPRESSEUR.
 
-`A` Le type de l’allocateur.
+*Un* le type de l’allocateur.
 
-`dtor` La suppression.
+*DTOR* SUPPRESSEUR.
 
-`ator` L’allocateur.
+*r* l’allocateur.
 
-`sp` Le pointeur intelligent à copier.
+*SP* le pointeur intelligent à copier.
 
-`wp` Le pointeur faible.
+*WP* pointeur faible.
 
-`ap` Pointeur automatique à copier.
+*AP* pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -722,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-`sp` Le pointeur partagé à échanger.
+*SP* le pointeur partagé à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre laisse la ressource détenue à l’origine par `*this` devenir la propriété de `sp`, et la ressource détenue à l’origine par `sp` devenir la propriété de `*this`. La fonction ne change pas le nombre de références pour les deux ressources, et ne lève pas d’exception.
+La fonction membre laisse la ressource détenue à l’origine par `*this` détenus par la suite par *sp*et la ressource détenue à l’origine par *sp* détenus par la suite par `*this`. La fonction ne change pas les décomptes de références pour les deux ressources, et ne lève aucune exception.
 
 ### <a name="example"></a>Exemple
 
@@ -792,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `true` si aucun autre objet `shared_ptr` détient la ressource qui appartient à `*this`. Sinon, elle retourne `false`.
+La fonction membre retourne **true** si aucun autre `shared_ptr` objet propriétaire de la ressource qui est détenue par `*this`, sinon **false**.
 
 ### <a name="example"></a>Exemple
 

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e72f9c584f818de69b0c341ff8dba66892816d8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861992"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955245"
 ---
 # <a name="moveiterator-class"></a>move_iterator, classe
 
@@ -64,9 +64,9 @@ Un `move_iterator` peut être capable d'effectuer des opérations qui ne sont pa
 |Nom de type|Description|
 |-|-|
 |[iterator_type](#iterator_type)|Synonyme pour le paramètre du modèle `RandomIterator`.|
-|[iterator_category](#iterator_category)|Synonyme d'une expression `typename` plus longue du même nom, `iterator_category` représente les fonctionnalités générales de l'itérateur.|
-|[value_type](#value_type)|Synonyme d'une expression `typename` plus longue du même nom, `value_type` décrit le type des éléments de l'itérateur.|
-|[difference_type](#difference_type)|Synonyme d'une expression `typename` plus longue du même nom, `difference_type` décrit le type intégral requis pour exprimer des différences de valeur entre les éléments.|
+|[iterator_category](#iterator_category)|Un synonyme pour une plus longue **typename** expression du même nom, `iterator_category` identifie les fonctionnalités générales de l’itérateur.|
+|[value_type](#value_type)|Un synonyme pour une plus longue **typename** expression du même nom, `value_type` décrit le type de l’itérateur sont des éléments.|
+|[difference_type](#difference_type)|Un synonyme pour une plus longue **typename** expression du même nom, `difference_type` décrit le type intégral requis aux valeurs d’exprimer des différences entre les éléments.|
 |[pointer](#pointer)|Synonyme du paramètre de modèle `RandomIterator`.|
 |[reference](#reference)|Synonyme de la référence `rvalue` `value_type&&`.|
 
@@ -90,7 +90,7 @@ Un `move_iterator` peut être capable d'effectuer des opérations qui ne sont pa
 |[move_iterator::operator+=](#op_add_eq)|Ajoute la valeur située à droite de l'itérateur stocké, et retourne `*this`.|
 |[move_iterator::operator-=](#operator-_eq)|Soustrait la valeur située à droite de l'itérateur stocké, et retourne `*this`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 
@@ -157,7 +157,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` L’itérateur à utiliser en tant que l’itérateur stocké.
+*droit* itérateur à utiliser en tant que l’itérateur stocké.
 
 ### <a name="remarks"></a>Notes
 
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Un offset à ajouter à la position actuelle pour déterminer la nouvelle position actuelle.
+*_Off* un offset à ajouter à la position actuelle pour déterminer la nouvelle position actuelle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -181,7 +181,7 @@ Retourne le nouvel élément actif.
 
 ### <a name="remarks"></a>Notes
 
-L'opérateur ajoute `_Off` à l'itérateur stocké. Il retourne ensuite `*this`.
+L’opérateur ajoute *_Off* à l’itérateur stocké. Il retourne ensuite `*this`.
 
 ## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
 
@@ -299,7 +299,7 @@ L'opérateur retourne `&**this`.
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-Le type `pointer` est un `typedef` basé sur l'itérateur aléatoire `RandomIterator` pour `move_iterator`. Vous pouvez utiliser indifféremment l'un ou l'autre.
+Le type `pointer` est un **typedef** en fonction de l’itérateur aléatoire `RandomIterator` pour `move_iterator`et peuvent être utilisées indifféremment.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -311,7 +311,7 @@ Le type est un synonyme de `RandomIterator`.
 
 ## <a name="reference"></a>  move_iterator::reference
 
-Le type `reference` est un `typedef` basé sur `value_type&&` pour `move_iterator`. Il peut être utilisé de manière interchangeable avec `value_type&&`.
+Le type `reference` est un **typedef** selon `value_type&&` pour `move_iterator`et peuvent être utilisées indifféremment avec `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;

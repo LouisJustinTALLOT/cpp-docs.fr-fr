@@ -1,5 +1,5 @@
 ---
-title: Afx_global_data, Structure | Documents Microsoft
+title: Afx_global_data, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337406"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 La structure `AFX_GLOBAL_DATA` contient des champs et des méthodes qui permettent de gérer l’infrastructure ou de personnaliser l’apparence et le comportement de votre application.  
@@ -126,7 +126,7 @@ BOOL  bIsOSAlphaBlendingSupport;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `TRUE` Indique la fusion alpha est pris en charge ; dans le cas contraire, `FALSE`.  
+ TRUE indique que la fusion alpha est pris en charge ; Sinon, FALSE.  
   
 
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
@@ -149,12 +149,12 @@ HRESULT D2D1MakeRotateMatrix(
   
 ### <a name="parameters"></a>Paramètres   
  *angle*  
- L’angle de rotation dans le sens horaire, en degrés.  
+ L’angle de rotation vers la droite, en degrés.  
   
  *Centre*  
  Le point autour duquel pivoter.  
   
- *Matrice*  
+ *matrice*  
  Lorsque cette méthode est retournée, contient la nouvelle transformation de rotation. Vous devez allouer le stockage pour ce paramètre.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -175,14 +175,14 @@ BOOL DrawParentBackground(
  [in] *pWnd*  
  Pointeur vers la fenêtre d’un contrôle.  
   
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers un contexte de périphérique.  
   
  [in] *lpRect*  
- Pointeur vers un rectangle qui délimite la zone à dessiner. La valeur par défaut est `NULL`.  
+ Pointeur vers un rectangle qui délimite la zone dans laquelle dessiner. La valeur par défaut est NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ## <a name="drawtextonglass"></a> AFX_GLOBAL_DATA::DrawTextOnGlass
 Dessine le texte spécifié dans le style visuel du thème spécifié.  
@@ -203,11 +203,11 @@ BOOL DrawTextOnGlass(
   
 ### <a name="parameters"></a>Paramètres   
  [in] *hTheme*  
- Handle vers les données de thème d’une fenêtre ou `NULL`. Si ce paramètre n’est pas `NULL` et que les thèmes sont pris en charge, l’infrastructure utilise le thème spécifié pour dessiner le texte. Sinon, l’infrastructure n’utilise pas de thème pour dessiner le texte.  
+ Handle vers les données de thème d’une fenêtre, ou NULL. L’infrastructure utilise le thème spécifié pour dessiner le texte si ce paramètre n’est pas NULL et thèmes sont pris en charge. Sinon, l’infrastructure n’utilise pas de thème pour dessiner le texte.  
   
- Utilisez la méthode [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) pour créer un `HTHEME`.  
+ Utilisez le [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) méthode pour créer un HTHEME.  
   
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers un contexte de périphérique.  
   
  [in] *iPartId*  
@@ -216,7 +216,7 @@ BOOL DrawTextOnGlass(
  [in] *iStateId*  
  État du contrôle ayant l’apparence de texte désirée. Pour plus d’informations, consultez la colonne États de la table figurant dans [Composants et états](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] *%{strText/}*  
+ [in] *strText*  
  Texte à dessiner.  
   
  [in] *rect*  
@@ -234,10 +234,10 @@ BOOL DrawTextOnGlass(
  Couleur utilisée pour dessiner le texte spécifié. La valeur par défaut est la couleur par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si un thème est utilisé pour dessiner le texte spécifié ; dans le cas contraire, `FALSE`.  
+ TRUE si un thème est utilisé pour dessiner le texte spécifié ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Un thème définit le style visuel d’une application. Un thème n’est pas utilisé pour dessiner le texte si le *hTheme* paramètre est `NULL`, ou si le [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) méthode n’est pas prise en charge, ou si [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) () Composition du Gestionnaire de fenêtrage) est désactivée.  
+ Un thème définit le style visuel d’une application. Un thème n’est pas utilisé pour dessiner le texte si le *hTheme* paramètre est NULL, ou si le [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) méthode n’est pas prise en charge, ou si [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) composition de (fenêtrage DWM) est désactivé.  
   
 ### <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
@@ -246,7 +246,7 @@ BOOL DrawTextOnGlass(
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
  [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
  [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Activer et contrôler Composition de gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [Activer et contrôler Composition DWM](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 Active ou désactive la prise en charge de Microsoft Active Accessibility.  
@@ -258,12 +258,12 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Paramètres   
  [in] *bActivez*  
- `TRUE` Pour activer la prise en charge de l’accessibilité ; `FALSE` pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est `TRUE`.  
+ TRUE pour activer la prise en charge d’accessibilité ; FALSE pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
- Active Accessibility est une technologie COM qui améliore les façon dont les programmes et le système d’exploitation de Windows fonctionne avec les produits de technologie d’assistance. Il fournit des méthodes fiables pour exposer des informations sur les éléments d’interface utilisateur. Cependant, un modèle d’accessibilité plus récente appelé Microsoft UI Automation est désormais disponible. Pour obtenir une comparaison des deux technologies, consultez [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
+ Active Accessibility est une technologie COM qui améliore les façon dont les programmes et le travail de système d’exploitation Windows ainsi que des produits de technologie d’assistance. Il fournit des méthodes fiables pour exposer des informations sur les éléments d’interface utilisateur. Toutefois, un modèle d’accessibilité plus récent appelé Microsoft UI Automation est maintenant disponible. Pour obtenir une comparaison des deux technologies, consultez [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
- Utilisez le [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) méthode pour déterminer si la prise en charge Microsoft Active Accessibility est activée.  
+ Utilisez le [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) méthode pour déterminer si la prise en charge de Microsoft Active Accessibility est activée.  
   
  
 ### <a name="see-also"></a>Voir aussi  
@@ -287,28 +287,28 @@ BOOL ExcludeTag(
  Une mémoire tampon de texte.  
   
  [in] *lpszTag*  
- Le nom d’une paire d’ouverture et de fermeture des balises XML.  
+ Le nom d’une paire de balises de XML.  
   
  [out] *strTag*  
- Lorsque cette méthode est retournée, la *strTag* paramètre contient le texte entre les balises XML balises qui sont nommées par le *lpszTag* paramètre. Les espaces de début ou de fin sont tronqué à partir du résultat.  
+ Lorsque cette méthode est retournée, le *strTag* paramètre contient le texte entre les balises XML les balises qui sont nommés en fonction du *lpszTag* paramètre. Tout espace blanc au début ou de fin est tronqué à partir du résultat.  
   
  [in] *bIsCharsList*  
- `TRUE` Pour convertir des symboles pour les caractères d’échappement dans le *strTag* paramètre en caractères d’échappement réel ; `FALSE` ne pas à effectuer la conversion. La valeur par défaut est `FALSE`. Pour plus d'informations, consultez la section Notes.  
+ True pour convertir les symboles pour les caractères d’échappement dans le *strTag* paramètre en caractères d’échappement réel ; Ne pas d’effectuer la conversion, la valeur est FALSE. La valeur par défaut est FALSE. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Une paire de balises XML se compose de nommé balises qui indiquent le début et la fin d’une séquence de texte dans la mémoire tampon spécifiée. Le *strBuffer* paramètre spécifie la mémoire tampon et le *lpszTag* paramètre spécifie le nom des balises XML.  
+ Une paire de balises XML se compose de nommé balises qui indiquent le début et la fin d’une exécution de texte dans la mémoire tampon spécifiée. Le *strBuffer* paramètre spécifie la mémoire tampon et le *lpszTag* paramètre spécifie le nom des balises XML.  
   
- Utilisez les symboles dans le tableau suivant pour encoder un jeu de caractères d’échappement dans la mémoire tampon spécifiée. Spécifiez `TRUE` pour le *bIsCharsList* paramètre à convertir les symboles dans le *strTag* paramètre en caractères d’échappement réel. Le tableau suivant utilise le [_T()](../../c-runtime-library/data-type-mappings.md) (macro) pour spécifier le symbole et les chaînes de caractères d’échappement.  
+ Utiliser les symboles dans le tableau suivant pour encoder un jeu de caractères d’échappement dans la mémoire tampon spécifiée. Spécifiez TRUE pour le *bIsCharsList* paramètre à convertir les symboles dans le *strTag* paramètre en caractères d’échappement réelle. Le tableau suivant utilise le [_T()](../../c-runtime-library/data-type-mappings.md) macro pour spécifier le symbole et de chaînes de caractères d’échappement.  
   
 |Symbole|Caractère d'échappement|  
 |------------|----------------------|  
-|_T («\\\t »)|_T("\t")|  
-|_T («\\\n »)|_T("\n")|  
-|_T («\\\r »)|_T("\r")|  
-|_T («\\\b »)|_T("\b")|  
+|_T ("\\\t »)|_T("\t")|  
+|_T ("\\\n »)|_T("\n")|  
+|_T ("\\\r »)|_T("\r")|  
+|_T ("\\\b »)|_T("\b")|  
 |_T("LT")|_T («\<»)|  
 |_T("GT")|_T("&GT;")|  
 |_T("AMP")|_T("&AMP;")|  
@@ -329,7 +329,7 @@ COLORREF GetColor(int nColor);
  La valeur de couleur RVB de l’élément d’interface utilisateur spécifié. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="remarks"></a>Notes  
- Si le *nColor* paramètre est hors limites, la valeur de retour est égale à zéro. Zéro est également une valeur RVB, vous ne pouvez pas utiliser cette méthode pour déterminer si une couleur système est pris en charge par le système d’exploitation actuel. Utilisez plutôt le [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) (méthode), qui retourne `NULL` si la couleur n’est pas pris en charge.  
+ Si le *nColor* paramètre est hors limites, la valeur de retour est égale à zéro. Étant donné que zéro est également une valeur valide RVB, vous ne pouvez pas utiliser cette méthode pour déterminer si une couleur système est pris en charge par le système d’exploitation actuel. Au lieu de cela, utilisez le [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) (méthode), qui retourne la valeur NULL si la couleur n’est pas pris en charge.  
   
 ### <a name="see-also"></a>Voir aussi  
 
@@ -349,7 +349,7 @@ ID2D1Factory* GetDirect2dFactory();
  Pointeur vers l’interface ID2D1Factory si la création d’une fabrique réussit, ou NULL si la création échoue ou de système d’exploitation actuel ne prend pas prise en charge D2D.  
   
 ## <a name="gethandcursor"></a>  AFX_GLOBAL_DATA::GetHandCursor
-Récupère le curseur prédéfini qui a la forme d’une main et dont l’identificateur est `IDC_HAND`.  
+Récupère le curseur prédéfini qui ressemble à une main et dont l’identificateur est IDC_HAND.  
   
   
 ```  
@@ -368,11 +368,11 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [dans, out] *info*  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) structure qui contient les mesures évolutives associés à la zone non cliente d’une fenêtre non réduite.  
+ [in, out] *info*  
+ Un [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) structure qui contient les mesures évolutives associées à la zone non cliente d’une fenêtre non réduite.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ TRUE si cette méthode réussit ; Sinon, FALSE.  
  
   
 ### <a name="see-also"></a>Voir aussi   
@@ -388,10 +388,10 @@ int GetTextHeight(BOOL bHorz = TRUE);
   
 ### <a name="parameters"></a>Paramètres   
  [in] *bHorz*  
- `TRUE` pour récupérer la hauteur des caractères lorsque le texte à l’horizontale ; `FALSE` pour récupérer la hauteur des caractères lorsque le texte verticalement. La valeur par défaut est `TRUE`.  
+ TRUE pour récupérer la hauteur des caractères lorsque le texte à l’horizontale ; FALSE pour récupérer la hauteur des caractères lorsque le texte verticalement. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La hauteur de la police actuelle, qui est mesurée à partir de son hampe à son hampe inférieure.  
+ La hauteur de la police actuelle, qui est mesurée à partir de son ascender à son hampe.  
   
 ## <a name="getwicfactory"></a> AFX_GLOBAL_DATA::GetWICFactory
 Retourne un pointeur vers l’interface IWICImagingFactory qui est stocké dans les données globales. Si l’interface n’est pas initialisée, elle est créée avec les paramètres par défaut.  
@@ -402,7 +402,7 @@ IWICImagingFactory* GetWICFactory();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur à interface IWICImagingFactory si la création d’une fabrique réussit, ou NULL si la création échoue ou système d’exploitation actuel ne prend pas en charge WIC.  
+ Pointeur vers l’interface IWICImagingFactory si la création d’une fabrique réussit, ou NULL si la création échoue ou système d’exploitation actuel ne prend pas prise en charge WIC.  
   
 ## <a name="getwritefactory"></a> AFX_GLOBAL_DATA::GetWriteFactory
 Retourne un pointeur vers l’interface IDWriteFactory qui est stocké dans les données globales. Si l’interface n’est pas initialisée, elle est créée avec les paramètres par défaut.  
@@ -413,7 +413,7 @@ IDWriteFactory* GetWriteFactory();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur interface IDWriteFactory si la création d’une fabrique réussit, ou NULL si la création échoue ou système d’exploitation actuel ne prend pas en charge DirectWrite.  
+ Pointeur vers l’interface IDWriteFactory si la création d’une fabrique réussit, ou NULL si la création échoue ou système d’exploitation actuel ne prend pas prise en charge de DirectWrite.  
  
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
 Initialise les fabriques D2D, DirectWrite et WIC. Appelez cette méthode avant que la fenêtre principale soit initialisée.  
@@ -427,13 +427,13 @@ BOOL InitD2D(
   
 ### <a name="parameters"></a>Paramètres   
  *d2dFactoryType*  
- Le modèle de thread de la fabrique D2D et les ressources qu’il crée.  
+ Le modèle de thread de la fabrique D2D et des ressources qu’il crée.  
   
  *writeFactoryType*  
  Une valeur qui spécifie si l’objet de fabrique d’écriture sera partagé ou isolé  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur TRUE si les fabriques ont été initialisées, FALSE : dans le cas contraire  
+ Retourne la valeur TRUE si les fabriques ont été initialisées, FALSE : sinon  
   
 ## <a name="is32biticons"></a> AFX_GLOBAL_DATA::Is32BitIcons
 Indique si les icônes 32 bits prédéfinies sont prises en charge.  
@@ -446,10 +446,10 @@ BOOL Is32BitIcons() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si les icônes de 32 bits prédéfinies sont prises en charge ; dans le cas contraire, `FALSE`.  
+ TRUE si les icônes 32 bits prédéfinies sont prises en charge ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode retourne `TRUE` si le framework prend en charge les icônes intégrés 32 bits et si le système d’exploitation prend en charge 16 bits par pixel ou plus, et si les images ne sont pas affichées avec un contraste élevé.  
+ Cette méthode retourne la valeur TRUE si le framework prend en charge les icônes intégrés 32 bits, si le système d’exploitation prend en charge 16 bits par pixel ou plus et si les images ne sont pas affichées avec un contraste élevé.  
   
 ## <a name="isaccessibilitysupport"></a> AFX_GLOBAL_DATA::IsAccessibilitySupport
 Indique si la prise en charge de Microsoft Active Accessibility est activée.  
@@ -460,12 +460,12 @@ BOOL IsAccessibilitySupport() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la prise en charge de l’accessibilité est activée ; dans le cas contraire, `FALSE`.  
+ TRUE si la prise en charge de l’accessibilité est activée ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Microsoft Active Accessibility était la solution précédemment utilisée pour rendre les applications accessibles. Microsoft UI Automation est le nouveau modèle d’accessibilité pour Microsoft Windows et est destinée à répondre aux besoins des produits de technologie d’assistance et outils de test automatisés.   
+ Microsoft Active Accessibility était la solution précédemment utilisée pour rendre les applications accessibles. Microsoft UI Automation est le nouveau modèle d’accessibilité pour Microsoft Windows et est conçue pour répondre aux besoins des produits de technologie d’assistance et outils de test automatisés.   
   
- Utilisez le [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) méthode pour activer ou désactiver la prise en charge de Active Accessibility.  
+ Utilisez le [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) méthode pour activer ou désactiver la prise en charge Active Accessibility.  
   
 
 ### <a name="see-also"></a>Voir aussi  
@@ -491,11 +491,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) composition de (fenêtrage DWM) est activée ; sinon, `FALSE`.  
+ TRUE si [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) composition de (fenêtrage DWM) est activée ; sinon, FALSE.  
   
 ### <a name="see-also"></a>Voir aussi    
  [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Activer et contrôler Composition de gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [Activer et contrôler Composition DWM](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  Indique si les images sont actuellement affichées avec un contraste élevé.    
@@ -504,10 +504,10 @@ BOOL IsHighContrastMode() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si les images sont affichées actuellement en mode de contraste élevé d’ou de blocage ; dans le cas contraire, `FALSE`.  
+ TRUE si les images sont affichées actuellement en mode de contraste élevé noir ou blanc. Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- En mode de contraste élevé noir, bords en face de la lumière sont blanches et l’arrière-plan est noir. En mode de contraste élevé blanc, bords en face de la lumière sont noirs et l’arrière-plan est blanc.  
+ En mode de contraste élevé noir, bords en face de la lumière sont le blancs et l’arrière-plan est noir. En mode de contraste élevé blanc, bords en face de la lumière sont affichent en noirs et l’arrière-plan est blanc.  
   
 ## <a name="iswindowslayersupportavailable"></a> AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
 Indique si le système d’exploitation prend en charge les fenêtres superposées.  
@@ -518,10 +518,10 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si les fenêtres superposées sont pris en charge ; dans le cas contraire, `FALSE`.  
+ TRUE si les fenêtres superposées sont pris en charge ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Si les fenêtres superposées sont pris en charge, *ancrage actifs* utilisent des marqueurs de fenêtres superposées.  
+ Si les fenêtres superposées sont pris en charge, *ancrage actifs* marqueurs utilisent des fenêtres superposées.  
   
 ## <a name="m_busebuiltin32biticons"></a> AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
 Indique si l’infrastructure utilise des icônes de couleur 32 bits prédéfinies ou des icônes d’une résolution inférieure.  
@@ -532,7 +532,7 @@ BOOL  m_bUseBuiltIn32BitIcons;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `TRUE` Spécifie que le framework utilise des icônes de couleur 32 bits ; `FALSE` spécifie les icônes de résolution inférieurs. Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise à ce membre `TRUE`.  
+ La valeur TRUE indique que le framework utilisent des icônes de couleur 32 bits ; La valeur FALSE indique les icônes de résolution inférieure. Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre sur TRUE.  
   
  Ce membre doit être défini au démarrage de l’application.  
   
@@ -545,9 +545,9 @@ BOOL m_bUseSystemFont;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `TRUE` Spécifie l’utilisation d’une police système ; dans le cas contraire, `FALSE`. Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise à ce membre `FALSE`.  
+ TRUE indique d’utiliser une police système ; Sinon, FALSE. Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre sur FALSE.  
   
- Test de ce membre n’est pas la seule façon pour l’infrastructure pour déterminer la police à utiliser. Le `AFX_GLOBAL_DATA::UpdateFonts` méthode teste également les polices par défaut et de remplacement pour déterminer les styles visuels sont disponibles pour être appliqués à des menus, barres d’outils et les rubans.  
+ Test de ce membre n’est pas la seule façon de l’infrastructure pour déterminer la police à utiliser. Le `AFX_GLOBAL_DATA::UpdateFonts` méthode teste également des polices par défaut et de remplacement pour déterminer les styles visuels sont disponibles pour être appliqués à des menus, barres d’outils et les rubans.  
   
 ## <a name="m_hcurhand"></a> AFX_GLOBAL_DATA::m_hcurHand
 Stocke le handle du curseur en forme de main.  
@@ -581,7 +581,7 @@ Stocke le handle de l’icône d’outil.
 HICON m_hiconTool;  
 ```  
 ## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
-Spécifie le décalage à partir de la barre d’outils à l’extrême gauche de masquage automatique sur le côté gauche de la barre d’ancrage.  
+Spécifie l’offset à partir de la barre d’outils de masquage automatique à l’extrême gauche vers le côté gauche de la barre d’ancrage.  
   
   
 ```  
@@ -600,11 +600,11 @@ int   m_nAutoHideToolBarSpacing;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre à 14 pixels.  
+ Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre en 14 pixels.  
   
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
-Spécifie l’épaisseur du cadre glisser qui est utilisé pour indiquer l’état ancré.  
+Spécifie l’épaisseur du cadre de glissement qui est utilisé pour indiquer l’état d’ancrage.  
   
   
 ```  
@@ -615,7 +615,7 @@ int  m_nDragFrameThicknessDock;
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 3 pixels.  
   
 ## <a name="m_ndragframethicknessfloat"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
-Spécifie l’épaisseur du cadre glisser qui est utilisé pour indiquer l’état flottant.  
+Spécifie l’épaisseur du cadre de glissement qui est utilisé pour indiquer l’état flottant.  
   
   
 ```  
@@ -634,7 +634,7 @@ void OnSettingChange();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode définit les variables de framework à l’état de certains attributs de bureau de l’utilisateur. Cette méthode détecte l’état actuel de l’animation de menu, atténuation de menu et de tâches de la barre des fonctionnalités de masquage automatique.  
+ Cette méthode définit les variables de framework à l’état de certains attributs de bureau de l’utilisateur. Cette méthode détecte l’état actuel de l’animation de menu, une atténuation de menu et une tâche fonctionnalités de masquage automatique de la barre.  
   
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 Inscrit la classe de fenêtre MFC spécifiée.  
@@ -649,17 +649,17 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  Le nom de la classe de fenêtre à inscrire.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nom qualifié de la classe inscrite si cette méthode a réussi ; Sinon, un [exception ressources](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Le nom qualifié de la classe inscrite si cette méthode réussit ; Sinon, un [exception de la ressource](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Notes  
- La valeur de retour est une liste délimitée par des deux-points de la *lpszClassNamePrefix* la chaîne de paramètres et les représentations sous forme de texte hexadécimal des handles de l’instance actuelle de l’application ; le curseur de l’application, qui est la flèche curseur dont l’identificateur est IDC_ARROW ; et le pinceau d’arrière-plan. Pour plus d’informations sur l’inscription des classes de fenêtre MFC, consultez [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
+ La valeur de retour est une liste délimitée par des deux-points de la *lpszClassNamePrefix* chaîne de paramètre et les représentations sous forme de texte hexadécimal des poignées de l’instance actuelle de l’application ; le curseur de l’application, c'est-à-dire la flèche curseur dont l’identificateur est IDC_ARROW ; et le pinceau d’arrière-plan. Pour plus d’informations sur l’inscription des classes de fenêtre MFC, consultez [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Voir aussi    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
  [AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
 
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
- Réinitialise les pointeurs de fonction interne qui accèdent aux méthodes qui prennent en charge les thèmes Windows et des styles visuels. 
+ Réinitialise les pointeurs de fonction internes qui accèdent à des méthodes qui prennent en charge des thèmes de Windows et les styles visuels. 
   
   
 ```  
@@ -667,7 +667,7 @@ BOOL Resume();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  
+ TRUE si cette méthode réussit ; Sinon, FALSE. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée lorsque l’infrastructure reçoit le [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) message.  
@@ -686,7 +686,7 @@ BOOL SetLayeredAttrib(
   
 ### <a name="parameters"></a>Paramètres   
  [in] *hwnd*  
- Handle vers la fenêtre superposée.  
+ Handle de la fenêtre superposée.  
   
  [in] *crKey*  
  La couleur de transparence de clé qui le [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) utilise pour composer la fenêtre superposée.  
@@ -695,10 +695,10 @@ BOOL SetLayeredAttrib(
  La valeur alpha est utilisée pour décrire l’opacité de la fenêtre superposée.  
   
  [in] *dwFlags*  
- Combinaison de bits (OR) d’indicateurs qui spécifient les paramètres de méthode à utiliser. Spécifiez LWA_COLORKEY à utiliser le *crKey* paramètre comme la couleur de transparence. Spécifiez LWA_ALPHA à utiliser le *bAlpha* paramètre pour déterminer l’opacité de la fenêtre superposée.  
+ Une combinaison (OR) au niveau du bit des indicateurs qui spécifient les paramètres de méthode à utiliser. Spécifiez LWA_COLORKEY à utiliser le *crKey* paramètre en tant que la couleur de transparence. Spécifiez LWA_ALPHA à utiliser le *bAlpha* paramètre pour déterminer l’opacité de la fenêtre superposée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.   
+ TRUE si cette méthode réussit ; Sinon, FALSE.   
  
 ### <a name="see-also"></a>Voir aussi   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
@@ -719,10 +719,10 @@ BOOL SetMenuFont(
  Pointeur vers une structure qui contient les attributs d’une police.  
   
  [in] *bHorz*  
- `TRUE` Pour spécifier que le texte à l’horizontale ; `FALSE` pour spécifier que le texte verticalement.  
+ TRUE pour spécifier que les séquences de texte horizontalement ; FALSE pour spécifier que les séquences de texte verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  
+ TRUE si cette méthode réussit ; Sinon, FALSE. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode crée une police normale horizontale, une police soulignée, et une police en gras est utilisé par défaut des éléments de menu. Si vous le souhaitez, cette méthode crée une police verticale normale. Pour plus d’informations sur les polices logiques, consultez [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
@@ -755,7 +755,7 @@ BOOL bIsWindows7;
 ```  
   
 ## <a name="clractivecaptiongradient"></a> AFX_GLOBAL_DATA::clrActiveCaptionGradient
-Spécifie la couleur de la légende active. Généralement utilisé pour les volets d’ancrage.  
+Spécifie la couleur de dégradé de la légende active. Généralement utilisé pour les volets d’ancrage.  
   
   
 ```  
@@ -771,7 +771,7 @@ COLORREF clrInactiveCaptionGradient;
 ```  
   
 ## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
-Crée et stocke les données globales, un pointeur vers le `ITaskBarList` interface.  
+Crée et stocke dans les données globales un pointeur vers le `ITaskBarList` interface.  
   
   
 ```  
@@ -779,10 +779,10 @@ ITaskbarList *GetITaskbarList();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `ITaskbarList` interface si la création d’une tâche à l’objet de liste de la barre a réussi ; `NULL` si la création échoue ou si le système d’exploitation actuel est inférieur à Windows 7.  
+ Un pointeur vers le `ITaskbarList` interface si la création d’une tâche à l’objet de liste de la barre réussit ; NULL si la création échoue ou si le système d’exploitation actuel est inférieur à Windows 7.  
   
 ## <a name="getitaskbarlist3"></a> AFX_GLOBAL_DATA::GetITaskbarList3
-Crée et stocke les données globales, un pointeur vers le `ITaskBarList3` interface.  
+Crée et stocke dans les données globales un pointeur vers le `ITaskBarList3` interface.  
   
   
 ```  
@@ -790,7 +790,7 @@ ITaskbarList3 *GetITaskbarList3();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `ITaskbarList3` interface si la création d’une tâche à l’objet de liste de la barre a réussi ; `NULL` si la création échoue ou si le système d’exploitation actuel est inférieur à Windows 7.  
+ Un pointeur vers le `ITaskbarList3` interface si la création d’une tâche à l’objet de liste de la barre réussit ; NULL si la création échoue ou si le système d’exploitation actuel est inférieur à Windows 7.  
   
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 Détermine les positions des barres de masquage automatique de l’interpréteur de commandes.  
@@ -801,7 +801,7 @@ int GetShellAutohideBars();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur entière avec encodé indicateurs qui spécifient les positions d’auto masquer les barres. Il peut combiner les valeurs suivantes : AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.  
+ Une valeur entière avec des indicateurs encodées qui spécifient les positions d’auto masquer les barres. Il peut combiner les valeurs suivantes : AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.  
   
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 Libère les interfaces obtenues via le `GetITaskbarList` et `GetITaskbarList3` méthodes.  

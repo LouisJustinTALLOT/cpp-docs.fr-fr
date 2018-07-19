@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74c62c1d6d80f21054f03f78e0151c2cddf00e2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859223"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959859"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator, classe
 
@@ -46,13 +46,13 @@ class istream_iterator
 
 ### <a name="parameters"></a>Paramètres
 
-`Type` Le type d’objet doit être extraite à partir du flux d’entrée.
+*Type* le type d’objet doit être extraite à partir du flux d’entrée.
 
-`CharType` Type qui représente le type de caractère pour le `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char`.
+*CharType* le type qui représente le type de caractère pour le `istream_iterator`. Cet argument est facultatif et la valeur par défaut est **char**.
 
-`Traits` Type qui représente le type de caractère pour le `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`< `CharType`>.
+*Caractéristiques* le type qui représente le type de caractère pour le `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`< `CharType`>.
 
-`Distance` Un type intégral signé qui représente le type de différence pour le `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `ptrdiff_t`.
+*Distance* un type intégral signé qui représente le type de différence pour le `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `ptrdiff_t`.
 
 Après avoir construit ou incrémenté un objet de classe istream_iterator avec un pointeur non null stocké, l'objet tente d'extraire et de stocker un objet de type `Type` à partir du flux d'entrée associé. Si l'extraction échoue, l'objet remplace le pointeur stocké par un pointeur null, créant ainsi un indicateur de fin de séquence.
 
@@ -78,7 +78,7 @@ Après avoir construit ou incrémenté un objet de classe istream_iterator avec 
 |[operator->](#op_arrow)|Retourne la valeur d'un membre, le cas échéant.|
 |[operator++](#op_add_add)|Extrait un objet incrémenté du flux d'entrée ou copie l'objet avant de l'incrémenter et retourne la copie.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 
@@ -94,7 +94,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **Chartype**.
+Le type est un synonyme du paramètre de modèle `Chartype`.
 
 ### <a name="example"></a>Exemple
 
@@ -144,11 +144,11 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Istr` Le flux d’entrée à lire à utiliser pour initialiser le `istream_iterator`.
+*_Istr* le flux d’entrée à lire pour initialiser le `istream_iterator`.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise le pointeur de flux d’entrée avec un pointeur Null et crée un itérateur de fin de flux. Le deuxième constructeur initialise le pointeur de flux d’entrée avec *&_Istr*, puis tente d’extraire et de stocker un objet de type **Type**.
+Le premier constructeur initialise le pointeur de flux d’entrée avec un pointeur Null et crée un itérateur de fin de flux. Le deuxième constructeur initialise le pointeur de flux d’entrée avec *& _Istr*, puis tente d’extraire et stocker un objet de type `Type`.
 
 Vous pouvez utiliser l’itérateur de fin de flux pour tester si un `istream_iterator` a atteint la fin d’un flux.
 
@@ -204,7 +204,7 @@ Pour découvrir comment déclarer et utiliser `istream_type`, consultez l’exem
 
 ## <a name="op_star"></a>  istream_iterator::operator*
 
-L’opérateur de déréférencement retourne l’objet stocké de type **Type** traité par `istream_iterator`.
+L'opérateur de déréférencement retourne l'objet stocké de type `Type` auquel se rapporte l'objet `istream_iterator`.
 
 ```cpp
 const Type& operator*() const;
@@ -212,7 +212,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Objet stocké de type **Type**.
+L’objet stocké de type `Type`.
 
 ### <a name="example"></a>Exemple
 
@@ -308,7 +308,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier opérateur de membre retourne une référence à l’objet incrémenté de type **Type** extrait à partir du flux d’entrée, et la deuxième fonction de membre retourne une copie de l’objet.
+Le premier opérateur membre retourne une référence à l’objet incrémenté de type `Type` extrait à partir du flux d’entrée et la deuxième fonction de membre retourne une copie de l’objet.
 
 ### <a name="example"></a>Exemple
 
@@ -352,7 +352,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **Traits**.
+Le type est un synonyme du paramètre de modèle *Traits*.
 
 ### <a name="example"></a>Exemple
 

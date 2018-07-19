@@ -1,5 +1,5 @@
 ---
-title: Classe de CConnectionPoint | Documents Microsoft
+title: CConnectionPoint, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,14 +34,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7b092c6a097d39c3114193c578bc37c179ca0df7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336197"
 ---
-# <a name="cconnectionpoint-class"></a>Classe de CConnectionPoint
+# <a name="cconnectionpoint-class"></a>CConnectionPoint, classe
 Définit un type particulier d'interface utilisé pour communiquer avec d'autres objets OLE, appelé « point de connexion ».  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -62,39 +62,39 @@ class CConnectionPoint : public CCmdTarget
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CConnectionPoint::GetConnections](#getconnections)|Récupère tous les points de connexion dans un mappage de connexion.|  
-|[CConnectionPoint::GetContainer](#getcontainer)|Récupère le conteneur du contrôle qui possède le mappage de connexion.|  
-|[CConnectionPoint::GetIID](#getiid)|Récupère l’ID de l’interface d’un point de connexion.|  
+|[CConnectionPoint::GetConnections](#getconnections)|Récupère tous les points de connexion dans un mappage de connexions.|  
+|[CConnectionPoint::GetContainer](#getcontainer)|Récupère le conteneur du contrôle qui possède le mappage de connexions.|  
+|[CConnectionPoint::GetIID](#getiid)|Récupère l’ID d’interface d’un point de connexion.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Récupère le nombre maximal de points de connexion pris en charge par un contrôle.|  
 |[CConnectionPoint::GetNextConnection](#getnextconnection)|Récupère un pointeur vers l’élément de la connexion à *pos*.|  
-|[CConnectionPoint::GetStartPosition](#getstartposition)|Démarre une itération de la carte en retournant un **POSITION** valeur qui peut être passé à un `GetNextConnection` appeler.|  
+|[CConnectionPoint::GetStartPosition](#getstartposition)|Démarre une itération de la carte en retournant une valeur POSITION qui peut être passée à un `GetNextConnection` appeler.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|Appelé par l’infrastructure lors de l’établissement ou l’arrêt d’une connexion.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Récupère un pointeur vers l’interface du récepteur demandé.|  
   
 ## <a name="remarks"></a>Notes  
- Contrairement aux interfaces OLE normales, qui sont utilisés pour implémenter et d’exposer les fonctionnalités d’un contrôle OLE, un point de connexion implémente une interface sortante qui est en mesure de lancer des actions sur d’autres objets, tels que le déclenchement d’événements et de notifications de modification.  
+ Contrairement aux interfaces OLE normales, qui servent à implémenter et d’exposer les fonctionnalités d’un contrôle OLE, un point de connexion implémente une interface sortante qui est en mesure de lancer des actions sur d’autres objets, tels que le déclenchement d’événements et notifications de modifications.  
   
- Une connexion se compose de deux parties : l’objet qui appelle l’interface, appelé la « source » et l’objet qui implémente l’interface, appelé « récepteur ». En exposant un point de connexion, une source permet à des récepteurs d’établir des connexions à elle-même. Via le mécanisme de point de connexion, un objet source Obtient un pointeur vers l’implémentation du récepteur d’un ensemble de fonctions membres. Par exemple, pour déclencher un événement implémenté par le récepteur, la source peut appeler la méthode appropriée de l'implémentation du récepteur.  
+ Une connexion se compose de deux parties : l’objet qui appelle l’interface, appelé la « source » et l’objet implémentant l’interface, appelé « sink ». En exposant un point de connexion, une source permet à des récepteurs d’établir des connexions à elle-même. Via le mécanisme de point de connexion, un objet de source Obtient un pointeur vers l’implémentation du récepteur d’un ensemble de fonctions membres. Par exemple, pour déclencher un événement implémenté par le récepteur, la source peut appeler la méthode appropriée de l'implémentation du récepteur.  
   
- Par défaut, un `COleControl`-classe dérivée implémente deux points de connexion : notifications de modification d’un des événements et l’autre pour la propriété. Ces connexions sont utilisées, respectivement, pour le déclenchement d’événement et pour avertir un récepteur (par exemple, le conteneur du contrôle) lorsqu’une valeur de propriété a changé. Prise en charge est également fournie pour les contrôles OLE implémenter les points de connexion supplémentaires. Pour chaque point de connexion supplémentaires implémentée dans votre classe de contrôle, vous devez déclarer une partie de connexion « » qui implémente le point de connexion. Si vous implémentez un ou plusieurs points de connexion, vous devez également déclarer un seul « mappage de connexions » dans votre classe de contrôle.  
+ Par défaut, un `COleControl`-classe dérivée implémente deux points de connexion : un pour les événements et un pour la propriété des notifications de modifications. Ces connexions sont utilisées, respectivement, pour le déclenchement des événements et pour notifier un récepteur (par exemple, le conteneur du contrôle) quand une valeur de propriété a changé. Prise en charge est également fournie pour contrôles OLE implémenter les points de connexion supplémentaires. Pour chaque point de connexion supplémentaires implémentée dans votre classe de contrôle, vous devez déclarer une partie de connexion « » qui implémente le point de connexion. Si vous implémentez un ou plusieurs points de connexion, vous devez également déclarer un seul « mappage de connexions » dans votre classe de contrôle.  
   
- L’exemple suivant illustre un mappage de connexions simple et un point de connexion pour le `Sample` contrôle OLE, consistant en deux fragments de code : la première partie déclare le mappage de connexion et le point ; le second implémente ce point et la carte. Le premier fragment est inséré dans la déclaration de la classe du contrôle, sous la `protected` section :  
+ L’exemple suivant montre un mappage de connexions simple et un point de connexion pour le `Sample` contrôle OLE, consistant en deux fragments de code : la première partie déclare le mappage de connexions et le point ; le second implémente ce point et la carte. Le premier fragment est inséré dans la déclaration de la classe de contrôle, sous la **protégé** section :  
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- Les macros BEGIN_CONNECTION_PART et END_CONNECTION_PART déclarent une classe incorporée, `XSampleConnPt` (dérivée de `CConnectionPoint`) qui implémente ce point de connexion particulier. Si vous souhaitez remplacer toutes les `CConnectionPoint` fonctions membres, ou ajouter vos propres fonctions membres, déclarez-les entre ces deux macros. Par exemple, la macro CONNECTION_IID remplace le `CConnectionPoint::GetIID` fonction membre lorsqu’elle est placée entre ces deux macros.  
+ Les macros BEGIN_CONNECTION_PART et END_CONNECTION_PART déclarent une classe incorporée, `XSampleConnPt` (dérivée de `CConnectionPoint`) qui implémente ce point de connexion particulier. Si vous souhaitez remplacer toutes `CConnectionPoint` fonctions membres, ou ajouter vos propres fonctions membres, déclarez-les entre ces deux macros. Par exemple, le CONNECTION_IID (macro) remplace le `CConnectionPoint::GetIID` fonction membre lorsqu’elle est placée entre ces deux macros.  
   
- Le deuxième fragment de code est inséré dans le fichier d’implémentation (. CPP) de votre classe du contrôle. Ce code implémente le mappage de connexion, ce qui inclut le point de connexion supplémentaires, `SampleConnPt`:  
+ Le deuxième fragment de code est inséré dans le fichier d’implémentation (. (CPP) de votre classe de contrôle. Ce code implémente le mappage de connexions, qui inclut le point de connexion supplémentaires, `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- Une fois ces fragments de code ont été insérées, le contrôle OLE exemple expose un point de connexion pour le `ISampleSink` interface.  
+ Une fois que ces fragments de code ont été insérées, le contrôle OLE exemple expose un point de connexion pour le `ISampleSink` interface.  
   
- En règle générale, les points de connexion prennent en charge la « multidiffusion », qui est la possibilité de distribution à plusieurs récepteurs connectés à la même interface. Le fragment de code suivant montre comment accomplir la multidiffusion en parcourant chaque destinataire sur un point de connexion :  
+ En règle générale, les points de connexion prennent en charge la « multidiffusion », qui est la possibilité de diffuser vers plusieurs récepteurs connectés à la même interface. Le fragment de code suivant montre comment accomplir la multidiffusion en parcourant chaque destinataire sur un point de connexion :  
   
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
- Cet exemple récupère l'ensemble actuel de connexions sur le point de connexion `SampleConnPt` par un appel à `CConnectionPoint::GetConnections`. Il itère ensuite les connexions et appelle `ISampleSink::SinkFunc` sur chaque connexion active.  
+ Cet exemple récupère l'ensemble actuel de connexions sur le point de connexion `SampleConnPt` par un appel à `CConnectionPoint::GetConnections`. Il effectue ensuite une itération via les connexions et appelle `ISampleSink::SinkFunc` sur chaque connexion active.  
   
  Pour plus d’informations sur l’utilisation de `CConnectionPoint`, consultez l’article [Points de connexion](../../mfc/connection-points.md).  
   
@@ -123,17 +123,17 @@ const CPtrArray* GetConnections();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un tableau de connexions actives (récepteurs). Certaines des pointeurs dans le tableau peuvent être NULL. Chaque pointeur non NULL dans ce tableau peut être converti en toute sécurité vers un pointeur vers l’interface du récepteur à l’aide d’un opérateur de conversion.  
+ Pointeur vers un tableau de connexions actives (récepteurs). Certaines des pointeurs dans le tableau peuvent être NULL. Chaque pointeur non NULL dans ce tableau peut être converti en toute sécurité à un pointeur vers l’interface du récepteur à l’aide d’un opérateur de conversion.  
   
 ##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
- Appelée par l’infrastructure pour récupérer le **IConnectionPointContainer** pour le point de connexion.  
+ Appelé par l’infrastructure pour récupérer le `IConnectionPointContainer` du point de connexion.  
   
 ```  
 virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- En cas de réussite, un pointeur vers le conteneur ; dans le cas contraire **NULL**.  
+ Si l’opération réussit, un pointeur vers le conteneur ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction est généralement implémentée par le BEGIN_CONNECTION_PART (macro).  
@@ -146,7 +146,7 @@ virtual REFIID GetIID() = 0;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à l’ID interface. du point de connexion de l'  
+ Une référence à l’ID d’interface. du point de connexion  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour retourner l’ID de ce point de connexion.  
@@ -174,30 +174,30 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *bons de commande*  
- Spécifie une référence à un **POSITION** valeur retournée par une précédente `GetNextConnection` ou [GetStartPosition](#getstartposition) appeler.  
+ *points de vente*  
+ Spécifie une référence à une valeur POSITION retournée par une précédente `GetNextConnection` ou [GetStartPosition](#getstartposition) appeler.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’élément de connexion spécifié par *pos*, ou NULL.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction est particulièrement utile pour l’itération au sein de tous les éléments dans le mappage de connexion. Lors de l’itération, ignorer toutes les valeurs NULL retournées par cette fonction.  
+ Cette fonction est particulièrement utile pour l’itération sur tous les éléments dans le mappage de connexion. Lors de l’itération, ignorer toutes les valeurs NULL retournées à partir de cette fonction.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
 ##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
- Démarre une itération de la carte en retournant un **POSITION** valeur qui peut être passée à une [GetNextConnection](#getnextconnection) appeler.  
+ Démarre une itération de la carte en retournant une valeur POSITION qui peut être passée à un [GetNextConnection](#getnextconnection) appeler.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui indique une position de départ pour une itération de la carte ; ou **NULL** si la carte est vide.  
+ Une valeur POSITION qui indique une position de départ pour une itération de la carte ; ou NULL si le mappage est vide.  
   
 ### <a name="remarks"></a>Notes  
- La séquence d’itération n’est pas prévisible ; Par conséquent, le « premier élément dans le mappage de » n’a aucune signification spéciale.  
+ La séquence d’itération n’est pas prévisible ; Par conséquent, le « premier élément dans le mappage » n’a aucun signification particulière.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CConnectionPoint::GetNextConnection](#getnextconnection).  
@@ -211,7 +211,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
 ### <a name="parameters"></a>Paramètres  
  *bAdvise*  
- **TRUE**, si une connexion est établie ; sinon **FALSE**.  
+ Valeur TRUE, si une connexion est établie ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  L'implémentation par défaut n'exécute aucune opération.  
@@ -232,10 +232,10 @@ virtual HRESULT QuerySinkInterface(
  Identificateur de l’interface du récepteur demandé.  
   
  *ppInterface*  
- Un pointeur vers le pointeur d’interface identifié par *pUnkSink*. Si l’objet ne prend pas en charge cette interface, \* *ppInterface* a la valeur **NULL**.  
+ Un pointeur vers le pointeur d’interface identifié par *pUnkSink*. Si l’objet ne prend pas en charge cette interface, \* *ppInterface* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur `HRESULT` standard.  
+ Une valeur HRESULT standard.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)   

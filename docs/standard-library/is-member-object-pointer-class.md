@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89dd2c01b4eea80fcd284a6eed44383c3eec9c5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a045abd8bb6a41e96febf972d21bae80b9b4f7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955414"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer, classe
 
@@ -37,11 +37,11 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un pointeur vers un objet membre ou un pointeur `cv-qualified` vers un objet membre. Sinon, sa valeur est false. Notez que `is_member_object_pointer` contient false si `Ty` est un pointeur vers une fonction membre.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un pointeur vers l’objet membre ou une `cv-qualified` pointeur vers membre objet, sinon, sa valeur est false. Notez que `is_member_object_pointer` contient false si *Ty* est un pointeur vers une fonction membre.
 
 ## <a name="example"></a>Exemple
 
@@ -87,7 +87,7 @@ is_member_object_pointer<int trivial::*> == true
 is_member_object_pointer<int (functional::*)()> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

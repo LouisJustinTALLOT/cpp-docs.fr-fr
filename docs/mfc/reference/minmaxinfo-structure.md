@@ -1,5 +1,5 @@
 ---
-title: Minmaxinfo, Structure | Documents Microsoft
+title: Minmaxinfo, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12161938f96e5044ae48f9eb5cf380fbc3840d3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337812"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO, structure
 Le `MINMAXINFO` structure contient des informations sur la taille agrandie d’une fenêtre et position et sa taille minimale et maximale de suivi.  
@@ -45,16 +45,16 @@ typedef struct tagMINMAXINFO {
  *ptMaxSize*  
  Spécifie la largeur agrandie (point.x) et la hauteur agrandie (point.y) de la fenêtre.  
   
- `ptMaxPosition`  
- Spécifie la position du côté gauche de la fenêtre agrandie (point.x) et la position du bord supérieur de la fenêtre agrandie (point.y).  
+ *ptMaxPosition*  
+ Spécifie la position du côté gauche de la fenêtre agrandie (point.x) et la position du haut de la fenêtre agrandie (point.y).  
   
  *ptMinTrackSize*  
  Spécifie la largeur (point.x) de suivi minimale et la hauteur (point.y) de la fenêtre de suivi minimale.  
   
  *ptMaxTrackSize*  
- Spécifie le nombre maximal (point.x) de largeur de suivi et la valeur maximale (point.y) de hauteur de la fenêtre de suivi.  
+ Spécifie le nombre maximal de suivi (point.x) de la largeur et la valeur maximale (point.y) de hauteur de la fenêtre de suivi.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

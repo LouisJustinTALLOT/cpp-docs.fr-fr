@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb1eec82e7f9e39f508bd0c9559cec787f6ec9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847635"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960003"
 ---
 # <a name="insertiterator-class"></a>insert_iterator, classe
 
@@ -44,7 +44,7 @@ class insert_iterator;
 
 ## <a name="remarks"></a>Notes
 
-Le conteneur de type **Container** doit être conforme aux exigences d’un conteneur de taille variable et avoir une fonction membre d’insertion de deux arguments dont les paramètres sont de type **Container::iterator** et **Container::value_type** et qui retourne un type **Container::iterator**. La séquence de bibliothèque standard C++ et les conteneurs associatifs triés sont conformes à ces exigences et peuvent être adaptés pour être utilisés avec des objets `insert_iterator`. Pour les conteneurs associatifs, l’argument de position est traité comme un indice, lequel peut améliorer ou dégrader les performances selon sa qualité. Un `insert_iterator` doit toujours être initialisé avec son conteneur.
+Le conteneur de type `Container` doit répondre aux exigences d’un conteneur de taille variable et une fonction de membre d’insertion de deux arguments dont les paramètres sont de type `Container::iterator` et `Container::value_type` et qui retourne un type `Container::iterator`. La séquence de bibliothèque standard C++ et les conteneurs associatifs triés sont conformes à ces exigences et peuvent être adaptés pour être utilisés avec des objets `insert_iterator`. Pour les conteneurs associatifs, l’argument de position est traité comme un indice, lequel peut améliorer ou dégrader les performances selon sa qualité. Un `insert_iterator` doit toujours être initialisé avec son conteneur.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -67,7 +67,7 @@ Le conteneur de type **Container** doit être conforme aux exigences d’un cont
 |[operator++](#op_add_add)|Incrémente le `insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|
 |[operator=](#op_eq)|Opérateur d’assignation servant à implémenter l’expression de l’itérateur de sortie * `i` = `x` pour une insertion générale.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<iterator>
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **Container**.
+Le type est un synonyme du paramètre de modèle *Container*.
 
 ### <a name="example"></a>Exemple
 
@@ -125,9 +125,9 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Cont` Le conteneur dans lequel le `insert_iterator` est d’insérer des éléments.
+*_Cont* le conteneur dans lequel le `insert_iterator` consiste à insérer des éléments.
 
-`_It` La position de l’insertion.
+*_It* la position d’insertion.
 
 ### <a name="remarks"></a>Notes
 
@@ -193,7 +193,7 @@ La fonction membre retourne la valeur de l’élément ciblé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si **Iter** est un itérateur qui cible un élément dans une séquence, alors **\*Iter** = **value** remplace cet élément par value et ne change pas le nombre total d’éléments dans la séquence.
+Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence, puis  **\*Iter** = **valeur** remplace cet élément par valeur et ne modifie pas le nombre total de éléments de la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -241,7 +241,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>  insert_iterator::operator++
 
-Incrémente l’objet **insert_iterator** à l’emplacement suivant où une valeur peut être stockée.
+Incrémente le `insert_iterator` à l'emplacement suivant où une valeur peut être stockée.
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -317,7 +317,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Paramètres
 
-`val` Valeur à affecter au conteneur.
+*Val* la valeur à assigner au conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856298"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956452"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc, classe
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Cache`|Type d'instances de cache contenu dans le tableau. Il peut s’agir de [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Type d'instances de cache contenu dans le tableau. Il peut s’agir de [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Notes
 
@@ -58,7 +58,7 @@ Cette classe de modèle contient plusieurs instances d'allocateur de bloc et dé
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -84,7 +84,7 @@ Un pointeur vers l’objet alloué.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `caches[_IDX].allocate(count)`, où l’index `_IDX` est déterminé par la taille de bloc demandé `count`, ou, si `count` est trop volumineux, il retourne `operator new(count)`. `cache`, qui représente l’objet cache.
+La fonction membre retourne `caches[_IDX].allocate(count)`, où l’index `_IDX` est déterminée par la taille de bloc demandé *nombre*, ou, si *nombre* est trop volumineux, il retourne `operator new(count)`. `cache`, qui représente l’objet cache.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle `caches[_IDX].deallocate(ptr, count)`, où l’index `_IDX` est déterminé par la taille de bloc demandé `count`, ou, si `count` est trop volumineux, il retourne `operator delete(ptr)`.
+La fonction membre appelle `caches[_IDX].deallocate(ptr, count)`, où l’index `_IDX` est déterminée par la taille de bloc demandé *nombre*, ou, si *nombre* est trop volumineux, il retourne `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`_Cache`|Objet cache associé au filtre.|
-|`_Other`|Objet cache pour comparer l’égalité.|
+|*_Cache*|Objet cache associé au filtre.|
+|*_Autre*|Objet cache dont l’égalité est à comparer.|
 
 ### <a name="remarks"></a>Notes
 
-`true` si le résultat est `caches[0].equals(other.caches[0])`. Sinon, `false`. `caches` représente le tableau d’objets cache.
+**true** si le résultat de `caches[0].equals(other.caches[0])`; sinon, **false**. `caches` représente le tableau d’objets cache.
 
 ## <a name="see-also"></a>Voir aussi
 

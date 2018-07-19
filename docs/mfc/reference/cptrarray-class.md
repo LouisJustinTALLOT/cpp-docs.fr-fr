@@ -1,5 +1,5 @@
 ---
-title: Classe de CPtrArray | Documents Microsoft
+title: CPtrArray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,14 +52,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078024"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851289"
 ---
-# <a name="cptrarray-class"></a>Classe de CPtrArray
+# <a name="cptrarray-class"></a>CPtrArray, classe
 Prend en charge des tableaux de pointeurs void.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CPtrArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**.  
+ Les fonctions membres de `CPtrArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -109,17 +109,17 @@ class CPtrArray : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[[] De CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
+|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
   
 ## <a name="remarks"></a>Notes  
- `CPtrArray` incorpore la `IMPLEMENT_DYNAMIC` macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage de pointeur individuels d’éléments de tableau, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
+ `CPtrArray` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge d’accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage pointeur individuelles d’éléments de tableau, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
 > [!NOTE]
 >  Avant d'utiliser un tableau, utilisez `SetSize` pour définir sa taille et lui allouer la mémoire nécessaire. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  
   
  Les tableaux de pointeur ne peut pas être sérialisés.  
   
- Lors de la suppression d’un tableau de pointeurs, ou que ses éléments sont supprimés, seuls les pointeurs sont supprimées, pas les entités qu’ils référencent.  
+ Lorsqu’un tableau de pointeurs est supprimé, ou lorsque ses éléments sont supprimés, seuls les pointeurs sont supprimées, pas les entités qu’elles référencent.  
   
  Pour plus d’informations sur l’utilisation de `CPtrArray`, consultez l’article [Collections](../../mfc/collections.md).  
   

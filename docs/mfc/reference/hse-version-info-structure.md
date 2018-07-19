@@ -1,5 +1,5 @@
 ---
-title: Hse_version_info, Structure | Documents Microsoft
+title: Hse_version_info, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335813"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO, structure
-Cette structure est pointée par le `pVer` paramètre dans le `CHttpServer::GetExtensionVersion` fonction membre. Il fournit le numéro de version ISA et une description de l’ISA.  
+Cette structure est indiquée par le *pVer* paramètre dans le `CHttpServer::GetExtensionVersion` fonction membre. Il fournit le numéro de version d’ISA et une description textuelle de l’ISA Server.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ typedef struct _HSE_VERSION_INFO {
   
 #### <a name="parameters"></a>Paramètres  
  *dwExtensionVersion*  
- Le numéro de version de l’ISA.  
+ Le numéro de version de l’ISA Server.  
   
  *lpszExtensionDesc*  
- La description de l’ISA. L’implémentation par défaut fournit le texte d’espace réservé ; substituer `CHttpServer::GetExtensionVersion` afin de fournir votre propre description.  
+ La description textuelle de l’ISA Server. L’implémentation par défaut fournit le texte d’espace réservé ; substituer `CHttpServer::GetExtensionVersion` afin de fournir votre propre description.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** httpext.h  
   
 ## <a name="see-also"></a>Voir aussi  

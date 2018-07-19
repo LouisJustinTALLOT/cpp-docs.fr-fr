@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850624"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955812"
 ---
 # <a name="gslice-class"></a>gslice, classe
 
@@ -39,9 +39,9 @@ La classe stocke les paramètres qui caractérisent un objet de type [gslice_arr
 
 - un index de départ ;
 
-- Un vecteur de longueur de classe **valarray<size_t>**.
+- Un vecteur de longueur de la classe `valarray<size_t>`.
 
-- Un vecteur stride de classe **valarray<size_t>**.
+- Un vecteur de stride de classe `valarray<size_t>`.
 
 Les deux vecteurs doivent avoir la même longueur.
 
@@ -63,7 +63,7 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 |[start](#start)|Recherche l'index de départ d'un secteur général d'un `valarray`.|
 |[stride](#stride)|Recherche la distance entre des éléments dans un secteur général d'un `valarray`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<valarray>
 
@@ -84,19 +84,19 @@ gslice(
 
 ### <a name="parameters"></a>Paramètres
 
-`_StartIndex` Index du premier élément dans le sous-ensemble valarray.
+*_StartIndex* l’index valarray du premier élément dans le sous-ensemble.
 
-`_LenArray` Un tableau en spécifiant le nombre d’éléments dans chaque secteur.
+*_LenArray* un tableau spécifiant le nombre d’éléments dans chaque section.
 
-`_IncArray` Un tableau en spécifiant la largeur de numérisation dans chaque secteur.
+*_IncArray* un tableau spécifiant le stride de chaque tranche.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le constructeur par défaut stocke zéro pour l’index de départ et les vecteurs de longueur nulle pour les vecteurs de longueur et stride. Le deuxième constructeur stocke `_StartIndex` pour l’index de départ, `_LenArray` pour le tableau de longueur et `_IncArray` pour le tableau stride.
+Le constructeur par défaut stocke zéro pour l’index de départ et les vecteurs de longueur nulle pour les vecteurs de longueur et stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_LenArray* pour le tableau de longueur et *_IncArray* pour le tableau stride.
 
 ### <a name="remarks"></a>Notes
 
-**gslice** définit un sous-ensemble d’un valarray qui se compose de plusieurs sections du valarray, chacune commençant au même élément spécifié. La possibilité d’utiliser des tableaux pour définir plusieurs sections est la seule différence entre `gslice` et [slice::slice](../standard-library/slice-class.md#slice). La première section a un premier élément avec un index `_StartIndex`, un nombre d’éléments spécifié par le premier élément de `_LenArray` et un stride donné par le premier élément de `_IncArray`. L’ensemble de sections orthogonales suivant a ses premiers éléments donnés par la première section. Le deuxième élément de `_LenArray` spécifie le nombre d’éléments. Le stride est fourni par le deuxième élément de `_IncArray`. Une troisième dimension de sections prend les éléments du tableau à deux dimensions comme éléments de départ et procède de la même façon
+**gslice** définit un sous-ensemble d’un valarray qui se compose de plusieurs sections du valarray, chacune commençant au même élément spécifié. La possibilité d’utiliser des tableaux pour définir plusieurs sections est la seule différence entre `gslice` et [slice::slice](../standard-library/slice-class.md#slice). La première section a un premier élément avec un index de *_StartIndex*, un nombre d’éléments spécifié par le premier élément de *_LenArray*et un stride donné par le premier élément de *_IncArray* . L’ensemble de sections orthogonales suivant a ses premiers éléments donnés par la première section. Le deuxième élément de *_LenArray* Spécifie le nombre d’éléments. Le stride est fourni par le deuxième élément de *_IncArray*. Une troisième dimension de sections prend les éléments du tableau à deux dimensions comme éléments de départ et procède de la même façon
 
 ### <a name="example"></a>Exemple
 

@@ -1,5 +1,5 @@
 ---
-title: Fonctions globales de la gestion des événements | Documents Microsoft
+title: Fonctions globales de gestion d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85babf3155fdc94dafd5d62c2e67401e5add3663
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358336"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883997"
 ---
-# <a name="event-handling-global-functions"></a>Fonctions globales de la gestion des événements
+# <a name="event-handling-global-functions"></a>Fonctions globales de gestion des événements
 Cette fonction fournit un gestionnaire d’événements.  
   
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ Cette fonction fournit un gestionnaire d’événements.
 |-|-|  
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Attend un objet soit signalé, en attendant la distribution des messages de fenêtre en fonction des besoins.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
 
 ##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop  
@@ -48,14 +48,14 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `hEvent`  
+ *hEvent*  
  [in] Le handle de l’objet à attendre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne **TRUE** si l’objet a été signalé.  
+ Retourne la valeur TRUE si l’objet a été signalé.  
   
 ### <a name="remarks"></a>Notes  
- Cela est utile si vous souhaitez attendre un événement d’un objet à se produire et être averti de ce produit, mais autoriser les messages de fenêtre doit être distribué lors de l’attente.  
+ Cela est utile si vous voulez attendre un événement d’un objet à se produire et d’en être informé qui se produisent, mais autoriser les messages de fenêtre à être distribués durant l’attente.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions](../../atl/reference/atl-functions.md)

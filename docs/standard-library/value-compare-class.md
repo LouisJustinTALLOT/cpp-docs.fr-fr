@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594f3aaa45638ff2ab5d184a771070d87dbeb0bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856581"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957106"
 ---
 # <a name="valuecompare-class"></a>value_compare, classe
 
@@ -49,7 +49,7 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Le critère de comparaison fourni par value_compare entre des **value_types** d’éléments entiers contenus par un objet hash_map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet **comp** de type `key_compare` stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.
+Les critères de comparaison fournis par value_compare entre `value_types` d’éléments entiers contenus par un objet hash_map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stockées dans l’objet de fonction fourni par value_compare pour comparer les composants de la clé de tri de deux éléments.
 
 Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, value_compare équivaut à `key_compare` ; pour les objets hash_map et hash_multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
@@ -57,7 +57,7 @@ Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans 
 
 Consultez l’exemple [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) qui illustre comment déclarer et utiliser value_compare.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<hash_map>
 

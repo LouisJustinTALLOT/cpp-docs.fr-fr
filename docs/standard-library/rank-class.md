@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960601"
 ---
 # <a name="rank-class"></a>rank, classe
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-La requête de type contient la valeur du nombre de dimensions du type tableau `Ty`, ou 0 si `Ty` n'est pas un type tableau.
+La requête de type conserve la valeur du nombre de dimensions du type tableau *Ty*, ou 0 si *Ty* n’est pas un type tableau.
 
 ## <a name="example"></a>Exemple
 
@@ -71,7 +71,7 @@ rank<int[5]> == 1
 rank<int[5][10]> == 2
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

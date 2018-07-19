@@ -1,5 +1,5 @@
 ---
-title: Classes (C++) abstraites | Documents Microsoft
+title: Classes (C++) abstraites | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34705359"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957946"
 ---
 # <a name="abstract-classes-c"></a>Classes abstraites (C++)
 
@@ -30,7 +30,7 @@ Les classes abstraites agissent comme des expressions de concepts généraux don
 
 Une classe contenant au moins une fonction virtuelle pure est considérée comme une classe abstraite. Les classes dérivées de la classe abstraite doivent implémenter la fonction virtuelle pure, sinon elles aussi sont des classes abstraites.
 
-Une fonction virtuelle est déclarée comme « pure » à l’aide de la *spécificateur pure* syntaxe (décrit dans [mise en œuvre du protocole de classe](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Prenons l’exemple présenté dans [fonctions virtuelles](../cpp/virtual-functions.md). L'objectif de la classe `Account` est de fournir une fonctionnalité générale, mais les objets de type `Account` sont trop généraux pour être utiles. Par conséquent, `Account` est un bon candidat pour une classe abstraite :
+Prenons l’exemple présenté dans [fonctions virtuelles](../cpp/virtual-functions.md). L'objectif de la classe `Account` est de fournir une fonctionnalité générale, mais les objets de type `Account` sont trop généraux pour être utiles. Par conséquent, `Account` est un bon candidat pour une classe abstraite :
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -63,7 +63,7 @@ Une autre restriction est que si le constructeur d'une classe abstraite appelle 
 
 Les fonctions virtuelles pures peuvent être définies pour les classes abstraites, mais elles peuvent être appelées directement en utilisant la syntaxe suivante :
 
-*nom de classe abstraite*::*-nom de la fonction*)
+*nom de classe abstraite*::*nom de la fonction*)
 
 C’est utile lors de la création des hiérarchies de classes dont les classes de base incluent des destructeurs virtuels purs, car les destructeurs de classe de base sont toujours appelés dans le processus de destruction d’un objet. Prenons l'exemple suivant :
 

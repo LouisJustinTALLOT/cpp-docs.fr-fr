@@ -1,5 +1,5 @@
 ---
-title: Héritage (C++) | Documents Microsoft
+title: Héritage (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: decef38bc69ea2b9a45005627b984c1f240afe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3181369f492f82fca1590e07655e728dbbcd40ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958596"
 ---
 # <a name="inheritance--c"></a>Héritage (C++)
 Cette section explique comment utiliser les classes dérivées pour générer des programmes extensibles.  
   
 ## <a name="overview"></a>Vue d'ensemble  
- Nouvelles classes peuvent être dérivés de classes existantes à l’aide d’un mécanisme appelé « héritage » (consultez le début des informations de [l’héritage unique](../cpp/single-inheritance.md)). Les classes utilisées pour la dérivation sont appelées classes de base d'une classe dérivée particulière. Une classe dérivée est déclarée en utilisant la syntaxe suivante :  
+ Nouvelles classes peuvent être dérivés de classes existantes à l’aide d’un mécanisme appelé « héritage » (voir le début de l’information dans [l’héritage unique](../cpp/single-inheritance.md)). Les classes utilisées pour la dérivation sont appelées classes de base d'une classe dérivée particulière. Une classe dérivée est déclarée en utilisant la syntaxe suivante :  
   
-```  
- class Derived : [virtual] [access-specifier] Base  
+```cpp 
+class Derived : [virtual] [access-specifier] Base  
 {  
    // member list  
 };  
- class Derived : [virtual] [access-specifier] Base1,  
- [virtual] [access-specifier] Base2, . . .  
+class Derived : [virtual] [access-specifier] Base1,  
+   [virtual] [access-specifier] Base2, . . .  
 {  
    // member list  
 };  
 ```  
   
- Après la balise (nom) de la classe, un signe deux-points apparaît, suivi d'une liste de spécifications de base.  Les classes de base ainsi nommées doivent avoir été déclarées précédemment.  Les spécifications de base peuvent contenir un spécificateur d’accès, qui est un des mots clés **public**, `protected` ou `private`.  Ces spécificateurs d'accès apparaissent avant le nom de classe de base et s'appliquent uniquement à cette classe de base.  Ces spécificateurs contrôlent l'autorisation de la classe dérivée à utiliser pour les membres de la classe de base.  Consultez [le contrôle d’accès de membre](../cpp/member-access-control-cpp.md) pour plus d’informations sur l’accès aux membres de la classe de base.  Si le spécificateur d'accès est omis, l'accès à cette base est considéré comme `private`.  Les spécifications de base peuvent contenir le mot clé **virtuels** pour indiquer l’héritage virtuel.  Ce mot clé peut apparaître avant ou après le spécificateur d'accès, le cas échéant.  Si l'héritage virtuel est utilisé, la classe de base est appelée classe de base virtuelle.  
+Après la balise (nom) de la classe, un signe deux-points apparaît, suivi d'une liste de spécifications de base.  Les classes de base ainsi nommées doivent avoir été déclarées précédemment.  Les spécifications de base peuvent contenir un spécificateur d’accès, qui est un des mots clés **public**, **protégé** ou **privé**.  Ces spécificateurs d'accès apparaissent avant le nom de classe de base et s'appliquent uniquement à cette classe de base.  Ces spécificateurs contrôlent l'autorisation de la classe dérivée à utiliser pour les membres de la classe de base.  Consultez [contrôle d’accès de membre](../cpp/member-access-control-cpp.md) pour plus d’informations sur l’accès aux membres de classe de base.  Si le spécificateur d’accès est omis, l’accès à cette base est considéré comme **privé**.  Les spécifications de base peuvent contenir le mot clé **virtuel** pour indiquer l’héritage virtuel.  Ce mot clé peut apparaître avant ou après le spécificateur d'accès, le cas échéant.  Si l'héritage virtuel est utilisé, la classe de base est appelée classe de base virtuelle.  
   
- Plusieurs classes de base peuvent être spécifiées en les séparant par des virgules.  Si une seule classe de base est spécifiée, le modèle d’héritage est [unique d’héritage](../cpp/single-inheritance.md). Si plusieurs classes de base est spécifié, le modèle d’héritage est appelé [l’héritage Multiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca),  
+ Plusieurs classes de base peuvent être spécifiées en les séparant par des virgules.  Si une seule classe de base est spécifiée, le modèle d’héritage est [l’héritage simple](../cpp/single-inheritance.md). Si plusieurs classes de base est spécifié, le modèle d’héritage est appelé [l’héritage Multiple](../cpp/multiple-base-classes.md).  
   
  Les rubriques suivantes sont incluses :  
   
 -   [Héritage simple](../cpp/single-inheritance.md)  
-  
--   [Héritage multiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)  
   
 -   [Plusieurs classes de base](../cpp/multiple-base-classes.md)  
   
@@ -60,7 +59,7 @@ Cette section explique comment utiliser les classes dérivées pour générer de
   
 -   [Résumé des règles de portée](../cpp/summary-of-scope-rules.md)  
   
- Le [__super](../cpp/super.md) et [__interface](../cpp/interface.md) mots clés sont décrits dans cette section.  
+ Le [__super](../cpp/super.md) et [__interface](../cpp/interface.md) mots clés sont documentées dans cette section.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)

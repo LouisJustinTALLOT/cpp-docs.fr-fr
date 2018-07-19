@@ -1,5 +1,5 @@
 ---
-title: XForm, Structure | Documents Microsoft
+title: XForm, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379484"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885882"
 ---
 # <a name="xform-structure"></a>XFORM, structure
 Le `XFORM` structure a la forme suivante :  
@@ -40,16 +40,16 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le `XFORM` structure spécifie un espace universel pour la transformation de l’espace de page. Le **eDx** et **eDy** membres spécifient les composants de traduction horizontales et verticales, respectivement. Le tableau suivant montre comment les autres membres sont utilisés, selon l’opération :  
+ Le `XFORM` structure spécifie un espace universel pour la transformation de l’espace de page. Le `eDx` et `eDy` membres spécifient les composants de la translation horizontale et verticale, respectivement. Le tableau suivant montre comment les autres membres sont utilisés, en fonction de l’opération :  
   
 |Opération|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|Cosinus de l’angle de rotation|Sinus de l’angle de rotation|Négatif sinus de l’angle de rotation|Cosinus de l’angle de rotation|  
-|**mise à l’échelle**|Composant de mise à l’échelle horizontale|Nothing|Nothing|Composant de mise à l’échelle verticale|  
-|**Inclinaison**|Nothing|Constante de proportionnalité horizontal|Constante de proportionnalité vertical|Nothing|  
-|**Réflexion**|Composant de réflexion horizontal|Nothing|Nothing|Composant de réflexion vertical|  
+|`Rotation`|Cosinus de l’angle de rotation|Sinus de l’angle de rotation|Sinus négatif d’angle de rotation|Cosinus de l’angle de rotation|  
+|`Scaling`|Composant de mise à l’échelle horizontale|Nothing|Nothing|Composant de mise à l’échelle verticale|  
+|`Shear`|Nothing|Constante de proportionnalité horizontal|Constante de proportionnalité verticale|Nothing|  
+|`Reflection`|Composant de réflexion horizontal|Nothing|Nothing|Composant de réflexion verticale|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

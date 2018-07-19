@@ -1,5 +1,5 @@
 ---
-title: Classe de CD2DRectF | Documents Microsoft
+title: Classe de CD2DRectF | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338270"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF, classe
 Wrapper pour `D2D1_RECT_F`.  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide ( **null**).|  
+|[CD2DRectF::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide (NULL).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -90,7 +90,7 @@ CD2DRectF(
  *fTop*  
  coordonnée supérieure source  
   
- *fait peur*  
+ *Terreur*  
  coordonnée droite source  
   
  *fBottom*  
@@ -104,7 +104,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- TRUE si le du rectangle haut, gauche, bas et valeurs sont toujours égaux à 0 ; Sinon, FALSE.  
+ TRUE si le du rectangle haut, gauche, bas et valeurs appropriées sont toujours égaux à 0 ; Sinon, FALSE.  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
  Convertit CD2DRectF en objet CRect.  

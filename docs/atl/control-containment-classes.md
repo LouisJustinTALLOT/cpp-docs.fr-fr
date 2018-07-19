@@ -1,5 +1,5 @@
 ---
-title: Classes de relation contenant-contenu (ATL) contrôle | Documents Microsoft
+title: Contrôler les Classes de relation contenant-contenu (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353b4a1a9acaeccd64d99e8ee18914681353ca86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a54da05cb71114f455b24d18004049b2fa91b2a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959337"
 ---
 # <a name="control-containment-classes"></a>Classes de relation contenant-contenu de contrôle
 Les classes suivantes fournissent la prise en charge de la relation contenant-contenu pour l’hébergement de contrôles :  

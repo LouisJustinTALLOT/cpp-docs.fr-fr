@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955330"
 ---
 # <a name="pair-structure"></a>pair, structure
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>Paramètres
 
-`Val1` Valeur initialisant le premier élément du `pair`.
+*Val1* valeur initialisant le premier élément du `pair`.
 
-`Val2` Valeur initialisant le second élément de `pair`.
+*Val2* valeur initialisant le second élément de `pair`.
 
-`Right` Paire dont les valeurs doivent être utilisées pour initialiser les éléments d’une autre paire.
+*Droite* une paire dont les valeurs doivent être utilisées pour initialiser les éléments d’une autre paire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le premier constructeur (par défaut) initialise le premier élément de la paire à la valeur par défaut de type **T1**, et le second élément à la valeur par défaut de type **T2**.
+Le premier constructeur (par défaut) initialise le premier élément de la paire à la valeur par défaut de type `T1` et le second élément à la valeur par défaut de type `T2`.
 
-Le deuxième constructeur initialise le premier élément de la paire à `Val1`, et le deuxième élément à *Val2*.
+Le deuxième constructeur initialise le premier élément de la paire à *Val1* et le second à *Val2.*
 
 Le troisième constructeur (modèle) initialise le premier élément de la paire à `Right`. **first**, et le second à `Right`. **second**.
 
-Le quatrième constructeur initialise le premier élément de la paire à `Val1`, et le deuxième élément à *Val2* à l’aide du [déclarateur de référence Rvalue &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Le quatrième constructeur initialise le premier élément de la paire à *Val1* et le second à *Val2* à l’aide de [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Notes
 
-La structure de modèle stocke une paire d’objets respectivement de type **T1** et **T2**. Le type **first_type** est identique au paramètre de modèle **T1** et le type **second_type** est identique au paramètre de modèle **T2**. **T1** et **T2** doivent chacun fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un `struct` plutôt que comme une **classe**. Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Cette dernière satisfait à l’exigence relative à un conteneur associatif de paires et a un type de valeur de la forme `pair`< **const**`key_type`, `mapped_type`>.
+Le struct de modèle stocke une paire d’objets de type `T1` et `T2`, respectivement. Le type `first_type` est le même que le paramètre de modèle `T1` et le type `second_type` est le même que le paramètre de modèle `T2`. `T1` et `T2` doivent chacun fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un `struct` plutôt que comme une **classe**. Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Cette dernière satisfait à l’exigence relative à un conteneur associatif de paires et a un type de valeur de la forme `pair`< **const**`key_type`, `mapped_type`>.
 
 ## <a name="example"></a>Exemple
 
@@ -163,7 +163,7 @@ The element with a key value of
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<utility>
 

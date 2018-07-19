@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0580d6e2128a75f7457541cc82caf2fece958b81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfc3f744da2deb804f1a3e3445fbed3da3fac0b5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955784"
 ---
-# <a name="divides-struct"></a>divides, struct
+# <a name="divides-struct"></a>divides (struct)
 
-Objet de fonction prédéfini qui effectue l’opération de division (`operator/`) sur ses arguments.
+Un objet de fonction prédéfini qui effectue l’opération de division (`operator/`) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,11 +49,11 @@ struct divides<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type`, `T`, `U` Un type qui prend en charge un `operator/` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U* un type qui prend en charge un `operator/` qui accepte des opérandes des types spécifiés ou inférés.
 
-`Left` L’opérande gauche de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.
+*Gauche* l’opérande gauche de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-`Right` L’opérande de droite de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.
+*Droite* l’opérande droit de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -115,7 +115,7 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

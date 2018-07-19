@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844274"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954706"
 ---
 # <a name="basiciostream-class"></a>basic_iostream, classe
 
@@ -65,7 +65,7 @@ La classe de modèle décrit un objet qui contrôle les insertions, par le biais
 |-|-|
 |[operator=](#op_eq)|Assigne la valeur d'un objet `basic_iostream` spécifié à cet objet. Il s'agit d'une assignation de déplacement impliquant une `rvalue` qui ne laisse pas de copie.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<istream>
 
@@ -85,9 +85,9 @@ basic_iostream();
 
 ### <a name="parameters"></a>Paramètres
 
-`strbuf` Existant `basic_streambuf` objet.
+*strbuf* existant `basic_streambuf` objet.
 
-`right` Existant `basic_iostream` objet qui est utilisé pour construire une nouvelle `basic_iostream`.
+*droit* existant `basic_iostream` objet qui est utilisé pour construire un nouveau `basic_iostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -105,7 +105,7 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un `rvalue` font référence à un `basic_iostream` objet à attribuer à partir de.
+*droit* un `rvalue` font référence à un `basic_iostream` objet affecter à partir de.
 
 ### <a name="remarks"></a>Notes
 
@@ -121,7 +121,7 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `basic_iostream` objet à échanger.
+*droit* le `basic_iostream` objet à échanger.
 
 ### <a name="remarks"></a>Notes
 

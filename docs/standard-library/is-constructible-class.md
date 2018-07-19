@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2461d7986e87bed846d09d6e3938a339237c8f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f9e3f71a0d8647000f77863ecc9243b069f0521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845165"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955825"
 ---
 # <a name="isconstructible-class"></a>is_constructible, classe
 
@@ -37,15 +37,15 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T* type à interroger.
 
-`Args` Les types d’arguments à faire correspondre dans un constructeur de `T`.
+*Args* les types d’arguments à faire correspondre dans un constructeur de *T*.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est constructible en utilisant les types d’arguments dans `Args`. Sinon, sa valeur est false. Le type `T` est constructible si la définition de variable `T t(std::declval<Args>()...);` est bien formée. `T` et tous les types dans `Args` doivent être des types complets, `void`, ou des tableaux de limite inconnue.
+Une instance du prédicat de type a la valeur true si le type *T* est constructible en utilisant les types d’arguments dans *Args*, sinon, sa valeur est false. Type *T* est constructible si la définition de variable `T t(std::declval<Args>()...);` est bien formée. Les deux *T* et tous les types dans *Args* doivent être des types complets, **void**, ou des tableaux de limite inconnue.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMultiPaneFrameWnd | Documents Microsoft
+title: Cmultipaneframewnd, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039204"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852339"
 ---
-# <a name="cmultipaneframewnd-class"></a>Classe de CMultiPaneFrameWnd
-Le `CMultiPaneFrameWnd` classe étend [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md). Elle peut prendre en charge plusieurs volets. Au lieu d’un seul handle incorporé à une barre de contrôle, `CMultiPaneFrameWnd` contient un [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objet qui permet à l’utilisateur d’ancrer un `CMultiPaneFrameWnd` à un autre et dynamiquement créer flottante plusieurs, onglets Windows.  
+# <a name="cmultipaneframewnd-class"></a>Cmultipaneframewnd, classe
+Le `CMultiPaneFrameWnd` classe étend [cpaneframewnd, classe](../../mfc/reference/cpaneframewnd-class.md). Elle peut prendre en charge plusieurs volets. Au lieu d’un seul handle incorporé à une barre de contrôle, `CMultiPaneFrameWnd` contient un [cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md) objet qui permet à l’utilisateur d’ancrer un `CMultiPaneFrameWnd` vers un autre et dynamiquement créer plusieurs flottante, avec onglets Windows.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -119,7 +119,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Ajuste la disposition de la fenêtre mini-frame. (Substitue [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
 |[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(Substitue [CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|  
 |[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcule le rectangle attendu d’une fenêtre ancrée. (Substitue [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|  
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Détermine si le volet actif peut ancrer à un autre volet ou une fenêtre frame. (Substitue [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Détermine si le volet actif pouvez ancrer à un autre volet ou une fenêtre frame. (Substitue [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
 |[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Détermine si la fenêtre mini-frame pouvez ancrer un volet. (Substitue [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Substitue [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
 |[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Substitue `CPaneFrameWnd::CloseMiniFrame`.)|  
@@ -153,13 +153,13 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Substitue [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>Notes  
- La plupart des méthodes de cette classe substituer des méthodes dans le [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md) classe.  
+ La plupart des méthodes dans cette classe remplace les méthodes dans le [cpaneframewnd, classe](../../mfc/reference/cpaneframewnd-class.md) classe.  
   
- Si un volet utilise le `AFX_CBRS_AUTO_ROLLUP` style et l’utilisateur ce volet est ancré à une fenêtre frame de plusieurs volets, l’utilisateur peut restaurer la fenêtre indépendamment des paramètres de style des autres volets ancrés.  
+ Si un volet utilise le style AFX_CBRS_AUTO_ROLLUP et que l’utilisateur ancre de ce volet à une fenêtre frame de plusieurs volets, l’utilisateur peut reporter la fenêtre indépendamment des paramètres de style des autres volets ancrés.  
   
- L’infrastructure crée automatiquement un `CMultiPaneFrameWnd` objet lorsque l’utilisateur fait flotter un volet qui utilise le `CBRS_FLOAT_MULTI` style.  
+ L’infrastructure crée automatiquement un `CMultiPaneFrameWnd` objet lorsque l’utilisateur fait flotter un volet qui utilise le style CBRS_FLOAT_MULTI.  
   
- Pour plus d’informations sur la dérivation d’une classe à partir de la `CPaneFrameWnd` de classe et de sa création dynamique, consultez [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ Pour plus d’informations sur la dérivation d’une classe à partir de la `CPaneFrameWnd` classe et de sa création dynamiquement, consultez [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment récupérer un pointeur vers un `CMultiPaneFrameWnd` objet. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../visual-cpp-samples.md).  
@@ -384,7 +384,7 @@ CPaneContainerManager& GetPaneContainerManager();
  Une référence à l’objet de gestionnaire de conteneur interne.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode peut être utilisée pour accéder aux interne [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objet.  
+ Cette méthode peut être utilisée pour accéder aux interne [cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md) objet.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonLabel | Documents Microsoft
+title: Cmfcribbonlabel, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042493"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848581"
 ---
-# <a name="cmfcribbonlabel-class"></a>Classe de CMFCRibbonLabel
+# <a name="cmfcribbonlabel-class"></a>Cmfcribbonlabel, classe
 Implémente une étiquette de texte non interactive pour un ruban.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,7 +42,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Construit et initialise un `CMFCRibbonLabel` objet avec la chaîne de texte spécifié.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Crée et initialise un `CMFCRibbonLabel` objet avec la chaîne de texte spécifiée.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructeur.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -51,12 +51,12 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
 |`CMFCRibbonLabel::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Détermine les données d’accessibilité de l’élément label de ruban en cours. (Substitue [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Détermine les données d’accessibilité de l’élément d’étiquette ruban actuel. (Substitue [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
 ### <a name="remarks"></a>Notes  
- Après avoir créé une étiquette de ruban, ajoutez-le à un panneau en appelant [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Une fois que vous créez une étiquette de ruban, ajoutez-le à un panneau en appelant [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- Impossible d’ajouter une étiquette de ruban à la barre d’outils Accès rapide.  
+ Vous ne pouvez pas ajouter une étiquette de ruban à la barre d’outils Accès rapide.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -71,7 +71,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
  **En-tête :** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
- Construit et initialise un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objet qui affiche la chaîne de texte spécifiée.  
+ Crée et initialise un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objet qui affiche la chaîne de texte spécifié.  
   
 ```  
 CMFCRibbonLabel(
@@ -81,13 +81,13 @@ CMFCRibbonLabel(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *lpszText*  
- Le texte à afficher dans l’étiquette.  
+ Le texte s’affiche dans l’étiquette.  
   
  [in] *bIsMultiLine*  
- `TRUE` Pour spécifier que l’étiquette est une étiquette multiligne. dans le cas contraire, `FALSE`.  
+ TRUE pour spécifier que l’étiquette est une étiquette multiligne ; Sinon, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
- Détermine les données d’accessibilité de l’élément label de ruban en cours.  
+ Détermine les données d’accessibilité de l’élément d’étiquette ruban actuel.  
   
 ```  
 virtual BOOL SetACCData(
@@ -100,10 +100,10 @@ virtual BOOL SetACCData(
  Représente la fenêtre parente de l’étiquette de ruban actuelle.  
   
  [out] *données*  
- Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité de l’étiquette de ruban actuelle.  
+ Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de l’étiquette de ruban actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le *données* paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, `FALSE`.  
+ TRUE si le *données* paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, FALSE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

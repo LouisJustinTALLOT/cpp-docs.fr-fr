@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 779fe61bec63f55d7f3b8b3bb7f2e0d084fbab5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4dac24b73e2b0a228f712453b124ff01e5c13c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959681"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt;, opérateurs
 
@@ -44,9 +44,9 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type **vecteur**.
+*gauche* un objet de type `vector`.
 
-`right` Un objet de type **vecteur**.
+*droit* un objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -93,9 +93,11 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type **vecteur**.
+*left*  
+ Objet de type `vector`.
 
-`right` Un objet de type **vecteur**.
+*right*  
+ Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -142,9 +144,11 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type **vecteur**.
+*left*  
+ Objet de type `vector`.
 
-`right` Un objet de type **vecteur**.
+*right*  
+ Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -191,9 +195,11 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type **vecteur**.
+*left*  
+ Objet de type `vector`.
 
-`right` Un objet de type **vecteur**.
+*right*  
+ Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -240,9 +246,11 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type **vecteur**.
+*left*  
+ Objet de type `vector`.
 
-`right` Un objet de type **vecteur**.
+*right*  
+ Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -290,9 +298,11 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un objet de type **vecteur**.
+*left*  
+ Objet de type `vector`.
 
-`right` Un objet de type **vecteur**.
+*right*  
+ Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 

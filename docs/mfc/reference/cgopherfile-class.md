@@ -1,5 +1,5 @@
 ---
-title: CGopherFile (classe) | Documents Microsoft
+title: CGopherFile, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c6c4f87ffb1538e581320e9d6f36e8d4fbc6fc12
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335680"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile (classe)
 Fournit les fonctionnalités permettant de rechercher et de lire des fichiers sur un serveur Gopher.  
   
 > [!NOTE]
->  Les classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` et leurs membres ont été déconseillées, car ils ne fonctionnent pas sur la plateforme Windows XP, mais ils continuent de fonctionner sur des plateformes antérieures.  
+>  Les classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` et leurs membres ont été déconseillées, car ils ne fonctionnent pas sur la plate-forme Windows XP, mais ils continueront à fonctionner sur des plateformes antérieures.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,9 +46,9 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|Construit un objet `CGopherFile`.|  
   
 ## <a name="remarks"></a>Notes  
- Le service gopher n’autorise pas les utilisateurs à écrire des données dans un fichier gopher, car ce service fonctionne principalement comme une interface de menus pour la recherche d’informations. Le `CGopherFile` fonctions membres `Write`, `WriteString`, et `Flush` ne sont pas implémentées pour `CGopherFile`. Appel de ces fonctions sur un `CGopherFile` de l’objet, retourne un [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Le service gopher n’autorise pas les utilisateurs à écrire des données dans un fichier gopher, car ce service fonctionne principalement comme une interface à menus pour trouver des informations. Le `CGopherFile` fonctions membres `Write`, `WriteString`, et `Flush` ne sont pas implémentées pour `CGopherFile`. Appel de ces fonctions sur un `CGopherFile` de l’objet, retourne un [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Pour en savoir plus sur la façon `CGopherFile` fonctionne avec les autres classes MFC Internet, consultez l’article [de programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Pour en savoir plus sur la façon `CGopherFile` fonctionne avec les autres classes Internet de MFC, consultez l’article [Internet programmation avec WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,7 +84,7 @@ CGopherFile(
   
 ### <a name="parameters"></a>Paramètres  
  *hFile*  
- Un handle vers un `HINTERNET` fichier.  
+ Handle vers un fichier HINTERNET.  
   
  *refLocator*  
  Une référence à un [objet CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objet.  
@@ -93,7 +93,7 @@ CGopherFile(
  Un pointeur vers un [objet CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objet.  
   
  *hSession*  
- Handle vers la session Internet en cours.  
+ Handle vers la session Internet actuel.  
   
  *pstrLocator*  
  Un pointeur vers une chaîne utilisée pour rechercher le serveur gopher. Consultez [Gopher Sessions](cgopherlocator-class.md) pour plus d’informations sur les localisateurs gopher.  
@@ -105,14 +105,14 @@ CGopherFile(
  Pointeur vers l’identificateur de contexte du fichier en cours d’ouverture.  
   
 ### <a name="remarks"></a>Notes  
- Vous avez besoin une `CGopherFile` objet à lire à partir d’un fichier pendant une session d’Internet gopher.  
+ Vous devez un `CGopherFile` objet à lire à partir d’un fichier pendant une session d’Internet gopher.  
   
  Vous ne créez jamais un `CGopherFile` directement l’objet. Au lieu de cela, appelez [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) pour ouvrir un fichier sur un serveur gopher.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CInternetFile (classe)](../../mfc/reference/cinternetfile-class.md)   
+ [CInternetFile, classe](../../mfc/reference/cinternetfile-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [CInternetFile (classe)](../../mfc/reference/cinternetfile-class.md)   
- [Classe d’objet CGopherLocator](../../mfc/reference/cgopherlocator-class.md)   
- [Classe de CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)   
+ [CInternetFile, classe](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherLocator, classe](../../mfc/reference/cgopherlocator-class.md)   
+ [CGopherFileFind, classe](../../mfc/reference/cgopherfilefind-class.md)   
  [CGopherConnection, classe](../../mfc/reference/cgopherconnection-class.md)

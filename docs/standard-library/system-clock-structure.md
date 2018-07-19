@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458899"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959041"
 ---
 # <a name="systemclock-structure"></a>system_clock, structure
 
@@ -70,7 +70,7 @@ Une horloge est *stable* si elle est *monotone* et si le laps de temps entre les
 |[system_clock::is_monotonic, constante](#is_monotonic_constant)|Spécifie si le type d'horloge est monotone.|
 |[system_clock::is_steady, constante](#is_steady_constant)|Spécifie si le type d'horloge est stable.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<chrono >
 
@@ -78,7 +78,7 @@ Une horloge est *stable* si elle est *monotone* et si le laps de temps entre les
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-Méthode statique qui retourne un [time_point](../standard-library/time-point-class.md) qui se rapproche le plus de l’heure représentée par `Tm`.
+Méthode statique qui retourne un [time_point](../standard-library/time-point-class.md) qui se rapproche le temps qui est représenté par *Tm*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -86,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Tm` A [time_t](../c-runtime-library/standard-types.md) objet.
+*TM*  
+ Objet [time_t](../c-runtime-library/standard-types.md).
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic, constante
 
@@ -98,7 +99,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans cette implémentation, `system_clock::is_monotonic` retourne toujours `false`.
+Dans cette implémentation, `system_clock::is_monotonic` retourne toujours **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -114,7 +115,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans cette implémentation, `system_clock::is_steady` retourne toujours `false`.
+Dans cette implémentation, `system_clock::is_steady` retourne toujours **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -134,7 +135,7 @@ Objet [time_point](../standard-library/time-point-class.md) qui représente l’
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-Méthode statique qui retourne un [time_t](../c-runtime-library/standard-types.md) qui se rapproche le plus de l’heure représentée par `Time`.
+Méthode statique qui retourne un [time_t](../c-runtime-library/standard-types.md) qui se rapproche le temps qui est représenté par *temps*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -142,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Time` A [time_point](../standard-library/time-point-class.md) objet.
+*Heure*  
+ Objet [time_point](../standard-library/time-point-class.md).
 
 ## <a name="see-also"></a>Voir aussi
 

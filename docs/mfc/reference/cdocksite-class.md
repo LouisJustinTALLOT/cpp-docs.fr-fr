@@ -1,5 +1,5 @@
 ---
-title: Classe CDockSite | Documents Microsoft
+title: Cdocksite, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336837"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -164,7 +164,7 @@ class CDockSite: public CBasePane
 ## <a name="remarks"></a>Notes  
  L’infrastructure crée `CDockSite` automatiquement des objets lorsque vous appelez [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Les fenêtres du site d'ancrage sont positionnées à l'extrémité de la zone cliente de la fenêtre frame principale.  
   
- Généralement inutile d’appeler les services fournis par le site d’ancrage, car [CFrameWndEx classe](../../mfc/reference/cframewndex-class.md) gère ces services.  
+ Généralement pas avoir à appeler les services fournis par le site d’ancrage car [cframewndex, classe](../../mfc/reference/cframewndex-class.md) gère ces services.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment créer un objet de la classe `CDockSite`.  
@@ -340,7 +340,7 @@ virtual BOOL DockPaneLeftOf(
  Pointeur vers le volet cible.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le volet est ancré avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si le volet est ancré avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -364,10 +364,10 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *nID*  
- L’ID de commande du volet à rechercher.  
+ ID de commande du volet à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le volet avec l’ID de la commande spécifiée, ou `NULL` si le volet est introuvable.  
+ Pointeur vers le volet avec l’ID de commande spécifié, ou NULL si le volet est introuvable.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -417,14 +417,14 @@ const CObList& GetDockSiteRowsList() const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
- Retourne une liste de volets qui sont ancrés dans le site d’ancrage.  
+ Retourne une liste de volets qui sont ancrées dans le site d’ancrage.  
   
 ```  
 const CObList& GetPaneList() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence en lecture seule à la liste des volets ancrés actuellement dans la barre d’ancrage.  
+ Une référence en lecture seule à la liste des volets est actuellement ancré dans la barre d’ancrage.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -615,10 +615,10 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pt*  
- Un point, en coordonnées d’écran, dans le volet de récupération.  
+ Un point, en coordonnées d’écran, pour le volet à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le volet situé au point spécifié ou `NULL` si aucun volet n’était présente au point spécifié.  
+ Pointeur vers le volet situé dans le point spécifié ou NULL si aucun volet n’était présent au point spécifié.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -742,19 +742,19 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>Paramètres  
  [in] [out] *pBar*  
- Pointeur vers le volet pour être affichés ou masqués.  
+ Un pointeur vers le volet pour être affichée ou masquée.  
   
  [in] *bShow*  
- `TRUE` Pour spécifier que le volet est à afficher ; `FALSE` pour spécifier que le volet doit être masqué.  
+ TRUE pour spécifier que le volet doit être affichée ; FALSE pour indiquer que le volet doit être masqué.  
   
  [in] *bDelay*  
- `TRUE` Pour spécifier que la disposition du volet doit être différée jusqu'à ce que le volet est affichée ; dans le cas contraire, `FALSE`.  
+ TRUE pour spécifier que la disposition du volet doit être différée jusqu'à une fois que le volet est affiché ; Sinon, FALSE.  
   
  [in] *bActivate*  
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le volet a été affiché ou masqué avec succès. `FALSE` Si le volet spécifié n’appartient pas à ce site d’ancrage.  
+ TRUE si le volet a été affiché ou masqué avec succès. FALSE si le volet spécifié n’appartient pas à ce site d’ancrage.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour afficher ou masquer des volets ancrés. Normalement, vous n’avez pas à appeler `CDockSite::ShowPane` directement, car elle est appelée par la fenêtre frame parente ou par le volet de base.  

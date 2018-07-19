@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957345"
 ---
 # <a name="makesigned-class"></a>make_signed, classe
 
@@ -40,13 +40,13 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Le type à modifier.
+*T* type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du modificateur de type contient un type modifié qui est `T` si `is_signed<T>` contient la valeur true. Dans le cas contraire, il s'agit du plus petit type non signé `UT` pour lequel `sizeof (T) <= sizeof (UT)`.
+Une instance du modificateur de type conserve un type modifié qui est *T* si `is_signed<T>` contienne la valeur true. Dans le cas contraire, il s'agit du plus petit type non signé `UT` pour lequel `sizeof (T) <= sizeof (UT)`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

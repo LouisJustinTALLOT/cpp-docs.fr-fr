@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959067"
 ---
 # <a name="tupleelement-class"></a>tuple_element, classe
 
@@ -66,29 +66,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Paramètres
 
-*Index* l’index de l’élément désigné.
+*Index*  
+Index de l’élément désigné.
 
-*Tuple* le type du tuple.
+*Tuple*  
+Type du tuple.
 
-*Elem* le type d’un élément de tableau.
+*Elem*  
+Type d’un élément de tableau.
 
-*Taille* la taille du tableau.
+*Taille*  
+Taille du tableau.
 
-*T1* Le type du premier élément d’une paire.
+*T1*  
+Le type du premier élément dans une paire.
 
-*T2* le type du deuxième élément dans une paire.
+*T2*  
+Le type du second élément d’une paire.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle `tuple_element` possède un typedef imbriqué `type` qui est un synonyme du type à l’index `Index` du type de tuple `Tuple`.
+La classe de modèle `tuple_element` possède un typedef imbriqué `type` qui est un synonyme pour le type de l’index *Index* du type de tuple *Tuple*.
 
 Le typedef `tuple_element_t` est un alias pratique pour `tuple_element<Index, Tuple>::type`.
 
-La spécialisation de classe de modèle pour les tableaux fournit une interface vers un `array` en tant que tuple de `Size` éléments, chacun d’entre eux ayant le même type. Chaque spécialisation a un typedef imbriqué `type` qui est un synonyme du type de l’élément `Index` du `array`, avec des qualifications const-volatiles conservées.
+La spécialisation de classe de modèle pour les tableaux fournit une interface vers un `array` en tant que tuple de `Size` éléments, chacun d’entre eux ayant le même type. Chaque spécialisation a un typedef imbriqué `type` qui est un synonyme pour le type de la *Index* élément de la `array`, avec des qualifications const-volatiles conservées.
 
 Les spécialisations de modèle pour les types `pair` fournissent chacune un typedef de membre unique, `type`, qui est un synonyme du type de l’élément à la position spécifiée dans la paire, avec des qualifications const et/ou volatiles conservées. Le typedef `tuple_element_t` est un alias pratique pour `tuple_element<N, pair<T1, T2>>::type`.
 
-Utilisez le [get, fonction &lt;utilitaire&gt; ](../standard-library/utility-functions.md#get) pour retourner l’élément à la position spécifiée, ou d’un type spécifié.
+Utilisez le [get, fonction &lt;utilitaire&gt; ](../standard-library/utility-functions.md#get) pour retourner l’élément à une position spécifiée, ou d’un type spécifié.
 
 ## <a name="example"></a>Exemple
 
@@ -176,9 +182,9 @@ int main() {
  0 1.333
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<tuple > **en-tête :** \<tableau > (pour une spécialisation de tableau) **en-tête :** \<utilitaire > (pour les spécialisations de paire)  **Namespace :** std
+**En-tête :** \<tuple > **en-tête :** \<array > (pour la spécialisation de tableau) **en-tête :** \<utilitaire > (pour les spécialisations de paire)  **Namespace :** std
 
 ## <a name="see-also"></a>Voir aussi
 

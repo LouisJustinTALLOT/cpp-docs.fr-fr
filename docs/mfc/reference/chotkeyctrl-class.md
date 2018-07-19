@@ -1,5 +1,5 @@
 ---
-title: CHotKeyCtrl (classe) | Documents Microsoft
+title: CHotKeyCtrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337256"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de touche d'accès rapide Windows.  
@@ -62,20 +62,20 @@ class CHotKeyCtrl : public CWnd
 |----------|-----------------|  
 |[CHotKeyCtrl::Create](#create)|Crée un contrôle de touche d’accès rapide et l’attache à un `CHotKeyCtrl` objet.|  
 |[CHotKeyCtrl::CreateEx](#createex)|Crée un contrôle de touche d’accès rapide avec les styles étendus Windows spécifiés et l’attache à un `CHotKeyCtrl` objet.|  
-|[CHotKeyCtrl::GetHotKey](#gethotkey)|Récupère les indicateurs clés virtuels code et le modificateur d’une touche d’accès rapide à partir d’un contrôle de touche d’accès rapide.|  
-|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Récupère le nom de clé dans le jeu de caractères local, affecté à une touche d’accès rapide.|  
-|[CHotKeyCtrl::GetKeyName](#getkeyname)|Récupère le nom de clé dans le jeu de caractères local attribué pour le code de touche virtuelle spécifié.|  
-|[CHotKeyCtrl::SetHotKey](#sethotkey)|Définit les touches d’accès rapide pour un contrôle de touche d’accès rapide.|  
+|[CHotKeyCtrl::GetHotKey](#gethotkey)|Récupère les indicateurs clés virtuels code et le modificateur de touche d’accès rapide à partir d’un contrôle de touche d’accès rapide.|  
+|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Récupère le nom de clé dans le jeu de caractères local affecté à une touche d’accès rapide.|  
+|[CHotKeyCtrl::GetKeyName](#getkeyname)|Récupère le nom de clé dans le jeu de caractères local affecté pour le code de touche virtuelle spécifié.|  
+|[CHotKeyCtrl::SetHotKey](#sethotkey)|Définit la combinaison de touches à chaud pour un contrôle de touche d’accès rapide.|  
 |[CHotKeyCtrl::SetRules](#setrules)|Définit les combinaisons non valides et la combinaison du modificateur par défaut pour un contrôle de touche d’accès rapide.|  
   
 ## <a name="remarks"></a>Notes  
- Un « contrôle de clé à chaud » est une fenêtre qui permet à l’utilisateur créer une touche d’accès rapide. Une « touche d’accès rapide » est une combinaison de clés que l’utilisateur peut sélectionner pour exécuter une action rapidement. (Par exemple, un utilisateur peut créer un raccourci clavier qui active une fenêtre donnée et la remet en vers le haut de l’ordre de plan.) Le contrôle de touche à chaud affiche les choix de l’utilisateur et garantit que l’utilisateur sélectionne une combinaison de touches valide.  
+ Un « contrôle de touche à chaud » est une fenêtre qui permet à l’utilisateur créer une touche d’accès rapide. Une « touche d’accès rapide » est une combinaison de touches que l’utilisateur peut appuyer sur pour effectuer une action rapidement. (Par exemple, un utilisateur peut créer une touche d’accès rapide qui active une fenêtre donnée et le rend au début de l’ordre de plan.) Le contrôle de touche d’accès rapide affiche les choix de l’utilisateur et s’assure que l’utilisateur sélectionne une combinaison de touches valide.  
   
  Ce contrôle (et par conséquent la `CHotKeyCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT version 3.51 et ultérieures.  
   
- Lorsque l’utilisateur a choisi une combinaison de touches, l’application peut récupérer la combinaison de touches spécifiée du contrôle et utiliser le **message WM_SETHOTKEY** message pour configurer la touche d’accès rapide dans le système. Chaque fois que l’utilisateur appuie sur la touche d’accès rapide par la suite, à partir de n’importe quelle partie du système, la fenêtre spécifiée dans le **message WM_SETHOTKEY** message reçoit une **WM_SYSCOMMAND** message spécifiant **SC_HOTKEY** . Ce message Active la fenêtre qui le reçoit. Le raccourci clavier reste valid jusqu'à ce que l’application qui a appelé **message WM_SETHOTKEY** se termine.  
+ Lorsque l’utilisateur a choisi une combinaison de touches, l’application peut récupérer la combinaison de touches spécifiée à partir du contrôle et le message de message WM_SETHOTKEY permet de configurer la touche d’accès rapide dans le système. Chaque fois que l’utilisateur appuie sur la touche d’accès rapide par la suite, à partir de n’importe quelle partie du système, la fenêtre spécifiée dans le message de message WM_SETHOTKEY reçoit un message WM_SYSCOMMAND spécifiant SC_HOTKEY. Ce message Active la fenêtre qui le reçoit. La touche d’accès rapide reste valide jusqu'à ce que l’application qui a appelé message WM_SETHOTKEY quitte.  
   
- Ce mécanisme est différent de la prise en charge clé à chaud dont dépend le **WM_HOTKEY** message et les fenêtres [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) et [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) fonctions.  
+ Ce mécanisme est différent de la prise en charge clé chaud varie selon le message WM_HOTKEY et le Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) et [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) fonctions.  
   
  Pour plus d’informations sur l’utilisation de `CHotKeyCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [à l’aide de CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -114,24 +114,24 @@ virtual BOOL Create(
  Spécifie le style du contrôle de clé à chaud. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le SDK Windows pour plus d’informations.  
   
  *Rect*  
- Spécifie la taille et la position du contrôle de clé à chaud. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [Rect, structure](../../mfc/reference/rect-structure1.md).  
+ Spécifie la taille et la position du contrôle de clé à chaud. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [structure RECT](../../mfc/reference/rect-structure1.md).  
   
  *pParentWnd*  
- Spécifie l’à chaud clé fenêtre du contrôle parent, généralement un [CDialog](../../mfc/reference/cdialog-class.md). Il ne doit pas être **NULL**.  
+ Spécifie la chaud clé fenêtre du contrôle parent, généralement un [CDialog](../../mfc/reference/cdialog-class.md). Il ne doit pas être NULL.  
   
  *nID*  
  Spécifie l’ID. du contrôle de clé à chaud  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro, si l’initialisation a réussi ; Sinon, 0.  
+ Différent de zéro, si l’initialisation a abouti ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Vous construisez un `CHotKeyCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, qui crée le contrôle de touche à chaud et l’attache à le `CHotKeyCtrl` objet.  
+ Vous construisez un `CHotKeyCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle de touche d’accès rapide et l’attache à la `CHotKeyCtrl` objet.  
   
- Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de `Create`.  
+ Si vous souhaitez utiliser des styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
- Appelez cette fonction pour créer un contrôle (une fenêtre enfant) et y associer la `CHotKeyCtrl` objet.  
+ Appelez cette fonction pour créer un contrôle (une fenêtre enfant) et associez-la à la `CHotKeyCtrl` objet.  
   
 ```  
 virtual BOOL CreateEx(
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
   
  *dwStyle*  
- Spécifie le style du contrôle de clé à chaud. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le Kit de développement logiciel Windows.  
+ Spécifie le style du contrôle de clé à chaud. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le SDK Windows.  
   
  *Rect*  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de *pParentWnd*.  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.  
   
  *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
@@ -162,7 +162,7 @@ virtual BOOL CreateEx(
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
+ Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.  
   
 ##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
  Récupère les indicateurs clés virtuels code et le modificateur d’un raccourci clavier à partir d’un contrôle de touche d’accès rapide.  
@@ -186,13 +186,13 @@ void GetHotKey(
   
 |Indicateur|Clé correspondante|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|touche ALT|  
-|`HOTKEYF_CONTROL`|Touche CTRL ENFONCÉE|  
-|`HOTKEYF_EXT`|Clé étendue|  
-|`HOTKEYF_SHIFT`|Touche MAJ enfoncée|  
+|HOTKEYF_ALT|touche ALT|  
+|HOTKEYF_CONTROL|Touche CTRL enfoncée|  
+|HOTKEYF_EXT|Clé étendue|  
+|HOTKEYF_SHIFT|Touche MAJ enfoncée|  
   
 ### <a name="return-value"></a>Valeur de retour  
- Dans la première méthode surchargée, un `DWORD` qui contient les indicateurs de code et le modificateur clés virtuelles. L’octet de poids faible du mot de poids faible contient le code de touche virtuelle, l’octet de poids fort du mot de poids faible contient les indicateurs de modificateur, et le mot de poids fort est égale à zéro.  
+ Dans la première méthode surchargée, une valeur DWORD qui contient les indicateurs de code et le modificateur clés virtuels. L’octet de poids faible du mot de poids faible contient le code de touche virtuelle, l’octet de poids fort du mot de poids faible contient les indicateurs de modificateur et le mot de poids fort est égal à zéro.  
   
 ### <a name="remarks"></a>Notes  
  Le code de touche virtuelle et les touches de modification ensemble définissent le raccourci clavier.  
@@ -208,7 +208,7 @@ CString GetHotKeyName() const;
  Le nom localisé de la touche d’accès rapide actuellement sélectionné. S’il n’existe aucune touche d’accès rapide sélectionné, `GetHotKeyName` retourne une chaîne vide.  
   
 ### <a name="remarks"></a>Notes  
- Le nom de cette fonction membre retourne provient le pilote du clavier. Vous pouvez installer un pilote non localisé de clavier dans une version localisée de Windows et vice versa.  
+ Le nom retourné par cette fonction membre est fourni à partir du pilote de clavier. Vous pouvez installer un pilote non localisé de clavier dans une version localisée de Windows et vice versa.  
   
 ##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
  Appelez cette fonction membre pour obtenir le nom localisé de la clé attribué à un code de touche virtuelle spécifié.  
@@ -224,13 +224,13 @@ static CString GetKeyName(
  Le code de touche virtuelle.  
   
  *fExtended*  
- Si le code de touche virtuelle est une clé étendue, **TRUE**; sinon **FALSE**.  
+ Si le code de touche virtuelle est une clé étendue, la valeur TRUE ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nom localisé de la clé spécifiée par le *vk* paramètre. Si la clé ne possède pas de nom mappé, `GetKeyName` retourne une chaîne vide.  
+ Le nom localisé de la clé spécifiée par le *vk* paramètre. Si la clé n’a aucun nom mappé, `GetKeyName` retourne une chaîne vide.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction retourne le nom de clé provient le pilote du clavier, vous pouvez installer un pilote non localisé de clavier dans une version localisée de Windows et vice versa.  
+ Le nom de la clé retournée par cette fonction est fourni à partir du pilote de clavier, donc vous pouvez installer un pilote non localisé de clavier dans une version localisée de Windows et vice versa.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
@@ -255,10 +255,10 @@ void SetHotKey(
   
 |Indicateur|Clé correspondante|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|touche ALT|  
-|`HOTKEYF_CONTROL`|Touche CTRL ENFONCÉE|  
-|`HOTKEYF_EXT`|Clé étendue|  
-|`HOTKEYF_SHIFT`|Touche MAJ enfoncée|  
+|HOTKEYF_ALT|touche ALT|  
+|HOTKEYF_CONTROL|Touche CTRL enfoncée|  
+|HOTKEYF_EXT|Clé étendue|  
+|HOTKEYF_SHIFT|Touche MAJ enfoncée|  
   
 ### <a name="remarks"></a>Notes  
  Le code de touche virtuelle et les touches de modification ensemble définissent le raccourci clavier.  
@@ -274,32 +274,32 @@ void SetRules(
   
 ### <a name="parameters"></a>Paramètres  
  *wInvalidComb*  
- Tableau d’indicateurs qui spécifie des combinaisons de clé non valides. Il peut être une combinaison des valeurs suivantes :  
+ Tableau d’indicateurs qui spécifie des combinaisons de touches non valides. Il peut être une combinaison des valeurs suivantes :  
   
-- `HKCOMB_A` ALT  
+- HKCOMB_A ALT  
   
-- `HKCOMB_C` CTRL  
+- HKCOMB_C CTRL  
   
-- `HKCOMB_CA` CTRL + ALT  
+- HKCOMB_CA CTRL + ALT  
   
-- `HKCOMB_NONE` Clés non modifiés  
+- Clés HKCOMB_NONE non modifié  
   
-- `HKCOMB_S` TOUCHE MAJ ENFONCÉE  
+- HKCOMB_S MAJ  
   
-- `HKCOMB_SA` MAJ + ALT  
+- HKCOMB_SA MAJ + ALT  
   
-- `HKCOMB_SC` MAJ + CTRL  
+- HKCOMB_SC MAJ + CTRL  
   
-- `HKCOMB_SCA` MAJ + CTRL + ALT  
+- HKCOMB_SCA MAJ + CTRL + ALT  
   
  *wModifiers*  
- Tableau d’indicateurs qui spécifie la combinaison de touches à utiliser lorsque l’utilisateur entre une combinaison non valide. Pour plus d’informations sur les indicateurs de modificateur, consultez [GetHotKey](#gethotkey).  
+ Tableau d’indicateurs qui spécifie la combinaison de touches à utiliser lors de l’utilisateur entre une combinaison non valide. Pour plus d’informations sur les indicateurs de modificateur, consultez [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Notes  
- Lorsqu’un utilisateur entre une combinaison de clé non valide, tel que défini par les indicateurs spécifiés dans *wInvalidComb*, le système utilise l’opérateur OR pour combiner les touches entrées par l’utilisateur avec les indicateurs spécifiés dans *wModifiers*. La combinaison de touches qui en résulte est convertie en une chaîne, puis affichée dans le contrôle de touche à chaud.  
+ Lorsqu’un utilisateur entre une combinaison de clé non valide, tel que défini par les indicateurs spécifiés dans *wInvalidComb*, le système utilise l’opérateur OR pour combiner les touches entrées par l’utilisateur avec les indicateurs spécifiés dans *wModifiers*. La combinaison de touches qui en résulte est convertie en une chaîne, puis affichée dans le contrôle de touche d’accès rapide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
+ [CWnd, classe](../../mfc/reference/cwnd-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
 
 

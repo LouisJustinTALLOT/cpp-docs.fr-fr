@@ -1,5 +1,5 @@
 ---
-title: Measureitemstruct, Structure | Documents Microsoft
+title: Measureitemstruct, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336957"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT, structure
-Le `MEASUREITEMSTRUCT` structure informe Windows les dimensions d’un élément de menu ou de contrôle owner-drawn.  
+Le `MEASUREITEMSTRUCT` structure informe Windows des dimensions d’un élément de menu ou de contrôle owner-drawn.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,28 +40,28 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `CtlType`  
+ *CtlType*  
  Contient le type de contrôle. Les valeurs pour les types de contrôle sont les suivantes :  
   
-- **ODT_COMBOBOX** zone de liste déroulante Owner-draw  
+- Zone de liste déroulante Owner-draw ODT_COMBOBOX  
   
-- **Odt_combobox** zone de liste Owner-draw  
+- Zone de liste Owner-draw odt_combobox  
   
-- **ODT_MENU** menu du mode Owner-draw  
+- Menu du mode Owner-draw ODT_MENU  
   
- `CtlID`  
- Contient l’ID de contrôle pour une zone de liste modifiable, une zone de liste ou un bouton. Ce membre n’est pas utilisé pour un menu.  
+ *CtlID*  
+ Contient l’ID de contrôle pour une zone de liste déroulante, une zone de liste ou un bouton. Ce membre n’est pas utilisé pour un menu.  
   
- `itemID`  
- Contient l’ID d’élément de menu pour un menu ou l’ID d’élément de zone de liste pour une zone de liste déroulante de hauteur variable ou d’une zone de liste. Ce membre n’est pas utilisé pour une zone de liste déroulante de hauteur fixe ou d’une zone de liste, ou pour un bouton.  
+ *itemID*  
+ Contient l’ID d’élément de menu pour un menu ou l’ID d’élément de zone de liste pour une zone de liste déroulante de hauteur variable ou d’une zone de liste. Ce membre n’est pas utilisé pour une zone de liste déroulante de hauteur fixe ou de la zone de liste, ou pour un bouton.  
   
  *itemWidth*  
  Spécifie la largeur d’un élément de menu. Le propriétaire de l’élément de menu en mode owner-draw doit remplir ce membre avant de retourner à partir du message.  
   
  *itemHeight*  
- Spécifie la hauteur d’un élément individuel dans une zone de liste ou un menu. Avant d’être retournée à partir du message, le propriétaire de la zone de liste déroulante owner-draw, zone de liste ou d’élément de menu doit remplir ce membre. La hauteur maximale d’un élément de zone de liste est de 255.  
+ Spécifie la hauteur d’un élément individuel dans une zone de liste ou un menu. Avant de retourner à partir du message, le propriétaire de la zone de liste déroulante owner-draw, zone de liste, ou élément de menu doit remplir ce membre. La hauteur maximale d’un élément de zone de liste est 255.  
   
- `itemData`  
+ *itemData*  
  Pour une zone de liste modifiable ou une zone de liste, ce membre contient la valeur qui été passée à la zone de liste par l’une des méthodes suivantes :  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -80,9 +80,9 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Cela permet à Windows traiter correctement les intervention de l’utilisateur avec le contrôle. Échec de remplir les membres appropriés dans le `MEASUREITEMSTRUCT` structure entraîne des opérations incorrectes du contrôle.  
+ Cela permet à Windows traiter correctement les interactions utilisateur avec le contrôle. Échec de remplir les membres appropriés dans le `MEASUREITEMSTRUCT` structure entraîne des opérations incorrectes du contrôle.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

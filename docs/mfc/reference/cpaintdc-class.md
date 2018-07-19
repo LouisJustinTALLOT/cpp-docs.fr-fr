@@ -1,5 +1,5 @@
 ---
-title: CPaintDC (classe) | Documents Microsoft
+title: CPaintDC, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c06fe7550598eeeb4136b233f39079d7425e9
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078217"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848913"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 Une classe de contexte de périphérique dérivée de [CDC](../../mfc/reference/cdc-class.md).  
@@ -56,12 +56,12 @@ class CPaintDC : public CDC
   
 |Name|Description|  
 |----------|-----------------|  
-|[CPaintDC::m_hWnd](#m_hwnd)|Le `HWND` auxquels ce `CPaintDC` objet est attaché.|  
+|[CPaintDC::m_hWnd](#m_hwnd)|Le HWND à laquelle cet `CPaintDC` objet est attaché.|  
   
 ## <a name="remarks"></a>Notes  
  Il effectue une [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) au moment de la construction et [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) au moment de la destruction.  
   
- A `CPaintDC` objet peut uniquement être utilisé lors de la réponse à une [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) d’un message, généralement dans votre `OnPaint` fonction membre de gestionnaire de messages.  
+ Un `CPaintDC` objet peut uniquement être utilisé lors de la réponse à une [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) du message, généralement dans votre `OnPaint` fonction membre de gestionnaire de messages.  
   
  Pour plus d’informations sur l’utilisation de `CPaintDC`, consultez [contextes de périphérique](../../mfc/device-contexts.md).  
   
@@ -76,7 +76,7 @@ class CPaintDC : public CDC
  **En-tête :** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
- Construit un `CPaintDC` objet prépare la fenêtre d’application pour la peinture et stocke le [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) de la structure dans le [m_ps](#m_ps) variable membre.  
+ Construit un `CPaintDC` objet, prépare la fenêtre d’application pour la peinture et stocke le [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) structure dans le [m_ps](#m_ps) variable membre.  
   
 ```  
 explicit CPaintDC(CWnd* pWnd);
@@ -84,29 +84,29 @@ explicit CPaintDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Paramètres  
  *pWnd*  
- Pointe vers le `CWnd` objet auquel le `CPaintDC` objet appartient.  
+ Pointe vers le `CWnd` objet vers lequel le `CPaintDC` objet appartient.  
   
 ### <a name="remarks"></a>Notes  
- Une exception (de type `CResourceException`) est levée si les fenêtres [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) appel échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué à tous ses contextes de périphérique disponible. Votre application en concurrence pour les contextes d’affichage courantes cinq disponibles à un moment donné sous Windows.  
+ Une exception (de type `CResourceException`) est levée si le Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CPaintDC::m_hWnd  
- Le `HWND` auxquels ce `CPaintDC` objet est attaché.  
+ Le `HWND` auquel ce `CPaintDC` objet est attaché.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- *m_hWnd* protégé variable de type `HWND`.  
+ *m_hWnd* protégé variable de type HWND.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
 ##  <a name="m_ps"></a>  CPaintDC::m_ps  
- `m_ps` est une variable membre public du type [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).  
+ `m_ps` est une variable de membre public de type [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).  
   
 ```  
 PAINTSTRUCT m_ps;  
@@ -117,7 +117,7 @@ PAINTSTRUCT m_ps;
   
  Le `PAINTSTRUCT` contient des informations que l’application utilise pour peindre la zone cliente de la fenêtre associée à un `CPaintDC` objet.  
   
- Notez que vous pouvez accéder le handle de contexte de périphérique via le `PAINTSTRUCT`. Toutefois, vous pouvez accéder à la poignée directement via le `m_hDC` variable membre qui `CPaintDC` hérite `CDC`.  
+ Notez que vous pouvez accéder au handle de contexte de périphérique via le `PAINTSTRUCT`. Toutefois, vous pouvez accéder à la poignée plus directement via le `m_hDC` variable membre qui `CPaintDC` hérite de capture de données modifiées.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CPaintDC::m_hWnd](#m_hwnd).  

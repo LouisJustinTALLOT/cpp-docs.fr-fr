@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954797"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -66,8 +66,8 @@ Une latitude inhabituelle est accordée à ces fonctions et classes de modèle a
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|Teste si les éléments correspondants de deux valarrays de taille égale sont inégaux ou si tous les éléments d'un valarray sont inégaux à une valeur spécifiée du type d'élément du valarray.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Obtient le reste de la division des éléments correspondants de deux valarrays de taille égale ou de la division d'un valarray par une valeur spécifiée du type d'élément du valarray ou de la division d'une valeur spécifiée par un valarray.|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtient le résultat de l’opération de bits **AND** entre les éléments correspondants de deux valarrays de taille égale ou entre un valarray et une valeur spécifiée du type d’élément.|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtient le résultat de l’opération logique **AND** entre les éléments correspondants de deux valarrays de taille égale ou entre un valarray et une valeur spécifiée du type d’élément du valarray.|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtient le résultat de l'opération `AND` binaire entre des éléments correspondants de deux valarrays de taille égale ou entre un valarray et une valeur spécifiée du type d'élément.|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtient le résultat de l'opération `AND` logique entre des éléments correspondants de deux valarrays de taille égale ou entre un valarray et une valeur spécifiée du type d'élément du valarray.|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|Teste si les éléments d'un valarray sont supérieurs aux éléments d'un valarray de taille égale ou si tous les éléments d'un valarray sont supérieurs ou inférieurs à une valeur spécifiée du type d'élément du valarray.|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Teste si les éléments d'un valarray sont supérieurs ou égaux aux éléments d'un valarray de taille égale ou si tous les éléments d'un valarray sont supérieurs ou égaux à, ou inférieurs ou égaux à, une valeur spécifiée.|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Décale vers la droite les bits de chaque élément d'un valarray d'un nombre spécifié de positions ou d'une quantité d'éléments spécifiée par un deuxième valarray.|
@@ -93,13 +93,13 @@ Une latitude inhabituelle est accordée à ces fonctions et classes de modèle a
 |[mask_array, classe](../standard-library/mask-array-class.md)|Classe de modèle interne auxiliaire qui prend en charge les objets qui sont des sous-ensembles de valarrays parents, spécifiés avec une expression booléenne, en fournissant des opérations entre les tableaux de sous-ensembles.|
 |[slice, classe](../standard-library/slice-class.md)|Classe utilitaire de valarray qui sert à définir des sous-ensembles vectoriels unidimensionnels d'un valarray parent.|
 |[slice_array, classe](../standard-library/slice-array-class.md)|Classe de modèle interne auxiliaire qui prend en charge les objets de secteurs en fournissant des opérations entre des tableaux de sous-ensembles définis par le secteur d'un valarray.|
-|[valarray, classe](../standard-library/valarray-class.md)|La classe de modèle décrit un objet qui contrôle une séquence d’éléments de type **Type** stockés sous forme de tableau, et qui est conçu pour effectuer des opérations mathématiques à grande vitesse et optimisé pour les performances de calcul.|
+|[valarray, classe](../standard-library/valarray-class.md)|La classe de modèle décrit un objet qui contrôle une séquence d’éléments de type `Type` qui sont stockés sous forme de tableau et conçu pour effectuer des opérations mathématiques très rapides, optimisées pour les performances de calcul.|
 
 ### <a name="specializations"></a>Spécialisations
 
 |||
 |-|-|
-|[valarray\<bool>, classe](../standard-library/valarray-bool-class.md)|Version spécialisée de la classe de modèle valarray\<**Type**> pour les éléments de type `bool`.|
+|[valarray\<bool>, classe](../standard-library/valarray-bool-class.md)|Une version spécialisée de la classe de modèle valarray\<**Type**> aux éléments de type **bool**.|
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6bc46fb8776de5f93b623b98f87513e710c603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec1cfe2be7f6a2172b6624f15cb3dcde4f0ba3c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843104"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957016"
 ---
 # <a name="exception-class"></a>exception, classe
 
@@ -46,7 +46,7 @@ class exception {
 
 Plus précisément, cette classe de base est la racine des classes d’exception standard définies dans [\<stdexcept>](../standard-library/stdexcept.md). La valeur de chaîne C retournée par `what` est non définie par le constructeur par défaut, mais peut être définie par les constructeurs pour certaines classes dérivées comme une chaîne C définie par l’implémentation. Aucune des fonctions membres ne lève d'exception.
 
-Le paramètre `int` permet de spécifier qu’aucune mémoire ne doit être allouée. La valeur de `int` est ignorée.
+Le **int** paramètre vous permet de spécifier qu’aucune mémoire ne doit être allouée. La valeur de la **int** est ignoré.
 
 > [!NOTE]
 > Les constructeurs `exception(const char* const &message)` et `exception(const char* const &message, int)` sont des extensions Microsoft pour la bibliothèque C++ Standard.
@@ -55,7 +55,7 @@ Le paramètre `int` permet de spécifier qu’aucune mémoire ne doit être allo
 
 Pour obtenir des exemples d’utilisation des classes d’exception standard qui héritent de la classe `exception`, consultez l’une des classes définies dans [\<stdexcept>](../standard-library/stdexcept.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<exception>
 

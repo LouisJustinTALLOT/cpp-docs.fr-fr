@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853776"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957371"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag, struct
 
-Classe qui fournit un type de retour pour une fonction **iterator_category** représentant un itérateur d’accès aléatoire.
+Une classe qui fournit un type de retour pour `iterator_category` fonction représentant un itérateur à accès aléatoire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,7 +38,7 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 Les classes de balise de catégorie sont utilisées comme balises de compilation pour la sélection de l’algorithme. La fonction de modèle doit rechercher la catégorie la plus spécifique de son argument d’itérateur, pour pouvoir utiliser l’algorithme le plus efficace au moment de la compilation. Pour chaque itérateur de type `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** doit être défini comme étant la balise de catégorie la plus spécifique qui décrit le comportement de l’itérateur.
 
-Le type est identique à **iterator**\< **Iter**> **::iterator_category** quand **Iter** décrit un objet pouvant servir d’itérateur d’accès aléatoire.
+Le type est identique à **itérateur** \< **Iter**> **:: iterator_category** lorsque `Iter` décrit un objet pouvant servir un itérateur à accès aléatoire.
 
 ## <a name="example"></a>Exemple
 
@@ -106,7 +106,7 @@ The iterators are not the same.
 0012FF3B
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 

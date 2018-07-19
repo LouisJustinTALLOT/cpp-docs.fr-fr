@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955720"
 ---
 # <a name="inputoutput-streams"></a>Flux d'entrée/sortie
 
@@ -32,7 +32,7 @@ Pour plus d’informations, consultez [basic_iostream, classe](../standard-libra
 
 Le modèle de classe `basic_fstream` dérive de `basic_iostream`. Il sert à transmettre des données de caractères vers et à partir des fichiers.
 
-Il existe également des typedefs qui fournissent des spécialisations de `basic_fstream` propres aux caractères. Il s’agit de `fstream`, qui est un flux d’E/S de fichier basé sur `char`, et de `wfstream`, qui est un flux d’E/S de fichier basé sur `wchar_t`. Pour plus d’informations, consultez [basic_fstream, classe](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) et [wfstream](../standard-library/basic-fstream-class.md). L’utilisation de ces typedefs nécessite l’inclusion du fichier d’en-tête \<fstream>.
+Il existe également des typedefs qui fournissent des spécialisations de `basic_fstream` propres aux caractères. Ils sont `fstream`, qui est un flux d’e/s de fichier qui est basé sur **char**, et `wfstream`, qui est un flux d’e/s de fichier qui est basé sur **wchar_t**. Pour plus d’informations, consultez [basic_fstream, classe](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) et [wfstream](../standard-library/basic-fstream-class.md). L’utilisation de ces typedefs nécessite l’inclusion du fichier d’en-tête \<fstream>.
 
 > [!NOTE]
 > Quand un objet `basic_fstream` est utilisé pour effectuer des E/S de fichiers, bien que la mémoire tampon sous-jacente contienne des positions distinctes désignées pour la lecture et l’écriture, les positions actuelles d’entrée et de sortie sont liées. Ainsi, la lecture de certaines données déplace la position de sortie.

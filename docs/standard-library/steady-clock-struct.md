@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569896"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959723"
 ---
 # <a name="steadyclock-struct"></a>steady_clock, struct
 
@@ -33,7 +33,7 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Notes
 
-Sous Windows, `steady_clock` encapsule le `QueryPerformanceCounter` (fonction).
+Sur Windows, `steady_clock` encapsule le `QueryPerformanceCounter` (fonction).
 
 Une horloge est *monotone* si la valeur retournée par un premier appel à `now` est toujours inférieure ou égale à la valeur retournée par un appel ultérieur à `now`. Une horloge est *stable* si elle est *monotone* et si le laps de temps entre les battements d’horloge est constant.
 
@@ -52,13 +52,13 @@ Une horloge est *monotone* si la valeur retournée par un premier appel à `now`
 
 |Fonction|Description|
 |--------------|-----------------|
-|`now`|Retourne l’heure actuelle en tant qu’un `time_point` valeur.|
+|`now`|Retourne l’heure actuelle comme un `time_point` valeur.|
 
 ## <a name="public-constants"></a>Constantes publiques
 
 |Name|Description|
 |----------|-----------------|
-|`steady_clock::is_steady`|Contient `true`. Un `steady_clock` est *steady*.|
+|`steady_clock::is_steady`|Contient **true**. Un `steady_clock` est *steady*.|
 
 ## <a name="requirements"></a>Configuration requise
 

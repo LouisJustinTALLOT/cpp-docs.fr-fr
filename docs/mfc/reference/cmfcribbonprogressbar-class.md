@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonProgressBar | Documents Microsoft
+title: Cmfcribbonprogressbar, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,14 +36,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040218"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850759"
 ---
-# <a name="cmfcribbonprogressbar-class"></a>Classe de CMFCRibbonProgressBar
+# <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar, classe
 Implémente un contrôle qui affiche l'avancement d'une opération de longue durée.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -71,14 +71,14 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 |[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Spécifie si la barre de progression fonctionne en mode infini.|  
 |[CMFCRibbonProgressBar::OnDraw](#ondraw)|Appelé par l'infrastructure pour dessiner l'élément de ruban. (Substitue [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Définit la barre de progression pour fonctionner en mode infini.|  
-|[CMFCRibbonProgressBar::SetPos](#setpos)|Définit l’état d’avancement.|  
+|[CMFCRibbonProgressBar::SetPos](#setpos)|Définit la progression actuelle.|  
 |[CMFCRibbonProgressBar::SetRange](#setrange)|Définit les valeurs minimales et maximales.|  
   
 ## <a name="remarks"></a>Notes  
- Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : standard et infini. En mode normal, la barre de progression est remplie de gauche à droite et s’arrête lorsqu’elle atteint la valeur maximale. En mode infini, la barre de progression est remplie à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure de fin est inconnu.  
+ Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : normal et infinie. En mode normal, la barre de progression est remplie de gauche à droite et s’arrête lorsqu’il atteint la valeur maximale. En mode infini, la barre de progression est remplie à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure d’achèvement est inconnu.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonProgressBar` classe. L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définir les valeurs minimales et maximales de la barre de progression et définir la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonProgressBar` classe. L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
   
@@ -93,7 +93,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
  **En-tête :** afxRibbonProgressBar.h  
   
 ##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
- Construit et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objet.  
+ Crée et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objet.  
   
 ```  
 CMFCRibbonProgressBar();
@@ -107,7 +107,7 @@ CMFCRibbonProgressBar(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *nID*  
- Spécifie l’ID de commande de la barre de progression du ruban.  
+ Spécifie l’ID de commande pour la barre de progression du ruban.  
   
  [in] *nWidth*  
  Spécifie la largeur, en pixels, de la barre de progression du ruban.  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -172,10 +172,10 @@ BOOL IsInfiniteMode() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la barre de progression est en mode infini ; dans le cas contraire, `FALSE`.  
+ TRUE si la barre de progression est en mode infini ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- En mode infini, la barre de progression remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure de fin est inconnu.  
+ En mode infini, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure d’achèvement est inconnu.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -198,10 +198,10 @@ void SetInfiniteMode(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bSet*  
- `TRUE` Pour spécifier que la barre de progression est en mode infini ; dans le cas contraire, `FALSE`.  
+ TRUE pour spécifier que la barre de progression est en mode infini ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- En règle générale, si la barre de progression est en mode infini, il informe l’utilisateur qu’une opération est en cours, mais que l’heure de fin est inconnu. Par conséquent, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale.  
+ En règle générale, si la barre de progression est en mode infini, il signale à l’utilisateur qu’une opération est en cours, mais que l’heure d’achèvement est inconnu. Par conséquent, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale.  
   
 ##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
  Définit la position actuelle de la barre de progression.  
@@ -223,7 +223,7 @@ void SetPos(
  La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).  
   
 ##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
- Définit les valeurs minimales et maximales de la barre de progression.  
+ Définit les valeurs minimales et maximales pour la barre de progression.  
   
 ```  
 void SetRange(
@@ -235,7 +235,7 @@ void SetRange(
  [in] *nMin*  
  Spécifie la valeur minimale de la plage.  
   
- [in] *nombre maximal*  
+ [in] *nMax*  
  Spécifie la valeur maximale de la plage.  
   
 ### <a name="remarks"></a>Notes  
@@ -244,5 +244,5 @@ void SetRange(
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)   
+ [Cmfcribbonbaseelement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)   
  [CMFCRibbonBar, classe](../../mfc/reference/cmfcribbonbar-class.md)

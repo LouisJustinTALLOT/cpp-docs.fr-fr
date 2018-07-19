@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCToolBarComboBoxButton | Documents Microsoft
+title: Cmfctoolbarcomboboxbutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -74,15 +74,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039191"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854055"
 ---
-# <a name="cmfctoolbarcomboboxbutton-class"></a>Classe de CMFCToolBarComboBoxButton
-Un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante ( [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)).  
+# <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton, classe
+Un bouton de barre d’outils qui contient un contrôle combo box ( [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -102,48 +102,48 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CMFCToolBarComboBoxButton::AddItem](#additem)|Ajoute un élément à la fin de la zone de liste modifiable.|  
-|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Ajoute un élément à la zone de liste modifiable. L’ordre des éléments dans la liste est spécifié par `Compare`.|  
-|[CMFCToolBarComboBoxButton::Compare](#compare)|Compare deux éléments. Appelé pour trier les éléments `AddSortedItems` ajoute à la zone de liste modifiable.|  
-|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Crée un nouveau contrôle d’édition pour le bouton de la zone de liste déroulante.|  
-|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Supprime un élément de la zone de liste modifiable.|  
+|[CMFCToolBarComboBoxButton::AddItem](#additem)|Ajoute un élément à la fin de la liste déroulante.|  
+|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Ajoute un élément à la liste déroulante. L’ordre des éléments dans la liste est spécifié par `Compare`.|  
+|[CMFCToolBarComboBoxButton::Compare](#compare)|Compare deux éléments. Appelé pour trier les éléments `AddSortedItems` ajoute à la liste déroulante.|  
+|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Crée un nouveau contrôle d’édition pour le bouton de zone de liste déroulante.|  
+|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Supprime un élément de la liste déroulante.|  
 |[CMFCToolBarComboBoxButton::FindItem](#finditem)|Retourne l’index de l’élément qui contient une chaîne spécifiée.|  
-|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Retourne un pointeur vers le bouton de la zone de liste déroulante avec un ID de commande spécifiée.|  
-|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Retourne un pointeur vers le contrôle de zone de liste déroulante qui est incorporé dans le bouton de la zone de liste déroulante.|  
+|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Retourne un pointeur vers le bouton de zone de liste modifiable avec un ID de commande spécifiée.|  
+|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Retourne un pointeur vers le contrôle de zone de liste déroulante qui est incorporé dans le bouton de zone de liste déroulante.|  
 |[CMFCToolBarComboBoxButton::GetCount](#getcount)|Retourne le nombre d’éléments dans la liste déroulante de la zone de liste.|  
-|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Recherche la liste déroulante bouton de zone qui possède un ID de commande spécifiée. Retourne le nombre d’éléments dans la liste déroulante de zone de liste de ce bouton.|  
+|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Recherche la liste déroulante bouton de zone qui a un ID de commande spécifié. Retourne le nombre d’éléments dans la liste déroulante zone de liste de ce bouton.|  
 |[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Retourne l’index de l’élément sélectionné dans la liste déroulante de la zone de liste.|  
-|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Recherche la liste déroulante de bouton de zone qui possède un ID de commande spécifié et retourne l’index de l’élément sélectionné dans la liste déroulante de zone de liste de ce bouton.|  
-|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Retourne un pointeur vers le contrôle d’édition qui est incorporé dans le bouton de la zone de liste déroulante.|  
+|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Recherche la liste déroulante de bouton de zone qui possède un ID de commande spécifié et retourne l’index de l’élément sélectionné dans la liste déroulante zone de liste de ce bouton.|  
+|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Retourne un pointeur vers le contrôle d’édition qui est incorporé dans le bouton de zone de liste déroulante.|  
 |[CMFCToolBarComboBoxButton::GetItem](#getitem)|Retourne la chaîne qui est associée à un index spécifié dans la liste déroulante de la zone de liste.|  
 |[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Recherche la liste déroulante de bouton de zone qui possède un ID de commande spécifié et retourne la chaîne qui est associée à un index dans la zone de liste modifiable de ce bouton.|  
 |[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Retourne la valeur de 32 bits qui est associée à un index spécifié dans la liste déroulante de la zone de liste.|  
 |[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Recherche la liste déroulante de bouton de zone qui possède un ID de commande spécifié et retourne la valeur de 32 bits qui est associée à un index dans la zone de liste modifiable de ce bouton.|  
-|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Recherche la liste déroulante bouton de zone qui possède un ID de commande spécifiée. Récupère la valeur de 32 bits qui est associé à un index dans la zone de liste modifiable de ce bouton et renvoie la valeur de 32 bits en tant que pointeur.|  
-|[CMFCToolBarComboBoxButton::GetText](#gettext)|Renvoie le texte du contrôle d’édition de la zone de liste déroulante.|  
-|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Recherche la liste déroulante de bouton de zone qui possède un ID de commande spécifié et retourne le texte à partir du contrôle d’édition de ce bouton.|  
-|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Détermine si les boutons de zone de liste modifiable dans l’application sont centrés ou alignés en haut de la barre d’outils.|  
-|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Détermine si les boutons de zone de liste modifiable dans l’application ont une apparence à deux dimensions.|  
+|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Recherche la liste déroulante bouton de zone qui a un ID de commande spécifié. Récupère la valeur de 32 bits qui est associé à un index dans la zone de liste modifiable de ce bouton et renvoie la valeur de 32 bits en tant que pointeur.|  
+|[CMFCToolBarComboBoxButton::GetText](#gettext)|Retourne le texte à partir du contrôle d’édition de la zone de liste déroulante.|  
+|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Recherche la liste déroulante de bouton de zone qui a un ID de commande spécifié et retourne le texte de contrôle d’édition de ce bouton.|  
+|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Détermine si les boutons de zone de liste déroulante dans l’application sont centrés ou alignés avec le haut de la barre d’outils.|  
+|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Détermine si les boutons de zone de liste déroulante dans l’application ont une apparence à deux dimensions.|  
 |[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Supprime tous les éléments de la liste de zone et de modifier le contrôle de zone de liste déroulante.|  
-|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Sélectionne un élément dans la zone de liste déroulante en fonction de son index, une valeur 32 bits ou une chaîne et informe le contrôle de zone de liste déroulante sur la sélection.|  
-|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Recherche la liste déroulante bouton de zone qui possède un ID de commande spécifiée. Appels `SelectItem` pour sélectionner un élément dans la zone de liste modifiable de ce bouton en fonction de sa chaîne, un index ou une valeur 32 bits.|  
-|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Indique si les boutons de zone de liste modifiable dans l’application sont centrés verticalement ou alignés en haut de la barre d’outils.|  
+|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Sélectionne un élément dans la zone de liste déroulante en fonction de son index, une valeur 32 bits ou une chaîne et en avertit le contrôle de zone de liste déroulante sur la sélection.|  
+|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Recherche la liste déroulante bouton de zone qui a un ID de commande spécifié. Appels `SelectItem` pour sélectionner un élément dans la zone de liste modifiable de ce bouton en fonction de sa chaîne, un index ou une valeur 32 bits.|  
+|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Spécifie si les boutons de zone de liste déroulante dans l’application sont centrés verticalement ou alignés avec le haut de la barre d’outils.|  
 |[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Définit la hauteur de la zone de liste déroulante.|  
-|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Spécifie si les boutons de zone de liste modifiable dans l’application ont une apparence à deux dimensions.|  
+|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Spécifie si les boutons de zone de liste déroulante dans l’application ont une apparence à deux dimensions.|  
   
 ## <a name="remarks"></a>Notes  
- Pour ajouter un bouton de la zone de liste modifiable à une barre d’outils, procédez comme suit :  
+ Pour ajouter un bouton de zone de liste déroulante à une barre d’outils, procédez comme suit :  
   
  1. Réservez un ID de ressource factice pour le bouton dans la ressource de la barre d'outils parente.  
   
  2. Construire un `CMFCToolBarComboBoxButton` objet.  
   
- 3. Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacer le bouton factice avec le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacez le bouton fictif avec le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Pour plus d’informations, consultez [procédure pas à pas : placement le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md). Pour obtenir un exemple d’un bouton de barre d’outils de zone de liste déroulante, consultez l’exemple de projet VisualStudioDemo.  
+ Pour plus d’informations, consultez [procédure pas à pas : placer le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md). Pour obtenir un exemple d’un bouton de barre d’outils de zone de liste déroulante, consultez l’exemple de projet VisualStudioDemo.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarComboBoxButton` classe. L’exemple montre comment activer les zones d’édition et de la liste déroulante, définissez des boutons de zone de la position verticale de la zone de liste déroulante dans l’application, affectez à la hauteur de la zone de liste lorsqu’il est déplacé vers le bas, définir l’apparence de style à deux dimensions de boutons de zone de liste modifiable dans l’application et définir le texte dans la zone d’édition de la liste déroulante bouton de zone. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarComboBoxButton` classe. L’exemple montre comment activer les cases à modifier et de la liste déroulante, définissez des cases à la position verticale de la zone de liste déroulante dans l’application, définir la hauteur de la zone de liste lorsqu’il est déplacé vers le bas, définir l’apparence de style à deux dimensions de boutons de zone de liste modifiable dans l’application et définir le texte dans la zone d’édition de la liste déroulante bouton de zone. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]  
@@ -205,14 +205,14 @@ virtual INT_PTR AddSortedItem(
  Cette fonction permet d’ajouter des éléments à la zone de liste dans un ordre spécifique.  
   
 ##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched  
- Indique si la taille de bouton de la zone de liste déroulante peut changer.  
+ Indique si la taille de bouton de la liste déroulante peut modifier.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `TRUE`.  
+ Retourne la valeur TRUE.  
   
 ##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  Construit un [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objet.  
@@ -270,7 +270,7 @@ virtual int Compare(
  Deuxième chaîne à comparer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur qui indique la relation lexicographique respectant la casse entre les chaînes. Le tableau suivant répertorie les valeurs possibles :  
+ Une valeur qui indique la relation lexicographique respect de la casse entre les chaînes. Le tableau suivant répertorie les valeurs possibles :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -293,11 +293,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `src`  
+ [in] *src*  
  Objet `CMFCToolBarComboBoxButton` source.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
- Crée une nouvelle zone de liste déroulante pour le bouton de la zone de liste déroulante.  
+ Crée une nouvelle zone de liste déroulante pour le bouton de zone de liste déroulante.  
   
 ```  
 virtual CComboBox* CreateCombo(
@@ -307,16 +307,16 @@ virtual CComboBox* CreateCombo(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndParent*  
- Pointeur vers la fenêtre parente du bouton.  
+ Pointeur vers la fenêtre parent du bouton.  
   
  [in] *rect*  
  Rectangle englobant de la zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la nouvelle zone de liste déroulante si la méthode a réussi ; dans le cas contraire, `NULL`.  
+ Un pointeur vers la nouvelle zone de liste déroulante si la méthode a réussi ; Sinon, NULL.  
   
 ##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
- Crée une nouvelle zone d’édition pour le bouton de la zone de liste déroulante.  
+ Crée une nouvelle zone d’édition pour le bouton de zone de liste déroulante.  
   
 ```  
 virtual CMFCToolBarComboBoxEdit* CreateEdit(
@@ -327,19 +327,19 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndParent*  
- Pointeur vers la fenêtre parente du bouton.  
+ Pointeur vers la fenêtre parent du bouton.  
   
  [in] *rect*  
  Rectangle englobant de la zone d’édition.  
   
  [in] *dwEditStyle*  
- Style du contrôle de la zone d’édition.  
+ Style de contrôle de la zone d’édition.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la nouvelle zone d’édition si la méthode a réussi ; dans le cas contraire, `NULL`.  
+ Un pointeur vers la nouvelle zone d’édition si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure appelle cette méthode lorsqu’il crée une nouvelle zone d’édition pour un bouton de la zone de liste déroulante. Substituez cette méthode pour modifier comment [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) est créé.  
+ L’infrastructure appelle cette méthode lorsqu’il crée une nouvelle zone d’édition pour un bouton de zone de liste déroulante. Substituez cette méthode pour modifier comment [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) est créé.  
   
 ##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
  Supprime un élément spécifié à partir de la zone de liste.  
@@ -361,7 +361,7 @@ BOOL DeleteItem(DWORD_PTR dwData);
  Le texte de l’élément à supprimer. S’il existe plusieurs éléments portant le même texte, le premier élément est supprimé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si l’élément a été situé et a été supprimé. dans le cas contraire, `FALSE`.  
+ TRUE si l’élément a été trouve et a été supprimé ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -384,13 +384,13 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bActivez*  
- `TRUE` Pour activer les zones d’édition et de liste déroulante ; `FALSE` pour désactiver les zones d’édition et de la liste déroulante.  
+ TRUE pour activer les cases à modifier et de liste déroulante ; FALSE pour désactiver les cases à modifier et de la liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Lorsque désactivé, les contrôles ne devient actifs et ne peut pas accepter l’entrée d’utilisateur.  
+ Lorsque désactivée, les contrôles ne peut pas devenir actives et ne peut pas accepter l’entrée d’utilisateur.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
- Copie une chaîne à partir de la table de chaînes d’application au menu spécifié à l’aide de la commande de bouton de la zone de liste déroulante ID.  
+ Copie une chaîne à partir de la table de chaînes d’application au menu spécifié à l’aide de la commande de bouton de zone de liste déroulante ID.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
@@ -401,7 +401,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
  Référence à un bouton de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Toujours `TRUE`.  
+ Toujours TRUE.  
   
 ##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
  Retourne l’index du premier élément dans la zone de liste qui contient une chaîne spécifiée.  
@@ -415,7 +415,7 @@ int FindItem(LPCTSTR lpszText) const;
  Le texte à rechercher dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’index de l’élément ; ou `CB_ERR` si l’élément est introuvable.  
+ L’index de l’élément ; ou CB_ERR si l’élément est introuvable.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -433,10 +433,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
  L’ID de commande d’un bouton de zone de liste déroulante.  
   
  [in] *bIsFocus*  
- `TRUE` Pour effectuer une recherche uniquement le focus boutons ; `FALSE` pour rechercher tous les boutons.  
+ True permet de rechercher uniquement axée boutons ; FALSE pour rechercher tous les boutons.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un bouton de la zone de liste modifiable ; ou `NULL` si le bouton n’est pas trouvé.  
+ Un pointeur vers un bouton de zone de liste déroulante ; ou NULL si le bouton n’est pas trouvé.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -448,19 +448,19 @@ CComboBox* GetComboBox() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le [CComboBox (classe)](../../mfc/reference/ccombobox-class.md) de l’objet si la méthode a réussi ; sinon `NULL`.  
+ Un pointeur vers le [CComboBox (classe)](../../mfc/reference/ccombobox-class.md) de l’objet si la méthode a réussi ; sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getcontextmenuid"></a>  CMFCToolBarComboBoxButton::GetContextMenuID  
- Obtient l’ID de ressource de menu contextuel pour le bouton de la zone de liste déroulante.  
+ Obtient l’ID de ressource de menu contextuel pour le bouton de zone de liste déroulante.  
   
 ```  
 UINT GetContextMenuID();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’ID de ressource de menu contextuel.  
+ L’ID de ressource de menu contextuel  
   
 ##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
  Retourne le nombre d’éléments dans la zone de liste.  
@@ -486,7 +486,7 @@ static int GetCountAll(UINT uiCmd);
  L’ID de commande d’un bouton de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre d’éléments dans la zone de liste ; dans le cas contraire, `CB_ERR` si le bouton de la zone de liste déroulante est introuvable.  
+ Le nombre d’éléments dans la zone de liste ; Sinon, CB_ERR si la liste déroulante zone de bouton est introuvable.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -498,13 +498,13 @@ int GetCurSel() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’index de l’élément actuellement sélectionné dans la zone de liste ; ou `CB_ERR` si aucun élément n’est sélectionné.  
+ L’index de l’élément actuellement sélectionné dans la zone de liste ; ou CB_ERR si aucun élément n’est sélectionné.  
   
 ### <a name="remarks"></a>Notes  
  L’index de zone de liste est de base zéro.  
   
 ##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
- Retourne l’index de l’élément actuellement sélectionné dans la zone de liste d’une zone de liste déroulante de bouton de zone qui possède un ID de commande spécifiée.  
+ Retourne l’index de l’élément actuellement sélectionné dans la zone de liste d’une zone de liste déroulante bouton de zone qui a un ID de commande spécifié.  
   
 ```  
 static int GetCurSelAll(UINT uiCmd);
@@ -515,7 +515,7 @@ static int GetCurSelAll(UINT uiCmd);
  L’ID de commande d’un bouton de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’index de l’élément actuellement sélectionné dans la zone de liste ; dans le cas contraire, `CB_ERR` si aucun élément n’est sélectionné ou un bouton de la zone de liste déroulante est introuvable.  
+ L’index de l’élément actuellement sélectionné dans la zone de liste ; Sinon, CB_ERR si aucun élément n’est sélectionné ou un bouton de zone de liste déroulante est introuvable.  
   
 ### <a name="remarks"></a>Notes  
  L’index de zone de liste est de base zéro.  
@@ -528,7 +528,7 @@ virtual CEdit* GetEditCtrl();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la zone d’édition si la méthode a réussi ; dans le cas contraire, `NULL`.  
+ Un pointeur vers la zone d’édition si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -540,7 +540,7 @@ virtual HWND GetHwnd();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le handle de fenêtre, ou `NULL` si la zone de liste déroulante n’est pas associée à un objet window.  
+ Le handle de fenêtre, ou NULL si la zone de liste déroulante n’est pas associée à un objet de fenêtre.  
   
 ##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
  Retourne la chaîne associée à un élément à l’index spécifié dans la zone de liste.  
@@ -554,10 +554,10 @@ LPCTSTR GetItem(int iIndex=-1) const;
  Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la chaîne qui est associé à l’élément ; dans le cas contraire, `NULL` si le paramètre d’index n’est pas valide, ou si le paramètre d’index est -1 et aucun élément n’est sélectionné dans la zone de liste déroulante.  
+ Un pointeur vers la chaîne qui est associé à l’élément ; Sinon, valeur NULL si le paramètre d’index n’est pas valide, ou si le paramètre d’index est -1 et il n’existe aucun élément sélectionné dans la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Un paramètre d’index-1 retourne la chaîne de l’élément actuellement sélectionné.  
+ Un paramètre d’index de -1 retourne la chaîne de l’élément actuellement sélectionné.  
   
 ##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
  Retourne la chaîne associée à un élément à l’index spécifié dans la zone de liste d’un bouton de zone de liste déroulante qui possède un ID de commande spécifiée.  
@@ -576,10 +576,10 @@ static LPCTSTR GetItemAll(
  Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la chaîne de l’élément si la méthode a réussi ; dans le cas contraire, `NULL` si l’index n’est pas valide, un bouton de la zone de liste déroulante n’est pas trouvée, ou si l’index est -1 et aucun élément n’est sélectionné dans la zone de liste déroulante.  
+ Un pointeur vers la chaîne de l’élément si la méthode a réussi ; Sinon, NULL si l’index n’est pas valide, un bouton de zone de liste déroulante est introuvable, ou si l’index est -1 et il n’existe aucun élément sélectionné dans la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Une valeur d’index-1 retourne la chaîne de l’élément actuellement sélectionné.  
+ Une valeur d’index de -1 retourne la chaîne de l’élément actuellement sélectionné.  
   
 ##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
  Retourne les données associées à un élément à un index spécifique dans la zone de liste.  
@@ -596,7 +596,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
  Les données associées à l’élément ; ou 0 si l’élément n’existe pas.  
   
 ### <a name="remarks"></a>Notes  
- Un paramètre d’index-1 retourne les données associées à l’élément actuellement sélectionné.  
+ Un paramètre d’index de -1 retourne les données associées à l’élément actuellement sélectionné.  
   
 ##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
  Retourne les données associées à un élément à un index spécifique dans la zone de liste d’un bouton de zone de liste déroulante qui possède un ID de commande spécifique.  
@@ -615,10 +615,10 @@ static DWORD_PTR GetItemDataAll(
  Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Les données associées à l’élément si la méthode a réussi ; Sinon, 0 si l’index spécifié n’est pas valide, ou CB_ERR si le bouton de zone de liste déroulante est introuvable.  
+ Les données associées à l’élément si la méthode a réussi ; Sinon, 0 si l’index spécifié n’est pas valide, ou CB_ERR si la liste déroulante zone de bouton est introuvable.  
   
 ### <a name="remarks"></a>Notes  
- Un paramètre d’index-1 retourne les données associées à l’élément actuellement sélectionné.  
+ Un paramètre d’index de -1 retourne les données associées à l’élément actuellement sélectionné.  
   
 ##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
  Retourne les données associées à un élément à un index spécifique dans la zone de liste d’un bouton de zone de liste déroulante qui possède un ID de commande spécifique. Ces données sont retournées en tant que pointeur.  
@@ -637,19 +637,19 @@ static void* GetItemDataPtrAll(
  Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur associé à l’élément si la méthode a réussi ; Sinon, -1 si une erreur se produit, ou `NULL` si le bouton de la zone de liste déroulante est introuvable.  
+ Un pointeur associé à l’élément si la méthode a réussi ; Sinon,-1 si une erreur se produit, ou NULL si la liste déroulante zone de bouton est introuvable.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
- Retourne la chaîne d’invite pour la zone de liste déroulante de bouton de zone.  
+ Retourne la chaîne d’invite pour la liste déroulante de bouton de zone.  
   
 ```  
 virtual CString GetPrompt() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- La chaîne du message.  
+ La chaîne d’invite.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode n’est actuellement pas implémentée.  
@@ -678,7 +678,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
  L’ID de commande d’un bouton de zone de liste déroulante spécifique.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le texte dans la zone d’édition si la méthode a réussi ; dans le cas contraire, `NULL`.  
+ Le texte dans la zone d’édition si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -690,10 +690,10 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la zone de liste modifiable a actuellement le focus ; dans le cas contraire, `FALSE`.  
+ TRUE si la zone de liste modifiable a actuellement le focus ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode retourne également `TRUE` si une fenêtre enfant de la zone de liste modifiable a actuellement le focus.  
+ Cette méthode retourne également la valeur TRUE si n’importe quelle fenêtre enfant de la zone de liste modifiable a actuellement le focus.  
   
 ##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
  Retourne la position verticale de boutons de zone de liste modifiable dans l’application.  
@@ -703,7 +703,7 @@ static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si les boutons sont centrées ; `FALSE` si les boutons sont alignés en haut.  
+ TRUE si les boutons sont centrées ; FALSE si les boutons sont alignés en haut.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -715,13 +715,13 @@ static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` s’ils ont un style à deux dimensions ; dans le cas contraire, `FALSE`.  
+ TRUE si les boutons ont un style à deux dimensions ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Le style en deux dimensions par défaut pour les boutons de zone de liste déroulante est `FALSE.`  
+ Le style à deux dimensions par défaut pour les boutons de zone de liste déroulante est FALSE.  
   
 ##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
- Indique si le handle spécifié est associé avec le bouton de la zone de liste déroulante, ou l’un de ses enfants.  
+ Indique si le handle spécifié est associé avec le bouton de zone de liste déroulante, ou l’un de ses enfants.  
   
 ```  
 virtual BOOL IsOwnerOf(HWND hwnd);
@@ -732,20 +732,20 @@ virtual BOOL IsOwnerOf(HWND hwnd);
  Un handle de fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le handle est associé le bouton de la zone de liste déroulante, ou l’un de ses enfants ; dans le cas contraire, `FALSE`.  
+ TRUE si le handle est associé le bouton de zone de liste déroulante, ou l’un de ses enfants ; Sinon, FALSE.  
   
 ##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
- Indique si le bouton de la zone de liste déroulante réside sur un panneau de ruban.  
+ Indique si le bouton de zone de liste déroulante réside sur un panneau de ruban.  
   
 ```  
 BOOL IsRibbonButton() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Toujours `FALSE`.  
+ Toujours la valeur FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, cette méthode retourne toujours `FALSE`, ce qui signifie que la liste déroulante bouton de zone n’est jamais affiché sur un panneau de ruban.  
+ Par défaut, cette méthode retourne toujours FALSE, ce qui signifie que le bouton de zone de liste déroulante n’est jamais affiché dans un panneau de ruban.  
   
 ##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
  Retourne l’état de visibilité de la liste déroulante de bouton de zone.  
@@ -758,7 +758,7 @@ virtual BOOL IsWindowVisible();
  L’état de visibilité du bouton de zone de liste déroulante.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand  
- Indique si le bouton de la zone de liste déroulante traite le message.  
+ Indique si le bouton de zone de liste déroulante traite le message.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -769,7 +769,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Le message de notification qui est associé à la commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Indique si le bouton de la zone de liste déroulante traite le message.  
+ Indique si le bouton de zone de liste déroulante traite le message.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
  Appelé par le framework lorsque le bouton est ajouté à la **personnaliser** boîte de dialogue.  
@@ -789,20 +789,20 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Le contexte de périphérique qui affiche le bouton de la zone de liste déroulante.  
+ [in] *pDC*  
+ Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
   
  [in] *sizeDefault*  
  La taille par défaut, la liste déroulante du bouton de zone.  
   
  [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parente. `TRUE` Lorsque la barre d’outils est ancré horizontalement et `FALSE` lorsque la barre d’outils est ancré verticalement.  
+ L’état d’ancrage de la barre d’outils parent. TRUE si la barre d’outils est ancrée horizontalement et FALSE lorsque la barre d’outils est ancrée verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `SIZE` structure qui contient les dimensions de la zone de liste déroulante du bouton de zone, en pixels.  
+ Un `SIZE` structure qui contient les dimensions du bouton de zone de liste déroulante, en pixels.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
- Appelé par le framework lorsque le bouton de la zone de liste déroulante est inséré dans une barre d’outils.  
+ Appelé par le framework lorsque le bouton de zone de liste déroulante est inséré dans une nouvelle barre d’outils.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -810,10 +810,10 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndParent*  
- Pointeur vers la nouvelle barre d’outils du parent.  
+ Pointeur vers la nouvelle barre d’outils parent.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
- Appelé par le framework lorsque l’utilisateur clique sur le bouton de la zone de liste déroulante.  
+ Appelé par le framework lorsque l’utilisateur clique sur le bouton de zone de liste déroulante.  
   
 ```  
 virtual BOOL OnClick(
@@ -829,10 +829,10 @@ virtual BOOL OnClick(
  Réservé pour une utilisation dans une classe dérivée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode gère l’événement ; dans le cas contraire, `FALSE`.  
+ TRUE si la méthode gère l’événement ; Sinon, FALSE.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
- Appelé par le framework lorsque l’utilisateur modifie la couleur de la barre d’outils parent pour définir la liste déroulante couleur de la zone.  
+ Appelé par le framework lorsque l’utilisateur modifie la couleur de la barre d’outils parent pour définir la liste déroulante couleur de bouton de zone.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -841,8 +841,8 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Le contexte de périphérique qui affiche le bouton de la zone de liste déroulante.  
+ [in] *pDC*  
+ Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
   
  [in] *nCtlColor*  
  Non utilisé.  
@@ -851,10 +851,10 @@ virtual HBRUSH OnCtlColor(
  Handle vers le pinceau de l’infrastructure utilise pour peindre l’arrière-plan du bouton de zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode définit également la couleur de texte de bouton de zone liste déroulante.  
+ Cette méthode définit également la couleur de texte de zone de liste déroulante bouton.  
   
 ##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
- Appelé par l’infrastructure pour dessiner le bouton de la zone de liste déroulante en utilisant les options et les styles spécifiés.  
+ Appelé par l’infrastructure pour dessiner le bouton de zone de liste déroulante en utilisant les options et les styles spécifiés.  
   
 ```  
 virtual void OnDraw(
@@ -869,32 +869,32 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *Contrôleur de domaine principal*  
+ [in] *Pdc*  
  Le contexte de périphérique qui affiche le bouton.  
   
  [in] *rect*  
  Le rectangle englobant du bouton.  
   
  [in] *pImages*  
- La collection d’images qui est associée au bouton.  
+ Collection d’images associée au bouton.  
   
  [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parente. `TRUE` Lorsque la barre d’outils est ancré horizontalement et `FALSE` lorsque la barre d’outils est ancré verticalement.  
+ L’état d’ancrage de la barre d’outils parent. TRUE si la barre d’outils est ancrée horizontalement et FALSE lorsque la barre d’outils est ancrée verticalement.  
   
  [in] *bCustomizeMode*  
  Indique si l’application est en mode de personnalisation.  
   
  [in] *bHighlight*  
- Indique s’il faut dessiner le bouton de zone de liste déroulante mis en surbrillance  
+ Si vous souhaitez dessiner le bouton de zone de liste déroulante en surbrillance.  
   
  [in] *bDrawBorder*  
- Indique s’il faut dessiner le bouton de la zone de liste modifiable avec une bordure  
+ Si vous souhaitez dessiner le bouton de zone de liste modifiable avec une bordure.  
   
  [in] *bGrayDisabledButtons*  
- `TRUE` Pour dessiner les boutons désactivés ombrés ; `FALSE` à utiliser le désactivé de l’image de collection.  
+ True pour dessiner un ombrage les boutons désactivés ; FALSE pour utiliser la collection d’images désactivé.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
- Appelé par l’infrastructure pour dessiner le bouton de la zone de liste déroulante dans le **commandes** volet de la **personnaliser** boîte de dialogue.  
+ Appelé par l’infrastructure pour dessiner le bouton de zone de liste déroulante dans le **commandes** volet de la **personnaliser** boîte de dialogue.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -904,20 +904,20 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Le contexte de périphérique qui affiche le bouton de la zone de liste déroulante.  
+ [in] *pDC*  
+ Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
   
  [in] *rect*  
- Le rectangle englobant de la zone de liste déroulante du bouton de zone.  
+ Le rectangle englobant la zone de liste déroulante du bouton de zone.  
   
  [in] *bSelected*  
- `TRUE` Si la liste déroulante zone bouton est sélectionné ; dans le cas contraire, `FALSE`.  
+ TRUE si le bouton de zone de liste déroulante est sélectionné ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La largeur, en pixels, la liste déroulante du bouton de zone.  
+ La largeur, en pixels, du bouton de zone de liste déroulante.  
   
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
- Appelé par l’infrastructure pour définir les police de bouton de zone de liste déroulante lors de la modification de la police de l’application.  
+ Appelé par l’infrastructure pour définir la liste déroulante Police de bouton de zone lors de la modification de la police de l’application.  
   
 ```  
 virtual void OnGlobalFontsChanged();
@@ -931,7 +931,7 @@ virtual void OnMove();
 ```  
   
 ##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
- Appelé par le framework lorsque le bouton de la zone de liste déroulante est masqué ou affiché.  
+ Appelé par le framework lorsque le bouton de zone de liste déroulante est masqué ou affiché.  
   
 ```  
 virtual void OnShow(BOOL bShow);
@@ -939,10 +939,10 @@ virtual void OnShow(BOOL bShow);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bShow*  
- Il faut masquer ou afficher le bouton de la zone de liste déroulante.  
+ Il faut masquer ou afficher le bouton de zone de liste déroulante.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
- Appelé par l’infrastructure pour modifier la taille de la zone de liste déroulante du bouton de zone lors de la barre d’outils du parent change de taille.  
+ Appelé par l’infrastructure pour modifier la taille du bouton de zone de liste déroulante lorsque la barre d’outils parent change de taille.  
   
 ```  
 virtual void OnSize(int iSize);
@@ -953,7 +953,7 @@ virtual void OnSize(int iSize);
  La nouvelle largeur du bouton de zone de liste déroulante.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
- Appelé par le framework lorsque l’utilisateur modifie l’info-bulle pour le bouton de la zone de liste déroulante.  
+ Appelé par le framework lorsque l’utilisateur modifie l’info-bulle pour le bouton de zone de liste déroulante.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -965,19 +965,19 @@ virtual BOOL OnUpdateToolTip(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pWndParent*  
- Pointeur vers la fenêtre parente pour le bouton de la zone de liste déroulante.  
+ Pointeur vers la fenêtre parente pour le bouton de zone de liste déroulante.  
   
  [in] *iButtonIndex*  
  ID de la liste déroulante du bouton de zone.  
   
  [in] *wndToolTip*  
- L’info-bulle à associer avec le bouton de la zone de liste déroulante.  
+ L’info-bulle à associer avec le bouton de zone de liste déroulante.  
   
  [in] *str*  
  Le texte info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode gère l’événement ; dans le cas contraire, `FALSE`.  
+ TRUE si la méthode gère l’événement ; Sinon, FALSE.  
   
 ##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  Supprime tous les éléments dans les zones de liste et les modifier.  
@@ -1006,7 +1006,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  Index de base zéro d’un élément dans la zone de liste.  
   
  [in] *bNotify*  
- `TRUE` pour notifier le bouton de la zone de liste déroulante de la sélection ; dans le cas contraire `FALSE`.  
+ TRUE pour informer le bouton de zone de liste déroulante de la sélection ; Sinon, FALSE.  
   
  [in] *dwData*  
  Les données associées à un élément dans la zone de liste.  
@@ -1015,7 +1015,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  Le texte d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode a réussi ; dans le cas contraire `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1040,10 +1040,10 @@ static BOOL SelectItemAll(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *uiCmd*  
- L’ID de commande, la liste déroulante du bouton de zone qui contient la zone de liste.  
+ ID de commande du bouton de zone de liste déroulante qui contient la zone de liste.  
   
  [in] *iIndex*  
- Index de base zéro de l’élément dans la zone de liste. La valeur-1 supprime la sélection actuelle dans la zone de liste et efface la zone d’édition.  
+ Index de base zéro de l’élément dans la zone de liste. La valeur -1 supprime la sélection actuelle dans la zone de liste et efface la zone d’édition.  
   
  [in] *dwData*  
  Les données d’un élément dans la zone de liste.  
@@ -1052,7 +1052,7 @@ static BOOL SelectItemAll(
  Le texte d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode a réussi ; dans le cas contraire `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1064,14 +1064,14 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [dans, out] *ar*  
+ [in, out] *ar*  
  Le `CArchive` objet à sérialiser.  
   
 ### <a name="remarks"></a>Notes  
- Les paramètres dans le `CArchive` déterminer si cette méthode lit ou écrit dans l’archive.  
+ Paramètres dans le `CArchive` objet déterminer si cette méthode lit ou écrit dans l’archive.  
   
 ##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
- Remplit spécifié `CAccessibilityData` objet à l’aide des données d’accessibilité à partir du bouton de la zone de liste déroulante.  
+ Remplit spécifié `CAccessibilityData` objet à l’aide des données d’accessibilité à partir du bouton de zone de liste déroulante.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1081,13 +1081,13 @@ virtual BOOL SetACCData(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pParent*  
- La fenêtre parente d’un bouton de zone de liste déroulante.  
+ La fenêtre parente, la liste déroulante du bouton de zone.  
   
  [out] *données*  
- A `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir du bouton de la zone de liste déroulante.  
+ Un `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir du bouton de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode a réussi ; dans le cas contraire `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
  Définit la position verticale de boutons de zone de liste déroulante de l’application.  
@@ -1098,13 +1098,13 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bCenterVert*  
- `TRUE` Pour centrer le bouton de la zone de liste déroulante dans la barre d’outils ; `FALSE` pour aligner le bouton de la zone de liste déroulante en haut de la barre d’outils.  
+ TRUE pour centrer le bouton de zone de liste déroulante dans la barre d’outils ; FALSE pour aligner le bouton de zone de liste déroulante en haut de la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, les boutons de zone de liste déroulante sont alignés vers le haut.  
+ Par défaut, les boutons de zone de liste déroulante sont alignés en haut.  
   
 ##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
- Définit l’ID de ressource de menu contextuel pour la zone de liste déroulante de bouton de zone.  
+ Définit l’ID de ressource de menu contextuel pour la liste déroulante de bouton de zone.  
   
 ```  
 void SetContextMenuID(UINT uiResID);
@@ -1112,7 +1112,7 @@ void SetContextMenuID(UINT uiResID);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *uiResID*  
- L’ID de ressource de menu contextuel.  
+ L’ID de ressource de menu contextuel  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  Définit la hauteur de la zone de liste lorsqu’il est déplacé vers le bas.  
@@ -1137,10 +1137,10 @@ static void SetFlatMode(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bFlat*  
- `TRUE` Pour obtenir une apparence de style à deux dimensions ; dans le cas contraire `FALSE`.  
+ TRUE pour un aspect de style à deux dimensions ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Le style en deux dimensions par défaut pour les boutons de zone de liste déroulante est `FALSE`.  
+ Le style à deux dimensions par défaut pour les boutons de zone de liste déroulante est FALSE.  
   
 ##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
  Définit le style spécifié pour la liste déroulante bouton de zone et redessine le contrôle s’il n’est pas désactivé.  
@@ -1151,7 +1151,7 @@ virtual void SetStyle(UINT nStyle);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *nStyle*  
- Combinaison de bits (OR) des styles de barre d’outils.  
+ Une combinaison (OR) au niveau du bit de styles de barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  Pour obtenir la liste des styles de bouton de barre d’outils, consultez [Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md)  
@@ -1170,7 +1170,7 @@ void SetText(LPCTSTR lpszText);
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Cmfctoolbarbutton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
  [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)

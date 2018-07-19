@@ -1,5 +1,5 @@
 ---
-title: Classe de CSimpleException | Documents Microsoft
+title: Csimpleexception, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 109801ff1dc974488abdc61e6b6fb4af4fafb1bd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078234"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853031"
 ---
-# <a name="csimpleexception-class"></a>Classe de CSimpleException
+# <a name="csimpleexception-class"></a>Csimpleexception, classe
 Cette classe est une classe de base pour les exceptions MFC critiques pour les ressources.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -57,13 +57,13 @@ class AFX_NOVTABLE CSimpleException : public CException
 |-|-|  
 |[CMemoryException, classe](../../mfc/reference/cmemoryexception-class.md)|Exception de mémoire insuffisante|  
 |[CNotSupportedException, classe](../../mfc/reference/cnotsupportedexception-class.md)|Requêtes pour une opération non prise en charge|  
-|[CResourceException, classe](../../mfc/reference/cresourceexception-class.md)|Ressource Windows introuvable ou ne peut pas être créé|  
+|[CResourceException, classe](../../mfc/reference/cresourceexception-class.md)|Ressources Windows introuvable ou ne peut pas être créé|  
 |[CUserException, classe](../../mfc/reference/cuserexception-class.md)|Exception qui indique une ressource est introuvable.|  
 |[CInvalidArgException, classe](../../mfc/reference/cinvalidargexception-class.md)|Exception qui indique un argument non valide|  
   
- Étant donné que `CSimpleException` est une classe de base abstraite, vous ne pouvez pas déclarer un `CSimpleException` directement l’objet. Au lieu de cela, vous devez déclarer les objets dérivés, tels que ceux dans le tableau précédent. Si vous déclarez votre propre classe dérivée, utilisez les classes précédentes en tant que modèle.  
+ Étant donné que `CSimpleException` est une classe de base abstraite, vous ne pouvez pas déclarer un `CSimpleException` directement l’objet. Au lieu de cela, vous devez déclarer les objets dérivés tels que ceux dans le tableau précédent. Si vous déclarez votre propre classe dérivée, utilisez les classes précédentes en tant que modèle.  
   
- Pour plus d’informations, consultez la [CException (classe)](../../mfc/reference/cexception-class.md) rubrique et [la gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ Pour plus d’informations, consultez le [CException (classe)](../../mfc/reference/cexception-class.md) rubrique et [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,10 +85,10 @@ explicit CSimpleException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>Paramètres  
  *bAutoDelete*  
- Spécifiez **TRUE** si la mémoire pour le `CSimpleException` objet a été alloué sur le tas. Cela entraîne le `CSimpleException` objet doit être supprimé quand le `Delete` fonction membre est appelée pour supprimer l’exception. Spécifiez **FALSE** si le `CSimpleException` objet est sur la pile ou est un objet global. Dans ce cas, le `CSimpleException` objet ne sera pas supprimé lorsque la `Delete` fonction membre est appelée.  
+ Spécifiez la valeur TRUE si la mémoire pour le `CSimpleException` objet a été alloué sur le tas. Cela entraîne le `CSimpleException` objet à supprimer lorsque la `Delete` fonction membre est appelée pour supprimer l’exception. Spécifiez la valeur FALSE si le `CSimpleException` objet sur la pile ou est un objet global. Dans ce cas, le `CSimpleException` objet ne sera pas supprimé quand le `Delete` fonction membre est appelée.  
   
 ### <a name="remarks"></a>Notes  
- Vous devez normalement jamais appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’un `CException`-classe dérivée et appeler son constructeur, ou il doit utiliser un des MFC lever les fonctions, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), lever un type prédéfini.  
+ Vous devez normalement jamais d’appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’un `CException`-classe dérivée et appeler son constructeur, ou il doit utiliser l’une des MFC lever fonctions, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), à lever un type prédéfini.  
   
 ##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  Appelez cette fonction membre pour fournir le texte sur une erreur s’est produite.  
@@ -105,13 +105,13 @@ virtual BOOL GetErrorMessage(
  Pointeur vers une mémoire tampon qui reçoit un message d’erreur.  
   
  *nMaxError*  
- Le nombre maximal de caractères de la mémoire tampon peut contenir, y compris le **NULL** marque de fin.  
+ Le nombre maximal de caractères de que la mémoire tampon peut contenir, y compris le terminateur NULL.  
   
  *pnHelpContext*  
- L’adresse d’un **UINT** qui recevra l’ID de contexte d’aide. Si **NULL**, aucun ID ne sera retourné.  
+ L’adresse de UINT qui reçoit l’ID de contexte d’aide. Si NULL, aucun ID ne seront retournées.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la fonction réussit ; Sinon, 0 si aucune erreur de message texte est disponible.  
+ Différent de zéro si la fonction a réussi ; Sinon, 0 si aucune erreur de texte du message est disponible.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  

@@ -1,5 +1,5 @@
 ---
-title: Date et heure | Documents Microsoft
+title: Date et heure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355559"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879557"
 ---
 # <a name="date-and-time"></a>Date et heure
-MFC prend en charge les différentes façons d’utiliser des dates et heures. Elles incluent notamment :  
+MFC prend en charge plusieurs façons de travailler avec des dates et heures. Elles incluent notamment :  
   
 -   Classes de temps à usage général. Le [CTime](../atl-mfc-shared/reference/ctime-class.md) et [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes encapsulent la plupart des fonctionnalités associées à la bibliothèque de temps à la norme ANSI, qui est déclarée dans le temps. H.  
   
--   Prise en charge de l’horloge système. Avec la version 3.0 de MFC, prise en charge a été ajouté à `CTime` pour Win32 `SYSTEMTIME` et `FILETIME` des types de données.  
+-   Prise en charge de l’horloge système. Avec MFC version 3.0, la prise en charge a été ajoutée à `CTime` pour Win32 `SYSTEMTIME` et `FILETIME` des types de données.  
   
--   Prise en charge de l’automatisation [type de données DATE](../atl-mfc-shared/date-type.md). **DATE** prend en charge la date, heure et date/heure des valeurs. Le [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulent ces fonctionnalités. Ils fonctionnent avec les [COleVariant](../mfc/reference/colevariant-class.md) classe à l’aide de la prise en charge Automation.  
+-   Prise en charge de l’automatisation [type de données DATE](../atl-mfc-shared/date-type.md). Date de prise en charge DATE et d’heure des valeurs de date/heure. Le [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulent cette fonctionnalité. Elles fonctionnent avec le [COleVariant](../mfc/reference/colevariant-class.md) classe à l’aide de la prise en charge Automation.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
   
 -   [Date et heure : classes à usage général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

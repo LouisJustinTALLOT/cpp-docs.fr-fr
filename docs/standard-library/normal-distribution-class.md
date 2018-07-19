@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855758"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959855"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution, classe
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, `double`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur, ou du type `double` si aucun n'est fourni, distribuées selon une loi normale. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur type ou type **double** si aucun n’est fourni, distribuées selon la Distribution normale. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Les fonctions de propriété `mean()` et `stddev()` retournent les valeurs des paramètres de distribution stockés `mean` et `stddev`, respectivement.
+Les fonctions de propriété `mean()` et `stddev()` retournent les valeurs des paramètres de distribution stockés *signifie* et *stddev* respectivement.
 
 Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
 
@@ -191,7 +191,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -212,7 +212,7 @@ explicit normal_distribution(const param_type& parm);
 
 *STDDEV* le `stddev` paramètre de distribution.
 
-*paramètre de* structure de paramètre utilisée pour construire la distribution.
+*parm* la structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 

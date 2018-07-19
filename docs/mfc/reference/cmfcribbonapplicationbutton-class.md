@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonApplicationButton | Documents Microsoft
+title: Cmfcribbonapplicationbutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037419"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849013"
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>Classe de CMFCRibbonApplicationButton
+# <a name="cmfcribbonapplicationbutton-class"></a>Cmfcribbonapplicationbutton, classe
 Implémente un bouton spécial situé dans l'angle supérieur gauche de la fenêtre d'application. Une fois activé, le bouton ouvre un menu qui contient généralement des commandes **Fichier** courantes telles que **Ouvrir**, **Enregistrer**et **Quitter**.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,10 +50,10 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 |----------|-----------------|  
 |`CMFCRibbonApplicationButton::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
 |`CMFCRibbonApplicationButton::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|  
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Assigne une image sur le bouton application de ruban.|  
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Assigne une image au bouton d’application du ruban.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonApplicationButton` classe. L’exemple montre comment assigner une image pour le bouton d’application et comment définir son info-bulle. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonApplicationButton` classe. L’exemple montre comment affecter une image pour le bouton d’application et comment définir son info-bulle. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
@@ -71,7 +71,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
  **En-tête :** afxRibbonBar.h  
   
 ##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
- Construit et initialise un [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objet.  
+ Crée et initialise un [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objet.  
   
 ```  
 CMFCRibbonApplicationButton();  
@@ -80,14 +80,14 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `uiBmpResID`  
+ *uiBmpResID*  
  L’ID de ressource de l’image à afficher sur le bouton d’application.  
   
- `hBmp`  
+ *hBmp*  
  Handle vers une image bitmap à afficher sur le bouton d’application.  
   
 ### <a name="remarks"></a>Notes  
- Le bouton application de ruban est un bouton spécial situé dans le coin supérieur gauche de la fenêtre d’application. Lorsqu’un utilisateur clique sur ce bouton, l’application ouvre un menu contenant généralement commun **fichier** commandes, telles que **ouvrir**, **enregistrer**, et **Exit**.  
+ Le bouton d’application de ruban est un bouton spécial qui se trouve dans le coin supérieur gauche de la fenêtre d’application. Lorsqu’un utilisateur clique sur ce bouton, l’application ouvre un menu contenant généralement courantes **fichier** commandes, telles que **Open**, **enregistrer**, et **Exit**.  
   
 ##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
  Assigne une image pour le bouton d’application.  
@@ -105,7 +105,7 @@ void SetImage(HBITMAP hBmp);
  Handle vers une image bitmap à afficher sur le bouton d’application.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour attribuer une nouvelle image sur le bouton application de ruban après avoir créé le bouton. Le bouton d’application se trouve dans le coin supérieur gauche de la fenêtre d’application.  
+ Utilisez cette méthode pour affecter une nouvelle image pour le bouton d’application de ruban après avoir créé le bouton. Le bouton d’application se trouve dans le coin supérieur gauche de la fenêtre d’application.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

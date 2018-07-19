@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958264"
 ---
 # <a name="tuplesize-class"></a>tuple_size, classe ;
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Paramètres
 
-*Tuple* le type du tuple.
+*Tuple*  
+Type du tuple.
 
-*Elem* le type des éléments du tableau.
+*Elem*  
+Type des éléments du tableau.
 
-*Taille* la taille du tableau.
+*Size*  
+Taille du tableau.
 
-*T1* le type du premier membre de la paire.
+*T1*  
+Type du premier membre de la paire.
 
-*T2* le type du deuxième membre de la paire.
+*T2*  
+Type du second membre de la paire.
 
-*Types de* les types d’éléments de tuple.
+*Types*  
+Types des éléments de tuple.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle a un membre `value` qui est une expression constante entière dont la valeur est l’extension du type de tuple `Tuple`.
+La classe de modèle a un membre `value` qui est une expression constante intégrale dont la valeur est l’étendue du type de tuple *Tuple*.
 
-La spécialisation de modèle pour les tableaux possède un membre `value` qui est une expression constante intégrale dont la valeur est `Size`, qui est la taille du tableau.
+La spécialisation du modèle pour les tableaux possède un membre `value` qui est une expression constante intégrale dont la valeur est *taille*, qui est la taille du tableau.
 
 La spécialisation de modèle pour une paire possède un membre `value` qui est une expression constante intégrale dont la valeur est 2.
 
@@ -114,9 +120,9 @@ int main()
  0 1.5 2 3.7
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<tuple > **en-tête :** \<tableau > (pour une spécialisation de tableau) **en-tête :** \<utilitaire > (pour une spécialisation de paire)
+**En-tête :** \<tuple > **en-tête :** \<array > (pour la spécialisation de tableau) **en-tête :** \<utilitaire > (pour la spécialisation de paire)
 
 **Espace de noms :** std
 

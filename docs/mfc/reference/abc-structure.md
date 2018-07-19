@@ -1,5 +1,5 @@
 ---
-title: ABC, Structure | Documents Microsoft
+title: ABC, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b5f67247b556b37cdf934f94c30947675533e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c9aac181edb12df8904a2bc6d891d59c0067ecc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339317"
 ---
 # <a name="abc-structure"></a>ABC, structure
-Le **ABC** structure contient la largeur d’un caractère dans une police TrueType.  
+Le `ABC` structure contient la largeur d’un caractère dans une police TrueType.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ typedef struct _ABC { /* abc */
   
 #### <a name="parameters"></a>Paramètres  
  *abcA*  
- Spécifie l’espacement A du caractère. L’espacement A est la distance à ajouter à la position actuelle avant de dessiner le glyphe de caractère.  
+ Spécifie l’espacement A du caractère. L’espacement A est la distance à ajouter à la position actuelle avant de dessiner le glyphe de caractères.  
   
  *abcB*  
- Spécifie l’espacement B du caractère. L’espacement B est la largeur de la partie dessinée du glyphe de caractère.  
+ Spécifie l’espacement B du caractère. L’espacement de B est la largeur de la partie dessinée du glyphe de caractères.  
   
  *abcC*  
- Spécifie l’espacement C du caractère. L’espacement C est la distance à ajouter à la position actuelle pour fournir des espaces blancs à droite du glyphe de caractère.  
+ Spécifie l’espacement C du caractère. L’espacement C est la distance à ajouter à la position actuelle pour fournir des espaces blancs à droite du glyphe de caractères.  
   
 ## <a name="remarks"></a>Notes  
- La largeur totale d’un caractère est la somme des espaces A, B et C. L’un ou l’espace de C peut être négatif pour indiquer underhangs ou dépassements.  
+ La largeur totale d’un caractère est la somme des espaces A, B et C. L’un ou l’espace C peut être négatif pour indiquer underhangs ou des interférences.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

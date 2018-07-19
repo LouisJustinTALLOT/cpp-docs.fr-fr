@@ -1,5 +1,5 @@
 ---
-title: Classe de COleResizeBar | Documents Microsoft
+title: COleResizeBar, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3706521108d848535742bf2314142fedf46f1746
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040114"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852710"
 ---
-# <a name="coleresizebar-class"></a>Classe de COleResizeBar
+# <a name="coleresizebar-class"></a>COleResizeBar, classe
 Type de barre de contrôle qui prend en charge le redimensionnement des éléments OLE sur place.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,7 +48,7 @@ class COleResizeBar : public CControlBar
   
 |Nom|Description|  
 |----------|-----------------|  
-|[COleResizeBar::Create](#create)|Crée et initialise une fenêtre enfant Windows et l’associe à la `COleResizeBar` objet.|  
+|[COleResizeBar::Create](#create)|Crée et initialise une fenêtre enfant de Windows et l’associe à la `COleResizeBar` objet.|  
   
 ## <a name="remarks"></a>Notes  
  `COleResizeBar` les objets apparaissent en tant qu’un [CRectTracker](../../mfc/reference/crecttracker-class.md) avec une bordure hachurée et externe des poignées de redimensionnement.  
@@ -79,7 +79,7 @@ COleResizeBar();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Appelez **créer** pour créer l’objet de barre de redimensionnement.  
+ Appelez `Create` pour créer l’objet de barre de redimensionnement.  
   
 ##  <a name="create"></a>  COleResizeBar::Create  
  Crée une fenêtre enfant et l’associe le `COleResizeBar` objet.  
@@ -99,10 +99,10 @@ virtual BOOL Create(
  Spécifie le [style de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributs.  
   
  *nID*  
- ID de fenêtre enfant de la barre de redimensionnement.  
+ ID de fenêtre enfant de la barre redimensionnement.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la barre de redimensionnement a été créée ; Sinon, 0.  
+ Différent de zéro si la barre de redimensionnement a été créée ; sinon 0.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC SUPERPAD](../../visual-cpp-samples.md)   

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 4937d79c04484dd0cd96f74abb7150873b6f7235
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959090"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt;, fonctions
 
@@ -82,7 +82,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -90,9 +90,9 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, les variables de type `bool` sont affichées comme 1 ou 0.
+Par défaut, les variables de type **bool** sont affichés sous forme de 1 ou 0.
 
-`boolalpha` appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), puis retourne `str`.
+`boolalpha` appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), puis retourne *str*.
 
 [noboolalpha](../standard-library/ios-functions.md#noboolalpha) inverse l’effet de `boolalpha`.
 
@@ -133,7 +133,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -143,7 +143,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, les variables de type entier sont affichées en base 10.
 
-**dec** appelle `str.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**), puis retourne `str`.
+`dec` appelle `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`, `ios_base::basefield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -185,7 +185,7 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Iosbase` Un `ios_base` objet.
+*_Iosbase* un `ios_base` objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -201,7 +201,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -209,9 +209,9 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 ### <a name="remarks"></a>Notes
 
-**fixed** est la notation d’affichage par défaut pour les nombres à virgule flottante. [scientific](../standard-library/ios-functions.md#scientific) fait en sorte que les nombres à virgule flottante soient affichés à l’aide de la notation scientifique.
+`fixed` est la notation d’affichage par défaut pour les nombres à virgule flottante. [scientific](../standard-library/ios-functions.md#scientific) fait en sorte que les nombres à virgule flottante soient affichés à l’aide de la notation scientifique.
 
-Le manipulateur appelle * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**), puis retourne `str`.
+Le manipulateur appelle * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -248,7 +248,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -258,11 +258,11 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, les variables de type entier sont affichées en notation de base 10. [dec](../standard-library/ios-functions.md#dec) et [oct](../standard-library/ios-functions.md#oct) modifient également le mode d’affichage des variables de type entier.
 
-Le manipulateur appelle `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**), puis retourne `str`.
+Le manipulateur appelle `str` **.** [setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, `ios_base::basefield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de **hex**, consultez [dec](../standard-library/ios-functions.md#dec).
+Consultez [dec](../standard-library/ios-functions.md#dec) pour obtenir un exemple montrant comment utiliser `hex`.
 
 ## <a name="internal"></a>  internal
 
@@ -274,17 +274,17 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à l’objet à partir duquel `str` est dérivé.
+Une référence à l’objet à partir de laquelle *str* est dérivée.
 
 ### <a name="remarks"></a>Notes
 
 [showpos](../standard-library/ios-functions.md#showpos) provoque l’affichage du signe pour les nombres positifs.
 
-Le manipulateur appelle `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)), puis retourne `str`.
+Le manipulateur appelle `str`. [SETF](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -319,7 +319,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -327,7 +327,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::left`, `ios_base::adjustfield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -361,7 +361,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -371,7 +371,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, `noboolalpha` est activé.
 
-`noboolalpha` appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), puis retourne `str`.
+`noboolalpha` appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), puis retourne *str*.
 
 [boolalpha](../standard-library/ios-functions.md#boolalpha) inverse l’effet de `noboolalpha`.
 
@@ -389,7 +389,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -399,7 +399,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 `noshowbase` est activé par défaut. Utilisez [showbase](../standard-library/ios-functions.md#showbase) pour indiquer la base notationnelle des nombres.
 
-Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), puis retourne `str`.
+Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -415,7 +415,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -425,7 +425,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 `noshowpoint` est activé par défaut. Utilisez [showpoint](../standard-library/ios-functions.md#showpoint) et [precision](../standard-library/ios-base-class.md#precision) pour afficher les zéros non significatifs après la virgule décimale.
 
-Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), puis retourne `str`.
+Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -461,7 +461,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -471,7 +471,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 `noshowpos` est activé par défaut.
 
-Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), puis retourne `str`.
+Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -487,7 +487,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -497,7 +497,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, [skipws](../standard-library/ios-functions.md#skipws) est activé. La lecture d’un espace dans le flux d’entrée signale la fin de la mémoire tampon.
 
-Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), puis retourne `str`.
+Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -528,7 +528,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -538,7 +538,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) fait en sorte que la mémoire tampon soit traitée quand elle n’est pas vide.
 
-Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), puis retourne `str`.
+Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), puis retourne *str*.
 
 ## <a name="nouppercase"></a>  nouppercase
 
@@ -550,7 +550,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -558,7 +558,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), puis retourne `str`.
+Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -574,7 +574,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -584,11 +584,11 @@ Une référence à l’objet à partir de laquelle *str* est dérivée.
 
 Par défaut, les variables de type entier sont affichées en notation de base 10. [dec](../standard-library/ios-functions.md#dec) et [hex](../standard-library/ios-functions.md#hex) modifient également le mode d’affichage des variables de type entier.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de **oct**, consultez [dec](../standard-library/ios-functions.md#dec).
+Consultez [dec](../standard-library/ios-functions.md#dec) pour obtenir un exemple montrant comment utiliser `oct`.
 
 ## <a name="right"></a>  right
 
@@ -600,7 +600,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -610,7 +610,7 @@ Une référence à l’objet à partir de laquelle *str* est dérivée.
 
 [left](../standard-library/ios-functions.md#left) modifie également la justification du texte.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -656,7 +656,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -666,7 +666,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, la notation [fixed](../standard-library/ios-functions.md#fixed) est appliquée pour les nombres à virgule flottante.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -700,7 +700,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -710,7 +710,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 La base notationnelle d’un nombre significatif peut être modifiée avec [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) ou [hex](../standard-library/ios-functions.md#hex).
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -753,7 +753,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -763,7 +763,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, [noshowpoint](../standard-library/ios-functions.md#noshowpoint) est activé.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -779,7 +779,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -789,7 +789,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos) est la valeur par défaut.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -823,7 +823,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -833,7 +833,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 Par défaut, `skipws` est activé. [noskipws](../standard-library/ios-functions.md#noskipws) fait en sorte que les espaces soient lus à partir du flux d’entrée.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -876,11 +876,11 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à l’objet à partir duquel `str` est dérivé.
+Une référence à l’objet à partir de laquelle *str* est dérivée.
 
 ### <a name="remarks"></a>Notes
 
@@ -888,7 +888,7 @@ Notez que `endl` vide aussi la mémoire tampon.
 
 [nounitbuf](../standard-library/ios-functions.md#nounitbuf) est activé par défaut.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), puis retourne *str*.
 
 ## <a name="uppercase"></a>  uppercase
 
@@ -900,17 +900,17 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-`str` Une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
+*Str* une référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à l’objet à partir duquel `str` est dérivé.
+Une référence à l’objet à partir de laquelle *str* est dérivée.
 
 ### <a name="remarks"></a>Notes
 
 Par défaut, [nouppercase](../standard-library/ios-functions.md#nouppercase) est activé.
 
-Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), puis retourne `str`.
+Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 

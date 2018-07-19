@@ -30,16 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0512e2794e5ac493a997b5d4d885931d9a9fc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862336"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960552"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf, classe
 
-Décrit une mémoire tampon de flux qui contrôle la transmission d'éléments vers et à partir d'une séquence d'éléments stockée dans un objet de tableau `char`.
+Décrit une mémoire tampon de flux qui contrôle la transmission d’éléments vers et à partir d’une séquence d’éléments stockés dans un **char** objet tableau.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,7 +87,7 @@ L'objet stocke également des pointeurs vers deux fonctions qui contrôlent l'al
 |[str](#str)|Appelle [freeze](#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|
 |[underflow](#underflow)|Fonction virtuelle protégée pour extraire l'élément actuel du flux d'entrée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<strstream>
 
@@ -103,11 +103,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Freezeit` Un `bool` qui indique si vous souhaitez que le flux à être figé.
+*_Freezeit*  
+ Un **bool** indiquant si vous souhaitez que le flux soit gelé.
 
 ### <a name="remarks"></a>Notes
 
-Si `_Freezeit` a la valeur true, la fonction modifie le mode `strstreambuf` stocké pour geler la séquence contrôlée. Dans le cas contraire, elle rend la séquence contrôlée non gelée.
+Si *_Freezeit* a la valeur true, la fonction modifie la stockée `strstreambuf` mode pour rendre la séquence contrôlée figée. Dans le cas contraire, elle rend la séquence contrôlée non gelée.
 
 [str](#str) implique `freeze`.
 
@@ -190,7 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Meta` Le caractère à insérer dans la mémoire tampon, ou `EOF`.
+*_Meta*  
+ Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -214,7 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Meta` Le caractère à insérer dans la mémoire tampon, ou `EOF`.
+*_Meta*  
+ Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -226,9 +229,9 @@ La fonction membre virtuelle protégée tente de replacer un élément dans la m
 
 Si _ *Meta* == `EOF`, l’élément à replacer est effectivement celui qui se trouve déjà dans le flux avant l’élément actif. Dans le cas contraire, cet élément est remplacé par **ch** = ( `char`)\_ *Meta*. La fonction peut replacer un élément de différentes manières :
 
-- Si une position putback est disponible et que l’élément qui y est stocké est égal à **ch**, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
+- Si une position de remise est disponible, et l’élément stocké est égal à `ch`, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
-- Si une position putback est disponible et si le mode strstreambuf indique que la séquence contrôlée est modifiable, la fonction peut stocker **ch** dans la position putback et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
+- Si une position putback est disponible, et si le mode strstreambuf indique que la séquence contrôlée est modifiable, la fonction peut stocker `ch` dans la position putback et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -277,11 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` La position à rechercher pour relatif à `_Way`.
+*_Off*  
+ La position à rechercher par rapport à *_Way*.
 
-`_Way` Le point de départ pour les opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
+*_Way*  
+ Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-`_Which` Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*  
+ Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -313,9 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Paramètres
 
-`_Sp` Position de recherche.
+*_Sp*  
+ Position à rechercher.
 
-`_Which` Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*  
+ Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -381,19 +389,24 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Allocfunc* la fonction utilisée pour allouer de la mémoire tampon.
+*_Allocfunc*  
+ Fonction utilisée pour allouer de la mémoire tampon.
 
-`count` Détermine la longueur de la mémoire tampon pointée par `_Getptr`. Si `_Getptr` n’est pas un argument (première forme constructeur), une taille d’allocation suggérée pour les mémoires tampons.
+*count*  
+ Détermine la longueur de la mémoire tampon vers laquelle pointée *_Getptr*. Si *_Getptr* n’est pas un argument (première forme constructeur), une allocation suggérée de taille pour les mémoires tampons.
 
-*_Freefunc* la fonction utilisée pour libérer de la mémoire tampon.
+*_Freefunc*  
+ Fonction utilisée pour libérer de la mémoire tampon.
 
-`_Getptr` Une mémoire tampon utilisée pour l’entrée.
+*_Getptr*  
+ Mémoire tampon utilisée pour l’entrée.
 
-`_Putptr` Une mémoire tampon utilisée pour la sortie.
+*_Putptr*  
+ Mémoire tampon utilisée pour la sortie.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur stocke un pointeur Null dans tous les pointeurs contrôlant la mémoire tampon d’entrée, la mémoire tampon de sortie et l’allocation strstreambuf. Il définit le mode strstreambuf stocké pour rendre la séquence contrôlée modifiable et extensible. Il accepte également `count` comme taille d’allocation initiale suggérée.
+Le premier constructeur stocke un pointeur Null dans tous les pointeurs contrôlant la mémoire tampon d’entrée, la mémoire tampon de sortie et l’allocation strstreambuf. Il définit le mode strstreambuf stocké pour rendre la séquence contrôlée modifiable et extensible. Il accepte également *nombre* comme une taille d’allocation initiale suggérée.
 
 Le deuxième constructeur se comporte comme le premier, si ce n’est qu’il stocke _ *Allocfunc* comme pointeur vers la fonction à appeler pour allouer le stockage et \_ *Freefunc* comme pointeur vers la fonction à appeler pour libérer ce stockage.
 
@@ -477,7 +490,7 @@ Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, elle retourne l
 
 ### <a name="remarks"></a>Notes
 
-S’efforce de la fonction membre virtuelle protégée extraire l’élément actuel **ch** à partir de la mémoire tampon d’entrée, puis avancer la position actuelle du flux et retourne l’élément en tant que (`int`) (`unsigned char`) **ch** . Elle peut le faire d’une seule façon : si une position de lecture est disponible, elle accepte **ch** comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
+La fonction membre virtuelle protégée s’efforce d’extraire l’élément actuel `ch` à partir de la mémoire tampon d’entrée, puis avance la position actuelle du flux et retourne l’élément en tant que (`int`) (`unsigned char`) **ch**. Il peut faire cela qu’une seule façon : si une position de lecture est disponible, elle accepte `ch` comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
 
 ## <a name="see-also"></a>Voir aussi
 

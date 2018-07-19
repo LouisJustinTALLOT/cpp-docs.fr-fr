@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956932"
 ---
 # <a name="negate-struct"></a>negate, struct
 
@@ -49,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type` N’importe quel type qui prend en charge un `operator-` qui accepte un opérande de type spécifié ou inféré.
+*Type* n’importe quel type qui prend en charge un `operator-` qui accepte un opérande de type spécifié ou inféré.
 
-`Left` L’opérande à inverser. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `Type`.
+*Gauche* l’opérande à rendre négative. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *Type*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -99,7 +99,7 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

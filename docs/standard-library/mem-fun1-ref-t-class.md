@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852362"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960828"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t, classe
 
-Classe d’adaptateur qui permet à une fonction membre **non_const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.
+Classe d’adaptateur qui permet un `non_const` fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire lors de l’initialisation avec un argument de référence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,11 +44,11 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Paramètres
 
-`_Pm` Un pointeur vers la fonction membre de classe **Type** pour être converti en un objet de fonction.
+*_Pm* un pointeur vers la fonction membre de classe `Type` à convertir en un objet de fonction.
 
-`left` L’objet qui le `_Pm` fonction membre est appelée sur.
+*gauche* l’objet qui le *_Pm* fonction membre est appelée sur.
 
-`right` L’argument donné pour `_Pm`.
+*droit* l’argument donné à *_Pm*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -56,13 +56,13 @@ Fonction binaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de `_Pm`, qui doit être un pointeur vers une fonction membre de la classe **Type**, dans un objet de membre privé. Il définit sa fonction membre `operator()` comme retournant ( **gauche**.\* `_Pm`) ( **droit**).
+La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **gauche**.\* `_Pm`) ( **droit**).
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `mem_fun1_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f6ef4f70807e753c24d3a3595ab3665b45fdbe42
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955700"
 ---
 # <a name="isunsigned-class"></a>is_unsigned, classe
 
@@ -37,11 +37,11 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type intégral non signé ou un type intégral non signé `cv-qualified`. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type intégral non signé ou un `cv-qualified` type intégral non signé, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -79,7 +79,7 @@ is_unsigned<unsigned int> == true
 is_unsigned<float> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

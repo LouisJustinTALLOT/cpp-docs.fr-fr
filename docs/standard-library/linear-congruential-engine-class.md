@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864071"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958277"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine, classe
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Paramètres
 
-`UIntType` Type de résultat de l’entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType* le type de résultat entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-`A` **Multiplicateur**. **Condition préalable** : consultez la section Notes.
+*Un* **multiplicateur**. **Condition préalable** : consultez la section Notes.
 
-`C` **Incrément**. **Condition préalable** : consultez la section Notes.
+*C* **incrément**. **Condition préalable** : consultez la section Notes.
 
-`M` **Modulo**. **Condition préalable** : consultez la section Notes.
+*M* **modulo**. **Condition préalable** : consultez la section Notes.
 
 ## <a name="members"></a>Membres
 
@@ -80,9 +80,9 @@ La classe de modèle `linear_congruential_engine` est le moteur de générateur 
 
 Ce moteur produit des valeurs d’un type intégral non signé spécifié par l’utilisateur à l’aide de la relation de périodicité ( *period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Si `M` est égal à zéro, la valeur utilisée pour cette opération de module est `numeric_limits<result_type>::max() + 1`. L'état du moteur est représenté par la dernière valeur retournée ou la valeur initiale si aucun appel n'a été passé à `operator()`.
+Si *M* est égal à zéro, la valeur utilisée pour cette opération modulo est `numeric_limits<result_type>::max() + 1`. L'état du moteur est représenté par la dernière valeur retournée ou la valeur initiale si aucun appel n'a été passé à `operator()`.
 
-Si `M` n'est pas égal à zéro, les valeurs des arguments de modèle `A` et `C` doivent être inférieures à `M`.
+Si *M* est ne pas égal à zéro, les valeurs des arguments template *A* et *C* doit être inférieur à *M*.
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, vous pouvez aussi utiliser l’un des typedefs prédéfinis suivants.
 
@@ -100,7 +100,7 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 Pour plus d’informations sur l’algorithme du moteur congruentiel linéaire, voir l’article de Wikipedia [Linear congruential generator](http://go.microsoft.com/fwlink/p/?linkid=402446).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 

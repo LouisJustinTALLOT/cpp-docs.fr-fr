@@ -1,5 +1,5 @@
 ---
-title: Classe de CInternetFile | Documents Microsoft
+title: CInternetFile, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60027195024a9abb1af5ce5ec47dc6f6a6bfbf8
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336564"
 ---
-# <a name="cinternetfile-class"></a>CInternetFile (classe)
-Autorise l’accès aux fichiers sur les systèmes distants qui utilisent des protocoles Internet.  
+# <a name="cinternetfile-class"></a>CInternetFile, classe
+Autorise l’accès aux fichiers sur des systèmes distants qui utilisent des protocoles Internet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Read](#read)|Lit le nombre d’octets spécifiés.|  
 |[CInternetFile::ReadString](#readstring)|Lit un flux de caractères.|  
 |[CInternetFile::Seek](#seek)|Repositionne le pointeur dans un fichier ouvert.|  
-|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Définit la taille de la mémoire tampon dans laquelle les données doivent être lues.|  
+|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Définit la taille de la mémoire tampon où les données seront lues.|  
 |[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|Définit la taille de la mémoire tampon dans laquelle les données seront écrites.|  
 |[CInternetFile::Write](#write)|Écrit le nombre d’octets spécifiés.|  
 |[CInternetFile::WriteString](#writestring)|Écrit une chaîne se terminant par null dans un fichier.|  
@@ -95,11 +95,11 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::m_hFile](#m_hfile)|Handle vers un fichier.|  
   
 ## <a name="remarks"></a>Notes  
- Fournit une classe de base pour le [CHttpFile](../../mfc/reference/chttpfile-class.md) et [CGopherFile](../../mfc/reference/cgopherfile-class.md) classes de fichier. Vous ne créez jamais un `CInternetFile` directement l’objet. Au lieu de cela, créez un objet de l’un de ses classes dérivées en appelant [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) ou [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Vous pouvez également créer un `CInternetFile` objet en appelant [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
+ Fournit une classe de base pour le [CHttpFile](../../mfc/reference/chttpfile-class.md) et [CGopherFile](../../mfc/reference/cgopherfile-class.md) classes de fichier. Vous ne créez jamais un `CInternetFile` directement l’objet. Au lieu de cela, créez un objet d’un de ses classes dérivées en appelant [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) ou [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Vous pouvez également créer un `CInternetFile` objet en appelant [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
  Le `CInternetFile` fonctions membres `Open`, `LockRange`, `UnlockRange`, et `Duplicate` ne sont pas implémentées pour `CInternetFile`. Si vous appelez ces fonctions sur un `CInternetFile` de l’objet, vous obtiendrez un [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Pour en savoir plus sur la façon `CInternetFile` fonctionne avec les autres classes MFC Internet, consultez l’article [de programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Pour en savoir plus sur la façon `CInternetFile` fonctionne avec les autres classes Internet de MFC, consultez l’article [Internet programmation avec WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -114,7 +114,7 @@ class CInternetFile : public CStdioFile
  **En-tête :** afxinet.h  
   
 ##  <a name="abort"></a>  CInternetFile::Abort  
- Ferme le fichier associé à cet objet et le rend indisponible pour lire ou écrire.  
+ Ferme le fichier associé à cet objet et rend le fichier indisponible pour la lecture ou écriture.  
   
 ```  
 virtual void Abort();
@@ -123,7 +123,7 @@ virtual void Abort();
 ### <a name="remarks"></a>Notes  
  Si vous n’avez pas fermé le fichier avant de détruire l’objet, le destructeur ferme pour vous.  
   
- Lors de la gestion des exceptions, `Abort` diffère [fermer](#close) de deux manières. Tout d’abord, le `Abort` fonction ne lève pas d’exception lors d’échecs de car il ignore les défaillances. Ensuite, `Abort` pas **ASSERT** si le fichier n’a pas été ouverte ou a été précédemment fermé.  
+ Lors de la gestion des exceptions, `Abort` diffère [fermer](#close) de deux manières. Tout d’abord, le `Abort` fonction ne lève pas une exception en cas d’échec, car il ignore les échecs. Ensuite, `Abort` pas **ASSERT** si le fichier n’a pas été ouvert ou a été fermé précédemment.  
   
 ##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  Cette fonction membre est appelée quand un `CInternetFile` objet est créé.  
@@ -159,7 +159,7 @@ CInternetFile(
  Indique si le fichier est en lecture seule.  
   
  *hSession*  
- Un handle à une session Internet.  
+ Handle vers une session Internet.  
   
  *pstrServer*  
  Un pointeur vers une chaîne contenant le nom du serveur.  
@@ -168,17 +168,17 @@ CInternetFile(
  L’identificateur de contexte pour le `CInternetFile` objet. Consultez [fondamentaux relatifs à WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
 ### <a name="remarks"></a>Notes  
- Vous ne créez jamais un `CInternetFile` directement l’objet. Au lieu de cela, créez un objet de l’un de ses classes dérivées en appelant [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) ou [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Vous pouvez également créer un `CInternetFile` objet en appelant [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
+ Vous ne créez jamais un `CInternetFile` directement l’objet. Au lieu de cela, créez un objet d’un de ses classes dérivées en appelant [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) ou [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Vous pouvez également créer un `CInternetFile` objet en appelant [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
 ##  <a name="close"></a>  CInternetFile::Close  
- Ferme un `CInternetFile` et libère une de ses ressources.  
+ Ferme un `CInternetFile` et libère ses ressources.  
   
 ```  
 virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si le fichier a été ouvert en écriture, il est un appel implicite à [vider](#flush) pour vous assurer que toutes les données de mises en mémoire est écrit à l’hôte. Vous devez appeler **fermer** lorsque vous avez terminé à l’aide d’un fichier.  
+ Si le fichier a été ouvert en écriture, il est un appel implicite à [vider](#flush) pour vous assurer que toutes les données de mises en mémoire est écrit à l’hôte. Vous devez appeler `Close` lorsque vous avez terminé à l’aide d’un fichier.  
   
 ##  <a name="flush"></a>  CInternetFile::Flush  
  Appelez cette fonction membre pour vider le contenu de la mémoire tampon d’écriture.  
@@ -188,7 +188,7 @@ virtual void Flush();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Utilisez `Flush` pour vous assurer que toutes les données en mémoire a réellement été écrit à l’ordinateur cible et pour vous assurer de votre transaction avec l’ordinateur hôte a été effectuée. `Flush` n’est effective sur `CInternetFile` objets ouverte en écriture.  
+ Utilisez `Flush` pour s’assurer que toutes les données en mémoire a réellement été écrits dans l’ordinateur cible et pour garantir votre transaction avec l’ordinateur hôte a été effectuée. `Flush` est uniquement efficace sur `CInternetFile` objets ouvert en écriture.  
   
 ##  <a name="getlength"></a>  CInternetFile::GetLength  
  Retourne la taille du fichier.  
@@ -205,14 +205,14 @@ HINTERNET m_hFile;
 ```  
   
 ##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
- Cet opérateur permet d’obtenir le handle Windows pour la session Internet.  
+ Utilisez cet opérateur pour obtenir le handle de Windows pour la session Internet actuelle.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
 ##  <a name="read"></a>  CInternetFile::Read  
- Appelez cette fonction membre pour lire dans la mémoire spécifiée, en commençant à *lpvBuf*, le nombre d’octets spécifié *nCount*.  
+ Appelez cette fonction membre pour lire dans la mémoire spécifiée, en commençant à *lpvBuf*, le nombre d’octets, spécifié *nCount*.  
   
 ```  
 virtual UINT Read(
@@ -231,9 +231,9 @@ virtual UINT Read(
  Nombre d'octets transférés dans la mémoire tampon. La valeur de retour peut être inférieure à *nCount* si la fin du fichier a été atteinte.  
   
 ### <a name="remarks"></a>Notes  
- La fonction retourne le nombre d’octets réellement lus : un nombre qui peut être inférieur à *nCount* si le fichier se termine. Si une erreur se produit lors de la lecture du fichier, la fonction lève un [CInternetException](../../mfc/reference/cinternetexception-class.md) objet qui décrit l’erreur. Notez que la lecture au-delà de la fin du fichier n'est pas considérée comme une erreur et aucune exception n'est levée.  
+ La fonction retourne le nombre d’octets réellement lus, un nombre qui peut être inférieur à *nCount* si le fichier se termine. Si une erreur se produit lors de la lecture du fichier, la fonction lève un [CInternetException](../../mfc/reference/cinternetexception-class.md) objet qui décrit l’erreur. Notez que la lecture au-delà de la fin du fichier n'est pas considérée comme une erreur et aucune exception n'est levée.  
   
- Pour garantir que toutes les données sont récupérées, une application doit continuer à appeler le **CInternetFile::Read** méthode jusqu'à ce que la méthode retourne la valeur zéro.  
+ Pour garantir que toutes les données sont récupérées, une application doit continuer à appeler le `CInternetFile::Read` méthode jusqu'à ce que la méthode retourne la valeur zéro.  
   
 ##  <a name="readstring"></a>  CInternetFile::ReadString  
  Appelez cette fonction membre pour lire un flux de caractères jusqu'à ce qu’il trouve un caractère de saut de ligne.  
@@ -258,17 +258,17 @@ virtual LPTSTR ReadString(
  Une référence à la [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet qui reçoit la ligne de lecture.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la mémoire tampon contenant les données ordinaires récupérées à partir de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objet. Quel que soit le type de données de la mémoire tampon passée à cette méthode, il n’effectue pas de toutes les manipulations sur les données (par exemple, la conversion en Unicode), donc vous devez mapper les données retournées à la structure que vous attendez, comme si le **void\***  type ont été retournés.  
+ Un pointeur vers la mémoire tampon contenant les données ordinaires récupérées à partir de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objet. Quel que soit le type de données de la mémoire tampon passée à cette méthode, il n’effectue pas des manipulations sur les données (par exemple, la conversion en Unicode), donc vous devez mapper les données retournées à la structure que vous attendez, comme si le **void\***  type ont été retournés.  
   
- **NULL** si la fin du fichier a été atteinte sans lors de la lecture des données ; ou, si la valeur booléenne **FALSE** si la fin du fichier a été atteinte sans lors de la lecture des données.  
+ NULL si la fin du fichier a été atteinte sans lire toutes les données ; ou, si le booléen, FALSE si la fin du fichier a été atteinte sans lire toutes les données.  
   
 ### <a name="remarks"></a>Notes  
- La fonction place la ligne dans la mémoire référencée par la *pstr* paramètre. Il s’arrête de lire des caractères lorsqu’il atteint le nombre maximal de caractères, spécifié par *nombre maximal*. La mémoire tampon reçoit toujours un caractère null de fin.  
+ La fonction place la ligne qui en résulte dans la mémoire référencée par le *pstr* paramètre. Il s’arrête de lire des caractères lorsqu’il atteint le nombre maximal de caractères, spécifié par *nMax*. La mémoire tampon reçoit toujours un caractère null de fin.  
   
  Si vous appelez `ReadString` sans appeler d’abord [SetReadBufferSize](#setreadbuffersize), vous obtiendrez une mémoire tampon de 4 096 octets.  
   
 ##  <a name="seek"></a>  CInternetFile::Seek  
- Appelez cette fonction membre pour repositionner le pointeur dans un fichier déjà ouvert.  
+ Appelez cette fonction membre pour repositionner le pointeur dans un fichier ouvert précédemment.  
   
 ```  
 virtual ULONGLONG Seek(
@@ -278,24 +278,24 @@ virtual ULONGLONG Seek(
   
 ### <a name="parameters"></a>Paramètres  
  *lOffset*  
- Offset en octets pour déplacer le pointeur en lecture/écriture dans le fichier.  
+ Décalage en octets pour déplacer le pointeur de lecture/écriture dans le fichier.  
   
- *ndu registre*  
- Référence relative du décalage. Doit être une des valeurs suivantes :  
+ *Ndepuis*  
+ Référence relative pour le décalage. Doit être une des valeurs suivantes :  
   
-- **CFile::begin** déplacer le pointeur de fichier *lOff* octets transférer à partir du début du fichier.  
+- `CFile::begin` Déplacez le pointeur de fichier *lOff* octets transférer à partir du début du fichier.  
   
-- **CFile::current** déplacer le pointeur de fichier *lOff* octets à partir de la position actuelle dans le fichier.  
+- `CFile::current` Déplacez le pointeur de fichier *lOff* octets à partir de la position actuelle dans le fichier.  
   
-- **CFile::end** déplacer le pointeur de fichier *lOff* octets à partir de la fin du fichier. *lOff* doivent être négatif à rechercher dans l’objet existant de fichiers ; positif de valeurs de recherche au-delà de la fin du fichier.  
+- `CFile::end` Déplacez le pointeur de fichier *lOff* octets à partir de la fin du fichier. *lOff* doit être négatif à rechercher dans l’existant de fichiers ; positif valeurs cherchera au-delà de la fin du fichier.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’octet de nouveau décalage à partir du début du fichier si la position demandée est légale. Sinon, la valeur n’est pas définie et un [CInternetException](../../mfc/reference/cinternetexception-class.md) objet est levé.  
+ Le nouveau décalage d’octet du début du fichier si la position demandée est légale. Sinon, la valeur est indéfinie et un [CInternetException](../../mfc/reference/cinternetexception-class.md) objet est levé.  
   
 ### <a name="remarks"></a>Notes  
- Le `Seek` fonction permet un accès aléatoire pour le contenu d’un fichier en déplaçant le pointeur un montant spécifié, relative ou absolue. Aucune donnée n’est lue pendant la recherche.  
+ Le `Seek` fonction autorise l’accès aléatoire au contenu d’un fichier en déplaçant le pointeur une quantité spécifiée, relative ou absolue. Aucune donnée n’est lue pendant la recherche.  
   
- À ce stade, un appel à cette fonction membre est uniquement prise en charge des données correspondant au `CHttpFile` objets. Il n’est pas pris en charge pour les demandes FTP ou gopher. Si vous appelez `Seek` pour l’une de ces services non pris en charge, il vous passera retour au code d’erreur Win32 **ERROR_INTERNET_INVALID_OPERATION**.  
+ À ce stade, un appel à cette fonction membre n’est possible que des données associées `CHttpFile` objets. Il n’est pas pris en charge pour les demandes FTP ou gopher. Si vous appelez `Seek` pour un de ces services non pris en charge, il vous passera revenir au code d’erreur Win32 ERROR_INTERNET_INVALID_OPERATION.  
   
  Lorsqu’un fichier est ouvert, le pointeur de fichier est à l’offset 0, le début du fichier.  
   
@@ -303,10 +303,10 @@ virtual ULONGLONG Seek(
 >  À l’aide de `Seek` peut entraîner un appel implicite à [vider](#flush).  
   
 ### <a name="example"></a>Exemple  
-  Consultez l’exemple de l’implémentation de classe de base ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
+  Consultez l’exemple pour l’implémentation de classe de base ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
 ##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
- Appelez cette fonction membre pour définir la taille de la mémoire tampon temporaire lecture utilisée par un `CInternetFile`-objet dérivé.  
+ Appelez cette fonction membre pour définir la taille du tampon de lecture temporaire utilisé par un `CInternetFile`-objet dérivé.  
   
 ```  
 BOOL SetReadBufferSize(UINT nReadSize);
@@ -317,14 +317,14 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Taille de la mémoire tampon voulue en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
+ Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.  
   
 ### <a name="remarks"></a>Notes  
- Les APIs WinInet sous-jacentes ne pas effectuer la mise en mémoire tampon, par conséquent, choisissez une taille de mémoire tampon qui permet à votre application de lire les données de manière efficace, quelle que soit la quantité de données à lire. Si chaque appel à [en lecture](#read) normalement implique une grande aount de données (par exemple, les kilo-octets quatre ou plus), vous ne devez pas une mémoire tampon. Toutefois, si vous appelez `Read` pour obtenir des petits segments de données, ou si vous utilisez [ReadString](#readstring) pour lire des lignes individuelles à la fois, d’un mémoire tampon de lecture améliore les performances de l’application.  
+ APIs WinInet sous-jacentes ne pas effectuer la mise en mémoire tampon, par conséquent, choisissez une taille de mémoire tampon qui permet à votre application lire les données de manière efficace, quelle que soit la quantité de données à lire. Si chaque appel à [en lecture](#read) normalement implique un aount volumineux de données (par exemple, les kilo-octets quatre ou plus), vous ne devez pas une mémoire tampon. Toutefois, si vous appelez `Read` pour obtenir des petits morceaux de données, ou si vous utilisez [ReadString](#readstring) pour lire des lignes individuelles à la fois, d’un mémoire tampon de lecture améliore les performances de l’application.  
   
- Par défaut, un `CInternetFile` objet ne fournit pas de toute mise en mémoire tampon pour la lecture. Si vous appelez cette fonction membre, vous devez être sûr que le fichier a été ouvert pour l’accès en lecture.  
+ Par défaut, un `CInternetFile` objet ne fournit pas de toute mise en mémoire tampon pour la lecture. Si vous appelez cette fonction membre, vous devez être sûr que le fichier a été ouvert pour un accès en lecture.  
   
- Vous pouvez augmenter la taille de mémoire tampon à tout moment, mais la réduction de la mémoire tampon n’a aucun effet. Si vous appelez [ReadString](#readstring) sans appeler d’abord `SetReadBufferSize`, vous obtiendrez une mémoire tampon de 4 096 octets.  
+ Vous pouvez augmenter la taille du tampon à tout moment, mais la réduction de la mémoire tampon n’a aucun effet. Si vous appelez [ReadString](#readstring) sans appeler d’abord `SetReadBufferSize`, vous obtiendrez une mémoire tampon de 4 096 octets.  
   
 ##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
  Appelez cette fonction membre pour définir la taille de la mémoire tampon d’écriture temporaire utilisé par un `CInternetFile`-objet dérivé.  
@@ -338,15 +338,15 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Taille de la mémoire tampon en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
+ Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.  
   
 ### <a name="remarks"></a>Notes  
- Mise en mémoire tampon, n’effectuez pas WinInet APIs sous-jacent, choisissez une taille de mémoire tampon qui permet à votre application écrire des données efficacement, quelle que soit la quantité de données à écrire. Si chaque appel à [écrire](#write) normalement implique une grande quantité de données (par exemple, les kilo-octets quatre ou plus à la fois), vous ne devez pas une mémoire tampon. Toutefois, si vous appelez [écrire](#write) pour écrire des petits segments de données, une mémoire tampon d’écriture améliore les performances de votre application.  
+ Sous-jacent WinInet APIs n’effectuez pas de mise en mémoire tampon, choisissez donc une taille de mémoire tampon qui permet à votre application écrire des données efficacement, quel que soit la quantité de données à écrire. Si chaque appel à [écrire](#write) normalement implique une grande quantité de données (par exemple, les kilo-octets quatre ou plus à la fois), vous ne devez pas une mémoire tampon. Toutefois, si vous appelez [écrire](#write) pour écrire des petits morceaux de données, une mémoire tampon d’écriture améliore les performances de votre application.  
   
  Par défaut, un `CInternetFile` objet ne fournit pas de toute mise en mémoire tampon pour l’écriture. Si vous appelez cette fonction membre, vous devez être sûr que le fichier a été ouvert pour un accès en écriture. Vous pouvez modifier la taille de la mémoire tampon d’écriture à tout moment, mais cela entraîne un appel implicite à [vider](#flush).  
   
 ##  <a name="write"></a>  CInternetFile::Write  
- Appelez cette fonction membre pour écrire dans la mémoire spécifiée, *lpvBuf*, le nombre d’octets spécifié *nCount*.  
+ Appelez cette fonction membre à écrire dans la mémoire spécifiée, *lpvBuf*, le nombre d’octets, spécifié *nCount*.  
   
 ```  
 virtual void Write(
@@ -356,7 +356,7 @@ virtual void Write(
   
 ### <a name="parameters"></a>Paramètres  
  *lpBuf*  
- Pointeur vers le premier octet à écrire.  
+ Un pointeur vers le premier octet à écrire.  
   
  *nCount*  
  Spécifie le nombre d’octets à écrire.  
@@ -379,6 +379,6 @@ virtual void WriteString(LPCTSTR pstr);
  Si une erreur se produit lors de l’écriture des données, la fonction lève un [CInternetException](../../mfc/reference/cinternetexception-class.md) objet décrivant l’erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CStdioFile](../../mfc/reference/cstdiofile-class.md)   
+ [CStdioFile, classe](../../mfc/reference/cstdiofile-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [CInternetConnection, classe](../../mfc/reference/cinternetconnection-class.md)

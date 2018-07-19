@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958618"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator, classe
 
@@ -40,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Paramètres
 
-`Container` Le type de conteneur à l’arrière de quels éléments doivent être insérés par un `back_insert_iterator`.
+*Conteneur* le type de conteneur à l’arrière de quels éléments doivent être insérés par un `back_insert_iterator`.
 
 ## <a name="remarks"></a>Notes
 
@@ -67,7 +67,7 @@ Le conteneur doit répondre aux exigences d’une insertion de fin de séquence 
 |[operator++](#op_add_add)|Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|
 |[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` pour une insertion de fin.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<iterator>
 
@@ -83,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Cont` Le conteneur qui le `back_insert_iterator` consiste à insérer un élément dans.
+*_Cont* le conteneur qui le `back_insert_iterator` consiste à insérer un élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Paramètres
 
-`val` La valeur à insérer dans le conteneur.
+*Val* la valeur à insérer dans le conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
 

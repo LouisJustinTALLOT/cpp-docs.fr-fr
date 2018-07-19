@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 562e522d695b20795d59f90dc1f166b4dfe44874
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5092107cc1af6327c5ab7d6e08f373f88dd56711
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846062"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959243"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution, classe
 
@@ -76,13 +76,13 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, `double`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 *URNG* Le moteur de génération de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type `double` si aucun n’est fourni, distribuées selon la loi du Khi-deux. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe de modèle décrit une distribution qui produit des valeurs de spécifié par l’utilisateur à virgule flottante type ou type **double** si aucun n’est fourni, distribuées selon une loi chi-Squared. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -226,7 +226,7 @@ Distribution for 10 samples:
     10: 1054.7051509381
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -245,7 +245,7 @@ explicit chi_squared_distribution(const param_type& parm);
 
 *n* le `n` paramètre de distribution.
 
-*paramètre de* structure de paramètre utilisée pour construire la distribution.
+*parm* la structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -274,7 +274,7 @@ struct param_type {
 
 *n* le `n` paramètre de distribution.
 
-*droit* le `param_type` à comparer à cet objet.
+*droit* le `param_type` objet à comparer à cela.
 
 ### <a name="remarks"></a>Notes
 

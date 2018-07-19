@@ -1,5 +1,5 @@
 ---
-title: Ajout d’un objet Simple ATL | Documents Microsoft
+title: Ajout d’un objet Simple ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229866620826581214d5fb0395fa2bdf4f0c8574
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cedb2da5ede01f4efee81ed4336d8a1ad4178997
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357054"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956191"
 ---
 # <a name="adding-an-atl-simple-object"></a>Ajout d’un objet Simple ATL
-Pour ajouter un objet ATL (Active Template Library) à votre projet, votre projet doit avoir été créé comme une application ATL ou comme une application MFC qui contient la prise en charge ATL. Vous pouvez utiliser la [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md) pour créer une application ATL, ou [ajouter un objet ATL à votre application MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge ATL pour une application MFC.  
+Pour ajouter un objet ATL (Active Template Library) à votre projet, votre projet doit avoir été créé comme une application ATL ou comme une application MFC qui contient la prise en charge ATL. Vous pouvez utiliser [l’Assistant Projet ATL](../../atl/reference/atl-project-wizard.md) pour créer une application ATL ou [ajouter un objet ATL à votre application MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge ATL dans une application MFC.  
   
- Vous pouvez définir des interfaces COM pour votre nouvel objet ATL lors de la création ou les ajouter ultérieurement à l’aide de la [implémenter l’Interface](../../ide/implement-interface-wizard.md) commande dans le menu Affichage de classes.  
+ Vous pouvez définir des interfaces COM pour votre nouvel objet ATL lors de la création ou les ajouter ultérieurement à l’aide de la [implémenter l’Interface](../../ide/implement-interface-wizard.md) commande dans le menu contextuel de vue de la classe.  
   
 ### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Pour ajouter un objet simple ATL à votre projet ATL COM  
   
-1.  Dans le **l’Explorateur de solutions** ou [affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez sur le nom du projet auquel vous souhaitez ajouter l’objet simple ATL.  
+1.  Dans le **l’Explorateur de solutions** ou [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez sur le nom du projet auquel vous souhaitez ajouter l’objet simple ATL.  
   
-2.  Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.  
+2.  Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.  
   
-3.  Dans le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue, dans le volet Modèles, cliquez sur **objet Simple ATL**, puis cliquez sur **ouvrir** pour afficher le [Assistant objet Simple ATL](../../atl/reference/atl-simple-object-wizard.md).  
+3.  Dans le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue, dans le volet Modèles, cliquez sur **objet Simple ATL**, puis cliquez sur **Open** pour afficher le [Assistant objet Simple ATL](../../atl/reference/atl-simple-object-wizard.md).  
   
 4.  Définir des options supplémentaires pour votre projet sur le [Options](../../atl/reference/options-atl-simple-object-wizard.md) page de l’Assistant objet Simple ATL.  
   

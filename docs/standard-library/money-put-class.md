@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862440"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954810"
 ---
 # <a name="moneyput-class"></a>money_put, classe
 
@@ -47,9 +47,9 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-`CharType` Le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
 
-`OutputIterator` Le type d’itérateur dans lequel les fonctions put monétaires enregistrent leur sortie.
+*OutputIterator* le type d’itérateur dans lequel les fonctions put monétaires enregistrent leur sortie.
 
 ## <a name="remarks"></a>Notes
 
@@ -76,7 +76,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[do_put](#do_put)|Fonction virtuelle appelée pour convertir un nombre ou une chaîne en une séquence de caractères représentant une valeur monétaire.|
 |[put](#put)|Convertit un nombre ou une chaîne en une séquence de caractères représentant une valeur monétaire.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 
@@ -117,15 +117,15 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Paramètres
 
-`next` Itérateur qui traite le premier élément de la chaîne insérée.
+*suivant* un itérateur qui traite le premier élément de la chaîne insérée.
 
-`_Intl` Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si internationales, **false** si nationales.
+*_Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-`_Iosbase` Indicateur qui spécifie un format qui lorsque set indique que le symbole monétaire est facultatif. dans le cas contraire, il est requis
+*_Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est obligatoire
 
-`_Fill` Un caractère qui est utilisé pour l’espacement.
+*_Fill* un caractère qui est utilisé pour l’espacement.
 
-`val` Un objet de chaîne à convertir.
+*Val* un objet chaîne à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -133,9 +133,9 @@ Itérateur de sortie qui traite la position située juste au-delà du dernier é
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre protégée virtuelle génère des éléments séquentiels en commençant à `next` pour produire un champ de sortie monétaire à partir de l’objet [string_type](#string_type) `val`. La séquence contrôlée par `val` doit commencer par un ou plusieurs chiffres décimaux, éventuellement précédés d’un signe moins (-), qui représente la quantité. La fonction retourne un itérateur désignant le premier élément au-delà du champ de sortie monétaire généré.
+La première fonction membre protégée virtuelle génère des éléments séquentiels en commençant à *suivant* pour produire un champ de sortie monétaire à partir de la [string_type](#string_type) objet *val*. La séquence contrôlée par *val* doit commencer par un ou plusieurs chiffres décimaux, éventuellement précédés par un signe moins (-), qui représente la quantité. La fonction retourne un itérateur désignant le premier élément au-delà du champ de sortie monétaire généré.
 
-La deuxième fonction membre protégée virtuelle se comporte comme la première, sauf qu’elle convertit d’abord `val` en une séquence de chiffres décimaux, éventuellement précédée d’un signe moins, puis elle convertit cette séquence comme indiqué ci-dessus.
+La deuxième fonction membre protégée virtuelle comporte comme la première, sauf qu’elle convertit d’abord *val* à une séquence de chiffres décimaux, éventuellement précédé par un signe moins, puis convertit cette séquence comme ci-dessus.
 
 Le format d’un champ de sortie monétaire est déterminé par la [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) fac retournée par l’appel (effectif) [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -195,17 +195,17 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Refs` Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre `_Refs` et leur signification sont les suivantes :
+Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définis.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -234,15 +234,15 @@ iter_type put(
 
 ### <a name="parameters"></a>Paramètres
 
-`next` Itérateur qui traite le premier élément de la chaîne insérée.
+*suivant* un itérateur qui traite le premier élément de la chaîne insérée.
 
-`_Intl` Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si internationales, **false** si nationales.
+*_Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-`_Iosbase` Indicateur qui spécifie un format qui lorsque set indique que le symbole monétaire est facultatif. dans le cas contraire, il est requis
+*_Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est obligatoire
 
-`_Fill` Un caractère qui est utilisé pour l’espacement.
+*_Fill* un caractère qui est utilisé pour l’espacement.
 
-`val` Un objet de chaîne à convertir.
+*Val* un objet chaîne à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -286,7 +286,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a>  money_put::string_type
 
-Type qui décrit une chaîne contenant des caractères de type **CharType**.
+Type qui décrit une chaîne contenant des caractères de type `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

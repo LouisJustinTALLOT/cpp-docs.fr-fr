@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb6d17a771b5a1e24b8d09532f432b95ce5d736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863528"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959805"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilisation des opérateurs d'insertion et contrôle du format
 
@@ -37,7 +37,7 @@ Vous pouvez contrôler le format avec les options suivantes :
 
 ## <a name="vclrfoutputwidthanchor3"></a> Largeur de sortie
 
-Pour aligner la sortie, vous spécifiez la largeur de sortie pour chaque élément en plaçant le manipulateur `setw` dans le flux ou en appelant la fonction membre **width**. Cet exemple aligne à droite les valeurs dans une colonne d'au moins 10 caractères de large :
+Pour aligner la sortie, vous spécifiez la largeur de sortie pour chaque élément en plaçant le `setw` manipulateur dans le flux ou en appelant le `width` fonction membre. Cet exemple aligne à droite les valeurs dans une colonne d'au moins 10 caractères de large :
 
 ```cpp
 // output_width.cpp
@@ -65,7 +65,7 @@ int main( )
 
 Des espaces de début sont ajoutés à toute valeur dont la largeur est inférieure à 10 caractères.
 
-Pour remplir un champ, utilisez la fonction membre **fill**, qui définit la valeur du caractère de remplissage pour les champs qui ont une largeur spécifiée. La valeur par défaut est un espace. Pour remplir la colonne de nombres avec des astérisques, modifiez la boucle **for** précédente comme suit :
+Pour remplir un champ, utilisez le `fill` fonction membre, qui définit la valeur de caractère de remplissage pour les champs qui ont une largeur spécifiée. La valeur par défaut est un espace. Pour remplir la colonne de nombres avec des astérisques, modifiez la boucle **for** précédente comme suit :
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -104,7 +104,7 @@ int main( )
 }
 ```
 
-La fonction membre **width** est déclarée dans \<iostream>. Si vous utilisez `setw` ou tout autre manipulateur avec des arguments, vous devez inclure \<iomanip>. Dans la sortie, les chaînes sont imprimées dans un champ de largeur 6 et les entiers dans un champ de largeur 10 :
+Le `width` fonction membre est déclarée dans \<iostream >. Si vous utilisez `setw` ou tout autre manipulateur avec des arguments, vous devez inclure \<iomanip>. Dans la sortie, les chaînes sont imprimées dans un champ de largeur 6 et les entiers dans un champ de largeur 10 :
 
 ```Output
   Zoot      1.23
@@ -113,7 +113,7 @@ La fonction membre **width** est déclarée dans \<iostream>. Si vous utilisez `
   Stan   4358.24
 ```
 
-Ni `setw` ni **width** ne tronquent les valeurs. Si la sortie mise en forme dépasse la largeur, la valeur entière est imprimée, conformément au paramètre de précision du flux. `setw` et **width** affectent tous deux uniquement le champ suivant. La largeur de champ reprend son comportement par défaut (la largeur nécessaire) une fois qu'un champ a été imprimé. Toutefois, les autres options de format de flux restent en vigueur jusqu'à ce qu'elles soient modifiées.
+Ni `setw` ni `width` tronque les valeurs. Si la sortie mise en forme dépasse la largeur, la valeur entière est imprimée, conformément au paramètre de précision du flux. Les deux `setw` et `width` affectent uniquement le champ suivant. La largeur de champ reprend son comportement par défaut (la largeur nécessaire) une fois qu'un champ a été imprimé. Toutefois, les autres options de format de flux restent en vigueur jusqu'à ce qu'elles soient modifiées.
 
 ## <a name="vclrfalignmentanchor4"></a> Alignement
 
@@ -136,11 +136,11 @@ Al         653.7
 Stan     4358.24
 ```
 
-L’indicateur d’alignement à gauche est défini à l’aide du manipulateur [setiosflags](../standard-library/iomanip-functions.md#setiosflags) avec l’énumérateur `left`. Cet énumérateur est défini dans la classe [ios](../standard-library/basic-ios-class.md). Sa référence doit donc inclure le préfixe **ios::**. Le manipulateur [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) désactive l’indicateur d’alignement à gauche. Contrairement à **width** et `setw`, l’effet de `setiosflags` et `resetiosflags` est permanent.
+L’indicateur d’alignement à gauche est défini à l’aide du manipulateur [setiosflags](../standard-library/iomanip-functions.md#setiosflags) avec l’énumérateur `left`. Cet énumérateur est défini dans la classe [ios](../standard-library/basic-ios-class.md). Sa référence doit donc inclure le préfixe **ios::**. Le manipulateur [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) désactive l’indicateur d’alignement à gauche. Contrairement aux `width` et `setw`, l’effet de `setiosflags` et `resetiosflags` est définitive.
 
 ## <a name="vclrfprecisionanchor5"></a> Précision
 
-La valeur par défaut pour la précision de virgule flottante est six. Par exemple, le nombre 3466,9768 est imprimé comme 3466,98. Pour modifier comment cette valeur est imprimée, utilisez le manipulateur [setprecision](../standard-library/iomanip-functions.md#setprecision). Le manipulateur a deux indicateurs : [fixed](../standard-library/ios-functions.md#fixed) et [scientific](../standard-library/ios-functions.md#scientific). Si [fixed](../standard-library/ios-functions.md#fixed) est défini, le nombre imprimé est 3466,976800. Si **scientific** est défini, le nombre imprimé est 3,4669773+003.
+La valeur par défaut pour la précision de virgule flottante est six. Par exemple, le nombre 3466,9768 est imprimé comme 3466,98. Pour modifier comment cette valeur est imprimée, utilisez le manipulateur [setprecision](../standard-library/iomanip-functions.md#setprecision). Le manipulateur a deux indicateurs : [fixed](../standard-library/ios-functions.md#fixed) et [scientific](../standard-library/ios-functions.md#scientific). Si [fixed](../standard-library/ios-functions.md#fixed) est défini, le nombre imprimé est 3466,976800. Si `scientific` est défini, il imprime 3.4669773 + 003.
 
 Pour afficher les nombres à virgule flottante illustrés dans [Alignement](#vclrfalignmentanchor4) avec un chiffre significatif, remplacez la boucle **for** comme suit :
 
@@ -180,7 +180,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-Si vous remplacez l’indicateur **ios::fixed** par **ios::scientific**, le programme imprime :
+Si vous modifiez le `ios::fixed` indicateur `ios::scientific`, le programme imprime ceci :
 
 ```cpp
 Zoot    1.2e+00
@@ -189,11 +189,11 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-Là encore, le programme imprime un chiffre après la virgule décimale. Si **ios::fixed** ou **ios::scientific** est défini, la valeur de précision détermine le nombre de chiffres après la virgule décimale. Si ni l'un ni l'autre n'est défini, la valeur de précision détermine le nombre total de chiffres significatifs. Le manipulateur `resetiosflags` efface ces indicateurs.
+Là encore, le programme imprime un chiffre après la virgule décimale. Si `ios::fixed` ou `ios::scientific` est défini, la valeur de précision détermine le nombre de chiffres après la virgule décimale. Si ni l'un ni l'autre n'est défini, la valeur de précision détermine le nombre total de chiffres significatifs. Le manipulateur `resetiosflags` efface ces indicateurs.
 
 ## <a name="vclrfradixanchor6"></a> Base
 
-Les manipulateurs **dec**, **oct** et **hex** définissent la base par défaut pour l’entrée et la sortie. Par exemple, si vous insérez le manipulateur **hex** dans le flux de sortie, l’objet traduit correctement la représentation de données internes des entiers dans un format de sortie hexadécimal. Les nombres sont affichés avec les chiffres a à f en minuscules si l’indicateur [uppercase](../standard-library/ios-functions.md#uppercase) est clear (par défaut) ; sinon, ils sont affichés en majuscules. La base par défaut est **dec** (décimal).
+Le `dec`, `oct`, et `hex` manipulateurs définissent la base de la valeur par défaut pour l’entrée et de sortie. Par exemple, si vous insérez le `hex` manipulateur dans le flux de sortie, l’objet traduit correctement la représentation de données internes des entiers dans un format de sortie hexadécimal. Les nombres sont affichés avec les chiffres a à f en minuscules si l’indicateur [uppercase](../standard-library/ios-functions.md#uppercase) est clear (par défaut) ; sinon, ils sont affichés en majuscules. La base par défaut est `dec` (décimal).
 
 ## <a name="quoted-strings-c14"></a>Chaînes entre guillemets (C++14)
 
@@ -211,13 +211,13 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-Ce comportement peut être contourné manuellement, mais pour rendre aller-retour de chaîne plus pratique, C ++ 14 ajoute le `std::quoted` flux manipulateur dans \<iomanip >. Lors de l'insertion, `quoted()` entoure la chaîne avec un séparateur (guillemet double " par défaut) et lors de l'extraction il manipule le flux pour extraire tous les caractères jusqu'au séparateur final. Les guillemets incorporés sont précédés d’un caractère d’échappement (\\\\ par défaut).
+Ce comportement peut être contourné manuellement, mais pour rendre l’aller-retour de chaîne plus pratique, C ++ 14 ajoute le `std::quoted` diffuser manipulateur dans \<iomanip >. Lors de l'insertion, `quoted()` entoure la chaîne avec un séparateur (guillemet double " par défaut) et lors de l'extraction il manipule le flux pour extraire tous les caractères jusqu'au séparateur final. Les guillemets incorporés sont précédés d’un caractère d’échappement (\\\\ par défaut).
 
-Les délimiteurs sont présents uniquement dans l’objet de flux de données. ils ne sont pas présents dans la chaîne extraite, mais ils sont présents dans la chaîne retournée par [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).
+Les délimiteurs sont présents uniquement dans l’objet de flux de données ; ils ne sont pas présents dans la chaîne extraite, mais ils sont présents dans la chaîne retournée par [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).
 
 Le comportement d'espace blanc des opérations d'insertion et d'extraction est indépendant de la façon dont la chaîne est représentée dans le code. L'opérateur quoted est donc utile que la chaîne d'entrée soit un littéral de chaîne brut ou une chaîne standard. La chaîne d'entrée, quel que soit son format, peut avoir des guillemets incorporés, des sauts de ligne, des tabulations, et ainsi de suite, qui seront tous conservés par le manipulateur quoted().
 
-Pour plus d’informations et des exemples de code complet, consultez [entre guillemets](../standard-library/iomanip-functions.md#quoted).
+Pour plus d’informations et des exemples de code complets, consultez [entre guillemets](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCDesktopAlertWnd | Documents Microsoft
+title: Cmfcdesktopalertwnd, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,15 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6347c6c3cb5bd9499bbf84a2ef1cb33efeac76e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039984"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852235"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
-La `CMFCDesktopAlertWnd` classe implémente les fonctionnalités d’une boîte de dialogue non modale qui apparaît à l’écran pour informer l’utilisateur sur un événement.  
+Le `CMFCDesktopAlertWnd` classe implémente les fonctionnalités d’une boîte de dialogue non modale qui apparaît à l’écran pour informer l’utilisateur sur un événement.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Syntaxe  
@@ -79,32 +79,32 @@ class CMFCDesktopAlertWnd : public CWnd
 |----------|-----------------|  
 |[CMFCDesktopAlertWnd::Create](#create)|Crée et initialise la fenêtre d’alerte de bureau.|  
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Retourne la vitesse d’animation.|  
-|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Retourne le type de l’animation.|  
+|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Retourne le type d’animation.|  
 |[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Retourne le délai d’attente de fermeture automatique.|  
 |[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Retourne la hauteur de la légende.|  
 |[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||  
 |[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Retourne la dernière position valide de la fenêtre d’alerte bureau sur l’écran.|  
 |[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Retourne le niveau de transparence.|  
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Détermine si la fenêtre d’alerte de bureau est affichée avec la petite légende.|  
+|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Détermine si la fenêtre d’alerte de postes de travail est affichée avec la petite légende.|  
 |[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||  
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Appelé par le framework lorsque l’utilisateur clique sur un bouton de lien situé dans le menu alerte bureau.|  
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|L’infrastructure appelle cette fonction membre quand l’utilisateur sélectionne un élément dans un menu, lorsqu’un contrôle enfant envoie un message de notification, ou lors de la traduction d’une séquence de touches accélérateur. (Substitue [fonction membre CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
+|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Appelé par le framework lorsque l’utilisateur clique sur un bouton de lien situé dans le menu alert bureau.|  
+|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|L’infrastructure appelle cette fonction membre lorsque l’utilisateur sélectionne un élément dans un menu, lorsqu’un contrôle enfant envoie un message de notification, ou lors de la traduction d’une séquence de touches accélérateur. (Substitue [fonction membre CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
 |[CMFCDesktopAlertWnd::OnDraw](#ondraw)||  
 |[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||  
 |[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Définit la vitesse d’animation.|  
-|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Définit le type de l’animation.|  
+|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Définit le type d’animation.|  
 |[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Définit le délai d’attente de fermeture automatique.|  
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Bascule entre les légendes normales et de petite taille.|  
+|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Bascule entre les légendes des petites et normales.|  
 |[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Définit le niveau de transparence.|  
   
 ## <a name="remarks"></a>Notes  
- Une fenêtre du bureau alerte peut être transparente, il peut être affichée avec des effets d’animation, et il peut disparaître (après un délai spécifié ou lors de l’action de l’utilisateur en cliquant sur le bouton Fermer).  
+ Une fenêtre d’alerte bureau peut être transparente, il peut apparaître avec des effets d’animation, et il peut disparaître (après un délai spécifié ou lors de l’action de l’utilisateur en cliquant sur le bouton Fermer).  
   
- Une fenêtre d’alerte bureau peut également contenir une boîte de dialogue par défaut qui à son tour contient une icône, texte du message (étiquette) et un lien. Sinon, une fenêtre du bureau alerte peut contenir une boîte de dialogue personnalisée à partir des ressources de l’application.  
+ Une fenêtre d’alerte bureau peut également contenir une boîte de dialogue par défaut qui à son tour contient une icône, le texte de message (étiquette) et un lien. Sinon, une fenêtre d’alerte bureau peut contenir une boîte de dialogue personnalisée à partir de ressources de l’application.  
   
  Vous créez une fenêtre d’alerte bureau en deux étapes. Tout d’abord, appelez le constructeur pour construire le `CMFCDesktopAlertWnd` objet. Ensuite, appelez le [CMFCDesktopAlertWnd::Create](#create) fonction membre pour créer la fenêtre et l’attacher à la `CMFCDesktopAlertWnd` objet.  
   
- Le `CMFCDesktopAlertWnd` objet crée une boîte de dialogue enfants spéciaux qui remplit la zone cliente de la fenêtre d’alerte de bureau. Tous les contrôles qui sont placés sur ce dernier est propriétaire de la boîte de dialogue.  
+ Le `CMFCDesktopAlertWnd` objet crée une boîte de dialogue enfants spéciaux qui remplit la zone cliente de la fenêtre Bureau de l’alerte. La boîte de dialogue possède tous les contrôles sont positionnés sur celui-ci.  
   
  Pour afficher une boîte de dialogue personnalisée dans la fenêtre contextuelle, procédez comme suit :  
   
@@ -114,11 +114,11 @@ class CMFCDesktopAlertWnd : public CWnd
   
 3.  Appelez [CMFCDesktopAlertWnd::Create](#create) à l’aide de l’ID de ressource de modèle de boîte de dialogue et un pointeur vers les informations de classe runtime de la classe dérivée.  
   
-4.  Programmer la boîte de dialogue personnalisée pour gérer toutes les communications en provenance des contrôles hébergés ou programmez les contrôles hébergés de gérer ces notifications directement.  
+4.  Programme de la boîte de dialogue personnalisée pour gérer toutes les notifications en provenance des contrôles hébergés ou programmez les contrôles hébergés pour gérer ces notifications directement.  
   
- Pour contrôler le comportement de la fenêtre d’alerte de bureau, utilisez les fonctions suivantes :  
+ Utilisez les fonctions suivantes pour contrôler le comportement de la fenêtre Bureau de l’alerte :  
   
--   Définir le type de l’animation en appelant [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Les options valides incluent dérouler, faites glisser et en fondu.  
+-   Définir le type d’animation en appelant [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Options valides sont dérouler, faites glisser et en fondu.  
   
 -   Définir la vitesse de frame d’animation en appelant [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
   
@@ -127,7 +127,7 @@ class CMFCDesktopAlertWnd : public CWnd
 -   Modifier la taille de la légende à petite en appelant [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). La petite légende est 7 pixels de haut.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCDesktopAlertWnd` classe permettant de configurer un `CMFCDesktopAlertWnd` objet. L’exemple montre comment définir un type d’animation, la transparence de la fenêtre indépendante, spécifiez que la fenêtre d’alerte affiche une barre de titre réduite et le temps qui s’écoule avant que la fenêtre d’alerte se ferme automatiquement. L’exemple montre également comment créer et initialiser la fenêtre d’alerte de bureau. Cet extrait de code fait partie de la [exemple de démonstration d’alerte bureau](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCDesktopAlertWnd` classe permettant de configurer un `CMFCDesktopAlertWnd` objet. L’exemple montre comment définir un type d’animation, définir la transparence de la fenêtre contextuelle, spécifiez que la fenêtre d’alerte affiche une barre de titre réduite et définissez le temps qui s’écoule avant que la fenêtre d’alerte se ferme automatiquement. L’exemple montre également comment créer et initialiser la fenêtre d’alerte de bureau. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
   
@@ -164,30 +164,30 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
  [in] [out] *pWndOwner*  
- Spécifie le propriétaire de la fenêtre d’alerte. Ce propriétaire reçoit ensuite toutes les notifications de la fenêtre d’alerte de bureau. Cette valeur ne peut pas être `NULL`.  
+ Spécifie le propriétaire de la fenêtre d’alerte. Ce propriétaire recevra ensuite toutes les notifications de la fenêtre d’alerte de bureau. Cette valeur ne peut pas être NULL.  
   
  [in] *uiDlgResID*  
  Spécifie l’ID de ressource de la fenêtre d’alerte.  
   
  [in] *hMenu*  
- Spécifie le menu qui s’affiche lorsque l’utilisateur clique sur le bouton de menu. Si `NULL`, le bouton de menu n’est pas affiché.  
+ Spécifie le menu qui s’affiche lorsque l’utilisateur clique sur le bouton de menu. Si NULL, le bouton de menu n’est pas affiché.  
   
  [in] *ptPos*  
  Spécifie la position initiale, où la fenêtre d’alerte s’affiche, à l’aide des coordonnées d’écran. Si ce paramètre est (-1, -1), la fenêtre d’alerte s’affiche dans le coin inférieur droit de l’écran.  
   
  [in] *pRTIDlgBar*  
- Informations de classe runtime pour une classe de boîte de dialogue personnalisée qui couvre la zone cliente de la fenêtre alerte.  
+ Informations de classe runtime pour une classe de boîte de dialogue personnalisée qui couvre la zone cliente de la fenêtre d’alerte.  
   
  [in] *params*  
  Spécifie les paramètres qui sont utilisés pour créer une fenêtre d’alerte.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre d’alerte a été créée avec succès ; dans le cas contraire, `FALSE`.  
+ TRUE si la fenêtre d’alerte a été créée avec succès ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour créer une fenêtre d’alerte. La zone cliente de la fenêtre d’alerte contient une boîte de dialogue enfant qui héberge tous les contrôles qui sont affichés à l’utilisateur.  
   
- La première surcharge de méthode crée une fenêtre qui contient une boîte de dialogue enfant qui est chargée à partir des ressources de l’application. La première surcharge de méthode peut également spécifier des informations de classe runtime pour une classe de boîte de dialogue personnalisées.  
+ La première surcharge de méthode crée une fenêtre qui contient une boîte de dialogue enfant qui est chargée à partir de ressources de l’application. La première surcharge de méthode peut également spécifier des informations de classe runtime pour une classe de boîte de dialogue personnalisées.  
   
  La deuxième surcharge de méthode crée une fenêtre qui contient les contrôles par défaut. Vous pouvez spécifier les contrôles à afficher en modifiant le [cmfcdesktopalertwndinfo, classe](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
   
@@ -205,7 +205,7 @@ UINT GetAnimationSpeed() const;
  La vitesse d’animation décrit la vitesse à laquelle la fenêtre d’alerte s’ouvre et se ferme.  
   
 ##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType  
- Retourne le type de l’animation.  
+ Retourne le type d’animation.  
   
 ```  
 CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
@@ -214,15 +214,15 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 ### <a name="return-value"></a>Valeur de retour  
  Un des types d’animation suivants :  
   
-- `NO_ANIMATION`  
+- NO_ANIMATION  
   
-- `UNFOLD`  
+- DÉROULER  
   
-- `SLIDE`  
+- DIAPOSITIVE  
   
-- `FADE`  
+- FONDU  
   
-- `SYSTEM_DEFAULT_ANIMATION`  
+- SYSTEM_DEFAULT_ANIMATION  
   
 ##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime  
  Retourne le délai d’attente de fermeture automatique.  
@@ -235,7 +235,7 @@ int GetAutoCloseTime() const;
  La durée, en millisecondes, après laquelle l’alerte fenêtre se fermera automatiquement.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour déterminer combien de temps qui doit s’écouler avant que la fenêtre se fermera automatiquement.  
+ Utilisez cette méthode pour déterminer combien de temps qui doit s’écouler avant que la fenêtre d’alerte se ferme automatiquement.  
   
 ##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight  
  Retourne la hauteur de la légende.  
@@ -248,10 +248,10 @@ virtual int GetCaptionHeight();
  La hauteur, en pixels, de la légende.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode peut être substituée dans une classe dérivée. L’implémentation par défaut soit : retourne la valeur de hauteur de petite légende (7 pixels) si la fenêtre contextuelle doit afficher la barre de titre réduite, ou la valeur obtenue à partir de la fonction API Windows `GetSystemMetrics(SM_CYSMCAPTION)`.  
+ Cette méthode peut être substituée dans une classe dérivée. L’implémentation par défaut soit : retourne la valeur de hauteur de barre de titre réduite (7 pixels) si la fenêtre contextuelle doit afficher la barre de titre réduite, ou la valeur obtenue à partir de la fonction Windows API `GetSystemMetrics(SM_CYSMCAPTION)`.  
   
 ##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos  
- Retourne la dernière position de la fenêtre d’alerte de bureau sur l’écran.  
+ Retourne la dernière position de la fenêtre d’alerte bureau sur l’écran.  
   
 ```  
 CPoint GetLastPos() const;  
@@ -271,23 +271,23 @@ BYTE GetTransparency() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un niveau de transparence comprise entre 0 et 255, inclus. Plus la valeur, la partie la plus opaque la fenêtre.  
+ Un niveau de transparence comprise entre 0 et 255 inclus. Plus la valeur, la plus opaque la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour récupérer le niveau actuel de la transparence de la fenêtre d’alerte.  
   
 ##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption  
- Détermine si la fenêtre d’alerte bureau a une barre de titre réduite ou d’une légende de la taille normale.  
+ Détermine si la fenêtre d’alerte bureau possède une barre de titre réduite ou d’une légende de la taille normale.  
   
 ```  
 BOOL HasSmallCaption() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la fenêtre contextuelle s’affiche avec une barre de titre réduite ; `FALSE` si la fenêtre contextuelle s’affiche avec une légende de la taille normale.  
+ TRUE si la fenêtre contextuelle s’affiche avec une barre de titre réduite ; FALSE si la fenêtre contextuelle s’affiche avec une légende de taille normale.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour déterminer si la fenêtre contextuelle a une barre de titre réduite ou d’une légende de la taille normale. Par défaut, la petite légende est 7 pixels de haut. Vous pouvez obtenir la hauteur de la légende de la taille standard en appelant la fonction API Windows `GetSystemMetrics(SM_CYCAPTION)`.  
+ Utilisez cette méthode pour déterminer si la fenêtre contextuelle a une barre de titre réduite ou d’une légende de la taille normale. Par défaut, la barre de titre réduite est 7 pixels de haut. Vous pouvez obtenir la hauteur de la légende de la taille standard en appelant la fonction Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
   
 ##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow  
 
@@ -304,7 +304,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton  
- Appelé par le framework lorsque l’utilisateur clique sur un bouton de lien situé dans le menu alerte bureau.  
+ Appelé par le framework lorsque l’utilisateur clique sur un bouton de lien situé dans le menu alert bureau.  
   
 ```  
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
@@ -315,10 +315,10 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  Ce paramètre n'est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Toujours `FALSE`.  
+ Toujours la valeur FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Substituez cette méthode dans une classe dérivée si vous souhaitez être averti lorsqu’un utilisateur clique sur le lien dans la fenêtre d’alerte.  
+ Substituez cette méthode dans une classe dérivée si vous souhaitez être averti quand un utilisateur clique sur le lien dans la fenêtre alerte.  
   
 ##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand  
 
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -375,10 +375,10 @@ void SetAnimationSpeed(UINT nSpeed);
  Spécifie la vitesse d’animation nouvelle, en millisecondes.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour définir la vitesse d’animation de la fenêtre d’alerte. La vitesse d’animation par défaut est de 30 millisecondes.  
+ Appelez cette méthode pour définir la vitesse d’animation de la fenêtre d’alerte. La vitesse d’animation par défaut est 30 millisecondes.  
   
 ##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType  
- Définit le type de l’animation.  
+ Définit le type d’animation.  
   
 ```  
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
@@ -386,20 +386,20 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *type*  
- Spécifie le type de l’animation.  
+ Spécifie le type d’animation.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir le type d’animation. Vous pouvez spécifier l'une des valeurs suivantes :  
   
-- `NO_ANIMATION`  
+- NO_ANIMATION  
   
-- `UNFOLD`  
+- DÉROULER  
   
-- `SLIDE`  
+- DIAPOSITIVE  
   
-- `FADE`  
+- FONDU  
   
-- `SYSTEM_DEFAULT_ANIMATION`  
+- SYSTEM_DEFAULT_ANIMATION  
   
 ##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime  
  Définit le délai d’attente de fermeture automatique.  
@@ -409,14 +409,14 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nTime*  
- La durée, en millisecondes, qui s’écoule avant que la fenêtre d’alerte se ferme automatiquement.  
+ [in] *Nintervalle*  
+ La durée, en millisecondes, qui doit s’écouler avant la fenêtre d’alerte se ferme automatiquement.  
   
 ### <a name="remarks"></a>Notes  
- Si l’utilisateur n’interagit pas avec la fenêtre, la fenêtre d’alerte est fermée automatiquement après l’heure spécifiée.  
+ La fenêtre d’alerte est automatiquement fermée après l’heure spécifiée si l’utilisateur n’interagit pas avec la fenêtre.  
   
 ##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption  
- Bascule entre les légendes de taille normale et de petite taille.  
+ Bascule entre les légendes de petite et de taille normale.  
   
 ```  
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
@@ -424,10 +424,10 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bSmallCaption*  
- `TRUE` Pour spécifier que la fenêtre d’alerte affiche une barre de titre réduite ; dans le cas contraire, `FALSE` pour spécifier que la fenêtre d’alerte affiche une légende de la taille normale.  
+ TRUE pour spécifier que la fenêtre d’alerte affiche une barre de titre réduite ; Sinon, FALSE pour spécifier que la fenêtre d’alerte affiche une légende de la taille normale.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour afficher la légende de petite taille ou de taille normale. Par défaut, la petite légende est 7 pixels de haut. Vous pouvez obtenir la taille de la légende régulière en appelant la fonction API Windows `GetSystemMetrics(SM_CYCAPTION)`.  
+ Appelez cette méthode pour afficher la légende de petite ou de taille normale. Par défaut, la barre de titre réduite est 7 pixels de haut. Vous pouvez obtenir la taille de la légende régulière en appelant la fonction Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
   
 ##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency  
  Définit le niveau de transparence de la fenêtre contextuelle.  
@@ -438,7 +438,7 @@ void SetTransparency(BYTE nTransparency);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *nTransparency*  
- Spécifie le niveau de transparence. Cette valeur doit être comprise entre 0 et 255, inclus. Plus la valeur, la partie la plus opaque la fenêtre.  
+ Spécifie le niveau de transparence. Cette valeur doit être comprise entre 0 et 255 inclus. Plus la valeur, la plus opaque la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction pour définir le niveau de transparence de la fenêtre contextuelle.  
@@ -458,5 +458,5 @@ virtual CSize GetDialogSize();
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Cmfcdesktopalertwndinfo, classe](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
- [Classe de CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)   
+ [Cmfcdesktopalertdialog, classe](../../mfc/reference/cmfcdesktopalertdialog-class.md)   
  [CWnd, classe](../../mfc/reference/cwnd-class.md)

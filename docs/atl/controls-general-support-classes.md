@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ATL : Classes de prise en charge général | Documents Microsoft'
+title: 'Contrôles ATL : Classes de prise en charge général | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0aa30487edb3a5998a0b9777017015aeb7b675
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6674bbdc29a6945cb26ea6b2caa03cc8c72be230
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354853"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958515"
 ---
 # <a name="controls-general-support-classes"></a>Contrôles : Classes de prise en charge général
 Les classes suivantes fournissent la prise en charge générale pour les contrôles ATL :  
@@ -33,7 +33,7 @@ Les classes suivantes fournissent la prise en charge générale pour les contrô
   
 -   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) fournit les méthodes principales par le biais duquel un conteneur communique avec un contrôle. Gère l’activation et la désactivation des contrôles de la place.  
   
--   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) combine l’initialisation en un seul appel pour éviter des retards lors du chargement de contrôles conteneurs.  
+-   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) combine l’initialisation dans un seul appel pour éviter les retards lors du chargement des contrôles conteneurs.  
   
 -   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) fournit une interaction minimale de la souris pour un contrôle inactif dans le cas contraire.  
   

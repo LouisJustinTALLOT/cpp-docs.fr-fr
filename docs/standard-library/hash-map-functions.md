@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845971"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958546"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;hash_map&gt;, fonctions
 
@@ -35,9 +35,9 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-`right` L’objet hash_map dont les éléments doivent être échangés avec ceux de la carte `left`.
+*droit* hash_map dont les éléments doivent être échangés avec ceux du mappage *gauche*.
 
-`left` L’objet hash_map dont les éléments doivent être échangés avec ceux de la carte `right`.
+*gauche* hash_map dont les éléments doivent être échangés avec ceux du mappage *droit*.
 
 ### <a name="remarks"></a>Notes
 
@@ -58,9 +58,9 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-`right` La classe hash_multimap dont les éléments doivent être échangés avec ceux de la carte `left`.
+*droit* hash_multimap dont les éléments doivent être échangés avec ceux du mappage *gauche*.
 
-`left` La classe hash_multimap dont les éléments doivent être échangés avec ceux de la carte `right`.
+*gauche* hash_multimap dont les éléments doivent être échangés avec ceux du mappage *droit*.
 
 ### <a name="remarks"></a>Notes
 

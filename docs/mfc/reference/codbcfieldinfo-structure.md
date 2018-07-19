@@ -1,5 +1,5 @@
 ---
-title: Codbcfieldinfo, Structure | Documents Microsoft
+title: Codbcfieldinfo, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040192"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853080"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo, structure
 Le `CODBCFieldInfo` structure contient des informations sur les champs dans une source de données ODBC.  
@@ -45,16 +45,16 @@ struct CODBCFieldInfo
  Nom du champ.  
   
  *m_nSQLType*  
- Le type de données SQL du champ. Cela peut être un type de données SQL ODBC ou un type de données SQL spécifique au pilote. Pour obtenir la liste des types de données ODBC SQL valides, consultez « Types de données SQL » dans le SDK Windows. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
+ Le type de données SQL du champ. Cela peut être un type de données ODBC SQL ou un type de données spécifiques au pilote SQL. Pour obtenir la liste des types de données ODBC SQL valides, consultez « Types de données SQL » dans le SDK Windows. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
   
  *m_nPrecision*  
- La précision maximale du champ. Pour plus d’informations, consultez « Précision, échelle, longueur et taille d’affichage » dans le Kit de développement logiciel Windows.  
+ La précision maximale du champ. Pour plus d’informations, consultez « Précision, échelle, longueur et taille d’affichage » dans le SDK Windows.  
   
  *m_nScale*  
- L’échelle du champ. Pour plus d’informations, consultez « Précision, échelle, longueur et taille d’affichage » dans le Kit de développement logiciel Windows.  
+ La mise à l’échelle du champ. Pour plus d’informations, consultez « Précision, échelle, longueur et taille d’affichage » dans le SDK Windows.  
   
  *m_nNullability*  
- Indique si le champ accepte une valeur Null. Cela peut prendre l’une des deux valeurs : **SQL_NULLABLE** si le champ accepte des valeurs Null, ou **SQL_NO_NULLS** si le champ n’accepte pas les valeurs Null.  
+ Indique si le champ accepte une valeur Null. Cela peut prendre l’une des deux valeurs : SQL_NULLABLE si le champ accepte les valeurs Null ou SQL_NO_NULLS si le champ n’accepte pas les valeurs Null.  
   
 ## <a name="remarks"></a>Notes  
  Pour récupérer ces informations, appelez [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  

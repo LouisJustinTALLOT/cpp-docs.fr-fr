@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857374"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955304"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine, classe
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-`UIntType` Type de résultat de l’entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType*  
+ Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-`W` **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Décalage court**. Nombre de valeurs entières. **Condition préalable** : `0 < S < R`
+*S*  
+ **Décalage court**. Nombre de valeurs entières. **Condition préalable** : `0 < S < R`
 
-`R` **Décalage long**. Détermine la périodicité dans la série générée.
+*R*  
+ **Décalage long**. Détermine la périodicité dans la série générée.
 
 ## <a name="members"></a>Membres
 
@@ -68,7 +72,7 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 La classe de modèle `substract_with_carry_engine` est une version améliorée du [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Aucun de ces moteurs n’est aussi rapide ni ne produit des résultats d’aussi bonne qualité que [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Ce moteur produit des valeurs d’un type intégral non signé, spécifié par l’utilisateur, à l’aide de la relation de périodicité ( *période*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, où `cy(i)` a la valeur `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, sinon `0`, et `M` a la valeur `2`<sup>W</sup>. L'état du moteur est un indicateur de Carry plus `R` valeurs. Ces valeurs sont constituées des `R` dernières valeurs retournées si `operator()` a été appelé au moins `R` fois, sinon les `N` valeurs qui ont été retournées et les `R - N` dernières valeurs de la valeur initiale.
+Ce moteur produit des valeurs d’un type intégral non signé, spécifié par l’utilisateur, à l’aide de la relation de périodicité ( *période*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, où `cy(i)` a la valeur `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, sinon `0`, et `M` a la valeur `2`<sup>W</sup>. L’état du moteur est un carry indicateur plu *R* valeurs. Ces valeurs sont constituées de la dernière *R* valeurs retournées si `operator()` a été appelé au moins *R* fois, sinon le `N` les valeurs qui ont été retournés et la dernière `R - N` valeurs de la valeur de départ.
 
 L'argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu'à `M - 1`.
 

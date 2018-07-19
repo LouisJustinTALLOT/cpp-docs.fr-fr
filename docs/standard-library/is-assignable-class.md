@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842997"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958463"
 ---
 # <a name="isassignable-class"></a>is_assignable, classe
 
@@ -42,9 +42,9 @@ Pour le type de l’objet qui reçoit l’assignation.
 
 ## <a name="remarks"></a>Notes
 
-L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. `From` et `To` doivent tous deux être des types complets, `void` ou des tableaux de limite inconnue.
+L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. Les deux `From` et `To` doivent être des types complets, **void**, ou des tableaux de limite inconnue.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

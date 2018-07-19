@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957696"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt;, opérateurs
 
@@ -58,9 +58,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un nombre complexe ou un objet de son type de paramètre doit être testée d’inégalité.
+*gauche* un nombre complexe ou un objet de son type de paramètre à tester pour vérifier leur inégalité.
 
-`right` Un nombre complexe ou un objet de son type de paramètre doit être testée d’inégalité.
+*droit* un nombre complexe ou un objet de son type de paramètre à tester pour vérifier leur inégalité.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` La première des deux nombres complexes ou un nombre qui est du type de paramètre pour un nombre complexe qui doit être multiplié par la * opération.
+*gauche* le premier des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être multiplié par le * opération.
 
-`right` Second des deux nombres complexes ou un nombre qui est du type de paramètre pour un nombre complexe qui doit être multiplié par la * opération.
+*droit* le second des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être multiplié par le * opération.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -295,9 +295,9 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` La première des deux nombres complexes ou un nombre qui est du type de paramètre pour un nombre complexe qui doit être ajouté par l’opération +.
+*gauche* le premier des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être ajouté par l’opération +.
 
-`right` Second des deux nombres complexes ou un nombre qui est du type de paramètre pour un nombre complexe qui doit être ajouté par l’opération +.
+*droit* le second des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être ajouté par l’opération +.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -305,7 +305,7 @@ Nombre complexe qui résulte de l’addition de deux nombres dont la valeur et l
 
 ### <a name="remarks"></a>Notes
 
-L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier. L’opérateur unaire retourne `left`.
+L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier. L’opérateur unaire retourne *gauche*.
 
 ### <a name="example"></a>Exemple
 
@@ -433,13 +433,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Premier des deux nombres complexes ou un nombre qui est du type de paramètre pour un nombre complexe qui doit être soustraite par-opération.
+*gauche* le premier des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être soustrait par l’opération -.
 
-`right` Second des deux nombres complexes ou un nombre qui est du type de paramètre pour un nombre complexe qui doit être soustraite par-opération.
+*droit* le second des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être soustrait par l’opération -.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre complexe qui résulte de la soustraction de `right` à `left`, les deux nombres dont les valeurs sont spécifiées par les entrées de paramètre.
+Nombre complexe qui résulte de la soustraction de *droit* de *gauche*, les deux nombres dont les valeurs sont spécifiées par les entrées de paramètre.
 
 ### <a name="remarks"></a>Notes
 
@@ -570,9 +570,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un nombre complexe ou un nombre qui est du type de paramètre pour un nombre complexe qui est le numérateur à diviser par le dénominateur avec la / opération.
+*gauche* un nombre complexe ou un nombre qui a le type de paramètre pour un nombre complexe qui est le numérateur à diviser par le dénominateur avec le / opération.
 
-`right` Un nombre complexe ou un nombre qui est du type de paramètre pour un nombre complexe qui est le dénominateur à utiliser pour diviser le numérateur avec la / opération.
+*droit* un nombre complexe ou un nombre qui a le type de paramètre pour un nombre complexe qui est le dénominateur à utiliser pour diviser le numérateur avec le / opération.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -678,13 +678,13 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ostr` Le flux de sortie dans lequel le nombre complexe est en cours d’entrée.
+*Ostr* le flux de sortie dans lequel le nombre complexe est entré.
 
-`right` Nombre complexe à être entrés dans le flux de sortie
+*droit* nombre complexe à entrer dans le flux de sortie
 
 ### <a name="return-value"></a>Valeur de retour
 
-Écrit la valeur du nombre complexe spécifié dans le `Ostr` au format cartésien : ( *partie réelle, partie imaginaire* ).
+Écrit la valeur du nombre complexe spécifié à la *Ostr* au format cartésien : ( *partie réelle, partie imaginaire* ).
 
 ### <a name="remarks"></a>Notes
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Un nombre complexe ou un objet de son type de paramètre doit être testée d’inégalité.
+*gauche* un nombre complexe ou un objet de son type de paramètre à tester pour vérifier leur inégalité.
 
-`right` Un nombre complexe ou un objet de son type de paramètre doit être testée d’inégalité.
+*droit* un nombre complexe ou un objet de son type de paramètre à tester pour vérifier leur inégalité.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -877,13 +877,13 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-`Istr` Le flux d’entrée à partir de laquelle est extraite du nombre complexe.
+*ISTR* le flux d’entrée à partir de laquelle le nombre complexe est extrait.
 
-`right` Nombre complexe qui est extraite à partir du flux d’entrée.
+*droit* nombre complexe qui est extraite du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Lit la valeur du nombre complexe spécifié à partir de `Istr` et le retourne en `right`.
+Lit la valeur du nombre complexe spécifié à partir de *Istr* et le retourne dans *droit*.
 
 ### <a name="remarks"></a>Notes
 

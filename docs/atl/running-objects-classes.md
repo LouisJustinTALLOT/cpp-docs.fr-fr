@@ -1,5 +1,5 @@
 ---
-title: Classes (ATL) des objets en cours d’exécution | Documents Microsoft
+title: Classes (ATL) des objets en cours d’exécution | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358936"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958564"
 ---
 # <a name="running-objects-classes"></a>Classes d’objets en cours d’exécution
-La classe suivante prend en charge pour les objets en cours d’exécution :  
+La classe suivante prend en charge l’exécution d’objets :  
   
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) détermine si un objet est en cours d’exécution, oblige à s’exécuter, ou il verrouille à l’état en cours d’exécution.  
+-   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) détermine si un objet est en cours d’exécution, force à s’exécuter, ou se bloque à l’état en cours d’exécution.  
   
 ## <a name="related-articles"></a>Articles connexes  
  [Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)  

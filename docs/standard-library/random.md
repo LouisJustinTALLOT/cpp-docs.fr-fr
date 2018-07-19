@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956503"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -59,7 +59,7 @@ Voici quelques conseils à prendre en compte lors de l’utilisation \<aléatoir
 
 - Pour la plupart des applications, l’association la plus utile est le moteur `mt19937` avec `uniform_int_distribution`, comme illustré dans l’[exemple de code](#code) plus loin dans cet article.
 
-Il existe plusieurs options permettant de choisir dans le \<aléatoire > en-tête et que l’un d’eux est préférable à la fonction C Runtime obsolète `rand()`. Pour plus d’informations sur les problèmes avec `rand()` et comment \<aléatoire > les traite, consultez [cette vidéo](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Il existe de nombreuses options à choisir dans le \<aléatoire > en-tête et une d'entre elles est préférable à la fonction C Runtime obsolète `rand()`. Pour savoir quel est le problème avec `rand()` et comment \<aléatoire > aborde ces problèmes, consultez [cette vidéo](http://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Exemples
 
@@ -228,7 +228,7 @@ Les générateurs URNG sont souvent décrits sous l'angle des propriétés suiva
 
 3. **Qualité** : proximité de la séquence générée des nombres véritablement aléatoires. Cette propriété est souvent appelée *caractère aléatoire*.
 
-Les sections suivantes répertorient les générateurs (générateurs Urng) fournis dans le \<aléatoire > en-tête.
+Les sections suivantes répertorient les uniformes générateurs de nombres aléatoires (Urng) fournis dans le \<aléatoire > en-tête.
 
 ####  <a name="rd"></a> Générateur non déterministe
 
@@ -264,7 +264,7 @@ Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’inform
 - `ranlux24_base` : utilisé comme base pour `ranlux24`.
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-- `ranlux48` moteur RANLUX 48 bits (Martin Lüscher et Fred James, 1994).
+- `ranlux48` moteur RANLUX de 48 bits (Martin Lüscher et Fred James, 1994).
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
 
 - `ranlux48_base` : utilisé comme base pour `ranlux48`.
@@ -310,7 +310,7 @@ Les sections suivantes répertorient les distributions fournies dans le \<aléat
 
 |||
 |-|-|
-|[bernoulli_distribution, classe](../standard-library/bernoulli-distribution-class.md)|Produit une distribution de Bernoulli de valeurs `bool`.|
+|[bernoulli_distribution, classe](../standard-library/bernoulli-distribution-class.md)|Produit une distribution de Bernoulli de **bool** valeurs.|
 |[binomial_distribution, classe](../standard-library/binomial-distribution-class.md)|Produit une distribution binomiale de valeurs entières.|
 |[geometric_distribution, classe](../standard-library/geometric-distribution-class.md)|Produit une distribution géométrique de valeurs entières.|
 |[negative_binomial_distribution, classe](../standard-library/negative-binomial-distribution-class.md)|Produit une distribution négative binomiale de valeurs entières.|
@@ -375,11 +375,11 @@ Cette section répertorie les opérateurs fournis dans le \<aléatoire > en-têt
 
 Reportez-vous aux sections suivantes pour plus d’informations sur chacune de ces catégories de classe de modèle définis dans \<aléatoire >. Ces deux catégories de classes de modèles acceptent un type comme argument et utilisent des noms de paramètres de modèles partagés pour décrire les propriétés du type qui sont autorisées en tant que type d'argument réel, comme suit :
 
-- `IntType` indique un `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` ou `unsigned long long`.
+- `IntType` Indique un **court**, **int**, **long**, **longue**, **unsigned short**,  **unsigned int**, **long non signé**, ou **unsigned long long**.
 
-- `UIntType` indique `unsigned short`, `unsigned int`, `unsigned long` ou `unsigned long long`.
+- `UIntType` indique **unsigned short**, **unsigned int**, **long non signé**, ou **unsigned long long**.
 
-- `RealType` indique un `float`, `double` ou `long double`.
+- `RealType` Indique un **float**, **double**, ou **long double**.
 
 ### <a name="engines"></a>Moteurs
 

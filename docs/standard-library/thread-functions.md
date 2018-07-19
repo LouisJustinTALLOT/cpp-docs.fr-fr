@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855901"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960448"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;, fonctions
 
@@ -54,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Paramètres
 
-`Rel_time` A [durée](../standard-library/duration-class.md) objet qui spécifie un intervalle de temps.
+*Rel_time*  
+ Objet [duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps.
 
 ### <a name="remarks"></a>Notes
 
-La fonction bloque le thread appelant pendant au moins la durée spécifiée par `Rel_time`. Cette fonction ne lève aucune exception.
+La fonction bloque le thread appelant au moins l’heure spécifiée par *Rel_time*. Cette fonction ne lève aucune exception.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -73,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Paramètres
 
-`Abs_time` Représente un point dans le temps.
+*Abs_time*  
+ Représente un point dans le temps.
 
 ### <a name="remarks"></a>Notes
 
@@ -81,7 +83,7 @@ Cette fonction ne lève aucune exception.
 
 ## <a name="swap"></a>  swap
 
-Permute les états de deux objets `thread`.
+Permute les États de deux **thread** objets.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Left` Gauche `thread` objet.
+*Gauche*  
+ Gauche **thread** objet.
 
-`Right` Droite `thread` objet.
+*Droite*  
+ Droite **thread** objet.
 
 ### <a name="remarks"></a>Notes
 

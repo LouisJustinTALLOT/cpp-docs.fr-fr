@@ -1,5 +1,5 @@
 ---
-title: LOGBRUSH (Structure) | Documents Microsoft
+title: Logbrush, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336404"
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH, structure
-Le `LOGBRUSH` structure définit le style, la couleur et le modèle d’un pinceau physique. Il est utilisé par Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) et [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) fonctions.  
+Le `LOGBRUSH` structure définit le style, la couleur et le modèle d’un pinceau physique. Il est utilisé par le Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) et [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) fonctions.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,51 +37,51 @@ typedef struct tag LOGBRUSH { /* lb */
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `lbStyle`  
+ *lbStyle*  
  Spécifie le style de pinceau. Le `lbStyle` membre doit être un des styles suivants :  
   
-- **BS_DIBPATTERN** un pinceau de modèle défini par une spécification le bitmap indépendante du périphérique (DIB). Si `lbStyle` est **BS_DIBPATTERN**, le **lbHatch** membre contient un handle vers un fichier DIB compressé.  
+- Pinceau de modèle BS_DIBPATTERN une par une bitmap indépendante du périphérique (DIB) spécification définie. Si *lbStyle* est BS_DIBPATTERN, le `lbHatch` membre contient un handle vers un DIB compressé.  
   
-- **BS_DIBPATTERNPT** un pinceau de modèle défini par une spécification le bitmap indépendante du périphérique (DIB). Si `lbStyle` est **BS_DIBPATTERNPT**, le **lbHatch** membre contient un pointeur vers un fichier DIB compressé.  
+- Pinceau de modèle BS_DIBPATTERNPT une par une bitmap indépendante du périphérique (DIB) spécification définie. Si *lbStyle* est BS_DIBPATTERNPT, le `lbHatch` membre contient un pointeur vers un DIB compressé.  
   
-- **BS_HATCHED** issus du pinceau.  
+- Pinceau BS_HATCHED hachée.  
   
-- **BS_HOLLOW** creuse pinceau.  
+- Pinceau BS_HOLLOW creux.  
   
-- **BS_NULL** identique **BS_HOLLOW**.  
+- BS_NULL identique à BS_HOLLOW.  
   
-- **BS_PATTERN** pinceau défini par une image bitmap de mémoire de modèle.  
+- Pinceau BS_PATTERN modèle défini par une image bitmap de mémoire.  
   
-- **BS_SOLID** pinceau plein.  
+- Pinceau BS_SOLID solide.  
   
- `lbColor`  
- Spécifie la couleur dans laquelle le pinceau doit être dessiné. Si `lbStyle` est la **BS_HOLLOW** ou **BS_PATTERN** style, **lbColor** est ignoré. Si `lbStyle` est **BS_DIBPATTERN** ou **BS_DIBPATTERNBT**, le mot de poids faible de **lbColor** Spécifie si le **bmiColors**membres de la [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contiennent explicite rouge, vert, bleu () ou les valeurs RVB index dans la palette logique actuellement réalisée. Le **lbColor** membre doit être une des valeurs suivantes :  
+ *lbColor*  
+ Spécifie la couleur dans laquelle le pinceau doit être dessiné. Si *lbStyle* correspond au style BS_HOLLOW ou BS_PATTERN, *lbColor* est ignoré. Si *lbStyle* est BS_DIBPATTERN ou BS_DIBPATTERNBT, le mot de poids faible de *lbColor* Spécifie si le `bmiColors` membres de la [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contiennent explicite rouge, vert, bleu valeurs (RVB) ou index dans la palette logique actuellement réalisée. Le `lbColor` membre doit être une des valeurs suivantes :  
   
-- **DIB_PAL_COLORS** la table des couleurs se compose d’un tableau d’index 16 bits dans la palette logique actuellement réalisée.  
+- DIB_PAL_COLORS la table des couleurs se compose d’un tableau d’indices de 16 bits dans la palette logique actuellement réalisée.  
   
-- **DIB_RGB_COLORS** la table des couleurs contient des valeurs RVB littérales.  
+- DIB_RGB_COLORS la table des couleurs contient des valeurs RVB littérales.  
   
  *lbHatch*  
- Spécifie un style de hachurage. La signification varie selon le style de pinceau défini par `lbStyle`. Si `lbStyle` est **BS_DIBPATTERN**, le **lbHatch** membre contient un handle vers un fichier DIB compressé. Si `lbStyle` est **BS_DIBPATTERNPT**, le **lbHatch** membre contient un pointeur vers un fichier DIB compressé. Si `lbStyle` est **BS_HATCHED**, le **lbHatch** membre spécifie l’orientation des lignes utilisées pour créer le hachurage. Il peut prendre l’une des valeurs suivantes :  
+ Spécifie un style de hachurage. La signification varie selon le style de pinceau défini par *lbStyle*. Si *lbStyle* est BS_DIBPATTERN, le `lbHatch` membre contient un handle vers un DIB compressé. Si *lbStyle* est BS_DIBPATTERNPT, le `lbHatch` membre contient un pointeur vers un DIB compressé. Si *lbStyle* est BS_HATCHED, le `lbHatch` membre spécifie l’orientation des lignes utilisées pour créer le hachurage. Il peut prendre l’une des valeurs suivantes :  
   
-- `HS_BDIAGONAL` Un hachurage de 45 degrés vers le haut, de gauche à droite  
+- Hachurage de vers le haut, gauche à droite la 45 degrés des A HS_BDIAGONAL  
   
-- `HS_CROSS` Hachurage horizontal et vertical  
+- HS_CROSS horizontale et verticale hachurage  
   
-- `HS_DIAGCROSS` hachurage de 45 degrés  
+- Hachurage de 45 degrés HS_DIAGCROSS  
   
-- `HS_FDIAGONAL` Un hachurage de 45 degrés vers le bas, de gauche à droite  
+- Hachurage de vers le bas, de gauche à droite la 45 degrés des A HS_FDIAGONAL  
   
-- `HS_HORIZONTAL` Hachurage horizontal  
+- Hachures horizontales HS_HORIZONTAL  
   
-- `HS_VERTICAL` Hachage vertical  
+- Hachage HS_VERTICAL Vertical  
   
- Si `lbStyle` est **BS_PATTERN**, **lbHatch** est un handle de la bitmap qui définit le modèle. Si `lbStyle` est **BS_SOLID** ou **BS_HOLLOW**, **lbHatch** est ignoré.  
+ Si *lbStyle* est BS_PATTERN, *lbHatch* est un handle de bitmap qui définit le modèle. Si *lbStyle* est BS_SOLID ou BS_HOLLOW, *lbHatch* est ignoré.  
   
 ## <a name="remarks"></a>Notes  
- Bien que **lbColor** contrôle la couleur de premier plan d’un pinceau de hachurage, le [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) et [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) fonctions contrôlent la couleur d’arrière-plan.  
+ Bien que *lbColor* contrôle la couleur de premier plan d’un pinceau de hachurage, le [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) et [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) fonctions contrôlent la couleur d’arrière-plan.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

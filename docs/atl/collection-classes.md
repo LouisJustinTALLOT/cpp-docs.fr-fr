@@ -1,5 +1,5 @@
 ---
-title: Classes de Collection ATL | Documents Microsoft
+title: Classes de Collection ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa8bf42d255cfb582989d1376aa3479559e9309
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89576f96c50e62220e56050834b141e1f2ac6e08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955382"
 ---
 # <a name="collection-classes"></a>Classes de collection
-Les classes suivantes fournissent la prise en charge pour les tableaux, listes, mappages et également des méthodes de caractéristiques pour aider avec les comparaisons et l’accès de l’élément.  
+Les classes suivantes fournissent la prise en charge pour les tableaux, listes, cartes et également des méthodes de traits pour aider à des comparaisons et d’accès à un élément.  
   
 -   [CAtlArray](../atl/reference/catlarray-class.md) cette classe implémente un objet tableau.  
   
@@ -36,25 +36,25 @@ Les classes suivantes fournissent la prise en charge pour les tableaux, listes, 
   
 -   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) cette classe fournit des méthodes utiles lors de la construction d’une liste de pointeurs intelligents.  
   
--   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) cette classe fournit des méthodes, des fonctions statiques, et typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de vecteur de nouveau et supprimer des opérateurs.  
+-   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) cette classe fournit des méthodes, des fonctions statiques, et typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de vector, nouveaux et supprimer des opérateurs.  
   
--   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) cette classe fournit des méthodes, des fonctions statiques, et typedefs utiles lors de la création de regroupements COM des pointeurs d’interface.  
+-   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) cette classe fournit des méthodes, des fonctions statiques, et typedefs utiles lors de la création de collections de COM pointeurs d’interface.  
   
--   [CComSafeArray](../atl/reference/ccomsafearray-class.md) cette classe est un wrapper pour le [Type de données SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) structure.  
+-   [CComSafeArray](../atl/reference/ccomsafearray-class.md) cette classe est un wrapper pour le [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) structure.  
   
--   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) cette classe est un wrapper pour un [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) structure.  
+-   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) cette classe est un wrapper pour un [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) structure.  
   
 -   [CComUnkArray](../atl/reference/ccomunkarray-class.md) cette classe stocke **IUnknown** pointeurs et est conçu pour être utilisé en tant que paramètre à la [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe de modèle.  
   
--   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) cette classe fournit deux fonctions statiques pour la conversion de caractères entre majuscules et minuscules.  
+-   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) cette classe fournit deux fonctions statiques pour la conversion des caractères entre majuscules et minuscules.  
   
 -   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) cette classe fournit des fonctions de comparaison élément par défaut.  
   
 -   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) cette classe fournit des fonctions et des méthodes par défaut pour une classe de collection.  
   
--   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) cette classe fournit une fonction statique pour le calcul de valeurs de hachage.  
+-   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) cette classe fournit une fonction statique pour le calcul des valeurs de hachage.  
   
--   [CElementTraits](../atl/reference/celementtraits-class.md) cette classe est utilisée par les classes de collection pour fournir des fonctions et méthodes pour déplacer, copier, comparaison et les opérations de hachage.  
+-   [CElementTraits](../atl/reference/celementtraits-class.md) cette classe est utilisée par les classes de collection pour fournir des fonctions et méthodes pour déplacer, copier, comparaison et des opérations de hachage.  
   
 -   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) cette classe fournit des méthodes de copie et de déplacement pour une classe de collection par défaut.  
   
@@ -68,27 +68,27 @@ Les classes suivantes fournissent la prise en charge pour les tableaux, listes, 
   
 -   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée de types de données primitifs.  
   
--   [CRBMap](../atl/reference/crbmap-class.md) cette classe représente une structure de mappage à l’aide d’un arbre binaire rouge-noire.  
+-   [CRBMap](../atl/reference/crbmap-class.md) cette classe représente une structure de mappage, à l’aide d’une arborescence binaire rouge-noire.  
   
--   [CRBMultiMap](../atl/reference/crbmultimap-class.md) cette classe représente une structure de mappage qui permet à chaque clé à associer à plusieurs valeurs, à l’aide d’un arbre binaire rouge-noire.  
+-   [CRBMultiMap](../atl/reference/crbmultimap-class.md) cette classe représente une structure de mappage qui permet à chaque clé à associer à plusieurs valeurs, à l’aide d’une arborescence binaire rouge-noire.  
   
--   [CRBTree](../atl/reference/crbtree-class.md) cette classe fournit des méthodes pour la création et utilisation d’une arborescence rouge-noire.  
+-   [CRBTree](../atl/reference/crbtree-class.md) cette classe fournit des méthodes pour la création et l’utilisation d’une arborescence rouge-noire.  
   
--   [CSimpleArray](../atl/reference/csimplearray-class.md) cette classe fournit des méthodes pour la gestion d’un simple tableau.  
+-   [CSimpleArray](../atl/reference/csimplearray-class.md) cette classe fournit des méthodes pour la gestion d’un tableau simple.  
   
--   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) cette classe est une application d’assistance pour le [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
+-   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) cette classe est une application d’assistance pour la [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
   
--   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) cette classe est une application d’assistance pour le [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
+-   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) cette classe est une application d’assistance pour la [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
   
 -   [CSimpleMap](../atl/reference/csimplemap-class.md) cette classe fournit la prise en charge pour un tableau de mappage simple.  
   
--   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) cette classe est une application d’assistance pour le [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
+-   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) cette classe est une application d’assistance pour la [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
   
--   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) cette classe est une application d’assistance pour le [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
+-   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) cette classe est une application d’assistance pour la [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
   
--   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) cette classe fournit des fonctions statiques utilisées par le stockage des classes de collection `CString` objets.  
+-   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) cette classe fournit des fonctions statiques utilisées par les classes de collection stockage `CString` objets.  
   
--   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Il est similaire à [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons sans respecter la casse.  
+-   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Elle est similaire à [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons de non-respect de la casse.  
   
 -   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Les objets de chaîne sont traitées en tant que références.  
   

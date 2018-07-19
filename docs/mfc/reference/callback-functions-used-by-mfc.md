@@ -1,5 +1,5 @@
 ---
-title: Fonctions de rappel utilisées par MFC | Documents Microsoft
+title: Fonctions de rappel utilisées par MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339008"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
-Trois fonctions de rappel s’affichent dans la bibliothèque Microsoft Foundation Class. Ces fonctions de rappel sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de retourner à Windows, étant donné que les exceptions ne peut pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
+Trois fonctions de rappel apparaissent dans la bibliothèque Microsoft Foundation Class. Ces fonctions de rappel sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de revenir à Windows, étant donné que les exceptions ne peut pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
 
 |Name||  
 |----------|-----------------|  
@@ -39,7 +39,7 @@ Trois fonctions de rappel s’affichent dans la bibliothèque Microsoft Foundati
  **En-tête :** afxwin.h 
 
 ## <a name="enum_objects"></a> Fonction de rappel pour CDC::EnumObjects
-Le *ObjectFunc* nom est un espace réservé pour le nom de la fonction fournie par l’application.  
+Le *ObjectFunc* nom est un espace réservé pour le nom de fonction fournie par l’application.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -54,10 +54,10 @@ int CALLBACK EXPORT ObjectFunc(
  Pointe vers un [LOGPEN](../../mfc/reference/logpen-structure.md) ou [LOGBRUSH](../../mfc/reference/logbrush-structure.md) structure de données qui contient des informations sur les attributs de logiques de l’objet.  
   
  *lpData*  
- Points de données fourni par l’application passé à la `EnumObjects` (fonction).  
+ Pointe vers les données fournie par l’application passé à la `EnumObjects` (fonction).  
   
 ### <a name="return-value"></a>Valeur de retour  
- La fonction de rappel retourne un **int**. La valeur de ce retour est définie par l’utilisateur. Si la fonction de rappel retourne 0, `EnumObjects` arrête d’énumération au début.  
+ La fonction de rappel renvoie un **int**. La valeur de ce retour est défini par l’utilisateur. Si la fonction de rappel retourne 0, `EnumObjects` arrête l’énumération au début.  
   
 ### <a name="remarks"></a>Notes  
  Le nom réel doit être exporté.  
@@ -76,7 +76,7 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>Paramètres  
  *hDC*  
- Identifie un contexte de périphérique de mémoire avec une image bitmap d’au moins la largeur et la hauteur spécifiée par *nWidth* et *nHeight* à `GrayString`.  
+ Identifie un contexte de périphérique de mémoire avec une image bitmap d’au moins la largeur et la hauteur spécifiée par `nWidth` et `nHeight` à `GrayString`.  
   
  *lpData*  
  Pointe vers la chaîne de caractères à ajouter.  
@@ -85,13 +85,13 @@ BOOL CALLBACK EXPORT OutputFunc(
  Spécifie le nombre de caractères en sortie.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur de retour de la fonction de rappel doit être **TRUE** pour indiquer la réussite ; sinon, il est **FALSE**.  
+ Valeur de retour de la fonction de rappel doit être TRUE pour indiquer la réussite ; Sinon, elle est FALSE.  
   
 ### <a name="remarks"></a>Notes  
- La fonction de rappel (*OutputFunc*) doit dessiner une image par rapport aux coordonnées (0,0) plutôt que (*x*, *y*).  
+ La fonction de rappel (*OutputFunc*) doit dessiner une image relatif aux coordonnées (0,0) au lieu de (*x*, *y*).  
 
 ## <a name="setabortproc"></a>  Fonction de rappel pour CDC::SetAbortProc
-Le nom *AbortFunc* est un espace réservé pour le nom de la fonction fournie par l’application.  
+Le nom *AbortFunc* est un espace réservé pour le nom de fonction fournie par l’application.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -106,10 +106,10 @@ BOOL CALLBACK EXPORT AbortFunc(
  Identifie le contexte de périphérique.  
   
  *Code*  
- Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne s’est produite. Il s’agit de **SP_OUTOFDISK** si le Gestionnaire d’impression n’est pas l’espace disque et davantage d’espace disque devient disponible si l’application attend. Si *code* est **SP_OUTOFDISK**, l’application ne dispose pas d’annuler le travail d’impression. Si elle n’est pas le cas, elle doit générer pour le Gestionnaire d’impression en appelant le `PeekMessage` ou `GetMessage` fonction Windows.  
+ Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne se n’est produite. Il est SP_OUTOFDISK si le Gestionnaire d’impression est actuellement manque d’espace disque et davantage d’espace disque devient disponible si l’application attend. Si *code* est SP_OUTOFDISK, l’application ne devra pas abandonner le travail d’impression. Dans le cas contraire, elle doit générer pour le Gestionnaire d’impression en appelant le `PeekMessage` ou `GetMessage` (fonction) Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La valeur de retour de la fonction de gestionnaire d’abandon est différent de zéro si le travail d’impression pour continuer et 0 si elle est annulée.  
+ La valeur de retour de la fonction de gestionnaire d’abandon est différent de zéro si le travail d’impression doit continuer et 0 si elle est annulée.  
   
 ### <a name="remarks"></a>Notes  
  Le nom réel doit être exporté comme décrit dans la section Notes de [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  

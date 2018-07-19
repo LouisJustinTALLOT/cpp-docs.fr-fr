@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCToolTipInfo | Documents Microsoft
+title: Cmfctooltipinfo, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,14 +42,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb5cb4020b851f3522842951030c8155ee68516f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037543"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850889"
 ---
-# <a name="cmfctooltipinfo-class"></a>Classe de CMFCToolTipInfo
+# <a name="cmfctooltipinfo-class"></a>Cmfctooltipinfo, classe
 Stocke des informations sur l'apparence visuelle des info-bulles.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -76,7 +76,7 @@ class CMFCToolTipInfo
 |[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Variable booléenne qui indique si l'info-bulle contient une icône.|  
 |[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Variable booléenne qui indique si un séparateur s'affiche entre l'étiquette et la description de l'info-bulle.|  
 |[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Variable booléenne qui indique si l'info-bulle a des angles arrondis.|  
-|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Variable booléenne qui indique si l’apparence de l’info-bulle doit être contrôlé par un gestionnaire visuel (consultez [CMFCVisualManager classe](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Une variable booléenne qui indique si l’apparence de l’info-bulle doit être contrôlée par un gestionnaire visuel (consultez [cmfcvisualmanager, classe](../../mfc/reference/cmfcvisualmanager-class.md)).|  
 |[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Couleur de la bordure de l'info-bulle.|  
 |[CMFCToolTipInfo::m_clrFill](#m_clrfill)|Couleur de l'arrière-plan de l'info-bulle.|  
 |[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|Couleur du dégradé dans l'info-bulle.|  
@@ -85,7 +85,7 @@ class CMFCToolTipInfo
 |[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Largeur maximale, en pixels, de la description figurant dans l'info-bulle.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez [CMFCToolTipCtrl classe](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, et [CTooltipManager classe](../../mfc/reference/ctooltipmanager-class.md) pour implémenter des info-bulles personnalisées dans votre application. Pour obtenir un exemple montrant comment utiliser ces classes d’info-bulle, consultez le [CMFCToolTipCtrl classe](../../mfc/reference/cmfctooltipctrl-class.md) rubrique.  
+ Utilisez [CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, et [ctooltipmanager, classe](../../mfc/reference/ctooltipmanager-class.md) pour implémenter des info-bulles personnalisées dans votre application. Pour obtenir un exemple montrant comment utiliser ces classes d’info-bulle, consultez le [CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md) rubrique.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment définir les valeurs des différentes variables membres de la classe `CMFCToolTipInfo`.  
@@ -106,17 +106,17 @@ BOOL m_bBalloonTooltip;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `TRUE` Indique que les info-bulles utilisent le style d’info-bulle, `FALSE` indique que les info-bulles utilisent le style rectangulaire.  
+ TRUE indique que les info-bulles utilisent le style d’info-bulle, et FALSE indique que les info-bulles utilisent le style rectangulaire.  
   
 ##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
- Spécifie si la police du texte info-bulle est en gras.  
+ Spécifie si la police du texte d’info-bulle est en gras.  
   
 ```  
 BOOL m_bBoldLabel;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre `TRUE` pour afficher le texte de l’info-bulle avec une police en gras, ou `FALSE` pour afficher les étiquettes de l’info-bulle avec gras la police.  
+ Définissez ce membre à True pour texte d’info-bulle affiché en gras, ou FALSE pour afficher les étiquettes de l’info-bulle avec police gras.  
   
 ##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
  Spécifie si chaque info-bulle affiche le texte de description.  
@@ -126,17 +126,17 @@ BOOL m_bDrawDescription;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre `TRUE` pour afficher la description, ou `FALSE` pour masquer la description. Vous pouvez spécifier la description dans une info-bulle en appelant [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+ Définissez ce membre à True pour afficher la description, ou FALSE pour masquer la description. Vous pouvez spécifier la description dans une info-bulle en appelant [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
 ##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
- Spécifie si les info-bulles tous les affichent des icônes.  
+ Spécifie si toutes les info-bulles affichent des icônes.  
   
 ```  
 BOOL m_bDrawIcon;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre `TRUE` pour afficher une icône sur chaque info-bulle, ou `FALSE` pour afficher des info-bulles sans icônes.  
+ Définissez ce membre sur TRUE pour afficher une icône sur chaque info-bulle, ou FALSE pour afficher des info-bulles sans icônes.  
   
 ##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
  Spécifie si chaque info-bulle a un séparateur entre son étiquette et sa description.  
@@ -146,17 +146,17 @@ BOOL m_bDrawSeparator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre `TRUE` pour afficher le séparateur entre l’étiquette d’info-bulle et la description, ou `FALSE` pour afficher des info-bulles avec aucun séparateur.  
+ Définissez ce membre sur TRUE pour afficher le séparateur entre l’étiquette d’info-bulle et la description, ou FALSE pour afficher des info-bulles avec aucun séparateur.  
   
 ##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
- Spécifie si toutes les info-bulles ont des angles arrondis.  
+ Spécifie si toutes les info-bulles aux angles arrondis.  
   
 ```  
 BOOL m_bRoundedCorners;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Attribuez à ce membre `TRUE` pour afficher les angles arrondis sur les info-bulles, ou `FALSE` pour afficher les angles rectangulaires sur les info-bulles.  
+ Définissez ce membre à True pour affichage arrondi des angles sur Info-bulles, ou FALSE pour afficher les angles rectangulaires sur Info-bulles.  
   
 ##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
  Spécifie la couleur des bordures sur toutes les info-bulles.  
@@ -166,14 +166,14 @@ COLORREF m_clrBorder;
 ```  
   
 ##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
- Spécifie la couleur d’arrière-plan des info-bulle.  
+ Spécifie la couleur d’arrière-plan d’info-bulle.  
   
 ```  
 COLORREF m_clrFill;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) est -1, la couleur d’arrière-plan info-bulle est `m_clrFill`. Dans le cas contraire, `m_clrFill` spécifie la couleur de début du dégradé et `m_clrFillGradient` spécifie la couleur de la fin du dégradé. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) détermine la direction du dégradé.  
+ Si [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) est -1, la couleur d’arrière-plan info-bulle est `m_clrFill`. Sinon, `m_clrFill` spécifie la couleur de début du dégradé et `m_clrFillGradient` spécifie la couleur de la fin du dégradé. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) détermine le sens du dégradé.  
   
 ##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
  Spécifie la couleur de fin pour un arrière-plan dégradé pour les info-bulles.  
@@ -183,10 +183,10 @@ COLORREF m_clrFillGradient;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si `m_clrFillGradient` est -1, il n’existe aucun dégradé. Sinon, la couleur initiale est spécifiée par [CMFCToolTipInfo::m_clrFill](#m_clrfill) et la couleur de fin de dégradé est spécifiée par `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) détermine la direction du dégradé.  
+ Si `m_clrFillGradient` est -1, il n’existe aucun dégradé. Sinon, la couleur initiale est spécifiée par [CMFCToolTipInfo::m_clrFill](#m_clrfill) et la couleur de fin de dégradé est spécifiée par `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) détermine le sens du dégradé.  
   
 ##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
- Spécifie la couleur du texte des info-bulles de tous les.  
+ Spécifie la couleur du texte de toutes les info-bulles.  
   
 ```  
 COLORREF m_clrText;  
@@ -200,7 +200,7 @@ int m_nGradientAngle;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `m_nGradientAngle` Spécifie l’angle, en degrés, que le dégradé de l’arrière-plan des info-bulles décalée par rapport à l’horizontale. Si `m_nGradientAngle` est 0, le dégradé est dessiné de gauche à droite. Si `m_nGradientAngle` est comprise entre 1 et 360, le dégradé de la rotation dans le sens horaire par le nombre de degrés. Si `m_nGradientAngle` est -1, qui est la valeur par défaut, le dégradé est dessiné à partir du haut vers le bas. Il est identique à un paramètre `m_nGradientAngle` à 90.  
+ `m_nGradientAngle` Spécifie l’angle, en degrés, que le dégradé de l’arrière-plan d’info-bulles offset par rapport à l’horizontale. Si `m_nGradientAngle` est 0, le dégradé est dessiné de gauche à droite. Si `m_nGradientAngle` est comprise entre 1 et 360, le dégradé est dans le sens horaire rotation par le nombre de degrés. Si `m_nGradientAngle` est -1, ce qui est la valeur par défaut, le dégradé est dessiné de haut en bas. Cela est équivalent au paramètre `m_nGradientAngle` à 90.  
   
  [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` spécifie la couleur de début du dégradé et [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` spécifie la couleur de la fin du dégradé. Si `m_clrFillGradient` est -1, il n’existe aucun dégradé.  
   
@@ -219,7 +219,7 @@ BOOL m_bVislManagerTheme;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si `m_bVislManagerTheme` est `TRUE`, chaque info-bulle demande un nouveau [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) à partir du Gestionnaire visuel de l’application avant qu’ils s’affichent sur l’écran et utilise les valeurs de cet objet pour déterminer leur apparence. Les autres membres de votre [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) sont ignorés.  
+ Si `m_bVislManagerTheme` a la valeur TRUE, chaque info-bulle demande un nouveau [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) à partir du Gestionnaire visuel de l’application avant qu’ils s’affichent sur l’écran et utilise les valeurs dans cet objet pour déterminer leur apparence. Les autres membres de votre [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) sont ignorés.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -238,5 +238,5 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)   
+ [Ctooltipmanager, classe](../../mfc/reference/ctooltipmanager-class.md)   
  [CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md)

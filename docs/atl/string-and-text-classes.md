@@ -1,5 +1,5 @@
 ---
-title: Chaîne ATL et les Classes de texte | Documents Microsoft
+title: Chaîne d’ATL et Classes de texte | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 953afd2ba9f2a575eddb4140e71bada46e71dae3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362198"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848949"
 ---
 # <a name="string-and-text-classes"></a>Chaîne et les Classes de texte
 Ces classes fournissent la prise en charge pour les chaînes et les conversions de chaînes de texte.  
   
--   [CA2AEX](../atl/reference/ca2aex-class.md) cette classe est utilisée par les macros de conversion de chaînes `CA2TEX` et `CT2AEX`et le typedef **CA2A**.  
+-   [CA2AEX](../atl/reference/ca2aex-class.md) cette classe est utilisée par les macros de conversion de chaîne CA2TEX CT2AEX et CA2A typedef.  
   
--   [CA2CAEX](../atl/reference/ca2caex-class.md) cette classe est utilisée par les macros de conversion de chaînes `CA2CTEX` et `CT2CAEX`et le typedef **CA2CA**.  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md) cette classe est utilisée par le typedef CA2CA macros de conversion de chaînes CA2CTEX et CT2CAEX.  
   
--   [CA2WEX](../atl/reference/ca2wex-class.md) cette classe est utilisée par les macros de conversion de chaînes `CA2TEX`, `CA2CTEX`, `CT2WEX`, et `CT2CWEX`et le typedef **CA2W**.  
+-   [CA2WEX](../atl/reference/ca2wex-class.md) cette classe est utilisée par les macros de conversion de chaîne CA2TEX, CA2CTEX, CT2WEX, CT2CWEX et CA2W typedef.  
   
--   [CW2AEX](../atl/reference/cw2aex-class.md) cette classe est utilisée par les macros de conversion de chaînes `CT2AEX`, `CW2TEX`, `CW2CTEX`, et `CT2CAEX`et le typedef **CW2A**.  
+-   [CW2AEX](../atl/reference/cw2aex-class.md) cette classe est utilisée par les macros de conversion de chaîne CT2AEX, CW2TEX, CW2CTEX, CT2CAEX et CW2A typedef.  
   
--   [CW2CWEX](../atl/reference/cw2cwex-class.md) cette classe est utilisée par les macros de conversion de chaînes `CW2CTEX` et `CT2CWEX`et le typedef **CW2CW**.  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md) cette classe est utilisée par les macros de conversion de chaîne CW2CTEX CT2CWEX et CW2CW typedef.  
   
--   [CW2WEX](../atl/reference/cw2wex-class.md) cette classe est utilisée par les macros de conversion de chaînes `CW2TEX` et `CT2WEX`et le typedef `CW2W`.  
+-   [CW2WEX](../atl/reference/cw2wex-class.md) cette classe est utilisée par les macros de conversion de chaîne CW2TEX CT2WEX et CW2W typedef.  
   
--   [CComBSTR](../atl/reference/ccombstr-class.md) cette classe est un wrapper pour `BSTR`s.  
+-   [CComBSTR](../atl/reference/ccombstr-class.md) cette classe est un wrapper de BSTR.  
   
--   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) deux noms de ressources permet à cette classe d’argument d’adaptateur (`LPCTSTR`s) ou l’ID de ressource (**UINT**s) à passer à une fonction sans nécessiter de l’appelant convertir l’ID d’une chaîne à l’aide de la  **MAKEINTRESOURCE** (macro).  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) cette classe d’adaptateur argument permet deux noms de ressources (`LPCTSTR`s) ou ID (ventes) à passer à une fonction sans nécessiter de l’appelant à convertir en chaîne à l’aide de la macro MAKEINTRESOURCE l’ID de ressource.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../atl/atl-class-overview.md)   
- [Macros de Conversion de chaînes MFC et ATL](reference/string-conversion-macros.md)
+ [Macros de Conversion de chaîne MFC et ATL](reference/string-conversion-macros.md)
 

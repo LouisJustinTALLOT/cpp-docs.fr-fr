@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960415"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist, classe
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Sz`|Nombre d’éléments du tableau à allouer.|
-|`Max`|Classe max représentant la taille maximale de la liste de libération. Cette taille peut être [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) ou [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|Nombre d’éléments du tableau à allouer.|
+|*Max*|Classe max représentant la taille maximale de la liste de libération. Cette taille peut être [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) ou [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle cache_freelist conserve une liste de libération des blocs de mémoire de taille `Sz`. Quand la liste de libération est pleine, elle utilise `operator delete` pour désallouer des blocs de mémoire. Quand la liste de libération est vide, elle utilise `operator new` pour allouer de nouveaux blocs de mémoire. La taille maximale de la liste de libération est déterminée par la classe max passée dans le paramètre `Max`.
+La classe de modèle cache_freelist conserve une liste de libération des blocs de mémoire de taille *Sz*. Lorsque la liste de libération est pleine, elle utilise **opérateur delete** pour libérer la mémoire bloque. Lorsque la liste de libération est vide, il utilise **opérateur new** pour allouer de nouveaux blocs de mémoire. La taille maximale de la liste de libération est déterminée par la classe max passée dans le *Max* paramètre.
 
-Chaque bloc de mémoire contient `Sz` octets de mémoire utilisable et les données dont `operator new` et `operator delete` ont besoin.
+Chaque bloc de mémoire contient *Sz* octets de mémoire utilisable et les données qui **opérateur new** et **opérateur delete** nécessitent.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -64,7 +64,7 @@ Chaque bloc de mémoire contient `Sz` octets de mémoire utilisable et les donn
 |[allocate](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 

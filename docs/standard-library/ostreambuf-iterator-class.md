@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958251"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator
 
@@ -45,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Paramètres
 
-`CharType` Type qui représente le type de caractère pour l’objet ostreambuf_iterator. Cet argument est facultatif et sa valeur par défaut est `char`.
+*CharType* le type qui représente le type de caractère pour l’objet ostreambuf_iterator. Cet argument est facultatif et la valeur par défaut est **char**.
 
-`Traits` Type qui représente le type de caractère pour l’objet ostreambuf_iterator. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*
+*Caractéristiques* le type qui représente le type de caractère pour l’objet ostreambuf_iterator. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Notes
 
@@ -82,7 +82,7 @@ La classe ostreambuf_iterator doit être conforme aux exigences d’un itérateu
 |[operator++](#op_add_add)|Opérateur d'incrément non fonctionnel qui retourne un `ostreambuf_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.|
 |[operator=](#op_eq)|L'opérateur insère un caractère dans la mémoire tampon du flux associé.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **CharType**.
+Le type est un synonyme du paramètre de modèle `CharType`.
 
 ### <a name="example"></a>Exemple
 
@@ -294,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Char` Le caractère à insérer dans la mémoire tampon du flux.
+*_Char* le caractère à insérer dans la mémoire tampon de flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -346,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-`strbuf` L’objet streambuf de sortie utilisé pour initialiser le pointeur de mémoire tampon du flux de sortie.
+*strbuf* objet de sortie streambuf utilisé pour initialiser le pointeur de mémoire tampon du flux de sortie.
 
-`Ostr` L’objet de flux de sortie utilisé pour initialiser le pointeur de mémoire tampon du flux de sortie.
+*Ostr* l’objet de flux de sortie utilisé pour initialiser le pointeur de mémoire tampon du flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise le pointeur de mémoire tampon du flux de sortie avec `strbuf`.
+Le premier constructeur initialise le pointeur de mémoire tampon du flux de sortie avec *strbuf*.
 
 Le deuxième constructeur initialise le pointeur de mémoire tampon du flux de sortie avec `Ostr`. `rdbuf`. Le pointeur stocké ne doit pas être un pointeur null.
 
@@ -415,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de `basic_streambuf`\< **CharType**, **Traits**>, une classe stream pour les mémoires tampons d’E/S qui devient la classe `streambuf` quand le type est spécialisé sur le type de caractères `char`.
+Le type est un synonyme de `basic_streambuf` \< **CharType**, **Traits**>, une classe de flux pour les mémoires tampons d’e/s qui devient `streambuf` quand elle est spécialisée pour le type de caractère **char**.
 
 ### <a name="example"></a>Exemple
 
@@ -431,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **Traits**.
+Le type est un synonyme du paramètre de modèle `Traits`.
 
 ### <a name="example"></a>Exemple
 

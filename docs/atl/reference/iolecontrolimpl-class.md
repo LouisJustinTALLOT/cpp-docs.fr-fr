@@ -1,5 +1,5 @@
 ---
-title: Classe de IOleControlImpl | Documents Microsoft
+title: Iolecontrolimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361796"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879281"
 ---
-# <a name="iolecontrolimpl-class"></a>Classe de IOleControlImpl
-Cette classe fournit une implémentation par défaut de la **IOleControl** interface et implémente **IUnknown**.  
+# <a name="iolecontrolimpl-class"></a>Iolecontrolimpl, classe
+Cette classe fournit une implémentation par défaut de la `IOleControl` interface et implémente `IUnknown`.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ class IOleControlImpl
 ```   
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Votre classe, dérivée de `IOleControlImpl`.  
   
 ## <a name="members"></a>Membres  
@@ -52,12 +52,12 @@ class IOleControlImpl
 |Nom|Description|  
 |----------|-----------------|  
 |[IOleControlImpl::FreezeEvents](#freezeevents)|Indique si le conteneur ignore ou accepte les événements à partir du contrôle.|  
-|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Remplit les informations sur le comportement du contrôle clavier. L’implémentation ATL retourne **E_NOTIMPL**.|  
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Indique un contrôle qu’un ou plusieurs des propriétés ambiantes du conteneur a changé. L’implémentation ATL retourne `S_OK`.|  
-|[IOleControlImpl::OnMnemonic](#onmnemonic)|Informe le contrôle qu’un utilisateur a appuyé sur une séquence de touches spécifiée. L’implémentation ATL retourne **E_NOTIMPL**.|  
+|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Renseigne les informations sur le comportement du clavier du contrôle. L’implémentation de ATL retourne E_NOTIMPL.|  
+|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Indique un contrôle qu’un ou plusieurs des propriétés ambiantes du conteneur a changé. L’implémentation de ATL retourne S_OK.|  
+|[IOleControlImpl::OnMnemonic](#onmnemonic)|Informe le contrôle qu’un utilisateur a appuyé sur une séquence de touches spécifiée. L’implémentation de ATL retourne E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Notes  
- Classe `IOleControlImpl` fournit une implémentation par défaut de la [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
+ Classe `IOleControlImpl` fournit une implémentation par défaut de la [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -66,23 +66,23 @@ class IOleControlImpl
   
  `IOleControlImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlctl.h  
   
 ##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
- Dans l’implémentation de d’ATL, `FreezeEvents` incrémente la classe de contrôle `m_nFreezeEvents` membre de données si `bFreeze` est **TRUE**et décrémente `m_nFreezeEvents` si `bFreeze` est **FALSE**.  
+ Dans l’implémentation d’ATL, `FreezeEvents` incrémente la classe de contrôle `m_nFreezeEvents` membre de données si `bFreeze` est TRUE et décrémente `m_nFreezeEvents` si `bFreeze` a la valeur FALSE.  
   
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>Notes  
- `FreezeEvents` retourne ensuite `S_OK`.  
+ `FreezeEvents` puis retourne S_OK.  
   
  Consultez [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
- Remplit les informations sur le comportement du contrôle clavier.  
+ Renseigne les informations sur le comportement du clavier du contrôle.  
   
 ```
 HRESULT GetControlInfo(LPCONTROLINFO pCI);
@@ -92,7 +92,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
  Consultez [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) dans le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne **E_NOTIMPL**.  
+ Retourne E_NOTIMPL.  
   
 ##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  Indique un contrôle qu’un ou plusieurs des propriétés ambiantes du conteneur a changé.  
@@ -102,7 +102,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `S_OK`.  
+ Retourne S_OK.  
   
 ### <a name="remarks"></a>Notes  
  Consultez [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) dans le Kit de développement logiciel Windows.  
@@ -115,12 +115,12 @@ HRESULT OnMnemonic(LPMSG pMsg);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne **E_NOTIMPL**.  
+ Retourne E_NOTIMPL.  
   
 ### <a name="remarks"></a>Notes  
  Consultez [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)   
+ [Ioleobjectimpl, classe](../../atl/reference/ioleobjectimpl-class.md)   
  [Interfaces de contrôles ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

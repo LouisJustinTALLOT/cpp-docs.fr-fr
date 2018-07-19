@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954745"
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible, classe
 
@@ -37,15 +37,15 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T* type à interroger.
 
-`Args` Les types d’arguments à faire correspondre dans un constructeur de `T`.
+*Args* les types d’arguments à faire correspondre dans un constructeur de *T*.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est constructible de façon triviale en utilisant les types d’arguments dans `Args`. Sinon, sa valeur est false. Le type `T` est constructible de façon triviale si la définition de variable `T t(std::declval<Args>()...);` est bien formée et est connue pour n’appeler aucune opération non triviale. `T` et tous les types dans `Args` doivent être des types complets, `void`, ou des tableaux de limite inconnue.
+Une instance du prédicat de type a la valeur true si le type *T* est constructible de façon triviale en utilisant les types d’argument dans *Args*, sinon, sa valeur est false. Type *T* est constructible de façon triviale si la définition de variable `T t(std::declval<Args>()...);` est correctement formée et est connue pour n’appeler aucune opération non triviale. Les deux *T* et tous les types dans *Args* doivent être des types complets, **void**, ou des tableaux de limite inconnue.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

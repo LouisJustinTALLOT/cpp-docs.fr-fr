@@ -1,5 +1,5 @@
 ---
-title: Programmation avec CComBSTR (ATL) | Documents Microsoft
+title: Programmation avec CComBSTR (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b957cca4ff1af93d3f62ab0bf667462c91b81bba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0cae1e2f05484aeccd76e987c2d63c41aec30f6
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357855"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848436"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programmation avec CComBSTR (ATL)
-La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper autour de le `BSTR` type de données. Alors que `CComBSTR` est un outil utile, il existe plusieurs situations nécessitant une attention.  
+La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper autour du type de données BSTR. Bien que `CComBSTR` est un outil utile, il existe plusieurs situations nécessitant une attention.  
   
 -   [Problèmes de conversion](#programmingwithccombstr_conversionissues)  
   
@@ -36,18 +36,18 @@ La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper 
 -   [Problèmes de fuite de mémoire](#programmingwithccombstr_memoryleaks)  
   
 ##  <a name="programmingwithccombstr_conversionissues"></a> Problèmes de conversion  
- Bien que plusieurs `CComBSTR` méthodes convertissent automatiquement un argument de chaîne ANSI en Unicode, les méthodes retournera toujours des chaînes au format Unicode. Pour convertir la chaîne de sortie en ANSI, utilisez une classe de conversion ATL. Pour plus d’informations sur les classes de conversion ATL, consultez [ATL et MFC Macros de Conversion de chaînes](reference/string-conversion-macros.md).  
+ Bien que plusieurs `CComBSTR` méthodes convertissent automatiquement un argument de chaîne ANSI en Unicode, les méthodes retournent toujours les chaînes au format Unicode. Pour convertir la chaîne de sortie en ANSI, utilisez une classe de conversion ATL. Pour plus d’informations sur les classes de conversion ATL, consultez [Macros de Conversion de chaîne de MFC et ATL](reference/string-conversion-macros.md).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]  
   
- Si vous utilisez un littéral de chaîne pour modifier un `CComBSTR` de l’objet, utilisez des chaînes à caractères larges. Cela permet de réduire les conversions inutiles.  
+ Si vous utilisez un littéral de chaîne pour modifier un `CComBSTR` de l’objet, utilisez des chaînes de caractères larges. Cela permet de réduire les conversions inutiles.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
 ##  <a name="programmingwithccombstr_scopeissues"></a> Problèmes de portée  
- Comme avec toute classe valide, `CComBSTR` permettra de libérer ses ressources lorsqu’il devient hors de portée. Si une fonction retourne un pointeur vers le `CComBSTR` chaîne, cela peut provoquer des problèmes, le pointeur de la référence de la mémoire qui a déjà été libéré. Dans ces cas, utilisez le **copie** méthode, comme indiqué ci-dessous.  
+ Comme avec n’importe quelle classe se comportant bien, `CComBSTR` permettra de libérer ses ressources lorsqu’il devient hors de portée. Si une fonction retourne un pointeur vers le `CComBSTR` chaîne, cela peut entraîner des problèmes, comme le pointeur de référence de la mémoire qui a déjà été libéré. Dans ces cas, utilisez le `Copy` (méthode), comme indiqué ci-dessous.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
@@ -59,25 +59,25 @@ La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper 
  [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
 ##  <a name="programmingwithccombstr_usingloops"></a> Utilisation d’objets CComBSTR dans des boucles  
- Comme le `CComBSTR` classe alloue une mémoire tampon pour effectuer certaines opérations, telles que la `+=` opérateur ou **Append** (méthode), il est déconseillé d’effectuer de manipulation de chaînes dans une boucle étroite. Dans ces situations, `CStringT` offre de meilleures performances.  
+ Comme le `CComBSTR` classe alloue une mémoire tampon pour effectuer certaines opérations, telles que la `+=` opérateur ou `Append` (méthode), il est déconseillé d’effectuer de manipulation de chaînes à l’intérieur d’une boucle serrée. Dans ces situations, `CStringT` offre de meilleures performances.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
 ##  <a name="programmingwithccombstr_memoryleaks"></a> Problèmes de fuite de mémoire  
- Transmission de l’adresse d’initialisé `CComBSTR` à une fonction comme un **[out]** paramètre entraîne une fuite de mémoire.  
+ En passant l’adresse d’initialisé `CComBSTR` à une fonction comme un **[out]** paramètre entraîne une fuite de mémoire.  
   
  Dans l’exemple ci-dessous, la chaîne allouée pour contenir la chaîne `"Initialized"` fuite lorsque la fonction `MyGoodFunction` remplace la chaîne.  
   
  [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]  
   
- Pour éviter la fuite, appelez le **vide** méthode existant `CComBSTR` objets avant la transmission de l’adresse en tant qu’un **[out]** paramètre.  
+ Pour éviter la fuite, appelez le `Empty` méthode existant `CComBSTR` objets avant de transmettre l’adresse en tant qu’un **[out]** paramètre.  
   
- Notez que le même code ne provoque pas une fuite si le paramètre de la fonction a été **[dans, out]**.  
+ Notez que le même code ne serait pas provoquer une fuite si le paramètre de la fonction a été **[dans, out]**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts](../atl/active-template-library-atl-concepts.md)   
- [CStringT (classe)](../atl-mfc-shared/reference/cstringt-class.md)   
+ [CStringT, classe](../atl-mfc-shared/reference/cstringt-class.md)   
  [wstring](../standard-library/basic-string-class.md)   
  [Macros de conversion de chaînes](../atl/reference/string-conversion-macros.md)
 

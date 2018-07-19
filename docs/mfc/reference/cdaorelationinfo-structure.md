@@ -1,5 +1,5 @@
 ---
-title: Cdaorelationinfo, Structure | Documents Microsoft
+title: Cdaorelationinfo, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0fedf6ad90af670a462b0ccac23cc599a1a13e26
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336356"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo, structure
 Le `CDaoRelationInfo` structure contient des informations sur une relation définie entre les champs de deux tables dans un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet.  
@@ -46,43 +46,43 @@ struct CDaoRelationInfo
   
 #### <a name="parameters"></a>Paramètres  
 *m_strName*  
- Identifie l’objet de relation. Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
+ Identifiant de manière unique l’objet relation. Pour plus d’informations, consultez la rubrique « Propriété de nom » dans l’aide de DAO.  
   
  *m_strTable*  
- Noms de la table primaire de la relation.  
+ Nom de la table primaire dans la relation.  
   
  *m_strForeignTable*  
- Noms de la table étrangère dans la relation. Une table étrangère est une table utilisée pour contenir des clés étrangères. En règle générale, vous utilisez une table étrangère pour établir ou appliquer l’intégrité référentielle. La table étrangère est généralement le côté « plusieurs » d’une relation un-à-plusieurs. Tables contenant des codes d’États américains ou canadiens provinces les commandes client sont des exemples de tables externes.  
+ Nom de la table étrangère dans la relation. Une table externe est une table utilisée pour contenir des clés étrangères. En règle générale, vous utilisez une table étrangère pour établir ou appliquer l’intégrité référentielle. La table externe est généralement sur le côté « plusieurs » d’une relation un-à-plusieurs. Exemples de tables externes contiennent des tables contenant des codes pour les États américains, provinces du Canada ou les commandes des clients.  
   
  *m_lAttributes*  
  Contient des informations sur le type de relation. La valeur de ce membre peut être une des opérations suivantes :  
   
-- **dbRelationUnique** relation est un à un.  
+- `dbRelationUnique` Relation est-à-un.  
   
-- **Pourriez** relation n’est pas appliquée (aucune intégrité référentielle).  
+- `dbRelationDontEnforce` Relation n’est pas (aucune intégrité référentielle).  
   
-- **dbRelationInherited** relation existe dans une base de données non courante qui contient les deux tables attachées.  
+- `dbRelationInherited` Relation existe dans une base de données non courante qui contient les deux tables jointes.  
   
-- **dbRelationLeft** la relation est une jointure gauche. Une jointure externe gauche comprend tous les enregistrements de la première (gauche) de deux tables, même si aucune valeur correspondante pour les enregistrements de la seconde table (à droite).  
+- `dbRelationLeft` La relation est une jointure gauche. Une jointure externe gauche comprend tous les enregistrements de la première (gauche) de deux tables, même si aucune valeur correspondante pour les enregistrements de la seconde table (droite).  
   
-- **dbRelationRight** la relation est une jointure droite. Une jointure externe droite comprend tous les enregistrements de la deuxième (à droite) de deux tables, même si aucune valeur correspondante pour les enregistrements de la première table (gauche).  
+- `dbRelationRight` La relation est une jointure droite. Une jointure externe droite inclut tous les enregistrements de la deuxième (droite) de deux tables, même si aucune valeur correspondante pour les enregistrements dans la première table (gauche).  
   
-- **dbRelationUpdateCascade** mises à jour seront produisent en cascade.  
+- `dbRelationUpdateCascade` Mises à jour sont mises en cascade.  
   
-- **dbRelationDeleteCascade** suppressions seront produisent en cascade.  
+- `dbRelationDeleteCascade` Suppressions sont mises en cascade.  
   
 *m_pFieldInfos*  
- Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le `m_nFields` donnée membre donne le nombre d’éléments du tableau.  
+ Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le `m_nFields` membre de données renvoie un nombre des éléments du tableau.  
   
 *m_nFields*  
  Le nombre de `CDaoRelationFieldInfo` des objets dans le `m_pFieldInfos` membre de données.  
   
 ## <a name="remarks"></a>Notes  
- Les références aux principaux et secondaires ci-dessus indiquent la façon dont les informations sont retournées par la [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre dans la classe `CDaoDatabase`.  
+ Les références au principal et secondaire ci-dessus indiquent la façon dont les informations sont retournées par la [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre dans la classe `CDaoDatabase`.  
   
- Les objets de relation ne sont pas représentées par une classe MFC. Au lieu de cela, l’objet DAO sous-jacent d’un objet MFC de la `CDaoDatabase` classe maintient une collection d’objets relation : `CDaoDatabase` fournit les fonctions de membre pour accéder à certains éléments individuels d’informations sur la relation, ou vous peuvent y accéder à la fois avec un `CDaoRelationInfo` objet en appelant le `GetRelationInfo` fonction membre de l’objet conteneur de la base de données.  
+ Les objets de relation ne sont pas représentées par une classe MFC. Au lieu de cela, l’objet DAO sous-jacent d’un objet MFC de le `CDaoDatabase` classe maintient une collection d’objets de relation : `CDaoDatabase` fournit des fonctions de membre pour accéder à certains des éléments individuels d’informations sur la relation, ou vous peuvent y accéder à la fois avec un `CDaoRelationInfo` objet en appelant le `GetRelationInfo` fonction membre de l’objet conteneur de la base de données.  
   
- Les informations extraites par le [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre est stockée dans un `CDaoRelationInfo` structure. `CDaoRelationInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationInfo` objet.  
+ Les informations récupérées par le [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre est stockée dans un `CDaoRelationInfo` structure. `CDaoRelationInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationInfo` objet.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  

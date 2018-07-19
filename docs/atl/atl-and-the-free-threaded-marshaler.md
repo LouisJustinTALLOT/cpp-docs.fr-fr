@@ -1,5 +1,5 @@
 ---
-title: ATL et le marshaleur libre | Documents Microsoft
+title: ATL et le marshaleur libre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1716985adf65b714a418f20d3873f45c32d368b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355824"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848348"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL et le marshaleur libre de threads
 Page de l’Assistant objet Simple ATL attributs fournit une option qui permet à votre classe d’agréger FTM (FTM).  
   
- L’Assistant génère le code pour créer une instance de FTM dans `FinalConstruct` et libère cette instance dans `FinalRelease`. A `COM_INTERFACE_ENTRY_AGGREGATE` macro est automatiquement ajouté au mappage COM pour vous assurer que `QueryInterface` pour les demandes [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) sont gérés par le marshaleur libre.  
+ L’Assistant génère du code pour créer une instance de FTM dans `FinalConstruct` et mise en production de cette instance dans `FinalRelease`. Une macro COM_INTERFACE_ENTRY_AGGREGATE est automatiquement ajoutée au mappage COM pour vous assurer que `QueryInterface` les demandes concernant [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) sont gérées par le marshaleur libre.  
   
- Le marshaleur libre de permet d’accéder directement aux interfaces sur votre objet à partir de n’importe quel thread dans le même processus, ce qui accélère les appels d’intercloisonnements. Cette option est destinée aux classes qui utilisent le modèle de thread à la fois.  
+ FTM permet un accès direct aux interfaces sur votre objet à partir de n’importe quel thread dans le même processus, accélère les appels entre cloisonnements. Cette option est destinée aux classes qui utilisent le modèle de thread à la fois.  
   
- Lorsque vous utilisez cette option, les classes doivent être responsable de la sécurité des threads de leurs données. En outre, les objets qui agrègent FTM et qui doivent utiliser des pointeurs d’interface obtenus à partir d’autres objets doivent suivre des étapes supplémentaires pour garantir que les interfaces sont correctement marshalés. En général, cela implique de stocker les pointeurs d’interface dans le tableau global d’interface (GIT) et l’obtention du pointeur de la GIT chaque fois qu’il est utilisé. ATL fournit la classe [CComGITPtr](../atl/reference/ccomgitptr-class.md) pour vous aider à utiliser des pointeurs d’interface stockés dans le GIT.  
+ Lorsque vous utilisez cette option, les classes doivent prendre la responsabilité de la sécurité des threads de leurs données. En outre, les objets qui agrègent FTM et doivent utiliser des pointeurs d’interface obtenus à partir d’autres objets doivent suivre des étapes supplémentaires pour garantir que les interfaces sont correctement marshalées. En général, cela implique de stocker les pointeurs d’interface dans la table d’interface globale (GIT) et le pointeur de la GIT chaque fois qu’il est utilisé. ATL fournit la classe [CComGITPtr](../atl/reference/ccomgitptr-class.md) pour vous aider à utiliser des pointeurs d’interface stockés dans le GIT.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts](../atl/active-template-library-atl-concepts.md)   

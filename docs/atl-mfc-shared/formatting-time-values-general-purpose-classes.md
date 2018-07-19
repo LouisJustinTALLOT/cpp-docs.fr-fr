@@ -1,5 +1,5 @@
 ---
-title: 'Mise en forme des valeurs de temps : Classes à usage général | Documents Microsoft'
+title: 'Mise en forme des valeurs de temps : Classes à usage général | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48dd7ef4990c4ffe13c7c1f056d5904b6897435
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354653"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879366"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Mise en forme des valeurs de temps : Classes à usage général
-La procédure suivante montre la mise en forme des valeurs d’heure.  
+La procédure suivante montre comment formater les valeurs d’heure.  
   
-#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Pour mettre en forme une représentation de chaîne d’une heure ou un temps écoulé  
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Pour mettre en forme une chaîne représentant une heure ou le temps écoulé  
   
-1.  Utilisez le **Format** fonction membre à partir de le le [CTime](../atl-mfc-shared/reference/ctime-class.md) ou [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes pour créer un caractère de chaîne la représentation sous forme de l’heure ou la durée écoulée, comme indiqué par le exemple suivant.  
+Utilisez le `Format` fonction membre à partir d’un le [CTime](../atl-mfc-shared/reference/ctime-class.md) ou [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes pour créer un caractère représentation de chaîne de l’heure ou le temps écoulé, comme indiqué dans l’exemple suivant.
   
      [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
   
--   [Date général et programmation dans MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Date générale et la programmation de temps dans MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Utilisation de SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

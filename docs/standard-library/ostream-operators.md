@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e818c267f5fed9bd98b5c5998f4b0eac0c09f3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955931"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt;, opérateurs
 
@@ -88,17 +88,17 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-`_Ch` Un caractère.
+*_Ch* un caractère.
 
-`_Elem` Le type d’élément.
+*_Elem* le type d’élément.
 
-`_Ostr` A `basic_ostream` objet.
+*_Ostr* A `basic_ostream` objet.
 
-`str` Une chaîne de caractères.
+*Str* une chaîne de caractères.
 
-`_Tr` Caractéristiques.
+*_Tr* traits de caractère.
 
-`val` Le type
+*Val* le type
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -117,7 +117,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-détermine la longueur N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) de la séquence à partir de `str`, et insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne `_Ostr`.
+Détermine la longueur N = `traits_type::` [longueur](../standard-library/char-traits-struct.md#length)(`str`) de la séquence à partir *str*et insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne *_Ostr*.
 
 La fonction de modèle
 
@@ -128,7 +128,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-insère l’élément `_Ch`. Si 1 < `_Ostr.width`, la fonction insère également une répétition de caractères de remplissage - 1 `_Ostr.width`. La répétition précède la séquence si `_Ostr.flags & adjustfield != left`. Sinon, la répétition suit la séquence. Il retourne `_Ostr`.
+insère l’élément `_Ch`. Si 1 < `_Ostr.width`, la fonction insère également une répétition de caractères de remplissage - 1 `_Ostr.width`. La répétition précède la séquence si `_Ostr.flags & adjustfield != left`. Sinon, la répétition suit la séquence. Elle retourne *_Ostr*.
 
 La fonction de modèle
 
@@ -148,7 +148,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-sauf que chaque élément `_Ch` de la séquence à partir de `str` est converti en objet de type `Elem` en appelant `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)).
+sauf que chaque élément *_Ch* de la séquence à partir *str* est converti en un objet de type `Elem` en appelant `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [élargir](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 La fonction de modèle
 
@@ -168,7 +168,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-sauf que `_Ch` est converti en objet de type `Elem` en appelant `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
+à ceci près que *_Ch* est converti en un objet de type `Elem` en appelant `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
 
 La fonction de modèle
 
@@ -208,7 +208,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Elle n’a pas besoin d’élargir `_Ch` avant de l’insérer.)
+(Il n’a pas besoin d’élargir *_Ch* avant de l’insérer.)
 
 La fonction de modèle
 
@@ -219,7 +219,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-retourne `_Ostr` << ( `const char *`) `str`.
+Retourne `_Ostr` << (`const char *`) `str`.
 
 La fonction de modèle
 
@@ -230,7 +230,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-retourne `_Ostr` << ( `char`) `_Ch`.
+Retourne `_Ostr` << (`char`) `_Ch`.
 
 La fonction de modèle
 
@@ -241,7 +241,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-retourne `_Ostr` << ( `const char *`) `str`.
+Retourne `_Ostr` << (`const char *`) `str`.
 
 La fonction de modèle
 
@@ -252,7 +252,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-retourne `_Ostr` << ( `char`) `_Ch`.
+Retourne `_Ostr` << (`char`) `_Ch`.
 
 La fonction de modèle
 

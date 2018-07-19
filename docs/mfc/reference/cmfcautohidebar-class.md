@@ -1,5 +1,5 @@
 ---
-title: Cmfcautohidebar, classe | Documents Microsoft
+title: Cmfcautohidebar, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337013"
 ---
 # <a name="cmfcautohidebar-class"></a>Cmfcautohidebar, classe
 `CMFCAutoHideBar` est une classe de barre d'outils spéciale qui implémente la fonctionnalité de masquage automatique.  
@@ -147,13 +147,13 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ### <a name="remarks"></a>Notes  
  Le *dwAlignment* paramètre indique où le bouton Masquer automatiquement réside dans l’application. Le paramètre peut avoir l’une des valeurs suivantes :  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -251,7 +251,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Lorsque l’utilisateur place le curseur de la souris sur un `CMFCAutoHideButton`, il existe un court délai avant que le framework affiche la fenêtre associée. Ce paramètre détermine la longueur de ce délai en millisecondes.  
+ Lorsque l’utilisateur place le curseur de la souris sur un `CMFCAutoHideButton`, il existe un léger délai avant que le framework affiche la fenêtre associée. Ce paramètre détermine la longueur de ce délai en millisecondes.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -346,7 +346,7 @@ virtual CSize StretchPane(
  La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez cette valeur pour indiquer la longueur du volet redimensionné.  
   
  [in] *bVert*  
- La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez `TRUE` pour gérer le cas où la barre à masquage automatique est réduite verticalement et `FALSE` pour le cas où la barre à masquage automatique est réduite horizontalement.  
+ La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez True pour le handle, le cas où la barre à masquage automatique est réduite verticalement et FALSE dans le cas où la barre à masquage automatique est réduite horizontalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Taille résultante du volet redimensionné.  

@@ -1,5 +1,5 @@
 ---
-title: Classe de CHeapPtrElementTraits | Documents Microsoft
+title: Cheapptrelementtraits, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1aa3921f79e8c368fe4a42c3b56ede27f436e25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360075"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884098"
 ---
-# <a name="cheapptrelementtraits-class"></a>Classe de CHeapPtrElementTraits
-Cette classe fournit des méthodes, les fonctions statiques et typedefs utiles lors de la création de collections de pointeurs de tas.  
+# <a name="cheapptrelementtraits-class"></a>Cheapptrelementtraits, classe
+Cette classe fournit des méthodes, les fonctions statiques et les typedefs utiles lors de la création de collections de pointeurs de tas.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,11 +41,11 @@ class CHeapPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Le type d’objet à stocker dans la classe de collection.  
   
- `Allocator`  
- La classe de l’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ *Allocateur*  
+ La classe d’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Membres  
   
@@ -57,9 +57,9 @@ class CHeapPtrElementTraits :
 |[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe fournit des méthodes, les fonctions statiques et typedefs pour contribuer à la création d’objets de classe de collection qui contient les pointeurs de segment de mémoire. La classe `CHeapPtrList` dérive `CHeapPtrElementTraits`.  
+ Cette classe fournit des méthodes, les fonctions statiques et les typedefs pour contribuer à la création d’objets de classe de collection qui contient des pointeurs de tas. La classe `CHeapPtrList` dérive `CHeapPtrElementTraits`.  
   
- Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -72,7 +72,7 @@ class CHeapPtrElementTraits :
   
  `CHeapPtrElementTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE  
@@ -90,6 +90,6 @@ typedef T *& OUTARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Classe de CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+ [Cdefaultelementtraits, classe](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

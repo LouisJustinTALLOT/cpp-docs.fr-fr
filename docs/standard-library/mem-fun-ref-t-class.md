@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029fba9cc5a13569df8cc1e2e11b639e65ea24c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956096"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t, classe
 
-Classe d’adaptateur qui permet à une fonction membre **non_const** qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence.
+Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de référence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,9 +42,9 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Paramètres
 
-`_Pm` Un pointeur vers la fonction membre de classe **Type** pour être converti en un objet de fonction.
+*_Pm* un pointeur vers la fonction membre de classe `Type` à convertir en un objet de fonction.
 
-`left` L’objet qui le `_Pm` fonction membre est appelée sur.
+*gauche* l’objet qui le *_Pm* fonction membre est appelée sur.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -52,13 +52,13 @@ Fonction unaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de `_Pm`, qui doit être un pointeur vers une fonction membre de classe **Type**, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **left**.* `_Pm`)( ).
+La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **left**.* `_Pm`)( ).
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `mem_fun_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

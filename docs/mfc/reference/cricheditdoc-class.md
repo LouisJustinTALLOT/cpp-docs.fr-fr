@@ -1,5 +1,5 @@
 ---
-title: CRichEditDoc (classe) | Documents Microsoft
+title: CRichEditDoc, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28b84747a694a62139546f3105f84c9e799b292a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372057"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852508"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (classe)
-Avec [CRichEditView](../../mfc/reference/cricheditview-class.md) et [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte du document architecture vue de MFC.  
+Avec [CRichEditView](../../mfc/reference/cricheditview-class.md) et [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte de l’architecture document / vue de MFC.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ class CRichEditDoc : public COleServerDoc
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CRichEditDoc::CreateClientItem](#createclientitem)|Appelé pour effectuer un nettoyage du document.|  
+|[CRichEditDoc::CreateClientItem](#createclientitem)|Appelée pour effectuer un nettoyage du document.|  
 |[CRichEditDoc::GetStreamFormat](#getstreamformat)|Indique si les flux d’entrée et sortie doivent inclure des informations de mise en forme.|  
 |[CRichEditDoc::GetView](#getview)|Récupère l’associé [CRichEditView](../../mfc/reference/cricheditview-class.md) objet.|  
   
@@ -57,13 +57,13 @@ class CRichEditDoc : public COleServerDoc
 |[CRichEditDoc::m_bRTF](#m_brtf)|Indique si le flux d’e/s doit inclure la mise en forme.|  
   
 ## <a name="remarks"></a>Notes  
- Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte de caractère et de mise en forme peut être alloué et peut inclure des objets OLE incorporés. Les contrôles RichEdit fournissent une interface de programmation pour la mise en forme de texte. Toutefois, une application doit implémenter tous les composants d’interface utilisateur nécessaires pour effectuer les opérations de mise en forme disponibles à l’utilisateur.  
+ Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte peut avoir de caractère et de mise en forme de paragraphe et peut inclure des objets OLE incorporés. Les contrôles RichEdit fournissent une interface de programmation pour la mise en forme de texte. Toutefois, une application doit implémenter les composants d’interface utilisateur nécessaires pour rendre les opérations de mise en forme disponibles à l’utilisateur.  
   
- `CRichEditView` conserve le texte et les caractéristiques de mise en forme du texte. `CRichEditDoc` gère la liste des éléments de clients qui se trouvent dans la vue. `CRichEditCntrItem` fournit l’accès côté conteneur pour les éléments clients OLE.  
+ `CRichEditView` gère le texte et les caractéristiques de mise en forme du texte. `CRichEditDoc` gère la liste des éléments de clients qui se trouvent dans la vue. `CRichEditCntrItem` fournit l’accès côté conteneur aux éléments client OLE.  
   
- Ce contrôle commun de Windows (et par conséquent la [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et des classes connexes) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.  
+ Ce contrôle commun de Windows (et par conséquent le [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et les classes associées) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.  
   
- Pour obtenir un exemple de l’utilisation d’un document RichEdit dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.  
+ Pour obtenir un exemple d’utilisation d’un document RichEdit dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -80,7 +80,7 @@ class CRichEditDoc : public COleServerDoc
   
  `CRichEditDoc`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrich.h  
   
 ##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem  
@@ -92,18 +92,18 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>Paramètres  
  *preo*  
- Pointeur vers un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure qui décrit un élément OLE. La nouvelle `CRichEditCntrItem` objet est construit autour de cet élément OLE. Si *preo* est **NULL**, le nouvel élément de client est vide.  
+ Pointeur vers un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure qui décrit un élément OLE. La nouvelle `CRichEditCntrItem` objet est construit autour de cet élément OLE. Si *preo* est NULL, le nouvel élément de client est vide.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un nouveau [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objet qui a été ajouté à ce document.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction n’effectue pas de toute initialisation d’OLE.  
+ Cette fonction n’effectue pas de toute initialisation OLE.  
   
- Pour plus d’informations, consultez la [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure dans le SDK Windows.  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
- Appelez cette fonction pour déterminer le format du texte de diffusion en continu le contenu de l’édition enrichi.  
+ Appelez cette fonction pour déterminer le format de texte pour le contenu de l’édition enrichie de diffusion en continu.  
   
 ```  
 int GetStreamFormat() const;  
@@ -112,12 +112,12 @@ int GetStreamFormat() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un des indicateurs suivants :  
   
-- `SF_TEXT` Indique que le contrôle d’édition enrichi ne conserve pas les informations de mise en forme.  
+- SF_TEXT indique que le contrôle RichEdit ne conserve pas les informations de mise en forme.  
   
-- `SF_RTF` Indique que le contrôle d’édition enrichi ne conserve pas les informations de mise en forme.  
+- SF_RTF indique que le contrôle RichEdit ne conserve pas les informations de mise en forme.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de retour est basée sur le [m_bRTF](#m_brtf) membre de données. Cette fonction retourne `SF_RTF` si `m_bRTF` est **TRUE**; sinon, `SF_TEXT`.  
+ La valeur de retour est basée sur le [m_bRTF](#m_brtf) membre de données. Cette fonction retourne SF_RTF si `m_bRTF` est TRUE ; sinon, SF_TEXT.  
   
 ##  <a name="getview"></a>  CRichEditDoc::GetView  
  Appelez cette fonction pour accéder à la [CRichEditView](../../mfc/reference/cricheditview-class.md) objet associé à cet `CRichEditDoc` objet.  
@@ -133,7 +133,7 @@ virtual CRichEditView* GetView() const;
  Le texte et les informations de mise en forme sont contenus dans le `CRichEditView` objet. Le `CRichEditDoc` objet gère les éléments OLE pour la sérialisation. Il doit y avoir qu’un seul `CRichEditView` pour chaque `CRichEditDoc`.  
   
 ##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF  
- Lorsque **TRUE**, indique que [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) et [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) doit stocker paragraphe et les caractéristiques de mise en forme des caractères.  
+ Quand la valeur est TRUE, indique que [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) et [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) doit stocker paragraphe et caractéristiques de mise en forme des caractères.  
   
 ```  
 BOOL m_bRTF;  
@@ -141,9 +141,9 @@ BOOL m_bRTF;
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC WORDPAD](../../visual-cpp-samples.md)   
- [Classe de COleServerDoc](../../mfc/reference/coleserverdoc-class.md)   
+ [COleServerDoc, classe](../../mfc/reference/coleserverdoc-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [CRichEditView (classe)](../../mfc/reference/cricheditview-class.md)   
- [Classe de CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)   
- [COleDocument (classe)](../../mfc/reference/coledocument-class.md)   
+ [CRichEditCntrItem, classe](../../mfc/reference/cricheditcntritem-class.md)   
+ [COleDocument, classe](../../mfc/reference/coledocument-class.md)   
  [CRichEditCtrl, classe](../../mfc/reference/cricheditctrl-class.md)

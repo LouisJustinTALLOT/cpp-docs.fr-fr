@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonCategory | Documents Microsoft
+title: Cmfcribboncategory, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -140,15 +140,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44caf81fd73567e9c206bdfe62869f5fc145fd33
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039101"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852384"
 ---
-# <a name="cmfcribboncategory-class"></a>Classe de CMFCRibbonCategory
-Le `CMFCRibbonCategory` classe implémente un onglet de ruban qui contient un groupe de [panneaux de ruban](../../mfc/reference/cmfcribbonpanel-class.md).  
+# <a name="cmfcribboncategory-class"></a>Cmfcribboncategory, classe
+Le `CMFCRibbonCategory` classe implémente un onglet de ruban qui contient un groupe de [ruban panneaux](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -169,7 +169,7 @@ class CMFCRibbonCategory : public CObject
 |Nom|Description|  
 |----------|-----------------|  
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Ajoute un élément masqué à la catégorie de ruban.|  
-|[CMFCRibbonCategory::AddPanel](#addpanel)|Ajoute un nouveau panneau à la catégorie de ruban.|  
+|[CMFCRibbonCategory::AddPanel](#addpanel)|Ajoute un nouveau volet à la catégorie de ruban.|  
 |[CMFCRibbonCategory::CopyFrom](#copyfrom)||  
 |[CMFCRibbonCategory::FindByData](#findbydata)||  
 |[CMFCRibbonCategory::FindByID](#findbyid)||  
@@ -179,14 +179,14 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::GetDroppedDown](#getdroppeddown)||  
 |[CMFCRibbonCategory::GetElements](#getelements)||  
 |[CMFCRibbonCategory::GetElementsByID](#getelementsbyid)||  
-|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|Obtenir le premier élément visible qui appartiennent à la catégorie de ruban.|  
+|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|Obtenir un premier élément visible qui appartiennent à la catégorie de ruban.|  
 |[CMFCRibbonCategory::GetFocused](#getfocused)|Retourne un élément qui a le focus.|  
 |[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|Retourne un élément en surbrillance.|  
 |[CMFCRibbonCategory::GetImageCount](#getimagecount)||  
 |[CMFCRibbonCategory::GetImageSize](#getimagesize)||  
 |[CMFCRibbonCategory::GetItemIDsList](#getitemidslist)||  
-|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Obtenir le dernier élément visible qui appartiennent à la catégorie de ruban|  
-|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Retourne une référence à la liste des images de grande taille qui utilise de la catégorie de ruban.|  
+|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Obtenir un dernier élément visible qui appartiennent à la catégorie de ruban|  
+|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Retourne une référence à la liste des images de grande taille qui utilise la catégorie de ruban.|  
 |[CMFCRibbonCategory::GetMaxHeight](#getmaxheight)||  
 |[CMFCRibbonCategory::GetName](#getname)||  
 |[CMFCRibbonCategory::GetPanel](#getpanel)|Retourne un pointeur vers le volet du ruban qui se trouve à l’index spécifié.|  
@@ -197,7 +197,7 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::GetParentMenuBar](#getparentmenubar)||  
 |[CMFCRibbonCategory::GetParentRibbonBar](#getparentribbonbar)||  
 |[CMFCRibbonCategory::GetRect](#getrect)||  
-|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Retourne une référence à la liste des petites images qui utilise de la catégorie.|  
+|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Retourne une référence à la liste des petites images qui utilise la catégorie.|  
 |[CMFCRibbonCategory::GetTabColor](#gettabcolor)|Retourne la couleur actuelle de l’onglet de catégorie de ruban.|  
 |[CMFCRibbonCategory::GetTabRect](#gettabrect)||  
 |[CMFCRibbonCategory::GetTextTopLine](#gettexttopline)||  
@@ -224,16 +224,16 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::RecalcLayout](#recalclayout)||  
 |[CMFCRibbonCategory::RemovePanel](#removepanel)||  
 |[CMFCRibbonCategory::ReposPanels](#repospanels)||  
-|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|Définit l’ordre de réduction des volets de ruban qui sont présents dans la catégorie de ruban.|  
+|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|Définit l’ordre de réduire les panneaux de ruban qui sont présents dans la catégorie de ruban.|  
 |[CMFCRibbonCategory::SetData](#setdata)|Stocke les données définies par l’utilisateur dans la catégorie de ruban.|  
 |[CMFCRibbonCategory::SetKeys](#setkeys)|Assigne une touche d’accès à la catégorie de ruban.|  
 |[CMFCRibbonCategory::SetName](#setname)||  
 |[CMFCRibbonCategory::SetTabColor](#settabcolor)|Définit la couleur de la catégorie de ruban.|  
   
 ## <a name="remarks"></a>Notes  
- En général, vous créez une catégorie de ruban indirectement en appelant [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), qui retourne un pointeur vers la catégorie de ruban nouvellement créé. Ajouter des panneaux à la catégorie en appelant [CMFCRibbonCategory::AddPanel](#addpanel).  
+ En général, vous créez une catégorie de ruban indirectement en appelant [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), qui retourne un pointeur vers la catégorie de ruban qui vient d’être créé. Ajouter des panneaux à la catégorie en appelant [CMFCRibbonCategory::AddPanel](#addpanel).  
   
- La `CMFCRibbonTab` classe dessine des catégories de ruban. Elle est dérivée de [CMFCRibbonBaseElement classe](../../mfc/reference/cmfcribbonbaseelement-class.md).  
+ Le `CMFCRibbonTab` classe dessine des catégories de ruban. Elle est dérivée de [cmfcribbonbaseelement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md).  
   
  L’exemple suivant montre comment créer une catégorie de ruban et lui ajouter un panneau de configuration.  
   
@@ -255,7 +255,7 @@ class CMFCRibbonCategory : public CObject
   
  `m_PanelIcons.ExtractIcon (0));  // Panel icon`  
   
- Le diagramme suivant montre un graphique de la catégorie d’accueil à partir de l’exemple d’application RibbonApp.  
+ Le diagramme suivant illustre une figure de la catégorie d’accueil à partir de l’exemple d’application RibbonApp.  
   
  ![Image CMFCRibbonCategory](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")  
   
@@ -296,18 +296,18 @@ CMFCRibbonPanel* AddPanel(
  Pointeur vers le nom du nouveau panneau de ruban.  
   
  [in] *hIcon*  
- Handle vers l’icône par défaut pour le nouveau volet du ruban.  
+ Handle de l’icône par défaut pour le nouveau panneau de ruban.  
   
  [in] *pRTI*  
  Pointeur vers les informations de classe runtime pour un panneau de ruban personnalisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le nouveau volet du ruban si la méthode a réussi ; dans le cas contraire `NULL` si le panneau de configuration n’a pas été créé.  
+ Pointeur vers le nouveau panneau de ruban si la méthode a réussi ; Sinon, NULL si le panneau de configuration n’a pas été créé.  
   
 ### <a name="remarks"></a>Notes  
- Si vous souhaitez créer un volet de ruban personnalisé, vous devez spécifier ses informations de classe runtime dans *pRTI*. La classe du Panneau de ruban personnalisé doit être dérivée du `CMFCRibbonPanel` classe.  
+ Si vous souhaitez créer un panneau de ruban personnalisé, vous devez spécifier ses informations de classe runtime dans *pRTI*. La classe panel de ruban personnalisé doit être dérivée du `CMFCRibbonPanel` classe.  
   
- L’icône par défaut pour le panneau de ruban s’affiche lorsque l’espace est insuffisant pour afficher les éléments de ruban.  
+ L’icône par défaut pour le volet du ruban s’affiche lorsque l’espace est insuffisant pour afficher les éléments de ruban.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `AddPanel` méthode dans la `CMFCRibbonCategory` classe.  
@@ -315,7 +315,7 @@ CMFCRibbonPanel* AddPanel(
  [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
   
 ##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory  
- Construit et initialise un [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objet.  
+ Crée et initialise un [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objet.  
   
 ```  
 CMFCRibbonCategory(
@@ -362,7 +362,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData  
- Récupère l’élément de ruban associé aux données spécifiées.  
+ Récupère l’élément de ruban associé avec les données spécifiées.  
   
 ```  
 CMFCRibbonBaseElement* FindByData(
@@ -375,10 +375,10 @@ CMFCRibbonBaseElement* FindByData(
  Les données associées à un élément de ruban.  
   
  [in] *bVisibleOnly*  
- `TRUE` Pour inclure les éléments de ruban d’accès rapide dans la recherche ; `FALSE` pour exclure des éléments de ruban d’accès rapide dans la recherche.  
+ TRUE pour inclure les éléments de ruban d’accès rapide dans la recherche ; FALSE pour exclure des éléments de ruban d’accès rapide dans la recherche.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un élément de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -393,13 +393,13 @@ CMFCRibbonBaseElement* FindByID(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *uiCmdID*  
- ID de commande associée à un élément de ruban.  
+ ID de commande associé à un élément de ruban.  
   
  [in] *bVisibleOnly*  
- `TRUE` Pour inclure les éléments de ruban d’accès rapide dans la recherche ; `FALSE` pour exclure des éléments de ruban d’accès rapide dans la recherche.  
+ TRUE pour inclure les éléments de ruban d’accès rapide dans la recherche ; FALSE pour exclure des éléments de ruban d’accès rapide dans la recherche.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un élément de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -415,7 +415,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
  Pointeur vers un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un panneau de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un panneau de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -443,14 +443,14 @@ DWORD_PTR GetData() const;
  Les données définies par l’utilisateur qui sont associées à la catégorie de ruban.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown  
- Récupère un pointeur vers l’élément de ruban qui a actuellement son menu contextuel qui s’affiche.  
+ Récupère un pointeur vers l’élément de ruban qui a son menu contextuel qui s’affiche.  
   
 ```  
 CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un élément de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -463,11 +463,11 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [dans, out] *arElements*  
+ [in, out] *arElements*  
  Référence à un [CArray](../../mfc/reference/carray-class.md) d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
- Les éléments de ruban qui sont conçues pour une utilisation dans la barre d’outils Accès rapide sont inclus dans le tableau.  
+ Éléments de ruban qui sont conçus pour une utilisation dans la barre d’outils Accès rapide sont inclus dans le tableau.  
   
 ##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID  
  Récupère tous les éléments de ruban qui sont associés à l’ID de commande spécifiée.  
@@ -480,13 +480,13 @@ void GetElementsByID(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *uiCmdID*  
- ID de commande associée à un élément de ruban.  
+ ID de commande associé à un élément de ruban.  
   
- [dans, out] *arElements*  
+ [in, out] *arElements*  
  Référence à un [CArray](../../mfc/reference/carray-class.md) d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
- Les éléments de ruban qui sont conçues pour une utilisation dans la barre d’outils Accès rapide sont inclus dans le tableau.  
+ Éléments de ruban qui sont conçus pour une utilisation dans la barre d’outils Accès rapide sont inclus dans le tableau.  
   
 ##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement  
  Récupère le premier élément visible qui appartient à la catégorie de ruban.  
@@ -496,7 +496,7 @@ CMFCRibbonBaseElement* GetFirstVisibleElement() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le premier élément visible ; peut être `NULL` si la catégorie n’a pas d’éléments visibles.  
+ Pointeur vers le premier élément visible ; peut-être NULL si la catégorie n’a pas d’éléments visibles.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -508,7 +508,7 @@ CMFCRibbonBaseElement* GetFocused();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un élément ayant le focus ou `NULL`.  
+ Pointeur vers un élément ayant le focus ou la valeur NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -520,7 +520,7 @@ CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un élément en surbrillance ou `NULL` si aucun élément n’est mis en surbrillance.  
+ Un pointeur vers un élément en surbrillance ou de la valeur NULL si aucun élément n’est mis en surbrillance.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -533,7 +533,7 @@ int GetImageCount(BOOL bIsLargeImage) const;
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bIsLargeImage*  
- `TRUE` pour le nombre d’images dans la liste d’images de grande taille ; `FALSE` pour le nombre d’images dans la liste d’images miniatures.  
+ TRUE pour le nombre d’images dans la liste d’images de grande taille ; Si la valeur est FALSE, le nombre d’images dans la liste de petite image.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’images dans la liste d’images spécifiés.  
@@ -541,7 +541,7 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize  
- Récupère la taille d’une image dans la liste de l’image spécifiée qui est contenue dans la catégorie de ruban.  
+ Récupère la taille d’une image dans la liste d’images spécifié qui est contenue dans la catégorie de ruban.  
   
 ```  
 CSize GetImageSize(BOOL bIsLargeImage) const;  
@@ -549,16 +549,16 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bIsLargeImage*  
- `TRUE` pour la taille des images de grande taille ; `FALSE` pour la taille des petites images.  
+ TRUE pour la taille des images de grande taille ; Si la valeur est FALSE, la taille de petites images.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille d’une image dans la liste d’images spécifiés.  
   
 ### <a name="remarks"></a>Notes  
- La taille de récupérer inclut le facteur d’échelle image globale.  
+ La taille récupérée inclut le facteur d’échelle image globale.  
   
 ##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList  
- Récupère les ID de commande pour les éléments de ruban qui sont contenus dans la catégorie de ruban.  
+ Récupère l’ID de commande pour les éléments de ruban qui sont contenus dans la catégorie de ruban.  
   
 ```  
 void GetItemIDsList(
@@ -571,7 +571,7 @@ void GetItemIDsList(
  La liste des ID de commande pour les éléments de ruban dans la catégorie de ruban.  
   
  [in] *bHiddenOnly*  
- `TRUE` Pour exclure les éléments de ruban s’affichés sur les volets de ruban dans la catégorie de ruban ; `FALSE` pour inclure tous les éléments de ruban dans la catégorie de ruban.  
+ TRUE pour exclure des éléments de ruban affichés sur les panneaux de ruban dans la catégorie de ruban ; FALSE pour inclure tous les éléments de ruban dans la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -593,7 +593,7 @@ CMFCRibbonBaseElement* GetLastVisibleElement() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le dernier élément visible ; peut être `NULL` si la catégorie n’a pas d’éléments visibles.  
+ Pointeur vers le dernier élément visible ; peut-être NULL si la catégorie n’a pas d’éléments visibles.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -605,14 +605,14 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Pointeur vers un contexte de périphérique pour les volets de ruban.  
+ [in] *pDC*  
+ Pointeur vers un contexte de périphérique pour les panneaux de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur maximale de volets de ruban qui sont contenus dans la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
- La valeur récupérée inclut la hauteur des marges supérieure et inférieure pour les volets de ruban.  
+ La valeur récupérée inclut la hauteur des marges supérieure et inférieure pour les panneaux de ruban.  
   
 ##  <a name="getname"></a>  CMFCRibbonCategory::GetName  
  Récupère le nom de la catégorie de ruban.  
@@ -654,7 +654,7 @@ int GetPanelCount() const;
  Le nombre de volets de ruban dans la catégorie de ruban.  
   
 ##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint  
- Récupère un pointeur vers un panneau de ruban si le point spécifié se trouve dans celui-ci.  
+ Récupère un pointeur vers un panneau de ruban si le point spécifié se trouve qu’il contient.  
   
 ```  
 CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;  
@@ -662,10 +662,10 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
   
 ### <a name="parameters"></a>Paramètres  
  [in] *point*  
- Les coordonnées x et y du pointeur par rapport à l’angle supérieur gauche de la fenêtre.  
+ Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un panneau de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un panneau de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
  Uniquement les volets de ruban qui sont contenus dans la catégorie de ruban sont testés.  
@@ -679,10 +679,10 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pPanel*  
- Pointeur vers un volet du ruban.  
+ Pointeur vers un panneau de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro du Panneau de ruban spécifiée si la méthode a réussi ; Sinon,-1.  
+ Index de base zéro du Panneau de ruban spécifiée si la méthode a réussi ; sinon -1.  
   
 ### <a name="remarks"></a>Notes  
  Uniquement les volets de ruban qui sont contenus dans la catégorie de ruban sont recherchés.  
@@ -695,19 +695,19 @@ CMFCRibbonBaseElement* GetParentButton() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un pointeur vers l’élément de ruban parent, ou `NULL` s’il n’existe aucun élément parent.  
+ Retourne un pointeur vers l’élément de ruban de parent, ou NULL s’il n’existe aucun élément parent.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar  
- Retourne un pointeur vers la barre de menus de parent de la `CMFCRibbonCategory` objet.  
+ Retourne un pointeur vers la barre de menu parent de le `CMFCRibbonCategory` objet.  
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le contenu de la `m_pParentMenuBar` protégé du membre.  
+ Retourne le contenu de la `m_pParentMenuBar` protégé de membre.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -734,7 +734,7 @@ CRect GetRect() const;
  Le rectangle d’affichage pour la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
- Le rectangle d’affichage pour la catégorie de ruban n’inclut pas l’onglet catégorie.  
+ Le rectangle d’affichage pour la catégorie de ruban n’inclut pas l’onglet de catégorie.  
   
 ##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages  
  Récupère la liste des petites images qui figurent dans la catégorie de ruban.  
@@ -813,7 +813,7 @@ void GetVisibleElements(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel  
- Met en surbrillance le panneau de ruban spécifiée.  
+ Met en évidence le panneau de ruban spécifiée.  
   
 ```  
 CMFCRibbonPanel* HighlightPanel(
@@ -826,16 +826,16 @@ CMFCRibbonPanel* HighlightPanel(
  Pointeur vers le volet du ruban pour mettre en surbrillance.  
   
  [in] *point*  
- Les coordonnées x et y du pointeur par rapport à l’angle supérieur gauche de la fenêtre.  
+ Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le volet du ruban précédemment mis en surbrillance ; dans le cas contraire `NULL` si aucun panneau de ruban n’est mis en surbrillance lorsque cette méthode est appelée.  
+ Pointeur vers le volet du ruban précédemment mis en surbrillance ; Sinon, NULL si aucun volet du ruban n’est mis en surbrillance lorsque cette méthode est appelée.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la mise en surbrillance d’un panneau de ruban, consultez [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).  
   
 ##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest  
- Récupère un pointeur vers un élément de ruban si le point spécifié se trouve dans celui-ci.  
+ Récupère un pointeur vers un élément de ruban si le point spécifié se trouve qu’il contient.  
   
 ```  
 CMFCRibbonBaseElement* HitTest(
@@ -848,16 +848,16 @@ CMFCRibbonBaseElement* HitTest(
  Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
   
  [in] *bCheckPanelCaption*  
- `TRUE` Pour tester la légende du Panneau de ruban ; `FALSE` à exclure de la légende du Panneau de ruban.  
+ TRUE pour tester la légende du Panneau de ruban ; FALSE pour exclure la légende du Panneau de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un élément de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
  Uniquement les éléments de ruban qui sont contenus dans la catégorie de ruban sont testés.  
   
 ##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx  
- Récupère l’index de base zéro d’un élément de ruban si le point spécifié se trouve dans celui-ci.  
+ Récupère l’index de base zéro d’un élément de ruban si le point spécifié se trouve qu’il contient.  
   
 ```  
 int HitTestEx(CPoint point) const;  
@@ -868,13 +868,13 @@ int HitTestEx(CPoint point) const;
  Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro d’un élément de ruban si la méthode a réussi ; Sinon,-1.  
+ Index de base zéro d’un élément de ruban si la méthode a réussi ; sinon -1.  
   
 ### <a name="remarks"></a>Notes  
  Uniquement les éléments de ruban qui sont contenus dans la catégorie de ruban sont testés.  
   
 ##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons  
- Si un point se situe dans un bouton de défilement de gauche ou droite d’une catégorie de ruban, retourne un pointeur vers ce bouton.  
+ Si un point se situe dans le bouton de défilement gauche ou droite d’une catégorie de ruban, retourne un pointeur vers ce bouton.  
   
 ```  
 CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;  
@@ -885,7 +885,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
  Point à tester.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si *point* se situe dans le rectangle englobant de la gauche ou sur le bouton de défilement vers la droite de la catégorie de ruban, retourne un pointeur vers ce bouton ou dans le cas contraire, retourne `NULL`.  
+ Si *point* se situe dans le rectangle englobant de la gauche ou sur le bouton de défilement vers la droite de la catégorie de ruban, retourne un pointeur vers ce bouton ou sinon, retourne NULL.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -897,7 +897,7 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la catégorie de ruban est la catégorie active ; dans le cas contraire `FALSE`.  
+ TRUE si la catégorie de ruban est la catégorie active ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  La catégorie de ruban active affiche ses volets de ruban.  
@@ -910,7 +910,7 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la catégorie de ruban est visible ; dans le cas contraire `FALSE`.  
+ TRUE si la catégorie de ruban est visible ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Les catégories de ruban qui sont visibles s’affichent un onglet de catégorie.  
@@ -923,12 +923,12 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si le ruban parent a Windows 7 rechercher ; dans le cas contraire `FALSE`.  
+ TRUE si le ruban parent a Windows 7 à rechercher ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand  
- Fournit un message de commande WM_NOTIFY à tous les `CMFCRibbonPanel` éléments dans le `CMFCRibbonCategory` jusqu'à ce que le message est géré.  
+ Remet un message de commande WM_NOTIFY à tous les `CMFCRibbonPanel` éléments dans le `CMFCRibbonCategory` jusqu'à ce que le message est traité.  
   
 ```  
 virtual BOOL NotifyControlCommand(
@@ -940,7 +940,7 @@ virtual BOOL NotifyControlCommand(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bAccelerator*  
- `TRUE` Si cette commande provenance d’un accélérateur, ou `FALSE` dans le cas contraire.  
+ TRUE si cette commande provenant d’un accélérateur, ou FALSE dans le cas contraire.  
   
  [in] *nNotifyCode*  
  Le code de notification.  
@@ -952,12 +952,12 @@ virtual BOOL NotifyControlCommand(
  Le champ LPARAM du message.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `TRUE` si le message a été géré, ou `FALSE` si ce n’est pas le cas.  
+ Retourne la valeur TRUE si le message a été géré, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode  
- Appelle mode Annuler dans tous les `CMFCRibbonPanel` éléments de la `CMFCRibbonCategory`.  
+ Appelle mode annulation dans tous les `CMFCRibbonPanel` éléments de la `CMFCRibbonCategory`.  
   
 ```  
 virtual void OnCancelMode();
@@ -973,7 +973,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers un contexte de périphérique pour la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -992,7 +992,7 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers un contexte de périphérique pour l’image.  
   
  [in] *rect*  
@@ -1002,16 +1002,16 @@ virtual BOOL OnDrawImage(
  Pointeur vers l’élément de ruban qui contient l’image.  
   
  [in] *bIsLargeImage*  
- `TRUE` Si l’image est la taille ; `FALSE` si l’image est la petite taille.  
+ TRUE si l’image est la grande taille ; FALSE si l’image est la petite taille.  
   
  [in] *nImageIndex*  
  Index de base zéro de l’image dans le tableau de l’image qui est contenu dans la catégorie de ruban.  
   
  [in] *bCenter*  
- `TRUE` Pour centrer l’image dans le rectangle d’affichage ; `FALSE` pour dessiner l’image dans le coin supérieur gauche du rectangle d’affichage.  
+ TRUE pour centrer l’image dans le rectangle d’affichage ; Pour dessiner l’image dans le coin supérieur gauche du rectangle d’affichage, la valeur est FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la méthode a réussi ; dans le cas contraire `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1025,7 +1025,7 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Ce paramètre n'est pas utilisé.  
   
  [in] *pMenuBar*  
@@ -1042,7 +1042,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *nChar*  
+ *NChar*  
  Le code de touche virtuelle pour un utilisateur a appuyé sur la clé.  
   
 ### <a name="remarks"></a>Notes  
@@ -1059,12 +1059,12 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
  Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un élément de ruban si la méthode a réussi ; dans le cas contraire `NULL`.  
+ Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp  
- Appelé par le framework lorsque l’utilisateur relâche le bouton gauche de la souris et que le pointeur est sur la catégorie de ruban.  
+ Appelé par le framework lorsque l’utilisateur relâche le bouton gauche de la souris et le pointeur est sur la catégorie de ruban.  
   
 ```  
 virtual void OnLButtonUp(CPoint point);
@@ -1072,7 +1072,7 @@ virtual void OnLButtonUp(CPoint point);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *point*  
- Les coordonnées x et y du pointeur par rapport à l’angle supérieur gauche de la fenêtre.  
+ Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1085,7 +1085,7 @@ virtual void OnMouseMove(CPoint point);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *point*  
- Les coordonnées x et y du pointeur par rapport à l’angle supérieur gauche de la fenêtre.  
+ Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1098,7 +1098,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bIsRTL*  
- `TRUE` Si la disposition est de droite à gauche ; `FALSE` si la disposition est de gauche à droite.  
+ TRUE si la disposition est de droite à gauche ; FALSE si la disposition est de gauche à droite.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode ajuste la disposition de tous les volets de ruban et les éléments de ruban qui sont contenus dans la catégorie de ruban.  
@@ -1114,18 +1114,18 @@ virtual BOOL OnScrollHorz(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *bScrollLeft*  
- `TRUE` Pour faire défiler vers la gauche. `FALSE` pour faire défiler vers la droite.  
+ TRUE pour faire défiler vers la gauche. FALSE pour faire défiler vers la droite.  
   
  [in] *nScrollOffset*  
  La distance de défilement, en pixels.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` Si la catégorie de ruban déplacé dans le sens horizontal ; dans le cas contraire `FALSE`.  
+ TRUE si la catégorie de ruban est déplacé dans le sens horizontal ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI  
- Appelle le `OnUpdateCmdUI` fonction membre dans chacun de la `CMFCRibbonPanel` les éléments de la `CMFCRibbonCategory` pour activer ou désactiver les éléments d’interface utilisateur dans les.  
+ Appelle le `OnUpdateCmdUI` fonction membre dans chacune de la `CMFCRibbonPanel` les éléments de la `CMFCRibbonCategory` pour activer ou désactiver les éléments d’interface utilisateur dans les.  
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1142,19 +1142,19 @@ virtual void OnUpdateCmdUI(
  Pointeur vers la fenêtre qui contrôle l’activation ou la désactivation des éléments d’interface utilisateur.  
   
  [in] *bDisableIfNoHndler*  
- `TRUE` Pour désactiver l’élément d’interface utilisateur si aucun gestionnaire n’est défini dans une table des messages ; dans le cas contraire, `FALSE`.  
+ TRUE pour désactiver l’élément d’interface utilisateur si aucun gestionnaire n’est défini dans une table des messages ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout  
- Ajuste la disposition de tous les contrôles de la catégorie de ruban.  
+ Ajuste la disposition de tous les contrôles sur la catégorie de ruban.  
   
 ```  
 virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers un contexte de périphérique pour la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
@@ -1173,10 +1173,10 @@ BOOL RemovePanel(
  Le numéro d’index du panneau à supprimer. Obtenu en appelant le [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) (méthode).  
   
  [in] *bDelete*  
- `TRUE` Pour supprimer l’objet du Panneau de configuration de la mémoire. `FALSE` pour supprimer l’objet du Panneau de configuration sans la supprimer.  
+ TRUE pour supprimer l’objet de panneau de configuration de la mémoire ; FALSE pour supprimer l’objet de panneau de configuration sans la supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE` si la méthode a réussi ; sinon, `FALSE`.  
+ TRUE si la méthode a réussi ; Sinon, FALSE.  
   
 ##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels  
  Ajuste la disposition de tous les contrôles sur les panneaux de ruban qui sont contenus dans la catégorie de ruban.  
@@ -1186,13 +1186,13 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers un contexte de périphérique pour les panneaux de ruban qui sont contenus dans la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder  
- Définit l’ordre dans lequel les panneaux de ruban de la catégorie de ruban réduits.  
+ Définit l’ordre dans lequel réduire les panneaux de ruban de la catégorie de ruban.  
   
 ```  
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
@@ -1203,14 +1203,14 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
  Spécifie l’ordre de réduction. Le tableau contient des index de base zéro de volets de ruban.  
   
 ### <a name="remarks"></a>Notes  
- La bibliothèque définit l’ordre de réduction. Toutefois, vous pouvez personnaliser ce comportement en fournissant à la catégorie de la liste des index qui spécifie l’ordre de réduction.  
+ La bibliothèque définit l’ordre de réduction. Toutefois, vous pouvez personnaliser ce comportement en fournissant la catégorie avec la liste des index qui spécifie l’ordre de réduction.  
   
- Lors de la catégorie détecte qu’il doit réduire un panneau de ruban, il recherche l’élément suivant dans la liste spécifiée. Si la liste est vide, ou vous n’avez pas spécifié suffisamment d’éléments, la catégorie utilise l’algorithme interne.  
+ Lorsque la catégorie détecte qu’il a réduire un panneau de ruban, il recherche l’élément suivant dans la liste spécifiée. Si la liste est vide, ou vous n’avez pas spécifié suffisamment d’éléments, la catégorie utilise l’algorithme interne.  
   
- Par exemple, la catégorie comporte trois volets de ruban et peut être réduite à plusieurs reprises jusqu'à ce que tous les panneaux sont dans l’état complètement réduite. Vous pouvez définir l’ordre de réduction suivant : 0, 0, 2, 2. Dans ce cas, la catégorie réduira le panneau 0 deux fois, le panneau de configuration 2 à deux reprises. Le panneau de configuration qui possède l’index 1 reste développée.  
+ Par exemple, la catégorie a trois volets de ruban et peut être réduite à plusieurs reprises jusqu'à ce que tous les panneaux sont dans un état complètement réduit. Vous pouvez définir l’ordre de réduction suivant : 0, 0, 2, 2. Dans ce cas, la catégorie réduira le panneau 0 deux fois, le panneau 2 deux fois. Le panneau qui possède l’index 1 reste développée.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le `SetCollapseOrder` méthode dans la `CMFCRibbonCategory` classe. L’exemple montre comment construire un tableau de la commande de réduction et comment définir l’ordre de la réduire à la catégorie de ruban.  
+ L’exemple suivant montre comment utiliser le `SetCollapseOrder` méthode dans la `CMFCRibbonCategory` classe. L’exemple montre comment construire un tableau pour la commande de réduction et comment définir l’ordre de réduire à la catégorie de ruban.  
   
  [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
   
@@ -1237,10 +1237,10 @@ void SetKeys(LPCTSTR lpszKeys);
  Le texte de la touche d’accès.  
   
 ### <a name="remarks"></a>Notes  
- Touches d’accès sont affichés lorsque l’utilisateur appuie sur la touche Alt ou F10.  
+ Combinaisons de touches sont affichées lorsque l’utilisateur appuie sur la touche Alt ou F10.  
   
 ##  <a name="setname"></a>  CMFCRibbonCategory::SetName  
- Affecte un nom et une touche d’accès à la catégorie de ruban.  
+ Assigne un nom et une touche d’accès à la catégorie de ruban.  
   
 ```  
 void SetName(LPCTSTR lpszName);
@@ -1251,7 +1251,7 @@ void SetName(LPCTSTR lpszName);
  Le nom et la touche d’accès de la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
- Pour définir la touche d’accès pour la catégorie de ruban, ajoutez une séquence d’échappement de saut de ligne suivie par les caractères de touche d’accès à *le caractère*.  
+ Pour définir la touche d’accès pour la catégorie de ruban, ajoutez une séquence d’échappement de saut de ligne suivie par les caractères de la touche d’accès à *le caractère*.  
   
 ##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor  
  Définit la couleur de la catégorie de ruban.  

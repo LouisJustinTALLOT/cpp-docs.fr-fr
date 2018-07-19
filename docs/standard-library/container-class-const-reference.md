@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935898197455715160e463d1b272e55ab368eab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cabc805f826c0e4d89fc9506e6a019632bdcd8c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956244"
 ---
 # <a name="container-classconstreference"></a>Conteneur Class::const_reference
 
@@ -37,7 +37,7 @@ typedef T3 const_reference;
 
 ## <a name="remarks"></a>Notes
 
-Il est décrit ici comme un synonyme du type non spécifié **T3** (généralement, **Alloc::const_reference**).
+Il est décrit ici comme un synonyme du type non spécifié `T3` (généralement `Alloc::const_reference`).
 
 ## <a name="see-also"></a>Voir aussi
 

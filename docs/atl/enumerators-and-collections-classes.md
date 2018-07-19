@@ -1,5 +1,5 @@
 ---
-title: Les énumérateurs et les Classes de Collections (ATL) | Documents Microsoft
+title: Les Classes de Collections (ATL) et les énumérateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe8dfb4610b88b9a53e90b7af5f52b4d1c2807f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355644"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847880"
 ---
 # <a name="enumerators-and-collections-classes"></a>Classes de Collections et énumérateurs
-Les classes suivantes fournissent la prise en charge pour les collections de COM et les énumérations :  
+Les classes suivantes fournissent la prise en charge des énumérations et des collections de COM :  
   
--   [CComEnum](../atl/reference/ccomenum-class.md) objet d’énumérateur définit COM basé sur un tableau.  
+-   [CComEnum](../atl/reference/ccomenum-class.md) objet d’énumérateur définit une COM basé sur un tableau.  
   
--   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau.  
+-   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) fournit l’implémentation pour une interface d’énumérateur COM dans lequel les éléments énumérés sont stockés dans un tableau.  
   
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) objet d’énumérateur définit COM basé sur une collection de la bibliothèque C++ Standard.  
+-   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) objet d’énumérateur définit une COM basé sur une collection de la bibliothèque C++ Standard.  
   
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un conteneur de bibliothèque C++ Standard compatible.  
+-   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fournit l’implémentation pour une interface d’énumérateur COM dans lequel les éléments énumérés sont stockés dans un conteneur de bibliothèque C++ Standard compatible.  
   
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fournit l’implémentation pour la **nombre**, **élément**, et `_NewEnum` propriétés d’une interface de collection.  
+-   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fournit l’implémentation pour le `Count`, `Item`, et `_NewEnum` propriétés d’une interface de collection.  
   
 ## <a name="related-articles"></a>Articles connexes  
  [Collections ATL et énumérateurs](../atl/atl-collections-and-enumerators.md)  

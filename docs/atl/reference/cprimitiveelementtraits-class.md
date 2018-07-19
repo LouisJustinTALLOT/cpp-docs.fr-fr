@@ -1,5 +1,5 @@
 ---
-title: Classe de CPrimitiveElementTraits | Documents Microsoft
+title: Cprimitiveelementtraits, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359141"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885807"
 ---
-# <a name="cprimitiveelementtraits-class"></a>Classe de CPrimitiveElementTraits
-Cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée des types de données primitifs.  
+# <a name="cprimitiveelementtraits-class"></a>Cprimitiveelementtraits, classe
+Cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée de types de données primitifs.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Le type de données à stocker dans l’objet de classe de collection.  
   
 ## <a name="members"></a>Membres  
@@ -50,9 +50,9 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe fournit les fonctions statiques par défaut et les méthodes pour déplacer, copier, comparaison et hachage des éléments de type de données primitif stockées dans un objet de classe de collection.  
+ Cette classe fournit des méthodes pour déplacer, copier, comparaison et des éléments de type de données primitif stockés dans un objet de classe de collection de hachage et les fonctions statiques par défaut.  
   
- Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -65,7 +65,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
   
  `CPrimitiveElementTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
@@ -83,5 +83,5 @@ typedef T& OUTARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Cdefaultelementtraits, classe](../../atl/reference/cdefaultelementtraits-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

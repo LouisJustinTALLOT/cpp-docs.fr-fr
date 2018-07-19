@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb5e2511dadb9b9003dc760b9edc89dd2a95996
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 104ac3531d371eb1a4e35905fa974a381b6f8334
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843494"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955746"
 ---
 # <a name="container-classconstiterator"></a>Conteneur Class::const_iterator
 
@@ -37,7 +37,7 @@ typedef T6 const_iterator;
 
 ## <a name="remarks"></a>Notes
 
-Il est décrit ici comme un synonyme du type non spécifié **T6**.
+Il est décrit ici comme un synonyme du type non spécifié `T6`.
 
 ## <a name="see-also"></a>Voir aussi
 

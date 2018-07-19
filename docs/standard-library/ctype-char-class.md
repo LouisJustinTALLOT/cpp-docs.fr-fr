@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845997"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960659"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;, classe
 
-Classe constituant une spécialisation explicite de la classe de modèle **ctype\<CharType**> en type `char`, décrivant un objet qui peut servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type `char`.
+La classe est une spécialisation explicite de la classe de modèle `ctype\<CharType>` à taper **char**, décrivant un objet pouvant servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type **char**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -132,21 +132,21 @@ protected:
 
 La spécialisation explicite diffère de la classe de modèle de plusieurs façons :
 
-- Un objet de classe ctype< `char`> stocke un pointeur vers le premier élément d’un tableau de masque ctype, un tableau de UCHAR_MAX + 1 éléments de type **ctype_base::mask**. Il stocke également un objet booléen qui indique si le tableau doit être supprimé (à l’aide de `operator delete[]`) quand l’objet ctype\< **Elem**> est détruit.
+- Un objet de classe ctype < `char`> stocke un pointeur vers le premier élément d’un tableau de masque ctype, un tableau de UCHAR_MAX + 1 éléments de type `ctype_base::mask`. Il stocke également un objet booléen qui indique si le tableau doit être supprimé (à l’aide de `operator delete[]`) quand l’objet ctype\< **Elem**> est détruit.
 
-- Son seul constructeur public vous permet de spécifier **tab**, le tableau de masque ctype, et **del**, l’objet booléen qui a la valeur true si le tableau doit être supprimé quand l’objet ctype< `char`> est détruit, ainsi que les références de paramètre reference-count.
+- Son seul constructeur public vous permet de spécifier `tab`, le tableau de masque ctype, et `del`, l’objet booléen qui a la valeur true si le tableau doit être supprimé quand la ctype < `char`> objet est détruit, ainsi que le décompte de références références de paramètre.
 
-- La fonction membre protégée **table** retourne le tableau de masque ctype stocké.
+- La fonction membre protégée `table` retourne le tableau de masque ctype stocké.
 
-- L’objet de membre statique **table_size** spécifie le nombre minimal d’éléments dans un tableau de masque ctype.
+- L’objet membre statique `table_size` Spécifie le nombre minimal d’éléments dans un tableau de masque ctype.
 
-- La fonction membre statique protégée **classic_table**( retourne le tableau de masque ctype approprié pour les paramètres régionaux « C ».
+- La fonction membre statique protégée `classic_table`(retourne le tableau de masque ctype approprié pour les paramètres régionaux « C ».
 
 - Il n’y a aucune fonction membre virtuelle protégée [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) ou [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Les fonctions membres publiques correspondantes effectuent les opérations équivalentes.
 
 Les fonctions membres [do_narrow](../standard-library/ctype-class.md#do_narrow) et [do_widen](../standard-library/ctype-class.md#do_widen) copient des éléments non modifiés.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 

@@ -1,5 +1,5 @@
 ---
-title: WINDOWPOS Structure1 | Documents Microsoft
+title: WINDOWPOS, Structure1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379292"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885960"
 ---
-# <a name="windowpos-structure1"></a>WINDOWPOS Structure1
+# <a name="windowpos-structure1"></a>WINDOWPOS, Structure1
 Le `WINDOWPOS` structure contient des informations sur la taille et la position d’une fenêtre.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -53,42 +53,42 @@ typedef struct tagWINDOWPOS { /* wp */
  *y*  
  Spécifie la position du bord droit de la fenêtre.  
   
- `cx`  
+ *CX*  
  Spécifie la largeur de la fenêtre, en pixels.  
   
- `cy`  
+ *CY*  
  Spécifie la hauteur de la fenêtre, en pixels.  
   
- `flags`  
+ *flags*  
  Spécifie les options de positionnement de fenêtre. Ce membre peut être une des valeurs suivantes :  
   
-- **SWP_DRAWFRAME** Dessine une image (définie dans la description de la classe de la fenêtre) autour de la fenêtre. La fenêtre reçoit un `WM_NCCALCSIZE` message.  
+- SWP_DRAWFRAME Dessine un frame (défini dans la description de la classe de la fenêtre) autour de la fenêtre. La fenêtre reçoit un message WM_NCCALCSIZE.  
   
-- **SWP_FRAMECHANGED** envoie un `WM_NCCALCSIZE` de message à la fenêtre, même si la taille de la fenêtre n’est pas modifiée. Si cet indicateur n’est pas spécifié, `WM_NCCALCSIZE` est envoyée uniquement lorsque la taille de la fenêtre est modifiée.  
+- SWP_FRAMECHANGED envoie un WM_NCCALCSIZE du message à la fenêtre, même si la taille de la fenêtre n’est pas en cours de modification. Si cet indicateur n’est pas spécifié, WM_NCCALCSIZE est envoyée uniquement lorsque la taille de la fenêtre est en cours de modification.  
   
-- **SWP_HIDEWINDOW** masque la fenêtre.  
+- SWP_HIDEWINDOW masque la fenêtre.  
   
-- `SWP_NOACTIVATE` N’active pas la fenêtre.  
+- SWP_NOACTIVATE ne s’active pas la fenêtre.  
   
-- **SWP_NOCOPYBITS** ignore tout le contenu de la zone cliente. Si cet indicateur n’est pas spécifié, le contenu valid de la zone cliente est enregistré et copié dans la zone cliente une fois que la fenêtre est dimensionnée ou repositionnée.  
+- SWP_NOCOPYBITS ignore tout le contenu de la zone cliente. Si cet indicateur n’est pas spécifié, le contenu valid de la zone cliente est enregistré et copié dans la zone cliente, une fois que la fenêtre est dimensionnée ou repositionnée.  
   
-- `SWP_NOMOVE` Conserve la position actuelle (ignore le **x** et **y** membres).  
+- SWP_NOMOVE conserve la position actuelle (ignore le `x` et `y` membres).  
   
-- **SWP_NOOWNERZORDER** ne modifie pas la position de la fenêtre propriétaire dans l’ordre de plan.  
+- SWP_NOOWNERZORDER changent position de la fenêtre propriétaire dans l’ordre de plan.  
   
-- `SWP_NOSIZE` Conserve la taille actuelle (ignore le **cx** et **cy** membres).  
+- SWP_NOSIZE conserve la taille actuelle (ignore le `cx` et `cy` membres).  
   
-- **SWP_NOREDRAW** ne redessine pas les modifications.  
+- Ne de SWP_NOREDRAW ne redessine pas les modifications.  
   
-- **SWP_NOREPOSITION** identique **SWP_NOOWNERZORDER**.  
+- SWP_NOREPOSITION identique à SWP_NOOWNERZORDER.  
   
-- **SWP_NOSENDCHANGING** empêche la fenêtre de réception le `WM_WINDOWPOSCHANGING` message.  
+- SWP_NOSENDCHANGING empêche la fenêtre de réception du message WM_WINDOWPOSCHANGING.  
   
-- `SWP_NOZORDER` Conserve le classement actuel (ignore le **hwndInsertAfter** membre).  
+- SWP_NOZORDER conserve le classement actuel (ignore le `hwndInsertAfter` membre).  
   
-- **SWP_SHOWWINDOW** affiche la fenêtre.  
+- SWP_SHOWWINDOW affiche la fenêtre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

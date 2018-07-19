@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864162"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958528"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution, classe
 
@@ -78,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, `double`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur, ou du type `double` si aucun n'est fourni, distribuées selon une loi log-normale. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur type ou type **double** si aucun n’est fourni, distribuées en fonction de la Distribution normale logarithmique. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -187,7 +187,7 @@ Distribution for 10 samples:
     10: 5.4406507912
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -208,7 +208,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 *s* le `s` paramètre de distribution.
 
-*paramètre de* le `param_type` structure utilisée pour construire la distribution.
+*parm* le `param_type` structure utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 

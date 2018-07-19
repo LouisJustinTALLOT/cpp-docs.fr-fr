@@ -1,5 +1,5 @@
 ---
-title: À l’aide de IDispEventImpl (ATL) | Documents Microsoft
+title: Utilisation d’IDispEventImpl (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 520d1129234a26ff6eb4c402154969ad7e166211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361149"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848926"
 ---
-# <a name="using-idispeventimpl"></a>À l’aide de IDispEventImpl
-Lorsque vous utilisez `IDispEventImpl` pour gérer des événements, vous devez :  
+# <a name="using-idispeventimpl"></a>Utilisation d’IDispEventImpl
+Lorsque vous utilisez `IDispEventImpl` pour gérer les événements, vous devez :  
   
 -   Dérivez votre classe de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
@@ -32,12 +32,12 @@ Lorsque vous utilisez `IDispEventImpl` pour gérer des événements, vous devez�
   
 -   Ajouter des entrées à la carte de récepteur événement à l’aide du [aide de SINK_ENTRY](reference/composite-control-macros.md#sink_entry) ou [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) (macro).  
   
--   Implémentez les méthodes que vous êtes intéressé par la gestion.  
+-   Implémenter les méthodes qui vous intéresse dans la gestion des.  
   
--   Conseille et déconseiller la source d’événements.  
+-   Et désinformation la source d’événements.  
   
 ## <a name="example"></a>Exemple  
- L’exemple ci-dessous montre comment gérer les **DocumentChange** événements déclenchement par de Word **Application** objet. Cet événement est défini en tant que méthode sur le **ApplicationEvents** dispinterface.  
+ L’exemple ci-dessous montre comment gérer les `DocumentChange` événements déclenchement par de Word **Application** objet. Cet événement est défini en tant que méthode sur le `ApplicationEvents` dispinterface.  
   
  L’exemple est issu le [exemple ATLEventHandling](../visual-cpp-samples.md).  
   
@@ -69,11 +69,11 @@ Lorsque vous utilisez `IDispEventImpl` pour gérer des événements, vous devez�
   
  `};`  
   
- L’exemple utilise `#import` pour générer les fichiers d’en-tête requis à partir de la bibliothèque de types de Word. Si vous souhaitez utiliser cet exemple avec d’autres versions de Word, vous devez spécifier le fichier dll mso approprié. Par exemple, Office 2000 fournit mso9.dll et OfficeXP fournit mso.dll. Ce code est simplifié de stdafx.h :  
+ L’exemple utilise `#import` pour générer les fichiers d’en-tête requis à partir de la bibliothèque de types de Word. Si vous souhaitez utiliser cet exemple avec d’autres versions de Word, vous devez spécifier le fichier mso dll approprié. Par exemple, Office 2000 fournit mso9.dll et OfficeXP fournit mso.dll. Ce code est simplifié dans stdafx.h :  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- Le code suivant s’affiche dans NotSoSimple.h. Le code est indiqué par des commentaires :  
+ Le code suivant s’affiche dans NotSoSimple.h. Le code correspondant est indiqué par des commentaires :  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   

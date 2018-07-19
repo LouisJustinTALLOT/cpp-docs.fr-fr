@@ -1,5 +1,5 @@
 ---
-title: Classe de CDWordArray | Documents Microsoft
+title: Cdwordarray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,14 +52,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b06364aeb75ef57d02946a6799e80cf44c21c733
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335703"
 ---
-# <a name="cdwordarray-class"></a>Classe de CDWordArray
+# <a name="cdwordarray-class"></a>Cdwordarray, classe
 Prend en charge les tableaux de mots doubles de 32 bits.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -69,7 +69,7 @@ class CDWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Membres  
- Les fonctions membres de `CDWordArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction ou de valeur de retour, remplacez un `DWORD`.  
+ Les fonctions membres de `CDWordArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez un `DWORD`.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CDWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libère toute la mémoire inutilisée au-dessus de la limite supérieure actuelle.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retourne la valeur à un index donné.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtient le nombre d'éléments dans ce tableau.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtient le nombre d'éléments dans ce tableau.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retourne le plus grand index valide.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|  
@@ -109,19 +109,19 @@ class CDWordArray : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[[] De CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
+|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
   
 ## <a name="remarks"></a>Notes  
- `CDWordArray` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau de mots doubles est stocké dans une archive, soit à l’insertion surchargée ( **<<**) (opérateur) ou avec la `Serialize` la fonction membre, chaque élément est, à son tour, sérialisé.  
+ `CDWordArray` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si un tableau de mots doubles est stocké dans une archive, soit avec l’insertion surchargée ( **<<**) opérateur ou avec le `Serialize` fonction membre, chaque élément est, à son tour, sérialisé.  
   
 > [!NOTE]
 >  Avant d'utiliser un tableau, utilisez `SetSize` pour définir sa taille et lui allouer la mémoire nécessaire. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  
   
- Si vous devez déboguer des éléments individuels dans le tableau, vous devez définir la profondeur de la `CDumpContext` objet à 1 ou supérieur.  
+ Si vous avez besoin de la sortie à partir des éléments individuels dans le tableau de débogage, vous devez définir la profondeur de la `CDumpContext` objet à 1 ou supérieur.  
   
  Pour plus d’informations sur l’utilisation de `CDWordArray`, consultez l’article [Collections](../../mfc/collections.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonFontComboBox | Documents Microsoft
+title: Cmfcribbonfontcombobox, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,14 +32,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039373"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852521"
 ---
-# <a name="cmfcribbonfontcombobox-class"></a>Classe de CMFCRibbonFontComboBox
+# <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox, classe
 Implémente une zone de liste déroulante contenant une liste de polices. Vous placez la zone de liste déroulante sur un panneau de ruban.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -116,7 +116,7 @@ void BuildFonts(
  Spécifie la hauteur et la famille de polices à ajouter.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
- Construit et initialise un [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objet.  
+ Crée et initialise un [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objet.  
   
 ```  
 CMFCRibbonFontComboBox(
@@ -129,24 +129,24 @@ CMFCRibbonFontComboBox(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *nID*  
- L’ID de commande de la commande qui s’exécute lorsque l’utilisateur sélectionne un élément dans la zone de liste déroulante.  
+ ID de commande de la commande qui s’exécute lorsque l’utilisateur sélectionne un élément dans la zone de liste déroulante.  
   
  [in] *nFontType*  
- Spécifie les types de police à afficher dans la zone de liste déroulante. Les options valides sont **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, et **TRUETYPE_FONTTYPE**, ou toute autre combinaison au niveau du bit.  
+ Spécifie les types de police à afficher dans la zone de liste déroulante. Les options valides sont DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE ou toute autre combinaison au niveau du bit de ces options.  
   
  [in] *nCharSet*  
- Filtre les polices dans la zone de liste déroulante à ceux qui appartiennent au jeu de caractères spécifié...  
+ Filtre les polices dans la zone de liste déroulante pour ceux qui appartiennent au jeu de caractères spécifié...  
   
  [in] *nPitchAndFamily*  
- Spécifie la hauteur et la famille de polices qui s’affichent dans la zone de liste déroulante.  
+ Spécifie la hauteur et la famille de polices qui sont affichés dans la zone de liste déroulante.  
   
  [in] *nWidth*  
  Spécifie la largeur, en pixels, de la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations sur les éventuelles *nFontType* les valeurs de paramètre, consultez [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du Kit de développement logiciel Windows.  
+ Pour plus d’informations sur les éventuelles *nFontType* les valeurs de paramètre, consultez [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du SDK Windows.  
   
- Pour plus d’informations sur les jeux de caractères valide qui peut être assigné à *nCharSet*et les valeurs valides qui peuvent être affectés à *nPitchAndFamily*, consultez [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) dans le Documentation du Kit de développement logiciel Windows.  
+ Pour plus d’informations sur les jeux de caractères valide qui peut être affecté à *nCharSet*et les valeurs valides qui peuvent être affectés à *nPitchAndFamily*, consultez [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) dans le Documentation du Kit de développement logiciel Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -163,14 +163,14 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts  
- Remplit la zone de liste déroulante du ruban avec des polices, d’un type de police spécifié précédemment, le jeu de caractères et la tonalité et la famille.  
+ Remplit la zone de liste déroulante du ruban avec des polices d’un type de police spécifié précédemment, le jeu de caractères et pas et la famille.  
   
 ```  
 void RebuildFonts();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez spécifier le type de police, le jeu de caractères, et pas et la famille de polices à inclure dans la liste déroulante de police du ruban zone le [constructeur](#cmfcribbonfontcombobox) à cette classe, ou en appelant [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
+ Vous pouvez spécifier le type de police, le jeu de caractères, et pas et la famille de polices à inclure dans la liste déroulante de police du ruban zone le [constructeur](#cmfcribbonfontcombobox) pour cette classe, ou en appelant [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
 ##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont  
  Sélectionne la police spécifiée dans la zone de liste modifiable.  
@@ -187,13 +187,13 @@ BOOL SetFont(
  Spécifie le nom de la police à sélectionner.  
   
  *nCharSet*  
- Spécifie le jeu de caractères de la police sélectionnée.  
+ Spécifie le jeu de caractères pour la police sélectionnée.  
   
  *bExact*  
- `TRUE` Pour spécifier que le jeu de caractères doit correspondre à lors de la sélection d’une police ; `FALSE` pour spécifier que le jeu de caractères peut être ignoré lors de la sélection d’une police.  
+ TRUE pour spécifier que le jeu de caractères doit correspondre à lors de la sélection d’une police ; FALSE pour indiquer que le jeu de caractères peut être ignoré lors de la sélection d’une police.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la police spécifiée est introuvable et est sélectionnée ; Sinon, zéro.  
+ Différent de zéro si la police spécifiée a été trouvée et sélectionnée ; Sinon, zéro.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -205,7 +205,7 @@ BYTE GetCharSet() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Jeu de caractères (voir LOGFONT dans la documentation du Kit de développement).  
+ Jeu de caractères (voir LOGFONT dans la documentation du SDK Windows).  
   
 ### <a name="remarks"></a>Notes  
   
@@ -217,7 +217,7 @@ int GetFontType() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Types de polices (voir EnumFontFamProc dans la documentation du Kit de développement).  
+ Types de police (voir EnumFontFamProc dans la documentation du SDK Windows).  
   
 ### <a name="remarks"></a>Notes  
   
@@ -229,7 +229,7 @@ BYTE GetPitchAndFamily() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Espacement et la famille (voir LOGFONT dans la documentation du Kit de développement).  
+ Pas et la famille (voir LOGFONT dans la documentation du SDK Windows).  
   
 ### <a name="remarks"></a>Notes  
   

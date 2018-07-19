@@ -1,5 +1,5 @@
 ---
-title: Classe de CD2DSizeU | Documents Microsoft
+title: Classe du CD2DSizeU | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335839"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU, classe
 Wrapper pour D2D1_SIZE_U.  
@@ -48,7 +48,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide ( **null**).|  
+|[CD2DSizeU::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide (NULL).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -65,7 +65,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- Construit un objet CD2DSizeU à partir de l’objet CSize.  
+ Construit un objet du CD2DSizeU à partir de l’objet CSize.  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -99,7 +99,7 @@ BOOL IsNull() const;
  TRUE si la largeur et la hauteur sont vides ; Sinon, FALSE.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
- Convertit CD2DSizeU en objet CSize.  
+ Convertit du CD2DSizeU en objet CSize.  
   
 ```  
 operator CSize();

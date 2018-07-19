@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959269"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-`UIntType` Type de résultat de l’entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType* le type de résultat entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-`W` **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **Taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.
+*N* **taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.
 
-`M` **Taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`
+*M* **taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`
 
-`R` **Masque de bits**. **Condition préalable** : `R ≤ W`
+*R* **bits du masque**. **Condition préalable** : `R ≤ W`
 
-`A` **Masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`
+*Un* **masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`
 
-`U`, `S`, `T`, `L` **Tempering les paramètres de décalage**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`
+*U*, *S*, *T*, *L* **Tempering les paramètres de décalage**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`
 
-`D`, `B`, `C` **Tempering les paramètres de masque de bits**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C* **Tempering les paramètres de masque de bits**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`
 
-`F` **Multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`
+*F* **multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membres
 
@@ -70,9 +70,9 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de valeurs sur l’intervalle fermé [ `0`, `2`<sup>W</sup> - `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Il extrait `W` bits à la fois de cette valeur élevée et, quand il a utilisé tous les bits, il déforme la valeur élevée en décalant et en combinant les bits pour avoir un nouvel ensemble de bits dans lequel procéder à l'extraction. L'état du moteur est représenté par les dernières valeurs de `N` `W` bits utilisées si `operator()` a été appelé au moins `N` fois, sinon les valeurs de `M` `W` bits utilisées et les dernières valeurs `N - M` de la valeur initiale.
+Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de valeurs sur l’intervalle fermé [ `0`, `2`<sup>W</sup> - `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Elle extrait *W* bits à la fois à partir de cette valeur élevée, et quand il a utilisé tous les bits il déforme la valeur élevée en décalant et en combinant les bits afin qu’il dispose d’un nouvel ensemble de bits pour extraire. L’état du moteur est le dernier `N` `W`-bit des valeurs utilisées si `operator()` a été appelé au moins *N* fois, sinon le `M` `W`-bit des valeurs qui ont été utilisés et la dernière `N - M` les valeurs de la valeur initiale.
 
-Le générateur déforme la valeur élevée qu'il contient en utilisant un registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage `N` et `M`, une valeur de torsion `R` et un masque XOR conditionnel `A`. En outre, les bits du registre à décalage brut sont brouillés (altérés) selon une matrice de brouillage des bits définie par les valeurs `U`, `D`, `S`, `B`, `T`, `C` et `L`.
+Le générateur déforme la valeur élevée qu’il contient en utilisant un Registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage *N* et *M*, une valeur de torsion *R*et un masque XOR conditionnel *A*. En outre, les bits du Registre à décalage brut sont brouillés (altérés) selon une matrice de brouillage des bits définie par les valeurs *U*, *D*, *S*, *B* , *T*, *C*, et *L*.
 
 L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux spécifications suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
@@ -106,7 +106,7 @@ Pour plus d’informations sur l’algorithme twister de Mersenne, consultez l�
 
 Pour obtenir un exemple de code, consultez [\<random>](../standard-library/random.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 

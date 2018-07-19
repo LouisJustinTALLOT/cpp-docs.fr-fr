@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bd408a6dd2c04bc3b2ab0c4969c17635410b56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d09513fa0f8b53c13ad1302533d4c0606b28743c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956529"
 ---
 # <a name="container-classreverseiterator"></a>Conteneur Class::reverse_iterator
 
@@ -37,7 +37,7 @@ typedef T7 reverse_iterator;
 
 ## <a name="remarks"></a>Notes
 
-Il est décrit ici comme un synonyme du type non spécifié **T7** (généralement, `reverse_iterator` **\<**[iterator](../standard-library/container-class-iterator.md)**>**).
+Il est décrit ici comme un synonyme du type non spécifié `T7` (généralement `reverse_iterator` **\<** [itérateur](../standard-library/container-class-iterator.md)**>**).
 
 ## <a name="see-also"></a>Voir aussi
 

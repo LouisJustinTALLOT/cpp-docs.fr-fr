@@ -1,5 +1,5 @@
 ---
-title: " Classes de fabriques de classes ATL | Documents Microsoft"
+title: " Classes de fabriques de classes ATL | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958489"
 ---
-# <a name="class-factories-classes"></a>Classes de fabriques de classes
-Les classes suivantes implémentent ou prend en charge une fabrique de classe :  
+# <a name="class-factories-classes"></a>Classe de fabriques de Classes
+Les classes suivantes implémentent ou prennent en charge une fabrique de classe :  
   
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) fournit une fabrique de classe par défaut pour la création d’objet.  
+-   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) fournit une fabrique de classe par défaut pour la création d’objets.  
   
--   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) contrôle la création d’objets via une licence.  
+-   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) contrôle la création d’objet via une licence.  
   
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) permet aux objets d’être créée dans plusieurs mis en pool de threads cloisonnés (STA).  
+-   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) permet aux objets d’être créé dans plusieurs mis en pool de threads cloisonnés (STA).  
   
 -   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) crée un objet unique.  
   

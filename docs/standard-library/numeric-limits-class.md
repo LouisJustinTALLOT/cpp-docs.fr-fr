@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c8d98157e81f087bf382c3733a2ade909349a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862778"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954875"
 ---
 # <a name="numericlimits-class"></a>numeric_limits, classe
 
@@ -100,13 +100,13 @@ class numeric_limits
 
 ### <a name="parameters"></a>Paramètres
 
-`Type` Le type de données fondamental des éléments dont les propriétés sont en cours testées, interrogées ou définies.
+*Type* le type de données fondamental des éléments dont les propriétés sont en cours testées, interrogées ou définies.
 
 ## <a name="remarks"></a>Notes
 
-L'en-tête définit des spécialisations explicites pour les types `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`et `char32_t`. Pour ces spécialisations explicites, le membre [numeric_limits::is_specialized](#is_specialized) est `true`, et tous les membres pertinents ont des valeurs significatives. Le programme peut fournir des spécialisations explicites supplémentaires. La plupart des fonctions membres de la classe décrivent ou testent les implémentations possibles de `float`.
+L’en-tête définit des spécialisations explicites pour les types **wchar_t**, **bool**, **char**, **signé char**, **non signé char**, **court**, **unsigned short**, **int**, **unsigned int**, **long**, **long non signé**, **float**, **double**, **long double ***** **long long**, **unsigned long long**, `char16_t`, et `char32_t`. Pour ces spécialisations explicites, le membre [numeric_limits::is_specialized](#is_specialized) est **true**, et tous les membres pertinents ont des valeurs significatives. Le programme peut fournir des spécialisations explicites supplémentaires. La plupart des fonctions membres de la classe décrivent ou testent les implémentations possibles de **float**.
 
-Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. Un objet membre qui n'a pas de valeur significative stocke zéro (ou `false`), tandis qu'une fonction membre qui ne retourne pas de valeur significative retourne `Type(0)`.
+Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. Un objet de membre qui n’a pas de valeur significative stocke zéro (ou **false**) et une fonction membre qui ne retourne pas de valeur significative retourne `Type(0)`.
 
 ### <a name="static-functions-and-constants"></a>Fonctions statiques et constantes
 
@@ -145,7 +145,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 |[tinyness_before](#tinyness_before)|Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.|
 |[traps](#traps)|Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<limits>
 
@@ -165,9 +165,9 @@ Plus petite valeur dénormalisée différente de zéro.
 
 ### <a name="remarks"></a>Notes
 
-`long double` est similaire à **double** pour le compilateur C++.
+**long double** est identique à **double** pour le compilateur C++.
 
-La fonction retourne la valeur minimale pour le type, qui correspond à [min](#min) si [has_denorm](#has_denorm) n’est pas égal à **denorm_present**.
+La fonction retourne la valeur minimale pour le type, qui est le même en tant que [min](#min) si [has_denorm](#has_denorm) n’est pas égal à `denorm_present`.
 
 ### <a name="example"></a>Exemple
 
@@ -364,7 +364,7 @@ Valeur d’énumération de type **const**`float_denorm_style`, qui indique si l
 
 ### <a name="remarks"></a>Notes
 
-Le membre stocke **denorm_present** pour un type à virgule flottante qui a des valeurs dénormalisées, à savoir un nombre variable de bits d’exposant.
+La membre stocke `denorm_present` pour un type à virgule flottante est dénormalisé des valeurs, en fait un nombre variable de bits d’exposant.
 
 ### <a name="example"></a>Exemple
 
@@ -1010,7 +1010,7 @@ Retourne la plus grande valeur finie négative.
 
 ### <a name="remarks"></a>Notes
 
-Retourne la valeur finie négative plus pour le type (qui est généralement `min()` pour les types entiers et `-max()` pour les types à virgule flottante). La valeur de retour est significative si `is_bounded` a pour valeur `true`.
+Retourne la valeur finie plus négative pour le type (ce qui est généralement `min()` pour les types entiers et `-max()` pour les types à virgule flottante). La valeur de retour est significative si `is_bounded` est **true**.
 
 ## <a name="max"></a>  numeric_limits::max
 
@@ -1026,7 +1026,7 @@ Valeur finie maximale pour un type.
 
 ### <a name="remarks"></a>Notes
 
-La valeur finie maximale est INT_MAX pour le type `int` et FLT_MAX pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) est **true**.
+La valeur finie maximale est INT_MAX pour le type **int** et FLT_MAX pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) est **true**.
 
 ### <a name="example"></a>Exemple
 
@@ -1176,7 +1176,7 @@ Valeur normalisée minimale pour le type.
 
 ### <a name="remarks"></a>Notes
 
-La valeur normalisée minimale est INT_MIN pour le type `int` et FLT_MIN pour le type `float`. La valeur de retour est significative si [is_bounded](#is_bounded) est `true` ou si [is_signed](#is_signed) est `false`.
+La valeur normalisée minimale est INT_MIN pour le type **int** et FLT_MIN pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) est **true** ou si [is_signed](#is_signed) est **false**.
 
 ### <a name="example"></a>Exemple
 
@@ -1535,7 +1535,7 @@ static const bool tinyness_before = false;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le type peut détecter les valeurs très petites avant d’être arrondies. `false` dans le cas contraire.
+**true** si le type peut détecter des valeurs très petites avant d’être arrondie ; **false** s’il ne peut pas.
 
 ### <a name="remarks"></a>Notes
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de CD2DSizeF | Documents Microsoft
+title: Classe de CD2DSizeF | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336111"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF, classe
 Wrapper pour D2D1_SIZE_F.  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide ( **null**).|  
+|[CD2DSizeF::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide (NULL).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   

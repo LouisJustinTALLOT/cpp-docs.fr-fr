@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccf608b9949ad9e1502b489a237adf60a4d50a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f163ef7d0e5ec05dd0f41c11ea77c558cfef4919
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845737"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955696"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -57,7 +57,7 @@ Définit les classes de modèle de conteneur hash_set et hash_multiset et leurs 
 
 |Classe|Description|
 |-|-|
-|[hash_compare, classe](../standard-library/hash-compare-class.md)|Décrit un objet qui peut être utilisé par les conteneurs associatifs de hachage, hash_map, hash_multimap, hash_set ou hash_multiset, comme objet de paramètre **Traits** par défaut pour ordonner et hacher les éléments qu’ils contiennent.|
+|[hash_compare, classe](../standard-library/hash-compare-class.md)|Décrit un objet qui peut être utilisé par les conteneurs associatifs de hachage de, hash_map, hash_multimap, hash_set ou hash_multiset, comme une valeur par défaut `Traits` objet de paramètre pour ordonner et hacher les éléments qu’ils contiennent.|
 |[hash_set, classe](../standard-library/hash-set-class.md)|Sert au stockage et à la récupération rapide des données d’une collection dans laquelle les valeurs des éléments contenus sont uniques et servent de valeurs de clés.|
 |[hash_multiset, classe](../standard-library/hash-multiset-class.md)|Sert au stockage et à la récupération rapide des données d’une collection dans laquelle les valeurs des éléments contenus sont uniques et servent de valeurs de clés.|
 
