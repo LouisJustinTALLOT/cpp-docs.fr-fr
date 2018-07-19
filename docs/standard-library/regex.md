@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109d7ee960b6788468c473e88321a00a38fb4379
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963129"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -55,8 +55,8 @@ Pour modifier les détails de la grammaire des expressions régulières, écrive
 |[regex_error](../standard-library/regex-error-class.md)|Signale une expression régulière incorrecte.|
 |[regex_iterator](../standard-library/regex-iterator-class.md)|Itère au sein des résultats de mise en correspondance.|
 |[regex_traits](../standard-library/regex-traits-class.md)|Décrit les caractéristiques des éléments pour la mise en correspondance.|
-|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Décrit les caractéristiques de `char` pour la mise en correspondance.|
-|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Décrit les caractéristiques de `wchar_t` pour la mise en correspondance.|
+|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Décrit les caractéristiques de **char** pour la correspondance.|
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Décrit les caractéristiques de **wchar_t** pour la correspondance.|
 |[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Itère au sein des sous-correspondances.|
 |[sub_match](../standard-library/sub-match-class.md)|Décrit une sous-correspondance.|
 
@@ -64,20 +64,20 @@ Pour modifier les détails de la grammaire des expressions régulières, écrive
 
 |||
 |-|-|
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Définition de type pour `char` `match_results`.|
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Définition de type pour `char` `regex_iterator`.|
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Définition de type pour `char` `regex_token_iterator`.|
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Définition de type pour `char` `sub_match`.|
-|[regex](../standard-library/regex-typedefs.md#regex)|Définition de type pour `char` `basic_regex`.|
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Définition de type pour **char** `match_results`.|
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Définition de type pour **char** `regex_iterator`.|
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Définition de type pour **char** `regex_token_iterator`.|
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Définition de type pour **char** `sub_match`.|
+|[regex](../standard-library/regex-typedefs.md#regex)|Définition de type pour **char** `basic_regex`.|
 |[smatch](../standard-library/regex-typedefs.md#smatch)|Définition de type pour `string` `match_results`.|
 |[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Définition de type pour `string` `regex_iterator`.|
 |[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Définition de type pour `string` `regex_token_iterator`.|
 |[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Définition de type pour `string` `sub_match`.|
-|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Définition de type pour `wchar_t` `match_results`.|
-|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Définition de type pour `wchar_t` `regex_iterator`.|
-|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Définition de type pour `wchar_t` `regex_token_iterator`.|
-|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Définition de type pour `wchar_t` `sub_match`.|
-|[wregex](../standard-library/regex-typedefs.md#wregex)|Définition de type pour `wchar_t` `basic_regex`.|
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Définition de type pour **wchar_t** `match_results`.|
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Définition de type pour **wchar_t** `regex_iterator`.|
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Définition de type pour **wchar_t** `regex_token_iterator`.|
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Définition de type pour **wchar_t** `sub_match`.|
+|[wregex](../standard-library/regex-typedefs.md#wregex)|Définition de type pour **wchar_t** `basic_regex`.|
 |[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Définition de type pour `wstring` `match_results`.|
 |[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Définition de type pour `wstring` `regex_iterator`.|
 |[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Définition de type pour `wstring` `regex_token_iterator`.|

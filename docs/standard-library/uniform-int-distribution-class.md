@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f59e7f6595d89b0078e650ab1ce8a36139f03486
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859746"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961576"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution, classe
 
@@ -81,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType* le résultat de type entier, valeur par défaut est `int`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType* le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -182,7 +182,7 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -200,17 +200,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*un* la limite inférieure pour les valeurs aléatoires, inclus.
+*a*  
+Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*b* la limite supérieure pour les valeurs aléatoires, inclus.
+*b*  
+Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
-*paramètre de* le `param_type` structure utilisée pour construire la distribution.
+*parm*  
+Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
 **Condition préalable :** `a ≤ b`
 
-Le premier constructeur construit un objet dont la valeur `a` stockée contient la valeur *a* et dont la valeur `b` stockée contient la valeur *b*.
+Le premier constructeur construit un objet dont stockée *un* valeur conserve la valeur *un* et dont stockée *b* valeur conserve la valeur *b*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
@@ -233,11 +236,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*un* la limite inférieure pour les valeurs aléatoires, inclus.
+*a*  
+Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*b* la limite supérieure pour les valeurs aléatoires, inclus.
+*b*  
+Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
-*droit* le `param_type` à comparer à cet objet.
+*right*  
+Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 

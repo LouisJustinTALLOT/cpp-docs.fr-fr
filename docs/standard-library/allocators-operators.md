@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962954"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt;, opérateurs
 
-Ce sont les fonctions d’opérateur de modèle global définies dans &lt;allocateurs&gt;. Pour les fonctions d’opérateur de membre de classe, consultez la documentation de la classe.
+Ce sont les fonctions d’opérateur de modèle global définies dans &lt;allocateurs&gt;. Pour les fonctions d’opérateur de membre de classe, consultez la documentation de classe.
 
 |||
 |-|-|
@@ -39,8 +39,8 @@ bool operator!=(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Un des objets allocateur dont l’inégalité doit être vérifiée.|
-|`right`|Un des objets allocateur dont l’inégalité doit être vérifiée.|
+|*left*|Un des objets allocateur dont l’inégalité doit être vérifiée.|
+|*right*|Un des objets allocateur dont l’inégalité doit être vérifiée.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -65,8 +65,8 @@ bool operator==(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Un des objets allocateur dont l’égalité doit être vérifiée.|
-|`right`|Un des objets allocateur dont l’égalité doit être vérifiée.|
+|*left*|Un des objets allocateur dont l’égalité doit être vérifiée.|
+|*right*|Un des objets allocateur dont l’égalité doit être vérifiée.|
 
 ### <a name="return-value"></a>Valeur de retour
 

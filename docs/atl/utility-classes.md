@@ -1,5 +1,5 @@
 ---
-title: Classes d’utilitaire (ATL) | Documents Microsoft
+title: Classes d’utilitaire (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450c22a6c31128204dcb9e2f5baf8aeb04439eab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c3803a3b78e5a5a1e08edf1e8b6ca7df0c257ee
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961774"
 ---
 # <a name="utility-classes"></a>Classes d’utilitaire
-Les classes d’utilitaire MFC indépendant suivantes sont fournies :  
+Les classes d’utilitaire indépendants des MFC suivantes sont fournies :  
   
--   [CImage](../atl-mfc-shared/reference/cimage-class.md) fournit amélioré la prise en charge de la bitmap, y compris la possibilité de charger et enregistrer les images JPEG, GIF, BMP et met en forme graphique PNG (Portable Network).  
+-   [CImage](../atl-mfc-shared/reference/cimage-class.md) fournit amélioré la prise en charge de la bitmap, y compris la possibilité pour charger et enregistrer des images JPEG, GIF, BMP, et met en forme graphique PNG (Portable Network).  
   
 -   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fournit une implémentation pour le stockage des paires de coordonnées (x, y).  
   
 -   [CRect](../atl-mfc-shared/reference/crect-class.md) fournit une implémentation pour le stockage des coordonnées de zones rectangulaires.  
   
--   [CSize](../atl-mfc-shared/reference/csize-class.md) fournit une implémentation pour le stockage de la distance, les positions relatives ou les paires de valeurs.  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md) fournit une implémentation pour le stockage de distance positions relatives, valeurs ou associés.  
   
 -   [CString](../atl-mfc-shared/reference/cstringt-class.md) fournit une implémentation pour le stockage des chaînes de caractères.  
   
--   [CAdapt](../atl/reference/cadapt-class.md) un modèle simple utilisé pour encapsuler les classes qui redéfinissent l’opérateur d’adresse.  
+-   [CAdapt](../atl/reference/cadapt-class.md) un modèle simple utilisé pour encapsuler les classes qui redéfinissent l’opérateur address-of.  
   
--   [_U_RECT](../atl/reference/u-rect-class.md) une classe d’adaptateur argument qui permet soit `RECT` pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.  
+-   [_U_RECT](../atl/reference/u-rect-class.md) une classe d’adaptateur argument qui permet soit `RECT` les pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../atl/atl-class-overview.md)

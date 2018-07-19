@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861296"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962554"
 ---
 # <a name="regexiterator-class"></a>regex_iterator, classe
 
@@ -75,11 +75,11 @@ private:
 
 ### <a name="parameters"></a>Paramètres
 
-`BidIt` Type d’itérateur pour les sous-correspondances.
+*BidIt* le type d’itérateur pour les sous-correspondances.
 
-`Elem` Le type des éléments à faire correspondre.
+*Elem* le type des éléments à faire correspondre.
 
-`RXtraits` Classe traits des éléments.
+*RXtraits* classe Traits des éléments.
 
 ## <a name="remarks"></a>Notes
 
@@ -97,7 +97,7 @@ Consultez les rubriques suivantes pour obtenir des exemples d’expressions rég
 
 - [swap](../standard-library/regex-functions.md#swap)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -223,7 +223,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Itérateur auquel comparer.
+*droit* l’itérateur à comparer à.
 
 ### <a name="remarks"></a>Notes
 
@@ -395,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Itérateur auquel comparer.
+*droit* l’itérateur à comparer à.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true si `*this` et `right` sont des itérateurs de séquence de fin, ou si aucun d’eux n’est un itérateur de fin de séquence et `begin == right.begin`, `end == right.end`, `pregex == right.pregex`et `flags == right.flags`. Sinon, elle retourne false.
+La fonction membre retourne la valeur true si `*this` et *droit* sont tous deux itérateurs de fin de séquence, ou si aucun des deux est un itérateur de fin de séquence et `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, et `flags == right.flags`. Sinon, elle retourne false.
 
 ### <a name="example"></a>Exemple
 
@@ -625,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Paramètres
 
-`first` Début de la séquence pour faire correspondre.
+*première* début de la séquence pour faire correspondre.
 
-`last` Fin de séquence pour faire correspondre.
+*dernière* fin de séquence pour faire correspondre.
 
-`re` Expression régulière pour les correspondances.
+*Re* une expression régulière pour les correspondances.
 
-`f` Indicateurs pour les correspondances.
+*f* indicateurs pour les correspondances.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur construit un itérateur de fin de séquence. Le deuxième constructeur initialise la valeur stockée `begin` avec `first`, la valeur stockée `end` avec `last`, la valeur stockée `pregex` avec `&re`, et la valeur stockée `flags` avec `f`. Il appelle ensuite `regex_search(begin, end, match, *pregex, flags)`. En cas d’échec de la recherche, le constructeur assigne à l’objet un itérateur de fin de séquence.
+Le premier constructeur construit un itérateur de fin de séquence. Le deuxième constructeur initialise la valeur stockée `begin` avec *première*, la valeur stockée `end` avec *dernière*, la valeur stockée `pregex` avec `&re`et le valeur stockée `flags` avec *f*. Il appelle ensuite `regex_search(begin, end, match, *pregex, flags)`. En cas d’échec de la recherche, le constructeur assigne à l’objet un itérateur de fin de séquence.
 
 ### <a name="example"></a>Exemple
 

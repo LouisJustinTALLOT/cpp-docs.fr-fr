@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847700"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028227"
 ---
 # <a name="errorcategory-class"></a>error_category, classe
 
@@ -70,7 +70,7 @@ Deux objets prédéfinis implémentent `error_category` : [generic_category](..
 |[operator!=](#op_neq)|Vérifie l’inégalité d’objets `error_category`.|
 |[operator<](#op_lt)|Vérifie si l’objet [error_category](../standard-library/error-category-class.md) est inférieur à l’objet `error_category` transmis pour la comparaison.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<system_error>
 
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`_Errval`|Valeur de code d’erreur à stocker dans [error_condition](../standard-library/error-condition-class.md).|
+|*_Errval*|Valeur de code d’erreur à stocker dans [error_condition](../standard-library/error-condition-class.md).|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -112,13 +112,13 @@ virtual bool equivalent(const error_code& _Code,
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`_Errval`|Valeur de code d’erreur à comparer.|
-|`_Cond`|Objet [error_condition](../standard-library/error-condition-class.md) à comparer.|
-|`_Code`|Objet [error_code](../standard-library/error-code-class.md) à comparer.|
+|*_Errval*|Valeur de code d’erreur à comparer.|
+|*_Cond*|Objet [error_condition](../standard-library/error-condition-class.md) à comparer.|
+|*_Code*|Objet [error_code](../standard-library/error-code-class.md) à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la catégorie et la valeur sont égales ; sinon, `false`.
+**true** si la catégorie et la valeur sont égales ; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -138,11 +138,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`val`|Valeur de code d’erreur à décrire.|
+|*Val*|Valeur de code d’erreur à décrire.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un nom descriptif du code d’erreur `val` pour la catégorie.
+Retourne un nom descriptif du code d’erreur *val* pour la catégorie.
 
 ### <a name="remarks"></a>Notes
 
@@ -172,7 +172,7 @@ bool operator==(const error_category& right) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`right`|Objet dont l’égalité doit être vérifiée.|
+|*right*|Objet dont l’égalité doit être vérifiée.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -194,11 +194,11 @@ bool operator!=(const error_category& right) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`right`|Objet dont l’inégalité doit être vérifiée.|
+|*right*|Objet dont l’inégalité doit être vérifiée.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet `error_category` n’est pas égal à l’objet `error_category` passé dans `right` ; sinon, **false**.
+**true** si le `error_category` objet n’est pas égal à la `error_category` objet passé dans *droit*; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -216,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`right`|Objet `error_category` à comparer.|
+|*right*|Objet `error_category` à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -236,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Notes
 
-Cette définition de type est un synonyme de `int`.
+Cette définition de type est un synonyme de **int**.
 
 ## <a name="see-also"></a>Voir aussi
 

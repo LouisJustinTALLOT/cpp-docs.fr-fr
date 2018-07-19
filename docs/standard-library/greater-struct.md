@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab4990ad1c2440449eff2699634364149f5a055
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06fe531330b1043c78882fb511caafe9cc3a7b6d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845542"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963805"
 ---
-# <a name="greater-struct"></a>greater, struct
+# <a name="greater-struct"></a>greater (struct)
 
-Prédicat binaire qui effectue l’opération Supérieur à ( `operator>`) sur ses arguments.
+Un prédicat binaire qui effectue la plus grande-que l’opération (`operator>`) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,11 +52,11 @@ struct greater<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type`, `T`, `U` N’importe quel type qui prend en charge un `operator>` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator>` qui accepte des opérandes des types spécifiés ou inférés.
 
-`Left` L’opérande de gauche de la plus grande-que l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.
+*Gauche* l’opérande gauche de la plus grande-que l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-`Right` L’opérande de droite de la plus grande-que l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.
+*Droite* l’opérande de droite de la plus grande-que l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -64,7 +64,7 @@ Résultat de `Left > Right`. Le modèle spécialisé effectue un transfert parfa
 
 ## <a name="remarks"></a>Notes
 
-Le prédicat binaire `greater`< `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’élément de type `Type` dans des classes d’équivalence, si et seulement si ce type remplit les conditions mathématiques standard pour être ordonné de cette façon. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
+Le prédicat binaire `greater` <  `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
 
 ## <a name="example"></a>Exemple
 
@@ -118,7 +118,7 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
 Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

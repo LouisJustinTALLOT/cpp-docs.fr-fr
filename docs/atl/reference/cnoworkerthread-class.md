@@ -1,5 +1,5 @@
 ---
-title: Classe de CNoWorkerThread | Documents Microsoft
+title: Cnoworkerthread, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16eafd8c33bf1c9a42b95c31a333ff1df55b3495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962502"
 ---
-# <a name="cnoworkerthread-class"></a>Classe de CNoWorkerThread
+# <a name="cnoworkerthread-class"></a>Cnoworkerthread, classe
 Utilisez cette classe comme argument pour le `MonitorClass` paramètre de modèle pour les classes de cache si vous souhaitez désactiver la maintenance du cache dynamique.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,24 +49,24 @@ class CNoWorkerThread
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CNoWorkerThread::AddHandle](#addhandle)|Non-équivalent du [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
-|[CNoWorkerThread::AddTimer](#addtimer)|Non-équivalent du [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
-|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Non-équivalent du [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
-|[CNoWorkerThread::GetThreadId](#getthreadid)|Non-équivalent du [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
-|[CNoWorkerThread::Initialize](#initialize)|Non-équivalent du [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
-|[CNoWorkerThread::RemoveHandle](#removehandle)|Non-équivalent du [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
-|[CNoWorkerThread::Shutdown](#shutdown)|Non-équivalent du [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
+|[CNoWorkerThread::AddHandle](#addhandle)|Équivalent non fonctionnelles de [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
+|[CNoWorkerThread::AddTimer](#addtimer)|Équivalent non fonctionnelles de [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
+|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Équivalent non fonctionnelles de [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
+|[CNoWorkerThread::GetThreadId](#getthreadid)|Équivalent non fonctionnelles de [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
+|[CNoWorkerThread::Initialize](#initialize)|Équivalent non fonctionnelles de [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
+|[CNoWorkerThread::RemoveHandle](#removehandle)|Équivalent non fonctionnelles de [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
+|[CNoWorkerThread::Shutdown](#shutdown)|Équivalent non fonctionnelles de [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
   
 ## <a name="remarks"></a>Notes  
  Cette classe fournit la même interface publique en tant que [CWorkerThread](../../atl/reference/cworkerthread-class.md). Cette interface est censée être fournies par le `MonitorClass` paramètre de modèle pour les classes de cache.  
   
- Les méthodes de cette classe sont implémentés pour ne rien faire. Les méthodes qui retournent une valeur HRESULT toujours retournent S_OK et les méthodes qui retournent un ID de HANDLE ou de thread toujours retournent 0.  
+ Les méthodes de cette classe sont implémentées pour ne rien faire. Les méthodes qui retournent une valeur HRESULT toujours retournent S_OK et les méthodes qui retournent un ID de HANDLE ou de thread toujours retournent 0.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlutil.h  
   
 ##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle  
- Non-équivalent du [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Équivalent non fonctionnelles de [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ```
 HRESULT AddHandle(HANDLE /* hObject
@@ -78,13 +78,13 @@ HRESULT AddHandle(HANDLE /* hObject
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours S_OK.  
+ Retourne toujours la valeur S_OK.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer  
- Non-équivalent du [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
+ Équivalent non fonctionnelles de [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
   
 ```
 HRESULT AddTimer(DWORD /* dwInterval
@@ -98,13 +98,13 @@ HRESULT AddTimer(DWORD /* dwInterval
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours S_OK.  
+ Retourne toujours la valeur S_OK.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle  
- Non-équivalent du [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
+ Équivalent non fonctionnelles de [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
   
 ```
 HANDLE GetThreadHandle() throw();
@@ -117,7 +117,7 @@ HANDLE GetThreadHandle() throw();
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId  
- Non-équivalent du [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
+ Équivalent non fonctionnelles de [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
   
 ```
 DWORD GetThreadId() throw();
@@ -130,20 +130,20 @@ DWORD GetThreadId() throw();
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="initialize"></a>  CNoWorkerThread::Initialize  
- Non-équivalent du [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
+ Équivalent non fonctionnelles de [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
   
 ```
 HRESULT Initialize() throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours S_OK.  
+ Retourne toujours la valeur S_OK.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle  
- Non-équivalent du [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
+ Équivalent non fonctionnelles de [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
   
 ```
 HRESULT RemoveHandle(HANDLE /* hObject
@@ -151,20 +151,20 @@ HRESULT RemoveHandle(HANDLE /* hObject
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours S_OK.  
+ Retourne toujours la valeur S_OK.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown  
- Non-équivalent du [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
+ Équivalent non fonctionnelles de [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
   
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours S_OK.  
+ Retourne toujours la valeur S_OK.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.

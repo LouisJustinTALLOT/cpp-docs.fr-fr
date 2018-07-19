@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964975"
 ---
 # <a name="issame-class"></a>is_same, classe
 
@@ -37,13 +37,13 @@ struct is_same;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty1` Le premier type à interroger.
+*Ty1* le premier type de la requête.
 
-`Ty2` Le deuxième type à interroger.
+*Ty2* le deuxième type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si les types `Ty1` et `Ty2` sont identiques. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si les types *Ty1* et *Ty2* sont du même type, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -89,7 +89,7 @@ is_same<int, int> == true
 is_same<int, const int> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

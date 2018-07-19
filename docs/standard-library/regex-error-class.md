@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae7d6e9e3a50ad6a0b78d2b47a732b6b5fa9fc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853701"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964143"
 ---
 # <a name="regexerror-class"></a>regex_error, classe
 
@@ -46,7 +46,7 @@ public:
 
 Cette classe décrit un objet d’exception levé pour signaler une erreur dans la construction ou l’utilisation d’un objet `basic_regex` .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -111,11 +111,11 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Paramètres
 
-`error` Le code d’erreur.
+*erreur* le code d’erreur.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur construit un objet qui contient la valeur `error`.
+Le constructeur construit un objet qui contient la valeur *erreur*.
 
 ### <a name="example"></a>Exemple
 

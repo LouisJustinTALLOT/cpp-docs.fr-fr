@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962671"
 ---
 # <a name="maskarray-class"></a>mask_array, classe
 
@@ -31,11 +31,11 @@ Classe de modèle interne auxiliaire qui prend en charge les objets qui sont des
 
 ## <a name="remarks"></a>Notes
 
-Cette classe décrit un objet qui stocke une référence à un objet **va** de classe [valarray](../standard-library/valarray-class.md)**\<Type>**, ainsi qu’un objet **ba** de classe [valarray\<bool>](../standard-library/valarray-bool-class.md), qui décrit la séquence d’éléments à sélectionner à partir de l’objet **valarray\<Type>**.
+La classe décrit un objet qui stocke une référence à un objet `va` de classe [valarray](../standard-library/valarray-class.md)**\<Type >**, ainsi qu’un objet `ba` de classe [ valarray\<bool >](../standard-library/valarray-bool-class.md), qui décrit la séquence d’éléments à sélectionner à partir de la `valarray<Type>` objet.
 
-Vous construisez un objet **mask_array\<Type>** uniquement en écrivant une expression sous la forme [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de classe mask_array se comportent ensuite comme les signatures de fonctions correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnée est affectée.
+Vous construisez un `mask_array<Type>` objet uniquement en écrivant une expression sous la forme [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de classe mask_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée.
 
-La séquence se compose tout au plus de **ba.size** éléments. Un élément *J* n’est inclus que si **ba**[ *J*] a la valeur true. Par conséquent, il y a autant d’éléments dans la séquence qu’il y a d’éléments true dans **ba**. Si `I` est l’index de l’élément true le plus bas dans **ba**, **va**[ `I`] est l’élément zéro dans la séquence sélectionnée.
+La séquence se compose d’au plus `ba.size` éléments. Un élément *J* n’est inclus que si **ba**[ *J*] a la valeur true. Par conséquent, il existe autant d’éléments dans la séquence qu’il sont a des éléments true dans `ba`. Si `I` est l’index de l’élément true le plus bas dans `ba`, puis **va**[ `I`] est l’élément zéro dans la séquence sélectionnée.
 
 ## <a name="example"></a>Exemple
 
@@ -78,7 +78,7 @@ The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
 The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<valarray>
 

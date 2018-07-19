@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964754"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -37,7 +37,7 @@ Définit la classe de modèle `numeric_limits` et deux énumérations concernant
 
 ## <a name="remarks"></a>Notes
 
-Les spécialisations explicites de la classe `numeric_limits` décrivent de nombreuses propriétés des types fondamentaux, y compris les types à virgule flottante, caractère, entier et `bool` qui sont définis par l'implémentation plutôt que fixés par les règles du langage C++. Les propriétés décrites dans \<limits> incluent la précision, les représentations de taille minimale et maximale, l’arrondi et le signalement des erreurs de type.
+Les spécialisations explicites de la `numeric_limits` classe décrivent de nombreuses propriétés des types fondamentaux, y compris le caractère, entier et les types à virgule flottante et **bool** qui sont implémentation défini plutôt que fixés par les règles du langage C++. Les propriétés décrites dans \<limits> incluent la précision, les représentations de taille minimale et maximale, l’arrondi et le signalement des erreurs de type.
 
 ### <a name="enumerations"></a>Énumérations
 

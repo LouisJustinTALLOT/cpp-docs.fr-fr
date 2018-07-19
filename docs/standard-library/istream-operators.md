@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961111"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt;, opérateurs
 
@@ -64,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ch` Un caractère.
+*CH* un caractère.
 
-`Istr` Flux de données.
+*ISTR* un flux de données.
 
-`str` Une chaîne.
+*Str* une chaîne.
 
-`val` Un type.
+*Val* un type.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrait jusqu’à *N* - 1 éléments et les stocke dans le tableau en commençant à _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr`. **width**. Sinon, il est égal à la taille du plus grand tableau **Elem** qui peut être déclaré. La fonction stocke toujours la valeur **Elem()** après tout élément extrait qu’elle stocke. L’extraction s’arrête dès la fin du fichier, sur un caractère avec la valeur **Elem**(0) (qui n’est pas extrait), ou sur tout élément (qui n’est pas extrait) qui serait ignoré par [ws](../standard-library/istream-functions.md#ws). Si la fonction n’extrait aucun élément, elle appelle `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle appelle `Istr`. **width**(0) et retourne `Istr`.
+extrait jusqu’à *N* - 1 éléments et les stocke dans le tableau en commençant à _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr`. **largeur**; sinon, elle est la taille de la plus grande quantité de `Elem` qui peut être déclaré. La fonction stocke toujours la valeur `Elem()` après les éléments qu’elle stocke extraits. L’extraction s’arrête dès la fin du fichier, sur un caractère avec la valeur **Elem**(0) (qui n’est pas extrait), ou sur tout élément (qui n’est pas extrait) qui serait ignoré par [ws](../standard-library/istream-functions.md#ws). Si la fonction n’extrait aucun élément, elle appelle `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). Dans tous les cas, elle appelle `Istr`. **largeur**(0) et retourne *Istr*.
 
-**Note de sécurité** La chaîne terminée par Null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la mémoire tampon de destination `str`. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Note de sécurité** la chaîne se terminant par null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la mémoire tampon de destination *str*. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 La fonction de modèle
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrait un élément, si c’est possible, et le stocke dans `Ch`. Sinon, elle appelle **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle retourne `Istr`.
+extrait un élément, s’il est possible et le stocke dans *Ch*. Sinon, elle appelle **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle retourne *Istr*.
 
 La fonction de modèle
 

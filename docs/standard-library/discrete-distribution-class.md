@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af8f5c543847c91903c9cb4ddf2502c0cc59dfa0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964208"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution, classe
 
@@ -82,7 +82,7 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType* le résultat de type entier, valeur par défaut est `int`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType* le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -178,7 +178,7 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -211,19 +211,19 @@ explicit discrete_distribution(const param_type& parm);
 
 *firstW* le premier itérateur dans la liste à partir duquel construire la distribution.
 
-*lastW* dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide à la fin).
+*lastW* le dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
 
 *weightlist* le [initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
 
 *nombre de* le nombre d’éléments dans la plage de distribution. Si `count==0`, équivalent au constructeur par défaut (génère toujours zéro).
 
-*faible* la valeur la plus basse dans la plage de distribution.
+*faible* la plus petite valeur dans la plage de distribution.
 
 *haute* la valeur la plus élevée dans la plage de distribution.
 
-*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent tous deux être convertibles en `double`.
+*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*paramètre de* le `param_type` structure utilisée pour construire la distribution.
+*parm* le `param_type` structure utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -236,7 +236,7 @@ Le constructeur de liste d’initialiseurs qui a un paramètre *weightlist* cons
 Le constructeur qui a les paramètres *ount*, *low*, *igh* et *weightfunc* construit un objet de distribution initialisé selon ces règles :
 
 - Si *count* < 1, **n** = 1 et, par conséquent, est équivalent au constructeur par défaut qui génère toujours zéro.
-- Si *count* > 0, **n** = *count*. Fourni **d** = (*haute* - *basse*) / **n** est supérieur à zéro, à l’aide de **d** uniforme sous-plages, chaque poids est affecté comme suit : `weight[k] = weightfunc(x)`, où **x** = *basse* + **k**  *  **d** + **d** / 2, pour **k** = 0,..., **n** - 1.
+- Si *count* > 0, **n** = *count*. Fourni **d** = (*haute* - *faible*) / **n** est supérieur à zéro, à l’aide de **d** uniforme sous-plages, chaque poids est affecté comme suit : `weight[k] = weightfunc(x)`, où **x** = *faible* + **k**  *  **d** + **d** / 2, pour **k** = 0,..., **n** - 1.
 
 Le constructeur qui a un paramètre `param_type` *parm* construit un objet de distribution qui utilise *parm* comme structure de paramètre stockée.
 
@@ -271,19 +271,19 @@ struct param_type {
 
 *firstW* le premier itérateur dans la liste à partir duquel construire la distribution.
 
-*lastW* dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide à la fin).
+*lastW* le dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
 
 *weightlist* le [initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
 
 *nombre de* le nombre d’éléments dans la plage de distribution. Si *count* a la valeur 0, il est équivalent au constructeur par défaut (génère toujours zéro).
 
-*faible* la valeur la plus basse dans la plage de distribution.
+*faible* la plus petite valeur dans la plage de distribution.
 
 *haute* la valeur la plus élevée dans la plage de distribution.
 
-*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent tous deux être convertibles en `double`.
+*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*droit* le `param_type` à comparer à cet objet.
+*droit* le `param_type` objet à comparer à cela.
 
 ### <a name="remarks"></a>Notes
 

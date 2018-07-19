@@ -1,7 +1,7 @@
 ---
-title: 'Comment : utiliser les fenêtres 10 SDK dans une Application de bureau Windows | Documents Microsoft'
+title: 'Comment : utiliser Windows 10 SDK dans une Application de bureau Windows | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 04/19/2018
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -13,26 +13,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882822"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034778"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
-Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 2017, il est configuré par défaut pour générer avec la version du SDK Windows 10 qui a été installé lors de la charge de travail de bureau C++ a été installé ou mis à jour. Cette version du SDK Windows est compatible avec toutes les versions récentes de Windows. Si vous souhaitez cibler une version antérieure du Kit de développement, vous pouvez ouvrir le projet | Propriétés et choisissez parmi les autres versions de kit de développement logiciel disponibles dans la liste déroulante Version du Kit de développement logiciel Windows.  
+Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 2017, il est configuré par défaut pour générer avec la version du SDK Windows 10 qui a été installé lors de la charge de travail C++ Desktop a été installé ou mis à jour. Cette version du SDK Windows est compatible avec Windows 7 et versions ultérieures. Consultez [utilisation des en-têtes Windows](/windows/desktop/WinProg/using-the-windows-headers) pour plus d’informations sur le ciblage des versions spécifiques de Windows.
+
+Si vous souhaitez cibler une version antérieure du Kit de développement, vous pouvez ouvrir **projet | Propriétés** et choisissez parmi les autres versions SDK disponibles dans la liste déroulante de Version du Kit de développement logiciel Windows.
   
- À partir de Visual Studio 2015 et le SDK Windows 10, la bibliothèque CRT a été séparée en deux parties, une (ucrtbase) qui contient les fonctions qui sont acceptables pour une utilisation dans les applications Windows universelles et celui qui contient tout le reste (vcruntime140). Étant donné que le Kit de développement logiciel (SDK) Windows 10 contient de nouvelles fonctions, comme de nombreuses fonctions C99, vous devez procéder comme suit pour utiliser ces fonctions. Consultez [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md).  
+ À partir de Visual Studio 2015 et le SDK Windows 10, la bibliothèque CRT a été divisée en deux parties, une (ucrtbase) qui contient les fonctions qui sont acceptables pour une utilisation dans les applications Windows universelles et celui qui contient tout le reste (vcruntime140). Étant donné que le Kit de développement logiciel (SDK) Windows 10 contient de nouvelles fonctions, comme de nombreuses fonctions C99, vous devez procéder comme suit pour utiliser ces fonctions. Consultez [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md).  
   
 ### <a name="to-target-the-windows-10-sdk"></a>Pour cibler le Kit de développement logiciel (SDK) Windows 10  
   
-1.  Assurez-vous que le Kit de développement logiciel (SDK) Windows 10 est installé. Le SDK Windows 10 est installé dans le cadre de la **bureau développement avec C++** la charge de travail. Une version autonome est disponible à l’adresse [téléchargements et outils pour Windows 10](https://developer.microsoft.com/windows/downloads).
+1.  Assurez-vous que le Kit de développement logiciel (SDK) Windows 10 est installé. Le SDK Windows 10 est installé dans le cadre de la **développement Desktop en C++** charge de travail. Une version autonome est disponible à l’adresse [téléchargements et outils pour Windows 10](https://developer.microsoft.com/windows/downloads).
 
   
 2.  Ouvrez le menu contextuel du nœud du projet, puis sélectionnez **Recibler la version du Kit de développement logiciel (SDK)**.  
   
-     ![Recibler la Version du Kit de développement logiciel](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
+     ![Recibler la Version SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
   
      La boîte de dialogue **Examiner les actions de la solution** apparaît.  
   
@@ -50,13 +52,13 @@ Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 201
   
      ![Cibler la Version de la plateforme](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Cette action change les valeurs des macros du projet qui incluent des chemins d'accès aux fichiers d'en-tête et aux fichiers de la bibliothèque. Pour voir ce qui a été modifié, dans la section répertoires Visual C++ de la boîte de dialogue Propriétés du projet, choisissez l’une des propriétés telles que les répertoires Include, ouvrez la liste déroulante, puis choisissez \<Modifier >. La boîte de dialogue **Répertoires Include** apparaît.  
+     Cette action change les valeurs des macros du projet qui incluent des chemins d'accès aux fichiers d'en-tête et aux fichiers de la bibliothèque. Pour voir ce qui a changé dans la section répertoires Visual C++ de la boîte de dialogue Propriétés du projet, choisissez l’une des propriétés telles que des répertoires Include ouvrir la liste déroulante, choisissez \<Modifier >. La boîte de dialogue **Répertoires Include** apparaît.  
   
      ![Inclure la boîte de dialogue répertoires](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     Choisissez le **Macros >>** bouton et faites défiler la liste des macros aux macros du Kit de développement logiciel Windows pour voir toutes les nouvelles valeurs.  
+     Choisissez le **Macros >>** bouton et faites défiler la liste des macros pour les macros du Kit de développement logiciel Windows pour voir toutes les nouvelles valeurs.  
   
-     ![Macros du Kit de développement logiciel Windows](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
+     ![Macros de kit de développement logiciel Windows](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   
 5.  Répétez l'opération pour les autres projets selon vos besoins et régénérez la solution.  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962398"
 ---
 # <a name="conditional-class"></a>conditional, classe
 
@@ -40,17 +40,17 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-`B` La valeur qui détermine le type sélectionné.
+*B* la valeur qui détermine le type sélectionné.
 
-`T1` Résultat de type quand B a la valeur true.
+*T1* le résultat de type quand B a la valeur true.
 
-`T2` Résultat de type quand B a la valeur false.
+*T2* le résultat de type quand B a la valeur false.
 
 ## <a name="remarks"></a>Notes
 
-Le typedef de membre de modèle `conditional<B, T1, T2>::type` équivaut à `T1` quand `B` équivaut à `true`, et équivaut à `T2` quand `B` équivaut à `false`.
+Le typedef de membre de modèle `conditional<B, T1, T2>::type` prend la valeur *T1* lorsque *B* prend la valeur **true**et prend la valeur *T2* lorsque  *B* prend la valeur **false**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

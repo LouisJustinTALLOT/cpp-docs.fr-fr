@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963522"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator, classe
 
-La classe de modèle ostream_iterator décrit un objet itérateur de sortie qui écrit les éléments consécutifs dans le flux de sortie avec l’**opérateur <<** d’extraction.
+La classe de modèle ostream_iterator décrit un objet itérateur de sortie qui écrit des éléments consécutifs dans le flux de sortie avec l’extraction `operator <<`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,9 +44,9 @@ class ostream_iterator
 
 *Type* le type d’objet à insérer dans le flux de sortie.
 
-`CharType` Type qui représente le type de caractère pour le `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char`.
+*CharType* le type qui représente le type de caractère pour le `ostream_iterator`. Cet argument est facultatif et la valeur par défaut est **char**.
 
-`Traits` Type qui représente le type de caractère pour le `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*
+*Caractéristiques* le type qui représente le type de caractère pour le `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*
 
 La classe ostream_iterator doit répondre aux exigences d’un itérateur de sortie. Les algorithmes peuvent être enregistrés directement dans le flux de sortie à l'aide de `ostream_iterator`.
 
@@ -72,7 +72,7 @@ La classe ostream_iterator doit répondre aux exigences d’un itérateur de sor
 |[operator++](#op_add_add)|Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.|
 |[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **CharType**.
+Le type est un synonyme du paramètre de modèle `CharType`.
 
 ### <a name="example"></a>Exemple
 
@@ -236,11 +236,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-`val` La valeur de l’objet de type `Type` à insérer dans le flux de sortie.
+*Val* la valeur de l’objet de type `Type` à insérer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’opérateur insère `val` dans le flux de sortie associé à l’objet, suivi du délimiteur éventuellement spécifié dans le [constructeur ostream_iterator](#ostream_iterator), puis retourne une référence à `ostream_iterator`.
+L’opérateur insère *val* dans le flux de sortie associé à l’objet, suivi par le délimiteur spécifié dans le [constructeur ostream_iterator](#ostream_iterator) (le cas échéant), puis retourne une référence à la `ostream_iterator`.
 
 ### <a name="remarks"></a>Notes
 
@@ -294,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Paramètres
 
-`_Ostr` Le flux de sortie de type [ostream_iterator::ostream_type](#ostream_type) à être itéré.
+*_Ostr* le flux de sortie de type [ostream_iterator::ostream_type](#ostream_type) devant être itéré.
 
-`_Delimiter` Le délimiteur est inséré dans le flux de sortie entre les valeurs.
+*_Delimiter* le délimiteur qui est inséré dans le flux de sortie entre les valeurs.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur initialise le pointeur de flux de sortie avec `&_Ostr`. Le pointeur de chaîne de délimiteur désigne une chaîne vide.
 
-Le deuxième constructeur initialise le pointeur de flux de sortie avec `&_Ostr`, et le pointeur de chaîne de délimiteur avec `_Delimiter`.
+Le deuxième constructeur initialise le pointeur de flux de sortie avec `&_Ostr` et le pointeur de chaîne de délimiteur avec *_Delimiter*.
 
 ### <a name="example"></a>Exemple
 
@@ -377,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **Traits**.
+Le type est un synonyme du paramètre de modèle `Traits`.
 
 ### <a name="example"></a>Exemple
 

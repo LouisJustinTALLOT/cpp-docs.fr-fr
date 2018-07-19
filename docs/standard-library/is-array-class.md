@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f4594044ce135ed6927f9d0108863cca12845d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a368b9df930a3a72ba1e43c861663263175699d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963083"
 ---
 # <a name="isarray-class"></a>is_array, classe
 
@@ -37,11 +37,11 @@ struct is_array;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type tableau. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type tableau, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -75,7 +75,7 @@ is_array<int> == false
 is_array<int[5]> == true
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

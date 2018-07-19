@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c655ea4adec0364f35d0b43c637eae9c270cdb0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856770"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962063"
 ---
 # <a name="ispod-class"></a>is_pod, classe
 
@@ -41,7 +41,7 @@ struct is_pod;
 
 ## <a name="remarks"></a>Notes
 
-`is_pod<T>::value` est `true` si le type *T* est Plain Old Data (POD). Sinon, il est `false`.
+`is_pod<T>::value` est **true** si le type *T* est Plain Old Data (POD). Sinon, il est **false**.
 
 Les types arithmétiques, les types énumération, les types pointeur et les pointeurs vers des types de membres sont des types POD.
 
@@ -103,7 +103,7 @@ is_pod<int> == true
 is_pod<throws> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850344"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964253"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible, classe
 
@@ -36,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est un type de classe qui a un constructeur par défaut. Sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Le type `T` doit être un type complet, `void`, ou un tableau ayant des limites d’index inconnues.
+Une instance du prédicat de type a la valeur true si le type *T* est un type de classe qui a un constructeur par défaut, sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Type *T* doit être un type complet, **void**, ou un tableau de limite inconnue.
 
 ## <a name="example"></a>Exemple
 
@@ -77,7 +77,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

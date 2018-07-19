@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962986"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible, classe
 
@@ -36,13 +36,13 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` a un constructeur par défaut nothrow. Sinon, sa valeur est false. Une instance du prédicat de type équivaut à `is_nothrow_constructible<Ty>`.
+Une instance du prédicat de type a la valeur true si le type *Ty* a un constructeur par défaut nothrow, sinon, sa valeur est false. Une instance du prédicat de type équivaut à `is_nothrow_constructible<Ty>`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

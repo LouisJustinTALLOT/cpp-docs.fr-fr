@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852108"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962814"
 ---
 # <a name="ispointer-class"></a>is_pointer, classe
 
@@ -37,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un pointeur vers `void`, un pointeur vers un objet ou un pointeur vers une fonction, ou une forme `cv-qualified` de l'un d'eux. Sinon, sa valeur est false. Notez que `is_pointer` contient false si `Ty` est un pointeur vers un membre ou un pointeur vers une fonction membre.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un pointeur vers **void**, un pointeur vers un objet, ou un pointeur vers une fonction ou un `cv-qualified` forme d’un d’eux, sinon, sa valeur est false. Notez que `is_pointer` contient false si *Ty* est un pointeur vers membre ou un pointeur vers fonction membre.
 
 ## <a name="example"></a>Exemple
 
@@ -82,7 +82,7 @@ is_pointer<int> == false
 is_pointer<int *> == true
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862375"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963223"
 ---
 # <a name="stack-class"></a>stack, classe
 
@@ -52,15 +52,15 @@ class stack
 
 *Type* type de données de l’élément à stocker dans la pile.
 
-`Container` Le type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par défaut est la classe `deque`*\<Type>*.
+*Conteneur* le type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par défaut est la classe `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Notes
 
-Les éléments de la classe **Type** stipulés dans le premier paramètre de modèle d’un objet stack sont synonymes de [value_type](#value_type) et doivent correspondre au type d’élément de la classe de conteneur sous-jacent **Container** stipulé par le deuxième paramètre de modèle. La classe **Type** doit pouvoir faire l’objet d’une assignation, pour qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.
+Les éléments de classe `Type` stipulés dans le modèle de paramètre d’un objet stack sont synonymes de [value_type](#value_type) et doit correspondre au type d’élément de la classe de conteneur sous-jacent `Container` stipulé par le deuxième paramètre de modèle. Le `Type` doit être assignable, afin qu’il soit possible de copier des objets de ce type et d’affecter des valeurs aux variables de ce type.
 
-Les classes de conteneur sous-jacent appropriées pour stack incluent la [classe deque](../standard-library/deque-class.md), la [classe list](../standard-library/list-class.md) et la [classe vector](../standard-library/vector-class.md) ou tout autre conteneur de séquence qui prend en charge les opérations **back**, `push_back` et `pop_back`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
+Classes de conteneur sous-jacent appropriées pour stack incluent [deque](../standard-library/deque-class.md), [list, classe](../standard-library/list-class.md), et [vector, classe](../standard-library/vector-class.md), ou tout autre conteneur de séquence qui prend en charge les opérations de `back`, `push_back`, et `pop_back`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
 
-Les objets stack sont comparables quant à l’égalité si et seulement si les éléments de la classe **Type** sont comparables quant à l’égalité, et ils sont comparables avec l’opérateur « inférieur à » si et seulement si les éléments de la classe **Type** sont comparables avec l’opérateur « inférieur à ».
+Les objets stack sont comparables à l’égalité si et seulement si les éléments de classe `Type` l’égalité ne sont comparables, et ils inférieur-que comparable si et seulement si les éléments de classe `Type` sont inférieurs-que comparable.
 
 - La classe stack prend en charge une structure de données LIFO (dernier entré, premier sorti). Une bonne analogie à avoir à l'esprit est celle d'une pile d'assiettes. Les éléments (les assiettes) peuvent être insérés, inspectés ou supprimés seulement à partir du haut de la pile, qui est le dernier élément à la fin du conteneur de base. La restriction qui fait que seul l'élément du haut est accessible est la raison de l'utilisation de la classe stack.
 
@@ -92,7 +92,7 @@ Les objets stack sont comparables quant à l’égalité si et seulement si les 
 |[size](#size)|Retourne le nombre d'éléments d'un `stack`.|
 |[top](#top)|Retourne une référence à un élément en haut de l'objet la`stack`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<stack>
 
@@ -227,7 +227,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-`val` L’élément est ajouté en haut de la pile.
+*Val* l’élément ajouté en haut de la pile.
 
 ### <a name="remarks"></a>Notes
 
@@ -334,7 +334,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le conteneur dont la pile construite doit être une copie.
+*droit* le conteneur sur lequel l’objet stack construit doit être une copie.
 
 ### <a name="example"></a>Exemple
 
@@ -393,7 +393,7 @@ Référence au dernier élément dans le conteneur en haut de l’objet stack.
 
 L’objet stack ne doit pas être vide pour appliquer la fonction membre. Le haut de l’objet stack correspond à la position occupée par l’élément ajouté le plus récemment et au dernier élément à la fin du conteneur.
 
-Si la valeur de retour de **top** est assignée à `const_reference`, l’objet stack ne peut pas être modifié. Si la valeur de retour de **top** est assignée à **reference**, l’objet stack peut être modifié.
+Si la valeur de retour de `top` est affecté à un `const_reference`, l’objet de pile ne peut pas être modifié. Si la valeur de retour de `top` est affecté à un `reference`, l’objet de pile peut être modifié.
 
 ### <a name="example"></a>Exemple
 

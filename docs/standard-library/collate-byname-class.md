@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964910"
 ---
 # <a name="collatebyname-class"></a>collate_byname, classe
 
@@ -49,15 +49,15 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-`_Locname` Paramètres régionaux nommée.
+*_Locname* paramètres régionaux nommés.
 
-`_Refs` Un décompte de références initial.
+*_Refs* nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
-Classe de modèle qui décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) de type [collate](../standard-library/collate-class.md#collate)\<CharType>. Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#name) `_Locname`. Chaque constructeur initialise son objet de base avec [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Classe de modèle qui décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) de type [collate](../standard-library/collate-class.md#collate)\<CharType>. Son comportement est déterminé par le [nommé](../standard-library/locale-class.md#name) paramètres régionaux *_Locname*. Chaque constructeur initialise son objet de base avec [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 

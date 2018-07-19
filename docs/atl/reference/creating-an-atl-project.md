@@ -1,5 +1,5 @@
 ---
-title: Création d’un projet ATL | Documents Microsoft
+title: Création d’un projet ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37badfba693357cb14b34e0f26f717b2ebe8f024
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61302df754c0657fb201d555c6e7491ba1414f7f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359001"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962941"
 ---
 # <a name="creating-an-atl-project"></a>Création d’un projet ATL
-Pour créer un projet ATL, la plus simple consiste à utiliser l’Assistant Projet ATL, situé dans le dossier projets Win32 de la **boîte de dialogue Nouveau projet**.  
+Le moyen le plus simple de créer un projet ATL consiste à utiliser l’Assistant Projet ATL, situé dans le dossier projets Win32 de la **boîte de dialogue Nouveau projet**.  
   
 ### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Pour créer un projet ATL à l’aide de l’Assistant Projet ATL  
   
-1.  Suivez les instructions de la rubrique [création d’un projet avec l’Assistant Application Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Suivez les instructions de la rubrique [création d’un projet avec un Assistant d’Application Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
 2.  Sélectionnez le **projet ATL** icône dans le volet Modèles pour ouvrir l’Assistant Projet ATL.  
   
-3.  Définir les paramètres de votre application à l’aide de la [paramètres de l’Application](../../atl/reference/application-settings-atl-project-wizard.md) page de la `ATL Project Wizard`.  
+3.  Définir les paramètres de votre application à l’aide de la [paramètres d’Application](../../atl/reference/application-settings-atl-project-wizard.md) page de la `ATL Project Wizard`.  
   
     > [!NOTE]
     >  Ignorez cette étape afin que l'Assistant conserve les paramètres par défaut.  
@@ -47,5 +47,4 @@ Pour créer un projet ATL, la plus simple consiste à utiliser l’Assistant Pro
 ## <a name="see-also"></a>Voir aussi  
  [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
- [Déploiement d’Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

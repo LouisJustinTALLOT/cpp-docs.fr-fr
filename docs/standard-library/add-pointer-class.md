@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963574"
 ---
 # <a name="addpointer-class"></a>add_pointer, classe
 
@@ -44,7 +44,7 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>Notes
 
-Le typedef de membre `type` nomme le même type que celui de `remove_reference<T>::type*`. L’alias `add_pointer_t` est un raccourci pour accéder au typedef de membre `type`.
+Le membre **typedef** `type` nomme le même type en tant que `remove_reference<T>::type*`. L’alias `add_pointer_t` est un raccourci pour accéder au membre **typedef** `type`.
 
 Comme il n'est pas valide de créer un pointeur à partir d'une référence, `add_pointer` supprime la référence, le cas échéant, du type spécifié avant de créer un pointeur vers un type. Par conséquent, vous pouvez utiliser un type avec `add_pointer` sans vous soucier de savoir si ce type est une référence.
 
@@ -72,7 +72,7 @@ int main()
 add_pointer_t<int> == int *
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

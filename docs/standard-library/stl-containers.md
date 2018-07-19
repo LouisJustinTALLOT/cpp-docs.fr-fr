@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862427"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965240"
 ---
 # <a name="c-standard-library-containers"></a>Conteneurs de la bibliothèque standard C++
 
@@ -177,7 +177,7 @@ Tous les conteneurs surchargent l'opérateur == pour la comparaison de deux cont
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparaison de conteneurs différents (C++14)
 
-Dans C++14 et les versions ultérieures, vous pouvez comparer des conteneurs et/ou des types d’éléments différents en utilisant l’une des surcharges de fonctions **std::equal**, **std::mismatch** ou **std::is_permutation** qui acceptent deux plages complètes. Ces surcharges vous permettent de comparer des conteneurs ayant des longueurs différentes. Elles sont beaucoup moins vulnérables aux erreurs des utilisateurs et sont optimisées pour retourner la valeur false en temps fixe quand des conteneurs de longueurs différentes sont comparés. C’est pourquoi nous vous recommandons d’utiliser ces surcharges sauf si (1) vous avez une raison très précise de ne pas le faire ou (2) vous utilisez un conteneur [std::list](../standard-library/list-class.md), qui ne tire pas profit des optimisations de double plage.
+Dans C ++ 14 et versions ultérieures, vous pouvez comparer des conteneurs et/ou des types d’éléments en utilisant l’une de le `std::equal`, `std::mismatch`, ou `std::is_permutation` surcharges qui acceptent deux plages complètes de fonctions. Ces surcharges vous permettent de comparer des conteneurs ayant des longueurs différentes. Elles sont beaucoup moins vulnérables aux erreurs des utilisateurs et sont optimisées pour retourner la valeur false en temps fixe quand des conteneurs de longueurs différentes sont comparés. C’est pourquoi nous vous recommandons d’utiliser ces surcharges sauf si (1) vous avez une raison très précise de ne pas le faire ou (2) vous utilisez un conteneur [std::list](../standard-library/list-class.md), qui ne tire pas profit des optimisations de double plage.
 
 ## <a name="see-also"></a>Voir aussi
 

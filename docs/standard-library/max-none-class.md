@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97cb713eda7a11874893bc9fc8a13b3b0784f29a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 44981141be5bfb4f18cb278e724ab905aebcc5cf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854026"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964169"
 ---
 # <a name="maxnone-class"></a>max_none, classe
 
@@ -48,7 +48,7 @@ class max_none
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Max`|Classe maximale qui détermine le nombre maximal d’éléments à stocker dans la `freelist`.|
+|*Max*|Classe maximale qui détermine le nombre maximal d’éléments à stocker dans la `freelist`.|
 
 ### <a name="member-functions"></a>Fonctions membres
 
@@ -60,7 +60,7 @@ class max_none
 |[released](#released)|Décrémente le nombre de blocs de mémoire dans la liste libre.|
 |[saved](#saved)|Incrémente le nombre de blocs de mémoire dans la liste libre.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -78,11 +78,11 @@ void allocated(std::size_t _Nx = 1);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`_Nx`|Valeur d’incrément.|
+|*_Nx*|Valeur d’incrément.|
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre ne fait rien. Elle est appelée après chaque appel réussi par `cache_freelist::allocate` à l’opérateur `new`. L’argument `_Nx` est le nombre de blocs de mémoire dans le bloc alloués par l’opérateur `new`.
+Cette fonction membre ne fait rien. Elle est appelée après chaque appel réussi par `cache_freelist::allocate` à l’opérateur **nouveau**. L’argument *_Nx* est le nombre de blocs de mémoire dans le bloc alloués par l’opérateur **nouveau**.
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -96,11 +96,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`_Nx`|Valeur d’incrément.|
+|*_Nx*|Valeur d’incrément.|
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre ne fait rien. Cette fonction membre est appelée après chaque appel par `cache_freelist::deallocate` à l’opérateur `delete`. L’argument `_Nx` est le nombre de blocs de mémoire dans le bloc libérés par l’opérateur `delete`.
+La fonction membre ne fait rien. Cette fonction membre est appelée après chaque appel par `cache_freelist::deallocate` à l’opérateur **supprimer**. L’argument *_Nx* est le nombre de blocs de mémoire dans le bloc libérés par l’opérateur **supprimer**.
 
 ## <a name="full"></a>  max_none::full
 
@@ -112,11 +112,11 @@ bool full();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Cette fonction membre retourne toujours `true`.
+Cette fonction membre retourne toujours **true**.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre est appelée par `cache_freelist::deallocate`. Si l’appel retourne `true`, `deallocate` place le bloc de mémoire dans la liste libre ; s’il retourne false, `deallocate` appelle l’opérateur `delete` pour libérer le bloc.
+Cette fonction membre est appelée par `cache_freelist::deallocate`. Si l’appel retourne **true**, `deallocate` place le bloc de mémoire dans la liste libre ; si elle retourne false, `deallocate` appelle l’opérateur **supprimer** pour libérer le bloc.
 
 ## <a name="released"></a>  max_none::released
 

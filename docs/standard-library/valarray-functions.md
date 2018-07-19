@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 53a7c666684783a85b2aeb0318cfedd738cc4b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962469"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt;, fonctions
 
@@ -69,7 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -123,7 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -195,7 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -205,7 +208,7 @@ Un valarray dont les éléments sont égaux à l’arc sinus des éléments du v
 
 L’unité des éléments retournés est le radian.
 
-La valeur de retour est une valeur comprise entre + pi/2 et - pi/2, ce qui est cohérent avec le sinus d’entrée de valeur.
+La valeur de retour est un principal comprise entre + pi/2 et - pi/2 qui est cohérente avec le sinus valeur entrée.
 
 ### <a name="example"></a>Exemple
 
@@ -267,7 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -277,7 +281,7 @@ Un valarray dont les éléments sont égaux à l’arc tangente des éléments d
 
 L’unité des éléments retournés est le radian.
 
-La valeur de retour est une valeur comprise entre + entrée de valeur de pi/2 et - pi/2, ce qui est cohérent avec la tangente.
+La valeur de retour est un principal comprise entre + pi/2 et - pi/2 qui est cohérente avec la tangente valeur entrée.
 
 ### <a name="example"></a>Exemple
 
@@ -348,9 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée ou de type constant de données numériques dont les éléments fournissent les valeurs de la coordonnée y de l’argument de l’arc tangente.
+*left*  
+ Le type de données numériques constantes ou le valarray d’entrée dont les éléments fournissent les valeurs de la coordonnée y de l’argument de l’arc tangente.
 
-`right` Le valarray d’entrée ou de type constant de données numériques dont les éléments fournissent les valeurs de la coordonnée x de l’argument de l’arc tangente.
+*right*  
+ Le type de données numériques constantes ou le valarray d’entrée dont les éléments fournissent les valeurs de la coordonnée x de l’argument de l’arc tangente.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -366,9 +372,9 @@ Un valarray dont les éléments `I` sont égaux à l’arc tangente de :
 
 L’unité des éléments retournés est le radian.
 
-Cette fonction conserve les informations sur les signes des composants dans l’argument sont perdues lors de la fonction tangente standard, et cette base de connaissances du quadrant permet à la valeur de retournée et être affecté à un angle unique entre + pi,-pi.
+Cette fonction préserve les informations sur les signes des composants dans l’argument sont perdues par la fonction tangente standard, et cette connaissance du quadrant permet à la valeur de retournée être affecté à un angle unique compris entre + pi et - pi.
 
-Si `left` et `right` ont un nombre différent d’éléments, le résultat est non défini.
+Si *gauche* et *droit* ont un nombre différent d’éléments, le résultat est indéfini.
 
 ### <a name="example"></a>Exemple
 
@@ -434,7 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -510,7 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -592,7 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -654,7 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -716,7 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -795,9 +806,11 @@ pow(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments fournissent la base de chaque élément d’exponentiated.
+*left*  
+ Le valarray d’entrée dont les éléments fournissent la base des éléments à élever à une puissance.
 
-`right` Le valarray d’entrée dont les éléments l’alimentation pour chaque élément d’exponentiated.
+*right*  
+ Le valarray d’entrée dont les éléments fournissent la puissance à laquelle chaque élément doit être élevé.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -811,7 +824,7 @@ Un valarray dont les éléments `I` sont égaux à :
 
 ### <a name="remarks"></a>Notes
 
-Si `left` et `right` ont un nombre différent d’éléments, le résultat est non défini.
+Si *gauche* et *droit* ont un nombre différent d’éléments, le résultat est indéfini.
 
 ### <a name="example"></a>Exemple
 
@@ -875,7 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -951,7 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1033,7 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1090,8 +1106,8 @@ void swap(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Objet de type `valarray`.|
-|`right`|Objet de type `valarray`.|
+|*left*|Objet de type `valarray`.|
+|*right*|Objet de type `valarray`.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1108,7 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1184,7 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le valarray d’entrée dont les éléments doivent être traitées par la fonction membre.
+*left*  
+ Le valarray d’entrée dont les éléments doivent être traités par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 

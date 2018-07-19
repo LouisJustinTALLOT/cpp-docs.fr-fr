@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963924"
 ---
 # <a name="tuple-class"></a>tuple, classe
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Paramètres
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ Type du Nième élément de tuple.
 
-## Remarks
+## <a name="remarks"></a>Notes
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+La classe de modèle décrit un objet qui stocke des objets de N de types `T1`, `T2`,..., `TN`, respectivement, le cas où `0 <= N <= Nmax`. L’étendue d’une instance de tuple `tuple<T1, T2, ..., TN>` correspond au nombre `N` de ses arguments template. L’index de l’argument template `Ti` et de la valeur stockée correspondante de ce type est `i - 1`. Par conséquent, pendant que nous numéroter les types à partir de 1 à N dans cette documentation, l’index correspondant les valeurs comprises entre 0 et N - 1.
 
-## Example
+## <a name="example"></a>Exemple
 
 ```cpp
 // tuple.cpp
@@ -126,7 +127,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<tuple>
 
@@ -153,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Paramètres
 
-`UN` Le type du nième élément de tuple de copié.
+*ANNULER*  
+ Type du Nième élément de tuple copié.
 
-`right` Le tuple à copier à partir de.
+*right*  
+ Tuple à partir duquel effectuer la copie.
 
 ### <a name="remarks"></a>Notes
 
-Les deux premiers opérateurs membres assignent les éléments de `right` aux éléments correspondants de `*this`. Le troisième opérateur membre assigne `right.first` à l’élément à l’index 0 de `*this` et `right.second` à l’élément à l’index 1. Ces trois opérateurs membres retournent `*this`.
+Les deux premiers opérateurs membres assignent les éléments de *droit* aux éléments correspondants de `*this`. Le troisième opérateur membre assigne `right.first` à l’élément à l’index 0 de `*this` et `right.second` à l’élément à l’index 1. Ces trois opérateurs membres retournent `*this`.
 
 Les opérateurs membres restants sont analogues aux précédents, mais avec le [déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -226,8 +229,8 @@ template <class... Types>
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Tuple dont les éléments doivent être échangés avec ceux du tuple `right`.|
-|`right`|Tuple dont les éléments doivent être échangés avec ceux du tuple `left`.|
+|*left*|Un tuple dont les éléments doivent être échangés avec ceux du tuple *droit*.|
+|*right*|Un tuple dont les éléments doivent être échangés avec ceux du tuple *gauche*.|
 
 ### <a name="remarks"></a>Notes
 
@@ -260,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Paramètres
 
-`UN` Le type du nième élément de tuple de copié.
+*ANNULER*  
+ Type du Nième élément de tuple copié.
 
-`right` Le tuple à copier à partir de.
+*right*  
+ Tuple à partir duquel effectuer la copie.
 
 ### <a name="remarks"></a>Notes
 
@@ -270,7 +275,7 @@ Le premier constructeur construit un objet dont les éléments sont construits p
 
 Le second constructeur construit un objet dont les éléments sont construits par copie à partir des arguments `P1`, `P2`, ..., `PN` avec chaque `Pi` initialisant l'élément à l'index `i - 1`.
 
-Les troisième et quatrième constructeurs construisent un objet dont les éléments sont construits par copie à partir de l'élément correspondant du `right`.
+Les troisième et quatrième constructeurs construisent un objet dont les éléments sont construits à partir de l’élément correspondant par copie *droit*.
 
 Le cinquième constructeur construit un objet dont l'élément à l'index 0 est construit par copie à partir de `right.first` et dont l'élément à l'index 1 est construit par copie à partir de `right.second`.
 

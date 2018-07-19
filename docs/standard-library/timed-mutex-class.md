@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4dc22ed8676c720dd8bde5c8f424915dfa8fe40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863256"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962658"
 ---
 # <a name="timedmutex-class"></a>timed_mutex, classe
 
@@ -64,7 +64,7 @@ class timed_mutex;
 |[try_lock_until](#try_lock_until)|Tente d’obtenir la propriété du `mutex` jusqu’à une heure spécifiée.|
 |[unlock](#unlock)|Libère la propriété du `mutex`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<mutex >
 
@@ -112,7 +112,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.
+**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -129,11 +129,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Paramètres
 
-`Rel_time` A [chrono::duration](../standard-library/duration-class.md) objet qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété de la `mutex`.
+*Rel_time*  
+ Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.
+**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -152,11 +153,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Paramètres
 
-`Abs_time` Un point dans le temps qui spécifie le seuil au-delà duquel la méthode n’est plus tente d’obtenir la propriété de la `mutex`.
+*Abs_time*  
+ Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.
+**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

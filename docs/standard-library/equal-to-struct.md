@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1ef431fdba40ef9e8fd46b8c0e5d9cf7b32eda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844001"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961650"
 ---
-# <a name="equalto-struct"></a>equal_to, struct
+# <a name="equalto-struct"></a>equal_to (struct)
 
-Prédicat binaire qui effectue l’opération d’égalité ( `operator==`) sur ses arguments.
+Un prédicat binaire qui effectue l’opération d’égalité (`operator==`) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,11 +49,11 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type`, `T`, `U` N’importe quel type qui prend en charge un `operator==` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator==` qui accepte des opérandes des types spécifiés ou inférés.
 
-`Left` L’opérande gauche de l’opération d’égalité. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.
+*Gauche* l’opérande gauche de l’opération d’égalité. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-`Right` L’opérande de droite de l’opération d’égalité. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.
+*Droite* l’opérande droit de l’opération d’égalité. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -61,7 +61,7 @@ Résultat de `Left == Right`. Le modèle spécialisé effectue un transfert parf
 
 ## <a name="remarks"></a>Notes
 
-L’égalité des objets de type `Type` doit pouvoir être comparée. `operator==` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.
+Les objets de type *Type* doit être comparable pour l’égalité. `operator==` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.
 
 ## <a name="example"></a>Exemple
 

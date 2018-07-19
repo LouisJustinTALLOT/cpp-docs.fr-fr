@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856633"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961862"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-Définit plusieurs classes qui prennent en charge les opérations iostreams sur les séquences stockées dans un tableau d'objets `char` alloué. Ces séquences sont facilement converties vers et à partir de chaînes C.
+Définit plusieurs classes qui prennent en charge les opérations iostreams sur les séquences stockées dans un tableau alloué de **char** objet. Ces séquences sont facilement converties vers et à partir de chaînes C.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ Définit plusieurs classes qui prennent en charge les opérations iostreams sur 
 Les objets de type `strstream` fonctionnent avec `char` *, qui sont des chaînes C. Utilisez [\<sstream>](../standard-library/sstream.md) pour les objets de type [basic_string](../standard-library/basic-string-class.md).
 
 > [!NOTE]
-> Les classes de \<strstream > sont déconseillés. Envisagez d’utiliser les classes de \<sstream > à la place.
+> Les classes de \<strstream > sont déconseillés. Envisagez d’utiliser les classes dans \<sstream > à la place.
 
 ### <a name="classes"></a>Classes
 
 |Classe|Description|
 |-|-|
-|[strstreambuf, classe](../standard-library/strstreambuf-class.md)|Cette classe décrit une mémoire tampon de flux qui contrôle la transmission d'éléments vers et à partir d'une séquence d'éléments stockée dans un objet de tableau `char`.|
+|[strstreambuf, classe](../standard-library/strstreambuf-class.md)|La classe décrit une mémoire tampon de flux qui contrôle la transmission d’éléments vers et à partir d’une séquence d’éléments stockés dans un **char** objet tableau.|
 |[istrstream, classe](../standard-library/istrstream-class.md)|La classe décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[ostrstream, classe](../standard-library/ostrstream-class.md)|La classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[strstream, classe](../standard-library/strstream-class.md)|La classe décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l’aide d’une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).|

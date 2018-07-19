@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964780"
 ---
 # <a name="submatch-class"></a>sub_match, classe
 
@@ -65,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`BidIt` Type d’itérateur pour les sous-correspondances.
+*BidIt*  
+ Type d'itérateur pour les sous-correspondances.
 
 ## <a name="remarks"></a>Notes
 
@@ -73,13 +74,13 @@ La classe de modèle décrit un objet qui désigne une séquence de caractères 
 
 Si le groupe de capture n’a aucune correspondance, le membre de données `matched` de l’objet a la valeur false, et les deux itérateurs `first` et `second` (hérités du `std::pair`de base) sont égaux. Si le groupe de capture a une correspondance, `matched` a la valeur true et l’itérateur `first` pointe vers le premier caractère de la séquence cible correspondant au groupe de capture. En outre, l’itérateur `second` pointe vers la position située après le dernier caractère de la séquence cible correspondant au groupe de capture. Notez que pour une correspondance de longueur nulle, le membre `matched` a la valeur true. Par ailleurs, les deux itérateurs sont égaux et pointent vers la position de la correspondance.
 
-Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Par exemple :
+Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Exemple :
 
 « ^ » correspond à la séquence cible « a ». L’objet `sub_match` correspondant au groupe de capture 0 contient les itérateurs qui pointent vers le premier caractère de la séquence.
 
 « b(a*)b » correspond à la séquence cible « bb ». L’objet `sub_match` correspondant au groupe de capture 1 contient les itérateurs qui pointent vers le second caractère de la séquence.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` La sous-correspondance à comparer.
+*right*  
+ Sous-correspondance avec laquelle effectuer la comparaison.
 
-`str` Chaîne à comparer.
+*str*  
+ Chaîne de comparaison.
 
-`ptr` La séquence se terminant par null à comparer.
+*ptr*  
+ Séquence terminée par un caractère null avec laquelle effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
 
@@ -373,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>Notes
 
-Le membre contient `true` seulement si le groupe de capture associé à `*this` faisait partie de la correspondance d’expression régulière.
+Le membre contient **true** uniquement si le groupe de capture associé `*this` faisait partie de la correspondance d’expression régulière.
 
 ### <a name="example"></a>Exemple
 

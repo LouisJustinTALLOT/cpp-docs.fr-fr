@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961504"
 ---
 # <a name="logicalor-struct"></a>logical_or, struct
 
@@ -49,11 +49,11 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type`, `T`, `U` N’importe quel type qui prend en charge un `operator||` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator||` qui accepte des opérandes des types spécifiés ou inférés.
 
-`Left` L’opérande gauche de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.
+*Gauche* l’opérande gauche de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-`Right` L’opérande de droite de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.
+*Droite* l’opérande de droite de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -123,7 +123,7 @@ The deque which is the disjuction of d1 & d2 is:
 
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

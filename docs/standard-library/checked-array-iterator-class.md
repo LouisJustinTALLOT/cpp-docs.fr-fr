@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ac7686706aad871b95f8b94d2bb11b459a64e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961738"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator, classe
 
@@ -189,7 +189,7 @@ int main()
 |[operator-](#operator-)|Décrémente un décalage depuis un itérateur et retourne le nouveau `checked_array_iterator` qui traite l'élément inséré à la nouvelle position décalée.|
 |[operator&#91;&#93;](#op_at)|Retourne une référence à un élément décalé d'un nombre donné de positions par rapport à l'élément auquel un `checked_array_iterator` se rapportait.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 
@@ -253,11 +253,11 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Paramètres
 
-`ptr` Un pointeur vers le tableau.
+*PTR* un pointeur vers le tableau.
 
-`size` La taille du tableau.
+*taille* la taille du tableau.
 
-`index` (Facultatif) Un élément dans le tableau, pour initialiser l’itérateur.  Par défaut, l’itérateur est initialisé au niveau du premier élément du tableau.
+*index* (facultatif) un élément dans le tableau, pour initialiser l’itérateur.  Par défaut, l’itérateur est initialisé au niveau du premier élément du tableau.
 
 ### <a name="remarks"></a>Notes
 
@@ -325,7 +325,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `checked_array_iterator` permettant de vérifier l’égalité.
+*droit* le `checked_array_iterator` par rapport auquel vérifier l’égalité.
 
 ### <a name="remarks"></a>Notes
 
@@ -380,7 +380,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `checked_array_iterator` par rapport à laquelle vérifier pour vérifier leur inégalité.
+*droit* le `checked_array_iterator` par rapport auquel vérifier pour vérifier leur inégalité.
 
 ### <a name="remarks"></a>Notes
 
@@ -435,7 +435,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `checked_array_iterator` par rapport à laquelle vérifier pour vérifier leur inégalité.
+*droit* le `checked_array_iterator` par rapport auquel vérifier pour vérifier leur inégalité.
 
 ### <a name="remarks"></a>Notes
 
@@ -490,7 +490,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `checked_array_iterator` à comparer.
+*droit* le `checked_array_iterator` à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -508,7 +508,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `checked_array_iterator` à comparer.
+*droit* le `checked_array_iterator` à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -526,7 +526,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Le `checked_array_iterator` à comparer.
+*droit* le `checked_array_iterator` à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -756,7 +756,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Le décalage d’incrément de l’itérateur.
+*_Off* le décalage d’incrémentation de l’itérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` L’offset à ajouter à la `checked_array_iterator`.
+*_Off* le décalage à ajouter à la `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -850,7 +850,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Le décalage d’incrément de l’itérateur.
+*_Off* le décalage d’incrémentation de l’itérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -900,7 +900,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Le décalage à décrémenter à partir de la `checked_array_iterator`.
+*_Off* le décalage à décrémenter le `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -922,7 +922,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`_Off` Le décalage à partir de la `checked_array_iterator` adresse.
+*_Off* le décalage à partir de la `checked_array_iterator` adresse.
 
 ### <a name="return-value"></a>Valeur de retour
 

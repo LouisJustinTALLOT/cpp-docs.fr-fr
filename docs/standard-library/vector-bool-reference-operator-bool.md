@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fd249dd7591caaaf62a0b8a698085efedb1f25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00ccd9e9ffbab78534c5b6417b7567ba03d007ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963678"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>vector&lt;bool&gt;::reference::operator bool
 
-Fournit une conversion implicite de `vector<bool>::reference` en `bool`.
+Fournit une conversion implicite de `vector<bool>::reference` à **bool**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ La valeur booléenne de l’élément de l’objet [vector\<bool>](../standard-l
 
 L'objet `vector<bool>` ne peut pas être modifié par cet opérateur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<vector>
 
@@ -53,5 +53,5 @@ L'objet `vector<bool>` ne peut pas être modifié par cet opérateur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[vecteur\<bool > :: classe de référence](../standard-library/vector-bool-reference-class.md)<br/>
+[vecteur\<bool > :: reference, classe](../standard-library/vector-bool-reference-class.md)<br/>
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

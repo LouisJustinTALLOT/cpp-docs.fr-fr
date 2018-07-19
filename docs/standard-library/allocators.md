@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963493"
 ---
 # <a name="allocators"></a>Allocateurs
 
@@ -38,7 +38,7 @@ La bibliothèque C++ Standard fournit une implémentation par défaut pour un al
 
 ## <a name="writing-your-own-allocator-c11"></a>Écriture de votre propre allocateur (C++11)
 
-L'allocateur par défaut utilise `new` et `delete` pour allouer et désallouer la mémoire. Si vous souhaitez utiliser une autre méthode d'allocation de la mémoire, telle que l'utilisation de la mémoire partagée, vous devez créer votre propre allocateur. Si vous ciblez C++11 et que vous devez écrire un nouvel allocateur personnalisé, faites-en un allocateur minimal si possible. Même si vous avez déjà implémenté un allocateur de style antérieur, changez-le en *allocateur minimal* pour tirer parti de la méthode `construct()` la plus efficace fournie automatiquement.
+L’allocateur par défaut utilise **nouveau** et **supprimer** pour allouer et libérer la mémoire. Si vous souhaitez utiliser une autre méthode d'allocation de la mémoire, telle que l'utilisation de la mémoire partagée, vous devez créer votre propre allocateur. Si vous ciblez C++11 et que vous devez écrire un nouvel allocateur personnalisé, faites-en un allocateur minimal si possible. Même si vous avez déjà implémenté un allocateur de style antérieur, changez-le en *allocateur minimal* pour tirer parti de la méthode `construct()` la plus efficace fournie automatiquement.
 
 Un allocateur minimal nécessite beaucoup moins de code réutilisable et vous permet de vous concentrer sur les fonctions membres `allocate` et `deallocate` qui effectuent tout le travail. Lors de la création d'un allocateur minimal, n'implémentez aucun membre à l'exception de ceux indiqués dans l'exemple ci-dessous :
 

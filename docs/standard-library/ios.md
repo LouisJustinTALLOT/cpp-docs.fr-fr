@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961481"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -37,9 +37,9 @@ Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet
 
 ## <a name="remarks"></a>Notes
 
-Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’une des classes de modèle [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) efface l’indicateur de format `ios_base::skipws` dans l’objet **str**, qui peut être de l’un de ces types.
+Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’une des classes de modèle [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) efface l’indicateur de format `ios_base::skipws` dans l’objet `str`, ce qui peut être l’une de ces types.
 
-Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Par exemple :
+Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Exemple :
 
 ```cpp
 istr>> noskipws;

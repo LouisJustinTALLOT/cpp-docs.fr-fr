@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961920"
 ---
 # <a name="binarynegate-class"></a>binary_negate, classe
 
@@ -44,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`Func` La fonction binaire à inverser.
+*Func* la fonction binaire à rendre négative.
 
-`left` L’opérande de gauche de la fonction binaire à inverser.
+*gauche* l’opérande gauche de la fonction binaire à rendre négative.
 
-`right` L’opérande de droite de la fonction binaire à inverser.
+*droit* l’opérande de droite de la fonction binaire à rendre négative.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -123,7 +123,7 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

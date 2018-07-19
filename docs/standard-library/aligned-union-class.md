@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962111"
 ---
 # <a name="alignedunion-class"></a>aligned_union, classe
 
@@ -39,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-`Len` La valeur d’alignement pour le plus grand type dans l’union.
+*Len* la valeur d’alignement pour le type le plus grand dans l’union.
 
-`Types` Types distincts dans l’union sous-jacente.
+*Types* types distincts dans l’union sous-jacente.
 
 ## <a name="remarks"></a>Notes
 
-Utilisez la classe de modèle pour obtenir l’alignement et la taille nécessaires pour stocker une union dans un stockage non initialisé. Le typedef de membre `type` nomme un type POD adapté au stockage de tout type répertorié dans `Types`. La taille minimale est `Len`. Le membre statique `alignment_value` de type `std::size_t` contient l’alignement le plus strict nécessaire de tous les types répertoriés dans `Types`.
+Utilisez la classe de modèle pour obtenir l’alignement et la taille nécessaires pour stocker une union dans un stockage non initialisé. Le typedef de membre `type` nomme un type POD adaptés au stockage d’un type énuméré dans *Types*; la taille minimale est *Len*. Le membre statique `alignment_value` de type `std::size_t` contient l’alignement le plus strict nécessaire de tous les types répertoriés dans *Types*.
 
 ## <a name="example"></a>Exemple
 
@@ -85,7 +85,7 @@ int main()
 value of u->i is 1065353216
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

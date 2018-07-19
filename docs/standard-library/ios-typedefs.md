@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 7ee458d0d84b63de52a2840a7a86903afed1704d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79e3361d58165ac356e2ef75c0a3fd1a4cb4f26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963639"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt;, typedefs
 
@@ -35,7 +35,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisée pour les éléments de type `char` ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **char** ayant les caractéristiques par défaut.
 
 ## <a name="streamoff"></a>  streamoff
 
@@ -51,7 +51,7 @@ Prend en charge les opérations internes.
 
 ### <a name="remarks"></a>Notes
 
-Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur **streamoff(-1)** indique généralement un décalage erroné.
+Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur `streamoff(-1)` indique généralement un décalage erroné.
 
 ## <a name="streampos"></a>  streampos
 
@@ -134,7 +134,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisée pour les éléments de type `wchar_t` ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
 
 ## <a name="wstreampos"></a>  wstreampos
 

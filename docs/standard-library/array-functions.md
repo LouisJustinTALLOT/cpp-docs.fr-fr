@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840773"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961069"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;, fonctions
 
-L’en-tête \<array> inclut deux fonctions non-membres, `get` et `swap`, qui traitent des objets `array`.
+Le \<tableau > en-tête inclut deux fonctions non-membres, `get` et `swap`, qui opèrent sur **tableau** objets.
 
 |||
 |-|-|
@@ -50,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Index` Décalage de l’élément.
+*Index* décalage de l’élément.
 
-`T` Le type d’un élément.
+*T* le type d’un élément.
 
-`N` Le nombre d’éléments dans le tableau.
+*N* le nombre d’éléments dans le tableau.
 
-`arr` Sélectionnez à partir du tableau.
+*ARR* sélectionner à partir du tableau.
 
 ### <a name="example"></a>Exemple
 
@@ -92,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Une spécialisation de modèle non-membre de `std::swap` qui échange deux objets `array`.
+Une spécialisation de modèle non-membre de `std::swap` qui échange deux **tableau** objets.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -101,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Le premier tableau à échanger.
+*gauche* le premier tableau à échanger.
 
-`right` Le deuxième tableau à échanger.
+*droit* le deuxième tableau à échanger.
 
 ### <a name="remarks"></a>Notes
 

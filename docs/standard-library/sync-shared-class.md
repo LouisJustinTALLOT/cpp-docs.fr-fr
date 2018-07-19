@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963457"
 ---
 # <a name="syncshared-class"></a>sync_shared, classe
 
@@ -44,7 +44,7 @@ class sync_shared
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Cache`|Type de cache associé au filtre de synchronisation. Il peut s’agir de [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Type de cache associé au filtre de synchronisation. Il peut s’agir de [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Fonctions membres
 
@@ -54,7 +54,7 @@ class sync_shared
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
@@ -113,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Cache`|Type de cache associé au filtre de synchronisation.|
-|`Other`|Cache dont l’égalité est à comparer.|
+|*Cache*|Type de cache associé au filtre de synchronisation.|
+|*Autre*|Cache dont l’égalité est à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le résultat de `cache.equals(Other.cache)`, où `cache` représente l’objet cache, est `true` ; sinon, `false`.
+**true** si le résultat de `cache.equals(Other.cache)`, où `cache` représente l’objet cache, est **true**; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

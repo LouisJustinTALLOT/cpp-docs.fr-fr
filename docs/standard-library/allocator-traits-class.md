@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3b8fc232c6d692dd6e4f80018ab571e4e0cb34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962444"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits, classe
 
@@ -97,7 +97,7 @@ Les méthodes statiques suivantes appellent la méthode correspondante sur un pa
 |[max_size](#max_size)|Méthode statique qui utilise un allocateur spécifié pour déterminer le nombre maximal d’objets pouvant être alloués.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Méthode statique qui appelle `select_on_container_copy_construction` sur l’allocateur spécifié.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<memory>
 
@@ -116,11 +116,11 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Paramètres
 
-`al` Un objet allocateur.
+*Al* un objet allocateur.
 
-`count` Le nombre d’éléments à allouer.
+*nombre de* le nombre d’éléments à allouer.
 
-`hint` Un `const_pointer` qui peut aider à l’objet allocateur répondant à la demande pour le stockage en recherchant l’adresse d’un objet alloué avant la demande. Un pointeur null est traité comme s’il n’y avait aucun argument hint.
+*indicateur* A `const_pointer` pouvant aider l’objet allocateur à satisfaire la demande pour le stockage en recherchant l’adresse d’un objet alloué avant la demande. Un pointeur null est traité comme s’il n’y avait aucun argument hint.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -141,11 +141,11 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-`al` Un objet allocateur.
+*Al* un objet allocateur.
 
-`ptr` Pointeur vers l’emplacement où l’objet doit être construite.
+*PTR* un pointeur vers l’emplacement où l’objet doit être construite.
 
-`args` Une liste d’arguments est passée au constructeur d’objet.
+*args* une liste d’arguments est passée au constructeur d’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -163,11 +163,11 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Paramètres
 
-`al` Un objet allocateur.
+*Al* un objet allocateur.
 
-`ptr` Pointeur vers l’emplacement de départ de l’objet à être libéré.
+*PTR* un pointeur vers l’emplacement de départ des objets à désallouer.
 
-`count` Le nombre d’objets à libérer.
+*nombre de* le nombre d’objets à désallouer.
 
 ### <a name="remarks"></a>Notes
 
@@ -186,9 +186,9 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-`al` Un objet allocateur.
+*Al* un objet allocateur.
 
-`ptr` Pointeur vers l’emplacement de l’objet.
+*PTR* un pointeur vers l’emplacement de l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -204,7 +204,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Paramètres
 
-`al` Un objet allocateur.
+*Al* un objet allocateur.
 
 ### <a name="remarks"></a>Notes
 
@@ -220,11 +220,11 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Paramètres
 
-`al` Un objet allocateur.
+*Al* un objet allocateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Cette méthode retourne `al.select_on_container_copy_construction()`, si ce type est correctement construit ; sinon, `al`.
+Cette méthode retourne `al.select_on_container_copy_construction()`, si ce type est correctement construite ; sinon, elle retourne *al*.
 
 ### <a name="remarks"></a>Notes
 

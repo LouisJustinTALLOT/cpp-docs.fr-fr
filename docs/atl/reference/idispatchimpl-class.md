@@ -1,5 +1,5 @@
 ---
-title: Classe de IDispatchImpl | Documents Microsoft
+title: IDispatchImpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fddf556eba07264f6ea0b01edea3e3d1e8a3a7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c30f65701aa42c3fb73a5ef544f4b4126468a29d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962577"
 ---
-# <a name="idispatchimpl-class"></a>IDispatchImpl (classe)
+# <a name="idispatchimpl-class"></a>IDispatchImpl, classe
 Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,23 +50,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `T`  
+ [in] *T*  
  Une interface double.  
   
- [in] `piid`  
- Un pointeur vers l’IID de `T`.  
+ [in] *piid*  
+ Un pointeur vers l’IID de *T*.  
   
- [in] `plibid`  
+ [in] *plibid*  
  Pointeur vers le LIBID de la bibliothèque de types qui contient des informations sur l’interface. Par défaut, la bibliothèque de types de niveau serveur est passée.  
   
- [in] `wMajor`  
+ [in] *wMajor*  
  Version principale de la bibliothèque de types. Par défaut, la valeur est 1.  
   
- [in] `wMinor`  
+ [in] *wMinor*  
  Version secondaire de la bibliothèque de types. Par défaut, la valeur est 0.  
   
- [in] `tihclass`  
- La classe utilisée pour gérer les informations de type `T`. Par défaut, la valeur est définie sur `CComTypeInfoHolder`.  
+ [in] *tihclass*  
+ La classe utilisée pour gérer les informations de type pour *T*. Par défaut, la valeur est définie sur `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Membres  
   
@@ -74,7 +74,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Constructeur. Appels `AddRef` sur la variable membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle `Release`.|  
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Constructeur. Appels `AddRef` sur la variable de membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle `Release`.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -86,22 +86,22 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |[IDispatchImpl::Invoke](#invoke)|Fournit l’accès aux méthodes et propriétés exposées par l’interface double.|  
   
 ## <a name="remarks"></a>Notes  
- `IDispatchImpl` Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double sur un objet. Une interface double dérive `IDispatch` et utilise uniquement des types compatibles Automation. Comme une dispinterface, une interface double prend en charge la liaison anticipée et liaison tardive ; Toutefois, une interface double prend également en charge liaison par vtable.  
+ `IDispatchImpl` Fournit une implémentation par défaut pour le `IDispatch` dans le cadre de n’importe quelle interface double sur un objet. Une interface double dérive `IDispatch` et utilise uniquement des types compatibles Automation. Comme une dispinterface, une interface double prend en charge la liaison anticipée et liaison tardive ; Toutefois, une interface double prend également en charge liaison par vtable.  
   
- L’exemple suivant montre une implémentation classique des `IDispatchImpl`.  
+ L’exemple suivant montre une implémentation classique de `IDispatchImpl`.  
   
  [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]  
   
- Par défaut, le `IDispatchImpl` recherche les informations de type classe `T` dans le Registre. Pour implémenter une interface non inscrite, vous pouvez utiliser la `IDispatchImpl` classe sans accès au Registre à l’aide d’un numéro de version prédéfinies. Si vous créez un `IDispatchImpl` objet ayant 0xFFFF comme valeur pour `wMajor` et 0xFFFF comme valeur pour `wMinor`, la `IDispatchImpl` classe récupère la bibliothèque de types à partir du fichier .dll au lieu du Registre.  
+ Par défaut, le `IDispatchImpl` classe recherche les informations de type pour *T* dans le Registre. Pour implémenter une interface non inscrite, vous pouvez utiliser la `IDispatchImpl` classe sans l’accès au Registre à l’aide d’un numéro de version prédéfinies. Si vous créez un `IDispatchImpl` objet ayant 0xFFFF comme valeur pour *wMajor* et 0xFFFF comme valeur pour *wMinor*, la `IDispatchImpl` classe récupère la bibliothèque de types à partir du fichier .dll au lieu de la Registre.  
   
- `IDispatchImpl` contient un membre statique de type `CComTypeInfoHolder` qui gère les informations de type pour l’interface double. Si vous avez plusieurs objets qui implémentent la même double interface, une seule instance de `CComTypeInfoHolder` est utilisé.  
+ `IDispatchImpl` contient un membre statique de type `CComTypeInfoHolder` qui gère les informations de type pour l’interface double. Si vous avez plusieurs objets qui implémentent la même double n'interface qu’une seule instance de `CComTypeInfoHolder` est utilisé.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `T`  
   
  `IDispatchImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames  
@@ -117,7 +117,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) dans le Kit de développement logiciel Windows.  
+ Consultez [IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo  
  Récupère les informations de type pour l’interface double.  
@@ -130,7 +130,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) dans le Kit de développement logiciel Windows.  
+ Consultez [IDispatch::GetTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount  
  Détermine si les informations de type est disponible pour l’interface double.  
@@ -143,7 +143,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
  Consultez `IDispatch::GetTypeInfoCount` dans le Kit de développement logiciel Windows.  
   
 ##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl  
- Constructeur. Appels `AddRef` sur la variable membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle **version**.  
+ Constructeur. Appels `AddRef` sur la variable de membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle `Release`.  
   
 ```
 IDispatchImpl();
@@ -165,7 +165,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) dans le Kit de développement logiciel Windows.  
+ Consultez [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

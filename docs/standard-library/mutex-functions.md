@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858210"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962186"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;, fonctions et variables
 
@@ -50,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Paramètres
 
-`Flag` A [once_flag](../standard-library/once-flag-structure.md) objet qui permet de s’assurer que l’objet peut être appelé est appelé une seule fois.
+*Indicateur* A [once_flag](../standard-library/once-flag-structure.md) objet qui permet de s’assurer que l’objet pouvant être est appelée uniquement une fois.
 
-`F` Un objet pouvant être appelé.
+*F* un objet pouvant être appelé.
 
-`A` Une liste d’arguments.
+*Un* une liste d’arguments.
 
 ### <a name="remarks"></a>Notes
 
-Si `Flag` n’est pas valide, la fonction lève une [system_error](../standard-library/system-error-class.md) dont le code d’erreur est `invalid_argument`. Sinon, la fonction de modèle utilise son argument `Flag` pour s’assurer qu’elle appelle `F(A...)` correctement exactement une fois, quel que soit le nombre de fois où la fonction de modèle est appelée. Si `F(A...)` se termine en levant une exception, l’appel n’a pas réussi.
+Si *indicateur* n’est pas valide, la fonction lève un [system_error](../standard-library/system-error-class.md) avec le code d’erreur `invalid_argument`. Sinon, la fonction de modèle utilise son *indicateur* argument pour vous assurer qu’elle appelle `F(A...)` correctement exactement une fois, quel que soit le nombre de fois où la fonction de modèle est appelée. Si `F(A...)` se termine en levant une exception, l’appel n’a pas réussi.
 
 ## <a name="defer_lock"></a>  defer_lock, variable
 

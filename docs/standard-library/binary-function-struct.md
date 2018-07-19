@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845074"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964156"
 ---
 # <a name="binaryfunction-struct"></a>binary_function, struct
 
@@ -45,7 +45,7 @@ Le struct de modèle sert de base pour les classes qui définissent une fonction
 
 **const second_argument_type&** ) **const**
 
-Toutes ces fonctions binaires peuvent référencer leur premier type d’argument comme **first_argument_type**, leur deuxième type d’argument comme **second_argument_type** et leur type de retour comme ***result_type***.
+Toutes ces fonctions binaires peuvent référencer leur premier type d’argument en tant que `first_argument_type`, leur deuxième type d’argument en tant que `second_argument_type`et leur type de retour en tant que ***result_type***.
 
 ## <a name="example"></a>Exemple
 
@@ -108,7 +108,7 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

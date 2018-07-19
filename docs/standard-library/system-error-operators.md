@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856796"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963691"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt;, opérateurs
 
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Objet dont l’égalité doit être vérifiée.|
-|`right`|Objet dont l’égalité doit être vérifiée.|
+|*left*|Objet dont l’égalité doit être vérifiée.|
+|*right*|Objet dont l’égalité doit être vérifiée.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Objet dont l’inégalité doit être vérifiée.|
-|`right`|Objet dont l’inégalité doit être vérifiée.|
+|*left*|Objet dont l’inégalité doit être vérifiée.|
+|*right*|Objet dont l’inégalité doit être vérifiée.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet passé dans `left` n’est pas égal à l’objet passé dans `right` ; sinon, **false**.
+**true** si l’objet passé dans *gauche* n’est pas égal à l’objet passé dans *droit*; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`left`|Objet à comparer.|
-|`right`|Objet à comparer.|
+|*left*|Objet à comparer.|
+|*right*|Objet à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet passé dans `left` est inférieur à l’objet passé dans `right` ; sinon, **false**.
+**true** si l’objet passé dans *gauche* est inférieur à l’objet passé dans *droite*; Sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

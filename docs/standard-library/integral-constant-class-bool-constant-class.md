@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962531"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant, classe, bool_constant, classe
 
@@ -54,7 +54,7 @@ struct integral_constant {
 
 La classe de modèle `integral_constant`, quand elle est spécialisée avec un type intégral *T* et une valeur *v* de ce type, représente un objet qui contient une constante de ce type intégral avec la valeur spécifiée. Le membre nommé `type` est un alias pour le type de spécialisation de modèle généré, et le membre `value` contient la valeur *v* servant à créer la spécialisation.
 
-La classe de modèle `bool_constant` est une spécialisation partielle explicite de `integral_constant` qui utilise `bool` comme argument *T*.
+Le `bool_constant` classe de modèle est une spécialisation partielle explicite de `integral_constant` qui utilise **bool** en tant que le *T* argument.
 
 ## <a name="example"></a>Exemple
 
@@ -81,7 +81,7 @@ integral_constant<int, 5> == 5
 integral_constant<bool, false> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964481"
 ---
 # <a name="matchresults-class"></a>match_results, classe
 
@@ -69,15 +69,15 @@ class match_results {
 
 ### <a name="parameters"></a>Paramètres
 
-`BidIt` Type d’itérateur pour les sous-correspondances.
+*BidIt* le type d’itérateur pour les sous-correspondances.
 
-`Alloc` Le type d’un allocateur pour la gestion du stockage.
+*Alloc* le type d’un allocateur pour la gestion du stockage.
 
 ## <a name="remarks"></a>Notes
 
 La classe de modèle décrit un objet qui contrôle une séquence non modifiable d’éléments de type `sub_match<BidIt>` , générés par une recherche d’expression régulière. Chaque élément pointe vers la sous-séquence qui correspond au groupe de capture correspondant à cet élément.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -93,7 +93,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Notes
 
-Le typedef est un synonyme de l'argument de modèle `Alloc`.
+Le typedef est un synonyme de l’argument de modèle *Alloc*.
 
 ### <a name="example"></a>Exemple
 
@@ -1066,17 +1066,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Paramètres
 
-`OutIt` Le type d’itérateur de sortie.
+*Outlt* le type d’itérateur de sortie.
 
-`out` Le flux de sortie dans lequel écrire.
+*out* à écrire dans le flux de sortie.
 
-`fmt` La chaîne de format.
+*FMT* la chaîne de format.
 
-`flags` Les indicateurs de format.
+*indicateurs* les indicateurs de format.
 
 ### <a name="remarks"></a>Notes
 
-Chaque fonction membre génère du texte mis en forme sous le contrôle du format `fmt`. La première fonction membre écrit le texte mis en forme dans la séquence définie par son argument `out` et retourne `out`. La deuxième fonction membre retourne un objet chaîne contenant une copie du texte mis en forme.
+Chaque fonction membre génère du texte mis en forme sous le contrôle du format *fmt*. La première fonction membre écrit le texte mis en forme dans la séquence définie par son argument *out* et retourne *out*. La deuxième fonction membre retourne un objet chaîne contenant une copie du texte mis en forme.
 
 Pour générer du texte mis en forme, le texte littéral dans la chaîne de format est habituellement copié dans la séquence cible. Chaque séquence d'échappement dans la chaîne de format est remplacée par le texte qu'elle représente. Les détails de la copie et du remplacement sont contrôlés par les indicateurs de format transmis à la fonction.
 
@@ -1441,7 +1441,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`sub` L’index de la sous-correspondance.
+*Sub* l’index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`alloc` L’objet allocateur à stocker.
+*Alloc* objet allocateur à stocker.
 
-`right` Objet match_results à copier.
+*droit* le match_results objet à copier.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur construit un objet `match_results` qui ne contient aucune sous-correspondance. Le deuxième constructeur construit un objet `match_results` qui est une copie de `right`.
+Le premier constructeur construit un objet `match_results` qui ne contient aucune sous-correspondance. Le deuxième constructeur construit un `match_results` objet qui est une copie de *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Objet match_results à copier.
+*droit* le match_results objet à copier.
 
 ### <a name="remarks"></a>Notes
 
-L'opérateur membre remplace la séquence contrôlée par `*this` par une copie de la séquence contrôlée par `right`.
+L’opérateur membre remplace la séquence contrôlée par `*this` avec une copie de la séquence contrôlée par *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`n` Index de la sous-correspondance.
+*n* Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une référence à l’élément `n` de la séquence contrôlée, ou une référence à un objet `sub_match` vide, si `size() <= n` ou le groupe de capture `n` ne fait pas partie de la correspondance.
+La fonction membre retourne une référence à l’élément *n* de la séquence contrôlée, ou une référence à vide `sub_match` si l’objet `size() <= n` ou si le groupe de capture *n* ne faisait pas partie de la correspondance.
 
 ### <a name="example"></a>Exemple
 
@@ -2066,7 +2066,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`sub` Index de la sous-correspondance.
+*Sub* Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
 
@@ -2675,7 +2675,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-`sub` Index de la sous-correspondance.
+*Sub* Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Objet match_results à échanger.
+*droit* le match_results de l’objet pour l’échange avec.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange le contenu de `*this` et `right` dans un cadre de temps fixe, et ne lève pas d’exceptions.
+La fonction membre échange le contenu de `*this` et *droit* en temps constant et ne lève pas d’exceptions.
 
 ### <a name="example"></a>Exemple
 

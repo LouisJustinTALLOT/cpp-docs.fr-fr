@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083ef4cea345e7b600782c09a7bdfdc09b4af3d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844671"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962856"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Décrit un objet qui stocke une paire ordonnée d'objets de type `long double`, le premier représentant la partie réelle d'un nombre complexe et le deuxième représentant la partie imaginaire.
+Décrit un objet qui stocke une paire ordonnée d’objets de type **long double**, le premier représentant la partie réelle d’un nombre complexe et le deuxième représentant la partie imaginaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,19 +47,19 @@ complex(
 
 ### <a name="parameters"></a>Paramètres
 
-`_RealVal` La valeur de type **long double** pour la partie réelle du nombre complexe qui est construit.
+*_RealVal* la valeur de type **long double** pour la partie réelle du nombre complexe en cours de construction.
 
-`_ImagVal` La valeur de type `long double` pour la partie imaginaire du nombre complexe qui est construit.
+*_ImagVal* la valeur de type **long double** pour la partie imaginaire du nombre complexe en cours de construction.
 
-`complexNum` Nombre complexe de type **double** ou de type **float** dont les parties réelles et imaginaires sont utilisés pour initialiser un nombre complexe de type `long double` en cours de construction.
+*complexNum* nombre complexe de type **double** ou de type **float** dont les parties réelles et imaginaires sont utilisées pour initialiser un nombre complexe de type **long double**en cours de construction.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Nombre complexe de type `long double`.
+Un nombre complexe de type **long double**.
 
 ## <a name="remarks"></a>Notes
 
-La spécialisation explicite de la classe de modèle complex en une classe complexe de type `long double` diffère de la classe de modèle uniquement dans les constructeurs qu'elle définit. La conversion de `long double` en **float** peut être implicite, mais la conversion de **double** en `long double` doit être de type **explicit**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.
+La spécialisation explicite de la classe de modèle complex en classe complex de type **long double** diffère de la classe de modèle uniquement dans les constructeurs qu’elle définit. La conversion de **long double** à **float** est autorisé à être implicite, mais la conversion de **double** à **long double** est obligatoire pour être **explicite**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.
 
 Pour plus d’informations sur la classe de modèle `complex`, consultez [complex, classe](../standard-library/complex-class.md). Pour obtenir la liste des membres de la classe de modèle `complex`, consultez .
 
@@ -118,7 +118,7 @@ Argument of c3 is recovered from c3 using:
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<complex>
 

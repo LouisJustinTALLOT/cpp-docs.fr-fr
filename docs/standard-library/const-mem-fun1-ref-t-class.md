@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c465ce95ecbf2ecb50e79e6e4cbaafce8cf7a407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddd340f0a5d988709804698f53918462f4b4e512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964529"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t, classe
 
@@ -41,11 +41,11 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Paramètres
 
-`Pm` Un pointeur vers la fonction membre de classe **Type** pour être converti en un objet de fonction.
+*PM* un pointeur vers la fonction membre de classe `Type` à convertir en un objet de fonction.
 
-`left` Le **const** de l’objet qui le `Pm` fonction membre est appelée sur.
+*gauche* le **const** de l’objet qui le *Pm* fonction membre est appelée sur.
 
-`right` L’argument donné pour `Pm`.
+*droit* l’argument donné à *Pm*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -53,13 +53,13 @@ Fonction binaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de `Pm`, qui doit être un pointeur vers une fonction membre de la classe **Type**, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( `left`.\* *Pm*)( `right`) **const**.
+La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( `left`.\* *Pm*)( `right`) **const**.
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `const_mem_fun1_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir des exemples d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

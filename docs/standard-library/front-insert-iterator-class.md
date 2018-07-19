@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847154"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964383"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator, classe
 
@@ -40,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Paramètres
 
-`Container` Le type de conteneur à l’avant, dont les éléments doivent être insérés par un `front_insert_iterator`.
+*Conteneur* le type de conteneur à l’avant dont les éléments doivent être insérés par un `front_insert_iterator`.
 
 ## <a name="remarks"></a>Notes
 
@@ -67,7 +67,7 @@ Le conteneur doit répondre aux exigences d’une insertion de début de séquen
 |[operator++](#op_add_add)|Incrémente le `front_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|
 |[operator=](#op_eq)|Opérateur d’assignation servant à implémenter l’expression de l’itérateur de sortie * `i` = `x` pour une insertion de début.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<iterator>
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle **Container**.
+Le type est un synonyme du paramètre de modèle *Container*.
 
 ### <a name="example"></a>Exemple
 
@@ -125,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Cont` L’objet conteneur dans lequel le `front_insert_iterator` est d’insérer des éléments.
+*_Cont* l’objet conteneur dans lequel le `front_insert_iterator` consiste à insérer des éléments.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -191,7 +191,7 @@ La fonction membre retourne la valeur de l’élément ciblé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si **Iter** est un itérateur qui cible un élément dans une séquence, alors **\*Iter** = **value** remplace cet élément par value et ne change pas le nombre total d’éléments dans la séquence.
+Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence, puis  **\*Iter** = **valeur** remplace cet élément par valeur et ne modifie pas le nombre total de éléments de la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Paramètres
 
-`val` Valeur à affecter au conteneur.
+*Val* la valeur à assigner au conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c86f71912c5fe4cf3f5d2fc0df37c8530a8517
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961247"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t, classe
 
@@ -41,9 +41,9 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>Paramètres
 
-`Pm` Un pointeur vers la fonction membre de classe **Type** pour être converti en un objet de fonction.
+*PM* un pointeur vers la fonction membre de classe `Type` à convertir en un objet de fonction.
 
-`left` L’objet qui le `Pm` fonction membre est appelée sur.
+*gauche* l’objet qui le *Pm* fonction membre est appelée sur.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -51,13 +51,13 @@ Fonction unaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de `Pm`, qui doit être un pointeur vers une fonction membre de la classe **Type**, dans un objet de membre privé. Il définit sa fonction membre `operator()` comme retournant ( **gauche**.\* `Pm`) () **const**.
+La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **gauche**.\* `Pm`) () **const**.
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `const_mem_fun_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

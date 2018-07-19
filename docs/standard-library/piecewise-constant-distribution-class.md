@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560cad54e315aa1304e26456392b2b82404d4933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963535"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution, classe
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* la virgule flottante par défaut du type de résultat `double`. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* type de résultat, valeur par défaut est de virgule flottante **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -222,7 +222,7 @@ Distribution for 100 samples:
     14-15 ::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 
@@ -258,23 +258,23 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-`firstI` Itérateur d’entrée du premier élément dans la plage de distribution.
+*firstI* un itérateur d’entrée du premier élément dans la plage de distribution.
 
-`lastI` Itérateur d’entrée du dernier élément dans la plage de distribution.
+*lastI* un itérateur d’entrée du dernier élément dans la plage de distribution.
 
-`firstW` Itérateur d’entrée du premier élément dans la plage de poids.
+*firstW* un itérateur d’entrée du premier élément dans la plage de poids.
 
-`intervals` Un [initializer_list](../cpp/initializers.md) avec les intervalles de la distribution.
+*intervalles* un [initializer_list](../cpp/initializers.md) avec les intervalles de la distribution.
 
-`count` Le nombre d’éléments dans la plage de distribution.
+*nombre de* le nombre d’éléments dans la plage de distribution.
 
-`xmin` La valeur la plus basse dans la plage de distribution.
+*XMIN* la plus petite valeur dans la plage de distribution.
 
-`xmax` La valeur la plus élevée dans la plage de distribution. Doit être supérieure à `xmin`.
+*XMAX* la valeur la plus élevée dans la plage de distribution. Doit être supérieure à *xmin*.
 
-`weightfunc` Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent tous deux être convertibles en `double`.
+*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-`parm` Structure de paramètre utilisée pour construire la distribution.
+*parm* la structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -297,7 +297,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-construit un objet de distribution avec des intervalles à partir de la valeur `intervals` de la liste d'initialiseurs et des poids générés à partir de la fonction `weightfunc`.
+Construit un objet de distribution avec des intervalles à partir de la liste d’initialiseurs *intervalles* et poids générés à partir de la fonction *weightfunc*.
 
 Le constructeur défini en tant que
 ```cpp
@@ -306,14 +306,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-construit un objet de distribution avec `count` intervalles distribués uniformément sur [ `xmin,xmax`], en assignant à chaque intervalle des poids d’après la fonction `weightfunc`, et `weightfunc` doit accepter un seul paramètre et avoir une valeur de retour, tous deux étant convertibles en `double`. **Condition préalable :** `xmin < xmax`
+Construit un objet de distribution avec *nombre* intervalles distribués uniformément sur [ `xmin,xmax`], assignant à chaque intervalle des poids d’après la fonction *weightfunc*, et  *weightfunc* doit accepter un paramètre et avoir une valeur de retournée, qui sont tous deux convertibles en `double`. **Condition préalable :** `xmin < xmax`
 
 Le constructeur défini en tant que
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-construit un objet de distribution en utilisant `parm` en tant que structure de paramètre stocké.
+Construit un objet de distribution à l’aide *parm* en tant que structure de paramètre stockée.
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862466"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964832"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;, opérateurs
 
@@ -78,9 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments doivent être testés pour vérifier leur inégalité.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être testés pour vérifier leur inégalité.
 
-`right` La seconde des deux valarrays dont les éléments doivent être testés sont inégaux.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être testés pour vérifier leur inégalité.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -92,11 +94,11 @@ Un valarray de valeurs booléennes, dont chacune est :
 
 ### <a name="remarks"></a>Notes
 
-Le premier opérateur de modèle retourne un objet de classe [valarray\<bool >](../standard-library/valarray-bool-class.md), chacun des dont les éléments `I` est `left[I] != right[I]`.
+Le premier opérateur de modèle retourne un objet de classe [valarray\<bool >](../standard-library/valarray-bool-class.md), dont chaque élément `I` est `left[I] != right[I]`.
 
 Le deuxième opérateur de modèle stocke dans l’élément `I` `left[I] != right`.
 
-Le troisième opérateur de modèle stocke dans l’élément `I` `left != right[I]`.
+Le troisième opérateur du modèle stocke dans l’élément `I` `left != right[I]`.
 
 ### <a name="example"></a>Exemple
 
@@ -171,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Une valeur ou un valarray qui sert le dividende dans une autre valeur ou un valarray est à diviser.
+*left*  
+ Valeur ou valarray qui sert de dividende qui doit être divisé par une autre valeur ou un autre valarray.
 
-`right` Valeur ou valarray qui sert le diviseur et qui divise une autre valeur ou valarray.
+*right*  
+ Valeur ou valarray qui sert de diviseur et qui divise une autre valeur ou un autre valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont l’élément par élément restes de `left` divisé par `right`.
+Un valarray dont les éléments sont les restes au niveau des éléments de *gauche* divisé par *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -252,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits **AND** ou une valeur spécifiée du type d’élément pour pouvoir être associé au niveau du bit de chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `AND` ou une valeur spécifiée du type d’élément qui doit être combinée au niveau du bit avec chaque élément d’un valarray.
 
-`right` La deuxième les deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits **AND** ou une valeur spécifiée du type d’élément pour pouvoir être associé au niveau du bit de chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `AND` ou une valeur spécifiée du type d’élément qui doit être combinée au niveau du bit avec chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont la combinaison d’élément de l’opération AND au niveau du bit de `left` et `right`.
+Un valarray dont les éléments sont la combinaison au niveau des éléments de l’opération AND au niveau du bit de *gauche* et *droit*.
 
 ### <a name="remarks"></a>Notes
 
-Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, **longdouble**, `void`, `bool` ou autres.
+Une opération de bits peut uniquement être utilisée pour manipuler des bits dans **char** et **int** types de données et de variantes et non pas sur **float**, **double**, **longdouble**, **void**, **bool** ou autres, types de données plus complexes.
 
-L’opérateur de bits **AND** a la même table de vérité que l’opérateur logique **AND**, mais il s’applique au type de données au niveau des bits individuels. L’opérateur [operator&&](../standard-library/valarray-operators.md#amp) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. L’opérateur de bits **ANDoperator&**, en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
+L’opérateur de bits `AND` a la même table de vérité que l’opérateur `AND` logique, mais il s’applique au type de données au niveau des bits individuels. L’opérateur [operator&&](../standard-library/valarray-operators.md#amp) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. L’opérateur de bits **ANDoperator&**, en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
 
 ### <a name="example"></a>Exemple
 
@@ -339,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec la logique **AND** ou une valeur spécifiée du type d’élément pour pouvoir être associé à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur logique `AND` ou une valeur spécifiée du type d’élément qui doit être combinée avec chaque élément d’un valarray.
 
-`right` La deuxième les deux valarrays dont les éléments respectifs doivent être combinés avec la logique **AND** ou une valeur spécifiée du type d’élément pour pouvoir être associé à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur logique `AND` ou une valeur spécifiée du type d’élément qui doit être combinée avec chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont de type booléen et la combinaison d’élément de la logique **AND** opération de `left` et `right`.
+Un valarray dont les éléments sont de type bool et sont la combinaison au niveau des éléments de l’opérateur logique `AND` opération de *gauche* et *droit*.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur logique **ANDoperator&&** s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. La version au niveau du bit de l’opérateur **AND**, [operator&,](../standard-library/valarray-operators.md#op_amp), en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
+L’opérateur logique `ANDoperator&&` s’applique au niveau de l’élément compte toutes les valeurs différentes de zéro comme true, le résultat est un valarray de valeurs booléennes. La version au niveau du bit de `AND`, [opérateur &,](../standard-library/valarray-operators.md#op_amp), en revanche, peut fournir un valarray de valeurs autres que 0 ou 1, selon le résultat de l’opération au niveau du bit.
 
 ### <a name="example"></a>Exemple
 
@@ -424,17 +432,19 @@ operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
-`right` Le deuxième des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Un valarray de valeurs booléennes, dont chacune est :
 
-- **true** si la valeur ou l’élément `left` est supérieur(e) à la valeur ou l’élément `right` correspondant(e).
+- **true** si le *gauche* valeur ou l’élément est supérieur à correspondant *droit* valeur ou l’élément.
 
-- **false** si la valeur ou l’élément `left` n’est pas supérieur(e) à la valeur ou l’élément `right` correspondant(e).
+- **false** si le *gauche* valeur ou l’élément n’est pas supérieure à correspondant *droit* valeur ou l’élément.
 
 ### <a name="remarks"></a>Notes
 
@@ -513,17 +523,19 @@ operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
-`right` Le deuxième des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Un valarray de valeurs booléennes, dont chacune est :
 
-- **true** si la valeur ou l’élément `left` est supérieur(e) ou égale(e) à la valeur ou l’élément `right` correspondant(e).
+- **true** si le *gauche* valeur ou l’élément est supérieur ou égal à le correspondantes *droit* valeur ou l’élément.
 
-- **false** si la valeur ou l’élément `left` est inférieur(e) à la valeur ou l’élément `right` correspondant(e).
+- **false** si le *gauche* élément ou la valeur est inférieure à le correspondantes *droit* valeur ou l’élément.
 
 ### <a name="remarks"></a>Notes
 
@@ -602,9 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` La valeur de décalage ou la valarray dont les éléments doivent être décalés.
+*left*  
+ La valeur à décaler ou le valarray dont les éléments doivent être décalés.
 
-`right` La valeur qui indique la quantité de décalage vers la droite ou valarray dont les éléments indiquent la quantité d’éléments de décalage vers la droite.
+*right*  
+ La valeur qui indique la quantité de décalage vers la droite ou le valarray dont les éléments indiquent la quantité d’éléments de décalage vers la droite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -687,17 +701,19 @@ operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
-`right` Le deuxième des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Un valarray de valeurs booléennes, dont chacune est :
 
-- **true** si la valeur ou l’élément `left` est inférieur(e) à la valeur ou l’élément `right` correspondant(e).
+- **true** si le *gauche* élément ou la valeur est inférieure à le correspondantes *droit* valeur ou l’élément.
 
-- **false** si la valeur ou l’élément `left` n’est pas inférieur(e) à la valeur ou l’élément `right` correspondant(e).
+- **false** si le *gauche* valeur ou l’élément n’est pas inférieure à le correspondantes *droit* valeur ou l’élément.
 
 ### <a name="remarks"></a>Notes
 
@@ -776,17 +792,19 @@ operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
-`right` Le deuxième des deux valarrays dont les éléments sont à comparer ou une valeur spécifiée à comparer à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être comparés ou une valeur spécifiée qui doit être comparée à chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Un valarray de valeurs booléennes, dont chacune est :
 
-- **true** si la valeur ou l’élément `left` est inférieur(e) ou égale(e) à la valeur ou l’élément `right` correspondant(e).
+- **true** si le *gauche* élément ou la valeur est inférieure ou égale à son *droit* valeur ou l’élément.
 
-- **false** si la valeur ou l’élément `left` est supérieur(e) à la valeur ou l’élément `right` correspondant(e).
+- **false** si le *gauche* valeur ou l’élément est supérieur à correspondant *droit* valeur ou l’élément.
 
 ### <a name="remarks"></a>Notes
 
@@ -865,9 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` La valeur de décalage ou la valarray dont les éléments doivent être décalés.
+*left*  
+ La valeur à décaler ou le valarray dont les éléments doivent être décalés.
 
-`right` La valeur qui indique la quantité de décalage vers la gauche ou valarray dont les éléments indiquent la quantité d’éléments de décalage vers la gauche.
+*right*  
+ La valeur qui indique la quantité de décalage vers la gauche ou le valarray dont les éléments indiquent la quantité d’éléments de décalage vers la gauche.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -950,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments doivent être multipliés ou une valeur spécifiée à multiplier avec chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être multipliés ou une valeur spécifiée qui doit être multipliée avec chaque élément d’un valarray.
 
-`right` Le deuxième des deux valarrays dont les éléments doivent être multipliés ou une valeur spécifiée à multiplier avec chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être multipliés ou une valeur spécifiée qui doit être multipliée avec chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont le produit d’éléments de `left` et `right`.
+Un valarray dont les éléments sont le produit au niveau des éléments de *gauche* et *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -1031,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` La première des deux valarrays dont les éléments doivent être ajoutés ou une valeur spécifiée pour être ajoutés à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être ajoutés ou une valeur spécifiée qui doit être ajoutée à chaque élément d’un valarray.
 
-`right` Le deuxième des deux valarrays dont les éléments doivent être ajoutés ou une valeur spécifiée pour être ajoutés à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être ajoutés ou une valeur spécifiée qui doit être ajoutée à chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont la somme de `left` et `right`.
+Un valarray dont les éléments sont la somme de *gauche* et *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -1112,13 +1136,15 @@ operator-(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Une valeur ou un valarray qui sert de diminuende à partir de laquelle d’autres valeurs ou valarrays sont soustraites pour former la différence.
+*left*  
+ Valeur ou valarray qui sert de diminuende auquel d’autres valeurs ou valarrays doivent être soustraits pour fournir la différence.
 
-`right` Une valeur ou un valarray qui sert de diminuteur qui doit être retranché que d’autres valeurs ou les valarrays pour former la différence.
+*right*  
+ Valeur ou valarray qui sert de diminuteur à soustraire à d’autres valeurs ou valarrays pour fournir la différence.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont la différence de `left` et `right`.
+Un valarray dont les éléments sont la différence de *gauche* et *droit*.
 
 ### <a name="remarks"></a>Notes
 
@@ -1199,13 +1225,15 @@ operator/(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Une valeur ou un valarray qui sert le dividende dans une autre valeur ou un valarray est réparti dans formant le quotient.
+*left*  
+ Valeur ou valarray qui sert de dividende qui doit être divisé par une autre valeur ou un autre valarray.
 
-`right` Une valeur ou un valarray qui sert le diviseur et qui divise une autre valeur ou valarray pour former le quotient.
+*right*  
+ Valeur ou valarray qui sert de diviseur et qui divise une autre valeur ou un autre valarray pour fournir le quotient.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont le quotient de `left` divisé par `right`.
+Un valarray dont les éléments sont le quotient de *gauche* divisé par *droit*.
 
 ### <a name="remarks"></a>Notes
 
@@ -1286,9 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments sont à tester l’égalité.
+*left*  
+ Le premier des deux valarrays dont les éléments doivent être testés pour vérifier leur égalité.
 
-`right` Le deuxième des deux valarrays dont les éléments sont à tester l’égalité.
+*right*  
+ Le second des deux valarrays dont les éléments doivent être testés pour vérifier leur égalité.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1300,7 +1330,7 @@ Un valarray de valeurs booléennes, dont chacune est :
 
 ### <a name="remarks"></a>Notes
 
-Le premier opérateur de modèle retourne un objet de classe [valarray\<bool >](../standard-library/valarray-bool-class.md), chacun des dont les éléments `I` est `left[I] == right[I]`. Le deuxième opérateur de modèle stocke dans l’élément `I` `left[I] == right`. Le troisième opérateur de modèle stocke dans l’élément `I` `left == right[I]`.
+Le premier opérateur de modèle retourne un objet de classe [valarray\<bool >](../standard-library/valarray-bool-class.md), dont chaque élément `I` est `left[I] == right[I]`. Le deuxième opérateur de modèle stocke dans l’élément `I` `left[I] == right`. Le troisième opérateur du modèle stocke dans l’élément `I` `left == right[I]`.
 
 ### <a name="example"></a>Exemple
 
@@ -1375,17 +1405,19 @@ operator^(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits **XOR** ou une valeur spécifiée du type d’élément pour pouvoir être associé au niveau du bit de chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits **XOR** ou une valeur spécifiée du type d’élément qui doit être combinée au niveau du bit avec chaque élément d’un valarray.
 
-`right` La deuxième les deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits **XOR** ou une valeur spécifiée du type d’élément pour pouvoir être associé au niveau du bit de chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits **XOR** ou une valeur spécifiée du type d’élément qui doit être combinée au niveau du bit avec chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont la combinaison d’élément de l’opérateur de bits **XOR** opération de `left` et `right`.
+Un valarray dont les éléments sont la combinaison au niveau des éléments de l’opérateur de bits **XOR** opération de *gauche* et *droit*.
 
 ### <a name="remarks"></a>Notes
 
-Une opération au niveau du bit utilisable uniquement pour manipuler les bits de `char` et `int` des types de données et de variantes et non sous **float**, **double**, `long double`, `void`, `bool` ou d’autres types de données plus complexes.
+Une opération de bits peut uniquement être utilisée pour manipuler des bits dans **char** et **int** types de données et de variantes et non pas sur **float**, **double**, **long double**, **void**, **bool** ou autres, types de données plus complexes.
 
 L’opération de bits `OR` ( **XOR**) exclusive a la sémantique suivante : étant donné les bits *b*1 et *b*2, *b*1 **XOR** *b*2 a la valeur **true** si exactement un des bits a la valeur true ; **false** si les deux bits ont la valeur false ou si les deux bits ont la valeur true.
 
@@ -1466,17 +1498,19 @@ operator|(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `OR` ou une valeur spécifiée du type d’élément pour pouvoir être associé au niveau du bit de chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `OR` ou une valeur spécifiée du type d’élément qui doit être combinée au niveau du bit avec chaque élément d’un valarray.
 
-`right` La deuxième les deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `OR` ou une valeur spécifiée du type d’élément pour pouvoir être associé au niveau du bit de chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `OR` ou une valeur spécifiée du type d’élément qui doit être combinée au niveau du bit avec chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont la combinaison d’élément de l’opérateur de bits `OR` opération de `left` et `right`.
+Un valarray dont les éléments sont la combinaison au niveau des éléments de l’opérateur de bits `OR` opération de *gauche* et *droit*.
 
 ### <a name="remarks"></a>Notes
 
-Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, **longdouble**, `void`, `bool` ou autres.
+Une opération de bits peut uniquement être utilisée pour manipuler des bits dans **char** et **int** types de données et de variantes et non pas sur **float**, **double**, **longdouble**, **void**, **bool** ou autres, types de données plus complexes.
 
 L’opérateur de bits OR a la même table de vérité que l’opérateur logique `OR`, mais il s’applique au type de données au niveau des bits individuels. Étant donné les bits *b*1 et *b*2, *b*1 `OR` *b*2 a la valeur **true** si au moins un des bits a la valeur true ou **false** si les deux bits ont la valeur false. L’opérateur logique `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme **true** : le résultat est un valarray de valeurs booléennes. L’opérateur de bits OR `operator|`, en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
 
@@ -1557,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>Paramètres
 
-`left` Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec la logique `OR` ou une valeur spécifiée du type d’élément pour pouvoir être associé à chaque élément d’un valarray.
+*left*  
+ Le premier des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur logique `OR` ou une valeur spécifiée du type d’élément qui doit être combinée avec chaque élément d’un valarray.
 
-`right` La deuxième les deux valarrays dont les éléments respectifs doivent être combinés avec la logique `OR` ou une valeur spécifiée du type d’élément pour pouvoir être associé à chaque élément d’un valarray.
+*right*  
+ Le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur logique `OR` ou une valeur spécifiée du type d’élément qui doit être combinée avec chaque élément d’un valarray.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un valarray dont les éléments sont de type `bool` et sont une combinaison de l’opération OR logique d’élément par élément `left` et `right`.
+Un valarray dont les éléments sont de type **bool** et sont la combinaison au niveau des éléments de l’opération OR logique de *gauche* et *droit*.
 
 ### <a name="remarks"></a>Notes
 
-La logique `OR` `operator||` s’applique au niveau élément, en prenant en compte toutes les valeurs différentes de zéro en tant que **true**, et le résultat est un valarray de valeurs booléennes. La version au niveau du bit de l’opérateur `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
+L’opérateur logique `OR` `operator||` s’applique au niveau de l’élément compter toutes les valeurs différentes de zéro comme **true**, et le résultat est un valarray de valeurs booléennes. La version au niveau du bit de l’opérateur `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
 
 ### <a name="example"></a>Exemple
 

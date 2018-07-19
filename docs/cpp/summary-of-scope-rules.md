@@ -1,5 +1,5 @@
 ---
-title: Résumé des règles de portée | Documents Microsoft
+title: Résumé des règles de portée | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423868"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028136"
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
-L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point où la surcharge est déterminée). Si le nom indique une fonction, celle-ci doit être non équivoque en ce qui concerne le nombre et le type de paramètres. Si le nom n’est pas ambigu, [accès aux membres](../cpp/member-access-control-cpp.md) les règles sont appliquées.  
+L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point où la surcharge est déterminée). Si le nom indique une fonction, celle-ci doit être non équivoque en ce qui concerne le nombre et le type de paramètres. Si le nom n’est pas ambigu, [accès au membre](../cpp/member-access-control-cpp.md) les règles sont appliquées.  
   
 ## <a name="constructor-initializers"></a>Initialiseurs de constructeur  
- Initialiseurs de constructeur (décrits dans [initialisation des Bases et membres](http://msdn.microsoft.com/en-us/2f71377e-2b6b-49da-9a26-18e9b40226a1)) sont évalués dans l’étendue du bloc extérieur du constructeur pour lequel ils sont spécifiés. Par conséquent, ils peuvent utiliser les noms de paramètres du constructeur.  
+ Initialiseurs de constructeur (décrit dans [initialisation des Bases et membres](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) sont évalués dans la portée du bloc extérieur du constructeur pour lequel elles sont spécifiées. Par conséquent, ils peuvent utiliser les noms de paramètres du constructeur.  
   
 ## <a name="global-names"></a>Noms globaux  
  Un nom d'objet, de fonction ou d'énumérateur est global s'il est placé en dehors de toute fonction ou classe ou préfixé par l'opérateur de portée unaire globale (`::`), et s'il n'est pas utilisé conjointement avec l'un des opérateurs binaires suivants :  
@@ -43,7 +43,7 @@ L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point
 ## <a name="qualified-names"></a>Noms qualifiés  
  Les noms utilisés avec l'opérateur binaire de résolution de portée (`::`) sont appelés des noms qualifiés. Le nom spécifié après l’opérateur binaire de résolution de portée doit être membre de la classe spécifiée à gauche de l’opérateur ou membre d’une ou plusieurs de ses classes de base.  
   
- Les noms spécifiés après l’opérateur de sélection de membre (**.** ou **->**) doivent être membres du type de classe de l’objet spécifié à gauche de l’opérateur ou membres de ses classes de base. Les noms spécifiés à droite de l’opérateur de sélection de membre (**->**) peut également être des objets d’un autre type de classe, à condition que le côté gauche de **->** est un objet de classe et que la classe définit un opérateur de sélection de membre surchargé (**->**) qui prend un pointeur vers un autre type de classe. (Cette disposition est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)  
+ Les noms spécifiés après l’opérateur de sélection de membre (**.** ou **->**) doivent être membres du type de classe de l’objet spécifié à gauche de l’opérateur ou membres de ses classes de base. Les noms spécifiés sur la droite de l’opérateur de sélection de membre (**->**) peut également être des objets d’un autre type de classe, à condition que le côté gauche de **->** est un objet de classe et que la classe définit un opérateur de sélection de membre surchargé (**->**) qui prend la valeur en un pointeur vers un autre type de classe. (Cette disposition est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)  
   
  Le compilateur recherche les noms dans l'ordre suivant et s'arrête après avoir trouvé le nom :  
   
@@ -63,11 +63,11 @@ L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point
   
 1.  Les noms précédés de `::` forcent la recherche à commencer au niveau de la portée globale.  
   
-2.  Les noms précédés du **classe**, `struct`, et **union** mots clés forcent le compilateur à rechercher uniquement les **classe**, `struct`, ou **union**  noms.  
+2.  Les noms précédés du **classe**, **struct**, et **union** mots clés forcent le compilateur pour rechercher uniquement les **classe**,  **struct**, ou **union** noms.  
   
-3.  Les noms sur le côté gauche de l’opérateur de résolution de portée (`::`) peut uniquement être **classe**, `struct`, **espace de noms**, ou **union** noms.  
+3.  Les noms sur le côté gauche de l’opérateur de résolution de portée (`::`) peut uniquement être **classe**, **struct**, **espace de noms**, ou **union**noms.  
   
- Si le nom fait référence à un membre non statique mais est utilisé dans une fonction membre statique, un message d'erreur est généré. De même, si le nom fait référence à un membre non statique dans une classe englobante, un message d’erreur est généré, car les classes englobées n’ont pas de classe englobante **cela** pointeurs.  
+ Si le nom fait référence à un membre non statique mais est utilisé dans une fonction membre statique, un message d'erreur est généré. De même, si le nom fait référence à un membre non statique d’une classe englobante, un message d’erreur est généré, car les classes englobées n’ont pas de classe englobante **cela** pointeurs.  
   
 ## <a name="function-parameter-names"></a>Noms de paramètres de fonction  
  Les noms de paramètres de fonction dans les définitions de fonction sont considérés comme étant dans la portée du bloc le plus à l'extérieur de la fonction. Par conséquent, il s'agit de noms régionaux. Ils se trouvent hors de portée lors de la sortie de la fonction.  

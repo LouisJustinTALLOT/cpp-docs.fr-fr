@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863398"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962778"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;, classe
 
-La classe `vector<bool>` est une spécialisation partielle de [vector](../standard-library/vector-class.md) pour les éléments de type `bool`. Elle possède un allocateur pour le type sous-jacent utilisé par la spécialisation, qui permet une optimisation de l'espace en stockant une valeur `bool` par bit.
+Le `vector<bool>` classe est une spécialisation partielle de [vecteur](../standard-library/vector-class.md) pour les éléments de type **bool**. Elle possède un allocateur pour le type sous-jacent qui est utilisé par la spécialisation, qui fournit l’optimisation de l’espace en stockant une **bool** valeur par bit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,14 +47,14 @@ class vector<bool, Allocator>
 
 Le comportement de cette spécialisation de modèle de classe est identique à celui de vector, à l’exception de quelques différences expliquées dans cet article.
 
-Les opérations qui gèrent le type `bool` correspondent aux valeurs du conteneur de stockage. `allocator_traits::construct` n'est pas utilisé pour créer ces valeurs.
+Opérations qui gèrent le **bool** type correspondent aux valeurs dans le conteneur de stockage. `allocator_traits::construct` n'est pas utilisé pour créer ces valeurs.
 
 ### <a name="typedefs"></a>Typedef
 
 |Nom de type|Description|
 |-|-|
 |[const_pointer](#const_pointer)|Typedef d'un `const_iterator` qui peut servir de pointeur constant à un élément booléen du `vector<bool>`.|
-|[const_reference](#const_reference)|Typedef pour `bool`. Après l'initialisation, il n'applique pas les mises à jour de la valeur d'origine.|
+|[const_reference](#const_reference)|Typedef pour **bool**. Après l'initialisation, il n'applique pas les mises à jour de la valeur d'origine.|
 |[pointer](#pointer)|Typedef d'un `iterator` qui peut servir de pointeur à un élément booléen du `vector<bool>`.|
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -74,7 +74,7 @@ Les opérations qui gèrent le type `bool` correspondent aux valeurs du conteneu
 |-|-|
 |[vector\<bool>, classe de référence](#reference_class)|Classe qui sert de proxy pour simuler le comportement `bool&`, et dont les objets peuvent fournir des références aux éléments (bits uniques) au sein d'un objet `vector<bool>`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<vector>
 
@@ -153,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Paramètre|Description|
 |-|-|
-|`Pos`|Position de l'élément `vector<bool>`.|
+|*points de vente*|Position de l'élément `vector<bool>`.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -163,7 +163,7 @@ Si la position spécifiée est supérieure ou égale à la taille du conteneur, 
 
 ### <a name="remarks"></a>Notes
 
-Si vous compilez en ayant défini `_ITERATOR_DEBUG_LEVEL`, une erreur d'exécution se produira lorsque vous tenterez d'accéder à un élément situé en dehors des limites du vecteur.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
+Si vous compilez avec _ITERATOR_DEBUG_LEVEL ensemble, une erreur d’exécution se produit si vous tentez d’accéder à un élément en dehors des limites du vecteur.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Exemple
 
@@ -268,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-Fournit une conversion implicite de `vector<bool>::reference` en `bool`.
+Fournit une conversion implicite de `vector<bool>::reference` à **bool**.
 
 ```cpp
 operator bool() const;
@@ -293,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` La référence d’élément dont la valeur doit être assignée au bit.
+*Droite*  
+ Référence d'élément dont la valeur doit être assignée au bit.
 
-`Val` La valeur booléenne à assigner au bit.
+*Val*  
+ Valeur booléenne à assigner au bit.
 
 #### <a name="example"></a>Exemple
 
@@ -380,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-`Left` L’élément à échanger avec la `Right` élément.
+*Gauche*  
+ L’élément à être échangés avec le *droite* élément.
 
-`Right` L’élément à échanger avec la `Left` élément.
+*Droite*  
+ L’élément à être échangés avec le *gauche* élément.
 
 ### <a name="remarks"></a>Notes
 

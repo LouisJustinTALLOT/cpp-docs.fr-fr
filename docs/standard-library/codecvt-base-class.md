@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843260"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965390"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base, classe
 
-Classe de base de la classe codecvt utilisée pour définir un type d’énumération appelé **result**, utilisé comme type de retour pour les fonctions membres de la classe facet afin d’indiquer le résultat d’une conversion.
+Une classe de base pour la classe codecvt qui sert à définir un type d’énumération appelé `result`, utilisé comme type de retour pour les fonctions membres de facette pour indiquer le résultat d’une conversion.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,15 +50,15 @@ protected:
 
 Cette classe décrit une énumération commune à toutes les spécialisations de la classe de modèle [codecvt](../standard-library/codecvt-class.md). Le résultat de l’énumération décrit les valeurs de retour possibles de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out) :
 
-- **ok** si la conversion entre les codages de caractère internes et externes réussit.
+- `ok` Si la conversion entre les encodages de caractères internes et externes réussit.
 
-- **partial** si la destination n’est pas assez grande pour que la conversion réussisse.
+- `partial` Si la destination n’est pas assez grande pour que la conversion réussisse.
 
-- **error** si la séquence source est incorrecte.
+- `error` Si la séquence source est malade formée.
 
-- **noconv** si la fonction n’exécute aucune conversion.
+- `noconv` si la fonction n’exécute aucune conversion.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 

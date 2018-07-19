@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962369"
 ---
 # <a name="isscalar-class"></a>is_scalar, classe
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Ty` est un type intégral, un type à virgule flottante, un type énumération, un type pointeur, un pointeur vers un type de membre ou une forme `cv-qualified` de l'un d'eux. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type intégral, virgule flottante type, un type d’énumération, un type pointeur ou un pointeur vers le type de membre, ou un `cv-qualified` forme d’un d’eux, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -79,7 +79,7 @@ is_scalar<int> == true
 is_scalar<float> == true
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

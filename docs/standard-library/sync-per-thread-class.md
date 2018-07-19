@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858768"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964130"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread, classe
 
@@ -44,7 +44,7 @@ class sync_per_thread
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Cache`|Type de cache associé au filtre de synchronisation. Il peut s’agir de [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Type de cache associé au filtre de synchronisation. Il peut s’agir de [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Notes
 
@@ -58,7 +58,7 @@ Les allocateurs qui utilisent `sync_per_thread` peuvent être considérés comme
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<allocators>
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`count`|Nombre d’éléments du tableau à allouer.|
+|*count*|Nombre d’éléments du tableau à allouer.|
 
 ### <a name="remarks"></a>Notes
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|
-|`count`|Nombre d’objets à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
@@ -113,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`Cache`|L’objet cache du filtre de synchronisation.|
-|`Other`|Objet cache dont l’égalité est à comparer.|
+|*Cache*|L’objet cache du filtre de synchronisation.|
+|*Autre*|Objet cache dont l’égalité est à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-`false` si aucun objet cache n’a été alloué pour cet objet ou pour `Other` dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
+**false** si aucun objet cache a été alloué pour cet objet ou pour *autres* dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
 
 ### <a name="remarks"></a>Notes
 

@@ -1,7 +1,7 @@
 ---
-title: 'Procédure pas à pas : Création et utilisation d’une bibliothèque statique (C++) | Documents Microsoft'
+title: 'Procédure pas à pas : Création et utilisation d’une bibliothèque statique (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,52 +16,50 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bcbf5747b667615c96ced3488e16f2a8fc0ef2d
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891579"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034801"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Procédure pas à pas : création et utilisation d’une bibliothèque statique (C++)
 Cette procédure pas à pas montre comment créer une bibliothèque statique (fichier .lib) à utiliser avec des applications C++. L’utilisation d’une bibliothèque statique est un excellent moyen de réutiliser le code. Au lieu d'implémenter les mêmes routines dans chaque application qui requiert les fonctionnalités, vous les écrivez une fois pour toutes dans une bibliothèque statique et vous y faites référence dans les applications. Le code lié à partir d'une bibliothèque statique devient partie intégrante de votre application. Il n'est pas nécessaire d'installer un autre fichier pour utiliser le code.  
   
  Cette procédure pas à pas couvre les tâches suivantes :  
   
--   [Création d’un projet de bibliothèque statique](#BKMK_CreateLibProject)  
+-   [Création d’un projet de bibliothèque statique](#CreateLibProject)  
   
--   [Ajout d’une classe à la bibliothèque statique](#BKMK_AddClassToLib)  
+-   [Ajout d’une classe à la bibliothèque statique](#AddClassToLib)  
   
--   [Création d’une application console C++ qui fait référence à la bibliothèque statique](#BKMK_CreateAppToRefTheLib)  
+-   [Création d’une application console C++ qui fait référence à la bibliothèque statique](#CreateAppToRefTheLib)  
   
--   [Utilisation des fonctionnalités de la bibliothèque statique dans l’application](#BKMK_UseLibInApp)  
+-   [Utilisation des fonctionnalités de la bibliothèque statique dans l’application](#UseLibInApp)  
   
--   [Exécution de l’application](#BKMK_RunApp)  
+-   [Exécution de l’application](#RunApp)  
   
 ## <a name="prerequisites"></a>Prérequis  
  Une connaissance des notions de base du langage C++.  
   
-##  <a name="BKMK_CreateLibProject"></a> Création d’un projet de bibliothèque statique  
+##  <a name="CreateLibProject"></a> Création d’un projet de bibliothèque statique  
   
 #### <a name="to-create-a-static-library-project"></a>Pour créer un projet de bibliothèque statique  
   
 1.  Dans la barre de menus, sélectionnez **Fichier**, **Nouveau**, **Projet**.  
   
-2.  Dans le volet gauche de la boîte de dialogue **Nouveau projet** , développez **Installés**, **Modèles**, **Visual C++**, puis sélectionnez **Win32**.  
+2. Dans le volet gauche de la **nouveau projet** boîte de dialogue, développez **installé, Visual C++**, puis sélectionnez **Windows Desktop**.
   
-3.  Dans le volet central, sélectionnez **Application console Win32**.  
+3. Dans le volet central, sélectionnez **Windows Desktop Assistant**.  
   
 4.  Spécifiez un nom pour le projet, par exemple **MathFuncsLib**, dans la zone **Nom** . Spécifiez un nom pour la solution, par exemple **StaticLibrary**, dans la zone **Nom de la solution** . Sélectionnez le bouton **OK** .  
   
-5.  Dans la page **Vue d'ensemble** de la boîte de dialogue **Assistant Application Win32** , choisissez le bouton **Suivant** .  
+5. Sous **type d’Application**, sélectionnez la bibliothèque statique (.lib).  
   
-6.  Dans la page **Paramètres de l'application** , sous **Type d'application**, sélectionnez **Bibliothèque statique**.  
+6. Sous **des Options supplémentaires**, décochez la case la **en-tête précompilé** case à cocher.
   
-7.  Dans la page **Paramètres de l'application** , sous **Options supplémentaires**, décochez la case **En-tête précompilé** .  
-  
-8.  Choisissez le bouton **Terminer** pour créer le projet.  
-  
-##  <a name="BKMK_AddClassToLib"></a> Ajout d’une classe à la bibliothèque statique  
+7. Choisissez **OK** pour créer le projet.  
+ 
+##  <a name="AddClassToLib"></a> Ajout d’une classe à la bibliothèque statique  
   
 #### <a name="to-add-a-class-to-the-static-library"></a>Pour ajouter une classe à la bibliothèque statique  
   
@@ -82,33 +80,30 @@ Cette procédure pas à pas montre comment créer une bibliothèque statique (fi
     > [!NOTE]
     >  Lorsque vous générez un projet sur la ligne de commande Visual Studio, vous devez générer le programme en deux étapes. Commencez par exécuter **cl /c /EHsc MathFuncsLib.cpp** pour compiler le code et pour créer un fichier objet nommé **MathFuncsLib.obj**. (Le **cl** commande appelle le compilateur, Cl.exe et le **/c** option spécifie la compilation sans liaison. Pour plus d’informations, consultez [/c (compiler sans liaison)](../build/reference/c-compile-without-linking.md).) Ensuite, exécutez **lib MathFuncsLib.obj** pour lier le code et créer la bibliothèque statique **MathFuncsLib.lib**. (La commande **lib** appelle le gestionnaire de bibliothèque Lib.exe. Pour plus d’informations, consultez [LIB Reference](../build/reference/lib-reference.md).)  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a> Création d’une application console C++ qui fait référence à la bibliothèque statique  
+##  <a name="CreateAppToRefTheLib"></a> Création d’une application console C++ qui fait référence à la bibliothèque statique  
   
 #### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Pour créer une application console C++ qui fait référence à la bibliothèque statique  
   
 1.  Dans la barre de menus, sélectionnez **Fichier**, **Nouveau**, **Projet**.  
   
-2.  Dans le volet gauche, sous **Visual C++**, sélectionnez **Win32**.  
-  
-3.  Dans le volet central, sélectionnez **Application console Win32**.  
+2. Dans le volet gauche de la **nouveau projet** boîte de dialogue, développez **installé, Visual C++**, puis sélectionnez **Windows Desktop**.  
+
+3. Dans le volet central, sélectionnez **Windows Desktop Assistant**.  
   
 4.  Spécifiez un nom pour le projet, par exemple **MyExecRefsLib**, dans la zone **Nom** . Dans la liste déroulante, en regard de **Solution**, sélectionnez **Ajouter à la solution**. Le nouveau projet est ajouté à la solution qui contient la bibliothèque statique. Sélectionnez le bouton **OK** .  
+5. Sous **type d’Application**, sélectionnez **Application Console (.exe)**.
+
+6. Sous **Additioal Options**, décochez la case la **en-tête précompilé** case à cocher.
+
+7. Choisissez **OK** pour créer le projet.  
   
-5.  Dans la page **Vue d'ensemble** de la boîte de dialogue **Assistant Application Win32** , choisissez le bouton **Suivant** .  
-  
-6.  Dans la page **Paramètres de l'application** sous **Type d'application**, sélectionnez **Application console**.  
-  
-7.  Dans la page **Paramètres de l'application** , sous **Options supplémentaires**, décochez la case **En-tête précompilé** .  
-  
-8.  Choisissez le bouton **Terminer** pour créer le projet.  
-  
-##  <a name="BKMK_UseLibInApp"></a> Utilisation des fonctionnalités de la bibliothèque statique dans l’application  
+##  <a name="UseLibInApp"></a> Utilisation des fonctionnalités de la bibliothèque statique dans l’application  
   
 #### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Pour utiliser les fonctionnalités de la bibliothèque statique dans l’application  
   
 1.  Une fois que vous avez créé une application console, un programme vide est créé à votre intention. Le nom du fichier source est identique au nom que vous avez choisi précédemment. Dans cet exemple, il est nommé **MyExecRefsLib.cpp**.  
   
-2.  Avant de pouvoir utiliser les routines mathématiques dans la bibliothèque statique, vous devez la référencer. Pour cela, ouvrez le menu contextuel du projet **MyExecRefsLib** dans l’ **Explorateur de solutions**, puis sélectionnez **Références**. Dans le **MyExecRefsLibProperty Pages** boîte de dialogue, développez le **propriétés communes** nœud, sélectionnez **structure et références**, puis choisissez le **ajouter Une nouvelle référence** bouton. Pour plus d’informations sur la **références** boîte de dialogue, consultez [l’ajout de références](../ide/adding-references-in-visual-cpp-projects.md).  
+2.  Avant de pouvoir utiliser les routines mathématiques dans la bibliothèque statique, vous devez la référencer. Pour ce faire, ouvrez le menu contextuel du projet MyExecRefsLib dans **l’Explorateur de solutions**, puis choisissez **ajouter, référence**.  
   
 3.  La boîte de dialogue **Ajouter une référence** répertorie les bibliothèques que vous pouvez référencer. L’onglet **Projets** répertorie tous les projets de la solution actuelle et toutes les bibliothèques qu’ils contiennent. Sous l’onglet **Projets** , cochez la case **MathFuncsLib** , puis sélectionnez le bouton **OK** .  
   
@@ -122,7 +117,7 @@ Cette procédure pas à pas montre comment créer une bibliothèque statique (fi
   
 6.  Générez le fichier exécutable en sélectionnant **Générer**, **Générer la solution** dans la barre de menus.  
   
-##  <a name="BKMK_RunApp"></a> Exécution de l’application  
+##  <a name="RunApp"></a> Exécution de l’application  
   
 #### <a name="to-run-the-app"></a>Pour exécuter l’application  
   

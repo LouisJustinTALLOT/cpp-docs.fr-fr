@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2fa3ef6113add6bcf72f85f74b8722033cb8d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962872"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,23 +38,23 @@ Définit plusieurs classes qui prennent en charge les opérations iostreams sur 
 
 |Nom de type|Description|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Type `basic_filebuf` spécialisé sur des paramètres de modèle `char`.|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|Type `basic_fstream` spécialisé sur des paramètres de modèle `char`.|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Type `basic_ifstream` spécialisé sur des paramètres de modèle `char`.|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Type `basic_ofstream` spécialisé sur des paramètres de modèle `char`.|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Type `basic_fstream` spécialisé sur des paramètres de modèle `wchar_t`.|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Type `basic_ifstream` spécialisé sur des paramètres de modèle `wchar_t`.|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Type `basic_ofstream` spécialisé sur des paramètres de modèle `wchar_t`.|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Type `basic_filebuf` spécialisé sur des paramètres de modèle `wchar_t`.|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Un type `basic_filebuf` spécialisé sur **char** paramètres de modèle.|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|Un type `basic_fstream` spécialisé sur **char** paramètres de modèle.|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Un type `basic_ifstream` spécialisé sur **char** paramètres de modèle.|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Un type `basic_ofstream` spécialisé sur **char** paramètres de modèle.|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Un type `basic_fstream` spécialisé sur **wchar_t** paramètres de modèle.|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Un type `basic_ifstream` spécialisé sur **wchar_t** paramètres de modèle.|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Un type `basic_ofstream` spécialisé sur **wchar_t** paramètres de modèle.|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Un type `basic_filebuf` spécialisé sur **wchar_t** paramètres de modèle.|
 
 ### <a name="classes"></a>Classes
 
 |Classe|Description|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La classe de modèle décrit une mémoire tampon de flux qui contrôle la transmission d’éléments de type **Elem**, dont les caractéristiques sont déterminées par la classe **Tr**, vers et à partir d’une séquence d’éléments stockés dans un fichier externe.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|La classe de modèle décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets codés à l’aide d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, avec des éléments de type **Elem**, dont les caractéristiques sont déterminées par la classe **Tr**.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et d’objets codés à partir d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, avec des éléments de type **Elem**, dont les caractéristiques sont déterminées par la classe **Tr**.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La classe de modèle décrit un objet qui contrôle l’insertion d’éléments et d’objets codés dans une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, avec des éléments de type **Elem**, dont les caractéristiques sont déterminées par la classe **Tr**.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La classe de modèle décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d'une séquence d'éléments stockés dans un fichier externe.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|La classe de modèle décrit un objet qui contrôle l’insertion et l’extraction d’éléments et objets encodés à l’aide d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**,  **TR**>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et objets encodés à partir d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La classe de modèle décrit un objet qui contrôle l’insertion d’éléments et objets encodés dans une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.|
 
 ## <a name="see-also"></a>Voir aussi
 

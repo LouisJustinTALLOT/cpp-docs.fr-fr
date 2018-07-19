@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963626"
 ---
 # <a name="iterator-struct"></a>iterator, struct
 
-Struct de base vide permettant de garantir qu’une classe d’itérateur définie par l’utilisateur fonctionne correctement avec des **iterator_trait**.
+Struct de base vide permettant de garantir qu’une classe d’itérateur définie par l’utilisateur fonctionne correctement avec `iterator_trait`s.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,7 +47,7 @@ Le struct de modèle sert de type de base pour tous les itérateurs. Il définit
 
 - `iterator_category` (synonyme du paramètre du modèle `Category`).
 
-- `value_type` (synonyme du paramètre du modèle **Type**).
+- `value_type` (synonyme du paramètre du modèle `Type`).
 
 - `difference_type` (synonyme du paramètre du modèle `Distance`).
 
@@ -57,13 +57,13 @@ Le struct de modèle sert de type de base pour tous les itérateurs. Il définit
 
 - `reference` (synonyme du paramètre du modèle `Reference`).
 
-Notez que `value_type` ne doit pas être un type de constante, même si **pointer** pointe vers un objet de **Type** const et que la référence désigne un objet de **Type** const.
+Notez que `value_type` ne doit pas être une constante de type, même lorsque `pointer` pointe vers un objet de **const** `Type` et référence désigne un objet de **const** `Type`.
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple montrant comment déclarer et utiliser les types de la classe de base iterator, consultez [iterator_traits](../standard-library/iterator-traits-struct.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iterator>
 

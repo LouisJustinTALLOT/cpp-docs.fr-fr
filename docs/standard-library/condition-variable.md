@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845724"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963470"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -59,9 +59,9 @@ Les classes `condition_variable_any` et `condition_variable` ont chacune trois m
 
 - `wait_for` attend pendant une valeur `time interval` spécifiée.
 
-Chacune de ces méthodes a deux versions surchargées. L’une se contente d’attendre et peut s’éveiller sans motif. L’autre accepte un argument de modèle supplémentaire qui définit un prédicat. La méthode ne retourne pas de valeur tant que le prédicat est `true`.
+Chacune de ces méthodes a deux versions surchargées. L’une se contente d’attendre et peut s’éveiller sans motif. L’autre accepte un argument de modèle supplémentaire qui définit un prédicat. La méthode ne retourne pas jusqu'à ce que le prédicat est **true**.
 
-Chaque classe a également deux méthodes qui sont utilisées pour informer une variable conditionnelle que sa condition est `true`.
+Chaque classe a également deux méthodes sont utilisées pour informer une variable conditionnelle que sa condition est **true**.
 
 - `notify_one` éveille un des threads en attente de la variable conditionnelle.
 

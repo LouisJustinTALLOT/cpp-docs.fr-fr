@@ -1,1 +1,1 @@
-Kit de développement logiciel Windows
+SDK Windows

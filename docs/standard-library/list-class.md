@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fde78a6a7fdbd89be2f98cd2ab794ada3728008
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962915"
 ---
 # <a name="list-class"></a>list, classe
 
@@ -130,7 +130,7 @@ class list
 
 *Type* type de données de l’élément à stocker dans la liste.
 
-`Allocator` Type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire de la liste. Cet argument est facultatif et la valeur par défaut est **allocateur**\<*Type*>.
+*Allocateur* le type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire de la liste. Cet argument est facultatif et la valeur par défaut est **allocateur**\<*Type*>.
 
 ## <a name="remarks"></a>Notes
 
@@ -153,14 +153,14 @@ Incluez l’en-tête standard de bibliothèque standard C++ \<list> pour défini
 |Nom de type|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Type qui représente la classe `allocator` d'un objet list.|
-|[const_iterator](#const_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément `const` dans une liste.|
-|[const_pointer](#const_pointer)|Type qui fournit un pointeur vers un élément `const` dans une liste.|
-|[const_reference](#const_reference)|Type qui fournit une référence à un élément `const` stocké dans une liste pour la lecture et l'exécution des opérations `const`.|
-|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément `const` dans une liste.|
+|[const_iterator](#const_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément **const** dans une liste.|
+|[const_pointer](#const_pointer)|Un type qui fournit un pointeur vers un **const** élément dans une liste.|
+|[const_reference](#const_reference)|Type qui fournit une référence à un élément **const** stocké dans une liste pour la lecture et l’exécution d’opérations **const**.|
+|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément **const** dans une liste.|
 |[difference_type](#difference_type)|Type qui fournit la différence entre deux itérateurs qui font référence aux éléments d'une même liste.|
 |[iterator](#iterator)|Type qui fournit un itérateur bidirectionnel capable de lire ou modifier un élément d'une liste.|
 |[pointer](#pointer)|Type qui fournit un pointeur vers un élément d'une liste.|
-|[reference](#reference)|Type qui fournit une référence à un élément `const` stocké dans une liste pour la lecture et l'exécution des opérations `const`.|
+|[reference](#reference)|Type qui fournit une référence à un élément **const** stocké dans une liste pour la lecture et l’exécution d’opérations **const**.|
 |[reverse_iterator](#reverse_iterator)|Type qui fournit un itérateur bidirectionnel pouvant lire ou modifier un élément d'une liste inversée.|
 |[size_type](#size_type)|Type qui compte le nombre d'éléments dans une liste.|
 |[value_type](#value_type)|Type qui représente le type de données stocké dans une liste.|
@@ -210,7 +210,7 @@ Incluez l’en-tête standard de bibliothèque standard C++ \<list> pour défini
 |-|-|
 |[list::operator=](#op_eq)|Remplace les éléments de la liste par une copie d'une autre liste.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<list>
 
@@ -224,7 +224,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Notes
 
-`allocator_type` est un synonyme du paramètre de modèle **Allocator.**
+`allocator_type` est un synonyme du paramètre de modèle *allocateur*.
 
 ### <a name="example"></a>Exemple
 
@@ -250,15 +250,15 @@ void assign(
 
 ### <a name="parameters"></a>Paramètres
 
-`First` Position du premier élément dans la plage d’éléments à copier à partir de la liste d’arguments.
+*Première* Position du premier élément dans la plage d’éléments à copier à partir de la liste d’arguments.
 
-`Last` Position du premier élément juste après la plage d’éléments à copier à partir de la liste d’arguments.
+*Dernière* Position du premier élément juste après la plage d’éléments à copier à partir de la liste d’arguments.
 
-`Count` Le nombre de copies d’un élément inséré dans la liste.
+*Nombre de* le nombre de copies d’un élément inséré dans la liste.
 
-`Val` La valeur de l’élément inséré dans la liste.
+*Val* la valeur de l’élément inséré dans la liste.
 
-`IList` Initializer_list qui contient les éléments à insérer.
+*IList* initializer_list qui contient les éléments à insérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -330,7 +330,7 @@ Dernier élément de la liste. Si la liste est vide, la valeur de retour n'est p
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de **back** est affectée à un objet `const_reference`, l’objet de liste ne peut pas être changé. Si la valeur de retour de **back** est affectée à un objet **reference**, l’objet de liste peut être changé.
+Si la valeur de retour de `back` est affectée à `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `back` est affectée à un `reference`, l’objet de liste peut être changé.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément d’une liste vide.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) .
 
@@ -380,7 +380,7 @@ Itérateur bidirectionnel qui traite le premier élément dans la liste ou à l'
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de **begin** est affectée à un objet `const_iterator`, les éléments de l’objet de liste ne peuvent pas être changés. Si la valeur de retour de **begin** est affectée à un objet **iterator**, les éléments de l’objet de liste peuvent être changés.
+Si la valeur de retour de `begin` est affecté à un `const_iterator`, les éléments dans l’objet de liste ne peut pas être modifiés. Si la valeur de retour de `begin` est affecté à un `iterator`, les éléments dans l’objet de liste peuvent être changés.
 
 ### <a name="example"></a>Exemple
 
@@ -419,7 +419,7 @@ The first element of c1 is now 20
 
 ## <a name="cbegin"></a>  list::cbegin
 
-Retourne un itérateur `const` qui traite le premier élément d'une plage.
+Retourne un **const** itérateur qui traite le premier élément dans la plage.
 
 ```cpp
 const_iterator cbegin() const;
@@ -427,13 +427,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur forward bidirectionnel `const` qui pointe vers le premier élément de la plage, ou vers l'emplacement situé juste après la fin d'une plage vide (pour une plage vide : `cbegin() == cend()`).
+Un **const** itérateur Forward bidirectionnel qui pointe vers le premier élément de la plage ou l’emplacement juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Notes
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -459,7 +459,7 @@ Itérateur forward bidirectionnel `const` qui pointe juste après la fin de la p
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -524,7 +524,7 @@ Consultez l’exemple de [back](#back).
 
 ## <a name="const_pointer"></a>  list::const_pointer
 
-Fournit un pointeur vers un élément `const` dans une liste.
+Fournit un pointeur vers un **const** élément dans une liste.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -760,8 +760,8 @@ void emplace(iterator Where, Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|`Where`|Position dans l’objet [liste](../standard-library/list-class.md) cible où le premier élément est inséré.|
-|`val`|Élément ajouté à la fin de l'objet `list`.|
+|*Where*|Position dans l’objet [liste](../standard-library/list-class.md) cible où le premier élément est inséré.|
+|*Val*|Élément ajouté à la fin de l'objet `list`.|
 
 ### <a name="remarks"></a>Notes
 
@@ -803,7 +803,7 @@ void emplace_back(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|`val`|Élément ajouté à la fin de l’objet [list](../standard-library/list-class.md).|
+|*Val*|Élément ajouté à la fin de l’objet [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Notes
 
@@ -845,7 +845,7 @@ void emplace_front(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|`val`|Élément ajouté au début de l’objet [list](../standard-library/list-class.md).|
+|*Val*|Élément ajouté au début de l’objet [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Notes
 
@@ -927,7 +927,7 @@ Itérateur bidirectionnel qui traite l'emplacement suivant le dernier élément 
 
 ### <a name="remarks"></a>Notes
 
-**end** est utilisé pour déterminer si un itérateur a atteint la fin de sa liste.
+`end` est utilisé pour tester si un itérateur a atteint la fin de sa liste.
 
 ### <a name="example"></a>Exemple
 
@@ -983,11 +983,11 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Paramètres
 
-`Where` Position de l’élément à supprimer de la liste.
+*Où* Position de l’élément à supprimer de la liste.
 
-`first` Position du premier élément supprimé de la liste.
+*première* Position du premier élément supprimé de la liste.
 
-`last` Position juste après le dernier élément supprimé de la liste.
+*dernière* Position juste après le dernier élément supprimé à partir de la liste.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -997,7 +997,7 @@ Itérateur bidirectionnel qui désigne le premier élément restant après tous 
 
 Aucune réallocation ne se produit. Ainsi, les itérateurs et les références deviennent non valides uniquement pour les éléments effacés.
 
-**erase** ne lève jamais d’exception.
+`erase` ne lève jamais d’exception.
 
 ### <a name="example"></a>Exemple
 
@@ -1059,7 +1059,7 @@ Si la liste est vide, la valeur de retour n'est pas définie.
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `front` est affectée à `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `front` est affectée à un objet **reference**, l’objet de liste peut être changé.
+Si la valeur de retour de `front` est affectée à `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `front` est affectée à un `reference`, l’objet de liste peut être changé.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément d’une liste vide.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) .
 
@@ -1150,11 +1150,11 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 |Paramètre|Description|
 |-|-|
-|`Where`|Position dans la liste cible où le premier élément est inséré.|
-|`Val`|Valeur de l'élément inséré dans la liste.|
-|`Count`|Nombre d'éléments insérés dans la liste.|
-|`First`|Position du premier élément de la plage d'éléments dans la liste d'arguments à copier.|
-|`Last`|Position du premier élément au-delà de la plage d’éléments dans la liste d’arguments à copier.|
+|*Where*|Position dans la liste cible où le premier élément est inséré.|
+|*Val*|Valeur de l'élément inséré dans la liste.|
+|*Nombre*|Nombre d'éléments insérés dans la liste.|
+|*Premier*|Position du premier élément de la plage d'éléments dans la liste d'arguments à copier.|
+|*Dernière*|Position du premier élément au-delà de la plage d’éléments dans la liste d’arguments à copier.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1240,7 +1240,7 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser un type **iterator** pour modifier la valeur d’un élément.
+Un type `iterator` peut être utilisé pour modifier la valeur d’un élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1272,29 +1272,29 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 |Paramètre|Description|
 |-|-|
-|`Al`|Classe allocator à utiliser avec cet objet.|
-|`Count`|Nombre d'éléments dans la liste construite.|
-|`Val`|Valeur des éléments de la liste.|
-|`Right`|Liste dont la liste construite doit être une copie.|
-|`First`|Position du premier élément de la plage d'éléments à copier.|
-|`Last`|Position du premier élément au-delà de la plage d'éléments à copier.|
-|`IList`|initializer_list qui contient les éléments à copier.|
+|*Al*|Classe allocator à utiliser avec cet objet.|
+|*Nombre*|Nombre d'éléments dans la liste construite.|
+|*Val*|Valeur des éléments de la liste.|
+|*Droite*|Liste dont la liste construite doit être une copie.|
+|*Premier*|Position du premier élément de la plage d'éléments à copier.|
+|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*IList*|initializer_list qui contient les éléments à copier.|
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs stockent un objet allocateur ( `Al`) et initialisent la liste.
+Tous les constructeurs stockent un objet allocateur (*Al*) et initialisent la liste.
 
 [get_allocator](#get_allocator) retourne une copie de l’objet allocateur utilisé pour construire une liste.
 
-Les deux premiers constructeurs spécifient une liste initiale vide. En outre, le second spécifie le type d’allocateur ( `Al`) à utiliser.
+Les deux premiers constructeurs spécifient une liste initiale vide, le deuxième spécifie le type d’allocateur (*Al*) à utiliser.
 
-Le troisième constructeur spécifie une répétition d'un nombre spécifique ( `Count`) d'éléments de la valeur par défaut pour la classe **Type**.
+Le troisième constructeur spécifie une répétition d’un nombre spécifié (*nombre*) d’éléments de la valeur par défaut pour la classe `Type`.
 
-Les quatrième et cinquième constructeurs spécifient une répétition de ( `Count`) éléments ayant la valeur `Val`.
+Les quatrième et cinquième constructeurs spécifient une répétition des (*nombre*) éléments ayant la valeur *Val*.
 
-Le sixième constructeur spécifie une copie de la liste `Right`.
+Le sixième constructeur spécifie une copie de la liste *droite*.
 
-Le septième constructeur déplace la liste `Right`.
+Le septième constructeur déplace la liste *droite*.
 
 Le huitième constructeur utilise initializer_list pour spécifier les éléments.
 
@@ -1437,15 +1437,15 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` La liste d’arguments à fusionner avec la liste cible.
+*droit* la liste d’arguments à fusionner avec la liste des cibles.
 
-`comp` L’opérateur de comparaison utilisé pour classer les éléments de la liste cible.
+*comp* l’opérateur de comparaison utilisé pour ordonner les éléments de la liste cible.
 
 ### <a name="remarks"></a>Notes
 
-La liste d'arguments `right` est fusionnée avec la liste cible.
+La liste d’arguments *droit* est fusionnée avec la liste cible.
 
-La liste d'arguments et la liste cible doivent être classées en fonction de la même relation de comparaison que la séquence résultante. L'ordre par défaut de la première fonction membre est l'ordre croissant. La deuxième fonction membre impose l’opération de comparaison spécifiée par l’utilisateur `comp` de la classe **Traits**.
+La liste d'arguments et la liste cible doivent être classées en fonction de la même relation de comparaison que la séquence résultante. L'ordre par défaut de la première fonction membre est l'ordre croissant. La deuxième fonction membre impose l’opération de comparaison spécifié par l’utilisateur *comp* de classe `Traits`.
 
 ### <a name="example"></a>Exemple
 
@@ -1519,11 +1519,11 @@ list& operator=(list&& right);
 
 |Paramètre|Description|
 |-|-|
-|`right`|Objet [list](../standard-library/list-class.md) copié dans `list`.|
+|*right*|Objet [list](../standard-library/list-class.md) copié dans `list`.|
 
 ### <a name="remarks"></a>Notes
 
-Après avoir effacé les éléments existants dans `list`, l'opérateur copie ou déplace le contenu de `right` dans `list`.
+Après avoir supprimé les éléments existants dans un `list`, l’opérateur copie ou déplace le contenu de *droit* dans le `list`.
 
 ### <a name="example"></a>Exemple
 
@@ -1576,7 +1576,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser un type **pointer** pour modifier la valeur d’un élément.
+Un type `pointer` peut être utilisé pour modifier la valeur d’un élément.
 
 Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accéder aux éléments dans un objet de liste.
 
@@ -1676,7 +1676,7 @@ void push_back(void push_back(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|`val`|Élément ajouté à la fin de la liste.|
+|*Val*|Élément ajouté à la fin de la liste.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1732,7 +1732,7 @@ void push_front(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|`val`|Élément ajouté au début de la liste.|
+|*Val*|Élément ajouté au début de la liste.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1892,7 +1892,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-`val` Valeur qui, si détenues par un élément, entraîne la suppression de l’élément dans la liste.
+*Val* la valeur qui, si détenue par un élément, se traduira par la suppression de cet élément dans la liste.
 
 ### <a name="remarks"></a>Notes
 
@@ -1949,7 +1949,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Paramètres
 
-`pred` Prédicat unaire qui, si respecté par un élément, entraîne la suppression de cet élément dans la liste.
+*pred* prédicat unaire qui, si satisfaite par un élément, entraîne la suppression de cet élément dans la liste.
 
 ### <a name="example"></a>Exemple
 
@@ -2099,15 +2099,15 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Paramètres
 
-`_Newsize` La nouvelle taille de la liste.
+*_Newsize* la nouvelle taille de la liste.
 
-`val` La valeur des nouveaux éléments à ajouter à la liste si la nouvelle taille est plus grande que la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
+*Val* la valeur des nouveaux éléments à ajouter à la liste si la nouvelle taille est plus grande que la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes
 
-Si la taille de la liste est inférieure à la taille demandée, `_Newsize`, des éléments sont ajoutés à la liste jusqu’à ce qu’elle atteigne la taille demandée.
+Si la taille de la liste est inférieure à la taille demandée, *_Newsize*, éléments sont ajoutés à la liste jusqu'à ce qu’il atteigne la taille demandée.
 
-Si la taille de la liste est supérieure à la taille demandée, les éléments les plus proches de la fin de la liste sont supprimés jusqu’à ce que celle-ci atteigne la taille `_Newsize`.
+Si la taille de la liste est supérieure à la taille demandée, les éléments les plus proches à la fin de la liste sont supprimés jusqu'à ce que celle-ci atteigne la taille *_Newsize*.
 
 Si la taille actuelle de la liste est égale à la taille demandée, aucune action n'est effectuée.
 
@@ -2279,13 +2279,13 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Paramètres
 
-`comp` L’opérateur de comparaison utilisé pour trier des éléments consécutifs.
+*comp* l’opérateur de comparaison utilisé pour classer les éléments consécutifs.
 
 ### <a name="remarks"></a>Notes
 
 La première fonction membre trie les éléments dans l’ordre croissant par défaut.
 
-La fonction de modèle membre trie les éléments en fonction de l’opération de comparaison spécifiée par l’utilisateur `comp` de classe **Traits**.
+La fonction de modèle membre trie les éléments en fonction de l’opération de comparaison spécifié par l’utilisateur *comp* de classe `Traits`.
 
 ### <a name="example"></a>Exemple
 
@@ -2350,23 +2350,23 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Paramètres
 
-`Where` Position dans la liste de destination avant laquelle insérer.
+*Où* la position dans la liste de destination avant lequel insérer.
 
-`Source` La liste source qui doit être inséré dans la liste de destination.
+*Source* la liste source qui doit être inséré dans la liste de destination.
 
-`Iter` L’élément à insérer dans la liste source.
+*Iter* l’élément à insérer dans la liste source.
 
-`First` Le premier élément dans la plage à insérer dans la liste source.
+*Première* le premier élément dans la plage à insérer dans la liste source.
 
-`Last` La première position au-delà du dernier élément dans la plage à insérer dans la liste source.
+*Dernière* la première position au-delà du dernier élément dans la plage à insérer dans la liste source.
 
 ### <a name="remarks"></a>Notes
 
-La première paire de fonctions membres insère tous les éléments de la liste source dans la liste de destination avant la position référencée par `Where` et supprime tous les éléments de la liste source. ( `&Source` ne doit pas être égal à `this`.)
+La première paire de fonctions membres insère tous les éléments dans la liste source dans la liste de destination avant la position référencée par *où* et supprime tous les éléments de la liste source. (`&Source` ne doit pas correspondre `this`.)
 
-La deuxième paire de fonctions membres insère l'élément référencé par `Iter` avant la position dans la liste de destination référencée par `Where` et supprime `Iter` de la liste source. (Si `Where == Iter || Where == ++Iter`, aucune modification ne se produit.)
+La deuxième paire de fonctions membres insère l’élément référencé par *Iter* avant la position dans la liste de destination référencé par *où* et supprime *Iter* à partir de la liste source. (Si `Where == Iter || Where == ++Iter`, aucune modification ne se produit.)
 
-La troisième paire de fonctions membres insère la plage désignée par [ `First`, `Last`) avant l’élément dans la liste de destination référencé par `Where`, et supprime cette plage d’éléments de la liste source. (Si `&Source == this`, la plage `[First, Last)` ne doit pas inclure l'élément vers lequel `Where` pointe.)
+La troisième paire de fonctions membres insère la plage désignée par [ `First`, `Last`) avant l’élément dans la liste de destination référencé par *où* et supprime cette plage d’éléments de la liste source. (Si `&Source == this`, la plage `[First, Last)` ne doit pas inclure l’élément désigné par *où*.)
 
 Si la méthode splice à plage insère `N` éléments et que `&Source != this`, un objet de classe [iterator](../standard-library/forward-list-class.md#iterator) est incrémenté `N` fois.
 
@@ -2460,9 +2460,9 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Paramètres
 
-`right` La liste qui fournit les éléments à permuter, ou la liste dont les éléments doivent être échangés avec ceux de la liste `left`.
+*droit* la liste qui fournit les éléments à échanger, ou la liste dont les éléments doivent être échangés avec ceux de la liste *gauche*.
 
-`left` Une liste dont les éléments doivent être échangés avec ceux de la liste `right`.
+*gauche* une liste dont les éléments doivent être échangés avec ceux de la liste *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -2525,7 +2525,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Paramètres
 
-`pred` Le prédicat binaire utilisé pour comparer des éléments consécutifs.
+*pred* le prédicat binaire utilisé pour comparer des éléments consécutifs.
 
 ### <a name="remarks"></a>Notes
 
@@ -2533,7 +2533,7 @@ Cette fonction suppose que la liste est triée, pour que tous les éléments dup
 
 La première fonction membre supprime chaque élément dont la valeur est égale à l'élément précédent.
 
-La deuxième fonction membre supprime chaque élément conforme à la fonction de prédicat *pred* par rapport à son élément précédent. Vous pouvez utiliser un des objets de fonction binaire déclarés dans le \<fonctionnel > en-tête pour l’argument *pred* ou vous pouvez créer vos propres.
+La deuxième fonction membre supprime chaque élément qui satisfait à la fonction de prédicat *pred* par rapport à son élément précédent. Vous pouvez utiliser un des objets de fonction binaire déclarés dans le \<fonctionnel > en-tête pour l’argument *pred* ou vous pouvez créer les vôtres.
 
 ### <a name="example"></a>Exemple
 
@@ -2594,7 +2594,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Notes
 
-`value_type` est un synonyme du paramètre de modèle **Type**.
+`value_type` est un synonyme du paramètre de modèle *Type*.
 
 ### <a name="example"></a>Exemple
 

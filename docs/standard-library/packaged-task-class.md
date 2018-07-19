@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964793"
 ---
 # <a name="packagedtask-class"></a>packaged_task, classe
 
@@ -75,7 +75,7 @@ class packaged_task;
 |[packaged_task::operator()](#op_call)|Appelle l’objet pouvant être appelé qui est stocké dans l’état asynchrone associé, stocke atomiquement la valeur retournée et définit l’état sur *ready*.|
 |[packaged_task::operator bool](#op_bool)|Spécifie si l’objet a un état asynchrone associé.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<future >
 
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` A `packaged_task` objet.
+*Droite* A `packaged_task` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -131,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Notes
 
-Après l’opération, `Right` n’a plus d’état asynchrone associé.
+Après l’opération, *droite* n’a plus d’état asynchrone associé.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'objet possède un état asynchrone associé ; sinon, `false`.
+**true** si l’objet a un état asynchrone associé ; sinon, **false**.
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task, constructeur
 
@@ -178,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` A `packaged_task` objet.
+*Droite* A `packaged_task` objet.
 
-`alloc` Un allocateur de mémoire. Pour plus d’informations, consultez [\<allocators>](../standard-library/allocators-header.md).
+*Alloc* un allocateur de mémoire. Pour plus d’informations, consultez [\<allocators>](../standard-library/allocators-header.md).
 
-`fn` Un objet de fonction.
+*fn* un objet de fonction.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet `packaged_task` sans *état asynchrone associé*.
 
-Le deuxième constructeur construit un objet `packaged_task` et transfère l’état asynchrone associé à partir de `Right`. Après l’opération, `Right` n’a plus d’état asynchrone associé.
+Le deuxième constructeur construit un `packaged_task` de l’objet et transfère l’état asynchrone associé à partir de *droite*. Après l’opération, *droite* n’a plus d’état asynchrone associé.
 
-Le troisième constructeur construit un objet `packaged_task` qui a une copie de `fn` stockée dans son état asynchrone associé.
+Le troisième constructeur construit un `packaged_task` objet qui possède une copie de *fn* stockées dans son état asynchrone associé.
 
-Le quatrième constructeur construit un objet `packaged_task` qui a une copie de `fn` stockée dans son état asynchrone associé, et utilise `alloc` pour l’allocation de mémoire.
+Le quatrième constructeur construit un `packaged_task` objet qui possède une copie de *fn* stockée dans son état asynchrone associé et utilise `alloc` pour l’allocation de mémoire.
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task, destructeur
 
@@ -228,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` A `packaged_task` objet.
+*Droite* A `packaged_task` objet.
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -240,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'objet possède un état asynchrone associé ; sinon, `false`.
+**true** si l’objet a un état asynchrone associé ; sinon, **false**.
 
 ## <a name="see-also"></a>Voir aussi
 

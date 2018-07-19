@@ -1,5 +1,5 @@
 ---
-title: Seul l’héritage | Documents Microsoft
+title: L’héritage simple | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028619"
 ---
 # <a name="single-inheritance"></a>Héritage simple
 Dans « l'héritage unique », une forme courante d'héritage, les classes possèdent une seule classe de base. Considérons la relation illustrée à la figure ci-dessous.  
   
- ![Une seule base&#45;graphique d’héritage](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![Base unique&#45;graphique d’héritage](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Graphique simple illustrant un héritage unique  
   
  Notez la progression d'un niveau général à un niveau spécifique dans la figure. Un autre attribut courant figurant dans la conception de la plupart des hiérarchies de classes est que la classe dérivée possède une « sorte » de relation avec la classe de base. Dans la figure ci-dessus, un objet `Book` est une sorte d'objet `PrintedDocument` et un objet `PaperbackBook` est une sorte d'objet `book`.  
   
  Autre élément à retenir dans la figure : `Book` est à la fois une classe dérivée (de `PrintedDocument`) et une classe de base (`PaperbackBook` est dérivé de `Book`). Le squelette de la déclaration d'une telle hiérarchie de classes est illustré dans l'exemple suivant :  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,7 +53,7 @@ class PaperbackBook : public Book {};
   
  La classe de base dont chaque classe est dérivée est déclarée avant la déclaration de la classe dérivée. Il ne suffit pas de fournir une déclaration de référence avant pour une classe de base ; il faut fournir une déclaration complète.  
   
- Dans l’exemple précédent, le spécificateur d’accès **public** est utilisé. La signification de l’héritage public, protégé et privé est décrite dans [le contrôle d’accès de membre.](../cpp/member-access-control-cpp.md)  
+ Dans l’exemple précédent, le spécificateur d’accès **public** est utilisé. La signification de l’héritage public, protégé et privé est décrite dans [contrôle d’accès de membre.](../cpp/member-access-control-cpp.md)  
   
  Une classe peut servir de classe de base pour de nombreuses classes spécifiques, comme illustré à la figure suivante.  
   
@@ -62,11 +63,11 @@ Exemple de graphique acyclique dirigé
  Dans le diagramme ci-dessus, appelé « graphique acyclique dirigé », certaines classes sont des classes de base pour plusieurs classes dérivées. Toutefois, l'inverse n'est pas vrai : il existe une seule classe de base directe pour chaque classe dérivée. Le graphique de la figure représente une structure « d'héritage unique ».  
   
 > [!NOTE]
->  Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple. Cette rubrique est traitée dans [l’héritage Multiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple. Cette rubrique est couverte dans [l’héritage Multiple](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  Dans un héritage, la classe dérivée contient les membres de la classe de base, ainsi que tous les nouveaux membres que vous ajoutez. Par conséquent, une classe dérivée peut faire référence à des membres de la classe de base (à moins que ces membres soient redéfinis dans la classe dérivée). L'opérateur de résolution de portée (`::`) peut être utilisé pour faire référence à des membres de classes de base directes ou indirectes, lorsque ces membres ont été redéfinis dans la classe dérivée. Considérez cet exemple :  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  Notez que le constructeur de `Book`, (`Book::Book`), a accès aux données membres, `Name`. Dans un programme, un objet de type `Book` peut être créé et utilisé comme suit :  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  Comme le montre l'exemple précédent, le membre de classe et les données et fonctions héritées sont utilisés de façon identique. Si l'implémentation de la classe `Book` demande une réimplémentation de la fonction `PrintNameOf`, la fonction qui appartient à la classe `Document` peut être appelée uniquement à l'aide de l'opérateur de résolution de portée (`::`) :  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  Les pointeurs et les références des classes dérivées peuvent être convertis implicitement en pointeurs et références de leurs classes de base, s'il existe une classe de base accessible et non équivoque. Le code suivant illustre ce concept à l'aide de pointeurs (le même principe s'applique aux références) :  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  
@@ -162,5 +163,5 @@ int main() {
  Comme la classe `Document` possède une fonction `PrintNameOf`, elle peut imprimer le nom de chaque ouvrage de la bibliothèque, mais elle peut omettre certaines informations spécifiques au type de document (nombre de pages pour `Book`, nombre d'octets pour `HelpFile`, etc.).  
   
 > [!NOTE]
->  Obliger la classe de base à implémenter une fonction telle que `PrintNameOf` est rarement le meilleur choix de conception. [Fonctions virtuelles](../cpp/virtual-functions.md) offrent d’autres alternatives de conception.  
+>  Obliger la classe de base à implémenter une fonction telle que `PrintNameOf` est rarement le meilleur choix de conception. [Fonctions virtuelles](../cpp/virtual-functions.md) offre d’autres alternatives de conception.  
   

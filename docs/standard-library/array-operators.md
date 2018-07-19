@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846140"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965456"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;, opérateurs
 
-L’en-tête \<array> inclut ces fonctions de modèle de comparaison non-membres `array`.
+Le \<tableau > en-tête comprend ces **tableau** les fonctions de modèle de comparaison non-membres.
 
 ||||
 |-|-|-|
@@ -42,13 +42,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Conteneur de gauche à comparer.
+*gauche* conteneur de gauche à comparer.
 
-`right` Conteneur droit à comparer.
+*droit* conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -111,13 +111,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Conteneur de gauche à comparer.
+*gauche* conteneur de gauche à comparer.
 
-`right` Conteneur droit à comparer.
+*droit* conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -181,13 +181,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Conteneur de gauche à comparer.
+*gauche* conteneur de gauche à comparer.
 
-`right` Conteneur droit à comparer.
+*droit* conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -251,13 +251,13 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Conteneur de gauche à comparer.
+*gauche* conteneur de gauche à comparer.
 
-`right` Conteneur droit à comparer.
+*droit* conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -321,13 +321,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Conteneur de gauche à comparer.
+*gauche* conteneur de gauche à comparer.
 
-`right` Conteneur droit à comparer.
+*droit* conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -391,13 +391,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Le type d’un élément.
+*Ty* le type d’un élément.
 
-`N` La taille du tableau.
+*N* la taille du tableau.
 
-`left` Conteneur de gauche à comparer.
+*gauche* conteneur de gauche à comparer.
 
-`right` Conteneur droit à comparer.
+*droit* conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 

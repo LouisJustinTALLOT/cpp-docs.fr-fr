@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843806"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961589"
 ---
 # <a name="iscompound-class"></a>is_compound, classe
 
@@ -37,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a `false` si le type de `Ty` est un type fondamental (autrement dit, si [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > contient `true`) ; sinon, il conserve `true`. Ainsi, le prédicat a la valeur `true` si `Ty` est un type tableau, un type fonction, un pointeur vers `void` ou un objet ou une fonction, une référence, une classe, une union, une énumération ou un pointeur vers un membre de classe non statique, ou une forme *cv-qualified* de l’un d’eux.
+Conserve une instance du prédicat de type **false** si le type de *Ty* est un type fondamental (autrement dit, si [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > contient  **true**) ; Sinon, il contient **true**. Ainsi, le prédicat a **true** si *Ty* est un type de tableau, un type de fonction, un pointeur vers **void** ou un objet ou une fonction, une référence, une classe, une union, une énumération ou une pointeur vers membre de classe non statique, ou un *qualifiés cv* formulaire d’un d’eux.
 
 ## <a name="example"></a>Exemple
 
@@ -85,7 +85,7 @@ is_compound<void *> == true
 is_compound<int> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

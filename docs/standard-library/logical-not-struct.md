@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860016"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961637"
 ---
-# <a name="logicalnot-struct"></a>logical_not, struct
+# <a name="logicalnot-struct"></a>logical_not (struct)
 
-Objet de fonction prédéfini qui effectue l’opération NOT logique ( `operator!`) sur ses arguments.
+Un objet de fonction prédéfini qui effectue l’opération logique pas d’opération (`operator!`) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Paramètres
 
-`Type` N’importe quel type qui prend en charge un `operator!` qui accepte un opérande de type spécifié ou inféré.
+*Type* n’importe quel type qui prend en charge un `operator!` qui accepte un opérande de type spécifié ou inféré.
 
-`Left` L’opérande de l’opération logique pas d’opération. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `Type`.
+*Gauche* l’opérande de l’opérateur logique pas d’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *Type*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -102,7 +102,7 @@ The deque with its values negated is:
  */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

@@ -1,5 +1,5 @@
 ---
-title: Gestion des événements | Documents Microsoft
+title: Gestion des événements | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09029f3afef0a9a28fdc572b9b7d8685cf76e811
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961439"
 ---
 # <a name="event-handling"></a>Gestion des événements
 Gestion des événements sont principalement prise en charge pour les classes COM (classes C++ qui implémentent des objets COM, généralement à l’aide de classes ATL ou [coclasse](../windows/coclass.md) attribut).  Pour plus d’informations, consultez [gestion des événements COM](../cpp/event-handling-in-com.md).  
@@ -42,6 +42,5 @@ Gestion des événements sont principalement prise en charge pour les classes CO
 |[__unhook](../cpp/unhook.md)|Dissocie une méthode de gestionnaire d'un événement.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)   
  [Mots clés](../cpp/keywords-cpp.md)   
- [Exemples de gestion des événements](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

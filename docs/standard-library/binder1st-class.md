@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f000ea8458925f8ea3faa4896943e045de127d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961719"
 ---
 # <a name="binder1st-class"></a>binder1st, classe
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-`Func` L’objet de fonction binaire à convertir en un objet de fonction unaire.
+*Func* l’objet de fonction binaire à convertir en un objet de fonction unaire.
 
-`left` La valeur à laquelle le premier argument de l’objet de fonction binaire doit être liée.
+*gauche* la valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.
 
-`right` La valeur de l’argument de l’objet binaire adapter compare à la valeur fixe du second argument.
+*droit* la valeur de l’argument de l’objet binaire adapté compare à la valeur fixe du deuxième argument.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire avec la valeur `left.`
+L’objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire à la valeur *gauche*.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction binaire `Func` dans **op** et une copie de `left` dans **value**. Elle définit sa fonction membre `operator()` comme retournant **op**( **value**, `right`).
+La classe de modèle stocke une copie d’un objet de fonction binaire *Func* dans `op`et une copie de *gauche* dans `value`. Elle définit sa fonction membre `operator()` comme retournant **op**( **value**, `right`).
 
-Si `Func` est un objet de type **Operation** et que `c` est une constante, [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) est équivalent au constructeur de classe `binder1st` `binder1st`\< **Operation**> ( `Func`, `c` ) et il est plus pratique.
+Si *Func* est un objet de type `Operation` et `c` est une constante, puis [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) est équivalente à la `binder1st` constructeur de classe `binder1st` \< **Opération**> ( `Func`, `c` ) et plus pratique.
 
 ## <a name="example"></a>Exemple
 
@@ -119,7 +119,7 @@ The number of elements in v1 less than 10 is: 2.
 *\
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

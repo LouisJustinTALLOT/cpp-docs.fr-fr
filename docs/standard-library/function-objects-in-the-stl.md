@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964924"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objets de fonction dans la bibliothèque C++ Standard
 
@@ -58,7 +58,7 @@ template <class Key,
 class set
 ```
 
-Le deuxième argument du modèle est l’objet de fonction `less`. Cet objet de fonction retourne `true` si le premier paramètre passé est inférieur au second paramètre passé. Comme certains conteneurs trient leurs éléments, le conteneur a besoin d’un moyen de comparer deux éléments : ceci est réalisé à l’aide de l’objet de fonction. Vous pouvez définir vos propres critères de tri pour les conteneurs en créant un objet de fonction et en le spécifiant dans la liste des modèles pour le conteneur.
+Le deuxième argument du modèle est l’objet de fonction `less`. Retourne cet objet de fonction **true** si le premier paramètre passé à il est inférieur au second paramètre transmis. Comme certains conteneurs trient leurs éléments, le conteneur a besoin d’un moyen de comparer deux éléments : ceci est réalisé à l’aide de l’objet de fonction. Vous pouvez définir vos propres critères de tri pour les conteneurs en créant un objet de fonction et en le spécifiant dans la liste des modèles pour le conteneur.
 
 ## <a name="function-objects-and-algorithms"></a>Objets de fonction et algorithmes
 
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Le dernier argument de `remove_if` est un objet de fonction qui retourne une valeur booléenne (un *prédicat*). Si le résultat de l’objet de fonction est `true`, l’élément est supprimé du conteneur auquel accèdent les itérateurs `first` et `last`. Vous pouvez utiliser n’importe lequel des objets de fonction déclarés dans l’en-tête [\<functional>](../standard-library/functional.md) pour l’argument `pred` ou vous pouvez créer votre propre objet.
+Le dernier argument de `remove_if` est un objet de fonction qui retourne une valeur booléenne (un *prédicat*). Si le résultat de l’objet de fonction est **true**, puis l’élément est supprimé du conteneur accédé par les itérateurs `first` et `last`. Vous pouvez utiliser n’importe lequel des objets de fonction déclarés dans l’en-tête [\<functional>](../standard-library/functional.md) pour l’argument `pred` ou vous pouvez créer votre propre objet.
 
 ## <a name="see-also"></a>Voir aussi
 

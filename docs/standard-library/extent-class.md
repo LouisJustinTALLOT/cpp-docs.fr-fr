@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843247"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964308"
 ---
 # <a name="extent-class"></a>extent, classe
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>Paramètres
 
-`Ty` Type à interroger.
+*Ty* type à interroger.
 
-`I` Le tableau lié à interroger.
+*J’ai* tableau lié à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Si `Ty` est un type tableau qui possède au moins `I` dimensions, la requête de type contient le nombre d'éléments dans la dimension spécifié par `I`. Si `Ty` n'est pas un type tableau ou si son rang est inférieur à `I`, ou si `I` est égal à zéro et que `Ty` est de type « tableau ayant des limites d'index inconnues de `U` », la requête de type contient la valeur 0.
+Si *Ty* est un type de tableau qui possède au moins *je* dimensions, la requête de type contient le nombre d’éléments dans la dimension spécifiée par *je*. Si *Ty* n’est pas un type tableau ou son rang est inférieur à *je*, ou si *je* est égal à zéro et *Ty* est de type « tableau inconnu lié de `U` «, la requête de type conserve la valeur 0.
 
 ## <a name="example"></a>Exemple
 
@@ -70,7 +70,7 @@ extent 0 == 5
 extent 1 == 10
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

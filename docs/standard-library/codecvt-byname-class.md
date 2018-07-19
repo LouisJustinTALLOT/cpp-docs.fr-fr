@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b1d6e93aa929d95032c04a58b5b419ca312f8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964370"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname, classe
 
@@ -53,17 +53,17 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-`_Locname` Paramètres régionaux nommée.
+*_Locname* paramètres régionaux nommés.
 
-`_Refs` Un décompte de références initial.
+*_Refs* nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
 Les facettes byname sont créées automatiquement pendant la construction de paramètres régionaux nommés.
 
-Leur comportement est déterminé par les paramètres régionaux nommés `_Locname`. Chaque constructeur initialise son objet de base avec [odecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).
+Son comportement est déterminé par les paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [odecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 

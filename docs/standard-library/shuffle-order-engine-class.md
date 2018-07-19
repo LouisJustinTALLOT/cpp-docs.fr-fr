@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961972"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine, classe
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-`Engine` Le type de moteur de base.
+*Moteur* le type de moteur de base.
 
-`K` **Taille de la table**. Nombre d'éléments dans la mémoire tampon (table). **Condition préalable** : `0 < K`
+*K* **taille de la Table**. Nombre d'éléments dans la mémoire tampon (table). **Condition préalable** : `0 < K`
 
 ## <a name="members"></a>Membres
 
@@ -60,9 +60,9 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en réordonnançant les valeurs retournées par son moteur de base. Chaque constructeur remplit la table interne avec `K` valeurs retournées par le moteur de base et un élément aléatoire est sélectionné à partir de la table quand une valeur est demandée.
+Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en réordonnançant les valeurs retournées par son moteur de base. Chaque constructeur remplit la table interne avec *K* valeurs retournées par le moteur de base, et un élément aléatoire est sélectionné dans la table lorsqu’une valeur est demandée.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<random>
 

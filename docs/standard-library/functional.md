@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848009"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961234"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -40,7 +40,7 @@ Définit les fonctions de bibliothèque C++ Standard qui aident à construire de
 
 Les algorithmes nécessitent deux types d'objets de fonction : unaire et binaire. Les objets de fonction unaires nécessitent un argument et les objets de fonction binaires nécessitent deux arguments. Un objet de fonction et des pointeurs fonction peuvent être passés sous forme de prédicat à un algorithme, mais les objets de fonction sont également adaptables et augmentent la portée, la flexibilité et l’efficacité de la bibliothèque C++ Standard. Si, par exemple, une valeur doit être liée à une fonction avant d'être passée à un algorithme, vous ne pouvez pas utiliser un pointeur fonction. Les adaptateurs de fonction convertissent des pointeurs fonction en objets de fonction adaptables qui peuvent être liés à une valeur. L’en-tête \<functional> contient aussi des adaptateurs de fonction membre qui permettent aux fonctions membres d’être appelées comme des objets de fonction adaptables. Les fonctions sont adaptables si elles ont des déclarations de type imbriquées spécifiant leur argument et leurs types de retour. La norme C++ impose que cette capacité d'adaptation soit implémentée en faisant en sorte que toutes les classes d'objets standard héritent des classes de base unary_function ou binary_function. Les objets de fonction et leurs adaptateurs permettent à la bibliothèque C++ Standard de mettre à niveau les applications existantes et aident à son intégration dans l’environnement de programmation C++.
 
-L’implémentation Visual C++ des objets de fonction dans \<fonctionnel > inclut *foncteurs*, qui sont des spécialisations de la norme d’objets de fonction et n’accepter aucun paramètre de modèle, et effectuer un transfert parfait des arguments de fonction et un retour parfait du résultat. Cette fonctionnalité fait partie de la spécification C++14 Draft Standard. Ces spécialisations de modèle ne vous obligent pas à spécifier des types d'arguments quand vous appelez des foncteurs d'opérateurs arithmétiques, de comparaison, logiques et au niveau du bit. Vous pouvez surcharger des opérateurs arithmétiques, de comparaison, logiques ou au niveau du bit pour vos propres types, ou pour des combinaisons hétérogènes de types, puis utiliser les foncteurs d’opérateurs transparents en tant qu’arguments de fonction. Par exemple, si votre type *MyType* implémente `operator<`, vous pouvez appeler `sort(my_collection.begin(), my_collection.end(), less<>())` au lieu de spécifier explicitement le type `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+L’implémentation Visual C++ des objets de fonction dans \<fonctionnel > inclut *foncteurs*, qui sont des spécialisations de la norme d’objets de fonction et n’acceptent aucun paramètre de modèle, et effectuer un transfert parfait des arguments de fonction et un retour parfait du résultat. Cette fonctionnalité fait partie de la spécification C++14 Draft Standard. Ces spécialisations de modèle ne vous obligent pas à spécifier des types d'arguments quand vous appelez des foncteurs d'opérateurs arithmétiques, de comparaison, logiques et au niveau du bit. Vous pouvez surcharger des opérateurs arithmétiques, de comparaison, logiques ou au niveau du bit pour vos propres types, ou pour des combinaisons hétérogènes de types, puis utiliser les foncteurs d’opérateurs transparents en tant qu’arguments de fonction. Par exemple, si votre type *MyType* implémente `operator<`, vous pouvez appeler `sort(my_collection.begin(), my_collection.end(), less<>())` au lieu de spécifier explicitement le type `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
 ## <a name="c11c14-implementation"></a>Implémentation C++11/C++14
 
@@ -100,10 +100,10 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[hash](../standard-library/hash-class.md)|Classe qui calcule un code de hachage pour une valeur.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Classe qui teste si un type particulier est généré en appelant `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Classe qui teste si un type particulier est un espace réservé.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre **non_const** qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence.|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe d’adaptateur qui permet à une fonction membre **non_const** qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de pointeur.|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre **non_const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe d’adaptateur qui permet à une fonction membre **non_const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de pointeur.|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de référence.|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de pointeur.|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe d’adaptateur qui permet un `non_const` fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire lors de l’initialisation avec un argument de référence.|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe d’adaptateur qui permet un `non_const` fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire lors de l’initialisation avec un argument de pointeur.|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Convertit un pointeur de fonction binaire en fonction binaire adaptable.|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Convertit un pointeur de fonction unaire en fonction unaire adaptable.|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Classe qui encapsule une référence.|

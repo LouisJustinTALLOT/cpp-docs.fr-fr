@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961553"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr, classe
 
@@ -104,13 +104,17 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-`Right` A `unique_ptr`.
+*Droite*  
+ `unique_ptr`
 
-`Nptr` Un `rvalue` de type `std::nullptr_t`.
+*Nptr*  
+ `rvalue` de type `std::nullptr_t`.
 
-`Ptr` A `pointer`.
+*PTR*  
+ `pointer`
 
-`Deleter` A `deleter` fonction qui est liée à un `unique_ptr`.
+*SUPPRESSEUR*  
+ Fonction `deleter` liée à un `unique_ptr`.
 
 ## <a name="exceptions"></a>Exceptions
 
@@ -124,7 +128,7 @@ Utilisez la fonction d’assistance [make_unique](../standard-library/memory-fun
 
 `unique_ptr` gère de façon unique une ressource. Chaque objet `unique_ptr` stocke un pointeur vers l'objet qu'il possède ou stocke un pointeur null. Une ressource ne peut pas être détenue par plus d’un objet `unique_ptr`. Lorsqu’un objet `unique_ptr` qui possède une ressource particulière est détruit, la ressource est libérée. Un objet `unique_ptr` peut être déplacé, mais pas copié. Pour plus d’informations, consultez [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-La ressource est libérée par l'appel à un objet `deleter` stocké de type `Del` qui sait comment les ressources sont allouées pour un `unique_ptr` particulier. La valeur par défaut `deleter` `default_delete<T>` suppose que la ressource vers laquelle pointe `ptr` est alloué avec `new`, et qu’il peut être libérée en appelant `delete _Ptr`. (Une spécialisation partielle `unique_ptr<T[]>` gère les objets tableaux alloués à `new[]`, et possède le `deleter` `default_delete<T[]>` par défaut, spécialisé pour appeler delete[] `ptr`.)
+La ressource est libérée par l'appel à un objet `deleter` stocké de type `Del` qui sait comment les ressources sont allouées pour un `unique_ptr` particulier. La valeur par défaut `deleter` `default_delete<T>` suppose que la ressource désignée par `ptr` est alloué avec `new`, et qu’elle peut être libérée en appelant `delete _Ptr`. (Une spécialisation partielle `unique_ptr<T[]>` gère les objets tableaux alloués à `new[]`, et possède le `deleter` `default_delete<T[]>` par défaut, spécialisé pour appeler delete[] `ptr`.)
 
 Le pointeur stocké vers une ressource détenue, `stored_ptr`, a le type `pointer`. Il s’agit de `Del::pointer` s’il est défini, ou de `T *` dans le cas contraire. L'objet `deleter` stocké `stored_deleter` n'occupe pas d'espace dans l'objet si le `deleter` est sans état. Notez que `Del` peut être un type référence.
 
@@ -158,12 +162,12 @@ Le pointeur stocké vers une ressource détenue, `stored_ptr`, a le type `pointe
 
 |Opérateur|Description|
 |-|-|
-|`operator bool`|L'opérateur retourne une valeur d'un type qui peut être converti en `bool`. Le résultat de la conversion en `bool` est `true` lorsque `get() != pointer()`, sinon `false`.|
+|**operator bool**|L’opérateur retourne une valeur d’un type convertible en **bool**. Le résultat de la conversion en **bool** est **true** lorsque `get() != pointer()`, sinon **false**.|
 |`operator->`|La fonction membre retourne `stored_ptr`.|
 |`operator*`|La fonction membre retourne `*stored_ptr`.|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|Assigne la valeur d’un objet `unique_ptr` (ou d’un `pointer-type`) à l’objet `unique_ptr` actuel.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<memory>
 
@@ -252,7 +256,7 @@ Le type est un synonyme de `Del::pointer` s'il est défini ; sinon `Type *`.
 
 ## <a name="release"></a>  unique_ptr::release
 
-Libère la propriété du pointeur stocké retourné pour l'appelant et définit la valeur de pointeur stocké sur `nullptr`.
+Libère la propriété du pointeur stocké retourné à l’appelant et définit la valeur de pointeur stocké sur **nullptr**.
 
 ```cpp
 pointer release();
@@ -315,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a>  unique_ptr::reset
 
-Prend possession du paramètre de pointeur et supprime le pointeur stocké d'origine. Si le nouveau pointeur est le même que le pointeur d'origine stocké, `reset` supprime le pointeur et définit le pointeur stocké sur `nullptr`.
+Prend possession du paramètre de pointeur et supprime le pointeur stocké d'origine. Si le nouveau pointeur est le même que le pointeur stocké d’origine, `reset` supprime le pointeur et définit le pointeur stocké sur **nullptr**.
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -326,13 +330,13 @@ void reset(nullptr_t ptr);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers la ressource dont il faut prendre possession.|
+|*ptr*|Pointeur vers la ressource dont il faut prendre possession.|
 
 ### <a name="remarks"></a>Notes
 
-Utilisez `reset` pour remplacer le [pointeur](#pointer) stocké détenu par l’obet `unique_ptr` par `ptr`, puis supprimez le pointeur stocké d’origine. Si l’objet `unique_ptr` n’était pas vide, `reset` appelle la fonction de suppression retournée par [get_deleter](#get_deleter) sur le pointeur stocké d’origine.
+Utilisez `reset` pour attribuer au [pointeur](#pointer) détenus par le `unique_ptr` à *ptr* , puis supprimez le pointeur stocké d’origine. Si l’objet `unique_ptr` n’était pas vide, `reset` appelle la fonction de suppression retournée par [get_deleter](#get_deleter) sur le pointeur stocké d’origine.
 
-Étant donné que `reset` stocke d'abord le nouveau pointeur `ptr`, puis supprime le pointeur stocké d'origine, `reset` peut supprimer `ptr` immédiatement s'il est identique au pointeur stocké d'origine.
+Étant donné que `reset` stocke tout d’abord le nouveau pointeur *ptr*, puis supprime le pointeur stocké d’origine, il est possible pour `reset` supprimer immédiatement *ptr* si elle est identique à l’original pointeur stocké.
 
 ## <a name="swap"></a>  unique_ptr::swap
 
@@ -344,7 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` A `unique_ptr` utilisé pour échanger des pointeurs.
+*right*  
+ `unique_ptr` utilisé pour échanger des pointeurs.
 
 ### <a name="remarks"></a>Notes
 
@@ -377,15 +382,15 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|`ptr`|Pointeur vers la ressource à affecter à un `unique_ptr.`|
-|`_Deleter`|`deleter` à affecter à un `unique_ptr`.|
-|`right`|`rvalue reference` à un `unique_ptr` à partir duquel des champs `unique_ptr` sont affectés par déplacement au `unique_ptr` nouvellement construit.|
+|*ptr*|Pointeur vers la ressource à affecter à un `unique_ptr.`|
+|*_Deleter*|`deleter` à affecter à un `unique_ptr`.|
+|*right*|`rvalue reference` à un `unique_ptr` à partir duquel des champs `unique_ptr` sont affectés par déplacement au `unique_ptr` nouvellement construit.|
 
 ### <a name="remarks"></a>Notes
 
-Les deux premiers constructeurs construisent un objet qui ne gère aucune ressource. Le troisième constructeur stocke `ptr` dans `stored_ptr`. Le quatrième constructeur stocke `ptr` dans `stored_ptr` et `deleter` dans `stored_deleter`.
+Les deux premiers constructeurs construisent un objet qui ne gère aucune ressource. Le troisième constructeur stocke *ptr* dans `stored_ptr`. Le quatrième constructeur stocke *ptr* dans `stored_ptr` et `deleter` dans `stored_deleter`.
 
-Le cinquième constructeur stocke `ptr` dans `stored_ptr` et déplace `deleter` dans `stored_deleter`. Les sixième et septième constructeurs stockent `right.release()` dans `stored_ptr` et déplacent `right.get_deleter()` dans `stored_deleter`.
+Le cinquième constructeur stocke *ptr* dans `stored_ptr` et déplace `deleter` dans `stored_deleter`. Les sixième et septième constructeurs stockent `right.release()` dans `stored_ptr` et déplacent `right.get_deleter()` dans `stored_deleter`.
 
 ## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
 

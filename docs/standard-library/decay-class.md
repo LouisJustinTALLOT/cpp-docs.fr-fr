@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0451b8565a4d021181d79d15437637e1b2f3b27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5433c9ff76b8b6f218cfff5e5fd39a0ad7166613
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841796"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963613"
 ---
 # <a name="decay-class"></a>decay, classe
 
@@ -39,7 +39,7 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Le type à modifier.
+*T* type à modifier.
 
 ## <a name="remarks"></a>Notes
 
@@ -53,7 +53,7 @@ Utilisez le modèle de décomposition pour produire le type résultant comme si 
 
 - Sinon, le type modifié `type` est `remove_cv<U>::type`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

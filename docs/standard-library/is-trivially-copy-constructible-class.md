@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963665"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible, classe
 
@@ -36,15 +36,15 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-`T` Type à interroger.
+*T* type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `T` est une classe qui a un constructeur de copie trivial. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est une classe qui a un constructeur de copie triviaux, sinon, sa valeur est false.
 
-Un constructeur de copie d’une classe `T` est trivial s’il est déclaré implicitement, si la classe `T` n’a aucune ou aucune base virtuelle, si toutes les bases directes de la classe `T` ont des constructeurs de copie triviaux, si les classes de toutes les données membres non statiques de type classe ont des constructeurs de copie triviaux, et si les classes de toutes les données membres non statiques de type tableau de classe ont des constructeurs de copie triviaux.
+Un constructeur de copie pour une classe *T* est trivial s’il est implicitement déclaré, la classe *T* n’a pas les fonctions virtuelles ni les bases virtuelles, toutes les bases directes de classe *T* ont constructeurs de copie triviaux, les classes de tous les membres de données non statiques de type de classe possèdent des constructeurs de copie triviaux, et les classes de tous les membres de données non statiques de type tableau de classe possèdent des constructeurs de copie trivial.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841178"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962722"
 ---
 # <a name="binder2nd-class"></a>binder2nd, classe
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-`Func` L’objet de fonction binaire à convertir en un objet de fonction unaire.
+*Func* l’objet de fonction binaire à convertir en un objet de fonction unaire.
 
-`right` La valeur à laquelle le deuxième argument de l’objet de fonction binaire doit être liée.
+*droit* la valeur à laquelle le deuxième argument de l’objet de fonction binaire doit être lié.
 
-`left` La valeur de l’argument de l’objet binaire adapter compare à la valeur fixe du second argument.
+*gauche* la valeur de l’argument de l’objet binaire adapté compare à la valeur fixe du deuxième argument.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Objet de fonction unaire qui résulte de la liaison du deuxième argument de l’objet de fonction binaire avec la valeur `right.`
+L’objet de fonction unaire qui résulte de la liaison le deuxième argument de l’objet de fonction binaire à la valeur *droit*.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction binaire _ *Func* dans **op** et une copie de `right` dans **value**. Elle définit sa fonction membre `operator()` comme retournant **op**( `left` **value**).
+La classe de modèle stocke une copie d’un objet de fonction binaire _ *Func* dans `op`et une copie de *droit* dans `value`. Elle définit sa fonction membre `operator()` comme retournant **op**( `left` **value**).
 
-Si `Func` est un objet de type **Operation** et que c est une constante, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) est équivalent au constructeur de classe `binder2nd` `binder2nd`\< **Operation**> ( `Func`, `c` ) et il est plus pratique.
+Si `Func` est un objet de type `Operation` et c est une constante, puis [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) est équivalente à la `binder2nd` constructeur de classe `binder2nd` \<  **Opération**> ( `Func`, `c` ) et plus pratique.
 
 ## <a name="example"></a>Exemple
 
@@ -119,7 +119,7 @@ The number of elements in v1 less than 10 is: 2.
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 
