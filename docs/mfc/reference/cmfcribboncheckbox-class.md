@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonCheckBox | Documents Microsoft
+title: Cmfcribboncheckbox, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,14 +34,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042054"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027178"
 ---
-# <a name="cmfcribboncheckbox-class"></a>Classe de CMFCRibbonCheckBox
+# <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox, classe
 La classe `CMFCRibbonCheckBox` implémente une case à cocher que vous pouvez ajouter à un volet du ruban, une barre d'outils Accès rapide ou un menu contextuel.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -94,7 +94,7 @@ où *nID* est l’ID de commande de case à cocher et *lpszText* représente l�
  **En-tête :** afxribboncheckbox.h  
   
 ##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
- Constructeur d’un objet de la case à cocher du ruban  
+ Constructeur d’un objet de case à cocher du ruban  
   
 ```  
 CMFCRibbonCheckBox(
@@ -110,7 +110,7 @@ CMFCRibbonCheckBox(
  Spécifie l’étiquette de texte.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Construit un objet de la case à cocher du ruban.  
+ Construit un objet de case à cocher du ruban.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment construire un objet de la `CMFCRibbonCheckBox` classe.  
@@ -125,14 +125,14 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Pointeur vers le `CDC` associé à la case à cocher.  
+ [in] *pDC*  
+ Pointeur vers la capture de données modifiées associé à la case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `CSize` objet qui contient la taille réduite de la case à cocher.  
   
 ### <a name="remarks"></a>Notes  
- Si ne pas substituée, retourne la taille intermédiaire de la case à cocher.  
+ Si ne pas de substitution, retourne la taille intermédiaire de la case à cocher.  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  Obtient la taille intermédiaire de la case à cocher.  
@@ -142,11 +142,11 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Pointeur vers le `CDC` associé à cette case à cocher.  
+ [in] *pDC*  
+ Pointeur vers la capture de données modifiées associée à cette case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `CSize` objet contenant la taille intermédiaire de la case à cocher.  
+ Un `CSize` objet contenant la taille intermédiaire de la case à cocher.  
   
 ### <a name="remarks"></a>Notes  
  Si ne pas substituée, calcule la taille intermédiaire en tant que la taille de la case à cocher par défaut ( `AFX_CHECK_BOX_DEFAULT_SIZE`) ainsi que la taille du texte, ainsi que les marges.  
@@ -159,14 +159,14 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Pointeur vers le `CDC` objet associé à cette case à cocher.  
+ [in] *pDC*  
+ Pointeur vers l’objet de capture de données modifiées associé à cette case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `CSize` objet qui contient la taille normale de la case à cocher.  
   
 ### <a name="remarks"></a>Notes  
- Si ne pas substituée, retourne la taille intermédiaire de la case à cocher.  
+ Si ne pas de substitution, retourne la taille intermédiaire de la case à cocher.  
   
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  Indique s’il existe une image de l’info-bulle associée à la case à cocher.  
@@ -176,7 +176,7 @@ virtual BOOL IsDrawTooltipImage() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `TRUE` s’il existe une image de l’info-bulle associée à la case à cocher, ou `FALSE` si ce n’est pas le cas.  
+ Retourne TRUE s’il existe une image de l’info-bulle associée à la case à cocher, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Pointeur vers le `CDC` dans lequel dessiner la case à cocher.  
+ [in] *pDC*  
+ Pointeur vers la capture de données modifiées dans lequel dessiner la case à cocher.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -202,16 +202,16 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *Capture de données modifiées**  
- Pointeur vers le `CDC` associé à la case à cocher.  
+ Pointeur vers la capture de données modifiées associé à la case à cocher.  
   
  [in] *CRect*  
- A `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.  
+ Un `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne `TRUE` si l’image a été dessinée, ou `FALSE` si ce n’est pas le cas.  
+ Retourne la valeur TRUE si l’image a été dessinée, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Si ne pas substituée, retourne `FALSE`.  
+ Si ne pas de substitution, retourne FALSE.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  Appelé par l’infrastructure pour dessiner la case à cocher dans une zone de liste de commandes.  
@@ -227,28 +227,28 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  Pointeur vers le contexte de périphérique dans lequel dessiner la case à cocher.  
   
- [in] *%{strText/}*  
- Le texte d’affichage.  
+ [in] *strText*  
+ Texte affiché.  
   
  [in] *nTextOffset*  
- La distance, en pixels, du côté gauche de la zone de liste pour afficher du texte.  
+ La distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.  
   
  [in] *rect*  
- Le rectangle d’affichage de la case à cocher.  
+ Le rectangle d’affichage pour la case à cocher.  
   
  [in] *bIsSelected*  
- `TRUE` Si la case à cocher est activée, ou `FALSE` si ce n’est pas le cas.  
+ TRUE si la case à cocher est sélectionnée, ou FALSE dans le cas contraire.  
   
  [in] *bHighlighted*  
- `TRUE` Si la case à cocher est sélectionnée, ou `FALSE` si ce n’est pas le cas.  
+ TRUE si la case à cocher est mis en surbrillance, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
- Définit les données d’accessibilité de la case à cocher.  
+ Définit les données d’accessibilité pour la case à cocher.  
   
 ```  
 virtual BOOL SetACCData(
@@ -261,13 +261,13 @@ virtual BOOL SetACCData(
  La fenêtre parente de la case à cocher.  
   
  *data*  
- Données d’accessibilité de la case à cocher.  
+ Les données d’accessibilité pour la case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne toujours `TRUE`.  
+ Renvoie toujours TRUE.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut cette méthode définit les données d’accessibilité de la case à cocher et always retourne `TRUE`. Remplacez cette méthode pour définir l’accessibilité des données et retourner une valeur qui indique la réussite ou l’échec.  
+ Par défaut, cette méthode définit les données d’accessibilité pour la case à cocher et retourne toujours la valeur TRUE. Remplacez cette méthode pour définir l’accessibilité des données et retourner une valeur qui indique la réussite ou l’échec.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

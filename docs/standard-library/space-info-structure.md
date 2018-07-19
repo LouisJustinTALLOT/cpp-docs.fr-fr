@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3506572586f0dc8edc3f9e97955e7612bcea46ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b143a37c306320223ac3abe430e41c9750c8ece9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859184"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025781"
 ---
 # <a name="spaceinfo-structure"></a>space_info, structure
 
@@ -45,7 +45,7 @@ struct space_info   {
 |`unsigned long long capacity`|Représente le nombre total d’octets que le volume peut représenter.|
 |`unsigned long long free`|Représente le nombre d’octets qui ne sont pas utilisés pour représenter des données sur le volume.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<filesystem >
 
@@ -55,5 +55,5 @@ struct space_info   {
 
 [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<filesystem>](../standard-library/filesystem.md)<br/>
-[space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
+[space](http://msdn.microsoft.com/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
 [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md)<br/>

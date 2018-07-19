@@ -1,5 +1,5 @@
 ---
-title: 'TN014 : Contrôles personnalisés | Documents Microsoft'
+title: 'TN014 : Contrôles personnalisés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377b754fd9e04cd88c5d1c6f71508ff8f431ee99
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e7ab10a6c0c53bd9aba87ddea594e689b3142b4c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121888"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027259"
 ---
 # <a name="tn014-custom-controls"></a>TN014 : contrôles personnalisés
 
@@ -104,9 +104,9 @@ Pour plus d’informations sur les structures owner-draw ([DRAWITEMSTRUCT](../mf
 
 Pour les champs de dessin automatique, vous devez substituer les méthodes `OnMeasureItem` et `OnDrawItem`.
 
-Pour les zones de liste et les zones de liste déroulante de dessin automatique, vous devez remplacer `OnMeasureItem` et `OnDrawItem`. Vous devez spécifier le style LBS_OWNERDRAWVARIABLE pour les zones de liste ou un style CBS_OWNERDRAWVARIABLE pour les zones de liste déroulante dans le modèle de boîte de dialogue. Le style OWNERDRAWFIXED ne fonctionnera pas avec des éléments de dessin automatique car la hauteur d’élément fixe est déterminée avant que les contrôles de dessin automatique sont attachés à la zone de liste. (Vous pouvez utiliser les méthodes [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) et [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) à passer outre cette limitation.)
+Pour les zones de liste et les zones de liste déroulante de dessin automatique, vous devez remplacer `OnMeasureItem` et `OnDrawItem`. Vous devez spécifier le style LBS_OWNERDRAWVARIABLE pour les zones de liste ou un style CBS_OWNERDRAWVARIABLE pour les zones de liste déroulante dans le modèle de boîte de dialogue. Le style OWNERDRAWFIXED ne fonctionnera pas avec les éléments de dessin automatique car la hauteur d’élément fixe est définie avant que les contrôles de dessin automatique sont attachés à la zone de liste. (Vous pouvez utiliser les méthodes [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) et [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) pour passer outre cette limitation.)
 
-Passage à un style OWNERDRAWVARIABLE force le système à appliquer le style NOINTEGRALHEIGHT au contrôle. Étant donné que le contrôle ne peut pas calculer une hauteur intégrale avec les éléments de tailles variable, le style par défaut de la propriété INTEGRALHEIGHT est ignoré et le contrôle est toujours NOINTEGRALHEIGHT. Si les éléments sont à hauteur fixe, vous pouvez empêcher les éléments partiels d'être dessinés en spécifiant que la taille de contrôle soit un multiplicateur entier de la taille d'élément.
+Basculer vers un style OWNERDRAWVARIABLE forcera le système pour appliquer le style NOINTEGRALHEIGHT au contrôle. Étant donné que le contrôle ne peut pas calculer une hauteur intégrale avec des éléments de taille variable, le style par défaut de INTEGRALHEIGHT est ignoré et le contrôle est toujours NOINTEGRALHEIGHT. Si les éléments sont à hauteur fixe, vous pouvez empêcher les éléments partiels d'être dessinés en spécifiant que la taille de contrôle soit un multiplicateur entier de la taille d'élément.
 
 Pour dessiner des zones de liste et zones de liste déroulante avec le style LBS_SORT ou CBS_SORT, vous devez substituer la `OnCompareItem` (méthode).
 
@@ -122,9 +122,9 @@ L'exemple le plus typique d'un bouton de dessin automatique est un bouton bitmap
 
 Occasionnellement, vous souhaiterez modifier la fonctionnalité d'objet qui existe déjà. Les exemples précédents requièrent que vous personnalisiez les contrôles avant qu'ils soient créés. Le sous-classement dynamique permet de personnaliser un contrôle qui a déjà été créé.
 
-Le sous-classement est le terme Windows pour remplacer le [WndProc](http://msdn.microsoft.com/en-us/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) d’une fenêtre avec un texte personnalisé `WndProc` et appeler l’ancien `WndProc` pour les fonctionnalités par défaut.
+Le sous-classement est le terme Windows pour remplacer le [WndProc](http://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) d’une fenêtre avec un texte personnalisé `WndProc` et appeler l’ancien `WndProc` pour les fonctionnalités par défaut.
 
-Cela ne doit pas être confondu avec la dérivation de classe C++. Pour une clarification, les termes du contrat C++ *classe de base* et *classe dérivée* sont analogues aux *superclasse* et *sous-classe* dans les fenêtres modèle d’objet. La dérivation C++ MFC et le sous-classement Windows sont fonctionnellement similaires, à moins que C++ ne prenne pas en charge le sous-classement dynamique.
+Cela ne doit pas être confondu avec la dérivation de classe C++. Pour une clarification, les termes du contrat de C++ *classe de base* et *classe dérivée* sont analogues aux *superclasse* et *sous-classe* dans le Windows modèle d’objet. La dérivation C++ MFC et le sous-classement Windows sont fonctionnellement similaires, à moins que C++ ne prenne pas en charge le sous-classement dynamique.
 
 La classe `CWnd` fournit la connexion entre un objet C++ (dérivé de `CWnd`) et un objet fenêtre Windows (appelé `HWND`).
 

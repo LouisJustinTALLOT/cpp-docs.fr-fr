@@ -21,24 +21,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846322"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025937"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
 Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<expérimentale/filesystem > **Namespace :** std::experimental::filesystem
+**En-tête :** \<expérimentale/filesystem > **Namespace :** std::Experimental :: FileSystem
 
 ## <a name="copy_options"></a>  copy_options
 
-Énumération de valeurs de masque de bits utilisée avec les fonctions [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) et [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) pour spécifier le comportement.
+Énumération de valeurs de masque de bits utilisée avec les fonctions [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) et [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) pour spécifier le comportement.
 
 ### <a name="syntax"></a>Syntaxe
 

@@ -1,5 +1,5 @@
 ---
-title: Classe de CHtmlEditDoc | Documents Microsoft
+title: CHtmlEditDoc, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335602"
 ---
-# <a name="chtmleditdoc-class"></a>Classe de CHtmlEditDoc
+# <a name="chtmleditdoc-class"></a>CHtmlEditDoc, classe
 Avec [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fournit les fonctionnalités de la plateforme d’édition WebBrowser dans le contexte de l’architecture document / vue MFC.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **En-tête :** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- Construit un **CHtmlEditDoc** objet.  
+ Construit un objet `CHtmlEditDoc`.  
   
 ```  
 CHtmlEditDoc();
@@ -83,7 +83,7 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un pointeur vers le document **CHtmlEditView** objet.  
+ Retourne un pointeur vers le document `CHtmlEditView` objet.  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
  Indique si le contrôle WebBrowser de la vue associée contient un document qui a été modifié par l’utilisateur.  
@@ -104,9 +104,9 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
  L’URL à ouvrir.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
+ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ## <a name="see-also"></a>Voir aussi  
- [HTMLEdit, exemple](../../visual-cpp-samples.md)   
+ [Exemple HTMLEdit](../../visual-cpp-samples.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
 

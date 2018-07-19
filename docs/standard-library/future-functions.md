@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 83a1d50c0041c3cd66abbd3d52d2e2b49231c81c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847076"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027395"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt;, fonctions
 
@@ -46,7 +46,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Paramètres
 
-`policy` A [lancer](../standard-library/future-enums.md#launch) valeur.
+*stratégie* A [lancer](../standard-library/future-enums.md#launch) valeur.
 
 ### <a name="remarks"></a>Notes
 
@@ -64,11 +64,9 @@ La deuxième fonction retourne un objet `future<Ty>` dont l’*état asynchrone 
 
 À moins que `decay<Fn>::type` ne soit un type autre que launch, la deuxième fonction ne participe pas à la résolution de surcharge.
 
-Si `policy` est `launch::any`, la fonction peut choisir `launch::async` ou `launch::deferred`. Dans cette implémentation, la fonction utilise `launch::async`.
+La norme C++ stipule que si la stratégie est launch::async, la fonction crée un nouveau thread. Toutefois l’implémentation Microsoft est actuellement non conforme. Il obtient ses threads du ThreadPool Windows, qui, dans certains cas, peut fournir un thread recyclé au lieu d’un nouveau. Cela signifie que le `launch::async` stratégie est réellement implémentée en tant que `launch::async|launch::deferred`.  Une autre implication de l’implémentation basée sur le pool de threads est qu’il n’existe aucune garantie que les variables locales de thread seront détruits lorsque le thread soit terminé. Si le thread est recyclé et fourni à un nouvel appel à `async`, les variables ancien existe toujours. Il est donc recommandé de ne pas utiliser les variables locales de thread avec `async`.
 
-Si `policy` est `launch::async`, la fonction crée un thread qui évalue `INVOKE(dfn, dargs..., Ty)`. La fonction retourne une valeur après avoir créé le thread sans attendre les résultats. Si le système ne peut pas démarrer de nouveau thread, la fonction lève un [system_error](../standard-library/system-error-class.md) dont le code d’erreur est `resource_unavailable_try_again`.
-
-Si `policy` est `launch::deferred`, la fonction marque son état asynchrone associé comme contenant une *fonction différée* et retourne une valeur. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.
+Si *stratégie* est `launch::deferred`, la fonction marque son état asynchrone associé comme contenant un *fonction différée* et retourne. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.
 
 Dans tous les cas, l’état asynchrone associé de l’objet `future` n’est pas défini sur *prêt* avant la fin de l’évaluation de `INVOKE(dfn, dargs..., Ty)`, en levant une exception ou en retournant normalement une valeur. Le résultat de l’état asynchrone associé est une exception, s’il en a été levée une, ou toute valeur retournée par l’évaluation.
 
@@ -95,7 +93,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc) valeur qui identifie l’erreur signalée.
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc) valeur qui identifie l’erreur signalée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -111,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc) valeur qui identifie l’erreur signalée.
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc) valeur qui identifie l’erreur signalée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -131,9 +129,9 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Paramètres
 
-`Left` Gauche `promise` objet.
+*Gauche* gauche `promise` objet.
 
-`Right` Droite `promise` objet.
+*Droite* droite `promise` objet.
 
 ## <a name="see-also"></a>Voir aussi
 

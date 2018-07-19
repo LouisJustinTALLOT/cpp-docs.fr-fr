@@ -1,5 +1,5 @@
 ---
-title: Les fonctions de chemin d’accès ATL | Documents Microsoft
+title: Fonctions de chemin d’accès de l’ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad0db4641731f4c92550fad075b759957383c52a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366534"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027574"
 ---
-# <a name="atl-path-functions"></a>Fonctions de chemin d’accès ATL
+# <a name="atl-path-functions"></a>Fonctions de chemin d’accès de l’ATL
 
 ATL fournit la classe ATLPath permettant de manipuler des chemins d’accès sous la forme de [CPathT](cpatht-class.md). Vous trouverez ce code dans atlpath.h.  
   
-### <a name="related-classes"></a>Classes associées  
+### <a name="related-classes"></a>Classes connexes  
   
 |||  
 |-|-|  
@@ -113,7 +113,7 @@ ATL fournit la classe ATLPath permettant de manipuler des chemins d’accès sou
 |[ATLPath::StripToRoot](#striptoroot)|Cette fonction est un wrapper surchargé de [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).|  
 |[ATLPath::UnquoteSpaces](#unquotespaces)|Cette fonction est un wrapper surchargé de [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlpath.h  
 
 ## <a name="addbackslash"></a> ATLPath::AddBackSlash
@@ -195,7 +195,7 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
   
 
 ## <a name="combine"></a> ATLPath::Combine 
-Cette fonction est un wrapper surchargé de [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571).  
+Cette fonction est un wrapper surchargé de [PathCombine](https://msdn.microsoft.com/library/windows/desktop/bb773571).  
 
 ### <a name="syntax"></a>Syntaxe  
 ```
@@ -350,7 +350,7 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory 
-Cette fonction est un wrapper surchargé de [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621).
+Cette fonction est un wrapper surchargé de [PathIsDirectory](https://msdn.microsoft.com/library/windows/desktop/bb773621).
 
 ```  
 inline BOOL IsDirectory(const char* pszPath);

@@ -1,5 +1,5 @@
 ---
-title: Instructions (C++) | Documents Microsoft
+title: Instructions (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422779"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025755"
 ---
 # <a name="statements-c"></a>Instructions (C++)
-Instructions C++ sont des éléments de programme qui contrôlent comment et dans quel ordre les objets sont manipulées. Cette section comprend :  
+Instructions C++ sont les éléments de programme qui contrôlent comment et dans quel ordre les objets sont manipulées. Cette section inclut :  
   
 -   [Vue d’ensemble](../cpp/overview-of-cpp-statements.md)  
   
@@ -30,21 +30,21 @@ Instructions C++ sont des éléments de programme qui contrôlent comment et dan
   
 -   Catégories d’instructions  
   
-    -   [Instructions d’expression](../cpp/expression-statement.md). Ces instructions évaluent une expression pour ses effets ou sa valeur de retour.  
+    -   [Instructions d’expression](../cpp/expression-statement.md). Ces instructions évaluent une expression pour ses effets ou pour sa valeur de retour.  
   
-    -   [Instructions de null](../cpp/null-statement.md). Ces instructions peuvent être fournies lorsqu’une instruction est requise par la syntaxe C++, mais où aucune action n’est à entreprendre.  
+    -   [Instructions de null](../cpp/null-statement.md). Ces instructions peuvent être fournies d’une instruction est requise par la syntaxe C++, mais où n’existe aucune action à entreprendre.  
   
-    -   [Instructions composées](../cpp/compound-statements-blocks.md). Ces instructions sont des groupes d’instructions entourées accolades ({}). Ils peuvent être utilisés partout où une instruction unique peut être utilisée.  
+    -   [Instructions composées](../cpp/compound-statements-blocks.md). Ces instructions sont des groupes d’instructions placées entre accolades ({}). Ils peuvent être utilisés partout où une seule instruction peut être utilisée.  
   
-    -   [Instructions de sélection](../cpp/selection-statements-cpp.md). Ces instructions effectuent un test ; Ensuite, elles exécutent une section de code si le test a la valeur true (différente de zéro). Elles peuvent s’exécuter une autre section de code si le test a la valeur false.  
+    -   [Instructions de sélection](../cpp/selection-statements-cpp.md). Ces instructions effectuent un test ; elles exécutent ensuite une section de code si le test a la valeur true (différent de zéro). Elles peuvent s’exécuter une autre section de code si le test a la valeur false.  
   
-    -   [Instructions d’itération](../cpp/iteration-statements-cpp.md). Ces instructions fournissent pour l’exécution répétée d’un bloc de code jusqu'à ce qu’un critère d’arrêt spécifiée est rempli.  
+    -   [Instructions d’itération](../cpp/iteration-statements-cpp.md). Ces instructions assurent l’exécution répétée d’un bloc de code jusqu'à ce qu’un critère d’arrêt spécifiée est rempli.  
   
-    -   [Instructions de saut](../cpp/jump-statements-cpp.md). Ces instructions transférer immédiatement le contrôle vers un autre emplacement dans la fonction ou retournent le contrôle à partir de la fonction.  
+    -   [Instructions de saut](../cpp/jump-statements-cpp.md). Ces instructions transférer le contrôle immédiatement à un autre emplacement dans la fonction ou retournent le contrôle à partir de la fonction.  
   
-    -   [Les instructions de déclaration](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9). Déclarations d’introduisent un nom dans un programme. ([Déclarations et définitions](declarations-and-definitions-cpp.md) fournit plus d’informations sur les déclarations.)  
+    -   [Les instructions de déclaration](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Déclarations d’introduisent un nom dans un programme. ([Déclarations et définitions](declarations-and-definitions-cpp.md) fournit plus d’informations sur les déclarations.)  
   
- Pour plus d’informations sur les instructions de gestion des exceptions, consultez [la gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md).  
+ Pour plus d’informations sur les instructions de gestion des exceptions, consultez [gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)

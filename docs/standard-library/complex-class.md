@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848243"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026405"
 ---
 # <a name="complex-class"></a>complexe, classe
 
-La classe de modèle décrit un objet qui stocke deux objets de type **Type**, un qui représente la partie réelle d’un nombre complexe et un qui représente la partie imaginaire.
+La classe de modèle décrit un objet qui stocke deux objets de type `Type`, un qui représente la partie réelle d’un nombre complexe et un objet représentant la partie imaginaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>Notes
 
-Un objet de la classe **Type** :
+Un objet de classe `Type`:
 
 - A un constructeur public par défaut, un destructeur, un constructeur de copie et un opérateur d’assignation avec un comportement conventionnel.
 
@@ -50,9 +50,9 @@ Un objet de la classe **Type** :
 
 - Définit les opérateurs arithmétiques et les fonctions mathématiques, selon les besoins, qui sont définis pour les types à virgule flottante avec un comportement conventionnel.
 
-En particulier, aucune différence même minime ne peut exister entre la construction de copie et la construction par défaut suivie de l'affectation. Aucune des opérations sur les objets de la classe **Type** ne peut lever d’exception.
+En particulier, aucune différence même minime ne peut exister entre la construction de copie et la construction par défaut suivie de l'affectation. Aucune des opérations sur les objets de classe `Type` peuvent lever des exceptions.
 
-Des spécialisations explicites de la classe de modèle complex existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur d’un autre type **Type** est convertie en **double** pour les calculs réels, avec le résultat **double** réassigné à l’objet stocké de type **Type**`.`
+Des spécialisations explicites de la classe de modèle complex existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur d’un autre type `Type` est convertie en **double** pour les calculs réels, avec le **double** réassigné à l’objet stocké de type de résultat `Type``.`
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -83,7 +83,7 @@ Des spécialisations explicites de la classe de modèle complex existent pour le
 |[operator/=](#op_div_eq)|Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
 |[operator=](#op_eq)|Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête** : \<complex>
 
@@ -108,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Paramètres
 
-`_RealVal` La valeur de la partie réelle utilisée pour initialiser le nombre complexe à construire.
+*_RealVal* la valeur de la partie réelle utilisée pour initialiser le nombre complexe en cours de construction.
 
-`_ImagVal` La valeur de la partie imaginaire utilisée pour initialiser le nombre complexe à construire.
+*_ImagVal* la valeur de la partie imaginaire utilisée pour initialiser le nombre complexe en cours de construction.
 
-`complexNum` Nombre complexe dont les parties réelles et imaginaires sont utilisées pour initialiser le nombre complexe qui est construit.
+*complexNum* nombre complexe dont les parties réelles et imaginaires sont utilisés pour initialiser le nombre complexe en cours de construction.
 
 ### <a name="remarks"></a>Notes
 
@@ -187,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un nombre complexe dont la valeur imaginaire doit être extraite.
+*droit* un nombre complexe dont la valeur imaginaire doit être extraite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -243,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un nombre complexe ou un nombre qui est du même type que le paramètre du nombre complexe cible.
+*droit* un nombre complexe ou un nombre qui a le même type que le paramètre du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -326,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un nombre complexe ou un nombre qui est du même type que le paramètre du nombre complexe cible.
+*droit* un nombre complexe ou un nombre qui a le même type que le paramètre du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -428,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Paramètres
 
-`complexNum` Un nombre complexe à soustraire de nombre complexe cible.
+*complexNum* un nombre complexe à soustraire du nombre complexe cible.
 
-`_RealPart` Nombre réel à soustraire du nombre complexe cible.
+*_RealPart* un nombre réel à soustraire du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -534,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Paramètres
 
-`complexNum` Un nombre complexe à soustraire de nombre complexe cible.
+*complexNum* un nombre complexe à soustraire du nombre complexe cible.
 
-`_RealPart` Nombre réel à soustraire du nombre complexe cible.
+*_RealPart* un nombre réel à soustraire du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -634,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un nombre complexe ou un nombre qui est du même type que le paramètre du nombre complexe cible.
+*droit* un nombre complexe ou un nombre qui a le même type que le paramètre du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -711,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Paramètres
 
-`right` Un nombre complexe dont la valeur réelle doit être extraite.
+*droit* un nombre complexe dont la valeur réelle doit être extraite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -763,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Notes
 
-`value_type` est un synonyme du paramètre de modèle **Type** complexe de la classe.
+`value_type` est un synonyme de la classe complexes `Type` paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Membres complexes](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[Complex, membres](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

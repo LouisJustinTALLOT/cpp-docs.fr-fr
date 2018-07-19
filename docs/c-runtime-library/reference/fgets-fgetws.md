@@ -1,7 +1,7 @@
 ---
 title: fgets, fgetws | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402018"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027165"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -73,22 +73,22 @@ Emplacement de stockage des données.
 *numChars*<br/>
 Nombre maximal de caractères à lire.
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne *str*. **NULL** est renvoyée pour indiquer une erreur ou une condition de fin de fichier. Utilisez **feof** ou **ferror** pour déterminer si une erreur s’est produite. Si *str* ou *flux* est un pointeur null, ou *numChars* est inférieur ou égal à zéro, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
+Chacune de ces fonctions retourne *str*. **NULL** est retourné pour indiquer une erreur ou une condition de fin de fichier. Utilisez **feof** ou **ferror** pour déterminer si une erreur s’est produite. Si *str* ou *flux* est un pointeur null, ou *numChars* est inférieure ou égale à zéro, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fgets** fonction lit une chaîne à partir de l’entrée *flux* argument et le stocke dans *str*. **fgets** lit les caractères à partir de la position actuelle du flux à et y compris le premier caractère de saut de ligne, à la fin du flux, ou jusqu'à ce que le nombre de caractères lus est égal à *numChars* - 1, selon ce qui se produit en premier. Le résultat est stocké dans *str* est ajouté par un caractère null. Le caractère de saut de ligne, s’il est lu, est inclus dans la chaîne.
+Le **fgets** fonction lit une chaîne à partir de l’entrée *flux* argument et le stocke dans *str*. **fgets** lit les caractères à partir de la position actuelle du flux à et y compris le premier caractère de saut de ligne, à la fin du flux, ou jusqu'à ce que le nombre de caractères lus est égal à *numChars* - 1, le premier prévalant. Le résultat est stocké dans *str* est ajouté par un caractère null. Le caractère de saut de ligne, s’il est lu, est inclus dans la chaîne.
 
 **fgetws** est une version à caractères larges de **fgets**.
 
-**fgetws** lit l’argument de caractères larges *str* comme une chaîne de caractères multioctets ou une chaîne à caractères larges selon s’il *flux* est ouvert en mode de texte ou binaire, respectivement. Pour plus d’informations sur l’utilisation des modes texte et binaire dans les E/S de flux Unicode et multioctets, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md) et [E/S de flux Unicode en modes texte et binaire](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+**fgetws** lit l’argument à caractères larges *str* comme une chaîne de caractères multioctets ou une chaîne à caractères larges selon que *flux* est ouvert en mode texte ou binaire, respectivement. Pour plus d’informations sur l’utilisation des modes texte et binaire dans les E/S de flux Unicode et multioctets, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md) et [E/S de flux Unicode en modes texte et binaire](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -96,7 +96,7 @@ Le **fgets** fonction lit une chaîne à partir de l’entrée *flux* argument e
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgetts**|**fgets**|**fgets**|**fgetws**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
@@ -109,9 +109,8 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 

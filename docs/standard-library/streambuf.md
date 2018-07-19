@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855264"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026930"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -38,14 +38,14 @@ Incluez l’en-tête standard iostreams \<streambuf> pour définir la classe de 
 
 |Nom de type|Description|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Spécialisation de `basic_streambuf` qui utilise `char` comme paramètres du modèle.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Spécialisation de `basic_streambuf` qui utilise `wchar_t` comme paramètres du modèle.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Une spécialisation de `basic_streambuf` qui utilise **char** en tant que les paramètres du modèle.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Une spécialisation de `basic_streambuf` qui utilise **wchar_t** en tant que les paramètres du modèle.|
 
 ### <a name="classes"></a>Classes
 
 |Classe|Description|
 |-|-|
-|[basic_streambuf, classe](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|La classe de modèle décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux.|
+|[basic_streambuf, classe](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|La classe de modèle décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux.|
 
 ## <a name="see-also"></a>Voir aussi
 

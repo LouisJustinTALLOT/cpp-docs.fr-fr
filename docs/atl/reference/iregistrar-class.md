@@ -1,5 +1,5 @@
 ---
-title: Interface IRegistrar | Documents Microsoft
+title: Interface IRegistrar | Microsoft Docs
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363745"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993566"
 ---
-# <a name="iregistrar-interface"></a>Interface IRegistrar
-Cette interface est définie dans atliface.h et est utilisée en interne par les fonctions membres de CAtlModule comme [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+# <a name="iregistrar-interface"></a>IRegistrar, Interface
+Cette interface est définie dans atliface.h et est utilisée en interne par les fonctions membres de CAtlModule notamment [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ Consultez la rubrique [à l’aide des paramètres remplaçables (le préprocess
   
 
  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlifase.h  
   
 ##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz 
@@ -112,7 +112,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 ```  
   
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- Annule l’enregistrement de données de la chaîne spécifiée.  
+ Annule l’inscription de la chaîne de données spécifiée.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -144,5 +144,5 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de paramètres remplaçables (préprocesseur d’inscription)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
- [Module (Classes)](../../atl/atl-module-classes.md)   
+ [Classes de module](../../atl/atl-module-classes.md)   
  [Composant de Registre (inscription)](../../atl/atl-registry-component-registrar.md)  

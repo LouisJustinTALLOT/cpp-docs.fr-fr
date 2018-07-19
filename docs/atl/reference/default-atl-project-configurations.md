@@ -1,5 +1,5 @@
 ---
-title: Par défaut des Configurations de projet ATL | Documents Microsoft
+title: Configurations de projet ATL par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.technology:
@@ -14,27 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f9f41a068605cbc73309f89c3ffb09def76750
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52f74ec15c6bc6d58f9f092a24faf66d0cef3740
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359043"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026470"
 ---
 # <a name="default-atl-project-configurations"></a>Configurations de projet ATL par défaut
 L’Assistant Projet ATL crée deux configurations de projet par défaut :  
   
-|Configuration|Jeu de caractères|Utilisation des ATL|  
+|Configuration|La chaîne retournée a le format suivant :|Utilisation des ATL|  
 |-------------------|-------------------|----------------|  
 |Mise en production|MBCS|DLL|  
 |Débogage|MBCS|DLL|  
   
- **Jeu de caractères**, **utilisation des ATL** et peuvent être modifiés dans le **les paramètres de projet** boîte de dialogue sous le **général** onglet. Vous pouvez également ajouter vos propres configurations à l’aide du Gestionnaire de Configuration. Pour plus d’informations, consultez [Configurations de Build](/visualstudio/ide/understanding-build-configurations).  
+ **Jeu de caractères**, **utilisation des ATL** et peut être modifié dans le **paramètres du projet** boîte de dialogue sous la **général** onglet. Vous pouvez également ajouter vos propres configurations à l’aide du Gestionnaire de Configuration. Pour plus d’informations, consultez [des Configurations de Build](/visualstudio/ide/understanding-build-configurations).  
   
 
 ## <a name="see-also"></a>Voir aussi  
- [Programmation avec ATL et le Code d’exécution C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)   
- [Boîte de dialogue Gestionnaire de configuration](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Boîte de dialogue de configuration Manager](http://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
  [Compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

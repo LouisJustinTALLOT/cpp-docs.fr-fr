@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863372"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026349"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -74,7 +74,7 @@ Catégories de type principal
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Teste si le type est `void`.|
+|[is_void](../standard-library/is-void-class.md)|Teste si le type est **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Teste si le type est `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Teste si le type est intégral.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Teste si le type est à virgule flottante.|
@@ -95,7 +95,7 @@ Catégories de type composite
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Teste si le type est une référence.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Teste si le type est arithmétique.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Teste si le type est `void` ou arithmétique.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Teste si le type est **void** ou arithmétique.|
 |[is_object](../standard-library/is-object-class.md)|Teste si le type est un type d'objet.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Teste si le type est scalaire.|
 |[is_compound](../standard-library/is-compound-class.md)|Teste si le type n'est pas scalaire.|
@@ -105,8 +105,8 @@ Propriétés de type
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Teste si le type est `const`.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Teste si le type est `volatile`.|
+|[is_const](../standard-library/is-const-class.md)|Teste si le type est **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Teste si le type est **volatile**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Teste si le type est trivial.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Teste si le type peut être copié de façon triviale.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Teste si le type est un type de disposition standard.|
@@ -142,7 +142,7 @@ Propriétés de type
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Teste si le type peut être assigné par copie et si l’assignation est connue comme ne levant pas d’exception.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Teste si le type peut être assigné par déplacement et si l’assignation est connue comme ne levant pas d’exception.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Teste si le type est destructible et si le destructeur est connu comme ne levant pas d’exception.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Teste si le type a un destructeur virtuel.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Teste si le type a un destructeur virtuel.|
 
 Requêtes de propriétés de type
 
@@ -164,9 +164,9 @@ Modifications const-volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Génère un type `const` à partir d’un type.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Génère un type `volatile` à partir d’un type.|
-|[add_cv](../standard-library/add-cv-class.md)|Génère un type `const volatile` à partir d’un type.|
+|[add_const](../standard-library/add-const-class.md)|Génère un **const** type à partir du type.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Génère un **volatile** type à partir du type.|
+|[add_cv](../standard-library/add-cv-class.md)|Génère un **volatile const** type à partir du type.|
 |[remove_const](../standard-library/remove-const-class.md)|Génère un type non const à partir d’un type.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Génère un type non volatile à partir d’un type.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Génère un type non const non volatile à partir d’un type.|

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed73314d5cef6849c84a8e1019e1fd2d6c8ead86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43f4aec5796db6a277b6bfb1edecdcd2e7f5c455
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845386"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954615"
 ---
 # <a name="isbaseof-class"></a>is_base_of, classe
 
@@ -37,13 +37,13 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Paramètres
 
-`Base` La classe de base à tester.
+*Base* la classe de base à tester.
 
-`Derived` Le type dérivé à tester.
+*Dérivés* le type dérivé à tester.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type `Base` est une classe de base du type `Derived`. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Base* est une classe de base du type *dérivé*, sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -80,7 +80,7 @@ is_base_of<base, derived> == true
 is_base_of<derived, base> == false
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 
