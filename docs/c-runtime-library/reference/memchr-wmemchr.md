@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401683"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181170"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -92,20 +92,20 @@ Nombre de caractères à vérifier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans *tampon*. Sinon, elle retourne **NULL**.
+En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans *tampon*. Sinon, elle retourne NULL.
 
 ## <a name="remarks"></a>Notes
 
-**memchr** et **wmemchr** rechercher la première occurrence de *c* dans la première *nombre* octets de *tampon*. Il s’arrête lorsqu’il trouve *c* ou si elle a activé la première *nombre* octets.
+`memchr` et `wmemchr` rechercher la première occurrence de *c* dans la première *nombre* octets de *tampon*. Il s’arrête lorsqu’il trouve *c* ou qu’elles ont vérifié la première *nombre* octets.
 
-En C, ces fonctions acceptent un ** const ** pointeur comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers ** const ** retourne un pointeur vers **const **; la version qui prend un pointeur vers non -** const ** retourne un pointeur vers non -** const **. La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const ** et non-** const ** les versions de ces fonctions sont disponibles. Si vous avez besoin non -** const ** comportement pour les deux overloadsin C++ C++, définissez le symbol _CONST_RETURN.
+En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**memchr**|\<memory.h> ou \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> ou \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 

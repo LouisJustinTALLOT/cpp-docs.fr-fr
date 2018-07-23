@@ -54,18 +54,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb937cfdce7ed933c637cb48d370515134b66dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415707"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181092"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Retourne un pointeur désignant la première occurrence d’une chaîne de recherche dans une chaîne.
 
 > [!IMPORTANT]
-> **_mbsstr** et **_mbsstr_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsstr` et `_mbsstr_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -136,33 +136,33 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la première occurrence de *strSearch* dans *str*, ou **NULL** si *strSearch* n’apparaît pas dans *str* . Si *strSearch* pointe vers une chaîne de longueur nulle, la fonction retourne *str*.
+Retourne un pointeur désignant la première occurrence de *strSearch* dans *str*, ou NULL si *strSearch* n’apparaît pas dans *str*. Si *strSearch* pointe vers une chaîne de longueur nulle, la fonction retourne *str*.
 
 ## <a name="remarks"></a>Notes
 
-Le **strstr** fonction retourne un pointeur vers la première occurrence de *strSearch* dans *str*. La recherche n’inclut pas les caractères Null de fin. **wcsstr** est la version à caractères larges de **strstr** et **_mbsstr** est la version à caractères multioctets. Les arguments et la valeur de retour de **wcsstr** sont des caractères larges chaînes ; ceux de **_mbsstr** sont des chaînes de caractères multioctets. **_mbsstr** valide ses paramètres. Si *str* ou *strSearch* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbsstr** définit **errno** à **EINVAL** et retourne 0. **strstr** et **wcsstr** ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+Le `strstr` fonction retourne un pointeur désignant la première occurrence de *strSearch* dans *str*. La recherche n’inclut pas les caractères Null de fin. `wcsstr` est la version à caractères larges de `strstr` et `_mbsstr` est la version à caractères multioctets. Les arguments et la valeur de retour de `wcsstr` sont des chaînes de caractères larges ; ceux de `_mbsstr` sont des chaînes de caractères multioctets. `_mbsstr` valide ses paramètres. Si *str* ou *strSearch* est NULL, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, `_mbsstr` définit `errno` EINVAL et retourne 0. `strstr` et `wcsstr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 > [!IMPORTANT]
 > Ces fonctions peuvent être exposées à un risque lié à un dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être exploités dans le cadre d’une attaque de système, car ils permettent d’exécuter du code arbitraire, ce qui peut entraîner une élévation injustifiée des privilèges. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
-En C, ces fonctions acceptent un ** const ** pointeur comme premier argument. En C++, deux surcharges sont disponibles. La surcharge qui accepte un pointeur vers ** const ** retourne un pointeur vers **const **; la version qui prend un pointeur vers non -** const ** retourne un pointeur vers non -** const **. La macro **_CRT_CONST_CORRECT_OVERLOADS** est défini si les deux le **const ** et non-** const ** les versions de ces fonctions sont disponibles. Si vous avez besoin non -** const ** comportement pour les deux surcharges C++, définissez le symbole **_CONST_RETURN**.
+En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui accepte un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non - **const**. La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
 
-La valeur de sortie est affectée par le paramètre de catégorie de paramètres régionaux de **LC_CTYPE**; pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le **_l** suffixe utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le paramètre de catégorie de paramètres régionaux de LC_CTYPE ; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsstr**|**strstr**|**_mbsstr**|**wcsstr**|
-|**n/a**|**n/a**|**_mbsstr_l**|**n/a**|
+|`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
+|**n/a**|**n/a**|`_mbsstr_l`|**n/a**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**strstr**|\<string.h>|
-|**wcsstr**|\<string.h> ou \<wchar.h>|
-|**_mbsstr**, **_mbsstr_l**|\<mbstring.h>|
+|`strstr`|\<string.h>|
+|`wcsstr`|\<string.h> ou \<wchar.h>|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
 Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
