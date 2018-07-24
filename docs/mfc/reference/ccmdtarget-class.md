@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027652"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208687"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (classe)
 La classe de base pour l’architecture de table des messages de bibliothèque Microsoft Foundation Class.  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  Pointeur vers un pointeur vers le `ITypeInfo` interface.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur HRESULT indiquant la réussite ou l’échec de l’appel. En cas de réussite, * *ppTypeInfo* pointe vers l’interface d’informations de type.  
+ Une valeur HRESULT indiquant la réussite ou l’échec de l’appel. En cas de réussite, \* *ppTypeInfo* pointe vers l’interface d’informations de type.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Obtient un pointeur vers une bibliothèque de types.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  Un pointeur vers un pointeur vers le `ITypeLib` interface.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur HRESULT indiquant la réussite ou l’échec de l’appel. En cas de réussite, * *ppTypeLib* pointe vers l’interface de bibliothèque de type.  
+ Une valeur HRESULT indiquant la réussite ou l’échec de l’appel. En cas de réussite, \* *ppTypeLib* pointe vers l’interface de bibliothèque de type.  
   
 ### <a name="remarks"></a>Notes  
  Les classes dérivées doivent remplacer cette fonction membre (si ne pas substituée, `GetTypeLib` retourne TYPE_E_CANTLOADLIBRARY). Utilisez le [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, qui implémente également `GetTypeInfoCount` et `GetTypeLibCache`.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* valeur|*pExtra* valeur|  
 |-------------------|--------------------|  
-|CAS|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CAS|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>Exemple  

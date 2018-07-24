@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143924aa3dccf00df1f5486a07d9324cea584a46
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884299"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208856"
 ---
 # <a name="csid-class"></a>CSid, classe
 Cette classe est un wrapper pour un `SID` structure de (l’identificateur de sécurité).  
@@ -469,7 +469,7 @@ bool operator>=(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si *lhs* est supérieur ou égal à *rhs*; sinon, FALSE.  
   
-##  <a name="operator_const_sid__star"></a>  SID const CSid::operator *  
+##  <a name="operator_const_sid__star"></a>  SID const CSid::operator \*  
  Les casts un `CSid` objet vers un autre pointeur vers un `SID` structure de (l’identificateur de sécurité).  
   
 ```  

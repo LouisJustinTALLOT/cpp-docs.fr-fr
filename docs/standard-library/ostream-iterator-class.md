@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963522"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207917"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator, classe
 
@@ -68,9 +68,9 @@ La classe ostream_iterator doit répondre aux exigences d’un itérateur de sor
 
 |Opérateur|Description|
 |-|-|
-|[operator*](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x`.|
+|[operator*](#op_star)|Opérateur de déréférencement permettent d’implémenter l’expression d’itérateur de sortie \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.|
-|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.|
+|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie \* `i`  =  `x` pour l’écriture dans un flux de sortie.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.
+Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie \* `i`  =  `x` pour l’écriture dans un flux de sortie.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ L’opérateur insère *val* dans le flux de sortie associé à l’objet, suivi
 
 ### <a name="remarks"></a>Notes
 
-La seule condition que doit remplir l’itérateur de sortie `ostream_iterator` est que l’expression * `ii` = `t` soit valide. Il n’y a pas de condition spécifiée pour operator ou operator= proprement dit. Cet opérateur membre retourne `*this`.
+La configuration requise pour un itérateur de sortie qui le `ostream_iterator` doit satisfaire que l’expression \* `ii`  =  `t` être valide et ne dit rien sur l’opérateur ou l’opérateur = eux-mêmes. Cet opérateur membre retourne `*this`.
 
 ### <a name="example"></a>Exemple
 

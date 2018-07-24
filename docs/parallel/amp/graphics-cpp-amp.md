@@ -1,5 +1,5 @@
 ---
-title: Graphiques (C++ AMP) | Documents Microsoft
+title: Graphiques (C++ AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,29 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e91f762a6f340d4fe0dcc513dea850b977e0524c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695364"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208726"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
-C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) espace de noms que vous pouvez utiliser pour accéder à la prise en charge de texture sur le GPU. Voici quelques scénarios courants :  
+C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) espace de noms que vous pouvez utiliser pour accéder à la prise en charge de texture sur GPU. Voici quelques scénarios courants :  
   
--   Vous pouvez utiliser la [texture](../../parallel/amp/reference/texture-class.md) classe comme un conteneur de données pour le calcul et d’exploiter la *la localité spatiale* du cache de texture et des dispositions du matériel GPU. La localité spatiale est la propriété des éléments de données physiquement proches les uns des autres.  
+-   Vous pouvez utiliser la [texture](../../parallel/amp/reference/texture-class.md) classe comme un conteneur de données pour le calcul et d’exploiter le *localité spatiale* du cache de texture et dispositions du matériel GPU. La localité spatiale est la propriété des éléments de données physiquement proches les uns des autres.  
   
 -   Le runtime fournit une interopérabilité efficace avec des nuanceurs non calculés. Les pixels, les vertex, les pavages et les nuanceurs de coque consomment ou produisent fréquemment des textures utilisables dans les calculs C++ AMP.  
   
 -   Les API graphiques de C++ AMP fournissent d'autres moyens pour accéder aux mémoires tampons contenant des sous-mots. Les textures formatées *texels* (éléments de texture) qui sont composées de 8 bits ou 16 bits scalaires autorisent l’accès à ce stockage de données compressées.  
   
 ## <a name="the-norm-and-unorm-types"></a>Les types norm et unorm  
- Le `norm` et `unorm` types sont des types scalaires qui limitent la plage de `float` valeurs ; il s’agit en tant que *serrage*. Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans un casting, la valeur est tout d’abord castée en `float` , puis fixée à la zone respective autorisée par norm [-1.0, 1.0] ou unorm [0.0, 1.0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Opérateurs binaires sont définis entre ces types et d’autres types scalaires intégrés tels que `float` et `int`: +, -, *, /, ==, ! =, >, \<, > =, < =. Les opérateurs d’assignation composée sont également pris en charge : +=, -=, \*=, / =. L'opérateur de négation unaire (-) est défini pour les types norm.  
+ Le `norm` et `unorm` types sont des types scalaires qui limitent la plage de `float` valeurs ; il s’agit *serrage*. Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans un casting, la valeur est premièrement transtypée en `float` , puis fixée à la zone respective autorisée par norm [-1.0, 1.0] ou unorm [0.0, 1.0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Opérateurs binaires sont définis entre ces types et les autres types scalaires intégrés tels que `float` et `int`: +, -, \*, /, ==, ! =, >, \<, > =, < =. Les opérateurs d’assignation composée sont également autorisés : +=, -=, \*=, / =. L'opérateur de négation unaire (-) est défini pour les types norm.  
   
 ## <a name="short-vector-library"></a>Bibliothèque de vecteurs courts  
- La bibliothèque de vecteurs courts fournit certaines des fonctionnalités de la [Type de vecteur](http://go.microsoft.com/fwlink/p/?linkid=248500) qui est défini en langage HLSL et est généralement utilisé pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont `double`, `float`, `int`, `norm`, `uint` et `unorm`. Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un `typedef` correspondant sans trait de soulignement (underscore) dans son nom. Les types ayant les traits de soulignement sont dans le [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas les traits de soulignement sont dans le [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils sont clairement séparées à partir des types fondamentaux portent comme `__int8` et `__int16`.  
+ La bibliothèque de vecteurs courts fournit certaines des fonctionnalités de la [Type vectoriel](http://go.microsoft.com/fwlink/p/?linkid=248500) qui est défini dans HLSL et est généralement utilisé pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont `double`, `float`, `int`, `norm`, `uint` et `unorm`. Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un `typedef` correspondant sans trait de soulignement (underscore) dans son nom. Les types ayant les traits de soulignement sont dans le [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas les traits de soulignement sont dans le [Concurrency::Graphics :: Direct3D Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils soient clairement séparés à partir des types fondamentaux portent des noms tels que `__int8` et `__int16`.  
   
-||Length 2|Longueur de 3|Longueur de 4|  
+||Length 2|Longueur de 3|Longueur 4|  
 |-|--------------|--------------|--------------|  
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|  
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|  
@@ -54,15 +54,15 @@ C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/am
   
 |Type d'opérateur|Types valides|  
 |-------------------|-----------------|  
-|Opérateurs binaires|Valides sur tous les types : +, -, *, /,<br /><br /> Valide sur les types entiers : %, ^, &#124;, &, <\<, >><br /><br /> Les deux vecteurs doivent avoir la même taille et le résultat doit être un vecteur de la même taille.|  
+|Opérateurs binaires|Valide sur tous les types : +, -, \*, /,<br /><br /> Valide sur les types d’entiers : %, ^, &#124;, &, <\<, >><br /><br /> Les deux vecteurs doivent avoir la même taille et le résultat doit être un vecteur de la même taille.|  
 |Opérateurs relationnels|Valides sur tous les types : == et !=|  
-|Opérateur d'assignation composée|Valide sur tous les types : +=, -=, *=, /=<br /><br /> Valide sur les types entiers : % =, ^ =, &#124;=, & =, <\<= >> =|  
+|Opérateur d'assignation composée|Valide sur tous les types : +=, -=, \*=, / =<br /><br /> Valide sur les types d’entiers : % =, ^ =, &#124;=, & =, <\<=, >> =|  
 |Opérateurs d'incrémentation et de décrémentation|Valides sur tous les types : ++, --<br /><br /> Le préfixe et le suffixe sont valides.|  
 |Opérateur de bits Not (~)|Valide sur les types d'entiers.|  
 |Opérateur unaire|Valide sur tous les types hormis `unorm` et `uint`.|  
   
 ### <a name="swizzling-expressions"></a>Expressions de swizzling  
- La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. Le `identifier`, qui est appelé un *expression de swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Des caractères individuels de l’identificateur peuvent être : x, y, z et w ; ou r, g, b et un. « x » et « r » signifie l’énième zéro composant, « y » et « g » moyenne le premier composant et ainsi de suite. (Notez que « x » et « r » ne peuvent être utilisés dans le même identificateur.) Par conséquent, « rgba » et « xyzw » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.  
+ La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. Le `identifier`, qui est appelé un *expression de swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels dans l’identificateur peuvent être : x, y, z et w ; ou r, g, b et un. « x » et « r » désigne le composant zéro, « y » et « g » désigne le premier composant et ainsi de suite. (Notez que « x » et « r » ne peuvent être utilisés dans le même identificateur.) Par conséquent, « rgba » et « xyzw » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.  
   
 ## <a name="texture-classes"></a>Classes de texture  
  De nombreux GPU ont un matériel et des caches optimisées pour récupérer des pixels et des texels afin d’afficher des images et des textures. Le [texture\<T, N >](../../parallel/amp/reference/texture-class.md) (classe), qui est une classe de conteneur pour objets texel, expose les fonctionnalités de texture de ces GPU. Un texel peut être :  
@@ -71,7 +71,7 @@ C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/am
   
 -   Un vecteur court ayant deux ou quatre composants. La seule exception est `double_4`, qui n'est pas autorisée.  
   
- L'objet `texture` peut avoir un rang de 1, 2 ou 3. L'objet `texture` peut être capturé uniquement par référence dans le lambda d'un appel à `parallel_for_each`. La texture est stockée sur le GPU en tant qu'objet de texture Direct3D. Pour plus d’informations sur les textures et des texels dans Direct3D, consultez [présentation de Textures dans Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
+ L'objet `texture` peut avoir un rang de 1, 2 ou 3. L'objet `texture` peut être capturé uniquement par référence dans le lambda d'un appel à `parallel_for_each`. La texture est stockée sur le GPU en tant qu'objet de texture Direct3D. Pour plus d’informations sur les textures et les texels dans Direct3D, consultez [Introduction aux Textures dans Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  Le type de texel que vous utilisez peut être l'un des nombreux formats de texture utilisés dans la programmation graphique. Par exemple, un format RVBA peut utiliser 32 bits, avec 8 bits pour chacun des éléments scalaires R, G, B et A. Le matériel de texture d'une carte graphique peut accéder à chaque élément selon son format. Par exemple, si vous utilisez le format RVBA, le matériel de texture peut extraire chaque élément de 8 bits dans une forme 32 bits. En C++ AMP, vous pouvez définir des bits par élément scalaire de votre texel afin d'accéder automatiquement aux éléments scalaires individuels dans le code sans utiliser le décalage de bits.  
   
@@ -140,14 +140,14 @@ void createTextureWithBPC() { // Create the source data.
   
  Il existe des limites sur la taille de chaque dimension de l'objet `texture`, comme l'indique le tableau suivant. Une erreur d'exécution est générée si vous dépassez les limites.  
   
-|Texture|La taille limite dimension|  
+|Texture|Limite de taille par dimension|  
 |-------------|---------------------|  
 |texture\<T, 1 >|16384|  
 |texture\<T, 2 >|16384|  
 |texture\<T, 3 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>Lecture des objets de texture  
- Vous pouvez lire un `texture` à l’aide de l’objet [texture::operator\[\]](reference/texture-class.md#operator_at), [texture::operator opérateur](reference/texture-class.md#operator_call), ou [texture::Get, méthode](reference/texture-class.md#get). Les deux opérateurs retournent une valeur, et non une référence. Par conséquent, vous ne pouvez pas écrire dans un objet `texture` à l'aide de `texture::operator\[\]`.  
+ Vous pouvez lire à partir d’un `texture` objet à l’aide de [texture::operator\[\]](reference/texture-class.md#operator_at), [texture::operator opérateur](reference/texture-class.md#operator_call), ou [texture::Get, méthode](reference/texture-class.md#get). Les deux opérateurs retournent une valeur, pas une référence. Par conséquent, vous ne pouvez pas écrire dans un objet `texture` à l'aide de `texture::operator\[\]`.  
   
 ```cpp  
 void readTexture() {  
@@ -282,7 +282,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
   
 ## <a name="texture-view-classes"></a>Classes d'affichage de texture  
- C++ AMP introduit le [texture_view, classe](../../parallel/amp/reference/texture-view-class.md) dans [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Les vues de texture prennent en charge les mêmes types de texel et comme le [texture, classe](../../parallel/amp/reference/texture-class.md), mais à la différence des textures, ils donnent accès aux fonctionnalités de matériel supplémentaire tel que l’échantillonnage de texture et les mipmaps. Les vues de texture prennent en charge l'accès en lecture seule, en écriture seule et en lecture-écriture aux données de texture sous-jacentes.  
+ C++ AMP introduit le [texture_view, classe](../../parallel/amp/reference/texture-view-class.md) dans [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Les vues de texture prennent en charge les mêmes types de texel et rangs en tant que le [texture, classe](../../parallel/amp/reference/texture-class.md), mais contrairement aux textures, ils fournissent un accès à des fonctionnalités matérielles supplémentaires telles que l’échantillonnage de texture et les mipmaps. Les vues de texture prennent en charge l'accès en lecture seule, en écriture seule et en lecture-écriture aux données de texture sous-jacentes.  
   
 -   L'accès en lecture seule est fourni par une spécialisation de modèle `texture_view<const T, N>`, qui prend en charge des éléments comportant 1, 2 ou 4 composants, un échantillonnage de texture et un accès dynamique à une plage de niveaux de mipmaps qui sont déterminés lorsque la vue est instanciée.  
   
@@ -290,10 +290,10 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
   
 -   L'accès en lecture-écriture est fourni par la classe de modèles non spécialisée `texture_view<T, N>`, qui, comme les textures, prend en charge les éléments comportant uniquement un composant ; la vue peut accéder à un niveau de mipmap qui est déterminé lorsque la vue est instanciée. L'échantillonnage n'est pas pris en charge.  
   
- Les vues de texture sont analogues aux vues de tableau, mais ne fournissent pas les fonctionnalités de gestion et un déplacement automatique des données qui le [array_view, classe](../../parallel/amp/reference/array-view-class.md) offre sur le [array, classe](../../parallel/amp/reference/array-class.md). `texture_view` est accessible uniquement sur la vue d'accélérateur où les données de texture sous-jacentes résident.  
+ Les vues de texture sont analogues aux vues de tableaux, mais ne fournissent pas les fonctionnalités de gestion et de déplacement automatique des données qui le [array_view, classe](../../parallel/amp/reference/array-view-class.md) fournit sur le [array, classe](../../parallel/amp/reference/array-class.md). `texture_view` est accessible uniquement sur la vue d'accélérateur où les données de texture sous-jacentes résident.  
   
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view déconseillé  
- Pour [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP présente une meilleure prise en charge pour les fonctionnalités de texture matérielles telles que l’échantillonnage et les mipmaps, qui ne peut pas être pris en charge par le [writeonly_texture_view, classe](../../parallel/amp/reference/writeonly-texture-view-class.md). La classe `texture_view` récemment introduite, prend en charge un sur-ensemble de la fonctionnalité dans `writeonly_texture_view`; par conséquent, `writeonly_texture_view` est déconseillé.  
+ Pour [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP introduit une meilleure prise en charge pour les fonctionnalités de texture matérielles telles que l’échantillonnage et les mipmaps, qui ne peut pas être pris en charge par le [writeonly_texture_view, classe](../../parallel/amp/reference/writeonly-texture-view-class.md). La classe `texture_view` récemment introduite, prend en charge un sur-ensemble de la fonctionnalité dans `writeonly_texture_view`; par conséquent, `writeonly_texture_view` est déconseillé.  
   
  Nous vous recommandons (au moins pour le nouveau code) d'utiliser `texture_view` pour accéder aux fonctionnalités qui ont été précédemment fournies par `writeonly_texture_view`. Comparez les deux exemples de code suivants qui accèdent en écriture à l'objet de texture comportant deux composants (int_2). Notez que dans les deux cas, la vue, `wo_tv4`, doit être capturée par la valeur de l'expression lambda. Voici l'exemple qui utilise la nouvelle classe `texture_view` :  
   
@@ -329,7 +329,7 @@ void write2ComponentTexture() {
   
  Comme vous pouvez le voir, les deux exemples de code sont quasiment identiques lorsque vous vous contentez d'accéder en écriture au niveau de mipmap principal. Si vous avez utilisé `writeonly_texture_view` dans le code existant et que vous n'envisagez pas d'améliorer ce code, vous ne devez pas le modifier. Toutefois, si vous pensez présenter ce code, nous vous suggérons de le réécrire pour utiliser `texture_view` car ses améliorations prennent en charge les nouvelles fonctionnalités de texture matérielles. Lisez la suite pour plus d'informations sur ces nouvelles fonctionnalités.  
   
- Pour plus d’informations sur l’utilisation déconseillée de `writeonly_texture_view`, consultez [vue d’ensemble de la conception de la vue de Texture en C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) sur la programmation parallèle en Code natif blog.  
+ Pour plus d’informations sur la désapprobation de `writeonly_texture_view`, consultez [vue d’ensemble de la conception de vue de Texture en C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) sur la programmation parallèle en Code natif blog.  
   
 ### <a name="instantiating-texture-view-objects"></a>Instanciation d'objets de la vue Texture  
  La déclaration d'une `texture_view` est semblable à la déclaration d'une `array_view` qui est associée à un `array`. L'exemple de code suivant déclare plusieurs objets `texture` et objets `texture_view` qui leur sont associés.  
@@ -404,10 +404,10 @@ void write2ComponentTexture() {
   
  Outre les modes que C++ AMP prend directement en charge, vous pouvez accéder à d'autres modes de filtrage et modes d'adressage de la plateforme sous-jacente à l'aide des API d'interopérabilité pour adopter un échantillonneur de texture créé en utilisant directement les API de plateforme. Par exemple, Direct3D prend en charge d'autres vues de filtrage, telles que le filtrage anisotropique, et peut appliquer un mode d'adressage différent à chaque dimension d'une texture. Vous pouvez créer un échantillonnage de texture dont les coordonnées sont encapsulées verticalement, mises en miroir horizontalement et échantillonnées avec le filtrage anisotropique à l'aide des API Direct3D, puis tirer parti de l'échantillonneur dans votre code C++ AMP en utilisant l'API d'interopérabilité `make_sampler`. Pour plus d’informations, consultez [échantillonnage de Texture en C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) sur la programmation parallèle en Code natif blog.  
   
- Les vues de texture prennent également en charge la lecture des mipmaps. Les vues de texture en lecture seule (celles qui ont un type d'élément const) offrent le plus de flexibilité car une plage de niveaux mip qui est déterminée à l'instanciation peut être dynamiquement échantillonnée, et parce que les éléments comportant 1, 2 ou 4 composants sont pris en charge. Les vues de texture en lecture-écriture qui ont des éléments comportant un composant prennent également en charge les mipmaps, mais uniquement d'un niveau qui est déterminé à l'instanciation. Pour plus d’informations, consultez [Texture avec les Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) sur la programmation parallèle en Code natif blog.  
+ Les vues de texture prennent également en charge la lecture des mipmaps. Les vues de texture en lecture seule (celles qui ont un type d'élément const) offrent le plus de flexibilité car une plage de niveaux mip qui est déterminée à l'instanciation peut être dynamiquement échantillonnée, et parce que les éléments comportant 1, 2 ou 4 composants sont pris en charge. Les vues de texture en lecture-écriture qui ont des éléments comportant un composant prennent également en charge les mipmaps, mais uniquement d'un niveau qui est déterminé à l'instanciation. Pour plus d’informations, consultez [Texture avec Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) sur la programmation parallèle en Code natif blog.  
   
 ### <a name="writing-to-texture-view-objects"></a>Écriture dans des objets de la vue Texture  
- Utilisez le [texture_view::Get, méthode](reference/texture-view-class.md#get) d’écrire des sous-jacent `texture` via la `texture_view` objet. Une vue de texture peut être accessible en lecture seule, en lecture-écriture ou en écriture seule. Pour qu'une vue de texture soit accessible en écriture, elle doit avoir un type d'élément non const ; pour qu'une vue de texture soit lisible et accessible en écriture, son type d'élément doit également avoir qu'un composant. Autrement, la vue de texture n'est accessible qu'en lecture seule. Vous ne pouvez accéder qu'à un niveau de mipmap d'une texture à la fois via une vue de texture, et le niveau est spécifié lorsque la vue est instanciée.  
+ Utilisez le [texture_view::Get, méthode](reference/texture-view-class.md#get) à écrire dans sous-jacent `texture` via la `texture_view` objet. Une vue de texture peut être accessible en lecture seule, en lecture-écriture ou en écriture seule. Pour qu'une vue de texture soit accessible en écriture, elle doit avoir un type d'élément non const ; pour qu'une vue de texture soit lisible et accessible en écriture, son type d'élément doit également avoir qu'un composant. Autrement, la vue de texture n'est accessible qu'en lecture seule. Vous ne pouvez accéder qu'à un niveau de mipmap d'une texture à la fois via une vue de texture, et le niveau est spécifié lorsque la vue est instanciée.  
   
  Cet exemple montre comment accéder en écriture au deuxième niveau de mipmap le plus détaillé d'une texture comportant 4 niveaux de mipmaps. Le niveau de mipmap le plus détaillé est le niveau 0.  
   
@@ -444,8 +444,8 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
  [norm_2, classe](../../parallel/amp/reference/norm-2-class.md)   
  [norm_3, classe](../../parallel/amp/reference/norm-3-class.md)   
  [norm_4, classe](../../parallel/amp/reference/norm-4-class.md)   
- [short_vector Structure](../../parallel/amp/reference/short-vector-structure.md)   
- [short_vector_traits Structure](../../parallel/amp/reference/short-vector-traits-structure.md)   
+ [short_vector, Structure](../../parallel/amp/reference/short-vector-structure.md)   
+ [short_vector_traits, Structure](../../parallel/amp/reference/short-vector-traits-structure.md)   
  [uint_2, classe](../../parallel/amp/reference/uint-2-class.md)   
  [uint_3, classe](../../parallel/amp/reference/uint-3-class.md)   
  [uint_4, classe](../../parallel/amp/reference/uint-4-class.md)   

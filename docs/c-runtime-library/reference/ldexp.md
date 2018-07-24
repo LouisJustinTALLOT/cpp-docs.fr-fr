@@ -1,5 +1,5 @@
 ---
-title: ldexp, ldexpf, ldexpl | Documents Microsoft
+title: ldexp, ldexpf, ldexpl | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401415"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208413"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -90,15 +90,15 @@ Exposant entier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **ldexp** fonctions retournent la valeur de *x* * 2<sup>*exp* </sup> en cas de réussite. De dépassement de capacité et, selon le signe de *x*, **ldexp** retourne **HUGE_VAL**; le **errno** a la valeur **ERANGE** .
+Le **ldexp** fonctions retournent la valeur de *x* \* 2<sup>*exp* </sup> en cas de réussite. Cas de dépassement et selon le signe de *x*, **ldexp** retourne **HUGE_VAL**; le **errno** a la valeur **ERANGE** .
 
-Pour plus d’informations sur **errno** et d’erreur possible de retourner des valeurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pour plus d’informations sur **errno** et erreur possible de retourner des valeurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ldexp** acceptant **float** ou **long** **double** types. Dans un programme C, **ldexp** prend toujours un **double** et un **int** et retourne un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ldexp** acceptant **float** ou **long** **double** types. Dans un programme C, **ldexp** prend toujours un **double** et un **int** et retourne un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

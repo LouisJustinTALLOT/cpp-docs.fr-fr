@@ -16,37 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1491d99c21628207e19f34676e16863cc24e07d3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862989"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209019"
 ---
 # <a name="regular-expressions-c"></a>Expressions régulières (C++)
 
-La bibliothèque standard C++ prend en charge plusieurs grammaires d’expressions régulières. Cette rubrique décrit les variations de grammaire disponibles lors de l’utilisation d’expressions régulières.
+La bibliothèque C++ standard prend en charge plusieurs grammaires d’expressions régulières. Cette rubrique aborde les variations de grammaire disponibles lors de l’utilisation d’expressions régulières.
 
 ## <a name="regexgrammar"></a> Grammaire des expressions régulières
 
-La grammaire d’expression régulière à utiliser est spécifiée à l’aide de l’un par le `std::regex_constants::syntax_option_type` valeurs d’énumération. Les grammaires d’expressions régulières sont définies dans std::regex_constants :
+La grammaire d’expression régulière à utiliser est spécifiée à l’aide d’un par le `std::regex_constants::syntax_option_type` valeurs d’énumération. Ces grammaires d’expressions régulières sont définies dans std::regex_constants :
 
 - `ECMAScript`: Il s’agit le plus proche de la grammaire utilisée par JavaScript et les langages .NET.
-- `basic`: Les expressions régulières base POSIX les BRE.
+- `basic`: Les expressions régulières base POSIX ou un BRE.
 - `extended`: La POSIX étendue des expressions régulières ou ERE.
-- `awk`: Il s’agit de `extended`, mais il implique d’autres séquences d’échappement pour les caractères non imprimables.
-- `grep`: Il s’agit de `basic`, mais il permet également un saut de ligne ('\n') caractères comme séparateur d’alternatives.
-- `egrep`: Il s’agit de `extended`, mais elle permet également de caractères de saut de ligne séparer les alternatives.
+- `awk`: Il s’agit de `extended`, mais il a d’autres séquences d’échappement pour les caractères non imprimables.
+- `grep`: Il s’agit de `basic`, mais il permet également saut de ligne ('\n') caractères séparateur d’alternatives.
+- `egrep`: Il s’agit de `extended`, mais il permet également des caractères de saut de ligne séparer les alternatives.
 
-Par défaut, si aucune grammaire n’est spécifiée, `ECMAScript` est supposé. Grammaire qu’une seule peut être spécifiée.
+Par défaut, si aucune syntaxe n’est spécifié, `ECMAScript` est supposé. Grammaire qu’une seule peut être spécifiée.
 
-En plus de la grammaire, plusieurs indicateurs peuvent être appliquées :
+En plus de la grammaire, plusieurs indicateurs peuvent être appliqués :
 - `icase`: Ignorer la casse lors de la correspondance.
 - `nosubs`: Ignorer les correspondances marquées (autrement dit, des expressions entre parenthèses) ; aucune substitution n’est stockées.
 - `optimize`: Assurez-vous de correspondance plus rapidement, aux dépens du moment de la construction.
-- `collate`: Utilisez des séquences de classement de dépendent des paramètres régionaux (par exemple, les plages au format « [a-z] »).
+- `collate`: Utilisez des séquences de classement de respectant les paramètres régionaux (par exemple, les plages de la forme « [a-z] »).
 
-Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour spécifier le comportement du moteur des expressions régulières. Si seuls les indicateurs sont spécifiés, `ECMAScript` est considéré comme étant la grammaire.
+Zéro ou plusieurs indicateurs peuvent être combinées avec la syntaxe pour spécifier le comportement de moteur d’expression régulière. Si seuls sont spécifiés, `ECMAScript` est considéré comme étant la grammaire.
 
 ### <a name="element"></a>Élément
 
@@ -92,7 +92,7 @@ Dans `ECMAScript`, `basic` et `grep`, un élément peut également être une *r�
 
 Dans `ECMAScript`, un élément peut également être ce qui suit :
 
-- A *groupe de non capture* sous la forme « ( ? : *sous-expression* ) ». Correspond à la séquence de caractères de la séquence cible qui correspond au modèle situé entre les délimiteurs.
+- Un *groupe de non capture* sous la forme « ( ? : *sous-expression* ) ». Correspond à la séquence de caractères de la séquence cible qui correspond au modèle situé entre les délimiteurs.
 
 - Un *échappement de format de fichier* limité au format "\f", "\n", "\r", "\t" ou "\v". Ces derniers correspondent, respectivement, à un saut de page, un saut de ligne, un retour chariot, une tabulation horizontale et une tabulation verticale, dans la séquence cible.
 
@@ -140,7 +140,7 @@ Un nombre de répétitions peut également prendre l'une des formes suivantes :
 
 - "{`min`,}", ou "\\{`min`,\\}" dans `basic` et `grep`. Équivalent à "{`min`, unbounded}".
 
-- "*". Équivalent à "{0,unbounded}".
+- "\*". Équivalent à "{0,unbounded}".
 
 Exemples :
 
@@ -148,7 +148,7 @@ Exemples :
 
 - « un{2,}» correspond à la séquence cible « aa », la séquence cible « aaa » et ainsi de suite, mais ne correspond pas à la séquence cible « a ».
 
-- "a*" correspond aux séquences cibles "", "a", "aa", et ainsi de suite.
+- « un\*» correspond à la séquence cible « », « a », la séquence cible « aa » de la séquence cible et ainsi de suite.
 
 Pour toutes les grammaires, sauf `basic` et `grep`, un nombre de répétitions peut également prendre l'une des formes suivantes :
 
@@ -162,7 +162,7 @@ Exemples :
 
 - "a+" correspond aux séquences cibles "a", "aa", et ainsi de suite, mais pas à la séquence cible "".
 
-Dans `ECMAScript`, toutes les formes du nombre de répétitions peuvent être suivis par le caractère ' ?', qui désigne une *répétition non gourmande*.
+Dans `ECMAScript`, toutes les formes de nombres de répétitions peuvent être suivies par le caractère ' ?', qui désigne une *répétition non gourmande*.
 
 ### <a name="concatenation"></a>Concaténation
 
@@ -205,9 +205,9 @@ Le tableau suivant résume les fonctionnalités disponibles dans les différente
 |séquence d'échappement octale||||||+|
 |caractère ordinaire|+|+|+|+|+|+|
 |assertion positive|||+||||
-|répétition utilisant «{}»||+|+||+|+|
+|répétition utilisant "{}»||+|+||+|+|
 |répétition utilisant "\\{\\}"|+|||+|||
-|répétition utilisant '*'|+|+|+|+|+|+|
+|répétition utilisant '\*'|+|+|+|+|+|+|
 |répétition utilisant '?' et '+'||+|+||+|+|
 |séquence d'échappement Unicode|||+||||
 |caractère générique|+|+|+|+|+|+|
@@ -313,10 +313,10 @@ Un caractère d'échappement dsw est un nom court donné à une plage de caract�
 |"\D"|"[^[:d:]]"|"[^[:digit:]]"|
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
-|"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"*|
-|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"*|
+|"\w"|"[[:w:]]"|« [a-zA-Z0-9_] »\*|
+|"\W"|"[^[:w:]]"|« [^ a-zA-Z0-9_] »\*|
 
-* jeu de caractères ASCII
+\*Jeu de caractères ASCII
 
 ### <a name="equivalence-class"></a>Classe d'équivalence
 
@@ -332,7 +332,7 @@ Une séquence d'échappement hexadécimale est une barre oblique inverse suivie 
 
 ### <a name="identity-escape"></a>Échappement d'identité
 
-Un échappement d'identité est une barre oblique inverse suivie d'un caractère unique. Elle correspond à ce caractère. Il est requis lorsque le caractère a une signification particulière ; si vous utilisez l'échappement d'identité, la signification particulière sera supprimée. Par exemple :
+Un échappement d'identité est une barre oblique inverse suivie d'un caractère unique. Elle correspond à ce caractère. Il est requis lorsque le caractère a une signification particulière ; si vous utilisez l'échappement d'identité, la signification particulière sera supprimée. Exemple :
 
 - « un\*» correspond à la séquence cible « aaa », mais ne correspond pas à la séquence cible « un\*».
 
@@ -345,7 +345,7 @@ Le jeu de caractères autorisés dans un échappement d'identité dépend de la 
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
 |`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|
 |`awk`|`extended` plus { '"', '/' }|
-|`ECMAScript`|Tous les caractères à l'exception de ceux pouvant faire partie d'un identificateur. En règle générale, cela inclut des lettres, des chiffres, '$', '\_' et les séquences d’échappement unicode. Pour plus d'informations, consultez la spécification du langage ECMAScript.|
+|`ECMAScript`|Tous les caractères à l'exception de ceux pouvant faire partie d'un identificateur. En règle générale, cela inclut des lettres, chiffres, '$', '\_' et les séquences d’échappement unicode. Pour plus d'informations, consultez la spécification du langage ECMAScript.|
 
 ### <a name="individual-character"></a>Caractère individuel
 
@@ -379,7 +379,7 @@ Exemples :
 
 ### <a name="negative-assert"></a>Assertion négative
 
-Une assertion négative peut représenter n'importe quel élément, à l'exception de son contenu. Elle ne consomme pas les caractères situés dans la séquence cible. Par exemple, "(!aa)(a*)" correspond à la séquence cible "a" et associe le groupe de capture 1 à la sous-séquence "a". Elle ne correspond pas à la séquence cible "aa" ni à la séquence cible "aaa".
+Une assertion négative peut représenter n'importe quel élément, à l'exception de son contenu. Elle ne consomme pas les caractères situés dans la séquence cible. Par exemple, "(!aa) (un\*) » correspond à la séquence cible « a » et associe le groupe 1 capture à la sous-séquence « a ». Elle ne correspond pas à la séquence cible "aa" ni à la séquence cible "aaa".
 
 ### <a name="negative-word-boundary-assert"></a>Assertion négative de limite de mot
 
@@ -403,7 +403,7 @@ Un caractère ordinaire est un caractère valide qui n'a pas de signification sp
 
 Dans `ECMAScript`, les caractères suivants ont une signification particulière :
 
-- ^  $  \  .  *  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
 
 Dans `basic` et `grep`, les caractères suivants ont une signification particulière :
 
@@ -411,7 +411,7 @@ Dans `basic` et `grep`, les caractères suivants ont une signification particuli
 
 Dans `basic` et `grep`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique :
 
-- '\*' a une signification spéciale dans tous les cas, sauf si elle est le premier caractère dans une expression régulière ou le premier caractère qui suit une initiale ' ^' dans une expression régulière, ou lorsqu’il est le premier caractère d’une capture du groupe ou le premier caractère suit un premier ' ^' dans un groupe de capture.
+- '\*' a une signification spéciale dans tous les cas sauf quand il est le premier caractère dans une expression régulière ou le premier caractère qui suit un premier ' ^' dans une expression régulière, ou lorsqu’il est le premier caractère d’une capture de groupe ou le premier caractère suit un premier ' ^' dans un groupe de capture.
 
 - '^' possède une signification particulière lorsqu'il s'agit du premier caractère d'une expression régulière.
 
@@ -419,7 +419,7 @@ Dans `basic` et `grep`, les caractères suivants ont une signification particuli
 
 Dans `extended`, `egrep` et `awk`, les caractères suivants ont une signification particulière :
 
-- .   [   \   (   *   +   ?   {   &#124;
+- .   [   \   (   \*   +   ?   {   &#124;
 
 Dans `extended`, `egrep` et `awk`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique.
 
@@ -439,7 +439,7 @@ Exemples :
 
 - "(=aa) (un\*) » correspond à la séquence cible « aaaa » et associe le groupe de capture 1 à la sous-séquence « aaaa ».
 
-- « (aa) (un\*) » correspond à la séquence cible « aaaa » et associe le groupe de capture 1 à la sous-séquence « aa » au début du groupe séquence et capture cible 2 à la sous-séquence « aa » à la fin de la séquence cible.
+- « (aa) (un\*) » correspond à la séquence cible « aaaa » et associe le groupe de capture 1 à la sous-séquence « aa » au début de la cible séquence et capture le groupe 2 à la sous-séquence « aa » à la fin de la séquence cible.
 
 - "(=aa)(a)&#124;(a)" correspond à la séquence cible "a" et associe le groupe de capture 1 à une séquence vide (car l’assertion positive a échoué), et le groupe de capture 2 à la sous-séquence "a". Elle correspond également à la séquence cible "aa" et associe le groupe de capture 1 à la sous-séquence "aa", et le groupe de capture 2 à une séquence vide.
 
@@ -490,7 +490,7 @@ Une correspondance partielle aboutit si la correspondance atteint la fin de la s
 |"$&"|"&"|Séquence de caractères qui correspond à l'intégralité de l'expression régulière (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|« $\`» (signe dollar suivi apostrophe inverse)||Séquence de caractères qui précède la sous-séquence correspondant à l'expression régulière (`[match.prefix().first, match.prefix().second)`)|
+|« $\`» (signe dollar suivi d’apostrophe)||Séquence de caractères qui précède la sous-séquence correspondant à l'expression régulière (`[match.prefix().first, match.prefix().second)`)|
 |"$'" (signe dollar suivi d'un guillemet)||Séquence de caractères qui suit la sous-séquence correspondant à l'expression régulière (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|La séquence de caractères qui correspond au groupe de capture à la position `n`, où `n` est un nombre compris entre 0 et 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|

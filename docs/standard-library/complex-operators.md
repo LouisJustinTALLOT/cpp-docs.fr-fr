@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957696"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208674"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt;, opérateurs
 
@@ -172,7 +172,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a>  operator\*
 
 Multiplie deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* le premier des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être multiplié par le * opération.
+*gauche* le premier des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être multiplié par le \* opération.
 
-*droit* le second des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être multiplié par le * opération.
+*droit* le second des deux nombres complexes ou un nombre qui a le type de paramètre pour un nombre complexe qui doit être multiplié par le \* opération.
 
 ### <a name="return-value"></a>Valeur de retour
 

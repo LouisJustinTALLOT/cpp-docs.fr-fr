@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944003"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207450"
 ---
 # <a name="typeid-operator"></a>typeid, opérateur
 ## <a name="syntax"></a>Syntaxe  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   Une référence à une classe  
   
--   Un pointeur, déréférencé avec *  
+-   Un pointeur, déréférencé avec \*  
   
 -   Un pointeur indicé ([ ] par exemple). (Notez qu'il n'est généralement pas possible d'utiliser un indice avec un pointeur vers un type polymorphe.)  
   

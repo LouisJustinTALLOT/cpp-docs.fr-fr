@@ -1,5 +1,5 @@
 ---
-title: fmod, fmodf, fmodl | Documents Microsoft
+title: fmod, fmodf, fmodl | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399034"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207531"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -82,15 +82,15 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fmod** renvoie le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est égale à 0.0, **fmod** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation sous forme d’une valeur NaN silencieuse par le **printf** famille, voir [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** renvoie le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0.0, **fmod** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation sous forme d’un NaN silencieux par la **printf** famille, consultez [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fmod** fonction calcule le reste à virgule flottante *f* de *x* / *y* tels que *x*  =  *i* * *y* + *f*, où *i* est un entier, *f* a la même signature que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
+Le **fmod** fonction calcule le reste à virgule flottante *f* de *x* / *y* tels que *x*  =  *je* \* *y* + *f*, où *je* est un entier, *f* a le même signe que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
 
-C++ autorise la surcharge, vous pouvez appeler des surcharges de **fmod** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **fmod** toujours prend deux **double** arguments et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fmod** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **fmod** accepte toujours deux **double** arguments et retourne un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

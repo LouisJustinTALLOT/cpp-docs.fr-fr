@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407075"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209454"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -112,17 +112,17 @@ Exposant entier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **scalbn** fonctions retournent la valeur de *x* * **FLT_RADIX**<sup>exp</sup> cas de réussite. De dépassement de capacité (selon le signe de *x*), **scalbn** retourne **HUGE_VAL**; le **errno** a la valeur **ERANGE** .
+Le **scalbn** fonctions retournent la valeur de *x* \* **FLT_RADIX**<sup>exp</sup> cas de réussite. De dépassement de capacité (selon le signe de *x*), **scalbn** retourne **HUGE_VAL**; le **errno** a la valeur **ERANGE** .
 
-Pour plus d’informations sur **errno** et d’erreur possible de retourner des valeurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pour plus d’informations sur **errno** et erreur possible de retourner des valeurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
 **FLT_RADIX** est défini dans \<float.h > comme base à virgule flottante native ; sur les systèmes binaires, il a la valeur 2, et **scalbn** équivaut à [ldexp](ldexp.md).
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **scalbn** et **scalbln** qui acceptent et retournent **float** ou **long** **double** types. Dans un programme C, **scalbn** prend toujours un **double** et un **int** et retourne un **double**, et **scalbln**prend toujours un **double** et un **long** et retourne un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **scalbn** et **scalbln** qui acceptent et retournent **float** ou **long** **double** types. Dans un programme C, **scalbn** prend toujours un **double** et un **int** et retourne un **double**, et **scalbln**prend toujours un **double** et un **long** et retourne un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

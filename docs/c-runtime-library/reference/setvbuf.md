@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c516932eb8d50fb8c9fdbe6f8c48a3f590b1ffb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 279fb5f7c400a3c7160a9dc66c6cfce7ccaf2bc4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408482"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208495"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -57,7 +57,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *buffer*<br/>
@@ -73,15 +73,15 @@ Taille de la mémoire tampon en octets. Plage autorisée : 2 < = *taille* < = I
 
 Retourne 0 en cas de réussite.
 
-Si *flux* est **NULL**, ou si *mode* ou *taille* est n’est pas dans une modification valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et affecte **errno** à **EINVAL**.
+Si *flux* est **NULL**, ou si *mode* ou *taille* est pas dans une plage valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et affecte **errno** à **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **setvbuf** fonction permet au programme de contrôle à la fois mise en mémoire tampon et de la mémoire tampon de taille pour *flux*. *flux* doit faire référence à un fichier ouvert qui n’a pas subi une opération d’e/s, car il a été ouvert. Le tableau vers lequel pointe *tampon* est utilisé en tant que la mémoire tampon, sauf s’il est **NULL**, auquel cas **setvbuf** utilise un tampon alloué automatiquement de longueur  *taille*/2 * 2 octets.
+Le **setvbuf** fonction permet au programme de contrôler les deux mise en mémoire tampon et la mémoire tampon de taille pour *flux*. *flux* doit faire référence à un fichier ouvert qui n’a pas subi une opération d’e/s dans la mesure où il a été ouvert. Le tableau vers lequel pointe *tampon* est utilisé en tant que la mémoire tampon, sauf s’il est **NULL**, auquel cas **setvbuf** utilise une mémoire tampon allouée automatiquement de longueur  *taille*/2 \* 2 octets.
 
-Le mode doit être **_IOFBF**, **_IOLBF**, ou **_IONBF**. Si *mode* est **_IOFBF** ou **_IOLBF**, puis *taille* est utilisé en tant que la taille de la mémoire tampon. Si *mode* est **_IONBF**, le flux est tamponné et *taille* et *tampon* sont ignorés. Les valeurs pour *mode* et leurs significations sont :
+Le mode doit être **_IOFBF**, **_IOLBF**, ou **_IONBF**. Si *mode* est **_IOFBF** ou **_IOLBF**, puis *taille* est utilisé en tant que la taille de la mémoire tampon. Si *mode* est **_IONBF**, le flux est sans tampon et *taille* et *tampon* sont ignorés. Valeurs pour *mode* et leurs significations sont :
 
 |*mode* valeur|Signification|
 |-|-|
@@ -89,7 +89,7 @@ Le mode doit être **_IOFBF**, **_IOLBF**, ou **_IONBF**. Si *mode* est **_IOFBF
 **_IOLBF**|Pour certains systèmes, ce mode assure une mise en mémoire tampon de ligne. Toutefois, pour Win32, le comportement est identique à **_IOFBF** -mise en mémoire tampon complète.
 **_IONBF**|Aucune mémoire tampon n’est utilisé, quel que soit le *tampon* ou *taille*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

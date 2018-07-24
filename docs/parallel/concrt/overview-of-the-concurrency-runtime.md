@@ -1,7 +1,7 @@
 ---
-title: Vue d’ensemble du Runtime d’accès concurrentiel | Documents Microsoft
+title: Vue d’ensemble du Runtime d’accès concurrentiel | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -17,32 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab1ab8c36f10e492aec45b41d5da4692bf2979a1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692425"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207876"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il décrit les avantages du runtime d'accès concurrentiel, quand l'utiliser et la façon dont ses composants interagissent entre eux et avec le système d'exploitation et les applications.  
   
-> [!IMPORTANT]
->  Dans Visual Studio 2015 et versions ultérieures, le planificateur de tâches du runtime d'accès concurrentiel n'est plus le planificateur de la classe de tâche et des types associés dans ppltasks.h. Ces types utilisent désormais le pool de threads Windows pour de meilleures performances et une meilleure interopérabilité avec les primitives de synchronisation Windows. Les algorithmes parallèles comme parallel_for continuent à utiliser le planificateur de tâches du runtime d’accès concurrentiel.  
-  
 ##  <a name="top"></a> Sections  
  Ce document contient les sections suivantes :  
   
--   [Pourquoi un Runtime d’accès concurrentiel est-il important ?](#runtime)  
+- [Historique de mise en œuvre de Runtime d’accès concurrentiel](#dlls)
+
+- [Pourquoi un Runtime d’accès concurrentiel est Important](#runtime)  
   
--   [Architecture](#architecture)  
+- [Architecture](#architecture)  
   
--   [Expressions Lambda C++](#lambda)  
+- [Expressions Lambda C++](#lambda)  
   
--   [Requirements](#requirements)  
+- [Requirements](#requirements)  
+
+## <a name="dlls"></a> Historique de mise en œuvre de Runtime d’accès concurrentiel
+
+Dans Visual Studio 2010, 2013, le Runtime d’accès concurrentiel a été intégré dans msvcr100.dll via msvcr120.dll.  Lors de la refactorisation UCRT dans Visual Studio 2015, cette DLL a été refactorisée en trois parties :
+
+- ucrtbase.dll – API C, fournis dans Windows 10 et pris en charge de niveau inférieur par le biais de Windows Update- 
+
+- vcruntime140.dll – compilateur prennent en charge les fonctions et runtime EH, fournis par le biais de Visual Studio
+
+- concrt140.dll – le Runtime d’accès concurrentiel, fournis par le biais de Visual Studio. Requis pour les algorithmes et des conteneurs parallèles telles que `concurrency::parallel_for`. En outre, la bibliothèque STL requiert cette DLL sur Windows XP pour les primitives de synchronisation de puissance, car Windows XP n’a pas de variables conditionnelles. 
+
+Dans Visual Studio 2015 et versions ultérieures, le planificateur de tâches du runtime d’accès concurrentiel n’est plus le planificateur de la classe de tâche et des types associés dans ppltasks.h. Ces types utilisent désormais le pool de threads Windows pour de meilleures performances et une meilleure interopérabilité avec les primitives de synchronisation Windows.  
   
-##  <a name="runtime"></a> Pourquoi un Runtime d’accès concurrentiel est-il important ?  
- Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Voici deux exemples des avantages du Runtime d’accès concurrentiel : *planification de tâches coopérative* et *le blocage coopératif*.  
+##  <a name="runtime"></a> Pourquoi un Runtime d’accès concurrentiel est Important  
+ Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Voici deux exemples des avantages du Runtime d’accès concurrentiel *planification de tâches coopérative* et *blocage coopératif*.  
   
  Le runtime d’accès concurrentiel utilise un planificateur de tâches coopératif qui implémente un algorithme de vol de travail pour distribuer efficacement le travail entre les ressources informatiques. Par exemple, considérez une application qui a deux threads gérés par le même runtime. Si un thread termine sa tâche planifiée, il peut décharger du travail de l’autre thread. Ce mécanisme équilibre la charge de travail globale de l'application.  
   
@@ -58,23 +69,23 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
  ![L’Architecture de Runtime d’accès concurrentiel](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  Les composants du Planificateur de tâches et le Gestionnaire de ressources ne sont pas disponibles à partir d’une application de plateforme Windows universelle (UWP) ou lorsque vous utilisez la classe de tâche ou d’autres types dans ppltasks.h.  
+>  Les composants du Planificateur de tâches et le Gestionnaire de ressources ne sont pas disponibles à partir d’une application de plateforme universelle Windows (UWP), ou lorsque vous utilisez la classe de tâche ou d’autres types dans ppltasks.h.  
   
  Le Runtime d’accès concurrentiel est hautement *composable*, autrement dit, vous pouvez combiner les fonctionnalités existantes pour plus d’informations. Le runtime d’accès concurrentiel compose de nombreuses fonctionnalités, telles que des algorithmes parallèles, à partir de composants de niveau inférieur.  
   
- Le runtime d’accès concurrentiel fournit également des primitives de synchronisation qui utilisent le blocage coopératif pour synchroniser l’accès aux ressources. Pour plus d’informations sur ces primitives de synchronisation, consultez [des Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md).  
+ Le runtime d’accès concurrentiel fournit également des primitives de synchronisation qui utilisent le blocage coopératif pour synchroniser l’accès aux ressources. Pour plus d’informations sur ces primitives de synchronisation, consultez [les Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md).  
   
  Les sections suivantes fournissent un bref aperçu de ce que fournit chaque composant et quand les utiliser.  
   
 ### <a name="parallel-patterns-library"></a>bibliothèque de modèles parallèles  
- La bibliothèque de modèles parallèles (PPL) fournit des algorithmes et des conteneurs à usage général pour effectuer un parallélisme affiné. La bibliothèque PPL permet *parallélisme des données impératif* en fournissant des algorithmes parallèles qui distribuent des calculs sur des collections ou ensembles de données entre les ressources informatiques. Il permet également de *parallélisme des tâches* en fournissant des objets de tâche qui distribuent plusieurs opérations indépendantes entre les ressources informatiques.  
+ La bibliothèque de modèles parallèles (PPL) fournit des algorithmes et des conteneurs à usage général pour effectuer un parallélisme affiné. La bibliothèque PPL permet *parallélisme des données impératif* en fournissant des algorithmes parallèles qui distribuent des calculs sur des collections ou des groupes de données entre les ressources informatiques. Il permet également de *parallélisme des tâches* en fournissant des objets de tâche qui distribuent plusieurs opérations indépendantes entre les ressources informatiques.  
   
- Utilisez la bibliothèque de modèles parallèles quand vous avez un calcul local qui peut tirer parti d’une exécution en parallèle. Par exemple, vous pouvez utiliser la [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme pour transformer un existant `for` boucle d’agir en parallèle.  
+ Utilisez la bibliothèque de modèles parallèles quand vous avez un calcul local qui peut tirer parti d’une exécution en parallèle. Par exemple, vous pouvez utiliser la [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme permettant de transformer un existant `for` boucle d’agir en parallèle.  
   
  Pour plus d’informations sur la bibliothèque de modèles parallèles, consultez [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).  
   
 ### <a name="asynchronous-agents-library"></a>bibliothèque d’agents asynchrones  
- La bibliothèque d’Agents asynchrones (ou simplement *bibliothèque d’Agents*) fournit un modèle de programmation basé sur acteur et la transmission de messages des interfaces pour les flux de données à granularité grossière et les tâches de traitement « pipeline ». Les agents asynchrones vous permettent d'utiliser de façon productive la latence, en effectuant le travail pendant que d'autres composants attendent des données.  
+ La bibliothèque d’Agents asynchrones (ou simplement *bibliothèque d’Agents*) fournit un modèle de programmation basé sur acteur et le passage de messages des interfaces pour les flux de données à granularité grossière et les tâches de traitement « pipeline ». Les agents asynchrones vous permettent d'utiliser de façon productive la latence, en effectuant le travail pendant que d'autres composants attendent des données.  
   
  Utilisez la bibliothèque d'agents quand vous avez plusieurs entités qui communiquent entre elles de façon asynchrone. Par exemple, vous pouvez créer un agent qui lit des données à partir d'un fichier ou d'une connexion réseau, puis utilise les interfaces de passage de messages pour envoyer ces données à un autre agent.  
   
@@ -85,7 +96,7 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
   
  Le runtime d'accès concurrentiel fournit un planificateur par défaut pour que vous n'ayez pas à gérer les détails de l'infrastructure. Toutefois, pour répondre aux besoins de qualité de votre application, vous pouvez également fournir votre propre stratégie de planification ou associer des planificateurs spécifiques à des tâches spécifiques.  
   
- Pour plus d’informations sur le Planificateur de tâches, consultez [du Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+ Pour plus d’informations sur le Planificateur de tâches, consultez [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ### <a name="resource-manager"></a>Gestionnaire des ressources  
  Le rôle du gestionnaire des ressources est de gérer les ressources informatiques, comme les processeurs et la mémoire. Le gestionnaire des ressources répond aux charges de travail à mesure qu'elles changent au moment de l'exécution en affectant des ressources là où elles peuvent être les plus efficaces.  
@@ -127,7 +138,7 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
 |Planificateur de tâches|concrt.h|  
 |Gestionnaire des ressources|concrtrm.h|  
   
- Le Runtime d’accès concurrentiel est déclaré dans le [Concurrency](../../parallel/concrt/reference/concurrency-namespace.md) espace de noms. (Vous pouvez également utiliser [concurrency](../../parallel/concrt/reference/concurrency-namespace.md), qui est un alias pour cet espace de noms.) L'espace de noms `concurrency::details` prend en charge l'infrastructure du runtime d'accès concurrentiel et n'a pas vocation à être utilisé directement à partir de votre code.  
+ Le Runtime d’accès concurrentiel est déclaré dans le [concurrence](../../parallel/concrt/reference/concurrency-namespace.md) espace de noms. (Vous pouvez également utiliser [concurrence](../../parallel/concrt/reference/concurrency-namespace.md), qui est un alias pour cet espace de noms.) L'espace de noms `concurrency::details` prend en charge l'infrastructure du runtime d'accès concurrentiel et n'a pas vocation à être utilisé directement à partir de votre code.  
   
  Le runtime d'accès concurrentiel est fourni dans le cadre de la bibliothèque Runtime C (CRT). Pour plus d’informations sur la création d’une application qui utilise la bibliothèque CRT, consultez [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   

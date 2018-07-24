@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954771"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208635"
 ---
 # <a name="ctype-class"></a>ctype, classe
 
@@ -275,7 +275,7 @@ Pointeur vers le premier caractère d’une plage qui correspond à un masque sp
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée retourne le plus petit pointeur `ptr` de la plage [ `first`, `last`) pour lequel [do_is](#do_is)( `maskVal`, * `ptr`) a la valeur true.
+La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [ `first`, `last`) pour lequel [do_is](#do_is)( `maskVal`, \* `ptr`) a la valeur true.
 
 ### <a name="example"></a>Exemple
 
@@ -306,7 +306,7 @@ Pointeur vers le premier caractère d’une plage qui ne correspond pas à un ma
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée retourne le plus petit pointeur `ptr` de la plage [ `first`, `last`) pour lequel [do_is](#do_is)( `maskVal`, * `ptr`) a la valeur false.
+La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [ `first`, `last`) pour lequel [do_is](#do_is)( `maskVal`, \* `ptr`) a la valeur false.
 
 ### <a name="example"></a>Exemple
 

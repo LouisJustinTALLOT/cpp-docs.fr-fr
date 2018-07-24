@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027964"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209116"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -248,25 +248,25 @@ Le tableau suivant présente le mappage entre les codes de déroulement et les o
 
 |Octet 1|Octet 2|Octet 3|Octet 4|Taille d'opcode|Explication|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x7F) * 4|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> où le registre LR fait l'objet d'un pop si Code & 0x2000 et r0-r12 font l'objet d'un pop si le bit correspondant est défini dans Code & 0x1FFF|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> où X correspond à Code & 0x0F|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (Code & 0x03) + 4 et LR fait l'objet d'un pop si Code & 0x04|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (Code & 0x03) + 8 et LR fait l'objet d'un pop si Code & 0x04|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> où X correspond à (Code & 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> où X correspond à (Code & 0x03FF) * 4|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> où X correspond à (Code & 0x03FF) \* 4|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> où le registre LR fait l'objet d'un pop si Code & 0x0100 et r0-r7 font l'objet d'un pop si le bit correspondant est défini dans Code & 0x00FF|
 |EE|00-0F|||16|Spécifique à Microsoft|
 |EE|10-FF|||16|Disponible|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> où X correspond à (Code & 0x000F) * 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> où X correspond à (Code & 0x000F) \* 4|
 |EF|10-FF|||32|Disponible|
 |F0-F4||||-|Disponible|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S correspond à (Code & 0x00F0) >> 4 et E à Code & 0x000F|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S correspond à ((Code & 0x00F0) >> 4) + 16 et E à (Code & 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFF) * 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFFFF) * 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFF) * 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFFFF) * 4|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 bits)|
 |FC||||32|nop (32 bits)|
 |FD||||16|fin + nop de 16 bits dans l'épilogue|
@@ -751,3 +751,4 @@ Function:
 
 [Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 [Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
+

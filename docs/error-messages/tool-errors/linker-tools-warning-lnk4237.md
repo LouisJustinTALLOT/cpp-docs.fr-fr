@@ -1,5 +1,5 @@
 ---
-title: LNK4237 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4237 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5acccf52d3738985c7a83432342952af03bf78b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcc109fe3ccf06e0461deed449517850271a2024
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302865"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209389"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Avertissement des outils Éditeur de liens LNK4237
 / SUBSYSTEM : native spécifié lors de l’importation à partir de 'dll' ; Utilisez/SUBSYSTEM : console ou/SUBSYSTEM : Windows.  
@@ -34,6 +34,6 @@ ms.locfileid: "33302865"
   
 -   user32.dll  
   
--   une des DLL msvcrt *.  
+-   un des fichier msvcrt\* DLL.  
   
- Résoudre cet avertissement en ne spécifiant **/SUBSYSTEM : native**.
+ Résoudre cet avertissement en ne spécifiant ne pas **/SUBSYSTEM : native**.

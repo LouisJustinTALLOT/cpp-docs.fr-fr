@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337419"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209168"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
 Le `CDrawingManager` classe implémente les algorithmes de dessins complexes.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Notes  
  Cette méthode échoue avec une erreur si le *k1* ou *k2* est inférieur à zéro. Si ces deux paramètres sont définies sur 0, la méthode retourne `RGB(0, 0, 0)`.  
   
- Le ratio pondéré est calculé avec la formule suivante : (color1 * k1 + color2 \* k2) /(k1 + k2). Une fois que le ratio pondéré est déterminé, la méthode calcule la luminosité de la couleur mixte. Il multiplie ensuite la luminosité par *dblLumRatio*. Si la valeur est supérieure à 1.0, la méthode définit la luminosité de la couleur mixte pour la nouvelle valeur. Sinon, la luminosité est définie sur 1.0.  
+ Le ratio pondéré est calculé avec la formule suivante : (color1 \* k1 + color2 \* k2) /(k1 + k2). Une fois que le ratio pondéré est déterminé, la méthode calcule la luminosité de la couleur mixte. Il multiplie ensuite la luminosité par *dblLumRatio*. Si la valeur est supérieure à 1.0, la méthode définit la luminosité de la couleur mixte pour la nouvelle valeur. Sinon, la luminosité est définie sur 1.0.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Fait pivoter une source de contenu de contrôleur de domaine à l’intérieur du rectangle donné de 90 degrés.  

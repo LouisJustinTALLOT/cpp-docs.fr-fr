@@ -1,5 +1,5 @@
 ---
-title: CArrayRowset (classe) | Documents Microsoft
+title: CArrayRowset, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,22 +11,55 @@ f1_keywords:
 - CArrayRowset
 - ATL::CArrayRowset
 - ATL::CArrayRowset<TAccessor>
+- ATL::CArrayRowset::CArrayRowset
+- CArrayRowset.CArrayRowset
+- ATL.CArrayRowset.CArrayRowset
+- ATL.CArrayRowset<TAccessor>.CArrayRowset
+- CArrayRowset::CArrayRowset
+- CArrayRowset
+- CArrayRowset<TAccessor>::CArrayRowset
+- ATL::CArrayRowset<TAccessor>::CArrayRowset
+- CArrayRowset<TAccessor>.Snapshot
+- ATL::CArrayRowset::Snapshot
+- Snapshot
+- CArrayRowset<TAccessor>::Snapshot
+- ATL.CArrayRowset.Snapshot
+- ATL.CArrayRowset<TAccessor>.Snapshot
+- ATL::CArrayRowset<TAccessor>::Snapshot
+- CArrayRowset::Snapshot
+- CArrayRowset.Snapshot
+- CArrayRowset::operator[]
+- CArrayRowset.operator[]
+- ATL::CArrayRowset::m_nRowsRead
+- ATL::CArrayRowset<TAccessor>::m_nRowsRead
+- CArrayRowset<TAccessor>::m_nRowsRead
+- ATL.CArrayRowset<TAccessor>.m_nRowsRead
+- CArrayRowset.m_nRowsRead
+- m_nRowsRead
+- ATL.CArrayRowset.m_nRowsRead
+- CArrayRowset::m_nRowsRead
 dev_langs:
 - C++
 helpviewer_keywords:
 - CArrayRowset class
+- CArrayRowset class, constructor
+- Snapshot method
+- operator [], arrays
+- '[] operator'
+- operator[], arrays
+- m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 691776f39c54e843cec478c3c42871e7b7e81da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b367fc74fdbb03a6e5193f3fc9be08f74111a09
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091100"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207485"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset, classe
 Éléments d’accès d’un ensemble de lignes à l’aide de la syntaxe de tableau.  
@@ -40,9 +73,12 @@ class CArrayRowset :
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `TAccessor`  
+### <a name="parameters"></a>Paramètres  
+ *TAccessor*  
  Le type de classe d’accesseur que vous souhaitez que l’ensemble de lignes à utiliser.  
+
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
 ## <a name="members"></a>Membres  
   
@@ -50,25 +86,78 @@ class CArrayRowset :
   
 |||  
 |-|-|  
-|[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|Constructeur.|  
-|[Instantané](../../data/oledb/carrayrowset-snapshot.md)|Lit l’ensemble de lignes en mémoire.|  
+|[CArrayRowset](#carrayrowset)|Constructeur.|  
+|[Instantané](#snapshot)|Lit l’ensemble de lignes en mémoire.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[(Opérateur)&#91;&#93;](../../data/oledb/carrayrowset-operator.md)|Accède à un élément de l’ensemble de lignes.|  
+|[opérateur&#91;&#93;](#operator)|Accède à un élément de l’ensemble de lignes.|  
   
 ### <a name="data-members"></a>Membres de données  
   
 |||  
 |-|-|  
-|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|Le nombre de lignes déjà lue.|  
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Le nombre de lignes déjà lues.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** atldbcli.h  
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+Crée un objet `CArrayRowset`.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      CArrayRowset(int nMax = 100000);  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ *nombre maximal*  
+ [in] Nombre maximal de lignes dans l’ensemble de lignes. 
+
+## <a name="snapshot"></a> CArrayRowset::Snapshot
+Lit l’ensemble de lignes en mémoire, création d’une image ou un instantané de celui-ci.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+HRESULT Snapshot() throw();  
+  
+```  
+
+## <a name="operator"></a> CArrayRowset::operator
+Fournit la syntaxe de type tableau pour accéder à une ligne dans l’ensemble de lignes.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      TAccessor  
+      & operator[](int nrow);  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ *TAccessor*  
+ Un paramètre basé sur un modèle qui spécifie le type d’accesseur stockée dans l’ensemble de lignes.  
+  
+ *nRow*  
+ [in] Numéro de la ligne (élément de tableau) que vous souhaitez accéder.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Le contenu de la ligne demandée.  
+  
+### <a name="remarks"></a>Notes  
+ Si *nRow* dépasse le nombre de lignes dans l’ensemble de lignes, une exception est levée.  
+
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+Contient le nombre de lignes dans l’ensemble de lignes qui ont déjà été lues.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+ULONG m_nRowsRead;  
+  
+```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence des modèles de consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Référence de modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CRowset, classe](../../data/oledb/crowset-class.md)

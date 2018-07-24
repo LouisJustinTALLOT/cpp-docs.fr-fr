@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1c6b7ef094715e052bdea023bcff0437492325c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854754"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208400"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -53,13 +53,13 @@ for (auto num : vec)
 
 Il existe cinq catégories d'itérateurs. Par ordre de puissance croissante, les catégories sont :
 
-- **Sortie**. Un itérateur de sortie `X` peut itérer vers l'avant sur une séquence avec l'opérateur ++, et il ne peut écrire un élément qu'une seule fois avec l'opérateur *.
+- **Sortie**. Itérateur de sortie `X` peut itérer vers l’avant sur une séquence à l’aide de la ++ (opérateur) et peut écrire un élément qu’une seule fois, à l’aide de la \* opérateur.
 
-- **Entrée**. Un itérateur d'entrée `X` peut itérer vers l'avant sur une séquence avec l'opérateur ++, et il peut lire un élément plusieurs fois avec l'opérateur *. Vous pouvez comparer des itérateurs d'entrée à l'aide des opérateurs ++ et !=. Une fois que vous incrémentez une copie d'un itérateur d'entrée, aucune des autres copies ne peut être comparée, déréférencée ou incrémentée de façon fiable par la suite.
+- **Entrée**. Un itérateur d’entrée `X` peut itérer vers l’avant sur une séquence à l’aide de la ++ (opérateur) et capable de lire un élément autant de fois à l’aide de la \* opérateur. Vous pouvez comparer des itérateurs d'entrée à l'aide des opérateurs ++ et !=. Une fois que vous incrémentez une copie d'un itérateur d'entrée, aucune des autres copies ne peut être comparée, déréférencée ou incrémentée de façon fiable par la suite.
 
-- **Vers l’avant**. Un itérateur vers l'avant `X` peut itérer vers l'avant sur une séquence avec l'opérateur ++ et peut lire n'importe quel élément ou écrire des éléments autres que const un nombre quelconque de fois avec l'opérateur *. Vous pouvez accéder aux membres de l'élément avec l'opérateur -> et comparer les itérateurs vers l'avant avec les opérateurs == et !=. Vous pouvez effectuer plusieurs copies d'un itérateur vers l'avant, chacune d'elles pouvant être déréférencée et incrémentée indépendamment. Un itérateur vers l'avant qui est initialisé sans référence à aucun conteneur est appelé un itérateur vers l'avant null. La comparaison d'itérateurs vers l'avant null donne toujours une égalité.
+- **Vers l’avant**. Itérateur vers l’avant `X` peut itérer vers l’avant sur une séquence avec le ++ opérateur et peut lire n’importe quel élément ou écrire des éléments non-const n’importe quel nombre de fois à l’aide de la \* opérateur. Vous pouvez accéder aux membres de l'élément avec l'opérateur -> et comparer les itérateurs vers l'avant avec les opérateurs == et !=. Vous pouvez effectuer plusieurs copies d'un itérateur vers l'avant, chacune d'elles pouvant être déréférencée et incrémentée indépendamment. Un itérateur vers l'avant qui est initialisé sans référence à aucun conteneur est appelé un itérateur vers l'avant null. La comparaison d'itérateurs vers l'avant null donne toujours une égalité.
 
-- Bidirectionnel. Un itérateur bidirectionnel `X` peut remplacer un itérateur vers l'avant. Toutefois, vous pouvez également décrémenter un itérateur bidirectionnel, comme dans --`X`, `X`-- ou (`V` = *`X`--). Vous pouvez accéder aux membres de l'élément et comparer des itérateurs bidirectionnels de la même façon que pour des itérateurs vers l'avant.
+- Bidirectionnel. Un itérateur bidirectionnel `X` peut remplacer un itérateur vers l'avant. Vous pouvez, toutefois, également décrémenter un itérateur bidirectionnel, comme dans--`X`, `X`--, ou (`V` = \*`X`--). Vous pouvez accéder aux membres de l'élément et comparer des itérateurs bidirectionnels de la même façon que pour des itérateurs vers l'avant.
 
 - **Accès aléatoire**. Un itérateur à accès aléatoire `X` peut remplacer un itérateur bidirectionnel. Avec un itérateur à accès aléatoire, vous pouvez utiliser l'opérateur d'indice [] pour accéder aux éléments. Vous pouvez utiliser les opérateurs +, -, += et -= pour avancer ou reculer d'un nombre spécifié d'éléments et pour calculer la distance entre des itérateurs. Vous pouvez comparer des itérateurs bidirectionnels avec ==, !=, \<, >, \<= et >=.
 
@@ -69,7 +69,7 @@ La hiérarchie des catégories d'itérateur peut être résumée en indiquant tr
 
 > itérateur de sortie<br/>
 > -> itérateur vers l’avant<br/>
-> -> itérateur bidirectionnel.<br/>
+> -> itérateur bidirectionnel<br/>
 > -> itérateur à accès aléatoire<br/>
 
 La flèche droite signifie "peut être remplacé par". Tout algorithme qui appelle un itérateur de sortie doit fonctionner correctement avec un itérateur vers l’avant, par exemple, mais *pas* dans l’autre sens.
@@ -78,7 +78,7 @@ Pour l'accès en lecture seule à une séquence, vous pouvez utiliser l'une des 
 
 > itérateur d’entrée<br/>
 > -> itérateur vers l’avant<br/>
-> -> itérateur bidirectionnel.<br/>
+> -> itérateur bidirectionnel<br/>
 > -> itérateur à accès aléatoire<br/>
 
 Un itérateur d'entrée est le plus faible de toutes les catégories, dans ce cas.
@@ -86,7 +86,7 @@ Un itérateur d'entrée est le plus faible de toutes les catégories, dans ce ca
 Enfin, pour l'accès en lecture/écriture à une séquence, vous pouvez utiliser l'une des catégories suivantes :
 
 > itérateur vers l’avant<br/>
-> -> itérateur bidirectionnel.<br/>
+> -> itérateur bidirectionnel<br/>
 > -> itérateur à accès aléatoire<br/>
 
 Un pointeur d'objet peut toujours servir d'itérateur à accès aléatoire, il peut donc être utilisé comme catégorie d'itérateur s'il prend en charge l'accès approprié en lecture et en écriture à la séquence qu'il désigne.
@@ -96,9 +96,9 @@ Un itérateur `Iterator` autre qu'un pointeur d'objet doit également définir l
 Il est important de comprendre les promesses et les limites de chaque catégorie d’itérateur pour voir comment les itérateurs sont utilisés par les conteneurs et les algorithmes dans la bibliothèque standard C++.
 
 > [!NOTE]
-> Vous pouvez éviter d'utiliser des itérateurs explicitement avec des boucles for basées sur un intervalle. Pour plus d’informations, consultez [plage instruction for basée](../cpp/range-based-for-statement-cpp.md).
+> Vous pouvez éviter d'utiliser des itérateurs explicitement avec des boucles for basées sur un intervalle. Pour plus d’informations, consultez [Range-based pour instruction](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ offre maintenant des itérateurs vérifiés et des itérateurs de débogage pour garantir que vous ne remplaciez pas les limites de votre conteneur. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [Itérateurs de débogage, prise en charge](../standard-library/debug-iterator-support.md).
+Visual C++ propose désormais des itérateurs vérifiés et les itérateurs de débogage pour vous assurer que vous ne remplacez pas les limites de votre conteneur. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [Itérateurs de débogage, prise en charge](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406665"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209415"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -71,15 +71,15 @@ Dénominateur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est égale à 0.0, **reste** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation sous forme d’une valeur NaN silencieuse par le **printf** famille, voir [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0.0, **reste** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation d’un NaN silencieux par la **printf** famille, consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **reste** fonctions calculent le reste à virgule flottante *r* de *x* / *y* tels que *x*   =  *n* * *y* + *r*, où *n*est le entier le plus proche valeur *x* / *y* et *n*est même chaque fois que &#124; *n*  -  *x* / *y* &#124; = 1/2. Lorsque *r* = 0, *r* a la même signature que *x*.
+Le **reste** fonctions calculent le reste à virgule flottante *r* de *x* / *y* tels que *x*   =  *n* \* *y* + *r*, où *n*est le entier le plus proche dans la valeur à *x* / *y* et *n*est pair chaque fois que &#124; *n*  -  *x* / *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **reste** toujours prend deux **double** arguments et retourne un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **reste** accepte toujours deux **double** arguments et retourne un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|

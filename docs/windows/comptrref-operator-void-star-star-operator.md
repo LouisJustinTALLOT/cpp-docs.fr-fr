@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator void **, opérateur | Documents Microsoft
+title: ComPtrRef::operator void **, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3993cb0a5ce55996ae2ff793e83453040455aa7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887080"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207850"
 ---
-# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void**, opérateur
+# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* opérateur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -34,9 +34,9 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Supprime l’objet ComPtrRef actif, convertit le pointeur vers l’interface qui a été représenté par l’objet ComPtrRef comme un pointeur à pointeur-à `void`, puis retourne le pointeur de cast.  
+ Supprime l’objet ComPtrRef en cours, effectue un cast du pointeur vers l’interface qui a été représenté par l’objet ComPtrRef comme un pointeur à pointeur-à `void`, puis retourne le pointeur de cast.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

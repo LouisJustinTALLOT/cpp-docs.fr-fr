@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885449"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209220"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 Cette classe fournit une base pour les classes de pointeur intelligent à l’aide des routines de mémoire basé sur COM.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|L’opérateur de cast.|  
 |[CComPtrBase::operator !](#operator_not)|L’opérateur NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|Le & opérateur.|  
-|[CComPtrBase::operator *](#operator_star)|Le * opérateur.|  
+|[CComPtrBase::operator *](#operator_star)|opérateur \*,|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Inférieur-que l’opérateur.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|L’opérateur d’égalité.|  
 |[CComPtrBase::operator ->](#operator_ptr)|L’opérateur de pointeur de membre.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’adresse de l’objet vers lequel pointé le `CComPtrBase` objet.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- Le * opérateur.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ opérateur \*,  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si le pointeur est géré par l’objet actuel est inférieure à celle du pointeur auquel il est comparé.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  L’opérateur de cast.  
   
 ```  

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954628"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208524"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator, classe
 
@@ -69,8 +69,8 @@ Cette classe d'adaptateur est utilisée quand il est nécessaire de séparer l'a
 
 |Opérateur|Description|
 |-|-|
-|[operator*](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `ii` = `x`.|
-|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de stockage brut * `i` = `x` pour le stockage en mémoire.|
+|[operator*](#op_star)|Un opérateur de déréférencement permettent d’implémenter l’expression d’itérateur de sortie \* `ii`  =  `x`.|
+|[operator=](#op_eq)|Un opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de stockage brut \* `i`  =  `x` pour le stockage en mémoire.|
 |[operator++](#op_add_add)|Opérateurs de préincrémentation et de postincrémentation pour les itérateurs de stockage brut.|
 
 ## <a name="requirements"></a>Configuration requise
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator::operator\*
 
 Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de stockage brut \* *ii* = *x*.
 

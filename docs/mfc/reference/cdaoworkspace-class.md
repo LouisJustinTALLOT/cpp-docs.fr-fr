@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337445"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209129"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace, classe
 Gère une session de base de données nommée et protégée par mot de passe, de la connexion à la déconnexion, pour un seul utilisateur.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Paramètres  
  *lpszDefaultUser*  
- Le nom d’utilisateur par défaut. Un nom d’utilisateur peut avoir une longueur de 1 à 20 caractères et inclure des caractères alphabétiques, des caractères accentués, des chiffres, des espaces et des symboles à l’exception de : » (entre guillemets), / (barre oblique), \ (barre oblique inverse), \[ \] (crochets), : (deux-points), &#124; () barre verticale), \< (moins-signe supérieur), > (supérieur-signe supérieur), signe plus (+), = (signe égal), (point-virgule), (virgule), (point d’interrogation), * (astérisque), des espaces et les caractères de contrôle (ASCII 00 et ASCII 31). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.  
+ Le nom d’utilisateur par défaut. Un nom d’utilisateur peut avoir une longueur de 1 à 20 caractères et inclure des caractères alphabétiques, des caractères accentués, des chiffres, des espaces et des symboles à l’exception de : » (entre guillemets), / (barre oblique), \ (barre oblique inverse), \[ \] (crochets), : (deux-points), &#124; () barre verticale), \< (moins-signe supérieur), > (supérieur-signe supérieur), signe plus (+), = (signe égal), (point-virgule), (virgule), (point d’interrogation), \* astérisque (*), des espaces et les caractères de contrôle (ASCII 00 et ASCII 31). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.  
   
 ### <a name="remarks"></a>Notes  
  Le nom d’utilisateur par défaut que vous définissez s’applique aux nouveaux espaces de travail après l’appel. Lorsque vous créez des espaces de travail suivants, il est inutile de spécifier un nom d’utilisateur dans le [créer](#create) appeler.  

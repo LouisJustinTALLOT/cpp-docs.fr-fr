@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336772"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208008"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl, classe
 Fournit les fonctionnalités du contrôle commun SysLink Windows.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Paramètre|Description|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|La largeur maximale de la liaison, en pixels.|  
-|[out] * *pSize*|Un pointeur vers un Windows [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, le *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien spécifié par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur de texte de lien qui est réellement nécessaire.|  
+|[out] \* *pSize*|Un pointeur vers un Windows [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, le *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien spécifié par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur de texte de lien qui est réellement nécessaire.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur préférée du texte du lien, en pixels. La valeur de retour est identique à la valeur de la *cy* membre de la `SIZE` structure.  

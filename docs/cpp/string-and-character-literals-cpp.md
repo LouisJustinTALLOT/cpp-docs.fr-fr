@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942092"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208547"
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractère (C++)
 C++ prend en charge divers types de chaîne et de caractère, et fournit les moyens d'exprimer les valeurs littérales de chacun de ces types. Dans votre code source, vous exprimez le contenu de vos littéraux de caractère et de chaîne à l’aide d’un jeu de caractères. Les noms de caractères universels et les caractères d’échappement vous permettent d’exprimer une chaîne en utilisant uniquement le jeu de caractères sources de base. Un littéral de chaîne brut vous permet d'éviter d'utiliser des caractères d'échappement et peut servir à exprimer tous les types de littéral de chaîne. Vous pouvez également créer des littéraux std::string sans avoir à effectuer d’étapes de conversion ou de construction supplémentaires.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Notez que `strlen()` et `wcslen()` n’incluent pas la taille du caractère null de fin, dont la taille est égale à la taille de l’élément du type chaîne : un octet sur une chaîne char*, deux octets sur wchar_t\* ou char16_t\* chaînes, et quatre octets sur char32_t\* chaînes.  
+ Notez que `strlen()` et `wcslen()` n’incluent pas la taille du caractère null de fin, dont la taille est égale à la taille d’élément du type chaîne : un octet sur une valeur char\* de chaîne, deux octets sur wchar_t\* ou char16_t\*chaînes et quatre octets sur char32_t\* chaînes.  
   
  La longueur maximale d'un littéral de chaîne est de 65 535 octets. Cette limite s'applique à la fois aux littéraux de chaîne étroits et étendus.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Littéraux de chaîne avec des noms de caractères universels  
- Les littéraux de chaîne natifs (non bruts) peuvent utiliser des noms de caractères universels pour représenter un caractère, du moment que le nom de caractère universel peut être encodé sous forme d’un ou de plusieurs caractères dans le type de chaîne.  Par exemple, un nom de caractère universel représentant un caractère étendu ne peut pas être encodé dans une chaîne étroite à l’aide de la page de codes ANSI. Toutefois, il peut être encodé dans les chaînes étroites de certaines pages de codes multioctets, dans les chaînes UTF-8 ou dans une chaîne large. Dans C ++ 11, prise en charge Unicode est étendu par char16_t * et char32_t\* types de chaînes :  
+ Les littéraux de chaîne natifs (non bruts) peuvent utiliser des noms de caractères universels pour représenter un caractère, du moment que le nom de caractère universel peut être encodé sous forme d’un ou de plusieurs caractères dans le type de chaîne.  Par exemple, un nom de caractère universel représentant un caractère étendu ne peut pas être encodé dans une chaîne étroite à l’aide de la page de codes ANSI. Toutefois, il peut être encodé dans les chaînes étroites de certaines pages de codes multioctets, dans les chaînes UTF-8 ou dans une chaîne large. Dans C ++ 11, prise en charge Unicode est étendu par le char16_t\* et char32_t\* types de chaînes :  
   
 ```cpp  
 // ASCII smiling face  

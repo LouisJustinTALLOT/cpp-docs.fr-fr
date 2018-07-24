@@ -1,5 +1,5 @@
 ---
-title: _scalb, _scalbf | Documents Microsoft
+title: _scalb, _scalbf | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406262"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207518"
 ---
 # <a name="scalb-scalbf"></a>_scalb, _scalbf
 
@@ -77,9 +77,9 @@ Pour plus d’informations sur ce code de retour et sur les autres codes, consul
 
 ## <a name="remarks"></a>Notes
 
-Le **_scalb** fonction calcule la valeur de *x* * 2<sup>*exp*</sup>.
+Le **_scalb** fonction calcule la valeur de *x* \* 2<sup>*exp*</sup>.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

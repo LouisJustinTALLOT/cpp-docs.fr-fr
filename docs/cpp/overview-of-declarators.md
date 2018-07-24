@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942694"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208560"
 ---
 # <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
 Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [déclarations et définitions](declarations-and-definitions-cpp.md), transmettre des propriétés telles que la classe de type et de stockage. Modificateurs, décrits dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifient les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- peut ressembler à la déclaration d’un **int** pointeur et une fonction qui retourne `int*`, mais il n’est pas.  En effet, * fait partie du déclarateur pour `i` et non pas du déclarateur pour `f`.  
+ peut ressembler à la déclaration d’un **int** pointeur et une fonction qui retourne `int*`, mais il n’est pas.  C’est parce que le \* fait partie du déclarateur pour `i`, ne fait pas partie du déclarateur pour `f`.  
   
  **Ce qui simplifie la syntaxe des déclarateurs avec typedef**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - et *pointeur-, opérateur* est une des :  
   
-  - * [qualificateurs cv]  
-  - & [qualificateurs cv] :: spécificateur de nom imbriqué * [qualificateurs cv]  
+  - \* [qualificateurs cv]  
+  - & [qualificateurs cv] :: spécificateur de nom imbriqué \* [qualificateurs cv]  
 
   
  Comme un déclarateur peut contenir des déclarateurs, il est possible de construire des types dérivés plus complexes, tels que des tableaux de pointeurs ou des fonctions retournant des tableaux de pointeurs de fonction, à l'aide des règles ci-dessus.  Pour former chaque étape de la construction, commencez avec l'identificateur représentant le type de données de base et appliquez la règle de syntaxe ci-dessus avec l'expression précédente comme `declarator`.  L'ordre dans lequel vous appliquez les règles de syntaxe doit être inverse à l'ordre dans lequel l'expression est énoncée en anglais.  Si l’application de la *pointeur-, opérateur* règle de syntaxe pour une expression de tableau ou fonction, utilisez des parenthèses si vous souhaitez un pointeur vers le tableau ou la fonction, comme dans la dernière ligne dans le tableau ci-dessous.  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |tableau de 10|`(*i)[10]`|4|  
 |pointeur désignant|`*((*i)[10])`|6 puis 5|  
   
- Lorsque plusieurs modificateurs de pointeur, référence, tableau ou fonction sont utilisés, les déclarateurs peuvent devenir relativement complexes.  La rubrique [interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md) explique comment lire la syntaxe des déclarateurs plus complexe.  La rubrique s’applique à C et C++, bien que dans C++, partout où le * est utilisé pour indiquer un pointeur, un nom qualifié tel que MyClass ::\* peut être utilisée pour spécifier un pointeur vers un membre d’une classe.
+ Lorsque plusieurs modificateurs de pointeur, référence, tableau ou fonction sont utilisés, les déclarateurs peuvent devenir relativement complexes.  La rubrique [interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md) explique comment lire la syntaxe des déclarateurs plus complexe.  La rubrique s’applique à C et C++, bien que dans C++, partout où le \* est utilisé pour indiquer un pointeur, un nom qualifié tel que MyClass ::\* peut être utilisée pour spécifier un pointeur vers un membre d’une classe.
