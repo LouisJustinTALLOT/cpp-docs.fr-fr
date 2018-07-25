@@ -1,5 +1,5 @@
 ---
-title: CStreamRowset (classe) | Documents Microsoft
+title: CStreamRowset, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,22 +11,39 @@ f1_keywords:
 - CStreamRowset
 - ATL.CStreamRowset<TAccessor>
 - ATL.CStreamRowset
+- CStreamRowset::CStreamRowset
+- CStreamRowset.CStreamRowset
+- ATL.CStreamRowset.CStreamRowset
+- ATL::CStreamRowset::CStreamRowset
+- CStreamRowset
+- CStreamRowset<TAccessor>::CStreamRowset
+- ATL::CStreamRowset<TAccessor>::CStreamRowset
+- CStreamRowset<TAccessor>.Close
+- ATL.CStreamRowset<TAccessor>.Close
+- CStreamRowset::Close
+- CStreamRowset<TAccessor>::Close
+- ATL::CStreamRowset::Close
+- ATL.CStreamRowset.Close
+- ATL::CStreamRowset<TAccessor>::Close
+- CStreamRowset.Close
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStreamRowset class
+- CStreamRowset class, constructor
+- Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3365767ed36bcdc45e87f08fb038500fa9ac6d82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0aad7fe25205d4cf31cbe76db3f1fb441858858
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100029"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233397"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset, classe
 Utilisé dans un `CCommand` ou `CTable` déclaration.  
@@ -38,9 +55,12 @@ template <class TAccessor = CAccessorBase>
 class CStreamRowset  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `TAccessor`  
- Une classe d’accesseur.  
+### <a name="parameters"></a>Paramètres  
+ *TAccessor*  
+ Classe d’accesseur.  
+
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
 ## <a name="members"></a>Membres  
   
@@ -48,8 +68,8 @@ class CStreamRowset
   
 |||  
 |-|-|  
-|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Constructeur. Instancie et initialise le `CStreamRowset` objet.|  
-|[Fermer](../../data/oledb/cstreamrowset-close.md)|Versions du [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) pointeur d’interface dans la classe.|  
+|[CStreamRowset](#cstreamrowset)|Constructeur. Instancie et initialise le `CStreamRowset` objet.|  
+|[Fermer](#close)|Versions le [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) pointeur d’interface dans la classe.|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez `CStreamRowset` dans votre `CCommand` ou `CTable` déclaration, par exemple :  
@@ -60,7 +80,7 @@ class CStreamRowset
   
  [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le **en lecture** méthode pour récupérer les données (chaîne Unicode) au format XML. Par exemple :  
+ `ICommand::Execute` Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le `Read` méthode pour récupérer les données (chaîne Unicode) au format XML. Exemple :  
   
  [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
@@ -69,8 +89,25 @@ class CStreamRowset
 > [!NOTE]
 >  Cette fonctionnalité fonctionne uniquement avec SQL Server 2000.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** atldbcli.h  
+## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+Instancie et initialise le `CStreamRowset` objet.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+CStreamRowset();  
+  
+```  
+
+## <a name="close"></a> CStreamRowset::Close
+Versions le [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) pointeur d’interface dans la classe.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+void Close();  
+  
+```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
