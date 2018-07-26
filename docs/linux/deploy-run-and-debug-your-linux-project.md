@@ -1,7 +1,8 @@
 ---
-title: Déployer, exécuter et déboguer un projet Linux | Microsoft Docs
+title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Studio | Microsoft Docs
+description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b3f3742f8a63bf93f5686143daeea23ba13255be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338053"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207677"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
-Une fois que vous avez créé un projet Linux et que vous vous êtes connecté au projet par le biais du [Gestionnaire de connexions Linux](../linux/connect-to-your-remote-linux-computer.md), vous pouvez exécuter et déboguer le projet. Vous compilez, exécutez et déboguez le code sur la cible distante.
+Une fois que vous avez créé un projet Linux C++ dans Visual Studio et que vous vous y êtes connecté par le biais du [Gestionnaire de connexions Linux](../linux/connect-to-your-remote-linux-computer.md), vous pouvez l’exécuter et le déboguer. Vous compilez, exécutez et déboguez le code sur la cible distante.
 
 Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848776"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208807"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 Cette étude de cas de portage vise à vous donner une idée de ce qu'est un projet de portage classique et des types de problèmes que vous êtes susceptible de rencontrer. Elle fournit également quelques conseils et astuces généraux qui vous aideront à résoudre certains problèmes liés au portage. Elle n'est pas destinée à être un guide du portage exhaustif, car le déroulement du portage d'un projet dépend beaucoup des spécificités du code.  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- La macro `MOUT` se résout en *g_pmout, qui est un objet de type `mstream`. La classe mstream est dérivée de la classe string de sortie standard, `std::basic_ostream<TCHAR>.`. Toutefois, à cause du _T que nous avons ajouté autour du littéral de chaîne en vue de la conversion en Unicode, la résolution de surcharge de l'opérateur << a échoué avec le message d'erreur suivant :  
+ La macro `MOUT` se résout en \*g_pmout, qui est un objet de type `mstream`. La classe mstream est dérivée de la classe string de sortie standard, `std::basic_ostream<TCHAR>.`. Toutefois, à cause du _T que nous avons ajouté autour du littéral de chaîne en vue de la conversion en Unicode, la résolution de surcharge de l'opérateur << a échoué avec le message d'erreur suivant :  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

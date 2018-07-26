@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337572"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208573"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Délimiteurs pour les étiquettes de documentation Visual C++
 L’utilisation de balises de documentation exige des délimiteurs, qui indiquent au compilateur où un commentaire de documentation commence et se termine.  
@@ -51,7 +51,7 @@ L’utilisation de balises de documentation exige des délimiteurs, qui indiquen
     /** <summary>text</summary> */  
     ```  
   
--   Le compilateur applique un modèle « * » à ignorer au début des deuxième et troisième lignes.  
+-   Le compilateur applique un modèle « \* » à ignorer au début des deuxième et troisième lignes.  
   
     ```  
     /**  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330802"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207758"
 ---
 # <a name="midl-property-pages-advanced"></a>Pages de propriétés MIDL : Avancé
 La page de propriétés **Avancé** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
@@ -48,7 +48,7 @@ La page de propriétés **Avancé** du dossier **MIDL** spécifie les options du
   
 -   Vérification des données stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Validation des paramètres ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Validation des paramètres ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   Alignement des membres de la structure ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   

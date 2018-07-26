@@ -1,7 +1,8 @@
 ---
-title: Télécharger, installer et configurer la charge de travail Linux | Microsoft Docs
+title: Installer la charge de travail Linux C++ dans Visual Studio | Microsoft Docs
+description: Décrit comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,14 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 1d28f0db0ff91dbdb08c9ca88dfe197e8942a7f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e33b9ac72ca7691ccbb80a9a30349d3a1e31e194
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329434"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207557"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
+
+Pour utiliser l’IDE Visual Studio pour créer et déboguer des projets C++ sur Linux, vous devez installer la charge de travail **Développement Linux en C++**.
 
 ## <a name="visual-studio-setup"></a>Installation Visual Studio
 1. Démarrez le programme d’installation de Visual Studio et sélectionnez la charge de travail **Développement Linux en C++**.

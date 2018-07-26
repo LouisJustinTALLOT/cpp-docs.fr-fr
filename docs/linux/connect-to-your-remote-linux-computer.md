@@ -1,7 +1,8 @@
 ---
-title: Se connecter à votre ordinateur Linux distant | Microsoft Docs
+title: Vous connecter à votre ordinateur Linux distant dans Visual Studio | Microsoft Docs
+description: Comment se connecter à un ordinateur Linux distant à partir d’un projet C++ Visual Studio.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,24 +13,24 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329320"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207664"
 ---
-# <a name="connect-to-your-remote-linux-computer"></a>Se connecter à votre ordinateur Linux distant
+# <a name="connect-to-your-remote-linux-computer"></a>Vous connecter à votre ordinateur Linux distant
 
-Lors de la génération, le code Linux est copié sur votre ordinateur Linux distant, puis compilé sur ce système selon les paramètres choisis dans Visual Studio.  Pour configurer cette connexion à distance :
+Lors de la génération d’un projet Linux C++ dans Visual Studio, le code Linux est copié sur votre ordinateur Linux distant, puis compilé selon les paramètres Visual Studio. Pour configurer cette connexion distante :
 
 1. Générez le projet pour la première fois ou créez manuellement une entrée en sélectionnant **Outils > Options**, puis ouvrez le nœud **Multiplateforme > Gestionnaire de connexion** et cliquez sur le bouton **Ajouter**.
 
    ![Gestionnaire de connexion](media/settings_connectionmanager.png)
 
-   Dans les deux cas, la fenêtre **Connect to Remote System** (Se connecter au système distant) s’affiche.
+   Dans les deux cas, la fenêtre **Se connecter au système distant** s’affiche.
    
-   ![Connect to Remote System (Se connecter au système distant)](media/connect.png)
+   ![Se connecter au système distant](media/connect.png)
 
 1. Entrez les informations suivantes :
 

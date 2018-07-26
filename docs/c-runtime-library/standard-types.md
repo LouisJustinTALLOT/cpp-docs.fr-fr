@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418521"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208778"
 ---
 # <a name="standard-types"></a>Types standard
 La bibliothèque Runtime Microsoft définit les types et typedefs standard suivants.  
@@ -218,7 +218,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |`fpos_t` (entier long, `__int64`, ou structure, selon la plateforme cible)|Utilisé par [fgetpos](../c-runtime-library/reference/fgetpos.md) et [fsetpos](../c-runtime-library/reference/fsetpos.md) pour enregistrer des informations afin de spécifier de manière unique chaque position dans un fichier.|STDIO.H|  
 |`_fsize_t` (entier long non signé)|Utilisé pour représenter la taille d'un fichier.|IO.H,<br /><br /> WCHAR.H|  
 |Structure `_HEAPINFO`|Contient des informations sur l'entrée suivante du tas pour [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|  
-|`_HFILE` (void *)|Handle de fichiers du système d'exploitation.|CRTDBG.H|  
+|`_HFILE` (void \*)|Handle de fichiers du système d'exploitation.|CRTDBG.H|  
 |`imaxdiv_t`|Type de valeur retournée par la fonction [imaxdiv](../c-runtime-library/reference/imaxdiv.md), contenant le quotient et le reste.|inttypes.h|  
 |`ino_t`, `_ino_t` (court non signé)|Pour retourner les informations d'état.|WCHAR.H|  
 |`intmax_t`|Un type d'entier signé capable de représenter toute valeur d'un type d'entier signé.|stdint.h|  

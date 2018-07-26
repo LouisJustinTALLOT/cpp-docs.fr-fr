@@ -1,7 +1,7 @@
 ---
-title: Pages de propriétés dans un projet Linux | Microsoft Docs
+title: Pages de propriétés d’un projet Linux C++ dans Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,12 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: ac222eb89cd0d2fee27e67fdb0c9ffb6a06fbc26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f6f7361a32e69461f6420cd94a1b7b34ceedd83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324010"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208739"
 ---
 # <a name="linux-project-property-page-reference"></a>Informations de référence sur les pages de propriétés dans un projet Linux
 
