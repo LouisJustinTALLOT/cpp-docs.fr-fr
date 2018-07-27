@@ -1,5 +1,5 @@
 ---
-title: IRowsetCreatorImpl, classe | Documents Microsoft
+title: IRowsetCreatorImpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,34 @@ f1_keywords:
 - ATL::IRowsetCreatorImpl<T>
 - ATL.IRowsetCreatorImpl<T>
 - IRowsetCreatorImpl
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetCreatorImpl class
+- SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0492994193130ffa6a547691490b4da1ae557c8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8d43c0824b2f4783b9a09782360940fb1327d99
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102135"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322057"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl, classe
-Exécute les mêmes fonctions que `IObjectWithSite` mais permet également de propriétés OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**.  
+Effectue les mêmes fonctions que `IObjectWithSite` mais permet également les propriétés OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +48,12 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
    : public IObjectWithSiteImpl< T >  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
- Une classe dérivée de **IRowsetCreator**.  
+### <a name="parameters"></a>Paramètres  
+ *T*  
+ Une classe dérivée de `IRowsetCreator`.  
+
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
 ## <a name="members"></a>Membres  
   
@@ -49,14 +61,30 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
   
 |||  
 |-|-|  
-|[SetSite](../../data/oledb/irowsetcreatorimpl-setsite.md)|Définit le site qui contient l’objet d’ensemble de lignes.|  
+|[SetSite](#setsite)|Définit le site qui contient l’objet d’ensemble de lignes.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe hérite de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) et remplacements [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Lorsqu’un objet de commande ou de la session du fournisseur crée un ensemble de lignes, il appelle `QueryInterface` sur l’objet d’ensemble de lignes recherchez `IObjectWithSite` et appelle `SetSite` en passant l’objet de l’ensemble de lignes **IUnkown** interface en tant que l’interface du site.  
+ Cette classe hérite de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) et remplace [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Lorsqu’un objet de commande ou de la session du fournisseur crée un ensemble de lignes, il appelle `QueryInterface` sur l’objet d’ensemble de lignes que vous recherchez `IObjectWithSite` et appelle `SetSite` en passant l’objet d’ensemble de lignes `IUnkown` interface en tant que l’interface du site.  
+
+## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
+Définit le site qui contient l’objet d’ensemble de lignes. Pour plus d’informations, consultez [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** atldb.h  
+### <a name="syntax"></a>Syntaxe  
   
+```cpp
+      STDMETHOD(SetSite )(IUnknown* pCreator);  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ *pCreator*  
+ [in] Pointeur vers le `IUnknown` pointeur d’interface du site de gestion de l’objet d’ensemble de lignes.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Une valeur HRESULT standard.  
+  
+### <a name="remarks"></a>Notes  
+ En outre, `IRowsetCreatorImpl::SetSite` permet OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` propriétés. 
+
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
