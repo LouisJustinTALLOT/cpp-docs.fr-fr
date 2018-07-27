@@ -1,5 +1,5 @@
 ---
-title: Icommandpropertiesimpl, classe | Documents Microsoft
+title: Icommandpropertiesimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,33 @@ f1_keywords:
 - ICommandPropertiesImpl
 - ATL.ICommandPropertiesImpl
 - ATL::ICommandPropertiesImpl
+- ICommandPropertiesImpl::GetProperties
+- ICommandPropertiesImpl.GetProperties
+- GetProperties
+- ICommandPropertiesImpl.SetProperties
+- ICommandPropertiesImpl::SetProperties
+- SetProperties
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICommandPropertiesImpl class
+- GetProperties method
+- SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25be1548bd41f832a007f102c138fc01f8818774
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f170aa27cdc52b98729b0953568575292f6f6b
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098999"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269584"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl, classe
-Fournit une implémentation de la [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) interface.  
+Fournit une implémentation de la [ICommandProperties](https://msdn.microsoft.com/library/ms723044.aspx) interface.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,12 +45,15 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Votre classe dérivée  
   
- `PropClass`  
+ *PropClass*  
  Votre classe de propriétés.  
+
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
 ## <a name="members"></a>Membres  
   
@@ -50,14 +61,42 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Retourne la liste des propriétés dans le groupe de propriétés d’ensemble de lignes qui sont actuellement demandé pour l’ensemble de lignes.|  
-|[SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)|Définit les propriétés dans le groupe de propriétés d’ensemble de lignes.|  
+|[GetProperties](#getproperties)|Retourne la liste des propriétés dans le groupe de propriétés d’ensemble de lignes qui sont actuellement demandées pour l’ensemble de lignes.|  
+|[SetProperties](#setproperties)|Définit les propriétés dans le groupe de propriétés d’ensemble de lignes.|  
   
 ## <a name="remarks"></a>Notes  
- Ce champ est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par le [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) (macro).  
+ Ce champ est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par le [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.  
+
+## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+Retourne tous les jeux de propriété demandée à l’aide du mappage des propriétés de la commande.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** atldb.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets);  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [ICommandProperties::GetProperties](https://msdn.microsoft.com/library/ms723119.aspx) dans le *de référence du programmeur OLE DB*.  
+  
+### <a name="remarks"></a>Notes  
+ Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+  
+## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+Définit les propriétés de l’objet de commande.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]);  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [ICommandProperties::SetProperties](https://msdn.microsoft.com/library/ms711497.aspx) dans le *de référence du programmeur OLE DB*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

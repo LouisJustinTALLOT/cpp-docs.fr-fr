@@ -1,5 +1,5 @@
 ---
-title: Idbcreatecommandimpl, classe | Documents Microsoft
+title: Idbcreatecommandimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,29 @@ f1_keywords:
 - ATL::IDBCreateCommandImpl
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
+- IDBCreateCommandImpl.CreateCommand
+- CreateCommand
+- IDBCreateCommandImpl::CreateCommand
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDBCreateCommandImpl class
+- CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cc032a488626f2d366152f2d2b70b2539b9137b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ffc92cecb3b28423aa2e869171f730c956996cd
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101524"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269749"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl, classe
-Fournit une implémentation de la [IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx) interface.  
+Fournit une implémentation de la [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx) interface.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,12 +41,15 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Dérivé de l’objet de session `IDBCreateCommandImpl`.  
   
- `CommandClass`  
+ *CommandClass*  
  Votre classe de commande.  
+
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
 ## <a name="members"></a>Membres  
   
@@ -50,13 +57,30 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
   
 |||  
 |-|-|  
-|[CreateCommand](../../data/oledb/idbcreatecommandimpl-createcommand.md)|Crée une nouvelle commande.|  
+|[CreateCommand](#createcommand)|Crée une nouvelle commande.|  
   
 ## <a name="remarks"></a>Notes  
  Une interface facultative sur l’objet de session pour obtenir une nouvelle commande.  
+
+## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+Crée une nouvelle commande et retourne l’interface demandée.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** atldb.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppvCommand);  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IDBCreateCommand::CreateCommand](https://msdn.microsoft.com/library/ms709772.aspx) dans le *de référence du programmeur OLE DB*.  
+  
+ Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBCreateCommand::CreateCommand`:  
+  
+|Paramètres de modèle OLE DB|*Référence du programmeur OLE DB* paramètres|  
+|--------------------------------|------------------------------------------------|  
+|*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
