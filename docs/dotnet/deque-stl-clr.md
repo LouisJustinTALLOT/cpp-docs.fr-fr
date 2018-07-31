@@ -1,5 +1,5 @@
 ---
-title: deque (STL/CLR) | Documents Microsoft
+title: deque (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -108,21 +108,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3d5db6c886de547abd94ec0390f1056efef0091e
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079823"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376194"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
-La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `deque` pour gérer une séquence d’éléments qui ressemble à un bloc contigu de stockage, mais qui peuvent augmenter ou réduire à chaque extrémité sans avoir besoin de copier les éléments restants. Par conséquent, elle peut implémenter efficacement un `double-ended queue`. (Par conséquent, le nom.)  
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `deque` pour gérer une séquence d’éléments qui se présente comme un bloc contigu de stockage, mais qui peuvent croître ou diminuer à chaque extrémité sans avoir besoin de copier les éléments restants. Par conséquent, elle peut implémenter efficacement un `double-ended queue`. (Par conséquent, le nom.)  
   
- Dans la description ci-dessous, `GValue` est identique à `Value` , sauf si ce dernier est un type référence, auquel cas il est `Value^`.  
+ Dans la description ci-dessous, `GValue` est identique à `Value` , sauf si ce dernier est un type ref, auquel cas il est `Value^`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     ref class deque  
         :   public  
@@ -137,10 +137,10 @@ template<typename Value>
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- GValue  
+ *GValue*  
  Le type générique d’un élément dans la séquence contrôlée.  
   
- Value  
+ *Valeur*  
  Type d'un élément dans la séquence contrôlée.  
   
 ## <a name="requirements"></a>Configuration requise  
@@ -178,17 +178,17 @@ template<typename Value>
 |[deque::end (STL/CLR)](#end)|Désigne la fin de la séquence contrôlée.|  
 |[deque::erase (STL/CLR)](#erase)|Supprime les éléments placés aux positions spécifiées.|  
 |[deque::front (STL/CLR)](#front)|Accède au premier élément.|  
-|[deque::insert (STL/CLR)](#insert)|Ajoute des éléments à la position spécifiée.|  
+|[deque::insert (STL/CLR)](#insert)|Ajoute des éléments à une position spécifiée.|  
 |[deque::pop_back (STL/CLR)](#pop_back)|Supprime le dernier élément.|  
 |[deque::pop_front (STL/CLR)](#pop_front)|Supprime le premier élément.|  
-|[deque::push_back (STL/CLR)](#push_back)|Ajoute un nouvel élément en dernier.|  
-|[deque::push_front (STL/CLR)](#push_front)|Ajoute un nouvel élément en premier.|  
+|[deque::push_back (STL/CLR)](#push_back)|Ajoute un nouvel élément dernière.|  
+|[deque::push_front (STL/CLR)](#push_front)|Ajoute un nouvel élément de premier.|  
 |[deque::rbegin (STL/CLR)](#rbegin)|Désigne le début de la séquence contrôlée inverse.|  
 |[deque::rend (STL/CLR)](#rend)|Désigne la fin de la séquence contrôlée inverse.|  
 |[deque::resize (STL/CLR)](#resize)|Modifie le nombre d’éléments.|  
 |[deque::size (STL/CLR)](#size)|Compte le nombre d'éléments.|  
 |[deque::swap (STL/CLR)](#swap)|Échange le contenu de deux conteneurs.|  
-|[deque::to_array (STL/CLR)](#to_array)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[deque::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée vers un nouveau tableau.|  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -219,15 +219,15 @@ template<typename Value>
 |IDeque < valeur\>|Mettre à jour de conteneur générique.|  
   
 ## <a name="remarks"></a>Notes  
- L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau stocké de handles qui désigne des blocs de `Value` éléments. Le module s’étend à la demande. Croissance se produit de manière à ce que le coût de l’ajoutant au début ou de l’ajout d’un nouvel élément est le temps constant, et aucuns autres éléments ne sont perturbés. Vous pouvez également supprimer un élément à des extrémités dans le temps et sans perturber éléments restants. Par conséquent, un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [la file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md) ou classe de modèle [pile (STL/CLR)](../dotnet/stack-stl-clr.md).  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau de handles qui désigne des blocs de stocké `Value` éléments. Le tableau se développe sur la demande. Croissance se produit de façon à ce que le coût d’ajoutant ou en ajoutant un nouvel élément est de temps constant, et aucun éléments restants ne sont perturbés. Vous pouvez également supprimer un élément aux deux extrémités en temps constant et sans perturber leurs éléments restants. Par conséquent, un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md) ou classe de modèle [pile (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- A `deque` objet prend en charge les itérateurs à accès aléatoire, ce qui signifie que vous pouvez faire référence à un élément donné directement de sa position numérique, en partant de zéro pour le premier élément (avant), à [deque::size (STL/CLR)](#size) `() - 1` pour le dernier élément (précédent). Cela signifie également qu’un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
+ Un `deque` objet prend en charge les itérateurs d’accès aléatoire, ce qui signifie que vous pouvez faire référence à un élément directement étant donné sa position numérique, en partant de zéro pour le premier élément (avant), à [deque::size (STL/CLR)](#size) `() - 1` pour le dernier élément (serveur). Cela signifie également qu’un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Un itérateur deque stocke un handle vers son objet deque associés, ainsi que le décalage de l’élément qu’il désigne. Vous pouvez utiliser des itérateurs uniquement avec les objets du conteneur associé. Le décalage d’un élément deque est `not` nécessairement identique à sa position. Le premier élément inséré a le décalage de zéro, l’élément ajouté suivant a POLARISATION 1, mais l’élément ajoutant au début suivant a écart -1.  
+ Un itérateur deque stocke un handle vers son objet deque associé, ainsi que l’écart de l’élément qu’il désigne. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associé. Le décalage d’un élément deque est *pas* nécessairement identique à sa position. Le premier élément inséré a écart de zéro, l’élément ajouté suivant a écart de 1, mais l’élément ajouté au début suivant a écart de -1.  
   
- Insertion ou la suppression d’éléments aux extrémités est `not` modifier la valeur d’un élément stocké sur n’importe quel décalage valide. Insertion ou suppression d’un élément intérieur, toutefois, `can` modifier la valeur d’élément stockée à un décalage donné, donc la valeur désignée par un itérateur peut également changer. (Le conteneur peut avoir à copier des éléments ou vers le bas pour créer une faille d’avant une opération d’insertion ou de remplissage d’un trou après un effacement.) Toutefois, un itérateur deque reste valide tant que son décalage désigne un élément valide. En outre, un itérateur valide reste dereferencable--vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne--tant que son décalage n’est pas égal à l’écart de l’itérateur retourné par `end()`.  
+ Insertion ou la suppression des éléments aux deux extrémités est *pas* modifier la valeur d’un élément stocké au niveau de tout écart valide. Insertion ou suppression d’un élément intérieur, toutefois, *pouvez* modifier la valeur d’élément stockée à un écart donné, donc la valeur désignée par un itérateur peut également changer. (Le conteneur peut avoir copier des éléments haut ou vers le bas pour créer un trou avant une insertion ou de remplissage d’un trou après un effacement). Néanmoins, un itérateur deque reste valide tant que son décalage désigne un élément valid. En outre, un itérateur valide reste déréférençable--vous pouvez l’utiliser pour accéder ou de modifier la valeur de l’élément qu’il désigne--tant que son écart n’est pas égal à l’écart de l’itérateur retourné par `end()`.  
   
- Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
+ Effacer ou de suppression d’un élément appelle le destructeur pour sa valeur stockée. Détruire le conteneur efface tous les éléments. Par conséquent, un conteneur dont le type élément est une classe ref garantit qu’aucun élément ne survivre le conteneur. Notez, toutefois, qu’un conteneur de handles ne *pas* détruire ses éléments.  
  
 ## <a name="members"></a>Membres
 
@@ -236,7 +236,7 @@ Remplace tous les éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void assign(size_type count, value_type val);  
 template<typename InIt>  
     void assign(InIt first, InIt last);  
@@ -244,27 +244,27 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `count`  
+ *count*  
  Nombre d’éléments à insérer.  
   
- `first`  
+ *first*  
  Début de la plage à insérer.  
   
- `last`  
+ *last*  
  Fin de la plage à insérer.  
   
- `right`  
+ *right*  
  Énumération à insérer.  
   
- `val`  
+ *Val*  
  Valeur de l’élément à insérer.  
   
 ### <a name="remarks"></a>Notes  
- La première fonction membre remplace la séquence contrôlée par une répétition de `count` éléments ayant la valeur `val`. Utilisez-le pour remplir le conteneur avec des éléments dont la même valeur.  
+ La première fonction membre remplace la séquence contrôlée par une répétition de *nombre* éléments ayant la valeur *val*. Vous utilisez pour remplir le conteneur avec des éléments dont la même valeur.  
   
- Si `InIt` est de type entier, la deuxième fonction membre comporte comme `assign((size_type)first, (value_type)last)`. Dans le cas contraire, elle remplace la séquence contrôlée par la séquence [`first`, `last`). Utilisez-le pour rendre le contrôlée une copie de la séquence une autre séquence.  
+ Si `InIt` est de type entier, la deuxième fonction membre comporte comme `assign((size_type)first, (value_type)last)`. Sinon, elle remplace la séquence contrôlée par la séquence [`first`, `last`). Utilisez-la pour rendre le contrôlée une copie de la séquence une autre séquence.  
   
- La troisième fonction membre remplace la séquence contrôlée par la séquence de désignée par l’énumérateur `right`. Il permet d’effectuer la séquence contrôlée une copie d’une séquence décrite par l’énumérateur.  
+ La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par l’énumérateur *droit*. Il permet d’effectuer la séquence contrôlée une copie d’une séquence décrite par un énumérateur.  
   
 ### <a name="example"></a>Exemple  
   
@@ -301,7 +301,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -315,16 +314,16 @@ Accède à un élément à une position spécifiée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference at(size_type pos);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- pos  
+ *points de vente*  
  Position de l'élément auquel accéder.  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne une référence à l’élément de la séquence contrôlée à la position `pos`. Vous l’utilisez pour lire ou écrire un élément dont la position vous connaissez.  
+ La fonction membre retourne une référence à l’élément de la séquence contrôlée à la position *pos*. Vous l’utilisez pour lire ou écrire un élément dont la position vous connaissez.  
   
 ### <a name="example"></a>Exemple  
   
@@ -365,12 +364,12 @@ Accède au dernier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne une référence au dernier élément de la séquence contrôlée, qui doit être vide. Il permet d’accéder au dernier élément, lorsque vous savez qu’il existe.  
+ La fonction membre retourne une référence au dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour accéder au dernier élément, lorsque vous savez qu’il existe.  
   
 ### <a name="example"></a>Exemple  
   
@@ -401,7 +400,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -415,12 +413,12 @@ Accède au dernier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La propriété accède le dernier élément de la séquence contrôlée, qui doit être vide. Vous l’utilisez pour lire ou écrire le dernier élément, lorsque vous savez qu’il existe.  
+ La propriété accède le dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le dernier élément lorsque vous savez qu’il existe.  
   
 ### <a name="example"></a>Exemple  
   
@@ -465,12 +463,12 @@ Désigne le début de la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne un itérateur à accès aléatoire qui désigne le premier élément de la séquence contrôlée ou juste après la fin d’une séquence vide. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
+ La fonction membre retourne un itérateur à accès aléatoire qui désigne le premier élément de la séquence contrôlée, ou juste après la fin d’une séquence vide. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
   
 ### <a name="example"></a>Exemple  
   
@@ -504,7 +502,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -519,12 +516,12 @@ Supprime tous les éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre appelle [deque::erase (STL/CLR)](#erase) `(` [deque::begin (STL/CLR)](#begin) `(),` [deque::end (STL/CLR)](#end) `())`. Il permet de vous assurer que la séquence contrôlée est vide.  
+ La fonction membre appelle [deque::erase (STL/CLR)](#erase) `(` [deque::begin (STL/CLR)](#begin) `(),` [deque::end (STL/CLR)](#end) `())`. Vous l’utilisez pour vous assurer que la séquence contrôlée est vide.  
   
 ### <a name="example"></a>Exemple  
   
@@ -560,7 +557,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -575,12 +571,12 @@ Type d'un itérateur constant pour la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet de type non spécifié `T2` qui peut servir d’un itérateur à accès aléatoire constant pour la séquence contrôlée.  
+ Le type décrit un objet de type non spécifié `T2` qui peut servir d’itérateur à accès aléatoire constant pour la séquence contrôlée.  
   
 ### <a name="example"></a>Exemple  
   
@@ -603,7 +599,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -615,7 +610,7 @@ Type d'une référence constante à un élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -646,7 +641,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -658,12 +652,12 @@ Le type d’un itérateur inverse constant pour la séquence contrôlée...
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet de type non spécifié `T4` qui peut servir d’un itérateur inverse constant pour la séquence contrôlée.  
+ Le type décrit un objet de type non spécifié `T4` qui peut servir d’itérateur inverse constant pour la séquence contrôlée.  
   
 ### <a name="example"></a>Exemple  
   
@@ -687,7 +681,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -699,7 +692,7 @@ Construit un objet conteneur.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 deque();  
 deque(deque<Value>% right);  
 deque(deque<Value>^ right);  
@@ -711,19 +704,19 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `count`  
+ *count*  
  Nombre d’éléments à insérer.  
   
- `first`  
+ *first*  
  Début de la plage à insérer.  
   
- `last`  
+ *last*  
  Fin de la plage à insérer.  
   
- `right`  
+ *right*  
  Objet ou plage à insérer.  
   
- `val`  
+ *Val*  
  Valeur de l’élément à insérer.  
   
 ### <a name="remarks"></a>Notes  
@@ -731,31 +724,31 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `deque();`  
   
- Initialise la séquence contrôlée sans aucun élément. Il permet de spécifier une séquence contrôlée initiale vide.  
+ Initialise la séquence contrôlée sans éléments. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide.  
   
  Le constructeur :  
   
  `deque(deque<Value>% right);`  
   
- Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`). Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque `right`. Pour plus d’informations sur les itérateurs, consultez [deque::begin (STL/CLR)](#begin) et [deque::end (STL/CLR)](#end).  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque *droit*. Pour plus d’informations sur les itérateurs, consultez [deque::begin (STL/CLR)](#begin) et [deque::end (STL/CLR)](#end).  
   
  Le constructeur :  
   
  `deque(deque<Value>^ right);`  
   
- Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`). Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque dont le handle est `right`.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque dont le handle est *droit*.  
   
  Le constructeur :  
   
  `explicit deque(size_type count);`  
   
- Initialise la séquence contrôlée avec `count` éléments dont la valeur `value_type()`. Utilisez-le pour remplir le conteneur avec des éléments dont la valeur par défaut.  
+ Initialise la séquence contrôlée avec *nombre* éléments dont la valeur `value_type()`. Vous utilisez pour remplir le conteneur avec des éléments dont la valeur par défaut.  
   
  Le constructeur :  
   
  `deque(size_type count, value_type val);`  
   
- Initialise la séquence contrôlée avec `count` éléments dont la valeur `val`. Utilisez-le pour remplir le conteneur avec des éléments dont la même valeur.  
+ Initialise la séquence contrôlée avec *nombre* éléments dont la valeur *val*. Vous utilisez pour remplir le conteneur avec des éléments dont la même valeur.  
   
  Le constructeur :  
   
@@ -769,7 +762,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `deque(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur *droit*. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur.  
   
 ### <a name="example"></a>Exemple  
   
@@ -824,7 +817,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -842,7 +834,7 @@ Les types d’une distance signée entre deux éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
@@ -881,7 +873,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -895,12 +886,12 @@ Vérifie l'absence d'éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [deque::size (STL/CLR)](#size)`() == 0`. Il permet de tester si le deque est vide.  
+ La fonction membre retourne la valeur true pour une séquence contrôlée vide. Il est équivalent à [deque::size (STL/CLR)](#size)`() == 0`. Vous l’utilisez pour tester si la deque est vide.  
   
 ### <a name="example"></a>Exemple  
   
@@ -929,7 +920,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -945,7 +935,7 @@ Désigne la fin de la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
@@ -985,7 +975,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1000,29 +989,29 @@ Supprime les éléments placés aux positions spécifiées.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `first`  
+ *first*  
  Début de la plage à effacer.  
   
- `last`  
+ *last*  
  Fin de la plage à effacer.  
   
- `where`  
+ *where*  
  Élément à effacer.  
   
 ### <a name="remarks"></a>Notes  
- La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé `where`. Il permet de supprimer un seul élément.  
+ La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé *où*. Il permet de supprimer un élément unique.  
   
  La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Il permet de supprimer de zéro ou plusieurs éléments contigus.  
   
  Les deux fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [deque::end (STL/CLR)](#end) `()` si cet élément n’existe.  
   
- Lorsque vous supprimez des éléments, le nombre de copies de l’élément est linéaire quant au nombre d’éléments entre la fin de la suppression et la fin la plus proche de la séquence. (Lorsque vous supprimez un ou plusieurs éléments à chaque extrémité de la séquence, aucune copie de l’élément se produit.)  
+ Lorsque vous supprimez des éléments, le nombre de copies de l’élément est linéaire quant au nombre d’éléments entre la fin de l’effacement et la fin la plus proche de la séquence. (Lorsque vous supprimez un ou plusieurs éléments à chaque extrémité de la séquence, aucune copie de l’élément se produire.)  
   
 ### <a name="example"></a>Exemple  
   
@@ -1061,7 +1050,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1077,12 +1065,12 @@ Accède au premier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne une référence au premier élément de la séquence contrôlée, qui doit être vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.  
+ La fonction membre retourne une référence au premier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1113,7 +1101,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1127,12 +1114,12 @@ Accède au premier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La propriété accède au premier élément de la séquence contrôlée, qui doit être vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.  
+ La propriété accède au premier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1163,7 +1150,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1177,7 +1163,7 @@ Le type de l’interface générique pour le conteneur.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IDeque<generic_value>  
     generic_container;  
@@ -1227,7 +1213,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1242,7 +1227,7 @@ Le type d’un itérateur pour une utilisation avec l’interface générique po
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerRandomAccessIterator<generic_value> generic_iterator;  
 ```  
@@ -1284,7 +1269,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1298,7 +1282,7 @@ Le type d’un itérateur inverse pour une utilisation avec l’interface géné
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value> generic_reverse_iterator;  
 ```  
@@ -1340,7 +1324,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1354,12 +1337,12 @@ Le type d’un élément pour une utilisation avec l’interface générique pou
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle.  
+ Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stockée pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1395,7 +1378,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1405,11 +1387,11 @@ a a c
 ```  
 
 ## <a name="insert"></a> deque::Insert (STL/CLR)
-Ajoute des éléments à la position spécifiée.  
+Ajoute des éléments à une position spécifiée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator insert(iterator where, value_type val);  
 void insert(iterator where, size_type count, value_type val);  
 template<typename InIt>  
@@ -1419,36 +1401,36 @@ void insert(iterator where,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `count`  
+ *count*  
  Nombre d’éléments à insérer.  
   
- `first`  
+ *first*  
  Début de la plage à insérer.  
   
- `last`  
+ *last*  
  Fin de la plage à insérer.  
   
- `right`  
+ *right*  
  Énumération à insérer.  
   
- `val`  
+ *Val*  
  Valeur de l’élément à insérer.  
   
- `where`  
+ *where*  
  Emplacement dans le conteneur à insérer avant.  
   
 ### <a name="remarks"></a>Notes  
- Chaque membre fonctions insertions, avant l’élément vers lequel pointé `where` dans la séquence contrôlée, une séquence spécifiée par les opérandes restants.  
+ Chacune du membre fonctions insertions, avant l’élément vers lequel pointé *où* dans la séquence contrôlée, une séquence spécifiée par les opérandes restants.  
   
- La première fonction membre insère un élément avec la valeur `val` et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique avant un endroit désigné par un itérateur.  
+ La première fonction membre insère un élément avec la valeur *val* et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique avant un emplacement désigné par un itérateur.  
   
- La deuxième fonction membre insère une répétition de `count` éléments ayant la valeur `val`. Il permet d’insérer des éléments contigus zéro ou plus qui sont toutes les copies de la même valeur.  
+ La deuxième fonction membre insère une répétition de *nombre* éléments ayant la valeur *val*. Il permet d’insérer de zéro ou plusieurs éléments contigus qui sont toutes les copies de la même valeur.  
   
- Si `InIt` est un type entier, la troisième fonction membre se comporte comme `insert(where, (size_type)first, (value_type)last)`. Dans le cas contraire, il insère la séquence [`first`, `last`). Il permet d’insérer de zéro ou plusieurs éléments contigus, copiés à partir d’une autre séquence.  
+ Si `InIt` est un type entier, la troisième fonction membre se comporte comme `insert(where, (size_type)first, (value_type)last)`. Sinon, elle insère la séquence [`first`, `last`). Il permet d’insérer de zéro ou plusieurs éléments contigus, copié à partir d’une autre séquence.  
   
- La quatrième fonction membre insère la séquence désignée par le `right`. Il permet d’insérer une séquence décrite par l’énumérateur.  
+ La quatrième fonction membre insère la séquence désignée par le *droit*. Il permet d’insérer une séquence décrite par un énumérateur.  
   
- Lors de l’insertion d’un élément unique, le nombre de copies de l’élément est linéaire quant au nombre d’éléments entre le point d’insertion et la fin la plus proche de la séquence. (Lors de l’insertion d’un ou plusieurs éléments à chaque extrémité de la séquence, aucune copie de l’élément se produit.) Si `InIt` est un itérateur d’entrée, la troisième fonction membre exécute en réalité une insertion unique pour chaque élément dans la séquence. Sinon, lors de l’insertion `N` éléments, le nombre de copies de l’élément est linéaire dans `N` plus le nombre d’éléments entre le point d’insertion et la fin la plus proche de la séquence.  
+ Quand vous insérez un élément unique, le nombre de copies de l’élément est linéaire quant au nombre d’éléments entre le point d’insertion et la fin la plus proche de la séquence. (Lors de l’insertion d’un ou plusieurs éléments à chaque extrémité de la séquence, aucune copie de l’élément se produire.) Si `InIt` est un itérateur d’entrée, la troisième fonction membre exécute efficacement une insertion unique pour chaque élément dans la séquence. Sinon, lors de l’insertion `N` éléments, le nombre de copies de l’élément est linéaire pour `N` plus le nombre d’éléments entre le point d’insertion et la fin la plus proche de la séquence.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1499,7 +1481,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1516,7 +1497,7 @@ Type d'un itérateur pour la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp 
 typedef T1 iterator;  
 ```  
   
@@ -1551,7 +1532,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1564,21 +1544,21 @@ Deque différent de comparaison.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator!=(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `left`  
+ *left*  
  Conteneur de gauche à comparer.  
   
- `right`  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si `left` n’est pas ordonné identique `right` lorsque les deux classes deque est comparé élément par élément.  
+ La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si *gauche* n’est pas ordonné identique *droit* lorsque les deux classes deque est comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1616,7 +1596,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,16 +1610,16 @@ Accède à un élément à une position spécifiée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference operator[](size_type pos);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- pos  
+ *points de vente*  
  Position de l'élément auquel accéder.  
   
 ### <a name="remarks"></a>Notes  
- L’opérateur membre retourne un referene à l’élément à la position `pos`. Il permet d’accéder à un élément dont vous connaissez la position.  
+ L’opérateur membre retourne un referene à l’élément à la position *pos*. Il permet d’accéder à un élément dont vous connaissez la position.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1668,7 +1647,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1681,12 +1659,12 @@ Supprime le dernier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop_back();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre supprime le dernier élément de la séquence contrôlée, qui doit être vide. Il permet de raccourcir la deque d’un élément à l’arrière.  
+ La fonction membre supprime le dernier élément de la séquence contrôlée, qui doit être non vide. Il permet de raccourcir la deque par un seul élément à l’arrière.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1714,7 +1692,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1727,12 +1704,12 @@ Supprime le premier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop_front();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre supprime le premier élément de la séquence contrôlée, qui doit être vide. Il permet de raccourcir la deque d’un élément au début.  
+ La fonction membre supprime le premier élément de la séquence contrôlée, qui doit être non vide. Il permet de raccourcir la deque par un élément au début.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1760,7 +1737,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1769,11 +1745,11 @@ b c
 ```  
   
 ## <a name="push_back"></a> deque::push_back (STL/CLR)
-Ajoute un nouvel élément en dernier.  
+Ajoute un nouvel élément dernière.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push_back(value_type val);  
 ```  
   
@@ -1800,7 +1776,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1808,11 +1783,11 @@ a b c
 ```  
 
 ## <a name="push_front"></a> deque::push_front (STL/CLR)
-Ajoute un nouvel élément en premier.  
+Ajoute un nouvel élément de premier.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push_front(value_type val);  
 ```  
   
@@ -1839,7 +1814,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1851,7 +1825,7 @@ Désigne le début de la séquence contrôlée inverse.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
@@ -1890,7 +1864,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1905,7 +1878,7 @@ Type d'une référence à un élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1946,7 +1919,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1959,7 +1931,7 @@ Désigne la fin de la séquence contrôlée inverse.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
@@ -1999,7 +1971,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2014,20 +1985,20 @@ Modifie le nombre d’éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- NEW_SIZE  
+ *NEW_SIZE*  
  Nouvelle taille de la séquence contrôlée.  
   
- Val  
+ *Val*  
  Valeur de l’élément de remplissage.  
   
 ### <a name="remarks"></a>Notes  
- Les deux fonctions membres Vérifiez que [deque::size (STL/CLR)](#size) `()` retourne désormais `new_size`. Si elle doit rallonger la séquence contrôlée, la première fonction membre ajoute des éléments avec la valeur `value_type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur `val`. Pour rendre la séquence contrôlée plus courte, les deux fonctions membres effacement efficacement le dernier élément [deque::size (STL/CLR)](#size) `() -` `new_size` fois. Vous l’utilisez pour vous assurer que la séquence contrôlée est de taille `new_size`, par la suppression ou la séquence contrôlée en cours de remplissage.  
+ Les deux fonctions membres Vérifiez que [deque::size (STL/CLR)](#size) `()` retourne désormais *new_size*. Si elle doit rallonger la séquence contrôlée, la première fonction membre ajoute des éléments avec la valeur `value_type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur *val*. Pour rendre la séquence contrôlée, les deux fonctions membres effacement efficacement le dernier élément [deque::size (STL/CLR)](#size) `() -` `new_size` fois. Vous l’utilisez pour vous assurer que la séquence contrôlée a taille *new_size*, par la suppression ou de la séquence contrôlée en cours de remplissage.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2057,7 +2028,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2072,7 +2042,7 @@ Type d'un itérateur inverse pour la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
@@ -2107,7 +2077,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2120,12 +2089,12 @@ Compte le nombre d'éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne la longueur de la séquence contrôlée. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si tout vous intéressent est indique si la séquence a une taille différente de zéro, consultez [deque::empty (STL/CLR)](#empty)`()`.  
+ La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous intéresse est si la séquence a une taille différente de zéro, consultez [deque::empty (STL/CLR)](#empty)`()`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2157,7 +2126,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2172,12 +2140,12 @@ Le type d’une distance signée entre deux éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un nombre non négatif élément.  
+ Le type décrit un nombre d’éléments de non négatif.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2203,7 +2171,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2216,16 +2183,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void swap(deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- droite  
+ *right*  
  Conteneur avec lequel échanger le contenu.  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre échange les séquences contrôlées entre `*this` et `right`. Cela se fait en temps constant et ne lève aucune exception. Vous l’utiliser comme un moyen rapide de l’échange le contenu de deux conteneurs.  
+ La fonction membre échange les séquences contrôlées entre `*this` et *droit*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide pour échanger le contenu de deux conteneurs.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2263,7 +2230,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2274,16 +2240,16 @@ a b c
 ```  
 
 ## <a name="to_array"></a> deque::to_array (STL/CLR)
-Copie de la séquence contrôlée vers un nouveau tableau.  
+Copie la séquence contrôlée vers un nouveau tableau.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne un tableau contenant la séquence contrôlée. Il permet d’obtenir une copie de la séquence contrôlée sous forme de tableau.  
+ La fonction membre retourne un tableau contenant la séquence contrôlée. Vous l’utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2313,7 +2279,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2326,12 +2291,12 @@ Type d’un élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Value`.  
+ Le type est un synonyme du paramètre de modèle *valeur*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2358,7 +2323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2370,21 +2334,21 @@ Deque inférieure à la comparaison.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- L’opérateur fonction retourne true si, pour la position la plus basse `i` pour lequel `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, elle retourne `left->size() < right->size()` vous l’utiliser pour tester si `left` est classé avant `right` lorsque les deux classes deque est comparé élément par élément.  
+ L’opérateur fonction retourne true si, pour la position la plus basse `i` pour lequel `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, elle retourne `left->size() < right->size()` vous l’utiliser pour tester si *gauche* est classé avant *droit* lorsque les deux classes deque est comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2422,7 +2386,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2433,25 +2396,25 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> opérateur&lt;= (deque) (STL/CLR)
-Deque inférieur ou égal comparaison.  
+Deque inférieure ou égale comparaison.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<=(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si `left` n’est pas ordonné après `right` lorsque les deux classes deque est comparé élément par élément.  
+ La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si *gauche* n’est pas ordonné après *droit* lorsque les deux classes deque est comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2489,7 +2452,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2504,16 +2466,16 @@ Remplace la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 deque<Value>% operator=(deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- droite  
+ *right*  
  Conteneur à copier.  
   
 ### <a name="remarks"></a>Notes  
- Les copies d’opérateur de membre `right` à l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans `right`.  
+ Les copies d’opérateur membre *droit* à l’objet, puis retourne `*this`. Utilisez-le pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *droit*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2542,7 +2504,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2551,25 +2512,25 @@ a b c
 ```  
   
 ## <a name="op_eq"></a> opérateur == (deque) (STL/CLR)
-Deque de comparaison égale.  
+Comparaison d’égalité deque.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator==(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne true uniquement si les séquences contrôlées par `left` et `right` ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Il permet de tester si `left` est ordonné identique `right` lorsque les deux classes deque est comparé élément par élément.  
+ La fonction d’opérateur retourne true uniquement si les séquences contrôlées par *gauche* et *droit* ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Il permet de tester si *gauche* est ordonné identique *droit* lorsque les deux classes deque est comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2607,7 +2568,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2618,25 +2578,25 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> opérateur&gt; (deque) (STL/CLR)
-Deque supérieure à la comparaison.  
+Deque comparaison de supériorité.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si `left` est trié après `right` lorsque les deux classes deque est comparé élément par élément.  
+ La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si *gauche* est trié après *droit* lorsque les deux classes deque est comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2674,7 +2634,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2685,25 +2644,25 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> opérateur&gt;= (deque) (STL/CLR)
-Comparaison supérieur ou égal à deque.  
+Comparaison supérieure ou égale à deque.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>=(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `!(left` `<` `right)`. Il permet de tester si `left` n’est pas classé avant `right` lorsque les deux classes deque est comparé élément par élément.  
+ La fonction d’opérateur retourne `!(left` `<` `right)`. Il permet de tester si *gauche* n’est pas classé avant *droit* lorsque les deux classes deque est comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2741,7 +2700,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2750,4 +2708,3 @@ int main()
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
 ``` 
- 

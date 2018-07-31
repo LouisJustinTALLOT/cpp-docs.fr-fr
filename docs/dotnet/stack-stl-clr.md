@@ -1,5 +1,5 @@
 ---
-title: pile (STL/CLR) | Documents Microsoft
+title: Stack (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -69,21 +69,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 09368f3a43a5ba7a5a1c4247fdbbccdf345b0b21
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079731"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376207"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
-La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments qui dispose d’un accès dernier sorti. Utilisation de l’adaptateur de conteneur `stack` pour gérer un conteneur sous-jacent comme une pile de transmission de type push.  
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d’éléments qui dispose d’un accès dernier sorti. Utilisation de l’adaptateur de conteneur `stack` pour gérer un conteneur sous-jacent comme une pile de push vers le bas.  
   
- Dans la description ci-dessous, `GValue` est identique à `Value` , sauf si ce dernier est un type référence, auquel cas il est `Value^`. De même, `GContainer` est identique à `Container` , sauf si ce dernier est un type référence, auquel cas il est `Container^`.  
+ Dans la description ci-dessous, `GValue` est identique à *valeur* , sauf si ce dernier est un type ref, auquel cas il est `Value^`. De même, `GContainer` est identique à *conteneur* , sauf si ce dernier est un type ref, auquel cas il est `Container^`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class stack  
@@ -94,14 +94,14 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- Value  
+ *Valeur*  
  Type d'un élément dans la séquence contrôlée.  
   
- Conteneur  
+ *Conteneur*  
  Type du conteneur sous-jacent.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<cliext/stack >  
+ **En-tête :** \<cliext/pile >  
   
  **Namespace :** cliext  
   
@@ -113,7 +113,7 @@ template<typename Value,
 |[stack::container_type (STL/CLR)](#container_type)|Type du conteneur sous-jacent.|  
 |[stack::difference_type (STL/CLR)](#difference_type)|Type d'une distance signée entre deux éléments.|  
 |[stack::generic_container (STL/CLR)](#generic_container)|Le type de l’interface générique pour l’adaptateur de conteneur.|  
-|[stack::generic_value (STL/CLR)](#generic_value)|Le type d’un élément de l’interface générique de l’adaptateur de conteneur.|  
+|[stack::generic_value (STL/CLR)](#generic_value)|Le type d’un élément pour l’interface générique pour l’adaptateur de conteneur.|  
 |[stack::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|  
 |[stack::size_type (STL/CLR)](#size_type)|Type d'une distance signée entre deux éléments.|  
 |[stack::value_type (STL/CLR)](#value_type)|Type d’un élément.|  
@@ -124,11 +124,11 @@ template<typename Value,
 |[stack::empty (STL/CLR)](#empty)|Vérifie l'absence d'éléments.|  
 |[stack::get_container (STL/CLR)](#get_container)|Accède au conteneur sous-jacent.|  
 |[stack::pop (STL/CLR)](#pop)|Supprime le dernier élément.|  
-|[stack::push (STL/CLR)](#push)|Ajoute un nouvel élément en dernier.|  
+|[stack::push (STL/CLR)](#push)|Ajoute un nouvel élément dernière.|  
 |[stack::size (STL/CLR)](#size)|Compte le nombre d'éléments.|  
 |[stack::stack (STL/CLR)](#stack)|Construit un objet conteneur.|  
 |[stack::top (STL/CLR)](#top)|Accède au dernier élément.|  
-|[stack::to_array (STL/CLR)](#to_array)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[stack::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée vers un nouveau tableau.|  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -149,10 +149,10 @@ template<typename Value,
 |Interface|Description|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Dupliquer un objet.|  
-|IStack\<valeur, le conteneur >|Mettre à jour la carte de conteneur générique.|  
+|IStack\<valeur, le conteneur >|Mettre à jour d’adaptateur de conteneur générique.|  
   
 ## <a name="remarks"></a>Notes  
- L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke `Value` éléments et à la demande. L’objet limite l’accès en exécutant un push et POP simplement le dernier élément, mise en œuvre d’une file d’attente dernier sorti (également appelé une file d’attente LIFO ou pile).  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type *conteneur*, qui stocke *valeur* éléments et se développe sur la demande. L’objet limite l’accès à poussant et en dépilant simplement le dernier élément, mise en œuvre d’une file d’attente, last-in sorti (également appelé une file d’attente LIFO, ou stack).  
  
 ## <a name="members"></a>Membres
 
@@ -161,16 +161,16 @@ Remplace tous les éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void assign(stack<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- droite  
+ *right*  
  Adaptateur de conteneur à insérer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre assigne `right.get_container()` au conteneur sous-jacent. Il permet de modifier le contenu entier de la pile.  
+ La fonction membre assigne `right.get_container()` au conteneur sous-jacent. Il permet de modifier tout le contenu de la pile.  
   
 ### <a name="example"></a>Exemple  
   
@@ -200,7 +200,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -213,7 +212,7 @@ Type d'une référence constante à un élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -244,7 +243,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -256,12 +254,12 @@ Type du conteneur sous-jacent.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Container`.  
+ Le type est un synonyme du paramètre de modèle *Container*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -284,8 +282,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -297,7 +294,7 @@ Les types d’une distance signée entre deux éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
@@ -340,7 +337,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -354,12 +350,12 @@ Vérifie l'absence d'éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Il permet de tester si la pile est vide.  
+ La fonction membre retourne la valeur true pour une séquence contrôlée vide. Il est équivalent à [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si la pile est vide.  
   
 ### <a name="example"></a>Exemple  
   
@@ -391,7 +387,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -407,7 +402,7 @@ Le type de l’interface générique pour l’adaptateur de conteneur.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IStack<Value>  
     generic_container;  
 ```  
@@ -454,7 +449,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -469,12 +463,12 @@ Le type d’un élément pour une utilisation avec l’interface générique pou
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle. (`GValue` est `value_type` ou `value_type^` si `value_type` est de type ref.)  
+ Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stockée pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle. (`GValue` est soit `value_type` ou `value_type^` si `value_type` est un type ref.)  
   
 ### <a name="example"></a>Exemple  
   
@@ -512,7 +506,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -526,12 +519,12 @@ Accède au conteneur sous-jacent.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne un handle pour le conteneur sous-jacent. Il permet de contourner les restrictions imposées par le wrapper de conteneur.  
+ La fonction membre retourne un handle pour le conteneur sous-jacent. Vous l’utilisez pour ignorer les restrictions imposées par le wrapper de conteneur.  
   
 ### <a name="example"></a>Exemple  
   
@@ -555,7 +548,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -567,16 +559,16 @@ Remplace la séquence contrôlée.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 stack <Value, Container>% operator=(stack <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- droite  
+ *right*  
  Adaptateur de conteneur à copier.  
   
 ### <a name="remarks"></a>Notes  
- Les copies d’opérateur de membre `right` à l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans `right`.  
+ Les copies d’opérateur membre *droit* à l’objet, puis retourne `*this`. Utilisez-le pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *droit*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -605,8 +597,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -619,12 +610,12 @@ Supprime le dernier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre supprime le dernier élément de la séquence contrôlée, qui doit être vide. Il permet de réduire la pile d’un élément à l’arrière.  
+ La fonction membre supprime le dernier élément de la séquence contrôlée, qui doit être non vide. Il permet de raccourcir la pile d’un élément à l’arrière.  
   
 ### <a name="example"></a>Exemple  
   
@@ -653,7 +644,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -662,11 +652,11 @@ a b
 ```  
 
 ## <a name="push"></a> Stack::push (STL/CLR)
-Ajoute un nouvel élément en dernier.  
+Ajoute un nouvel élément dernière.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
@@ -694,7 +684,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -706,7 +695,7 @@ Type d'une référence à un élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -741,7 +730,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -754,12 +742,12 @@ Compte le nombre d'éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne la longueur de la séquence contrôlée. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si tout vous intéressent est indique si la séquence a une taille différente de zéro, consultez [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
+ La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous intéresse est si la séquence a une taille différente de zéro, consultez [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -792,7 +780,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -807,12 +794,12 @@ Le type d’une distance signée entre deux éléments.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un nombre non négatif élément.  
+ Le type décrit un nombre d’éléments de non négatif.  
   
 ### <a name="example"></a>Exemple  
   
@@ -842,7 +829,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -855,7 +841,7 @@ Construit un objet d’adaptateur de conteneur.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 stack();  
 stack(stack<Value, Container>% right);  
 stack(stack<Value, Container>^ right);  
@@ -863,10 +849,10 @@ explicit stack(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- droite  
+ *right*  
  Objet à copier.  
   
- encapsulé  
+ *encapsulé*  
  Conteneur encapsulée à utiliser.  
   
 ### <a name="remarks"></a>Notes  
@@ -874,25 +860,25 @@ explicit stack(container_type% wrapped);
   
  `stack();`  
   
- Crée un conteneur encapsulé vide. Il permet de spécifier une séquence contrôlée initiale vide.  
+ Crée un conteneur vide encapsulé. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide.  
   
  Le constructeur :  
   
  `stack(stack<Value, Container>% right);`  
   
- Crée un conteneur encapsulé est une copie de `right.get_container()`. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de pile `right`.  
+ Crée un conteneur encapsulé est une copie de `right.get_container()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de pile *droit*.  
   
  Le constructeur :  
   
  `stack(stack<Value, Container>^ right);`  
   
- Crée un conteneur encapsulé est une copie de `right->get_container()`. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de pile `*right`.  
+ Crée un conteneur encapsulé est une copie de `right->get_container()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de pile `*right`.  
   
  Le constructeur :  
   
  `explicit stack(container_type% wrapped);`  
   
- utilise le conteneur existant `wrapped` comme conteneur encapsulé. Il permet de construire une pile à partir d’un conteneur existant.  
+ utilise le conteneur existant *encapsulé* comme conteneur encapsulé. Il permet de construire une pile à partir d’un conteneur existant.  
   
 ### <a name="example"></a>Exemple  
   
@@ -930,8 +916,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -942,16 +927,16 @@ size() = 0
 ```  
 
 ## <a name="to_array"></a> Stack::to_array (STL/CLR)
-Copie de la séquence contrôlée vers un nouveau tableau.  
+Copie la séquence contrôlée vers un nouveau tableau.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne un tableau contenant la séquence contrôlée. Il permet d’obtenir une copie de la séquence contrôlée sous forme de tableau.  
+ La fonction membre retourne un tableau contenant la séquence contrôlée. Vous l’utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.  
   
 ### <a name="example"></a>Exemple  
   
@@ -982,7 +967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -995,12 +979,12 @@ Accède au dernier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference top();  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne une référence au dernier élément de la séquence contrôlée, qui doit être vide. Il permet d’accéder au dernier élément, lorsque vous savez qu’il existe.  
+ La fonction membre retourne une référence au dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour accéder au dernier élément, lorsque vous savez qu’il existe.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1032,7 +1016,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1046,12 +1029,12 @@ Accède au dernier élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type top_item;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- La propriété accède le dernier élément de la séquence contrôlée, qui doit être vide. Vous l’utilisez pour lire ou écrire le dernier élément, lorsque vous savez qu’il existe.  
+ La propriété accède le dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le dernier élément lorsque vous savez qu’il existe.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1083,7 +1066,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1097,12 +1079,12 @@ Type d’un élément.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Value`.  
+ Le type est un synonyme du paramètre de modèle *valeur*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1128,8 +1110,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1137,11 +1118,11 @@ c b a
 ```  
 
 ## <a name="op_neq"></a> opérateur ! = (pile) (STL/CLR)
-La pile de comparaison n’est pas égal.  
+Comparaison différent de la pile.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(stack<Value, Container>% left,  
@@ -1149,14 +1130,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si `left` n’est pas ordonné identique `right` lorsque les deux piles sont comparé élément par élément.  
+ La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si *gauche* n’est pas ordonné identique *droit* lorsque les deux piles sont comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1194,8 +1175,7 @@ int main()
     System::Console::WriteLine("[a b c] != [a b d] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1206,11 +1186,11 @@ int main()
 ```  
 
 ## <a name="op_lt"></a> opérateur&lt; (pile) (STL/CLR)
-Pile inférieure à comparaison.  
+Pile inférieur comparaison.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(stack<Value, Container>% left,  
@@ -1218,14 +1198,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- L’opérateur fonction retourne true si, pour la position la plus basse `i` pour lequel `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, elle retourne `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` vous l’utiliser pour tester si `left` est classé avant `right` lorsque les deux piles sont comparé élément par élément.  
+ L’opérateur fonction retourne true si, pour la position la plus basse `i` pour lequel `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, elle retourne `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` vous l’utiliser pour tester si *gauche* est classé avant *droite* Lorsque les deux piles sont comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1263,8 +1243,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1279,7 +1258,7 @@ Inférieur ou égal de pile comparaison.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(stack<Value, Container>% left,  
@@ -1287,14 +1266,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si `left` n’est pas ordonné après `right` lorsque les deux piles sont comparé élément par élément.  
+ La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si *gauche* n’est pas ordonné après *droit* lorsque les deux piles sont comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1332,8 +1311,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1344,11 +1322,11 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> opérateur == (pile) (STL/CLR)
-Comparaison égale de la pile.  
+Pile de comparaison égale.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(stack<Value, Container>% left,  
@@ -1356,14 +1334,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne true uniquement si les séquences contrôlées par `left` et `right` ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Il permet de tester si `left` est ordonné identique `right` lorsque les deux piles sont comparé élément par élément.  
+ La fonction d’opérateur retourne true uniquement si les séquences contrôlées par *gauche* et *droit* ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Il permet de tester si *gauche* est ordonné identique *droit* lorsque les deux piles sont comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1401,8 +1379,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1413,11 +1390,11 @@ int main()
 ```  
   
 ## <a name="op_gt"></a> opérateur&gt; (pile) (STL/CLR)
-Supérieure à la comparaison de la pile.  
+Comparaison de supériorité de la pile.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(stack<Value, Container>% left,  
@@ -1425,14 +1402,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si `left` est trié après `right` lorsque les deux piles sont comparé élément par élément.  
+ La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si *gauche* est trié après *droit* lorsque les deux piles sont comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1470,8 +1447,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1482,11 +1458,11 @@ int main()
 ```  
   
 ## <a name="op_gteq"></a> opérateur&gt;= (pile) (STL/CLR)
-La pile supérieur ou égal à comparaison.  
+Pile supérieur ou égal à comparaison.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(stack<Value, Container>% left,  
@@ -1494,18 +1470,18 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- left  
+ *left*  
  Conteneur de gauche à comparer.  
   
- droite  
+ *right*  
  Conteneur de droite à comparer.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur retourne `!(left < right)`. Il permet de tester si `left` n’est pas classé avant `right` lorsque les deux piles sont comparé élément par élément.  
+ La fonction d’opérateur retourne `!(left < right)`. Il permet de tester si *gauche* n’est pas classé avant *droit* lorsque les deux piles sont comparé élément par élément.  
   
 ### <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cliext_stack_operator_ge.cpp   
 // compile with: /clr   
 #include <cliext/stack>   
@@ -1540,7 +1516,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1548,4 +1523,4 @@ int main()
  a b d  
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
-```  
+``` 

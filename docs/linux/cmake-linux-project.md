@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207785"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269538"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
 
@@ -38,13 +38,13 @@ Pour commencer, choisissez **Fichier** > **Ouvrir** > **Dossier** dans le menu p
 L’exemple suivant montre un fichier CMakeLists.txt et un fichier .cpp simples :
 
 ```cpp
-// Hello.cpp
+// hello.cpp
 
-#include <iostream>;
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Hello" << std::endl;
+    std::cout << "Hello from Linux CMake" << std::endl;
 }
 ```
 

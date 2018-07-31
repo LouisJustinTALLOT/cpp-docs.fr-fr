@@ -1,5 +1,5 @@
 ---
-title: fonctionnel (STL/CLR) | Documents Microsoft
+title: fonctionnel (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305902"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376363"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir l’un nombre de classes de modèle et les fonctions et les délégués de modèle associés.  
+Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir l’un nombre de classes de modèle et les fonctions et les délégués de modèle associé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +90,7 @@ Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir l’un nombre d
 ```  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<cliext/fonctionnel >  
+ **En-tête :** \<cliext/functional >  
   
  **Namespace :** cliext 
 
@@ -99,47 +99,47 @@ Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir l’un nombre d
 |délégué|Description|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](#binary_delegate)|Délégué à deux arguments.|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Délégué à deux arguments retournant `void`.|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Délégué de deux arguments retournant **void**.|  
 |[unary_delegate (STL/CLR)](#unary_delegate)|Délégué à un argument.|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Délégué à un argument retour `void`.|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Délégué à un argument retournant **void**.|  
   
 |Classe|Description|  
 |-----------|-----------------|  
-|[binary_negate (STL/CLR)](#binary_negate)|Functor pour annuler un functor deux arguments.|  
+|[binary_negate (STL/CLR)](#binary_negate)|Functor à inverser un functor deux arguments.|  
 |[binder1st (STL/CLR)](#binder1st)|Functor pour lier le premier argument à un functor deux arguments.|  
 |[binder2nd (STL/CLR)](#binder2nd)|Functor pour lier le deuxième argument à un functor deux arguments.|  
-|[divides (STL/CLR)](#divides)|Diviser functor.|  
-|[equal_to (STL/CLR)](#equal_to)|Fonction de comparaison égale.|  
-|[greater (STL/CLR)](#greater)|Fonction de comparaison supérieure.|  
-|[greater_equal (STL/CLR)](#greater_equal)|Fonction de comparaison supérieur ou égal à.|  
+|[divides (STL/CLR)](#divides)|Diviser le functor.|  
+|[equal_to (STL/CLR)](#equal_to)|Functor de comparaison égale.|  
+|[greater (STL/CLR)](#greater)|Functor de comparaison supérieur.|  
+|[greater_equal (STL/CLR)](#greater_equal)|Functor de comparaison supérieur ou égal à.|  
 |[less (STL/CLR)](#less)|Moins functor de comparaison.|  
-|[less_equal (STL/CLR)](#less_equal)|Fonction de comparaison inférieur ou égal à.|  
+|[less_equal (STL/CLR)](#less_equal)|Functor de comparaison inférieur ou égal à.|  
 |[logical_and (STL/CLR)](#logical_and)|Logique AND functor.|  
 |[logical_not (STL/CLR)](#logical_not)|Logique pas functor.|  
-|[logical_or (STL/CLR)](#logical_or)|Functor de OR logique.|  
+|[logical_or (STL/CLR)](#logical_or)|Functor d’OR logique.|  
 |[minus (STL/CLR)](#minus)|Soustraire functor.|  
 |[modulus (STL/CLR)](#modulus)|Functor de modulo.|  
 |[multiplies (STL/CLR)](#multiplies)|Multipliez functor.|  
-|[negate (STL/CLR)](#negate)|Functor pour retourner l’argument de l’opération de négation.|  
-|[not_equal_to (STL/CLR)](#not_equal_to)|Fonction de comparaison n’est pas égal.|  
-|[plus (STL/CLR)](#plus)|Ajoutez un functor.|  
-|[unary_negate (STL/CLR)](#unary_negate)|Functor pour annuler un functor un argument.|  
+|[negate (STL/CLR)](#negate)|Functor à renvoyer son argument négatif.|  
+|[not_equal_to (STL/CLR)](#not_equal_to)|Functor de comparaison différent.|  
+|[plus (STL/CLR)](#plus)|Ajoutez le functor.|  
+|[unary_negate (STL/CLR)](#unary_negate)|Functor à inverser un functor un argument.|  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|Génère un binder1st pour un argument et un functor.|  
-|[bind2nd (STL/CLR)](#bind2nd)|Génère un binder2nd pour un argument et un functor.|  
+|[bind1st (STL/CLR)](#bind1st)|Génère un binder1st pour un argument et le functor.|  
+|[bind2nd (STL/CLR)](#bind2nd)|Génère un binder2nd pour un argument et le functor.|  
 |[not1 (STL/CLR)](#not1)|Génère un unary_negate pour un functor.|  
 |[not2 (STL/CLR)](#not2)|Génère un binary_negate pour un functor.|  
    
 ## <a name="members"></a>Membres
 
 ## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-La classe genereic décrit un délégué à deux arguments. Vous l’utilisez spécifier en termes de ses types d’arguments et de retour d’un délégué.  
+La classe genereic décrit un délégué à deux arguments. Vous l’utilisez spécifier un délégué en termes de ses types d’arguments et de retour.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,13 +147,13 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- arg1  
+ *arg1*  
  Le type du premier argument.  
   
- Arg2  
- Le type du second argument.  
+ *Arg2*  
+ Le type du deuxième argument.  
   
- Résultat  
+ *Résultat*  
  Type de retour.  
   
 ### <a name="remarks"></a>Notes  
@@ -165,7 +165,7 @@ generic<typename Arg1,
   
  `binary_delegate<int, int, int> Fun2;`  
   
- les types `Fun1` et `Fun2` sont des synonymes, tandis que pour :  
+ les types `Fun1` et `Fun2` sont synonymes, tandis que pour :  
   
  `delegate int Fun1(int, int);`  
   
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,25 +208,25 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
-La classe genereic décrit un délégué à deux arguments qui renvoie `void`. Vous l’utilisez spécifier un délégué en termes de son argument.  
+La classe genereic décrit un délégué à deux arguments renvoyant **void**. Vous l’utilisez spécifier un délégué en termes de son argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- arg1  
+ *arg1*  
  Le type du premier argument.  
   
- Arg2  
- Le type du second argument.  
+ *Arg2*  
+ Le type du deuxième argument.  
   
 ### <a name="remarks"></a>Notes  
- Le délégué genereic décrit une fonction de deux arguments qui retourne `void`.  
+ Le délégué genereic décrit une fonction de deux arguments renvoyant **void**.  
   
  Notez que pour :  
   
@@ -235,7 +234,7 @@ generic<typename Arg1,
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- les types `Fun1` et `Fun2` sont des synonymes, tandis que pour :  
+ les types `Fun1` et `Fun2` sont synonymes, tandis que pour :  
   
  `delegate void Fun1(int, int);`  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -277,11 +275,11 @@ compare(b, a) = False
 ```  
 
 ## <a name="binary_negate"></a> binary_negate (STL/CLR)
-La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne la logique pas de son stockée functor de deux arguments. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne l’opérateur logique non de ses stockée functor deux arguments. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,8 +302,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- amusement  
- Le type de la fonction stockée.  
+ *amusement*  
+ Le type de foncteur stocké.  
   
 ## <a name="member-functions"></a>Fonctions membres  
   
@@ -313,21 +311,21 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
 |stored_function_type|Le type de foncteur.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|binary_negate|Construit le foncteur.|  
+|binary_negate|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type^()|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments qui stocke un autre functor de deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne la logique pas de la fonction stockée appelée avec les deux arguments.  
+ La classe de modèle décrit un functor deux arguments qui stocke un autre functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne l’opérateur logique pas du functor stocké appelée avec les deux arguments.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st (STL/CLR)
-Génère un `binder1st` pour un argument et un functor.  
+Génère un `binder1st` pour un argument et le functor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Paramètres de modèle  
- Arg  
+ *Arg*  
  Type de l’argument.  
   
- amusement  
+ *amusement*  
  Le type de foncteur.  
   
 #### <a name="function-parameters"></a>Paramètres de fonction  
- functor  
- La fonction à encapsuler.  
+ *functor*  
+ Le functor à encapsuler.  
   
- left  
- Le premier argument de retour à la ligne.  
+ *left*  
+ Le premier argument à encapsuler.  
   
 ### <a name="remarks"></a>Notes  
- La fonction de modèle retourne [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Vous l’utiliser comme un moyen pratique d’encapsuler un functor deux arguments et son premier argument à un functor un argument qui l’appelle avec un deuxième argument.  
+ La fonction de modèle retourne [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Vous l’utilisez comme un moyen pratique d’encapsuler un functor deux arguments et son premier argument à un functor un argument qui l’appelle avec un deuxième argument.  
   
 ### <a name="example"></a>Exemple  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd (STL/CLR)
-Génère un `binder2nd` pour un argument et un functor.  
+Génère un `binder2nd` pour un argument et le functor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Paramètres de modèle  
- Arg  
+ *Arg*  
  Type de l’argument.  
   
- amusement  
+ *amusement*  
  Le type de foncteur.  
   
 #### <a name="function-parameters"></a>Paramètres de fonction  
- functor  
- La fonction à encapsuler.  
+ *functor*  
+ Le functor à encapsuler.  
   
- droite  
- Le deuxième argument de retour à la ligne.  
+ *right*  
+ Le deuxième argument à encapsuler.  
   
 ### <a name="remarks"></a>Notes  
- La fonction de modèle retourne [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Vous l’utiliser comme un moyen pratique d’encapsuler un functor deux arguments et le second argument dans un functor un argument qui l’appelle avec un premier argument.  
+ La fonction de modèle retourne [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Vous l’utilisez comme un moyen pratique d’encapsuler un functor deux arguments et le deuxième argument dans un functor un argument qui l’appelle avec un premier argument.  
   
 ### <a name="example"></a>Exemple  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,11 +540,11 @@ int main()
 ```  
 
 ## <a name="binder1st"></a> binder1st (STL/CLR)
-La classe de modèle décrit un functor un argument qui, lorsqu’elle est appelée, retourne sa functor deux arguments stockée appelée avec le premier argument stockée et le deuxième argument fourni. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
+La classe de modèle décrit un functor un argument qui, lorsqu’elle est appelée, retourne sa functor deux arguments stockée appelée avec son premier argument stockée et le deuxième argument fourni. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,8 +566,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- amusement  
- Le type de la fonction stockée.  
+ *amusement*  
+ Le type de foncteur stocké.  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
@@ -580,21 +575,21 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
 |stored_function_type|Le type de foncteur.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|binder1st|Construit le foncteur.|  
+|binder1st|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type^()|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor un argument qui stocke un functor deux arguments et un premier argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le résultat de l’appel de la fonction stockée avec le premier argument stocké et le deuxième argument fourni.  
+ La classe de modèle décrit un functor un argument qui stocke un functor deux arguments et un premier argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le résultat de l’appel le functor stocké avec le premier argument stocké et le deuxième argument fourni.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -648,11 +642,11 @@ int main()
 ```  
 
 ## <a name="binder2nd"></a> binder2nd (STL/CLR)
-La classe de modèle décrit un functor un argument qui, lorsqu’elle est appelée, retourne sa functor deux arguments stockée appelé avec le premier argument fourni et son deuxième argument stockée. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
+La classe de modèle décrit un functor un argument qui, lorsqu’elle est appelée, retourne sa functor deux arguments stockée appelée avec le premier argument fourni et le deuxième argument stockée. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,8 +668,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- amusement  
- Le type de la fonction stockée.  
+ *amusement*  
+ Le type de foncteur stocké.  
   
 ## <a name="member-functions"></a>Fonctions membres  
   
@@ -683,21 +677,21 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
 |stored_function_type|Le type de foncteur.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|binder2nd|Construit le foncteur.|  
+|binder2nd|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type^()|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor un argument qui stocke un functor deux arguments et un deuxième argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le résultat de l’appel de la fonction stockée avec le premier argument fourni et le deuxième argument stocké.  
+ La classe de modèle décrit un functor un argument qui stocke un functor deux arguments et un deuxième argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le résultat de l’appel le functor stocké avec le premier argument fourni et le deuxième argument stocké.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -755,7 +748,7 @@ La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,7 +770,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments et de la valeur de retour.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -786,20 +779,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|divides|Construit le foncteur.|  
+|divides|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type^()|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument divisé par la seconde.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument divisé par la seconde.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -854,7 +846,7 @@ La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,7 +868,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -885,20 +877,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|equal_to|Construit le foncteur.|  
+|equal_to|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type^()|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est égal au second.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument est égal au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -953,7 +944,7 @@ La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,7 +966,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -984,20 +975,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|greater|Construit le foncteur.|  
+|greater|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est supérieur au second.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument est supérieur au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal (STL/CLR)
-La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne true uniquement si le premier argument est supérieur ou égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne la valeur true uniquement si le premier argument est supérieur ou égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,7 +1064,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1083,20 +1073,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|greater_equal|Construit le foncteur.|  
+|greater_equal|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est supérieur ou égal au second.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument est supérieur ou égal au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1151,7 +1140,7 @@ La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,7 +1162,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1182,20 +1171,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|less|Construit le foncteur.|  
+|less|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est inférieur au second.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument est inférieur au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal (STL/CLR)
-La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne true uniquement si le premier argument est inférieur ou égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne la valeur true uniquement si le premier argument est inférieur ou égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,7 +1260,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1281,20 +1269,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|less_equal|Construit le foncteur.|  
+|less_equal|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est inférieur ou égal au second.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument est inférieur ou égal au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1349,7 +1336,7 @@ La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,7 +1358,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1380,20 +1367,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|logical_and|Construit le foncteur.|  
+|logical_and|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument et le deuxième test en tant que true.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument et le deuxième test comme true.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1448,7 +1434,7 @@ La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,7 +1454,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1477,19 +1463,19 @@ public:
 |---------------------|-----------------|  
 |argument_type|Le type de l’argument functor.|  
 |delegate_type|Le type du délégué générique.|  
-|RESULT_TYPE|Le type du résultat functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|logical_not|Construit le foncteur.|  
+|logical_not|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor un argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si son argument tests comme false.  
+ La classe de modèle décrit un functor un argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si son argument teste comme false.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or (STL/CLR)
-La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument ou des deuxième tests en tant que la valeur true. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
+La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument ou les tests deuxième en tant que la valeur true. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,7 +1543,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1567,20 +1552,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|logical_or|Construit le foncteur.|  
+|logical_or|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument ou tests en tant que deuxième true.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument ou les tests deuxième comme true.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1635,7 +1619,7 @@ La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,7 +1641,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments et de la valeur de retour.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1666,20 +1650,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|minus|Construit le foncteur.|  
+|minus|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument, moins la seconde.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument moins le second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1734,7 +1717,7 @@ La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,7 +1739,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments et de la valeur de retour.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1765,20 +1748,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|modulus|Construit le foncteur.|  
+|modulus|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument modulo la seconde.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument modulo la seconde.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1833,7 +1815,7 @@ La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,7 +1837,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments et de la valeur de retour.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1864,20 +1846,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|multiplies|Construit le foncteur.|  
+|multiplies|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument heures la seconde.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument heures la seconde.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1928,11 +1909,11 @@ int main()
 ```  
 
 ## <a name="negate"></a> Negate (STL/CLR)
-La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne l’argument de l’opération de négation. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne son argument négatif. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,7 +1933,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -1961,19 +1942,19 @@ public:
 |---------------------|-----------------|  
 |argument_type|Le type de l’argument functor.|  
 |delegate_type|Le type du délégué générique.|  
-|RESULT_TYPE|Le type du résultat functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|negate|Construit le foncteur.|  
+|negate|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor un argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne son argument de l’opération de négation.  
+ La classe de modèle décrit un functor un argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne son argument négatif.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> Not_Equal_To (STL/CLR)
-La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument n’est pas égal à la seconde. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
+La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument n’est pas égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,7 +2022,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -2051,20 +2031,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|not_equal_to|Construit le foncteur.|  
+|not_equal_to|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument n’est pas égal à la seconde.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si le premier argument n’est pas égal au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2119,21 +2098,21 @@ Génère un `unary_negate` pour un functor.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Paramètres de modèle  
- amusement  
+ *amusement*  
  Le type de foncteur.  
   
 #### <a name="function-parameters"></a>Paramètres de fonction  
- functor  
- La fonction à encapsuler.  
+ *functor*  
+ Le functor à encapsuler.  
   
 ### <a name="remarks"></a>Notes  
- La fonction de modèle retourne [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Vous l’utiliser comme un moyen pratique d’encapsuler un functor un argument dans un functor qui remet son NOT logique.  
+ La fonction de modèle retourne [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Vous l’utilisez comme un moyen pratique d’encapsuler un functor un argument dans un functor qui offre n’est pas logique.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2188,21 +2166,21 @@ Génère un `binary_negate` pour un functor.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Paramètres de modèle  
- amusement  
+ *amusement*  
  Le type de foncteur.  
   
 #### <a name="function-parameters"></a>Paramètres de fonction  
- functor  
- La fonction à encapsuler.  
+ *functor*  
+ Le functor à encapsuler.  
   
 ### <a name="remarks"></a>Notes  
- La fonction de modèle retourne [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Vous l’utiliser comme un moyen pratique d’encapsuler un functor deux arguments dans un functor qui remet son NOT logique.  
+ La fonction de modèle retourne [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Vous l’utilisez comme un moyen pratique d’encapsuler un functor deux arguments dans un functor qui offre n’est pas logique.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2266,7 +2243,7 @@ La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourn
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,7 +2265,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Le type des arguments et de la valeur de retour.  
   
 ### <a name="member-functions"></a>Fonctions membres  
@@ -2297,20 +2274,20 @@ public:
 |---------------------|-----------------|  
 |delegate_type|Le type du délégué générique.|  
 |first_argument_type|Le type du premier argument functor.|  
-|RESULT_TYPE|Le type du résultat functor.|  
-|second_argument_type|Le type du second argument functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
+|second_argument_type|Le type du deuxième argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|plus|Construit le foncteur.|  
+|plus|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|opérateur delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument ainsi que la seconde.  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument ainsi que la seconde.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2361,21 +2337,21 @@ int main()
 ```  
 
 ## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-La classe genereic décrit un délégué à un argument. Vous l’utilisez spécifier en termes de ses types d’arguments et de retour d’un délégué.  
+La classe genereic décrit un délégué à un argument. Vous l’utilisez spécifier un délégué en termes de ses types d’arguments et de retour.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
- Type de l'argument.  
+ *Arg*  
+ Type de l’argument.  
   
- Résultat  
+ *Résultat*  
  Type de retour.  
   
 ### <a name="remarks"></a>Notes  
@@ -2387,7 +2363,7 @@ generic<typename Arg,
   
  `unary_delegare<int, int> Fun2;`  
   
- les types `Fun1` et `Fun2` sont des synonymes, tandis que pour :  
+ les types `Fun1` et `Fun2` sont synonymes, tandis que pour :  
   
  `delegate int Fun1(int);`  
   
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,21 +2400,21 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
-La classe genereic décrit un délégué à un argument qui renvoie `void`. Vous l’utilisez spécifier en termes de son type d’argument d’un délégué.  
+La classe genereic décrit un délégué à un argument qui renvoie **void**. Vous l’utilisez spécifier un délégué en termes de son type d’argument.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Arg  
+ *Arg*  
  Type de l’argument.  
   
 ### <a name="remarks"></a>Notes  
- Le délégué genereic décrit une fonction d’un argument qui renvoie `void`.  
+ Le délégué genereic décrit une fonction d’un argument qui retourne **void**.  
   
  Notez que pour :  
   
@@ -2447,7 +2422,7 @@ generic<typename Arg>
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- les types `Fun1` et `Fun2` sont des synonymes, tandis que pour :  
+ les types `Fun1` et `Fun2` sont synonymes, tandis que pour :  
   
  `delegate void Fun1(int);`  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2486,11 +2460,11 @@ hash(b) = 22
 ```  
 
 ## <a name="unary_negate"></a> unary_negate (STL/CLR)
-La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne la logique pas de son stockée functor d’un argument. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne l’opérateur logique non de ses stockée functor d’un argument. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,8 +2485,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- amusement  
- Le type de la fonction stockée.  
+ *amusement*  
+ Le type de foncteur stocké.  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
@@ -2520,19 +2494,19 @@ public:
 |---------------------|-----------------|  
 |argument_type|Le type de l’argument functor.|  
 |delegate_type|Le type du délégué générique.|  
-|RESULT_TYPE|Le type du résultat functor.|  
+|RESULT_TYPE|Le type du résultat de functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|unary_negate|Construit le foncteur.|  
+|unary_negate|Construit le functor.|  
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|operator()|Calcule la fonction de votre choix.|  
-|delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
+|operator()|Calcule la fonction souhaitée.|  
+|delegate_type ^|Convertit le functor à un délégué.|  
   
 ### <a name="remarks"></a>Notes  
- La classe de modèle décrit un functor un argument qui stocke un autre un argument functor. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne la logique pas de la fonction stockée appelée avec l’argument.  
+ La classe de modèle décrit un functor un argument qui stocke un autre un argument functor. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelée en tant que fonction, elle retourne l’opérateur logique pas du functor stocké appelé avec l’argument.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
