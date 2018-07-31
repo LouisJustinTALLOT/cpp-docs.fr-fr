@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207800"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338257"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection, classe
 Gère la connexion avec la source de données.  
@@ -133,8 +133,7 @@ Instancie et initialise un `CDataConnection` objet.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDataConnection();   
-
+CDataConnection();   
 CDataConnection(const CDataConnection &ds);  
 ```  
   
@@ -153,7 +152,7 @@ Crée une copie d’une connexion de données existante.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDataConnection& Copy(const CDataConnection & ds) throw();  
+CDataConnection& Copy(const CDataConnection & ds) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -202,7 +201,6 @@ Détermine si la session active est ouverte ou non.
   
 ```cpp
 operator BOOL() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -215,7 +213,6 @@ Détermine si la session active est ouverte ou non.
   
 ```cpp
 operator bool() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -228,7 +225,6 @@ Retourne une référence à la relation contenant-contenu `CDataSource` objet.
   
 ```cpp
 operator const CDataSource&() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -248,7 +244,6 @@ Retourne un pointeur vers la relation contenant-contenu `CDataSource` objet.
   
 ```cpp
 operator const CDataSource*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -263,7 +258,6 @@ Retourne une référence à la relation contenant-contenu `CSession` objet.
   
 ```cpp
 operator const CSession&();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -283,7 +277,6 @@ Retourne un pointeur vers la relation contenant-contenu `CSession` objet.
   
 ```cpp
 operator const CSession*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  

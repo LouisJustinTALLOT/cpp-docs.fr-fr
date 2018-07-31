@@ -1,5 +1,5 @@
 ---
-title: Substitution d’un accesseur dynamique | Documents Microsoft
+title: Substitution d’un accesseur dynamique | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107855"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340028"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substitution d’un accesseur dynamique
-Lorsque vous utilisez un accesseur dynamique tel que `CDynamicAccessor`, la commande **ouvrir** méthode crée un accesseur pour vous automatiquement, en fonction des informations de colonne de l’ensemble de lignes ouvert. Vous pouvez substituer l’accesseur dynamique pour contrôler exactement comment les colonnes sont liées.  
+Lorsque vous utilisez un accesseur dynamique tel que `CDynamicAccessor`, la commande `Open` méthode crée un accesseur pour vous automatiquement, selon les informations de colonne de l’ensemble de lignes ouvert. Vous pouvez substituer l’accesseur dynamique pour contrôler exactement comment les colonnes sont liées.  
   
- Pour substituer l’accesseur dynamique, passez **false** comme dernier paramètre à la `CCommand::Open` (méthode). Cela empêche **Open** de créer un accesseur automatiquement. Vous pouvez ensuite appeler `GetColumnInfo` et appelez `AddBindEntry` pour chaque colonne que vous souhaitez lier. Le code suivant montre comment procéder :  
+ Pour substituer l’accesseur dynamique, passez **false** comme dernier paramètre à la `CCommand::Open` (méthode). Cela empêche `Open` de créer un accesseur automatiquement. Vous pouvez ensuite appeler `GetColumnInfo` et appelez `AddBindEntry` pour chaque colonne que vous voulez lier. Le code suivant montre comment procéder :  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

@@ -37,12 +37,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ccf4d6b34362d4c8b7875319af444f755d741e7
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322034"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337071"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 Fournit une implémentation pour le [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) interface.  
@@ -85,7 +85,7 @@ Retourne les paramètres actuels pour les propriétés de le `DBPROPSET_ROWSET` 
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
    const DBPROPIDSET rgPropertyIDSets[],  
    ULONG* pcPropertySets,  
    DBPROPSET** prgPropertySets);  
@@ -100,7 +100,7 @@ Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’appliq
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
    REFIID riid,  
    IUnknown** ppReferencedRowset);  
 ```  
@@ -114,7 +114,7 @@ Retourne un pointeur d’interface sur l’objet (commande ou session) qui a cr�
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetSpecification )(REFIID riid,  
+STDMETHOD (GetSpecification )(REFIID riid,  
    IUnknown** ppSpecification);  
 ```  
   

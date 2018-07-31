@@ -1,5 +1,5 @@
 ---
-title: Activation et désactivation des Services pour un fournisseur | Documents Microsoft
+title: Activation et désactivation des Services pour un fournisseur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef36e35234aa4878e30e70748a5b2ba2975c38dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099730"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340688"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Activation et désactivation de services pour un fournisseur
-Services OLE DB individuels peuvent être activés ou désactivés par défaut pour toutes les applications qui accèdent à un seul fournisseur. Cela est fait en ajoutant un **OLEDB_SERVICES** CLSID, de l’entrée de Registre sous le fournisseur avec un `DWORD` valeur spécifiant les services pour activer ou désactiver, comme illustré dans le tableau suivant.  
+Des services OLE DB peuvent être activées ou désactivées par défaut pour toutes les applications qui accèdent à un seul fournisseur. Cela s’effectue en ajoutant une entrée de Registre OLEDB_SERVICES sous le CLSID du fournisseur, avec un `DWORD` valeur spécifiant les services pour activer ou désactiver, comme illustré dans le tableau suivant.  
   
-|Services activés par défaut|Valeur du mot clé|  
+|Services activés par défaut|Valeur de mot clé|  
 |------------------------------|-------------------|  
 |Tous les services (par défaut)|0xFFFFFFFF|  
 |Tous sauf le regroupement et l’inscription automatique|0xFFFFFFFE|  
-|Tous sauf le curseur Client|0xfffffffb|  
+|Tout sauf le curseur Client|0xfffffffb|  
 |Tous sauf le regroupement, l’inscription automatique et le curseur Client|0xfffffff0|  
 |Aucun service|0x00000000|  
 |Aucune agrégation, tous les services désactivés|\<clé manquante >|  

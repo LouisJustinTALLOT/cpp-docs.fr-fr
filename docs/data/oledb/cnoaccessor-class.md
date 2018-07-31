@@ -1,5 +1,5 @@
 ---
-title: Cnoaccessor, classe | Documents Microsoft
+title: Cnoaccessor, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3110d20330d42fcb0816873ff3e8a25d1f8436ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097352"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336737"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor, classe
-Peut être utilisé comme argument de modèle (`TAccessor`) pour les classes de modèle, telles que `CCommand` et `CTable`, qui nécessitent un argument de classe d’accesseur.  
+Peut être utilisé comme argument template (`TAccessor`) pour les classes de modèle, tel que `CCommand` et `CTable`, qui nécessitent un argument de classe d’accesseur.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,21 +36,21 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `CNoAccessor` comme argument de modèle lorsque vous ne souhaitez pas la classe pour prendre en charge des paramètres ou des colonnes de sortie.  
+ Utilisez `CNoAccessor` comme argument de modèle lorsque vous ne souhaitez pas que la classe pour prendre en charge des paramètres ou des colonnes de sortie.  
   
- `CNoAccessor` implémente les méthodes stub suivantes, chacune d’elles correspondent aux autres méthodes d’accesseur de classe :  
+ `CNoAccessor` implémente les méthodes stub suivantes, chacune d’elles correspondent à d’autres méthodes de classe d’accesseur :  
   
--   **BindColumns** -lie les colonnes aux accesseurs.  
+-   `BindColumns` -Lie les colonnes aux accesseurs.  
   
--   `BindParameters` -Lie les paramètres aux colonnes.  
+-   `BindParameters` -Lie les paramètres créés pour les colonnes.  
   
--   **Lier** -crée des liaisons.  
+-   `Bind` -Crée des liaisons.  
   
--   **Fermer** -ferme l’accesseur.  
+-   `Close` -Ferme l’accesseur.  
   
 -   `ReleaseAccessors` -Libère les accesseurs créés par la classe.  
   
--   `FreeRecordMemory` -Permet de libérer toutes les colonnes dans l’enregistrement actif qui doivent être libérées.  
+-   `FreeRecordMemory` -Libère toutes les colonnes dans l’enregistrement actif qui doivent être libérées.  
   
 -   `GetColumnInfo` -Obtient les informations de colonne à partir de l’ensemble de lignes ouvert.  
   
@@ -62,9 +62,9 @@ class CNoAccessor
   
 -   `GetBuffer` -Récupère le pointeur vers la mémoire tampon de signet.  
   
--   **NoBindOnNullRowset** -empêche la liaison de données sur des ensembles de lignes vide.  
+-   `NoBindOnNullRowset` : Empêche la liaison de données sur des ensembles de lignes vide.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

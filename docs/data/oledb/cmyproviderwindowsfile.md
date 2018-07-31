@@ -1,5 +1,5 @@
 ---
-title: CMyProviderWindowsFile | Documents Microsoft
+title: CMyProviderWindowsFile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8f0ba90bdcbaa4255757ee31015d0f6986862916
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f18f5a524cbfbfa7f17dfd3964c68329bc8a042
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097924"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338504"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-L’Assistant crée une classe pour contenir une ligne de données ; Dans ce cas, il est appelé `CMyProviderWindowsFile`. Le code suivant pour `CMyProviderWindowsFile` est généré par un Assistant et répertorie tous les fichiers dans un répertoire à l’aide de la **WIN32_FIND_DATA** structure. `CMyProviderWindowsFile` hérite de la **WIN32_FIND_DATA** structure :  
+L’Assistant crée une classe pour contenir une ligne de données ; Dans ce cas, elle est appelée `CMyProviderWindowsFile`. Le code suivant pour `CMyProviderWindowsFile` est généré par un Assistant et répertorie tous les fichiers dans un répertoire à l’aide de la `WIN32_FIND_DATA` structure. `CMyProviderWindowsFile` hérite le `WIN32_FIND_DATA` structure :  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -46,9 +46,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` est appelé le [classe d’enregistrement utilisateur](../../data/oledb/user-record.md) car elle contient également un mappage décrivant les colonnes dans l’ensemble de lignes du fournisseur. Le mappage de colonnes du fournisseur contient une entrée pour chaque champ dans l’ensemble de lignes à l’aide de macros PROVIDER_COLUMN_ENTRY. Les macros de spécifient le nom de colonne ordinal et l’offset à une entrée de la structure. Dans le code ci-dessus, les entrées de colonnes du fournisseur contiennent des offsets dans le **WIN32_FIND_DATA** structure. Lorsque le consommateur appelle **IRowset::GetData**, les données sont transférées dans une mémoire tampon contiguë. Plutôt que d’effectuer d’effectuer l’opération arithmétique de pointeur, le mappage permet de spécifier un membre de données.  
+ `CMyProviderWindowsFile` est appelé le [classe d’enregistrement utilisateur](../../data/oledb/user-record.md) , car elle contient également un mappage décrivant les colonnes dans l’ensemble de lignes du fournisseur. Le mappage de colonnes du fournisseur contient une entrée pour chaque champ dans l’ensemble de lignes que l’utilisation des macros PROVIDER_COLUMN_ENTRY. Les macros spécifient le nom de colonne ordinal et l’offset pour une entrée de la structure. Dans le code ci-dessus, les entrées de colonne du fournisseur contiennent des offsets dans la `WIN32_FIND_DATA` structure. Lorsque le consommateur appelle `IRowset::GetData`, données sont transférées dans une mémoire tampon contiguë. Plutôt que d’effectuer d’effectuer l’opération arithmétique de pointeur, le mappage vous permet de spécifier un membre de données.  
   
- Le `CMyProviderRowset` classe contient également le `Execute` (méthode). `Execute` est en fait, ce qui lit les données dans la source native. Le code suivant illustre la générées par l’Assistant `Execute` (méthode). La fonction utilise Win32 **FindFirstFile** et `FindNextFile` API pour extraire des informations sur les fichiers dans le répertoire et les placer dans des instances de la `CMyProviderWindowsFile` classe.  
+ Le `CMyProviderRowset` classe contient également le `Execute` (méthode). `Execute` est ce qui lit les données dans la source native. Le code suivant montre le générées par l’Assistant `Execute` (méthode). La fonction utilise Win32 `FindFirstFile` et `FindNextFile` API pour récupérer des informations sur les fichiers dans le répertoire et les placer dans des instances de la `CMyProviderWindowsFile` classe.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -83,7 +83,7 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
   
  Le répertoire à Explorer est représenté par `m_strCommandText`; il contient le texte représenté par le `ICommandText` interface dans l’objet de commande. Si aucun répertoire n’est spécifié, il utilise le répertoire actif.  
   
- La méthode crée une entrée pour chaque fichier (correspondant à une ligne) et le place dans le **m_rgRowData** membre de données. Le `CRowsetImpl` classe définit les **m_rgRowData** membre de données. Les données de ce tableau représentent la table entière et sont utilisées dans tous les modèles.  
+ La méthode crée une entrée pour chaque fichier (correspondant à une ligne) et le place dans le `m_rgRowData` membre de données. Le `CRowsetImpl` classe définit la `m_rgRowData` membre de données. Les données de ce tableau représentent la table entière et sont utilisées dans tous les modèles.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)

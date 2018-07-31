@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207836"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337595"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 Hérite de la `DBPROPSET` structurer et ajoute un constructeur qui initialise les champs clés, ainsi que les `AddProperty` accéder à la méthode.  
@@ -136,7 +136,7 @@ Constructeur. Initialise le `rgProperties`, `cProperties`, et `guidPropertySet` 
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);  
 
 CDBPropSet(const CDBPropSet& propset);  
 
@@ -156,7 +156,7 @@ Définit le `guidPropertySet` champ dans le `DBPROPSET` structure.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -172,7 +172,7 @@ Assigne le contenu d’une propriété définie sur un autre jeu de propriétés
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+CDBPropSet& operator =(CDBPropSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

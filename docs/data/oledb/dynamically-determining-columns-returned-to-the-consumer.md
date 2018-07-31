@@ -1,5 +1,5 @@
 ---
-title: Détermination de manière dynamique les colonnes retournées au consommateur | Documents Microsoft
+title: Détermination de manière dynamique des colonnes retournées au consommateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28150a39042305ab96c4dba7746c0b79dbec9509
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107937"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340454"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Détermination de manière dynamique des colonnes retournées au consommateur
-Les macros PROVIDER_COLUMN_ENTRY gèrent normalement le **IColumnsInfo::GetColumnsInfo** appeler. Toutefois, étant donné que le consommateur peut choisir d’utiliser des signets, le fournisseur doit être en mesure de modifier les colonnes retournées selon que le consommateur demande un signet.  
+Les macros PROVIDER_COLUMN_ENTRY gèrent normalement le `IColumnsInfo::GetColumnsInfo` appeler. Toutefois, étant donné qu’un consommateur peut choisir d’utiliser des signets, le fournisseur doit être en mesure de modifier les colonnes retournées selon que le consommateur demande un signet.  
   
- Pour gérer les **IColumnsInfo::GetColumnsInfo** appeler, supprimez la macro PROVIDER_COLUMN_MAP, qui définit une fonction `GetColumnInfo`, à partir de la `CAgentMan` utilisateur Enregistrer dans MyProviderRS.h et remplacez-la par la définition de votre propre `GetColumnInfo` (fonction) :  
+ Pour gérer le `IColumnsInfo::GetColumnsInfo` appeler, supprimez la macro PROVIDER_COLUMN_MAP, qui définit une fonction `GetColumnInfo`, à partir de la `CAgentMan` utilisateur enregistrent dans MyProviderRS.h et remplacez-la par la définition de votre propre `GetColumnInfo` fonction :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -51,9 +51,9 @@ public:
   
  Ensuite, implémentez la `GetColumnInfo` fonctionner dans MyProviderRS.cpp, comme indiqué dans le code suivant.  
   
- `GetColumnInfo` vérifie tout d’abord si la propriété OLE DB **DBPROP_BOOKMARKS** est définie. Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur (`pRowset`) à l’objet d’ensemble de lignes. Le `pThis` pointeur représente la classe qui a créé l’ensemble de lignes, qui est la classe où le mappage de propriété. `GetColumnInfo` Convertit le `pThis` pointeur vers un `RMyProviderRowset` pointeur.  
+ `GetColumnInfo` vérifie tout d’abord si la propriété OLE DB `DBPROP_BOOKMARKS` est définie. Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur (`pRowset`) à l’objet d’ensemble de lignes. Le `pThis` pointeur représente la classe qui a créé l’ensemble de lignes, qui est la classe où le mappage des propriétés. `GetColumnInfo` conversions de type les `pThis` pointeur vers un `RMyProviderRowset` pointeur.  
   
- Pour vérifier la **DBPROP_BOOKMARKS** propriété, `GetColumnInfo` utilise le `IRowsetInfo` interface que vous pouvez obtenir en appelant `QueryInterface` sur la `pRowset` interface. En guise d’alternative, vous pouvez utiliser un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) méthode à la place.  
+ Pour vérifier la `DBPROP_BOOKMARKS` propriété, `GetColumnInfo` utilise le `IRowsetInfo` interface, que vous pouvez obtenir en appelant `QueryInterface` sur la `pRowset` interface. Comme alternative, vous pouvez utiliser un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) méthode à la place.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +114,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- Cet exemple utilise un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne des signets, une entrée dans le tableau est inutilisée. Pour gérer les informations, vous créez deux macros de tableau : ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX prend un paramètre supplémentaire, `flags`, qui est nécessaire si vous désignez une colonne de signet.  
+ Cet exemple utilise un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne de signet, une entrée dans le tableau est inutilisée. Pour gérer les informations, vous créez deux macros de tableau : ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX prend un paramètre supplémentaire, `flags`, qui est nécessaire si vous désignez une colonne de signet.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -145,9 +145,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Dans la `GetColumnInfo` fonction, la macro de signets est utilisée comme suit :  
+ Dans le `GetColumnInfo` (fonction), la macro de signet est utilisée comme suit :  
   
-```  
+```cpp  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,   
    DBCOLUMNFLAGS_ISBOOKMARK)  

@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233417"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339215"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor, classe
 Utilisé par [CEnumerator](../../data/oledb/cenumerator-class.md) accéder aux données à partir de l’ensemble de lignes d’énumérateur.  
@@ -89,7 +89,6 @@ Une variable qui indique si l’énumérateur est un énumérateur parent, si la
   
 ```cpp
 VARIANT_BOOL m_bIsParent;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -102,7 +101,6 @@ Une variable qui indique si la ligne décrit une source de données ou d’un é
   
 ```cpp
 USHORT m_nType;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -115,7 +113,6 @@ Description de la source de données ou de l’énumérateur.
   
 ```cpp
 WCHAR m_szDescription[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -128,7 +125,6 @@ Le nom de la source de données ou de l’énumérateur.
   
 ```cpp
 WCHAR m_szName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -141,7 +137,6 @@ Chaîne à passer au [IParseDisplayName](http://msdn.microsoft.com/library/windo
   
 ```cpp
 WCHAR m_szParseName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  

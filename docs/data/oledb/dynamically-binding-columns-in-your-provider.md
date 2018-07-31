@@ -1,5 +1,5 @@
 ---
-title: Liaison dynamique des colonnes dans votre fournisseur | Documents Microsoft
+title: Liaison dynamique des colonnes dans votre fournisseur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 566a7248fabc1fcdb66224ccbc302e3f8038c5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101690"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336688"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Liaison dynamique des colonnes dans votre fournisseur
-Assurez-vous que vous avez vraiment besoin de liaison dynamique des colonnes. Vous en aurez besoin, car :  
+Assurez-vous que vous avez vraiment besoin de liaison dynamique des colonnes. Vous en auriez besoin, car :  
   
--   Les colonnes de l’ensemble de lignes ne sont pas définies au moment de la compilation.  
+-   Vos colonnes de l’ensemble de lignes ne sont pas définies au moment de la compilation.  
   
--   Vous prenez en charge un élément tel que les signets qui ajoute des colonnes.  
+-   Vous prend en charge un élément telles que les signets qui ajoute des colonnes.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>Pour implémenter la liaison de colonne dynamique  
   
-1.  Supprimer les **PROVIDER_COLUMN_MAP**s à partir de votre code.  
+1.  Supprimez les `PROVIDER_COLUMN_MAP`s à partir de votre code.  
   
 2.  Dans l’enregistrement utilisateur (votre structure), ajoutez la déclaration suivante :  
   
-    ```  
+    ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implémentez la `GetColumnInfo` (fonction). Cette fonction indique comment les informations sont stockées. Vous devrez peut-être obtenir des propriétés ou autres informations pour cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, pour ajouter vos propres informations.  
+3.  Implémentez le `GetColumnInfo` (fonction). Cette fonction indique comment les informations sont stockées. Vous devrez peut-être obtenir les propriétés ou autres informations relatives à cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, pour ajouter vos propres informations.  
   
      L’exemple suivant montre un `GetColumnInfo` (fonction).  
   
-    ```  
+    ```cpp  
     // Check the property flag for bookmarks, if it is set, set the zero  
     // ordinal entry in the column map with the bookmark information.  
     CAgentRowset* pRowset = (CAgentRowset*) pThis;  

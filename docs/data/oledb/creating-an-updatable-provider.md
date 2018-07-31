@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954582"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340636"
 ---
 # <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
 
@@ -30,7 +30,7 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
   
  Cette rubrique suppose que vous démarrez avec un fournisseur opérationnel. Il existe deux étapes pour créer un fournisseur actualisable. Vous devez d’abord déterminer comment le fournisseur sera apportée à la banque de données ; plus précisément, si modifications doivent être effectuées immédiatement ou différée jusqu'à ce que l’émission d’une commande de mise à jour. La section «[fournisseurs actualisables](#vchowmakingprovidersupdatable)» décrit les modifications et les paramètres que vous devez effectuer dans le code du fournisseur.  
   
- Ensuite, il se peut que vous devez vous assurer que votre fournisseur contient toutes les fonctionnalités pour prendre en charge tout ce que le consommateur peut lui demander. Si le consommateur souhaite mettre à jour le magasin de données, le fournisseur doit contenir du code qui rend persistantes les données au magasin de données. Par exemple, vous pouvez utiliser la bibliothèque du Run-Time C ou MFC pour exécuter des opérations sur votre source de données. La section «[écriture dans la Source de données](#vchowwritingtothedatasource)» explique comment écrire dans la source de données, pour traiter des `NULL` et valeurs par défaut et définir des indicateurs de la colonne.  
+ Ensuite, il se peut que vous devez vous assurer que votre fournisseur contient toutes les fonctionnalités pour prendre en charge tout ce que le consommateur peut lui demander. Si le consommateur souhaite mettre à jour le magasin de données, le fournisseur doit contenir du code qui rend persistantes les données au magasin de données. Par exemple, vous pouvez utiliser la bibliothèque du Run-Time C ou MFC pour exécuter des opérations sur votre source de données. La section «[écriture dans la Source de données](#vchowwritingtothedatasource)» décrit comment écrire dans la source de données, gérer les valeurs NULL et par défaut et définir des indicateurs de la colonne.  
   
 > [!NOTE]
 >  UpdatePV est un exemple d’un fournisseur actualisable. UpdatePV est le même que MyProv, mais avec prise en charge de mettre à jour.  
@@ -55,7 +55,7 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
   
      Ajouter `IRowsetChangeImpl` à votre chaîne d’héritage à l’aide de ce formulaire :  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
   
      Ajouter `IRowsetUpdate` à votre chaîne d’héritage à l’aide de ce formulaire :  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
   
 4.  Dans le mappage de jeu de propriété, vous incluez également tous les paramètres suivants de telles qu’elles apparaissent ci-dessous :  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

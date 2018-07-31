@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 072820f556f8e4d43a88daaeb8b50ac56db9ab5d
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233384"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338244"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor, classe
 Vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données).  
@@ -216,7 +216,7 @@ Instancie et initialise le `CDynamicAccessor` objet.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
    DBLENGTH nBlobSize = 8000);  
 ```  
   
@@ -239,7 +239,6 @@ Annule la liaison de toutes les colonnes, libère la mémoire allouée et libèr
   
 ```cpp
 void Close() throw();  
-  
 ```  
 
 ## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
@@ -249,7 +248,6 @@ Récupère l’objet BLOB de valeur pour la ligne actuelle de gestion.
   
 ```cpp
 const DBBLOBHANDLINGENUM GetBlobHandling() const;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -262,7 +260,6 @@ Récupère la taille d’objet BLOB maximale en octets.
   
 ```cpp
 const DBLENGTH GetBlobSizeLimit() const;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -294,7 +291,6 @@ Récupère le nombre de colonnes.
   
 ```cpp
 DBORDINAL GetColumnCount() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -307,7 +303,7 @@ Récupère les caractéristiques de la colonne.
   
 ```cpp
 bool GetColumnFlags(DBORDINAL nColumn,   
-  DBCOLUMNFLAGS* pFlags) const throw();  
+   DBCOLUMNFLAGS* pFlags) const throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -360,7 +356,7 @@ Récupère le nom de la colonne spécifiée.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
+LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -377,7 +373,7 @@ Récupère le type de données d’une colonne spécifiée.
   
 ```cpp
 bool GetColumnType(DBORDINAL nColumn,   
-  DBTYPE* pType) const throw();  
+   DBTYPE* pType) const throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -397,7 +393,7 @@ Récupère la longueur de la colonne spécifiée.
   
 ```cpp
 bool GetLength(DBORDINAL nColumn,   
-  DBLENGTH* pLength) const throw();  
+   DBLENGTH* pLength) const throw();  
 
 bool GetLength(const CHAR* pColumnName,   
    DBLENGTH* pLength) const throw();  
@@ -428,7 +424,7 @@ Récupère le numéro de colonne donné un nom de colonne.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool GetOrdinal(const CHAR* pColumnName,  
+bool GetOrdinal(const CHAR* pColumnName,  
    DBORDINAL* pOrdinal) const throw();  
 
 bool GetOrdinal(const WCHAR* pColumnName,  
@@ -452,7 +448,7 @@ Récupère l’état de la colonne spécifiée.
   
 ```cpp
 bool GetStatus(DBORDINAL nColumn,   
-  DBSTATUS* pStatus) const throw();  
+   DBSTATUS* pStatus) const throw();  
 
 bool GetStatus(const CHAR* pColumnName,  
    DBSTATUS* pStatus) const throw();  
@@ -525,7 +521,7 @@ Définit l’objet BLOB de valeur pour la ligne actuelle de gestion.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
+bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -549,7 +545,7 @@ Définit la taille maximale de BLOB en octets.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetBlobSizeLimit(DBLENGTH nBlobSize);  
+void SetBlobSizeLimit(DBLENGTH nBlobSize);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  

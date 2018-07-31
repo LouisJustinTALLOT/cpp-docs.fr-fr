@@ -1,5 +1,5 @@
 ---
-title: Classes de consommateur générées par l’Assistant | Documents Microsoft
+title: Classes de consommateur générées par l’Assistant | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091983"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338737"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes de consommateur générées par l’Assistant
 Quand vous utilisez l’Assistant Consommateur OLE DB ATL pour générer un consommateur, vous avez le choix entre utiliser soit des modèles OLE DB, soit des attributs OLE DB. Dans les deux cas, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande contient du code destiné à ouvrir la source de données et le rowset que vous avez spécifié dans l’Assistant. La classe d’enregistrement utilisateur contient un mappage de colonnes pour la table de base de données que vous avez sélectionnée. Cependant, le code généré est différent dans chaque cas :  
@@ -47,9 +47,9 @@ Quand vous utilisez l’Assistant Consommateur OLE DB ATL pour générer un cons
 >  Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
   
 > [!NOTE]
->  L’Assistant Consommateur OLE DB ATL utilise le type **DB_NUMERIC** pour lier les types de données numériques. Auparavant, il utilisait **DBTYPE_VARNUMERIC** (dont le format est décrit par le type **DB_VARNUMERIC** ; voir Oledb.h). Si vous n’utilisez pas l’Assistant pour créer des consommateurs, il est recommandé d’utiliser **DB_NUMERIC**.  
+>  L’Assistant Consommateur OLE DB ATL utilise le `DB_NUMERIC` type pour lier les types de données numériques. Auparavant, il utilisait `DBTYPE_VARNUMERIC` (dont le format est décrit par le `DB_VARNUMERIC` type ; voir Oledb.h). Si vous n’utilisez pas l’Assistant pour créer des consommateurs, il est recommandé d’utiliser `DB_NUMERIC`.  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>Propriétés du rowset  
  Ensuite, l’Assistant définit les propriétés du rowset. Si vous avez sélectionné **Modifier**, **Insérer**ou **Supprimer** dans l’Assistant Consommateur OLE DB ATL, les propriétés appropriées sont définies ici (DBPROP_IRowsetChange est toujours défini, puis une ou plusieurs propriétés parmi DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT et/ou DBPROPVAL_UP_DELETE, respectivement).  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>Classe de commande ou de table  
  Si vous spécifiez une classe de commande, l’Assistant déclare la classe de commande ; pour le code basé sur un modèle, la commande se présente comme suit :  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>Déclaration de classe  
  Enfin, l’Assistant génère une déclaration de classe de commande semblable à la suivante :  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  Dans l’exemple suivant, l’Assistant génère une déclaration pour la classe `COrders`, mais la classe d’enregistrement utilisateur `COrdersAccessor` n’apparaît pas, car elle est injectée par les attributs.  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

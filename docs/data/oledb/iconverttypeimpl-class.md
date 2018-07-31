@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dfa073226dc4ddb3cd14b2aae31375a6f6ccc25
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 57ad4c5e9f119a7c9904376db4f77c35de4290f2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269781"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337126"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl, classe
 Fournit une implémentation de la [IConvertType](https://msdn.microsoft.com/library/ms715926.aspx) interface.  
@@ -67,7 +67,7 @@ Fournit des informations sur la disponibilité de conversions de type sur une co
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(CanConvert)(DBTYPE wFromType,   
+STDMETHOD(CanConvert)(DBTYPE wFromType,   
    DBTYPE wToType,   
    DBCONVERTFLAGS dwConvertFlags);  
 ```  

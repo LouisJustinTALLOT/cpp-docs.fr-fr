@@ -1,5 +1,5 @@
 ---
-title: Simplifier l’accès aux données avec les attributs de base de données | Documents Microsoft
+title: Simplifier l’accès aux données avec les attributs de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,42 +29,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e665369f292a646353d1a180661982ce4c902665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a143badef2aec500b12d176e10c0a5eaf06b2cf4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111713"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339361"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplification de l'accès aux données à l'aide d'attributs de base de données
 Cette rubrique illustre l’utilisation d’attributs de base de données pour simplifier les opérations de base de données.  
   
- Pour accéder aux informations à partir d’une base de données, la base consiste à créer une classe command (ou table) et une classe d’enregistrement utilisateur pour une table particulière dans la base de données. Les attributs de base de données simplifient certaines des déclarations de modèles que vous deviez effectuer précédemment.  
+ La méthode simple pour accéder aux informations à partir d’une base de données consiste à créer une classe de commande (ou table) et une classe d’enregistrement utilisateur pour une table particulière dans la base de données. Les attributs de base de données simplifient certaines des déclarations de modèles que vous deviez effectuer précédemment.  
   
- Pour illustrer l’utilisation d’attributs de base de données, les sections suivantes montrent deux table équivalente et les déclarations de classe d’enregistrement utilisateur : la première utilise les attributs et la seconde utilise des modèles OLE DB. Ce code de déclaration est généralement placé dans un fichier d’en-tête nommé pour l’objet table ou de la commande, par exemple, Authors.h.  
+ Pour illustrer l’utilisation d’attributs de base de données, les sections suivantes montrent deux table équivalente et les déclarations de classe d’enregistrement utilisateur : la première utilise les attributs et la seconde utilise les modèles OLE DB. Ce code de déclaration est généralement placé dans un fichier d’en-tête nommé pour l’objet table ou de la commande, par exemple, Authors.h.  
   
  En comparant les deux fichiers, vous pouvez voir comment beaucoup plus simple est d’utiliser les attributs. Parmi les différences sont :  
   
--   L’utilisation d’attributs, il vous suffit de déclarer une classe : `CAuthors`, tandis que des modèles, vous devez déclarer deux : `CAuthorsNoAttrAccessor` et `CAuthorsNoAttr`.  
+-   À l’aide des attributs, il vous suffit de déclarer une classe : `CAuthors`, tandis qu’avec des modèles, vous devez déclarer deux : `CAuthorsNoAttrAccessor` et `CAuthorsNoAttr`.  
   
 -   Le `db_source` appel dans la version avec attributs est équivalent à la `OpenDataSource()` appeler dans la déclaration de modèle.  
   
--   Le **db_table** appel dans la version avec attributs est équivalent à la déclaration de modèle suivante :  
+-   Le `db_table` appel dans la version avec attributs est équivalent à la déclaration de modèle suivante :  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   Le **db_column** appels dans la version avec attributs sont équivalents au mappage de colonnes (voir `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) dans la déclaration de modèle.  
+-   Le `db_column` appels dans la version avec attributs sont équivalents au mappage de colonnes (voir `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) dans la déclaration de modèle.  
   
- Les attributs injectent une déclaration de classe d’enregistrement utilisateur pour vous. La classe d’enregistrement utilisateur est équivalente à `CAuthorsNoAttrAccessor` dans la déclaration de modèle. Si votre classe de table est `CAuthors`, la classe d’enregistrement utilisateur injectée se nomme `CAuthorsAccessor`, et vous pouvez seulement afficher sa déclaration dans le code injecté. Pour plus d’informations, consultez « Classes d’enregistrement utilisateur injectées par des attributs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).  
+ Les attributs injectent une déclaration de classe d’enregistrement utilisateur pour vous. La classe d’enregistrement utilisateur est équivalente à `CAuthorsNoAttrAccessor` dans la déclaration de modèle. Si votre classe de table est `CAuthors`, la classe d’enregistrement utilisateur injectée est nommée `CAuthorsAccessor`, et vous pouvez uniquement afficher sa déclaration dans le code injecté. Pour plus d’informations, consultez « Classes d’enregistrement utilisateur injectées par des attributs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).  
   
- Notez que dans à la fois avec attributs et le code basé sur un modèle, vous devez définir les propriétés d’ensemble de lignes à l’aide de `CDBPropSet::AddProperty`.  
+ Notez que dans à la fois avec attributs et le code basé sur un modèle, vous devez définir les propriétés d’ensemble de lignes à l’aide `CDBPropSet::AddProperty`.  
   
  Pour plus d’informations sur les attributs présentés dans cette rubrique, consultez [les attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Table et la déclaration d’accesseur à l’aide d’attributs  
- Le code suivant appelle `db_source` et **db_table** sur la classe de table. `db_source` Spécifie la source de données et la connexion à utiliser. **db_table** injecte le code de modèle approprié pour déclarer une classe de table. **db_column** spécifier le mappage de colonnes et injecte la déclaration d’accesseur. Vous pouvez utiliser les attributs du consommateur OLE DB dans tous les projets qui prend en charge ATL.  
+ Le code suivant appelle `db_source` et `db_table` sur la classe de table. `db_source` Spécifie la source de données et la connexion à utiliser. `db_table` injecte le code de modèle approprié pour déclarer une classe de table. `db_column` spécifier le mappage de colonnes et injecte la déclaration d’accesseur. Vous pouvez utiliser des attributs du consommateur OLE DB dans n’importe quel projet qui prend en charge ATL.  
   
  Voici la déclaration de table et d’accesseur à l’aide d’attributs :  
   
@@ -208,4 +208,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md)   
- [Procédures pas à pas les attributs](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [Procédures pas à pas les attributs](http://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

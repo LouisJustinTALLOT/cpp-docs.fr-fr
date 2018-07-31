@@ -1,5 +1,5 @@
 ---
-title: Remplissage d’une zone de liste à partir d’un Second jeu d’enregistrements (MFC Data Access) | Documents Microsoft
+title: Remplissage d’une zone de liste à partir d’un Second Recordset (accès de données MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090645"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339768"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Remplissage d'une zone de liste à partir d'un second recordset (Accès aux données MFC)
 Par défaut, une vue d'enregistrement est associée à un seul objet recordset dont les champs sont mappés aux contrôles de la vue d'enregistrement. Parfois, vous souhaiterez peut-être placer un contrôle de zone de liste ou de zone de liste déroulante dans votre vue d'enregistrement et le remplir avec des valeurs issues d'un second objet recordset. L'utilisateur peut utiliser la zone de liste pour sélectionner une nouvelle catégorie d'informations à afficher dans la vue d'enregistrement. Cette rubrique explique quand et comment procéder ainsi.  
@@ -38,17 +38,17 @@ Par défaut, une vue d'enregistrement est associée à un seul objet recordset d
   
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Pour remplir une zone de liste déroulante ou une zone de liste à partir d'un second recordset  
   
-1.  Créez l’objet recordset ([CRecordset](../mfc/reference/crecordset-class.md).  
+1.  Créer l’objet recordset ([CRecordset](../mfc/reference/crecordset-class.md).  
   
 2.  Obtenir un pointeur vers le [CComboBox](../mfc/reference/ccombobox-class.md) objet pour le contrôle de zone de liste déroulante.  
   
 3.  Videz la zone de liste déroulante de son contenu précédent.  
   
-4.  Parcourez tous les enregistrements dans le jeu d’enregistrements, l’appel [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) pour chaque chaîne à partir de l’enregistrement actif que vous souhaitez ajouter à la zone de liste déroulante.  
+4.  Parcourez tous les enregistrements dans le jeu d’enregistrements, appelant [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) pour chaque chaîne à partir de l’enregistrement actif que vous souhaitez ajouter à la zone de liste déroulante.  
   
 5.  Initialisez la sélection dans la zone de liste déroulante.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  
@@ -79,5 +79,5 @@ void CSectionForm::OnInitialUpdate()
  La fonction obtient `m_courseSet` à partir du document et l'ouvre. Ensuite, elle vide `m_ctlCourseList` et parcourt `m_courseSet`. Pour chaque enregistrement, la fonction appelle la fonction membre `AddString` de la zone de liste déroulante pour ajouter la valeur de l'ID du cours à partir de l'enregistrement. Pour finir, le code définit la sélection de la liste déroulante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues des enregistrements (MFC Data Access)](../data/record-views-mfc-data-access.md)   
+ [Vues d’enregistrement (accès de données MFC)](../data/record-views-mfc-data-access.md)   
  [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

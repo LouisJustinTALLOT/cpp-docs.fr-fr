@@ -1,5 +1,5 @@
 ---
-title: Parcours d’un ensemble de lignes Simple | Documents Microsoft
+title: Parcourir un ensemble de lignes Simple | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102949"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336652"
 ---
 # <a name="traversing-a-simple-rowset"></a>Parcours d'un jeu de lignes simple
-L’exemple suivant montre un accès simple et rapide de la base de données qui n’implique pas de commandes. Le code de consommateur suivant, dans un projet ATL, extrait des enregistrements à partir d’une table appelée *artistes* Microsoft Access, une base de données à l’aide du fournisseur Microsoft OLE DB pour ODBC. Le code crée un [CTable](../../data/oledb/ctable-class.md) objet de table avec un accesseur basé sur la classe d’enregistrement utilisateur `CArtists`. Ouvre une connexion, ouvre une session sur la connexion et la table s’ouvre sur la session.  
+L’exemple suivant montre un accès simple et rapide de la base de données qui n’implique pas de commandes. Le code de consommateur suivant, dans un projet ATL, récupère les enregistrements d’une table appelée *artistes* Microsoft Access, une base de données à l’aide du fournisseur Microsoft OLE DB pour ODBC. Le code crée un [CTable](../../data/oledb/ctable-class.md) objet de table avec un accesseur basé sur la classe d’enregistrement utilisateur `CArtists`. Il ouvre une connexion, ouvre une session sur la connexion et la table s’ouvre sur la session.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- L’enregistrement d’utilisateur, `CArtists`, ressemble à ceci :  
+ L’enregistrement de l’utilisateur, `CArtists`, ressemble à ceci :  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

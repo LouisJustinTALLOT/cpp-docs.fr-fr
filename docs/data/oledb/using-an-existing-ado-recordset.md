@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’un Recordset ADO existant | Documents Microsoft
+title: À l’aide d’un Recordset ADO existant | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103562"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338936"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilisation d'un recordset ADO existant
-Pour combiner des modèles du consommateur OLE DB et Active Data Objects (ADO), utilisez ADO pour ouvrir un jeu d’enregistrements (correspondant à un ensemble de lignes dans les modèles du consommateur OLE DB). Lorsque vous disposez d’un jeu d’enregistrements, procédez comme suit pour vous connecter à un ensemble de lignes OLE DB :  
+Pour combiner des modèles du consommateur OLE DB et Active Data Objects (ADO), utilisez ADO pour ouvrir un jeu d’enregistrements (correspondant à un ensemble de lignes dans les modèles du consommateur OLE DB). Lorsque vous avez un jeu d’enregistrements, procédez comme suit pour vous connecter à un ensemble de lignes OLE DB :  
   
 1.  Appelez `QueryInterface` pour le `IRowset` et `IAccessor` des pointeurs.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ Pour combiner des modèles du consommateur OLE DB et Active Data Objects (ADO), 
     ```  
   
     > [!NOTE]
-    >  *lpUnk* pointe vers le **IUnknown** objet de l’ensemble d’enregistrements ADO.  
+    >  *lpUnk* pointe vers le `IUnknown` objet de l’objet recordset ADO.  
   
-2.  Attachez l’accesseur et un ensemble de lignes à leurs classes de modèles du consommateur OLE DB appropriées.  
+2.  Attachez l’accesseur et un ensemble de lignes à leurs classes de modèles du consommateur OLE DB appropriés.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   

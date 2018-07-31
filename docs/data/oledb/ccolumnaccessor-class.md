@@ -1,5 +1,5 @@
 ---
-title: Ccolumnaccessor, classe | Documents Microsoft
+title: Ccolumnaccessor, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d211277a8354d94f1892b97ea8f808cc0b22c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095318"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341060"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor, classe
-Génère le code de consommateur injecté.  
+Génère du code de consommateur injecté.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,27 +36,27 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans le code injecté, chaque colonne est liée en tant qu’un accesseur séparé. Vous devez être conscient que cette classe est utilisée dans le code injecté (par exemple, vous pouvez rencontrer il lors du débogage), mais vous devez en général jamais directement l’utiliser ou ses méthodes.  
+ Dans le code injecté, chaque colonne est lié en tant qu’un accesseur séparé. Vous devez être conscient que cette classe est utilisée dans le code injecté (par exemple, vous pouvez rencontrer il lors du débogage), mais vous devez en général jamais l’utiliser directement ou ses méthodes.  
   
- `CColumnAccessor` implémente les méthodes stub suivantes, chacune d’elles correspondant de fonctionnalités à d’autres méthodes d’accesseur de classe :  
+ `CColumnAccessor` implémente les méthodes stub suivantes, chacune d’elles correspondent dans les fonctionnalités à d’autres méthodes de classe d’accesseur :  
   
 -   `CColumnAccessor` Le constructeur ; instancie et initialise le `CColumnAccessor` objet.  
   
--   `CreateAccessor` Alloue de la mémoire pour la colonne de structures de liaison et initialise les membres de données de colonne.  
+-   `CreateAccessor` Alloue de la mémoire pour la colonne des structures de liaison et initialise les membres de données de colonne.  
   
--   **BindColumns** lie les colonnes aux accesseurs.  
+-   `BindColumns` Lie les colonnes aux accesseurs.  
   
--   **SetParameterBuffer** alloue des mémoires tampons pour les paramètres.  
+-   `SetParameterBuffer` Alloue des tampons de paramètres.  
   
 -   `AddParameter` Ajoute une entrée de paramètre pour les structures d’entrée de paramètre.  
   
--   **HasOutputColumns** détermine si l’accesseur a des colonnes de sortie  
+-   `HasOutputColumns` Détermine si l’accesseur a des colonnes de sortie  
   
--   **HasParameters** détermine si l’accesseur a des paramètres.  
+-   `HasParameters` Détermine si l’accesseur a des paramètres.  
   
--   `BindParameters` Lie les paramètres aux colonnes.  
+-   `BindParameters` Lie les paramètres créés pour les colonnes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Création d’un projet pour le fournisseur | Documents Microsoft
+title: Création d’un projet pour le fournisseur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08ceb80842d8552e19b62ff2ac2252d3f291b4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098353"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339839"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Création d'un projet pour le fournisseur
-#### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Pour créer un projet dans lequel réside le fournisseur OLE DB  
+### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Pour créer un projet dans lequel résidera le fournisseur OLE DB  
   
-1.  À partir de la **fichier** menu, cliquez sur `New`, puis cliquez sur **projet**.  
+1.  Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.  
   
      La boîte de dialogue **Nouveau projet** s’affiche.  
   
-2.  Dans le volet Types de projets, cliquez sur le dossier de projets Visual C++. Dans le volet Modèles, cliquez sur **projet ATL**.  
+2.  Dans le volet Types de projets, cliquez sur le dossier projets Visual C++. Dans le volet Modèles, cliquez sur **projet ATL**.  
   
 3.  Dans le **nom** zone, entrez un nom pour le projet, puis cliquez sur **OK**.  
   
-     L’Assistant Projet ATL apparaît.  
+     L’Assistant Projet ATL s’affiche.  
   
 4.  Dans l’Assistant Projet ATL, choisissez **bibliothèque de liens dynamiques (DLL)** pour **Type de serveur**.  
   

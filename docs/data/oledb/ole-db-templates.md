@@ -1,5 +1,5 @@
 ---
-title: Modèles OLE DB | Documents Microsoft
+title: Modèles OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109571"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339434"
 ---
 # <a name="ole-db-templates"></a>modèles OLE DB
-Les modèles OLE DB facilitent l’accès aux données OLE DB. Visual C++ fournit des classes de modèles qui implémentent de nombreuses interfaces OLE DB courantes. Vous pouvez utiliser les modèles de consommateur Visual C++ pour écrire une application de client (consommateur) OLE DB et les modèles du fournisseur pour écrire une application serveur (fournisseur).  
+Les modèles OLE DB facilitent l’accès aux données de OLE DB. Visual C++ fournit des classes de modèle qui implémentent de nombreuses interfaces OLE DB couramment utilisées. Vous pouvez utiliser les modèles de consommateur Visual C++ pour écrire une application de client (consommateur) OLE DB et les modèles du fournisseur pour écrire une application serveur (fournisseur).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
  Fournit des liens vers les classes de modèles du consommateur OLE DB répertoriés par utilisation.  
   
  [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
- Fournit des liens vers les classes de modèles du fournisseur OLE DB répertoriés par utilisation.  
+ Fournit des liens vers les classes de modèle de fournisseur OLE DB répertoriés par utilisation.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)  
- Décrit les nouveautés de OLE DB et traite Universal Data Access dans OLE DB.  
+ Décrit les nouveautés de OLE DB et traite l’accès aux données universel dans OLE DB.  
   
- [Référence du programmeur OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Fournit des liens vers la documentation du Kit de développement OLE DB.  
+ [Référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
+ Fournit des liens vers la documentation du SDK Windows sur OLE DB.  
   
  [Exemples de modèles OLE DB](../../visual-cpp-samples.md)  
  Fournit des liens vers les exemples de modèles OLE DB qui montrent comment utiliser OLE DB dans vos projets.  

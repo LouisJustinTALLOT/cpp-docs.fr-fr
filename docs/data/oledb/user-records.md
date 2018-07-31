@@ -1,5 +1,5 @@
 ---
-title: Enregistrements utilisateur | Documents Microsoft
+title: Enregistrements utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,21 +26,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e9549070acf08e566110ea30f4a0259caeca047
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109805"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339670"
 ---
 # <a name="user-records"></a>Enregistrements utilisateur
-Pour utiliser un accesseur statique (autrement dit, un accesseur dérivé **CAccessor)**, le consommateur doit disposer d’un enregistrement d’utilisateur. L’enregistrement de l’utilisateur est une classe C++ qui contienne les éléments de données à l’entrée de handle ou de sortie. L’Assistant Consommateur OLE DB ATL génère un enregistrement d’utilisateur pour le consommateur. Vous pouvez ajouter des méthodes à l’enregistrement d’utilisateur pour les tâches facultatives telles que la gestion des commandes.  
+Pour utiliser un accesseur statique (autrement dit, un accesseur dérivé `CAccessor`), le consommateur doit disposer d’un enregistrement utilisateur. L’enregistrement de l’utilisateur est une classe C++ qui contient les éléments de données à l’entrée de handle ou de sortie. L’Assistant Consommateur OLE DB ATL génère un enregistrement de l’utilisateur pour le consommateur. Vous pouvez ajouter des méthodes à l’enregistrement d’utilisateur pour des tâches facultatives telles que la gestion des commandes.  
   
- Le code suivant montre un exemple d’enregistrement qui gère les commandes. Dans l’enregistrement d’utilisateur, `BEGIN_COLUMN_MAP` représente un ensemble de lignes de données passée au consommateur d’un fournisseur. `BEGIN_PARAM_MAP` représente un ensemble de paramètres de commande. Cet exemple utilise un [CCommand](../../data/oledb/ccommand-class.md) classe pour gérer les paramètres de commande. Les membres de données dans les entrées de mappage représentent des offsets dans un bloc contigu de mémoire pour chaque instance de la classe. Le `COLUMN_ENTRY` macros correspondent à la `PROVIDER_COLUMN_ENTRY` macros côté fournisseur.  
+ Le code suivant montre un exemple d’enregistrement qui gère les commandes. Dans l’enregistrement utilisateur, BEGIN_COLUMN_MAP représente un ensemble de lignes de données passée au consommateur par un fournisseur. BEGIN_PARAM_MAP représente un ensemble de paramètres de commande. Cet exemple utilise un [CCommand](../../data/oledb/ccommand-class.md) classe pour gérer les paramètres de commande. Les membres de données dans les entrées de mappage représentent des offsets dans un bloc contigu de mémoire pour chaque instance de la classe. Les macros COLUMN_ENTRY correspondent aux macros PROVIDER_COLUMN_ENTRY côté fournisseur.  
   
- Pour plus d’informations sur la **COLUMN_MAP** et **PARAM_MAP** macros, consultez [Macros pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Pour plus d’informations sur les macros COLUMN_MAP et PARAM_MAP, consultez [Macros pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
@@ -63,15 +63,15 @@ END_PARAM_MAP()
 };  
 ```  
   
-## <a name="wizard-generated-user-records"></a>Enregistrements utilisateur générés par l’Assistant  
- Si vous utilisez l’Assistant Consommateur OLE DB ATL pour générer un consommateur, vous avez le choix de l’utilisation de modèles OLE DB et attributs OLE DB. Le code généré est différent dans chaque cas. Pour plus d’informations sur ce code, consultez [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md).  
+## <a name="wizard-generated-user-records"></a>Enregistrements d’utilisateur générées par l’Assistant  
+ Si vous utilisez l’Assistant Consommateur OLE DB ATL pour générer un consommateur, vous avez le choix de l’utilisation de modèles OLE DB ou des attributs OLE DB. Le code généré est différent dans chaque cas. Pour plus d’informations sur ce code, consultez [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md).  
   
-## <a name="user-record-support-for-multiple-accessors"></a>Prise en charge enregistrement d’utilisateur pour les accesseurs multiples  
+## <a name="user-record-support-for-multiple-accessors"></a>Prise en charge pour plusieurs accesseurs des enregistrements utilisateur  
  Pour obtenir une présentation détaillée des scénarios dans lesquels vous devez utiliser plusieurs accesseurs, consultez [à l’aide de plusieurs accesseurs sur un ensemble de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- L’exemple suivant montre l’enregistrement utilisateur modifié pour prendre en charge plusieurs accesseurs sur l’ensemble de lignes. Au lieu de `BEGIN_COLUMN_MAP` et `END_COLUMN_MAP`, il utilise [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) et [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) pour chaque accesseur. Le `BEGIN_ACCESSOR` macro Spécifie le numéro de l’accesseur (offset à partir de zéro) et indique si l’accesseur est un auto-accesseur. Les auto-accesseurs appel `GetData` pour récupérer les données automatiquement via un appel à [MoveNext](../../data/oledb/crowset-movenext.md). Accesseurs non automatiques exigent explicitement extraire les données. Utilisez un accesseur non automatique si vous établissez une liaison à un champ de données de grande taille (par exemple, une image bitmap) que vous pouvez récupérer pour chaque enregistrement.  
+ L’exemple suivant montre l’enregistrement utilisateur modifié pour prendre en charge plusieurs accesseurs sur l’ensemble de lignes. Au lieu de BEGIN_COLUMN_MAP et END_COLUMN_MAP, il utilise [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) et [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) pour chaque accesseur. La macro BEGIN_ACCESSOR spécifie le numéro de l’accesseur (offset à partir de zéro) et indique si l’accesseur est un auto-accesseur. Les auto-accesseurs appel `GetData` pour récupérer les données automatiquement via un appel à [MoveNext](../../data/oledb/crowset-movenext.md). Accesseurs non automatiques exigent que vous récupériez explicitement les données. Utilisez un accesseur non automatique si vous liez à un champ de données de grande taille (par exemple, une image bitmap) que vous ne pouvez pas récupérer pour chaque enregistrement.  
   
-```  
+```cpp  
 class CMultiArtists  
 {  
 public:  

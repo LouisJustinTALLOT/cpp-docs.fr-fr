@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207625"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337720"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 Récupère et manipule des lignes à traiter les données en bloc en récupérant plusieurs handles de ligne avec un seul appel.  
@@ -166,7 +166,6 @@ Appels [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) p
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -179,7 +178,6 @@ Crée un `CBulkRowset` de l’objet et affecte le nombre de lignes par défaut 1
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
@@ -189,7 +187,6 @@ Récupère la première ligne de données.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -202,7 +199,6 @@ Passe à la dernière ligne.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -215,7 +211,6 @@ Récupère la ligne suivante de données.
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -228,7 +223,6 @@ Se déplace vers la ligne précédente.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -240,7 +234,7 @@ Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (*l
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ Extrait les lignes à partir d’un emplacement de fractions de seconde dans l�
   
 ### <a name="syntax"></a>Syntaxe  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ Appels [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) 
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -300,7 +293,7 @@ Définit le nombre de descripteurs de lignes récupérées par chaque appel.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  

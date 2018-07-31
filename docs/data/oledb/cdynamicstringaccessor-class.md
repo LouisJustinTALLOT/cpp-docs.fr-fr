@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd497c59bcdbaba2afc1571cf7509887a44bcd59
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: d74138247bdfd427dd26d1a3d98b9a82dae39e60
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233436"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337685"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor, classe
 Vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données).  
@@ -36,11 +36,10 @@ Vous permet d’accéder à une source de données lorsque vous n’avez aucune 
 ## <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      template< typename BaseType, DBTYPEENUM OleDbType >  
+template< typename BaseType, DBTYPEENUM OleDbType >  
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  
 
-  
 ## <a name="requirements"></a>Configuration requise  
  **En-tête**: atldbcli.h 
 
@@ -70,7 +69,7 @@ Récupère les données de la colonne spécifiée sous forme de chaîne.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      BaseType* GetString(DBORDINAL nColumn) const throw();  
+BaseType* GetString(DBORDINAL nColumn) const throw();  
 
 BaseType* GetString(const CHAR* pColumnName) const throw();  
 
@@ -97,12 +96,10 @@ Définit les données de la colonne spécifiée sous forme de chaîne.
   
 ```cpp
 HRESULT SetString(DBORDINAL nColumn,  
-  BaseType* data) throw();  
-
+   BaseType* data) throw();  
 
 HRESULT SetString(const CHAR* pColumnName,  
    BaseType* data) throw();  
-
 
 HRESULT SetString(const WCHAR* pColumnName,  
    BaseType* data) throw();  

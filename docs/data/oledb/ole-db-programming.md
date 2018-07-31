@@ -1,5 +1,5 @@
 ---
-title: Programmation OLE DB | Documents Microsoft
+title: Programmation OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb77c5b7d7f6de91f74e83c395d0fcc13ebf70e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d211297d587fffcfc58ac57db6687dc8edde4344
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107176"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336545"
 ---
 # <a name="ole-db-programming"></a>Programmation OLE DB
-Microsoft OLE DB est une technologie héritée ; pour les nouvelles applications, il est l’API d’accès données requises pour les serveurs liés SQL. Toutes les autres nouvelles applications doivent utiliser ODBC. Le fournisseur OLE DB actuel pour SQL Server est SQLNCLI11. DLL. Le fournisseur est toujours celle de SQL Server 2016. Cette documentation s’adresse aux développeurs chargés de la maintenance des applications existantes qui utilisent déjà OLE DB.
+Microsoft OLE DB est une technologie héritée ; pour les nouvelles applications, il est l’API accès aux données requises pour les serveurs SQL liés. Toutes les autres nouvelles applications doivent utiliser ODBC. Le fournisseur OLE DB actuel pour SQL Server est SQLNCLI11. DLL. Le fournisseur est toujours transaction dans SQL Server 2016. Cette documentation s’adresse aux développeurs chargés de la maintenant des applications existantes qui utilisent déjà OLE DB.
   
  Les modèles OLE DB sont des modèles C++ qui facilitent l'utilisation de la technologie de base de données OLE DB haute performance en fournissant des classes qui implémentent de nombreuses interfaces OLE DB couramment utilisées. Cette bibliothèque de modèles est divisée en modèles de consommateurs et en modèles de fournisseurs.  
   
@@ -39,11 +39,10 @@ Microsoft OLE DB est une technologie héritée ; pour les nouvelles application
 |Utilisation des modèles du fournisseur OLE DB (rubriques conceptuelles)|[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Classes et macros des modèles OLE DB|[Référence des modèles OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Attributs du consommateur OLE DB|[Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Interfaces OLE DB|[Référence du programmeur OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) (dans le Kit de développement logiciel Windows)|  
-|Exemples de modèles OLE DB|[Exemples de modèles OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Interfaces OLE DB|[Référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (dans le Kit de développement logiciel Windows)|  
+|Exemples de modèles OLE DB|[Exemples de modèles OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Vue d'ensemble de la programmation de l'accès aux données (Visual C++)|[Programmation d’accès aux données](../../data/data-access-programming-mfc-atl.md)|  
 |Rubriques sur les concepts d'ODBC|[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
-  
 ## <a name="see-also"></a>Voir aussi  
  [Accès aux données](../data-access-in-cpp.md)

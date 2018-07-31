@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321953"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338338"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl, classe
 Fournit une implémentation de l’interface `IRowset`.  
@@ -177,7 +177,7 @@ Ajoute un décompte de références à un handle de ligne existant.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ Une méthode d’assistance appelée par [GetNextRows](../../data/oledb/irowseti
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ Récupère les données à partir de la copie de l’ensemble de lignes de la li
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ Retourne les indicateurs d’état DBSTATUS pour le champ spécifié.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ Extrait les lignes séquentiellement, en mémorisant la position précédente.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ Constructeur.
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -307,7 +306,7 @@ Libère des lignes.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ Repositionne la prochaine position d’extraction à sa position initiale ; Aut
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -338,7 +337,7 @@ Définit les indicateurs d’état DBSTATUS pour le champ spécifié.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ Indique si un fournisseur prend en charge l’extraction vers l’arrière.
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -379,7 +377,6 @@ Indique si un fournisseur peut avoir son défilement de curseur de vers l’arri
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -392,7 +389,6 @@ Un indicateur de bit utilisé pour déterminer si la position du curseur est dé
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -405,7 +401,6 @@ Un index à l’ensemble de lignes, qui représente le curseur.
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl::m_rgRowHandles
@@ -414,9 +409,7 @@ Un mappage de descripteurs de lignes actuellement contenus par le fournisseur en
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Notes  

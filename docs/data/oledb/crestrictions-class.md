@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa95eb630fac2fe30014e378cc79bdbac285dbdb
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233501"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337168"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 Une classe générique qui vous permet de spécifier des restrictions pour les ensembles de lignes de schéma.  
@@ -39,10 +39,10 @@ Une classe générique qui vous permet de spécifier des restrictions pour les e
 ```cpp
 template <class T, short nRestrictions, const GUID* pguid>  
 class CRestrictions : 
-        public CSchemaRowset <T, nRestrictions>  
+   public CSchemaRowset <T, nRestrictions>  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *T*  
  La classe utilisée pour l’accesseur.  
   

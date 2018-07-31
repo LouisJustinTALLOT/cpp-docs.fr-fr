@@ -1,5 +1,5 @@
 ---
-title: CAccessor (classe) | Documents Microsoft
+title: CAccessor, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,26 +21,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093907"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337415"
 ---
 # <a name="caccessor-class"></a>CAccessor, classe
 Représente un des types d’accesseurs.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  La classe d’enregistrement utilisateur.  
   
 ## <a name="remarks"></a>Notes  
@@ -50,7 +49,7 @@ class CAccessor : public CAccessorBase, public T
   
  Si votre accesseur contient des champs qui pointent vers la mémoire (comme un `BSTR` ou interface) qui doit être libéré, appelez la fonction membre [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) avant le prochain enregistrement est lu.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

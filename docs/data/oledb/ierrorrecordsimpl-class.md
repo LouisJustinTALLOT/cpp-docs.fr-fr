@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269684"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338117"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl, classe
 Implémente la norme OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interface, ajout d’enregistrements à et récupérer des enregistrements d’un membre de données ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) de type **CAtlArray <** `RecordClass`**>**.  
@@ -138,7 +138,7 @@ Obtient la chaîne de description d’erreur à partir d’un enregistrement d�
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -154,7 +154,7 @@ Obtient le GUID de l’erreur à partir d’un enregistrement d’erreur.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -170,7 +170,7 @@ Obtient l’ID de contexte d’aide à partir d’un enregistrement d’erreur.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -186,7 +186,7 @@ Obtient le nom de chemin d’accès du fichier d’aide à partir d’un enregis
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -202,7 +202,7 @@ Obtient le code source qui a provoqué l’erreur à partir d’un enregistremen
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -218,7 +218,7 @@ Ajoute un enregistrement à l’objet d’erreur OLE DB.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ Retourne des informations de base sur l’erreur, telles que le code de retour e
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ Retourne un pointeur vers une interface sur un objet d’erreur personnalisé.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ Retourne un [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) point
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ Retourne les paramètres de l’erreur.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ Retourne le nombre d’enregistrements dans l’objet d’enregistrement OLE DB.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -300,10 +300,7 @@ Tableau d’enregistrements d’erreur.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Création d’un fournisseur OLE DB | Documents Microsoft
+title: Création d’un fournisseur OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f649b5b4c79c4148d0aed026b044485ca2b1eaa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5de304b7a21c47af18b8b753d6de704ef2473c5f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097105"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338790"
 ---
 # <a name="creating-an-ole-db-provider"></a>Création d'un fournisseur OLE DB
-La méthode recommandée pour créer un fournisseur OLE DB doit utiliser les Assistants pour créer un projet ATL COM et un fournisseur, puis modifier les fichiers en utilisant les modèles OLE DB. Quand vous personnalisez votre fournisseur, vous pouvez commenter les propriétés indésirables et ajouter des interfaces facultatives.  
+La méthode recommandée pour créer un fournisseur OLE DB consiste à utiliser les Assistants pour créer un projet ATL COM et un fournisseur, puis modifier les fichiers en utilisant les modèles OLE DB. Quand vous personnalisez votre fournisseur, vous pouvez commenter les propriétés indésirables et ajouter des interfaces facultatives.  
   
  Les étapes de base sont les suivantes :  
   
 1.  Utilisez l’Assistant Projet ATL pour créer les fichiers de projet de base et l’Assistant fournisseur OLE DB ATL pour créer le fournisseur (sélectionnez **fournisseur OLE DB ATL** à partir du dossier Visual C++ dans **ajouter une classe**).  
   
-2.  Modifier le code dans la `Execute` méthode dans CMyProviderRS.h. Pour obtenir un exemple, consultez [lecture de chaînes dans le fournisseur OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
+2.  Modifier le code dans le `Execute` méthode dans CMyProviderRS.h. Pour obtenir un exemple, consultez [lecture de chaînes dans le fournisseur OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
   
 3.  Modifiez les mappages de propriété dans MyProviderDS.h, MyProviderSess.h et MyProviderRS.h. L’Assistant crée des mappages de propriété qui contiennent toutes les propriétés qu’un fournisseur peut implémenter. Parcourez les mappages de propriété et supprimez ou commentez les propriétés de votre fournisseur n’a pas besoin pour prendre en charge.  
   
-4.  Mettre à jour de la macro PROVIDER_COLUMN_MAP, qui se trouve dans MyProviderRS.h. Pour obtenir un exemple, consultez [le stockage de chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
+4.  Mettre à jour PROVIDER_COLUMN_MAP, qui se trouve dans MyProviderRS.h. Pour obtenir un exemple, consultez [stockage de chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Lorsque vous êtes prêt à tester votre fournisseur, vous pouvez le tester en essayant de trouver le fournisseur dans une énumération de fournisseurs. Pour obtenir des exemples de code de test qui retrouve un fournisseur dans une énumération, consultez la [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) et [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ou l’exemple fourni dans [implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Lorsque vous êtes prêt à tester votre fournisseur, vous pouvez le tester en essayant de trouver le fournisseur dans une énumération de fournisseur. Pour obtenir des exemples de code de test qui recherche un fournisseur dans une énumération, consultez le [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) et [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ou l’exemple fourni dans [implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md).  
   
-6.  Ajoutez les interfaces supplémentaires que vous le souhaitez. Pour obtenir un exemple, consultez [amélioration du fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+6.  Ajouter toutes les interfaces que vous souhaitez. Pour obtenir un exemple, consultez [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
     > [!NOTE]
-    >  Par défaut, les Assistants génèrent un code OLE DB conforme au niveau 0. Pour vous assurer que votre application conserve une conformité au niveau 0, ne supprimez pas une des interfaces générées par l’Assistant à partir du code.  
+    >  Par défaut, les Assistants génèrent un code OLE DB conforme au niveau 0. Pour vous assurer que votre application reste conforme au niveau 0, ne supprimez pas les interfaces générées par l’Assistant à partir du code.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)
+ [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
+ [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)

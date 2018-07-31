@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 986626fa391971ce342f8d80b9e3e7f8ec979b63
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322174"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338387"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl, classe
 Implémente la norme OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes.  
@@ -128,7 +128,7 @@ Compare deux signets.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
+STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmark1,  
    const BYTE* pBookmark1,  
    DBBKMARK cbBookmark2,  
@@ -158,7 +158,7 @@ Extrait les lignes en commençant à la ligne spécifiée par un décalage à pa
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
+STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
    HCHAPTER hReserved2,  
    DBBKMARK cbBookmark,  
    const BYTE* pBookmark,  
@@ -182,7 +182,7 @@ Extrait une ou plusieurs lignes qui correspondent aux signets spécifiés.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const DBBKMARK rgcbBookmarks[],  
    const BYTE* rgpBookmarks,  
@@ -205,7 +205,7 @@ Retourne des valeurs pour les signets spécifiés de hachage.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
+STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmarks,  
    const DBBKMARK* rgcbBookmarks[],  
    const BYTE* rgpBookmarks[],  
@@ -226,7 +226,6 @@ Un tableau de signets.
   
 ```cpp
 CAtlArray<DBROWCOUNT> m_rgBookmarks;  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

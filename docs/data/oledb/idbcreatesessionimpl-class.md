@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02701b03de074823da3cc7fcd229056195fd9a85
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 756cc7ba203a1655bf5112d9c03e84707644f1e5
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269457"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337568"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl, classe
 Fournit une implémentation pour le [IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx) interface.  
@@ -68,7 +68,7 @@ Crée une nouvelle session de l’objet de source de données et retourne l’in
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(CreateSession)(IUnknown * pUnkOuter,   
+STDMETHOD(CreateSession)(IUnknown * pUnkOuter,   
    REFIID riid,   
    IUnknown ** ppDBSession);  
 ```  

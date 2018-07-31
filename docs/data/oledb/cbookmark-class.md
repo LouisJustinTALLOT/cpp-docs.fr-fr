@@ -78,12 +78,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7545a9a31ff9bd7426002ef97176c59dd308dd49
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 9bd662c827650112d0e9bcf1d59086f4205aea58
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209142"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337616"
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 Contient une valeur de signet dans sa mémoire tampon.  
@@ -131,8 +131,8 @@ Constructeur.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CBookmark();   
-
+CBookmark();
+   
 CBookmark(DBLENGTH nSize);  
 ```  
   
@@ -153,7 +153,6 @@ Récupère le pointeur vers la mémoire tampon de signet.
   
 ```cpp
 virtual BYTE* GetBuffer() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -166,7 +165,6 @@ Récupère la taille de la mémoire tampon de signet.
   
 ```cpp
 virtual DBLENGTH GetSize() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -177,9 +175,8 @@ Copie la valeur de signet référencée par *pBuffer* à la `CBookmark` mettre e
   
 ### <a name="syntax"></a>Syntaxe  
   
-```
-HRESULT SetBookmark(DBLENGTH nSize,  
-  BYTE* pBuffer) throw();  
+```cpp
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -201,7 +198,7 @@ Assigne un `CBookmark` objet vers un autre.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CBookmark& operator =(const CBookmark& bookmark) throw();  
+CBookmark& operator =(const CBookmark& bookmark) throw();  
 ```  
   
 ### <a name="remarks"></a>Notes  

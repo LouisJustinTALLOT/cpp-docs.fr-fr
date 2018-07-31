@@ -1,5 +1,5 @@
 ---
-title: À l’aide des vues des enregistrements OLE DB | Documents Microsoft
+title: À l’aide de vues des enregistrements OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6cebf8a1c1130a33ffd07e2d23d65c55a2a67b34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d98b2f95c9b06d748b7486955b03f34f41e9ab57
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111271"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339511"
 ---
 # <a name="using-ole-db-record-views"></a>Utilisation des vues de l'enregistrement OLE DB
-Si vous souhaitez afficher les données d’ensemble de lignes OLE DB dans une application MFC, vous devez utiliser la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Un objet de vue de l’enregistrement créé à partir de `COleDBRecordView` vous permet d’afficher les enregistrements de base de données dans des contrôles MFC. La vue de l’enregistrement est une vue de formulaire de boîte de dialogue directement connectée à un objet de l’ensemble de lignes OLE DB créé à partir de la `CRowset` classe de modèle. Obtention d’un handle vers l’objet d’ensemble de lignes est simple :  
+Si vous souhaitez afficher les données d’ensemble de lignes OLE DB dans une application MFC, vous devez utiliser la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Un objet de vue d’enregistrement est créé à partir de `COleDBRecordView` vous permet d’afficher les enregistrements de base de données dans les contrôles MFC. La vue de l’enregistrement est une vue de formulaire de boîte de dialogue directement connectée à un objet d’ensemble de lignes OLE DB créé à partir de la `CRowset` classe de modèle. Obtention d’un descripteur à l’objet d’ensemble de lignes est simple :  
   
-```  
+```cpp  
 COleDBRecordView myRecordView;  
 ...  
 // CProductAccessor is a user record class  
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- La vue affiche les champs de la `CRowset` objet dans les contrôles de la boîte de dialogue. Le `COleDBRecordView` objet utilise l’échange de données de boîte de dialogue (DDX) et les fonctionnalités de navigation intégrées `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, et `MoveLast`) pour automatiser le déplacement des données entre les contrôles sur le formulaire et les champs de l’ensemble de lignes. `COleDBRecordView` effectue le suivi de position de l’utilisateur dans l’ensemble de lignes afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur et fournit un [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) méthode de mise à jour de l’enregistrement actif avant de passer à un autre.  
+ La vue affiche les champs de la `CRowset` objet dans les contrôles de la boîte de dialogue. Le `COleDBRecordView` objet utilise l’échange de données de boîte de dialogue (DDX) et les fonctionnalités de navigation intégrée à `CRowset` (`MoveFirst`, `MoveNext`, `MovePrev`, et `MoveLast`) pour automatiser le déplacement des données entre les contrôles sur le formulaire et les champs de l’ensemble de lignes. `COleDBRecordView` effectue le suivi de position de l’utilisateur dans l’ensemble de lignes afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur et fournit un [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) méthode de mise à jour de l’enregistrement en cours avant de passer à un autre.  
   
- Vous pouvez utiliser des fonctions DDX avec **COleDbRecordView** pour obtenir des données directement à partir de l’ensemble d’enregistrements de base de données et les afficher dans un contrôle de boîte de dialogue. Vous devez utiliser le **DDX_\***  méthodes (tel que `DDX_Text`), et non le **DDX_Field\***  fonctions (telles que `DDX_FieldText`) avec **COleDbRecordView** .  
+ Vous pouvez utiliser des fonctions DDX avec `COleDbRecordView` pour obtenir des données directement à partir de l’ensemble d’enregistrements de base de données et les afficher dans un contrôle de boîte de dialogue. Vous devez utiliser le **DDX_\***  méthodes (telles que `DDX_Text`), et non le **DDX_Field\***  fonctions (telles que `DDX_FieldText`) avec `COleDbRecordView`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation d’accesseurs](../../data/oledb/using-accessors.md)   

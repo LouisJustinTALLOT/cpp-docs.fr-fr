@@ -1,5 +1,5 @@
 ---
-title: À l’aide de procédures stockées | Documents Microsoft
+title: À l’aide de procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5b49daa44fc8c88316134915945ad7ee01bb81a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe62aff7e8828dcb17c04fc3e05eedc9eefe9d16
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112236"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337279"
 ---
 # <a name="using-stored-procedures"></a>Utilisation des procédures stockées
-Une procédure stockée est un objet exécutable stocké dans une base de données. Appel d’une procédure stockée est similaire à l’appel d’une commande SQL. À l’aide de procédures stockées sur la source de données (au lieu d’exécuter ou de préparation d’une instruction dans l’application cliente) peut fournir plusieurs avantages, notamment des performances accrues, une charge réseau réduite et améliorer la cohérence et la précision.  
+Une procédure stockée est un objet exécutable stocké dans une base de données. Appel d’une procédure stockée est similaire à l’appel d’une commande SQL. À l’aide de procédures stockées sur la source de données (au lieu d’exécuter ou de préparation d’une instruction dans l’application cliente) peut offrir plusieurs avantages, notamment des performances plus élevées, une charge réseau réduite et la précision et cohérence améliorée.  
   
- Une procédure stockée peut avoir un nombre quelconque de (y compris zéro) d’entrée ou de paramètres de sortie et pouvez passer une valeur de retour. Vous pouvez soit coder en dur les valeurs de paramètre comme valeurs de données spécifiques ou utilisent un marqueur de paramètre (un point d’interrogation « ? »).  
+ Une procédure stockée peut avoir un nombre quelconque de (zéro compris) d’entrée ou de paramètres de sortie et pouvez passer une valeur de retour. Vous pouvez soit coder en dur de valeurs de paramètre comme valeurs de données spécifiques, soit utilisent un marqueur de paramètre (un point d’interrogation « ? »).  
   
 > [!NOTE]
->  CLR SQL Server et les procédures stockées créées à l’aide de Visual C++ doivent être compilés avec les **/CLR : safe** option du compilateur.  
+>  Les procédures stockées créées à l’aide de Visual C++ doivent être compilés avec CLR SQL Server la `/clr:safe` option du compilateur.  
   
  Le fournisseur OLE DB pour SQL Server (SQLOLEDB) prend en charge les mécanismes suivants, que les procédures stockées utilisent pour retourner des données :  
   
@@ -43,7 +43,7 @@ Une procédure stockée est un objet exécutable stocké dans une base de donné
 -   La procédure peut avoir un nombre entier de code de retour.  
   
 > [!NOTE]
->  Vous ne pouvez pas utiliser les procédures stockées avec le fournisseur OLE DB pour Jet car ce fournisseur ne prend pas en charge les procédures stockées ; Seules des constantes sont autorisées dans les chaînes de requête.  
+>  Vous ne pouvez pas utiliser les procédures stockées avec le fournisseur OLE DB pour Jet, car ce fournisseur ne prend pas en charge les procédures stockées ; Seules les constantes sont autorisées dans les chaînes de requête.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

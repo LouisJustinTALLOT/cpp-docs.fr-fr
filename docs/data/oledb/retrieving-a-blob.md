@@ -1,5 +1,5 @@
 ---
-title: Récupération d’un BLOB | Documents Microsoft
+title: Récupération d’un BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105203"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339273"
 ---
 # <a name="retrieving-a-blob"></a>Récupération d'un BLOB
-Vous pouvez récupérer un objet binaire volumineux (BLOB) de différentes manières. Vous pouvez utiliser **DBTYPE_BYTES** pour récupérer l’objet BLOB sous la forme d’une séquence d’octets ou utiliser une interface de type `ISequentialStream`. Pour plus d’informations, consultez [BLOB et les objets OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) dans les *de référence du programmeur OLE DB*.  
+Vous pouvez récupérer un objet binaire volumineux (BLOB) de différentes manières. Vous pouvez utiliser `DBTYPE_BYTES` pour récupérer l’objet BLOB sous la forme d’une séquence d’octets ou utiliser une interface comme `ISequentialStream`. Pour plus d’informations, consultez [objets BLOB et OLE](https://msdn.microsoft.com/library/ms711511.aspx) dans le *de référence du programmeur OLE DB*.  
   
- Le code suivant montre comment récupérer un objet BLOB à l’aide de `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vous permet de spécifier l’interface et les indicateurs utilisés pour l’interface. Après l’ouverture de la table, le code appelle **en lecture** à maintes reprises sur `ISequentialStream` pour lire les octets à partir de l’objet BLOB. Le code appelle **version** pour supprimer le pointeur d’interface avant d’appeler `MoveNext` pour obtenir l’enregistrement suivant.  
+ Le code suivant montre comment récupérer un objet BLOB à l’aide `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vous permet de spécifier l’interface et les indicateurs utilisés pour l’interface. Après avoir ouvert la table, le code appelle `Read` à maintes reprises sur `ISequentialStream` pour lire les octets à partir de l’objet BLOB. Le code appelle `Release` pour supprimer le pointeur d’interface avant d’appeler `MoveNext` pour obtenir l’enregistrement suivant.  
   
-```  
+```cpp  
 class CCategories  
 {  
 public:  

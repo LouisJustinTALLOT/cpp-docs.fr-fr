@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207583"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336938"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 Hérite de la `DBPROPIDSET` structurer et ajoute un constructeur qui initialise les champs clés, ainsi que les [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accéder à la méthode.  
@@ -88,7 +88,7 @@ Ajoute un ID de propriété à l’ensemble d’ID de propriété.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool AddPropertyID(DBPROPID propid) throw();  
+bool AddPropertyID(DBPROPID propid) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -101,7 +101,7 @@ Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `g
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDBPropIDSet(const GUID& guid);  
+CDBPropIDSet(const GUID& guid);  
 
 CDBPropIDSet(const CDBPropIDSet& propidset);  
 
@@ -121,7 +121,7 @@ Définit le champ GUID dans le `DBPROPIDSET` structure.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -137,7 +137,7 @@ Assigne le contenu d’une propriété ID est défini à un autre jeu de propri�
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
