@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7d7c9ccf70286040d06e7e01400299b806157e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 07e05e3a1c1b25e87053e15244f3c5fb9db442d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940975"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404159"
 ---
 # <a name="nullptr"></a>nullptr
 Désigne une constante de pointeur null du type `std::nullptr_t`, qui peut être convertie en tout type pointeur brut.  Bien que vous pouvez utiliser le mot clé **nullptr** sans inclure aucun en-tête, si votre code utilise le type `std::nullptr_t`, ensuite, vous devez la définir en incluant l’en-tête `<cstddef>`.  

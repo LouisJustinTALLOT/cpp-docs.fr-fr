@@ -1,5 +1,5 @@
 ---
-title: Expressions avec opérateurs binaires | Documents Microsoft
+title: Expressions avec opérateurs binaires | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414674"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406817"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressions avec opérateurs binaires
 Les opérateurs binaires agissent sur deux opérandes dans une expression. Les opérateurs binaires sont :  
@@ -64,9 +64,9 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
   
     -   [Opération de bits AND (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [Opérateur de bits OR exclusif (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [Au niveau du bit OR exclusif (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [Opérateur de bits OR inclusif (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [Au niveau du bit OR inclusif (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Opérateurs logiques  
   
@@ -88,7 +88,7 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
   
     -   Assignation de modulo (%=)  
   
-    -   Assignation de décalage de gauche (<\<=)  
+    -   Assignation de décalage vers la gauche (<\<=)  
   
     -   Assignation de décalage vers la droite (>>=)  
   
@@ -96,7 +96,7 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
   
     -   Assignation d'opération OR exclusive au niveau du bit (^=)  
   
-    -   Opération de bits OR inclusive assignation OR (&#124;=)  
+    -   Or inclusive assignation OR (&#124;=)  
   
 -   [Opérateur virgule](../cpp/comma-operator.md) (,)  
   

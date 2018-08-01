@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942702"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406865"
 ---
 # <a name="event-handling-in-com"></a>Gestion des événements dans COM
 Dans Gestion des événements de COM, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `com`. Ces attributs injectent le code approprié pour les interfaces personnalisées, de dispatch et doubles afin d'autoriser les classes auxquelles ils sont appliqués à déclencher et gérer des événements via des points de connexion COM.  
   
 ## <a name="declaring-events"></a>Déclaration d'événements  
- Dans une classe de source d’événement, utilisez le [__event](../cpp/event.md) mot clé dans une déclaration d’interface pour déclarer des méthodes d’interface en tant qu’événements. Les événements de cette interface sont déclenchés lorsqu'ils sont appelés comme méthodes d'interface. Les méthodes sur les interfaces d’événement peuvent avoir zéro ou plusieurs paramètres (qui doit être `in` paramètres). Le type de retour peut être void ou un type intégral.  
+ Dans une classe de source d’événement, utilisez le [__event](../cpp/event.md) mot clé dans une déclaration d’interface pour déclarer des méthodes d’interface en tant qu’événements. Les événements de cette interface sont déclenchés lorsqu'ils sont appelés comme méthodes d'interface. Les méthodes sur les interfaces d’événement peuvent avoir zéro ou plusieurs paramètres (qui doit être *dans* paramètres). Le type de retour peut être void ou un type intégral.  
   
 ## <a name="defining-event-handlers"></a>Définition de gestionnaires d'événements  
  Dans une classe de récepteur d’événements, vous définissez des gestionnaires d’événements, qui sont des méthodes avec signatures (types de retour, conventions d’appel et arguments) qui correspondent à l’événement qu’ils doivent gérer. Pour les événements COM, les conventions d’appel n’ont pas faire correspondre ; consultez [événements COM dépendant des dispositions](#vcconeventhandlingincomanchorlayoutdependentcomevents) ci-dessous pour plus d’informations.  

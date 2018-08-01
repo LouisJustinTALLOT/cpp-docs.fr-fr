@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5fe9e5c1099f6c30483cdb20c48daf9c35fbed8e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942841"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404975"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias et typedefs (C++)
 Vous pouvez utiliser un *déclaration d’alias* pour déclarer un nom à utiliser comme un synonyme pour un type déclaré précédemment. (Ce mécanisme est également appelé de manière informelle un *alias de type*). Vous pouvez également utiliser ce mécanisme pour créer un *modèle d’alias*, qui peut être particulièrement utile pour les allocateurs personnalisés.  
@@ -31,10 +31,10 @@ using identifier = type;
 ```  
   
 ## <a name="remarks"></a>Notes  
- `identifier`  
+ *identifier*  
  Nom de l'alias.  
   
- `type`  
+ *type*  
  Identificateur de type pour lequel vous créez un alias.  
   
  Un alias n'introduit pas de nouveau type et ne peut pas modifier la signification du nom d'un type existant.  
@@ -177,7 +177,6 @@ int main()
 // typedef UL back in scope  
 ```  
  
-  
 ```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  

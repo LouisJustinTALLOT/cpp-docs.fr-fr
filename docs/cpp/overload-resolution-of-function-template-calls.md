@@ -1,5 +1,5 @@
 ---
-title: Résolution de surcharge des appels de fonction modèle | Documents Microsoft
+title: Résolution de surcharge des appels de modèle de fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d4a0e2867c5057eb5808c4d39687961eabba6dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62041f78af18d6ac2f521fea763a11bb2859fbf5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420026"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401923"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Résolution de surcharge des appels de modèles de fonctions
 Un modèle de fonction peut surcharger des fonctions non basées sur un modèle du même nom. Dans ce scénario, les appels de fonction sont résolus d’abord en utilisant la déduction de l’argument template pour instancier le modèle de fonction avec une seule spécialisation. Si la déduction d’argument template échoue, les autres surcharges de fonction sont prises en compte pour résoudre l’appel. Ces autres surcharges, également connues comme étant l'ensemble de candidats, incluent des fonctions non basées sur un modèle et d'autres modèles de fonctions instanciés. Si la déduction d’arguments template réussit, la fonction générée est comparée aux autres fonctions pour déterminer la meilleure correspondance, d’après les règles relative à la résolution de la surcharge. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md).  
@@ -90,7 +90,5 @@ void f(T1, T2)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-
  [Résolution de noms](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- 

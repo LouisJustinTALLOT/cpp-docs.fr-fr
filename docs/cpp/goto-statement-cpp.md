@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953393"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402570"
 ---
 # <a name="goto-statement-c"></a>goto, instruction (C++)
 Le **goto** instruction transfère sans condition le contrôle à l’instruction étiquetée par l’identificateur spécifié.  

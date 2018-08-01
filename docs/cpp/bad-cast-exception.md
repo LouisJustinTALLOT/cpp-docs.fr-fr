@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942625"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401365"
 ---
 # <a name="badcast-exception"></a>bad_cast, exception
-L'exception `bad_cast` est levée par l'opérateur `dynamic_cast` suite à un échec de cast vers un type référence.  
+Le **bad_cast** exception est levée par le **dynamic_cast** opérateur à la suite d’un échec de cast à un type référence.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Notes  
- L'interface de `bad_cast` est :  
+ L’interface pour **bad_cast** est :  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- Le code suivant contient un exemple de cast `dynamic_cast` qui échoue et qui lève l'exception `bad_cast`.  
+ Le code suivant contient un exemple d’un échec **dynamic_cast** qui lève la **bad_cast** exception.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- L'exception est levée car l'objet du cast (Shape) n'est pas dérivé du type de cast spécifié (Circle). Pour éviter l’exception, ajoutez ces déclarations à **principale**:  
+ L'exception est levée car l'objet du cast (Shape) n'est pas dérivé du type de cast spécifié (Circle). Pour éviter l'exception, ajoutez les déclarations ci-dessous à `main` :  
   
 ```cpp 
 Circle circle_instance;  

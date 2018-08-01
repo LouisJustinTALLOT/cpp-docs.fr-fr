@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f722d1c4e8fc3d534403c2d18713e64dc2069011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939674"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404897"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Section spécifique à Microsoft**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939674"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 _bstr_t Source() const;  
-  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne le résultat de `IErrorInfo::GetSource` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le BSTR résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.  
+ Retourne le résultat de `IErrorInfo::GetSource` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.  
   
 ## <a name="remarks"></a>Notes  
  Tout échec lors de l’appel la `IErrorInfo::GetSource` méthode est ignorée.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943972"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403467"
 ---
 # <a name="class-member-overview"></a>Vue d'ensemble des membres de classe
 Une classe ou un struct se compose de ses membres. Le travail exécuté par une classe est effectué par ses fonctions membres. L'état géré est stocké dans ses données membres. Initialisation des membres est effectuée par les constructeurs et le travail de nettoyage comme la libération de mémoire et de ressources est destructeurs. En C++11 et versions ultérieures, les données membres peuvent (et généralement doivent) être initialisées au point de déclaration.  
@@ -124,7 +124,6 @@ Pour plus d’informations, consultez [de fonctions membres spéciales](../cpp/s
  En C++11 et versions ultérieures, les déclarateurs de membres non statiques peuvent contenir des initialiseurs.  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c7eb281ecc7a7175614c5c72c54c7267cf55e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393457"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401559"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -57,15 +57,15 @@ void _aligned_free_dbg(
 
 ## <a name="remarks"></a>Notes
 
-Le **_aligned_free_dbg** fonction est une version debug de la [_aligned_free](aligned-free.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_free_dbg** est réduit à un appel à **_aligned_free**. Les deux **_aligned_free** et **_aligned_free_dbg** libérer un bloc de mémoire dans le tas de base, mais **_aligned_free_dbg** prend en charge une fonctionnalité de débogage : la capacité à conserver libérés blocs dans la liste de liée du tas pour simuler des conditions de mémoire insuffisante.
+Le **_aligned_free_dbg** (fonction) est une version debug de la [_aligned_free](aligned-free.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_free_dbg** est réduite à un appel à `_aligned_free`. Les deux `_aligned_free` et **_aligned_free_dbg** libérer un bloc de mémoire dans le tas de base, mais **_aligned_free_dbg** gère une fonctionnalité de débogage : la capacité à conserver libérés bloque dans la liste du tas lié à simuler des conditions de mémoire insuffisante.
 
-**_aligned_free_dbg** effectue une vérification de validité sur tous les fichiers spécifiés et les emplacements de blocs avant d’effectuer l’opération libre. Il n'est pas prévu que l'application fournisse ces informations. Quand un bloc de mémoire est libéré, le gestionnaire de tas de débogage vérifie automatiquement l'intégrité des mémoires tampons de chaque côté de la partie utilisateur et émet un rapport d'erreurs si un remplacement a eu lieu. Si le **_CRTDBG_DELAY_FREE_MEM_DF** champ de bits de le [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) indicateur est défini, le bloc libéré est renseigné avec la valeur 0xDD, affectée le **_FREE_BLOCK** type, de bloc et conservés dans la liste du tas lié de blocs de mémoire.
+**_aligned_free_dbg** effectue une vérification de validité sur tous les fichiers spécifiés et les emplacements de blocs avant d’effectuer l’opération gratuite. Il n'est pas prévu que l'application fournisse ces informations. Quand un bloc de mémoire est libéré, le gestionnaire de tas de débogage vérifie automatiquement l'intégrité des mémoires tampons de chaque côté de la partie utilisateur et émet un rapport d'erreurs si un remplacement a eu lieu. Si le champ de type bit la _CRTDBG_DELAY_FREE_MEM_DF le [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) indicateur est défini, le bloc libéré est renseigné avec la valeur 0xDD, affecté le type de bloc _FREE_BLOCK et conservé dans la liste liée du tas de blocs de mémoire.
 
-Si une erreur se produit pendant la libération de la mémoire, **errno** est défini avec les informations sur la nature de la défaillance du système d’exploitation. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si une erreur se produit pendant la libération de la mémoire, `errno` est défini avec les informations du système d'exploitation sur la nature de la défaillance. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -75,4 +75,4 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Routines de débogage](../../c-runtime-library/debug-routines.md)<br/>
+[Routines de débogage](../../c-runtime-library/debug-routines.md)  

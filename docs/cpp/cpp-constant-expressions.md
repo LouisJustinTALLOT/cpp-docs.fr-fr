@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026700"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408110"
 ---
 # <a name="c-constant-expressions"></a>Expressions constantes C++
 Un *constante* valeur fait partie qui ne change pas. C++ fournit deux mots clés qui vous permettent d'exprimer l'intention qu'un objet n'est pas destiné à être modifié, et d'appliquer cette intention.  
@@ -53,7 +53,7 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-Les conversions explicites en types intégraux sont autorisées dans les expressions constantes ; tous les autres types et types dérivés ne sont pas autorisés, sauf quand ils sont utilisés en tant qu'opérandes par rapport à l'opérateur `sizeof`.  
+Les conversions explicites en types intégraux sont autorisées dans les expressions constantes ; tous les autres types et les types dérivés ne sont pas conformes, sauf lorsque utilisé en tant qu’opérandes pour le **sizeof** opérateur.  
   
 L'opérateur virgule et les opérateurs d'assignation de virgule ne peuvent pas être utilisés dans les expressions constantes.  
   

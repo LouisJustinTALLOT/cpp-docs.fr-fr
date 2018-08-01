@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d5ee7e0b9679fc4fd4e4cd9c541c38dd4446e47c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942689"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404364"
 ---
 # <a name="raise"></a>__raise
 Met en évidence le site d'appel d'un événement.  
@@ -30,9 +30,7 @@ Met en évidence le site d'appel d'un événement.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 __raise method-declarator;  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  

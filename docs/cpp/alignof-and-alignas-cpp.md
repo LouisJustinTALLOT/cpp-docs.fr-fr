@@ -1,5 +1,5 @@
 ---
-title: alignof et alignas (C++) | Documents Microsoft
+title: alignof et alignas (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407981"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402414"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof et alignas (C++)
-Le spécificateur de type `alignas` est un élément standard C++ portable qui permet de spécifier un alignement personnalisé des variables et des types définis par l'utilisateur. L'opérateur `alignof` est également un élément standard portable permettant d'obtenir l'alignement d'une variable ou d'un type spécifié.  
+Le **alignas** spécificateur de type est un moyen de standard C++ portable, pour spécifier un alignement personnalisé des variables et les types définis par l’utilisateur. Le **alignof** opérateur est également un moyen standard et portable pour obtenir l’alignement d’une variable ou un type spécifié.  
   
 ## <a name="example"></a>Exemple  
- Vous pouvez utiliser `alignas` sur une classe, un struck ou une union, ou sur des membres individuels. Quand plusieurs spécificateurs `alignas` sont utilisés, le compilateur choisit celui qui est le plus strict (celui ayant la plus grande valeur).  
+ Vous pouvez utiliser **alignas** sur une classe, struck ou une union, ou sur des membres individuels. Lorsque plusieurs **alignas** spécificateurs sont rencontrés, le compilateur choisit celui plus strict, (celui avec la plus grande valeur).  
   
 ```cpp  
 // alignas_alignof.cpp

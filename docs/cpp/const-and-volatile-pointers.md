@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942669"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408188"
 ---
 # <a name="const-and-volatile-pointers"></a>Pointeurs const et volatile
 Le [const](../cpp/const-cpp.md) et [volatile](../cpp/volatile-cpp.md) mots clés modifier la façon dont les pointeurs sont traités. Le **const** mot clé spécifie que le pointeur ne peut pas être modifié après l’initialisation ; le pointeur est protégé contre toute modification ultérieure.  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- La déclaration de `pch2` déclare un pointeur par l'intermédiaire duquel un objet constant peut être modifié et par conséquent désactivé. La déclaration de `pch3` Spécifie que le **pointeur** est constant, pas l’objet ; la déclaration n’est pas autorisée pour la même raison le `pch2` déclaration n’est pas autorisée.  
+ La déclaration de `pch2` déclare un pointeur par l'intermédiaire duquel un objet constant peut être modifié et par conséquent désactivé. La déclaration de `pch3` Spécifie que le pointeur est constant, pas l’objet ; la déclaration n’est pas autorisée pour la même raison le `pch2` déclaration n’est pas autorisée.  
   
  Les huit assignations suivantes indiquent l'assignation par l'intermédiaire du pointeur et la modification de la valeur du pointeur pour les déclarations précédentes ; pour le moment, supposons que l'initialisation est correcte de `pch1` à `pch8`.  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  L’instruction précédente déclare une fonction, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), où deux des trois arguments sont de type pointeur vers **char**. Étant donné que les arguments sont passés par référence et non par valeur, la fonction serait libre de modifier `strDestination` et `strSource` si `strSource` n’était pas déclaré comme **const**. La déclaration de `strSource` comme **const** garantit à l’appelant qui `strSource` ne peut pas être modifié par la fonction appelée.  
   
 > [!NOTE]
->  Car il existe une conversion standard de *typename* **\*** à **const** *typename* **\***, il est permis de passer un argument de type **char \***  à [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Toutefois, l’inverse n’est pas vrai ; Il n’existe aucune conversion implicite pour supprimer le **const** attribut à partir d’un objet ou pointeur.  
+>  Car il existe une conversion standard de *typename* **\*** à **const** *typename* **\***, il est permis de passer un argument de type `char *` à [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Toutefois, l’inverse n’est pas vrai ; Il n’existe aucune conversion implicite pour supprimer le **const** attribut à partir d’un objet ou pointeur.  
   
  Un **const** pointeur d’un type donné peut être assigné à un pointeur du même type. Toutefois, un pointeur qui n’est pas **const** ne peut pas être assigné à un **const** pointeur. L'exemple de code suivant montre des assignations correctes et incorrectes :  
   

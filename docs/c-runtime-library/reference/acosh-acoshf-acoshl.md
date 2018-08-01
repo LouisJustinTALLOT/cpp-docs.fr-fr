@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392781"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404750"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,23 +66,23 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*  
 Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **acosh** fonctions retournent le cosinus hyperbolique inverse (arc le cosinus hyperbolique) de *x*. Ces fonctions sont valides sur le domaine *x* ≥ 1. Si *x* est inférieur à 1, **errno** a la valeur **EDOM** et le résultat est une valeur NaN silencieuse. Si *x* est une valeur NaN silencieuse, indéfini ou l’infini, la même valeur est retournée.
+Le **acosh** fonctions retournent le cosinus hyperbolique inverse (arc le cosinus hyperbolique) de *x*. Ces fonctions sont valides sur le domaine *x* ≥ 1. Si *x* est inférieur à 1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si *x* est une valeur NaN silencieuse, indéfini, ou l’infini, la même valeur est retournée.
 
-|Entrée|Exception SEH|**_matherr** (exception)|
+|Entrée|Exception SEH|`_matherr` |
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|aucun|aucun|
-|*x* < 1|aucun|aucun|
+|± QNAN, IND, INF|aucun|none|
+|*x* < 1|none|none|
 
 ## <a name="remarks"></a>Notes
 
 Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **acosh** accepte et retourne toujours **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cos, cosf, cosl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cos, cosf, cosl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

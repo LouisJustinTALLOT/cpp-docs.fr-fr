@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942862"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404107"
 ---
 # <a name="pointers-c"></a>Pointeurs (C++)
 Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.  
@@ -32,7 +32,7 @@ Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.
 [ms-modifier] declarator ;  
 ```  
   
- où tout déclarateur de pointeur valide peut être utilisé pour `declarator`.  La syntaxe d'un déclarateur de pointeur simple est la suivante :  
+ où tout déclarateur de pointeur valide peut être utilisé pour `declarator`. La syntaxe d'un déclarateur de pointeur simple est la suivante :  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  

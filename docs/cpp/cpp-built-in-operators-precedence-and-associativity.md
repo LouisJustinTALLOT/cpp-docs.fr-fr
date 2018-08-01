@@ -1,5 +1,5 @@
 ---
-title: Les opérateurs C++ intégrés, priorité et associativité | Documents Microsoft
+title: Opérateurs C++ intégrés, priorité et associativité | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 504a6afb9815074efe0bda2b679d5ac6a720b220
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418427"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401891"
 ---
-# <a name="c-built-in-operators-precedence-and-associativity"></a>Les opérateurs C++ intégrés, priorité et associativité
+# <a name="c-built-in-operators-precedence-and-associativity"></a>Opérateurs C++ intégrés, priorité et associativité
 
 Le langage C++ inclut tous les opérateurs C et en ajoute plusieurs nouveaux. Les opérateurs spécifient une évaluation à effectuer sur un ou plusieurs opérandes.
 
@@ -41,7 +41,7 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |--------------------------|--------------|
 |**Groupe de 1 priorité, aucun associativité**|
 |[Résolution de portée](../cpp/scope-resolution-operator.md)|[::](../cpp/scope-resolution-operator.md)|
-|**Priorité du groupe 2, de gauche à droite associativité**|
+|**Précédence du groupe 2, de gauche à droite associativité**|
 |[Sélection de membre (objet ou pointeur)](../cpp/member-access-operators-dot-and.md)|[. ou ->](../cpp/member-access-operators-dot-and.md)|
 |[Indice de tableau](../cpp/subscript-operator.md)|[&#91;&#93;](../cpp/subscript-operator.md)|
 |[Appel de fonction](../cpp/function-call-operator-parens.md)|[()](../cpp/function-call-operator-parens.md)|
@@ -52,32 +52,32 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Conversion de type dynamique](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
 |[Conversion de type réinterprété](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|
 |[Conversion de type statique](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
-|**Priorité du groupe 3, de droite à gauche associativité**|
-|[Taille de l’objet ou un type](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
+|**Précédence du groupe 3, de droite à gauche associativité**|
+|[Taille d’objet ou type](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
 |[Incrément préfixé](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Décrément préfixé](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Complément à 1](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
 |[Not logique](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[Négation unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Plus unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[Adresse](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Adresse de](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Indirection](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
-|[Création d’objet](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
+|[Créer l’objet](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[Détruire un objet](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Cast](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
-|**Priorité de groupe 4, de gauche à droite associativité**|
+|**Précédence du groupe 4, de gauche à droite associativité**|
 |[Pointeur vers membre (objets ou pointeurs)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; ou ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
-|**Priorité du groupe de 5, de gauche à droite associativité**|
+|**Précédence du groupe de 5, de gauche à droite associativité**|
 |[Multiplication](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Division](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|**Priorité de groupe 6, de gauche à droite associativité**|
+|**Précédence du groupe de 6, de gauche à droite associativité**|
 |[Addition](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Soustraction](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
-|**Groupe de priorité 7, de gauche à droite associativité**|
+|**Précédence du groupe de 7, de gauche à droite associativité**|
 |[Décalage vers la gauche](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
 |[Décalage vers la droite](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[>>](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
-|**Priorité de groupe 8, de gauche à droite associativité**|
+|**Précédence du groupe de 8, de gauche à droite associativité**|
 |[Inférieur à](../cpp/relational-operators-equal-and-equal.md)|[<](../cpp/relational-operators-equal-and-equal.md)|
 |[Supérieur à](../cpp/relational-operators-equal-and-equal.md)|[>](../cpp/relational-operators-equal-and-equal.md)|
 |[Inférieur ou égal à](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
@@ -85,19 +85,19 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |**Groupe de priorité 9, de gauche à droite associativité**|
 |[Égalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |[Inégalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[\!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
-|**Priorité de groupe 10 de gauche à droite associativité**|
+|**Précédence du groupe 10 de gauche à droite associativité**|
 |[AND au niveau du bit](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
-|**Priorité de groupe 11, de gauche à droite associativité**|
-|[Opérateur de bits OR exclusif](../cpp/bitwise-exclusive-or-operator-hat.md)|[^](../cpp/bitwise-exclusive-or-operator-hat.md)|
-|**Priorité de groupe 12, de gauche à droite associativité**|
-|[Opérateur de bits OR inclusif](../cpp/bitwise-inclusive-or-operator-pipe.md)|[&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)|
-|**Priorité de 13 de groupe, de gauche à droite associativité**|
+|**Précédence du groupe 11, de gauche à droite associativité**|
+|[Au niveau du bit OR exclusif](../cpp/bitwise-exclusive-or-operator-hat.md)|[^](../cpp/bitwise-exclusive-or-operator-hat.md)|
+|**Précédence du groupe de 12, de gauche à droite associativité**|
+|[Au niveau du bit OR inclusif](../cpp/bitwise-inclusive-or-operator-pipe.md)|[&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)|
+|**Précédence du groupe 13, de gauche à droite associativité**|
 |[AND logique](../cpp/logical-and-operator-amp-amp.md)|[&amp;&amp;](../cpp/logical-and-operator-amp-amp.md)|
-|**Priorité de groupe 14, de gauche à droite associativité**|
+|**Précédence du groupe de 14, de gauche à droite associativité**|
 |[OR logique](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
-|**Priorité du groupe 15, de droite à gauche associativité**|
-|[Conditionnel](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
-|**Priorité du groupe 16, de droite à gauche associativité**|
+|**Précédence du groupe de 15, de droite à gauche associativité**|
+|[conditionnel](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
+|**Précédence du groupe de 16, de droite à gauche associativité**|
 |[Attribution](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[Assignation de multiplication](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|
 |[Assignation de division](../cpp/assignment-operators.md)|[/=](../cpp/assignment-operators.md)|
@@ -106,16 +106,13 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Assignation de soustraction](../cpp/assignment-operators.md)|[-=](../cpp/assignment-operators.md)|
 |[Assignation de décalage vers la gauche](../cpp/assignment-operators.md)|[<<=](../cpp/assignment-operators.md)|
 |[Assignation de décalage vers la droite](../cpp/assignment-operators.md)|[>>=](../cpp/assignment-operators.md)|
-|[Assignation d’opération AND au niveau du bit](../cpp/assignment-operators.md)|[&amp;=](../cpp/assignment-operators.md)|
+|[Affectation d’après AND au niveau du bit](../cpp/assignment-operators.md)|[&amp;=](../cpp/assignment-operators.md)|
 |[Au niveau du bit assignation d’opération OR inclusive](../cpp/assignment-operators.md)|[&#124;=](../cpp/assignment-operators.md)|
 |[Au niveau du bit assignation OR exclusive](../cpp/assignment-operators.md)|[^=](../cpp/assignment-operators.md)|
-|**Priorité du groupe 17, de droite à gauche associativité**|
-|[expression throw](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
-|**Priorité de groupe 18, de gauche à droite associativité**|
+|**Précédence du groupe 17, de droite à gauche associativité**|
+|[une expression throw](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
+|**Précédence du groupe de 18, de gauche à droite associativité**|
 |[Virgule](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
 
 ## <a name="see-also"></a>Voir aussi
-
-[Surcharge d'opérateur](operator-overloading.md)
-
-
+ [Surcharge d'opérateur](operator-overloading.md)

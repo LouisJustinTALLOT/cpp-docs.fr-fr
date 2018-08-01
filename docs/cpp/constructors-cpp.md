@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940883"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403061"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -30,7 +30,6 @@ Pour personnaliser la façon dont les membres de classe sont initialisés ou d�
 Constructeurs peuvent éventuellement prendre un membre de liste d’init. Il s’agit d’un moyen plus efficace pour initialiser les membres de classe que l’affectation de valeurs dans le corps du constructeur. L’exemple suivant montre une classe `Box` avec trois constructeurs surchargés. Les deux dernières utilisent des listes de membres init :
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 Lorsque vous déclarez une instance d’une classe, le compilateur choisit le constructeur à appeler en fonction des règles de résolution de surcharge :
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - Les constructeurs peuvent être déclarées comme **inline**, [explicite](#explicit_constructors), **friend** ou [constexpr](#constexpr_constructors).
@@ -87,7 +83,6 @@ Un constructeur peut avoir éventuellement une liste d’initialiseur de membre,
 Une liste d’initialiseurs de membres est préférable d’utiliser assignation des valeurs dans le corps du constructeur, car elle initialise directement le membre. Dans l’exemple suivant montre l’initialiseur de membre de liste se compose de tous les **identifier(argument)** expressions après le signe deux-points :
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 Si vous comptez sur un constructeur implicite par défaut, veillez à initialiser les membres dans la définition de classe, comme indiqué dans l’exemple précédent. Sans ces initialiseurs, les membres serait non initialisées et l’appel Volume() produirait une valeur de la mémoire. En règle générale, il est conseillé pour initialiser les membres de cette façon même lorsque vous basez ne pas sur un constructeur par défaut implicite.
@@ -141,7 +135,6 @@ Si vous comptez sur un constructeur implicite par défaut, veillez à initialise
 Vous pouvez empêcher le compilateur de générer un constructeur implicite par défaut en la définissant en tant que [supprimé](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 Si une classe n'a aucun constructeur par défaut, un tableau d'objets de cette classe ne peut pas être construit seulement à l'aide de la syntaxe avec crochets. Par exemple, dans le bloc de code précédent, un tableau de Boxes ne peut pas être déclaré comme suit :
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 Toutefois, vous pouvez utiliser un ensemble de listes d’initialiseurs pour initialiser un tableau d’objets de la zone :
@@ -205,7 +196,6 @@ Un *constructeur de copie* Initialise un objet en copiant les valeurs de membre 
 Un constructeur de copie peut avoir une de ces signatures :
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Le compilateur choisit un constructeur de déplacement dans certaines situations
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 Si une classe ne définit pas un constructeur de déplacement, le compilateur génère un implicit s’il n’existe aucun constructeur de copie déclaré par l’utilisateur, opérateur d’assignation de copie, opérateur d’assignation de déplacement ou un destructeur. Si aucun constructeur de déplacement explicite ou implicite n’est définie, les opérations qui seraient sinon utiliser un constructeur de déplacement utilisent le constructeur de copie à la place. Si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, le constructeur de copie déclarée implicitement est défini comme étant supprimé.
@@ -338,7 +325,6 @@ Un constructeur peut être déclaré comme [constexpr](constexpr-cpp.md) si
 - tous les membres de données non statiques et les sous-objets de classe de base sont initialisés ;
 - Si la classe est (a) une union des membres de type variant ou (b) a des unions anonymes, uniquement un membre de l’union est initialisé ;
 - chaque membre de données non statiques de type de classe et tous les sous-objets classe de base ont un constructeur constexpr
-
 
 ## <a name="init_list_constructors"></a> Constructeurs de liste d’initialiseur
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 Ces conversions peuvent être utiles dans certains cas mais, le plus souvent, elles peuvent entraîner des erreurs subtiles mais graves dans votre code. En règle générale, vous devez utiliser le **explicite** mot clé sur un constructeur (et des opérateurs définis par l’utilisateur) pour éviter ce genre de conversion de type implicite :
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ Un constructeur effectue son travail dans l'ordre suivant :
 L'exemple suivant montre l'ordre dans lequel les constructeurs de classe de base et membres sont appelés dans le constructeur pour une classe dérivée. D'abord, le constructeur de base est appelé, puis les membres de classe de base sont initialisés dans l'ordre dans lequel ils apparaissent dans la déclaration de classe, puis le constructeur dérivé est appelé.
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 Voici la sortie :
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. Les constructeurs de classe de base sont appelés par ordre de dérivation. Par exemple, si ClasseA est dérivée de ClasseB, qui est dérivée de ClasseC, le constructeur ClasseC est appelé en premier, puis le constructeur ClasseB, puis le constructeur ClasseA.
+Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. Les constructeurs de classe de base sont appelés dans l’ordre de dérivation — par exemple, si `ClassA` est dérivée de `ClassB`, qui est dérivée de `ClassC`, le `ClassC` constructeur est appelé en premier, puis le `ClassB` constructeur, le `ClassA` constructeur.
 
 Si une classe de base n'a pas de constructeur par défaut, vous devez fournir les paramètres du constructeur de classe de base dans le constructeur de classe dérivée :
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 Vous devez obtenir la sortie suivante :
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> Fonctions virtuelles dans les constructeurs
@@ -587,7 +566,7 @@ int main() {
 
 Voici la sortie :
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 L'instruction using place dans la portée tous les constructeurs de la classe de base, à l'exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre.
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 Une classe dérivée ne peut pas hériter de plusieurs classes de base si ces classes de base possèdent des constructeurs qui ont une signature identique.

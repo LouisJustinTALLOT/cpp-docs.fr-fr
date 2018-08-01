@@ -1,5 +1,5 @@
 ---
-title: Conventions lexicales | Documents Microsoft
+title: Conventions lexicales | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419126"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405907"
 ---
 # <a name="lexical-conventions"></a>Conventions lexicales
 Cette section introduit les éléments fondamentaux d'un programme C++. Vous utilisez ces éléments, appelés « éléments lexicaux » ou « jetons », pour élaborer les instructions, les définitions, les déclarations, etc., utilisées pour construire des programmes complets. Les éléments lexicaux suivants sont présentés dans cette section :
@@ -45,5 +45,5 @@ Cette section introduit les éléments fondamentaux d'un programme C++. Vous uti
 - [Littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
-- [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)
-- [Programme et liaison](program-and-linkage-cpp.md)
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)  
+ [Programme et liaison](program-and-linkage-cpp.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940726"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405868"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ Le compilateur ne garantit pas et ne tente pas de préserver l'attribut d'aligne
 
 Vous ne pouvez pas spécifier d'alignement des paramètres de fonction. Quand des données qui ont un attribut d'alignement sont passées par valeur dans la pile, leur alignement est contrôlé par la convention d'appel. Si l'alignement des données est important dans la fonction appelée, copiez le paramètre dans la mémoire correctement alignée avant de l'utiliser.
 
-Sans `__declspec(align(#))`, le compilateur aligne généralement les données sur les frontières naturelles en fonction du processeur cible et la taille des données, jusqu'à des limites de 4 octets sur les processeurs 32 bits et les limites de 8 octets sur les processeurs 64 bits. Les données dans les classes ou structures sont alignées dans la classe ou structure au minimum de son alignement naturel et du paramètre de compression actuel (à partir du #pragma **pack** ou **/Zp** option du compilateur).
+Sans `__declspec(align(#))`, le compilateur aligne généralement les données sur les frontières naturelles en fonction du processeur cible et la taille des données, jusqu'à des limites de 4 octets sur les processeurs 32 bits et les limites de 8 octets sur les processeurs 64 bits. Les données dans les classes ou les structures sont alignées dans la classe ou la structure au minimum de leur alignement naturel et du paramètre actuel de compression (à partir du #pragma `pack` ou de l'option de compilateur `/Zp`).
 
 Cet exemple illustre l'utilisation de `__declspec(align(#))` :
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez **malloc**, le résultat dépend de la taille d’opérande. Si *arg* > = 8, la mémoire retournée est alignée de 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée représente la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
+Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez `malloc`, le résultat dépend de la taille d'opérande. Si *arg* > = 8, la mémoire retournée est alignée de 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée représente la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Définition de nouveaux Types avec __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Comment aligner des travaux avec compression de données
 
-Le **/Zp** option du compilateur et le **pack** pragma ont pour effet de compresser les données pour les membres de structure et d’union. Cet exemple montre comment **/Zp** et `__declspec(align(#))` fonctionnent ensemble :
+Le `/Zp` option du compilateur et le `pack` pragma ont pour effet de compresser les données pour les membres de structure et d’union. Cet exemple montre comment `/Zp` et `__declspec(align(#))` fonctionnent ensemble :
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-Le tableau suivant répertorie le décalage de chaque membre dans diverses **/Zp** (ou #pragma **pack**) valeurs, en montrant comment les deux interagissent.
+Le tableau suivant répertorie le décalage de chaque membre pour diverses valeurs `/Zp` (ou #pragma `pack`), en indiquant leur mode d'interaction.
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ Le décalage d'un objet est basé sur le décalage de l'objet précédent et du 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
-
 [__declspec](../cpp/declspec.md)  
 [Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 [Vue d’ensemble des conventions d’appel x64](../build/overview-of-x64-calling-conventions.md)  

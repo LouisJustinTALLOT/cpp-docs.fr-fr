@@ -1,5 +1,5 @@
 ---
-title: Extensions Microsoft | Documents Microsoft
+title: Extensions Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419821"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408373"
 ---
 # <a name="microsoft-extensions"></a>Extensions Microsoft
-*l’instruction asm*:  
- **__asm***assembly-instruction* **;** s’abonner    
+*instruction d’ASM*:  
+ **__asm***instruction d’assembly* **;** opt    
   
- **__asm {***assembly-instruction-list***} ;** s’abonner      
+ **__asm {***liste d’instructions d’assembly***} ;** opt      
   
- *assembly-instruction-list*:  
- *assembly-instruction* **;** s’abonner  
+ *liste d’instructions d’assembly*:  
+ *instruction d’assembly* **;** opt  
   
- *assembly-instruction* **;** *assembly-instruction-list* **;** s’abonner  
+ *instruction d’assembly* **;** *liste d’instructions d’assembly* **;** opt  
   
- *MS-modifier-list*:  
- *MS-modifier ms-modifier-list*opt  
+ *MS-modificateur-list*:  
+ *MS-modificateur ms-modificateur-list*opt  
   
- *MS-modifier*:  
+ *MS-modificateur*:  
  **__cdecl**  
   
  **__fastcall**  
@@ -48,9 +48,9 @@ ms.locfileid: "32419821"
   
  **__unaligned** (réservé pour les implémentations futures)  
   
- *modificateur de base*  
+ *modificateur en fonction*  
   
- *modificateur en fonction*:  
+ *modificateur basé*:  
  **__based (** *en fonction de type* **)**  
   
  *en fonction de type*:  

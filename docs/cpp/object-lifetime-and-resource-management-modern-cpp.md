@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941549"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406040"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Gestion de la durée de vie et des ressources de l'objet (Modern C++)
 Contrairement aux langages managés, C++ ne possède aucun garbage collection (GC), ce qui libère automatiquement les ressources mémoire qui ne sont plus utilisées lors de l’exécution d’un programme. En C++, la gestion des ressources est directement liée à la durée de vie des objets. Ce document explique les facteurs qui affectent la durée de vie des objets en C++ et leur mode de gestion.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Utilisez `unique_ptr` pour une propriété unique, par exemple, dans le *pimpl* idiome. (Consultez [Pimpl pour l’Encapsulation de compilation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Rendre un `unique_ptr` la cible principale de tous explicites **nouveau** expressions.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Lorsque l’optimisation des performances est requise, vous devrez peut-être utiliser *bien encapsulé* qui possède des pointeurs et des appels explicites à supprimer. L'implémentation de votre propre structure de données de bas niveau en est la parfaite illustration.  

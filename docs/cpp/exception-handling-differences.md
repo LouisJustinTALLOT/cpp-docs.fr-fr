@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942885"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404621"
 ---
 # <a name="exception-handling-differences"></a>Différences de gestion des exceptions
 La principale différence entre la gestion structurée des exceptions et gestion des exceptions C++ est que la C++ exceptions modèle traite des types, lors de la C modèle de gestion structurée des exceptions traite des exceptions d’un type, en particulier,  **unsigned int**. Autrement dit, les exceptions C sont identifiées par une valeur entière non signée, tandis que les exceptions C++ sont identifiées par le type de données. Lorsqu'une exception est levée en C, chaque gestionnaire possible exécute un filtre qui examine le contexte d'exception C et détermine s'il faut accepter l'exception, la passer à un autre gestionnaire ou l'ignorer. Lorsqu'une exception est levée en C++, elle peut être de n'importe quelle type.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Pour utiliser cette classe, vous installez une fonction de traduction d'exception C personnalisée appelée par le mécanisme de gestion des exceptions interne chaque fois qu'une exception C est levée. Dans votre fonction de traduction, vous pouvez lever n’importe quelle exception typée (peut-être un `SE_Exception` type ou un type de classe dérivé `SE_Exception`) qui peut être interceptée par un C++ approprié **catch** gestionnaire. La fonction de traduction peut simplement retourner, ce qui signifie qu'elle n'a pas géré l'exception. Si la fonction de traduction proprement dite lève une exception C, [Terminer](../c-runtime-library/reference/terminate-crt.md) est appelée.  

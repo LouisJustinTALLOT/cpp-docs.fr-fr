@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c2fc99d4349a158bc4ce944be96e9c6141700cf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942714"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403665"
 ---
 # <a name="inline-functions-c"></a>Fonctions inline (C++)
 Une fonction définie dans le corps d'une déclaration de classe est une fonction inline.  
@@ -235,7 +235,6 @@ int main() {
 }  
 //  Sample Input:  xyz  
 // Sample Output:  Z  
-  
 ```  
   
  L’intention de l’expression `toupper(getc(stdin))` est qu’un caractère doit être lu à partir de l’appareil de console (`stdin`) et, si nécessaire, être converti en majuscules.  

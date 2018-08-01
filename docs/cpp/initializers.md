@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939860"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408162"
 ---
 # <a name="initializers"></a>Initialiseurs
 Un initialiseur spécifie la valeur initiale d'une variable. Vous pouvez initialiser des variables dans les contextes suivants :  
@@ -46,7 +46,6 @@ Un initialiseur spécifie la valeur initiale d'une variable. Vous pouvez initial
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  Les initialiseurs peuvent prendre les formes suivantes :  
@@ -93,7 +92,7 @@ Un initialiseur spécifie la valeur initiale d'une variable. Vous pouvez initial
   
 -   Char variables sont initialisées à `'\0'`.  
   
--   Les pointeurs sont initialisés à `nullptr`.  
+-   Les pointeurs sont initialisés à **nullptr**.  
   
 -   Tableaux, [POD](../standard-library/is-pod-class.md) classes, structures et unions ont leurs membres est initialisé à une valeur zéro.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>Initialisation de copie  
@@ -533,4 +531,3 @@ Graphique de décision pour l'initialisation des types référence
   
 ### <a name="initialization-of-external-variables"></a>Initialisation des variables externes  
  Les déclarations de variables automatiques, statiques et externes peuvent contenir des initialiseurs. Toutefois, les déclarations de variables externes peuvent contenir des initialiseurs uniquement si les variables ne sont pas déclarés en tant que **extern**.
-  

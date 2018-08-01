@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942877"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402820"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Fonctions utilisées par défaut et supprimées explicitement
 En C++11, les fonctions utilisées par défaut et supprimées vous permettent de contrôler de façon explicite si les fonctions membres spéciales sont générées automatiquement. Les fonctions supprimées vous fournissent également un langage simple pour empêcher les promotions de type problématiques dans les arguments de fonctions de tous les types (les fonctions membres spéciales, ainsi que les fonctions membres normales et les fonctions non membres) qui provoqueraient autrement un appel de fonction indésirable.  
@@ -145,5 +145,4 @@ template < typename T >
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

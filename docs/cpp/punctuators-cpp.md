@@ -1,5 +1,5 @@
 ---
-title: Signes de ponctuation (C++) | Documents Microsoft
+title: Signes de ponctuation (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa90598ce07cd0db52b7a4c30cfacc12566aba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1602857896745daae6e7af969add76ca2c1e1ead
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420083"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406752"
 ---
 # <a name="punctuators-c"></a>Signes de ponctuation (C++)
 Les signes de ponctuation en langage C++ ont une signification syntaxique et sémantique pour le compilateur mais ne spécifient pas d'eux-mêmes une opération qui produit une valeur. Certains signes de ponctuation, seuls ou combinés, peuvent également être des opérateurs C++ ou être significatifs pour le préprocesseur.  

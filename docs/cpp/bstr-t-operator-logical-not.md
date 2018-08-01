@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c3a3c6d70ded818f938f6169e2c3fbe277dcf35c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940227"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407057"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Section spécifique à Microsoft**  
@@ -33,9 +33,7 @@ ms.locfileid: "37940227"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 bool operator!( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  

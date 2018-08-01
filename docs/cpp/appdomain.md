@@ -1,5 +1,5 @@
 ---
-title: AppDomain | Documents Microsoft
+title: AppDomain | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52108e79a50d596dbb1f1afdfb2f64b93421d860
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 52b371d0dedc03c3f14ede1472221077d081ae8f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705229"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402300"
 ---
 # <a name="appdomain"></a>appdomain
 
@@ -32,11 +32,11 @@ Chaque domaine d'application a sa propre copie d'une variable par domaine d'appl
 
 Si vous voulez que tous les domaines d'application au sein d'un processus dans le Common Langage Runtime partagent une variable globale, utilisez le modificateur `__declspec(process)`. `__declspec(process)` est activé par défaut sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md). Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
-`__declspec(appdomain)` est valide uniquement lorsque un de le **/CLR** options du compilateur est utilisée. Seules une variable globale, une variable membre static ou une variable locale static peuvent être marquées avec `__declspec(appdomain)`. Il est incorrect d'appliquer `__declspec(appdomain)` aux membres static des types managés, car ils ont toujours ce comportement.
+`__declspec(appdomain)` est valide uniquement lorsque une de la **/CLR** options du compilateur est utilisé. Seules une variable globale, une variable membre static ou une variable locale static peuvent être marquées avec `__declspec(appdomain)`. Il est incorrect d'appliquer `__declspec(appdomain)` aux membres static des types managés, car ils ont toujours ce comportement.
 
-À l’aide de `__declspec(appdomain)` est similaire à celle de [stockage Local des threads (TLS)](../parallel/thread-local-storage-tls.md). Les threads ont leur propre stockage, tout comme les domaines d'application. L'utilisation de `__declspec(appdomain)` assure que la variable globale possède son propre stockage dans chaque domaine d'application créé pour cette application.
+À l’aide de `__declspec(appdomain)` revient à utiliser [stockage Local des threads (TLS)](../parallel/thread-local-storage-tls.md). Les threads ont leur propre stockage, tout comme les domaines d'application. L'utilisation de `__declspec(appdomain)` assure que la variable globale possède son propre stockage dans chaque domaine d'application créé pour cette application.
 
-Il existe des limitations à l’utilisation de fonctions redémarrables par processus et par appdomain variables ; consultez [processus](../cpp/process.md) pour plus d’informations.
+Il existe des limitations à l’utilisation combinée par processus et par appdomain variables ; consultez [processus](../cpp/process.md) pour plus d’informations.
 
 Par exemple, au lancement du programme, toutes les variables par processus sont initialisées, puis toutes les variables par domaine d'application. Par conséquent, lorsqu'une variable par processus est en cours d'initialisation, elle ne peut pas dépendre de la valeur d'une quelconque variable par domaine d'application. Il n'est pas recommandé de combiner l'utilisation (assignation) de variables par processus et par domaine d'application.
 
@@ -145,6 +145,5 @@ __declspec(process) CGlobal::~CGlobal destructor
 ```
 
 ## <a name="see-also"></a>Voir aussi
-
-- [__declspec](../cpp/declspec.md)
-- [Mots clés](../cpp/keywords-cpp.md)
+[__declspec](../cpp/declspec.md)  
+[Mots clés](../cpp/keywords-cpp.md)  

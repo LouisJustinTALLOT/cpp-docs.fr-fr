@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943932"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403139"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 Les expressions suffixées se composent d'expressions primaires ou d'expressions dans lesquelles les opérateurs suffixés suivent une expression primaire. Les opérateurs suffixés sont répertoriées dans le tableau suivant.  
@@ -34,13 +34,12 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 |[Opérateur d’appel de fonction](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*nom de type* **)**|  
 |[Opérateur d’accès au membre](../cpp/member-access-operators-dot-and.md)|**.** Ou **->**|  
-|[Opérateur d’Incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Opérateur d’Incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[Opérateur de décrémentation suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  La syntaxe suivante décrit les expressions suffixées possibles :  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Dans l'expression ci-dessus, func est une expression primaire, func(1) est une expression de fonction suffixée, func(1)->GetData est une expression suffixée spécifiant un membre de la classe, func(1)->GetData() est une autre expression de fonction suffixée et l'expression entière est une expression suffixée incrémentant la valeur de retour de GetData.  L'expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appeler ensuite GetValue() sur cette classe, puis incrémenter la valeur retournée.  
+ Dans l’expression ci-dessus, `func` est une expression primaire, `func(1)` est une expression de fonction suffixée, `func(1)->GetData` est une expression suffixée spécifiant un membre de la classe, `func(1)->GetData()` est une autre expression de fonction suffixée et l’ensemble expression est une expression suffixée incrémentant la valeur de retour de GetData.  L’expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appelez ensuite `GetValue()` sur cette classe, puis incrémenter la valeur retournée.  
   
  Les expressions répertoriées ci-dessus sont des expressions d'assignation, ce qui signifie que le résultat de ces expressions doit être une r-value.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Le programme précédent déclare une fonction, `print`, qui accepte deux arguments. Toutefois, le deuxième argument, `terminator`, a la valeur par défaut `"\n"`. Dans `main`, les deux premiers appels à `print` autoriser le deuxième argument par défaut fournir une nouvelle ligne pour terminer la chaîne imprimée. Le troisième appel indique une valeur explicite pour le deuxième argument. Le résultat généré par le programme est  
+ Le programme précédent déclare une fonction, `print`, qui accepte deux arguments. Toutefois, le deuxième argument, *terminateur*, a la valeur par défaut, `"\n"`. Dans `main`, les deux premiers appels à `print` autoriser le deuxième argument par défaut fournir une nouvelle ligne pour terminer la chaîne imprimée. Le troisième appel indique une valeur explicite pour le deuxième argument. Le résultat généré par le programme est  
   
 ```Output 
 hello,  

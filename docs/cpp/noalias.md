@@ -1,5 +1,5 @@
 ---
-title: noalias | Documents Microsoft
+title: noalias | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420117"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404393"
 ---
 # <a name="noalias"></a>noalias
 
 **Section spécifique à Microsoft**
 
-`noalias` signifie qu’un appel de fonction ne pas modifier ou faire référence à un état global visible et modifie uniquement la mémoire pointée *directement* par les paramètres de pointeur (indirections de premier niveau).
+**noalias** signifie qu’un appel de fonction ne pas modifier ou faire référence à un état global visible et modifie uniquement la mémoire pointée *directement* par les paramètres de pointeur (indirections de premier niveau).
 
-Si une fonction est annotée comme `noalias`, l'optimiseur peut supposer que, en plus des paramètres proprement dits, seuls les indirections de premier niveau des paramètres de pointeur sont référencées ou modifiées dans la fonction. L'état global visible est l'ensemble de toutes les données qui ne sont pas définies ou référencées en dehors de la portée de compilation, et leur adresse n'est pas prise. La portée de compilation est à tous les fichiers sources ([/LTCG (génération de Code d’édition de liens)](../build/reference/ltcg-link-time-code-generation.md) génère) ou un fichier source unique (non -**LTCG** build).
+Si une fonction est annotée en tant que **noalias**, l’optimiseur peut supposer que, outre les paramètres eux-mêmes, indirections de premier niveau uniquement des paramètres de pointeur sont référencées ou modifiées à l’intérieur de la fonction. L'état global visible est l'ensemble de toutes les données qui ne sont pas définies ou référencées en dehors de la portée de compilation, et leur adresse n'est pas prise. La portée de compilation est tous les fichiers sources ([/LTCG (Link-time Code Generation)](../build/reference/ltcg-link-time-code-generation.md) génère) ou un fichier source unique (non -**/LTCG** build).
 
-Le `noalias` annotation s’applique uniquement dans le corps de la fonction annotée. Le marquage d’une fonction en tant que `__declspec(noalias)` n’affecte pas l’utilisation d’alias de pointeurs retourné par la fonction.
+Le **noalias** annotation s’applique uniquement dans le corps de la fonction annoté. Marquage d’une fonction en tant que **__declspec (noalias)** n’affecte pas les alias des pointeurs retournés par la fonction.
 
 Pour une autre annotation qui peut affecter les alias, consultez [__declspec (Restrict)](../cpp/restrict.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de `__declspec(noalias)`.
+L’exemple suivant illustre l’utilisation de **__declspec (noalias)**.
 
-Lorsque la fonction `multiply` que les accès mémoire est annoté `__declspec(noalias)`, il indique au compilateur que cette fonction ne modifie pas l’état global, à l’exception à travers les pointeurs dans sa liste de paramètres.
+Lorsque la fonction `multiply` que les accès mémoire est annoté **__declspec (noalias)**, il indique au compilateur que cette fonction ne modifie pas l’état global, à l’exception à travers les pointeurs dans sa liste de paramètres.
 
 ```C
 // declspec_noalias.c
@@ -109,7 +109,6 @@ int main()
 ```
 
 ## <a name="see-also"></a>Voir aussi
-
-[__declspec](../cpp/declspec.md)  
-[Mots clés](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Mots clés](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

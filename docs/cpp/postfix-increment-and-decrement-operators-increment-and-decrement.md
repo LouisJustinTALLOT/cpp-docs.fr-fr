@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942881"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404052"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Opérateurs suffixés d'incrémentation et de décrémentation : ++ et --
 ## <a name="syntax"></a>Syntaxe  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- L'application de l'opérateur d'incrémentation suffixé (`++`) entraîne l'augmentation de la valeur de l'opérande d'une unité du type approprié. De même, l’effet d’appliquer l’opérateur de décrémentation suffixé (**--**) est que la valeur de l’opérande est diminué d’une unité du type approprié.  
+ L’effet d’appliquer l’opérateur d’incrémentation suffixé (**++**) est que la valeur de l’opérande est augmentée d’une unité du type approprié. De même, l’effet d’appliquer l’opérateur de décrémentation suffixé (**--**) est que la valeur de l’opérande est diminué d’une unité du type approprié.  
   
  Il est important de noter qu’un suffixe incrémenter ou décrémenter expression prend la valeur de l’expression *antérieures à* application de l’opérateur respectif. L’opération d’incrémentation ou décrémentation *après* l’opérande est évalué. Ce problème survient uniquement lorsque l'opération d'incrémentation ou de décrémentation suffixée intervient dans le contexte d'une plus grande expression.  
   

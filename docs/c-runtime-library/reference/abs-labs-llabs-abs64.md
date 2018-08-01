@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391751"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408126"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -76,7 +76,7 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*n*<br/>
+*n*  
 Valeur numérique.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -85,18 +85,18 @@ Le **abs**, **labs**, **llabs** et **_abs64** fonctions retournent la valeur abs
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **abs** qui acceptent et retournent **long**, **long** **long**,  **float**, **double**, et **long** **double** valeurs. Ces surcharges sont définies dans l’en-tête \<cmath>. Dans un programme C, **abs** toujours prend et retourne un entier.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **abs** qui acceptent et retournent **long**, **long** **long**,  **float**, **double**, et **long** **double** valeurs. Ces surcharges sont définies dans l’en-tête \<cmath>. Dans un programme C, **abs** accepte et retourne toujours un **int**.
 
-**Microsoft Specific**: étant donné que la plage d’entiers négatifs qui peuvent être représentées à l’aide de n’importe quel type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentées à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peut pas être converties. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, le **abs** fonctions retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne **INT_MIN**, `labs(LONG_MIN)` retourne **LONG_MIN**, `llabs(LLONG_MIN)` retourne **LLONG_MIN**, et `_abs64(_I64_MIN)` Retourne **_I64_MIN**. Cela signifie que la **abs** fonctions ne peuvent pas être utilisées pour garantir une valeur positive.
+**Microsoft Specific**: étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de n’importe quel type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peut pas être converties. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, le **abs** fonctions retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que le **abs** fonctions ne peuvent pas être utilisées pour garantir une valeur positive.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|-----------------------|---------------------------|
 |**ABS**, **labs**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
-Pour utiliser des versions surchargées de **abs** en C++, vous devez inclure le \<cmath > en-tête.
+Pour utiliser les versions surchargées de **abs** en C++, vous devez inclure le \<cmath > en-tête.
 
 ## <a name="example"></a>Exemple
 
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Conversion de données](../../c-runtime-library/data-conversion.md)  
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

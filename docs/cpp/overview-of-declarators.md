@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208560"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404936"
 ---
 # <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
 Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [déclarations et définitions](declarations-and-definitions-cpp.md), transmettre des propriétés telles que la classe de type et de stockage. Modificateurs, décrits dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifient les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - déclarateur de pointeur-, opérateur   
   - (déclarateur)  
 
-  
 - et *pointeur-, opérateur* est une des :  
   
   - \* [qualificateurs cv]  
   - & [qualificateurs cv] :: spécificateur de nom imbriqué \* [qualificateurs cv]  
 
-  
  Comme un déclarateur peut contenir des déclarateurs, il est possible de construire des types dérivés plus complexes, tels que des tableaux de pointeurs ou des fonctions retournant des tableaux de pointeurs de fonction, à l'aide des règles ci-dessus.  Pour former chaque étape de la construction, commencez avec l'identificateur représentant le type de données de base et appliquez la règle de syntaxe ci-dessus avec l'expression précédente comme `declarator`.  L'ordre dans lequel vous appliquez les règles de syntaxe doit être inverse à l'ordre dans lequel l'expression est énoncée en anglais.  Si l’application de la *pointeur-, opérateur* règle de syntaxe pour une expression de tableau ou fonction, utilisez des parenthèses si vous souhaitez un pointeur vers le tableau ou la fonction, comme dans la dernière ligne dans le tableau ci-dessous.  
   
  L'exemple suivant illustre la construction de « pointeur désignant un tableau de 10 pointeurs désignant des valeurs int ».  

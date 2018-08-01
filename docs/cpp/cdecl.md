@@ -1,5 +1,5 @@
 ---
-title: __cdecl | Documents Microsoft
+title: __cdecl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d07c34c11037132b9f9695ec889bb681c7f43951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414491"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406544"
 ---
 # <a name="cdecl"></a>__cdecl
 **Section spécifique à Microsoft**  
   
- `__cdecl` est la convention d'appel par défaut pour les programmes C et C++. Étant donné que la pile est nettoyée par l’appelant, il peut faire **vararg** fonctions. Le `__cdecl` convention d’appel crée des exécutables plus grands que [__stdcall](../cpp/stdcall.md), car il exige que chaque appel de fonction pour inclure du code de nettoyage de pile. La liste suivante illustre l’implémentation de cette convention d’appel.  
+ **__cdecl** est la valeur par défaut de convention d’appel pour les programmes C et C++. Étant donné que la pile est nettoyée par l’appelant, il peut faire `vararg` fonctions. Le **__cdecl** convention d’appel crée des exécutables plus grands que [__stdcall](../cpp/stdcall.md), car elle exige de chaque appel de fonction pour inclure du code de nettoyage de pile. La liste suivante illustre l’implémentation de cette convention d’appel.  
   
 |Élément|Implémentation|  
 |-------------|--------------------|  
@@ -38,9 +38,9 @@ ms.locfileid: "32414491"
 > [!NOTE]
 >  Pour plus d’informations, consultez [noms décorés](../build/reference/decorated-names.md).  
   
- Placez le modificateur `__cdecl` avant un nom de variable ou de fonction. Étant donné que les noms et conventions d’appel C sont la valeur par défaut, le seul moment où vous devez utiliser `__cdecl` dans x86 code est lorsque vous avez spécifié le **GV** (vectorcall), **GZ** (stdcall) ou  **GR** option du compilateur (fastcall). Le [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) du compilateur option force le `__cdecl` convention d’appel.  
+ Place le **__cdecl** modificateur avant une variable ou un nom de fonction. Étant donné que les noms et conventions d’appel C sont la valeur par défaut, le seul moment où vous devez utiliser **__cdecl** dans x86 code est lorsque vous avez spécifié le `/Gv` (vectorcall), `/Gz` (stdcall) ou `/Gr` (fastcall) option du compilateur. Le [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) du compilateur option force le **__cdecl** convention d’appel.  
   
- Sur les processeurs ARM et x64, `__cdecl` est accepté mais en général ignoré par le compilateur. Par convention sur ARM et x64, les arguments sont passés dans les registres le cas échéant, et les arguments suivants sont passés sur la pile. Dans x64 de code, utilisez `__cdecl` pour remplacer le **GV** option du compilateur et l’utilisation de la convention d’appel par défaut x64.  
+ Sur ARM et x64 processeurs, **__cdecl** est accepté mais en général ignoré par le compilateur. Par convention sur ARM et x64, les arguments sont passés dans les registres le cas échéant, et les arguments suivants sont passés sur la pile. Dans x64 de code, utilisez **__cdecl** pour remplacer le **GV** option du compilateur et l’utilisation de la convention d’appel par défaut x64.  
   
  Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :  
   
@@ -73,5 +73,5 @@ typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Passage des arguments et Conventions d’affectation de noms](../cpp/argument-passing-and-naming-conventions.md)   
+ [Passage des arguments et Conventions de nommage](../cpp/argument-passing-and-naming-conventions.md)   
  [Mots clés](../cpp/keywords-cpp.md)

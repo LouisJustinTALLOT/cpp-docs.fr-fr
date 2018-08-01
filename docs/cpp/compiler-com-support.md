@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941825"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402459"
 ---
 # <a name="compiler-com-support"></a>Prise en charge COM du compilateur
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
@@ -28,7 +28,7 @@ ms.locfileid: "37941825"
   
  À l’aide de la [directive de préprocesseur #import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et les convertir dans un fichier d’en-tête C++ qui décrit le modèle COM des interfaces en tant que classes. Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en-tête de la bibliothèque de types obtenus.  
   
- Vous pouvez utiliser la [__declspec](../cpp/declspec.md) attributs étendus [uuid](../cpp/uuid-cpp.md) pour attribuer un identificateur global unique (GUID) à un objet COM. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet COM. Un autre `__declspec` attribut, [propriété](../cpp/property-cpp.md), peut être utilisé pour spécifier le **obtenir** et **définir** méthodes pour un membre de données d’un objet COM.  
+ Vous pouvez utiliser la [__declspec](../cpp/declspec.md) attributs étendus [uuid](../cpp/uuid-cpp.md) pour attribuer un identificateur global unique (GUID) à un objet COM. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet COM. Un autre **__declspec** attribut, [propriété](../cpp/property-cpp.md), peut être utilisé pour spécifier le `get` et `set` méthodes pour un membre de données d’un objet COM.  
   
  Un ensemble de classes et fonctions globales de prise en charge COM est fourni pour prendre en charge la `VARIANT` et `BSTR` types, implémenter les pointeurs intelligents et encapsuler l’objet d’erreur levé par `_com_raise_error`:  
   

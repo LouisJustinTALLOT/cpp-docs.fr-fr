@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble des instructions C++ | Documents Microsoft
+title: Vue d’ensemble des instructions C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421745"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402508"
 ---
 # <a name="overview-of-c-statements"></a>Vue d'ensemble des instructions C++
 Les instructions C++ sont exécutées séquentiellement, sauf lorsqu'une instruction d'expression, une instruction de sélection, une instruction d'itération ou une instruction de saut modifie spécifiquement cette séquence.  
@@ -27,7 +27,6 @@ Les instructions C++ sont exécutées séquentiellement, sauf lorsqu'une instruc
  Les instructions peuvent être des types suivants :  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- Dans la plupart des cas, la syntaxe d’instruction C++ est identique à celle d’ANSI C. La principale différence entre les deux est qui dans C, les déclarations sont autorisées uniquement au début d’un bloc ; C++ ajoute le *instruction de déclaration*, ce qui élimine cette restriction. Cela vous permet d'entrer des variables à un point du programme où une valeur d'initialisation précalculée peut être calculée.  
+ Dans la plupart des cas, la syntaxe de l’instruction C++ est identique à celle d’ANSI C. La principale différence entre les deux est que dans C, les déclarations sont autorisées uniquement au début d’un bloc ; C++ ajoute le *instruction de déclaration*, ce qui élimine cette restriction. Cela vous permet d'entrer des variables à un point du programme où une valeur d'initialisation précalculée peut être calculée.  
   
  La déclaration de variables à l'intérieur de blocs vous permet également d'exercer un contrôle précis sur la portée et la durée de vie de ces variables.  
   

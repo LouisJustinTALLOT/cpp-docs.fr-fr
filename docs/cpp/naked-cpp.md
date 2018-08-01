@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942681"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402494"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Section spécifique à Microsoft**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  Le compilateur ne peut pas générer une fonction inline pour une fonction marquée avec l’attribut naked, même si la fonction est également marquée avec le [__forceinline](inline-functions-cpp.md) mot clé.  
 
-  
  Le compilateur émet une erreur si le **naked** attribut est appliqué à l’autre que la définition d’une méthode non membre.  
   
 ## <a name="examples"></a>Exemples  

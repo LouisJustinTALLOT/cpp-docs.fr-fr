@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942079"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407015"
 ---
 # <a name="friend-c"></a>friend (C++)
 Dans certaines circonstances, il est plus pratique d’accorder l’accès au niveau du membre à des fonctions qui ne sont pas membres d’une classe ou à tous les membres dans une classe distincte. Seul l'implémenteur de classe peut déclarer qui sont ses fonctions friend. Une fonction ou une classe ne peut pas se déclarer elle-même en tant que fonction ou classe friend d'une classe. Dans une définition de classe, utilisez le **friend** mot clé et le nom d’une fonction non membre ou autre classe pour lui accorder l’accès aux membres privés et protégés de votre classe. Dans une définition de modèle, un paramètre de type peut être déclaré en tant qu’ami.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- La première forme introduit une nouvelle classe F si aucune classe existante portant ce nom a été trouvée dans l’espace de noms plus profond.  **C ++ 11**: la deuxième forme n’introduit pas une nouvelle classe ; il peut être utilisé lors de la classe a déjà été déclarée, et il doit être utilisé lors de la déclaration d’un paramètre de type de modèle ou un typedef comme friend.  
+ La première forme introduit une nouvelle classe F si aucune classe existante portant ce nom a été trouvée dans l’espace de noms plus profond. **C ++ 11**: la deuxième forme n’introduit pas une nouvelle classe ; il peut être utilisé lors de la classe a déjà été déclarée, et il doit être utilisé lors de la déclaration d’un paramètre de type de modèle ou un typedef comme friend.  
   
  Utilisez `class friend F` lorsque le type référencé n’a pas encore été déclaré :  
   

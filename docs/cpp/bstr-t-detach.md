@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30d17c929316efe5e3b6c8c71f90591bb05868c3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940249"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401406"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Section spécifique à Microsoft**  
@@ -31,16 +31,14 @@ ms.locfileid: "37940249"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 BSTR Detach( ) throw;  
-  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
  `BSTR` encapsulé par `_bstr_t`.  
   
 ## <a name="example"></a>Exemple  
- Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant `Detach`.  
+ Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant **détachement**.  
   
  **FIN de la section spécifique à Microsoft**  
   

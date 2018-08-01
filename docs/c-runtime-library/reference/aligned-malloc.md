@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393145"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405212"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -55,25 +55,25 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Paramètres
 
-*size*<br/>
+*size*  
 Taille de l'allocation de mémoire demandée.
 
-*Alignement*<br/>
+*Alignement*  
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le bloc de mémoire qui a été alloué ou **NULL** si l’opération a échoué. Le pointeur est un multiple de *alignement*.
+Un pointeur vers le bloc de mémoire qui a été alloué ou NULL si l’opération a échoué. Le pointeur est un multiple de *alignement*.
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_malloc** est basée sur [malloc](malloc.md).
+**_aligned_malloc** repose sur [malloc](malloc.md).
 
 **_aligned_malloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-Cette fonction affecte **errno** à **ENOMEM** si l’allocation de mémoire a échoué ou si la taille demandée était supérieure à **_HEAP_MAXREQ**. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). En outre, **_aligned_malloc** valide ses paramètres. Si *alignement* n’est pas une puissance de 2 ou *taille* est égal à zéro, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **NULL** et définit **errno** à **EINVAL**.
+Cette fonction affecte à `errno` la valeur `ENOMEM` si l'allocation de mémoire a échoué ou si la taille demandée était supérieure à `_HEAP_MAXREQ`. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). En outre, **_aligned_malloc** valide ses paramètres. Si *alignement* n’est pas une puissance de 2 ou *taille* est égal à zéro, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne NULL et affecte `errno` à `EINVAL`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -163,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>Voir aussi
 
-[Alignement des données](../../c-runtime-library/data-alignment.md)<br/>
+[Alignement des données](../../c-runtime-library/data-alignment.md)  

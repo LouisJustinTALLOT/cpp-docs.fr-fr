@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941965"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402963"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 Dans C ++ 11 et versions ultérieures, une expression lambda, souvent appelé un *lambda*, est un moyen pratique de définir un objet de fonction anonyme (un *fermeture*) à l’emplacement où il est appelé ou passé comme argument pour une fonction. Les expressions lambda sont généralement utilisées pour encapsuler quelques lignes de code qui sont passées à des algorithmes ou méthodes asynchrones. Cet article explique ce que sont les expressions lambda, les compare à d'autres techniques de programmation, décrit leurs avantages et fournit un exemple simple.  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  Cette illustration montre les éléments d'une expression lambda :  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- Pour utiliser les expressions lambda dans le corps d'une méthode de classe, passez le pointeur `this` à la clause de capture pour permettre l'accès aux méthodes et données membres de la classe englobante. 
+ Pour utiliser des expressions lambda dans le corps d’une méthode de classe, passez le **cela** pointeur à la clause de capture pour fournir l’accès aux méthodes et des données membres de la classe englobante. 
  
 **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **cela** pointeur peut être capturé par sa valeur en spécifiant `*this` dans la clause de capture. Capture par valeur signifie que l’intégralité de *fermeture*, qui est l’objet de fonction anonyme qu’encapulates l’expression lambda, est copié dans chaque site d’appel où l’expression lambda est invoquée. Capture par valeur est utile lorsque l’expression lambda s’exécutera dans les opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA. 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  Dans **C ++ 14**, si le type de paramètre est générique, vous pouvez utiliser le mot clé auto comme spécificateur de type. Cela indique au compilateur de créer l'opérateur d'appel de fonction en tant que modèle. Chaque instance d'auto dans une liste de paramètres est équivalente à un paramètre de type distinct.  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Une expression lambda est implicitement `constexpr` si son résultat satisfait aux exigences d’un `constexpr` (fonction) :
 ```cpp

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941796"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405377"
 ---
 # <a name="nonstandard-behavior"></a>Comportement non standard
 Les sections suivantes répertorient certaines des situations dans lesquelles l'implémentation Visual C++ n'est pas conforme à la norme C++. Les numéros de section ci-dessous correspondent aux numéros de section de la norme C++11 (ISO/IEC 14882:2011(E)).  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>Spécificateurs d'exceptions de fonctions  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  Pour plus d’informations sur les spécifications d’exceptions, consultez [les spécifications d’exceptions](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- La norme C++ stipule que [char_traits::eof](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à un valide `char_type` valeur. Le compilateur Visual C++ applique cette contrainte de type **char**, mais pas pour le type `wchar_t`. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.  
+ La norme C++ stipule que [char_traits::eof](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à un valide `char_type` valeur. Le compilateur Visual C++ applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.  
   
 ```cpp  
 #include <iostream>  

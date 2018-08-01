@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393366"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402446"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,15 +54,15 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Paramètres
 
-*memblock* un pointeur vers le bloc de mémoire qui a été retourné à la **_aligned_malloc** ou **_aligned_offset_malloc** (fonction).
+*memblock* un pointeur vers le bloc de mémoire qui a été retourné à la `_aligned_malloc` ou `_aligned_offset_malloc` (fonction).
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_free** est marqué comme `__declspec(noalias)`, c'est-à-dire que la fonction ne peut ne pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
+**_aligned_free** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
 
-Cette fonction ne valide pas son paramètre, contrairement à d’autres fonctions CRT _aligned. Si *memblock* est un **NULL** simplement pointeur, cette fonction n’effectue aucune action. Il ne modifie pas **errno** et il n’appelle pas le Gestionnaire de paramètre non valide. Si une erreur se produit dans la fonction en raison de la non-utilisation de fonctions _aligned au préalable pour allouer le bloc de mémoire ou qu’une erreur d’alignement de mémoire se produit en raison d’un désastre imprévu, la fonction génère un rapport de débogage à partir des [macros _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
+Cette fonction ne valide pas son paramètre, contrairement à d’autres fonctions CRT _aligned. Si *memblock* est un pointeur NULL, cette fonction n’effectue aucune action. Elle ne modifie pas `errno` et elle n’appelle pas le gestionnaire de paramètres non valides. Si une erreur se produit dans la fonction en raison de la non-utilisation de fonctions _aligned au préalable pour allouer le bloc de mémoire ou qu’une erreur d’alignement de mémoire se produit en raison d’un désastre imprévu, la fonction génère un rapport de débogage à partir des [macros _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -74,4 +74,4 @@ Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Alignement des données](../../c-runtime-library/data-alignment.md)<br/>
+[Alignement des données](../../c-runtime-library/data-alignment.md)  

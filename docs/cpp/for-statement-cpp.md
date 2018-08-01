@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940817"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401572"
 ---
 # <a name="for-statement-c"></a>for, instruction (C++)
 Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur la plage-basé sur une instruction, consultez [Range-based pour instruction (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  Par défaut, sous [/Ze](../build/reference/za-ze-disable-language-extensions.md), une variable déclarée dans une **pour** boucle reste dans la portée jusqu'à ce que le **pour** extrémités de la portée englobante de la boucle.  
   
- [/ Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Active le comportement standard de variables déclarées dans des boucles sans avoir à spécifier/Za.  
+ [/ Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Active le comportement standard de variables déclarées dans des boucles sans avoir à spécifier `/Za`.  
   
- Il est également possible d’utiliser les différences d’étendue de la **pour** boucle pour redéclarer des variables sous /Ze comme suit :  
+ Il est également possible d’utiliser les différences d’étendue de la **pour** boucle pour redéclarer des variables sous `/Ze` comme suit :  
   
 ```cpp  
 // for_statement5.cpp  

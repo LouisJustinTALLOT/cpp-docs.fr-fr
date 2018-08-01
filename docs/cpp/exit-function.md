@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d08ac1375fa383543eaafb5b3ce49cd2bbfbc4da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce4272ecfee4b3d02d8bf79f7816200a392c9735
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941078"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404826"
 ---
 # <a name="exit-function"></a>exit, fonction
-Le `exit` fonction, déclarée dans le fichier include standard \<stdlib.h >, met fin à un programme C++.  
+Le **quitter** fonction, déclarée dans le fichier include standard \<stdlib.h >, met fin à un programme C++.  
   
- La valeur fournie en tant qu’argument à `exit` est retourné au système d’exploitation en tant que code retour de code ou de sortie du programme. Par convention, un code de retour égal à zéro signifie que le programme s'est terminé correctement.  
+ La valeur fournie en tant qu’argument à **quitter** est retourné au système d’exploitation en tant que code retour de code ou de sortie du programme. Par convention, un code de retour égal à zéro signifie que le programme s'est terminé correctement.  
   
 > [!NOTE]
 >  Vous pouvez utiliser les constantes EXIT_FAILURE et EXIT_SUCCESS, défini dans \<stdlib.h >, pour indiquer la réussite ou l’échec de votre programme.  
   
- Émission d’un **retourner** instruction à partir de la `main` fonction équivaut à appeler le `exit` fonction avec la valeur de retour comme argument.  
+ Émission d’un **retourner** instruction à partir de la `main` fonction équivaut à appeler le **quitter** fonction avec la valeur de retour comme argument.  
   
  Pour plus d’informations, consultez [quitter](../c-runtime-library/reference/exit-exit-exit.md) dans le *Run-Time Library Reference*.  
   

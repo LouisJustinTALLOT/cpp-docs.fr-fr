@@ -1,5 +1,5 @@
 ---
-title: Passage des arguments et Conventions d’affectation de noms | Documents Microsoft
+title: Passage des arguments et Conventions de nommage | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413484"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404039"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passage des arguments et conventions de dénomination
 **Section spécifique à Microsoft**  
@@ -44,7 +44,7 @@ ms.locfileid: "32413484"
   
  Pour plus d’informations sur la façon de définir votre propre code de prologue et épilogue de fonction, consultez [des appels de fonction Naked](../cpp/naked-function-calls.md).  
   
- Pour plus d’informations sur la valeur par défaut conventions d’appel dans le code les plateformes cibles x64, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Pour plus d’informations sur l’appel des problèmes de la convention de code qui cible les plateformes ARM, consultez [problèmes courants de Visual C++ ARM Migration](../build/common-visual-cpp-arm-migration-issues.md).  
+ Pour plus d’informations sur la valeur par défaut conventions d’appel dans le code plateformes cibles x64, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Pour plus d’informations sur l’appel des problèmes de convention dans le code qui cible les plateformes ARM, consultez [problèmes courants de Visual C++ ARM Migration](../build/common-visual-cpp-arm-migration-issues.md).  
   
  Les conventions d’appel suivantes sont prises en charge par le compilateur Visual C/C++.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32413484"
 |[__clrcall](../cpp/clrcall.md)|N/A|Charger les paramètres sur la pile d'expression CLR dans l'ordre (de gauche à droite).|  
 |[__stdcall](../cpp/stdcall.md)|Appelé|Effectue un push des paramètres sur la pile, dans l'ordre inverse (de droite à gauche)|  
 |[__fastcall](../cpp/fastcall.md)|Appelé|Stocké dans les registres, puis fait l'objet d'un push sur la pile|  
-|[__thiscall](../cpp/thiscall.md)|Appelé|Objet d’un push sur la pile ; **cela** pointeur stocké dans le Registre ECX|  
+|[__thiscall](../cpp/thiscall.md)|Appelé|Objet d’un push sur la pile ; **cela** pointeur stocké dans ECX|  
 |[__vectorcall](../cpp/vectorcall.md)|Appelé|Stocké dans les registres, puis fait l'objet d'un push sur la pile dans l'ordre inverse (de droite à gauche)|  
   
  Pour plus d’informations, consultez [Conventions d’appel obsolètes](../cpp/obsolete-calling-conventions.md).  

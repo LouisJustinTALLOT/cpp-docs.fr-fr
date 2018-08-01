@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939069"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403824"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Section spécifique à Microsoft**  
   
- Construit un objet `_com_ptr_t`.  
+ Construit un **_com_ptr_t** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  Si la valeur est TRUE, `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.  
   
  *CP*  
- Objet `_com_ptr_t`.  
+ Un **_com_ptr_t** objet.  
   
  *p*  
- Pointeur d'interface brut dont le type est différent du type de pointeur intelligent de cet objet `_com_ptr_t`.  
+ Un pointeur d’interface brut, dont le type est différent du type de pointeur intelligent de ce **_com_ptr_t** objet.  
   
  *varSrc*  
  Objet `_variant_t`.  

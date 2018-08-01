@@ -1,5 +1,5 @@
 ---
-title: Concepts de base (C++) | Documents Microsoft
+title: Concepts de base (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409574"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403574"
 ---
 # <a name="basic-concepts--c"></a>Concepts de base (C++)
-Cette section explique les concepts qui sont importants pour comprendre C++. Les programmeurs en C sera familiers avec la plupart de ces concepts, mais il existe quelques différences subtiles qui peuvent provoquer des résultats inattendus de programme. Les rubriques suivantes sont incluses :  
+Cette section explique les concepts qui sont essentielles au fonctionnement C++. Les programmeurs C sera familiers avec la plupart de ces concepts, mais il existe quelques différences subtiles qui peuvent entraîner des résultats inattendus de programme. Les rubriques suivantes sont incluses :  
   
 -   [Déclarations et définitions](../cpp/declarations-and-definitions-cpp.md)  
   
--   [Étendue d’un objet C++ (fonction)](../cpp/scope-visual-cpp.md)  
+-   [Étendue d’un objet C++ ou d’une fonction](../cpp/scope-visual-cpp.md)  
   
--   [Règles de définition et de la liaison de programme](../cpp/program-and-linkage-cpp.md)  
+-   [Règles de définition et une liaison de programme](../cpp/program-and-linkage-cpp.md)  
   
 -   [Démarrage et arrêt](../cpp/startup-and-termination-cpp.md)  
   
--   [Valeurs L-Value et r-values](../cpp/lvalues-and-rvalues-visual-cpp.md)  
+-   [L-values et r-values](../cpp/lvalues-and-rvalues-visual-cpp.md)  
   
 -   [Objets temporaires](../cpp/temporary-objects.md)  
   

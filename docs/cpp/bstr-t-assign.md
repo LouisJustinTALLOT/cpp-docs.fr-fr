@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942650"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403905"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Section spécifique à Microsoft**  
@@ -41,7 +41,7 @@ void Assign(
  `BSTR` à copier dans le `BSTR` encapsulé par un `_bstr_t`.  
   
 ## <a name="remarks"></a>Notes  
- `Assign` effectue une copie binaire, ce qui signifie que toute la longueur du `BSTR` est copiée, indépendamment du contenu.  
+ **Affecter** effectue une copie binaire, ce qui signifie que toute la durée de la `BSTR` est copiée, indépendamment du contenu.  
   
 ## <a name="example"></a>Exemple  
   

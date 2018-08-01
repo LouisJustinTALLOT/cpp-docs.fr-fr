@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392768"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401936"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -67,26 +67,26 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
-Valeur comprise entre -1 et 1, pour lesquelles calculer l’arc cosinus (le cosinus inverse).
+*x*  
+Valeur comprise entre -1 et 1, pour lesquelles calculer l’arc cosinus (cosinus inverse).
 
 ## <a name="return-value"></a>Valeur de retour
 
 Le **acos** fonction retourne l’arc cosinus de *x* dans la plage 0 en radians la mesure π.
 
-Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne un indéterminée.
+Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne un indéfini.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDE**|**_DOMAIN**|
-|± QNAN,IND|aucun|**_DOMAIN**|
-|&#124;x&#124;>1|**NON VALIDE**|**_DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN,IND|aucun|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **acos** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **acos** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **acos** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **acos** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
@@ -94,7 +94,7 @@ C++ autorisant la surcharge, vous pouvez appeler des surcharges de **acos** qui 
 
 ## <a name="example"></a>Exemple
 
-Ce programme vous invite à entrer une valeur comprise entre -1 et 1. Les valeurs d’entrée en dehors de cette plage produisent **_DOMAIN** les messages d’erreur. Si une valeur valide est entrée, le programme affiche l’arc sinus et l’arc cosinus de cette valeur.
+Ce programme vous invite à entrer une valeur comprise entre -1 et 1. Les valeurs d’entrée en dehors de cette plage génèrent des messages d’erreur `_DOMAIN`. Si une valeur valide est entrée, le programme affiche l’arc sinus et l’arc cosinus de cette valeur.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos, cosf, cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

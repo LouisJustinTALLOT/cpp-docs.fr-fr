@@ -1,5 +1,5 @@
 ---
-title: Spécialisation explicite des modèles de fonction | Documents Microsoft
+title: Spécialisation explicite des modèles de fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410731"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407687"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Spécialisation explicite de modèles de fonctions
-Avec un modèle de fonction, vous pouvez définir un comportement spécial pour un type spécifique en fournissant une spécialisation explicite (substitution) du modèle de fonction pour ce type. Par exemple :  
+Avec un modèle de fonction, vous pouvez définir un comportement spécial pour un type spécifique en fournissant une spécialisation explicite (substitution) du modèle de fonction pour ce type. Exemple :  
   
 ```cpp
 template<> void MySwap(double a, double b);  
 ```  
   
- Cette déclaration vous permet de définir une fonction différente pour **double** variables. Comme les fonctions sans modèle, les conversions de types standard (telles que la promotion d’une variable de type **float** à **double**) sont appliquées.  
+ Cette déclaration vous permet de définir une fonction différente pour **double** variables. Comme les fonctions sans modèle, les conversions de type standard (comme la promotion d’une variable de type **float** à **double**) sont appliquées.  
   
 ## <a name="example"></a>Exemple  
   

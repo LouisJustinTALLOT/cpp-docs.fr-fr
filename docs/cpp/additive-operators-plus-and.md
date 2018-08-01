@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943940"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402748"
 ---
 # <a name="additive-operators--and--"></a>Opérateurs additifs : + et -
 ## <a name="syntax"></a>Syntaxe  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  Le code du formulaire `pIntArray = pIntArray + 1` figure rarement dans les programmes C++. Pour effectuer un incrément, il est préférable d'opter pour les formulaires `pIntArray++` ou `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Soustraction de pointeur  
- Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L’expression de soustraction génère un résultat intégral signé de type **ptrdiff_t** (défini dans le fichier include standard \<stddef.h >).  
+ Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L’expression de soustraction génère un résultat intégral signé de type `ptrdiff_t` (défini dans le fichier include standard \<stddef.h >).  
   
  L’un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur vers le (*n* - *je*) élément de tableau th, où *n* est l’élément vers lequel pointe le pointeur d’origine et *je* est la valeur intégrale du second opérande.  
   

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb9419562382d3494e64dd7fb0472882fe73c13
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939037"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406332"
 ---
 # <a name="containers-modern-c"></a>Conteneurs (Modern C++)
 
@@ -48,7 +48,6 @@ N’utilisez pas les tableaux de style C. Pour les API plus anciennes qui doiven
 Pour plus d’informations sur les conteneurs, consultez [conteneurs de bibliothèque Standard C++](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Voir aussi
-
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)  
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)  
+ [Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)  
+ [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)  

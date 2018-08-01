@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943971"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407586"
 ---
 # <a name="argument-definitions"></a>Définitions d’arguments
 Les arguments dans le prototype  
   
 ```cpp 
-  
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
 ```  
@@ -45,16 +44,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  Le premier argument de ligne de commande est toujours `argv` **[1]** et le dernier `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Par convention, `argv`**[0]** est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) et si vous utilisez le premier et le deuxième argument (`lpApplicationName` et `lpCommandLine`), `argv` **[0]** peut ne pas être le nom du fichier exécutable ; Utilisez [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) pour récupérer le nom de l’exécutable et son chemin d’accès qualifié complet.  
+>  Par convention, `argv`**[0]** est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) et si vous utilisez le premier et le deuxième argument (*IpApplicationName* et *lpCommandLine*), `argv` **[0]** peut ne pas être le fichier exécutable nom ; utiliser [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) pour récupérer le nom de l’exécutable et son chemin d’accès qualifié complet.  
   
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
  *envp*  
- Le *envp* tableau, qui est une extension courante dans de nombreux systèmes UNIX, est utilisé dans Microsoft C++. Il s'agit d'un tableau de chaînes représentant les variables définies dans l'environnement de l'utilisateur. Ce tableau se termine par une entrée NULL. Il peut être déclaré en tant que tableau de pointeurs vers **char (char** \*envp []**)** ou en tant que pointeur vers des pointeurs en **char (char** \* \* envp **)**. Si votre programme utilise **wmain** au lieu de **principal**, utilisez le **wchar_t** au lieu du type de données **char**. Le bloc environnement passé à **principal** et **wmain** est une copie « figée » de l’environnement actuel. Si vous modifiez ultérieurement l’environnement via un appel à **putenv** ou `_wputenv`, l’environnement actuel (tel que retourné par `getenv` / `_wgetenv` et `_environ` /  `_wenviron` variable) sera modifié, mais le bloc dirigé vers envp ne changera pas. Consultez [personnalisation du traitement de ligne de commande](../cpp/customizing-cpp-command-line-processing.md) pour plus d’informations sur la suppression du traitement de l’environnement. Cet argument est compatible ANSI en C, mais pas en C++.  
+ Le *envp* tableau, qui est une extension courante dans de nombreux systèmes UNIX, est utilisé dans Microsoft C++. Il s'agit d'un tableau de chaînes représentant les variables définies dans l'environnement de l'utilisateur. Ce tableau se termine par une entrée NULL. Il peut être déclaré en tant que tableau de pointeurs vers **char (char** \*envp []**)** ou en tant que pointeur vers des pointeurs en **char (char** \* \* envp **)**. Si votre programme utilise `wmain` au lieu de `main`, utilisez le `wchar_t` au lieu du type de données **char**. Le bloc environnement passé à `main` et `wmain` est une copie « figée » de l’environnement actuel. Si vous modifiez ultérieurement l’environnement via un appel à `putenv` ou `_wputenv`, l’environnement actuel (tel que retourné par `getenv` / `_wgetenv` et `_environ` /  `_wenviron` variable) sera modification, mais le bloc dirigé vers envp ne changera pas. Consultez [personnalisation du traitement de ligne de commande](../cpp/customizing-cpp-command-line-processing.md) pour plus d’informations sur la suppression du traitement de l’environnement. Cet argument est compatible ANSI en C, mais pas en C++.  
   
 **FIN de la section spécifique à Microsoft**  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le *argc*, *argv*, et *envp* arguments à **principale**:  
+ L’exemple suivant montre comment utiliser le *argc*, *argv*, et *envp* arguments à `main`:  
   
 ```cpp 
 // argument_definitions.cpp  

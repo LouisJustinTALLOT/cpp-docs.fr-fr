@@ -1,5 +1,5 @@
 ---
-title: Abort (fonction) | Documents Microsoft
+title: Abort, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
 ms.technology:
@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408023"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403620"
 ---
 # <a name="abort-function"></a>abort, fonction
 
-Le **abandonner** fonction, également déclarée dans le fichier include standard \<stdlib.h >, met fin à un programme C++. La différence entre **quitter** et **abandonner** qui est **quitter** permet le traitement de fin d’exécution C++ se déroulent (objet global destructeurs seront appelés), alors que **abandonner** termine le programme immédiatement. Pour plus d’informations, consultez [abandonner](../c-runtime-library/reference/abort.md) dans les *Run-Time Library Reference*.
+Le **abandonner** fonction, déclarée également dans le fichier include standard \<stdlib.h >, met fin à un programme C++. La différence entre `exit` et **abandonner** qui est `exit` permet le traitement de terminaison d’exécution C++ se déroulent (objet global destructeurs seront appelés), tandis que **abandonner** arrête le programme immédiatement. Pour plus d’informations, consultez [abandonner](../c-runtime-library/reference/abort.md) dans le *Run-Time Library Reference*.
 
 ## <a name="see-also"></a>Voir aussi
-
 [Terminaison du programme](../cpp/program-termination.md)

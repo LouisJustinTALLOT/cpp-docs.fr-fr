@@ -1,5 +1,5 @@
 ---
-title: Modèles de classe | Documents Microsoft
+title: Classe de modèles | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415684"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405092"
 ---
 # <a name="class-templates"></a>Modèles de classe
-Cette rubrique décrit les règles qui sont propres aux modèles de classe C++.  
+Cette rubrique décrit les règles qui sont spécifiques aux modèles de classe C++.  
   
 ## <a name="member-functions-of-class-templates"></a>Fonctions membres des modèles de classe  
  Les fonctions membres peuvent être définies à l'intérieur ou à l'extérieur d'un modèle de classe. Elles sont définies comme des modèles de fonctions si elles sont définies à l'extérieur du modèle de classe.  
@@ -81,11 +81,10 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
 ## <a name="nested-class-templates"></a>Modèles de classe imbriqués  
- Les modèles peuvent être définis dans des classes ou des modèles de classe, auquel cas ils sont appelés modèles membres. Les modèles membres qui sont des classes sont appelés modèles de classe imbriqués. Les modèles de membres qui sont des fonctions sont abordés dans [modèles de fonction membre](../cpp/member-function-templates.md).  
+ Les modèles peuvent être définis dans des classes ou des modèles de classe, auquel cas ils sont appelés modèles membres. Les modèles membres qui sont des classes sont appelés modèles de classe imbriqués. Les modèles membres qui sont des fonctions sont abordées dans [modèles de fonction membre](../cpp/member-function-templates.md).  
   
  Les modèles de classe imbriqués sont déclarés en tant que modèles de classe dans la portée de la classe externe. Ils peuvent être définis à l'intérieur ou à l'extérieur de la classe englobante.  
   

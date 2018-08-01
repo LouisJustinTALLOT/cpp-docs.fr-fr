@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941003"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402944"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellipses et modèles variadiques
 Cet article explique comment utiliser les points de suspension (`...`) avec les modèles variadic C++. L’ellipse a de nombreux usages dans C et C++. Ceux-ci incluent des listes d’arguments variables pour les fonctions. Le `printf()` fonction à partir de la bibliothèque Runtime C est un des exemples plus connus.  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  Notez que cet article utilise la convention est indiquée dans le premier exemple (les points de suspension est attaché à `typename`).  
   
- Dans les exemples précédents, `Arguments` est un package de paramètres. La classe `classname` peut accepter un nombre variable d’arguments, comme dans les exemples :  
+ Dans les exemples précédents, *Arguments* est un package de paramètres. La classe `classname` peut accepter un nombre variable d’arguments, comme dans les exemples :  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  En utilisant une définition de classe de modèle variadique, vous pouvez également exiger au moins un paramètre :  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  Voici un exemple de base *fonction de modèle variadique* syntaxe :  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- Le `Arguments` pack de paramètre est ensuite étendue pour une utilisation, comme indiqué dans la section suivante, **présentation des modèles variadiques**.  
+ Le *Arguments* pack de paramètre est ensuite étendue pour une utilisation, comme indiqué dans la section suivante, **présentation des modèles variadiques**.  
   
  Autres formes de syntaxe de fonction de modèle variadique sont possibles, y compris, mais sans limitation, ces exemples :  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  Comme avec les définitions de classe de modèle variadique, vous pouvez apporter des fonctions qui requièrent au moins un paramètre :  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  Les modèles Variadiques utilisent la `sizeof...()` opérateur (non liés à l’ancien `sizeof()` opérateur) :  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>Plus d’informations sur le positionnement des points de suspension  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>Sortie  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  La plupart des implémentations qui intègrent des fonctions de modèle variadique utilisent la récurrence sous une forme quelconque, mais il est légèrement différente de la récurrence classique.  La récurrence classique implique une fonction s’appelle lui-même à l’aide de la même signature. (Il peut être surchargée ou modélisée, mais la même signature est choisie à chaque fois.) La récursivité Variadique implique l’appel d’un modèle de fonction variadique en utilisant des nombres (presque toujours décroissants) d’arguments et ainsi en horodatant une signature différente chaque fois. Un « cas de base » est toujours requis, mais la nature de la récursivité est différente.  
-  

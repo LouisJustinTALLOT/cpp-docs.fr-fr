@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943883"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402918"
 ---
 # <a name="mutable-data-members-c"></a>Membres de données mutables (C++)
 Ce mot clé peut être appliqué uniquement aux données membres non statiques et non constantes d'une classe. Si un membre de données est déclaré **mutable**, puis il est permis d’assigner une valeur à ce membre de données à partir d’un **const** fonction membre.  
@@ -29,7 +29,6 @@ Ce mot clé peut être appliqué uniquement aux données membres non statiques e
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   

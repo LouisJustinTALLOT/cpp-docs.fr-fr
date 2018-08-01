@@ -1,5 +1,5 @@
 ---
-title: 'Exclusif au niveau du bit ou opérateur : ^ | Documents Microsoft'
+title: 'Exclusif au niveau du bit ou un opérateur : ^ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409850"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406674"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Opérateur de bits OR exclusif : ^
 ## <a name="syntax"></a>Syntaxe  
@@ -37,10 +37,10 @@ expression ^ expression
 ## <a name="remarks"></a>Notes  
 L’opérateur OR exclusif au niveau du bit (**^**) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si un bit est 0 et que l'autre bit est 1, le bit de résultat correspondant prend la valeur 1. Sinon, le bit de résultat correspondant a la valeur 0.  
   
-Les deux opérandes de l’opérateur de bits OR exclusif doivent être de types intégraux. Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.  
+Les deux opérandes de l’opérateur de bits OR exclusif doivent être de types intégraux. Les conversions arithmétiques habituelles traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé d'opérateur pour ^  
-Le **xor** opérateur est l’équivalent textuel de **^**. Il existe deux moyens d’accéder à la **xor** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+Le **xor** opérateur est l’équivalent textuel de **^**. Il existe deux façons d’accéder à la **xor** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   
@@ -60,5 +60,3 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

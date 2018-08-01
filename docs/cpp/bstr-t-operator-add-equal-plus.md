@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aad73939b8fd011fd6e1c9bf16f8dfe6eb303ff3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942690"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405741"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Section spécifique à Microsoft**  
@@ -33,7 +33,6 @@ ms.locfileid: "37942690"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 _bstr_t& operator+=( const _bstr_t& s1 );  
 _bstr_t operator+( const _bstr_t& s1 );  
 friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
@@ -53,9 +52,9 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 ## <a name="remarks"></a>Notes  
  Ces opérateurs exécutent une concaténation de chaînes :  
   
--   **operator += (***s1***)** ajoute les caractères dans encapsulé `BSTR` de *s1* à la fin de encapsulédecetobjet`BSTR`.      
+-   **operator += (***s1***)** ajoute les caractères dans encapsulé `BSTR` de *s1* à la fin de encapsulédecetobjet`BSTR`.  
   
--   **operator + (***s1***)** retourne le nouvel `_bstr_t` qui est formé en concaténant de cet objet `BSTR` avec celui de *s1*.      
+-   **operator + (***s1***)** retourne le nouvel `_bstr_t` qui est formé en concaténant de cet objet `BSTR` avec celui de *s1*.  
   
 -   **operator + (***s2***&#124;***s1***)** retourne un nouvel `_bstr_t` qui est formé en concaténant une chaîne multioctet *s2*, converti en Unicode, avec le `BSTR` encapsulé dans *s1*.          
   

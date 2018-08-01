@@ -1,5 +1,5 @@
 ---
-title: La résolution de noms pour les noms déclarés localement | Documents Microsoft
+title: Résolution de noms pour les noms déclarés localement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6347f3b0b71dc35544f22101479de23bb4efd686
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d5083839b99e4b94beb2ceb3a4cba9615ea4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420040"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408266"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Résolution de nom pour les noms déclarés localement
 
@@ -173,5 +173,4 @@ Base
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-
  [Résolution de noms](../cpp/templates-and-name-resolution.md)

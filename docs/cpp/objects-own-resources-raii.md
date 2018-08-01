@@ -1,5 +1,5 @@
 ---
-title: Objets possèdent des ressources (RAII) | Documents Microsoft
+title: Ressources propres objets (RAII) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419928"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402134"
 ---
 # <a name="objects-own-resources-raii"></a>Ressources propres objets (RAII)
-Assurez-vous que les ressources propres objets. Ce principe est également connu sous « resource acquisition is initialization » ou « RAII. »  
+Assurez-vous que les ressources propres objets. Ce principe est également appelé « resource acquisition is initialization » ou « RAII. »  
   
 ## <a name="example"></a>Exemple  
- Passez chaque objet « nouveau » comme un argument de constructeur à un autre objet nommé qui est propriétaire (presque toujours unique_ptr).  
+ Passez chaque objet « nouveau » comme un argument de constructeur à un autre objet nommé qui le possède (presque toujours unique_ptr).  
   
 ```cpp  
 void f() {  
@@ -34,7 +34,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
 ```  
   
- Passez toujours immédiatement toute nouvelle ressource à un autre objet auquel il appartient.  
+ Passez toujours immédiatement une nouvelle ressource à un autre objet auquel il appartient.  
   
 ```cpp  
 void g() {  
@@ -46,5 +46,5 @@ void g() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)   
  [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

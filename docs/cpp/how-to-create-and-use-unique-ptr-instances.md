@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer et utiliser des Instances unique_ptr | Documents Microsoft'
+title: 'Comment : créer et utiliser des Instances unique_ptr | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
-ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
+ms.openlocfilehash: eed34b3c356b36c824e22739697b7967575792f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755769"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402648"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Comment : créer et utiliser des instances unique_ptr
-A [unique_ptr](../standard-library/unique-ptr-class.md) ne partage pas son pointeur. Il ne peut pas être copié vers un autre `unique_ptr`, passé par valeur à une fonction ou utilisées dans n’importe quel algorithme de la bibliothèque C++ Standard qui requiert la copie doit être effectuée. Un `unique_ptr` peut uniquement être déplacé. Cela signifie que la propriété de la ressource mémoire est transférée à un autre `unique_ptr` et que le `unique_ptr` d'origine ne le possède plus. Il est recommandé de restreindre un objet à un seul propriétaire, car la multiplicité des propriétaires ajoute de la complexité à la logique du programme. Par conséquent, lorsque vous avez besoin d’un pointeur intelligent pour un objet ordinaire C++, utilisez `unique_ptr`, et lorsque vous construisez un `unique_ptr`, utilisez le [make_unique](../standard-library/memory-functions.md#make_unique) fonction d’assistance.  
+Un [unique_ptr](../standard-library/unique-ptr-class.md) ne partage pas son pointeur. Il ne peut pas être copié vers un autre `unique_ptr`, passé par valeur à une fonction ou utilisés dans n’importe quel algorithme de bibliothèque C++ Standard qui nécessite des clichés. Un `unique_ptr` peut uniquement être déplacé. Cela signifie que la propriété de la ressource mémoire est transférée à un autre `unique_ptr` et que le `unique_ptr` d'origine ne le possède plus. Il est recommandé de restreindre un objet à un seul propriétaire, car la multiplicité des propriétaires ajoute de la complexité à la logique du programme. Par conséquent, lorsque vous avez besoin d’un pointeur intelligent pour un objet ordinaire C++, utilisez `unique_ptr`, et lorsque vous construisez un `unique_ptr`, utilisez le [make_unique](../standard-library/memory-functions.md#make_unique) fonction d’assistance.  
   
  Le diagramme suivant illustre le transfert de propriété entre deux instances `unique_ptr`.  
   
- ![Déplacement de la propriété d’une unique&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![Déplacement de la propriété d’un unique&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` est défini dans le `<memory>` en-tête dans la bibliothèque C++ Standard. Il est exactement aussi efficace que d’un pointeur brut et peut être utilisé dans des conteneurs de bibliothèque C++ Standard. L’ajout de `unique_ptr` instances aux conteneurs de bibliothèque C++ Standard est efficace, car le constructeur de déplacement de la `unique_ptr` élimine la nécessité pour une opération de copie.  
+ `unique_ptr` est défini dans le `<memory>` en-tête dans la bibliothèque Standard C++. Il est exactement aussi efficace que d’un pointeur brut et peut être utilisé dans des conteneurs de bibliothèque C++ Standard. L’ajout de `unique_ptr` instances aux conteneurs de bibliothèque Standard C++ est efficace, car le constructeur de déplacement de la `unique_ptr` élimine la nécessité d’une opération de copie.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment créer des instances `unique_ptr` et les passer entre des fonctions.  

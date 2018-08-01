@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcfd93d1529844c7e5b72d61a6f1fd87d6dd3a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940434"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408040"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C++
 
@@ -94,5 +94,4 @@ La liste suivante détaille les opérations erronées sur les champs de bits :
 - L’initialisation non -**const** référence avec un champ de bits.
 
 ## <a name="see-also"></a>Voir aussi
-
-- [Classes et structs](../cpp/classes-and-structs-cpp.md)
+ [Classes et structs](../cpp/classes-and-structs-cpp.md)

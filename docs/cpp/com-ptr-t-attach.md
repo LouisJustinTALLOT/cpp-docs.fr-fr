@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943795"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402882"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Section spécifique à Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37943795"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 void Attach( Interface* pInterface ) throw( );  
 void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
@@ -46,7 +45,7 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
   
 ## <a name="remarks"></a>Notes  
   
--   **Attacher (***pInterface***)** `AddRef` n’est pas appelée.     La propriété de l'interface est passée à cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.  
+-   **Attacher (***pInterface***)** `AddRef` n’est pas appelée. La propriété de l'interface est passée à cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.  
   
 -   **Attacher (***pInterface* **,***fAddRef***)** si *fAddRef* a la valeur TRUE, `AddRef`est appelé pour incrémenter le décompte de références pour le pointeur d’interface encapsulé.       Si *fAddRef* est FALSE, cela `_com_ptr_t` objet prend possession du pointeur d’interface brut sans appeler `AddRef`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.  
   

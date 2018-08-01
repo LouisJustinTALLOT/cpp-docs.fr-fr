@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942729"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407713"
 ---
 # <a name="nested-class-declarations"></a>Déclarations de classes imbriquées
 Une classe peut être déclarée dans la portée d'une autre classe. Il s'agit d'une « classe imbriquée ». Les classes imbriquées sont prises dans la portée de la classe englobante et peuvent être utilisées dans cette portée. Pour faire référence à une classe imbriquée à partir d'une portée différente de sa portée englobante immédiate, vous devez utiliser un nom qualifié complet.  

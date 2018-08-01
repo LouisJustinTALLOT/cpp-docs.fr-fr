@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940317"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403691"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Comment : conception pour la sécurité des exceptions
 Un des avantages du mécanisme d'exception est que l'exécution, associée aux données sur l'exception, passe directement de l'instruction qui lève l'exception à la première instruction catch qui la gère. Le gestionnaire peut concerner n'importe quels niveaux de la pile des appels. Les fonctions qui sont appelées entre l'instruction try et l'instruction throw n'ont pas besoin de connaître quoi que ce soit concernant l'exception levée.  Toutefois, elles doivent être conçues afin qu'elles puissent être "inopinément" mises hors de portée lorsqu'une exception peut se propager en remontant. Il faut donc veiller à ne pas laisser des objets, de la mémoire perdue, ou des structures de données partiellement créés qui seraient inutilisables.  
@@ -86,7 +86,6 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Utilisez l'idiome RAII pour gérer des ressources  

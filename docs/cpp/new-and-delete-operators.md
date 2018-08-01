@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940758"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406661"
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Seul l’un des deux formes précédentes peut être présent pour une classe donnée. La première forme accepte un seul argument de type **void \*** , qui contient un pointeur vers l’objet à désallouer. La deuxième forme — désallocation dimensionnée — accepte deux arguments, le premier d'entre eux est un pointeur vers le bloc de mémoire à libérer et le second est le nombre d’octets à libérer. Est le type de retour des deux formulaires **void** (**opérateur delete** ne peut pas retourner une valeur).  
+ Seul l’un des deux formes précédentes peut être présent pour une classe donnée. La première forme accepte un seul argument de type `void *`, qui contient un pointeur vers l’objet à désallouer. La deuxième forme — désallocation dimensionnée — accepte deux arguments, le premier d'entre eux est un pointeur vers le bloc de mémoire à libérer et le second est le nombre d’octets à libérer. Est le type de retour des deux formulaires **void** (**opérateur delete** ne peut pas retourner une valeur).  
   
  L’objectif de la deuxième forme est pour accélérer la recherche pour la catégorie de taille appropriée de l’objet à supprimer, ce qui est souvent pas stocké à proximité de l’allocation de lui-même et probablement mise hors cache ; la deuxième forme est particulièrement utile lorsqu’un **opérateur delete** fonction à partir d’une classe de base est utilisée pour supprimer un objet d’une classe dérivée.  
   
- Le **opérateur delete** fonction est statique ; par conséquent, il ne peut pas être virtuel. Le `operator delete` fonction obéit à access control service, comme décrit dans [contrôle d’accès de membre](../cpp/member-access-control-cpp.md).  
+ Le **opérateur delete** fonction est statique ; par conséquent, il ne peut pas être virtuel. Le **opérateur delete** fonction obéit à access control service, comme décrit dans [contrôle d’accès de membre](../cpp/member-access-control-cpp.md).  
   
  L’exemple suivant montre défini par l’utilisateur **opérateur new** et **opérateur delete** fonctions conçues pour consigner les allocations et désallocations de mémoire :  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

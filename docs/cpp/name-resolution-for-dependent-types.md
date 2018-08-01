@@ -1,5 +1,5 @@
 ---
-title: La résolution de noms pour les Types dépendants | Documents Microsoft
+title: Résolution de noms pour les Types dépendants | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419909"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402684"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Résolution du nom pour les types dépendants
 Utilisez **typename** pour les noms qualifiés dans les définitions de modèle pour indiquer au compilateur que le nom qualifié donné identifie un type. Pour plus d’informations, consultez [typename](../cpp/typename.md).  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- Recherche de noms dépendants examine les noms dans le contexte de la définition du modèle, dans l’exemple suivant, ce contexte trouverait `myFunction(char)`et le contexte de l’instanciation de modèle. Dans l’exemple suivant, le modèle est instancié dans main. Par conséquent, le `MyNamespace::myFunction` est visible à partir du point d’instanciation et est choisi comme la meilleure correspondance. Si `MyNamespace::myFunction` était renommé, `myFunction(char)` serait appelé à la place.  
+ Recherche de noms dépendants examine les noms dans le contexte de la définition du modèle, dans l’exemple suivant, ce contexte trouverait `myFunction(char)`— et le contexte de l’instanciation de modèle. Dans l’exemple suivant, le modèle est instancié dans main. Par conséquent, le `MyNamespace::myFunction` est visible à partir du point d’instanciation et est choisi comme la meilleure correspondance. Si `MyNamespace::myFunction` était renommé, `myFunction(char)` serait appelé à la place.  
   
  Tous les noms sont résolus comme s'ils étaient des noms dépendants. Néanmoins, nous vous recommandons d'utiliser des noms complets en cas de conflit éventuel.  
   
@@ -93,7 +93,7 @@ int main()
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   

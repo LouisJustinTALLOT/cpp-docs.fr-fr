@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940652"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408149"
 ---
 # <a name="override-specifier"></a>Spécificateur de substitution
 Vous pouvez utiliser la **remplacer** mot clé pour désigner les fonctions qui remplacent une fonction virtuelle dans une classe de base de membre.  
@@ -27,7 +27,6 @@ Vous pouvez utiliser la **remplacer** mot clé pour désigner les fonctions qui 
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  Lorsque vous utilisez **remplacer**, le compilateur génère des erreurs au lieu de créer en mode silencieux à nouveau membre de fonctions.  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  Pour spécifier que les fonctions ne peut pas être substituées et que les classes ne peut pas être héritées, utilisez le [finale](../cpp/final-specifier.md) mot clé.  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>Voir aussi  
  [Spécificateur final](../cpp/final-specifier.md)   
  [Mots clés](../cpp/keywords-cpp.md)   
- 

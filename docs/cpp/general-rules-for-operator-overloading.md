@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942710"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403454"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Règles générales de surcharge d'opérateur
 Les règles suivantes limitent le mode d'implémentation des opérateurs surchargés. Toutefois, ils ne s’appliquent pas à la [nouveau](../cpp/new-operator-cpp.md) et [supprimer](../cpp/delete-operator-cpp.md) operators, qui sont traités séparément.  
@@ -59,7 +59,7 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
   
 -   Les opérateurs surchargés ne peuvent pas avoir d’arguments par défaut.  
   
--   Tous les opérateurs surchargés à l'exception de l'assignation (`operator=`) sont hérités par des classes dérivées.  
+-   Tous les opérateurs à l’exception d’assignation surchargés (**opérateur =**) sont héritées par les classes dérivées.  
   
 -   Le premier argument pour les opérateurs surchargés déclarés comme fonctions membres est toujours le type de classe de l’objet pour lequel l’opérateur est appelé (la classe dans laquelle l’opérateur est déclaré ou une classe dérivée de cette classe). Aucune conversion n'est fournie pour le premier argument.  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- On ne peut pas se reposer sur cette identité pour les types de classe qui surchargent des opérateurs. De plus, certaines des exigences implicites dans l’utilisation de ces opérateurs pour les types de base sont allégées pour les opérateurs surchargés. Par exemple, l'opérateur d'addition/assignation, `+=`, requiert que l'opérande gauche soit une l-value en cas d'application à des types de base ; il n'existe aucune spécification de ce genre lorsque l'opérateur est surchargé.  
+ On ne peut pas se reposer sur cette identité pour les types de classe qui surchargent des opérateurs. De plus, certaines des exigences implicites dans l’utilisation de ces opérateurs pour les types de base sont allégées pour les opérateurs surchargés. Par exemple, l’opérateur d’addition/assignation, **+=**, nécessite l’opérande gauche soit une l-value lorsqu’il est appliqué aux types de base ; n’est pas obligatoire de ce type lors de l’opérateur est surchargé.  
   
 > [!NOTE]
 > Pour des raisons de cohérence, il est souvent préférable de suivre le modèle des types intégrés lors de la définition des opérateurs surchargés. Si la sémantique d'un opérateur surchargé diffère sensiblement de sa signification dans d'autres contextes, il peut être plus perturbant qu'utile.  

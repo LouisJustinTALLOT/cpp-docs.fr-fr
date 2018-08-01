@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b7032d9344ec9375059d5584d080854ffe5c775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943684"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405338"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Section spécifique à Microsoft**  
@@ -32,13 +32,12 @@ ms.locfileid: "37943684"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  *fCopy*  
- Si la valeur est TRUE, `copy` retourne une copie de la relation contenant-contenu `BSTR`, sinon `copy` retourne le BSTR réel.  
+ Si la valeur est TRUE, **copie** retourne une copie de la relation contenant-contenu `BSTR`, sinon **copie** retourne le BSTR réel.  
   
 ## <a name="remarks"></a>Notes  
  Retourne une copie nouvellement allouée de l'objet `BSTR` encapsulé.  

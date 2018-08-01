@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c592607732eb5558ce74edb7b71adbc023b2ae52
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939024"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402281"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Section spécifique à Microsoft**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939024"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 GUID GUID( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne le résultat de `IErrorInfo::GetGUID` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Si aucun `IErrorInfo` objet est enregistré, elle retourne la valeur GUID_NULL.  
+ Retourne le résultat de `IErrorInfo::GetGUID` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Si aucun `IErrorInfo` objet est enregistré, elle retourne `GUID_NULL`.  
   
 ## <a name="remarks"></a>Notes  
  Tout échec lors de l’appel la `IErrorInfo::GetGUID` méthode est ignorée.  

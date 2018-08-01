@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Length | Documents Microsoft
+title: _bstr_t::Length | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2979b9db6fc7b36d8f0d5581ae9397acf65b6977
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc853ce15a8c7cfdbe67a3469f33189e89e55c3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409135"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403337"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
 **Section spécifique à Microsoft**  
@@ -32,9 +32,7 @@ ms.locfileid: "32409135"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 unsigned int length ( ) const throw( );  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  

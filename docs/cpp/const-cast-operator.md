@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ed2b161c5b8f73d68fb22eb29eb00e057d7029
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5ba0312b255b2957c815bb5f26c97a668d4f7b6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942910"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403022"
 ---
 # <a name="constcast-operator"></a>const_cast, opérateur
 Supprime le **const**, **volatile**, et **__unaligned** attribut (s) à partir d’une classe.  
@@ -29,17 +29,15 @@ Supprime le **const**, **volatile**, et **__unaligned** attribut (s) à partir d
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 const_cast <type-id> (expression)  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Un pointeur vers n’importe quel type d’objet ou un pointeur vers un membre de données peut être converti explicitement en un type qui est identique à l’exception de la **const**, **volatile**, et **__unaligned** qualificateurs. Pour les pointeurs et des références, le résultat fait référence à l'objet d'origine. Pour les pointeurs vers des données membres, le résultat fait référence au même membre que le pointeur d'origine (sans cast) vers les données membres. Selon le type de l'objet référencé, une opération d'écriture via le pointeur résultant, la référence, ou le pointeur vers les données membres peut entraîner un comportement non défini.  
   
- Vous ne pouvez pas utiliser l'opérateur `const_cast` pour substituer directement l'état constant d'une variable constante.  
+ Vous ne pouvez pas utiliser le **const_cast** opérateur pour substituer directement l’état constant d’une variable constante.  
   
- L'opérateur `const_cast` convertit une valeur de pointeur null en la valeur de pointeur null du type de destination.  
+ Le **const_cast** opérateur convertit une valeur de pointeur null à la valeur de pointeur null du type de destination.  
   
 ## <a name="example"></a>Exemple  
   
@@ -72,7 +70,7 @@ int main() {
 }  
 ```  
   
- Sur la ligne contenant le `const_cast`, le type de données de la **cela** pointeur est `const CCTest *`. Le `const_cast` opérateur change le type de données de la **cela** pointeur vers `CCTest *`, ce qui permet le membre `number` à modifier. Le cast dure uniquement pendant le reste de l'instruction dans laquelle il apparaît.  
+ Sur la ligne contenant le **const_cast**, le type de données de la **cela** pointeur est `const CCTest *`. Le **const_cast** opérateur change le type de données de la **cela** pointeur vers `CCTest *`, ce qui permet le membre `number` à modifier. Le cast dure uniquement pendant le reste de l'instruction dans laquelle il apparaît.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs de casting](../cpp/casting-operators.md)   

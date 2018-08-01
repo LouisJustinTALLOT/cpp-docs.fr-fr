@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941182"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405481"
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 Un espace de noms est une région déclarative qui fournit une portée aux identificateurs (noms de types, fonctions, variables, etc.) à l'intérieur. Les espaces de noms sont utilisés pour organiser le code en groupes logiques et pour éviter les conflits de noms qui peuvent se produire en particulier lorsque votre base de code inclut plusieurs bibliothèques. Tous les identificateurs de portée espace de noms sont visibles les uns pour les autres sans qualification. Les identificateurs en dehors de l’espace de noms peuvent accéder aux membres en utilisant le nom qualifié complet pour chaque identificateur, par exemple `std::vector<std::string> vec;`, ou par un [à l’aide de la déclaration](../cpp/using-declaration.md) pour un identificateur unique (`using std::string`), ou un [à l’aide de la Directive](../cpp/namespaces-cpp.md#using_directives) pour tous les identificateurs dans l’espace de noms (`using namespace std;`). Le code dans les fichiers d'en-tête doit toujours utiliser le nom de l'espace de noms qualifié complet.  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  Utiliser une directive using pour placer tous les éléments de l'espace de noms dans la portée :  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> directives using  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- Les implémentations de fonctions dans contosodata.cpp doivent utiliser le nom qualifié complet, même si vous placez un `using` directive en haut du fichier :  
+ Les implémentations de fonctions dans contosodata.cpp doivent utiliser le nom qualifié complet, même si vous placez un **à l’aide de** directive en haut du fichier :  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  Vous pouvez utiliser des espaces de noms inline comme mécanisme de contrôle de version pour gérer les modifications apportées à l'interface publique d'une bibliothèque. Par exemple, vous pouvez créer un espace de noms parent unique et encapsuler chaque version de l'interface dans son propre espace de noms imbriqué dans le parent. L'espace de noms qui contient la version la plus récente ou préférée est qualifié comme étant inline et est par conséquent exposé comme s'il s'agissait d'un membre direct de l'espace de noms parent. Le code client qui appelle Parent::Class se liera automatiquement au nouveau code. Les clients qui préfèrent utiliser l'ancienne version peuvent toujours y accéder en utilisant le chemin d'accès qualifié complet à l'espace de noms imbriqué qui possède ce code.  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Alias de Namespace  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>espaces de noms anonymes ou sans nom  

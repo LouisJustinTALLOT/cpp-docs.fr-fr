@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942902"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405517"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Littéraux numériques, booléen et pointeur (C++)
 Un littéral est un élément de programme qui représente directement une valeur. Cet article traite des littéraux de type entier, virgule flottante, booléen et de pointeur. Pour plus d’informations sur les littéraux de chaîne et de caractère, consultez [chaîne et les littéraux de caractère (C++)](../cpp/string-and-character-literals-cpp.md). Vous pouvez également définir vos propres littéraux basés sur un de ces catégories. Pour plus d’informations, consultez [littéraux définis par l’utilisateur (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  Parfois, il est important indiquer au compilateur comment interpréter un littéral ou le type spécifique à lui affecter. Pour cela, ajoutez des préfixes ou suffixes au littéral. Par exemple, le préfixe 0x indique au compilateur d'interpréter le nombre qui le suit en tant que valeur hexadécimale, par exemple 0x35. Le suffixe ULL indique au compilateur de traiter la valeur un **unsigned long long** type, comme dans 5894345ULL. Consultez les sections suivantes pour obtenir la liste complète des préfixes et suffixes pour chaque type de littéral.  
@@ -129,7 +128,6 @@ void func( long double );
  Un littéral binaire peut être spécifié à l'aide du préfixe `0B` ou `0b`, suivi d'une séquence de 1 et de 0 :  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  Dans l'exemple précédent, il peut être préférable d'utiliser une constante nommée avec une signification claire, par exemple « MAXIMUM_ERROR_THRESHOLD ». De plus, si la valeur de retour « Opération réussie » est visible par les utilisateurs finaux, il peut être préférable d'utiliser une constante de chaîne nommée qui peut être stockée à un emplacement unique dans un fichier d'où elle peut être localisée dans d'autres langues. L'utilisation de constantes nommées permet à d'autres utilisateurs ainsi qu'à vous-même de comprendre l'objectif du code.  

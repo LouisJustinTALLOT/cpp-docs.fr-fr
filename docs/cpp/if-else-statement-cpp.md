@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942634"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405108"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 Contrôles création de branches conditionnelles. Les instructions dans le *bloc if* sont exécutés uniquement si la *-expression if* correspond à une valeur différente de zéro (ou la valeur TRUE). Si la valeur de *expression* est différent de zéro, *instruction1* et toutes les autres instructions dans le bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
@@ -36,7 +36,6 @@ Contrôles création de branches conditionnelles. Les instructions dans le *bloc
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -131,7 +130,6 @@ int main()
 #include <string>
 #include <algorithm>
 
-
 using namespace std;
 
 map<int, string> m;
@@ -159,13 +157,11 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
@@ -196,8 +192,6 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
 ## <a name="see-also"></a>Voir aussi  
  [Instructions de sélection](../cpp/selection-statements-cpp.md)   
  [Mots clés](../cpp/keywords-cpp.md)   

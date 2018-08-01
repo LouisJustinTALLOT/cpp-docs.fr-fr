@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414781"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407073"
 ---
 # <a name="character-sets"></a>Jeux de caractères
 Le texte d’un programme C++ est stocké dans des fichiers sources qui utilisent un encodage des caractères particulier. La norme C++ spécifie un jeu de caractères sources de base pour les fichiers sources, et un jeu de caractères d’exécution de base pour les fichiers compilés. Visual C++ permet l’utilisation d’un jeu supplémentaire de caractères spécifiques à des paramètres régionaux dans les fichiers sources et les fichiers compilés.  
@@ -57,7 +57,6 @@ Le texte d’un programme C++ est stocké dans des fichiers sources qui utilisen
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
  Le format des caractères étendus sur le Presse-papiers Windows est spécifique aux valeurs des paramètres régionaux de l’application. Le fait de couper et de coller ces caractères dans votre code depuis une autre application peut introduire des encodages de caractères inattendus. Ceci peut aboutir à des erreurs d’analyse sans cause visible dans votre code. Nous vous recommandons de définir l’encodage de vos fichiers sources sur une page de codes Unicode avant de coller des caractères étendus. Nous vous recommandons aussi d’utiliser un éditeur de méthode d’entrée (IME) ou l’application Character Map pour générer des caractères étendus.  
@@ -65,4 +64,4 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
  **FIN de la section spécifique à Microsoft**  
   
 ### <a name="basic-execution-character-set"></a>jeu de caractères d’exécution de base  
- Le *jeu de caractères d’exécution de base* et le *jeu de caractères larges d’exécution de base* sont constitués de tous les caractères du jeu de caractères sources de base, et des caractères de contrôle qui représentent le caractère alerte, barre oblique inverse, retour chariot et null.   Le *jeu de caractères d’exécution* et le *jeu de caractères larges d’exécution* sont des sur-ensembles des jeux de base. Ils comprennent des caractères sources définis par une implémentation en dehors du jeu de caractères sources de base. Le jeu de caractères d’exécution a une représentation spécifique aux paramètres régionaux.
+ Le *jeu de caractères d’exécution de base* et le *jeu de caractères larges d’exécution de base* sont constitués de tous les caractères du jeu de caractères sources de base, et des caractères de contrôle qui représentent le caractère alerte, barre oblique inverse, retour chariot et null. Le *jeu de caractères d’exécution* et le *jeu de caractères larges d’exécution* sont des sur-ensembles des jeux de base. Ils comprennent des caractères sources définis par une implémentation en dehors du jeu de caractères sources de base. Le jeu de caractères d’exécution a une représentation spécifique aux paramètres régionaux.

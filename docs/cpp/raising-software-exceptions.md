@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943772"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405186"
 ---
 # <a name="raising-software-exceptions"></a>Déclenchement d'exceptions logicielles
 Certaines des sources les plus courantes d'erreurs de programme ne sont pas marquées en tant qu'exceptions par le système. Par exemple, si vous essayez d'allouer un bloc de mémoire mais que la mémoire disponible est insuffisante, la fonction runtime ou API ne déclenche pas d'exception mais retourne un code d'erreur.  
@@ -60,7 +60,7 @@ Certaines des sources les plus courantes d'erreurs de programme ne sont pas marq
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- Après avoir défini un code d'exception, vous pouvez l'utiliser pour lever une exception. Par exemple, le code suivant déclenche l'exception STATUS_INSUFFICIENT_MEM en réponse à un problème d'allocation de mémoire :  
+ Après avoir défini un code d'exception, vous pouvez l'utiliser pour lever une exception. Par exemple, le code suivant déclenche le `STATUS_INSUFFICIENT_MEM` exception en réponse à un problème d’allocation de mémoire :  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

@@ -1,5 +1,5 @@
 ---
-title: Conversion | Documents Microsoft
+title: Cast | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c7dfe18c65fcde7cbfa0ea2121234f2896a2723
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411726"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405017"
 ---
 # <a name="casting"></a>Cast
 Le langage C++ prévoit que si une classe est dérivée d'une classe de base contenant des fonctions virtuelles, un pointeur vers ce type de classe de base peut être utilisé pour appeler les implémentations des fonctions virtuelles résidant dans l'objet classe dérivé. Une classe contenant des fonctions virtuelles est parfois appelée une classe polymorphe.  
@@ -42,9 +42,9 @@ Class C avec sous-objet B et sous-objet A
   
  Avec une instance de classe `C`, il y a un sous-objet `B` et un sous-objet `A`. L'instance de `C`, avec les sous-objets `A` et `B` forme l'objet complet.  
   
- En utilisant les informations de type au moment de l'exécution, il est possible de vérifier si un pointeur pointe réellement vers un objet complet et peut être casté sans risque vers un autre objet de sa hiérarchie. Le [dynamic_cast](../cpp/dynamic-cast-operator.md) opérateur peut être utilisé pour effectuer ces types de conversions. Il exécute également le contrôle à l'exécution nécessaire pour sécuriser l'opération.  
+ En utilisant les informations de type au moment de l'exécution, il est possible de vérifier si un pointeur pointe réellement vers un objet complet et peut être casté sans risque vers un autre objet de sa hiérarchie. Le [dynamic_cast](../cpp/dynamic-cast-operator.md) opérateur peut être utilisé pour effectuer ces types de casts. Il exécute également le contrôle à l'exécution nécessaire pour sécuriser l'opération.  
   
- Pour la conversion des types non polymorphes, vous pouvez utiliser la [static_cast](../cpp/static-cast-operator.md) (opérateur) (cette rubrique explique la différence entre les conversions de casting statiques et dynamiques, et lorsqu’il est judicieux d’utiliser chacun).  
+ Pour la conversion des types non polymorphes, vous pouvez utiliser la [static_cast](../cpp/static-cast-operator.md) opérateur (cette rubrique explique la différence entre les conversions de casting statiques et dynamiques, et quand il convient d’utiliser chaque).  
   
  Cette section couvre les rubriques suivantes :  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943843"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407778"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l'aide de la séquence suivante :  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de classe `Window` qui possède un type **char\***. Le type de `pwCaption` est `char * Window::* `. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.  
+ Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de classe `Window` qui possède un type `char*`. Le type de `pwCaption` est `char * Window::* `. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  La différence entre la **.\***  et **-> \*** opérateurs (les opérateurs de pointeur vers membre) est que le **.\***  opérateur sélectionne des membres étant donné un objet ou une référence d’objet, tandis que le **-> \*** opérateur sélectionne des membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Le résultat des opérateurs pointeur vers membre est le type du membre, dans ce cas, **char \*** .  
+ Le résultat des opérateurs pointeur vers membre est le type du membre, dans ce cas, `char *`.  
   
  Le fragment de code suivant appelle les fonctions membres `GetCaption` et `SetCaption` à l'aide de pointeurs vers des membres :  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Voir aussi  
- 

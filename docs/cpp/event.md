@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942882"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407823"
 ---
 # <a name="event"></a>__event
 Déclare un événement.  
@@ -31,7 +31,6 @@ Déclare un événement.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Consultez [gestion des événements en C++ natif](../cpp/event-handling-in-native-cpp.md) pour l’exemple de code.  
   
 ## <a name="com-events"></a>Événements COM  
- Les événements COM sont des interfaces. Les paramètres d’une méthode dans une interface de source d’événement doivent être `in` paramètres (mais cela n’est pas rigoureusement appliqué), car un `out` paramètre n’est pas utile lors du multicasting. Un avertissement de niveau 1 est émis si vous utilisez un `out` paramètre.  
+ Les événements COM sont des interfaces. Les paramètres d’une méthode dans une interface de source d’événement doivent être *dans* paramètres (mais cela n’est pas rigoureusement appliqué), car un *out* paramètre n’est pas utile lors du multicasting. Un avertissement de niveau 1 est émis si vous utilisez un *out* paramètre.  
   
  Le type de retour est généralement HRESULT ou **void**, mais peut être n’importe quel type intégral, y compris **enum**. Lorsqu’un événement utilise un type de retour intégral et qu’un gestionnaire d’événements retourne une valeur différente de zéro, il s’agit d’une condition d’erreur. L’événement déclenché annule alors les appels aux autres délégués. Notez que le compilateur marque automatiquement une interface de source d’événement comme un [source](../windows/source-cpp.md) dans le fichier IDL généré.  
   

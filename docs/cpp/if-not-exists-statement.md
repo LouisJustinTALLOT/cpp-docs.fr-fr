@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bee63ace276863a30c4ec81d970ba3bf5fd29e40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939947"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405283"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists, instruction
 Le **__if_not_exists** instruction teste si l’identificateur spécifié existe. S'il n'existe pas, le bloc d'instructions spécifié est exécuté.  
@@ -38,8 +38,8 @@ statements
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|`identifier`|Identificateur dont vous voulez tester l'existence.|  
-|`statements`|Une ou plusieurs instructions à exécuter si `identifier` n’existe pas.|  
+|*identifier*|Identificateur dont vous voulez tester l'existence.|  
+|*Instructions*|Une ou plusieurs instructions à exécuter si *identificateur* n’existe pas.|  
   
 ## <a name="remarks"></a>Notes  
   

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940116"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407970"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Comment : établir une interface entre le code exceptionnel et le code non exceptionnel
 Cet article explique comment implémenter une gestion cohérente des exceptions dans un module C++, et comment convertir ces exceptions vers et depuis des codes d'erreur aux limites de l'exception.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Appel de code exceptionnel depuis un code non exceptionnel  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Lorsque vous convertissez des exceptions en codes d'erreur, un problème potentiel est que les codes d'erreur ne contiennent pas souvent toutes les informations qu'une exception peut stocker. Pour résoudre ce problème, vous pouvez fournir un **catch** bloc pour chaque type d’exception spécifique qui peut être levée et d’exécuter la journalisation pour enregistrer les détails de l’exception avant qu’il est converti en un code d’erreur. Cette approche peut créer un grand nombre de répétition de code si plusieurs fonctions utilisent toutes le même ensemble de **catch** blocs. Un bon moyen pour éviter la répétition de code consiste à refactoriser ces blocs dans une fonction utilitaire privée qui implémente le **essayez** et **catch** bloque et accepte un objet de fonction qui est appelé dans le **essayez** bloc. Dans chaque fonction publique, passez le code à la fonction utilitaire en tant qu’expression lambda.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  L’exemple suivant montre comment écrire l’expression lambda qui définit le foncteur. Lorsqu’un foncteur est défini "inline" à l’aide d’une expression lambda, il est souvent plus facile à lire que s’il avait été écrit en tant qu’objet de fonction nommé.  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942722"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406569"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ils sont appelés *surchargé* fonctions. Les fonctions surchargées permettent de fournir une sémantique différente pour une fonction, selon les types et le nombre d’arguments. 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  L'instruction précédente génère deux ensembles :  
   
-|Ensemble 1 : Fonctions candidates qui comportent le premier argument de type fraction|Ensemble 2 : Fonctions candidates dont le second argument peut être converti en type int|  
+|Ensemble 1 : Fonctions candidates qui comportent le premier argument de type fraction|Ensemble 2 : Candidate fonctions dont deuxième Argument peut être converti en Type **int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Variant 1|Variant 1 (**int** peut être converti en **long** à l’aide d’une conversion standard)|  
 |Variant 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  L'appel de fonction précédent génère les ensembles suivants :  
   
-|Ensemble 1 : Fonctions candidates qui comportent le premier argument de type int|Ensemble 2 : Fonctions candidates qui comportent le second argument de type int|  
+|Ensemble 1 : Fonctions candidates qu’ont premier Argument de Type **int**|Ensemble 2 : Fonctions candidates qu’ont deuxième Argument de Type **int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (**int** peut être converti en **long** à l’aide d’une conversion standard)|Variant 1 (**int** peut être converti en **long** à l’aide d’une conversion standard)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  Correspondance avec des conversions standard. Toute séquence non classée comme correspondance exacte ou correspondance avec des promotions et qui contient uniquement des conversions standard et des conversions ordinaires est classée comme correspondance avec des conversions standard. Dans cette catégorie, les règles ci-dessous s'appliquent.  
   
-    -   Conversion d’un pointeur vers une classe dérivée, vers un autre pointeur vers une classe de base directe ou indirecte est préférable à la conversion en **void \***  ou **const void \*** .  
+    -   Conversion d’un pointeur vers une classe dérivée, vers un autre pointeur vers une classe de base directe ou indirecte est préférable à la conversion en `void *` ou `const void *`.  
   
     -   La conversion d'un pointeur vers une classe dérivée, vers un pointeur vers une classe de base génère une correspondance d'autant meilleure que la classe de base est proche d'une classe de base directe. Supposons que la hiérarchie de classes s'apparente à celle de l'illustration ci-dessous.  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>Restrictions concernant la surcharge  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR` est un synonyme de type **char \*** . Dans la portée du membre, ce code génère une erreur.  
+     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR` est un synonyme de type `char *`. Dans la portée du membre, ce code génère une erreur.  
   
 -   Les types énumérés sont des types distincts et peuvent être utilisés pour établir une distinction entre les fonctions surchargées.  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions (C++)](../cpp/functions-cpp.md)
