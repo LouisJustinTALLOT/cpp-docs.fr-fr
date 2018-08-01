@@ -1,5 +1,5 @@
 ---
-title: Analyse des Arguments de ligne de commande C++ | Documents Microsoft
+title: Analyse des Arguments de ligne de commande C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409204"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analyse des arguments de ligne de commande C++
 **Section spécifique à Microsoft**  
   
- Code de démarrage Microsoft C/C++ utilise les règles suivantes lors de l’interprétation des arguments spécifiés sur la ligne de commande du système d’exploitation :  
+ Code de démarrage Microsoft C/C++ utilise les règles suivantes lors de l’interprétation des arguments spécifiés dans la ligne de commande du système d’exploitation :  
   
 -   Les arguments sont délimités par un espace blanc, qui peut être un espace ou une tabulation.  
   
--   Le signe insertion (^) n’est pas reconnu comme caractère d’échappement ni comme délimiteur. Le caractère est géré complètement par l’Analyseur de ligne de commande du système d’exploitation avant d’être passé à la `argv` tableau dans le programme.  
+-   Le signe insertion (^) n’est pas reconnu comme caractère d’échappement ni comme délimiteur. Ce caractère est complètement traité par l’Analyseur de ligne de commande dans le système d’exploitation avant d’être passée à la `argv` tableau dans le programme.  
   
--   Une chaîne placée entre guillemets doubles («*chaîne*») est interprétée comme un argument unique, quel que soit le contenu dans un espace blanc. Une chaîne entre guillemets peut être incorporée dans un argument.  
+-   Une chaîne placée entre guillemets doubles («*chaîne*») est interprétée comme un argument unique, quels que soient contenu dans un espace blanc. Une chaîne entre guillemets peut être incorporée dans un argument.  
   
 -   Un guillemet double précédé d’une barre oblique inverse (\\") est interprété comme un caractère guillemet double littéral (").  
   
@@ -41,12 +42,12 @@ ms.lasthandoff: 05/03/2018
   
 -   Si un nombre pair de barres obliques inverses est suivi d’un guillemet double, une barre oblique inverse est placée dans le `argv` tableau pour chaque paire de barres obliques inverses et le guillemet double est interprété comme un délimiteur de chaîne.  
   
--   Si un nombre impair de barres obliques inverses est suivi d’un guillemet double, une barre oblique inverse est placée dans le `argv` tableau pour chaque paire de barres obliques inverses et le guillemet double est « échappé » à la barre oblique inverse restante, provoquant un guillemet double littéral ( » ) doit être placé dans `argv`.  
+-   Si un nombre impair de barres obliques inverses est suivi d’un guillemet double, une barre oblique inverse est placée dans le `argv` tableau pour chaque paire de barres obliques inverses et le guillemet double est « ignoré » par la barre oblique inverse restante, provoquant un guillemet double littéral ( » ) à placer dans `argv`.  
   
 ## <a name="example"></a>Exemple  
- Le programme suivant montre les arguments de la ligne de commande sont passés :  
+ Le programme suivant montre comment de la ligne de commande arguments sont passés :  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -66,7 +67,7 @@ int main( int argc,      // Number of strings in array argv
 }  
 ```  
   
- Le tableau suivant montre l’exemple d’entrée et sortie attendue, qui montre les règles dans la liste précédente.  
+ Le tableau suivant montre l’exemple d’entrée et sortie attendue, montrant les règles dans la liste précédente.  
   
 ### <a name="results-of-parsing-command-lines"></a>Résultats de l’analyse des lignes de commande  
   

@@ -1,5 +1,5 @@
 ---
-title: allouer | Documents Microsoft
+title: allouer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a253d1b539d1f3d2648cba5fa41b6d1cfbc955
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82ce0af801b77a9566bd6395a9f03b05f41676d7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408764"
 ---
 # <a name="allocate"></a>allocate
 **Section spécifique à Microsoft**  
   
- Le **allouer** spécificateur de déclaration désigne un segment de données dans laquelle l’élément de données est alloué.  
+ Le **allouer** spécificateur de déclaration nomme un segment de données dans laquelle l’élément de données sera alloué.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-
    __declspec(allocate("segname")) declarator  
-
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // allocate.cpp  
 #pragma section("mycode", read)  
 __declspec(allocate("mycode"))  int i = 0;  

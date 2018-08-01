@@ -1,5 +1,5 @@
 ---
-title: Arguments de fonction de Type référence | Documents Microsoft
+title: Arguments de fonction de Type référence | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409054"
 ---
 # <a name="reference-type-function-arguments"></a>Arguments de fonction de type référence
 Il est souvent plus efficace de passer des références que de grands objets à des fonctions. Cela permet au compilateur de passer l'adresse de l'objet tout en maintenant la syntaxe qui aurait été utilisée pour accéder à l'objet. Prenons l'exemple suivant, qui utilise la structure `Date` :  
   
-```  
+```cpp 
 // reference_type_function_arguments.cpp  
 struct Date  
 {  
@@ -66,11 +67,11 @@ int main()
 }  
 ```  
   
- Le code précédent montre que les membres d’une structure passée par référence sont accessibles à l’aide de l’opérateur de sélection de membre (**.**) au lieu de l’opérateur de sélection de membre pointeur (**->**).  
+ Le code précédent montre que les membres d’une structure passée par référence sont accessibles à l’aide de l’opérateur de sélection de membre (**.**) au lieu de l’opérateur de sélection de membre de pointeur (**->**).  
   
- Bien que les arguments passés comme types référence observent la syntaxe des types non-pointeur, ils conservent une fonctionnalité importante des types pointeur : ils sont modifiables, sauf si déclarée en tant que **const**. Comme l'objectif du code précédent n'est pas de modifier l'objet `GDate`, un prototype de fonction plus approprié est :  
+ Bien que les arguments passés comme des types référence observent la syntaxe des types non-pointeur, ils conservent une caractéristique importante de types pointeur : ils sont modifiables, sauf si déclarée en tant que **const**. Comme l'objectif du code précédent n'est pas de modifier l'objet `GDate`, un prototype de fonction plus approprié est :  
   
-```  
+```cpp 
 long JulianFromGregorian( const Date& GDate );  
 ```  
   

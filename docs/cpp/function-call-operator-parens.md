@@ -1,5 +1,5 @@
 ---
-title: 'Opérateur d’appel de fonction : () | Documents Microsoft'
+title: 'Opérateur d’appel de fonction : () | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b0c4cde0c50064c5a88469e8f9061a0321902e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408994"
 ---
 # <a name="function-call-operator-"></a>Opérateur d'appel de fonction : ()
-Une expression suffixée suivie par l’opérateur d’appel de fonction, **()**, spécifie un appel de fonction.  
+Une expression suffixée suivie de l’opérateur d’appel de fonction, **()**, spécifie un appel de fonction.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,29 +42,29 @@ postfix-expression
   
  Le *postfix-expression* doit correspondre à une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passés à la fonction. L’argument *argument-expression-list* peut être vide.  
   
- Le *postfix-expression* doit être l’un de ces types :  
+ Le *postfix-expression* doit être un de ces types :  
   
 -   Fonction retournant le type `T`. Voici un exemple de déclaration  
   
-    ```  
+    ```cpp 
     T func( int i )  
     ```  
   
 -   Pointeur d'une fonction qui retourne le type `T`. Voici un exemple de déclaration  
   
-    ```  
+    ```cpp 
     T (*func)( int i )  
     ```  
   
 -   Référence à une fonction qui retourne le type `T`. Voici un exemple de déclaration  
   
-    ```  
+    ```cpp 
     T (&func)(int i)  
     ```  
   
 -   Déréférencement de fonction de pointeur de membre qui retourne le type `T`. Voici des exemples d'appels de fonction  
   
-    ```  
+    ```cpp 
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
@@ -71,7 +72,7 @@ postfix-expression
 ## <a name="example"></a>Exemple  
  L'exemple suivant appelle la fonction de bibliothèque standard `strcat_s` avec trois arguments :  
   
-```  
+```cpp 
 // expre_Function_Call_Operator.cpp  
 // compile with: /EHsc  
   
@@ -104,7 +105,7 @@ Welcome to C++
 ## <a name="function-call-results"></a>Résultats de l'appel de fonction  
  Un appel de fonction prend une r-value, sauf si la fonction est déclarée en tant que type de référence. Les fonctions avec type de retour de référence ont des l-values et peuvent être utilisées à gauche d’une instruction d’assignation, comme suit :  
   
-```  
+```cpp 
 // expre_Function_Call_Results.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -134,11 +135,11 @@ int main()
 }  
 ```  
   
- Le code précédent définit une classe appelée `Point`, qui représentent des objets qui contiennent des données privées *x* et *y* coordonnées. Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.  
+ Le code précédent définit une classe appelée `Point`, qui contient des données privées des objets qui représentent *x* et *y* coordonnées. Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.  
   
  Les fonctions qui retournent des types de classe, des pointeurs vers des types de classe ou des références à des types de classe peuvent être utilisées comme opérande gauche pour les opérateurs de sélection de membres. Par conséquent, le code suivant est conforme :  
   
-```  
+```cpp 
 // expre_Function_Results2.cpp  
 class A {  
 public:  
@@ -179,9 +180,9 @@ int main() {
 }  
 ```  
   
- Les fonctions peuvent être appelées de manière récursive. Pour plus d’informations sur les déclarations de fonction, consultez [fonctions](functions-cpp.md). Documentation connexe est dans [programme et liaison](../cpp/program-and-linkage-cpp.md).  
+ Les fonctions peuvent être appelées de manière récursive. Pour plus d’informations sur les déclarations de fonction, consultez [fonctions](functions-cpp.md). Documentation connexe est disponible dans [programme et liaison](../cpp/program-and-linkage-cpp.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions suffixées](../cpp/postfix-expressions.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Appel de fonction ](../c-language/function-call-c.md)   

@@ -1,5 +1,5 @@
 ---
-title: Substitutions explicites (C++) | Documents Microsoft
+title: Substitutions explicites (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409444"
 ---
 # <a name="explicit-overrides-c"></a>Substitutions explicites (C++)
 **Section spécifique à Microsoft**  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment utiliser les substitutions explicites :  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  

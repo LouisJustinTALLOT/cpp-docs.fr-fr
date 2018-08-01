@@ -1,5 +1,5 @@
 ---
-title: Nettoyage des ressources | Documents Microsoft
+title: Nettoyage des ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408734"
 ---
 # <a name="cleaning-up-resources"></a>Nettoyage des ressources
-Pendant l'exécution du gestionnaire de terminaisons, il est possible que vous ne sachiez pas quelles ressources ont été réellement allouées avant l'appel du gestionnaire de terminaisons. Il est possible que le bloc d'instructions `__try` ait été interrompu avant l'allocation de toutes les ressources, afin que toutes les ressources ne soient pas ouvertes.  
+Pendant l'exécution du gestionnaire de terminaisons, il est possible que vous ne sachiez pas quelles ressources ont été réellement allouées avant l'appel du gestionnaire de terminaisons. Il est possible que le **__try** bloc d’instructions a été interrompu avant que toutes les ressources ont été alloués, afin que pas toutes les ressources ont été ouverts.  
   
  Ainsi, par sécurité, vous devez vérifier les ressources qui sont réellement ouvertes avant de procéder au nettoyage de la gestion du bloc de fin. Voici une procédure recommandée :  
   
 1.  Initialiser les handles sur NULL.  
   
-2.  Dans le bloc d'instructions `__try`, allouer les ressources. Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.  
+2.  Dans le **__try** instruction de blocs, d’allouer des ressources. Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.  
   
-3.  Dans le bloc d'instructions `__finally`, libérez chaque ressource dont la variable de handle ou de type indicateur est différente de zéro ou non Null.  
+3.  Dans le **__finally** bloc d’instructions, libérez chaque ressource dont handle correspondant ou la variable d’indicateur est différente de zéro, ou not NULL.  
   
 ## <a name="example"></a>Exemple  
- Par exemple, le code suivant utilise un gestionnaire de terminaisons pour fermer trois fichiers et un bloc de mémoire alloués dans le bloc d'instructions `__try`. Avant de nettoyer une ressource, le code vérifie si elle a été allouée.  
+ Par exemple, le code suivant utilise un gestionnaire de terminaisons pour fermer trois fichiers et un bloc de mémoire alloués lors de la **__try** bloc d’instructions. Avant de nettoyer une ressource, le code vérifie si elle a été allouée.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  
@@ -78,5 +79,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)   
+ [Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)   
  [Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

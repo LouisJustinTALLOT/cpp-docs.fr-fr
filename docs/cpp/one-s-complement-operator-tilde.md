@@ -1,5 +1,5 @@
 ---
-title: 'Un&#39;opérateur de complément s : ~ | Documents Microsoft'
+title: 'Un&#39;opérateur de complément s : ~ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409154"
 ---
 # <a name="one39s-complement-operator-"></a>Un&#39;opérateur de complément s : ~
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 ~ cast-expression  
 ```  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 05/03/2018
  L'opérateur de complément à un (`~`), parfois appelé l'opérateur de complément de bits, génère un complément à un au niveau du bit de son opérande. Autrement dit, chaque bit qui est 1 dans l'opérande est 0 dans le résultat. Inversement, chaque bit qui est 0 dans l’opérande est 1 dans le résultat. L'opérande de l'opérateur de complément à un doit être un type intégral.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé Operator pour ~  
- L'opérateur `compl` est l'équivalent textuel de `~`. Il existe deux moyens d’accéder à la `compl` opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec [/Za](../build/reference/za-ze-disable-language-extensions.md).  
+ Le **compl** opérateur est l’équivalent textuel de `~`. Il existe deux façons d’accéder à la **compl** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compilez avec [/Za](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // expre_One_Complement_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -63,5 +63,5 @@ int main () {
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md)

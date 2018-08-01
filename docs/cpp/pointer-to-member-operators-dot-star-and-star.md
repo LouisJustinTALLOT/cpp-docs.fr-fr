@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408964"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Opérateurs de pointeur vers membre : .* et -&gt;*
 ## <a name="syntax"></a>Syntaxe  
@@ -38,7 +39,7 @@ expression ->* expression
 ## <a name="remarks"></a>Notes  
  Les opérateurs de pointeur vers membre,. * et ->\*, retourner la valeur d’un membre de classe spécifique pour l’objet spécifié sur le côté gauche de l’expression.  Le côté droit doit spécifier un membre de la classe.  L'exemple ci-dessous illustre l'utilisation de ces opérateurs :  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>Sortie  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -93,12 +94,12 @@ m_func1
   
  Dans une expression contenant l’opérateur .*, le premier opérande doit être du type classe du pointeur vers le membre spécifié dans le second opérande, et accessible à ce dernier, ou d’un type accessible clairement dérivé de cette classe et accessible à cette dernière.  
   
- Dans une expression contenant le-> * (opérateur), le premier opérande doit être du type « pointeur vers le type de classe » du type spécifié dans le second opérande, ou il doit être d’un type sans ambiguïté dérivée de cette classe.  
+ Dans une expression contenant le-> * (opérateur), le premier opérande doit être de type « pointeur vers le type de classe » du type spécifié dans le second opérande, ou il doit être d’un type sans ambiguïté dérivée de cette classe.  
   
 ## <a name="example"></a>Exemple  
  Considérez les classes et le fragment de programme suivants :  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -134,11 +135,10 @@ int main() {
 }  
 ```  
   
- Le résultat de la. * ou ->\* opérateurs pointeur vers membre est un objet ou une fonction du type spécifié dans la déclaration de pointeur vers le membre. Ainsi, dans l'exemple précédent, le résultat de l'expression `ADerived.*pmfnFunc1()` est un pointeur vers une fonction qui retourne void. Ce résultat est une l-value si le second opérande est une l-value.  
+ Le résultat de la. * ou ->\* opérateurs pointeur vers membre est un objet ou une fonction du type spécifié dans la déclaration de pointeur vers membre. Ainsi, dans l'exemple précédent, le résultat de l'expression `ADerived.*pmfnFunc1()` est un pointeur vers une fonction qui retourne void. Ce résultat est une l-value si le second opérande est une l-value.  
   
 > [!NOTE]
 >  Si le résultat d’un des opérateurs de pointeur vers membre est une fonction, le résultat peut être utilisé uniquement comme opérande pour l’opérateur d’appel de fonction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Opérateurs d’assignation | Documents Microsoft
+title: Opérateurs d’assignation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408984"
 ---
 # <a name="assignment-operators"></a>Opérateurs d'assignation
 ## <a name="syntax"></a>Syntaxe  
@@ -61,11 +62,11 @@ assignment-operator : one of
 ## <a name="remarks"></a>Notes  
  Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par l’opérande de gauche. Il existe trois types d’opérations d’assignation : 
 
-1. assignation simple, dans laquelle la valeur du deuxième opérande est stockée dans l’objet spécifié par le premier opérande. 1. assignation composée, dans lequel une opération arithmétique, MAJ ou opération au niveau du bit est exécutée avant d’enregistrer le résultat.
-1. dans les ressources qui sont transférés sans copier, déplacer attribution (pour les types de classe).
+1. assignation simple, dans laquelle la valeur du second opérande est stockée dans l’objet spécifié par le premier opérande. 1. assignation composée, dans lequel une opération arithmétique, MAJ ou au niveau du bit une opération est effectuée avant le stockage du résultat.
+1. déplacer l’affectation (types de classes) dans les ressources qui sont transférés sans copie.
 
 
-Tous les opérateurs d’assignation dans le tableau suivant à l’exception de l’opération = et & & = opérateurs sont des opérateurs d’assignation composée.  
+Tous les opérateurs d’assignation dans le tableau suivant à l’exception de la = et & & = opérateurs sont des opérateurs d’assignation composée.  
   
 ### <a name="assignment-operators"></a>Opérateurs d'assignation  
   
@@ -82,7 +83,7 @@ Tous les opérateurs d’assignation dans le tableau suivant à l’exception de
 |**&=**|Obtient l’opérateur de bits AND du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**^=**|Obtient l’opérateur de bits OR exclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**\|=**|Obtient l’opérateur de bits OR inclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
-|**&&=**| Opérateur d’assignation de déplacement (pour les types de classe). Si le second opérande est une rvalue, déplacer ses ressources vers le premier opérande (sans les copier). Consultez [des constructeurs de déplacement et opérateurs d’assignation](move-constructors-and-move-assignment-operators-cpp.md) pour plus d’informations.|
+|**&&=**| Opérateur d’assignation de déplacement (pour les types de classe). Si le second opérande est une rvalue, de déplacer ses ressources vers le premier opérande (sans les copier). Consultez [constructeurs de déplacement et opérateurs d’assignation de déplacement](move-constructors-and-move-assignment-operators-cpp.md) pour plus d’informations.|
   
  **Mots clés des opérateurs**  
   
@@ -94,11 +95,11 @@ Tous les opérateurs d’assignation dans le tableau suivant à l’exception de
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- Il existe deux façons d’accéder à ces mots clés des opérateurs dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+ Il existe deux façons d’accéder à ces mots clés des opérateurs dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -127,9 +128,9 @@ int main() {
   
  L'assignation à des objets de type classe (types struct, union et classe) est exécutée par une fonction nommée operator=. Le comportement par défaut de cette fonction d'opérateur consiste à effectuer une copie de bits ; toutefois, ce comportement peut être modifié à l'aide d'opérateurs surchargés. (Consultez [opérateurs surchargés](../cpp/operator-overloading.md) pour plus d’informations.)  
   
- Un objet de toute classe clairement dérivée d'une classe de base donnée peut être assigné à un objet de la classe de base. L'inverse n'est pas vrai, car il existe une conversion implicite de la classe dérivée vers la classe de base mais pas de la classe de base vers la classe dérivée. Par exemple :  
+ Un objet de toute classe clairement dérivée d'une classe de base donnée peut être assigné à un objet de la classe de base. L'inverse n'est pas vrai, car il existe une conversion implicite de la classe dérivée vers la classe de base mais pas de la classe de base vers la classe dérivée. Exemple :  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  Pour les objets de type classe, l'assignation est différente de l'initialisation. Pour illustrer les différences entre l'assignation et l'initialisation, prenez le code  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  Le code précédent illustre un initialiseur ; il appelle le constructeur de `UserType2` qui accepte un argument de type `UserType1`. Étant donné le code  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  l'instruction d'assignation  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,13 +190,13 @@ B = A;
 -   Appelez un constructeur `UserType2::UserType2`, si un tel constructeur existe, qui accepte un argument `UserType1` et copie le résultat.  
   
 ## <a name="compound-assignment"></a>Assignation composée  
- Les opérateurs d’assignation composée, affichés dans la table de [opérateurs d’assignation](../cpp/assignment-operators.md), sont spécifiés sous la forme *e1* `op` =  *e2*, où *e1* est une l-value modifiable pas de type const et *e2* est une des opérations suivantes :  
+ Les opérateurs d’assignation composée, indiqués dans le tableau de [opérateurs d’assignation](../cpp/assignment-operators.md), sont spécifiées sous la forme *e1* `op` =  *e2*, où *e1* est une l-value modifiable pas de type const et *e2* est une des opérations suivantes :  
   
 -   Un type arithmétique  
   
 -   Un pointeur, si `op` est + ou -  
   
- Le *e1* `op` =  *e2* formulaire se comporte comme *e1* *= e1* `op` *e2*, mais *e1* est évaluée qu’une seule fois.  
+ Le *e1* `op` =  *e2* se comporte comme *e1* *= e1* `op` *e2*, mais *e1* est évaluée une seule fois.  
   
  L'assignation composée en type énuméré génère un message d'erreur. Si l'opérande de gauche est d'un type pointeur, l'opérande de droite doit être d'un type pointeur ou il doit être une expression constante qui correspond à 0. Si l’opérande de gauche est d’un type intégral, l’opérande de droite ne doit pas être d’un type pointeur.  
   
@@ -206,5 +207,5 @@ B = A;
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs binaires](../cpp/expressions-with-binary-operators.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs d’assignation C](../c-language/c-assignment-operators.md)

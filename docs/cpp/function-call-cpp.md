@@ -1,5 +1,5 @@
 ---
-title: Fonction d’appel (C++) | Documents Microsoft
+title: Fonction d’appel (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409354"
 ---
 # <a name="function-call-c"></a>Appel de fonction (C++)
 L'opérateur d'appel de fonction, invoqué à l'aide de parenthèses, est un opérateur binaire.  
@@ -33,7 +34,6 @@ L'opérateur d'appel de fonction, invoqué à l'aide de parenthèses, est un op�
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
@@ -42,14 +42,14 @@ primary-expression ( expression-list )
   
  L'opérateur d'appel de fonction, quand il est surchargé, ne modifie pas la façon dont les fonctions sont appelées, mais la façon dont l'opérateur doit être interprété quand il est appliqué aux objets d'un type de classe donné. Par exemple, le code suivant n'a généralement pas de signification :  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
  Toutefois, pour un opérateur d'appel de fonction surchargé approprié donné, cette syntaxe peut être utilisée pour décaler de 3 unités la coordonnée `x` et de 2 unités la coordonnée `y`. Le code suivant illustre ce type de définition :  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  

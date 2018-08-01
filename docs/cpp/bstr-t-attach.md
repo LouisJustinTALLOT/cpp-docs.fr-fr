@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Attach | Documents Microsoft
+title: _bstr_t::Attach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb114a33d3ac356bff16aeab47b8d894b7513e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9f69811b7b25a793d11ef6d53aaf0638c752a11
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409104"
 ---
 # <a name="bstrtattach"></a>_bstr_t::Attach
 **Section spécifique à Microsoft**  
@@ -30,8 +31,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      void Attach(  
+void Attach(  
    BSTR s  
 );  
 ```  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  Si `_bstr_t` a été précédemment attaché à un autre `BSTR`, `_bstr_t` nettoie la ressource `BSTR`, si aucune autre variable `_bstr_t` n'utilise `BSTR`.  
   
 ## <a name="example"></a>Exemple  
- Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour un exemple utilisant **attacher**.  
+ Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant **attacher**.  
   
  **FIN de la section spécifique à Microsoft**  
   

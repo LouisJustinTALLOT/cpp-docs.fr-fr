@@ -1,5 +1,5 @@
 ---
-title: propriété (C++) | Documents Microsoft
+title: propriété (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409064"
 ---
 # <a name="property-c"></a>property (C++)
 **Section spécifique à Microsoft**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Lorsque le compilateur détecte une donnée membre déclarée avec cet attribut sur la droite d’un opérateur de sélection de membres («**.**« ou »**->**»), il convertit l’opération à un **obtenir** ou **put** fonction, selon que cette expression est une l-value ou une r-value. Plus compliquée contextes, tels que «`+=`», une réécriture est effectuée en exécutant les deux **obtenir** et **put**.  
+ Lorsque le compilateur détecte une donnée membre déclarée avec cet attribut sur la droite d’un opérateur de sélection de membres («**.**« ou »**->**»), il convertit l’opération à un `get` ou `put` (fonction), selon que cette expression est une l-value ou une r-value. En savoir plus compliqué contextes, tels que «`+=`», une réécriture est effectuée par ces deux approches `get` et `put`.  
   
- Cet attribut peut également être utilisé dans la déclaration d'un tableau vide dans une définition de classe ou de structure. Par exemple :  
+ Cet attribut peut également être utilisé dans la déclaration d'un tableau vide dans une définition de classe ou de structure. Exemple :  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -52,7 +52,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  

@@ -1,5 +1,5 @@
 ---
-title: Arguments par défaut | Documents Microsoft
+title: Arguments par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409194"
 ---
 # <a name="default-arguments"></a>Arguments par défaut
 Dans de nombreux cas, les fonctions ont des arguments utilisés si rarement qu’une valeur par défaut suffirait. La fonctionnalité d’argument par défaut permet de spécifier uniquement les arguments d’une fonction qui sont significatifs dans un appel donné. Pour illustrer ce concept, prenons l’exemple présenté dans [surcharge de fonction](../cpp/function-overloading.md).  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,16 +40,16 @@ int print( double dvalue, int prec );  // Print a double with a
   
  Dans de nombreuses applications, une valeur par défaut raisonnable peut être fournie pour `prec`, éliminant ainsi la nécessité de faire appel à deux fonctions :  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
 //  given precision.  
 ```  
   
- L’implémentation de la `print` fonction est légèrement modifiée pour refléter le fait que seule une telle fonction existe pour le type **double**:  
+ L’implémentation de la `print` fonction est légèrement modifiée pour refléter le fait que qu’une telle fonction existe pour le type **double**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  Pour appeler la nouvelle fonction `print`, utilisez du code comme semblable au suivant :  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Les arguments par défaut sont utilisés uniquement dans les appels de fonction où les arguments de fin sont omis. Il doit s’agir des derniers arguments. Par conséquent, le code suivant n'est pas valide :  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   Un argument par défaut ne peut pas être redéfini dans des déclarations ultérieures, même si la redéfinition est identique à celle d'origine. Par conséquent, le code suivant génère une erreur :  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -114,11 +115,8 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Des arguments par défaut supplémentaires peuvent être ajoutés par des déclarations ultérieures.  
   
--   Des arguments par défaut peuvent être fournis pour des pointeurs vers des fonctions. Par exemple :  
+-   Des arguments par défaut peuvent être fournis pour des pointeurs vers des fonctions. Exemple :  
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>Voir aussi  
- 
