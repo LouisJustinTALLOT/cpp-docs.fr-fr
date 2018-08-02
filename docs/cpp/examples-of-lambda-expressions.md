@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942718"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404959"
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour une vue d’ensemble des expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’Expression Lambda](../cpp/lambda-expression-syntax.md).  
@@ -204,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Sortie  
@@ -256,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Sortie  
@@ -276,7 +274,6 @@ int main()
  Vous pouvez utiliser la **cela** pointeur explicitement dans une fonction, comme illustré ici :  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -290,7 +287,6 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
  Vous pouvez également capturer le **cela** pointeur implicitement :  
@@ -344,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Sortie  
@@ -354,7 +349,6 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -365,7 +359,7 @@ int main()
 ##  <a name="templateLambdaExpressions"></a> Utilisation d’Expressions Lambda avec des modèles  
   
 ### <a name="example"></a>Exemple  
- Les expressions lambda étant typées, vous pouvez les utiliser avec des modèles C++. L'exemple suivant illustre les fonctions `negate_all` et `print_all`. La fonction `negate_all` applique l'opérateur `operator-` unaire à chaque élément de l'objet `vector`. La fonction `print_all` affiche chaque élément de l'objet `vector` sur la console.  
+ Les expressions lambda étant typées, vous pouvez les utiliser avec des modèles C++. L'exemple suivant illustre les fonctions `negate_all` et `print_all`. Le `negate_all` fonction s’applique l’unaire **operator -** à chaque élément dans le `vector` objet. La fonction `print_all` affiche chaque élément de l'objet `vector` sur la console.  
   
 ### <a name="code"></a>Code  
   
@@ -405,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Sortie  
@@ -418,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>Notes  
@@ -502,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>Sortie  

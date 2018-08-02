@@ -1,5 +1,5 @@
 ---
-title: Portabilité aux limites ABI (Modern C++) | Documents Microsoft
+title: Portabilité aux limites ABI (Modern C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb9ce8012db8617afc7af3183bd7439ddeb8fab7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419659"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402349"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilité aux limites ABI (Modern C++)
-Utiliser des types suffisamment portables et les conventions aux limites de l’interface binaire. Un « type portable » est un type intégré de C ou un struct qui contient uniquement des types intégrés C. Classe types peuvent uniquement être utilisés lors de l’appelant et l’appelé s’accorder sur mise en page, l’appel convention, etc. Ceci est possible uniquement lorsque les deux sont compilés avec le compilateur et les paramètres de compilateur.  
+Utiliser des conventions et types suffisamment portables aux limites de l’interface binaire. Un « type portable » est un type intégré de C ou un struct qui contient uniquement des types intégrés C. Classe types peuvent uniquement être utilisés lors de l’appelant et l’appelé d’accord sur la mise en page, appelant convention, etc. Cela est possible uniquement lorsque les deux sont compilées avec le même compilateur et les paramètres de compilateur.  
   
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Comment faire pour lisser une classe pour la portabilité de C  
- Lorsque les appelants peuvent être compilés avec un autre compilateur/langage, les « aplatir » à un **extern « C »** API avec une convention d’appel spécifique :  
+## <a name="how-to-flatten-a-class-for-c-portability"></a>Comment aplatir une classe pour la portabilité de C  
+ Lorsque les appelants peut être compilés avec un autre compilateur/langage, les « aplatir » un **extern « C »** API avec une convention d’appel spécifique :  
   
 ```cpp  
 // class widget {  
@@ -41,5 +41,5 @@ extern "C" {        // functions using explicit "this"
   
 ## <a name="see-also"></a>Voir aussi  
  [Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)   
  [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)
