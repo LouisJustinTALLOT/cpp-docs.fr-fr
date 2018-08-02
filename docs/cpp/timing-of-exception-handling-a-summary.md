@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939414"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465007"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Synchronisation de la gestion des exceptions : Résumé
 Un gestionnaire de terminaisons est exécuté quelle que soit la façon dont le **__try** bloc d’instructions est terminé. Causes incluent hors de la **__try** bloc, un `longjmp` instruction qui transfère le contrôle hors du bloc et le déroulement de la pile en raison de la gestion des exceptions.  

@@ -1,5 +1,5 @@
 ---
-title: La fonction de rappel (Windows Runtime C++ modèle bibliothèque) | Documents Microsoft
+title: La fonction de rappel (Windows Runtime bibliothèque de modèles C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860851"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461490"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback, fonction (bibliothèque de modèles Windows Runtime C++)
 Crée un objet dont la fonction membre est une méthode de rappel.  
@@ -199,58 +199,58 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Paramètre de modèle qui spécifie l'interface du délégué à appeler lorsqu'un événement se produit.  
   
- `TCallback`  
+ *TCallback*  
  Paramètre de modèle qui spécifie le type d'un objet qui représente un objet et sa fonction membre de rappel.  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  Paramètre de modèle qui spécifie l'objet dont la fonction membre est la méthode à appeler lorsqu'un événement se produit.  
   
- `TArg1`  
+ *TArg1*  
  Paramètre de modèle qui spécifie le type du premier argument de la méthode de rappel.  
   
- `TArg2`  
+ *TArg2*  
  Paramètre de modèle qui spécifie le type du second argument de la méthode de rappel.  
   
- `TArg3`  
+ *TArg3*  
  Paramètre de modèle qui spécifie le type du troisième argument de la méthode de rappel.  
   
- `TArg4`  
+ *TArg4*  
  Paramètre de modèle qui spécifie le type du quatrième argument de la méthode de rappel.  
   
- `TArg5`  
+ *TArg5*  
  Paramètre de modèle qui spécifie le type du cinquième argument de la méthode de rappel.  
   
- `TArg6`  
+ *TArg6*  
  Paramètre de modèle qui spécifie le type du sixième argument de la méthode de rappel.  
   
- `TArg7`  
+ *TArg7*  
  Paramètre de modèle qui spécifie le type du septième argument de la méthode de rappel.  
   
- `TArg8`  
+ *TArg8*  
  Paramètre de modèle qui spécifie le type du huitième argument de la méthode de rappel.  
   
- `TArg9`  
+ *TArg9*  
  Paramètre de modèle qui spécifie le type du neuvième argument de la méthode de rappel.  
   
- `callback`  
+ *rappel*  
  Objet qui représente l'objet de rappel et sa fonction membre.  
   
- `object`  
+ *object*  
  Objet dont la fonction membre est appelée lorsqu'un événement se produit.  
   
- `method`  
+ *(Méthode)*  
  Fonction membre à appeler lorsqu'un événement se produit.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Objet dont la fonction membre est la méthode de rappel spécifiée.  
   
 ## <a name="remarks"></a>Notes  
- La base d'un objet délégué doit être IUnknown, et non IInspectable.  
+ La base d’un objet délégué doit être `IUnknown`, et non `IInspectable`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL  

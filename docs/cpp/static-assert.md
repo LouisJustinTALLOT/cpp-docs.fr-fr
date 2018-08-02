@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc51fab2dade4c6bed0456dd353258df82722de5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6fa9b8fb7fe85aca21e90195534f33201bee59fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943836"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464932"
 ---
 # <a name="staticassert"></a>static_assert
 Teste une assertion logicielle au moment de la compilation. Si l’expression de constante spécifiée a la valeur FALSE, le compilateur affiche le message spécifié, si un est fourni, et la compilation échoue avec l’erreur C2338 ; Sinon, la déclaration n’a aucun effet.  
@@ -42,15 +42,15 @@ static_assert( constant-expression );
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|`constant-expression`|Expression constante intégrale pouvant être convertie en expression booléenne.<br /><br /> Si l'expression évaluée a la valeur zéro (fausse), le paramètre `string-literal` s'affiche et la compilation échoue avec une erreur. Si l’expression est différente de zéro (true), le **static_assert** déclaration n’a aucun effet.|  
-|`string-literal`|Message qui s'affiche si le paramètre `constant-expression` a la valeur zéro. Le message est une chaîne de caractères dans le [jeu de caractères de base](../c-language/ascii-character-set.md) du compilateur ; c'est-à-dire, pas [caractères multioctets ou larges](../c-language/multibyte-and-wide-characters.md).|  
+|*constant-expression*|Expression constante intégrale pouvant être convertie en expression booléenne.<br /><br /> Si l’expression évaluée est égal à zéro (false), le *littéral de chaîne* paramètre s’affiche et la compilation échoue avec une erreur. Si l’expression est différente de zéro (true), le **static_assert** déclaration n’a aucun effet.|  
+|*string-literal*|Un message s’affiche si le *expression constante* paramètre est égal à zéro. Le message est une chaîne de caractères dans le [jeu de caractères de base](../c-language/ascii-character-set.md) du compilateur ; c'est-à-dire, pas [caractères multioctets ou larges](../c-language/multibyte-and-wide-characters.md).|  
   
 ## <a name="remarks"></a>Notes  
- Le `constant-expression` paramètre d’un **static_assert** déclaration représente un *assertion logicielle*. Une assertion logicielle spécifie une condition supposée être vraie en un point particulier de votre programme. Si la condition est true, le **static_assert** déclaration n’a aucun effet. Si la condition est fausse, l'assertion échoue, le compilateur affiche le message dans le paramètre `string-literal` et la compilation échoue avec une erreur. Dans Visual Studio 2017 et versions ultérieures, le paramètre de littéral de chaîne est facultatif. 
+ Le *expression constante* paramètre d’un **static_assert** déclaration représente un *assertion logicielle*. Une assertion logicielle spécifie une condition supposée être vraie en un point particulier de votre programme. Si la condition est true, le **static_assert** déclaration n’a aucun effet. Si la condition est false, l’assertion échoue, le compilateur affiche le message dans *littéral de chaîne* paramètre et la compilation échoue avec une erreur. Dans Visual Studio 2017 et versions ultérieures, le paramètre de littéral de chaîne est facultatif. 
   
- Le **static_assert** déclaration teste une assertion logicielle au moment de la compilation. En revanche, le [assert (macro), _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro teste une assertion logicielle au moment de l’exécution et génère un coût d’exécution dans l’espace ou de temps. Le **static_assert** déclaration est particulièrement utile pour déboguer des modèles, car les arguments template peuvent être inclus dans le `constant-expression` paramètre.  
+ Le **static_assert** déclaration teste une assertion logicielle au moment de la compilation. En revanche, le [assert (macro), _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro teste une assertion logicielle au moment de l’exécution et génère un coût d’exécution dans l’espace ou de temps. Le **static_assert** déclaration est particulièrement utile pour déboguer des modèles, car les arguments template peuvent être inclus dans le *expression constante* paramètre.  
   
- Le compilateur examine la **static_assert** déclaration pour les erreurs de syntaxe lors de la déclaration est rencontrée. Le compilateur évalue immédiatement le paramètre `constant-expression` s'il ne dépend pas d'un paramètre de modèle. Sinon, le compilateur évalue le paramètre `constant-expression` lorsque le modèle est instancié. Par conséquent, le compilateur peut publier un message de diagnostic une fois la déclaration rencontrée, puis à nouveau lorsque le modèle est instancié.  
+ Le compilateur examine la **static_assert** déclaration pour les erreurs de syntaxe lors de la déclaration est rencontrée. Le compilateur évalue le *expression constante* paramètre immédiatement si elle ne dépend pas de paramètre de modèle. Sinon, le compilateur évalue le *expression constante* paramètre quand le modèle est instancié. Par conséquent, le compilateur peut publier un message de diagnostic une fois la déclaration rencontrée, puis à nouveau lorsque le modèle est instancié.  
   
  Vous pouvez utiliser la **static_assert** mot clé à l’espace de noms, classe ou portée de bloc. (Le **static_assert** mot clé est techniquement une déclaration, même s’il n’introduit pas de nouveau nom dans votre programme, car il peut être utilisé à la portée de l’espace de noms.)  
   
@@ -64,7 +64,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```  
   
 ## <a name="description"></a>Description  
- Dans l’exemple suivant, le **static_assert** déclaration a une portée de classe. Le **static_assert** vérifie qu’un paramètre de modèle est un *données* type (POD). Le compilateur examine la **static_assert** déclaration lorsqu’elle est déclarée, mais n’évalue pas le `constant-expression` paramètre jusqu'à ce que le `basic_string` modèle de classe est instancié dans `main()`.  
+ Dans l’exemple suivant, le **static_assert** déclaration a une portée de classe. Le **static_assert** vérifie qu’un paramètre de modèle est un *données* type (POD). Le compilateur examine la **static_assert** déclaration lorsqu’elle est déclarée, mais n’évalue pas le *expression constante* paramètre jusqu'à ce que le `basic_string` modèle de classe est instancié dans `main()`.  
   
 ## <a name="example"></a>Exemple  
   

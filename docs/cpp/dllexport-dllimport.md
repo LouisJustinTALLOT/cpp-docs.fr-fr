@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb3495f67f674f7d65e18b985295fabf9931869
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f21256ca78a4bf5f268c4fa3d03c86bc52c91670
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407882"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461674"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Section spécifique à Microsoft**  
@@ -80,7 +80,7 @@ DllExport int n;
   
 -   [Utilisation de dllimport et dllexport dans les classes C++](../cpp/using-dllimport-and-dllexport-in-cpp-classes.md)  
   
- **FIN de la section spécifique à Microsoft**  
+**FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [__declspec](../cpp/declspec.md)   

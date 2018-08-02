@@ -1,5 +1,5 @@
 ---
-title: Comptrrefbase, classe | Documents Microsoft
+title: ComPtrRefBase (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883578"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464241"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -37,8 +37,8 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md) type ou un type dérivé, pas simplement l’interface représentée par le ComPtr.  
+ *T*  
+ Un [ComPtr\<T >](../windows/comptr-class.md) type ou un type dérivé, pas simplement l’interface représentée par le **ComPtr**.  
   
 ## <a name="remarks"></a>Notes  
  Représente la classe de base pour le [ComPtrRef](../windows/comptrref-class.md) classe.  
@@ -49,14 +49,14 @@ class ComPtrRefBase;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`InterfaceType`|Un synonyme pour le type de paramètre de modèle `T`.|  
+|`InterfaceType`|Un synonyme du type de paramètre de modèle *T*.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable**, opérateur](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Convertit en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) membre de données pour un pointeur à une-pointeur-à l’interface IInspectable.|  
-|[ComPtrRefBase::operator IUnknown**, opérateur](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Convertit en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) membre de données pour un pointeur à une-pointeur-à l’interface IUnknown.|  
+|[ComPtrRefBase::operator IInspectable**, opérateur](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-à l’interface IInspectable.|  
+|[ComPtrRefBase::operator IUnknown**, opérateur](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-à l’interface IUnknown.|  
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
@@ -67,7 +67,7 @@ class ComPtrRefBase;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ComPtrRefBase`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

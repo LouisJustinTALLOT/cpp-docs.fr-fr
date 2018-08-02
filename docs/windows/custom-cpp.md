@@ -1,5 +1,5 @@
 ---
-title: personnalisé (C++) | Documents Microsoft
+title: personnalisé (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871625"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460930"
 ---
 # <a name="custom-c"></a>custom (C++)
 Définit les métadonnées pour un objet dans la bibliothèque de types.  
@@ -30,8 +30,7 @@ Définit les métadonnées pour un objet dans la bibliothèque de types.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -45,20 +44,20 @@ Définit les métadonnées pour un objet dans la bibliothèque de types.
  Une valeur qui peut être placée dans un variant.  
   
 ## <a name="remarks"></a>Notes  
- Le **personnalisé** attribut C++ entraîne à placer dans la bibliothèque de types d’informations. Vous devez un outil qui lit la valeur personnalisée à partir de la bibliothèque de types.  
+ Le **personnalisé** attribut C++ entraînera des informations d’être placées dans la bibliothèque de types. Vous devez un outil qui lit la valeur personnalisée à partir de la bibliothèque de types.  
   
  Le **personnalisé** attribut a les mêmes fonctionnalités que le [personnalisé](http://msdn.microsoft.com/library/windows/desktop/aa366766) attribut MIDL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Non-COM `interface`, **classe**, `enum`s, `idl_module` méthodes, les membres d’interface, les paramètres de l’interface, `typedef`s, **union**s, `struct`s|  
+|**S'applique à**|Non-COM **interface**, **classe**, **enum**s, `idl_module` méthodes, les membres d’interface, les paramètres de l’interface, **typedef**s, **union**s, **struct**s|  
 |**Renouvelable**|Oui|  
 |**Attributs requis**|**coclasse** (lorsqu’il est utilisé pour la classe)|  
-|**Attributs non valides**|Aucun|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

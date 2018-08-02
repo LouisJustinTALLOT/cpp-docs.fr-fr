@@ -1,5 +1,5 @@
 ---
-title: call_as | Documents Microsoft
+title: call_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860864"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465868"
 ---
 # <a name="callas"></a>call_as
-Permet à un [local](../windows/local-cpp.md) fonction d’être mappée à une fonction distante afin que lorsque la fonction à distance est appelée, la fonction locale est appelée.  
+Permet une [local](../windows/local-cpp.md) fonction être mappée à une fonction à distance afin que lorsque la fonction à distance est appelée, la fonction locale soit appelée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  *function*  
- La fonction locale que vous souhaitez être appelé lorsqu’une fonction distante est appelée.  
+ La fonction locale que vous souhaitez être appelée lorsqu’une fonction à distance est appelée.  
   
 ## <a name="remarks"></a>Notes  
  Le **call_as** attribut C++ a les mêmes fonctionnalités que le [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) attribut MIDL.  
@@ -46,7 +45,7 @@ Permet à un [local](../windows/local-cpp.md) fonction d’être mappée à une 
 ## <a name="example"></a>Exemple  
  Le code suivant montre comment vous pouvez utiliser **call_as** pour mapper une fonction non accessibles à distance (**f1**) à une fonction accessible à distance (**Remf1**) :  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -58,7 +57,7 @@ __interface IMInterface {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -66,12 +65,12 @@ __interface IMInterface {
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs IDL](../windows/idl-attributes.md)   
  [Attributs de méthode](../windows/method-attributes.md)   
- [Local](../windows/local-cpp.md)   
+ [local](../windows/local-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: Attributs de tableau | Documents Microsoft
+title: Tableau d’attributs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5a054d6b1cf680998dc5eb073fafc8d351e298
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac37f1b5b5df8f39e584b8e5476af81a4b09ecff
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854465"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464335"
 ---
 # <a name="array-attributes"></a>Attributs de tableau
-Les attributs suivants s’appliquent à des tableaux ou **SAFEARRAY**s.  
+Les attributs suivants s’applique aux tableaux ou `SAFEARRAY`s.  
   
 |Attribut|Description|  
 |---------------|-----------------|  
 |[library_block](../windows/library-block.md)|Place une construction à l’intérieur du bloc de bibliothèque du fichier .idl.|  
 |[satype](../windows/satype.md)|Spécifie le type de données de la structure SAFEARRAY.|  
-|[string](../windows/string-cpp.md)|Indique que la dimension `char`, `wchar_t`, **octets** (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité en tant que chaîne.|  
+|[string](../windows/string-cpp.md)|Indique qu’unidimensionnel **char**, **wchar_t**, **octets** (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité comme une chaîne.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs par utilisation](../windows/attributes-by-usage.md)

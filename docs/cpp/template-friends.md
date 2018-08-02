@@ -1,5 +1,5 @@
 ---
-title: Friends de modèle | Documents Microsoft
+title: Friends de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422122"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466954"
 ---
 # <a name="template-friends"></a>Friends de modèle
 
 Modèles de classe peuvent avoir [amis](friend-cpp.md). Une classe ou un modèle de classe, une fonction ou un modèle de fonction peuvent être des éléments friend d'une classe de modèle. Les éléments friend peuvent également être des spécialisations d'un modèle de classe ou de fonction, mais des spécialisations non partielles.  
   
-**C++ 11**: un paramètre de type peut être déclaré en tant que friend à l’aide de la forme `friend T;`.  
+**C ++ 11**: un paramètre de type peut être déclaré en tant qu’ami à l’aide de la forme `friend T;`.  
   
 ```cpp
 template <typename T>  
@@ -261,5 +261,4 @@ a
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-
-[Arguments par défaut](../cpp/default-arguments.md)
+ [Arguments par défaut](../cpp/default-arguments.md)

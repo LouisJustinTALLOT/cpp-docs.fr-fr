@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940148"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462090"
 ---
 # <a name="thread"></a>thread
 
 **Section spécifique à Microsoft**
 
-Le **thread** modificateur de classe de stockage étendu est utilisé pour déclarer une variable locale de thread. Pour la fonction portable équivalente dans C ++ 11 et versions ultérieure, utilisez le [thread_local](../cpp/storage-classes-cpp.md#thread_local) spécificateur de classe de stockage pour du code portable. Sur Windows `thread_local` est implémentée avec `__declspec(thread)`.
+Le **thread** modificateur de classe de stockage étendu est utilisé pour déclarer une variable locale de thread. Pour la fonction portable équivalente dans C ++ 11 et versions ultérieure, utilisez le [thread_local](../cpp/storage-classes-cpp.md#thread_local) spécificateur de classe de stockage pour du code portable. Sur Windows `thread_local` est implémentée avec **__declspec (thread)**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -96,7 +96,6 @@ En outre, vous devez respecter ces indications lorsque vous déclarez des variab
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
-
-[__declspec](../cpp/declspec.md)  
-[Mots clés](../cpp/keywords-cpp.md)  
-[Stockage local des threads (TLS)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Mots clés](../cpp/keywords-cpp.md)  
+ [Stockage local des threads (TLS)](../parallel/thread-local-storage-tls.md)  

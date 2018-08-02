@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940551"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462262"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversions de types et sécurité de type (Modern C++)
 Ce document identifie les problèmes de conversion de type commun et décrit comment les éviter dans votre code C++.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  Notez que les valeurs sont réinterprétées dans les deux sens. Si votre programme produit des résultats étranges dans laquelle le signe de la valeur semble inversées par rapport à vos attentes, recherchez les conversions implicites entre types intégraux signés et non signés. Dans l’exemple suivant, le résultat de l’expression (0 - 1) est implicitement converti de **int** à **unsigned int** quand il est stocké dans `num`. Cela entraîne le modèle binaire qui doit être réinterprétée.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  Le compilateur n’avertit pas sur les conversions implicites entre types intégraux signés et non signés. Par conséquent, nous vous recommandons d’éviter conversions signed à unsigned complètement. Si vous ne pouvez pas les éviter, puis ajoutez à votre code une vérification à l’exécution pour détecter si la valeur convertie est supérieure ou égale à zéro et inférieure ou égale à la valeur maximale du type signé. Les valeurs dans cette plage transfère de signé en non signé ou à partir de non signé en signé sans être réinterprétée.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>Conversions explicites (casts)  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  L’opérateur de cast de style C est identique à l’opérateur d’appel () et est par conséquent discrète dans le code et facile d’oublier. Les deux sont incorrectes, car ils sont difficiles à reconnaître à l’aperçu ou recherchez pour, et ils sont suffisamment différents pour appeler n’importe quelle combinaison de **statique**, **const**, et **reinterpret_cast**. Essayer de comprendre ce que fait réellement un cast de style ancien peut être difficile et sujette aux erreurs. Pour toutes ces raisons, lorsqu’un cast est requis, nous vous recommandons d’utiliser un des opérateurs de cast C++ suivants, qui, dans certains cas sont considérablement plus de type sécurisé, et qui express beaucoup plus explicitement l’intention de programmation :  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      Pour plus d’informations, consultez [static_cast](../cpp/static-cast-operator.md).  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      Pour plus d’informations, consultez [dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      Pour plus d’informations, consultez [const_cast](../cpp/const-cast-operator.md).  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      Pour plus d’informations, consultez [reinterpret_cast, opérateur](../cpp/reinterpret-cast-operator.md).  

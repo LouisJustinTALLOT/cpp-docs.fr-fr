@@ -1,5 +1,5 @@
 ---
-title: Comptrref::releaseandgetaddressof, méthode | Documents Microsoft
+title: Comptrref::releaseandgetaddressof, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab97dad8f14d72a6e8e441c9889a0e18870a0b4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 631f27dc7124cfce655f6a254548335ca8f1039f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884005"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465407"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,12 +34,12 @@ InterfaceType** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’interface qui a été représenté par l’objet ComPtrRef supprimé.  
+ Pointeur vers l’interface qui a été représenté par supprimés **ComPtrRef** objet.  
   
 ## <a name="remarks"></a>Notes  
- Supprime l’objet ComPtrRef actuel et retourne un pointeur-à-un en pointeur vers l’interface qui a été représenté par l’objet ComPtrRef.  
+ Supprime l’actuel **ComPtrRef** de l’objet et retourne un pointeur-à-un-pointeur vers l’interface qui a été représenté par le **ComPtrRef** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

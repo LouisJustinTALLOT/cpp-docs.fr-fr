@@ -1,5 +1,5 @@
 ---
-title: ClassFactory::QueryInterface, méthode | Documents Microsoft
+title: ClassFactory::QueryInterface, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855986"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467090"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface, méthode
 Récupère un pointeur vers l’interface spécifiée par le paramètre.  
@@ -36,16 +36,16 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `riid`  
+ *riid*  
  ID d’interface.  
   
- `ppvObject`  
- Lorsque cette opération est terminée, un pointeur vers l’interface spécifiée par le paramètre `riid`.  
+ *ppvObject*  
+ Lorsque cette opération se termine, un pointeur vers l’interface spécifiée par le paramètre *riid*.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

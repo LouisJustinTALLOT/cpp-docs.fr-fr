@@ -1,5 +1,5 @@
 ---
-title: CriticalSection::CriticalSection, constructeur | Documents Microsoft
+title: CriticalSection::CriticalSection, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d86c80d169cb6d9794f163290c30bf1b2563588b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870895"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467350"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection, constructeur
 Initialise un objet de synchronisation qui est similaire à un objet mutex, mais peut être utilisé par uniquement les threads d’un processus unique.  
@@ -36,13 +36,13 @@ explicit CriticalSection(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `spincount`  
- Le nombre de sélection numérique pour l’objet de section critique. La valeur par défaut est 0.  
+ *spinCount*  
+ Nombre de spins pour l’objet de section critique. La valeur par défaut est 0.  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les sections critiques et spincounts, consultez la **InitializeCriticalSectionAndSpinCount** fonction dans la section de synchronisation de la documentation de l’API Windows.  
+ Pour plus d’informations sur les sections critiques et spincounts, consultez le `InitializeCriticalSectionAndSpinCount` fonctionner dans le **synchronisation** section de la documentation de l’API de Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

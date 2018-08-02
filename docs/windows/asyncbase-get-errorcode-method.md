@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::get_errorcode, méthode | Documents Microsoft
+title: Asyncbase::get_errorcode, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d2dd1d09b573b89e69d28071c7f689fa8396d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859629"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465127"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode, méthode
 Récupère le code d’erreur pour l’opération asynchrone actuelle.  
@@ -36,13 +36,13 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `errorCode`  
+ *code d’erreur*  
  L’emplacement où se trouve le code d’erreur actuel.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; dans le cas contraire, E_ILLEGAL_METHOD_CALL si l’opération asynchrone en cours est fermée.  
+ S_OK en cas de réussite ; Sinon, E_ILLEGAL_METHOD_CALL si l’opération asynchrone en cours est fermée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

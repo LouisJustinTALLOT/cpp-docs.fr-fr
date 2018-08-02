@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c23ba7ba476b44b44f48b76119776e2f2cb188e
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462334"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable\* \* opérateur
 
@@ -36,9 +36,9 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Notes
 
-Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-à l’interface IInspectable.
+Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-to la `IInspectable` interface.
 
-Une erreur est générée si le ComPtrRefBase actuel n’est pas dérivé d’IInspectable.
+Une erreur est générée si actuel **ComPtrRefBase** ne dérive pas de `IInspectable`.
 
 Ce cast est disponible uniquement si **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** est défini.
 
@@ -49,6 +49,5 @@ Ce cast est disponible uniquement si **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** e
 **Namespace :** Microsoft::WRL::Details
 
 ## <a name="see-also"></a>Voir aussi
-
 [ComPtrRefBase (classe)](../windows/comptrrefbase-class.md)   
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

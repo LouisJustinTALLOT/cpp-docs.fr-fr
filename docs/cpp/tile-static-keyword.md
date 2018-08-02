@@ -1,5 +1,5 @@
 ---
-title: tile_static, mot clé | Documents Microsoft
+title: tile_static, mot clé | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422161"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461873"
 ---
 # <a name="tilestatic-keyword"></a>tile_static, mot clé
-Le mot clé `tile_static` sert à déclarer une variable accessible par tous les threads dans une mosaïque de threads. La durée de vie des variables commence lorsque l'exécution atteint le point de déclaration et se termine lorsque la fonction noyau est retournée. Pour plus d’informations sur l’utilisation de mosaïques, consultez [à l’aide de mosaïques](../parallel/amp/using-tiles.md).  
+Le **tile_static** mot clé est utilisé pour déclarer une variable qui est accessible par tous les threads dans une mosaïque de threads. La durée de vie des variables commence lorsque l'exécution atteint le point de déclaration et se termine lorsque la fonction noyau est retournée. Pour plus d’informations sur l’utilisation des vignettes, consultez [à l’aide de vignettes](../parallel/amp/using-tiles.md).  
   
- Le mot clé `tile_static` présente les limitations suivantes :  
+ Le **tile_static** mot clé présente les limitations suivantes :  
   
 -   Il peut être utilisé uniquement sur des variables qui sont dans une fonction ayant le modificateur `restrict(amp)`.  
   
 -   Il ne peut pas être utilisé sur des variables qui sont des types pointeur ou référence.  
   
--   Une variable `tile_static` ne peut pas avoir d'initialiseur. Les constructeurs et les destructeurs par défaut ne sont pas appelés automatiquement.  
+-   Un **tile_static** variable ne peut pas avoir d’initialiseur. Les constructeurs et les destructeurs par défaut ne sont pas appelés automatiquement.  
   
--   La valeur d'une variable `tile_static` non initialisée est non définie.  
+-   La valeur de non initialisé **tile_static** variable n’est pas définie.  
   
--   Si une variable `tile_static` est déclarée dans un graphique des appels qui est enraciné par un appel non mosaïque à `parallel_for_each`, un avertissement est généré et le comportement de la variable est non défini.  
+-   Si un **tile_static** variable est déclarée dans un graphique des appels qui est enraciné par un appel non mosaïque à `parallel_for_each`, un avertissement est généré et le comportement de la variable n’est pas défini.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre comment une variable `tile_static` peut être utilisée pour accumuler des données sur plusieurs threads dans une mosaïque.  
+ L’exemple suivant montre comment un **tile_static** variable peut être utilisée pour accumuler des données sur plusieurs threads dans une mosaïque.  
   
 ```cpp  
 // Sample data:  
@@ -150,7 +150,6 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

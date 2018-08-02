@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942873"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461518"
 ---
 # <a name="subscripting"></a>Indices
 L’opérateur d’indice (**[]**), comme l’opérateur d’appel de fonction, est considéré comme un opérateur binaire. L’opérateur d’indice doit être une fonction membre non statique qui accepte un seul argument. Cet argument peut être de tout type et désigne l’indice de tableau souhaité.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Commentaires  
- Lorsque `i` atteint 10 dans le programme précédent, `operator[]` détecte qu'un indice hors limite est utilisé et émet un message d'erreur.  
+ Lorsque `i` atteint 10 dans le programme précédent, **operator []** détecte qu’un indice hors limite est utilisé et émet un message d’erreur.  
   
- Notez que la fonction `operator[]` retourne un type référence. Il s'agit par conséquent d'une l-value, ce qui vous permet d'utiliser des expressions indicées de chaque côté des opérateurs d'assignation.  
+ Notez que la fonction **operator []** retourne un type référence. Il s'agit par conséquent d'une l-value, ce qui vous permet d'utiliser des expressions indicées de chaque côté des opérateurs d'assignation.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surcharge d'opérateur](../cpp/operator-overloading.md)

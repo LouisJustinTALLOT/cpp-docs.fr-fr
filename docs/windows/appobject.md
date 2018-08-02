@@ -1,5 +1,5 @@
 ---
-title: appobject | Documents Microsoft
+title: appobject | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856971"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466369"
 ---
 # <a name="appobject"></a>appobject
-Identifie la coclasse comme un objet de l’application, qui est associé à une application .exe complet et indique que les fonctions et les propriétés de la coclasse sont disponibles dans cette [bibliothèque de types](../mfc/automation-clients-using-type-libraries.md).  
+Identifie la coclasse comme un objet de l’application, qui est associé à une application .exe complète et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles dans ce [bibliothèque de types](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **appobject** attribut C++ a les mêmes fonctionnalités que le [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant montre une définition de classe simple précédée d’un bloc d’attributs incluant **appobject**:  
+ Le code suivant montre une simple définition de classe précédée d’un bloc d’attributs qui inclut **appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -56,16 +54,16 @@ class A : public ICustom {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclass**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|`coclass`|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

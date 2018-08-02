@@ -1,5 +1,5 @@
 ---
-title: Jetons (C++) | Documents Microsoft
+title: Jetons (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467957"
 ---
 # <a name="tokens-c"></a>Jetons (C++)
 Un jeton est le plus petit élément d’un programme C++ qui est significatif pour le compilateur. L’analyseur C++ reconnaît les genres de jetons suivants : identificateurs, mots clés, littéraux, opérateurs, signes de ponctuation et autres séparateurs. Un flux de ces jetons constitue une unité de traduction.  
@@ -44,13 +45,13 @@ Un jeton est le plus petit élément d’un programme C++ qui est significatif p
   
  L’analyseur sépare les jetons du flux d’entrée en créant le jeton le plus long possible à l’aide des caractères d’entrée via une analyse de gauche à droite. Prenons le fragment de code suivant :  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  Le programmeur qui a écrit le code fait référence à deux instructions possibles :  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  

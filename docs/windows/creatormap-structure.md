@@ -1,5 +1,5 @@
 ---
-title: CreatorMap (Structure) | Documents Microsoft
+title: CreatorMap (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873282"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464254"
 ---
 # <a name="creatormap-structure"></a>CreatorMap (structure)
 Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -35,13 +35,13 @@ struct CreatorMap;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Contient des informations sur la façon d’initialiser, enregistrer et annuler l’inscription des objets.  
+ Contient des informations sur la façon d’initialiser, inscrire et annuler l’inscription d’objets.  
   
- CreatorMap contient les informations suivantes :  
+ **CreatorMap** contient les informations suivantes :  
   
--   Comment initialiser, enregistrer et annuler l’inscription des objets.  
+-   Guide pratique pour initialiser, inscrire et annuler l’inscription d’objets.  
   
--   Comment comparer les données d’activation en fonction d’une fabrique de COM ou Windows Runtime classique.  
+-   Comment comparer les données d’activation en fonction d’une fabrique classique COM ou Windows Runtime.  
   
 -   Informations sur la fabrique du cache et nom de serveur pour une interface.  
   
@@ -52,14 +52,14 @@ struct CreatorMap;
 |Nom|Description|  
 |----------|-----------------|  
 |[CreatorMap::activationId, données de membre](../windows/creatormap-activationid-data-member.md)|Représente un ID d’objet qui est identifié par un ID de classe COM classique ou un nom de Windows Runtime.|  
-|[CreatorMap::factoryCache, données de membre](../windows/creatormap-factorycache-data-member.md)|Stocke le pointeur vers le cache de fabrication pour le CreatorMap.|  
-|[CreatorMap::factoryCreator, données de membre](../windows/creatormap-factorycreator-data-member.md)|Crée une fabrique pour le CreatorMap spécifié.|  
-|[CreatorMap::serverName, données de membre](../windows/creatormap-servername-data-member.md)|Stocke le nom du serveur pour le CreatorMap.|  
+|[CreatorMap::factoryCache, données de membre](../windows/creatormap-factorycache-data-member.md)|Stocke le pointeur vers le cache de fabrication pour le **CreatorMap**.|  
+|[CreatorMap::factoryCreator, données de membre](../windows/creatormap-factorycreator-data-member.md)|Crée une fabrique pour spécifié **CreatorMap**.|  
+|[CreatorMap::serverName, données de membre](../windows/creatormap-servername-data-member.md)|Stocke le nom du serveur pour le **CreatorMap**.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CreatorMap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Namespace :** Microsoft::WRL::Details  

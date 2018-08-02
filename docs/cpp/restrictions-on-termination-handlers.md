@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941338"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461768"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restrictions sur les gestionnaires de terminaison
 Vous ne pouvez pas utiliser un **goto** pour sauter dans une **__try** bloc d’instructions ou un **__finally** bloc d’instructions. À la place, vous devez entrer dans le bloc d'instruction via le flux de contrôle normal. (Vous pouvez, toutefois, sauter hors d’un **__try** bloc d’instructions.) En outre, vous ne pouvez pas imbriquer un gestionnaire d’exceptions ou un gestionnaire de terminaisons dans un **__finally** bloc.  

@@ -1,5 +1,5 @@
 ---
-title: Comptr::swap, méthode | Documents Microsoft
+title: Comptr::swap, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45bc87ec63088fe8f44411a8e86438ebab706e3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fff9e812a6946dd15de5b2d33f57358d02246dab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883483"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462477"
 ---
 # <a name="comptrswap-method"></a>ComPtr::Swap, méthode
-Échange l’interface gérée par le ComPtr actuel avec l’interface gérée par le ComPtr spécifié.  
+Échange l’interface gérée par l’actuel **ComPtr** avec l’interface gérée par le **ComPtr**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ void Swap(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `r`  
- Un ComPtr.  
+ *r*  
+ Un **ComPtr**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,5 +1,5 @@
 ---
-title: Démarrage et arrêt (C++) | Documents Microsoft
+title: Démarrage et terminaison (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bf206280d234e630fabaed3f05daa41dde86fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420835"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463179"
 ---
 # <a name="startup-and-termination-c"></a>Démarrage et terminaison (C++)
 Démarrage du programme et arrêt sont facilités en utilisant deux fonctions : [principal](../cpp/main-program-startup.md) et [quitter](../cpp/program-termination.md). Un autre code de démarrage et d'arrêt est susceptible d'être exécuté.  

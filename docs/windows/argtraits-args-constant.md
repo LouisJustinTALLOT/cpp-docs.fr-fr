@@ -1,5 +1,5 @@
 ---
-title: Argtraits::args, constante | Documents Microsoft
+title: Argtraits::args, constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855771"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466554"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args, constante
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,12 +34,12 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Conserve le décompte du nombre de paramètres dans la méthode Invoke d’une interface de délégué.  
+ Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque `args` est égal à -1 indique qu’il ne peut y avoir aucune correspondance pour la signature de méthode Invoke.  
+ Lorsque `args` est égal à -1 indique qu’il ne peut y avoir aucune correspondance pour le `Invoke` signature de méthode.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

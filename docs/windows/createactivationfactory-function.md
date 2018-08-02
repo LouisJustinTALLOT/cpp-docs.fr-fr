@@ -1,5 +1,5 @@
 ---
-title: CreateActivationFactory (fonction) | Documents Microsoft
+title: Createactivationfactory, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e842a13461757e26dd1aed663c590df4c1ba6c74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883428"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466346"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory (fonction)
 Crée une fabrique qui produit des instances de la classe spécifiée pouvant être activées par le Windows Runtime.  
@@ -35,29 +35,28 @@ template<typename Factory>
       _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
       REFIID riid,   
      _Outptr_ IUnknown **ppFactory) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `flags`  
+ *flags*  
  Une combinaison d’une ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valeurs d’énumération.  
   
- `entry`  
- Pointeur vers un [CreatorMap](../windows/creatormap-structure.md) qui contient des informations d’initialisation et de l’inscription sur le paramètre `riid`.  
+ *entry*  
+ Pointeur vers un [CreatorMap](../windows/creatormap-structure.md) qui contient des informations d’initialisation et d’inscription sur le paramètre *riid*.  
   
- `riid`  
+ *riid*  
  Référence à un ID d’interface.  
   
- `ppFactory`  
- Si cette opération est terminée avec succès, un pointeur vers une fabrique d’activation.  
+ *ppFactory*  
+ Si cette opération termine avec succès, un pointeur vers une fabrique d’activation.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
 ## <a name="remarks"></a>Notes  
- Une erreur d’assertion est émise si le paramètre de modèle `Factory` ne dérive pas de l’interface IActivationFactory.  
+ Une erreur d’assertion est émise si le paramètre de modèle *Factory* n’est pas dérivé d’une interface `IActivationFactory`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

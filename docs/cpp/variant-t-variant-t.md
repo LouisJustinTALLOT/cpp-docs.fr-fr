@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942725"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464160"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Section spécifique à Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37942725"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  Un **unsigned int** valeur doit être copié dans le nouveau `_variant_t` objet.  
   
  *i8Src*  
- Un __**int64** valeur doit être copié dans le nouveau `_variant_t` objet.  
+ Un **__int64** valeur doit être copié dans le nouveau `_variant_t` objet.  
   
  *ui8Src*  
  Un **unsigned __int64** valeur doit être copié dans le nouveau `_variant_t` objet.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t (_variant_t &***var_t_Src***)** construit un `_variant_t` objet à partir d’un autre `_variant_t` objet.     Le type variant est conservé.  
   
--   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** construit un `_variant_t` objet depuis une `VARIANT` objet.       Si `fCopy` est **false**, le **VARIANT** objet est attaché au nouvel objet sans avoir à effectuer une copie.  
+-   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** construit un `_variant_t` objet depuis une `VARIANT` objet.       Si *fCopy* est **false**, le **VARIANT** objet est attaché au nouvel objet sans avoir à effectuer une copie.  
   
 -   **_variant_t (short***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** construit un `_variant_t` objet de type VT_I2 ou VT_BOOL à partir d’un **court** valeur entière.       N’importe quel autre `VARTYPE` entraîne une erreur E_INVALIDARG.  
   

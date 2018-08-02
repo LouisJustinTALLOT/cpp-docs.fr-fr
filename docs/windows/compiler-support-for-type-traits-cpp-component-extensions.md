@@ -1,5 +1,5 @@
 ---
-title: Prise en charge du compilateur pour les Type Traits (Extensions du composant C++) | Documents Microsoft
+title: Prise en charge du compilateur pour les Type Traits (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -71,31 +71,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862414"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463614"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Prise en charge du compilateur pour les Type Traits (extensions du composant C++)
-Le compilateur prend en charge *les caractéristiques de type*, qui indiquent diverses caractéristiques d’un type au moment de la compilation.  
+Le compilateur prend en charge *caractéristiques de type*, qui indiquent diverses caractéristiques d’un type au moment de la compilation.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
  **Remarques**  
   
  Les traits de type s'avèrent particulièrement utiles pour les programmeurs qui écrivent des bibliothèques.  
   
- La liste suivante contient les caractéristiques de type qui sont pris en charge par le compilateur. Tous les traits de type retournent `false` si la condition spécifiée par le nom du trait de type n'est pas remplie.  
+ La liste suivante contient les traits de type qui sont pris en charge par le compilateur. Tous les traits de type retournent **false** si la condition spécifiée par le nom de la caractéristique de type n’est pas remplie.  
   
- (Dans la liste suivante, les exemples de code sont écrits uniquement en c++ / CLI. Mais le trait de type correspondant est également pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] sauf indication contraire. Le terme « type de plateforme » fait référence à des types Windows Runtime ou types common language runtime).  
+ (Dans la liste suivante, les exemples de code sont écrits uniquement en C / c++ / CLI. Mais le trait de type correspondant est également pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] sauf indication contraire. Le terme « type de plateforme » fait référence à des types Windows Runtime ou types common language runtime.)  
   
 -   `__has_assign(` `type` `)`  
   
      Retourne la valeur true si le type de plateforme ou natif possède un opérateur d'assignation de copie.  
   
     ```  
-  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -103,7 +102,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     int main() {  
     System::Console::WriteLine(__has_assign(R));  
     }  
-  
     ```  
   
 -   `__has_copy(` `type` `)`  
@@ -111,7 +109,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le type de plateforme ou natif possède un constructeur de copie.  
   
     ```  
-  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -119,15 +116,13 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     int main() {  
     System::Console::WriteLine(__has_copy(R));  
     }  
-  
     ```  
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Non pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retourne la valeur true si le type CLR a un finaliseur. Consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C + c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.  
+     (Non pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retourne la valeur true si le type CLR a un finaliseur. Consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.  
   
     ```  
-  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -138,7 +133,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     int main() {  
     Console::WriteLine(__has_finalizer(R));  
     }  
-  
     ```  
   
 -   `__has_nothrow_assign(` `type` `)`  
@@ -146,7 +140,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un opérateur d'assignation de copie a une spécification d'exception vide.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -156,7 +149,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_nothrow_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_constructor(` `type` `)`  
@@ -164,7 +156,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le constructeur par défaut a une spécification d'exception vide.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -174,7 +165,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_nothrow_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_copy(` `type` `)`  
@@ -182,7 +172,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le constructeur de copie a une spécification d'exception vide.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -192,7 +181,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_nothrow_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_assign(` `type` `)`  
@@ -200,7 +188,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le type a un opérateur d'assignation trivial généré par le compilateur.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -208,7 +195,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_trivial_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_constructor(` `type` `)`  
@@ -216,7 +202,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le type a un constructeur trivial généré par le compilateur.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -224,7 +209,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_trivial_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_copy(` `type` `)`  
@@ -232,7 +216,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le type a un constructeur de copie trivial généré par le compilateur.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -240,15 +223,13 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_trivial_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_destructor(` `type` `)`  
   
      Retourne la valeur true si le type a un destructeur trivial généré par le compilateur.  
   
-    ```  
-  
+    ``` cpp 
     // has_trivial_destructor.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -257,15 +238,13 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_trivial_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_user_destructor(` `type` `)`  
   
      Retourne la valeur true si le type de plateforme ou natif a un destructeur déclaré par l'utilisateur.  
   
-    ```  
-  
+    ```cpp
     // has_user_destructor.cpp  
   
     using namespace System;  
@@ -276,7 +255,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     int main() {  
     Console::WriteLine(__has_user_destructor(R));  
     }  
-  
     ```  
   
 -   `__has_virtual_destructor(` `type` `)`  
@@ -285,8 +263,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
      `__has_virtual_destructor` fonctionne également sur les types de plateforme et tout destructeur défini par l'utilisateur dans un type de plateforme est un destructeur virtuel.  
   
-    ```  
-  
+    ```cpp  
     // has_virtual_destructor.cpp  
     #include <stdio.h>  
     struct S {  
@@ -297,7 +274,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __has_virtual_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_abstract(` `type` `)`  
@@ -306,8 +282,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
      `__is_abstract` fonctionne également pour les types de plateforme. Une interface avec au moins un membre est un type abstrait, à l'instar d'un type référence avec au moins un membre abstrait. Pour plus d’informations sur les types de plateforme abstraits, consultez [Classes abstraites](../cpp/abstract-classes-cpp.md)  
   
-    ```  
-  
+    ```cpp  
     // is_abstract.cpp  
     #include <stdio.h>  
     struct S {  
@@ -318,7 +293,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_abstract(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
@@ -327,8 +301,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
      `__is_base_of` fonctionne également sur les types de plateforme. Par exemple, il retourne true si le premier type est un [classe d’interface](../windows/interface-class-cpp-component-extensions.md) et le second type implémente l’interface.  
   
-    ```  
-  
+    ```cpp
     // is_base_of.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -341,15 +314,13 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_base_of(S, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_class(` `type` `)`  
   
      Retourne la valeur true si le type est une classe native ou un struct natif.  
   
-    ```  
-  
+    ```
     #include <stdio.h>  
     struct S {};  
   
@@ -357,7 +328,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_class(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
@@ -365,7 +335,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le premier type peut être converti en second type.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -377,7 +346,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_convertible_to(T, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_delegate(` `type` `)`  
@@ -385,12 +353,10 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si `type` est un délégué. Pour plus d’informations, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
-  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
     }  
-  
     ```  
   
 -   `__is_empty(` `type` `)`  
@@ -398,7 +364,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si le type ne possède aucun membre de données d'instance.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -408,15 +373,13 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_empty(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_enum(` `type` `)`  
   
      Retourne la valeur true si le type est un enum natif.  
   
-    ```  
-  
+    ```cpp
     // is_enum.cpp  
     #include <stdio.h>  
     enum E { a, b };  
@@ -432,15 +395,13 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_enum(S::E2) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_interface_class(` `type` `)`  
   
      Retourne la valeur true si une interface de plateforme est passée. Pour plus d’informations, consultez [classe d’interface](../windows/interface-class-cpp-component-extensions.md).  
   
-    ```  
-  
+    ```cpp
     // is_interface_class.cpp  
   
     using namespace System;  
@@ -448,7 +409,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     int main() {  
     Console::WriteLine(__is_interface_class(I));  
     }  
-  
     ```  
   
 -   `__is_pod(` `type` `)`  
@@ -458,7 +418,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      `__is_pod` retourne la valeur false sur les types fondamentaux.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -466,7 +425,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_pod(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_polymorphic(` `type` `)`  
@@ -474,7 +432,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un type natif possède des fonctions virtuelles.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -484,7 +441,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_polymorphic(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_ref_array(` `type` `)`  
@@ -492,13 +448,11 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un tableau de plateforme est passé. Pour plus d’informations, consultez [tableaux](../windows/arrays-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
     Console::WriteLine(__is_ref_array(array<int>));  
     }  
-  
     ```  
   
 -   `__is_ref_class(` `type` `)`  
@@ -506,14 +460,12 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si une classe de référence est passée. Pour plus d’informations sur les types référence définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     int main() {  
     Console::WriteLine(__is_ref_class(Buffer));  
     Console::WriteLine(__is_ref_class(R));  
     }  
-  
     ```  
   
 -   `__is_sealed(` `type` `)`  
@@ -521,12 +473,10 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un type de plateforme ou natif marquée comme sealed est passé. Pour plus d’informations, consultez [sealed](../windows/sealed-cpp-component-extensions.md).  
   
     ```  
-  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
     }  
-  
     ```  
   
 -   `__is_simple_value_class(` `type` `)`  
@@ -534,7 +484,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un type valeur qui ne contient aucune référence au tas récupéré par le garbage collector est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -546,7 +495,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     Console::WriteLine(__is_simple_value_class(V));  
     Console::WriteLine(__is_simple_value_class(V2));  
     }  
-  
     ```  
   
 -   `__is_union(` `type` `)`  
@@ -554,7 +502,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un type est une union.  
   
     ```  
-  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -565,7 +512,6 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
     __is_union(A) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_value_class(` `type` `)`  
@@ -573,13 +519,11 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
      Retourne la valeur true si un type valeur est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     value struct V {};  
   
     int main() {  
     System::Console::WriteLine(__is_value_class(V));  
     }  
-  
     ```  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
@@ -587,7 +531,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
  Le `__has_finalizer(` *type* `)` trait de type n’est pas pris en charge, car cette plateforme ne prend pas en charge les finaliseurs.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -595,7 +539,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
@@ -603,7 +547,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
  L’exemple de code suivant montre comment utiliser un modèle de classe pour exposer un trait de type du compilateur pour un **/CLR** compilation. Pour plus d’informations, consultez [Windows Runtime et modèles gérés](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-```  
+```cpp  
 // compiler_type_traits.cpp  
 // compile with: /clr  
 using namespace System;  

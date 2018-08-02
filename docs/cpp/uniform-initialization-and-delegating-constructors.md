@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939830"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465966"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Constructeurs d'initialisation uniforme et de délégation
 En C++ moderne, vous pouvez utiliser *accolade initialisation* pour n’importe quel type, sans le signe égal. En outre, vous pouvez utiliser les constructeurs de délégation pour simplifier votre code lorsque vous avez plusieurs constructeurs qui effectuent un travail similaire.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Si une classe a des constructeurs non définis par défaut, l’ordre dans la classe que les membres apparaissent dans l’initialiseur accolade est l’ordre dans lequel les paramètres correspondants dans le constructeur, pas l’ordre dans lequel les membres sont déclarés (comme avec `class_a` dans le exemple précédent). Sinon, si le type ne possède aucun constructeur déclaré, l’ordre dans lequel les membres dans l’initialiseur accolade est identique à l’ordre dans lequel ils sont déclarés. Dans ce cas, vous pouvez initialiser autant de membres publics comme vous le souhaitez, mais vous ne pouvez pas ignorer tous les membres. L’exemple suivant montre l’ordre qui est utilisé dans les accolades quand il n’existe aucun constructeur déclaré :  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list constructeurs  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  Les classes de conteneur de bibliothèque standard et également `string`, `wstring`, et `regex`, ont `initializer_list` constructeurs. Les exemples suivants montrent comment accolade l’initialisation avec ces constructeurs :  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  À mesure que vous parcourez l’exemple précédent, notez que le constructeur `class_c(int, int, int)` appelle d’abord le constructeur `class_c(int, int)`, qui appelle à son tour `class_c(int)`. Chacun des constructeurs effectue uniquement le travail qui n’est pas effectué par les autres constructeurs.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  L’exemple suivant illustre l’utilisation d’initialiseurs de membre de données non statiques. Notez que si un constructeur initialise également un membre de données donné, l’initialiseur de membre est remplacée :  

@@ -1,5 +1,5 @@
 ---
-title: __sptr, __uptr | Documents Microsoft
+title: __sptr, __uptr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca00f34f2b527ac7c2c6fc8ac4cccbdfc932fde3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e059b8144518f3d0cacdde5d7f438c04b7933a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467867"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Utilisez le modificateur `__sptr` ou `__uptr` sur une déclaration de pointeur 32 bits pour spécifier comment le compilateur convertit un pointeur 32 bits en pointeur 64 bits. Un pointeur 32 bits est converti, par exemple, lorsqu'il est assigné à une variable pointeur 64 bits ou est déréférencé sur une plateforme 64 bits.  
+**Section spécifique à Microsoft**  
+ Utilisez le **__sptr** ou **__uptr** modificateur sur une déclaration de pointeur 32 bits pour spécifier comment le compilateur convertit un pointeur 32 bits en pointeur 64 bits. Un pointeur 32 bits est converti, par exemple, lorsqu'il est assigné à une variable pointeur 64 bits ou est déréférencé sur une plateforme 64 bits.  
   
  La documentation Microsoft pour la prise en charge des plateformes 64 bits fait parfois référence au bit le plus significatif d'un pointeur 32 bits comme bit de signe. Par défaut, le compilateur utilise l'extension de signe pour convertir un pointeur 32 bits en pointeur 64 bits. Autrement dit, les 32 bits les moins significatifs du pointeur 64 bits sont définis avec la valeur du pointeur 32 bits et les 32 bits les plus significatifs sont définis avec la valeur du bit de signe du pointeur 32 bits. Cette conversion génère des résultats corrects si le bit de signe est 0, pas si le bit de signe est 1. Par exemple, l'adresse 32 bits 0x7FFFFFFF retourne l'adresse 64 bits équivalente 0x000000007FFFFFFF, mais l'adresse 32 bits 0x80000000 est modifiée incorrectement en 0xFFFFFFFF80000000.  
   
- Le modificateur `__sptr`, ou pointeur signé, spécifie qu'une conversion de pointeur transforme les bits les plus significatifs d'un pointeur 64 bits en bit de signe du pointeur 32 bits. Le modificateur `__uptr`, ou pointeur non signé, spécifie qu'une conversion définit les bits les plus significatifs à zéro. Les déclarations suivantes illustrent la `__sptr` et `__uptr` modificateurs utilisés avec deux pointeurs non qualifiés, deux pointeurs qualifiés avec le [__ptr32](../cpp/ptr32-ptr64.md) type et un paramètre de fonction.  
+ Le **__sptr**, ou pointeur signé, modificateur Spécifie qu’une conversion de pointeur définit les bits les plus significatifs d’un pointeur 64 bits pour le bit de signe du pointeur 32 bits. Le **__uptr**, ou le modificateur de pointeur non signé, spécifie qu’une conversion définit les bits les plus significatifs à zéro. Les déclarations suivantes illustrent la **__sptr** et **__uptr** modificateurs utilisés avec deux pointeurs non qualifiés, deux pointeurs qualifiés avec le [__ptr32](../cpp/ptr32-ptr64.md) type et une fonction paramètre.  
   
-```  
+```cpp 
 int * __sptr psp;  
 int * __uptr pup;  
 int * __ptr32 __sptr psp32;  
@@ -40,10 +41,10 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);  
 ```  
   
- Utilisez les modificateurs `__sptr` et `__uptr` avec les déclarations de pointeur. Utilisez les modificateurs dans la position d’un [qualificateur de type pointeur](../c-language/pointer-declarations.md), ce qui signifie que le modificateur doit suivre l’astérisque. Vous ne pouvez pas utiliser de modificateurs avec [des pointeurs vers membres](../cpp/pointers-to-members.md). Les modificateurs n'ont pas d'incidence sur les déclarations non pointeur.  
+ Utilisez le **__sptr** et **__uptr** modificateurs avec des déclarations de pointeur. Utilisez les modificateurs dans la position d’un [qualificateur de type pointeur](../c-language/pointer-declarations.md), ce qui signifie que le modificateur doit suivre l’astérisque. Vous ne pouvez pas utiliser de modificateurs avec [des pointeurs vers membres](../cpp/pointers-to-members.md). Les modificateurs n'ont pas d'incidence sur les déclarations non pointeur.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant déclare des pointeurs 32 bits qui utilisent les modificateurs `__sptr` et `__uptr`, assigne chaque pointeur 32 bits à une variable pointeur 64 bits, puis affiche la valeur hexadécimale de chaque pointeur 64 bits. Il est compilé avec le compilateur 64 bits natif et exécuté sur une plateforme 64 bits.  
+ L’exemple suivant déclare des pointeurs 32 bits qui utilisent le **__sptr** et **__uptr** modificateurs, assigne chaque pointeur 32 bits à une variable de pointeur 64 bits et affiche ensuite la valeur hexadécimale de chaque 64 - pointeur de bits. Il est compilé avec le compilateur 64 bits natif et exécuté sur une plateforme 64 bits.  
   
 ```cpp  
 // sptr_uptr.cpp  

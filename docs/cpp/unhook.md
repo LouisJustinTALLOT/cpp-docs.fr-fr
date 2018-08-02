@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943876"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463712"
 ---
 # <a name="unhook"></a>__unhook
 Dissocie une méthode de gestionnaire d'un événement.  
@@ -31,8 +31,7 @@ Dissocie une méthode de gestionnaire d'un événement.
 ## <a name="syntax"></a>Syntaxe  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  Le nom d’interface décroché à partir *récepteur*, uniquement pour les récepteurs d’événements COM dans lequel le *layout_dependent* paramètre de la [event_receiver](../windows/event-receiver.md) attribut est **true**.  
   
  *source*  
- Pointeur vers une instance de la source d'événement. En fonction du code `type` spécifié dans **event_receiver**, *source* peut prendre l’une des opérations suivantes :  
+ Pointeur vers une instance de la source d'événement. En fonction du code `type` spécifié dans `event_receiver`, *source* peut prendre l’une des opérations suivantes :  
   
 -   Un pointeur d'objet source de l'événement natif.  
   
--   Un **IUnknown**-en fonction de pointeur (source COM).  
+-   Un `IUnknown`-en fonction de pointeur (source COM).  
   
 -   Un pointeur d'objet managé (pour les événements managés).  
   

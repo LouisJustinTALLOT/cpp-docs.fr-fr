@@ -1,5 +1,5 @@
 ---
-title: Utilisation de génériques (C + c++ / CLI) | Documents Microsoft
+title: Utilisation de génériques (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870817"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460489"
 ---
 # <a name="consuming-generics-ccli"></a>Utilisation de génériques (C++/CLI)
-Génériques créés dans un langage .NET peuvent être utilisés dans d’autres langages .NET. Contrairement aux modèles, un type générique dans un assembly compilé reste toujours générique. Par conséquent, un peut instancier le type générique dans un autre assembly, même dans une langue autre que celle de l’assembly dans lequel le type générique a été défini.  
+Génériques créés dans un langage .NET peuvent être utilisés dans d’autres langages .NET. Contrairement aux modèles, un générique dans un assembly compilé reste générique. Par conséquent, un peut instancier le type générique dans un autre assembly et même dans une langue autre que celle de l’assembly dans lequel le type générique a été défini.  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre une classe générique définie dans le langage c#.  
+ Cet exemple montre une classe générique définie en c#.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -95,7 +95,7 @@ public class CircularList<ItemType> {
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

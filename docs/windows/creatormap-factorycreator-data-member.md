@@ -1,5 +1,5 @@
 ---
-title: Creatormap::FactoryCreator, données de membre | Documents Microsoft
+title: Creatormap::FactoryCreator, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8f0c5b2feda3b62dfb17902a281c7e71bd32f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882327"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465381"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator, données de membre
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -38,25 +38,25 @@ HRESULT (*factoryCreator)(
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- `currentflags`  
+ *currentflags*  
  Parmi les [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) énumérateurs.  
   
- `entry`  
+ *entry*  
  Un CreatorMap.  
   
- `iidClassFactory`  
+ *iidClassFactory*  
  L’ID d’interface d’une fabrique de classe.  
   
- `factory`  
+ *fabrique*  
  Lorsque l’opération terminée, l’adresse d’une fabrique de classe.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
 ## <a name="remarks"></a>Notes  
- Crée une fabrique pour le CreatorMap spécifié.  
+ Crée une fabrique pour la CreatorMap spécifié.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Namespace :** Microsoft::WRL::Details  

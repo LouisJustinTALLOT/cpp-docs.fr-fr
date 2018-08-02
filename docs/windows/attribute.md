@@ -1,5 +1,5 @@
 ---
-title: attribut | Documents Microsoft
+title: attribut | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862060"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461807"
 ---
 # <a name="attribute"></a>Attribut
 Vous permet de créer un attribut personnalisé.  
@@ -33,8 +33,7 @@ Vous permet de créer un attribut personnalisé.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ attribute(  
+[ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
    Inherited=boolean  
@@ -43,34 +42,34 @@ Vous permet de créer un attribut personnalisé.
   
 #### <a name="parameters"></a>Paramètres  
  *AllowOn*  
- Spécifie les éléments de langage auquel l’attribut personnalisé peut être appliqué. Valeur par défaut est **System::AttributeTargets::All** (consultez [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)).  
+ Spécifie les éléments de langage auquel l’attribut personnalisé peut être appliqué. Valeur par défaut est `System::AttributeTargets::All` (consultez [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
- `AllowMultiple`  
- Spécifie si l’attribut personnalisé peut être appliqué plusieurs fois à une construction. Valeur par défaut est **FALSE**.  
+ *AllowMultiple*  
+ Spécifie si l’attribut personnalisé peut être appliqué à plusieurs reprises d’une construction. Valeur par défaut est FALSE.  
   
- `Inherited`  
- Indique si l’attribut doit être héritées par les sous-classes. Le compilateur ne fournit aucune prise en charge spéciale pour cette fonctionnalité ; Il est le travail des consommateurs d’attribut (réflexion, par exemple) afin de respecter ces informations. Si `Inherited` est **TRUE**, l’attribut est hérité. Si `AllowMultiple` est **TRUE**, l’attribut s’accumulent sur le membre dérivé ; si `AllowMultiple` est **FALSE**, l’attribut remplace (ou remplacez) d’héritage. Si `Inherited` est **FALSE**, l’attribut ne sera pas être héritée. Valeur par défaut est **TRUE**.  
+ *Héritée*  
+ Indique si l’attribut doit être héritées par les sous-classes. Le compilateur ne fournit aucune prise en charge spéciale pour cette fonctionnalité ; Il est le travail des consommateurs d’attribut (la réflexion, par exemple) afin de respecter ces informations. Si *Inherited* a la valeur TRUE, l’attribut est hérité. Si *AllowMultiple* a la valeur TRUE, l’attribut s’accumulent sur le membre dérivé ; si *AllowMultiple* est FALSE, l’attribut remplace (ou remplacez) dans l’héritage. Si *Inherited* est FALSE, l’attribut ne sera pas être hérité. Valeur par défaut est TRUE.  
   
 ## <a name="remarks"></a>Notes  
   
 > [!NOTE]
->  Le `attribute` attribut est désormais déconseillé.  Utilisez l’attribut common language runtime System.Attribute directement pour créer des attirbutes de défini par l’utilisateur.  Pour plus d’informations, consultez [les attributs définis par l’utilisateur](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  Le `attribute` attribute est maintenant déconseillé.  Utilisez l’attribut runtime de common language System.Attribute directement pour créer des attirbutes défini par l’utilisateur.  Pour plus d’informations, consultez [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Vous définissez un [attribut personnalisé](../windows/custom-attributes-cpp.md) en plaçant le `attribute` attribut sur une définition de classe ou une structure managée. Le nom de la classe est l’attribut personnalisé. Par exemple :  
+ Vous définissez un [attribut personnalisé](../windows/custom-attributes-cpp.md) en plaçant le `attribute` attribut sur une définition de classe ou un struct managée. Le nom de la classe est l’attribut personnalisé. Exemple :  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- définit un attribut appelé MyAttr qui peut être appliqué aux paramètres de fonction. La classe doit être publique si l’attribut doit être utilisé dans d’autres assemblys.  
+ définit un attribut appelé `MyAttr` qui peut être appliqué aux paramètres de fonction. La classe doit être publique si l’attribut doit être utilisé dans d’autres assemblys.  
   
 > [!NOTE]
->  Pour éviter les collisions d’espace de noms, tous les noms d’attributs se terminent implicitement par « Attribute » ; Dans cet exemple, le nom de l’attribut et la classe est en fait MyAttrAttribute mais MyAttr et MyAttrAttribute peuvent être utilisées indifféremment.  
+>  Pour éviter les collisions d’espace de noms, tous les noms d’attributs se terminent implicitement par « Attribute » ; Dans cet exemple, le nom de l’attribut et la classe est en fait `MyAttrAttribute`, mais `MyAttr` et `MyAttrAttribute` peuvent être utilisés indifféremment.  
   
- Constructeurs publics de la classe définissent les paramètres sans nom de l’attribut. Constructeurs surchargés autoriser plusieurs méthodes pour spécifier l’attribut, donc un attribut personnalisé est défini comme suit :  
+ Les constructeurs publics de la classe définissent les paramètres sans nom de l’attribut. Constructeurs surchargés autoriser plusieurs façons de spécifier l’attribut, donc un attribut personnalisé qui est défini comme suit :  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -88,9 +87,9 @@ ref class ClassA {};   // Attribute with no parameters
 ref class ClassB {};   // Attribute with one parameter  
 ```  
   
- Membres de données publics et les propriétés de la classe sont des paramètres nommés de l’attribut facultatif :  
+ Données membres publiques et les propriétés de la classe sont des paramètres nommés facultatif de l’attribut :  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -112,13 +111,13 @@ public:
 ref class ClassC {};  
 ```  
   
- Pour obtenir la liste des types de paramètres d’attribut possibles, consultez [attributs personnalisés](../windows/custom-attributes-cpp.md).  
+ Pour obtenir la liste des types de paramètre d’attribut possibles, consultez [attributs personnalisés](../windows/custom-attributes-cpp.md).  
   
- Consultez [les attributs définis par l’utilisateur](../windows/user-defined-attributes-cpp-component-extensions.md) pour en savoir plus sur les cibles d’attribut.  
+ Consultez [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) pour une discussion sur les cibles d’attribut.  
   
- Le `attribute` attribut a un `AllowMultiple` paramètre qui spécifie si l’attribut personnalisé est à usage unique ou multiuse (peut apparaître plusieurs fois sur la même entité).  
+ Le `attribute` attribut a un *AllowMultiple* paramètre qui spécifie si l’attribut personnalisé est à usage unique ou multiuse (peut apparaître plusieurs fois sur la même entité).  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -131,7 +130,7 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Classes d’attributs personnalisés sont dérivés directement ou indirectement <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, qui permet d’identifier les définitions d’attributs dans les métadonnées rapidement et facilement. Le `attribute` attribut implique l’héritage de System::Attribute, dérivation explicite n’est pas nécessaire :  
+ Classes d’attributs personnalisés sont dérivées directement ou indirectement à partir de <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, ce qui permet d’identifier les définitions d’attributs dans les métadonnées rapidement et facilement. Le `attribute` attribut implique l’héritage de System::Attribute, dérivation explicite n’est pas nécessaire :  
   
 ```  
 [ attribute(Class) ]  
@@ -145,24 +144,24 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` est un alias de <xref:System.AttributeUsageAttribute?displayProperty=fullName> (pas attributAttribute ; il s’agit d’une exception à la règle d’affectation de noms d’attribut).  
+ `attribute` est un alias pour <xref:System.AttributeUsageAttribute?displayProperty=fullName> (pas AttributeAttribute ; il s’agit d’une exception à la règle d’affectation de noms d’attribut).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`ref` **classe**, **un struct ref**|  
+|**S'applique à**|**classe ref**, **un struct ref**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_4.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -176,9 +175,9 @@ ref class MyClass {};
 ```  
   
 ## <a name="example"></a>Exemple  
- Le `Inherited` argument nommé Spécifie si un attribut personnalisé est appliqué à une classe de base s’afficheront sur la réflexion d’une classe dérivée.  
+ Le `Inherited` argument nommé Spécifie si un attribut personnalisé appliqué à une classe de base s’affichera sur la réflexion d’une classe dérivée.  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -218,4 +217,4 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des attributs](../windows/attributes-alphabetical-reference.md)   
- [Attributs personnalisés](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [Attributs personnalisés](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

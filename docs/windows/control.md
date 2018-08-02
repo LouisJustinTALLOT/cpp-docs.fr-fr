@@ -1,5 +1,5 @@
 ---
-title: contrôle | Documents Microsoft
+title: contrôle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870830"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466485"
 ---
 # <a name="control"></a>contrôle
 Spécifie que le type défini par l’utilisateur est un contrôle.  
@@ -30,9 +30,7 @@ Spécifie que le type défini par l’utilisateur est un contrôle.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -40,7 +38,7 @@ Spécifie que le type défini par l’utilisateur est un contrôle.
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -55,16 +53,16 @@ __interface ICustom {
 class CTest : public ICustom {};  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

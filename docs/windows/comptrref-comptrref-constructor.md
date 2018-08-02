@@ -1,5 +1,5 @@
 ---
-title: Comptrref::comptrref, constructeur | Documents Microsoft
+title: Comptrref::comptrref, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870657"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463630"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef, constructeur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -36,13 +36,13 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `ptr`  
- La valeur sous-jacente d’un autre objet ComPtrRef.  
+ *ptr*  
+ La valeur sous-jacente d’un autre **ComPtrRef** objet.  
   
 ## <a name="remarks"></a>Notes  
- Initialise une nouvelle instance de la classe ComPtrRef à partir du pointeur spécifié vers un autre objet ComPtrRef.  
+ Initialise une nouvelle instance de la **ComPtrRef** classe à partir du pointeur spécifié vers un autre **ComPtrRef** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

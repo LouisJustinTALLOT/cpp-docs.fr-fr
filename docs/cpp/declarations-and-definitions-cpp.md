@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fdf87e9db7ecd419897615ab45cc967360b67fc2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403717"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462399"
 ---
 # <a name="declarations-and-definitions-c"></a>Déclarations et définitions (C++)
 Déclarations introduisent des noms dans un programme, par exemple les noms de variables, des espaces de noms, des fonctions et des classes. Les déclarations spécifient également les informations de type ainsi que d'autres caractéristiques de l'objet qui est déclaré. Un nom doit être déclaré avant de pouvoir être utilisé ; en C++, le point auquel un nom est déclaré détermine s'il est visible par le compilateur. Vous ne pouvez pas faire référence à une fonction ou une classe qui est déclarée au niveau d’un point ultérieur dans l’unité de compilation ; Vous pouvez utiliser *pré-déclarations* pour contourner cette limitation.  
@@ -39,7 +39,7 @@ Déclarations introduisent des noms dans un programme, par exemple les noms de v
   
 5.  Est un **typedef** instruction.  
   
- Voici des exemples de déclarations qui sont également des définitions :  
+Voici des exemples de déclarations qui sont également des définitions :  
   
 ```cpp 
 // Declare and define int variables i and j.  
@@ -58,7 +58,7 @@ public:
 };  
 ```  
   
- Voici des déclarations qui ne sont pas des définitions :  
+Voici des déclarations qui ne sont pas des définitions :  
   
 ```cpp 
 extern int i;  

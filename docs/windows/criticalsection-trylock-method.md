@@ -1,5 +1,5 @@
 ---
-title: CriticalSection::TryLock, méthode | Documents Microsoft
+title: CriticalSection::TryLock, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883950"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465420"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock, méthode
-Tente d’entrer une section critique sans se bloquer. Si l’appel réussit, le thread appelant prend la propriété de la section critique.  
+Tentatives de saisie d’une section critique sans bloquer. Si l’appel réussit, le thread appelant prend possession de la section critique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +38,16 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `cs`  
- Un objet spécifié par l’utilisateur une section critique.  
+ *cs*  
+ Un objet spécifié par l’utilisateur de section critique.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la section critique est entrée correctement ou le thread actuel possède déjà la section critique. Zéro si un autre thread possède déjà la section critique.  
+ Une valeur différente de zéro si la section critique est entrée avec succès ou le thread actif possède déjà la section critique. Zéro si un autre thread possède déjà la section critique.  
   
 ## <a name="remarks"></a>Notes  
  La première **TryLock** fonction affecte l’objet en cours de la section critique. La seconde **TryLock** fonction affecte une section critique spécifié par l’utilisateur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

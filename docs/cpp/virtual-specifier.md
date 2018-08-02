@@ -1,5 +1,5 @@
 ---
-title: Spécificateur virtuel | Documents Microsoft
+title: Spécificateur virtuel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,13 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200fdb93e7baf8ff229b0445b7ad7a8ceab90d19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01b569bd4a752eed66f2af138a7136032b092f51
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421258"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464968"
 ---
 # <a name="virtual-specifier"></a>Spécificateur virtuel
-Le [virtuels](../cpp/virtual-cpp.md) mot clé peut être appliqué uniquement aux fonctions membres de classe non statique. Cela signifie que la liaison des appels à la fonction est différée jusqu’au moment de l’exécution. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).  
-  
+Le [virtuel](../cpp/virtual-cpp.md) mot clé peut être appliqué uniquement aux fonctions membres de classe non statique. Cela signifie que la liaison des appels à la fonction est différée jusqu’au moment de l’exécution. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).  

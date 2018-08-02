@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator ! =, opérateur | Documents Microsoft
+title: ComPtr::operator ! =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881879"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461820"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!=, opérateur
-Indique si deux objets ComPtr ne sont pas égaux.  
+Indique si deux **ComPtr** objets ne sont pas égaux.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,22 +42,21 @@ bool operator!=(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `a`  
- Une référence à un objet ComPtr.  
+ *a*  
+ Une référence à un **ComPtr** objet.  
   
- `b`  
- Une référence à un autre objet ComPtr.  
+ *b*  
+ Une référence à un autre **ComPtr** objet.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Premier opérateur rendements `true` si objet `a` n’est pas égal à l’objet `b`; sinon, `false`.  
+ Le premier produit opérateur **true** si objet *un* n’est pas égal à l’objet *b*; sinon, **false**.  
   
- Les deuxième et troisième opérateurs yield `true` si objet `a` n’est pas égal à `nullptr`; sinon, `false`.  
+ Les deuxième et troisième opérateurs yield **true** si objet *un* n’est pas égal à **nullptr**; sinon, **false**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

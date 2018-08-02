@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::trytransitiontoerror, méthode | Documents Microsoft
+title: Asyncbase::trytransitiontoerror, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863502"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463205"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError, méthode
-Indique si le code d’erreur peut modifier l’état d’erreur interne.  
+Indique si le code d’erreur spécifié peut modifier l’état d’erreur interne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,16 +36,16 @@ bool TryTransitionToError(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `error`  
+ *Erreur*  
  Une erreur HRESULT.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si l’état d’une erreur interne a été modifié ; dans le cas contraire, `false`.  
+ **true** si l’état d’erreur interne a été modifié ; sinon, **false**.  
   
 ## <a name="remarks"></a>Notes  
- Cette opération modifie l’état d’erreur uniquement si l’état d’erreur est déjà défini à S_OK. Cette opération n’a aucun effet si l’état d’erreur est déjà erreur, annulé, terminé ou fermé.  
+ Cette opération modifie l’état d’erreur uniquement si l’état d’erreur est déjà définie à S_OK. Cette opération n’a aucun effet si l’état d’erreur est déjà erreur, annulé, terminé ou fermé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

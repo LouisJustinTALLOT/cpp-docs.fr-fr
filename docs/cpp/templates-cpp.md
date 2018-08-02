@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942905"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463926"
 ---
 # <a name="templates-c"></a>Modèles (C++)
 Les modèles constituent la base pour la programmation générique dans C++. Comme un langage fortement typé, C++ exige que toutes les variables pour avoir un type spécifique, soit explicitement déclarée par le programmeur soit déduit par le compilateur. Toutefois, plusieurs algorithmes et structures de données identiques, quel que soit le type qu’ils fonctionnent sur. Ces derniers permettent de définir les opérations d’une classe ou une fonction, et permettent à l’utilisateur de spécifier quels concret types ces opérations doit fonctionner sur.  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Le code ci-dessus décrit un modèle pour une fonction générique avec un seul paramètre de type `T`, dont la valeur de retour et appeler des paramètres (lhs et rhs) sont tous de ce type. Vous pouvez nommer un paramètre de type que vous comme, mais par convention unique majuscules sont couramment utilisés. `T` est un paramètre de modèle ; le **typename** mot clé indique que ce paramètre est un espace réservé pour un type. Lorsque la fonction est appelée, le compilateur remplace toutes les instances de `T` avec l’argument de type concret qui est spécifié par l’utilisateur ou déduit par le compilateur. Le processus dans lequel le compilateur génère une classe ou fonction à partir d’un modèle est appelée *instanciation de modèle*;   `minimum<int>` est une instanciation du modèle `minimum<T>`.  
+ Le code ci-dessus décrit un modèle pour une fonction générique avec un seul paramètre de type *T*, dont la valeur de retour et appeler des paramètres (lhs et rhs) sont tous de ce type. Vous pouvez nommer un paramètre de type que vous comme, mais par convention unique majuscules sont couramment utilisés. *T* est un paramètre de modèle ; la **typename** mot clé indique que ce paramètre est un espace réservé pour un type. Lorsque la fonction est appelée, le compilateur remplace toutes les instances de `T` avec l’argument de type concret qui est spécifié par l’utilisateur ou déduit par le compilateur. Le processus dans lequel le compilateur génère une classe ou fonction à partir d’un modèle est appelée *instanciation de modèle*; `minimum<int>` est une instanciation du modèle `minimum<T>`.  
   
  Par ailleurs, un utilisateur peut déclarer une instance du modèle qui est spécialisé pour int. Supposons que get_a() et get_b() sont des fonctions qui retournent une valeur int :  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- Toutefois, car il s’agit d’un modèle de fonction et le compilateur peuvent déduire le type de `T` à partir des arguments `a` et `b`, vous pouvez l’appeler comme une fonction ordinaire :  
+ Toutefois, car il s’agit d’un modèle de fonction et le compilateur peuvent déduire le type de `T` à partir des arguments *un* et *b*, vous pouvez l’appeler comme une fonction ordinaire :  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  Lorsque le compilateur rencontre cette dernière instruction, il génère une nouvelle fonction dans chaque occurrence de *T* dans le modèle est remplacé par **int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  Les règles de la façon dont le compilateur effectue la déduction de type dans les modèles de fonction sont basées sur les règles pour les fonctions ordinaires. Pour plus d’informations, consultez [surcharger la résolution de modèle appels de fonction](../cpp/overload-resolution-of-function-template-calls.md).  
   
 ## <a id="type_parameters"></a> Paramètres de type  
- Dans le `minimum` modèle ci-dessus, notez que le paramètre de type `T` n’est pas qualifié en aucune façon jusqu'à ce qu’il est utilisé dans les paramètres d’appel de fonction, où la const et qualificateurs de référence sont ajoutés.  
+ Dans le `minimum` modèle ci-dessus, notez que le paramètre de type *T* n’est pas qualifié en aucune façon jusqu'à ce qu’il est utilisé dans les paramètres d’appel de fonction, où la const et qualificateurs de référence sont ajoutés.  
   
  Il n’existe aucune limite pratique au nombre de paramètres de type. Séparez plusieurs paramètres par des virgules :  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  Le mot clé **classe** équivaut à **typename** dans ce contexte. Vous pouvez exprimer l’exemple précédent en tant que :  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  Une erreur du compilateur est générée car MyClass ne fournit pas une surcharge pour le < opérateur.  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  Notez la syntaxe dans la déclaration de modèle. La valeur size_t est transmise comme argument de modèle au moment de la compilation et doit être une constante ou une expression constexpr. Vous l’utilisez comme suit :  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  Autres types de valeurs, y compris des pointeurs et références peuvent être passés en tant que paramètres de type non. Par exemple, vous pouvez passer un pointeur à une fonction ou un objet de fonction à personnaliser une opération dans le code du modèle.  
   
 ## <a id="template_parameters"></a> Modèles en tant que paramètres de modèle  
- Un modèle peut être un paramètre de modèle. Dans cet exemple, MyClass2 a deux paramètres de modèle : un paramètre typename `T` et un paramètre de modèle `Arr`:  
+ Un modèle peut être un paramètre de modèle. Dans cet exemple, MyClass2 a deux paramètres de modèle : un paramètre typename *T* et un paramètre de modèle *Arr*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- Étant donné que le `Arr` paramètre lui-même n’a aucun corps, ses noms de paramètre ne sont pas nécessaires. En fait, il est une erreur pour faire référence à `Arr`de typename ou classe noms de paramètres à partir du corps de `MyClass2`. Pour cette raison, `Arr`de noms de paramètre de type peuvent être omis, comme illustré dans cet exemple :  
+ Étant donné que le *Arr* paramètre lui-même n’a aucun corps, ses noms de paramètre ne sont pas nécessaires. En fait, il est une erreur pour faire référence à *Arr*de typename ou classe noms de paramètres à partir du corps de `MyClass2`. Pour cette raison, *Arr*de noms de paramètre de type peuvent être omis, comme illustré dans cet exemple :  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>Spécialisation de modèle  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- Un modèle peut avoir un nombre quelconque de spécialisations tant que chaque paramètre de type spécialisé est unique.   Seuls les modèles de classe peuvent être partiellement spécialisés. Toutes les spécialisations complètes et partielles d’un modèle doivent être déclarées dans le même espace de noms en tant que le modèle d’origine.  
+ Un modèle peut avoir un nombre quelconque de spécialisations tant que chaque paramètre de type spécialisé est unique. Seuls les modèles de classe peuvent être partiellement spécialisés. Toutes les spécialisations complètes et partielles d’un modèle doivent être déclarées dans le même espace de noms en tant que le modèle d’origine.  
   
  Pour plus d’informations, consultez [spécialisation de modèle](../cpp/template-specialization-cpp.md).

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dbb46302c2ae8834ab9a2a626a3bfb77c41996a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942874"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461476"
 ---
 # <a name="void-c"></a>void (C++)
 Lorsqu’il est utilisé comme un type de retour de fonction, le **void** mot clé spécifie que la fonction ne retourne pas de valeur. Quand il est utilisé pour la liste des paramètres d'une fonction, void spécifie que la fonction ne prend aucun paramètre. Quand il est utilisé dans la déclaration d'un pointeur, void spécifie que le pointeur est « universel ».  
   
- Si le type de pointeur est **void \*** , le pointeur peut pointer vers n’importe quelle variable qui n’est pas déclaré avec le **const** ou **volatile** mot clé. Un pointeur void ne peut pas être déréférencé, sauf s'il fait l'objet d'un cast en un autre type. Un pointeur void peut être converti en tout autre type de pointeur de données.  
+ Si le type de pointeur est `void *`, le pointeur peut pointer vers n’importe quelle variable qui n’est pas déclaré avec le **const** ou **volatile** mot clé. Un pointeur void ne peut pas être déréférencé, sauf s'il fait l'objet d'un cast en un autre type. Un pointeur void peut être converti en tout autre type de pointeur de données.  
   
  Un pointeur void peut pointer vers une fonction, mais pas vers un membre de classe en C++.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942886"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462386"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue : &amp;&amp;
 Contient une référence à une expression rvalue.  
@@ -29,7 +29,6 @@ Contient une référence à une expression rvalue.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Sémantique de déplacement  
  Références rvalue prennent en charge l’implémentation de *la sémantique de déplacement*, ce qui peut augmenter considérablement les performances de vos applications. La sémantique de déplacement vous permet d'écrire du code qui transfère des ressources (telles que la mémoire allouée de manière dynamique) d'un objet vers un autre. La sémantique de déplacement fonctionne car elle permet de transférer des ressources à partir d'objets temporaires qui ne peuvent pas être référencés ailleurs dans le programme.  
   
- Pour implémenter la sémantique de déplacement, vous fournissez généralement un *constructeur de déplacement,* et éventuellement un opérateur d’assignation déplacement (`operator=`), à votre classe. Les opérations de copie et d'assignation dont les sources sont des rvalues profitent ensuite automatiquement de la sémantique de déplacement. Contrairement au constructeur de copie par défaut, le compilateur ne fournit pas de constructeur de déplacement par défaut. Pour plus d’informations sur la façon d’écrire un constructeur de déplacement et comment l’utiliser dans votre application, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Pour implémenter la sémantique de déplacement, vous fournissez généralement un *constructeur de déplacement,* et éventuellement un opérateur d’assignation déplacement (**opérateur =**), à votre classe. Les opérations de copie et d'assignation dont les sources sont des rvalues profitent ensuite automatiquement de la sémantique de déplacement. Contrairement au constructeur de copie par défaut, le compilateur ne fournit pas de constructeur de déplacement par défaut. Pour plus d’informations sur la façon d’écrire un constructeur de déplacement et comment l’utiliser dans votre application, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  Vous pouvez aussi surcharger des fonctions et des opérateurs ordinaires pour tirer parti de la sémantique de déplacement. Visual C++ 2010 introduit la sémantique de déplacement dans la bibliothèque C++ Standard. Par exemple, la classe `string` implémente des opérations qui exécutent la sémantique de déplacement. Prenons l'exemple suivant qui concatène plusieurs chaînes et affiche le résultat :  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Avant Visual C++ 2010, chaque appel à `operator+` alloue et retourne un nouveau temporaire `string` objet (une rvalue). `operator+` ne peut pas ajouter une chaîne à une autre car il ne sait pas si les chaînes sources sont des lvalues ou des rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. Si vous utilisez des références rvalue, `operator+` peut être modifié afin d'accepter des rvalues, qui ne peuvent pas être référencées ailleurs dans le programme. Par conséquent, `operator+` peut maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).  
+ Avant Visual C++ 2010, chaque appel à **opérateur +** alloue et retourne un nouveau temporaire `string` objet (une rvalue). **operator +** Impossible d’ajouter une chaîne à l’autre, car il ne sait pas si les chaînes sources sont des lvalues ou rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. À l’aide des références rvalue, **opérateur +** peut être modifiée pour accepter des rvalues, qui ne peut pas être référencées ailleurs dans le programme. Par conséquent, **opérateur +** peuvent maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).  
   
  La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   

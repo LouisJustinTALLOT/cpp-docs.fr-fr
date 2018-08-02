@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939375"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462360"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bienvenue dans C++ (Modern C++)
 C++ est l'un des langages de programmation les plus couramment utilisés au monde. Les programmes C++ bien écrits sont rapides et efficaces. Ce langage est plus flexible que d'autres, car il permet de créer une large gamme d'applications (jeux divertissants et passionnants, logiciels scientifiques de pointe, pilotes de périphériques, programmes incorporés et applications clientes Windows). Depuis plus de 20 ans, C++ est utilisé pour résoudre des problèmes similaires et beaucoup d'autres problèmes. Ce que vous ne savez peut-être pas, c'est qu'un nombre croissant de programmeurs C++ ont abandonné l'ancienne programmation de type C inélégante au profit de la programmation moderne C++.  
@@ -49,7 +49,6 @@ C++ est l'un des langages de programmation les plus couramment utilisés au mond
  Le langage C++ lui-même a également évolué. Comparez les extraits de code suivants. Cet extrait montre comment les choses se passaient en C++ :  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  Voici comment la même opération est accomplie en C++ moderne :  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  En C++ moderne, il est inutile d'utiliser new/delete ou une gestion des exceptions explicite car vous pouvez utiliser des pointeurs intelligents à la place. Lorsque vous utilisez le **automatique** déduction de type et [fonction lambda](../cpp/lambda-expressions-in-cpp.md), vous pouvez écrire du code plus rapide, renforcer et mieux le comprendre. Et basées sur une plage **pour** boucle est plus clair, plus facile à utiliser et moins sujette aux erreurs inattendues que le style de C **pour** boucle. Vous pouvez utiliser le code réutilisable avec un minimum de lignes de code pour écrire votre application. Et vous pouvez rendre ce code sécurisé du point de vue des exceptions et de la mémoire, et n'avoir aucune allocation/désallocation ou code d'erreur à traiter.  

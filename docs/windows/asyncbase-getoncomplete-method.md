@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::getoncomplete, méthode | Documents Microsoft
+title: Asyncbase::getoncomplete, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865108"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466570"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete, méthode
-Copie l’adresse du Gestionnaire d’événements d’achèvement actuel de la variable spécifiée.  
+Copie l’adresse du Gestionnaire d’événements de saisie semi-automatique actuelle à la variable spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `completeHandler`  
- L’emplacement de stockage de l’adresse du Gestionnaire d’événements d’achèvement actuel.  
+ *completeHandler*  
+ L’emplacement de stockage de l’adresse du Gestionnaire d’événements de saisie semi-automatique actuel.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; dans le cas contraire, E_ILLEGAL_METHOD_CALL.  
+ S_OK en cas de réussite ; Sinon, E_ILLEGAL_METHOD_CALL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

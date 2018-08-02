@@ -1,5 +1,5 @@
 ---
-title: 'Opérateur d’indice : | Documents Microsoft'
+title: 'Opérateur d’indice : | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbdeac996320d885e4d6e131dcb735ac369b09f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467907"
 ---
 # <a name="subscript-operator"></a>Opérateur d’indice :
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 postfix-expression [ expression ]  
 ```  
   
@@ -38,9 +38,9 @@ postfix-expression [ expression ]
   
  Pour plus d’informations sur les tableaux managés, consultez [tableaux](../windows/arrays-cpp-component-extensions.md).  
   
- En règle générale, la valeur représentée par *postfix-expression* est une valeur de pointeur, par exemple un identificateur de tableau, et *expression* est une valeur intégrale (y compris les types énumérés). Toutefois, sur le plan de la syntaxe, il est requis que l'une des expressions soit de type pointeur et l'autre de type intégral. Par conséquent, la valeur intégrale peut être dans le *postfix-expression* position et la valeur de pointeur peut être entre crochets, dans le *expression* ou position indice. Prenons le fragment de code suivant :  
+ En règle générale, la valeur représentée par *postfix-expression* est une valeur de pointeur, par exemple un identificateur de tableau, et *expression* est une valeur intégrale (y compris les types énumérés). Toutefois, sur le plan de la syntaxe, il est requis que l'une des expressions soit de type pointeur et l'autre de type intégral. La valeur intégrale peut donc se trouver dans le *postfix-expression* position et la valeur de pointeur peut être entre crochets, dans le *expression* ou la position d’indice. Prenons le fragment de code suivant :  
   
-```  
+```cpp 
 int nArray[5] = { 0, 1, 2, 3, 4 };  
 cout << nArray[2] << endl;            // prints "2"  
 cout << 2[nArray] << endl;            // prints "2"  
@@ -50,23 +50,23 @@ cout << 2[nArray] << endl;            // prints "2"
   
  **\*( (** *e2* **)** *+* **(***e1***) )**  
   
- L’adresse transmise par l’expression n’est pas *e2* octets à partir de l’adresse *e1*. Au lieu de cela, l’adresse est à l’échelle pour parvenir à l’objet suivant dans le tableau *e2*. Par exemple :  
+ L’adresse transmise par l’expression n’est pas *e2* octets à partir de l’adresse *e1*. Au lieu de cela, l’adresse est à l’échelle pour transmettre l’objet suivant dans le tableau *e2*. Exemple :  
   
-```  
+```cpp 
 double aDbl[2];  
 ```  
   
- Les adresses de `aDb[0]` et `aDb[1]` sont 8 octets séparés, la taille d’un objet de type **double**. Cette mise à l’échelle en fonction du type d’objet est effectuée automatiquement par le langage C++ et est défini dans [opérateurs additifs](../cpp/additive-operators-plus-and.md) où l’addition et la soustraction des opérandes de type pointeur sont abordés.  
+ Les adresses de `aDb[0]` et `aDb[1]` sont 8 octets séparés, la taille d’un objet de type **double**. Cette mise à l’échelle en fonction du type d’objet est effectuée automatiquement par le langage C++ et est défini dans [opérateurs additifs](../cpp/additive-operators-plus-and.md) où l’addition et la soustraction des opérandes de type pointeur est abordée.  
   
  Une expression d'indice peut également avoir plusieurs indices, comme suit :  
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, *expression1 ***[*** expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
+ Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1 ***[*** expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliqué après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
   
  Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions. L'exemple suivant déclare et initialise un tableau de caractères simple à deux dimensions :  
   
-```  
+```cpp 
 // expre_Subscript_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -86,7 +86,7 @@ int main() {
 ## <a name="positive-and-negative-subscripts"></a>Indices positifs et négatifs  
  Le premier élément d'un tableau est l'élément 0. La plage d’un tableau C++ est comprise entre *tableau*[0] à *tableau*[*taille* - 1]. Toutefois, C++ prend en charge les indices positifs et négatifs. Les indices négatifs doivent rester dans les limites du tableau. Sinon, les résultats sont imprévisibles. Le code suivant montre des indices de tableau positifs et négatifs :  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -109,11 +109,11 @@ int main() {
   
  L'indice négatif de la ligne lasta peut provoquer une erreur d'exécution, car il produit une adresse 256 octets plus bas en mémoire que l'origine du tableau. Le pointeur `midArray` est initialisé au milieu de `intArray`. Il est donc possible d'utiliser à la fois des index de tableau négatifs et positifs sur ce dernier. Les erreurs d'indice de tableau ne génèrent pas d'erreurs de compilation, mais ils produisent des résultats imprévisibles.  
   
- L'opérateur d'indice est commutatif. Par conséquent, les expressions *tableau*[*index*] et *tableau*[*tableau*] sont obligatoirement équivalentes aussi longtemps que l’indice opérateur n’est pas surchargé (voir [opérateurs surchargés](../cpp/operator-overloading.md)). La première forme constitue la pratique de codage la plus courante, mais les deux fonctionnent.  
+ L'opérateur d'indice est commutatif. Par conséquent, les expressions *tableau*[*index*] et *tableau*[*tableau*] sont obligatoirement équivalentes aussi longtemps que l’indice opérateur n’est pas surchargé (consultez [opérateurs surchargés](../cpp/operator-overloading.md)). La première forme constitue la pratique de codage la plus courante, mais les deux fonctionnent.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions suffixées](../cpp/postfix-expressions.md)   
- [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Tableaux](../cpp/arrays-cpp.md)   
  [Tableaux unidimensionnels](../c-language/one-dimensional-arrays.md)   
  [Tableaux multidimensionnels](../c-language/multidimensional-arrays-c.md)

@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper (Structure) | Documents Microsoft
+title: ArgTraitsHelper (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857699"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466635"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -35,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Une interface de délégué.  
   
 ## <a name="remarks"></a>Notes  
- Permet de définir les caractéristiques communes des arguments de délégué.  
+ Permet de définir les caractéristiques communes d’arguments du délégué.  
   
 ## <a name="members"></a>Membres  
   
@@ -54,12 +54,12 @@ struct ArgTraitsHelper;
   
 |Name|Description|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args, constante](../windows/argtraitshelper-args-constant.md)|Permet de [ArgTraits::args](../windows/argtraits-args-constant.md) conserver le nombre de paramètres de la méthode Invoke d’une interface de délégué.|  
+|[ArgTraitsHelper::args, constante](../windows/argtraitshelper-args-constant.md)|Vous aide à [ArgTraits::args](../windows/argtraits-args-constant.md) conserver le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ArgTraitsHelper`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

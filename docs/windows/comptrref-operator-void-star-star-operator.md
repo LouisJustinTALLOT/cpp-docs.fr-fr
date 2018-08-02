@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207850"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463851"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* opérateur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Supprime l’objet ComPtrRef en cours, effectue un cast du pointeur vers l’interface qui a été représenté par l’objet ComPtrRef comme un pointeur à pointeur-à `void`, puis retourne le pointeur de cast.  
+ Supprime actuel **ComPtrRef** d’objet, convertit le pointeur vers l’interface qui a été représenté par le **ComPtrRef** objet sous la forme d’un pointeur à pointeur-à **void**, puis Retourne le pointeur de cast.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  

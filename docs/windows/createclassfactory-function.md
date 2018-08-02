@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory (fonction) | Documents Microsoft
+title: Createclassfactory, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870471"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461323"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (fonction)
 Crée une fabrique produisant des instances de la classe spécifiée.  
@@ -37,29 +37,28 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `flags`  
+ *flags*  
  Une combinaison d’une ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valeurs d’énumération.  
   
- `entry`  
- Pointeur vers un [CreatorMap](../windows/creatormap-structure.md) qui contient des informations d’initialisation et de l’inscription sur le paramètre `riid`.  
+ *entry*  
+ Pointeur vers un [CreatorMap](../windows/creatormap-structure.md) qui contient des informations d’initialisation et d’inscription sur le paramètre *riid*.  
   
- `riid`  
+ *riid*  
  Référence à un ID d’interface.  
   
- `ppFactory`  
- Si cette opération est terminée avec succès, un pointeur vers une fabrique de classe.  
+ *ppFactory*  
+ Si cette opération termine avec succès, un pointeur vers une fabrique de classe.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
 ## <a name="remarks"></a>Notes  
- Une erreur d’assertion est émise si le paramètre de modèle `Factory` ne dérive pas de l’interface IClassFactory.  
+ Une erreur d’assertion est émise si le paramètre de modèle *Factory* n’est pas dérivé d’une interface `IClassFactory`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942914"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462184"
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une expression intégrale.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  Un **basculer** instruction peut être imbriquée. Dans ce cas, **cas** ou **par défaut** étiquettes associer la plus proche **basculer** instruction qui les entoure.  
 
- 
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
  Microsoft C ne limite pas le nombre de valeurs de cas dans un **basculer** instruction. Le nombre est limité uniquement par la mémoire disponible. C ANSI requiert qu’au moins 257 étiquettes soient autorisées dans un **basculer** instruction.  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>Voir aussi  
  [Instructions de sélection](../cpp/selection-statements-cpp.md)   
  [Mots clés](../cpp/keywords-cpp.md)   
- 

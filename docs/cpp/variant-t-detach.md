@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 895df401ab10ae85641fd2eed9f7a9654916f33f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026258"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465224"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Section spécifique à Microsoft**  
@@ -34,9 +34,7 @@ ms.locfileid: "39026258"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 VARIANT Detach( );  
-  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  

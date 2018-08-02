@@ -1,5 +1,5 @@
 ---
-title: COM_INTERFACE_ENTRY (C++) | Documents Microsoft
+title: COM_INTERFACE_ENTRY (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863450"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462782"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Ajoute une entrée de l’interface dans le mappage COM de la classe cible.  
@@ -30,8 +30,7 @@ Ajoute une entrée de l’interface dans le mappage COM de la classe cible.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-     [ com_interface_entry(   
+[ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
@@ -41,11 +40,11 @@ Ajoute une entrée de l’interface dans le mappage COM de la classe cible.
  Chaîne contenant le texte de l’entrée. Pour obtenir la liste des valeurs possibles, consultez [Macros COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).  
   
 ## <a name="remarks"></a>Notes  
- Le `com_interface_entry` attribut C++ insère le contenu ondes ultracourtes d’une chaîne de caractères dans le mappage d’interface COM de l’objet cible. Si l’attribut est appliqué une fois à l’objet cible, l’entrée est insérée au début de la table d’interface. Si l’attribut est appliqué à plusieurs reprises pour le même objet cible, les entrées sont insérées au début de la table d’interface dans l’ordre de que leur réception.  
+ Le **com_interface_entry** attribut C++ insère le contenu ondes ultracourtes d’une chaîne de caractères dans la table d’interface COM de l’objet cible. Si l’attribut est appliqué une fois à l’objet cible, l’entrée est insérée au début de la carte d’interface existante. Si l’attribut est appliqué à plusieurs reprises pour le même objet cible, les entrées sont insérées au début de la carte d’interface dans l’ordre de que leur réception.  
   
- Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi_progid** et **coclass** sont également appliqués.  
+ Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.  
   
- Étant donné que la première utilisation de `com_interface_entry` provoque la nouvelle interface à insérer au début de la table d’interface, il doit être un des types de COM_INTERFACE_ENTRY suivantes :  
+ Étant donné que la première utilisation de **com_interface_entry** provoque la nouvelle interface doit être inséré au début de la carte d’interface, il doit être un des types COM_INTERFACE_ENTRY suivants :  
   
 -   COM_INTERFACE_ENTRY  
   
@@ -55,9 +54,9 @@ Ajoute une entrée de l’interface dans le mappage COM de la classe cible.
   
 -   COM_INTERFACE_ENTRY2_IID  
   
- Utilisations supplémentaires de la `com_interface_entry` attribut peut utiliser des types de COM_INTERFACE_ENTRY toutes prises en charge.  
+ Utilisations supplémentaires de la **com_interface_entry** attribut peut utiliser les types de COM_INTERFACE_ENTRY tout pris en charge.  
   
- Cette restriction est nécessaire car ATL utilise la première entrée dans la table d’interface comme identité **IUnknown**; par conséquent, l’entrée doit être une interface valide. Par exemple, l’exemple de code suivant n’est pas valide, car la première entrée de la table d’interface ne spécifie pas une interface COM réelle.  
+ Cette restriction est nécessaire car ATL utilise la première entrée dans la table d’interface en tant que l’identité `IUnknown`; par conséquent, l’entrée doit être une interface valide. Par exemple, l’exemple de code suivant n’est pas valide, car la première entrée dans la table d’interface ne spécifie pas une interface COM réelle.  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -69,9 +68,9 @@ Ajoute une entrée de l’interface dans le mappage COM de la classe cible.
 ```  
   
 ## <a name="example"></a>Exemple  
- Le code suivant ajoute deux entrées à la carte d’interface COM existante de **CMyBaseClass**. La première est une interface standard, et le second masque la **IDebugTest** interface.  
+ Le code suivant ajoute deux entrées à la carte d’interface COM existante de `CMyBaseClass`. La première est une interface standard, et le second masque le `IDebugTest` interface.  
   
-```  
+```cpp  
 // cpp_attr_ref_com_interface_entry.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -99,7 +98,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- La table des objets COM qui en résulte pour **CMyBaseClass** est comme suit :  
+ Mappage résultant de l’objet COM pour `CMyBaseClass` se présente comme suit :  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -112,16 +111,16 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Oui|  
 |**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid**ou **vi_progid**.|  
-|**Attributs non valides**|Aucun|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

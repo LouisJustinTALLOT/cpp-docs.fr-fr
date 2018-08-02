@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator ==, opérateur | Documents Microsoft
+title: ComPtrRef::operator ==, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880772"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463952"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator==, opérateur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -55,23 +55,23 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `a`  
+ *a*  
  Une référence à un objet ComPtrRef.  
   
- `b`  
+ *b*  
  Une référence à un autre objet ComPtrRef, ou un pointeur vers un type anonyme (`void*`).  
   
 ## <a name="return-value"></a>Valeur de retour  
- Premier opérateur rendements `true` si objet `a` est égal à l’objet `b`; sinon, `false`.  
+ Le premier produit opérateur **true** si objet *un* est égal à l’objet *b*; sinon, **false**.  
   
- Les deuxième et troisième opérateurs yield `true` si objet `a` est égal à `nullptr`; sinon, `false`.  
+ Les deuxième et troisième opérateurs yield **true** si objet *un* est égal à **nullptr**; sinon, **false**.  
   
- Les opérateurs quatrième et cinquième yield `true` si objet `a` est égal à l’objet `b`; sinon, `false`.  
+ Les quatrième et cinquième opérateurs yield **true** si objet *un* est égal à l’objet *b*; sinon, **false**.  
   
 ## <a name="remarks"></a>Notes  
  Indique si deux objets ComPtrRef sont égaux.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

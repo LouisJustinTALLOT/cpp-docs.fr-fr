@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942705"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462116"
 ---
 # <a name="writing-an-exception-filter"></a>Écriture d'un filtre d'exception
 Vous pouvez gérer une exception en accédant au niveau du gestionnaire d'exceptions ou en reprenant l'exécution. Au lieu d’utiliser le code de gestionnaire d’exception à gérer l’exception et passer, vous pouvez utiliser *filtre* pour éliminer le problème et puis, en retournant -1, reprendre le flux normal sans nettoyer la pile.  

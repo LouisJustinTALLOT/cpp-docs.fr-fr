@@ -1,5 +1,5 @@
 ---
-title: Instructions de sélection (C++) | Documents Microsoft
+title: Instructions de sélection (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421271"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464426"
 ---
 # <a name="selection-statements-c"></a>Instructions de sélection (C++)
-Les instructions de sélection C++, [si](../cpp/if-else-statement-cpp.md) et [commutateur](../cpp/switch-statement-cpp.md), permettent d’exécuter de façon conditionnelle des sections de code.  
+Les instructions de sélection C++, [si](../cpp/if-else-statement-cpp.md) et [commutateur](../cpp/switch-statement-cpp.md), fournissent un moyen afin d’exécuter conditionnellement des sections de code.  
   
- Le [__if_exists](../cpp/if-exists-statement.md) et [__if_not_exists](../cpp/if-not-exists-statement.md) vous permettent de manière conditionnelle inclure du code en fonction de l’existence d’un symbole.  
+ Le [__if_exists](../cpp/if-exists-statement.md) et [__if_not_exists](../cpp/if-not-exists-statement.md) vous permettent d’inclure le code en fonction de l’existence d’un symbole de façon conditionnelle.  
   
  Consultez les différentes rubriques concernant la syntaxe de ces instructions.  
   

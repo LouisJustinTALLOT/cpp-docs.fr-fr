@@ -1,5 +1,5 @@
 ---
-title: Modification des propriétés d’une chaîne | Documents Microsoft
+title: Modification des propriétés d’une chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4de63d1275a5e90b6b20ea46d1774bae3c2861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc8f0ec7c904355e3b5b4989a89fd13a7d9ad767
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860601"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464569"
 ---
 # <a name="changing-the-properties-of-a-string"></a>Modification des propriétés d'une chaîne
-### <a name="to-change-a-string-or-its-identifier"></a>Pour modifier une chaîne ou son identificateur.  
+### <a name="to-change-a-string-or-its-identifier"></a>Pour modifier une chaîne ou son identificateur  
   
 1.  Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).  
   
     > [!NOTE]
     >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Sélectionnez la chaîne que vous souhaitez modifier, puis double-cliquez sur le **ID**, **valeur**, ou **légende** colonne. Désormais, vous pouvez :  
+2.  Sélectionnez la chaîne que vous souhaitez modifier, puis double-cliquez sur le **ID**, **valeur**, ou **légende** colonne. Vous pouvez désormais :  
   
     -   Sélectionnez un **ID** à partir de la **ID de liste déroulante** liste ou taper directement un ID.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33860601"
         > [!NOTE]
         >  Vous pouvez également modifier les propriétés d’une chaîne dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, et ceci manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [procédure pas à pas : localisation de Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Procédure pas à pas : utilisation des ressources pour la localisation avec ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Spécifications**  
   
@@ -51,4 +51,3 @@ ms.locfileid: "33860601"
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de chaînes](../windows/string-editor.md)   
-

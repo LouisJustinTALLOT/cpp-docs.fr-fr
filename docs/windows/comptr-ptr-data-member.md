@@ -1,5 +1,5 @@
 ---
-title: Comptr::PTR, données de membre | Documents Microsoft
+title: Comptr::PTR, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880799"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465098"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_, données de membre
-Contient un pointeur vers l’interface associée à ce ComPtr, et gérée par ce dernier.  
+Contient un pointeur vers l’interface qui est associé et géré par ce **ComPtr**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ InterfaceType *ptr_;
 ```  
   
 ## <a name="remarks"></a>Notes  
- `ptr_` est un membre interne des données protégées.  
+ **PTR_** est un membre de données protégée, interne.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

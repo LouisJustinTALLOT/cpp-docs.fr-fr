@@ -1,5 +1,5 @@
 ---
-title: Comptr::comptr, constructeur | Documents Microsoft
+title: Comptr::comptr, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871173"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465368"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr, constructeur
-Initialise une nouvelle instance de la classe ComPtr. Les surcharges fournissent des constructeurs par défaut, de copie, de déplacement et de conversion.  
+Initialise une nouvelle instance de la **ComPtr** classe. Les surcharges fournissent des constructeurs par défaut, de copie, de déplacement et de conversion.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,11 +59,11 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `U`  
- Type du paramètre `other`.  
+ *U*  
+ Le type de la *autres* paramètre.  
   
- `other`  
- Objet de type `U`.  
+ *other*  
+ Un objet de type *U*.  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -76,7 +76,7 @@ WRL_NOTHROW ComPtr(
   
  Les sixième et septième constructeurs sont des constructeurs de déplacement. Le septième constructeur déplace un objet s’il est converti vers le type actuel.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

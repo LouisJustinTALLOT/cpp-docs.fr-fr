@@ -1,5 +1,5 @@
 ---
-title: ActivateInstance (fonction) | Documents Microsoft
+title: ActivateInstance (fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855573"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461969"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (fonction)
-Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifiée.  
+Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,19 +39,19 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Un type à activer.  
   
- `activatableClassId`  
- Le nom de l’ID de classe qui définit le paramètre `T`.  
+ *activatableClassId*  
+ Le nom de l’ID de classe qui définit le paramètre *T*.  
   
- `instance`  
- Lorsque cette opération est terminée, une référence à une instance de `T`.  
+ *Instance*  
+ Lorsque cette opération se termine, une référence à une instance de *T*.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la cause de l’erreur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Windows::Foundation  

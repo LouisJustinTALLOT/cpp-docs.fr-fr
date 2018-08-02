@@ -1,5 +1,5 @@
 ---
-title: ClassFactory, classe | Documents Microsoft
+title: ClassFactory, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858391"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463864"
 ---
 # <a name="classfactory-class"></a>ClassFactory (classe)
-Implémente les fonctionnalités de base de l’interface IClassFactory.  
+Implémente les fonctionnalités de base de l'interface `IClassFactory`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,17 +46,17 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `I0`  
+ *I0*  
  L’interface de zéro.  
   
- `I1`  
+ *I1*  
  La première interface.  
   
- `I2`  
+ *I2*  
  La seconde interface.  
   
 ## <a name="remarks"></a>Notes  
- Utiliser `ClassFactory` pour fournir une implémentation de paramètres d’usine définie par l’utilisateur.  
+ Utiliser `ClassFactory` pour fournir une implémentation de fabrique défini par l’utilisateur.  
   
  Le modèle de programmation suivant montre comment utiliser le [implémente](../windows/implements-structure.md) structure pour spécifier plus de trois interfaces sur une fabrique de classe.  
   
@@ -75,7 +75,7 @@ class ClassFactory : public Details::RuntimeClass<
 |Nom|Description|  
 |----------|-----------------|  
 |[ClassFactory::AddRef, méthode](../windows/classfactory-addref-method.md)|Incrémente le décompte de références pour l’objet ClassFactory actuel.|  
-|[ClassFactory::LockServer, méthode](../windows/classfactory-lockserver-method.md)|Incrémente ou décrémente le nombre de sous-jacent des objets qui sont suivies par l’objet ClassFactory actuel.|  
+|[ClassFactory::LockServer, méthode](../windows/classfactory-lockserver-method.md)|Incrémente ou décrémente le nombre de sous-jacent objets qui sont suivies par l’objet ClassFactory actuel.|  
 |[ClassFactory::QueryInterface, méthode](../windows/classfactory-queryinterface-method.md)|Récupère un pointeur vers l’interface spécifiée par le paramètre.|  
 |[ClassFactory::Release, méthode](../windows/classfactory-release-method.md)|Décrémente le décompte de références pour l’objet ClassFactory actuel.|  
   
@@ -100,7 +100,7 @@ class ClassFactory : public Details::RuntimeClass<
   
  `ClassFactory`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

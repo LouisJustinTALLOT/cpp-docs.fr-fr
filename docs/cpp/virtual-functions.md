@@ -1,5 +1,5 @@
 ---
-title: Fonctions virtuelles | Documents Microsoft
+title: Fonctions virtuelles | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467917"
 ---
 # <a name="virtual-functions"></a>Fonctions virtuelles
 Une fonction virtuelle est une fonction membre dont vous souhaitez la redéfinition dans des classes dérivées. Lorsque vous faites référence à un objet de classe dérivée à l'aide d'un pointeur ou d'une référence à la classe de base, vous pouvez appeler une fonction virtuelle pour cet objet et exécuter la version de la classe dérivée de la fonction.  
   
  Les fonctions virtuelles garantissent que la fonction correcte est appelée pour un objet, quelle que soit l'expression utilisée pour créer l'appel de fonction.  
   
- Supposons qu’une classe de base contient une fonction déclarée en tant que [virtuels](../cpp/virtual-cpp.md) et une classe dérivée définit la même fonction. La fonction de la classe dérivée est appelée pour les objets de la classe dérivée, même si elle est appelée à l'aide d'un pointeur ou d'une référence à la classe de base. L'exemple suivant montre une classe de base qui fournit une implémentation de la fonction `PrintBalance` et de deux classes dérivées.  
+ Supposons qu’une classe de base contient une fonction déclarée en tant que [virtuel](../cpp/virtual-cpp.md) et une classe dérivée définit la même fonction. La fonction de la classe dérivée est appelée pour les objets de la classe dérivée, même si elle est appelée à l'aide d'un pointeur ou d'une référence à la classe de base. L'exemple suivant montre une classe de base qui fournit une implémentation de la fonction `PrintBalance` et de deux classes dérivées.  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  L'exemple suivant montre comment les fonctions virtuelles et non virtuelles se comportent lorsqu'elles sont appelées via des pointeurs :  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  Comme vous pouvez le constater, que la fonction `NameOf` soit appelée via un pointeur vers `Base` ou un pointeur vers `Derived`, c'est la fonction pour `Derived` qui est appelée. La fonction pour `Derived` est appelée car `NameOf` est une fonction virtuelle, et `pBase` et `pDerived` pointent vers un objet de type `Derived`.  
   
- Car les fonctions virtuelles sont appelées uniquement pour les objets des types de classe, vous ne pouvez pas déclarer des fonctions globales ou statiques comme **virtuels**.  
+ Étant donné que les fonctions virtuelles sont appelées uniquement pour les objets des types de classe, vous ne pouvez pas déclarer des fonctions globales ou statiques en tant que **virtuel**.  
   
- Le **virtuels** mot clé peut être utilisée lors de la déclaration de substitution de fonctions dans une classe dérivée, mais il n’est pas nécessaire ; les substitutions de fonctions virtuelles sont toujours virtuelles.  
+ Le **virtuel** mot clé peut être utilisé lors de la déclaration de substitution de fonctions dans une classe dérivée, mais il n’est pas nécessaire ; les substitutions de fonctions virtuelles sont toujours virtuelles.  
   
  Fonctions virtuelles dans une classe de base doivent être définies, sauf si elles sont déclarées à l’aide de la *spécificateur pure*. (Pour plus d’informations sur les fonctions virtuelles pures, consultez [Classes abstraites](../cpp/abstract-classes-cpp.md).)  
   
  Le mécanisme d'appel de fonction virtuelle peut être supprimé en qualifiant explicitement le nom de fonction à l'aide de l'opérateur de résolution de portée (`::`). Prenons l'exemple précédent qui implique la classe `Account`. Pour appeler `PrintBalance` dans la classe de base, utilisez le code suivant :  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  Les deux appels à `PrintBalance` dans l'exemple précédent suppriment le mécanisme d'appel de fonction virtuelle.  
-  

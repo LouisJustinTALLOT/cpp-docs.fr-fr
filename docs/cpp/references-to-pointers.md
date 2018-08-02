@@ -1,5 +1,5 @@
 ---
-title: Références aux pointeurs | Documents Microsoft
+title: Références aux pointeurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467827"
 ---
 # <a name="references-to-pointers"></a>Références aux pointeurs
 Les références aux pointeurs peuvent être déclarées à peu près de la même façon que les références aux objets. La déclaration d'une référence à un pointeur produit une valeur modifiable utilisée comme un pointeur normal.  
@@ -28,7 +29,7 @@ Les références aux pointeurs peuvent être déclarées à peu près de la mêm
   
  Les fonctions `Add1` et `Add2` sont équivalentes (bien qu'elles ne soient pas appelées de la même façon). La différence est que `Add1` utilise une double indirection tandis que `Add2` utilise la présence d'une référence à un pointeur.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

@@ -1,5 +1,5 @@
 ---
-title: Ajout de caractères spéciaux ou de mise en forme en une chaîne | Documents Microsoft
+title: Ajouter des caractères spéciaux ou de mise en forme une chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 429ba8d836579bd3bc1d1dd8844494bf9cd17a7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 35592793b0fe606d3b88bef900d528d2c1231406
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864595"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463838"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>Ajout de caractères de mise en forme ou de caractères spéciaux à une chaîne
 ### <a name="to-add-formatting-or-special-characters-to-a-string"></a>Pour ajouter des caractères spéciaux ou de mise en forme à une chaîne  
@@ -35,21 +35,21 @@ ms.locfileid: "33864595"
   
 2.  Sélectionnez la chaîne que vous souhaitez modifier.  
   
-3.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), ajouter des séquences d’échappement standard répertoriées ci-dessous à du texte dans le **légende** zone, puis appuyez sur **entrée**.  
+3.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), ajouter du texte dans des séquences d’échappement standard figurant ci-dessous le **légende** zone, puis appuyez sur **entrée**.  
   
-    |Pour obtenir ce|Tapez ce qui suit|  
+    |Pour résoudre ce|Ce type|  
     |-----------------|---------------|  
     |Nouvelle ligne|\n|  
     |Retour chariot|\r|  
     |Onglet|\t|  
     |Barre oblique inverse (\\)|\\\|  
     |Caractère ASCII|\ddd (notation octale)|  
-    |Alerte (clochette)|\a|  
+    |alerte (clochette)|\a|  
   
 > [!NOTE]
->  L’éditeur de chaînes ne prend pas en charge l’ensemble complet de caractères ASCII d’échappement. Vous ne pouvez utiliser que ceux répertoriés ci-dessus.  
+>  L’éditeur de chaînes ne prend pas en charge l’ensemble complet d’échappement des caractères d’ASCII. Vous ne pouvez utiliser que ceux répertoriés ci-dessus.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, et ceci manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [procédure pas à pas : localisation de Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Procédure pas à pas : utilisation des ressources pour la localisation avec ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Spécifications**  
   

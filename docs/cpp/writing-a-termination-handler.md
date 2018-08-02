@@ -1,5 +1,5 @@
 ---
-title: L’écriture d’un gestionnaire de terminaisons | Documents Microsoft
+title: Écriture d’un gestionnaire de terminaisons | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423234"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462831"
 ---
 # <a name="writing-a-termination-handler"></a>Écriture d'un gestionnaire des terminaisons
 Contrairement à un gestionnaire d'exceptions, un gestionnaire de terminaisons est toujours exécuté, que le bloc de code protégé soit terminé normalement ou non. L'objectif unique du gestionnaire de terminaisons doit être de garantir que les ressources, telles que la mémoire, les handles et les fichiers, sont fermées correctement indépendamment de la façon dont se termine l'exécution d'une section de code.  

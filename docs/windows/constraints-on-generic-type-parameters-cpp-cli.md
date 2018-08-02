@@ -1,5 +1,5 @@
 ---
-title: Paramètres de Type générique des contraintes (C + c++ / CLI) | Documents Microsoft
+title: Paramètres de Type de contraintes sur générique (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883340"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465296"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
 Dans les déclarations de méthode ou de type générique, vous pouvez qualifier un paramètre de type avec des contraintes. Une contrainte est une exigence que les types utilisés comme arguments de type doivent respecter. Par exemple, une contrainte peut indiquer que l'argument de type doit implémenter une certaine interface ou hériter d'une classe spécifique.  
@@ -33,7 +33,6 @@ Dans les déclarations de méthode ou de type générique, vous pouvez qualifier
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 where type-parameter: constraint list  
 ```  
   
@@ -42,24 +41,24 @@ where type-parameter: constraint list
  Un des paramètres de type, à limiter.  
   
  *liste de contraintes*  
- *liste de contraintes* est une liste séparée par des virgules de spécifications de contrainte. La liste peut inclure des interfaces à implémenter par le paramètre de type.  
+ *liste de contraintes* est une liste séparée par des virgules des spécifications de contrainte. La liste peut inclure des interfaces à implémenter par le paramètre de type.  
   
  La liste peut également inclure une classe. Pour que l’argument de type satisfasse une contrainte de classe de base, il doit être de la même classe que la contrainte ou dériver de la contrainte.  
   
- Vous pouvez également spécifier `gcnew()` pour indiquer que l'argument de type doit disposer d'un constructeur public sans paramètre ; ou `ref class` pour indiquer que l'argument de type doit être un type de référence, y compris tout type de classe, d'interface, de délégué ou de tableau ; ou `value class` pour indiquer que l'argument de type doit être un type de valeur. Toute valeur de type, hormis Nullable\<T > peut être spécifié.  
+ Vous pouvez également spécifier `gcnew()` pour indiquer l’argument de type doit avoir un constructeur sans paramètre public ; ou **classe ref** pour indiquer le type d’argument doit être un type référence, y compris toute classe, une interface, un délégué ou un tableau type ; ou **classe value** pour indiquer le type d’argument doit être un type valeur. Un type valeur, excepté Nullable\<T > peut être spécifié.  
   
  Vous pouvez également spécifier un paramètre générique en tant que contrainte. L’argument de type disponible pour le type que vous contraignez doit être, ou dériver du, type de la contrainte. Il s'agit d'une contrainte de type naked.  
   
 ## <a name="remarks"></a>Notes  
- La clause de contrainte se compose de **où** suivi d’un paramètre de type, un signe deux-points (**:**) et la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **où** est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparer plusieurs **où** clauses avec un espace.  
+ La clause de contrainte se compose de **où** suivie d’un paramètre de type, un signe deux-points (**:**) et la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **où** est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparer plusieurs **où** clauses avec un espace.  
   
  Les contraintes sont appliquées aux paramètres de type pour placer des restrictions sur les types qui peuvent être utilisés comme arguments pour un type générique ou une méthode générique.  
   
  La classe et les contraintes d’interface spécifient les types d’argument qui doivent être, ou hériter, d’une classe spécifiée ou implémentent une interface spécifiée.  
   
- L’application des contraintes sur un type ou une méthode générique permet au code de ce type ou de cette méthode de tirer parti des fonctionnalités connues des types de contraintes. Par exemple, vous pouvez déclarer une classe générique telle que le paramètre de type implémente le **IComparable\<T >** interface :  
+ L’application des contraintes sur un type ou une méthode générique permet au code de ce type ou de cette méthode de tirer parti des fonctionnalités connues des types de contraintes. Par exemple, vous pouvez déclarer une classe générique telle que le paramètre de type implémente le `IComparable<T>` interface :  
   
-```  
+```cpp  
 // generics_constraints_1.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -68,17 +67,17 @@ where T : IComparable<T>
 ref class List {};  
 ```  
   
- Cette contrainte exige qu’un argument de type utilisé pour `T` implémente `IComparable<T>` au moment de la compilation. Il permet également des méthodes d’interface, tel que **CompareTo**, à appeler. Aucune conversion n’est nécessaire sur une instance du paramètre de type pour appeler les méthodes d’interface.  
+ Cette contrainte exige qu’un argument de type utilisé pour `T` implémente `IComparable<T>` au moment de la compilation. Il permet également des méthodes d’interface, tel que `CompareTo`, d’être appelées. Aucune conversion n’est nécessaire sur une instance du paramètre de type pour appeler les méthodes d’interface.  
   
  Les méthodes statiques dans la classe de l’argument de type ne peuvent pas être appelées par le paramètre de type ; elles peuvent être appelées uniquement par le type réel désigné.  
   
- Une contrainte ne peut pas être un type valeur, y compris les types intégrés tels que `int` ou **double**. Puisque les types de valeur ne peuvent avoir de classes dérivées, seule une classe sera toujours en mesure de satisfaire la contrainte. Dans ce cas, le générique peut être réécrit avec le paramètre de type remplacé par le type de valeur spécifique.  
+ Une contrainte ne peut pas être un type valeur, y compris les types intégrés tels que **int** ou **double**. Puisque les types de valeur ne peuvent avoir de classes dérivées, seule une classe sera toujours en mesure de satisfaire la contrainte. Dans ce cas, le générique peut être réécrit avec le paramètre de type remplacé par le type de valeur spécifique.  
   
  Les contraintes sont requises dans certains cas puisque la compilation n’autorisera pas l’utilisation des méthodes ou autres fonctionnalités d’un type inconnu à moins que les contraintes n’impliquent que le type inconnu prenne en charge les méthodes ou les interfaces.  
   
  Plusieurs contraintes pour le même paramètre de type peuvent être spécifiés dans une liste séparée par des virgules  
   
-```  
+```cpp  
 // generics_constraints_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -88,9 +87,9 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- Avec plusieurs paramètres de type, utilisez une **où** clause pour chaque paramètre de type. Par exemple :  
+ Avec plusieurs paramètres de type, utilisez une **où** clause pour chaque paramètre de type. Exemple :  
   
-```  
+```cpp  
 // generics_constraints_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -108,9 +107,9 @@ ref class Dictionary {};
   
 -   Les contraintes peuvent être également des types de classe, tels que les classes de base abstraites. Toutefois, les contraintes ne peuvent pas être des types de valeur, ni des classes sealed.  
   
--   Les contraintes ne peuvent pas être elles-mêmes des paramètres de type, mais elles peuvent impliquer des paramètres de type dans un type construit ouvert. Par exemple :  
+-   Les contraintes ne peuvent pas être elles-mêmes des paramètres de type, mais elles peuvent impliquer des paramètres de type dans un type construit ouvert. Exemple :  
   
-    ```  
+    ```cpp  
     // generics_constraints_4.cpp  
     // compile with: /c /clr  
     generic <typename T>  
@@ -124,7 +123,7 @@ ref class Dictionary {};
 ## <a name="example"></a>Exemple  
  L’exemple suivant illustre l’utilisation de contraintes pour appeler des méthodes d’instance sur des paramètres de type.  
   
-```  
+```cpp  
 // generics_constraints_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -185,11 +184,11 @@ int main() {
 ## <a name="example"></a>Exemple  
  Lorsqu’un paramètre de type générique est utilisé comme contrainte, il est appelé une contrainte de type naked. Les contraintes de type naked sont utiles lorsqu’une fonction membre avec son propre paramètre de type doit limiter ce paramètre au paramètre de type contenant le type.  
   
- Dans l'exemple suivant, T est une contrainte de type naked dans le contexte de la méthode Add.  
+ Dans l’exemple suivant, `T` est une contrainte de type naked dans le contexte de la `Add` (méthode).  
   
  Les contraintes de type naked peuvent être également utilisées dans des définitions de classe générique. L'utilité des contraintes de type naked avec les classes génériques est très limitée, car la compilation ne peut rien deviner à propos des contraintes de types naked en dehors du fait qu'elles dérivent de <xref:System.Object>. Utilisez des contraintes de type naked sur les classes génériques dans des scénarios dans lesquels vous souhaitez mettre en application une relation d’héritage entre deux paramètres de type.  
   
-```  
+```cpp  
 // generics_constraints_6.cpp  
 // compile with: /clr /c  
 generic <class T>  

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941978"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466239"
 ---
 # <a name="static-members-c"></a>Membres statiques (C++)
 Les classes peuvent contenir des données membres et des fonctions membres statiques. Lorsqu’un membre de données est déclaré en tant que **statique**, qu’une seule copie des données est conservée pour tous les objets de la classe.

@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::ErrorCode, méthode | Documents Microsoft
+title: Asyncbase::ErrorCode, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abd3eae18d793739866b6c0dd8a1b6a994093c93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859577"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464614"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode, méthode
 Récupère le code d’erreur pour l’opération asynchrone actuelle.  
@@ -36,13 +36,13 @@ inline void ErrorCode(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `error`  
+ *Erreur*  
  L’emplacement où cette opération stocke le code d’erreur actuel.  
   
 ## <a name="remarks"></a>Notes  
  Cette opération est thread-safe.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953745"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463487"
 ---
 # <a name="specifiers"></a>Spécificateurs
 Cette rubrique décrit la *decl-specifiers* composant (spécificateurs de déclaration) d’un [déclaration](declarations-and-definitions-cpp.md).  
@@ -53,7 +53,7 @@ Cette rubrique décrit la *decl-specifiers* composant (spécificateurs de décla
  Étant donné que **signé**, **non signé**, **long**, et **court** impliquent tous **int**, un  **typedef** nom suivant une de ces mots clés est prise pour être membre du *declarator-list,* pas de *decl-specifiers*.  
   
 > [!NOTE]
->  Comme un nom peut être redéclaré, sa traduction est soumise à la déclaration la plus récente de la portée actuelle. Une nouvelle déclaration peut affecter la façon dont les noms sont interprétés par le compilateur, notamment des noms `typedef`.  
+>  Comme un nom peut être redéclaré, sa traduction est soumise à la déclaration la plus récente de la portée actuelle. Comment les noms sont interprétés par le compilateur, en particulier peut affecter la redéclaration **typedef** noms.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclarations et définitions](declarations-and-definitions-cpp.md)

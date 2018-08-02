@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::cancastto, méthode | Documents Microsoft
+title: Chaininterfaces::cancastto, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860292"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461208"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo, méthode
 Indique si l’ID d’interface spécifié peut être casté à chacune des spécialisations définies par les paramètres du modèle de celle par défaut.  
@@ -37,16 +37,16 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `riid`  
+ *riid*  
  ID d’interface.  
   
- `ppv`  
- Pointeur vers le dernier ID d’interface qui a été effectué avec succès.  
+ *PPV*  
+ Pointeur vers le dernier ID d’interface qui a été converti avec succès.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si toutes les opérations de cast a réussi ; dans le cas contraire, `false`.  
+ **true** si toutes les opérations de cast a réussi ; sinon, **false**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

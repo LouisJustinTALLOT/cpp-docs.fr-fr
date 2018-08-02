@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits (Structure) | Documents Microsoft
+title: CriticalSectionTraits (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870549"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466681"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (structure)
 Spécialise un objet CriticalSection pour prendre en charge une section critique non valide ou une fonction d’annulation d’une section critique.  
@@ -39,19 +39,19 @@ struct CriticalSectionTraits;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`Type`|Un `typedef` qui définit un pointeur vers une section critique. `Type` est défini en tant que `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Un **typedef** qui définit un pointeur vers une section critique. `Type` est défini en tant que `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue, méthode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Spécialiser un modèle CriticalSection afin que le modèle est toujours non valide.|  
-|[CriticalSectionTraits::Unlock, méthode](../windows/criticalsectiontraits-unlock-method.md)|Spécialiser un modèle CriticalSection afin qu’il prend en charge la propriété de libération de l’objet spécifié de section critique.|  
+|[CriticalSectionTraits::GetInvalidValue, méthode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Spécialise une `CriticalSection` modèle afin que le modèle est toujours non valide.|  
+|[CriticalSectionTraits::Unlock, méthode](../windows/criticalsectiontraits-unlock-method.md)|Spécialise une `CriticalSection` modèle afin qu’il prend en charge la libération de la propriété de l’objet de section critique spécifié.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CriticalSectionTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

@@ -1,5 +1,5 @@
 ---
-title: Classe de AgileEventSource | Documents Microsoft
+title: Agileeventsource, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58eb96e3a0268d3ba70b60d9c315e935e19485f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858118"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462067"
 ---
-# <a name="agileeventsource-class"></a>Classe de AgileEventSource
+# <a name="agileeventsource-class"></a>Agileeventsource, classe
 
-Représente un événement déclenché par un composant agile, qui est un composant qui est accessible à partir de n’importe quel thread. Hérite de [EventSource](eventsource-class.md) et remplace le `Add` fonction membre avec un paramètre de type supplémentaires pour spécifier des options pour l’appel de l’événement agile.
+Représente un événement est déclenché par un composant agile, qui est un composant qui est accessible à partir de n’importe quel thread. Hérite de [EventSource](eventsource-class.md) et remplace le `Add` fonction membre avec un paramètre de type supplémentaires pour spécifier des options pour l’appel de l’événement agile.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,22 +37,22 @@ class AgileEventSource
 ```
 
 ## <a name="parameters"></a>Paramètres  
- `TDelegateInterface`  
+ *TDelegateInterface*  
 
- L’interface d’un délégué qui représente un gestionnaire d’événements.
+ L’interface à un délégué qui représente un gestionnaire d’événements.
 
- `TEventSourceOptions`  
+ *TEventSourceOptions*  
  Un [InvokeModeOptions](invokemodeoptions-structure.md) structure dont le champ invokeMode a la valeur `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Notes
 
-La grande majorité des composants dans le Windows Runtime sont des composants agiles. Pour plus d’informations, consultez [thread et Marshaling (C + c++ / CX)](../cppcx/threading-and-marshaling-c-cx.md).
+La grande majorité des composants dans le Runtime Windows sont des composants agiles. Pour plus d’informations, consultez [thread et Marshaling (C++ / c++ / CX)](../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
  `EventSource` `AgileEventSource`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
  **En-tête :** event.h
 
@@ -64,7 +64,7 @@ La grande majorité des composants dans le Windows Runtime sont des composants a
 
 |Nom|Description|
 |----------|-----------------|
-|[AgileEventSource::Add (méthode)](#add)|Ajoute le Gestionnaire d’événements agile représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour l’objet AgileEventSource en cours.|
+|[AgileEventSource::Add (méthode)](#add)|Ajoute le Gestionnaire d’événements agile représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour l’objet AgileEventSource actuel.|
 
 ## <a name="add"></a> AgileEventSource::Add (méthode)
 
@@ -81,11 +81,11 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Paramètres
 
-*delegateInterface*
+*delegateInterface*  
+L’interface à un objet délégué, qui représente un gestionnaire d’événements.
 
-Interface à un seul objet délégué, qui représente un gestionnaire d’événements.
-
-*jeton* quand cette opération est terminée, un handle qui représente l’événement. Utiliser ce jeton en tant que paramètre à la méthode Remove() pour ignorer le Gestionnaire d’événements.
+*Jeton*  
+Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton comme paramètre à la méthode Remove() pour ignorer le Gestionnaire d’événements.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -93,5 +93,4 @@ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 
 ## <a name="see-also"></a>Voir aussi
-
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: CriticalSection, classe | Documents Microsoft
+title: CriticalSection (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b5eda8fb22f72bd1f50801f9993b9bd7a864d35
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b8aa37f6ac12cad91fa02a2387c95911227319d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871508"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466135"
 ---
 # <a name="criticalsection-class"></a>CriticalSection (classe)
 Représente un objet de section critique.  
@@ -40,14 +40,14 @@ class CriticalSection;
 |Name|Description|  
 |----------|-----------------|  
 |[CriticalSection::CriticalSection, constructeur](../windows/criticalsection-criticalsection-constructor.md)|Initialise un objet de synchronisation qui est similaire à un objet mutex, mais peut être utilisé par uniquement les threads d’un processus unique.|  
-|[CriticalSection::~CriticalSection, destructeur](../windows/criticalsection-tilde-criticalsection-destructor.md)|Désinitialise et détruit l’objet CriticalSection actuel.|  
+|[CriticalSection::~CriticalSection, destructeur](../windows/criticalsection-tilde-criticalsection-destructor.md)|Annule l’initialisation et détruit actuel **CriticalSection** objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CriticalSection::TryLock, méthode](../windows/criticalsection-trylock-method.md)|Tente d’entrer une section critique sans se bloquer. Si l’appel réussit, le thread appelant prend la propriété de la section critique.|  
-|[CriticalSection::Lock, méthode](../windows/criticalsection-lock-method.md)|Attend que la propriété de l’objet spécifié de section critique. La fonction retourne quand le thread appelant est accordé à la propriété.|  
+|[CriticalSection::TryLock, méthode](../windows/criticalsection-trylock-method.md)|Tentatives de saisie d’une section critique sans bloquer. Si l’appel réussit, le thread appelant prend possession de la section critique.|  
+|[CriticalSection::Lock, méthode](../windows/criticalsection-lock-method.md)|Attend que la propriété de l’objet de section critique spécifié. La fonction retourne quand le thread appelant est accordé à la propriété.|  
 |[CriticalSection::IsValid, méthode](../windows/criticalsection-isvalid-method.md)|Indique si la section critique en cours est valide.|  
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
@@ -59,7 +59,7 @@ class CriticalSection;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CriticalSection`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

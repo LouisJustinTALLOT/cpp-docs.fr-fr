@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028357"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462308"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 Le langage C++ définit les conversions entre ses types fondamentaux. Il définit également les conversions pour les types dérivés de pointeur, de référence et de pointeur vers membre. Ces conversions sont appelées « conversions standard ». (Pour plus d’informations sur les types, les types standard et les types dérivés, consultez [Types](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Les objets de types intégraux signés peuvent être convertis en types non signés correspondants. Lorsque ces conversions ont lieu, le modèle binaire réel ne change pas. Toutefois, l'interprétation des données change. Prenons le code suivant :  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  Dans l’exemple précédent, un **signés short**, `i`, est défini et initialisé à un nombre négatif. L’expression `(u = i)` provoque `i` à convertir en un **unsigned short** avant l’assignation à `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  Le code suivant illustre les règles de conversion décrites dans le tableau :  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  Le pointeur `pA` est de type `A *`, ce qui peut être interprété comme suit : « pointeur vers un objet de type `A` ». Membres de `bObject` `(`comme `BComponent` et `BMemberFunc`) sont propres au type `B` et sont donc inaccessibles via `pA`. Le pointeur `pA` autorise l'accès uniquement aux caractéristiques (fonctions membres et données) de l'objet définies dans la classe `A`.  
   
 ### <a name="pointer-to-function"></a>Pointeur vers fonction  
- Un pointeur vers une fonction peut être converti en type **void \*** , si type **void \***  est assez grand pour contenir ce pointeur.  
+ Un pointeur vers une fonction peut être converti en type `void *`, si type `void *` est assez grand pour contenir ce pointeur.  
   
 ### <a name="pointer-to-void"></a>Pointeur vers void  
  Des pointeurs en type **void** peuvent être convertis en pointeurs vers un autre type, mais uniquement avec un cast de type explicite (contrairement à c). (Consultez [Expressions avec Conversions de Type explicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) pour plus d’informations sur les casts de type.) Un pointeur vers n’importe quel type peut être converti implicitement vers un pointeur vers un type **void**. Un pointeur vers un objet incomplet d’un type peut être converti en un pointeur vers **void** (implicitement) et inversement (explicitement). Le résultat de ce type de conversion est égal à la valeur du pointeur d'origine. Un objet est considéré incomplet s'il est déclaré, mais que les informations sont insuffisantes pour déterminer sa taille ou sa classe de base.  
   
- Un pointeur vers n’importe quel objet qui n’est pas **const** ou **volatile** peut être implicitement converti en un pointeur de type **void \*** .  
+ Un pointeur vers n’importe quel objet qui n’est pas **const** ou **volatile** peut être implicitement converti en un pointeur de type `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>Pointeurs const et volatile  
  C++ ne fournit pas une conversion standard à partir d’un **const** ou **volatile** type en un type qui n’est pas **const** ou **volatile**. Cependant, toute sorte de conversion peut être spécifiée à l'aide de casts de type explicite (y compris les conversions qui ne sont pas sécurisées).  

@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409084"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466902"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 Cette rubrique concerne le spécifiques à Microsoft déconseillé declspec déclaration. Pour plus d’informations sur C ++ 14 `[[deprecated]]` attribut et des conseils sur l’utilisation de cet attribut et le declspec de spécifique à Microsoft ou le pragma, consultez [attributs Standard C++](attributes.md).
 
- Avec les exceptions indiquées ci-dessous, le **déconseillée** déclaration offre les mêmes fonctionnalités que le [déconseillée](../preprocessor/deprecated-c-cpp.md) pragma :  
+Avec les exceptions indiquées ci-dessous, le **déconseillée** déclaration offre les mêmes fonctionnalités que le [déconseillée](../preprocessor/deprecated-c-cpp.md) pragma :  
   
 -   Le **déconseillée** déclaration vous permet de spécifier des formes particulières de surcharges de fonction comme étant déconseillés, alors que la forme pragma s’applique à toutes les formes surchargées d’un nom de fonction.  
   

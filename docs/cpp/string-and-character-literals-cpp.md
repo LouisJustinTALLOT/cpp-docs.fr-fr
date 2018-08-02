@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208547"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466941"
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractère (C++)
 C++ prend en charge divers types de chaîne et de caractère, et fournit les moyens d'exprimer les valeurs littérales de chacun de ces types. Dans votre code source, vous exprimez le contenu de vos littéraux de caractère et de chaîne à l’aide d’un jeu de caractères. Les noms de caractères universels et les caractères d’échappement vous permettent d’exprimer une chaîne en utilisant uniquement le jeu de caractères sources de base. Un littéral de chaîne brut vous permet d'éviter d'utiliser des caractères d'échappement et peut servir à exprimer tous les types de littéral de chaîne. Vous pouvez également créer des littéraux std::string sans avoir à effectuer d’étapes de conversion ou de construction supplémentaires.  
@@ -146,7 +146,7 @@ int main() {
   
  **Section spécifique à Microsoft**  
   
- Pour créer une valeur à partir d’un littéral de caractère ordinaire (celles sans préfixe), le compilateur convertit le caractère ou une séquence de caractères entre guillemets simples en valeurs 8 bits au sein d’un entier 32 bits. Plusieurs caractères dans le littéral remplissent les octets correspondants selon les besoins, des octets de poids fort aux octets poids faible. Pour créer un **char** valeur, le compilateur prend l’octet de poids faible. Pour créer une valeur `wchar_t` ou `char16_t` , le compilateur prend le mot de poids faible. Le compilateur avertit que le résultat est tronqué si tous les bits sont définis au-dessus de l’octet ou du mot assigné.  
+ Pour créer une valeur à partir d’un littéral de caractère ordinaire (celles sans préfixe), le compilateur convertit le caractère ou une séquence de caractères entre guillemets simples en valeurs 8 bits au sein d’un entier 32 bits. Plusieurs caractères dans le littéral remplissent les octets correspondants selon les besoins, des octets de poids fort aux octets poids faible. Pour créer un **char** valeur, le compilateur prend l’octet de poids faible. Pour créer un **wchar_t** ou `char16_t` valeur, le compilateur prend le mot de poids faible. Le compilateur avertit que le résultat est tronqué si tous les bits sont définis au-dessus de l’octet ou du mot assigné.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Littéraux de chaîne larges  
- Un littéral de chaîne étendu est un tableau se terminant par null de constantes `wchar_t` qui est précédé de '`L`» et contenant tout caractère graphique à l’exception du guillemet double («), barre oblique inverse (\\), ou un caractère de saut de ligne. Un littéral de chaîne large peut contenir les séquences d’échappement répertoriées ci-dessus, ainsi que des noms de caractères universels.  
+ Un littéral de chaîne étendu est un tableau se terminant par null de constantes **wchar_t** qui est précédé de '`L`» et contenant tout caractère graphique à l’exception du guillemet double («), barre oblique inverse (\\), ou un caractère de saut de ligne. Un littéral de chaîne large peut contenir les séquences d’échappement répertoriées ci-dessus, ainsi que des noms de caractères universels.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Section spécifique à Microsoft**  
   
- Dans Visual C++, vous pouvez utiliser un littéral de chaîne pour initialiser un pointeur non const **char** ou `wchar_t`. Cela est autorisé en code C99, mais est déconseillé en C++98 et supprimé en C++11. Toute tentative de modification de la chaîne provoque une violation d'accès, comme dans cet exemple :  
+ Dans Visual C++, vous pouvez utiliser un littéral de chaîne pour initialiser un pointeur non const **char** ou **wchar_t**. Cela est autorisé en code C99, mais est déconseillé en C++98 et supprimé en C++11. Toute tentative de modification de la chaîne provoque une violation d'accès, comme dans cet exemple :  
   
 ```cpp  
 wchar_t* str = L"hello";  

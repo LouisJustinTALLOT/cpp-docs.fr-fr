@@ -1,5 +1,5 @@
 ---
-title: ArgTraits (Structure) | Documents Microsoft
+title: ArgTraits (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858040"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462041"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -118,38 +118,38 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `TMemberFunction`  
- Paramètre de nom de type pour une ArgTraits (structure) qui ne peut pas correspondre à n’importe quelle signature de méthode Invoke.  
+ *TMemberFunction*  
+ Paramètre TypeName pour une ArgTraits (structure) qui ne correspond à aucune `Invoke` signature de méthode.  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Une interface de délégué.  
   
- `TArg1`  
- Le type du premier argument de la méthode Invoke.  
+ *TArg1*  
+ Le type du premier argument de la `Invoke` (méthode).  
   
- `TArg2`  
- Le type du second argument de la méthode Invoke.  
+ *TArg2*  
+ Le type du deuxième argument de la `Invoke` (méthode).  
   
- `TArg3`  
- Le type du troisième argument de la méthode Invoke.  
+ *TArg3*  
+ Le type du troisième argument de la `Invoke` (méthode).  
   
- `TArg4`  
- Le type du quatrième argument de la méthode Invoke.  
+ *TArg4*  
+ Le type du quatrième argument de la `Invoke` (méthode).  
   
- `TArg5`  
- Type du cinquième argument de la méthode Invoke.  
+ *TArg5*  
+ Le type du cinquième argument de la `Invoke` (méthode).  
   
- `TArg6`  
- Type du sixième argument de la méthode Invoke.  
+ *TArg6*  
+ Le type du sixième argument de la `Invoke` (méthode).  
   
- `TArg7`  
- Type du septième argument de la méthode Invoke.  
+ *TArg7*  
+ Le type du septième argument de la `Invoke` (méthode).  
   
- `TArg8`  
- Type du huitième argument de la méthode Invoke.  
+ *TArg8*  
+ Le type du huitième argument de la `Invoke` (méthode).  
   
- `TArg9`  
- Type du neuvième argument de la méthode Invoke.  
+ *TArg9*  
+ Le type du neuvième argument de la `Invoke` (méthode).  
   
 ## <a name="remarks"></a>Notes  
  Le `ArgTraits` structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.  
@@ -160,26 +160,26 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 |Nom|Description|  
 |----------|-----------------|  
-|`Arg1Type`|Le typedef pour TArg1.|  
-|`Arg2Type`|Le typedef pour TArg2.|  
-|`Arg3Type`|Le typedef pour TArg3.|  
-|`Arg4Type`|Le typedef pour TArg4.|  
-|`Arg5Type`|Le typedef pour TArg5.|  
-|`Arg6Type`|Le typedef pour TArg6.|  
-|`Arg7Type`|Le typedef pour TArg7.|  
-|`Arg8Type`|Le typedef pour TArg8.|  
-|`Arg9Type`|Le typedef pour TArg9.|  
+|`Arg1Type`|Typedef pour TArg1.|  
+|`Arg2Type`|Typedef pour TArg2.|  
+|`Arg3Type`|Typedef pour TArg3.|  
+|`Arg4Type`|Typedef pour TArg4.|  
+|`Arg5Type`|Typedef pour TArg5.|  
+|`Arg6Type`|Typedef pour TArg6.|  
+|`Arg7Type`|Typedef pour TArg7.|  
+|`Arg8Type`|Typedef pour TArg8.|  
+|`Arg9Type`|Typedef pour TArg9.|  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
 |Name|Description|  
 |----------|-----------------|  
-|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le décompte du nombre de paramètres dans la méthode Invoke d’une interface de délégué.|  
+|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ArgTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

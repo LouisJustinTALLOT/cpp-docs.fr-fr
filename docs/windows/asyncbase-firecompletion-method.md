@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::firecompletion, méthode | Documents Microsoft
+title: Asyncbase::firecompletion, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cd18d340a11575ed9f6f52d92a5910dcee1faec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859733"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467239"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion, méthode
-Appelle le Gestionnaire d’événements de fin, ou réinitialise le délégué de progression interne.  
+Appelle le Gestionnaire d’événements de saisie semi-automatique, ou réinitialise le délégué de progression interne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +38,9 @@ virtual void FireCompletion();
 ```  
   
 ## <a name="remarks"></a>Notes  
- La première version de FireCompletion() réinitialise la variable de délégué progression interne. La deuxième version appelle le Gestionnaire d’événements de fin si l’opération asynchrone est terminée.  
+ La première version de **FireCompletion()** réinitialise la variable de délégué de progression interne. La deuxième version appelle le Gestionnaire d’événements de saisie semi-automatique si l’opération asynchrone est terminée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

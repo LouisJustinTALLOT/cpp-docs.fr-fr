@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator ! =, opérateur | Documents Microsoft
+title: ComPtrRef::operator ! =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883552"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462922"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!=, opérateur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -55,23 +55,23 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `a`  
- Une référence à un objet ComPtrRef.  
+ *a*  
+ Une référence à un **ComPtrRef** objet.  
   
- `b`  
- Une référence à un autre objet ComPtrRef, ou un pointeur vers un objet anonyme (`void*`).  
+ *b*  
+ Une référence à un autre **ComPtrRef** objet, ou un pointeur vers un objet anonyme (`void*`).  
   
 ## <a name="return-value"></a>Valeur de retour  
- Premier opérateur rendements `true` si objet `a` n’est pas égal à l’objet `b`; sinon, `false`.  
+ Le premier produit opérateur **true** si objet *un* n’est pas égal à l’objet *b*; sinon, **false**.  
   
- Les deuxième et troisième opérateurs yield `true` si objet `a` n’est pas égal à `nullptr`; sinon, `false`.  
+ Les deuxième et troisième opérateurs yield **true** si objet *un* n’est pas égal à **nullptr**; sinon, **false**.  
   
- Les opérateurs quatrième et cinquième yield `true` si objet `a` n’est pas égal à l’objet `b`; sinon, `false`.  
+ Les quatrième et cinquième opérateurs yield **true** si objet *un* n’est pas égal à l’objet *b*; sinon, **false**.  
   
 ## <a name="remarks"></a>Notes  
- Indique si deux objets ComPtrRef ne sont pas égaux.  
+ Indique si deux **ComPtrRef** objets ne sont pas égaux.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,5 +1,5 @@
 ---
-title: async_uuid | Documents Microsoft
+title: async_uuid | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856903"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466746"
 ---
 # <a name="asyncuuid"></a>async_uuid
 Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions synchrones et asynchrones d’une interface COM.  
@@ -30,22 +30,21 @@ Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions sy
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  *uuid*  
- Un UUID qui identifie la version de l’interface.  
+ UUID qui identifie la version de l’interface.  
   
 ## <a name="remarks"></a>Notes  
  Le **async_uuid** attribut C++ a les mêmes fonctionnalités que le [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -57,7 +56,7 @@ __interface ICustom {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -65,7 +64,7 @@ __interface ICustom {
 |-|-|  
 |**S'applique à**|`interface`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**Double**, **dispinterface**|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

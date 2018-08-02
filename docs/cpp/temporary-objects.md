@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942661"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466853"
 ---
 # <a name="temporary-objects"></a>Objets temporaires
 Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces objets temporaires peuvent être créés pour les raisons suivantes :  
@@ -54,4 +54,3 @@ Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces
 |------------------------------|-----------------------|  
 |Résultat de l'évaluation de l'expression|Tous les objets temporaires créés à la suite d’évaluation de l’expression sont détruits à la fin de l’instruction d’expression (c'est-à-dire au point-virgule), ou à la fin des expressions de contrôle pour **pour**, **si**, **tandis que**, **faire**, et **basculer** instructions.|  
 |L’initialisation **const** références|Si un initialiseur n'est pas une l-value du même type que la référence initialisée, un objet temporaire du type d'objet sous-jacent est créé et initialisé avec l'expression d'initialisation. Cet objet temporaire est détruit juste après la destruction de l’objet de référence auquel il est lié.|  
-  

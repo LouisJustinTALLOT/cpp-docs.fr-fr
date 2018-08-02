@@ -1,5 +1,5 @@
 ---
-title: peut être liée | Documents Microsoft
+title: peut être liée | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861803"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467142"
 ---
 # <a name="bindable"></a>bindable
 Indique que la propriété prend en charge la liaison de données.  
@@ -30,26 +30,24 @@ Indique que la propriété prend en charge la liaison de données.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le **pouvant être liés** attribut C++ a les mêmes fonctionnalités que le [pouvant être liés](http://msdn.microsoft.com/library/windows/desktop/aa366738) attribut MIDL. Vous pouvez l’utiliser sur les propriétés définies avec la [propget](../windows/propget.md), [propput](../windows/propput.md), ou [propputref](../windows/propputref.md) attributs, ou vous pouvez définir manuellement une méthode pouvant être liée.  
+ Le **peut être liée** attribut C++ a les mêmes fonctionnalités que le [peut être liée](http://msdn.microsoft.com/library/windows/desktop/aa366738) attribut MIDL. Vous pouvez l’utiliser sur les propriétés définies avec la [propget](../windows/propget.md), [propput](../windows/propput.md), ou [propputref](../windows/propputref.md) attributs, ou vous pouvez définir manuellement une méthode pouvant être liée.  
   
- Les exemples MFC suivants illustrent l’utilisation de **pouvant être liés**:  
+ Les exemples MFC suivants illustrent l’utilisation de **peut être liée**:  
   
--   [Exemples de contrôles : Les contrôles ActiveX de basée sur MFC](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Exemples de contrôles : Les contrôles ActiveX basé sur MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [CIRC, exemple : Contrôle ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [CERC exemple : Contrôle ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [TESTHELP, exemple : Contrôle ActiveX avec info-bulles et d’aide](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [TESTHELP, exemple : Contrôle ActiveX avec info-bulles et aide](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Exemple  
- Le code suivant montre comment vous pouvez utiliser **pouvant être liés** sur une propriété :  
+ Le code suivant montre comment vous pouvez utiliser **peut être liée** sur une propriété :  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -70,7 +68,7 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -78,8 +76,8 @@ __interface IPropDemo : IDispatch {
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

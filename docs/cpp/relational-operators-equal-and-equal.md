@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 393cb0b23ca67877a18d2148af76c8de59d29f30
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942858"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465556"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Opérateurs relationnels : &lt;, &gt;, &lt;=, et &gt;=
 ## <a name="syntax"></a>Syntaxe  
@@ -81,21 +81,21 @@ int main() {
  Les conversions arithmétiques habituelles traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes de types arithmétiques.  
   
 ## <a name="comparing-pointers"></a>Comparaison des pointeurs  
- Lorsque deux pointeurs vers des objets du même type sont comparés, le résultat est déterminé par l'emplacement des objets pointés figurant dans l'espace d'adressage du programme. Les pointeurs peuvent également être comparés à une expression constante qui correspond à 0 ou à un pointeur de type void *. Si une comparaison de pointeur est effectuée avec un pointeur de type void \*, l’autre pointeur est implicitement converti en type void \*. Ensuite la comparaison est effectuée.  
+ Lorsque deux pointeurs vers des objets du même type sont comparés, le résultat est déterminé par l'emplacement des objets pointés figurant dans l'espace d'adressage du programme. Pointeurs peuvent également être comparées à une expression constante qui correspond à 0 ou à un pointeur de type `void *`. Si une comparaison de pointeur est effectuée avec un pointeur de type `void *`, l’autre pointeur est implicitement converti en type `void *`. Ensuite la comparaison est effectuée.  
   
  Deux pointeurs de types différents ne peuvent pas être comparés à moins que :  
   
 -   Un type est un type de classe dérivé de l'autre type.  
   
--   Au moins un des pointeurs est explicitement converti (cast) pour taper void *. (L’autre pointeur est implicitement converti en type void \* pour la conversion.)  
+-   Au moins un des pointeurs est explicitement converti (cast) en type `void *`. (L’autre pointeur est implicitement converti en type `void *` pour la conversion.)  
   
  Deux pointeurs du même type qui pointent vers le même objet ont la garantie d'être de comparer une valeur égale. Si deux pointeurs vers des membres non statique d'un objet sont comparés, les règles suivantes s'appliquent :  
   
--   Si le type de classe n’est pas une union, et si les deux membres ne sont pas séparés par un *spécificateur d’accès*, tels que public, protected ou private, le pointeur vers le membre déclaré dernier fera une comparaison supérieure à celle du pointeur vers le membre déclaré précédemment.  
+-   Si le type de classe n’est pas un **union**, et si les deux membres ne sont pas séparés par un *spécificateur d’accès*, tel que **public**, **protégé**, ou **privé**, le pointeur vers le membre déclaré dernier fera une comparaison supérieure à celle du pointeur vers le membre déclaré précédemment.  
   
 -   Si les deux membres sont séparés par un *spécificateur d’accès*, les résultats sont indéfinis.  
   
--   Si le type de classe est une union, les pointeurs vers les données membres de cette union comparent une valeur égale.  
+-   Si le type de classe est un **union**, pointeurs vers des membres de données différents dans qui **union** égal de comparaison.  
   
  Si les deux pointeurs pointent vers des éléments du même tableau ou vers l'avant dernier élément du tableau, le pointeur vers l'objet avec l'indice le plus élevé compare une valeur supérieure. La comparaison des pointeurs est garantie comme étant valide uniquement lorsque les pointeurs font référence à des objets du même tableau ou à l'emplacement situé après la fin du tableau.  
   

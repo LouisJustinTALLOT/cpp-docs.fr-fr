@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::trytransitiontocompleted, méthode | Documents Microsoft
+title: Asyncbase::trytransitiontocompleted, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861257"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460740"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted, méthode
 Indique si l’opération asynchrone en cours est terminée.  
@@ -36,9 +36,9 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si l’opération asynchrone est terminée ; dans le cas contraire, `false`.  
+ **true** si l’opération asynchrone est terminée ; sinon, **false**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

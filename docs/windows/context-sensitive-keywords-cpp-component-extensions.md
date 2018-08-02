@@ -1,5 +1,5 @@
 ---
-title: Mots clés contextuels (Extensions du composant C++) | Documents Microsoft
+title: Mots clés contextuels (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871521"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466122"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Mots clés contextuels  (extensions de composant C++)
 *Mots clés contextuels* sont des éléments de langage reconnus uniquement dans des contextes spécifiques. En dehors du contexte spécifique, un mot clé contextuel peut être un symbole défini par l'utilisateur.  
@@ -46,7 +46,7 @@ ms.locfileid: "33871521"
   
 -   `internal`   
   
--   [Littéral](../windows/literal-cpp-component-extensions.md)  
+-   [littéral](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -54,16 +54,16 @@ ms.locfileid: "33871521"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` (dans le cadre du [génériques](../windows/generics-cpp-component-extensions.md))  
+-   `where` (dans le cadre de [génériques](../windows/generics-cpp-component-extensions.md))  
   
- Pour des raisons de lisibilité, vous voudrez limiter votre utilisation des mots clés contextuels comme symboles définis par l’utilisateur.  
+ Pour des raisons de lisibilité, vous souhaiterez limiter votre utilisation des mots clés contextuels comme symboles définis par l’utilisateur.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  **Remarques**  
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -71,15 +71,15 @@ ms.locfileid: "33871521"
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple de code suivant montre que dans le contexte approprié, le mot clé contextuel `property` peut être utilisé pour définir une propriété et une variable.  
+ L’exemple de code suivant montre que, dans le contexte approprié, le **propriété** mot clé contextuel peut être utilisé pour définir une propriété et une variable.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

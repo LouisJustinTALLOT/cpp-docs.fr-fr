@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 816c71d2c14b373e63de2b2c8725eb87b40d91e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2ec20dca7bb0a37adae576a8b5a9adfad027b21
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870313"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465813"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown**, opérateur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,11 +34,11 @@ operator IUnknown**() const;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Convertit en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) membre de données pour un pointeur à une-pointeur-à l’interface IUnknown.  
+ Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-to la `IUnknown` interface.  
   
- Une erreur est générée si le ComPtrRefBase actuelle ne dérive pas de IUnknown.  
+ Une erreur est générée si actuel **ComPtrRefBase** ne dérive pas de `IUnknown`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

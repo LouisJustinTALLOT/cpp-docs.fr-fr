@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’atexit | Documents Microsoft
+title: Utilisation d’atexit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb0c89c34b5107326a961e874289d20cbd2385c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4acd81a5420f9fe2685e7570f26fea61691b845
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420965"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467402"
 ---
 # <a name="using-atexit"></a>Utilisation d'atexit
-Avec la [atexit](../c-runtime-library/reference/atexit.md) (fonction), vous pouvez spécifier une fonction de sortie de traitement qui s’exécute avant l’arrêt du programme. Aucun objet statique global initialisé avant l'appel à `atexit` n'est détruit avant l'exécution de la fonction de sortie de traitement.  
+Avec le [atexit](../c-runtime-library/reference/atexit.md) (fonction), vous pouvez spécifier une fonction de sortie de traitement qui s’exécute avant l’arrêt du programme. Aucun objet statique global initialisé avant l’appel à **atexit** sont détruits avant l’exécution de la fonction de sortie de traitement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations supplémentaires sur la terminaison](../cpp/additional-termination-considerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection :: ~ CriticalSection, destructeur | Documents Microsoft'
+title: 'CriticalSection :: ~ CriticalSection, destructeur | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d33f8a3feb772ffe00221aeaf80892a535c2e271
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94f3937006f1cc13d9eefd7a9a8f338df2a13aa1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881612"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465979"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection, destructeur
-Désinitialise et détruit l’objet CriticalSection actuel.  
+Annule l’initialisation et détruit actuel **CriticalSection** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Désinitialise et détruit l’objet CriticalSection actuel.
 WRL_NOTHROW ~CriticalSection();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

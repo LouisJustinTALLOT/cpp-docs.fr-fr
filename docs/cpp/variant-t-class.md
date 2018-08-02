@@ -20,40 +20,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a3406d53296c778eba2ce9a6794afac2c846bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9315c2bb946cd80dd68153543ad6ae532ec9b7a0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939804"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460866"
 ---
 # <a name="variantt-class"></a>_variant_t (classe)
 **Section spécifique à Microsoft**  
   
- Un `_variant_t` objet encapsule le `VARIANT` type de données. La classe gère l’allocation des ressources et la désallocation et effectue des appels de fonction à `VariantInit` et `VariantClear` selon le cas.  
+ Un **_variant_t** objet encapsule le `VARIANT` type de données. La classe gère l’allocation des ressources et la désallocation et effectue des appels de fonction à `VariantInit` et `VariantClear` selon le cas.  
   
 ### <a name="construction"></a>Construction  
   
 |||  
 |-|-|  
-|[_variant_t](../cpp/variant-t-variant-t.md)|Construit un objet `_variant_t`.|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|Construit un **_variant_t** objet.|  
   
 ### <a name="operations"></a>Opérations  
   
 |||  
 |-|-|  
-|[Attacher](../cpp/variant-t-attach.md)|Attache un `VARIANT` de l’objet dans le `_variant_t` objet.|  
+|[Attacher](../cpp/variant-t-attach.md)|Attache un `VARIANT` de l’objet dans le **_variant_t** objet.|  
 |[Effacer](../cpp/variant-t-clear.md)|Efface le texte encapsulé `VARIANT` objet.|  
-|[ChangeType](../cpp/variant-t-changetype.md)|Change le type de la `_variant_t` objet au `VARTYPE`.|  
-|[Détacher](../cpp/variant-t-detach.md)|Détache encapsulé `VARIANT` objet à partir de ce `_variant_t` objet.|  
-|[SetString](../cpp/variant-t-setstring.md)|Assigne une chaîne à cet objet `_variant_t`.|  
+|[ChangeType](../cpp/variant-t-changetype.md)|Change le type de la **_variant_t** objet au `VARTYPE`.|  
+|[Détacher](../cpp/variant-t-detach.md)|Détache encapsulé `VARIANT` objet à partir de ce **_variant_t** objet.|  
+|[SetString](../cpp/variant-t-setstring.md)|Assigne une chaîne à cet **_variant_t** objet.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[opérateur =](../cpp/variant-t-operator-equal.md)|Assigne une nouvelle valeur à un objet `_variant_t` existant.|  
-|[opérateur ==, ! =](../cpp/variant-t-relational-operators.md)|Comparez deux objets `_variant_t` pour déterminer leur égalité ou inégalité.|  
+|[opérateur =](../cpp/variant-t-operator-equal.md)|Assigne une nouvelle valeur à un existant **_variant_t** objet.|  
+|[opérateur ==, ! =](../cpp/variant-t-relational-operators.md)|Comparer deux **_variant_t** objets pour l’égalité ou d’inégalité.|  
 |[Extracteurs](../cpp/variant-t-extractors.md)|Extraire des données d’encapsulé `VARIANT` objet.|  
   
 **FIN de la section spécifique à Microsoft**  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940493"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461700"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Bien que Windows et Visual C++ prennent en charge la gestion structurée des exceptions (SEH), nous vous recommandons d'utiliser la gestion des exceptions C++ conforme à la norme ISO, car elle rend le code plus portable et plus flexible. Néanmoins, vous devrez peut-être encore utiliser SEH dans le code existant ou pour des types particuliers de programmes.  
@@ -72,7 +72,7 @@ Bien que Windows et Visual C++ prennent en charge la gestion structurée des exc
 -   [Utilisation de la gestion structurée des exceptions avec C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Exemple  
- Comme nous l’avons vu, les destructeurs d’objets locaux sont appelés si vous utilisez SEH dans un programme C++ et compilez en utilisant le **/EH** option avec certains modificateurs, par exemple, **/EHsc** et **/EHa**. Toutefois, le comportement pendant l'exécution peut ne pas être celui prévu si vous utilisez également des exceptions C++. L'exemple suivant illustre ces différences de comportement.  
+ Comme indiqué précédemment, les destructeurs d'objets locaux sont appelés si vous utilisez SEH dans un programme C++ et le compilez en utilisant l'option `/EH` avec certains modificateurs, par exemple, `/EHsc` et `/EHa`. Toutefois, le comportement pendant l'exécution peut ne pas être celui prévu si vous utilisez également des exceptions C++. L'exemple suivant illustre ces différences de comportement.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  Si vous utilisez **/EHsc** pour compiler ce code, mais le contrôle de test local `CPPEX` est pas défini, il n’est exécuté le `TestClass` destructeur et la sortie ressemble à ceci :  

@@ -1,5 +1,5 @@
 ---
-title: Comptrref::getaddressof, méthode | Documents Microsoft
+title: Comptrref::getaddressof, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883305"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462935"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,12 +34,12 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Adresse d’un pointeur vers l’interface représentée par l’objet ComPtrRef en cours.  
+ Adresse d’un pointeur vers l’interface représentée par l’actuel **ComPtrRef** objet.  
   
 ## <a name="remarks"></a>Notes  
- Récupère l’adresse d’un pointeur vers l’interface représentée par l’objet ComPtrRef en cours.  
+ Récupère l’adresse d’un pointeur vers l’interface représentée par l’actuel **ComPtrRef** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

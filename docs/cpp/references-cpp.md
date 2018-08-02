@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956591"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463146"
 ---
 # <a name="references-c"></a>Références (C++)
 Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs dans la mémoire. Contrairement à un pointeur, une référence après son initialisation ne peut pas être définie pour faire référence à un autre objet ni prendre la valeur null. Il existe deux types de références : références lvalue qui font référence à un nommé variable et les références rvalue qui font référence à un [objet temporaire](../cpp/temporary-objects.md). L'opérateur & désigne une référence lvalue et l'opérateur && désigne une référence rvalue ou une référence universelle (rvalue ou lvalue) en fonction du contexte.  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>Commentaire  
- Rubriques de cette section :  
-  
--   [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)  
-  
--   [Retours de fonction de type référence](../cpp/reference-type-function-returns.md)  
-  
--   [Références aux pointeurs](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>Voir aussi
+ [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)  
+ [Retours de fonction de type référence](../cpp/reference-type-function-returns.md)  
+ [Références aux pointeurs](../cpp/references-to-pointers.md)  
   

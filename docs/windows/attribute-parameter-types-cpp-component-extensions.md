@@ -1,5 +1,5 @@
 ---
-title: Attribut de Types de paramètres (Extensions du composant C++) | Documents Microsoft
+title: Attribut de Types de paramètres (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860305"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466967"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Types de paramètre d'attribut  (extensions du composant C++)
-Les valeurs passées aux attributs doivent être connus du compilateur au moment de la compilation.  Paramètres d’attribut peuvent être des types suivants :  
+Valeurs passées aux attributs doivent être connus du compilateur au moment de la compilation.  Paramètres d’attribut peuvent être des types suivants :  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **char**, **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **short**, **unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**, **int non signé**  
   
--   `long`, `unsigned long`  
+-   **long**, **long non signé**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**, **unsigned __int64**  
   
--   `float`, `double`  
+-   **float**, **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*` ou `wchar_t*` ou `System::String*`  
   
@@ -47,13 +47,13 @@ Les valeurs passées aux attributs doivent être connus du compilateur au moment
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -81,7 +81,7 @@ ref struct MyStruct {
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -114,7 +114,7 @@ ref class ClassD {};   // Positional and named
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

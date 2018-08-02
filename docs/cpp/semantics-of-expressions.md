@@ -1,5 +1,5 @@
 ---
-title: Sémantique des Expressions | Documents Microsoft
+title: Sémantique des Expressions | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424124"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462740"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
-Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([La priorité des opérateurs et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans [Conventions lexicales](../cpp/lexical-conventions.md), montre les relations C++ opérateurs appliquent aux expressions.)  
+Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([Priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans [Conventions lexicales](../cpp/lexical-conventions.md), montre les relations du C++ opérateurs imposent aux expressions.)  
   
 ## <a name="order-of-evaluation"></a>Ordre d'évaluation  
  Considérez cet exemple :  
@@ -56,7 +56,7 @@ Ordre Expression-Évaluation
   
  L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est évaluée est déterminé par la priorité et l'associativité des opérateurs :  
   
-1.  La multiplication (\*) a la priorité la plus élevée dans cette expression. Donc, la sous-expression `b * c` est évaluée en premier.  
+1.  La multiplication (*) a la priorité la plus élevée dans cette expression. Donc, la sous-expression `b * c` est évaluée en premier.  
   
 2.  L'ajout (+) a la priorité la plus élevée suivante, donc `a` est ajouté au produit de `b` et `c`.  
   
@@ -70,16 +70,16 @@ Ordre Expression-Évaluation avec parenthèses
  Les expressions telles qu'elles existent dans l'illustration ci-dessus sont purement évaluées pour leurs effets secondaires, dans ce cas pour transférer des informations au périphérique de sortie standard.  
   
 ## <a name="notation-in-expressions"></a>Notation dans les expressions  
- Le langage C++ spécifie certaines compatibilités lors de la spécification des opérandes. Le tableau suivant indique les types d’opérandes acceptables pour les opérateurs qui nécessitent des opérandes de type *type*.  
+ Le langage C++ spécifie certaines compatibilités lors de la spécification des opérandes. Le tableau suivant présente les types d’opérandes acceptables pour les opérateurs qui nécessitent des opérandes de type *type*.  
   
 ### <a name="operand-types-acceptable-to-operators"></a>Types d’opérande acceptables pour les opérateurs  
   
 |Type attendu|Types autorisés|  
 |-------------------|-------------------|  
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
-|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
+|*type*|`const` *Type*<br /> `volatile` *Type*<br /> *type*&<br /> `const` *Type*&<br /> `volatile` *Type*&<br /> `volatile const` *Type*<br /> `volatile const` *Type*&|  
+|*type*\*|*type*\*<br /> `const` *Type*\*<br /> `volatile` *Type*\*<br /> `volatile const` *Type*\*|  
+|`const` *Type*|*type*<br /> `const` *Type*<br />`const` *Type*&|  
+|`volatile` *Type*|*type*<br /> `volatile` *Type*<br /> `volatile` *Type*&|  
   
  Comme les règles précédentes peuvent toujours être utilisées de manière combinée, un pointeur const vers un objet volatile peut être fourni là où un pointeur est attendu.  
   
@@ -101,7 +101,7 @@ func( i, ++i );
   
 -   Opérande de gauche de l’opérateur AND logique (&&). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur AND logique sera évalué.  
   
--   Opérande de gauche de l’opérateur OR logique (&#124;&#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur OR logique sera évalué.  
+-   Opérande gauche de l’opérateur OR logique (&#124;&#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur OR logique sera évalué.  
   
 -   Opérande gauche de l'opérateur virgule. L’opérande gauche de l’opérateur virgule est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Les deux opérandes de l'opérateur virgule sont toujours évalués.  
   

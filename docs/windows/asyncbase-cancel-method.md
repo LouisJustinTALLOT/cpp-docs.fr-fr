@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::Cancel, méthode | Documents Microsoft
+title: Asyncbase::Cancel, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0559f32315265a7db5543e8559097177c2a670fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859850"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464744"
 ---
 # <a name="asyncbasecancel-method"></a>AsyncBase::Cancel, méthode
 Annule une opération asynchrone.  
@@ -39,9 +39,9 @@ STDMETHOD(
  Par défaut, retourne toujours S_OK.  
   
 ## <a name="remarks"></a>Notes  
- Cancel() est une implémentation par défaut de IAsyncInfo::Cancel et n’effectue aucun travail réel. Pour réellement annuler une opération asynchrone, substituez la méthode virtuelle pure de OnCancel().  
+ `Cancel()` est une implémentation par défaut de `IAsyncInfo::Cancel`, et n’effectue aucun travail réel. Pour réellement annuler une opération asynchrone, remplacer le `OnCancel()` méthode virtuelle pure.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028619"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465685"
 ---
 # <a name="single-inheritance"></a>Héritage simple
 Dans « l'héritage unique », une forme courante d'héritage, les classes possèdent une seule classe de base. Considérons la relation illustrée à la figure ci-dessous.  
@@ -164,4 +164,3 @@ int main() {
   
 > [!NOTE]
 >  Obliger la classe de base à implémenter une fonction telle que `PrintNameOf` est rarement le meilleur choix de conception. [Fonctions virtuelles](../cpp/virtual-functions.md) offre d’autres alternatives de conception.  
-  

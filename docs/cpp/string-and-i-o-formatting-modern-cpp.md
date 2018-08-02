@@ -1,5 +1,5 @@
 ---
-title: Chaîne et la mise en forme d’e-S (Modern C++) | Documents Microsoft
+title: Chaîne et la mise en forme des e / S (Modern C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49ece9fef9122d5e2811eeb70a0ea1cba81b2e33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422382"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464095"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Mise en forme des chaînes et E/S (Modern C++)
-C++ [iostreams](../standard-library/iostream.md) compatibles avec la chaîne mise en forme d’e/s. Par exemple, le code suivant montre comment définir cout pour mettre en forme un entier et de sortie au format hexadécimal, tout d’abord l’enregistrement de l’état actuel et nouveau paramètre par la suite, car une fois la mise en forme de l’état est passé à cout, il reste de cette façon jusqu'à ce que modifié, pas seulement pour la ligne d’un du code.  
+C++ [iostreams](../standard-library/iostream.md) compatibles avec la chaîne mise en forme d’e/s. Par exemple, le code suivant montre comment définir cout pour mettre en forme un entier à sortir au format hexadécimal, tout d’abord l’enregistrement de l’état actuel et nouveau paramètre par la suite, car une fois la mise en forme de l’état est passée à cout, il reste ainsi jusqu'à modification, pas seulement pour la ligne par ligne du code.  
   
 ```cpp  
 #include <iostream>  
@@ -44,22 +44,21 @@ int main()
         << endl;  
     cout.copyfmt(state); // restore previous formatting  
 }  
-  
 ```  
   
- Cela peut être entièrement trop lourdes dans de nombreux cas. En guise d’alternative, vous pouvez utiliser Boost.Format dans les bibliothèques de renforcement C++, même s’il est non standard. Vous pouvez télécharger n’importe quelle bibliothèque de renforcement de la [renforcement](http://www.boost.org/) site Web.  
+ Cela peut être réellement trop fastidieux dans de nombreux cas. Comme alternative, vous pouvez utiliser Boost.Format des bibliothèques Boost C++, même si elle n’est pas standard. Vous pouvez télécharger une bibliothèque Boost depuis le [Boost](http://www.boost.org/) site Web.  
   
- Les avantages de Boost.Format sont :  
+ Voici certains avantages de Boost.Format sont :  
   
--   Safe : Type-safe et lève une exception pour les erreurs, par exemple, la spécification d’éléments trop ou trop peu.  
+-   Sécurisé : Type-safe et lève une exception pour les erreurs, par exemple, la spécification d’éléments trop ou trop peu.  
   
--   Extensible : Works pour tout type qui peut être transmis en continu.  
+-   Extensible : Fonctionne pour n’importe quel type puisse être diffusé en continu.  
   
--   Pratique : Posix Standard et les chaînes de format similaire.  
+-   Pratique : Norme Posix standard et chaînes de format similaires.  
   
- Bien que Boost.Format repose sur le langage C++ [iostreams](../standard-library/iostream-programming.md), qui sont fiables et extensibles, ils ne sont pas optimisées sur les performances. Lorsque vous avez besoin d’optimisation des performances, envisagez de C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) et [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), qui sont rapides et faciles à utiliser. Toutefois, ils ne sont pas extensibles ou protégée contre les vulnérabilités. (Les versions sécurisées existent, mais elles entraînent une légère baisse des performances. Pour plus d’informations, consultez [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) et [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
+ Bien que Boost.Format soit généré en C++ [iostreams](../standard-library/iostream-programming.md), qui est sécurisé et extensible, ils ne sont pas optimisé pour les performances. Lorsque vous avez besoin d’optimisation des performances, tenez compte des C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) et [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), qui sont rapides et faciles à utiliser. Toutefois, ils ne sont pas extensibles ou protégés contre les vulnérabilités. (Les versions sécurisées existent, mais elles entraînent une baisse des performances légères. Pour plus d’informations, consultez [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) et [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
   
- Le code suivant illustre certaines de renforcement de la mise en forme des fonctionnalités.  
+ Le code suivant illustre certaines de la valorisation de fonctionnalités de mise en forme.  
   
 ```cpp  
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
@@ -69,12 +68,11 @@ int main()
         cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
     // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)   
  [Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)   
  [\<iostream >](../standard-library/iostream.md)   
  [\<limites >](../standard-library/limits.md)   

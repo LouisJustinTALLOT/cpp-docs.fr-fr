@@ -1,5 +1,5 @@
 ---
-title: Comptr::Detach, méthode | Documents Microsoft
+title: Comptr::Detach, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afa5976d26351ed3022c58fa8226b6038fa816c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4d4a84131a6159c665e3947d7b642ab0592b2e36
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883591"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465436"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach, méthode
-Il dissocie `ComPtr` objet à partir de l’interface qu’elle représente.  
+Il dissocie **ComPtr** objet à partir de l’interface qu’elle représente.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ T* Detach();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’interface qui a été représenté par ce `ComPtr` objet.  
+ Un pointeur vers l’interface qui a été représenté par cet **ComPtr** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

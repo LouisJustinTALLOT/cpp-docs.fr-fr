@@ -1,5 +1,5 @@
 ---
-title: Effectue un cast de Style C avec - clr (C + c++ / CLI) | Documents Microsoft
+title: Effectue un cast de Style C avec /CLR (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860396"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464582"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Casts de style C avec /clr (C++/CLI)
 La rubrique suivante s’applique uniquement au Common Language Runtime.  
   
- Lorsqu’il est utilisé avec les types CLR, le compilateur tente de mapper de style C converti en un des conversions répertoriées ci-dessous, dans l’ordre suivant :  
+ Lorsqu’il est utilisé avec les types CLR, le compilateur tente de mapper C-style est converti en un des conversions répertoriées ci-dessous, dans l’ordre suivant :  
   
 1.  const_cast  
   
@@ -37,14 +37,14 @@ La rubrique suivante s’applique uniquement au Common Language Runtime.
   
 5.  static_cast plus const_cast  
   
- Si aucun des conversions répertoriées ci-dessus est valide et si le type de l’expression et le type de cible sont des types de référence CLR, cast de style C mappe à une vérification de runtime (instruction de MSIL castclass). Sinon, un cast de style C est considéré comme non valide et que le compilateur émet une erreur.  
+ Si aucune des conversions répertoriées ci-dessus est valide et si le type de l’expression et le type de cible sont des types de référence CLR, cast de style C est mappé à une vérification de runtime (instruction de MSIL castclass). Sinon, un cast de style C est considéré comme non valide et le compilateur émet une erreur.  
   
 ## <a name="remarks"></a>Notes  
  Un cast de style C n’est pas recommandé. Lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), utilisez [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- L’exemple suivant montre un cast de style C qui est mappé à un `const_cast`.  
+ L’exemple suivant montre un cast de style C qui mappe à un **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- L’exemple suivant montre un cast de style C qui est mappé à un `safe_cast`.  
+ L’exemple suivant montre un cast de style C qui mappe à un **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- L’exemple suivant montre un cast de style C qui est mappé à un `safe_cast` plus `const_cast`.  
+ L’exemple suivant montre un cast de style C qui mappe à un **safe_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- L’exemple suivant montre un cast de style C qui est mappé à un `static_cast`.  
+ L’exemple suivant montre un cast de style C qui mappe à un **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- L’exemple suivant montre un cast de style C qui est mappé à un `static_cast` plus `const_cast`.  
+ L’exemple suivant montre un cast de style C qui mappe à un **static_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- L’exemple suivant montre un cast de style C qui est mappé à un contrôle d’exécution.  
+ L’exemple suivant montre un cast de style C qui mappe à une vérification de l’exécution.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -154,7 +154,7 @@ int main() {
   
  L’exemple suivant montre un non valide cast de style C, ce qui entraîne le compilateur à émettre une erreur.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -164,7 +164,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ## <a name="see-also"></a>Voir aussi  

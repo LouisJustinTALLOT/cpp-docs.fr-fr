@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939207"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460870"
 ---
 # <a name="unions"></a>Unions
 Un **union** est un type défini par l’utilisateur dans lequel tous les membres partagent le même emplacement de mémoire. Cela signifie qu'à un moment donné une union ne peut pas contenir plusieurs objets de sa liste de membres. Cela signifie également que, quel que soit le nombre de membres dans une union, elle utilise toujours uniquement assez de mémoire pour stocker le plus grand membre.  
@@ -35,7 +35,7 @@ Un **union** est un type défini par l’utilisateur dans lequel tous les membre
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *name*  
  Nom du type donné à l'union.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  Dans l'exemple précédent, notez que l'union dans le struct d'entrée n'a aucun nom. Il s'agit d'une union anonyme et ses membres sont accessibles comme s'ils étaient des membres directs du struct. Pour plus d'informations sur les unions anonymes, consultez la section ci-dessous.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Les unions ne peuvent pas stocker de références. Les unions ne prennent pas en charge l'héritage ; par conséquent, une union elle-même ne peut pas être utilisée comme classe de base, ni hériter d'une autre classe ni avoir des fonctions virtuelles.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  L'union `NumericType` est organisée en mémoire (conceptuellement) comme l'illustre la figure ci-dessous.  
@@ -654,7 +651,7 @@ Outre les restrictions pour les unions nommées, les unions anonymes sont soumis
   
 -   Ils doivent également être déclarés en tant que **statique** si déclaré dans la portée de fichier ou un espace de noms.  
   
--   Elles ne peuvent avoir que des membres publics. Les membres privés et protégés des unions anonymes génèrent des erreurs.  
+-   Ils peuvent avoir uniquement **public** membres ; **privé** et **protégé** membres dans les unions anonymes génèrent des erreurs.  
   
 -   Ils ne peuvent pas avoir de fonctions membres.  
   
