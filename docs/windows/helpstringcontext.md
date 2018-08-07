@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext | Documents Microsoft
+title: helpstringcontext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874575"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569997"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.  
@@ -30,14 +30,13 @@ Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `contextID`  
+### <a name="parameters"></a>Paramètres  
+ *contextID*  
  Identificateur de contexte de l’aide de 32 bits disponible dans le fichier d’aide.  
   
 ## <a name="remarks"></a>Notes  
@@ -45,7 +44,7 @@ Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -62,16 +61,16 @@ __interface IMyI
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `interface`, méthode d’interface|  
+|**S'applique à**|**classe**, **interface**, méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
@@ -80,4 +79,4 @@ __interface IMyI
  [Attributs d’interface](../windows/interface-attributes.md)   
  [Attributs de classe](../windows/class-attributes.md)   
  [Attributs de méthode](../windows/method-attributes.md)   
- [Module](../windows/module-cpp.md)   
+ [module](../windows/module-cpp.md)   
