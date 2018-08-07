@@ -1,5 +1,5 @@
 ---
-title: EnableIf (Structure) | Documents Microsoft
+title: EnableIf (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873376"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569028"
 ---
 # <a name="enableif-structure"></a>EnableIf (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -43,14 +43,14 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
+ *T*  
  Type.  
   
- `b`  
+ *b*  
  Expression booléenne.  
   
 ## <a name="remarks"></a>Notes  
- Définit un membre de données du type spécifié par le deuxième paramètre de modèle, si le premier paramètre de modèle a la valeur `true`.  
+ Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur **true**.  
   
 ## <a name="members"></a>Membres  
   
@@ -58,12 +58,12 @@ struct EnableIf<true, T>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`type`|Si le paramètre de modèle `b` prend la valeur de `true`, la spécialisation partielle définit le membre de données `type` être de type `T`.|  
+|`type`|Si le paramètre de modèle *b* prend la valeur **true**, la spécialisation partielle définit le membre de données `type` soit de type `T`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `EnableIf`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

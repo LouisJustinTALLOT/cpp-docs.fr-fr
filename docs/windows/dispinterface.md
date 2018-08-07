@@ -1,5 +1,5 @@
 ---
-title: dispinterface | Documents Microsoft
+title: dispinterface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874286"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569212"
 ---
 # <a name="dispinterface"></a>dispinterface
 Place une interface dans le fichier .idl comme interface de dispatch.  
@@ -30,9 +30,7 @@ Place une interface dans le fichier .idl comme interface de dispatch.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -52,15 +50,15 @@ dispinterface helloPro
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple montrant comment utiliser [dispinterface](../windows/bindable.md) , consultez l’exemple de **bindable**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`|  
+|**S'applique à**|**interface**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

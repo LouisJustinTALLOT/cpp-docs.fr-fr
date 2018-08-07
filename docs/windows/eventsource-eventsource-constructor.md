@@ -1,5 +1,5 @@
 ---
-title: EventSource::EventSource, constructeur | Documents Microsoft
+title: EventSource::EventSource, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1cbab4c53b66f66fd79f28729230f16eb2482c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98927c0c6a4bc484b6babc3e74d772399e2f2f24
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872417"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569690"
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource, constructeur
-Initialise une nouvelle instance de la classe EventSource.  
+Initialise une nouvelle instance de la **EventSource** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Initialise une nouvelle instance de la classe EventSource.
 EventSource();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL
