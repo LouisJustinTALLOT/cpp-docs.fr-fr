@@ -1,5 +1,5 @@
 ---
-title: une licence | Documents Microsoft
+title: une licence | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875745"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603800"
 ---
 # <a name="licensed"></a>licensed
-Indique que l’objet COM auquel elle s’applique est concédé sous licence et doit être instancié à l’aide de **IClassFactory2**.  
+Indique que l’objet COM auquel il s’applique est concédé sous licence et doit être instanciée à l’aide de `IClassFactory2`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -40,7 +38,7 @@ Indique que l’objet COM auquel elle s’applique est concédé sous licence et
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -59,16 +57,16 @@ public:
 [module(name="MyLibrary", version="1.0", helpstring="My Library Block")];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclass**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|`coclass`|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

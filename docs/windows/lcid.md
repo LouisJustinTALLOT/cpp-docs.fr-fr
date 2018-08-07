@@ -1,5 +1,5 @@
 ---
-title: LCID | Documents Microsoft
+title: LCID | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c36c4a53dc627af10b6c768cdc9bc9353cbd4877
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919bf90fad228a3d7b4f574072e5f315da6427d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877252"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602696"
 ---
 # <a name="lcid"></a>lcid
 Vous permet de passer un identificateur de paramètres régionaux à une fonction.  
@@ -30,9 +30,7 @@ Vous permet de passer un identificateur de paramètres régionaux à une fonctio
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [lcid]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -40,7 +38,7 @@ Vous permet de passer un identificateur de paramètres régionaux à une fonctio
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_lcid.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -53,7 +51,7 @@ __interface IStatic {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -61,8 +59,8 @@ __interface IStatic {
 |-|-|  
 |**S'applique à**|Paramètre d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

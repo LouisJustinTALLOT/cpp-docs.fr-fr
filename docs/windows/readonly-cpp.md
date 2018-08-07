@@ -1,5 +1,5 @@
 ---
-title: ReadOnly (C++) | Documents Microsoft
+title: ReadOnly (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876564"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604422"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 Interdit l’assignation à un membre de données.  
@@ -30,9 +30,7 @@ Interdit l’assignation à un membre de données.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -43,7 +41,7 @@ Interdit l’assignation à un membre de données.
 ## <a name="example"></a>Exemple  
  Le code suivant illustre une utilisation de l’attribut **readonly** :  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -57,7 +55,7 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -65,8 +63,8 @@ __interface IFireTabCtrl
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

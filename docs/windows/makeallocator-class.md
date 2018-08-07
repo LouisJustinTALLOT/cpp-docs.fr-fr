@@ -1,5 +1,5 @@
 ---
-title: Makeallocator, classe | Documents Microsoft
+title: MakeAllocator (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878058"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605917"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (classe)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -30,7 +30,6 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Un nom de type.  
   
- `hasWeakReferenceSupport`  
- `true` allocation de mémoire pour un objet qui prend en charge les références faibles ; `false` pour allouer de la mémoire pour un objet qui ne prend pas en charge les références faibles.  
+ *hasWeakReferenceSupport*  
+ **true** d’allocation de mémoire pour un objet qui prend en charge les références faibles ; **false** d’allocation de mémoire pour un objet qui ne prend pas en charge les références faibles.  
   
 ## <a name="remarks"></a>Notes  
  Alloue la mémoire pour une classe activable, avec ou sans prise en charge de la référence faible.  
   
- Substituez la classe MakeAllocator pour implémenter un modèle d’allocation de mémoire défini par l’utilisateur.  
+ Remplacer le **MakeAllocator** classe pour implémenter un modèle d’allocation de mémoire défini par l’utilisateur.  
   
- MakeAllocator est généralement utilisé pour éviter les fuites de mémoire si un objet lève pendant la construction.  
+ **MakeAllocator** est généralement utilisé pour empêcher les fuites de mémoire si un objet lève pendant la construction.  
   
 ## <a name="members"></a>Membres  
   
@@ -64,20 +63,20 @@ class MakeAllocator<T, true>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator, constructeur](../windows/makeallocator-makeallocator-constructor.md)|Initialise une nouvelle instance de la classe MakeAllocator.|  
-|[MakeAllocator::~MakeAllocator, destructeur](../windows/makeallocator-tilde-makeallocator-destructor.md)|Désinitialise l’instance actuelle de la classe MakeAllocator.|  
+|[MakeAllocator::MakeAllocator, constructeur](../windows/makeallocator-makeallocator-constructor.md)|Initialise une nouvelle instance de la **MakeAllocator** classe.|  
+|[MakeAllocator::~MakeAllocator, destructeur](../windows/makeallocator-tilde-makeallocator-destructor.md)|Annule l’initialisation de l’instance actuelle de la **MakeAllocator** classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate, méthode](../windows/makeallocator-allocate-method.md)|Alloue de la mémoire et l’associe à l’objet MakeAllocator en cours.|  
-|[MakeAllocator::Detach, méthode](../windows/makeallocator-detach-method.md)|Dissocie la mémoire allouée par le [Allocate](../windows/makeallocator-allocate-method.md) méthode à partir de l’objet MakeAllocator en cours.|  
+|[MakeAllocator::Allocate, méthode](../windows/makeallocator-allocate-method.md)|Alloue de la mémoire et l’associe à actuel **MakeAllocator** objet.|  
+|[MakeAllocator::Detach, méthode](../windows/makeallocator-detach-method.md)|Dissocie la mémoire allouée par le [Allocate](../windows/makeallocator-allocate-method.md) (méthode) à partir du **MakeAllocator** objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `MakeAllocator`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

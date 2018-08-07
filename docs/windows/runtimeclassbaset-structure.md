@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset, Structure | Documents Microsoft
+title: Runtimeclassbaset, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888985"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604991"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT, structure
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,23 +34,23 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `RuntimeClassTypeT`  
+### <a name="parameters"></a>Paramètres  
+ *RuntimeClassTypeT*  
  Un champ d’indicateurs qui spécifie un ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) énumérateurs.  
   
 ## <a name="remarks"></a>Notes  
- Fournit des méthodes d’assistance pour `QueryInterface` opérations et lors de l’obtention des ID d’interface.  
+ Fournit des méthodes d’assistance pour `QueryInterface` opérations et l’obtention des ID d’interface.  
   
 ## <a name="members"></a>Membres  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `RuntimeClassBaseT`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence (bibliothèque Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Référence (Windows Runtime Library)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: InvokeHelper (Structure) | Documents Microsoft
+title: InvokeHelper (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880405"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604266"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -88,16 +88,16 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>Paramètres  
+ *TDelegateInterface*  
+ *TCallback*  
  Le type de la fonction de gestionnaire d’événements.  
   
- `argCount`  
- Le nombre d’arguments dans une spécialisation InvokeHelper.  
+ *argCount*  
+ Le nombre d’arguments dans une **InvokeHelper** spécialisation.  
   
 ## <a name="remarks"></a>Notes  
- Fournit une implémentation de la méthode Invoke() selon le nombre spécifié et le type d’arguments.  
+ Fournit une implémentation de la `Invoke()` méthode basée sur le nombre spécifié et le type d’arguments.  
   
 ## <a name="members"></a>Membres  
   
@@ -105,13 +105,13 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Nom|Description|  
 |----------|-----------------|  
-|`Traits`|Un synonyme de la classe qui définit le type de chaque argument de gestionnaire d’événements.|  
+|`Traits`|Synonyme de la classe qui définit le type de chaque argument de gestionnaire d’événements.|  
   
 ### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[InvokeHelper::InvokeHelper, constructeur](../windows/invokehelper-invokehelper-constructor.md)|Initialise une nouvelle instance de la classe InvokeHelper.|  
+|[InvokeHelper::InvokeHelper, constructeur](../windows/invokehelper-invokehelper-constructor.md)|Initialise une nouvelle instance de la **InvokeHelper** classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -123,12 +123,12 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Nom|Description|  
 |----------|-----------------|  
-|[InvokeHelper::callback_, donnée de membre](../windows/invokehelper-callback-data-member.md)|Représente un gestionnaire d’événements à appeler lorsqu’un événement se produit.|  
+|[InvokeHelper::callback_, donnée de membre](../windows/invokehelper-callback-data-member.md)|Représente le Gestionnaire d’événements à appeler lorsqu’un événement se produit.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InvokeHelper`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

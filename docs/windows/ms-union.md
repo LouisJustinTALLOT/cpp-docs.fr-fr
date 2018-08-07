@@ -1,5 +1,5 @@
 ---
-title: ms_union | Documents Microsoft
+title: ms_union | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882035"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606697"
 ---
 # <a name="msunion"></a>ms_union
 Contrôle l’alignement de représentation sous forme de données de réseau d’unions nonencapsulated.  
@@ -30,18 +30,16 @@ Contrôle l’alignement de représentation sous forme de données de réseau d�
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **ms_union** attribut C++ a les mêmes fonctionnalités que le [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant illustre le positionnement des **ms_union**:  
+ Le code suivant illustre le positionnement de **ms_union**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +62,7 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -72,8 +70,8 @@ __interface IFireTabCtrl {
 |-|-|  
 |**S'applique à**|Unions nonencapsulated|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|**dispinterface**|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|`dispinterface`|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

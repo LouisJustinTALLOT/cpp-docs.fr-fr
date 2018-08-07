@@ -1,5 +1,5 @@
 ---
-title: HStringReference::Operator&lt; opérateur | Documents Microsoft
+title: HStringReference::Operator&lt; opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b486157fb42883af724f2356e7f85701e405035
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 489d97252dcb4d20b7ef2f8557991a4e6016743d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877291"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605530"
 ---
-# <a name="hstringreferenceoperatorlt-operator"></a>HStringReference::Operator&lt; (opérateur)
-Indique si le premier paramètre est inférieur au second paramètre.  
+# <a name="hstringreferenceoperatorlt-operator"></a>HStringReference::Operator&lt; opérateur
+Indique si le premier paramètre est inférieur au second.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,17 +33,17 @@ inline bool operator<(
     const HStringReference& rhs) throw()  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `lhs`  
- Le premier paramètre à comparer. `lhs` peut être une référence à un HStringReference.  
+### <a name="parameters"></a>Paramètres  
+ *LHS*  
+ Le premier paramètre à comparer. *LHS* peut être une référence à un **HStringReference**.  
   
- `rhs`  
- Le deuxième paramètre à comparer.  `rhs` peut être une référence à un HStringReference.  
+ *terme de droite*  
+ Le deuxième paramètre à comparer.  *RHS* peut être une référence à un **HStringReference**.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si le `lhs` paramètre est inférieure à la `rhs` paramètre ; sinon, `false`.  
+ **true** si le *lhs* paramètre est inférieure à la *rhs* paramètre ; sinon, **false**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

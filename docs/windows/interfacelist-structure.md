@@ -1,5 +1,5 @@
 ---
-title: InterfaceList (Structure) | Documents Microsoft
+title: InterfaceList (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876733"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604838"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -37,11 +37,11 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Un nom d’interface ; la première interface dans la liste récursive.  
   
- `U`  
+ *U*  
  Un nom d’interface ; les interfaces restantes dans la liste récursive.  
   
 ## <a name="remarks"></a>Notes  
@@ -53,13 +53,13 @@ struct InterfaceList;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`FirstT`|Synonyme pour le paramètre de modèle `T`.|  
-|`RestT`|Synonyme pour le paramètre de modèle `U`.|  
+|`FirstT`|Synonyme du paramètre modèle *T*.|  
+|`RestT`|Synonyme du paramètre modèle *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InterfaceList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

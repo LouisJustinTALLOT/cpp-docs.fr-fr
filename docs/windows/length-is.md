@@ -1,5 +1,5 @@
 ---
-title: length_is | Documents Microsoft
+title: length_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d41c2c4747f69b5ddfae4cd5863c072cd2316ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e0294c7cc118c4014e998ad570d7e1e453ea2c6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879605"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606499"
 ---
 # <a name="lengthis"></a>length_is
 Spécifie le nombre d’éléments de tableau doit être transmis.  
@@ -30,15 +30,14 @@ Spécifie le nombre d’éléments de tableau doit être transmis.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ length_is(  
+[ length_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- *expression*  
- Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisées.  
+### <a name="parameters"></a>Paramètres  
+ *Expression*  
+ Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.  
   
 ## <a name="remarks"></a>Notes  
  Le **length_is** attribut C++ a les mêmes fonctionnalités que le [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) attribut MIDL.  
@@ -46,16 +45,16 @@ Spécifie le nombre d’éléments de tableau doit être transmis.
 ## <a name="example"></a>Exemple  
  Consultez [first_is](../windows/first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Champ `struct` ou **union**, paramètre de l’interface, méthode d’interface|  
+|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

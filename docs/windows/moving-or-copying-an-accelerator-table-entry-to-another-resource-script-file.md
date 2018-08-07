@@ -1,5 +1,5 @@
 ---
-title: Déplacement ou copie d’une entrée de Table d’accélérateurs vers un autre fichier de Script de ressources | Documents Microsoft
+title: Déplacement ou copie d’une entrée de Table d’accélérateurs vers un autre fichier de Script de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877902"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608050"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Déplacement ou copie d'une entrée d'une table d'accélérateurs vers un autre fichier de script de ressources
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Pour déplacer ou copier une entrée de table d'accélérateurs vers un autre fichier de script de ressources  
@@ -44,9 +44,7 @@ ms.locfileid: "33877902"
     > [!NOTE]
     >  Vous pouvez également utiliser les touches de raccourci pour les opérations de copie et de collage.  
   
-
-  
- **Spécifications**  
+## <a name="requirements"></a>Configuration requise  
   
  Win32  
   

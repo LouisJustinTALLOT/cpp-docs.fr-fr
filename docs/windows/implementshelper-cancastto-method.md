@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::cancastto, méthode | Documents Microsoft
+title: Implementshelper::cancastto, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876551"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605477"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -30,7 +30,6 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,14 +41,14 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `riid`  
+### <a name="parameters"></a>Paramètres  
+ *riid*  
  Référence à un ID d’interface.  
   
- `ppv`  
- Si cette opération réussit, un pointeur vers l’interface spécifiée par `riid` ou `iid`.  
+ *PPV*  
+ Si cette opération réussite, un pointeur vers l’interface spécifiée par *riid* ou *iid*.  
   
- `iid`  
+ *IID*  
  Référence à un ID d’interface.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -58,7 +57,7 @@ HRESULT CanCastTo(
 ## <a name="remarks"></a>Notes  
  Obtient un pointeur vers l’ID de l’interface spécifiée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

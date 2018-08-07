@@ -1,5 +1,5 @@
 ---
-title: __identifier (c + c++ / CLI) | Documents Microsoft
+title: __identifier (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877681"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603343"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-Permet l’utilisation de mots clés Visual C++ en tant qu’identificateurs.  
+Permet d’utiliser des mots clés Visual C++ en tant qu’identificateurs.  
   
 ## <a name="all-platforms"></a>Toutes les plateformes  
-**Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**Remarques**  
+### <a name="remarks"></a>Notes  
   
-Utilisation de la `__identifier` mot clé pour les identificateurs qui ne sont pas des mots clés est autorisée, mais fortement déconseillée en termes de style.  
+Utilisation de la **__identifier** mot clé pour les identificateurs qui ne sont pas des mots clés est autorisée, mais fortement déconseillée en tant qu’une question de style.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ### <a name="examples"></a>Exemples  
  **Exemple**  
   
- Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le `__identifier` mot clé masque le fait que `template` est un mot clé C++ standard.  
+ Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
- Le `__identifier` mot clé est valide avec le **/CLR** option du compilateur.  
+ Le **__identifier** mot clé est valide avec le `/clr` option du compilateur.  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
- Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le `__identifier` mot clé masque le fait que `template` est un mot clé C++ standard.  
+ Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  
@@ -103,5 +101,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
+ [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

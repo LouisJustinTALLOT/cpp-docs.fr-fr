@@ -1,5 +1,5 @@
 ---
-title: Modulebase, classe | Documents Microsoft
+title: Modulebase, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878734"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605056"
 ---
 # <a name="modulebase-class"></a>ModuleBase, classe
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -42,8 +42,8 @@ class ModuleBase;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase, constructeur](../windows/modulebase-modulebase-constructor.md)|Initialise une instance de la classe de Module.|  
-|[ModuleBase::~ModuleBase, destructeur](../windows/modulebase-tilde-modulebase-destructor.md)|Désinitialise l’instance actuelle de la classe de Module.|  
+|[ModuleBase::ModuleBase, constructeur](../windows/modulebase-modulebase-constructor.md)|Initialise une instance de la classe `Module`.|  
+|[ModuleBase::~ModuleBase, destructeur](../windows/modulebase-tilde-modulebase-destructor.md)|Annule l’initialisation de l’instance actuelle de la `Module` classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -55,7 +55,7 @@ class ModuleBase;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ModuleBase`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

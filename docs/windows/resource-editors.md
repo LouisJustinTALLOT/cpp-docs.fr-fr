@@ -1,5 +1,5 @@
 ---
-title: Éditeurs de ressources | Documents Microsoft
+title: Éditeurs de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91151b215a180fd926acf1205d810fc8eb6fd6f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879592"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604458"
 ---
 # <a name="resource-editors"></a>éditeurs de ressources
 Un éditeur de ressources est un environnement spécialisé pour créer ou modifier des ressources incluses dans un projet Visual Studio. Les éditeurs de ressources de Visual Studio partagent des techniques et des interfaces pour vous aider à créer et à modifier rapidement et facilement des ressources d’application. Les éditeurs de ressources vous permettent d’ [afficher et de modifier des ressources dans l’éditeur approprié](../windows/viewing-and-editing-resources-in-a-resource-editor.md) et d’ [afficher un aperçu des ressources](../windows/previewing-resources.md).  
@@ -36,7 +36,7 @@ Un éditeur de ressources est un environnement spécialisé pour créer ou modif
   
  **Remarque** comme les projets managés n’utilisent pas de fichiers de script de ressources, vous devez ouvrir vos ressources à partir de **l’Explorateur de solutions**. Vous pouvez utiliser l’ [éditeur d’images](../windows/image-editor-for-icons.md) et l’ [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 |Utilisez|Pour modifier|  
 |----------------|----------------|  
@@ -50,12 +50,11 @@ Un éditeur de ressources est un environnement spécialisé pour créer ou modif
 |[Éditeur de barres d’outils](../windows/toolbar-editor.md)|Ressources de barre d’outils dans des projets Visual C++. L’éditeur de barres d’outils fait partie de l’éditeur d’images.|  
 |[Éditeur d’informations sur la version](../windows/version-information-editor.md)|Informations de version dans des projets Visual C++.|  
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)   
  [Fichiers de ressources](../windows/resource-files-visual-studio.md)   
  [Symboles : Identificateurs de ressources](../windows/symbols-resource-identifiers.md)   
  [Menus et autres ressources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

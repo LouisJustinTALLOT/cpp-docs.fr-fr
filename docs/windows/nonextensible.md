@@ -1,5 +1,5 @@
 ---
-title: nonextensible | Documents Microsoft
+title: nonextensible | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881599"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608493"
 ---
 # <a name="nonextensible"></a>nonextensible
-Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés et méthodes répertoriées dans la description de l’interface et ne peuvent pas être étendus avec des membres supplémentaires au moment de l’exécution.  
+Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés et méthodes répertoriées dans la description de l’interface et ne peut pas être étendus avec des membres supplémentaires en cours d’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -43,7 +41,7 @@ Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés 
 ## <a name="example"></a>Exemple  
  Le code suivant illustre une utilisation de la **nonextensible** attribut :  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -58,16 +56,16 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`|  
+|**S'applique à**|**interface**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**Double** et **oleautomation**, ou **dispinterface**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|`dual` et `oleautomation`, ou `dispinterface`|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

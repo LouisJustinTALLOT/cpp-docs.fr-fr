@@ -1,5 +1,5 @@
 ---
-title: Constructeur de module::ReleaseNotifier::ReleaseNotifier | Documents Microsoft
+title: Constructeur de module::ReleaseNotifier::ReleaseNotifier | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882467"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608467"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier, constructeur
-Initialise une nouvelle instance de la classe Module::ReleaseNotifier.  
+Initialise une nouvelle instance de la **Module::ReleaseNotifier** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +33,13 @@ Initialise une nouvelle instance de la classe Module::ReleaseNotifier.
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `release`  
- `true` Pour supprimer cette instance lorsque la méthode Release est appelée ; `false` de ne pas supprimer cette instance.  
+### <a name="parameters"></a>Paramètres  
+ *release*  
+ **true** pour supprimer cette instance lorsque la `Release` méthode est appelée ; **false** de ne pas supprimer cette instance.  
   
 ## <a name="exceptions"></a>Exceptions  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

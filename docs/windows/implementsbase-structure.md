@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase (Structure) | Documents Microsoft
+title: ImplementsBase (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875771"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603962"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,14 +34,14 @@ struct ImplementsBase;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Permet de valider les types de paramètre de modèle dans [Implements, Structure](../windows/implements-structure.md).  
+ Permet de valider les types de paramètre de modèle dans [Implements (Structure)](../windows/implements-structure.md).  
   
- La structure ImplementsBase est vide par défaut.  
+ Le **ImplementsBase** structure est vide par défaut.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ImplementsBase`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

@@ -1,5 +1,5 @@
 ---
-title: Implémente la Structure | Documents Microsoft
+title: Implémente la Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880914"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607804"
 ---
 # <a name="implements-structure"></a>Implements (structure)
-Implémente QueryInterface et GetIid pour les interfaces spécifiées.  
+Implémente `QueryInterface` et `GetIid` pour les interfaces spécifiées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,44 +58,44 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `I0`  
+### <a name="parameters"></a>Paramètres  
+ *I0*  
  L’ID d’interface de zéro. (Obligatoire)  
   
- `I1`  
+ *I1*  
  Le premier ID d’interface. (facultatif)  
   
- `I2`  
+ *I2*  
  Le deuxième ID d’interface. (facultatif)  
   
- `I3`  
- L’ID d’interface tiers. (facultatif)  
+ *I3*  
+ Le troisième ID d’interface. (facultatif)  
   
- `I4`  
+ *I4*  
  La quatrième ID d’interface. (facultatif)  
   
- `I5`  
- La cinquième ID d’interface. (facultatif)  
+ *I5*  
+ Le cinquième ID d’interface. (facultatif)  
   
- `I6`  
- La sixième ID d’interface. (facultatif)  
+ *I6*  
+ Le sixième ID d’interface. (facultatif)  
   
- `I7`  
- La septième ID d’interface. (facultatif)  
+ *I7*  
+ Le septième ID d’interface. (facultatif)  
   
- `I8`  
+ *I8*  
  L’ID d’interface huitième. (facultatif)  
   
- `I9`  
- La neuvième ID d’interface. (facultatif)  
+ *I9*  
+ Le neuvième ID d’interface. (facultatif)  
   
- `flags`  
+ *flags*  
  Indicateurs de configuration pour la classe. Un ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) énumérations qui sont spécifiées dans un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) structure.  
   
 ## <a name="remarks"></a>Notes  
- Dérive de la liste des interfaces spécifiées et implémente des modèles d’application d’assistance de QueryInterface et GetIid.  
+ Dérive de la liste des interfaces spécifiées et implémente des modèles d’assistance pour `QueryInterface` et `GetIid`.  
   
- Chaque `I0` via `I9` paramètre d’interface doit dériver de l’interface IUnknown, IInspectable, ou [ChainInterfaces](../windows/chaininterfaces-structure.md) modèle. Le `flags` paramètre détermine si l’option prise en charge est générée pour IUnknown ou IInspectable.  
+ Chaque *I0* via *I9* paramètre d’interface doit être dérivé `IUnknown`, `IInspectable`, ou le [ChainInterfaces](../windows/chaininterfaces-structure.md) modèle. Le *indicateurs* paramètre détermine si la prise en charge est généré pour `IUnknown` ou `IInspectable`.  
   
 ## <a name="members"></a>Membres  
   
@@ -110,7 +110,7 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 |Nom|Description|  
 |----------|-----------------|  
 |[Implements::CanCastTo, méthode](../windows/implements-cancastto-method.md)|Obtient un pointeur vers l’interface spécifiée.|  
-|[Implements::CastToUnknown, méthode](../windows/implements-casttounknown-method.md)|Obtient un pointeur vers l’interface IUnknown sous-jacente.|  
+|[Implements::CastToUnknown, méthode](../windows/implements-casttounknown-method.md)|Obtient un pointeur vers sous-jacent `IUnknown` interface.|  
 |[Implements::FillArrayWithIid, méthode](../windows/implements-fillarraywithiid-method.md)|Insère l’ID d’interface spécifié par le paramètre de modèle actuel placée dans l’élément de tableau spécifié.|  
   
 ### <a name="protected-constants"></a>Constantes protégés  
@@ -132,7 +132,7 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
  `Implements`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::casttobase, méthode | Documents Microsoft
+title: Interfacetraits::casttobase, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878523"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606447"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -36,22 +36,22 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
- Le type de paramètre `ptr`.  
+### <a name="parameters"></a>Paramètres  
+ *T*  
+ Le type de paramètre *ptr*.  
   
- `ptr`  
- Pointeur vers un type `T`.  
+ *ptr*  
+ Pointeur vers un type *T*.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Un pointeur vers `Base`.  
   
 ## <a name="remarks"></a>Notes  
- Convertit le pointeur spécifié vers un pointeur vers `Base`.  
+ Effectue un cast du pointeur spécifié vers un pointeur vers `Base`.  
   
- Pour plus d’informations sur `Base`, consultez la section Typedefs publics dans [interfacetraits, Structure](../windows/interfacetraits-structure.md).  
+ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dans [InterfaceTraits (Structure)](../windows/interfacetraits-structure.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

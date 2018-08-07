@@ -1,5 +1,5 @@
 ---
-title: SafeIntException, classe | Documents Microsoft
+title: SafeIntException, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 961fc2f2050336469f5944f603c0db3c6291a176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbcb04229ea0d60c7bc5abfeb1db3f671c92c6b8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895773"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604978"
 ---
 # <a name="safeintexception-class"></a>SafeIntException, classe
-Le `SafeInt` classe utilise `SafeIntException` pour identifier la raison pour laquelle une opération mathématique ne peut pas être exécutée.  
+Le `SafeInt` classe utilise **SafeIntException** pour identifier la raison pour laquelle une opération mathématique ne peut pas être effectuée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,15 +37,15 @@ class SafeIntException;
   
 ### <a name="public-constructors"></a>Constructeurs publics  
  [SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)  
- Crée un objet `SafeIntException`.  
+ Crée un **SafeIntException** objet.  
   
 ## <a name="remarks"></a>Notes  
- Le [SafeInt, classe](../windows/safeint-class.md) est la seule classe qui utilise le `SafeIntException` classe.  
+ Le [classe SafeInt](../windows/safeint-class.md) est la seule classe qui utilise le **SafeIntException** classe.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [SafeIntException Class](../windows/safeintexception-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** safeint.h  
   
  **Namespace :** msl::utilities  

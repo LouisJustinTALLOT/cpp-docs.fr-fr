@@ -1,5 +1,5 @@
 ---
-title: PTR | Documents Microsoft
+title: PTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875992"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604328"
 ---
 # <a name="ptr"></a>ptr
-Désigne un pointeur en tant que pointeur complet.  
+Désigne un pointeur comme un pointeur complet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [ptr]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,16 +39,16 @@ Désigne un pointeur en tant que pointeur complet.
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de [defaultvalue](../windows/defaultvalue.md) pour un exemple d’utilisation de **ptr**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Paramètre, d’une méthode d’interface, interface `typedef`|  
+|**S'applique à**|Paramètre d’interface, la méthode d’interface, **(typedef)**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

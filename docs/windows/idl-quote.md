@@ -1,5 +1,5 @@
 ---
-title: idl_quote | Documents Microsoft
+title: idl_quote | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878510"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606512"
 ---
 # <a name="idlquote"></a>idl_quote
-Vous pouvez utiliser des constructions IDL qui ne sont pas pris en charge dans la version actuelle de Visual C++ et les transmettre au fichier .idl généré.  
+Vous permet d’utiliser des constructions IDL qui ne sont pas pris en charge dans la version actuelle de Visual C++ et les passer au fichier .idl généré.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  *texte*  
- Le nom d’attribut que vous avez l’intention le compilateur Visual C++ pour passer directement vers le fichier .idl généré sans retourner une erreur du compilateur.  
+ Le nom d’attribut que vous avez l’intention le compilateur Visual C++ à passer au fichier .idl généré sans retourner une erreur du compilateur.  
   
 ## <a name="remarks"></a>Notes  
- Si le **idl_quote** attribut C++ est utilisé en tant qu’attribut autonome (avec un point-virgule après le crochet fermant), puis *texte* est placé dans le fichier .idl fusionné. Si **idl_quote** est utilisé sur un symbole, *texte* est placé dans le bloc d’attributs de ce symbole.  
+ Si le **idl_quote** attribut C++ est utilisé comme un attribut autonome (avec un point-virgule après l’accolade fermante), puis *texte* est placé dans le fichier .idl fusionnée en l’état. Si **idl_quote** est utilisé sur un symbole, *texte* est placé dans le bloc d’attributs pour ce symbole.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant montre comment vous pouvez spécifier un attribut non pris en charge (à l’aide de **dans**, qui est pris en charge) et comment définir et utiliser une construction .idl non défini :  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,9 +78,9 @@ __interface IStatic{
 };  
 ```  
   
- Ce code entraîne MYFLOT et MYDUB et *texte* entrée doit être placé dans le fichier .idl généré. Le *nom* paramètre force *texte* doit être placé avant tout ce qui fait référence à *nom* dans le fichier .idl généré. Le *dépendances* paramètre force les définitions de liste de dépendance doit être placé avant *texte* dans le fichier .idl généré.  
+ Ce code provoque MYFLOT et MYDUB et *texte* entrée à placer dans le fichier .idl généré. Le *nom* paramètre force *texte* à être placé avant tout ce qui fait référence à *nom* dans le fichier .idl généré. Le *dépendances* paramètre force les définitions de liste de dépendance à être placé avant *texte* dans le fichier .idl généré.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -89,8 +88,8 @@ __interface IStatic{
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

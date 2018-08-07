@@ -1,5 +1,5 @@
 ---
-title: 'Module::GenericReleaseNotifier :: Invoke, méthode | Documents Microsoft'
+title: 'Module::GenericReleaseNotifier :: appeler la méthode | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ce08cdb1cfcba5e63c94904af965f504f30a8e4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875329"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606408"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke, méthode
-Appelle le Gestionnaire d’événements associé à l’objet Module::GenericReleaseNotifier en cours.  
+Appelle le Gestionnaire d’événements associé actuel **Module::GenericReleaseNotifier** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Appelle le Gestionnaire d’événements associé à l’objet Module::GenericRe
 void Invoke();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

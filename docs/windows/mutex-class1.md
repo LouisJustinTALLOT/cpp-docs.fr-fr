@@ -1,5 +1,5 @@
 ---
-title: Mutex Class1 | Documents Microsoft
+title: Mutex, Classe1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9c3dbbcbffff32f7c1611b6b49ee19ada7e52c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878409"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606772"
 ---
-# <a name="mutex-class1"></a>Mutex Class1
+# <a name="mutex-class1"></a>Mutex, Classe1
 Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -39,30 +39,30 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Nom|Description|  
 |----------|-----------------|  
-|**SyncLock**|Un synonyme pour une classe qui prend en charge les verrous synchrones.|  
+|`SyncLock`|Un synonyme pour une classe qui prend en charge les verrous synchrones.|  
   
 ### <a name="public-constructor"></a>Constructeur public  
   
 |Name|Description|  
 |----------|-----------------|  
-|[Mutex::mutex, constructeur](../windows/mutex-mutex-constructor.md)|Initialise une nouvelle instance de la classe Mutex.|  
+|[Mutex::mutex, constructeur](../windows/mutex-mutex-constructor.md)|Initialise une nouvelle instance de la **Mutex** classe.|  
   
 ### <a name="public-members"></a>Membres publics  
   
 |Name|Description|  
 |----------|-----------------|  
-|[Mutex::lock, méthode](../windows/mutex-lock-method.md)|Attend que l’objet actif ou l’objet Mutex associé au handle spécifié, libère le mutex ou l’intervalle de délai d’attente spécifié est écoulé.|  
+|[Mutex::lock, méthode](../windows/mutex-lock-method.md)|Attend jusqu'à ce que l’objet actuel, ou le **Mutex** objet associé au handle spécifié, versions le mutex ou l’intervalle de délai d’attente spécifié se soit écoulé.|  
   
 ### <a name="public-operator"></a>Opérateur public  
   
 |Name|Description|  
 |----------|-----------------|  
-|[Mutex::operator=, opérateur](../windows/mutex-operator-assign-operator.md)|Affecte (se déplace) le Mutex spécifié de l’objet à l’objet Mutex actuel.|  
+|[Mutex::operator=, opérateur](../windows/mutex-operator-assign-operator.md)|Assigne le texte spécifié (déplace) **Mutex** objet actuel **Mutex** objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Mutex`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

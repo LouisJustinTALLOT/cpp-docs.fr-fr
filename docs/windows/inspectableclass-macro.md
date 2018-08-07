@@ -1,5 +1,5 @@
 ---
-title: Inspectableclass, Macro | Documents Microsoft
+title: Inspectableclass, Macro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873769"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608954"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass, macro
 Définit le niveau de confiance et de nom de la classe runtime.  
@@ -33,17 +33,17 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `runtimeClassName`  
- Nom de la classe runtime textuel complet.  
+### <a name="parameters"></a>Paramètres  
+ *runtimeClassName*  
+ Le nom textuel complet de la classe runtime.  
   
- `trustLevel`  
+ *trustLevel*  
  Parmi les [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) valeurs énumérées.  
   
 ## <a name="remarks"></a>Notes  
- Le `InspectableClass` macro peut être utilisée uniquement avec les types Windows Runtime.  
+ Le **InspectableClass** macro peut être utilisée uniquement avec les types Windows Runtime.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

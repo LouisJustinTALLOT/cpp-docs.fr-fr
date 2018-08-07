@@ -1,5 +1,5 @@
 ---
-title: Objectif des attributs | Documents Microsoft
+title: Objectif des attributs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877834"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607022"
 ---
 # <a name="purpose-of-attributes"></a>Objectif des attributs
-Attributs étendent C++ dans le sens n’est pas actuellement possibles sans rompre la structure classique de la langue. Attributs permettent aux fournisseurs (DLL séparées) pour étendre les fonctionnalités de langage dynamique. L’objectif principal d’attributs est de simplifier la création de composants COM, en plus d’accroître la productivité des développeurs de composants. Les attributs peuvent être appliqués à presque n’importe quelle construction C++, telles que des classes, des membres de données ou des fonctions membres. Voici une mise en surbrillance des avantages offerts par cette nouvelle technologie :  
+Attributs étendent C++ dans les directions n’est pas actuellement possibles sans casser la structure classique de la langue. Attributs permettent aux fournisseurs (DLL séparées) pour étendre les fonctionnalités de langage dynamique. Le principal objectif des attributs est de simplifier la création de composants COM, en plus d’augmenter la productivité des développeurs de composants. Attributs peuvent être appliqués à presque n’importe quelle construction C++, telles que des classes, des membres de données ou des fonctions membres. Voici une mise en surbrillance des avantages offerts par cette nouvelle technologie :  
   
 -   Expose une convention d’appel familière et simple.  
   
--   Le code inséré, qui, contrairement aux macros, est reconnue par le débogueur.  
+-   Le code inséré, qui, contrairement aux macros, n’est reconnu par le débogueur.  
   
--   Permet de dérivation facile à partir de classes de base sans détails d’implémentation trop complexes.  
+-   Permet la dérivation facile à partir de classes de base sans détails d’implémentation laborieux.  
   
 -   Remplace la grande quantité de code IDL requis par un composant COM avec quelques attributs simples.  
   
- Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer la [event_receiver](../windows/event-receiver.md) attribut à une classe spécifique, tel que `CMyReceiver`. Le **event_receiver** attribut est ensuite compilé par le compilateur Visual C++, qui insère le code approprié dans le fichier objet.  
+ Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer le [event_receiver](../windows/event-receiver.md) attribut sur une classe spécifique, tel que `CMyReceiver`. Le `event_receiver` attribut est ensuite compilé par le compilateur Visual C++, qui insère le code approprié dans le fichier objet.  
   
 ```  
 [event_receiver(com)]  
@@ -44,7 +44,7 @@ class CMyReceiver
 }  
 ```  
   
- Vous pouvez ensuite configurer le **CMyReceiver** méthodes `handler1` et `handler2` pour gérer les événements (à l’aide de la fonction intrinsèque [__hook](../cpp/hook.md)) à partir d’une source d’événement, vous pouvez créer à l’aide de [event_source](../windows/event-source.md).  
+ Vous pouvez ensuite configurer le `CMyReceiver` méthodes `handler1` et `handler2` pour gérer les événements (à l’aide de la fonction intrinsèque [__hook](../cpp/hook.md)) à partir d’une source d’événement, vous pouvez créer à l’aide de [event_source](../windows/event-source.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts](../windows/attributed-programming-concepts.md)

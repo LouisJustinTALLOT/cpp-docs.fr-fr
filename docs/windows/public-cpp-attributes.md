@@ -1,5 +1,5 @@
 ---
-title: public (attributs C++) | Documents Microsoft
+title: public (attributs C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881729"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603602"
 ---
 # <a name="public-c-attributes"></a>public (attributs C++)
 Garantit qu’un typedef passera à la bibliothèque de types même s’il n’est pas référencé à partir du fichier .idl.  
@@ -30,9 +30,7 @@ Garantit qu’un typedef passera à la bibliothèque de types même s’il n’e
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,7 +39,7 @@ Garantit qu’un typedef passera à la bibliothèque de types même s’il n’e
 ## <a name="example"></a>Exemple  
  Le code suivant montre comment utiliser le **public** attribut :  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -55,16 +53,16 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`typedef`|  
+|**S'applique à**|**typedef**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

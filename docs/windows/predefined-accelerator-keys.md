@@ -1,5 +1,5 @@
 ---
-title: Les touches accélérateur prédéfinies | Documents Microsoft
+title: Des touches accélérateur prédéfinies | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880793"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608415"
 ---
 # <a name="predefined-accelerator-keys"></a>Touches accélérateur prédéfinies
 Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent faire partie d'un projet d'application Windows. Certaines de ces touches virtuelles sont destinées à l'environnement Windows. D'autres sont destinées aux navigateurs ou aux applications Unicode. Vous pouvez utiliser ces touches en tant que touches d'accès rapide.  
@@ -62,7 +62,7 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 |VK_NONCONVERT|Non-conversion IME|  
 |VK_OEM_1|Windows : pour le clavier standard américain, touche ';:'|  
 |VK_OEM_102|Windows : soit la touche du crochet gauche, soit la touche de barre oblique inverse sur le clavier RT de 102 touches|  
-|VK_OEM_2|Windows : pour le clavier américain standard, le '/ ?' clé|  
+|VK_OEM_2|Windows : pour le clavier américain standard, le « / » ? clé|  
 |VK_OEM_3|Windows : pour le clavier américain standard, touche '`~'|  
 |VK_OEM_4|Windows : pour le clavier américain standard, touche '[{'|  
 |VK_OEM_5|Windows : pour le clavier américain standard, le «\\&#124;' clé|  
@@ -83,9 +83,9 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 |VK_XBUTTON1|Windows : bouton de souris X1|  
 |VK_XBUTTON2|Windows : bouton de souris X2|  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

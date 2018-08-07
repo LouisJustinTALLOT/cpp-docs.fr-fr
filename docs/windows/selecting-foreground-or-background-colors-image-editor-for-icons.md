@@ -1,5 +1,5 @@
 ---
-title: Sélection de premier plan ou des couleurs d’arrière-plan (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Sélection de premier plan ou des couleurs d’arrière-plan (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888644"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605546"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Sélection de couleurs de premier plan ou d'arrière-plan (Éditeur d'images pour les icônes)
-À l’exception de la **gomme**, les outils sur le **Éditeur d’images** dessin de barre d’outils avec la couleur de premier plan ou d’arrière-plan actuelle lorsque vous appuyez sur le bouton gauche ou droit de la souris, respectivement.  
+À l’exception de la **gomme**, les outils sur le **Éditeur d’images** draw de barre d’outils avec la couleur de premier plan ou d’arrière-plan actuelle lorsque vous appuyez sur le bouton gauche ou droit de la souris, respectivement.  
   
 ### <a name="to-select-a-foreground-color"></a>Pour sélectionner une couleur de premier plan  
   
@@ -36,11 +36,11 @@ ms.locfileid: "33888644"
   
 1.  Avec le bouton droit de la souris, cliquez sur la couleur souhaitée dans le **couleurs** palette.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
- Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
- Aucun  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   

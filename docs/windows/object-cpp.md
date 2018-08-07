@@ -1,5 +1,5 @@
 ---
-title: objet (C++) | Documents Microsoft
+title: objet (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879706"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607908"
 ---
 # <a name="object-c"></a>object (C++)
 Identifie une interface personnalisée.  
@@ -30,29 +30,27 @@ Identifie une interface personnalisée.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Lorsqu’il précède une définition d’interface, le **objet** attribut C++ provoque l’interface doit être placé dans le fichier .idl comme une interface personnalisée.  
+ Lorsqu’il précède une définition d’interface, le **objet** attribut C++ provoque l’interface à placer dans le fichier .idl comme une interface personnalisée.  
   
- N’importe quelle interface marquée avec l’objet doit hériter de **IUnknown**. Cette condition est remplie si une des interfaces de base hérite de **IUnknown**. Si aucune interface de base ne hérite de **IUnknown**, le compilateur entraînera l’interface marquée avec **objet** dériver **IUnknown**.  
+ N’importe quelle interface marquée avec l’objet doit hériter `IUnknown`. Cette condition est remplie si une des interfaces de base héritent `IUnknown`. Si aucune interface de base ne hérite `IUnknown`, le compilateur entraîne l’interface marquée avec **objet** de dériver de `IUnknown`.  
   
 ## <a name="example"></a>Exemple  
  Consultez [nonbrowsable](../windows/nonbrowsable.md) pour obtenir un exemple montrant comment utiliser **objet**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`|  
+|**S'applique à**|**interface**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

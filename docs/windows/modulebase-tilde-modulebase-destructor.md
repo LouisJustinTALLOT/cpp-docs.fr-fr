@@ -1,5 +1,5 @@
 ---
-title: 'ModuleBase :: ~ ModuleBase, destructeur | Documents Microsoft'
+title: 'ModuleBase :: ~ modulebase, destructeur | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1dc6de0d4c3bc5bb723b1dbb39f146a49fe7ba8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d648577d03507154c8e3b226fa00e3f03dc25abc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876356"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608506"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase, destructeur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,13 +34,13 @@ virtual ~ModuleBase();
 ```  
   
 ## <a name="remarks"></a>Notes  
- Désinitialise l’instance actuelle de la classe ModuleBase.  
+ Annule l’initialisation de l’instance actuelle de la **ModuleBase** classe.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
- [ModuleBase (classe)](../windows/modulebase-class.md)   
+ [Modulebase, classe](../windows/modulebase-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

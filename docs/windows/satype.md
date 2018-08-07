@@ -1,5 +1,5 @@
 ---
-title: satype | Documents Microsoft
+title: satype | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888680"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603392"
 ---
 # <a name="satype"></a>satype
-Spécifie le type de données de la **SAFEARRAY** structure.  
+Spécifie le type de données de la `SAFEARRAY` structure.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *data_type*  
- Le type de données pour le **SAFEARRAY** structure de données qui est passé en tant que paramètre à une méthode d’interface.  
+ Le type de données pour le `SAFEARRAY` structure de données qui est passé en tant que paramètre à une méthode d’interface.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -48,18 +47,18 @@ Spécifie le type de données de la **SAFEARRAY** structure.
 |-|-|  
 |**S'applique à**|Paramètre d’interface, méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
 ## <a name="remarks"></a>Notes  
- Le **satype** attribut C++ Spécifie le type de données de la **SAFEARRAY**.  
+ Le **satype** attribut C++ Spécifie le type de données de la `SAFEARRAY`.  
   
 > [!NOTE]
->  Un niveau d’indirection est supprimé de la **SAFEARRAY** pointeur dans le fichier .idl généré à partir de la manière dont il est déclaré dans le fichier .cpp.  
+>  Un niveau d’indirection est supprimé de la `SAFEARRAY` pointeur dans le fichier .idl généré à partir de la façon dont elle est déclarée dans le fichier .cpp.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -71,7 +70,7 @@ __interface A {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs du compilateur](../windows/compiler-attributes.md)   
+ [Attributs de compilateur](../windows/compiler-attributes.md)   
  [Attributs de paramètre](../windows/parameter-attributes.md)   
  [Attributs de méthode](../windows/method-attributes.md)   
  [ID](../windows/id.md)   

@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::getweakreference, méthode | Documents Microsoft
+title: Runtimeclass::getweakreference, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e49703e96728e7287206aa264ce12deaad611495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0d5e6ca19749a4647ec85311e1fce0e7561b59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888215"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608532"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference, méthode
-Obtient un pointeur vers l’objet de référence faible pour l’objet RuntimeClass actuel.  
+Obtient un pointeur vers l’objet de référence faible pour actuel **RuntimeClass** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `weakReference`  
- Lorsque cette opération est terminée, un pointeur vers un objet de référence faible.  
+### <a name="parameters"></a>Paramètres  
+ *weakReference*  
+ Lorsque cette opération se termine, un pointeur vers un objet de référence faible.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Toujours S_OK.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

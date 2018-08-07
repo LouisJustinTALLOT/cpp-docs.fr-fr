@@ -1,5 +1,5 @@
 ---
-title: Plateforme, par défaut et cli espaces de noms (Extensions du composant C++) | Documents Microsoft
+title: Plateforme, par défaut et cli (Extensions du composant C++) d’espaces de noms | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880739"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603548"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Plateforme, valeurs par défaut et espaces de noms CLI (extensions du composant C++)
 Un espace de noms qualifie les noms des éléments du langage afin que les noms n'entrent pas en conflit avec des noms sinon identiques ailleurs dans le code source. Par exemple, une collision de nom peut empêcher le compilateur de reconnaître [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md). Les espaces de noms sont utilisés par le compilateur mais ne sont pas conservés dans l'assembly compilé.  
@@ -33,23 +33,23 @@ Un espace de noms qualifie les noms des éléments du langage afin que les noms 
  Visual C++ offre un espace de noms par défaut pour votre projet lorsque vous créez le projet. Vous pouvez renommer manuellement l’espace de noms, bien que dans Windows Runtime, le nom du fichier .winmd doit correspondre au nom de l’espace de noms racine.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Pour plus d’informations, consultez [espaces de noms et le type de visibilité (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
+ Pour plus d’informations, consultez [espaces de noms et visibilité de type (C++ / c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
 using namespace cli;  
 ```  
   
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
- C + c++ / CLI prend en charge la `cli` espace de noms. Lors de la compilation avec **/CLR**, la `using` instruction dans la section syntaxe est implicite.  
+ C++ / c++ / CLI prend en charge la **cli** espace de noms. Lors de la compilation avec `/clr`, le **à l’aide de** instruction dans la section syntaxe est implicite.  
   
- Les fonctionnalités de langage suivantes se trouvent dans l'espace de noms `cli` :  
+ Les fonctionnalités de langage suivantes se trouvent dans le **cli** espace de noms :  
   
 -   [Tableaux](../windows/arrays-cpp-component-extensions.md)  
   
@@ -59,15 +59,14 @@ using namespace cli;
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
- L'exemple de code suivant montre qu'il est possible d'utiliser un symbole dans l'espace de noms `cli` comme symbole défini par l'utilisateur dans votre code.  Toutefois, une fois que vous l'avez fait, vous devez qualifier explicitement ou implicitement vos références à l'élément de langage `cli` du même nom.  
+ L’exemple de code suivant montre qu’il est possible d’utiliser un symbole dans le **cli** espace de noms comme symbole défini par l’utilisateur dans votre code.  Toutefois, une fois que vous l’avez fait, vous devez qualifier explicitement ou implicitement de vos références à la **cli** élément de langage du même nom.  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  

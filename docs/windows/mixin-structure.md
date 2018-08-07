@@ -1,5 +1,5 @@
 ---
-title: MixIn (Structure) | Documents Microsoft
+title: MixIn, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876161"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605722"
 ---
 # <a name="mixin-structure"></a>MixIn (structure)
 Garantit qu'une classe d'exécution dérive des interfaces du Windows Runtime, le cas échéant, puis des interfaces du COM classique.  
@@ -39,23 +39,23 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `Derived`  
- Un type dérivé de la [implémente](../windows/implements-structure.md) structure.  
+### <a name="parameters"></a>Paramètres  
+ *DÉRIVÉS*  
+ Un type dérivé le [implémente](../windows/implements-structure.md) structure.  
   
- `MixInType`  
+ *MixInType*  
  Type de base.  
   
- `hasImplements`  
- `true` Si `MixInType` est dérivé de l’implémentation actuelle du type de base ; `false` dans le cas contraire.  
+ *hasImplements*  
+ **true** si *MixInType* est dérivée de l’implémentation actuelle du type de base ; **false** dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  
- Si une classe est dérivée de Windows Runtime et les interfaces de classe COM, la liste de déclaration de classe doit répertorier tout d’abord toutes les interfaces Windows Runtime et puis des interfaces tout COM classique. MixIn garantit que les interfaces sont spécifiées dans l’ordre correct.  
+ Si une classe est dérivée de Windows Runtime et des interfaces de classes COM, puis un COM classique interfaces et la liste de déclaration de classe doit tout d’abord répertoriez toutes les interfaces Windows Runtime. **MixIn** garantit que les interfaces sont spécifiées dans l’ordre approprié.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `MixIn`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

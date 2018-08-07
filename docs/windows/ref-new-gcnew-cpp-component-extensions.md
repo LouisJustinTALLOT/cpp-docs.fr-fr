@@ -1,5 +1,5 @@
 ---
-title: gcnew de nouveau, ref (Extensions du composant C++) | Documents Microsoft
+title: ref new, gcnew (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879059"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606183"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew  (extensions du composant C++)
-Le `ref new` mot clé d’agrégation alloue une instance d’un type qui est le garbage collecté lors de l’objet devienne inaccessible, et qui retourne un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) vers l’objet alloué.  
+Le **ref nouvelle** mot clé d’agrégation alloue une instance d’un type qui est le garbage collecté lorsque l’objet devienne inaccessible, et qui retourne un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) vers l’objet alloué.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- La mémoire d'une instance d'un type alloué par `ref new` est automatiquement désallouée.  
+ Mémoire pour une instance d’un type qui est allouée par **ref nouvelle** est automatiquement désallouée.  
   
- Une opération `ref new` lève une exception `OutOfMemoryException` s'il est impossible d'allouer de la mémoire.  
+ Un **ref nouvelle** opération lève `OutOfMemoryException` s’il est impossible d’allouer de mémoire.  
   
  Pour plus d’informations sur la façon dont la mémoire pour les types natifs C++ est allouée et désallouée, consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Utilisez `ref new` pour allouer de la mémoire aux objets Windows Runtime dont vous voulez administrer automatiquement la durée de vie. L'objet est automatiquement désalloué quand son nombre de références atteint zéro, ce qui se produit une fois que la dernière copie de la référence est hors de portée. Pour plus d’informations, consultez [les classes ou structures](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Utilisez **ref nouvelle** d’allocation de mémoire pour les objets Windows Runtime dont vous voulez administrer automatiquement la vie. L'objet est automatiquement désalloué quand son nombre de références atteint zéro, ce qui se produit une fois que la dernière copie de la référence est hors de portée. Pour plus d’informations, consultez [classes et structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- La mémoire d'un type managé (type référence ou valeur) est allouée par `gcnew`, puis désallouée à l'aide du garbage collection.  
+ Mémoire d’un type managé (type référence ou valeur) est allouée par **gcnew**et libérée en utilisant le garbage collection.  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
- L'exemple suivant utilise `gcnew` pour allouer un objet Message.  
+ L’exemple suivant utilise **gcnew** allouer un objet de Message.  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **Exemple**  
+ L’exemple suivant utilise **gcnew** pour créer un type valeur boxed à utiliser comme un type référence.  
   
- L'exemple suivant utilise `gcnew` pour créer un type valeur boxed à utiliser comme type référence.  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

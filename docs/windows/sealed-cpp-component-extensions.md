@@ -1,5 +1,5 @@
 ---
-title: sealed (Extensions du composant C++) | Documents Microsoft
+title: sealed (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890861"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604549"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed  (extensions du composant C++)
-`sealed` est un mot clé contextuel pour les classes ref qui indique qu'un membre virtuel ne peut pas être remplacé ou qu'un type ne peut pas être utilisé comme type de base.  
+**sealed** est un mot clé contextuel pour les classes ref qui indique qu’un membre virtuel ne peut pas être substitué, ou qu’un type ne peut pas être utilisé comme type de base.  
   
 > [!NOTE]
->  La norme ISO C ++ 11 Standard langue a la [final](../cpp/final-specifier.md) mot clé, qui est pris en charge dans Visual Studio. Utilisez `final` sur les classes standard et `sealed` sur les classes ref.  
+>  La norme ISO C ++ 11 Standard langue a la [finale](../cpp/final-specifier.md) mot clé, qui est pris en charge dans Visual Studio. Utilisez **finale** sur les classes standard et **sealed** sur les classes ref.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
   
@@ -45,33 +45,33 @@ virtual return-type identifier() sealed {...};
  *identifier*  
  Nom de la fonction ou de la classe.  
   
- *Type de retour*  
+ *type de retour*  
  Type retourné par une fonction.  
   
 ## <a name="remarks"></a>Notes  
   
  Dans le premier exemple de syntaxe, une classe est sealed. Dans le deuxième exemple, une fonction virtuelle est sealed.  
   
- Le `sealed` mot clé est valide pour les cibles natives et également pour le Windows Runtime et le common language runtime (CLR). Pour plus d’informations, consultez [des spécificateurs de substitution et Compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Le **sealed** mot clé est valide pour les cibles natives et également pour l’exécution de Windows et le common language runtime (CLR). Pour plus d’informations, consultez [des spécificateurs de substitution et Compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
  Vous pouvez détecter au moment de la compilation si un type est sealed à l’aide de la `__is_sealed(type)` trait de type. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `sealed` est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **sealed** est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Consultez [les classes ou structures](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Consultez [classes et structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  (Aucune note de cette fonctionnalité de langage ne s'applique qu'au Common Language Runtime.)  
   
 ### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- L'exemple de code suivant montre l'effet de `sealed` sur un membre virtuel.  
+ Cet exemple de code suivant montre l’effet de **sealed** sur un membre virtuel.  
   
 ```cpp  
 // sealed_keyword.cpp  

@@ -1,5 +1,5 @@
 ---
-title: SafeEquals | Documents Microsoft
+title: SafeEquals | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfde61e9bcc32e3924e923dd55c8e6ca51cda0eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c4b5a093b74f36529081ecaf7cf9f2040dbf82f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889320"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603327"
 ---
 # <a name="safeequals"></a>SafeEquals
 Compare deux nombres pour déterminer s’ils sont égaux.  
@@ -37,27 +37,27 @@ inline bool SafeEquals (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- [in] `t`  
- Le premier nombre à comparer. Cela doit être de type T.  
+### <a name="parameters"></a>Paramètres  
+ [in] *t*  
+ Le premier nombre à comparer. Il doit s’agir de type T.  
   
- [in] `u`  
- Second nombre à comparer. Cela doit être de type U.  
+ [in] *u*  
+ Le deuxième nombre à comparer. Il doit s’agir de type U.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si `t` et `u` sont égaux ; sinon `false`.  
+ **true** si *t* et *u* sont égales ; sinon **false**.  
   
 ## <a name="remarks"></a>Notes  
- La méthode améliore `==` car `SafeEquals` vous permet de comparer deux types de nombres.  
+ La méthode améliore `==` car **SafeEquals** vous permet de comparer deux différents types de nombres.  
   
- Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération de comparaison unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  
+ Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération de comparaison unique sans créer d’instance de la [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Cette méthode doit uniquement être utilisée lorsqu’une opération mathématique unique doit être protégée. S’il existe plusieurs opérations, vous devez utiliser le `SafeInt` classe au lieu d’appeler les fonctions autonomes individuelles.  
+>  Cette méthode doit uniquement être utilisée lorsqu’une opération mathématique unique doit être protégée. S’il existe plusieurs opérations, vous devez utiliser le `SafeInt` classe au lieu d’appeler des fonctions autonomes individuelles.  
   
- Pour plus d’informations sur les types de modèles T, U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
+ Pour plus d’informations sur les types de modèles T et U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** safeint.h  
   
  **Namespace :** Microsoft::Utilities  
@@ -65,5 +65,5 @@ inline bool SafeEquals (
 ## <a name="see-also"></a>Voir aussi  
  [SafeInt, fonctions](../windows/safeint-functions.md)   
  [Bibliothèque SafeInt](../windows/safeint-library.md)   
- [SafeInt (classe)](../windows/safeint-class.md)   
+ [SafeInt, classe](../windows/safeint-class.md)   
  [SafeNotEquals](../windows/safenotequals.md)

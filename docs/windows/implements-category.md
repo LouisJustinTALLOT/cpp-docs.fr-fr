@@ -1,5 +1,5 @@
 ---
-title: implements_category | Documents Microsoft
+title: implements_category | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6770f8303af63c66f0d1a656c2b36e034cc2be83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879033"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603716"
 ---
 # <a name="implementscategory"></a>implements_category
 Spécifie les catégories de composant implémentés par la classe cible.  
@@ -30,25 +30,24 @@ Spécifie les catégories de composant implémentés par la classe cible.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ implements_category(  
+[ implements_category(  
    implements_category="uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- **implements_category**  
- L’ID de la catégorie de mise en œuvre.  
+### <a name="parameters"></a>Paramètres  
+ *implements_category*  
+ L’ID de la catégorie implémentée.  
   
 ## <a name="remarks"></a>Notes  
- Le **implements_category** attribut C++ Spécifie les catégories de composant implémentés par la classe cible. Cela en créant un mappage de catégorie et en ajoutant des entrées distinctes spécifiées par le **implements_category** attribut. Pour plus d’informations, consultez [quelles sont les catégories de composants et comment effectuer leur travail ?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
+ Le **implements_category** attribut C++ Spécifie les catégories de composant implémentés par la classe cible. Pour cela, la création d’un mappage de catégorie et en ajoutant des entrées distinctes spécifiées par le **implements_category** attribut. Pour plus d’informations, consultez [quelles sont les catégories de composants et comment faire leur travail ?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
   
- Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi_progid** et **coclass** sont également appliqués.  
+ Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant spécifie que l’objet suivant implémente la catégorie de contrôle.  
   
-```  
+```cpp  
 // cpp_attr_ref_implements_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -61,16 +60,16 @@ Spécifie les catégories de composant implémentés par la classe cible.
 class CMyClass {};  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Oui|  
-|**Attributs requis**|Une des valeurs suivantes : **coclasse**, **progid**, ou **vi_progid**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Une des opérations suivantes : `coclass`, `progid`, ou `vi_progid`|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
@@ -78,4 +77,3 @@ class CMyClass {};
  [Attributs COM](../windows/com-attributes.md)   
  [Attributs de classe](../windows/class-attributes.md)   
  [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
- 

@@ -1,5 +1,5 @@
 ---
-title: New (nouvel emplacement dans vtable) (Extensions du composant C++) | Documents Microsoft
+title: New (nouvel emplacement dans vtable) (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879781"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607009"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>nouveau (nouvel emplacement dans vtable)  (extensions du composant C++)
-Le `new` mot clé indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable.  
+Le **nouveau** mot-clé indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
  (Aucune remarque pour cette fonctionnalité de langage ne s’applique à tous les runtimes.)  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Non pris en charge dans Windows Runtime.  
+ Pas de prise en charge dans Windows Runtime.  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
- Dans un **/CLR** compilation, `new` indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable ; que la fonction ne remplace pas une méthode de classe de base.  
+ Dans un `/clr` compilation, **nouveau** indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable ; que la fonction ne remplace pas une méthode de classe de base.  
   
- `new` provoque le modificateur newslot à ajouter avec le langage intermédiaire pour la fonction.  Pour plus d’informations sur newslot, consultez :  
+ **nouvelle** provoque le modificateur newslot à ajouter à l’IL de la fonction.  Pour plus d’informations sur newslot, consultez :  
   
--   [MethodInfo.GetBaseDefinition (méthode)](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition (méthode)](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [Énumération MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Énumération MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
- L’exemple suivant montre l’effet de `new`.  
+ L’exemple suivant montre l’effet de **nouveau**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  
@@ -112,5 +111,5 @@ E::f() called
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
+ [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Spécificateurs de substitution](../windows/override-specifiers-cpp-component-extensions.md)

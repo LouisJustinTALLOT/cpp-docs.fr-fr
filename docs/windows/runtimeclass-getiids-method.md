@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::getiids, méthode | Documents Microsoft
+title: Runtimeclass::getiids, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c309c97b9c9ce057ca67ab4b5d729c61d803ea5a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f51d39bf1ff8c7d4271797dcaa23278ac2e747
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888399"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608441"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids, méthode
-Obtient un tableau qui contient l’interface ID implémentées par l’objet RuntimeClass en cours.  
+Obtient un tableau qui contient l’interface implémentées par actuel des ID **RuntimeClass** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `iidCount`  
- Lorsque cette opération est terminée, le nombre total d’éléments du tableau `iids`.  
+### <a name="parameters"></a>Paramètres  
+ *iidCount*  
+ Lorsque cette opération se termine, le nombre total d’éléments du tableau *IID*.  
   
- `iids`  
- Lorsque cette opération est terminée, un pointeur vers un tableau d’ID de l’interface.  
+ *IID*  
+ Lorsque cette opération se termine, un pointeur vers un tableau d’ID d’interface.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; dans le cas contraire, E_OUTOFMEMORY.  
+ S_OK en cas de réussite ; Sinon, E_OUTOFMEMORY.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,5 +1,5 @@
 ---
-title: Membre de données module::GenericReleaseNotifier::callback_ | Documents Microsoft
+title: Membre de données module::GenericReleaseNotifier::callback_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880685"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605030"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_, données de membre
-Contient l’expression lambda, un functor ou un pointeur de fonction gestionnaire associé à l’objet Module::GenericReleaseNotifier en cours.  
+Contient l’expression lambda, functor ou gestionnaire d’événements de pointeur de fonction associé actuel `Module::GenericReleaseNotifier` objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Contient l’expression lambda, un functor ou un pointeur de fonction gestionnai
 T callback_;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

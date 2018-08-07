@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset::getimplementediids, méthode | Documents Microsoft
+title: Runtimeclassbaset::getimplementediids, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892232"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603249"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -38,26 +38,26 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
- Type du paramètre `implements`.  
+### <a name="parameters"></a>Paramètres  
+ *T*  
+ Le type de la *implémente* paramètre.  
   
- `implements`  
- Pointeur vers le type spécifié par le paramètre `T`.  
+ *Implémente*  
+ Pointeur vers le type spécifié par le paramètre *T*.  
   
- `iidCount`  
+ *iidCount*  
  Le nombre maximal d’ID d’interface à récupérer.  
   
- `iids`  
- Si cette opération est terminée avec succès, un tableau de l’interface implémentées par le type des ID `T`.  
+ *IID*  
+ Si cette opération termine avec succès, un tableau de l’ID implémentées par type d’interface *T*.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un HRESULT qui décrit l’erreur.  
+ S_OK en cas de réussite ; Sinon, une valeur HRESULT qui décrit l’erreur.  
   
 ## <a name="remarks"></a>Notes  
- Récupère un tableau d’ID qui sont implémentées par un type d’interface.  
+ Récupère un tableau d’ID qui sont implémentées par un type spécifié d’interface.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

@@ -1,5 +1,5 @@
 ---
-title: Fenêtre Affichage des ressources | Documents Microsoft
+title: Fenêtre Affichage des ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877382"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608307"
 ---
 # <a name="resource-view-window"></a>Affichage des ressources, fenêtre
 > [!NOTE]
@@ -35,19 +35,17 @@ ms.locfileid: "33877382"
 >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Vous pouvez cliquer avec le bouton droit sur la fenêtre Affichage des ressources pour lancer un menu contextuel de commandes. Vous pouvez également double-cliquer sur la barre de titre pour ancrer ou détacher la fenêtre. En cliquant avec le bouton droit sur la barre de titre, vous disposez de commandes supplémentaires qui vous permettent de contrôler le comportement de la fenêtre. Pour plus d’informations, consultez [gestion de Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Vous pouvez cliquer avec le bouton droit sur la fenêtre Affichage des ressources pour lancer un menu contextuel de commandes. Vous pouvez également double-cliquer sur la barre de titre pour ancrer ou détacher la fenêtre. En cliquant avec le bouton droit sur la barre de titre, vous disposez de commandes supplémentaires qui vous permettent de contrôler le comportement de la fenêtre. Pour plus d’informations, consultez [Windows gestion](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
 #### <a name="to-open-the-resource-view-window"></a>Pour ouvrir la fenêtre Affichage des ressources  
   
-1.  Cliquez sur **affichage des ressources** sur la **vue** menu.  
+1.  Cliquez sur **affichage des ressources** sur le **vue** menu.  
   
      \- ou -  
   
-2.  Appuyez sur **CTRL + MAJ + E**.  
+2.  Appuyez sur **Ctrl**+**MAJ**+**E**.  
   
-
-  
-### <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

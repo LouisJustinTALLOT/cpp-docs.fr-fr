@@ -1,5 +1,5 @@
 ---
-title: Module::getactivationfactory, méthode | Documents Microsoft
+title: Module::getactivationfactory, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887011"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608103"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory, méthode
-Obtient la fabrique d’activation pour le module.  
+Obtient une fabrique d’activation pour le module.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,23 +37,24 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `pActivatibleClassId`  
- IID d’une classe d’exécution.  
+### <a name="parameters"></a>Paramètres  
+ *pActivatibleClassId*  
+ IID d’une classe runtime.  
   
- `ppIFactory`  
+ *ppIFactory*  
  IActivationFactory pour la classe runtime spécifié.  
   
- `serverName`  
- Le nom d’un sous-ensemble des fabriques de classes du module en cours. Spécifiez le nom du serveur utilisé dans le [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro), ou spécifiez `nullptr` pour obtenir le nom du serveur par défaut.  
+ *Nom du serveur*  
+ Le nom d’un sous-ensemble des fabriques de classes du module en cours. Spécifiez le nom du serveur utilisé dans le [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro), ou spécifiez **nullptr** pour obtenir le nom du serveur par défaut.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; dans le cas contraire, le HRESULT retourné par GetActivationFactory.  
+ S_OK en cas de réussite ; Sinon, le HRESULT retourné par GetActivationFactory.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe de module](../windows/module-class.md) [activatableclass, Macros](../windows/activatableclass-macros.md)
+ [Module, classe](../windows/module-class.md)  
+ [ActivatableClass, macros](../windows/activatableclass-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: Fonction | Documents Microsoft
+title: Make, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878071"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604867"
 ---
 # <a name="make-function"></a>Make, fonction
 Initialise la classe Windows Runtime spécifiée. Utilisez cette fonction pour instancier un composant qui est défini dans le même module.  
@@ -171,71 +171,71 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Une classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.  
   
- `TArg1`  
+ *TArg1*  
  Type d’argument 1 qui est passé à la classe runtime spécifié.  
   
- `TArg2`  
+ *TArg2*  
  Type d’argument 2 qui est passé à la classe runtime spécifié.  
   
- `TArg3`  
- Type d’argument 3 est passée à la classe d’exécution spécifié.  
+ *TArg3*  
+ Type d’argument 3 est passée à la classe runtime spécifié.  
   
- `TArg4`  
+ *TArg4*  
  Type d’argument 4 qui est passé à la classe runtime spécifié.  
   
- `TArg5`  
+ *TArg5*  
  Type d’argument 5 est passé à la classe runtime spécifié.  
   
- `TArg6`  
- Type d’argument 6 est passé à la classe runtime spécifié.  
+ *TArg6*  
+ Type d’argument 6 est passée à la classe runtime spécifié.  
   
- `TArg7`  
+ *TArg7*  
  Type d’argument 7 est passé à la classe runtime spécifié.  
   
- `TArg8`  
+ *TArg8*  
  Type d’argument 8 est passé à la classe runtime spécifié.  
   
- `TArg9`  
+ *TArg9*  
  Type d’argument 9 est passé à la classe runtime spécifié.  
   
- `arg1`  
+ *arg1*  
  Argument 1 qui est passé à la classe runtime spécifié.  
   
- `arg2`  
+ *Arg2*  
  Argument 2 qui est passé à la classe runtime spécifié.  
   
- `arg3`  
+ *Arg3*  
  Argument 3 qui est passé à la classe runtime spécifié.  
   
- `arg4`  
+ *Arg4*  
  Argument 4 qui est passé à la classe runtime spécifié.  
   
- `arg5`  
+ *Arg5*  
  Argument 5 qui est passé à la classe runtime spécifié.  
   
- `arg6`  
- Arguments 6 est passé à la classe runtime spécifié.  
+ *Arg6*  
+ Argument 6 est passée à la classe runtime spécifié.  
   
- `arg7`  
+ *Arg7*  
  Argument 7 qui est passé à la classe runtime spécifié.  
   
- `arg8`  
+ *Arg8*  
  Argument 8 qui est passé à la classe runtime spécifié.  
   
- `arg9`  
+ *Arg9*  
  Argument 9 qui est passé à la classe runtime spécifié.  
   
 ## <a name="return-value"></a>Valeur de retour  
- A `ComPtr<T>` objet en cas de réussite ; sinon, `nullptr`.  
+ Un `ComPtr<T>` objet en cas de réussite ; sinon, **nullptr**.  
   
 ## <a name="remarks"></a>Notes  
- Consultez [Comment : instancier directement les composants de WRL](../windows/how-to-instantiate-wrl-components-directly.md) apprendre les différences entre cette fonction et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)et pour obtenir un exemple.  
+ Consultez [Comment : instancier directement les composants de WRL](../windows/how-to-instantiate-wrl-components-directly.md) pour découvrir les différences entre cette fonction et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)et pour obtenir un exemple.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

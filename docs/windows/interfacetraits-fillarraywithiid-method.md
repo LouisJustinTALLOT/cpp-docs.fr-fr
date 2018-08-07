@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::fillarraywithiid, méthode | Documents Microsoft
+title: Interfacetraits::fillarraywithiid, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ef552e5025a18eb4c778f9d08389d2b7e3634d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877488"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605654"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,24 +34,23 @@ __forceinline static void FillArrayWithIid(
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `index`  
+### <a name="parameters"></a>Paramètres  
+ *index*  
  Pointeur vers un champ qui contient une valeur d’index de base zéro.  
   
- `iids`  
+ *IID*  
  Tableau d’ID d’interface.  
   
 ## <a name="remarks"></a>Notes  
  Attribue l’ID de l’interface de `Base` à l’élément de tableau spécifié par l’argument d’index.  
   
- Contraire à celui de cette API, un seul groupe est modifié ; pas l’intégralité du tableau.  
+ Contrairement au nom de cette API, élément de tableau qu’une seule est modifiée ; pas l’intégralité du tableau.  
   
- Pour plus d’informations sur `Base`, consultez la section Typedefs publics dans [interfacetraits, Structure](../windows/interfacetraits-structure.md).  
+ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dans [InterfaceTraits (Structure)](../windows/interfacetraits-structure.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

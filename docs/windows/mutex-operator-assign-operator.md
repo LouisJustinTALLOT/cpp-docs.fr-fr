@@ -1,5 +1,5 @@
 ---
-title: Mutex::operator =, opérateur | Documents Microsoft
+title: Mutex::operator =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875485"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602744"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator=, opérateur
-Affecte (se déplace) le Mutex spécifié de l’objet à l’objet Mutex actuel.  
+Assigne le texte spécifié (déplace) **Mutex** objet actuel **Mutex** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,17 +35,17 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
- Une référence rvalue à un objet Mutex.  
+### <a name="parameters"></a>Paramètres  
+ *h*  
+ Une référence rvalue à un **Mutex** objet.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une référence à l’objet Mutex actuel.  
+ Une référence à l’actuel **Mutex** objet.  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la **sémantique de déplacement** section de [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Pour plus d’informations, consultez le **sémantique déplacer** section de [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers

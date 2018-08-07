@@ -1,5 +1,5 @@
 ---
-title: Module::ReleaseNotifier::Release | Documents Microsoft
+title: Module::ReleaseNotifier::Release | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877045"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605429"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-Supprime l’objet Module::ReleaseNotifier actuel si l’objet a été construit avec un paramètre de `true`.  
+Supprime l’actuel **Module::ReleaseNotifier** si l’objet a été construit avec un paramètre de l’objet **true**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,7 +31,7 @@ Supprime l’objet Module::ReleaseNotifier actuel si l’objet a été construit
 void Release() throw();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,5 +1,5 @@
 ---
-title: facultatif (C++) | Documents Microsoft
+title: facultatif (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a15be3f90c7ab1fd7d5064f8a69371560b7e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50273c511ff682410252a4c9d6ddafd11d0a92dc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878211"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603704"
 ---
 # <a name="optional-c"></a>facultatif (C++)
 Spécifie un paramètre facultatif pour une fonction membre.  
@@ -30,9 +30,7 @@ Spécifie un paramètre facultatif pour une fonction membre.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [optional]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,7 +39,7 @@ Spécifie un paramètre facultatif pour une fonction membre.
 ## <a name="example"></a>Exemple  
  Le code suivant montre comment **facultatif** peut être utilisé :  
   
-```  
+```cpp  
 // cpp_attr_ref_optional.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -54,7 +52,7 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -62,8 +60,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|  
 |**S'applique à**|Paramètre d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: IsBaseOfStrict (Structure) | Documents Microsoft
+title: IsBaseOfStrict (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876889"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604501"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -42,11 +42,11 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `Base`  
+### <a name="parameters"></a>Paramètres  
+ *base de*  
  Type de base.  
   
- `Derived`  
+ *DÉRIVÉS*  
  Le type dérivé.  
   
 ## <a name="remarks"></a>Notes  
@@ -65,7 +65,7 @@ struct IsBaseOfStrict<Base, Base>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IsBaseOfStrict`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

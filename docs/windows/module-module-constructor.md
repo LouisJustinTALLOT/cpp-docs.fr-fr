@@ -1,5 +1,5 @@
 ---
-title: Module::module, constructeur | Documents Microsoft
+title: Module::module, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 207b1006aeb57d9c16c09f5d8101a7f64b2cb85b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875251"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608717"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module, constructeur
-Initialise une nouvelle instance de la classe de Module.  
+Initialise une nouvelle instance de la **Module** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ Module();
 ```  
   
 ## <a name="remarks"></a>Notes  
- Ce constructeur est protégé et ne peut pas être appelé avec le `new` (mot clé). Au lieu de cela, appelez [module::GetModule, méthode](../windows/module-getmodule-method.md) ou [module::Create, méthode](../windows/module-create-method.md).  
+ Ce constructeur est protégé et ne peut pas être appelé avec le **nouveau** mot clé. Au lieu de cela, appelez [module::GetModule, méthode](../windows/module-getmodule-method.md) ou [module::Create, méthode](../windows/module-create-method.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

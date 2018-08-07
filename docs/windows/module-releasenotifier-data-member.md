@@ -1,5 +1,5 @@
 ---
-title: Module::releasenotifier, données de membre | Documents Microsoft
+title: Module::releasenotifier, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20e3ab1df91c279951b865f9a2d10804c7dbfd1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c074de0bd1a736d56979910d2123ca459848a40
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876941"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606486"
 ---
 # <a name="modulereleasenotifier-data-member"></a>Module::releaseNotifier_, données de membre
-Contient un pointeur vers un objet ReleaseNotifier.  
+Contient un pointeur vers un `ReleaseNotifier` objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Contient un pointeur vers un objet ReleaseNotifier.
 ReleaseNotifier *releaseNotifier_;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

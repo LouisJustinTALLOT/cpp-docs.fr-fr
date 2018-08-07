@@ -1,5 +1,5 @@
 ---
-title: Implements::cancastto, méthode | Documents Microsoft
+title: Implements::cancastto, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877071"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608941"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo, méthode
 Obtient un pointeur vers l’interface spécifiée.  
@@ -36,12 +36,12 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `riid`  
+### <a name="parameters"></a>Paramètres  
+ *riid*  
  Une référence à un ID d’interface.  
   
- `ppv`  
- Si réussie, un pointeur vers l’interface spécifiée par `riid`.  
+ *PPV*  
+ Si réussie, un pointeur vers l’interface spécifiée par *riid*.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un HRESULT qui indique l’erreur, telles que E_NOINTERFACE.  
@@ -49,7 +49,7 @@ __forceinline HRESULT CanCastTo(
 ## <a name="remarks"></a>Notes  
  Il s’agit d’une fonction d’assistance interne qui exécute une opération de QueryInterface.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

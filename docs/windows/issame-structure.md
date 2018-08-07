@@ -1,5 +1,5 @@
 ---
-title: IsSame (Structure) | Documents Microsoft
+title: IsSame (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877668"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603583"
 ---
 # <a name="issame-structure"></a>IsSame (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -41,15 +41,15 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T1`  
+### <a name="parameters"></a>Paramètres  
+ *T1*  
  Type.  
   
- `T2`  
+ *T2*  
  Un autre type.  
   
 ## <a name="remarks"></a>Notes  
- Teste si un type spécifié est identique à un autre de type spécifié.  
+ Teste si un spécifié le type est identique à un autre de type spécifié.  
   
 ## <a name="members"></a>Membres  
   
@@ -62,7 +62,7 @@ struct IsSame<T1, T1>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IsSame`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

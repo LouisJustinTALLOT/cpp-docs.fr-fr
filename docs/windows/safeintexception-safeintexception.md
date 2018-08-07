@@ -1,5 +1,5 @@
 ---
-title: SafeIntException::SafeIntException | Documents Microsoft
+title: SafeIntException::SafeIntException | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892174"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606655"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-Crée un objet `SafeIntException`.  
+Crée un **SafeIntException** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- [in] `code`  
+### <a name="parameters"></a>Paramètres  
+ [in] *code*  
  Une valeur de données énuméré qui décrit l’erreur qui s’est produite.  
   
 ## <a name="remarks"></a>Notes  
- Les valeurs possibles pour `code` sont définis dans le fichier Safeint.h. Pour plus de commodité, les valeurs possibles sont également répertoriés ici.  
+ Les valeurs possibles pour *code* sont définis dans le fichier Safeint.h. Pour plus de commodité, les valeurs possibles sont également répertoriés ici.  
   
 -   `SafeIntNoError`  
   
@@ -52,7 +52,7 @@ SafeIntException(
   
 -   `SafeIntDivideByZero`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** safeint.h  
   
  **Namespace :** msl::utilities  

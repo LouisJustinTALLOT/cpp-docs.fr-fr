@@ -1,5 +1,5 @@
 ---
-title: propriété (Extensions du composant C++) | Documents Microsoft
+title: propriété (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5fbf0b3c9db19e839d6832415cfd8ed6eb9b93a2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882704"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604116"
 ---
 # <a name="property--c-component-extensions"></a>propriété  (extensions du composant C++)
 Déclare un *propriété*, qui est une fonction membre qui se comporte et est accessible comme un membre de données ou un élément de tableau.  
@@ -32,7 +32,7 @@ Déclare un *propriété*, qui est une fonction membre qui se comporte et est ac
  Vous pouvez déclarer un des types de propriétés suivants.  
   
  *propriété simple*  
- Par défaut, crée un *accesseur set* qui assigne la valeur de propriété, un *accesseur get* qui Récupère la valeur de propriété et un membre de données privé généré par le compilateur qui contient la valeur de propriété.  
+ Par défaut, crée un *accesseur set* qui assigne la valeur de propriété, un *accesseur get* qui Récupère la valeur de propriété et un membre généré par le compilateur les données privées qui contient la valeur de propriété.  
   
  *bloc de propriété*  
  Utilisez-le pour créer des accesseurs get et/ou set définis par l’utilisateur. La propriété est en lecture/écriture si les accesseurs get et set sont définis, en lecture seule si seul l'accesseur get est défini et en écriture seule si seul l'accesseur set est défini.  
@@ -42,7 +42,7 @@ Déclare un *propriété*, qui est une fonction membre qui se comporte et est ac
  *propriété indexée*  
  Bloc de propriété que vous pouvez utiliser pour obtenir et définir une valeur de propriété qui est spécifiée par un ou plusieurs index.  
   
- Vous pouvez créer une propriété indexée qui a un nom de propriété définis par l’utilisateur ou un *par défaut* nom de la propriété. Le nom d'une propriété d'index par défaut correspond au nom de la classe dans laquelle la propriété est définie. Pour déclarer une propriété par défaut, spécifiez le mot clé `default` au lieu d'un nom de propriété.  
+ Vous pouvez créer une propriété indexée qui a un nom de propriété défini par l’utilisateur ou un *par défaut* nom de la propriété. Le nom d'une propriété d'index par défaut correspond au nom de la classe dans laquelle la propriété est définie. Pour déclarer une propriété par défaut, spécifiez la **par défaut** mot-clé au lieu d’un nom de propriété.  
   
  Vous devez déclarer explicitement un membre de données pour qu'il contienne la valeur de la propriété. Pour une propriété indexée, le membre de données est en général un tableau ou une collection.  
   
@@ -68,37 +68,37 @@ property type default[index_list] {
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `type`  
+ *type*  
  Type de données de la valeur de la propriété et donc la propriété proprement dite.  
   
- `property_name`  
+ *property_name*  
  Nom de la propriété.  
   
- `access-modifier`  
- Qualificateur d'accès. Les qualificateurs valides sont `static` et `virtual`.  
+ *modificateur d’accès*  
+ Qualificateur d'accès. Qualificateurs valides sont **statique** et **virtuel**.  
   
- Les accesseurs get ou set n'ont pas besoin de s'accorder sur le qualificateur `virtual`, mais ils doivent s'accorder sur le qualificateur `static`.  
+ La méthode get ou les accesseurs set n’accordent pas sur le **virtuel** qualificateur, mais ils doivent s’accorder sur le **statique** qualificateur.  
   
- `inheritance-modifier`  
- Qualificateur d'héritage. Les qualificateurs valides sont `abstract` et `sealed`.  
+ *modificateur d’héritage*  
+ Qualificateur d'héritage. Qualificateurs valides sont **abstraite** et **sealed**.  
   
- `index_list`  
+ *index_list*  
  Liste délimitée par des virgules d'un ou plusieurs index. Chaque index se compose d'un type d'index et d'un identificateur facultatif qui peut être utilisé dans le corps de la méthode de propriété.  
   
- `value`  
+ *valeur*  
  Valeur à affecter à la propriété dans une opération set ou à récupérer dans une opération get.  
   
- `property_body`  
- Corps de la méthode de propriété de l’accesseur set ou get. Le `property_body` peut utiliser la `index_list` pour accéder au membre de données de propriété sous-jacent, ou en tant que paramètres dans le cadre du traitement défini par l'utilisateur.  
+ *property_body*  
+ Corps de la méthode de propriété de l’accesseur set ou get. Le *property_body* pouvez utiliser la *index_list* pour accéder au membre de données de propriété sous-jacent, ou en tant que paramètres lors du traitement défini par l’utilisateur.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Pour plus d’informations, consultez [propriétés (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).  
+ Pour plus d’informations, consultez [propriétés (C++ / c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 modifier property type property_name;
@@ -115,10 +115,10 @@ modifier property type default[index];
 }  
 ```  
   
- **Paramètres**  
+### <a name="parameters"></a>Paramètres  
   
  *Modificateur*  
- Modificateur qui peut être utilisé sur une déclaration de propriété ou une méthode d’accesseur get/set. Les valeurs possibles sont `static` et `virtual`.  
+ Modificateur qui peut être utilisé sur une déclaration de propriété ou une méthode d’accesseur get/set. Les valeurs possibles sont **statique** et **virtuel**.  
   
  *type*  
  Type de la valeur représentée par la propriété.  
@@ -129,7 +129,7 @@ modifier property type default[index];
  *index_list*  
  Liste délimitée par des virgules d'un ou plusieurs index, spécifiés entre crochets (opérateur d'indice, ([])). Pour chaque index, spécifiez un type et éventuellement un identificateur qui peut être utilisé dans le corps de la méthode de propriété.  
   
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
  Le premier exemple de syntaxe montre une *propriété simple*, qui déclare implicitement à la fois un `set` et `get` (méthode). Le compilateur crée automatiquement un champ privé pour stocker la valeur de la propriété.  
   
@@ -137,21 +137,21 @@ modifier property type default[index];
   
  Le troisième exemple de syntaxe montre une définie par le client *index, propriété*. Une propriété d'index prend des paramètres, en plus de la valeur à définir ou à récupérer. Vous devez spécifier un nom pour la propriété. Contrairement à une propriété simple, les méthodes `set` et/ou `get` d'une propriété d'index doivent être définies explicitement, et vous devez spécifier un nom pour la propriété.  
   
- Le quatrième exemple de syntaxe montre une *par défaut* propriété qui fournit un accès de type tableau à une instance du type. Le mot clé, `default`, sert uniquement à spécifier une propriété par défaut. Le nom de la propriété par défaut correspond au nom du type dans lequel la propriété est définie.  
+ Le quatrième exemple de syntaxe montre une *par défaut* propriété, qui fournit l’accès de type tableau à une instance du type. Le mot clé, **par défaut**, sert uniquement à spécifier une propriété par défaut. Le nom de la propriété par défaut correspond au nom du type dans lequel la propriété est définie.  
   
- Le mot clé `property` peut apparaître dans une classe, une interface ou un type valeur. Une propriété peut avoir une fonction get (lecture seule), une fonction set (écriture seule) ou les deux (lecture-écriture).  
+ Le **propriété** mot clé peut apparaître dans une classe, une interface ou un type valeur. Une propriété peut avoir une fonction get (lecture seule), une fonction set (écriture seule) ou les deux (lecture-écriture).  
   
  Un nom de propriété ne peut pas correspondre au nom de la classe managée qui la contient. Le type de retour de la fonction d’accesseur Get doit correspondre au type du dernier paramètre d’une fonction d’accesseur Set correspondante.  
   
  Pour le code client, une propriété a l'apparence d'un membre de données ordinaire et peut être écrite ou lu à l'aide de la même syntaxe qu'un membre de données.  
   
- Les méthodes get et set ne s'accordent pas sur le modificateur `virtual`.  
+ La méthode get et les méthodes set n’accordent pas sur le **virtuel** modificateur.  
   
  L'accessibilité des méthodes get et set peut différer.  
   
  La définition d'une méthode de propriété peut apparaître en dehors du corps de la classe, comme une méthode ordinaire.  
   
- La méthode get et la méthode set d’une propriété doivent s’accorder sur le **statique** modificateur.  
+ La méthode get et la méthode set pour une propriété doit s’accorder sur le **statique** modificateur.  
   
  Une propriété est scalaire si ses méthodes get et set correspondent à la description suivante :  
   
@@ -163,18 +163,18 @@ modifier property type default[index];
   
  Quand un membre de données de propriété est déclaré, le compilateur injecte un membre de données (parfois appelé le « magasin de stockage ») dans la classe. Toutefois, le nom du membre de données est tel que vous ne pouvez pas référencer le membre dans la source comme s'il s'agissait d'un membre de données réel de la classe conteneur. Utilisez ildasm.exe pour afficher les métadonnées de votre type et voir le nom généré par le compilateur pour le magasin de stockage de la propriété.  
   
- Une accessibilité différente est autorisée pour les méthodes d'accesseur dans un bloc de propriété.  Autrement dit, la méthode set peut être publique et la méthode get peut être privée.  Toutefois, c'est une erreur pour une méthode d'accesseur d'avoir une accessibilité moins restrictive que celle figurant dans la déclaration de la propriété proprement dite.  
+ Une accessibilité différente est autorisée pour les méthodes d'accesseur dans un bloc de propriété.  Autrement dit, la méthode set peut être publique et la méthode get peut être privée.  Toutefois, c’est une erreur pour une méthode d’accesseur d’avoir une accessibilité moins restrictive que celle figurant dans la déclaration de la propriété proprement dite.  
   
- `property` est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **propriété** est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
  L'exemple suivant illustre la déclaration et l'utilisation d'un membre de données de propriété et d'un bloc de propriété.  Il montre également qu’un accesseur de propriété peut être défini en dehors d’une classe.  
   
-```  
+```cpp  
 // mcppv2_property.cpp  
 // compile with: /clr  
 using namespace System;  

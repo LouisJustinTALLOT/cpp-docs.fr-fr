@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::casttounknown, méthode | Documents Microsoft
+title: Implementshelper::casttounknown, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874497"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604237"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,12 +34,12 @@ IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’interface IUnknown sous-jacente.  
+ Pointeur vers l’interface IUnknown sous-jacent.  
   
 ## <a name="remarks"></a>Notes  
- Obtient un pointeur vers l’interface IUnknown sous-jacent pour la structure implémente actuelle.  
+ Obtient un pointeur vers sous-jacent `IUnknown` interface actif `Implements` structure.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

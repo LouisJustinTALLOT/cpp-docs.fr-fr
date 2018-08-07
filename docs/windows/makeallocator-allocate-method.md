@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::Allocate, méthode | Documents Microsoft
+title: Makeallocator::Allocate, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876213"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606261"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,16 +34,16 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, un pointeur vers la mémoire allouée ; dans le cas contraire, `nullptr`.  
+ Si l’opération réussit, un pointeur vers la mémoire allouée ; Sinon, **nullptr**.  
   
 ## <a name="remarks"></a>Notes  
- Alloue de la mémoire et l’associe à l’objet MakeAllocator en cours.  
+ Alloue de la mémoire et l’associe à actuel **MakeAllocator** objet.  
   
- La taille de la mémoire allouée est la taille du type spécifié par le paramètre de modèle MakeAllocator actuel.  
+ La taille de la mémoire allouée est la taille du type spécifié par l’actuel **MakeAllocator** paramètre de modèle.  
   
- Un développeur doit substituer la méthode Allocate() uniquement pour implémenter un modèle d’allocation de mémoire différentes.  
+ Un développeur a besoin remplacer uniquement le **Allocate()** méthode pour implémenter un modèle d’allocation de mémoire différentes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

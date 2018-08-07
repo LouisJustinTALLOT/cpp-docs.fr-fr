@@ -1,5 +1,5 @@
 ---
-title: HString::Operator =, opérateur | Documents Microsoft
+title: HString::Operator =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fd1082beb6d84c5dded008e20683f7292cbc1e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cc496f4f1c23508b2ebba2788910ff9c9ca2066
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873870"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608597"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator=, opérateur
-Déplace la valeur d’un autre objet HString à l’objet HString actuel.  
+Déplace la valeur d’un autre **HString** objet actuel **HString** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,14 +31,14 @@ Déplace la valeur d’un autre objet HString à l’objet HString actuel.
 HString& operator=(HString&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `other`  
- Objet HString existant.  
+### <a name="parameters"></a>Paramètres  
+ *other*  
+ Un existant **HString** objet.  
   
 ## <a name="remarks"></a>Notes  
- La valeur existants `other` objet est copié vers l’objet HString en cours, puis le `other` objet est détruit.  
+ La valeur existants *autres* objet est copié dans le cours **HString** objet, puis le *autres* détruit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

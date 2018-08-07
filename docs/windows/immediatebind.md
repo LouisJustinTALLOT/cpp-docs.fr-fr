@@ -1,5 +1,5 @@
 ---
-title: immediatebind | Documents Microsoft
+title: immediatebind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876262"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603046"
 ---
 # <a name="immediatebind"></a>immediatebind
 Indique que la base de données est immédiatement avertie de toutes les modifications apportées à une propriété d’un objet lié aux données.  
@@ -30,18 +30,16 @@ Indique que la base de données est immédiatement avertie de toutes les modific
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **immediatebind** attribut C++ a les mêmes fonctionnalités que le [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Consultez [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **immediatebind**.  
+ Consultez [peut être liée](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **immediatebind**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -49,8 +47,8 @@ Indique que la base de données est immédiatement avertie de toutes les modific
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

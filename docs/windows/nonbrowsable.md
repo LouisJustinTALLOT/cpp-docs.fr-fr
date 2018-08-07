@@ -1,5 +1,5 @@
 ---
-title: nonbrowsable | Documents Microsoft
+title: nonbrowsable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877366"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604588"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
-Indique qu’un membre d’interface ne doit pas être affiché dans la fenêtre Propriétés.  
+Indique qu’un membre d’interface ne doit pas être affiché dans un Explorateur de propriétés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -40,7 +38,7 @@ Indique qu’un membre d’interface ne doit pas être affiché dans la fenêtre
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -54,7 +52,7 @@ __interface IMyI
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -62,8 +60,8 @@ __interface IMyI
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

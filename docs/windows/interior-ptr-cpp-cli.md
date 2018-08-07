@@ -1,5 +1,5 @@
 ---
-title: interior_ptr (C + c++ / CLI) | Documents Microsoft
+title: interior_ptr (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879105"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605121"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
-Un *pointeur intérieur* déclare un pointeur vers à l’intérieur d’un type référence, mais pas à l’objet lui-même. Un pointeur intérieur peut pointer vers un handle de référence, le type de valeur, le handle du type boxed, le membre d’un type managé, ou à un élément d’un tableau managé.  
+Un *pointeur intérieur* déclare un pointeur vers à l’intérieur d’un type référence, mais pas à l’objet lui-même. Un pointeur intérieur peut pointer vers un handle de référence, le type de valeur, le handle de type boxed, le membre d’un type managé, ou à un élément d’un tableau managé.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
  (Aucune remarque pour cette fonctionnalité de langage ne s’applique à tous les runtimes.)  
@@ -35,11 +35,11 @@ Un *pointeur intérieur* déclare un pointeur vers à l’intérieur d’un type
 ## <a name="windows-runtime"></a>Windows Runtime  
  (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- L’exemple de syntaxe suivante illustre un pointeur intérieur.  
+ L’exemple de syntaxe suivant montre un pointeur intérieur.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -49,31 +49,31 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
 ### <a name="parameters"></a>Paramètres  
  *cv_qualifier*  
- **const** ou `volatile` qualificateurs.  
+ **const** ou **volatile** qualificateurs.  
   
  *type*  
  Le type de *initialiseur*.  
   
  *var*  
- Le nom de la `interior_ptr` variable.  
+ Le nom de la **interior_ptr** variable.  
   
  *initializer*  
  Un membre d’un type référence, un élément d’un tableau managé ou tout autre objet que vous pouvez affecter à un pointeur natif.  
   
 ### <a name="remarks"></a>Notes  
- Un pointeur natif n’est pas en mesure de suivre un élément en tant que les modifications apportées à son emplacement sur le tas managé, ce qui entraîne le déplacement des instances d’un objet de garbage collector. Pour un pointeur vers correctement référence à l’instance, le runtime doit mettre à jour le pointeur à l’objet qui vient d’être positionnée.  
+ Un pointeur natif n’est pas en mesure d’effectuer le suivi d’un élément en tant que les modifications apportées à son emplacement sur le tas managé, ce qui se traduit par le garbage collector de déplacer des instances d’un objet. Pour un pointeur référencer correctement l’instance, le runtime doit mettre à jour le pointeur vers l’objet qui vient d’être positionnée.  
   
- Un `interior_ptr` représente un sur-ensemble de la fonctionnalité d’un pointeur natif.  Par conséquent, tout ce qui peut être assigné à un pointeur natif peut également être affecté à un `interior_ptr`.  Un pointeur intérieur est autorisé à effectuer le même jeu d’opérations que les pointeurs natifs, y compris la comparaison et l’opération arithmétique de pointeur.  
+ Un **interior_ptr** représente un sur-ensemble de la fonctionnalité d’un pointeur natif.  Par conséquent, tout ce qui peut être affecté à un pointeur natif peut également être attribué à un **interior_ptr**.  Un pointeur intérieur est autorisé à effectuer le même jeu d’opérations que les pointeurs natifs, y compris la comparaison et l’opération arithmétique de pointeur.  
   
  Un pointeur intérieur peut uniquement être déclaré sur la pile.  Un pointeur intérieur ne peut pas être déclaré en tant que membre d’une classe.  
   
- Dans la mesure où il existe des pointeurs intérieurs uniquement sur la pile, prise d’adresse d’un pointeur intérieur génère un pointeur non managé.  
+ Dans la mesure où il existe des pointeurs intérieurs uniquement sur la pile, prendre l’adresse d’un pointeur intérieur génère un pointeur non managé.  
   
- `interior_ptr` a une conversion implicite vers `bool`, ce qui permet de son utilisation dans des instructions conditionnelles.  
+ **interior_ptr** a une conversion implicite vers **bool**, ce qui permet son utilisation dans les instructions conditionnelles.  
   
- Pour plus d’informations sur la façon de déclarer un pointeur intérieur qui pointe vers un objet qui ne peut pas être déplacé sur le tas de garbage collection, consultez [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
+ Pour plus d’informations sur la façon de déclarer un pointeur intérieur qui pointe dans un objet qui ne peut pas être déplacé sur le tas de garbage collection, consultez [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` est dans l'espace de noms cli.  Consultez [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) pour plus d’informations.  
+ **interior_ptr** est dans l’espace de noms cli.  Consultez [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) pour plus d’informations.  
   
  Pour plus d’informations sur les pointeurs intérieurs, consultez  
   
@@ -85,11 +85,10 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
 -   [Guide pratique pour déclarer des pointeurs intérieurs avec le mot clé const (C++-CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  L’exemple suivant montre comment déclarer et utiliser un pointeur intérieur en un type référence.  
   

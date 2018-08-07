@@ -1,5 +1,5 @@
 ---
-title: oleautomation | Documents Microsoft
+title: oleautomation | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882288"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608005"
 ---
 # <a name="oleautomation"></a>oleautomation
-Indique qu’une interface est compatible avec l’Automation.  
+Indique qu’une interface est compatible avec Automation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [oleautomation]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **oleautomation** attribut C++ a les mêmes fonctionnalités que le [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Consultez les exemples de [defaultvalue](../windows/defaultvalue.md) et [nonextensible](../windows/nonextensible.md) pour un exemple d’utilisation de **oleautomation**.  
+ Reportez-vous aux exemples de [defaultvalue](../windows/defaultvalue.md) et [nonextensible](../windows/nonextensible.md) pour un exemple d’utilisation de **oleautomation**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`|  
+|**S'applique à**|**interface**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**dispinterface**|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

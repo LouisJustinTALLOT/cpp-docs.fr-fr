@@ -1,5 +1,5 @@
 ---
-title: Module::Create, méthode | Documents Microsoft
+title: Module::Create, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0d49a6f0b5172b0971f755fc61b7767f0f4427d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874887"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603301"
 ---
 # <a name="modulecreate-method"></a>Module::Create, méthode
 Crée une instance d’un module.  
@@ -42,28 +42,26 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Type de module.  
   
- `callback`  
- Appelé lorsque le dernier objet d’instance du module est libéré.  
+ *rappel*  
+ Appelé lorsque le dernier objet d’instance du module est relâché.  
   
- `object`  
- Le `object` et `method` paramètres sont utilisés conjointement. Pointe vers le dernier objet d’instance lorsque le dernier objet d’instance dans le module est libéré.  
+ *object*  
+ Le *objet* et *méthode* paramètres sont utilisés conjointement. Pointe vers le dernier objet d’instance lorsque le dernier objet d’instance dans le module est lancé.  
   
- `method`  
- Le `object` et `method` paramètres sont utilisés conjointement. Pointe vers la méthode du dernier objet d’instance lorsque le dernier objet d’instance dans le module est libéré.  
+ *(Méthode)*  
+ Le *objet* et *méthode* paramètres sont utilisés conjointement. Points à la méthode du dernier objet d’instance lorsque le dernier objet d’instance dans le module est lancé.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Référence au module.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  
   
 ## <a name="see-also"></a>Voir aussi  
 [Module, classe](../windows/module-class.md)
-
- 

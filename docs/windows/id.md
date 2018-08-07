@@ -1,5 +1,5 @@
 ---
-title: ID | Documents Microsoft
+title: ID | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882445"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605706"
 ---
 # <a name="id"></a>ID
-Spécifie un `dispid` paramètre pour une fonction membre (une propriété ou une méthode, dans une interface ou une dispinterface).  
+Spécifie un *dispid* paramètre pour une fonction membre (une propriété ou une méthode, dans une interface ou la dispinterface).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `dispid`  
- L’ID de dispatch de la méthode d’interface.  
+### <a name="parameters"></a>Paramètres  
+ *DISPID*  
+ L’ID de dispatch pour la méthode d’interface.  
   
 ## <a name="remarks"></a>Notes  
  Le **id** attribut C++ a les mêmes fonctionnalités que le [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Consultez l’exemple de [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **id**.  
+ Consultez l’exemple de [peut être liée](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **id**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -54,8 +53,8 @@ Spécifie un `dispid` paramètre pour une fonction membre (une propriété ou un
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

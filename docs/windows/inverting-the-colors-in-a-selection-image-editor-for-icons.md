@@ -1,5 +1,5 @@
 ---
-title: Inversion des couleurs dans une sélection (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Inversion des couleurs dans une sélection (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874078"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608915"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Inversion des couleurs dans une sélection (Éditeur d'images pour les icônes)
 L'éditeur d'images fournit un moyen pratique d'inverser les couleurs dans la partie sélectionnée de l'image, ce qui vous permet de savoir à quoi ressemble une image avec des couleurs inversées.  
@@ -34,11 +34,9 @@ L'éditeur d'images fournit un moyen pratique d'inverser les couleurs dans la pa
   
 1.  Sur le **Image** menu, cliquez sur **inverser les couleurs**.  
   
-
+## <a name="requirements"></a>Configuration requise  
   
- Spécifications  
-  
- Aucun  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   

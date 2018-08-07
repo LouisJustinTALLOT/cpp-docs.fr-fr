@@ -1,5 +1,5 @@
 ---
-title: RaiseException (fonction) | Documents Microsoft
+title: RaiseException (fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882181"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602664"
 ---
 # <a name="raiseexception-function"></a>RaiseException (fonction)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -35,19 +35,19 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `hr`  
+### <a name="parameters"></a>Paramètres  
+ *ressources humaines*  
  Le code d’exception de l’exception est levée ; Autrement dit, la valeur HRESULT d’échec d’une opération.  
   
- `dwExceptionFlags`  
- Un indicateur qui indique une exception non bloquantes (la valeur de l’indicateur est égal à zéro), ou une exception noncontinuable (la valeur de l’indicateur est différente de zéro). Par défaut, l’exception est qui empêchait celle-ci.  
+ *dwExceptionFlags*  
+ Un indicateur qui indique une exception non bloquantes (la valeur de l’indicateur est égal à zéro), ou une exception noncontinuable (la valeur de l’indicateur est différent de zéro). Par défaut, l’exception est qui empêchait celle-ci.  
   
 ## <a name="remarks"></a>Notes  
  Lève une exception dans le thread appelant.  
   
- Pour plus d’informations, consultez les fenêtres **RaiseException** (fonction).  
+ Pour plus d’informations, consultez le Windows `RaiseException` (fonction).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

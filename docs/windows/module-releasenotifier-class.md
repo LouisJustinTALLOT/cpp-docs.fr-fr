@@ -1,5 +1,5 @@
 ---
-title: Module::releasenotifier, classe | Documents Microsoft
+title: Module::releasenotifier, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76edb403fae12dd8b6221d8bd6ec82424bc5a4f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1deeb3076d3f1bfc2243ec333f258f543a37fceb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878390"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608389"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier, classe
 Appelle un gestionnaire d’événements lorsque le dernier objet dans un module est lancé.  
@@ -39,20 +39,20 @@ class ReleaseNotifier;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier::~ReleaseNotifier, destructeur](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Désinitialise l’instance actuelle de la classe Module::ReleaseNotifier.|  
-|[Module::ReleaseNotifier::ReleaseNotifier, constructeur](../windows/module-releasenotifier-releasenotifier-constructor.md)|Initialise une nouvelle instance de la classe Module::ReleaseNotifier.|  
+|[Module::ReleaseNotifier::~ReleaseNotifier, destructeur](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Annule l’initialisation de l’instance actuelle de la **Module::ReleaseNotifier** classe.|  
+|[Module::ReleaseNotifier::ReleaseNotifier, constructeur](../windows/module-releasenotifier-releasenotifier-constructor.md)|Initialise une nouvelle instance de la **Module::ReleaseNotifier** classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
 |[Module::ReleaseNotifier::Invoke, méthode](../windows/module-releasenotifier-invoke-method.md)|En cas d’implémentation, appelle un gestionnaire d’événements lorsque le dernier objet dans un module est lancé.|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Supprime l’objet Module::ReleaseNotifier actuel si l’objet a été construit avec un paramètre de `true`.|  
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Supprime l’actuel **Module::ReleaseNotifier** si l’objet a été construit avec un paramètre de l’objet **true**.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ReleaseNotifier`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

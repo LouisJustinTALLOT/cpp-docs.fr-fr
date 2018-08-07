@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits (Structure) | Documents Microsoft
+title: InterfaceTraits (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878682"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606746"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -41,15 +41,15 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `I0`  
+### <a name="parameters"></a>Paramètres  
+ *I0*  
  Le nom d’une interface.  
   
- `CloakedType`  
- RuntimeClass, Implements et ChainInterfaces, une interface qui ne sont pas dans la liste des prises en charge les ID d’interface.  
+ *CloakedType*  
+ Pour `RuntimeClass`, `Implements` et `ChainInterfaces`, une interface qui ne sera pas dans la liste de prise en charge les ID d’interface.  
   
 ## <a name="remarks"></a>Notes  
- Caractéristiques communes implémente d’une interface.  
+ Caractéristiques communes d’implémente d’une interface.  
   
  Le deuxième modèle est une spécialisation pour les interfaces masqués. Le troisième modèle est une spécialisation pour les paramètres Nil.  
   
@@ -59,15 +59,15 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`Base`|Synonyme du paramètre de modèle `I0`.|  
+|`Base`|Un synonyme pour le *I0* paramètre de modèle.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[InterfaceTraits::CanCastTo, méthode](../windows/interfacetraits-cancastto-method.md)|Indique si le pointeur spécifié peut être converti en un pointeur vers `Base`.|  
-|[InterfaceTraits::CastToBase, méthode](../windows/interfacetraits-casttobase-method.md)|Convertit le pointeur spécifié vers un pointeur vers `Base`.|  
-|[InterfaceTraits::CastToUnknown, méthode](../windows/interfacetraits-casttounknown-method.md)|Convertit le pointeur spécifié vers un pointeur vers IUnknown.|  
+|[InterfaceTraits::CanCastTo, méthode](../windows/interfacetraits-cancastto-method.md)|Indique si le pointeur spécifié peut être casté en un pointeur vers `Base`.|  
+|[InterfaceTraits::CastToBase, méthode](../windows/interfacetraits-casttobase-method.md)|Effectue un cast du pointeur spécifié vers un pointeur vers `Base`.|  
+|[InterfaceTraits::CastToUnknown, méthode](../windows/interfacetraits-casttounknown-method.md)|Effectue un cast du pointeur spécifié vers un pointeur vers `IUnknown`.|  
 |[InterfaceTraits::FillArrayWithIid, méthode](../windows/interfacetraits-fillarraywithiid-method.md)|Attribue l’ID de l’interface de `Base` à l’élément de tableau spécifié par l’argument d’index.|  
 |[InterfaceTraits::Verify, méthode](../windows/interfacetraits-verify-method.md)|Vérifie qu’est correctement dérivé de Base.|  
   
@@ -75,12 +75,12 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |Name|Description|  
 |----------|-----------------|  
-|[InterfaceTraits::IidCount, constante](../windows/interfacetraits-iidcount-constant.md)|Contient le nombre d’interface Qu'id associées à l’objet InterfaceTraits en cours.|  
+|[InterfaceTraits::IidCount, constante](../windows/interfacetraits-iidcount-constant.md)|Contient le nombre d’ID associés en cours d’interface **InterfaceTraits** objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InterfaceTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

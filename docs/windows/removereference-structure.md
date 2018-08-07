@@ -1,5 +1,5 @@
 ---
-title: RemoveReference (Structure) | Documents Microsoft
+title: RemoveReference (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881261"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602709"
 ---
 # <a name="removereference-structure"></a>RemoveReference (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Une classe.  
   
 ## <a name="remarks"></a>Notes  
- Retire la caractéristique de référence ou une référence rvalue à partir du paramètre de modèle de classe spécifiée.  
+ Supprime la caractéristique de référence ou référence rvalue à partir du paramètre de modèle de classe spécifiée.  
   
 ## <a name="members"></a>Membres  
   
@@ -56,7 +56,7 @@ struct RemoveReference<T&&>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `RemoveReference`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

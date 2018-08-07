@@ -1,5 +1,5 @@
 ---
-title: library_block | Documents Microsoft
+title: library_block | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbd97897138edffba12baf47d64465b1f6ca0df4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877889"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605069"
 ---
 # <a name="libraryblock"></a>library_block
 Place une construction dans le bloc de bibliothèque IDL.  
@@ -30,9 +30,7 @@ Place une construction dans le bloc de bibliothèque IDL.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [library_block]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,7 +39,7 @@ Place une construction dans le bloc de bibliothèque IDL.
 ## <a name="example"></a>Exemple  
  Dans le code suivant, une interface personnalisée est placée dans le bloc de bibliothèque.  
   
-```  
+```cpp  
 // cpp_attr_ref_library_block.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -52,7 +50,7 @@ __interface IMyInterface {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -60,11 +58,11 @@ __interface IMyInterface {
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs du compilateur](../windows/compiler-attributes.md)   
+ [Attributs de compilateur](../windows/compiler-attributes.md)   
  [Attributs autonomes](../windows/stand-alone-attributes.md)   

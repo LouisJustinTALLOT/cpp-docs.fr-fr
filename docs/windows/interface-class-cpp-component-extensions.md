@@ -1,5 +1,5 @@
 ---
-title: l’interface de classe (Extensions du composant C++) | Documents Microsoft
+title: interface de classe (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880857"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604484"
 ---
 # <a name="interface-class--c-component-extensions"></a>classe d'interface  (extensions du composant C++)
 Déclare une interface.  Pour plus d’informations sur les interfaces natives, consultez [__interface](../cpp/interface.md).  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- **Syntaxe**  
+
+### <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
- **Paramètres**  
+### <a name="parameters"></a>Paramètres  
   
  *interface_access*  
- L’accessibilité d’une interface à l’extérieur de l’assembly.  Les valeurs possibles sont **public** et `private`.  `private` est la valeur par défaut.  Les interfaces imbriquées ne peuvent pas avoir un *interface_access* spécificateur.  
+ L’accessibilité d’une interface en dehors de l’assembly.  Les valeurs possibles sont **public** et **privé**.  **privé** est la valeur par défaut. Les interfaces imbriquées ne peut pas avoir un *interface_access* spécificateur.  
   
  *name*  
  Nom de l’interface.  
   
  *hériter_accès*  
- L’accessibilité de *base_interface*.  Le seul autorisé d’accessibilité pour une interface de base est `public` (la valeur par défaut).  
+ L’accessibilité de *base_interface*.  Le seul autorisé d’accessibilité pour une interface de base est **public** (la valeur par défaut).  
   
  *base_interface* (facultatif)  
- Une interface de base pour l’interface *nom*.  
+ Une interface de base pour interface *nom*.  
   
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
- **un struct d’interface** équivaut à **classe d’interface**.  
+ **interface struct** équivaut à **classe d’interface**.  
   
- Une interface peut contenir les déclarations de fonctions, des événements et des propriétés.  Tous les membres d’interface ont une accessibilité publique. Une interface peut également contenir des propriétés, des fonctions, des événements et des données membres statiques, et ces membres statiques doivent être définies dans l’interface.  
+ Une interface peut contenir les déclarations de fonctions, les événements et les propriétés.  Tous les membres d’interface ont une accessibilité publique. Une interface peut également contenir des propriétés, les fonctions, les événements et les données membres statiques, et ces membres statiques doivent être définies dans l’interface.  
   
- Une interface qui définit comment une classe peut être implémentée. Une interface n’est pas une classe et classes peuvent uniquement implémenter d’interfaces. Lorsqu’une classe définit une fonction déclarée dans une interface, la fonction est implémentée, ne pas substituée. Par conséquent, la recherche de nom n’inclut pas de membres d’interface.  
+ Une interface définit comment une classe peut être implémentée. Une interface n’est pas une classe et classes peuvent uniquement implémenter les interfaces. Lorsqu’une classe définit une fonction déclarée dans une interface, la fonction est implémentée, ne pas remplacé. Par conséquent, la recherche de nom n’inclut pas les membres d’interface.  
   
  Une classe ou un struct qui dérive d’une interface doit implémenter tous les membres de l’interface. Lors de l’implémentation d’interface *nom* vous devez également implémenter les interfaces dans le `base_interface` liste.  
   
@@ -72,15 +72,15 @@ interface class
   
  Vous pouvez détecter au moment de la compilation si un type est une interface avec `__is_interface_class(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Dans l’environnement de développement, vous pouvez obtenir aide (F1) sur ces mots clés, mettez en surbrillance le mot clé, (`interface class`, par exemple) et en appuyant sur F1.  
+ Dans l’environnement de développement, vous pouvez obtenir la touche F1 sur ces mots clés en surbrillance le mot clé, (`interface class`, par exemple) et en appuyant sur F1.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  **Remarques**  
   
  (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Remarques**  
@@ -88,14 +88,13 @@ interface class
  (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Common Language Runtime.)  
   
 ### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  L’exemple de code suivant montre comment une interface peut définir le comportement d’une fonction d’horloge.  
   
-```  
+```cpp  
 // mcppv2_interface_class.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -201,11 +200,9 @@ OnClick: 7, 3.14159
 in Function_1  
 ```  
   
- **Exemple**  
+ L’exemple de code suivant montre deux façons d’implémenter des fonctions avec la même signature que déclarée dans plusieurs interfaces et où ces interfaces sont utilisées par une classe.  
   
- L’exemple de code suivant montre deux façons d’implémenter des fonctions avec la même signature déclarée dans plusieurs interfaces, et où ces interfaces sont utilisées par une classe.  
-  
-```  
+```cpp  
 // mcppv2_interface_class_2.cpp  
 // compile with: /clr /c  
 interface class I {  

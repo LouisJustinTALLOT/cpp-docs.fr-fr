@@ -1,5 +1,5 @@
 ---
-title: Mutextraits::Unlock, méthode | Documents Microsoft
+title: Mutextraits::Unlock, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e4655c69e5ecb83cebf1225384c54c96be695b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1925755ca663ba82526fb8b8dae626165f1e4862
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880359"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606681"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock, méthode
 Libère le contrôle exclusif d’une ressource partagée.  
@@ -35,13 +35,13 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
+### <a name="parameters"></a>Paramètres  
+ *h*  
  Handle vers un objet mutex.  
   
 ## <a name="return-value"></a>Valeur de retour  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

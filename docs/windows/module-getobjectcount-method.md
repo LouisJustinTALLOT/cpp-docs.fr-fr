@@ -1,5 +1,5 @@
 ---
-title: Module::getobjectcount, méthode | Documents Microsoft
+title: Module::getobjectcount, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74fca4325891488aa1f4669ae1fd8b94a1298910
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49ffe6b952033ffc35edc1dc68648d9830fe54d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875079"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608824"
 ---
 # <a name="modulegetobjectcount-method"></a>Module::GetObjectCount, méthode
 Récupère le nombre d’objets gérés par ce module.  
@@ -36,10 +36,10 @@ virtual long GetObjectCount() const;
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre actuel d’objets gérés par ce module.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL
  
- ## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
  [Module, classe](../windows/module-class.md)

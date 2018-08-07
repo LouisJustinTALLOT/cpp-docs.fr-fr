@@ -1,5 +1,5 @@
 ---
-title: InvokeHelper::Invoke, méthode | Documents Microsoft
+title: InvokeHelper::Invoke, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8db9d9b44a2646d69dfbbd423d712f0d1c92d6cd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882301"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607970"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -62,41 +62,41 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `arg1`  
+### <a name="parameters"></a>Paramètres  
+ *arg1*  
  Argument 1.  
   
- `arg2`  
+ *Arg2*  
  Argument 2.  
   
- `arg3`  
+ *Arg3*  
  Argument 3.  
   
- `arg4`  
+ *Arg4*  
  Argument 4.  
   
- `arg5`  
+ *Arg5*  
  Argument 5.  
   
- `arg6`  
- Arguments 6.  
+ *Arg6*  
+ Argument 6.  
   
- `arg7`  
+ *Arg7*  
  Argument 7.  
   
- `arg8`  
+ *Arg8*  
  Argument 8.  
   
- `arg9`  
+ *Arg9*  
  Argument 9.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, un HRESULT qui décrit l’erreur.  
+ S_OK en cas de réussite ; Sinon, une valeur HRESULT qui décrit l’erreur.  
   
 ## <a name="remarks"></a>Notes  
  Appelle le Gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

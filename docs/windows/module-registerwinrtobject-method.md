@@ -1,5 +1,5 @@
 ---
-title: Module::registerwinrtobject, méthode | Documents Microsoft
+title: Module::registerwinrtobject, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874952"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603755"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject, méthode
-Inscrit un ou plusieurs objets Windows Runtime pour d’autres applications peuvent s’y connecter.  
+Inscrit un ou plusieurs objets Windows Runtime pour d’autres applications peuvent se connecter à leur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,23 +36,23 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `serverName`  
- Nom qui spécifie un sous-ensemble des objets affectés par cette opération.  
+### <a name="parameters"></a>Paramètres  
+ *Nom du serveur*  
+ Nom qui spécifie un sous-ensemble d’objets affectés par cette opération.  
   
- `activatableClassIds`  
- Tableau de CLSID activables à inscrire.  
+ *activatableClassIds*  
+ Tableau des CLSID activables à inscrire.  
   
- `cookie`  
- Une valeur qui identifie les objets de classe qui ont été enregistrés. Cette valeur est utilisée ultérieurement pour révoquer l’inscription.  
+ *Cookie*  
+ Une valeur qui identifie les objets de classe qui ont été inscrits. Cette valeur est utilisée ultérieurement pour révoquer l’inscription.  
   
- `count`  
+ *count*  
  Le nombre d’objets à inscrire.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, une erreur HRESULT comme CO_E_OBJISREG qui indique la raison pour laquelle l’opération a échoué.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

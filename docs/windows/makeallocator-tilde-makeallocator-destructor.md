@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator :: ~ MakeAllocator, destructeur | Documents Microsoft'
+title: 'MakeAllocator :: ~ MakeAllocator, destructeur | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877097"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606307"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator, destructeur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,11 +34,11 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ```  
   
 ## <a name="remarks"></a>Notes  
- Désinitialise l’instance actuelle de la classe MakeAllocator.  
+ Annule l’initialisation de l’instance actuelle de la **MakeAllocator** classe.  
   
  Ce destructeur supprime également la mémoire allouée sous-jacent si nécessaire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

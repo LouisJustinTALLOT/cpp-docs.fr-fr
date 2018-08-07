@@ -1,5 +1,5 @@
 ---
-title: Module::unregistercomobject, méthode | Documents Microsoft
+title: Module::unregistercomobject, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881934"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602628"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject, méthode
-Annule l’inscription d’un ou plusieurs objets COM, ce qui empêche d’autres applications de se connecter à ceux-ci.  
+Annule l’inscription d’un ou plusieurs objets COM, ce qui empêche les autres applications de se connecter à leur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,20 +36,20 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `serverName`  
+### <a name="parameters"></a>Paramètres  
+ *Nom du serveur*  
  (Non utilisé)  
   
- `cookies`  
- Tableau de pointeurs vers les valeurs qui identifient les objets de classe doit être annulée. Le tableau a été créé par le [RegisterCOMObject](../windows/module-registercomobject-method.md) (méthode).  
+ *Cookies*  
+ Un tableau de pointeurs vers des valeurs qui identifient les objets de classe doit être annulée. Le tableau a été créé par le [RegisterCOMObject](../windows/module-registercomobject-method.md) (méthode).  
   
- `count`  
+ *count*  
  Le nombre de classes pour annuler l’inscription.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK si cette opération a réussi ; Sinon, une erreur HRESULT qui indique la raison pour laquelle l’opération a échoué.  
+ S_OK si cette opération est réussie ; Sinon, une erreur HRESULT qui indique la raison pour laquelle l’opération a échoué.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

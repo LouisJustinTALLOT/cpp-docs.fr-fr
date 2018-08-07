@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassFlags (Structure) | Documents Microsoft
+title: Runtimeclassflags, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892024"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604932"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (structure)
 Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-class.md).  
@@ -36,9 +36,9 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `flags`  
- A [runtimeclasstype, énumération](../windows/runtimeclasstype-enumeration.md) valeur.  
+### <a name="parameters"></a>Paramètres  
+ *flags*  
+ Un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.  
   
 ## <a name="members"></a>Membres  
   
@@ -46,12 +46,12 @@ struct RuntimeClassFlags;
   
 |Name|Description|  
 |----------|-----------------|  
-|[RuntimeClassFlags::value, constante](../windows/runtimeclassflags-value-constant.md)|Contient un [runtimeclasstype, énumération](../windows/runtimeclasstype-enumeration.md) valeur.|  
+|[RuntimeClassFlags::value, constante](../windows/runtimeclassflags-value-constant.md)|Contient un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `RuntimeClassFlags`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  
