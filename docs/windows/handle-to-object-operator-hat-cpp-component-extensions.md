@@ -1,5 +1,5 @@
 ---
-title: Handle sur l’opérateur Object (^) (Extensions du composant C++) | Documents Microsoft
+title: Handle de l’opérateur Object (^) (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881167"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569802"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Handle sur l’opérateur Object (^) (extensions du composant C++)
-Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [spécificateur](../cpp/overview-of-declarators.md) signifie que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet est n’est plus accessible.  
+Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [spécificateur](../cpp/overview-of-declarators.md) pour indiquer que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet est ne seront plus accessibles.  
   
 ## <a name="accessing-the-declared-object"></a>Accès à l'objet déclaré  
  Une variable déclarée avec le déclarateur de handle se comporte comme un pointeur vers l'objet. Toutefois, la variable pointe vers l'objet entier, ne peut pas pointer vers un membre de l'objet et ne prend pas en charge les opérations arithmétiques sur les pointeurs. Utilisez l'opérateur d'indirection (`*`) pour accéder à l'objet et l'opérateur d'accès aux membres flèche (`->`) pour accéder à un membre de l'objet.  
@@ -35,11 +35,11 @@ Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [s
   
  Pour plus d’informations sur la façon d’instancier un objet, consultez [ref nouvelle](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Le système utilise le CLR *RÉCUPÉRATEUR* mécanisme pour déterminer si l’objet n’est plus utilisé et peut être supprimé. Le Common Langage Runtime gère un tas sur lequel il alloue des objets et utilise des références managées (variables) dans votre programme pour indiquer l'emplacement des objets sur le tas. Lorsqu'un objet n'est plus utilisé, la mémoire qu'il occupait sur le tas est libérée. Régulièrement, le garbage collector compacte le tas pour mieux utiliser la mémoire libérée. Le compactage du tas peut déplacer des objets sur le tas, ce qui invalide les emplacements référencés par des références managées. Toutefois, le garbage collector connaît l'emplacement de toutes les références managées et il les met automatiquement à jour pour indiquer l'emplacement actuel des objets sur le tas.  
+ Le système utilise le CLR *RÉCUPÉRATEUR de mémoire* mécanisme pour déterminer si l’objet n’est plus utilisé et peut être supprimé. Le Common Langage Runtime gère un tas sur lequel il alloue des objets et utilise des références managées (variables) dans votre programme pour indiquer l'emplacement des objets sur le tas. Lorsqu'un objet n'est plus utilisé, la mémoire qu'il occupait sur le tas est libérée. Régulièrement, le garbage collector compacte le tas pour mieux utiliser la mémoire libérée. Le compactage du tas peut déplacer des objets sur le tas, ce qui invalide les emplacements référencés par des références managées. Toutefois, le garbage collector connaît l'emplacement de toutes les références managées et il les met automatiquement à jour pour indiquer l'emplacement actuel des objets sur le tas.  
   
  Les pointeurs (`*`) et les références (`&`) C++ natifs n'étant pas des références managées, le garbage collector ne peut pas mettre à jour automatiquement les adresses vers lesquelles ils pointent. Pour résoudre ce problème, utilisez le déclarateur de handle pour spécifier une variable que le garbage collector connaît et peut mettre à jour automatiquement.  
   
@@ -52,7 +52,7 @@ Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [s
   
  Cet exemple montre comment créer une instance d’un type référence sur le tas managé.  Cet exemple montre également que vous pouvez initialiser un handle avec un autre, générant ainsi deux références au même objet sur le tas managé et récupéré par le garbage collector. Notez que l’assignation [nullptr](../windows/nullptr-cpp-component-extensions.md) à un handle ne marque pas l’objet pour le garbage collection.  
   
-```  
+```cpp  
 // mcppv2_handle.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -88,7 +88,7 @@ int main() {
   
  L’exemple suivant montre comment déclarer un handle vers un objet sur le tas managé, où le type d’objet est un type valeur boxed. Il montre également comment obtenir le type valeur à partir de l'objet converti.  
   
-```  
+```cpp  
 // mcppv2_handle_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -122,7 +122,7 @@ Not a boxed int
   
  Cet exemple montre que l'idiome C++ commun consistant à utiliser un pointeur de type void* pour pointer vers un objet arbitraire est remplacé par Object^, qui peut contenir un handle vers toute classe de référence. Il montre également que tous les types, tels que les tableaux et les délégués, peuvent être convertis en handle d'objet.  
   
-```  
+```cpp  
 // mcppv2_handle_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -171,7 +171,7 @@ Type is MyDel
   
  Cet exemple montre qu'un handle peut être déréférencé et qu'un membre est accessible via un handle déréférencé.  
   
-```  
+```cpp  
 // mcppv2_handle_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -221,7 +221,7 @@ Cannot access array element 11, size is 10
   
  Cet exemple montre qu'une référence native (`&`) ne peut pas être liée à un membre `int` d'un type managé, car le membre `int` peut être stocké dans le tas récupéré par le garbage collector et les références natives n'effectuent pas le suivi du déplacement d'objets dans le tas managé. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.  
   
-```  
+```cpp  
 // mcppv2_handle_5.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -241,9 +241,9 @@ int main() {
 }  
 ```  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
+ [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md)

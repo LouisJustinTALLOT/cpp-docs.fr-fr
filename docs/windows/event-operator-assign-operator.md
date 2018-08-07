@@ -1,5 +1,5 @@
 ---
-title: Event::operator =, opérateur | Documents Microsoft
+title: Event::operator =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871121"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571296"
 ---
 # <a name="eventoperator-operator"></a>Event::operator=, opérateur
-Assigne la référence Event spécifiée à l'instance Event actuelle.  
+Assigne le texte spécifié **événement** référence à le **événement** instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `h`  
- Une référence rvalue à une instance de l’événement.  
+ *h*  
+ Une référence rvalue à un **événement** instance.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’instance Event actuelle.  
+ Un pointeur vers l’actuel **événement** instance.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

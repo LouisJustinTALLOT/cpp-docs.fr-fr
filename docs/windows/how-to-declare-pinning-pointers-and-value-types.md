@@ -1,5 +1,5 @@
 ---
-title: 'Comment : déclarer des pointeurs épingles et les Types valeur | Documents Microsoft'
+title: 'Comment : déclarer l’épinglage de pointeurs et les Types valeur | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569753"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Comment : déclarer l'épinglage de pointeurs et de types de valeur
-Un type valeur peut être implicitement convertie (boxed). Vous pouvez ensuite déclarer un pointeur épingle vers l’objet de type valeur lui-même et utilisez un **pin_ptr** vers le type valeur boxed.  
+Un type valeur peut être implicitement converti (boxed). Vous pouvez ensuite déclarer un pointeur épingle vers l’objet de type valeur lui-même et utilisez un **pin_ptr** au type valeur boxed.  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 8  
 7  
 7  

@@ -1,5 +1,5 @@
 ---
-title: helpstringdll | Documents Microsoft
+title: helpstringdll | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877343"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570078"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 Spécifie le nom de la DLL à utiliser pour effectuer la recherche de chaîne de document (localisation).  
@@ -30,14 +30,13 @@ Spécifie le nom de la DLL à utiliser pour effectuer la recherche de chaîne de
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `string`  
+### <a name="parameters"></a>Paramètres  
+ *string*  
  La DLL à utiliser pour effectuer la recherche de chaîne de document.  
   
 ## <a name="remarks"></a>Notes  
@@ -45,7 +44,7 @@ Spécifie le nom de la DLL à utiliser pour effectuer la recherche de chaîne de
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -58,16 +57,16 @@ __interface IMyI
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `interface`, méthode d’interface|  
+|**S'applique à**|**classe**, **interface**, méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

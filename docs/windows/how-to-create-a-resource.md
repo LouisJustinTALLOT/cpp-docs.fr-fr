@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une ressource | Documents Microsoft'
+title: 'Comment : créer une ressource | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878643"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571468"
 ---
 # <a name="how-to-create-a-resource"></a>Comment : créer une ressource
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878643"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>Pour créer une ressource dans l’affichage de classes  
   
-1.  Dans [Affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur la classe, choisissez **Ajouter**, puis cliquez sur **Ajouter une ressource** dans le menu contextuel.  
+1.  Dans [affichage de classes](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), avec le bouton droit de votre classe et choisissez **ajouter**, puis cliquez sur **ajouter une ressource** dans le menu contextuel.  
   
 2.  Dans la [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), choisissez le type de ressource que vous souhaitez ajouter à votre projet.  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878643"
   
  Vous pouvez créer une ressource en tant que ressource par défaut (une ressource qui n'est pas basée sur un modèle) ou en tant que ressource inspirée d'un [modèle](../windows/how-to-use-resource-templates.md).  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*
+
+
+## <a name="requirements"></a>Configuration requise  
   
- **Spécifications**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers de ressources](../windows/resource-files-visual-studio.md)   

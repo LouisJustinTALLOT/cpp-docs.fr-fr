@@ -1,5 +1,5 @@
 ---
-title: EventSource::GetSize, méthode | Documents Microsoft
+title: EventSource::GetSize, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60c52c711c85caa64c289937f39fe50ec18e1839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e38bd233c302d0a2bd054a1cbf2efb301089a003
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886998"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569668"
 ---
 # <a name="eventsourcegetsize-method"></a>EventSource::GetSize, méthode
-Récupère le nombre de gestionnaires d’événements associés à l’objet en cours de la source d’événement  
+Récupère le nombre de gestionnaires d’événements associés à l’actuel **EventSource** objet  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ size_t GetSize() const;
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre de gestionnaires d’événements dans [targets_](../windows/eventsource-targets-data-member.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL  

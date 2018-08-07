@@ -1,5 +1,5 @@
 ---
-title: 'Comment : inclure des ressources au moment de la compilation | Documents Microsoft'
+title: 'Comment : inclure des ressources au moment de la compilation | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880148"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571335"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Comment : inclure des ressources au moment de la compilation
 Normalement, il est facile et pratique d'utiliser la disposition par défaut de toutes les ressources dans un seul fichier de script de ressources (.rc). Toutefois, vous pouvez ajouter des ressources dans d’autres fichiers à votre projet actif au moment de la compilation en les répertoriant dans la **directives de compilation** zone le [boîte de dialogue Include des ressources](../windows/resource-includes-dialog-box.md).  
@@ -53,13 +53,11 @@ Normalement, il est facile et pratique d'utiliser la disposition par défaut de 
   
 2.  Cliquez sur le fichier .rc (dans [affichage des ressources](../windows/resource-view-window.md)) et choisissez **Include des ressources** dans le menu contextuel.  
   
-3.  Dans le **directives de compilation** zone, ajoutez le [#include](../preprocessor/hash-include-directive-c-cpp.md) directive de compilateur pour inclure le nouveau fichier de ressources dans le fichier de ressources principal dans l’environnement de développement.  
+3.  Dans le **directives de compilation** zone, ajoutez le [#include](../preprocessor/hash-include-directive-c-cpp.md) directive de compilateur pour inclure le fichier de ressources dans le fichier de ressources principal dans l’environnement de développement.  
   
      Les ressources des fichiers inclus de cette façon sont intégrées à votre fichier exécutable au moment de la compilation. Elles ne sont pas directement modifiables quand vous travaillez sur le fichier .rc principal de votre projet. Vous devez ouvrir les fichiers .rc inclus séparément. Les fichiers inclus mais dépourvus d’extension .rc ne sont pas modifiables par les éditeurs de ressources.  
   
-
-  
- Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
  Win32  
   

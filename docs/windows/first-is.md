@@ -1,5 +1,5 @@
 ---
-title: first_is | Documents Microsoft
+title: first_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875004"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569261"
 ---
 # <a name="firstis"></a>first_is
-Spécifie l’index du premier élément du tableau doit être transmis.  
+Spécifie l’index du premier élément de tableau doit être transmis.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- *expression*  
- Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisées.  
+### <a name="parameters"></a>Paramètres  
+ *Expression*  
+ Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.  
   
 ## <a name="remarks"></a>Notes  
  Le **first_is** attribut C++ a les mêmes fonctionnalités que le [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant montre comment spécifier une section dans un tableau :  
+ Le code suivant montre différentes façons de spécifier une section dans un tableau :  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -66,16 +65,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Champ `struct` ou **union**, paramètre de l’interface, méthode d’interface|  
+|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Dontusenewusemake, classe | Documents Microsoft
+title: DontUseNewUseMake (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f343d0b47d50cd375d186c29ff55b91898aa9c61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872326"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569567"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake (classe)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,7 +34,7 @@ class DontUseNewUseMake;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Empêche l’utilisation d’opérateur `new` dans RuntimeClass. Par conséquent, vous devez utiliser le [fonction](../windows/make-function.md) à la place.  
+ Empêche l’utilisation d’opérateur **nouveau** dans RuntimeClass. Par conséquent, vous devez utiliser le [Make, fonction](../windows/make-function.md) à la place.  
   
 ## <a name="members"></a>Membres  
   
@@ -42,12 +42,12 @@ class DontUseNewUseMake;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator new, opérateur](../windows/dontusenewusemake-operator-new-operator.md)|Surcharge d’opérateur `new` et empêche l’utilisation de RuntimeClass.|  
+|[DontUseNewUseMake::operator new, opérateur](../windows/dontusenewusemake-operator-new-operator.md)|Surcharge d’opérateur **nouveau** et empêche l’utilisation dans RuntimeClass.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `DontUseNewUseMake`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

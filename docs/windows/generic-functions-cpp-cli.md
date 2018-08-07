@@ -1,5 +1,5 @@
 ---
-title: Fonctions génériques (C + c++ / CLI) | Documents Microsoft
+title: Fonctions génériques (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878832"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568876"
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
-Une fonction générique est une fonction déclarée avec les paramètres de type. Lorsqu’elle est appelée, les types réels sont utilisés à la place les paramètres de type.  
+Une fonction générique est une fonction qui est déclarée avec des paramètres de type. Lorsqu’elle est appelée, les types réels sont utilisés plutôt que les paramètres de type.  
   
 ## <a name="all-platforms"></a>Toutes les plateformes  
  **Remarques**  
@@ -37,15 +37,15 @@ Une fonction générique est une fonction déclarée avec les paramètres de typ
 ## <a name="windows-runtime"></a>Windows Runtime  
  **Remarques**  
   
- Cette fonctionnalité n’est pas pris en charge dans le Windows Runtime.  
+ Cette fonctionnalité n’est pas pris en charge dans le Runtime de Windows.  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Une fonction générique est une fonction déclarée avec les paramètres de type. Lorsqu’elle est appelée, les types réels sont utilisés à la place les paramètres de type.  
+ Une fonction générique est une fonction qui est déclarée avec des paramètres de type. Lorsqu’elle est appelée, les types réels sont utilisés plutôt que les paramètres de type.  
   
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
 [attributes] [modifiers]  
@@ -56,15 +56,15 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}  
 ```  
   
- **Paramètres**  
+### <a name="parameters"></a>Paramètres 
   
  *attributs* (facultatif)  
  Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
  *modificateurs* (facultatif)  
- Un modificateur de la fonction, comme statique.  `virtual` ne peut pas étant donné que les méthodes virtuelles ne peuvent pas être génériques.  
+ Un modificateur de la fonction, comme statique.  **virtuel** n’est pas autorisé dans la mesure où les méthodes virtuelles ne peuvent pas être génériques.  
   
- *Type de retour*  
+ *type de retour*  
  Type retourné par la méthode. Si le type de retour est void, aucune valeur de retour n’est requis.  
   
  *identifier*  
@@ -73,32 +73,32 @@ return-type identifier<type-parameter identifier(s)>
  *paramètre de type identificateur (s)*  
  Liste d’identificateurs séparés par des virgules.  
   
- *paramètres formels* (facultatif)  
+ *paramètres-formels* (facultatif)  
  Liste de paramètres.  
   
- *type-paramètre-contraintes-clauses*  
- Cela indique les restrictions sur les types qui peuvent être utilisés comme arguments de type et le format spécifié dans [contraintes sur les paramètres de Type générique (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ *type de paramètre contraintes clauses*  
+ Cela indique les restrictions sur les types qui peuvent être utilisés comme arguments de type et prend la forme spécifiée dans [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
- *corps de fonction*  
- Le corps de la méthode, ce qui peut faire référence aux identificateurs de paramètre de type.  
+ *corps de la fonction*  
+ Le corps de la méthode, qui peut faire référence aux identificateurs de paramètre de type.  
   
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
  Fonctions génériques sont des fonctions déclarées avec un paramètre de type générique. Ils peuvent être des méthodes dans une classe ou un struct ou autonome des fonctions. Une déclaration générique unique déclare implicitement une famille de fonctions qui diffèrent uniquement par la substitution d’un autre type réel pour le paramètre de type générique.  
   
  Dans Visual C++, les constructeurs de classe ou un struct ne peuvent pas être déclarés avec des paramètres de type générique.  
   
- Lorsqu’elle est appelée, le paramètre de type générique est remplacé par un type réel. Le type réel peut-être être spécifié explicitement dans les crochets à l’aide d’une syntaxe semblable à un appel de fonction de modèle. Si elle est appelée sans paramètres de type, le compilateur tente de déduire le type réel à partir des paramètres fournis dans l’appel de fonction. Si l’argument de type prévu ne peut pas être déduit des paramètres utilisés, le compilateur signale une erreur.  
+ Lorsqu’elle est appelée, le paramètre de type générique est remplacé par un type réel. Le type réel peut être spécifié explicitement dans les crochets angulaires à l’aide d’une syntaxe semblable à un appel de fonction de modèle. Si elle est appelée sans les paramètres de type, le compilateur tente de déduire le type réel à partir des paramètres fournis dans l’appel de fonction. Si l’argument de type prévu ne peut pas être déduit à partir des paramètres utilisés, le compilateur signale une erreur.  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L’exemple de code suivant illustre une fonction générique.  
+ L’exemple de code suivant montre une fonction générique.  
   
-```  
+```cpp  
 // generics_generic_function_1.cpp  
 // compile with: /clr  
 generic <typename ItemType>  
@@ -131,9 +131,9 @@ int main() {
   
  **Exemple**  
   
- Fonctions génériques peuvent être surchargées en fonction de la signature ou arité, le nombre de paramètres de type sur une fonction. En outre, les fonctions génériques peuvent être surchargées avec des fonctions non génériques du même nom, à condition que les fonctions diffèrent dans certains paramètres de type. Par exemple, les fonctions suivantes peuvent être surchargées :  
+ Fonctions génériques peuvent être surchargées en fonction de la signature ou arité, le nombre de paramètres de type sur une fonction. En outre, les fonctions génériques peuvent être surchargées avec des fonctions non génériques du même nom, tant que les fonctions diffèrent dans certains paramètres de type. Par exemple, les fonctions suivantes peuvent être surchargées :  
   
-```  
+```cpp  
 // generics_generic_function_2.cpp  
 // compile with: /clr /c  
 ref struct MyClass {  
@@ -149,9 +149,9 @@ ref struct MyClass {
   
  **Exemple**  
   
- L’exemple suivant utilise une fonction générique pour rechercher le premier élément dans un tableau. Elle déclare `MyClass`, qui hérite de la classe de base `MyBaseClass`. `MyClass` contient une fonction générique, `MyFunction`, qui appelle une autre fonction générique, `MyBaseClassFunction`, au sein de la classe de base. Dans **principal**, la fonction générique, `MyFunction`, est appelée à l’aide des arguments de type différents.  
+ L’exemple suivant utilise une fonction générique pour rechercher le premier élément dans un tableau. Elle déclare `MyClass`, qui hérite de la classe de base `MyBaseClass`. `MyClass` contient une fonction générique, `MyFunction`, qui appelle une autre fonction générique, `MyBaseClassFunction`, au sein de la classe de base. Dans `main`, la fonction générique, `MyFunction`, est appelée à l’aide des arguments de type différents.  
   
-```  
+```cpp  
 // generics_generic_function_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
+ [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Génériques](../windows/generics-cpp-component-extensions.md)

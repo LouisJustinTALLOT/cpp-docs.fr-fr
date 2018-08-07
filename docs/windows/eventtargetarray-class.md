@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray, classe | Documents Microsoft
+title: Eventtargetarray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2757589509e4a2b091c5057ef2065866a8829494
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881307"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570419"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray, classe
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,9 +34,9 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ```  
   
 ## <a name="remarks"></a>Notes  
- Représente un tableau de gestionnaires d’événements.  
+ Représente un tableau des gestionnaires d’événements.  
   
- Les gestionnaires d’événements qui sont associés un [EventSource](../windows/eventsource-class.md) objet sont stockées dans un membre de données EventTargetArray protégé.  
+ Les gestionnaires d’événements qui sont associés un [EventSource](../windows/eventsource-class.md) objet sont stockées dans un document protégé **EventTargetArray** membre de données.  
   
 ## <a name="members"></a>Membres  
   
@@ -44,8 +44,8 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Nom|Description|  
 |----------|-----------------|  
-|[EventTargetArray::EventTargetArray, constructeur](../windows/eventtargetarray-eventtargetarray-constructor.md)|Initialise une nouvelle instance de la classe EventTargetArray.|  
-|[EventTargetArray::~EventTargetArray, destructeur](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Désinitialise l’EventTargetArray (classe) en cours.|  
+|[EventTargetArray::EventTargetArray, constructeur](../windows/eventtargetarray-eventtargetarray-constructor.md)|Initialise une nouvelle instance de la **EventTargetArray** classe.|  
+|[EventTargetArray::~EventTargetArray, destructeur](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Annule l’initialisation en cours **EventTargetArray** classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -54,12 +54,12 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 |[EventTargetArray::AddTail, méthode](../windows/eventtargetarray-addtail-method.md)|Ajoute le Gestionnaire d’événements spécifié à la fin du tableau interne de gestionnaires d’événements.|  
 |[EventTargetArray::Begin, méthode](../windows/eventtargetarray-begin-method.md)|Obtient l’adresse du premier élément dans le tableau interne de gestionnaires d’événements.|  
 |[EventTargetArray::End, méthode](../windows/eventtargetarray-end-method.md)|Obtient l’adresse du dernier élément dans le tableau interne de gestionnaires d’événements.|  
-|[EventTargetArray::Length, méthode](../windows/eventtargetarray-length-method.md)|Obtient le nombre actuel d’éléments dans le tableau interne de gestionnaires d’événements.|  
+|[EventTargetArray::Length, méthode](../windows/eventtargetarray-length-method.md)|Obtient le nombre actuel d’éléments dans le tableau interne des gestionnaires d’événements.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `EventTargetArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

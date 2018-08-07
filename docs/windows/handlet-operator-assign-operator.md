@@ -1,5 +1,5 @@
 ---
-title: HandleT::operator =, opérateur | Documents Microsoft
+title: HandleT::operator =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873925"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570039"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator=, opérateur
-Déplace la valeur de l’objet HandleT spécifié à l’objet HandleT actuel.  
+Déplace la valeur de l’objet **HandleT** objet actuel **HandleT** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,17 +35,17 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
+### <a name="parameters"></a>Paramètres  
+ *h*  
  Une référence rvalue à un handle.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une référence à l’objet HandleT actuel.  
+ Une référence à l’actuel **HandleT** objet.  
   
 ## <a name="remarks"></a>Notes  
- Cette opération rend non valide l’objet HandleT spécifié par le paramètre `h`.  
+ Cette opération invalide le **HandleT** objet spécifié par le paramètre *h*.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

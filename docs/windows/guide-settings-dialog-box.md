@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Paramètres du repère | Documents Microsoft
+title: Guide de boîte de dialogue Paramètres | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,46 +23,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875875"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568889"
 ---
 # <a name="guide-settings-dialog-box"></a>Paramètres du repère, boîte de dialogue
-## <a name="layout-guides"></a>Guides de mise en page  
- Affiche les paramètres de mise en page.  
+## <a name="layout-guides"></a>Repères de disposition  
+ Affiche les paramètres pour les repères de disposition.  
   
  **Aucun**  
   
  Masque les outils de disposition.  
   
- **Règles et les repères**  
+ **Règles et repères**  
   
- Lorsque activé, ajoute des règles pour les outils de disposition ; guides peuvent être placés dans les règles. Les guides de valeur par défaut sont les marges, ce qui peuvent être déplacés par glissement. Cliquez dans les règles pour placer un guide. « Snap » sur les repères lorsque les contrôles sont déplacées sur ou en regard des contrôles. Contrôles sont également déplacés avec un repère une fois qu’ils sont attachés à ce dernier. Lorsqu’un contrôle est attaché à un repère sur chaque côté, et un repère est déplacé, le contrôle est redimensionné.  
+ Lorsque l’option est activée, les règles sont ajoutées aux outils de disposition ; guides peuvent être placés dans les règles. Les guides par défaut sont les marges, qui peuvent être déplacés en faisant glisser. Cliquez dans les règles pour placer un guide. Contrôles « alignent » sur les repères lorsque les contrôles sont déplacées sur ou en regard. Contrôles sont également déplacés avec un repère une fois qu’ils sont attachés. Quand un contrôle est attaché à un repère de chaque côté et un guide est déplacé, le contrôle est redimensionné.  
   
  **Grid**  
   
- Crée une grille de disposition. Nouveaux contrôles seront aligne automatiquement à la grille.  
+ Crée une grille de disposition. Nouveaux contrôles sont automatiquement alignés sur la grille.  
   
 ## <a name="grid-spacing"></a>espacement de la grille  
- Affiche les paramètres de la grille en unités de boîte de dialogue (DLU).  
+ Affiche les paramètres pour l’espacement de la grille en unités de boîte de dialogue (DLU).  
   
- **Largeur : DLU**  
+ **La largeur : DLU**  
   
- Définit la largeur de la grille de disposition dans DLU. Une DLU horizontale correspond à la largeur de la police de boîte de dialogue divisée en quatre.  
+ Définit la largeur de la grille de disposition en DLU. Une DLU horizontale est la largeur moyenne de la police de la boîte de dialogue divisée en quatre parties.  
   
  **Hauteur : DLU**  
   
- Définit la hauteur de la grille de disposition dans DLU. Une DLU verticale correspond à la hauteur moyenne de la police de boîte de dialogue divisée par huit.  
+ Définit la hauteur de la grille de disposition dans DLU. Une DLU verticale correspond à la hauteur moyenne de la police de la boîte de dialogue divisée par huit.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modification de la grille de disposition](../windows/modifying-the-layout-grid.md)   
  [États de l’Éditeur de boîtes de dialogue (repères et grilles)](../windows/dialog-editor-states-guides-and-grids.md)
-

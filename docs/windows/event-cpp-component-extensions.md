@@ -1,5 +1,5 @@
 ---
-title: événements (Extensions du composant C++) | Documents Microsoft
+title: événement (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881209"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570400"
 ---
 # <a name="event--c-component-extensions"></a>événement  (extensions du composant C++)
-Le `event` mot clé déclare une *événement*, qui est une notification aux abonnés inscrits (*gestionnaires d’événements*) qu’un élément d’intérêt s’est produit.  
+Le **événement** mot clé déclare une *événement*, qui est une notification aux abonnés inscrits (*gestionnaires d’événements*) qui s’est produite quelque chose de significatif.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- C + c++ / CX prend en charge la déclaration d’un *membre d’événement* ou *bloc d’événement*. Un membre d'événement est un raccourci pour déclarer un bloc d'événement. Par défaut, un membre d'événement déclare les fonctions `add()`, `remove()` et `raise()` qui sont déclarées explicitement dans un bloc d'événement. Pour personnaliser les fonctions dans un membre d'événement, déclarez un bloc d'événement à la place, puis remplacez les fonctions dont vous avez besoin.  
+ C++ / c++ / CX prend en charge la déclaration d’un *membre d’événement* ou un *bloc d’événement*. Un membre d'événement est un raccourci pour déclarer un bloc d'événement. Par défaut, un membre d'événement déclare les fonctions `add()`, `remove()` et `raise()` qui sont déclarées explicitement dans un bloc d'événement. Pour personnaliser les fonctions dans un membre d'événement, déclarez un bloc d'événement à la place, puis remplacez les fonctions dont vous avez besoin.  
   
  **Syntaxe**  
   
 ```  
-  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -50,16 +49,16 @@ modifiereventdelegate^ event_name
  **Paramètres**  
   
  *Modificateur*  
- Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont `static` et `virtual`.  
+ Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **statique** et **virtuel**.  
   
  *delegate*  
  Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.  
   
- *Nom_événement*  
+ *EVENT_NAME*  
  Nom de l'événement.  
   
  *return_value*  
- Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être `void`.  
+ Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **void**.  
   
  *Paramètres*  
  (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.  
@@ -76,27 +75,26 @@ modifiereventdelegate^ event_name
  *bloc d’événement*  
  Un bloc d'événement vous permet de déclarer et personnaliser explicitement le comportement des méthodes `add()`, `remove()` et `raise()`.  
   
- Vous pouvez utiliser `operators+=` et `operator-=` pour ajouter et supprimer un gestionnaire d'événements ou appeler les méthodes `add()` et `remove()` explicitement.  
+ Vous pouvez utiliser **opérateurs +=** et **opérateur-=** pour ajouter et supprimer un événement gestionnaire, ou appelez le `add()` et `remove()` méthodes explicitement.  
   
- `event` est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.  
+ **événement** est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [événements (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
+ Pour plus d’informations, consultez [événements (C++ / c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
   
  Si vous envisagez d'ajouter, puis de supprimer un gestionnaire d'événements, vous devez enregistrer la structure EventRegistrationToken retournée par l'opération d'ajout. Ensuite, dans l'opération de suppression, vous devez utiliser la structure EventRegistrationToken enregistrée pour identifier le gestionnaire d'événements à supprimer.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Le mot clé `event` vous permet de déclarer un événement. Un événement est un moyen pour une classe de fournir des notifications quand un fait digne d'intérêt se produit.  
+ Le **événement** mot clé vous permet de déclarer un événement. Un événement est un moyen pour une classe de fournir des notifications quand un fait digne d'intérêt se produit.  
   
  **Syntaxe**  
   
 ```  
-  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -112,16 +110,16 @@ modifiereventdelegate^ event_name
  **Paramètres**  
   
  *Modificateur*  
- Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont `static` et `virtual`.  
+ Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **statique** et **virtuel**.  
   
  *delegate*  
  Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.  
   
- *Nom_événement*  
+ *EVENT_NAME*  
  Nom de l'événement.  
   
  *return_value*  
- Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être `void`.  
+ Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **void**.  
   
  *Paramètres*  
  (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.  
@@ -148,13 +146,13 @@ modifiereventdelegate^ event_name
   
  Les étapes suivantes doivent être suivies pour créer et utiliser des événements en Visual C++ :  
   
-1.  Créez ou identifiez un délégué. Si vous définissez votre propre événement, vous devez également vous assurer qu'il existe un délégué à utiliser avec le mot clé `event`. Si l'événement est prédéfini, dans le .NET Framework par exemple, alors les consommateurs de l'événement doivent uniquement connaître le nom du délégué.  
+1.  Créez ou identifiez un délégué. Si vous définissez vos propres événements, vous devez également vous assurer qu’il existe un délégué à utiliser avec le **événement** mot clé. Si l'événement est prédéfini, dans le .NET Framework par exemple, alors les consommateurs de l'événement doivent uniquement connaître le nom du délégué.  
   
 2.  Créez une classe qui contient :  
   
     -   Un événement créé à partir du délégué.  
   
-    -   (facultatif) Une méthode qui vérifie qu'une instance du délégué déclaré avec le mot clé `event` existe. Sinon, cette logique doit être placée dans le code qui déclenche l'événement.  
+    -   (facultatif) Une méthode qui vérifie qu’une instance du délégué déclaré avec le **événement** mot clé existe. Sinon, cette logique doit être placée dans le code qui déclenche l'événement.  
   
     -   Des méthodes qui appellent l'événement. Ces méthodes peuvent être des substitutions de certaines fonctionnalités de la classe de base.  
   
@@ -168,11 +166,11 @@ modifiereventdelegate^ event_name
   
     -   Créez un objet de la classe qui contient la déclaration de l'événement.  
   
- Pour plus d’informations sur le langage c++ / CLI, événements, consultez  
+ Pour plus d’informations sur C + c++ / CLI, événements, consultez  
   
 -   [Événements dans une Interface](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
@@ -180,7 +178,7 @@ modifiereventdelegate^ event_name
   
  L'exemple de code suivant illustre : la déclaration de paires de délégués, d'événements et de gestionnaires d'événements, l'abonnement (ajout) des gestionnaires d'événements, l'appel des gestionnaires d'événements, puis l'annulation de l'abonnement (suppression) des gestionnaires d'événements.  
   
-```  
+```cpp  
 // mcppv2_events.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -241,9 +239,9 @@ OnDblClick: Hello
   
  **Exemple**  
   
- L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué. Si le type de retour du délégué n'est pas `void` et que le nombre d'abonnés à l'événement s'élève à zéro, la méthode `raise` retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le type de retour du délégué n'est pas `void`, le type délégué est retourné.  
+ L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué. Si le délégué de retour de type n’est pas **void** et s’il existe zéro abonnés aux événements, le `raise` méthode retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le délégué de type de retour est non **void**, le type délégué est retourné.  
   
-```  
+```cpp  
 // trivial_events.cpp  
 // compile with: /clr /c  
 using namespace System;  

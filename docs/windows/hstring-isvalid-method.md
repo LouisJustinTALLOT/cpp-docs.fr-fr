@@ -1,5 +1,5 @@
 ---
-title: Hstring::IsValid, méthode | Documents Microsoft
+title: Hstring::IsValid, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874315"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571000"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid, méthode
-Indique si l’objet HString actuel est vide ou non.  
+Indique si l’actuel **HString** objet est vide ou non.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,9 +32,9 @@ bool IsValid() const throw()
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `true` Si l’objet HString actuel n’est pas vide ; dans le cas contraire, `false`.  
+ **true** si actuel **HString** objet n’est pas vide ; sinon, **false**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

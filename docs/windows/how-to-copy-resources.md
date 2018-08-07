@@ -1,5 +1,5 @@
 ---
-title: 'Comment : copier des ressources | Documents Microsoft'
+title: 'Comment : copier des ressources | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,20 +23,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b173be24e9f177a3156f740fcb07240c30fec75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879846"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570683"
 ---
 # <a name="how-to-copy-resources"></a>Comment : copier des ressources
 Vous pouvez copier des ressources à partir d’un fichier vers un autre sans les modifier ou vous pouvez [modifier la langue ou la condition d’une ressource lors de la copie](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
   
- Vous pouvez facilement copier les ressources à partir d’une ressource existante ou d’un fichier exécutable à votre fichier de ressources actuel. Pour ce faire, vous ouvrez les deux fichiers contenant des ressources en même temps et faites glisser des éléments à partir d’un fichier vers un autre, ou copiez et collez entre les deux fichiers. Cette méthode fonctionne pour les fichiers de ressources (.rc) de script et les fichiers de ressources (.rct) de modèle, ainsi que les fichiers exécutables (.exe).  
+ Vous pouvez facilement copier les ressources à partir d’une ressource existante ou d’un fichier exécutable à votre fichier de ressources actuel. Pour ce faire, vous ouvrez les deux fichiers contenant des ressources en même temps et faire glisser des éléments à partir d’un fichier vers un autre, ou copiez et collez entre les deux fichiers. Cette méthode fonctionne pour les fichiers de script (.rc) de ressources et les fichiers de ressources (.rct) de modèle, ainsi que les fichiers exécutables (.exe).  
   
 > [!NOTE]
->  Visual C++ inclut des exemples de fichiers de ressources que vous pouvez utiliser dans votre application. Pour plus d’informations, consultez [CLIPART : ressources communes](http://msdn.microsoft.com/en-us/9bac2891-b6b3-49ec-a287-cec850c707e0).  
+>  Visual C++ inclut des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [CLIPART : ressources communes](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).  
   
  Vous pouvez utiliser la méthode glisser-déplacer entre les fichiers .rc qui sont ouverts [en dehors du projet](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -44,34 +44,34 @@ Vous pouvez copier des ressources à partir d’un fichier vers un autre sans le
   
 1.  Ouvrez les deux fichiers de ressources autonomes (pour plus d’informations, consultez [affichage des ressources dans un fichier à l’extérieur d’un projet .rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Par exemple, ouvrez Source1.rc et Source2.rc.  
   
-2.  Dans le premier fichier .rc, cliquez sur la ressource que vous souhaitez copier. Par exemple, dans Source1.rc, cliquez sur IDD_DIALOG1.  
+2.  Dans le premier fichier .rc, cliquez sur la ressource que vous souhaitez copier. Par exemple, dans Source1.rc, cliquez sur **IDD_DIALOG1**.  
   
-3.  Maintenez la touche CTRL enfoncée et faites glisser la ressource pour le second fichier .rc. Par exemple, faites glisser IDD_DIALOG1 de Source1.rc vers Source2.rc.  
+3.  Maintenez la touche CTRL enfoncée et faites glisser la ressource pour le deuxième fichier .rc. Par exemple, faites glisser **IDD_DIALOG1** de Source1.rc vers Source2.rc.  
   
     > [!NOTE]
-    >  En faisant glisser la ressource sans maintenir la touche CTRL enfoncée déplace la ressource au lieu de les copier.  
+    >  En faisant glisser la ressource sans maintenir enfoncée la touche CTRL enfoncée déplace la ressource plutôt que de le copier.  
   
-### <a name="to-copy-resources-using-copy-and-paste"></a>Pour copier des ressources à l’aide de copier et coller  
+### <a name="to-copy-resources-using-copy-and-paste"></a>Ressources à l’aide de la copie de copier et coller  
   
 1.  Ouvrez les deux fichiers de ressources autonomes (pour plus d’informations, consultez [affichage des ressources dans un fichier à l’extérieur d’un projet .rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Par exemple, Source1.rc et Source2.rc.  
   
-2.  Dans le fichier source à partir duquel vous voulez copier une ressource (par exemple, Source1.rc), une ressource avec le bouton droit et choisissez **copie** dans le menu contextuel.  
+2.  Dans le fichier source à partir de laquelle vous souhaitez copier une ressource (par exemple, Source1.rc), une ressource avec le bouton droit et choisissez **copie** dans le menu contextuel.  
   
-3.  Cliquez sur le fichier de ressources dans lequel vous voulez coller la ressource (par exemple, Source2.rc). Choisissez **coller** dans le menu contextuel.  
-  
-    > [!NOTE]
-    >  Ne peut pas faire glisser et déplacer, copier, Couper ou de coller entre les fichiers de ressources dans le projet (affichage des ressources) et des fichiers .rc autonomes (ceux qui sont ouverts dans des fenêtres de document). Vous pouvez le faire dans les versions précédentes du produit.  
+3.  Cliquez sur le fichier de ressources dans lequel vous souhaitez coller la ressource (par exemple, Source2.rc). Choisissez **coller** dans le menu contextuel.  
   
     > [!NOTE]
-    >  Pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant, Visual C++ peut modifier valeur du symbole de la ressource transférée ou le nom et valeur lorsque vous le copiez dans le nouveau fichier.  
+    >  Vous ne peut pas faire glisser et déplacer, copier, Couper ou -coller entre les fichiers de ressources dans le projet (affichage des ressources) et des fichiers .rc autonome (ceux qui sont ouverts dans les fenêtres de document). Vous le faisiez dans les versions précédentes du produit.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+    > [!NOTE]
+    >  Pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant, Visual C++ peut modifier les valeur de symbole de la ressource transférée ou le nom et valeur lorsque vous la copiez dans le nouveau fichier.  
   
- Spécifications  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+  
+## <a name="requirements"></a>Configuration requise  
   
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : ouvrir un fichier de Script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Guide pratique pour ouvrir un fichier de script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [Fichiers de ressources](../windows/resource-files-visual-studio.md)   
  [Éditeurs de ressources](../windows/resource-editors.md)

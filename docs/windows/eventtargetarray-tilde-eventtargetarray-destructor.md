@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray :: ~ EventTargetArray, destructeur | Documents Microsoft'
+title: 'EventTargetArray :: ~ eventtargetarray, destructeur | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871791"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571097"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray, destructeur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,13 +34,13 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ```  
   
 ## <a name="remarks"></a>Notes  
- Désinitialise actuel `EventTargetArray` classe.  
+ Annule l’initialisation en cours **EventTargetArray** classe.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
- [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
+ [Eventtargetarray, classe](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

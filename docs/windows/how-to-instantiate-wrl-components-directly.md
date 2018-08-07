@@ -1,5 +1,5 @@
 ---
-title: 'Comment : instancier directement les composants WRL | Documents Microsoft'
+title: 'Comment : instancier directement les composants WRL | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 127a8430e79e7963ea94646f70179df2f30450ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878806"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568814"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Comment : instancier directement les composants WRL
 Découvrez comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime[Microsoft::wrl :: Make](../windows/make-function.md) et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pour instancier un composant à partir du module qui Il définit.  
   
- En instanciant directement les composants, vous pouvez réduire la surcharge lorsque vous n’avez pas besoin des fabriques de classe ou d’autres mécanismes. Vous pouvez instancier un composant directement dans les deux applications de plateforme Windows universelle et applications de bureau.  
+ En instanciant des composants directement, vous pouvez réduire la surcharge lorsque vous n’avez pas besoin des fabriques de classe ou d’autres mécanismes. Vous pouvez instancier un composant directement dans les deux applications de plateforme Windows universelle et dans les applications de bureau.  
   
 Pour savoir comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant COM classique et l’instancier à partir d’une application de bureau externe, consultez [Comment : créer un composant COM classique](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
   
- Ce document montre deux exemples. Le premier exemple utilise la `Make` fonction pour instancier un composant. Le deuxième exemple utilise la `MakeAndInitialize` fonction pour instancier un composant peut échouer pendant la construction. (Étant donné que COM utilise généralement `HRESULT` valeurs, au lieu des exceptions, pour indiquer les erreurs, un type COM généralement ne lève pas à partir de son constructeur. `MakeAndInitialize` permet à un composant valider ses arguments de construction via la `RuntimeClassInitialize` méthode.) Les deux exemples, définissent une interface de journal de base et implémentent cette interface en définissant une classe qui écrit des messages dans la console.  
+ Ce document montre deux exemples. Le premier exemple utilise le `Make` fonction pour instancier un composant. Le deuxième exemple utilise le `MakeAndInitialize` fonction pour instancier un composant peut échouer lors de la construction. (Étant donné que COM utilise généralement des valeurs HRESULT, au lieu d’exceptions, pour indiquer des erreurs, un type COM en général, ne lève pas de son constructeur. `MakeAndInitialize` permet à un composant à valider ses arguments de construction via la `RuntimeClassInitialize` méthode.) Les deux exemples définissent une interface de journal de base et implémentent cette interface en définissant une classe qui écrit des messages dans la console.  
   
 > [!IMPORTANT]
->  Vous ne pouvez pas utiliser le `new` opérateur pour instancier les composants de la bibliothèque de modèles Windows Runtime C++. Par conséquent, nous vous recommandons de toujours utiliser `Make` ou `MakeAndInitialize` pour instancier un composant directement.  
+>  Vous ne pouvez pas utiliser le **nouveau** opérateur pour instancier les composants de la bibliothèque de modèles C++ Windows Runtime. Par conséquent, nous recommandons de toujours utiliser `Make` ou `MakeAndInitialize` pour instancier un composant directement.  
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Pour créer et instancier un composant de journal de base  
   
 1.  Dans Visual Studio, créez un **Application Console Win32** projet. Nommez le projet, par exemple, `WRLLogger`.  
   
-2.  Ajouter un **fichier Midl (.idl)** de fichiers au projet, nommez le fichier `ILogger.idl`, puis ajoutez ce code :  
+2.  Ajouter un **fichier Midl (.idl)** fichier au projet, nommez le fichier `ILogger.idl`, puis ajoutez ce code :  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   

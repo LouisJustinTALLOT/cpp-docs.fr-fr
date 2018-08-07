@@ -1,5 +1,5 @@
 ---
-title: EventSource::InvokeAll, méthode | Documents Microsoft
+title: EventSource::InvokeAll, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882613"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570649"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll, méthode
 Appelle chaque gestionnaire d’événements associé actuel [EventSource](../windows/eventsource-class.md) avec les types d’arguments spécifiés et les arguments de l’objet.  
@@ -183,68 +183,68 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T0`  
+### <a name="parameters"></a>Paramètres  
+ *T0*  
  Le type de l’argument de gestionnaire d’événements zeroth.  
   
- `T1`  
+ *T1*  
  Le type du premier argument de gestionnaire d’événements.  
   
- `T2`  
- Le type du second argument de gestionnaire d’événements.  
+ *T2*  
+ Le type du deuxième argument de gestionnaire d’événements.  
   
- `T3`  
+ *T3*  
  Le type du troisième argument de gestionnaire d’événements.  
   
- `T4`  
+ *T4*  
  Le type du quatrième argument de gestionnaire d’événements.  
   
- `T5`  
- Type du cinquième argument de gestionnaire d’événements.  
+ *T5*  
+ Le type du cinquième argument de gestionnaire d’événements.  
   
- `T6`  
- Type du sixième argument de gestionnaire d’événements.  
+ *T6*  
+ Le type du sixième argument de gestionnaire d’événements.  
   
- `T7`  
- Type du septième argument de gestionnaire d’événements.  
+ *T7*  
+ Le type du septième argument de gestionnaire d’événements.  
   
- `T8`  
- Type du huitième argument de gestionnaire événement.  
+ *T8*  
+ Le type de l’argument de gestionnaire d’événements huitième.  
   
- `T9`  
- Type du neuvième argument de gestionnaire d’événements.  
+ *T9*  
+ Le type du neuvième argument de gestionnaire d’événements.  
   
- `arg0`  
- L’argument Gestionnaire d’événement zéro.  
+ *arg0*  
+ L’argument Gestionnaire d’événement zeroth.  
   
- `arg1`  
+ *arg1*  
  Le premier argument de gestionnaire de l’événement.  
   
- `arg2`  
- Deuxième argument de gestionnaire d’événements.  
+ *Arg2*  
+ Le deuxième argument de gestionnaire de l’événement.  
   
- `arg3`  
- Troisième argument de gestionnaire d’événements.  
+ *Arg3*  
+ Le troisième argument de gestionnaire de l’événement.  
   
- `arg4`  
- Quatrième argument de gestionnaire d’événements.  
+ *Arg4*  
+ Le quatrième argument de gestionnaire de l’événement.  
   
- `arg5`  
- Cinquième argument de gestionnaire d’événements.  
+ *Arg5*  
+ Le cinquième argument de gestionnaire de l’événement.  
   
- `arg6`  
+ *Arg6*  
  Sixième argument de gestionnaire d’événements.  
   
- `arg7`  
+ *Arg7*  
  Septième argument de gestionnaire d’événements.  
   
- `arg8`  
- L’argument Gestionnaire d’événement huitième.  
+ *Arg8*  
+ Argument d’événement huitième gestionnaire.  
   
- `arg9`  
+ *Arg9*  
  Neuvième argument de gestionnaire d’événements.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL

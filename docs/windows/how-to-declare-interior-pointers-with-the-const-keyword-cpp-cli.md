@@ -1,5 +1,5 @@
 ---
-title: 'Comment : déclarer des pointeurs intérieurs avec le mot clé const (C + c++ / CLI) | Documents Microsoft'
+title: 'Comment : déclarer des pointeurs intérieurs avec le mot clé const (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a71de1ab8d0ae081274616d4c22a4d7f39c0bbbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fdab21e0e8b9ad0b6fb1d58ba7d1bcd7020ffd10
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875043"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568613"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Comment : déclarer des pointeurs intérieurs avec le mot clé const (C++/CLI)
-L’exemple suivant montre comment utiliser `const` dans la déclaration d’un pointeur intérieur.  
+L’exemple suivant montre comment utiliser **const** dans la déclaration d’un pointeur intérieur.  
   
 > [!IMPORTANT]
->  Cette fonctionnalité de langage est pris en charge par le **/CLR** option du compilateur, mais pas par le **/ZW** option du compilateur.  
+>  Cette fonctionnalité de langage est pris en charge par le `/clr` option du compilateur, mais pas par le `/ZW` option du compilateur.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // interior_ptr_const.cpp  
 // compile with: /clr  
 using namespace System;  

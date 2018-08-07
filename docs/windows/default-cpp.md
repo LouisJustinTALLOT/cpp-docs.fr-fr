@@ -1,5 +1,5 @@
 ---
-title: la valeur par défaut (C++) | Documents Microsoft
+title: par défaut (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872963"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570855"
 ---
 # <a name="default-c"></a>default (C++)
 Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.  
@@ -32,8 +32,7 @@ Indique que l’interface personnalisée ou dispinterface définie dans une cocl
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ Indique que l’interface personnalisée ou dispinterface définie dans une cocl
  L’attribut C++ **default** a les mêmes fonctionnalités que l’attribut MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . L’attribut **default** est aussi utilisé avec l’attribut [case](../windows/case-cpp.md) .  
   
 ## <a name="example"></a>Exemple  
- Le code suivant montre comment l’attribut **default** est utilisé dans la définition d’une coclasse pour spécifier **ICustomDispatch** comme interface de programmabilité par défaut :  
+ Le code suivant montre comment **par défaut** est utilisé dans la définition d’une coclasse pour spécifier `ICustomDispatch` en tant que l’interface de programmabilité par défaut :  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -107,16 +106,16 @@ int main() {
   
  Il existe aussi un exemple pour l’attribut [source](../windows/source-cpp.md) qui montre comment utiliser **default**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`, membre de données|  
+|**S'applique à**|**classe**, **struct**, membre de données|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclasse** (quand il s’applique à une **classe** ou un `struct`)|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

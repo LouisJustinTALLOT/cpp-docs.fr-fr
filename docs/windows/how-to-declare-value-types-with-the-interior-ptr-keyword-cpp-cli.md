@@ -1,5 +1,5 @@
 ---
-title: 'Comment : déclarer des Types valeur avec le mot clé interior_ptr (C + c++ / CLI) | Documents Microsoft'
+title: 'Comment : déclarer des Types de valeur avec le mot clé interior_ptr (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879475"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571186"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Comment : déclarer des types de valeur avec le mot clé interior_ptr (C++/CLI)
-Un `interior_ptr` peut être utilisé avec un type valeur.  
+Un **interior_ptr** peut être utilisé avec un type valeur.  
   
 > [!IMPORTANT]
->  Cette fonctionnalité de langage est pris en charge par le **/CLR** option du compilateur, mais pas par le **/ZW** option du compilateur.  
+>  Cette fonctionnalité de langage est pris en charge par le `/clr` option du compilateur, mais pas par le `/ZW` option du compilateur.  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- C suivant + c++ / CLI montre comment utiliser un `interior_ptr` avec un type valeur.  
+ C++ suivant / c++ / CLI montre comment utiliser un **interior_ptr** avec un type valeur.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -78,13 +78,13 @@ int main() {
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Dans un type valeur, le `this` pointeur prend la valeur interior_ptr.  
+ Dans un type valeur, le **cela** pointeur prend la valeur interior_ptr.  
   
- Dans le corps d’une fonction membre non statique d’un type valeur `V`, `this` est une expression de type `interior_ptr<V>` dont la valeur est l’adresse de l’objet pour lequel la fonction est appelée.  
+ Dans le corps d’une fonction membre non statique d’un type valeur `V`, **cela** est une expression de type `interior_ptr<V>` dont la valeur est l’adresse de l’objet pour lequel la fonction est appelée.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -99,13 +99,13 @@ value struct V {
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L’exemple suivant montre comment utiliser l’opérateur d’adresse avec des membres statiques.  
+ L’exemple suivant montre comment utiliser l’opérateur address-of avec membres statiques.  
   
  L’adresse d’un membre de type statique Visual C++ génère un pointeur natif.  L’adresse d’un membre de type valeur statique est un pointeur managé, car le membre de type valeur est alloué sur le tas du runtime et peut être déplacé par le garbage collector.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output 
 22  
 23  
 hello  

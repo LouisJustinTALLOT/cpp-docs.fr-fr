@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::AddTail, méthode | Documents Microsoft
+title: Eventtargetarray::AddTail, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872281"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570172"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -35,20 +35,20 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `element`  
+### <a name="parameters"></a>Paramètres  
+ *Élément*  
  Pointeur vers le Gestionnaire d’événements à ajouter.  
   
 ## <a name="remarks"></a>Notes  
  Ajoute le Gestionnaire d’événements spécifié à la fin du tableau interne de gestionnaires d’événements.  
   
- AddTail() est destinée à être utilisée en interne par la classe EventSource.  
+ **AddTail()** est destinée à être utilisée en interne par uniquement la `EventSource` classe.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
- [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
+ [Eventtargetarray, classe](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Personnalisation ou modification des couleurs (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Personnalisation ou modification des couleurs (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,21 +26,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871235"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571283"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personnalisation ou modification des couleurs (Éditeur d'images pour les icônes)
-L’éditeur d’images [palette de couleurs](../windows/colors-window-image-editor-for-icons.md) affiche initialement 16 couleurs standard. En plus des couleurs affichées, vous pouvez créer vos couleurs personnalisées. Vous pouvez ensuite [enregistrer et charger une palette de couleurs personnalisées](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+L’éditeur d’images [palette de couleurs](../windows/colors-window-image-editor-for-icons.md) affiche initialement 16 couleurs standard. En plus des couleurs affichées, vous pouvez créer vos couleurs personnalisées. Vous pouvez ensuite [enregistrer et charger une palette de couleurs personnalisée](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Pour changer les couleurs de la palette de couleurs  
   
-1.  À partir de la **Image** menu, choisissez **affiner les couleurs**.  
+1.  À partir de la **Image** menu, choisissez **ajuster les couleurs**.  
   
-2.  Dans le [boîte de dialogue Sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), définissez la couleur en tapant des valeurs RVB ou TSL dans les zones appropriées ou choisissez une couleur dans le **affichage des dégradés de couleur** boîte.  
+2.  Dans le [boîte de dialogue Sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), définir la couleur en tapant des valeurs RVB ou TSL dans les zones appropriées ou choisissez une couleur dans le **affichage des dégradés de couleur** boîte.  
   
 3.  Définissez la luminosité en déplaçant le curseur le **luminosité** barre.  
   
@@ -50,11 +50,9 @@ L’éditeur d’images [palette de couleurs](../windows/colors-window-image-edi
   
 5.  Cliquez sur **OK** pour ajouter la nouvelle couleur.  
   
-
+## <a name="requirements"></a>Configuration requise  
   
- Spécifications  
-  
- Aucun  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   

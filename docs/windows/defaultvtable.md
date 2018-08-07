@@ -1,5 +1,5 @@
 ---
-title: defaultvtable | Documents Microsoft
+title: defaultvtable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882535"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569664"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 Définit une interface en tant que l’interface de vtable par défaut pour un objet COM.  
@@ -30,15 +30,14 @@ Définit une interface en tant que l’interface de vtable par défaut pour un o
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `interface`  
- L’interface désignée que vous souhaitez avoir la vtable de la valeur par défaut pour l’objet COM.  
+ *interface*  
+ L’interface désigné que vous souhaitez avoir vtable pour l’objet COM par défaut.  
   
 ## <a name="remarks"></a>Notes  
  Le **defaultvtable** attribut C++ a les mêmes fonctionnalités que le [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) attribut MIDL.  
@@ -46,7 +45,7 @@ Définit une interface en tant que l’interface de vtable par défaut pour un o
 ## <a name="example"></a>Exemple  
  Le code suivant montre les attributs sur une classe qui utilisent **defaultvtable** pour spécifier une interface par défaut :  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -72,16 +71,16 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Non|  
 |**Attributs requis**|**coclass**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

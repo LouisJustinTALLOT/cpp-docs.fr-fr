@@ -1,5 +1,5 @@
 ---
-title: Délégués génériques (Visual C++) | Documents Microsoft
+title: Délégués génériques (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875596"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571309"
 ---
 # <a name="generic-delegates-visual-c"></a>Délégués génériques (Visual C++)
-Vous pouvez utiliser les paramètres de type générique avec des délégués. Pour plus d’informations sur les délégués, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).  
+Vous pouvez utiliser les paramètres de type générique avec les délégués. Pour plus d’informations sur les délégués, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `attributes` (Facultatif)  
+ *attributs* (facultatif)  
  Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
  *type-paramètre-identificateur (s)*  
- Liste de séparées par des virgules d’identificateurs pour les paramètres de type.  
+ Liste séparée par des virgules d’identificateurs pour les paramètres de type.  
   
- `type-parameter-constraints-clauses`  
- Le format spécifié dans [contraintes sur les paramètres de Type générique (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *type de paramètre contraintes clauses*  
+ Prend la forme spécifiée dans [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *modificateurs d’accessibilité* (facultatif)  
- Les modificateurs d’accessibilité (par exemple, **public**, `private`).  
+ *les modificateurs d’accessibilité* (facultatif)  
+ Les modificateurs d’accessibilité (par exemple, **public**, **privé**).  
   
  *result-type*  
  Le type de retour du délégué.  
@@ -55,13 +55,13 @@ generic < [class | typename] type-parameter-identifiers>
  *identifier*  
  Le nom du délégué.  
   
- *paramètres formels* (facultatif)  
+ *paramètres-formels* (facultatif)  
  La liste de paramètres du délégué.  
   
 ## <a name="example"></a>Exemple  
- Les paramètres de type de délégué sont spécifiés au point où un objet de délégué est créé. Le délégué et la méthode associée doivent avoir la même signature. Voici un exemple d’une déclaration de délégué générique.  
+ Les paramètres de type de délégué sont spécifiés au niveau du point où un objet délégué est créé. Le délégué et la méthode associée doivent avoir la même signature. Voici un exemple d’une déclaration de délégué générique.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -71,13 +71,13 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre que  
   
--   Vous ne pouvez pas utiliser le même objet de délégué avec différents types construits. Permet de créer des objets pour différents types de délégué différents.  
+-   Vous ne pouvez pas utiliser le même objet de délégué avec différents types construits. Permet de créer des objets pour différents types de délégués différents.  
   
 -   Un délégué générique peut être associé à une méthode générique.  
   
--   Lorsqu’une méthode générique est appelée sans spécifier les arguments de type, le compilateur tente de déduire les arguments de type pour l’appel.  
+-   Quand une méthode générique est appelée sans spécifier les arguments de type, le compilateur tente de déduire les arguments de type pour l’appel.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -112,9 +112,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant déclare un délégué générique `GenDelegate<ItemType>`, puis il instancie en l’associant à la méthode `MyMethod` qui utilise le paramètre de type `ItemType`. Deux instances de délégué (entier et double) sont créés et appelés.  
+ L’exemple suivant déclare un délégué générique `GenDelegate<ItemType>`, puis l’instancie en l’associant à la méthode `MyMethod` qui utilise le paramètre de type `ItemType`. Deux instances du délégué (entier et double) sont créés et appelés.  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

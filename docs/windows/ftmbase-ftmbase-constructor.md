@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::ftmbase, constructeur | Documents Microsoft
+title: Ftmbase::ftmbase, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15a2373a10df10012e4b2d2685b413014d2ea3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dadb80e62abd9088dc1d01515b1a169c0b1fb3d1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872183"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569551"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase, constructeur
-Initialise une nouvelle instance de la classe FtmBase.  
+Initialise une nouvelle instance de la **FtmBase** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Initialise une nouvelle instance de la classe FtmBase.
 FtmBase();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ftm.h  
   
  **Espace de noms :** Microsoft::WRL  

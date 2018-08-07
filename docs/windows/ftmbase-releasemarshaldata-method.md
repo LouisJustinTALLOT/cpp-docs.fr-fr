@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::releasemarshaldata, méthode | Documents Microsoft
+title: Ftmbase::releasemarshaldata, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c536d3708141250c6e0ab19cacb22fe989dc236
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873649"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568756"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>FtmBase::ReleaseMarshalData, méthode
 Détruit un paquet de données marshalé.  
@@ -36,13 +36,13 @@ STDMETHODIMP ReleaseMarshalData(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `pStm`  
- Pointeur vers un flux qui contient le paquet de données d’être détruites.  
+ *pStm*  
+ Pointeur vers un flux qui contient le paquet de données d’être détruit.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ftm.h  
   
  **Espace de noms :** Microsoft::WRL  

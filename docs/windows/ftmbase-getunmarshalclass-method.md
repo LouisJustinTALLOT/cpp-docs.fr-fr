@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::GetUnmarshalClass, méthode | Documents Microsoft
+title: Ftmbase::GetUnmarshalClass, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873301"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571150"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass, méthode
-Obtient le CLSID COM utilise pour rechercher la DLL qui contient le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.  
+Obtient le CLSID COM utilise pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,32 +40,32 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `riid`  
- Référence à l’identificateur de l’interface pour être marshalés.  
+### <a name="parameters"></a>Paramètres  
+ *riid*  
+ Référence à l’identificateur de l’interface doivent être marshalées.  
   
- `pv`  
- Pointeur vers l’interface pour être marshalés ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.  
+ *PV*  
+ Pointeur vers l’interface doivent être marshalées ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.  
   
- `dwDestContext`  
- Contexte de destination où l’interface spécifiée doit être démarshalée.  
+ *dwDestContext*  
+ Contexte de destination où l’interface spécifiée doit être marshalé.  
   
  Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.  
   
- Unmarshaling peut se produire dans un autre cloisonnement du processus actuel (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).  
+ Unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).  
   
- `pvDestContext`  
- Réservé à un usage ultérieur ; doit être NULL.  
+ *pvDestContext*  
+ Réservé pour une utilisation ultérieure ; doit être NULL.  
   
- `mshlflags`  
+ *mshlflags*  
  Lorsque cette opération se termine, pointeur vers le CLSID à utiliser pour créer un proxy dans le processus client.  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, S_FALSE.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ftm.h  
   
  **Espace de noms :** Microsoft::WRL  

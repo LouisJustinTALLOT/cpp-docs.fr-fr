@@ -1,5 +1,5 @@
 ---
-title: EventSource::targets, données de membre | Documents Microsoft
+title: EventSource::targets, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871742"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568847"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_, données de membre
 Tableau d’un ou plusieurs gestionnaires d’événements.  
@@ -34,9 +34,9 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Lorsque l’événement représenté par l’objet en cours de la source d’événement se produit, les gestionnaires d’événements sont appelés.  
+ Lorsque l’événement qui est représenté par l’actuel **EventSource** objet se produit, les gestionnaires d’événements sont appelées.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL

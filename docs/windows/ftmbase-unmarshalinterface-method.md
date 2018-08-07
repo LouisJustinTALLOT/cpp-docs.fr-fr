@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::UnmarshalInterface, méthode | Documents Microsoft
+title: Ftmbase::UnmarshalInterface, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877717"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570026"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface, méthode
 Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.  
@@ -38,19 +38,19 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `pStm`  
- Pointeur vers le flux à partir duquel le pointeur d’interface doit être démarshalée.  
+ *pStm*  
+ Pointeur vers le flux à partir duquel le pointeur d’interface doit être marshalé.  
   
- `riid`  
- Référence à l’identificateur de l’interface sont démarshalées.  
+ *riid*  
+ Référence à l’identificateur de l’interface pour être marshalé.  
   
- `ppv`  
- Lorsque cette opération est terminée, l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans `riid`. Si cette opération est réussie, *`ppv` contient le pointeur d’interface demandé de l’interface sont démarshalées.  
+ *PPV*  
+ Lorsque cette opération se termine, l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Si cette opération est réussie, **ppv* contient le pointeur d’interface requis de l’interface pour être marshalé.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, d’E_NOINTERFACE ou E_FAIL.  
+ S_OK en cas de réussite ; Sinon, E_NOINTERFACE ou E_FAIL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ftm.h  
   
  **Espace de noms :** Microsoft::WRL  

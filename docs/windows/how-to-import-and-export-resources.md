@@ -1,5 +1,5 @@
 ---
-title: 'Comment : importer et exporter des ressources | Documents Microsoft'
+title: 'Comment : importer et exporter des ressources | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879176"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570478"
 ---
 # <a name="how-to-import-and-export-resources"></a>Comment : importer et exporter des ressources
 Vous pouvez importer des ressources graphiques (images bitmap, icônes, curseurs et barres d'outils), des fichiers HTML et des ressources personnalisées pour les utiliser dans Visual C++. Vous pouvez exporter les mêmes types de fichier depuis un projet Visual C++ vers des fichiers distincts utilisables en dehors de l'environnement de développement.  
@@ -55,17 +55,15 @@ Vous pouvez importer des ressources graphiques (images bitmap, icônes, curseurs
   
 ### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Pour exporter une image bitmap, une icône ou un curseur en tant que fichier distinct (pour une utilisation en dehors de Visual C++)  
   
-1.  Dans **ressource** afficher, cliquez sur la ressource que vous souhaitez exporter.  
+1.  Dans **ressource** , cliquez sur la ressource que vous voulez exporter.  
   
 2.  Cliquez sur **exporter** dans le menu contextuel.  
   
-3.  Dans le **exporter une ressource** boîte de dialogue zone, acceptez le nom de fichier en cours ou tapez-en un nouveau.  
+3.  Dans le **exporter la ressource** boîte de dialogue zone, acceptez le nom de fichier actuel ou tapez-en un nouveau.  
   
 4.  Accédez au dossier où vous souhaitez enregistrer le fichier et cliquez sur **exporter**.  
   
-
-  
- Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
  Win32  
   

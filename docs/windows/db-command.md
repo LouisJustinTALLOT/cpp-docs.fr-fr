@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954979"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571436"
 ---
 # <a name="dbcommand"></a>db_command
 Crée une commande OLE DB.  
@@ -133,7 +133,7 @@ Si *bulk_fetch* est inférieur à 1, `SetRows` retourne la valeur zéro.
 ## <a name="remarks"></a>Notes  
 **db_command** crée un objet [CCommand](../data/oledb/ccommand-class.md) , qui est utilisé par un consommateur OLE DB pour exécuter une commande.  
   
-Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Utilisations de portée de classe et de fonction impliquent la classe de modèle de consommateur OLE DB **CCommand\<>**, mais les arguments template diffèrent pour les cas de fonction et de classe. Dans le cas d’une fonction, des liaisons à un **Accessor** qui comprend des variables locales sont effectuées, alors que pour une classe une classe dérivée de `CAccessor`sera déduite comme argument. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.  
+Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Utilisations de portée de classe et de fonction impliquent la classe de modèle de consommateur OLE DB `CCommand<>`, mais les arguments template diffèrent pour les cas de fonction et de classe. Dans le cas d’une fonction, des liaisons à un **Accessor** qui comprend des variables locales sont effectuées, alors que pour une classe une classe dérivée de `CAccessor`sera déduite comme argument. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.  
   
 Vous pouvez utiliser**db_command** pour exécuter des commandes qui ne retournent pas de jeu de résultats.  
   

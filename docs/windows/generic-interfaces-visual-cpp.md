@@ -1,5 +1,5 @@
 ---
-title: Interfaces génériques (Visual C++) | Documents Microsoft
+title: Interfaces génériques (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878695"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571173"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces génériques (Visual C++)
-Les restrictions qui s’appliquent aux paramètres de type sur les classes sont les mêmes que celles qui s’appliquent aux paramètres de type sur les interfaces (consultez [Classes génériques (C + c++ / CLI)](../windows/generic-classes-cpp-cli.md)).  
+Les restrictions qui s’appliquent aux paramètres de type sur les classes sont les mêmes que celles qui s’appliquent aux paramètres de type sur les interfaces (consultez [Classes génériques (C++ / c++ / CLI)](../windows/generic-classes-cpp-cli.md)).  
   
  Les règles qui contrôlent la surcharge de fonction sont les mêmes pour les fonctions dans les classes génériques ou les interfaces génériques.  
   
- Implémentations de membres d’interface explicite fonctionnent avec les types interface construits dans la même façon que les types interface simple (voir les exemples suivants).  
+ Implémentations de membres d’interface explicite fonctionnent avec les types d’interface construite dans la même façon qu’avec les types d’interface simple (voir les exemples suivants).  
   
  Pour plus d’informations sur les interfaces, consultez [classe d’interface](../windows/interface-class-cpp-component-extensions.md).  
   
@@ -43,22 +43,22 @@ Les restrictions qui s’appliquent aux paramètres de type sur les classes sont
  *attributs* (facultatif)  
  Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
- *clé de la classe*  
+ *clé de classe*  
  **classe** ou **typename**  
   
- `type-parameter-identifier(s)`  
+ *type-paramètre-identificateur (s)*  
  Liste d’identificateurs séparés par des virgules.  
   
- `type-parameter-constraints-clauses`  
- Le format spécifié dans [contraintes sur les paramètres de Type générique (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *type de paramètre contraintes clauses*  
+ Prend la forme spécifiée dans [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *modificateurs d’accessibilité* (facultatif)  
+ *les modificateurs d’accessibilité* (facultatif)  
  Les modificateurs d’accessibilité (par exemple, **public, privé**).  
   
  *identifier*  
  Le nom de l’interface.  
   
- *base-list* (facultatif)  
+ *liste de base* (facultatif)  
  Une liste qui contient un ou plusieurs interfaces de base explicites séparés par des virgules.  
   
  *corps de l’interface*  
@@ -68,9 +68,9 @@ Les restrictions qui s’appliquent aux paramètres de type sur les classes sont
  Déclarations de variables en fonction de ce type.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment déclarer et instancier une interface générique. Dans l’exemple, l’interface générique `IList<ItemType>` est déclarée. Il est ensuite implémentée par deux classes génériques, `List1<ItemType>` et `List2<ItemType>`, avec des implémentations différentes.  
+ L’exemple suivant montre comment déclarer et instancier une interface générique. Dans l’exemple, l’interface générique `IList<ItemType>` est déclaré. Il est ensuite implémenté par deux classes génériques, `List1<ItemType>` et `List2<ItemType>`, avec des implémentations différentes.  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>Exemple  
- Cet exemple déclare une interface générique, `IMyGenIface`et deux interfaces non génériques, `IMySpecializedInt` et `ImySpecializedString`, spécialisés `IMyGenIface`. Les deux interfaces spécialisées sont ensuite implémentées par deux classes, `MyIntClass` et `MyStringClass`. L’exemple montre comment spécialiser des interfaces génériques, instancier des interfaces génériques et non génériques et appeler les membres implémentés explicitement sur les interfaces.  
+ Cet exemple déclare une interface générique, `IMyGenIface`et deux interfaces non génériques, `IMySpecializedInt` et `ImySpecializedString`, qui sont spécialisés `IMyGenIface`. Les deux interfaces spécialisées sont ensuite implémentés par deux classes, `MyIntClass` et `MyStringClass`. L’exemple montre comment spécialiser des interfaces génériques, instancier les interfaces génériques et non génériques et appeler les membres implémentés explicitement sur les interfaces.  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

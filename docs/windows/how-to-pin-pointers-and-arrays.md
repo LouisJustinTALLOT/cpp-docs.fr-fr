@@ -1,5 +1,5 @@
 ---
-title: 'Comment : épingler des pointeurs et des tableaux | Documents Microsoft'
+title: 'Comment : épingler des pointeurs et des tableaux | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873587"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569373"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Comment : épingler des pointeurs et des tableaux
-Épingler un sous-objet défini dans un objet managé a pour effet d’épinglage de l’objet entier.  Par exemple, si un élément d’un tableau est épinglé, la totalité du tableau est épinglé également. Il n’existe aucune extension à la langue pour déclarer un tableau épinglé. Pour épingler un tableau, déclarez un pointeur épingle à son type d’élément et épingler un de ses éléments.  
+Épinglage d’un sous-objet défini dans un objet managé a pour effet de l’épinglage de l’objet entier.  Par exemple, si un élément d’un tableau est épinglé, la totalité du tableau est épinglé également. Il n’existe aucune extension à la langue pour déclarer un tableau épinglé. Pour épingler un tableau, déclarez un pointeur épingle à son type d’élément et épingler un de ses éléments.  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>Sortie  
   
-```  
+```Output  
 ++  
 ```  
   

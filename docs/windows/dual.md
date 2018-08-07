@@ -1,5 +1,5 @@
 ---
-title: Double | Documents Microsoft
+title: Double | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872378"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571016"
 ---
 # <a name="dual"></a>dual
 Place une interface dans le fichier .idl comme une interface double.  
@@ -30,18 +30,16 @@ Place une interface dans le fichier .idl comme une interface double.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Lorsque le **double** attribut C++ précède une interface, par conséquent, l’interface doit être placé dans le bloc de bibliothèque dans le fichier .idl généré.  
+ Lorsque le **double** attribut C++ précède une interface, il fait en sorte d’être placées dans le bloc de bibliothèque dans le fichier .idl généré.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant est un bloc d’attributs qui utilise **double** avant une définition d’interface :  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -73,15 +71,15 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`|  
+|**S'applique à**|**interface**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**dispinterface**|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

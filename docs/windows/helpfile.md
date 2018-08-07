@@ -1,5 +1,5 @@
 ---
-title: HelpFile | Documents Microsoft
+title: HelpFile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570445"
 ---
 # <a name="helpfile"></a>helpfile
 Définit le nom du fichier d’aide pour une bibliothèque de types.  
@@ -30,13 +30,12 @@ Définit le nom du fichier d’aide pour une bibliothèque de types.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *filename*  
  Le nom du fichier qui contient les rubriques d’aide.  
   
@@ -46,16 +45,16 @@ Définit le nom du fichier d’aide pour une bibliothèque de types.
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de [module](../windows/module-cpp.md) pour obtenir un exemple montrant comment utiliser **helpfile**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`, `typedef`, **classe**, méthode, propriété|  
+|**S'applique à**|**interface**, **typedef**, **classe**, méthode, **propriété**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Deferrableeventargs, classe | Documents Microsoft
+title: Deferrableeventargs, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15be5c26e5d4e976eaba7b6b24e1bf4f62c53aca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f5ee2beca3a3985258b12cea9091665eb74cfa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872096"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571260"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs, classe
 Classe de modèle utilisée pour les types d’arguments des événements différés.  
@@ -31,15 +31,14 @@ typename TEventArgsInterface,
 typename TEventArgsClass  
 >  
 class DeferrableEventArgs : public TEventArgsInterface  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `TEventArgsInterface`  
+ *TEventArgsInterface*  
  Type d’interface qui déclare les arguments d’un événement différé.  
   
- `TEventArgsClass`  
- Classe qui implémente `TEventArgsInterface`.  
+ *TEventArgsClass*  
+ La classe qui implémente *TEventArgsInterface*.  
   
 ## <a name="members"></a>Membres  
   
@@ -53,9 +52,9 @@ class DeferrableEventArgs : public TEventArgsInterface
 ## <a name="remarks"></a>Notes  
  Les instances de cette classe sont passées aux gestionnaires des événements différés. Les paramètres du modèle représentent une interface qui définit les détails des arguments d'événement pour un type spécifique d'événement différé, et une classe qui implémente cette interface.  
   
- La classe est présentée comme premier argument au gestionnaire d’événements qui traite l’événement différé. Vous pouvez appeler la [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) méthode pour obtenir le [report](http://go.microsoft.com/fwlink/p/?linkid=526520) objet à partir de laquelle vous pouvez obtenir toutes les informations sur l’événement différé. Une fois la gestion des événements terminée, vous devez appeler Complete sur l'objet Deferral. Vous devez appeler [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) à la fin de la méthode de gestionnaire d’événements, ce qui garantit que l’achèvement de tous les événements différés est communiqué correctement.  
+ La classe est présentée comme premier argument au gestionnaire d’événements qui traite l’événement différé. Vous pouvez appeler la [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) méthode pour obtenir le [report](http://go.microsoft.com/fwlink/p/?linkid=526520) objet à partir de laquelle vous pouvez obtenir toutes les informations relatives à l’événement différé. Une fois la gestion des événements terminée, vous devez appeler Complete sur l'objet Deferral. Vous devez appeler [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) à la fin de la méthode de gestionnaire d’événements, ce qui garantit que l’achèvement de tous les événements différés est communiqué correctement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL  

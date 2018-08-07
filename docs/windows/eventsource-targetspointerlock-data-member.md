@@ -1,5 +1,5 @@
 ---
-title: EventSource::targetspointerlock, données de membre | Documents Microsoft
+title: EventSource::targetspointerlock, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873106"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569815"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_, données de membre
-Synchronise l’accès aux membres de données internes, même si les gestionnaires d’événements pour cette source d’événement sont ajoutés, supprimés ou appelé.  
+Synchronise l’accès aux membres de données internes même lorsque les gestionnaires d’événements pour ce **EventSource** sont ajoutés, supprimés ou appelée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Synchronise l’accès aux membres de données internes, même si les gestionnai
 Wrappers::SRWLock targetsPointerLock_;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL

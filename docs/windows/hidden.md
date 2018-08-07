@@ -1,5 +1,5 @@
 ---
-title: masqué | Documents Microsoft
+title: masqué | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879683"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568668"
 ---
 # <a name="hidden"></a>hidden
 Indique que l’élément existe, mais ne doit pas être affiché dans un navigateur orienté utilisateur.  
@@ -30,27 +30,25 @@ Indique que l’élément existe, mais ne doit pas être affiché dans un naviga
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **masqué** attribut C++ a les mêmes fonctionnalités que le [masqué](http://msdn.microsoft.com/library/windows/desktop/aa366861) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Consultez l’exemple de [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **masqué**.  
+ Consultez l’exemple de [peut être liée](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **masqué**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`interface`, **classe**, `struct`, méthode, propriété|  
+|**S'applique à**|**interface**, **classe**, **struct**, méthode, propriété|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclasse** (quand il s’applique à une **classe** ou un `struct`)|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

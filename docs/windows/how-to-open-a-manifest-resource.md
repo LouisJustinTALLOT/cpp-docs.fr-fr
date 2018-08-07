@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ouvrir une ressource de manifeste | Documents Microsoft'
+title: 'Comment : ouvrir une ressource de manifeste | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881840"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569945"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Comment : ouvrir une ressource de manifeste
 Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage des ressources](../windows/resource-view-window.md), la ressource s'ouvre au format binaire. Pour afficher le contenu d'une ressource de manifeste dans un format plus lisible, vous devez ouvrir la ressource à partir de l'Explorateur de solutions.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Pour ouvrir une ressource de manifeste dans l'éditeur de texte  
   
-1.  Une fois votre projet ouvert dans `Solution Explorer`, développez le dossier **Fichiers de ressources** .  
+1.  Votre projet étant ouvert dans **l’Explorateur de solutions**, développez le **fichiers de ressources** dossier.  
   
 2.  Double-cliquez sur le fichier .manifest.  
   
@@ -36,13 +36,13 @@ Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage de
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Pour ouvrir une ressource de manifeste dans un autre éditeur  
   
-1.  Dans l'Explorateur de solutions, cliquez avec le bouton droit sur le fichier .manifest, puis choisissez **Ouvrir avec** dans le menu contextuel.  
+1.  Dans **l’Explorateur de solutions**, cliquez sur le fichier .manifest et choisissez **ouvrir avec...**  dans le menu contextuel.  
   
 2.  Dans la boîte de dialogue **Ouvrir avec** , spécifiez l'éditeur à utiliser, puis cliquez sur **Ouvrir**.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
- Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
  Win32  
   

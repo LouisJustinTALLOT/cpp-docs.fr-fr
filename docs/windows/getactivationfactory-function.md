@@ -1,5 +1,5 @@
 ---
-title: GetActivationFactory (fonction) | Documents Microsoft
+title: GetActivationFactory (fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881336"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570309"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (fonction)
-Récupère la fabrique d’activation pour le type spécifié par le paramètre de modèle.  
+Récupère une fabrique d’activation pour le type spécifié par le paramètre de modèle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,20 +39,20 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `T`  
+### <a name="parameters"></a>Paramètres  
+ *T*  
  Un paramètre de modèle qui spécifie le type de la fabrique d’activation.  
   
- `activatableClassId`  
- Le nom de la classe qui permet de créer la fabrique d’activation.  
+ *activatableClassId*  
+ Le nom de la classe de la fabrique d’activation peut produire.  
   
- `factory`  
- Lorsque cette opération est terminée, une référence à la fabrique d’activation pour le type `T`.  
+ *fabrique*  
+ Lorsque cette opération se termine, une référence à la fabrique d’activation pour le type *T*.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la raison pour laquelle cette opération a échoué.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Windows::Foundation  

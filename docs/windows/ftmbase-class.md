@@ -1,5 +1,5 @@
 ---
-title: Ftmbase, classe | Documents Microsoft
+title: Ftmbase, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814350"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570559"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 Représente un objet marshaler libre de threads.  
@@ -30,7 +30,6 @@ Représente un objet marshaler libre de threads.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  
@@ -45,7 +44,7 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Nom|Description|  
 |----------|-----------------|  
-|[FtmBase::FtmBase, constructeur](../windows/ftmbase-ftmbase-constructor.md)|Initialise une nouvelle instance de la classe FtmBase.|  
+|[FtmBase::FtmBase, constructeur](../windows/ftmbase-ftmbase-constructor.md)|Initialise une nouvelle instance de la **FtmBase** classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -53,8 +52,8 @@ class FtmBase : public Microsoft::WRL::Implements<
 |----------|-----------------|  
 |[FtmBase::CreateGlobalInterfaceTable, méthode](../windows/ftmbase-createglobalinterfacetable-method.md)|Crée un tableau global d’interface (GIT).|  
 |[FtmBase::DisconnectObject, méthode](../windows/ftmbase-disconnectobject-method.md)|Force libère toutes les connexions externes à un objet. Serveur de l’objet appelle l’implémentation de l’objet de cette méthode avant d’arrêter.|  
-|[FtmBase::GetMarshalSizeMax, méthode](../windows/ftmbase-getmarshalsizemax-method.md)|Obtenir la limite supérieure du nombre d’octets nécessaire pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.|  
-|[FtmBase::GetUnmarshalClass, méthode](../windows/ftmbase-getunmarshalclass-method.md)|Obtient le CLSID COM utilise pour rechercher la DLL qui contient le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.|  
+|[FtmBase::GetMarshalSizeMax, méthode](../windows/ftmbase-getmarshalsizemax-method.md)|Obtenir la limite supérieure sur le nombre d’octets nécessaires pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.|  
+|[FtmBase::GetUnmarshalClass, méthode](../windows/ftmbase-getunmarshalclass-method.md)|Obtient le CLSID COM utilise pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.|  
 |[FtmBase::MarshalInterface, méthode](../windows/ftmbase-marshalinterface-method.md)|Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.|  
 |[FtmBase::ReleaseMarshalData, méthode](../windows/ftmbase-releasemarshaldata-method.md)|Détruit un paquet de données marshalé.|  
 |[FtmBase::UnmarshalInterface, méthode](../windows/ftmbase-unmarshalinterface-method.md)|Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.|  

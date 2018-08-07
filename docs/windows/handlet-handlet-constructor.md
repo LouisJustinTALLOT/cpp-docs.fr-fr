@@ -1,5 +1,5 @@
 ---
-title: Handlet::handlet, constructeur | Documents Microsoft
+title: Handlet::handlet, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881895"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569509"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT, constructeur
-Initialise une nouvelle instance de la classe HandleT.  
+Initialise une nouvelle instance de la **HandleT** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +40,14 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
+### <a name="parameters"></a>Paramètres  
+ *h*  
  Un handle.  
   
 ## <a name="remarks"></a>Notes  
- Le premier constructeur initialise un objet HandleT qui n’est pas un handle valide d’un objet. Le deuxième constructeur crée un objet HandleT à partir du paramètre `h`.  
+ Le premier constructeur initialise un **HandleT** objet qui n’est pas un handle valide à un objet. Le deuxième constructeur crée un nouveau **HandleT** objet de paramètre *h*.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

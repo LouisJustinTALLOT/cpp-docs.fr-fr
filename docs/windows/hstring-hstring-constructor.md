@@ -1,5 +1,5 @@
 ---
-title: Hstring::hstring, constructeur | Documents Microsoft
+title: Hstring::hstring, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3188e137d3a39fb26ca4151f72073306038e46f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876876"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568769"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString, constructeur
-Initialise une nouvelle instance de la classe HString.  
+Initialise une nouvelle instance de la **HString** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,18 +33,18 @@ HString(HString&& other) throw();
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `hstr`  
+ *HSTR*  
  Un handle HSTRING.  
   
- `other`  
- Objet HString existant.  
+ *other*  
+ Un existant **HString** objet.  
   
 ## <a name="remarks"></a>Notes  
- Le premier constructeur initialise un nouvel objet HString qui est vide.  
+ Le premier constructeur initialise un nouveau **HString** objet est vide.  
   
- Le deuxième constructeur initialise un nouvel objet HString à la valeur existants `other` paramètre et puis détruit la `other` paramètre.  
+ Le deuxième constructeur initialise un nouveau **HString** objet à la valeur existants *autres* paramètre et détruit le *autres* paramètre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  
