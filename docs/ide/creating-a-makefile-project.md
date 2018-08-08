@@ -40,7 +40,7 @@ Le fichier de sortie que vous spécifiez dans le projet n'a pas d'incidence sur 
 
 1. Dans la boîte de dialogue **Nouveau projet**, développez **Visual C++** > **Général**, puis sélectionnez **Projet Makefile** dans le volet Modèles pour ouvrir l’Assistant Projet.
 
-1. Dans la page [Paramètres de l’application](../ide/application-settings-makefile-project-wizard.md), indiquez les informations relatives à la ligne de commande, à la sortie, au nettoyage et à la regénération pour les builds Debug et Release.
+1. Dans la page [Paramètres de l’application](../ide/application-settings-makefile-project-wizard.md), indiquez les informations relatives à la ligne de commande, à la sortie, au nettoyage et à la regénération pour les builds Debug et Retail.
 
 1. Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir le projet que vous venez de créer dans **l’Explorateur de solutions**.
 
