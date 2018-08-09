@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462782"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646187"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Ajoute une entrée de l’interface dans le mappage COM de la classe cible.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *COM_INTERFACE_ENTRY*  
  Chaîne contenant le texte de l’entrée. Pour obtenir la liste des valeurs possibles, consultez [Macros COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ Ajoute une entrée de l’interface dans le mappage COM de la classe cible.
   
  Cette restriction est nécessaire car ATL utilise la première entrée dans la table d’interface en tant que l’identité `IUnknown`; par conséquent, l’entrée doit être une interface valide. Par exemple, l’exemple de code suivant n’est pas valide, car la première entrée dans la table d’interface ne spécifie pas une interface COM réelle.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  Mappage résultant de l’objet COM pour `CMyBaseClass` se présente comme suit :  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Oui|  
-|**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid**ou **vi_progid**.|  
+|**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|  
 |**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569932"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646784"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Crée un récepteur d'événements (récepteur).  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *type*  
  Une énumération de l’une des valeurs suivantes :  
   
@@ -50,13 +50,13 @@ Crée un récepteur d'événements (récepteur).
   
 -   `com` pour le code COM. Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  Spécifiez *layout_dependent* uniquement si `type` = **com**. *layout_dependent* est une valeur booléenne :  
   
 -   **true** signifie que la signature des délégués dans le récepteur doit correspondre exactement à ceux auxquels ils sont raccordés des source de l’événement des événements. Les noms de gestionnaire d’événements récepteur doivent correspondre aux noms spécifiés dans l’interface de source d’événement pertinent. Vous devez utiliser `coclass` lorsque *layout_dependent* est **true**. Il est légèrement plus efficace de spécifier **true**.  
@@ -81,7 +81,7 @@ Crée un récepteur d'événements (récepteur).
 |-|-|  
 |**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclasse** lorsque *layout_dependent*=**true**|  
+|**Attributs requis**|`coclass` Lorsque *layout_dependent*=**true**|  
 |**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: transmit_as | Documents Microsoft
+title: transmit_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890410"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642523"
 ---
 # <a name="transmitas"></a>transmit_as
-Indique au compilateur pour associer un type de présenté qui manipulent des applications clientes et serveur, avec un type transmis.  
+Indique au compilateur d’associer un type présenté qui manipulent des applications clientes et serveur, à un type transmis.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `type`  
- Spécifie le type de données qui est transmis entre le client et le serveur.  
+### <a name="parameters"></a>Paramètres  
+ *type*  
+ Spécifie le type de données transmises entre le client et le serveur.  
   
 ## <a name="remarks"></a>Notes  
  Le **transmit_as** attribut C++ a les mêmes fonctionnalités que le [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) attribut MIDL.  
@@ -46,7 +45,7 @@ Indique au compilateur pour associer un type de présenté qui manipulent des ap
 ## <a name="example"></a>Exemple  
  Le code suivant illustre une utilisation de la **transmit_as** attribut :  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -74,16 +73,16 @@ struct _TREE_NODE_TYPE * right;
 [transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`typedef`|  
+|**S'applique à**|**typedef**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

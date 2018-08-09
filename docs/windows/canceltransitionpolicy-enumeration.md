@@ -1,5 +1,5 @@
 ---
-title: Canceltransitionpolicy, énumération | Documents Microsoft
+title: Canceltransitionpolicy, énumération | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860344"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642956"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy, énumération
-Indique la façon dont une opération asynchrone tentative du passage à un état terminal de terminée ou l’erreur doit se comporter en ce qui concerne un client a demandé l’état annulé.  
+Indique la façon dont une opération asynchrone tentative du passage à un état terminal de terminé ou erreur doit se comporter en ce qui concerne un client a demandé l’état annulé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,10 +41,10 @@ enum CancelTransitionPolicy;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`RemainCanceled`|Si l’opération asynchrone est actuellement dans un état annulé de demande du client, cela indique qu’il reste dans l’état annulé, par opposition à la transition vers un Terminal Server s’est terminée ou l’état d’erreur.|  
-|`TransitionFromCanceled`|Si l’opération asynchrone est actuellement dans un état annulé de demande du client, cela indique qu’état doit passer à partir de ce à l’état terminal d’état d’annulation s’est terminée ou d’erreur tel que déterminé par l’appel qui utilise cet indicateur.|  
+|`RemainCanceled`|Si l’opération asynchrone est en cours d’un client a demandé l’état annulé, cela indique qu’il reste à l’état annulé par opposition à la transition vers un terminal terminée ou l’état d’erreur.|  
+|`TransitionFromCanceled`|Si l’opération asynchrone est en cours d’un client a demandé l’état annulé, cela indique qu’état doit passer de celle état annulé à l’état terminal de terminé ou erreur, tel que déterminé par l’appel qui utilise cet indicateur.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

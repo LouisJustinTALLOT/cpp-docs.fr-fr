@@ -1,5 +1,5 @@
 ---
-title: chaîne (C++) | Documents Microsoft
+title: chaîne (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889018"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645407"
 ---
 # <a name="string-c"></a>string (C++)
-Indique que la dimension `char`, `wchar_t`, **octets** (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité en tant que chaîne.  
+Indique qu’unidimensionnel **char**, **wchar_t**, `byte` (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité comme une chaîne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **chaîne** attribut C++ a les mêmes fonctionnalités que le [chaîne](http://msdn.microsoft.com/library/windows/desktop/aa367270) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant montre comment utiliser **chaîne** sur une interface et un typedef :  
+ Le code suivant montre comment utiliser **chaîne** sur une interface et sur un typedef :  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -54,7 +52,7 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -62,8 +60,8 @@ __interface IFireTabCtrl
 |-|-|  
 |**S'applique à**|Tableau ou pointeur vers un tableau, le paramètre d’interface, la méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

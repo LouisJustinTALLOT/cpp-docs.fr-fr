@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: df5f341382b7f9594d740b7e47fbb53b53188d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462041"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643119"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename TMemberFunction>  
 struct ArgTraits;  
 template<typename TDelegateInterface>  
@@ -117,7 +117,7 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *TMemberFunction*  
  Paramètre TypeName pour une ArgTraits (structure) qui ne correspond à aucune `Invoke` signature de méthode.  
   
@@ -152,7 +152,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  Le type du neuvième argument de la `Invoke` (méthode).  
   
 ## <a name="remarks"></a>Notes  
- Le `ArgTraits` structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.  
+ Le **ArgTraits** structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.  
   
 ## <a name="members"></a>Membres  
   

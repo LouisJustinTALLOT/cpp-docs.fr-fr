@@ -1,5 +1,5 @@
 ---
-title: Creatormap::ServerName, données de membre | Documents Microsoft
+title: Creatormap::ServerName, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48095aa9f6a561baa03b0a529702cf97bdfb9785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870934"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642174"
 ---
 # <a name="creatormapservername-data-member"></a>CreatorMap::serverName, données de membre
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 const wchar_t* serverName;  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Stocke le nom du serveur pour le CreatorMap.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Namespace :** Microsoft::WRL::Details  

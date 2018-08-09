@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits (Structure) | Documents Microsoft
+title: HANDLETraits (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876646"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649911"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (structure)
-Définit les caractéristiques communes d’un handle.  
+Définit les caractéristiques communes d’une poignée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct HANDLETraits;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`Type`|Un synonyme de HANDLE.|  
+|`Type`|Synonyme de HANDLE.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -51,7 +51,7 @@ struct HANDLETraits;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HANDLETraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

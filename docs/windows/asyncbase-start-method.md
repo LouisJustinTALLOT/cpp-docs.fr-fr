@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463728"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641302"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start, méthode
 Démarre l’opération asynchrone.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    Start  
 )(void);  

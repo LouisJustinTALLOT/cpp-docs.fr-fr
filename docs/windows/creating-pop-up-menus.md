@@ -1,5 +1,5 @@
 ---
-title: Création de Menus contextuels | Documents Microsoft
+title: Création de Menus contextuels | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871495"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648072"
 ---
 # <a name="creating-pop-up-menus"></a>Création de menus contextuels
 Les[menus contextuels](../mfc/menus-mfc.md) affichent les commandes fréquemment utilisées. Ils dépendent du contexte selon l'emplacement du pointeur. L'utilisation de menus contextuels dans votre application nécessite la création du menu en question, puis sa connexion au code de l'application.  
@@ -36,7 +36,7 @@ Les[menus contextuels](../mfc/menus-mfc.md) affichent les commandes fréquemment
   
 1.  [Créez un menu](../windows/creating-a-menu.md) avec un titre vide (ne fournissez pas de **légende**).  
   
-2.  [Ajoutez une commande de menu au nouveau menu](../windows/adding-commands-to-a-menu.md). Placez-vous sur la première commande de menu sous le titre de menu vide (la légende temporaire indique « Tapez ici »). Tapez une **légende** et les autres informations appropriées.  
+2.  [Ajoutez une commande de menu au nouveau menu](../windows/adding-commands-to-a-menu.md). Déplacer vers la première commande de menu sous le titre de menu vide (la légende temporaire indique `Type Here`). Tapez une **légende** et les autres informations appropriées.  
   
      Répétez ce processus pour les autres commandes de menu du menu contextuel.  
   
@@ -45,10 +45,7 @@ Les[menus contextuels](../mfc/menus-mfc.md) affichent les commandes fréquemment
     > [!TIP]
     >  Pour plus d'informations sur l'affichage du menu contextuel, voir [Affichage d'un menu sous la forme d'un menu contextuel](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
   
-
-  
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c505d6ebf62e6c01ecd3c2f750cec1c95775f53d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642426"
 ---
 # <a name="helpcontext"></a>helpcontext
-Spécifie un ID de contexte qui vous permet de l’utilisateur afficher des informations sur cet élément dans le fichier d’aide.  
+Spécifie un ID de contexte qui vous permet de l’utilisateur afficher des informations sur cet élément dans le **aide** fichier.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ helpcontext(  
    id  
 ) ]  

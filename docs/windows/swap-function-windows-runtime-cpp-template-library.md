@@ -1,5 +1,5 @@
 ---
-title: Swap, fonction (bibliothèque de Windows Runtime C++ modèle) | Documents Microsoft
+title: Swap, fonction (bibliothèque de modèle C++ Windows Runtime) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b37a5e33b4d6a9e62510e79c7f72145ed0f1e128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889382"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651757"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap, fonction (bibliothèque de modèles Windows Runtime C++)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,11 +34,11 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `left`  
+### <a name="parameters"></a>Paramètres  
+ *left*  
  Le premier argument.  
   
- `right`  
+ *right*  
  Le deuxième argument.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -46,7 +46,7 @@ WRL_NOTHROW inline void Swap(
 ## <a name="remarks"></a>Notes  
  Échange les valeurs des deux arguments spécifiés.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

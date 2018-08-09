@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e9a0203bd0da2ea62d015264c1f4e8c58fcae66
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f55896ac0bca162df9f17703225552cdb70c079c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463192"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647084"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id, méthode
 Définit le handle de l’opération asynchrone.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    put_Id  
 )(const unsigned int id);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *ID*  
  Un handle différente de zéro.  
   

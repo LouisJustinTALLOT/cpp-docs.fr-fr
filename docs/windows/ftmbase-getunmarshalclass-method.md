@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 167ad8537a11a0118c15b588b353f33775b5ab3a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571150"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644997"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass, méthode
 Obtient le CLSID COM utilise pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHODIMP GetUnmarshalClass(  
    __in REFIID riid,  
    __in_opt void *pv,  

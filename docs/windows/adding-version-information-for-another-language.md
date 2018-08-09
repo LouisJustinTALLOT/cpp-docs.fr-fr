@@ -1,5 +1,5 @@
 ---
-title: Ajout d’informations sur la Version pour une autre langue | Documents Microsoft
+title: Ajout des informations de Version pour une autre langue | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857569"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650454"
 ---
 # <a name="adding-version-information-for-another-language"></a>Ajout d'informations sur la version pour une autre langue
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Pour ajouter des informations de version pour une autre langue (nouveau bloc d’informations)  
@@ -42,13 +42,11 @@ ms.locfileid: "33857569"
   
 3.  Dans la fenêtre **Propriétés** , sélectionnez la langue et le jeu de caractères appropriés pour votre nouveau bloc de caractères.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise 
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur d’informations de version](../windows/version-information-editor.md)   
  [Informations de version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

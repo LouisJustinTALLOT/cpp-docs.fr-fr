@@ -1,5 +1,5 @@
 ---
-title: Association d’une touche accélérateur à un élément de Menu | Documents Microsoft
+title: Association d’une touche accélérateur à un élément de Menu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3d55fc13cb8fd989188c5796709c952903ce83d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ad3914fb5cd98b09d3b0bdfa5c4385106312d73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854809"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651149"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Association d'une touche accélérateur à un élément de menu
-Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Pour ce faire, vous assignez le même identificateur (ID) de ressource à l'élément de menu et à une entrée de la table d'accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès, consultez [association d’un élément de Menu à une touche accélérateur](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
+Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Pour ce faire, vous assignez le même identificateur (ID) de ressource à l'élément de menu et à une entrée de la table d'accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès rapide, consultez [association d’un élément de Menu à une touche accélérateur](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
   
-
-  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

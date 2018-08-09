@@ -1,5 +1,5 @@
 ---
-title: Semaphore::operator =, opérateur | Documents Microsoft
+title: Semaphore::operator =, opérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892525"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651276"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator=, opérateur
-Déplace le handle spécifié à partir d’un objet sémaphore à l’objet de sémaphore actuel.  
+Déplace le handle spécifié à partir d’un **sémaphore** objet actuel **sémaphore** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
- Référence rvalue à un objet de sémaphore.  
+### <a name="parameters"></a>Paramètres  
+ *h*  
+ Référence rvalue à un **sémaphore** objet.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une référence à l’objet de sémaphore actuel.  
+ Une référence à l’actuel **sémaphore** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers

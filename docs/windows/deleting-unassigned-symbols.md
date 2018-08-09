@@ -1,5 +1,5 @@
 ---
-title: Suppression des symboles non assignés | Documents Microsoft
+title: Suppression des symboles non assignés | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882938"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648195"
 ---
 # <a name="deleting-unassigned-symbols"></a>Suppression de symboles non assignés
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Pour supprimer un symbole non assigné (non utilisé)  
@@ -32,14 +32,11 @@ ms.locfileid: "33882938"
     > [!NOTE]
     >  Avant de supprimer un symbole inutilisé dans un fichier de ressources, assurez-vous qu'il n'est pas utilisé ailleurs dans le programme, ni par les fichiers de ressources inclus au moment de la compilation.  
   
-
-  
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modification des symboles non assignés](../windows/changing-unassigned-symbols.md)   
- [Restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md)   
+ [Restrictions de nom de symbole](../windows/symbol-name-restrictions.md)   
  [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md)   
  [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)

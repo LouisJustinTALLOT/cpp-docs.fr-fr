@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eb93f90b6d96d679b055893dc13adaa0d3c2e780
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570683"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642979"
 ---
 # <a name="how-to-copy-resources"></a>Comment : copier des ressources
 Vous pouvez copier des ressources à partir d’un fichier vers un autre sans les modifier ou vous pouvez [modifier la langue ou la condition d’une ressource lors de la copie](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
@@ -44,23 +44,23 @@ Vous pouvez copier des ressources à partir d’un fichier vers un autre sans le
   
 1.  Ouvrez les deux fichiers de ressources autonomes (pour plus d’informations, consultez [affichage des ressources dans un fichier à l’extérieur d’un projet .rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Par exemple, ouvrez Source1.rc et Source2.rc.  
   
-2.  Dans le premier fichier .rc, cliquez sur la ressource que vous souhaitez copier. Par exemple, dans Source1.rc, cliquez sur **IDD_DIALOG1**.  
+2.  Dans le premier fichier .rc, cliquez sur la ressource que vous souhaitez copier. Par exemple, dans `Source1.rc`, cliquez sur **IDD_DIALOG1**.  
   
-3.  Maintenez la touche CTRL enfoncée et faites glisser la ressource pour le deuxième fichier .rc. Par exemple, faites glisser **IDD_DIALOG1** de Source1.rc vers Source2.rc.  
+3.  Maintenez la touche CTRL enfoncée et faites glisser la ressource pour le deuxième fichier .rc. Par exemple, faites glisser **IDD_DIALOG1** de `Source1.rc` à `Source2.rc`.  
   
     > [!NOTE]
-    >  En faisant glisser la ressource sans maintenir enfoncée la touche CTRL enfoncée déplace la ressource plutôt que de le copier.  
+    >  En faisant glisser la ressource sans maintenir enfoncée la **Ctrl** touche déplace la ressource plutôt que de le copier.  
   
 ### <a name="to-copy-resources-using-copy-and-paste"></a>Ressources à l’aide de la copie de copier et coller  
   
 1.  Ouvrez les deux fichiers de ressources autonomes (pour plus d’informations, consultez [affichage des ressources dans un fichier à l’extérieur d’un projet .rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Par exemple, Source1.rc et Source2.rc.  
   
-2.  Dans le fichier source à partir de laquelle vous souhaitez copier une ressource (par exemple, Source1.rc), une ressource avec le bouton droit et choisissez **copie** dans le menu contextuel.  
+2.  Dans le fichier source à partir de laquelle vous souhaitez copier une ressource (par exemple, `Source1.rc`), cliquez sur une ressource et choisissez **copie** dans le menu contextuel.  
   
-3.  Cliquez sur le fichier de ressources dans lequel vous souhaitez coller la ressource (par exemple, Source2.rc). Choisissez **coller** dans le menu contextuel.  
+3.  Cliquez sur le fichier de ressources dans lequel vous souhaitez coller la ressource (par exemple, `Source2.rc`). Choisissez **coller** dans le menu contextuel.  
   
     > [!NOTE]
-    >  Vous ne peut pas faire glisser et déplacer, copier, Couper ou -coller entre les fichiers de ressources dans le projet (affichage des ressources) et des fichiers .rc autonome (ceux qui sont ouverts dans les fenêtres de document). Vous le faisiez dans les versions précédentes du produit.  
+    >  Vous ne pouvez pas faire glisser et drop, copier, Couper ou -coller entre les fichiers de ressources dans le projet (**affichage des ressources**) et les fichiers .rc autonome (ceux qui sont ouverts dans les fenêtres de document). Vous le faisiez dans les versions précédentes du produit.  
   
     > [!NOTE]
     >  Pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant, Visual C++ peut modifier les valeur de symbole de la ressource transférée ou le nom et valeur lorsque vous la copiez dans le nouveau fichier.  
@@ -68,7 +68,6 @@ Vous pouvez copier des ressources à partir d’un fichier vers un autre sans le
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

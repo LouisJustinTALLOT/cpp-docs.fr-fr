@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir de métadonnées windows | Documents Microsoft'
+title: 'Comment : utiliser winmdidl.exe et midlrt.exe pour créer des fichiers .h à partir de métadonnées windows | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f93570d18373a2e5ab4c698a9a85d4412129dd17
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891719"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650607"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows
 Winmdidl.exe et midlrt.exe permettent l'interaction de niveau COM entre le code C++ natif et les composants Windows Runtime. Winmdidl.exe prend comme entrée un fichier .winmd qui contient des métadonnées pour un composant Windows Runtime et génère un fichier IDL. Midlrt.exe convertit ce fichier IDL en fichiers d'en-tête que le code C++ peut utiliser. Les deux outils sont exécutés sur la ligne de commande.  
@@ -67,15 +67,15 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre une commande winmdidl à une invite de commandes Visual Studio x86. Elle spécifie un répertoire de sortie et un fichier qui contient le texte de bannière spécial à ajouter au fichier .idl généré.  
   
- **C:\Program Files (x86) \Microsoft Visual Studio 12.0 > winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt « C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\ Test_for_winmdidl\test_for_winmdidl.winmd »**  
+ `C:\Program Files (x86)\Microsoft Visual Studio 12.0>winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"`  
   
  L'exemple suivant illustre l'affichage de la console à partir de winmdidl qui indique que l'opération a réussi.  
   
  **Génération de c:\users\giraffe\documents\\\Test_for_winmdidl.idl**  
   
- Ensuite, midlrt est exécuté sur le fichier IDL généré. Notez que la **metadata_dir** argument est spécifié après le nom du fichier .idl. Le chemin d’accès de \WinMetadata\ est obligatoire ; il s’agit de l’emplacement de windows.winmd.  
+ Ensuite, midlrt est exécuté sur le fichier IDL généré. Notez que le **metadata_dir** argument est spécifié après le nom du fichier .idl. Le chemin d’accès de \WinMetadata\ est obligatoire ; il s’agit de l’emplacement de windows.winmd.  
   
- **C:\Program Files (x86) \Microsoft Visual Studio 12.0 > midlrt « c:\users\mblome\documents\test_for_winmdidl.idl » /metadata_dir « C:\Windows\System32\WinMetadata »**  
+ `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`  
   
 ## <a name="remarks"></a>Notes  
  Le fichier de sortie d'une opération winmdidl a le même nom que le fichier d'entrée, mais porte l'extension de nom de fichier .idl.  

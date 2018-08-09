@@ -1,5 +1,5 @@
 ---
-title: defaultbind | Documents Microsoft
+title: defaultbind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871459"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644084"
 ---
 # <a name="defaultbind"></a>defaultbind
 Indique la propriété unique, pouvant être liée qui correspond le mieux à l’objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **defaultbind** attribut C++ a les mêmes fonctionnalités que le [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Consultez l’exemple de [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **defaultbind**.  
+ Consultez l’exemple de [peut être liée](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **defaultbind**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -49,8 +47,8 @@ Indique la propriété unique, pouvant être liée qui correspond le mieux à l�
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

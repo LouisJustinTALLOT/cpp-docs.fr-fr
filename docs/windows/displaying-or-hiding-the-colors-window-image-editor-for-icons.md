@@ -1,5 +1,5 @@
 ---
-title: Affichage ou masquage de la fenêtre couleurs (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Affichage ou masquage de la fenêtre couleurs (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872040"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645108"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Affichage ou masquage de la fenêtre Couleurs (Éditeur d'images pour les icônes)
 ### <a name="to-display-colors-window"></a>Pour afficher la fenêtre couleurs  
@@ -32,7 +32,7 @@ ms.locfileid: "33872040"
   
      \- ou -  
   
-2.  Cliquez sur **afficher la fenêtre des couleurs** sur la [menu Image](../windows/image-menu-image-editor-for-icons.md).  
+2.  Cliquez sur **afficher la fenêtre des couleurs** sur le [menu Image](../windows/image-menu-image-editor-for-icons.md).  
   
 ### <a name="to-hide-the-colors-window"></a>Pour masquer la fenêtre couleurs  
   
@@ -42,9 +42,8 @@ ms.locfileid: "33872040"
   
 -   Cliquez sur le **fermer** bouton.  
   
- Spécifications  
-  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)   

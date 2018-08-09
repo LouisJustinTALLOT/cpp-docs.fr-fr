@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462067"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642836"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource, classe
 
@@ -30,7 +30,7 @@ Représente un événement est déclenché par un composant agile, qui est un co
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Paramètres  
  *TDelegateInterface*  
-
  L’interface à un délégué qui représente un gestionnaire d’événements.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ La grande majorité des composants dans le Runtime Windows sont des composants a
 
 |Nom|Description|
 |----------|-----------------|
-|[AgileEventSource::Add (méthode)](#add)|Ajoute le Gestionnaire d’événements agile représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour l’objet AgileEventSource actuel.|
+|[AgileEventSource::Add (méthode)](#add)|Ajoute le Gestionnaire d’événements agile représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour actuel **AgileEventSource** objet.|
 
 ## <a name="add"></a> AgileEventSource::Add (méthode)
 
@@ -85,7 +84,7 @@ HRESULT Add(
 L’interface à un objet délégué, qui représente un gestionnaire d’événements.
 
 *Jeton*  
-Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton comme paramètre à la méthode Remove() pour ignorer le Gestionnaire d’événements.
+Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton en tant que paramètre à la `Remove()` méthode pour ignorer le Gestionnaire d’événements.
 
 ### <a name="return-value"></a>Valeur de retour
 

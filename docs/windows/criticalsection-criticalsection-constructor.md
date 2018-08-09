@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f87f95a0683f6b4440d2be8b770902a7e4ecde59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467350"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644292"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection, constructeur
 Initialise un objet de synchronisation qui est similaire à un objet mutex, mais peut être utilisé par uniquement les threads d’un processus unique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 explicit CriticalSection(  
    ULONG spincount = 0  
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *spinCount*  
  Nombre de spins pour l’objet de section critique. La valeur par défaut est 0.  
   

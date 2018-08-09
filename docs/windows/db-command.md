@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571436"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650087"
 ---
 # <a name="dbcommand"></a>db_command
 Crée une commande OLE DB.  
@@ -41,7 +41,6 @@ Crée une commande OLE DB.
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-
 *command*  
 Chaîne de commande contenant le texte d’une commande OLE DB. Voici un exemple simple :  
   
@@ -112,12 +111,12 @@ Variable `CSession` ou instance d’une classe à laquelle l’attribut `db_sour
 **db_command** vérifie que la variable utilisée pour *source_name* est valide. La variable spécifiée doit donc être dans la portée globale ou dans la portée de fonction.  
   
 *HRESULT* (facultatif)  
-Identifie la variable qui reçoit le `HRESULT` de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.  
+Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.  
   
 *bindings* (facultatif)  
 Vous permet de séparer les paramètres de liaison de la commande OLE DB.  
   
-Si vous spécifiez une valeur pour *liaisons*, **db_command** analysera la valeur associée et n’analyse pas le \[ *bindtype*] paramètre. Cette utilisation vous permet d’utiliser la syntaxe du fournisseur OLE DB. Pour désactiver l’analyse, sans paramètres de liaison, spécifiez **Bindings=""**.  
+Si vous spécifiez une valeur pour *liaisons*, **db_command** analysera la valeur associée et n’analyse pas le \[ *bindtype*] paramètre. Cette utilisation vous permet d’utiliser la syntaxe du fournisseur OLE DB. Pour désactiver l’analyse, sans paramètres de liaison, spécifiez `Bindings=""`.  
   
 Si vous ne spécifiez pas une valeur pour *liaisons*, **db_command** analyse le bloc de paramètres de liaison, recherchez «**(**», suivi par **\[** _bindtype_**]** entre crochets, suivi par un ou plusieurs déclaré précédemment C++ variables membres, suivi par '**)**». Tout le texte entre parenthèses est supprimé de la commande obtenue, et ces paramètres sont utilisés pour construire des liaisons de colonnes et de paramètres pour cette commande.  
   
@@ -133,7 +132,7 @@ Si *bulk_fetch* est inférieur à 1, `SetRows` retourne la valeur zéro.
 ## <a name="remarks"></a>Notes  
 **db_command** crée un objet [CCommand](../data/oledb/ccommand-class.md) , qui est utilisé par un consommateur OLE DB pour exécuter une commande.  
   
-Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Utilisations de portée de classe et de fonction impliquent la classe de modèle de consommateur OLE DB `CCommand<>`, mais les arguments template diffèrent pour les cas de fonction et de classe. Dans le cas d’une fonction, des liaisons à un **Accessor** qui comprend des variables locales sont effectuées, alors que pour une classe une classe dérivée de `CAccessor`sera déduite comme argument. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.  
+Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Utilisations de portée de classe et de fonction impliquent la classe de modèle de consommateur OLE DB `CCommand<>`, mais les arguments template diffèrent pour les cas de fonction et de classe. Dans le cas d’une fonction, les liaisons sont effectuées à un `Accessor` qui comprend des variables locales, tandis que l’utilisation de la classe déduira un `CAccessor`-classe comme argument dérivée. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.  
   
 Vous pouvez utiliser**db_command** pour exécuter des commandes qui ne retournent pas de jeu de résultats.  
   

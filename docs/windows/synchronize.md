@@ -1,5 +1,5 @@
 ---
-title: synchroniser | Documents Microsoft
+title: synchroniser | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 304ceece506465df0a51c56b247407d351fd23b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 371a974742975cec9fab9c2f822fe0540dc57ab0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889795"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643496"
 ---
 # <a name="synchronize"></a>synchronize
 Synchronise l’accès à la méthode cible.  
@@ -30,22 +30,20 @@ Synchronise l’accès à la méthode cible.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [synchronize]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **synchroniser** attribut C++ implémente la prise en charge pour la synchronisation de la méthode cible d’un objet. La synchronisation permet plusieurs objets à utiliser une ressource commune (par exemple, une méthode d’une classe) en contrôlant l’accès de la méthode cible.  
   
- Le code inséré par cet attribut appelle la bonne `Lock` (méthode) (déterminé par le modèle de thread) au début de la méthode cible. Lorsque la méthode se termine, `Unlock` est appelée automatiquement. Pour plus d’informations sur ces fonctions, consultez [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
+ Le code inséré par cet attribut appelle la bonne `Lock` (méthode) (déterminé par le modèle de thread) au début de la méthode cible. Lorsque la méthode est fermée, `Unlock` est appelée automatiquement. Pour plus d’informations sur ces fonctions, consultez [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi_progid** et **coclass** sont également appliqués.  
+ Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant fournit la synchronisation pour le `UpdateBalance` méthode de la `CMyClass` objet.  
   
-```  
+```cpp  
 // cpp_attr_ref_synchronize.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -70,7 +68,7 @@ class CMyClass {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -78,8 +76,8 @@ class CMyClass {
 |-|-|  
 |**S'applique à**|Méthode de classe, méthode|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid**ou **vi_progid**.|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Simpleclassfactory::CreateInstance, méthode | Documents Microsoft
+title: Simpleclassfactory::CreateInstance, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892746"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651078"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance, méthode
 
@@ -41,15 +41,15 @@ STDMETHOD( CreateInstance )(
 ### <a name="parameters"></a>Paramètres
 
 *pUnkOuter*  
-Doit être `nullptr`; sinon, la valeur de retour est CLASS_E_NOAGGREGATION.
+Doit être **nullptr**; sinon, la valeur de retour est CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory ne prend pas en charge d’agrégation. Si l’agrégation étaient pris en charge et de l’objet en cours de création faisait partie d’un agrégat, `pUnkOuter` serait un pointeur vers l’interface IUnknown de contrôle de l’agrégat.
+SimpleClassFactory ne prend pas en charge d’agrégation. Si l’agrégation ont été prise en charge et de l’objet en cours de création faisait partie d’un agrégat, *pUnkOuter* serait un pointeur vers le contrôle `IUnknown` interface de l’agrégat.
 
 *riid*  
 ID d’interface de l’objet à créer.
 
 *ppvObject*  
-Lorsque cette opération se termine, pointeur vers une instance de l’objet spécifié par le `riid` paramètre.
+Lorsque cette opération se termine, pointeur vers une instance de l’objet spécifié par le *riid* paramètre.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -59,12 +59,11 @@ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 Si &#95; &#95;WRL_STRICT&#95; &#95; est défini, une erreur d’assertion est émise si n’est pas dérivée de la classe de base spécifiée dans le paramètre de modèle de classe [RuntimeClass](../windows/runtimeclass-class.md), ou n’est pas configuré avec le ClassicCom ou WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valeur d’énumération.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** module.h
 
 **Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
-
-[SimpleClassFactory, classe](../windows/simpleclassfactory-class.md)
+ [SimpleClassFactory, classe](../windows/simpleclassfactory-class.md)

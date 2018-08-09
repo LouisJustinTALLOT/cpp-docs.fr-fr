@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb6c655bdc8da5341a28449a25796ad59e453b4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 582a46d35d0fe5327fa15aa0eb235ae8aa8a4cb2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569428"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645502"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Retournement d'une image (Éditeur d'images pour les icônes)
 Vous pouvez inverser ou faire pivoter une image à :  
@@ -51,7 +51,6 @@ Vous pouvez inverser ou faire pivoter une image à :
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Srwlockexclusivetraits::getinvalidvalue, méthode | Documents Microsoft
+title: Srwlockexclusivetraits::getinvalidvalue, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 963c3cbc09a9ed7f56d8ec25c35af0868eeae326
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888953"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649232"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue, méthode
-Récupère un objet SRWLockExclusiveTraits qui est toujours non valide.  
+Récupère un **SRWLockExclusiveTraits** objet qui est toujours non valide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Un objet SRWLockExclusiveTraits vide.  
+ Vide **SRWLockExclusiveTraits** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

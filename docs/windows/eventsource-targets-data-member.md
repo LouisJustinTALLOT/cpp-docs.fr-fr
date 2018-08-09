@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ea08cdc8657100e1c1e0157a8a542a44ea34cd4d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568847"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642371"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_, données de membre
 Tableau d’un ou plusieurs gestionnaires d’événements.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 ComPtr<Details::EventTargetArray> targets_;  
 ```  
   

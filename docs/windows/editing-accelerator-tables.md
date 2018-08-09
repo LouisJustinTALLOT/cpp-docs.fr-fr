@@ -1,5 +1,5 @@
 ---
-title: Modification des Tables d’accélérateurs | Documents Microsoft
+title: Modification des Tables d’accélérateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1f20e6e50fad1f77e495fb47c62b162524cc72
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 761a5eefb80d47da0194e9c718f67bfe2d7b69de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872937"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641532"
 ---
 # <a name="editing-accelerator-tables"></a>Modification des tables d'accélérateurs
-Dans Visual C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans l’éditeur d’accélérateurs.  
+Dans Visual C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans le **Accelerator** éditeur.  
   
  Les procédures ci-dessous font référence à l’utilisation des pages de propriétés standard, toutefois, la modification sur place et la méthode de page de propriété ont le même résultat. Modifications apportées à l’aide des pages de propriétés ou à l’aide de la modification sur place sont immédiatement répercutées dans la table d’accélérateurs.  
   
@@ -42,9 +42,9 @@ Dans Visual C++, vous pouvez modifier une table d’accélérateurs directement 
   
 -   [Modification des propriétés de plusieurs touches accélérateur](../windows/changing-the-properties-of-multiple-accelerator-keys.md)  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

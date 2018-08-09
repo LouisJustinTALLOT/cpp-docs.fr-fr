@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569802"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642768"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Handle sur l’opérateur Object (^) (extensions du composant C++)
 Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [spécificateur](../cpp/overview-of-declarators.md) pour indiquer que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet est ne seront plus accessibles.  
@@ -36,7 +36,7 @@ Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [s
  Pour plus d’informations sur la façon d’instancier un objet, consultez [ref nouvelle](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/ZW**  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  Le système utilise le CLR *RÉCUPÉRATEUR de mémoire* mécanisme pour déterminer si l’objet n’est plus utilisé et peut être supprimé. Le Common Langage Runtime gère un tas sur lequel il alloue des objets et utilise des références managées (variables) dans votre programme pour indiquer l'emplacement des objets sur le tas. Lorsqu'un objet n'est plus utilisé, la mémoire qu'il occupait sur le tas est libérée. Régulièrement, le garbage collector compacte le tas pour mieux utiliser la mémoire libérée. Le compactage du tas peut déplacer des objets sur le tas, ce qui invalide les emplacements référencés par des références managées. Toutefois, le garbage collector connaît l'emplacement de toutes les références managées et il les met automatiquement à jour pour indiquer l'emplacement actuel des objets sur le tas.  
@@ -48,7 +48,6 @@ Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [s
  Pour plus d’informations, consultez [Comment : déclarer des Handles dans les Types natifs](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  Cet exemple montre comment créer une instance d’un type référence sur le tas managé.  Cet exemple montre également que vous pouvez initialiser un handle avec un autre, générant ainsi deux références au même objet sur le tas managé et récupéré par le garbage collector. Notez que l’assignation [nullptr](../windows/nullptr-cpp-component-extensions.md) à un handle ne marque pas l’objet pour le garbage collection.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **Exemple**  
   
  L’exemple suivant montre comment déclarer un handle vers un objet sur le tas managé, où le type d’objet est un type valeur boxed. Il montre également comment obtenir le type valeur à partir de l'objet converti.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **Sortie**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **Exemple**  
-  
- Cet exemple montre que l'idiome C++ commun consistant à utiliser un pointeur de type void* pour pointer vers un objet arbitraire est remplacé par Object^, qui peut contenir un handle vers toute classe de référence. Il montre également que tous les types, tels que les tableaux et les délégués, peuvent être convertis en handle d'objet.  
+ Cet exemple montre que l’idiome C++ commun de l’utilisation un `void*` pointeur pour pointer vers un objet arbitraire est remplacé par `Object^`, qui peut contenir un handle vers n’importe quelle classe de référence. Il montre également que tous les types, tels que les tableaux et les délégués, peuvent être convertis en handle d'objet.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **Exemple**  
   
  Cet exemple montre qu'un handle peut être déréférencé et qu'un membre est accessible via un handle déréférencé.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **Exemple**  
-  
- Cet exemple montre qu'une référence native (`&`) ne peut pas être liée à un membre `int` d'un type managé, car le membre `int` peut être stocké dans le tas récupéré par le garbage collector et les références natives n'effectuent pas le suivi du déplacement d'objets dans le tas managé. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.  
+ Cet exemple montre qu’une référence native (`&`) ne peut pas lier à un **int** membre d’un type managé, comme le **int** peut être stocké dans le tas de garbage collectées et ne pas suivre les références natives déplacement d’objets dans le tas managé. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

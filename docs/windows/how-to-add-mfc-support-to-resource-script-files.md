@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569740"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647022"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Comment : ajouter de la prise en charge MFC aux fichiers de script de ressources
 Normalement, lorsque vous générez une application MFC pour Windows à l’aide de la [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’Assistant génère un ensemble de base de fichiers (y compris un fichier de script (.rc) de ressources) qui contiennent les principales fonctionnalités de Microsoft Foundation classes (MFC). Toutefois, si vous modifiez un fichier .rc d’une application Windows qui n’est pas basée sur MFC, les fonctionnalités suivantes propres à l’infrastructure MFC ne sont pas disponibles :  
@@ -55,7 +55,6 @@ Normalement, lorsque vous générez une application MFC pour Windows à l’aide
     >  Outre la définition de cet indicateur, le fichier .rc doit faire partie d'un projet MFC. Par exemple, définissant simplement **MFC Mode** à **True** sur un fichier .rc dans Win32 projet ne vous donne aucune des fonctionnalités MFC.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  MFC  
   
 ## <a name="see-also"></a>Voir aussi  

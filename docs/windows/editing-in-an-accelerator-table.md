@@ -1,5 +1,5 @@
 ---
-title: Modification d’une table d’accélérateurs | Documents Microsoft
+title: Modification dans une Table d’accélérateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5defa8cdd2e2fb96ceff0d333f06698154baf977
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0844ab8a4233e2204c42a8d165309c89026fb01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871726"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646226"
 ---
 # <a name="editing-in-an-accelerator-table"></a>Modification d'une table d'accélérateurs
 ### <a name="to-edit-in-an-accelerator-table"></a>Pour modifier une table d'accélérateurs  
@@ -41,12 +41,11 @@ ms.locfileid: "33871726"
   
     -   Pour [clé](../windows/accelerator-key-property.md), sélectionnez dans la liste ou d’un type à modifier.  
   
-    -   Pour [Type](../windows/accelerator-type-property.md), sélectionnez ASCII ou VIRTKEY dans la liste.  
+    -   Pour [Type](../windows/accelerator-type-property.md), sélectionnez **ASCII** ou **VIRTKEY** dans la liste.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

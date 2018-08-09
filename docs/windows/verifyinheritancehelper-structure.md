@@ -1,5 +1,5 @@
 ---
-title: VerifyInheritanceHelper (Structure) | Documents Microsoft
+title: VerifyInheritanceHelper (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889701"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652934"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -41,11 +41,11 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `I`  
+### <a name="parameters"></a>Paramètres  
+ *I*  
  Type.  
   
- `Base`  
+ *base de*  
  Un autre type.  
   
 ## <a name="remarks"></a>Notes  
@@ -57,12 +57,12 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify, méthode](../windows/verifyinheritancehelper-verify-method.md)|Teste les deux interfaces spécifiées par les paramètres de modèle actuel et détermine si une interface est dérivée de l’autre.|  
+|[VerifyInheritanceHelper::Verify, méthode](../windows/verifyinheritancehelper-verify-method.md)|Teste les deux interfaces spécifiées par les paramètres de modèle actuelle et détermine si une interface est dérivée de l’autre.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `VerifyInheritanceHelper`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

@@ -1,5 +1,5 @@
 ---
-title: Comptrrefbase::PTR, données de membre | Documents Microsoft
+title: Comptrrefbase::PTR, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883565"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644841"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_, données de membre
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
@@ -37,9 +37,9 @@ T* ptr_;
  Pointeur vers le type spécifié par le paramètre de modèle actuel.  
   
 ## <a name="remarks"></a>Notes  
- `ptr_` est le membre de données protégées.  
+ **PTR_** est le membre de données protégées.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Microsoft::WRL::Details  

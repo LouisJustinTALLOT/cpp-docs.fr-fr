@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 18f7f08362c14ab0d09019a5b9348750c96ddbd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464241"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643408"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
 class ComPtrRefBase;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *T*  
  Un [ComPtr\<T >](../windows/comptr-class.md) type ou un type dérivé, pas simplement l’interface représentée par le **ComPtr**.  
   
@@ -55,8 +55,8 @@ class ComPtrRefBase;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable**, opérateur](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-à l’interface IInspectable.|  
-|[ComPtrRefBase::operator IUnknown**, opérateur](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-à l’interface IUnknown.|  
+|[ComPtrRefBase::operator IInspectable**, opérateur](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-to la `IInspectable` interface.|  
+|[ComPtrRefBase::operator IUnknown**, opérateur](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) données membres à un pointeur-à-un-pointeur-to la `IUnknown` interface.|  
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   

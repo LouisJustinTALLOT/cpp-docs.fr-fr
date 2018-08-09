@@ -1,5 +1,5 @@
 ---
-title: Organisation des contrôles dans les boîtes de dialogue | Documents Microsoft
+title: Disposition des contrôles sur les boîtes de dialogue | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3414c6856619f602ec21297ebb330e060e98906b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858485"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645771"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Organisation des contrôles dans les boîtes de dialogue
-L’éditeur de boîte de dialogue fournit des outils de disposition qui alignent et dimensionnent automatiquement les contrôles. Pour la plupart des tâches, vous pouvez utiliser la [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Toutes les commandes de barre d’outils Éditeur de boîte de dialogue sont également disponibles dans le menu Format, et la plupart ont [touches de raccourci](../windows/accelerator-keys-for-the-dialog-editor.md).  
+Le **boîte de dialogue** éditeur fournit des outils de disposition qui alignent et dimensionnent un contrôle automatiquement. Pour la plupart des tâches, vous pouvez utiliser la [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Tous les **boîte de dialogue Éditeur** des commandes de barre d’outils sont également disponibles sur le **Format** menu et la plupart ont [touches de raccourci](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- De nombreuses commandes de mise en page des boîtes de dialogue sont disponibles uniquement lorsque plus d’un contrôle est sélectionné. Vous pouvez sélectionner un ou plusieurs contrôles, et lorsque plus d’un contrôle est sélectionné, le premier élément que vous sélectionnez est par défaut du contrôle « dominant ». Pour plus d’informations sur la sélection des contrôles et le contrôle dominant, consultez [sélection de contrôles](../windows/selecting-controls.md).  
+ De nombreuses commandes de disposition pour les boîtes de dialogue sont disponibles uniquement lorsque plus d’un contrôle est sélectionné. Vous pouvez sélectionner un ou plusieurs contrôles, et lorsque plus d’un contrôle est sélectionné, le premier que vous sélectionnez est par défaut le contrôle « principal ». Pour plus d’informations sur la sélection des contrôles et le contrôle dominant, consultez [sélection de contrôles](../windows/selecting-controls.md).  
   
- L’emplacement, la hauteur et la largeur du contrôle actuel sont affichés dans le coin inférieur droit de la barre d’état. Lorsque la boîte de dialogue est sélectionnée, la barre d’état affiche la position de la boîte de dialogue en tant qu’ensemble et sa hauteur et sa largeur.  
+ L’emplacement, la hauteur et la largeur du contrôle actuel sont affichés dans le coin inférieur droit de la barre d’état. Lorsque la boîte de dialogue est activée, la barre d’état affiche la position de la boîte de dialogue sous la forme dans son ensemble et sa hauteur et sa largeur.  
   
 -   [États de l’Éditeur de boîtes de dialogue (repères et grilles)](../windows/dialog-editor-states-guides-and-grids.md)  
   
@@ -45,12 +45,11 @@ L’éditeur de boîte de dialogue fournit des outils de disposition qui alignen
   
 -   [Modification de l’ordre de tabulation des contrôles](../windows/changing-the-tab-order-of-controls.md)  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
  [Contrôles](../mfc/controls-mfc.md)
-

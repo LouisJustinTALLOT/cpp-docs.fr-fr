@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la Palette 256 couleurs (Éditeur d’images pour les icônes) | Documents Microsoft
+title: À l’aide de la Palette 256 couleurs (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc78dfa5d549b37b99125cfcef5c25ae6c76b9e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890903"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645150"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Utilisation de la palette 256 couleurs (Éditeur d'images pour les icônes)
-Pour dessiner avec une sélection à partir de la palette 256 couleurs, vous devez sélectionner les couleurs de la palette de couleurs dans les [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md).  
+Pour dessiner avec une sélection à partir de la palette 256 couleurs, vous devez sélectionner les couleurs de la palette de couleurs dans le [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md).  
   
-### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Pour choisir une couleur de la palette 256 couleurs pour de grandes icônes  
+### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Pour choisir une couleur de la palette 256 couleurs pour les grandes icônes  
   
-1.  Sélectionnez une grande icône ou curseur, ou créez une grande icône ou un curseur.  
+1.  Sélectionnez la grande icône ou curseur, ou créez une nouvelle grande icône ou curseur.  
   
-2.  Choisissez une couleur parmi les 256 couleurs affichées dans le **couleurs** palette dans le **couleurs** fenêtre.  
+2.  Choisir une couleur parmi les 256 couleurs affichées dans le **couleurs** palette dans la **couleurs** fenêtre.  
   
-     La couleur sélectionnée devient la couleur actuelle dans la palette de couleurs dans les **couleurs** fenêtre.  
+     La couleur sélectionnée devient la couleur actuelle dans la palette de couleurs dans le **couleurs** fenêtre.  
   
     > [!NOTE]
-    >  La palette d’origine utilisée pour les images de 256 couleurs correspond à la palette retournée par l’API Windows CreateHalftonePalette. Toutes les icônes pour le shell Windows doivent utiliser cette palette pour éviter le scintillement pendant la réalisation de la palette.  
+    >  La palette d’origine utilisée pour les images de 256 couleurs correspond à la palette retournée par la `CreateHalftonePalette` API de Windows. Toutes les icônes pour le shell Windows doivent utiliser cette palette pour empêcher le scintillement pendant la réalisation de la palette.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
-  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Création d’un curseur ou une icône de 256 couleurs](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
  [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

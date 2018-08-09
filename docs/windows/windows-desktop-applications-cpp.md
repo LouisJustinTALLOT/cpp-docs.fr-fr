@@ -1,5 +1,5 @@
 ---
-title: Applications de bureau Windows (C++) | Documents Microsoft
+title: Applications de bureau Windows (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890699"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647955"
 ---
 # <a name="windows-desktop-applications-c"></a>Applications de bureau Windows (C++)
 Cette section explique comment créer des applications de bureau C++ qui s’exécutent dans une fenêtre.  
+
 > [!TIP]  
-> Pour Windows 10, vous pouvez utiliser le convertisseur d’application de bureau pour empaqueter votre application de bureau existante pour le déploiement via Microsoft Store. Pour plus d’informations, consultez [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) et [Déplacer votre application de bureau vers la plateforme universelle Windows (UWP) avec le pont du bureau](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Pour Windows 10, vous pouvez utiliser le Desktop App Converter pour empaqueter votre application de bureau existante pour le déploiement via le Microsoft Store. Pour plus d’informations, consultez [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) et [Déplacer votre application de bureau vers la plateforme universelle Windows (UWP) avec le pont du bureau](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
   
 ## <a name="prerequisites"></a>Prérequis  
- Ces rubriques supposent que vous comprenez les notions de base du langage C++.  
+ Ces rubriques partent du principe que vous avez des notions de base du langage C++.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -47,4 +48,3 @@ Cette section explique comment créer des applications de bureau C++ qui s’ex�
   
 ## <a name="see-also"></a>Voir aussi  
  [Visual C++ dans Visual Studio](../visual-cpp-in-visual-studio.md)
-

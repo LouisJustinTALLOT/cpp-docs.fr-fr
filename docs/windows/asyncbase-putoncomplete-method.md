@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465601"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646970"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete, méthode
 Définit l’adresse du Gestionnaire d’événements de saisie semi-automatique à la valeur spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnComplete  
 )(TComplete* completeHandler);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *completeHandler*  
  L’adresse à laquelle le Gestionnaire d’événements de saisie semi-automatique est défini.  
   

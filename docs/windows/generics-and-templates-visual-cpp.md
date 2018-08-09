@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570764"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649489"
 ---
 # <a name="generics-and-templates-visual-c"></a>Génériques et modèles (Visual C++)
 Génériques et les modèles sont des fonctionnalités de langage qui prennent en charge des types paramétrables. Cependant, ils sont différents et des utilisations différentes. Cette rubrique fournit une vue d’ensemble des nombreuses différences.  
@@ -51,7 +51,7 @@ Génériques et les modèles sont des fonctionnalités de langage qui prennent e
   
 ## <a name="combining-templates-and-generics"></a>Combinaison de modèles et génériques  
   
--   La principale différence dans les génériques a des implications en matière de création d’applications qui combinent des modèles et les génériques. Par exemple, supposons que vous avez une classe de modèle que vous souhaitez créer un wrapper générique pour exposer ce modèle dans d’autres langages comme générique. Vous ne pouvez avoir le générique prennent un paramètre de type qu’il transmet ensuite directement vers le modèle, dans la mesure où le modèle a besoin d’avoir ce paramètre de type au moment de la compilation, mais le générique ne résout pas le paramètre de type avant l’exécution. Imbrication d’un modèle à l’intérieur d’un générique ne fonctionnera, car il n’existe aucun moyen pour développer les modèles au moment de la compilation pour les types génériques arbitraires qui peut être instancié lors de l’exécution.  
+La principale différence dans les génériques a des implications en matière de création d’applications qui combinent des modèles et les génériques. Par exemple, supposons que vous avez une classe de modèle que vous souhaitez créer un wrapper générique pour exposer ce modèle dans d’autres langages comme générique. Vous ne pouvez avoir le générique prennent un paramètre de type qu’il transmet ensuite directement vers le modèle, dans la mesure où le modèle a besoin d’avoir ce paramètre de type au moment de la compilation, mais le générique ne résout pas le paramètre de type avant l’exécution. Imbrication d’un modèle à l’intérieur d’un générique ne fonctionnera, car il n’existe aucun moyen pour développer les modèles au moment de la compilation pour les types génériques arbitraires qui peut être instancié lors de l’exécution.  
   
 ## <a name="example"></a>Exemple  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>Sortie  
   
 ```Output  
 F  

@@ -1,5 +1,5 @@
 ---
-title: support_error_info | Documents Microsoft
+title: support_error_info | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddf76345234ba44b2634c04ee1e2899913ed2078
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889928"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653057"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 Implémente la prise en charge du retour d’erreurs détaillées.  
@@ -30,25 +30,24 @@ Implémente la prise en charge du retour d’erreurs détaillées.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ support_error_info(  
+[ support_error_info(  
    error_interface=uuid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- **error_interface**  
- Identificateur de l’interface qui implémente **IErrorInfo**.  
+### <a name="parameters"></a>Paramètres  
+ *error_interface*  
+ L’identificateur de l’interface qui implémente `IErrorInfo`.  
   
 ## <a name="remarks"></a>Notes  
- L’attribut C++ **support_error_info** implémente la prise en charge permettant de retourner au client les erreurs détaillées et contextuelles rencontrées par l’objet cible. Pour que l’objet prenne en charge les erreurs, les méthodes de l’interface **IErrorInfo** doivent être implémentées par l’objet. Pour plus d’informations, consultez [Prise en charge d’IDispatch et IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
+ L’attribut C++ **support_error_info** implémente la prise en charge permettant de retourner au client les erreurs détaillées et contextuelles rencontrées par l’objet cible. Pour l’objet prendre en charge les erreurs, les méthodes de la `IErrorInfo` interface doit être implémentée par l’objet. Pour plus d’informations, consultez [Prise en charge d’IDispatch et IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
   
- Cet attribut ajoute la classe [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) comme classe de base à l’objet cible. Il en résulte une implémentation par défaut de **ISupportErrorInfo** qui peut être utilisée quand une seule interface génère des erreurs sur un objet.  
+ Cet attribut ajoute la classe [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) comme classe de base à l’objet cible. Il en résulte une implémentation par défaut de `ISupportErrorInfo` et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant ajoute la prise en charge par défaut de l’interface **ISupportErrorInfo** à l’objet `CMyClass` .  
+ Le code suivant ajoute la prise en charge par défaut pour le `ISupportErrorInfo` interface pour le `CMyClass` objet.  
   
-```  
+```cpp  
 // cpp_attr_ref_support_error_info.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,7 +67,7 @@ class CMyClass
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -76,8 +75,8 @@ class CMyClass
 |-|-|  
 |**S'applique à**|**classe**|  
 |**Renouvelable**|Oui|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

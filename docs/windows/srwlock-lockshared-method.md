@@ -1,5 +1,5 @@
 ---
-title: SRWLOCK::lockshared, méthode | Documents Microsoft
+title: SRWLOCK::lockshared, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895747"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652124"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared, méthode
-Acquiert un objet SRWLock en mode partagé.  
+Acquiert un **SRWLock** objet en mode partagé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,14 +37,14 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `lock`  
- Pointeur vers un objet SRWLock.  
+### <a name="parameters"></a>Paramètres  
+ *lock*  
+ Pointeur vers un **SRWLock** objet.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Un objet SRWLock en mode partagé.  
+ Un **SRWLock** objet en mode partagé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

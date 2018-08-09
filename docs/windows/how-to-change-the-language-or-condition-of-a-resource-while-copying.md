@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650213"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Comment : modifier la langue ou la condition d'une ressource lors de la copie
 Durant la copie d'une ressource, vous pouvez changer sa propriété language ou sa propriété condition, ou les deux.  
@@ -34,7 +34,7 @@ Durant la copie d'une ressource, vous pouvez changer sa propriété language ou 
   
  La langue et la condition d'une ressource sont affichées entre parenthèses après le nom de la ressource dans la fenêtre Espace de travail. Dans cet exemple, la ressource nommée IDD_AboutBox utilise le finnois comme langue, et sa condition est XX33.  
   
-```  
+```cpp  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
@@ -51,7 +51,6 @@ IDD_AboutBox (Finnish - XX33)
     -   Dans le **Condition** , tapez la condition.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

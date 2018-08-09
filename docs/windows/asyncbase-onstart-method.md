@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::ONSTART, méthode | Documents Microsoft
+title: Asyncbase::ONSTART, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c33751bd375846cf3ee4cf5b92131e2824fafd04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71e661280c62be1a8335a8e84e30664c2f35a338
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861189"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646859"
 ---
 # <a name="asyncbaseonstart-method"></a>AsyncBase::OnStart, méthode
-En cas de substitution dans une classe dérivée, commence une opération asynchrone.  
+En cas de substitution dans une classe dérivée, démarre une opération asynchrone.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 virtual void OnStart(  
    void  
 ) = 0;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

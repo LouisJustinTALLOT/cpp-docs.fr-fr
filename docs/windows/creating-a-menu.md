@@ -1,5 +1,5 @@
 ---
-title: Création d’un Menu | Documents Microsoft
+title: Création d’un Menu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d9051e44216de9a64b68fc112fe8f17de112e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b220f51b0c5bf8bc139b3c7ccdb1953de310ec4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882074"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644055"
 ---
 # <a name="creating-a-menu"></a>Création d'un menu
 > [!NOTE]
->  La fenêtre Ressources n’est pas disponible dans les éditions Express.  
+>  Le **des ressources, fenêtre** n’est pas disponible dans les éditions Express.  
   
 ### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33882074"
   
 2.  Sélectionnez la zone **Nouvel élément** (le rectangle qui contient « Tapez ici ») dans la barre de menus.  
   
-     ![La nouvel élément dans l’éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
+     ![Zone de nouvel élément dans l’éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
 Zone Nouvel élément  
   
 3.  Tapez un nom pour votre nouveau menu, par exemple, « Fichier ».  
@@ -49,12 +49,11 @@ Zone Nouvel élément
 Zone Nouvel élément avec déplacement du focus quand vous avez tapé le nom du menu  
   
     > [!NOTE]
-    >  Pour créer un menu à un seul élément dans la barre de menus, affectez la valeur False à la propriété Popup.  
+    >  Pour créer un seul élément de menu sur la barre de menus, définissez le **contextuelle** propriété **False**.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

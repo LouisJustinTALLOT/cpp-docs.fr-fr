@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Sélecteur de couleurs (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Boîte de dialogue Sélecteur de couleurs (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880255"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642810"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Affiner les couleurs (Éditeur d'images pour les icônes)
 Cette boîte de dialogue vous permet de personnaliser les couleurs à qu'utiliser pour votre image. Pour plus d’informations, consultez [personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Affichage des couleurs de dégradé**  
- Modifie les valeurs de la couleur sélectionnée. Positionner la forme de croix sur la couleur que vous souhaitez modifier. Ensuite la déplacer le curseur vers le haut ou bas pour modifier la luminosité ou les valeurs RVB de la couleur.  
+ **Affichage de la couleur de dégradé**  
+ Modifie les valeurs de la couleur sélectionnée. Positionner la croix sur la couleur que vous souhaitez modifier. Puis déplacez le curseur que vers le haut ou bas pour modifier la luminosité ou les valeurs RVB de la couleur.  
   
  **Barre de luminosité**  
- Définit la luminosité de la couleur que vous sélectionnez dans la zone d’affichage des dégradés de couleur. Cliquez et faites glisser la flèche blanche la barre de luminosité supérieure ou vers le bas pour inférieur. Notez que la zone de couleur affiche la couleur que vous avez sélectionné et l’impact de la luminosité que vous définissez.  
+ Définit la luminosité de la couleur que vous sélectionnez dans la **affichage des dégradés de couleur** boîte. Cliquez et faites glisser la flèche blanche de la barre de luminosité supérieure ou vers le bas à moindre coût. Notez que le **couleur** zone affiche la couleur que vous avez sélectionné ainsi que l’impact de la luminosité que vous définissez.  
   
  **Couleur**  
- Répertorie la teinte (valeur de roulette de la couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 correspond au rouge, 60 apparaît en jaune, 120 est vert, 180 est cyan, 200 est à magenta et 240 est bleu.  
+ Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.  
   
- **Teinte**  
- Répertorie la teinte (valeur de roulette de la couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 correspond au rouge, 60 apparaît en jaune, 120 est vert, 180 est cyan, 200 est à magenta et 240 est bleu.  
+ **HUE**  
+ Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.  
   
- **SAT**  
- Spécifie la valeur de saturation de la couleur que vous définissez. Saturation est la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.  
+ **SAM**  
+ Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.  
   
  **Lum**  
  Répertorie la luminosité de la couleur que vous définissez. Les valeurs comprises entre 0 et 240.  
@@ -52,11 +52,11 @@ Cette boîte de dialogue vous permet de personnaliser les couleurs à qu'utilise
  **Vert**  
  Spécifie la valeur verte de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.  
   
- **bleu**  
+ **Bleu**  
  Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.  
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Menu image](../windows/image-menu-image-editor-for-icons.md)   

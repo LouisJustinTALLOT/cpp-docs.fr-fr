@@ -1,5 +1,5 @@
 ---
-title: Factorycache::cookie, données de membre | Documents Microsoft
+title: Factorycache::cookie, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874445"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652380"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie, données de membre
 Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
@@ -39,7 +39,7 @@ union {
 ## <a name="remarks"></a>Notes  
  Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Namespace :** Microsoft::WRL::Details  

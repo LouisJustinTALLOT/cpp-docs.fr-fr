@@ -1,5 +1,5 @@
 ---
-title: Propriété du modificateur d’un accélérateur | Documents Microsoft
+title: Propriété modificateur d’un accélérateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d99d4656f2835f9adb60f310e429c4ccb97ac7b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0788536e776661b9a84a6cccc648a7db68389ae5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854052"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644253"
 ---
 # <a name="accelerator-modifier-property"></a>Modifier, propriété d'un accélérateur
 Les éléments suivants sont des entrées valides pour la propriété Modifier dans la table d’accélérateurs.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Aucun**|Utilisateur appuie sur uniquement la valeur de clé. Utilisé avec les valeurs ASCII/ANSI 001 à 026, ce qui est ^ A à ^ Z (CTRL-A à CTRL-Z).|  
-|**ALT**|Utilisateur doit appuyer sur la touche ALT avant la valeur de clé.|  
-|**CTRL**|Utilisateur doit appuyer sur la touche CTRL ENFONCÉE avant que la valeur de clé. Non valide avec le Type ASCII.|  
-|**Touche MAJ enfoncée**|Utilisateur doit appuyer sur la touche MAJ avant la valeur de clé.|  
-|**Ctrl + Alt**|Utilisateur doit appuyer sur la touche CTRL et la touche ALT avant la valeur de clé. Non valide avec le Type ASCII.|  
-|**CTRL + MAJ**|Utilisateur doit appuyer sur la touche CTRL et la touche MAJ avant la valeur de clé. Non valide avec le Type ASCII.|  
-|**ALT + MAJ**|Utilisateur doit appuyer sur la touche ALT et la touche MAJ avant la valeur de clé. Non valide avec le Type ASCII.|  
-|**Ctrl + Alt + Maj**|Utilisateur doit appuyer sur MAJ, CTRL et ALT avant la valeur de clé. Non valide avec le Type ASCII.|  
+|**Aucun**|Utilisateur appuie sur uniquement le **clé** valeur. Utilisé avec les valeurs ASCII/ANSI 001 à 026, ce qui est ^ A à ^ Z (CTRL-A à CTRL-Z).|  
+|**Alt**|L’utilisateur doit appuyer sur la **Alt** clé avant du **clé** valeur.|  
+|**Ctrl**|L’utilisateur doit appuyer sur la **Ctrl** clé avant du **clé** valeur. Non valide avec le Type ASCII.|  
+|**Maj**|L’utilisateur doit appuyer sur la **MAJ** clé avant du **clé** valeur.|  
+|**Ctrl + Alt**|L’utilisateur doit appuyer sur le **Ctrl** clé et le **Alt** clé avant du **clé** valeur. Non valide avec le Type ASCII.|  
+|**CTRL + MAJ**|L’utilisateur doit appuyer sur le **Ctrl** clé et le **MAJ** clé avant du **clé** valeur. Non valide avec le Type ASCII.|  
+|**ALT + MAJ**|L’utilisateur doit appuyer sur le **Alt** clé et le **MAJ** clé avant du **clé** valeur. Non valide avec le Type ASCII.|  
+|**Ctrl + Alt + Maj**|L’utilisateur doit appuyer sur **Ctrl**, **Alt**, et **MAJ** avant la **clé** valeur. Non valide avec le Type ASCII.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

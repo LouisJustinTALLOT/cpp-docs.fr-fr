@@ -1,5 +1,5 @@
 ---
-title: Classe d’événements (Windows Runtime C++ modèle bibliothèque) | Documents Microsoft
+title: Classe d’événements (Windows Runtime bibliothèque de modèles C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872924"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644162"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event, classe (bibliothèque de modèles Windows Runtime C++)
 Représente un événement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -37,20 +37,20 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Event::Event, constructeur (bibliothèque de modèles Windows Runtime C++)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Initialise une nouvelle instance de la classe Event.|  
+|[Event::Event, constructeur (bibliothèque de modèles Windows Runtime C++)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Initialise une nouvelle instance de la **événement** classe.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Event::operator=, opérateur](../windows/event-operator-assign-operator.md)|Assigne la référence Event spécifiée à l'instance Event actuelle.|  
+|[Event::operator=, opérateur](../windows/event-operator-assign-operator.md)|Assigne le texte spécifié **événement** référence à le **événement** instance.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HandleT`  
   
  `Event`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

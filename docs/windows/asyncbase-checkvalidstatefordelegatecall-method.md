@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::checkvalidstatefordelegatecall, méthode | Documents Microsoft
+title: Asyncbase::checkvalidstatefordelegatecall, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859873"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653070"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>AsyncBase::CheckValidStateForDelegateCall, méthode
 Teste si les propriétés de délégué peuvent être modifiées dans l’état asynchrone actuelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForDelegateCall();  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- S_OK si les propriétés de délégué peuvent être modifiées ; dans le cas contraire, E_ILLEGAL_METHOD_CALL.  
+ S_OK si les propriétés de délégué peuvent être modifiées ; Sinon, E_ILLEGAL_METHOD_CALL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4488ca0e32bc9522e29028536efdcd5fea925301
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467363"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649983"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Ajout, modification ou suppression de contrôles
-À l’aide de l’éditeur de boîtes de dialogue, vous pouvez ajouter, redimensionner, modifier et supprimer des contrôles dans les boîtes de dialogue. Vous pouvez également modifier les propriétés d’un contrôle, telles que son ID, ou s’il est visible initialement en cours d’exécution.  
+À l’aide de la **boîte de dialogue** éditeur, vous pouvez ajouter, redimensionner, modifier et supprimer des contrôles dans les boîtes de dialogue. Vous pouvez également modifier les propriétés d’un contrôle, telles que son ID, ou s’il est visible initialement en cours d’exécution.  
   
- Vous pouvez utiliser le menu contextuel dans l’éditeur de boîtes de dialogue pour ajouter rapidement des contrôles ActiveX inscrits à une boîte de dialogue, et vous pouvez ajouter des contrôles ActiveX à la boîte à outils pour un accès rapide (pour plus d’informations, consultez [boîte de dialogue Personnaliser la boîte à outils](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
+ Vous pouvez utiliser le menu contextuel dans le **boîte de dialogue** éditeur permet d’ajouter rapidement inscrit les contrôles ActiveX à une boîte de dialogue, et vous pouvez ajouter des contrôles ActiveX les **boîte à outils** pour un accès rapide (pour plus d’informations, consultez [Personnaliser la boîte de dialogue de boîte à outils](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
   
 -   [Ajouter un contrôle à une boîte de dialogue](adding-a-control-to-a-dialog-box.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "39467363"
   
 -   [Afficher ou masquer la fenêtre Boîte à outils](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
  Win32  
@@ -52,4 +52,3 @@ ms.locfileid: "39467363"
  [Contrôles dans les boîtes de dialogue](controls-in-dialog-boxes.md)   
  [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](adding-event-handlers-for-dialog-box-controls.md)   
  [Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)
-

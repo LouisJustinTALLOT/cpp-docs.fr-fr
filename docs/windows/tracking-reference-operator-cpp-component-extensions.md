@@ -1,5 +1,5 @@
 ---
-title: Suivi de l’opérateur de référence (Extensions du composant C++) | Documents Microsoft
+title: Suivi de l’opérateur de référence (Extensions du composant C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890857"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651829"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Opérateur de référence de suivi (extensions du composant C++)
-A *référence de suivi* (`%`) se comporte comme une référence C++ ordinaire (`&`), sauf que lorsqu’un objet est assigné à une référence de suivi, le nombre de références de l’objet est incrémenté.  
+Un *référence de suivi* (`%`) se comporte comme une référence C++ ordinaire (`&`), à ceci près que lorsqu’un objet est assigné à une référence de suivi, le décompte de références de l’objet est incrémenté.  
   
 ## <a name="all-platforms"></a>Toutes les plateformes  
  Une référence de suivi possède les caractéristiques suivantes.  
   
 -   L'assignation d'un objet à une référence de suivi provoque l'incrémentation du nombre de références de l'objet.  
   
--   Une référence native (&) est le résultat obtenu lorsque vous déréférencez un *. Une référence de suivi (%) est le résultat obtenu lorsque vous déréférencez un ^. Tant que vous avez une référence % à un objet, l'objet reste actif en mémoire.  
+-   Une référence native (`&`) est le résultat lorsque vous déréférencez un `*`. Une référence de suivi (`%`) est le résultat lorsque vous déréférencez un `^`. Tant que vous avez un `%` à un objet, l’objet reste actif en mémoire.  
   
 -   L'opérateur d'accès aux membres point (`.`) est utilisé pour accéder à un membre de l'objet.  
   
 -   Les références de suivi sont valides pour les types valeur et les handles (par exemple `String^`).  
   
--   Une valeur null ou `nullptr` ne peut pas être assignée à une référence de suivi. Une référence de suivi peut être réassignée à un autre objet valide autant de fois que nécessaire.  
+-   Une référence de suivi ne peut pas être assignée à une valeur null ou **nullptr** valeur. Une référence de suivi peut être réassignée à un autre objet valide autant de fois que nécessaire.  
   
 -   Une référence de suivi ne peut pas être utilisée comme opérateur de prise d'adresse unaire.  
   
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  L'exemple suivant montre comment passer un ^ en fonction qui accepte un %.  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -85,11 +84,10 @@ ref class Foo sealed {};
 -   [Guide pratique pour utiliser des références de suivi dans C++-CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  L'exemple suivant pour C++/CLI montre comment utiliser une référence de suivi avec des types managés et natifs.  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **Exemple**  
   
  L'exemple suivant pour C++/CLI montre comment lier une référence de suivi à un tableau.  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

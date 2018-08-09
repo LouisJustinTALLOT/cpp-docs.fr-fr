@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::Status, données de membre | Documents Microsoft
+title: Synclockwithstatust::Status, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888450"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652846"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_, données de membre
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,9 +34,9 @@ DWORD status_;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Contient le résultat de l’objet sous-jacent attendre l’opération après une opération de verrouillage sur un objet basé sur l’objet SyncLockWithStatusT actuel.  
+ Contient le résultat de l’opération d’attente sous-jacente après une opération de verrouillage sur un objet selon actuel **SyncLockWithStatusT** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::Details  

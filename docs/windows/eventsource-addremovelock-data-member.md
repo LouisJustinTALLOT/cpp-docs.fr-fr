@@ -1,5 +1,5 @@
 ---
-title: EventSource::addremovelock, données de membre | Documents Microsoft
+title: EventSource::addremovelock, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46763a6376a18ae469833c3eee6a0d5d9f15ee45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d45ba6670d94ae1a58a1a46fab41dbb2ee6f1c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872651"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646538"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>EventSource::addRemoveLock_, données de membre
-Synchronise l’accès à la [targets_](../windows/eventsource-targets-data-member.md) tableau lors de l’ajout, la suppression ou appeler des gestionnaires d’événements.  
+Synchronise l’accès à la [targets_](../windows/eventsource-targets-data-member.md) tableau lors de l’ajout, suppression ou appeler des gestionnaires d’événements.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Wrappers::SRWLock addRemoveLock_;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL

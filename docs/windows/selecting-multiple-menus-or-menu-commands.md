@@ -1,5 +1,5 @@
 ---
-title: Sélection de plusieurs Menus ou commandes de Menu | Documents Microsoft
+title: Sélection de plusieurs Menus ou commandes de Menu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891907"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644854"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Sélection de plusieurs menus ou commandes de menu
 Vous pouvez sélectionner plusieurs noms de menus ou commandes de menu pour effectuer des opérations en bloc telles que la suppression ou la modification de propriétés.  
   
 ### <a name="to-select-multiple-menu-commands"></a>Pour sélectionner plusieurs commandes de menu  
   
-1.  Tout en maintenant la touche Ctrl enfoncée, cliquez sur les menus ou les commandes de sous-menu souhaitées.  
+1.  Tout en maintenant enfoncée la **Ctrl** enfoncée, cliquez sur les menus ou les commandes de sous-menu souhaitées.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
- **Spécifications**  
+## <a name="requirements"></a>Configuration requise  
   
  Win32  
   

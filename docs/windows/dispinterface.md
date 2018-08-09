@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569212"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644328"
 ---
 # <a name="dispinterface"></a>dispinterface
 Place une interface dans le fichier .idl comme interface de dispatch.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ Place une interface dans le fichier .idl comme interface de dispatch.
   
  L’exemple d’utilisation de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) dans la documentation MIDL :  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**S'applique à**|**interface**|  
 |**Renouvelable**|Non|  
 |**Attributs requis**|Aucun.|  
-|**Attributs non valides**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
+|**Attributs non valides**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

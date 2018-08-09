@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une Image pour un autre périphérique d’affichage (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Ajout d’une Image pour un autre périphérique d’affichage (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2819509bd5b3b42bc1d07cfb6ed1bedbd8a6bd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bf056dac289a88d2e94cb740c0ff1e7b4bedd33
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857361"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651790"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Ajout d'une image pour un autre périphérique d'affichage (Éditeur d'images pour les icônes)
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Pour ajouter une image pour un autre périphérique d’affichage  
@@ -32,14 +32,12 @@ ms.locfileid: "33857361"
   
 2.  Sélectionnez le type d’image que vous souhaitez ajouter. Vous pouvez également cliquer sur **personnalisé** pour créer une icône dont la taille n’est pas disponible dans la liste par défaut.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
-  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

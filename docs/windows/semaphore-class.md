@@ -1,5 +1,5 @@
 ---
-title: Classe de sémaphore | Documents Microsoft
+title: Classe de sémaphore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889467"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652634"
 ---
 # <a name="semaphore-class"></a>Semaphore (classe)
 Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.  
@@ -30,7 +30,6 @@ Représente un objet de synchronisation qui contrôle une ressource partagée pr
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -46,7 +45,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Semaphore::Semaphore, constructeur](../windows/semaphore-semaphore-constructor.md)|Initialise une nouvelle instance de la classe de sémaphore.|  
+|[Semaphore::Semaphore, constructeur](../windows/semaphore-semaphore-constructor.md)|Initialise une nouvelle instance de la **sémaphore** classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -58,18 +57,18 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Semaphore::Lock, méthode](../windows/semaphore-lock-method.md)|Attend que l’objet actif ou l’objet associé au handle spécifié, est dans l’état signalé ou que l’intervalle de délai d’attente spécifié est écoulé.|  
+|[Semaphore::Lock, méthode](../windows/semaphore-lock-method.md)|Attend que l’objet en cours ou l’objet associé au handle spécifié, est dans l’état signalé ou que l’intervalle de délai d’attente spécifié est écoulé.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Semaphore::operator=, opérateur](../windows/semaphore-operator-assign-operator.md)|Déplace le handle spécifié à partir d’un objet sémaphore à l’objet de sémaphore actuel.|  
+|[Semaphore::operator=, opérateur](../windows/semaphore-operator-assign-operator.md)|Déplace le handle spécifié à partir d’un **sémaphore** objet actuel **sémaphore** objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Semaphore`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

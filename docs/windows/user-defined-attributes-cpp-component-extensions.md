@@ -1,5 +1,5 @@
 ---
-title: Attributs (Extensions du composant C++) défini par l’utilisateur | Documents Microsoft
+title: Attributs (Extensions du composant C++) défini par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e09d3c285c64f049cc8e1bb8aea1c5debe88932
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891764"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644126"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Attributs définis par l'utilisateur  (extensions du composant C++)
 Attributs personnalisés permettent d’étendre les métadonnées d’une interface, classe ou structure, méthode, paramètre ou énumération.  
@@ -30,22 +30,22 @@ Attributs personnalisés permettent d’étendre les métadonnées d’une inter
  Tous les Runtimes prend en charge les attributs personnalisés.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- C + c++ / les attributs CX prend en charge uniquement les propriétés, mais pas d’attribut constructeurs ou méthodes.  
+ C++ / c++ / attributs CX prend en charge uniquement les propriétés, mais pas d’attribut constructeurs ou méthodes.  
   
 ### <a name="remarks"></a>Notes  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Attributs personnalisés vous permettent d’étendre les métadonnées d’un élément géré. Pour plus d’informations, consultez [Attributs](/dotnet/standard/attributes/index).  
   
 ### <a name="remarks"></a>Notes  
- Les informations et la syntaxe présentée dans cette rubrique est destinée à remplacer les informations présentées dans [attribut](../windows/attribute.md).  
+ Les informations et la syntaxe présentée dans cette rubrique est destiné à remplacer les informations présentées dans [attribut](../windows/attribute.md).  
   
- Vous pouvez définir un attribut personnalisé par la définition d’un type en apportant <xref:System.Attribute> une classe de base pour le type et éventuellement appliquer le <xref:System.AttributeUsageAttribute> attribut.  
+ Vous pouvez définir un attribut personnalisé en définissant un type et en rendant <xref:System.Attribute> une classe de base pour le type et éventuellement appliquer la <xref:System.AttributeUsageAttribute> attribut.  
   
- Par exemple, dans Microsoft Transaction Server (MTS) 1.0, comportement par rapport aux transactions, la synchronisation, l’équilibrage de charge, et ainsi de suite a été spécifié par le biais des GUID personnalisés insérés dans la bibliothèque de types à l’aide de l’attribut personnalisé ODL. Par conséquent, un client d’un serveur MTS pu déterminer ses caractéristiques en lisant la bibliothèque de types. Dans le .NET Framework, l’équivalent de la bibliothèque de types de métadonnées est l’équivalent de l’attribut personnalisé ODL est donc des attributs personnalisés. Également, la lecture de la bibliothèque de types est analogue à l’aide de la réflexion sur les types.  
+ Par exemple, dans Microsoft Transaction Server (MTS) 1.0, le comportement en ce qui concerne les transactions, la synchronisation, l’équilibrage de charge, et ainsi de suite a été spécifié par le biais des GUID personnalisées insérées dans la bibliothèque de types à l’aide de l’attribut personnalisé ODL. Par conséquent, un client d’un serveur MTS pu déterminer ses caractéristiques en lisant la bibliothèque de types. Dans le .NET Framework, l’équivalent de la bibliothèque de types est des métadonnées, et l’équivalent de l’attribut personnalisé ODL est attributs personnalisés. En outre, la lecture de la bibliothèque de types est analogue à l’aide de la réflexion sur les types.  
   
  Pour plus d'informations, consultez  
   
@@ -53,13 +53,12 @@ Attributs personnalisés permettent d’étendre les métadonnées d’une inter
   
 -   [Types de paramètre d’attribut](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Pour plus d’informations sur la signature d’assemblys dans Visual C++, consultez [les assemblys de nom fort (signature d’Assembly) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Pour plus d’informations sur la signature d’assemblys dans Visual C++, consultez [les assemblys de nom fort (signature d’Assembly) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
-### <a name="requirements"></a>Spécifications  
- Option du compilateur : **/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  L’exemple suivant montre comment définir un attribut personnalisé.  
   
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **Exemple**  
-  
- L’exemple suivant illustre certaines fonctionnalités importantes des attributs personnalisés. Par exemple, cet exemple montre une utilisation courante des attributs personnalisés : l’instanciation d’un serveur qui peut se décrire complètement aux clients.  
+ L’exemple suivant illustre certaines fonctionnalités importantes d’attributs personnalisés. Par exemple, cet exemple montre une utilisation courante des attributs personnalisés : l’instanciation d’un serveur qui peut se décrire complètement aux clients.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -171,9 +168,7 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **Exemple**  
-  
- L’objet ^ type remplace le type de données variant. L’exemple suivant définit un attribut personnalisé qui prend un tableau d’objet ^ en tant que paramètres.  
+ Le `Object^` type remplace le type de données variant. L’exemple suivant définit un attribut personnalisé qui prend un tableau de `Object^` en tant que paramètres.  
   
  Arguments d’attribut doivent être des constantes de compilation ; dans la plupart des cas, ils doivent être des littéraux constants.  
   
@@ -195,9 +190,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **Exemple**  
-  
- Le runtime requiert que la partie publique de la classe d’attributs personnalisés doit être sérialisable.  Lors de la création d’attributs personnalisés, les arguments nommés de l’attribut personnalisé sont limités aux constantes de compilation.  (Considérez-le comme une séquence de bits ajoutés à votre disposition de classe dans les métadonnées.)  
+ Le runtime nécessite que la partie publique de la classe d’attributs personnalisés doit être sérialisable.  Lors de la création d’attributs personnalisés, les arguments nommés de l’attribut personnalisé sont limités à des constantes de compilation.  (La considérer comme une séquence de bits ajoutés à votre disposition de classe dans les métadonnées.)  
   
 ```cpp  
 // extending_metadata_f.cpp  

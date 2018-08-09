@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464887"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648176"
 ---
 # <a name="attributes-alphabetical-reference"></a>Référence alphabétique des attributs
 Les attributs suivants sont disponibles dans Visual C++.  
@@ -118,7 +118,7 @@ Les attributs suivants sont disponibles dans Visual C++.
 |[satype](../windows/satype.md)|Spécifie le type de données de la `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Spécifie la taille de mémoire allouée pour les pointeurs de taille, taille des pointeurs vers des pointeurs de taille et seul ou les tableaux multidimensionnels.|  
 |[source](../windows/source-cpp.md)|Indique qu’un membre d’une classe, une propriété ou une méthode est une source d’événements.|  
-|[string](../windows/string-cpp.md)|Indique qu’unidimensionnel **char**, **wchar_t**, **octets**, ou tableau équivalent ou le pointeur vers ce type de tableau doit être traité comme une chaîne.|  
+|[string](../windows/string-cpp.md)|Indique qu’unidimensionnel **char**, **wchar_t**, `byte`, ou tableau équivalent ou le pointeur vers ce type de tableau doit être traité comme une chaîne.|  
 |[support_error_info](../windows/support-error-info.md)|Prend en charge les rapports d’erreurs pour l’objet cible.|  
 |[switch_is](../windows/switch-is.md)|Spécifie l’expression ou l’identificateur agissant comme l’union discriminante qui sélectionne le membre d’union.|  
 |[switch_type](../windows/switch-type.md)|Identifie le type de la variable utilisée en tant que l’union discriminante.|  
