@@ -1,5 +1,5 @@
 ---
-title: Microsoft::wrl Namespace | Documents Microsoft
+title: Microsoft::wrl Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881648"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020250"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL, espace de noms
-Définit les types fondamentaux qui composent la bibliothèque de modèles Windows Runtime C++.  
+Définit les types fondamentaux qui composent la bibliothèque de modèles C++ Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,8 +70,8 @@ namespace Microsoft::WRL;
 |Nom|Description|  
 |----------|-----------------|  
 |[ChainInterfaces, structure](../windows/chaininterfaces-structure.md)|Spécifie les fonctions de vérification et d'initialisation pouvant être appliquées à un ensemble d'ID d'interface.|  
-|[CloakedIid, structure](../windows/cloakediid-structure.md)|Indique aux modèles RuntimeClass, Implements et ChainInterfaces que l'interface spécifiée n'est pas accessible dans la liste des IID.|  
-|[Implements, structure](../windows/implements-structure.md)|Implémente QueryInterface et GetIid pour les interfaces spécifiées.|  
+|[CloakedIid, structure](../windows/cloakediid-structure.md)|Indique à la `RuntimeClass`, `Implements` et `ChainInterfaces` modèles que l’interface spécifiée n’est pas accessible dans la liste des IID.|  
+|[Implements, structure](../windows/implements-structure.md)|Implémente `QueryInterface` et `GetIid` pour les interfaces spécifiées.|  
 |[MixIn, structure](../windows/mixin-structure.md)|Garantit qu'une classe d'exécution dérive des interfaces du Windows Runtime, le cas échéant, puis des interfaces du COM classique.|  
 |[RuntimeClassFlags, structure](../windows/runtimeclassflags-structure.md)|Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-class.md).|  
   
@@ -79,7 +79,7 @@ namespace Microsoft::WRL;
   
 |Name|Description|  
 |----------|-----------------|  
-|[AsyncResultType, énumération](../windows/asyncresulttype-enumeration.md)|Spécifie le type de résultat retourné par la méthode GetResults().|  
+|[AsyncResultType, énumération](../windows/asyncresulttype-enumeration.md)|Spécifie le type de résultat retourné par la `GetResults()` (méthode).|  
 |[ModuleType, énumération](../windows/moduletype-enumeration.md)|Spécifie si un module doit prendre en charge un serveur in-process ou un serveur out-of-process.|  
 |[RuntimeClassType, énumération](../windows/runtimeclasstype-enumeration.md)|Spécifie le type de [RuntimeClass](../windows/runtimeclass-class.md) instance qui est pris en charge.|  
   
@@ -93,7 +93,7 @@ namespace Microsoft::WRL;
 |[CreateClassFactory, fonction](../windows/createclassfactory-function.md)|Crée une fabrique produisant des instances de la classe spécifiée.|  
 |[Make, fonction](../windows/make-function.md)|Initialise la classe Windows Runtime spécifiée.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
   
  **Espace de noms :** Microsoft::WRL  
