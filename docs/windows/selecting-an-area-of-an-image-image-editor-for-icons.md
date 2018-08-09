@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ed8669a22be7e1a2b696ca9373c30e71f17c191
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606785"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012681"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Sélection d'une zone d'une image (Éditeur d'images pour les icônes)
 Vous pouvez utiliser les outils de sélection pour définir une zone d’une image que vous souhaitez couper, copier, effacer, redimensionner, inverser ou déplacer. Avec le **sélection d’un Rectangle** outil, vous pouvez définir et sélectionner une zone rectangulaire de l’image. Avec le **Sélection irrégulière** outil que vous pouvez dessiner un contour à main levée de la zone que vous souhaitez sélectionner pour l’opérations couper, copier ou autre opération.  
@@ -52,7 +52,6 @@ Vous pouvez utiliser les outils de sélection pour définir une zone d’une ima
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

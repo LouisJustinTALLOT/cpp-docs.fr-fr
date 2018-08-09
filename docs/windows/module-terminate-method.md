@@ -1,5 +1,5 @@
 ---
-title: Module::Terminate, méthode | Documents Microsoft
+title: Module::Terminate, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1822f8c1a854274ff30795096bb639520ea8cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874718"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016890"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate, méthode
-Provoque la toutes les fabriques instanciés par le module pour l’arrêter.  
+Provoque toutes les fabriques instanciés par le module à arrêter.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void Terminate();  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Libère les fabriques dans le cache.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

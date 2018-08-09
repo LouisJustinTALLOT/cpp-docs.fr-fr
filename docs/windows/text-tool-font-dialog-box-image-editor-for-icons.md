@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Police outil texte (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Boîte de dialogue Police outil texte (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a197be0032c4ad42574418a153bba079366e396
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890428"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015909"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Police de l'outil texte (Éditeur d'images pour les icônes)
-Spécifie les paramètres de police lorsque vous utilisez la [boîte de dialogue Outil texte](../windows/text-tool-dialog-box-image-editor-for-icons.md) de la [Éditeur d’images](../windows/image-editor-for-icons.md).  
+Spécifie les paramètres de police lorsque vous utilisez le [boîte de dialogue Outil texte](../windows/text-tool-dialog-box-image-editor-for-icons.md) de la [Éditeur d’images](../windows/image-editor-for-icons.md).  
   
  Utilisez cette boîte de dialogue pour :  
   
--   [Modifier la police du texte d’une Image](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [Modification de la police du texte d’une Image](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Pour accéder à cette boîte de dialogue, cliquez sur le **police** bouton dans la boîte de dialogue Outil texte.  
+ Pour accéder à cette boîte de dialogue, cliquez sur le **police** situé dans le **outil texte** boîte de dialogue.  
   
  **Police**  
  Répertorie les polices disponibles.  
@@ -43,14 +43,13 @@ Spécifie les paramètres de police lorsque vous utilisez la [boîte de dialogue
  Répertorie les tailles disponibles pour la police spécifiée.  
   
  **Exemple**  
- Affiche un exemple de comment le texte s’affiche avec les paramètres de police spécifiée.  
+ Montre un exemple de comment le texte s’affiche avec les paramètres de police spécifiée.  
   
  **Script**  
- Répertorie les scripts de langue pour la police spécifiée. Lorsque vous sélectionnez un script de langue différent, le jeu de caractères pour cette langue devient disponible pour la création de documents multilingues.  
+ Répertorie les scripts de langue disponibles pour la police spécifiée. Lorsque vous sélectionnez un script de langue différente, le jeu de caractères pour cette langue devient disponible pour la création de documents multilingues.  
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)
-

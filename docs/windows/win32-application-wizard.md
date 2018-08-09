@@ -1,5 +1,5 @@
 ---
-title: Assistant Application Win32 | Documents Microsoft
+title: Assistant Application Win32 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891423"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014219"
 ---
 # <a name="win32-application-wizard"></a>Application Win32 (Assistant)
 L’Assistant Application Win32 Visual C++ vous permet de créer quatre types de projet possibles (répertoriés dans les en-têtes de colonne du tableau ci-dessous). Dans chaque cas, vous pouvez spécifier des options supplémentaires appropriées au type de projet que vous ouvrez. Le tableau suivant indique les options disponibles pour chaque type d’application.  
@@ -56,7 +56,7 @@ L’Assistant Application Win32 Visual C++ vous permet de créer quatre types de
 > [!NOTE]
 >  Vous ne pouvez pas ajouter de classes ATL. En outre, vous ne pouvez ajouter de classes MFC qu’aux types d’application de bureau Windows qui prennent en charge MFC (consultez le tableau précédent).  
   
- Vous pouvez afficher les fichiers que l’Assistant a créés pour votre projet dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichier, consultez [Types de fichier créés pour les projets Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
+ Vous pouvez afficher les fichiers que l’Assistant a créés pour votre projet dans **l’Explorateur de solutions**. Pour plus d’informations sur les fichiers que l’Assistant crée pour votre projet, consultez le fichier projet généré, `ReadMe.txt`. Pour plus d’informations sur les types de fichier, consultez [Types de fichier créés pour les projets Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une Application de bureau Windows vide](../windows/creating-an-empty-windows-desktop-application.md)   

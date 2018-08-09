@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 170d688988576d3cbc9c454eb84603f9660120a8
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 345171742f979e488c6a4bb48cf1b57e4bb2f164
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571218"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018108"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Comment : ouvrir un fichier de script de ressources au format texte
 Parfois, vous souhaitez afficher le contenu du fichier de script (.rc) de ressources de votre projet sans ouvrir une ressource, par exemple une boîte de dialogue, dans son éditeur de ressources spécifique. Par exemple, vous souhaitez rechercher une chaîne dans toutes les boîtes de dialogue du fichier de ressources sans avoir à ouvrir chacune d'elles séparément.  
@@ -35,7 +35,7 @@ Parfois, vous souhaitez afficher le contenu du fichier de script (.rc) de ressou
  Vous pouvez facilement ouvrir le fichier de ressources au format texte pour afficher toutes les ressources qu’il contient et effectuer des opérations globales prises en charge par le [éditeur de texte](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
   
 > [!NOTE]
->  Les éditeurs de ressources ne lisent pas directement les fichiers .rc ou resource.h. Le compilateur de ressources les compile en fichiers .aps, qui sont consommés par les éditeurs de ressources. Ce fichier est une étape de compilation, qui stocke uniquement les données symboliques. Comme pour un processus de compilation normal, les informations non symboliques (par exemple les commentaires) sont ignorées durant le processus de compilation. Chaque fois que le fichier .aps n'est plus synchronisé au fichier .rc, le fichier .rc est régénéré (par exemple, quand vous effectuez un enregistrement, l'éditeur de ressources remplace les fichiers .rc et resource.h). Les changements apportés aux ressources sont conservés dans le fichier .rc, mais les commentaires disparaissent une fois le fichier .rc remplacé. Pour plus d’informations sur la façon de conserver les commentaires, consultez [inclusion des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md).  
+>  Les éditeurs de ressources ne lisent pas directement .rc ou `resource.h` fichiers. Le compilateur de ressources les compile en fichiers .aps, qui sont consommés par les éditeurs de ressources. Ce fichier est une étape de compilation, qui stocke uniquement les données symboliques. Comme pour un processus de compilation normal, les informations non symboliques (par exemple les commentaires) sont ignorées durant le processus de compilation. Chaque fois que le fichier .aps n'est plus synchronisé au fichier .rc, le fichier .rc est régénéré (par exemple, quand vous effectuez un enregistrement, l'éditeur de ressources remplace les fichiers .rc et resource.h). Les changements apportés aux ressources sont conservés dans le fichier .rc, mais les commentaires disparaissent une fois le fichier .rc remplacé. Pour plus d’informations sur la façon de conserver les commentaires, consultez [inclusion des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md).  
   
 ### <a name="to-open-a-resource-script-file-as-text"></a>Pour ouvrir un fichier de script de ressources au format texte  
   
@@ -51,7 +51,7 @@ Parfois, vous souhaitez afficher le contenu du fichier de script (.rc) de ressou
   
 6.  À partir de la **ouvrir en tant que** liste déroulante, sélectionnez **texte**.  
   
-     La ressource s'ouvre dans l'Éditeur de code source.  
+     La ressource s’ouvre dans le **Code Source** éditeur.  
   
  \- ou -  
   
@@ -60,7 +60,6 @@ Parfois, vous souhaitez afficher le contenu du fichier de script (.rc) de ressou
 2.  Dans le menu contextuel, choisissez **ouvrir avec...** , puis sélectionnez **éditeur de Code Source (texte)**.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

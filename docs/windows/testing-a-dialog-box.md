@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652068"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019676"
 ---
 # <a name="testing-a-dialog-box"></a>Test d’une boîte de dialogue
 Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son comportement au moment de l’exécution sans compiler votre programme. Dans ce mode, vous pouvez :  
@@ -42,7 +42,7 @@ Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son co
   
 ### <a name="to-test-a-dialog-box"></a>Pour tester une boîte de dialogue  
   
-1.  Lorsque l’Éditeur de boîtes de dialogue est la fenêtre active, dans la barre de menus, choisissez **Format**, **Tester la boîte de dialogue**.  
+1.  Lorsque le **boîte de dialogue** éditeur est la fenêtre active, dans la barre de menus, choisissez **Format** > **boîte de dialogue Test**.  
   
 2.  Pour arrêter la simulation, appuyez sur **ÉCHAP**, ou sélectionnez simplement le **fermer** bouton dans la boîte de dialogue que vous testez.  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 919bf90fad228a3d7b4f574072e5f315da6427d8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 803b4652d4a6482e9e7615121d3a85f0bee309f7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602696"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013663"
 ---
 # <a name="lcid"></a>lcid
 Vous permet de passer un identificateur de paramètres régionaux à une fonction.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [lcid]  
 ```  
   

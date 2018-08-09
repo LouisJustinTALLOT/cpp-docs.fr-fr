@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a52f2a11634ff79bcb58302d4b2a4d7ceed362cc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604445"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017121"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr  (extensions du composant C++)
 Le **nullptr** mot clé représente un *valeur de pointeur null*. Utilisez une valeur de pointeur null pour indiquer qu’un handle d’objet, un pointeur intérieur ou un type de pointeur natif ne pointe pas vers un objet.  
@@ -116,8 +116,6 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 pMyClass == nullptr  
   
@@ -184,8 +182,6 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 test  
 ```  
@@ -212,8 +208,6 @@ int main() {
    x -> Test();  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 NULL  

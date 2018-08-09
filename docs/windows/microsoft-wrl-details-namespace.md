@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604224"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012126"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits, structure](../windows/argtraits-structure.md)|Déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.|  
 |[ArgTraitsHelper, structure](../windows/argtraitshelper-structure.md)|Permet de définir les caractéristiques communes d’arguments du délégué.|  
-|[BoolStruct, structure](../windows/boolstruct-structure.md)|Définit si un ComPtr gère la durée de vie d’une interface. BoolStruct est utilisé en interne par le [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) opérateur.|  
+|[BoolStruct, structure](../windows/boolstruct-structure.md)|Définit si un `ComPtr` gère la durée de vie d’une interface. `BoolStruct` est utilisé en interne par le [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) opérateur.|  
 |[CreatorMap, structure](../windows/creatormap-structure.md)|Contient des informations sur la façon d’initialiser, inscrire et annuler l’inscription d’objets.|  
 |[DerefHelper, structure](../windows/derefhelper-structure.md)|Représenter un pointeur déréférencé au `T*` paramètre de modèle.|  
 |[EnableIf, structure](../windows/enableif-structure.md)|Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur **true**.|  

@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646928"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014001"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Affichage et modification des ressources dans un Éditeur de ressources
-Chaque type de ressource possède un éditeur de ressources spécifique à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).  
+Chaque type de ressource a un **ressource** éditeur spécifique à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).  
   
  Certains types de ressources sont des fichiers individuels qui peuvent être importés et utilisés de différentes manières. Citons notamment les bitmaps, icônes, curseurs, barres d’outils et les fichiers html. Ces ressources ont des noms de fichiers ainsi que [identificateurs de ressource](../windows/symbols-resource-identifiers.md). D’autres, telles que les boîtes de dialogue, des menus et des tables de chaînes dans les projets Win32, existent uniquement dans le cadre d’un fichier de script (.rc) de ressource ou un fichier de ressources (.rct) de modèle.  
   
@@ -46,16 +46,16 @@ Chaque type de ressource possède un éditeur de ressources spécifique à ce ty
   
 1.  Sélectionnez **affichage des ressources** à partir de la **vue** menu.  
   
-2.  Si la fenêtre Affichage des ressources n’est pas la fenêtre de premier niveau, cliquez sur le **affichage des ressources** onglet pour les importer vers le haut.  
+2.  Si le **affichage des ressources** fenêtre n’est pas la fenêtre de premier niveau, cliquez sur le **affichage des ressources** onglet pour les importer vers le haut.  
   
-3.  À partir de l’affichage des ressources, développez le dossier du projet qui contient les ressources que vous souhaitez afficher. Par exemple, si vous souhaitez afficher une ressource de boîte de dialogue, développez le dossier de boîte de dialogue.  
+3.  À partir de **affichage des ressources**, développez le dossier du projet qui contient les ressources que vous souhaitez afficher. Par exemple, si vous souhaitez afficher une ressource de boîte de dialogue, développez le **boîte de dialogue** dossier.  
   
     > [!NOTE]
     >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Double-cliquez sur la ressource, par exemple, IDD_ABOUTBOX.  
+4.  Double-cliquez sur la ressource, par exemple, **IDD_ABOUTBOX**.  
   
-     La ressource s’ouvre dans l’éditeur approprié. Par exemple, pour les ressources de la boîte de dialogue, la ressource s’ouvre à l’intérieur de l’éditeur de boîtes de dialogue.  
+     La ressource s’ouvre dans l’éditeur approprié. Par exemple, pour les ressources de la boîte de dialogue, la ressource s’ouvre à l’intérieur de la **boîte de dialogue** éditeur.  
   
      Vous pouvez également [afficher des ressources dans un fichier .rc (script de ressources) sans ouvrir de projet](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -75,7 +75,7 @@ Chaque type de ressource possède un éditeur de ressources spécifique à ce ty
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Pour afficher une ressource managée dans un éditeur de ressources  
   
-1.  Dans **l’Explorateur de solutions**, double-cliquez sur la ressource, par exemple Bitmap1.bmp.  
+1.  Dans **l’Explorateur de solutions**, double-cliquez sur la ressource, par exemple, **Bitmap1.bmp**.  
   
      La ressource s’ouvre dans l’éditeur approprié.  
   
@@ -83,7 +83,7 @@ Chaque type de ressource possède un éditeur de ressources spécifique à ce ty
   
 1.  Dans **l’Explorateur de solutions**, avec le bouton droit de la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer** dans le menu contextuel.  
   
-### <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Configuration requise  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

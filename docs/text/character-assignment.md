@@ -1,5 +1,5 @@
 ---
-title: Assignation de caractère | Documents Microsoft
+title: Assignation de caractère | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084cfd69a3742db10e09e9d97974a0666fa31a47
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856695"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010410"
 ---
 # <a name="character-assignment"></a>Assignation de caractère
-Prenons l’exemple suivant, dans lequel le `while` boucle analyse une chaîne et copie tous les caractères, à l’exception de « X » dans une autre chaîne :  
+Prenons l’exemple suivant, dans lequel le **tandis que** boucle analyse une chaîne et copie tous les caractères à l’exception de « X » dans une autre chaîne :  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- Le code copie l’octet à `sz2` à l’emplacement vers lequel pointé `sz1`, puis incrémente `sz1` pour recevoir l’octet suivant. Toutefois, si le caractère suivant dans `sz2` est un caractère codés sur deux octets, l’assignation à `sz1` copie uniquement le premier octet. Le code suivant utilise une fonction portable pour copier le caractère et une autre pour incrémenter `sz1` et `sz2` correctement :  
+ Le code copie l’octet au `sz2` à l’emplacement vers lequel pointé `sz1`, puis incrémente `sz1` pour recevoir l’octet suivant. Toutefois, si le caractère suivant dans `sz2` est un caractère sur deux octets, l’assignation à `sz1` copie uniquement le premier octet. Le code suivant utilise une fonction portable pour copier le caractère et une autre pour incrémenter `sz1` et `sz2` correctement :  
   
 ```  
 while( *sz2 )  

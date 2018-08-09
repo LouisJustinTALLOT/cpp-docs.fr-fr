@@ -1,5 +1,5 @@
 ---
-title: Nouvelle &lt;périphérique&gt; Image du Type de boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Nouvelle &lt;appareil&gt; Image du Type de boîte de dialogue (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879618"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019284"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nouvelle &lt;périphérique&gt; Image du Type de boîte de dialogue (Éditeur d’images pour les icônes)
-Vous permet de créer une nouvelle image de périphérique d’un type spécifié. Pour ouvrir la **nouveau \<appareil > Image** boîte de dialogue, cliquez sur **nouveau Type d’Image** sur la **Image** menu.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nouvelle &lt;appareil&gt; Image du Type de boîte de dialogue (Éditeur d’images pour les icônes)
+Vous permet de créer une nouvelle image de périphérique d’un type spécifié. Pour ouvrir le **New \<appareil > Image** boîte de dialogue, cliquez sur **nouveau Type d’Image** sur le **Image** menu.  
   
- **Type d’Image cible**  
+### <a name="target-image-type"></a>Type d’Image cible  
  Répertorie les types d’images disponibles. Sélectionnez le type d’image que vous souhaitez ouvrir :  
   
 ||||  
@@ -42,11 +42,11 @@ Vous permet de créer une nouvelle image de périphérique d’un type spécifi�
 > [!NOTE]
 >  Toutes les images existantes seront affichera pas dans cette liste.  
   
- **Personnalisé**  
- Ouvre le [boîte de dialogue personnalisée](custom-image-dialog-box-image-editor-for-icons.md) dans lequel vous pouvez créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.  
+### <a name="custom"></a>Personnalisé  
+ Ouvre le [boîte de dialogue d’Image personnalisée](custom-image-dialog-box-image-editor-for-icons.md) dans lequel vous pouvez créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.  
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   

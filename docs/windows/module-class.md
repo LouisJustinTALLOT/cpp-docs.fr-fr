@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d097c5c1193b74aa3e4d6ecea755390b0885a8d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604409"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013058"
 ---
 # <a name="module-class"></a>Module (classe)
 Représente une collection d’objets connexes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -96,7 +96,7 @@ class Module<OutOfProc> : public Module<InProc>;
 |Name|Description|  
 |----------|-----------------|  
 |[Module::objectCount_, données de membre](../windows/module-objectcount-data-member.md)|Effectue le suivi des classes combien ont été créés avec le [rendre](../windows/make-function.md) (fonction).|  
-|[Module::releaseNotifier_, données de membre](../windows/module-releasenotifier-data-member.md)|Contient un pointeur vers un objet ReleaseNotifier.|  
+|[Module::releaseNotifier_, données de membre](../windows/module-releasenotifier-data-member.md)|Contient un pointeur vers un `ReleaseNotifier` objet.|  
   
 ### <a name="macros"></a>Macros  
   

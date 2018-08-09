@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604484"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012831"
 ---
 # <a name="interface-class--c-component-extensions"></a>classe d'interface  (extensions du composant C++)
 Déclare une interface.  Pour plus d’informations sur les interfaces natives, consultez [__interface](../cpp/interface.md).  
@@ -32,14 +32,13 @@ Déclare une interface.  Pour plus d’informations sur les interfaces natives, 
 
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-  
  *interface_access*  
  L’accessibilité d’une interface en dehors de l’assembly.  Les valeurs possibles sont **public** et **privé**.  **privé** est la valeur par défaut. Les interfaces imbriquées ne peut pas avoir un *interface_access* spécificateur.  
   
@@ -75,7 +74,7 @@ interface class
  Dans l’environnement de développement, vous pouvez obtenir la touche F1 sur ces mots clés en surbrillance le mot clé, (`interface class`, par exemple) et en appuyant sur F1.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Remarques**  
+### <a name="remarks"></a>Notes 
   
  (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)  
   
@@ -83,7 +82,7 @@ interface class
  Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Remarques**  
+### <a name="remarks"></a>Notes
   
  (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Common Language Runtime.)  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 in Function_3  

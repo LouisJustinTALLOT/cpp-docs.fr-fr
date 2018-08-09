@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3040e89ee4c729953c1a56f0c8728ba4d5b9d7b6
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a0635751fa052c6e6a54d958e9005fee80812f7d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570519"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012100"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Comment : rechercher des symboles dans les ressources
 ### <a name="to-find-symbols-in-resources"></a>Pour rechercher des symboles dans les ressources  
@@ -43,7 +43,6 @@ ms.locfileid: "39570519"
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, consultez [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

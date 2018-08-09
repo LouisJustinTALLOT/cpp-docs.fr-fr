@@ -1,5 +1,5 @@
 ---
-title: Microsoft::wrl::wrappers::Details Namespace | Documents Microsoft
+title: Microsoft::wrl::wrappers::Details Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,19 +23,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f74f8fe3e5b637869af7b03bb2eaf5e13df9550
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875550"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020160"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details, espace de noms
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
@@ -45,8 +45,8 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[SyncLockT, classe](../windows/synclockt-class.md)|Représente un type qui peut prendre exclusif ou partagé possession d’une ressource.|  
-|[SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)|Représente un type qui peut prendre exclusif ou partagé possession d’une ressource.|  
+|[SyncLockT, classe](../windows/synclockt-class.md)|Représente un type qui peut prendre exclusif ou la propriété d’une ressource partagée.|  
+|[SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)|Représente un type qui peut prendre exclusif ou la propriété d’une ressource partagée.|  
   
 ### <a name="methods"></a>Méthodes  
   
@@ -54,7 +54,7 @@ namespace Microsoft::WRL::Wrappers::Details;
 |----------|-----------------|  
 |[CompareStringOrdinal, méthode](../windows/comparestringordinal-method.md)|Compare deux spécifié `HSTRING` objets et retourne un entier qui indique leur position relative dans un ordre de tri.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::Details  

@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606154"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019330"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 Étend les primitives entières afin d’éviter les débordements d’entiers et vous permet de comparer les différents types d’entiers.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  Soyez prudent lorsque vous utilisez le **SafeInt** classe avec le `?:` opérateur ternaire. Envisagez la ligne de code suivante.  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  Le compilateur convertit à ceci :  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  Si `flag` est **false**, le compilateur lève une exception au lieu d’affecter la valeur -1 à `x`. Par conséquent, pour éviter ce comportement, le code approprié à utiliser est la ligne suivante.  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

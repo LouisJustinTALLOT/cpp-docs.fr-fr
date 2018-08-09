@@ -26,24 +26,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604614"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017832"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Icônes et des curseurs : ressources image pour les périphériques d'affichage (Éditeur d'images pour les icônes)
-Les icônes et curseurs sont des ressources graphiques qui peuvent contenir plusieurs images de différentes tailles et modèles de couleurs pour différents types de périphériques d’affichage. De plus, un curseur a une « zone réactive », l’emplacement utilisé par Windows pour suivre sa position. Vous pouvez créer et modifier des icônes et des curseurs à l’aide de l’Éditeur d’images, comme les bitmaps et autres images.  
+Les icônes et curseurs sont des ressources graphiques qui peuvent contenir plusieurs images de différentes tailles et modèles de couleurs pour différents types de périphériques d’affichage. De plus, un curseur a une « zone réactive », l’emplacement utilisé par Windows pour suivre sa position. Icônes et curseurs sont créés et modifiés à l’aide du **Image** éditeur, comme les bitmaps et autres images.  
   
- Lorsque vous créez une icône ou un curseur, l’Éditeur d’images crée une image d’un type standard. Cette image est remplie initialement avec la couleur d’écran (transparente). Si l’image est un curseur, la zone réactive est initialement le coin supérieur gauche (coordonnées 0,0).  
+ Lorsque vous créez une nouvelle icône ou curseur, la **Image** éditeur crée d’abord une image d’un type standard. Cette image est remplie initialement avec la couleur d’écran (transparente). Si l’image est un curseur, la zone réactive est initialement le coin supérieur gauche (coordonnées 0,0).  
   
- Par défaut, l’Éditeur d’images prend en charge la création d’images supplémentaires pour les périphériques répertoriés dans le tableau suivant. Vous pouvez créer des images pour d’autres périphériques en tapant les paramètres de hauteur, largeur et nombre de couleurs dans la boîte de dialogue [Image personnalisée](custom-image-dialog-box-image-editor-for-icons.md).  
+ Par défaut, le **Image** éditeur prend en charge la création d’images supplémentaires pour les périphériques répertoriés dans le tableau suivant. Vous pouvez créer des images pour d’autres périphériques en tapant les paramètres de hauteur, largeur et nombre de couleurs dans la boîte de dialogue [Image personnalisée](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Grâce à l'Éditeur d'images, vous pouvez afficher des images 32 bits, mais vous ne pouvez pas les modifier.  
+>  À l’aide de la **Éditeur d’images**, vous pouvez afficher des images 32 bits, mais vous ne pouvez pas les modifier.  
   
-|Couleur|Largeur (pixels)|Hauteur (pixels)|  
+|Color|Largeur (pixels)|Hauteur (pixels)|  
 |-----------|----------------------|-----------------------|  
 |Monochrome|16|16|  
 |Monochrome|32|32|  

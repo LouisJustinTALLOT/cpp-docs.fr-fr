@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651403"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019171"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Affichage ou masquage de la barre d’outils Éditeur de boîtes de dialogue
-Lorsque vous ouvrez l’éditeur de boîtes de dialogue, la barre d’outils Éditeur de boîte de dialogue s’affiche automatiquement en haut de votre solution.  
+Lorsque vous ouvrez le **boîte de dialogue** éditeur, le **boîte de dialogue Éditeur** barre d’outils s’affiche automatiquement en haut de votre solution.  
   
 ### <a name="dialog-editor-toolbar"></a>Barre d'outils de l'Éditeur de boîtes de dialogue  
   
@@ -40,9 +40,9 @@ Lorsque vous ouvrez l’éditeur de boîtes de dialogue, la barre d’outils Éd
 |![Bouton Centrer verticalement](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Bouton de grille bascule](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Activer/Désactiver la grille|  
 |![Bouton Centrer horizontalement](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Bouton de Guides bascule](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Activer/Désactiver les repères|  
   
- La barre d’outils Éditeur de boîte de dialogue contient des boutons pour organiser la disposition des contrôles dans la boîte de dialogue, par exemple taille et l’alignement. Boutons de barre d’outils Éditeur de boîte de dialogue correspondent aux commandes du menu Format. Pour plus d’informations, consultez [touches accélérateur pour l’éditeur de boîtes de dialogue](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ Le **boîte de dialogue Éditeur** barre d’outils contient des boutons pour organiser la disposition des contrôles dans la boîte de dialogue, par exemple la taille et l’alignement. **Boîte de dialogue Éditeur** des boutons de barre d’outils correspondent à des commandes sur le **Format** menu. Pour plus d’informations, consultez [touches accélérateur pour l’éditeur de boîtes de dialogue](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Lorsque vous êtes dans l’éditeur de boîtes de dialogue, vous pouvez basculer l’affichage de la barre d’outils Éditeur de boîte de dialogue en le sélectionnant dans la liste des barres d’outils disponibles et windows.  
+ Lorsque vous êtes dans le **boîte de dialogue** éditeur, vous pouvez afficher ou masquer les le **boîte de dialogue Éditeur** la barre d’outils en le sélectionnant dans la liste des barres d’outils disponibles et windows.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Pour afficher ou masquer la barre d’outils Éditeur de boîte de dialogue  
   

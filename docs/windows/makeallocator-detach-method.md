@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b629ec70ed29866d0f8e37d9e6ce746fbfe6f117
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603366"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018463"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __forceinline void Detach();  
 ```  
   

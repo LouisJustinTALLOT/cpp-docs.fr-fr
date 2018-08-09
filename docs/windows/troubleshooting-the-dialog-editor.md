@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648618"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011102"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Dépannage de l’Éditeur de boîtes de dialogue
-Voici quelques problèmes dont vous devez connaître lorsque vous travaillez dans l’éditeur de boîtes de dialogue.  
+Voici quelques problèmes dont vous devez connaître lorsque vous travaillez dans le **boîte de dialogue** éditeur.  
   
 -   [La boîte de dialogue ne fonctionne plus après l’ajout de contrôles](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

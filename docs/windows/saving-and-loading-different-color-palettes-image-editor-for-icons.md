@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606970"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015941"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Enregistrement et chargement de différentes palettes de couleurs (Éditeur d'images pour les icônes)
-Vous pouvez enregistrer et charger une palette de couleurs qui contient [personnalisé couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Par défaut, la palette de couleurs utilisée en dernier est automatiquement chargée quand vous démarrez Visual Studio.)  
+Vous pouvez enregistrer et charger un **couleurs** palette contienne [personnalisé couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Par défaut, le **couleurs** palette plus récemment utilisée est automatiquement chargé lorsque vous démarrez Visual Studio.)  
   
 > [!TIP]
->  Dans la mesure où l'éditeur d'images n'a aucun moyen de rétablir la palette de couleurs par défaut, vous devez enregistrer la palette de couleurs par défaut sous un nom tel que standard.pal ou defaut.pal pour pouvoir restaurer facilement les paramètres par défaut.  
+>  Dans la mesure où le **Image** éditeur n’a aucun moyen pour restaurer la valeur par défaut **couleurs** palette, vous devez enregistrer la valeur par défaut **couleurs** palette sous un nom tel que  *standard.PAL* ou *defaut.PAL* afin que vous pouvez facilement restaurer les paramètres par défaut.  
   
 ### <a name="to-save-a-custom-colors-palette"></a>Pour enregistrer une palette de couleurs personnalisées  
   
@@ -46,10 +46,9 @@ Vous pouvez enregistrer et charger une palette de couleurs qui contient [personn
   
 1.  À partir de la **Image** menu, choisissez **charger la Palette**.  
   
-2.  Dans le [boîte de dialogue Charger la Palette de couleurs](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), accédez au répertoire approprié et sélectionnez la palette à charger. Les palettes de couleurs sont enregistrées avec une extension de fichier .pal.  
+2.  Dans le [boîte de dialogue Charger la Palette de couleurs](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), accédez au répertoire approprié et sélectionnez la palette à charger. **Couleur** palettes sont enregistrés avec une extension de fichier .pal.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

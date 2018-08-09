@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a30598e617a4c68559d6932e20dadaf7f83dc2eb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651520"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015518"
 ---
 # <a name="source-c"></a>source (C++)
 Sur une classe, spécifie les interfaces de source de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou un VARIANT et qui est une source d’événements.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ source(  
    interfaces  
 ) ]  

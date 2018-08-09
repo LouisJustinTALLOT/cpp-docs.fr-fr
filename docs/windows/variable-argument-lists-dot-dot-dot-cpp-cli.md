@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642940"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015954"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listes d’arguments de variable (...) (C++/CLI)
 Cet exemple montre comment vous pouvez utiliser le `...` syntaxe dans Visual C++ pour implémenter des fonctions qui ont un nombre variable d’arguments.  
@@ -54,9 +54,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Sortie  
-  
-```  
+```Output  
 3  
 ```  
   

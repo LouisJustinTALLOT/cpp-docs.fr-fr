@@ -1,5 +1,5 @@
 ---
-title: Dépassements de mémoire tampon | Documents Microsoft
+title: Dépassement de capacité de mémoire tampon | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bb362be360986371200c8cde292b3fff5acd7cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854650"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020185"
 ---
 # <a name="buffer-overflow"></a>Dépassement de capacité du tampon
-Différentes tailles de caractères peut provoquer des problèmes lorsque vous placez des caractères dans une mémoire tampon. Prenons le code suivant, qui copie les caractères d’une chaîne, `sz`, dans une mémoire tampon, `rgch`:  
+Différentes tailles de caractères peut entraîner des problèmes lorsque vous placez des caractères dans une mémoire tampon. Prenons le code suivant, les caractères d’une chaîne, `sz`, dans une mémoire tampon, `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- La question est : a été le dernier octet copié un octet de tête ? Les éléments suivants ne résout pas le problème, car il peut présenter un dépassement du tampon :  
+ La question est : a été le dernier octet copié un octet de tête ? Les éléments suivants ne résout pas le problème, car il susceptible de déborder la mémoire tampon :  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- Le `_mbccpy` appel tente d’obtenir le résultat correct, copier le caractère, s’il s’agit de 1 ou 2 octets. Mais il ne prend pas en compte que le dernier caractère copié répondent pas forcément à la mémoire tampon si le caractère est égale à 2 octets. La solution correcte est :  
+ Le `_mbccpy` appel tente de faire la chose correcte : copier le caractère, qu’il s’agisse de 1 ou 2 octets. Mais il ne tient pas compte que le dernier caractère copié peut tiennent pas dans la mémoire tampon si le caractère est égale à 2 octets. La solution appropriée est :  
   
 ```  
 cb = 0;  
@@ -56,7 +56,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Ce code teste le dépassement de capacité de mémoire tampon possible dans la boucle de test, à l’aide de `_mbclen` pour tester la taille du caractère en cours vers lequel pointé `sz`. En effectuant un appel à la `_mbsnbcpy` (fonction), vous pouvez remplacer le code dans le `while` boucle avec une seule ligne de code. Par exemple :  
+ Ce code teste le dépassement de capacité de mémoire tampon possible dans la boucle de test, à l’aide de `_mbclen` pour tester la taille du caractère actuel vers lequel pointé `sz`. En effectuant un appel à la `_mbsnbcpy` (fonction), vous pouvez remplacer le code dans le **tandis que** boucle avec une seule ligne de code. Exemple :  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

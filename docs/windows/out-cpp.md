@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f83314de19548c93afa43feced8b2a877af00738
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606122"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019051"
 ---
 # <a name="out-c"></a>out (C++)
 Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [out]  
 ```  
   

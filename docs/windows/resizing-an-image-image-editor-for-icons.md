@@ -20,27 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41494e8b88f41c4c842e95e9f8a9f5da0247739f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605641"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013871"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Redimensionnement d'une image (Éditeur d'images pour les icônes)
-Le comportement de l’éditeur d’images lors du redimensionnement d’une image varie selon que vous avez [sélectionné](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) l’image entière ou une partie.  
+Le comportement de la **Image** éditeur lors du redimensionnement d’une image varie selon que vous avez [sélectionné](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) l’image entière ou une partie.  
   
- Lorsque la sélection contient uniquement une partie de l’image, l’éditeur d’images réduit la sélection en supprimant des lignes ou colonnes de pixels et en remplissant les régions libérées avec la couleur d’arrière-plan actuelle, ou il s’étend la sélection en dupliquant des lignes ou des colonnes de pixels.  
+ Lorsque la sélection contient uniquement une partie de l’image, le **Image** éditeur réduit la sélection en supprimant des lignes ou des colonnes de pixels et en remplissant les régions libérées avec la couleur d’arrière-plan actuelle, ou qu’il couvre la sélection par duplication des lignes ou des colonnes de pixels.  
   
- Lorsque la sélection inclut l’image entière, l’éditeur d’images soit réduit et étire l’image, ou les cultures et l’étend.  
+ Lorsque la sélection inclut l’image entière, le **Image** éditeur soit réduit et étire l’image, ou les cultures et l’étend.  
   
- Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez faire glisser les poignées de redimensionnement pour modifier la taille de tout ou partie d’une image. Les poignées de dimensionnement que vous pouvez faire glisser sont pleines. Vous ne pouvez pas faire glisser les poignées qui sont vides. Vous pouvez utiliser la fenêtre Propriétés pour redimensionner l’image entière uniquement, pas une partie sélectionnée.  
+ Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez faire glisser les poignées de redimensionnement pour modifier la taille de tout ou partie d’une image. Les poignées de dimensionnement que vous pouvez faire glisser sont pleines. Vous ne pouvez pas faire glisser les poignées qui sont vides. Vous pouvez utiliser la **propriétés** fenêtre pour redimensionner l’intégralité de l’image uniquement, pas une partie sélectionnée.  
   
  ![Dimensionnement des handles sur une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
 Poignées de redimensionnement  
   
 > [!NOTE]
->  Si vous avez la possibilité de grille mosaïque sélectionnée dans le [boîte de dialogue Paramètres de la grille](../windows/grid-settings-dialog-box-image-editor-for-icons.md), puis redimensionnement s’aligne sur la ligne de grille mosaïque suivante. Si seule la grille de pixels option est sélectionnée (paramètre par défaut), redimensionnement s’aligne sur le pixel suivant.  
+>  Si vous avez le **grille mosaïque** option sélectionnée dans le [boîte de dialogue Paramètres de la grille](../windows/grid-settings-dialog-box-image-editor-for-icons.md), puis redimensionnement s’aligne sur la ligne de grille mosaïque suivante. Si seul le **grille de pixels** option est sélectionnée (paramètre par défaut), redimensionnement s’aligne sur le pixel suivant.  
   
 -   [Redimensionner l’intégralité d’une Image](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   

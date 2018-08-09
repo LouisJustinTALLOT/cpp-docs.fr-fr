@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608610"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014911"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Ajout de symboles partagés (lecture seule) ou calculés
 La première fois que l'environnement de développement lit un fichier de ressources créé par une autre application, il marque tous les fichiers d'en-tête inclus en lecture seule. Par la suite, vous pouvez utiliser la [boîte de dialogue Include des ressources](../windows/resource-includes-dialog-box.md) pour ajouter des fichiers d’en-tête de symbole en lecture seule.  
@@ -37,7 +37,7 @@ La première fois que l'environnement de développement lit un fichier de ressou
   
  Vous pouvez également utiliser des fichiers de symboles inclus quand vous disposez de ressources avec des définitions de symbole qui utilisent des expressions au lieu d'entiers simples pour définir la valeur du symbole. Exemple :  
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ La première fois que l'environnement de développement lit un fichier de ressou
     > [!NOTE]
     >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Dans le **directives de symboles en lecture seule** zone, utilisez la **#include** directive de compilateur pour spécifier le fichier dans lequel les symboles en lecture seule peuvent être conservées.  
+2.  Dans le **directives de symboles en lecture seule** zone, utilisez la `#include` directive de compilateur pour spécifier le fichier dans lequel les symboles en lecture seule peuvent être conservées.  
   
-     N'appelez pas le fichier Resource.h, car il s'agit du nom de fichier utilisé normalement par le fichier d'en-tête de symbole principal.  
+     N’appelez pas le fichier `Resource.h`, puisque c’est le nom de fichier utilisé normalement par le fichier d’en-tête de symbole principal.  
   
     > [!NOTE]
     >  **Important** ce que vous tapez dans la zone directives de symbole en lecture seule est inclus dans le fichier de ressources exactement comme vous le tapez. Vérifiez que ce que vous tapez ne contient aucune erreur d'orthographe ou de syntaxe.  
@@ -76,7 +76,6 @@ La première fois que l'environnement de développement lit un fichier de ressou
 4.  Cliquez sur **OK**.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

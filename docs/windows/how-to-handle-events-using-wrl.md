@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570631"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012532"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Comment : gérer les événements à l'aide de WRL
 Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour s’abonner à et gérer les événements d’un objet Windows Runtime.  
@@ -35,7 +35,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h déclare les types qui sont requis pour énumérer les appareils.  
+     `Windows.Devices.Enumeration.h` déclare les types qui sont requis pour énumérer les appareils.  
   
      Nous vous recommandons d'utiliser la directive `using namespace` dans votre fichier .cpp pour rendre le code plus lisible.  
   
@@ -90,7 +90,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `wrl-consume-events.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
+ Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `wrl-consume-events.cpp` , puis exécutez la commande suivante une **invite de commandes Visual Studio** fenêtre.  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

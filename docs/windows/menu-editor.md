@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606248"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018333"
 ---
 # <a name="menu-editor"></a>Éditeur de menus
-Les menus permettent d’organiser les commandes de manière logique et de les trouver plus facilement. Avec l’Éditeur de menus, vous pouvez créer et modifier des menus en travaillant directement avec une barre de menus qui ressemble étroitement à celle de votre application terminée.  
+Les menus permettent d’organiser les commandes de manière logique et de les trouver plus facilement. Avec le **Menu** éditeur, vous pouvez créer et modifier des menus en travaillant directement avec une barre de menus qui ressemble étroitement à celui de votre application terminée.  
   
-Pour les projets Visual C++, vous pouvez utiliser l’Éditeur de menus pour :  
+Pour les projets Visual C++, vous pouvez utiliser la **Menu** éditeur pour :  
   
 -   [Créer des menus](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ Pour les projets Visual C++, vous pouvez utiliser l’Éditeur de menus pour :
 -   [Modifier les propriétés d’une commande de menu](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Quand vous utilisez l’Éditeur de menus, dans de nombreux cas, vous pouvez cliquer sur le bouton droit de la souris pour afficher un menu contextuel des commandes fréquemment utilisées. Les commandes disponibles varient selon la cible du pointeur.  
+    >  Lors de l’utilisation du **Menu** éditeur, dans de nombreux cas, vous pouvez cliquer sur le bouton droit de la souris pour afficher un menu contextuel des commandes fréquemment utilisées. Les commandes disponibles varient selon la cible du pointeur.  
   
     > [!NOTE]
-    >  Pour les programmes MFC (Microsoft Foundation Class Library) et ATL, vous pouvez utiliser les Assistants Code pour raccorder des commandes de menu au code. Pour plus d’informations, consultez [Ajout d’un événement](../ide/adding-an-event-visual-cpp.md).  
+    >  Pour les programmes MFC Microsoft Foundation Class Library () et ATL, vous pouvez utiliser **Assistants Code** pour raccorder des commandes de menu au code. Pour plus d’informations, consultez [Ajout d’un événement](../ide/adding-an-event-visual-cpp.md).  
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645991"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017914"
 ---
 # <a name="string--c-component-extensions"></a>Chaîne  (extensions du composant C++)
 Le compilateur Visual C++ prend en charge *chaînes*, qui sont des objets qui représentent le texte comme une séquence de caractères. Visual C++ prend en charge les variables de chaîne, dont la valeur est implicite, et les littéraux, dont la valeur est une chaîne entre guillemets explicite.  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 char *  

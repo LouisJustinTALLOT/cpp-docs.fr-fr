@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606512"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011576"
 ---
 # <a name="idlquote"></a>idl_quote
 Vous permet d’utiliser des constructions IDL qui ne sont pas pris en charge dans la version actuelle de Visual C++ et les passer au fichier .idl généré.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *texte*  
  Le nom d’attribut que vous avez l’intention le compilateur Visual C++ à passer au fichier .idl généré sans retourner une erreur du compilateur.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Ce code provoque MYFLOT et MYDUB et *texte* entrée à placer dans le fichier .idl généré. Le *nom* paramètre force *texte* à être placé avant tout ce qui fait référence à *nom* dans le fichier .idl généré. Le *dépendances* paramètre force les définitions de liste de dépendance à être placé avant *texte* dans le fichier .idl généré.  
+ Ce code provoque `MYFLOT` et `MYDUB` et *texte* entrée à placer dans le fichier .idl généré. Le *nom* paramètre force *texte* à être placé avant tout ce qui fait référence à *nom* dans le fichier .idl généré. Le *dépendances* paramètre force les définitions de liste de dépendance à être placé avant *texte* dans le fichier .idl généré.  
   
 ## <a name="requirements"></a>Configuration requise  
   

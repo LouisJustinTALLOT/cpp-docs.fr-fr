@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fbf0b3c9db19e839d6832415cfd8ed6eb9b93a2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a1a90f0d72c824f3f4840728e34c01667e4aa026
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604116"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011602"
 ---
 # <a name="property--c-component-extensions"></a>propriété  (extensions du composant C++)
 Déclare un *propriété*, qui est une fonction membre qui se comporte et est accessible comme un membre de données ou un élément de tableau.  
@@ -209,8 +209,6 @@ int main() {
    Console::WriteLine(MyC->Property_Block);  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 test  

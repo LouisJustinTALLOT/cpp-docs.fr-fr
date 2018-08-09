@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57f59aa201a60fb2cf118b31eb4be377cd246ece
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 94973b62b83b8b574b8747febf2204251f1642d8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606382"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017540"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (extensions du composant C++)
 Le **safe_cast** opération retourne l’expression spécifiée en tant que type spécifié, en cas de réussite ; sinon, lève `InvalidCastException`.  
@@ -97,8 +97,6 @@ int main(Array<String^>^ args) {
    }  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 Caught expected exception: InvalidCastException  
@@ -173,8 +171,6 @@ int main() {
    }  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 Caught expected exception  

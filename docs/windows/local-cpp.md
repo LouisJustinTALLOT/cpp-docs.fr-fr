@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ad1fb4dd281918b0d9ab3494c9a9f060468fc389
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604198"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018095"
 ---
 # <a name="local-c"></a>local (C++)
 Lorsqu’il est utilisé dans l’en-tête de l’interface, vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [local]  
 ```  
   

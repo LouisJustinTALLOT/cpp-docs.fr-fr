@@ -1,5 +1,5 @@
 ---
-title: Symboles MFC prédéfinis | Documents Microsoft
+title: Symboles MFC prédéfinis | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882058"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018492"
 ---
 # <a name="mfc-predefined-symbols"></a>Symboles MFC prédéfinis
-Projets MFC toujours incluent plusieurs fichiers d’en-tête qui prennent en charge de windows. Ils sont ajoutés via #include les instructions dans le fichier StdAfx.h :  
+Projets MFC toujours incluent plusieurs fichiers d’en-tête qui prennent en charge de windows. Ils sont ajoutés `#include` instructions dans le `StdAfx.h` fichier :  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ Projets MFC toujours incluent plusieurs fichiers d’en-tête qui prennent en ch
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- Les fichiers d’en-tête incluent des valeurs d’ID de symbole pour les valeurs MFC courantes. Ces symboles sont disponibles uniquement lorsque vous travaillez dans un projet MFC. Notez que le préfixe AFX_ est suivi par les préfixes de nom de symbole standard.  
+ Les fichiers d’en-tête incluent des valeurs d’ID de symbole pour les valeurs courantes de MFC. Ces symboles sont disponibles uniquement lorsque vous travaillez dans un projet MFC. Notez que le préfixe AFX_ est suivi par les préfixes de nom de symbole standard.  
   
 |||  
 |-|-|  
@@ -187,7 +187,7 @@ Projets MFC toujours incluent plusieurs fichiers d’en-tête qui prennent en ch
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|  
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|  
 |AFX_IDS_METAFILE_FORMAT|POLICE DE AFX_IDS_MINI|  
-|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ (EXCEPTION)|  
+|AFX_IDS_NOT_DOCOBJECT|EXCEPTION DE AFX_IDS_NOT_SUPPORTED_|  
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|  
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|  
 |AFX_IDS_OPENFILE|AFX_IDS_PASTELINKEDTYPE|  
@@ -217,7 +217,7 @@ Projets MFC toujours incluent plusieurs fichiers d’en-tête qui prennent en ch
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|  
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  MFC  
   
 ## <a name="see-also"></a>Voir aussi  

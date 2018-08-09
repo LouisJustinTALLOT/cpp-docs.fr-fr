@@ -1,5 +1,5 @@
 ---
-title: Symboles de programmation Windows MFC | Documents Microsoft
+title: Symboles de programmation Windows MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882691"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012779"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symboles de programmation Windows MFC
-Ces symboles font également partie des fichiers de prise en charge MFC, mais ils prennent en charge les actions et les fonctions d’application Windows standard. Ces symboles sont utilisés principalement avec les menus. Lorsque vous travaillez avec les menus dans l’éditeur de menus, ces symboles s’affichent dans la fenêtre des propriétés associées aux commandes de menu courantes. Par exemple, si votre application comporte un menu fichier avec une commande Quitter, cette commande est associée au symbole ID_APP_EXIT dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
+Ces symboles font également partie des fichiers de prise en charge MFC, mais ils prennent en charge les actions et fonctions d’application Windows standard. Ces symboles sont utilisés principalement avec les menus. Lorsque vous travaillez avec des menus dans le **éditeur de menus**, ces symboles s’affichent dans le **fenêtre des propriétés** associées aux commandes de menu courantes. Par exemple, si votre application comporte un **fichier** menu avec une **Exit** commande, que la commande sera associée au symbole ID_APP_EXIT dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -65,7 +65,7 @@ Ces symboles font également partie des fichiers de prise en charge MFC, mais il
 |IDNO|IDOK|IDP_OLE_INIT_FAILED|  
 |IDRETRY|IDYES||  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  MFC  
   
 ## <a name="see-also"></a>Voir aussi  

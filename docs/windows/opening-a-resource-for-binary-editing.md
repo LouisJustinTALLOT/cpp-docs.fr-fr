@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605953"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014505"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Ouverture d'une ressource à des fins d'édition binaire
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Pour ouvrir une ressource de bureau Windows pour l’édition binaire  
@@ -36,7 +36,7 @@ ms.locfileid: "39605953"
 2.  Cliquez avec le bouton droit sur la ressource et cliquez sur **Ouvrir au format binaire** dans le menu contextuel.  
   
     > [!NOTE]
-    >  Si vous utilisez la fenêtre [Affichage des ressources](../windows/resource-view-window.md) pour ouvrir une ressource ayant un format que Visual Studio ne reconnaît pas (comme RCDATA ou une ressource personnalisée), la ressource s’ouvre automatiquement dans l’éditeur binaire.  
+    >  Si vous utilisez le [affichage des ressources](../windows/resource-view-window.md) fenêtre pour ouvrir une ressource ayant un format que Visual Studio ne reconnaît pas (comme RCDATA ou une ressource personnalisée), la ressource s’ouvre automatiquement dans le **binaire** éditeur.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Pour ouvrir une ressource managée pour l’édition binaire  
   
@@ -58,10 +58,9 @@ Données binaires pour une boîte de dialogue affichée dans l’éditeur binair
  Seules certaines valeurs ASCII sont représentées dans l’éditeur binaire (0x20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section Valeur ASCII de l’éditeur binaire (volet droit). Les caractères « imprimables » sont les valeurs ASCII comprises entre 32 et 126.  
   
 > [!NOTE]
->  Si vous souhaitez utiliser l’éditeur binaire sur une ressource déjà en cours de modification dans une autre fenêtre d’éditeur, fermez d’abord l’autre fenêtre d’éditeur.  
+>  Si vous souhaitez utiliser le **binaire** éditeur sur une ressource déjà en cours de modification dans une autre fenêtre d’éditeur, fermez l’autre fenêtre d’éditeur tout d’abord.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

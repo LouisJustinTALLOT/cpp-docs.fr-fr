@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641458"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011560"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime et modèles gérés (extensions du composant C++)
 Les modèles vous permettent de définir un prototype d’un Runtime de Windows ou d’un type common language runtime et instancie ensuite les variantes de ce type à l’aide des paramètres de type de modèle différent.  
@@ -44,7 +44,7 @@ Les modèles vous permettent de définir un prototype d’un Runtime de Windows 
   
 ### <a name="examples"></a>Exemples  
   
- Il est possible d’instancier un type générique avec un paramètre de modèle de type managé, mais vous ne pouvez pas instancier un modèle géré avec un paramètre de modèle de type générique.  Il s’agit, car les types génériques sont résolues lors de l’exécution.  Pour plus d’informations, consultez [génériques et modèles (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Il est possible d’instancier un type générique avec un paramètre de modèle de type managé, mais vous ne pouvez pas instancier un modèle géré avec un paramètre de modèle de type générique. Il s’agit, car les types génériques sont résolues lors de l’exécution. Pour plus d’informations, consultez [génériques et modèles (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- Vous ne pouvez pas accéder aux modèles définis dans un assembly référencé avec C++ / c++ / syntaxe du langage CLI, mais vous pouvez utiliser la réflexion.  Si un modèle n’est pas instancié, il n’est pas émis dans les métadonnées.  Si un modèle est instancié, seules les fonctions de membre référencé seront affiche dans les métadonnées.  
+ Vous ne pouvez pas accéder aux modèles définis dans un assembly référencé avec C++ / c++ / syntaxe du langage CLI, mais vous pouvez utiliser la réflexion. Si un modèle n’est pas instancié, il n’est pas émis dans les métadonnées. Si un modèle est instancié, seules les fonctions de membre référencé seront affiche dans les métadonnées.  
   
 ```cpp  
 // managed_templates_3.cpp  

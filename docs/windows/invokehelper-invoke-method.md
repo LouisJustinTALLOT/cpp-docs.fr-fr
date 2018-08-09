@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8db9d9b44a2646d69dfbbd423d712f0d1c92d6cd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 56f7f77284d855a2d9a737c8694efdd357d0a6fb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607970"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011498"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    Invoke  
 )();  

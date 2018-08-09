@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569945"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014349"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Comment : ouvrir une ressource de manifeste
-Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage des ressources](../windows/resource-view-window.md), la ressource s'ouvre au format binaire. Pour afficher le contenu d'une ressource de manifeste dans un format plus lisible, vous devez ouvrir la ressource à partir de l'Explorateur de solutions.  
+Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage des ressources](../windows/resource-view-window.md), la ressource s'ouvre au format binaire. Pour afficher le contenu d’une ressource de manifeste dans un format plus lisible, vous devez ouvrir la ressource à partir de **l’Explorateur de solutions**.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Pour ouvrir une ressource de manifeste dans l'éditeur de texte  
   
@@ -32,7 +32,7 @@ Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage de
   
 2.  Double-cliquez sur le fichier .manifest.  
   
-     Votre ressource de manifeste s'ouvre dans l'éditeur de texte.  
+     Votre ressource de manifeste s’ouvre dans le **éditeur de texte**.  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Pour ouvrir une ressource de manifeste dans un autre éditeur  
   
@@ -43,7 +43,6 @@ Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage de
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

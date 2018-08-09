@@ -1,5 +1,5 @@
 ---
-title: Meilleures pratiques de sécurité pour C++ | Documents Microsoft
+title: Meilleures pratiques de sécurité pour C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2018
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015622"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -54,14 +55,14 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
  La bibliothèque Runtime C (CRT) a été étendue afin d'inclure des versions sécurisées des fonctions qui présentent des risques de sécurité, par exemple, la fonction de copie de chaîne non contrôlée `strcpy`. Comme les versions plus anciennes et non sécurisées de ces fonctions sont déconseillées, elles entraînent des avertissements de compilation. Nous vous encourageons à utiliser les versions sécurisées de ces fonctions CRT plutôt que de supprimer les avertissements de compilation. Pour plus d'informations, consultez [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
 ## <a name="safeint-library"></a>Bibliothèque SafeInt  
- [Bibliothèque SafeInt](../windows/safeint-library.md) aide à éviter les dépassements de capacité de nombre entier et d’autres erreurs exploitables qui peuvent se produire lorsque l’application effectue des opérations mathématiques. Le `SafeInt` bibliothèque inclut les [SafeInt, classe](../windows/safeint-class.md), le [SafeIntException, classe](../windows/safeintexception-class.md)et plusieurs [SafeInt, fonctions](../windows/safeint-functions.md).  
+ [Bibliothèque SafeInt](../windows/safeint-library.md) permet d’empêcher les dépassements de capacité entière et autres erreurs exploitables pouvant survenir lorsque l’application effectue des opérations mathématiques. Le `SafeInt` library inclut le [classe SafeInt](../windows/safeint-class.md), le [SafeIntException, classe](../windows/safeintexception-class.md)et plusieurs [SafeInt, fonctions](../windows/safeint-functions.md).  
   
- La classe `SafeInt` protège contre les dépassements sur les entiers et les tentatives de division par zéro. Vous pouvez l'utiliser pour gérer les comparaisons entre des valeurs de types différents. Elle fournit des deux stratégies de gestion des erreurs. Dans la stratégie par défaut, la classe `SafeInt` lève une exception de classe `SafeIntException` pour signaler la raison pour laquelle une opération mathématique ne peut pas être exécutée. Dans la seconde stratégie, la classe `SafeInt` arrête l'exécution du programme. Vous pouvez également définir une stratégie personnalisée.  
+ La classe `SafeInt` protège contre les dépassements sur les entiers et les tentatives de division par zéro. Vous pouvez l'utiliser pour gérer les comparaisons entre des valeurs de types différents. Il fournit deux stratégies de gestion des erreurs. Dans la stratégie par défaut, la classe `SafeInt` lève une exception de classe `SafeIntException` pour signaler la raison pour laquelle une opération mathématique ne peut pas être exécutée. Dans la seconde stratégie, la classe `SafeInt` arrête l'exécution du programme. Vous pouvez également définir une stratégie personnalisée.  
   
  Chaque fonction `SafeInt` protège une opération mathématique d'une erreur exploitable. Vous pouvez utiliser deux types différents de paramètres sans les convertir en un même type. Pour protéger plusieurs opérations mathématiques, utilisez la classe `SafeInt`.  
   
 ## <a name="checked-iterators"></a>Itérateurs vérifiés  
- Un itérateur vérifié met en place des limites de conteneur. Par défaut, quand un itérateur vérifié est hors limites, il génère une exception et arrête l'exécution du programme. Un itérateur vérifié fournit d’autres niveaux de réponse qui dépendent des valeurs qui sont assignées au préprocesseur définit comme  **\_SECURE\_SCL\_lève** et  **\_ITÉRATEUR\_déboguer\_niveau**. Par exemple, sur  **\_ITÉRATEUR\_déboguer\_LEVEL = 2**, un itérateur vérifié fournit de nombreuses vérifications d’exactitude en mode débogage, qui sont accessibles à l’aide des assertions. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [ \_ITÉRATEUR\_déboguer\_niveau](../standard-library/iterator-debug-level.md).  
+ Un itérateur vérifié met en place des limites de conteneur. Par défaut, quand un itérateur vérifié est hors limites, il génère une exception et arrête l'exécution du programme. Un itérateur vérifié fournit d’autres niveaux de réponse qui dépendent des valeurs qui sont assignées au préprocesseur définit comme  **\_SECURE\_SCL\_lève** et  **\_ITÉRATEUR\_déboguer\_niveau**. Par exemple, au niveau  **\_ITÉRATEUR\_déboguer\_LEVEL = 2**, un itérateur vérifié fournit de nombreuses vérifications d’exactitude en mode débogage, qui sont accessibles à l’aide des assertions. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [ \_ITÉRATEUR\_déboguer\_niveau](../standard-library/iterator-debug-level.md).  
   
 ## <a name="code-analysis-for-managed-code"></a>Analyse du code managé  
  L'analyse du code managé, également appelée FxCop, vérifie la conformité des assemblys aux règles de conception du .NET Framework. FxCop analyse le code et les métadonnées de chaque assembly pour rechercher des défaillances dans les domaines suivants :  
@@ -89,17 +90,17 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 
 -   Identifier des problèmes potentiels de sécurité dans une application.  
   
- AppVerifier fait partie de l’Application Compatibility Toolkit, qui est disponible à partir de la [compatibilité des applications](http://go.microsoft.com/fwlink/p/?linkid=91277) sur le site web TechNet.  
+ AppVerifier fait partie de l’Application Compatibility Toolkit est disponible à partir de la [compatibilité des applications](http://go.microsoft.com/fwlink/p/?linkid=91277) sur le site web TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Comptes utilisateur Windows  
- L'utilisation de comptes utilisateur Windows qui appartiennent au groupe Administrateurs expose les développeurs et, par extension, les clients aux risques de sécurité. Pour plus d’informations, consultez [en cours d’exécution en tant que membre du groupe utilisateurs](running-as-a-member-of-the-users-group.md) et [compte des contrôle utilisateur (UAC) a une incidence sur votre Application](how-user-account-control-uac-affects-your-application.md).
+ L'utilisation de comptes utilisateur Windows qui appartiennent au groupe Administrateurs expose les développeurs et, par extension, les clients aux risques de sécurité. Pour plus d’informations, consultez [en cours d’exécution en tant que membre du groupe utilisateurs](running-as-a-member-of-the-users-group.md) et [affecte de votre Application de compte des contrôle utilisateur (UAC)](how-user-account-control-uac-affects-your-application.md).
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>Conseils pour les canaux côté spéculatif d’exécution
+## <a name="guidance-for-speculative-execution-side-channels"></a>Conseils pour les canaux de côté l’exécution spéculative
 
-Pour plus d’informations sur la façon d’identifier et d’atténuation contre les vulnérabilités de matériel exécution spéculative côté canal dans le logiciel de C++, consultez [Guide du développeur C++ pour les canaux du côté spéculatif d’exécution](developer-guidance-speculative-execution.md).
+Pour plus d’informations sur la façon d’identifier et atténuer les vulnérabilités de l’exécution spéculative côté canal matériel dans le logiciel de C++, consultez [Guide du développeur C++ pour les canaux du côté d’exécution spéculatif](developer-guidance-speculative-execution.md).
 
 ## <a name="see-also"></a>Voir aussi  
-- <xref:System.Security>   
-- [Sécurité](/dotnet/standard/security/index)   
-- [Répercussions du contrôle de compte utilisateur sur votre application](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[Sécurité](/dotnet/standard/security/index)   
+[Répercussions du contrôle de compte utilisateur sur votre application](how-user-account-control-uac-affects-your-application.md)

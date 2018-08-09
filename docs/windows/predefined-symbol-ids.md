@@ -1,5 +1,5 @@
 ---
-title: ID de symbole prédéfinis | Documents Microsoft
+title: ID de symbole prédéfinis | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876421"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017238"
 ---
 # <a name="predefined-symbol-ids"></a>ID de symbole prédéfinis
 Quand vous commencez un nouveau projet, selon le type de projet, certains ID de symbole sont prédéfinis pour que vous puissiez les utiliser. Ces ID de symbole prennent en charge des bibliothèques et types de projet divers, par exemple MFC. Ils représentent les tâches usuelles généralement incluses dans une application, ou les actions des éléments matériels, par exemple une souris ou une imprimante.  
@@ -39,9 +39,7 @@ Quand vous commencez un nouveau projet, selon le type de projet, certains ID de 
     > [!NOTE]
     >  Les symboles prédéfinis sont toujours en lecture seule.  
   
-
-  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32, MFC ou ATL  
   
 ## <a name="see-also"></a>Voir aussi  

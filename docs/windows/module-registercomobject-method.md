@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 61ebc6b7bfb0571ba1f2ce1957d916ecb4c790c7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606538"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010982"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject, méthode
 Inscrit un ou plusieurs objets COM afin d’autres applications peuvent se connecter à leur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 WRL_NOTHROW virtual HRESULT RegisterCOMObject(  
    const wchar_t* serverName,  
    IID* clsids,  

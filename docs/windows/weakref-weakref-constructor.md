@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6e7b7d35fd8cae44c3f374a81cae572e4c9ee4f8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641471"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011157"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef, constructeur
 Initialise une nouvelle instance de la **WeakRef** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 WeakRef();  
 WeakRef(  
    decltype(__nullptr)  

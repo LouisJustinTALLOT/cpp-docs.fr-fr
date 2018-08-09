@@ -1,5 +1,5 @@
 ---
-title: Restrictions de la valeur de symbole | Documents Microsoft
+title: Restrictions de la valeur de symbole | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889540"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013399"
 ---
 # <a name="symbol-value-restrictions"></a>Restrictions relatives à la valeur d'un symbole
 Une valeur de symbole peut être un entier exprimé de façon normale pour les directives de préprocesseur #define. Voici quelques exemples de valeurs de symboles :  
@@ -45,28 +45,26 @@ Une valeur de symbole peut être un entier exprimé de façon normale pour les d
   
 -   Vous ne pouvez pas définir une valeur de symbole à l'aide d'autres chaînes de symboles. Par exemple, la définition de symbole suivante n'est pas prise en charge :  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
--   Vous ne pouvez pas utiliser de macros de préprocesseur avec des arguments en tant que définitions de valeur. Par exemple :  
+-   Vous ne pouvez pas utiliser de macros de préprocesseur avec des arguments en tant que définitions de valeur. Exemple :  
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
      n'est pas une expression valide, quelle que soit la valeur de `ID` au moment de la compilation.  
   
--   Votre application peut comporter un fichier existant contenant des symboles définis par des expressions. Pour plus d’informations sur la façon d’inclure des symboles en tant que symboles en lecture seule, consultez [symboles à l’aide de partagés (lecture seule) ou calculés](../windows/including-shared-read-only-or-calculated-symbols.md).  
+-   Votre application peut comporter un fichier existant contenant des symboles définis par des expressions. Pour plus d’informations sur la façon d’inclure les symboles en tant que symboles en lecture seule, consultez [symboles à l’aide de partagés (lecture seule) ou calculés](../windows/including-shared-read-only-or-calculated-symbols.md).  
   
  Pour plus d’informations sur les plages numériques, consultez [TN023 : ressources MFC Standard](../mfc/tn023-standard-mfc-resources.md).  
   
-
-  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
- [La modification de valeur numérique d’un symbole](../windows/changing-a-symbol-s-numeric-value.md)   
- [Restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md)   
+ [Modification de valeur numérique d’un symbole](../windows/changing-a-symbol-s-numeric-value.md)   
+ [Restrictions de nom de symbole](../windows/symbol-name-restrictions.md)   
  [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)

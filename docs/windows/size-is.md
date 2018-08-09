@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645449"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011853"
 ---
 # <a name="sizeis"></a>size_is
 Spécifiez la taille de mémoire allouée pour les pointeurs de taille, en taille réelle des pointeurs vers des pointeurs de taille et seul ou les tableaux multidimensionnels.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ size_is(  
    "expression"  
 ) ]  
