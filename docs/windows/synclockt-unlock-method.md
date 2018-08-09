@@ -1,5 +1,5 @@
 ---
-title: Synclockt::Unlock, méthode | Documents Microsoft
+title: Synclockt::Unlock, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa03dd41b66bb36d5dc7059863e13267e5dd77bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892304"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642121"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,9 +34,9 @@ void Unlock();
 ```  
   
 ## <a name="remarks"></a>Notes  
- Libère le contrôle de la ressource détenue par l’objet SyncLockT actuel, le cas échéant.  
+ Contrôle de la ressource détenue par l’actuel **SyncLockT** de l’objet, le cas échéant.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::Details  

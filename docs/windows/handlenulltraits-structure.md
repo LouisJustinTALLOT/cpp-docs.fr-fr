@@ -1,5 +1,5 @@
 ---
-title: HANDLENullTraits (Structure) | Documents Microsoft
+title: HANDLENullTraits (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877876"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645436"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits (structure)
 Définit les caractéristiques communes d’un handle non initialisé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct HANDLENullTraits;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`Type`|Un synonyme de HANDLE.|  
+|`Type`|Synonyme de HANDLE.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -51,7 +51,7 @@ struct HANDLENullTraits;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HANDLENullTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

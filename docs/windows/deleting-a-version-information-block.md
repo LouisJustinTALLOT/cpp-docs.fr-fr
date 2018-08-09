@@ -1,5 +1,5 @@
 ---
-title: Suppression d’un bloc d’informations de Version | Documents Microsoft
+title: Suppression d’un bloc d’informations de Version | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a374382e47e9623e041dd500730244b7fe205aa7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871856"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649957"
 ---
 # <a name="deleting-a-version-information-block"></a>Suppression d'un bloc d'informations de version
 ### <a name="to-delete-a-version-information-block"></a>Pour supprimer un bloc d’informations de version  
@@ -38,13 +38,11 @@ ms.locfileid: "33871856"
   
      Cette commande supprime l’en-tête sélectionné et laisse intactes les informations de version restantes. Notez que vous ne pouvez pas annuler cette action.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur d’informations de version](../windows/version-information-editor.md)   
  [Informations de version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

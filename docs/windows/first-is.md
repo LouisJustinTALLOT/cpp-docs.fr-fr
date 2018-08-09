@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e15897eeaa6a158ae3946202819b697c7372984d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569261"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642705"
 ---
 # <a name="firstis"></a>first_is
 Spécifie l’index du premier élément de tableau doit être transmis.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ first_is(  
    "expression"  
 ) ]  

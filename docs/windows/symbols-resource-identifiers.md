@@ -1,5 +1,5 @@
 ---
-title: 'Symboles : Identificateurs de ressources | Documents Microsoft'
+title: 'Symboles : Identificateurs de ressources | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891842"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650883"
 ---
 # <a name="symbols-resource-identifiers"></a>Symboles : identificateurs de ressources
-Un symbole est un identificateur de ressource (ID) composé de deux parties : une chaîne de texte (nom du symbole) mappée à une valeur entière (valeur du symbole). Par exemple :  
+Un symbole est un identificateur de ressource (ID) composé de deux parties : une chaîne de texte (nom du symbole) mappée à une valeur entière (valeur du symbole). Exemple :  
   
 ```  
 IDC_EDITNAME = 5100  
@@ -66,13 +66,12 @@ IDC_EDITNAME = 5100
   
 - [Afficher des ID de symboles prédéfinis](../windows/predefined-symbol-ids.md)  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Comment : rechercher des symboles dans les ressources](../windows/how-to-search-for-symbols-in-resources.md)   
  [Éditeurs de ressources](../windows/resource-editors.md)   
  [Fichiers de ressources](../windows/resource-files-visual-studio.md)
-

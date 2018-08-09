@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461687"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645566"
 ---
 # <a name="arrays-c-component-extensions"></a>Tableaux (extensions du composant C++)
 Le `Platform::Array<T>` type en C / c++ / CX, ou le **tableau** mot clé dans C++ / c++ / CLI, déclare un tableau d’un type spécifié et la valeur initiale.  
@@ -52,7 +52,7 @@ Le `Platform::Array<T>` type en C / c++ / CX, ou le **tableau** mot clé dans C+
   
  Le premier exemple de la syntaxe de la **ref nouvelle** mot clé d’agrégation pour allouer un tableau. Le deuxième exemple déclare un tableau local.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ Le `Platform::Array<T>` type en C / c++ / CX, ou le **tableau** mot clé dans C+
  Vous pouvez détecter au moment de la compilation si un type est un tableau de références comptabilisées avec `__is_ref_array(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/ZW**  
+ Option du compilateur : `/ZW`  
   
 ### <a name="examples"></a>Exemples  
  L’exemple suivant crée un tableau unidimensionnel qui comporte 100 éléments.  
@@ -106,7 +106,7 @@ int main() {
   
  Le premier exemple de la syntaxe de la **gcnew** mot clé pour allouer un tableau. Le deuxième exemple déclare un tableau local.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Notes  
   
- `array` est dans le [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) espace de noms.  
+ **tableau** est dans le [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) espace de noms.  
   
  Tel que C++ standard, les indices de tableau sont de base zéro et est indicée de tableau en utilisant des crochets ([]). Contrairement à C++ standard, les index d’un tableau multidimensionnel sont spécifiés dans une liste d’indices pour chaque dimension au lieu d’un ensemble d’opérateurs de crochets ([et]) pour chaque dimension. Par exemple, *identificateur*[*index1*, *index2*] au lieu de *identificateur*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  Au moment de la compilation, vous pouvez détecter si un type est une common language runtime (CLR) `__is_ref_array(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/clr**  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
  L’exemple suivant crée un tableau unidimensionnel qui comporte 100 éléments et un tableau tridimensionnel qui comporte 3 éléments dans la première dimension, 5 éléments dans la seconde et 6 éléments dans la troisième.  

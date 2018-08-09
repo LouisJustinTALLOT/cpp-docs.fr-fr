@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 86b55d8288f44b04ac1afc30a0afd67fce4edf81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465368"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646771"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr, constructeur
 Initialise une nouvelle instance de la **ComPtr** classe. Les surcharges fournissent des constructeurs par défaut, de copie, de déplacement et de conversion.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 WRL_NOTHROW ComPtr();  
 WRL_NOTHROW ComPtr(  
    decltype(__nullptr)  
@@ -58,7 +58,7 @@ WRL_NOTHROW ComPtr(
    void *>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *U*  
  Le type de la *autres* paramètre.  
   

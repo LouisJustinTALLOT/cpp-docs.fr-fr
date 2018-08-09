@@ -1,5 +1,5 @@
 ---
-title: WeakReference::decrementstrongreference, méthode | Documents Microsoft
+title: WeakReference::decrementstrongreference, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c7e2161c5451fe82e12918f00e8cb2cde37d336
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890334"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642313"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -34,18 +34,18 @@ ULONG DecrementStrongReference();
 ```  
   
 ## <a name="remarks"></a>Notes  
- Décrémente le fort décompte de références de l’objet WeakReference actuel.  
+ Décrémente le fort décompte de références actuel **WeakReference** objet.  
   
- Lorsque le nombre de référence forte devient égal à zéro, la référence forte est définie sur `nullptr`.  
+ Lorsque le nombre de référence forte devient égal à zéro, la référence forte est définie sur **nullptr**.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre de référence forte décrémenté.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
-[WeakReference (classe)](../windows/weakreference-class1.md)  
+ [WeakReference (classe)](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

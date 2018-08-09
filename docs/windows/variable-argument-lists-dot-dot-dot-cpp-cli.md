@@ -1,5 +1,5 @@
 ---
-title: Listes d’arguments variables (...) (C + C++ / CLI) | Documents Microsoft
+title: Listes d’arguments variables (...) (C + C++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eec0e3591da2417137fda3bae4ed9e7860472fb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889821"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642940"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listes d’arguments de variable (...) (C++/CLI)
-Cet exemple montre comment vous pouvez utiliser la `...` syntaxe dans Visual C++ pour implémenter des fonctions qui ont un nombre variable d’arguments.  
+Cet exemple montre comment vous pouvez utiliser le `...` syntaxe dans Visual C++ pour implémenter des fonctions qui ont un nombre variable d’arguments.  
   
 > [!NOTE]
->  Cette rubrique se rapporte à C + c++ / CLI. Pour plus d’informations sur l’utilisation de la `...` dans la norme ISO C++ Standard, consultez [Ellipses et modèles Variadiques](../cpp/ellipses-and-variadic-templates.md) et Ellipses et Arguments par défaut dans [expressions suffixées](../cpp/postfix-expressions.md).  
+>  Cette rubrique concerne C++ / c++ / CLI. Pour plus d’informations sur l’utilisation de la `...` dans la norme ISO C++ Standard, consultez [Ellipses et modèles Variadiques](../cpp/ellipses-and-variadic-templates.md) et Ellipses et Arguments par défaut dans [expressions suffixées](../cpp/postfix-expressions.md).  
   
- Le paramètre utilise `...` doit être le dernier paramètre dans la liste de paramètres.  
+ Le paramètre qui utilise `...` doit être le dernier paramètre dans la liste de paramètres.  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // mcppv2_paramarray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -61,9 +61,9 @@ int main() {
 ```  
   
 ## <a name="code-example"></a>Exemple de code  
- L’exemple suivant montre comment appeler à partir de c#, une fonction de Visual C++ qui accepte un nombre variable d’arguments.  
+ L’exemple suivant montre comment appeler à partir de c# une fonction de Visual C++ qui accepte un nombre variable d’arguments.  
   
-```  
+```cpp  
 // mcppv2_paramarray2.cpp  
 // compile with: /clr:safe /LD  
 using namespace System;  
@@ -78,7 +78,7 @@ public:
   
  En c#, un argument est passé à un `ParamArray` paramètre peut être appelé par un nombre variable d’arguments. L’exemple de code suivant est en c#.  
   
-```  
+```cs  
 // mcppv2_paramarray3.cs  
 // compile with: /r:mcppv2_paramarray2.dll  
 // a C# program  
@@ -95,7 +95,7 @@ public class X {
   
  Un appel à `f` dans Visual C++ peut passer un tableau initialisé ou un tableau de longueur variable.  
   
-```  
+```cpp  
 // mcpp_paramarray4.cpp  
 // compile with: /clr  
 using namespace System;  

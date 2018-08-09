@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570670"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643187"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 Une classe générique est déclarée à l’aide de la forme suivante :  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Notes  
  Dans la syntaxe ci-dessus, les termes suivants sont utilisés :  
   
- `attributes`(facultatif)  
+ *attributs* (facultatif)  
  Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
  *clé de classe*  
@@ -57,7 +57,7 @@ class-body
  *clauses de contrainte*  
  Une liste (ne pas séparées par des virgules) de **où** clauses spécifiant les contraintes pour les paramètres de type. Prend la forme :  
   
- `where`  *identificateur de paramètre de type*`:`*liste de contraintes*   `...`  
+ `where`  *identificateur de paramètre de type*`:`*liste de contraintes*  `...`  
   
  *liste de contraintes*  
  *classe ou interface*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- Le type externe\<int > :: interne n’est pas le même que le type externe\<double > :: interne.  
+ Le type `Outer<int>::Inner` n’est pas identique au type `Outer<double>::Inner`.  
   
  Comme avec les méthodes génériques dans les classes génériques, les paramètres de type supplémentaires peuvent être définis pour le type imbriqué. Si vous utilisez les mêmes noms de paramètre de type dans la classe interne et externe, le paramètre de type interne masque le paramètre de type externe.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  Dans la mesure où il n’existe aucun moyen pour faire référence au paramètre de type externe, le compilateur génère un avertissement dans ce cas.  
   
- Quand des types génériques construits imbriqués sont nommées, le paramètre de type pour le type externe n’est pas inclus dans la liste de paramètres de type pour le type interne, même si le type interne est implicitement paramétré par paramètre de type du type externe. Dans le cas ci-dessus, un nom d’un type construit serait Outer\<int > :: interne\<chaîne >.  
+ Quand des types génériques construits imbriqués sont nommées, le paramètre de type pour le type externe n’est pas inclus dans la liste de paramètres de type pour le type interne, même si le type interne est implicitement paramétré par paramètre de type du type externe. Dans le cas ci-dessus, un nom d’un type construit serait `Outer<int>::Inner<string>`.  
   
  L’exemple suivant illustre la création et la lecture d’une liste liée à l’aide des types imbriqués dans les classes génériques.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   Propriétés, événements, indexeurs et les opérateurs peuvent utiliser les paramètres de type de la classe générique englobante en tant que valeurs de retour, paramètres ou variables locales, par exemple quand `ItemType` est un paramètre de type d’une classe :  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

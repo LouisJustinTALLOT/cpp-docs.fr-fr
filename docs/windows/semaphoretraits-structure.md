@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits (Structure) | Documents Microsoft
+title: SemaphoreTraits (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892603"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645722"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits (structure)
-Définit les caractéristiques communes d’un objet sémaphore.  
+Définit les caractéristiques communes d’un **sémaphore** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,14 +39,14 @@ struct SemaphoreTraits : HANDLENullTraits;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[SemaphoreTraits::Unlock, méthode](../windows/semaphoretraits-unlock-method.md)|Contrôle des versions d’une ressource partagée.|  
+|[SemaphoreTraits::Unlock, méthode](../windows/semaphoretraits-unlock-method.md)|Contrôle de versions d’une ressource partagée.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HANDLENullTraits`  
   
  `SemaphoreTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

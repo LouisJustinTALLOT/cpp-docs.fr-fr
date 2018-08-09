@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 45cc86c873e7c45a7352f0035b2fd16e312e7c6c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467168"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644444"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown, méthode
-Convertit le pointeur d’interface du type défini par le *I0* paramètre de modèle à un pointeur IUnknown.  
+Convertit le pointeur d’interface du type défini par le *I0* paramètre de modèle à un pointeur vers `IUnknown`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’interface IUnknown.  
+ Un pointeur vers `IUnknown`.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  

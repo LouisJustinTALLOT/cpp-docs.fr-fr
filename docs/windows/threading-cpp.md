@@ -1,5 +1,5 @@
 ---
-title: threads (C++) | Documents Microsoft
+title: Threading (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891322"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652999"
 ---
 # <a name="threading-c"></a>thread (C++)
 Spécifie le modèle de thread pour un objet COM.  
@@ -30,48 +30,47 @@ Spécifie le modèle de thread pour un objet COM.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ threading(  
+[ threading(  
    model=enumeration  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- ***modèle*** (facultatif)  
+### <a name="parameters"></a>Paramètres  
+ *modèle* (facultatif)  
  L’un des modèles de threads suivants :  
   
--   **cloisonnement** (cloisonnement des threads)  
+-   `apartment` (modèle de thread cloisonné)  
   
--   **neutre** (composants de .NET Framework sans interface utilisateur)  
+-   `neutral` (Composants de .NET framework sans interface utilisateur)  
   
--   **seul** (thread simple)  
+-   `single` (thread simple)  
   
--   **libre** (libre de threads)  
+-   `free` (threading libre)  
   
--   **les deux** (thread cloisonné et libre)  
+-   `both` (cloisonnement et modèle de thread libre)  
   
- La valeur par défaut est **cloisonnement**.  
+ La valeur par défaut est `apartment`.  
   
 ## <a name="remarks"></a>Notes  
  Le **threading** attribut C++ n’apparaît pas dans le fichier .idl généré, mais sera utilisé dans l’implémentation de votre objet COM.  
   
- Dans les projets ATL, si le [coclasse](../windows/coclass.md) attribut est également présent, le modèle de thread spécifié par *modèle* est passé comme paramètre de modèle pour le [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inséré par le **coclasse** attribut.  
+ Dans les projets ATL, si le [coclasse](../windows/coclass.md) attribut est également présent, le modèle de thread spécifié par *modèle* est passé comme paramètre de modèle pour le [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inséré par la `coclass` attribut.  
   
  Le **threading** attribut protège également l’accès à un [event_source](../windows/event-source.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez le [concédé sous licence](../windows/licensed.md) exemple pour un exemple d’utilisation de **threading**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**class**, `struct`|  
+|**S'applique à**|**classe**, **struct**|  
 |**Renouvelable**|Non|  
 |**Attributs requis**|**coclass**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
@@ -79,5 +78,5 @@ Spécifie le modèle de thread pour un objet COM.
  [Attributs COM](../windows/com-attributes.md)   
  [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Attributs de classe](../windows/class-attributes.md)   
- [Prise en charge le multithreading pour un Code plus ancien (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Prise en charge le multithreading pour le Code plus ancien (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
  [Cloisonnements neutres](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

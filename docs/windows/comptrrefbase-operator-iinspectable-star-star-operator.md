@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4683305b9f7f396168bd9404f6f2501502db3d01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462334"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645020"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable\* \* opérateur
 
@@ -40,7 +40,7 @@ Effectue un cast en cours [ptr_](../windows/comptrrefbase-ptr-data-member.md) do
 
 Une erreur est générée si actuel **ComPtrRefBase** ne dérive pas de `IInspectable`.
 
-Ce cast est disponible uniquement si **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** est défini.
+Ce cast est disponible uniquement si `__WRL_CLASSIC_COM__` est défini.
 
 ## <a name="requirements"></a>Configuration requise
 

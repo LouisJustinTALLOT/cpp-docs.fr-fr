@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: aa178126b3a749e3af67b9dae3711c0a5cf9f408
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465855"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645784"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass, macros
 
@@ -64,7 +64,7 @@ Nom qui spécifie un sous-ensemble des fabriques de dans le module.
 
 ## <a name="remarks"></a>Notes
 
-N’utilisez pas ces macros avec COM classique, sauf si vous utilisez le `#undef` directive pour vous assurer que le **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** définition de macro est supprimée.
+N’utilisez pas ces macros avec COM classique, sauf si vous utilisez le `#undef` directive pour vous assurer que le `__WRL_WINRT_STRICT__` définition de macro est supprimée.
 
 ## <a name="requirements"></a>Configuration requise
 

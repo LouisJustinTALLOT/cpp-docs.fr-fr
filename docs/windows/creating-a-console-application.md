@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de317366d16748e9fb0a8a62f3602ad9d4ce025e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f1d960c634814df122202199be05149f47b01f28
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467275"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647662"
 ---
 # <a name="creating-a-console-application"></a>Création d'une application console
-Pour créer une application console Win32, le plus simple consiste à utiliser l’Assistant Application Win32.  
+Le moyen le plus simple pour créer une application console Win32 consiste à utiliser le **Assistant Application Win32**.  
   
 ### <a name="to-create-a-win32-console-application"></a>Pour créer une application console Win32  
   

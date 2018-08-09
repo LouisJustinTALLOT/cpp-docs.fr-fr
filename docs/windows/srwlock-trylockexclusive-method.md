@@ -1,5 +1,5 @@
 ---
-title: SRWLOCK::trylockexclusive, méthode | Documents Microsoft
+title: SRWLOCK::trylockexclusive, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892655"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652768"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive, méthode
-Tente d’acquérir un objet SRWLock en mode exclusif pour l’objet SRWLock actuelle ou spécifiée. Si l’appel réussit, le thread appelant prend possession du verrou.  
+Tente d’acquérir un **SRWLock** objet en mode exclusif pour la valeur actuelle ou spécifiée **SRWLock** objet. Si l’appel réussit, le thread appelant prend possession du verrou.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,14 +37,14 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `lock`  
- Pointeur vers un objet SRWLock.  
+### <a name="parameters"></a>Paramètres  
+ *lock*  
+ Pointeur vers un **SRWLock** objet.  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, un objet SRWLock en mode exclusif et que le thread appelant prend possession du verrou. Sinon, une SRWLock de l’objet dont l’état n’est pas valide.  
+ En cas de réussite, une **SRWLock** objet en mode exclusif et que le thread appelant prend possession du verrou. Sinon, un **SRWLock** objet dont l’état n’est pas valide.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

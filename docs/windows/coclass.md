@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463114"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647838"
 ---
 # <a name="coclass"></a>coclasse
 Crée un objet COM, ce qui peut implémenter une interface COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Crée un objet COM, ce qui peut implémenter une interface COM.
   
 -   Un [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) macro est insérée dans la table COM.
   
- Le nom de la coclasse généré dans le fichier .idl pour la classe aura le même nom que la classe.  Par exemple, qui fait référence à l’exemple suivant, pour accéder à l’ID de classe pour une coclasse CMyClass, dans un client via le fichier d’en-tête généré par MIDL, utilisez CLSID_CMyClass.  
+ Le nom de la coclasse généré dans le fichier .idl pour la classe aura le même nom que la classe.  Par exemple, qui fait référence à l’exemple suivant, pour accéder à l’ID de classe pour une coclasse `CMyClass`, dans un client via le fichier d’en-tête généré par MIDL, utilisez `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant montre comment utiliser le **coclasse** attribut :  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- L’exemple suivant montre comment substituer l’implémentation par défaut d’une fonction qui s’affiche dans le code injecté par le **coclasse** attribut. Pour plus d’informations sur l’affichage de code injecté, consultez [/Fx](../build/reference/fx-merge-injected-code.md) . Les classes de base ou les interfaces que vous utilisez pour une classe s’affiche dans le code injecté.   En outre, si une classe est incluse par défaut dans le code injecté et que vous spécifiez explicitement cette classe comme base pour votre coclasse, le fournisseur de l’attribut utilisera le formulaire spécifié dans votre code.  
+ L’exemple suivant montre comment substituer l’implémentation par défaut d’une fonction qui s’affiche dans le code injecté par le **coclasse** attribut. Pour plus d’informations sur l’affichage de code injecté, consultez [/Fx](../build/reference/fx-merge-injected-code.md) . Les classes de base ou les interfaces que vous utilisez pour une classe s’affiche dans le code injecté. En outre, si une classe est incluse par défaut dans le code injecté et que vous spécifiez explicitement cette classe comme base pour votre coclasse, le fournisseur de l’attribut utilisera le formulaire spécifié dans votre code.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

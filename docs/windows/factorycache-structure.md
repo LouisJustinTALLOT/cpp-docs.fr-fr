@@ -1,5 +1,5 @@
 ---
-title: FactoryCache (Structure) | Documents Microsoft
+title: FactoryCache (Structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874029"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647545"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (structure)
 Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Contient l’emplacement d’une fabrique de classe et une valeur qui identifie un inscrits wrt ou un objet de classe COM.  
+ Contient l’emplacement d’une fabrique de classe et une valeur qui identifie un inscrits wrt ou l’objet de classe COM.  
   
 ## <a name="members"></a>Membres  
   
@@ -43,12 +43,12 @@ struct FactoryCache;
 |Nom|Description|  
 |----------|-----------------|  
 |[FactoryCache::cookie, données de membre](../windows/factorycache-cookie-data-member.md)|Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.|  
-|[FactoryCache::factory, données de membre](../windows/factorycache-factory-data-member.md)|Pointe vers une fabrique de classe COM ou Windows Runtime.|  
+|[FactoryCache::factory, données de membre](../windows/factorycache-factory-data-member.md)|Pointe vers une fabrique de classe Windows Runtime ou COM.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `FactoryCache`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Namespace :** Microsoft::WRL::Details  

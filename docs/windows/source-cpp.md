@@ -1,5 +1,5 @@
 ---
-title: source (C++) | Documents Microsoft
+title: source (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889860"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651520"
 ---
 # <a name="source-c"></a>source (C++)
 Sur une classe, spécifie les interfaces de source de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou un VARIANT et qui est une source d’événements.  
@@ -30,14 +30,13 @@ Sur une classe, spécifie les interfaces de source de l’objet COM pour les poi
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ source(  
+[ source(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `interfaces`  
+### <a name="parameters"></a>Paramètres  
+ *interfaces*  
  Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez la source de l’attribut à une classe. Ce paramètre n’est pas utilisé lors de la source est appliquée à une propriété ou méthode.  
   
 ## <a name="remarks"></a>Notes  
@@ -47,7 +46,7 @@ Sur une classe, spécifie les interfaces de source de l’objet COM pour les poi
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cpp_attr_ref_source.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -79,16 +78,16 @@ class NN : public b
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`, `interface`|  
+|**S'applique à**|**classe**, **struct**, **interface**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à la classe ou struct)|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|`coclass` (lorsqu’il est appliqué à la classe ou struct)|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

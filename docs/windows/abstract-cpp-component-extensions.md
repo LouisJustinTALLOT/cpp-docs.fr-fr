@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463240"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641806"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract  (extensions du composant C++)
 Le **abstraite** mot clé déclare :  
@@ -33,16 +33,16 @@ Le **abstraite** mot clé déclare :
 -   Une fonction membre de type peut être définie uniquement dans un type dérivé.  
   
 ## <a name="all-platforms"></a>Toutes les plateformes  
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **Remarques**  
+### <a name="remarks"></a>Notes
   
  Le premier exemple de syntaxe déclare une classe comme étant abstraite. Le *déclaration de classe* composant peut être une déclaration C++ native (**classe** ou **struct**), ou une déclaration d’extension C++ (**classe ref** ou **ref struct**) si le `/ZW` ou `/clr` option du compilateur est spécifiée.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  Pour plus d’informations, consultez [classes et structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/ZW**  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/clr**  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
- L'exemple de code suivant génère une erreur car la classe `X` est marquée comme `abstract`.  
+ L’exemple de code suivant génère une erreur car classe `X` est marquée **abstraite**.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **Exemple**  
-  
- L'exemple de code suivant génère une erreur car il instancie une classe native marquée comme `abstract`. Cette erreur se produit avec ou sans l'option du compilateur `/clr`.  
+ L’exemple de code suivant génère une erreur, car il instancie une classe native marquée **abstraite**. Cette erreur se produit avec ou sans l'option du compilateur `/clr`.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **Exemple**  
-  
- L'exemple de code suivant génère une erreur car la fonction `f` inclut une définition, mais elle est marquée comme `abstract`. La dernière instruction de l'exemple montre que la déclaration d'une fonction virtuelle abstraite équivaut à la déclaration d'une fonction virtuelle pure.  
+ L’exemple de code suivant génère une erreur car fonction `f` inclut une définition, mais est marqué comme **abstraite**. La dernière instruction de l'exemple montre que la déclaration d'une fonction virtuelle abstraite équivaut à la déclaration d'une fonction virtuelle pure.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

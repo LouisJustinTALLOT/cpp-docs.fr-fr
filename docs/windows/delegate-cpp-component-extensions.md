@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570361"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649505"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (extensions du composant C++)
 Déclare un type qui représente un pointeur de fonction.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  Utilisez le *identificateur de type de délégué* pour déclarer un événement avec le même prototype que le délégué. Pour plus d’informations, consultez [délégués (C++ / c++ / CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/ZW**  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Le common language runtime prend en charge les délégués avec la syntaxe suivante.  
@@ -124,10 +124,9 @@ function_declaration
 -   [Délégués génériques (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/clr**  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  L’exemple suivant montre comment déclarer, initialiser et appeler des délégués.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 in func1 8  

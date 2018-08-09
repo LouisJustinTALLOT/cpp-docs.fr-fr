@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568889"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647994"
 ---
 # <a name="guide-settings-dialog-box"></a>Paramètres du repère, boîte de dialogue
 ## <a name="layout-guides"></a>Repères de disposition  
  Affiche les paramètres pour les repères de disposition.  
   
- **Aucun**  
+### <a name="none"></a>Aucun.  
   
  Masque les outils de disposition.  
   
- **Règles et repères**  
+### <a name="rulers-and-guides"></a>Règles et repères  
   
  Lorsque l’option est activée, les règles sont ajoutées aux outils de disposition ; guides peuvent être placés dans les règles. Les guides par défaut sont les marges, qui peuvent être déplacés en faisant glisser. Cliquez dans les règles pour placer un guide. Contrôles « alignent » sur les repères lorsque les contrôles sont déplacées sur ou en regard. Contrôles sont également déplacés avec un repère une fois qu’ils sont attachés. Quand un contrôle est attaché à un repère de chaque côté et un guide est déplacé, le contrôle est redimensionné.  
   
- **Grid**  
+### <a name="grid"></a>Grille  
   
  Crée une grille de disposition. Nouveaux contrôles sont automatiquement alignés sur la grille.  
   
 ## <a name="grid-spacing"></a>espacement de la grille  
  Affiche les paramètres pour l’espacement de la grille en unités de boîte de dialogue (DLU).  
   
- **La largeur : DLU**  
+### <a name="width-dlus"></a>La largeur : DLU  
   
  Définit la largeur de la grille de disposition en DLU. Une DLU horizontale est la largeur moyenne de la police de la boîte de dialogue divisée en quatre parties.  
   
- **Hauteur : DLU**  
+### <a name="height-dlus"></a>Hauteur : DLU 
   
  Définit la hauteur de la grille de disposition dans DLU. Une DLU verticale correspond à la hauteur moyenne de la police de la boîte de dialogue divisée par huit.  
   

@@ -1,5 +1,5 @@
 ---
-title: Suppression d’une Image de périphérique (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Suppression d’une Image de périphérique (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2922526827a4a812f31ebde209f118bd726f5b73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dd35697e6a46ae681286fd9601f7d8cdc022948e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881742"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649833"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Suppression d'une image de périphérique (Éditeur d'images pour les icônes)
 ### <a name="to-delete-a-device-image"></a>Pour supprimer une image de périphérique  
   
-1.  Lorsque l’image d’icône est affichée dans le **Image** éditeur, sélectionnez **supprimer une Image de périphérique** à partir de la **Image** menu. Lorsque vous supprimez la dernière image d’icône dans la ressource, la ressource est également supprimée.  
+1.  Tandis que l’image d’icône s’affiche dans le **Image** éditeur, sélectionnez **supprimer une Image de périphérique** à partir de la **Image** menu. Lorsque vous supprimez la dernière image d’icône dans la ressource, la ressource est également supprimée.  
   
     > [!NOTE]
-    >  Lorsque vous appuyez sur la touche SUPPR, les images et les couleurs que vous avez dessinées sur une icône sont supprimés, mais l’icône est conservée ; Vous pouvez redessiner. Si vous appuyez sur SUPPR par erreur, vous pouvez appuyer sur CTRL + Z pour annuler l’action.  
+    >  Quand vous appuyez sur la **Del** clé, que les images et les couleurs que vous avez dessiné sur une icône sont supprimées mais l’icône reste ; vous pouvez la redessiner. Si vous appuyez sur **Del** par erreur, vous pouvez appuyer sur **Ctrl**+**Z** annuler l’action.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
-  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

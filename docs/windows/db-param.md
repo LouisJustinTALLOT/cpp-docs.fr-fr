@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569441"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651380"
 ---
 # <a name="dbparam"></a>db_param
 Associe la variable de membre spécifié avec un paramètre d’entrée ou de sortie et délimite la variable.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ Associe la variable de membre spécifié avec un paramètre d’entrée ou de so
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *Ordinal*  
  Le numéro de colonne (ordinal DBCOLUMNINFO) correspondant à un champ dans l’ensemble de lignes à laquelle lier des données.  
   

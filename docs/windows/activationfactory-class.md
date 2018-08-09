@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461503"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649203"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory (classe)
 Permet à une ou plusieurs classes d'être activées par le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *I0*  
  L’interface de zéro.  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[ActivationFactory::AddRef, méthode](../windows/activationfactory-addref-method.md)|Incrémente le décompte de références du courant **ActivationFactory** objet.|  
 |[ActivationFactory::GetIids, méthode](../windows/activationfactory-getiids-method.md)|Récupère un tableau d’ID d’interface implémentée.|  
 |[ActivationFactory::GetRuntimeClassName, méthode](../windows/activationfactory-getruntimeclassname-method.md)|Obtient le nom de classe runtime de l’objet qui actuel **ActivationFactory** instancie.|  
-|[ActivationFactory::GetTrustLevel, méthode](../windows/activationfactory-gettrustlevel-method.md)|Obtient le niveau de confiance de l’objet qui instancie le ActivationFactory actuel.|  
+|[ActivationFactory::GetTrustLevel, méthode](../windows/activationfactory-gettrustlevel-method.md)|Obtient le niveau de confiance de l’objet qui actuel **ActivationFactory** instancie.|  
 |[ActivationFactory::QueryInterface, méthode](../windows/activationfactory-queryinterface-method.md)|Récupère un pointeur vers l’interface spécifiée.|  
 |[ActivationFactory::Release, méthode](../windows/activationfactory-release-method.md)|Décrémente le décompte de références du courant **ActivationFactory** objet.|  
   

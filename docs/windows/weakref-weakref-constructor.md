@@ -1,5 +1,5 @@
 ---
-title: Weakref::weakref, constructeur | Documents Microsoft
+title: Weakref::weakref, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891046"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641471"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef, constructeur
-Initialise une nouvelle instance de la classe WeakRef.  
+Initialise une nouvelle instance de la **WeakRef** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,14 +52,14 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `ptr`  
- Un pointeur, une référence ou une référence rvalue à un objet existant qui initialise l’objet WeakRef actif.  
+### <a name="parameters"></a>Paramètres  
+ *ptr*  
+ Un pointeur, une référence ou une référence rvalue à un objet existant qui initialise actuel **WeakRef** objet.  
   
 ## <a name="remarks"></a>Notes  
- Le premier constructeur initialise un objet WeakRef vide. Le deuxième constructeur initialise un objet WeakRef à partir d’un pointeur vers l’interface IWeakReference. Le troisième constructeur initialise un objet WeakRef à partir d’une référence à un ComPtr\<IWeakReference > objet. Les quatrième et cinquième constructeurs initialise un objet WeakRef à partir d’un autre objet WeakRef.  
+ Le premier constructeur initialise vide **WeakRef** objet. Le deuxième constructeur initialise un **WeakRef** objet d’un pointeur vers le `IWeakReference` interface. Le troisième constructeur initialise un **WeakRef** objet à partir d’une référence à un `ComPtr<IWeakReference>` objet. Les quatrième et cinquième constructeurs initialisent un **WeakRef** objet à partir d’un autre **WeakRef** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

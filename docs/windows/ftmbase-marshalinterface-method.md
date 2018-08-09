@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 23779cbe0b27680122c6aa3a8f8748c39f28078e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570055"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647405"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface, méthode
 Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHODIMP MarshalInterface(  
    __in IStream *pStm,  
    __in REFIID riid,  

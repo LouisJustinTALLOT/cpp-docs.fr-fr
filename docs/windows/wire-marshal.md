@@ -1,5 +1,5 @@
 ---
-title: wire_marshal | Documents Microsoft
+title: wire_marshal | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890211"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646681"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 Spécifie un type de données qui sera utilisé pour la transmission au lieu d’un type de données spécifiques à l’application.  
@@ -30,9 +30,7 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [wire_marshal]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,7 +39,7 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 ## <a name="example"></a>Exemple  
  Le code suivant illustre une utilisation de **wire_marshal**:  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -57,16 +55,16 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`typedef`|  
+|**S'applique à**|**typedef**|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

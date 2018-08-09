@@ -1,5 +1,5 @@
 ---
-title: Affichage des symboles des ressources | Documents Microsoft
+title: Affichage des symboles des ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891105"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649352"
 ---
 # <a name="viewing-resource-symbols"></a>Affichage des symboles des ressources
 ### <a name="to-view-resource-symbols"></a>Pour afficher les symboles des ressources  
@@ -34,15 +34,12 @@ ms.locfileid: "33891105"
     > [!NOTE]
     >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Sélectionnez **symboles des ressources** dans le menu contextuel pour afficher une table de symboles des ressources dans les [boîte de dialogue Symboles des ressources](../windows/resource-symbols-dialog-box.md).  
+2.  Sélectionnez **symboles des ressources** dans le menu contextuel pour afficher une table de symboles des ressources dans le [boîte de dialogue Symboles des ressources](../windows/resource-symbols-dialog-box.md).  
   
     > [!NOTE]
-    >  Pour afficher les symboles prédéfinis, vérifiez le **afficher les symboles en lecture seule** case à cocher.  
+    >  Pour afficher les symboles prédéfinis, cochez la **afficher les symboles en lecture seule** case à cocher.  
   
-
-  
- **Spécifications**  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

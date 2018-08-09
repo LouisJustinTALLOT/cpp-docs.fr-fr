@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465296"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649781"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
 Dans les déclarations de méthode ou de type générique, vous pouvez qualifier un paramètre de type avec des contraintes. Une contrainte est une exigence que les types utilisés comme arguments de type doivent respecter. Par exemple, une contrainte peut indiquer que l'argument de type doit implémenter une certaine interface ou hériter d'une classe spécifique.  
@@ -32,11 +32,11 @@ Dans les déclarations de méthode ou de type générique, vous pouvez qualifier
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *paramètre de type*  
  Un des paramètres de type, à limiter.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  La liste peut également inclure une classe. Pour que l’argument de type satisfasse une contrainte de classe de base, il doit être de la même classe que la contrainte ou dériver de la contrainte.  
   
- Vous pouvez également spécifier `gcnew()` pour indiquer l’argument de type doit avoir un constructeur sans paramètre public ; ou **classe ref** pour indiquer le type d’argument doit être un type référence, y compris toute classe, une interface, un délégué ou un tableau type ; ou **classe value** pour indiquer le type d’argument doit être un type valeur. Un type valeur, excepté Nullable\<T > peut être spécifié.  
+ Vous pouvez également spécifier **gcnew()** pour indiquer l’argument de type doit avoir un constructeur sans paramètre public ; ou **classe ref** pour indiquer l’argument de type doit être un type référence, y compris toute classe, interface, un délégué ou type de tableau ; ou **classe value** pour indiquer le type d’argument doit être un type valeur. Un type valeur, excepté Nullable\<T > peut être spécifié.  
   
  Vous pouvez également spécifier un paramètre générique en tant que contrainte. L’argument de type disponible pour le type que vous contraignez doit être, ou dériver du, type de la contrainte. Il s'agit d'une contrainte de type naked.  
   

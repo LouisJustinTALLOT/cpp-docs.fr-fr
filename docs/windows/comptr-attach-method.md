@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461066"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641328"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach, méthode
 Cela associe **ComPtr** avec le type d’interface spécifié par le paramètre de type de modèle actuel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void Attach(  
    _In_opt_ InterfaceType* other  
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *other*  
  Type d’interface.  
   

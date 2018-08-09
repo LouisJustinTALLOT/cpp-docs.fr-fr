@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466570"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647035"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete, méthode
 Copie l’adresse du Gestionnaire d’événements de saisie semi-automatique actuelle à la variable spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    GetOnComplete  
 )(TComplete** completeHandler);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *completeHandler*  
  L’emplacement de stockage de l’adresse du Gestionnaire d’événements de saisie semi-automatique actuel.  
   

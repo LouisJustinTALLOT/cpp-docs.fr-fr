@@ -1,5 +1,5 @@
 ---
-title: 'WeakRef :: ~ WeakRef, destructeur | Documents Microsoft'
+title: 'WeakRef :: ~ WeakRef, destructeur | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2acc2e24b1030dc09529fdcad444e29f83ae11e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889886"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651663"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef, destructeur
-Désinitialise l’instance actuelle de la classe WeakRef.  
+Annule l’initialisation de l’instance actuelle de la **WeakRef** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ Désinitialise l’instance actuelle de la classe WeakRef.
 ~WeakRef();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,5 +1,5 @@
 ---
-title: Dessin de ligne ou Figures fermées (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Dessin de ligne ou Figures fermées (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e2defbde7963c6e58cdfe3f4a25ea550ad88e5f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ca853e5dd44cd91edbae99cc51f88a41bdd4130
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882773"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648374"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Dessin de ligne ou de figures fermées (Éditeur d'images pour les icônes)
-Outils de l’éditeur d’images pour tracer des lignes et de figures fermées fonctionnent tous de la même façon : vous placez le point d’insertion à un moment donné et que vous faites glisser vers un autre. Pour les lignes, ces points sont les points de terminaison. Pour les figures fermées, ces points sont les coins opposés d’un rectangle englobant de l’illustration.  
+Outils de l’éditeur d’images pour dessiner des lignes et de figures fermées fonctionnent tous de la même façon : vous placez le point d’insertion à un moment donné et que vous faites glisser vers un autre. Pour les lignes, ces points sont les points de terminaison. Pour les figures fermées, ces points sont les angles opposés du rectangle englobant de la figure.  
   
- Lignes sont dessinées dans une largeur déterminée par la sélection de pinceau actuelle et les figures encadrées sont dessinées selon une largeur déterminée par la sélection actuelle de la largeur. Les lignes et toutes les figures, encadrées et remplies, sont dessinées dans la couleur de premier plan actuelle si vous appuyez sur le bouton gauche de la souris, ou dans la couleur d’arrière-plan actuelle si vous appuyez sur le bouton droit de la souris.  
+ Les lignes sont dessinées dans une largeur déterminée par la sélection de pinceau actuelle et les figures encadrées sont dessinées dans une largeur déterminée par la sélection de la largeur actuelle. Toutes les figures, encadrées et remplies et les lignes sont dessinées dans la couleur de premier plan actuelle si vous appuyez sur le bouton gauche de la souris, ou dans la couleur d’arrière-plan actuelle si vous appuyez sur le bouton droit de la souris.  
   
 ### <a name="to-draw-a-line"></a>Pour dessiner une ligne  
   
@@ -55,17 +55,15 @@ Outils de l’éditeur d’images pour tracer des lignes et de figures fermées 
   
 3.  Placez le pointeur sur un coin de la zone rectangulaire dans laquelle vous souhaitez dessiner la figure.  
   
-4.  Faites glisser le pointeur vers le coin opposé en diagonale.  
+4.  Faites glisser le pointeur vers le coin en diagonale opposé.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
-  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)   
  [Utilisation des couleurs](../windows/working-with-color-image-editor-for-icons.md)
-

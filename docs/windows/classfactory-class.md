@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c9a7caba7ccfb8f5764a1f460835ff540c838975
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463864"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641039"
 ---
 # <a name="classfactory-class"></a>ClassFactory (classe)
 Implémente les fonctionnalités de base de l'interface `IClassFactory`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -45,7 +45,7 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *I0*  
  L’interface de zéro.  
   
@@ -56,7 +56,7 @@ class ClassFactory : public Details::RuntimeClass<
  La seconde interface.  
   
 ## <a name="remarks"></a>Notes  
- Utiliser `ClassFactory` pour fournir une implémentation de fabrique défini par l’utilisateur.  
+ Utiliser **ClassFactory** pour fournir une implémentation de fabrique défini par l’utilisateur.  
   
  Le modèle de programmation suivant montre comment utiliser le [implémente](../windows/implements-structure.md) structure pour spécifier plus de trois interfaces sur une fabrique de classe.  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ClassFactory::AddRef, méthode](../windows/classfactory-addref-method.md)|Incrémente le décompte de références pour l’objet ClassFactory actuel.|  
-|[ClassFactory::LockServer, méthode](../windows/classfactory-lockserver-method.md)|Incrémente ou décrémente le nombre de sous-jacent objets qui sont suivies par l’objet ClassFactory actuel.|  
+|[ClassFactory::AddRef, méthode](../windows/classfactory-addref-method.md)|Incrémente le décompte de références pour actuel **ClassFactory** objet.|  
+|[ClassFactory::LockServer, méthode](../windows/classfactory-lockserver-method.md)|Incrémente ou décrémente le nombre de sous-jacent objets qui sont suivis par le **ClassFactory** objet.|  
 |[ClassFactory::QueryInterface, méthode](../windows/classfactory-queryinterface-method.md)|Récupère un pointeur vers l’interface spécifiée par le paramètre.|  
-|[ClassFactory::Release, méthode](../windows/classfactory-release-method.md)|Décrémente le décompte de références pour l’objet ClassFactory actuel.|  
+|[ClassFactory::Release, méthode](../windows/classfactory-release-method.md)|Décrémente le décompte de références pour actuel **ClassFactory** objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `I0`  

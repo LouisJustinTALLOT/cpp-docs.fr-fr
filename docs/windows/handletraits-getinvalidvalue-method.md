@@ -1,5 +1,5 @@
 ---
-title: Handletraits::getinvalidvalue, méthode | Documents Microsoft
+title: Handletraits::getinvalidvalue, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 190c327a404d19da86fdb86c32411a8ffeb06e7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873496"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651231"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>HANDLETraits::GetInvalidValue, méthode
 Représente un handle non valide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 inline static HANDLE GetInvalidValue();  
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne toujours INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE est défini par Windows.)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

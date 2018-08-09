@@ -1,5 +1,5 @@
 ---
-title: UIDefault | Documents Microsoft
+title: UIDefault | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890149"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651611"
 ---
 # <a name="uidefault"></a>uidefault
-Indique que le membre du type d’informations est le membre par défaut pour l’affichage dans l’interface utilisateur.  
+Indique que le membre d’informations de type est le membre par défaut pour l’affichage dans l’interface utilisateur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,7 +39,7 @@ Indique que le membre du type d’informations est le membre par défaut pour l�
 ## <a name="example"></a>Exemple  
  Le code suivant montre un exemple de **uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -58,7 +56,7 @@ __interface ICustom{
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -66,8 +64,8 @@ __interface ICustom{
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

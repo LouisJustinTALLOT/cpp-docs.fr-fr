@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461807"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646317"
 ---
 # <a name="attribute"></a>Attribut
 Vous permet de créer un attribut personnalisé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ Vous permet de créer un attribut personnalisé.
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *AllowOn*  
  Spécifie les éléments de langage auquel l’attribut personnalisé peut être appliqué. Valeur par défaut est `System::AttributeTargets::All` (consultez [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
@@ -48,16 +48,16 @@ Vous permet de créer un attribut personnalisé.
  Spécifie si l’attribut personnalisé peut être appliqué à plusieurs reprises d’une construction. Valeur par défaut est FALSE.  
   
  *Héritée*  
- Indique si l’attribut doit être héritées par les sous-classes. Le compilateur ne fournit aucune prise en charge spéciale pour cette fonctionnalité ; Il est le travail des consommateurs d’attribut (la réflexion, par exemple) afin de respecter ces informations. Si *Inherited* a la valeur TRUE, l’attribut est hérité. Si *AllowMultiple* a la valeur TRUE, l’attribut s’accumulent sur le membre dérivé ; si *AllowMultiple* est FALSE, l’attribut remplace (ou remplacez) dans l’héritage. Si *Inherited* est FALSE, l’attribut ne sera pas être hérité. Valeur par défaut est TRUE.  
+ Indique si l’attribut doit être héritées par les sous-classes. Le compilateur ne fournit aucune prise en charge spéciale pour cette fonctionnalité ; C’est le travail des consommateurs de l’attribut (`Reflection`, par exemple) afin de respecter ces informations. Si *Inherited* a la valeur TRUE, l’attribut est hérité. Si *AllowMultiple* a la valeur TRUE, l’attribut s’accumulent sur le membre dérivé ; si *AllowMultiple* est FALSE, l’attribut remplace (ou remplacez) dans l’héritage. Si *Inherited* est FALSE, l’attribut ne sera pas être hérité. Valeur par défaut est TRUE.  
   
 ## <a name="remarks"></a>Notes  
   
 > [!NOTE]
->  Le `attribute` attribute est maintenant déconseillé.  Utilisez l’attribut runtime de common language System.Attribute directement pour créer des attirbutes défini par l’utilisateur.  Pour plus d’informations, consultez [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  Le **attribut** attribute est maintenant déconseillé.  Utilisez l’attribut runtime de langage commun `System.Attribute` à directement pour créer des attirbutes défini par l’utilisateur. Pour plus d’informations, consultez [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Vous définissez un [attribut personnalisé](../windows/custom-attributes-cpp.md) en plaçant le `attribute` attribut sur une définition de classe ou un struct managée. Le nom de la classe est l’attribut personnalisé. Exemple :  
+ Vous définissez un [attribut personnalisé](../windows/custom-attributes-cpp.md) en plaçant le **attribut** attribut sur une définition de classe ou un struct managée. Le nom de la classe est l’attribut personnalisé. Exemple :  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  Consultez [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) pour une discussion sur les cibles d’attribut.  
   
- Le `attribute` attribut a un *AllowMultiple* paramètre qui spécifie si l’attribut personnalisé est à usage unique ou multiuse (peut apparaître plusieurs fois sur la même entité).  
+ Le **attribut** attribut a un *AllowMultiple* paramètre qui spécifie si l’attribut personnalisé est à usage unique ou multiuse (peut apparaître plusieurs fois sur la même entité).  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Classes d’attributs personnalisés sont dérivées directement ou indirectement à partir de <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, ce qui permet d’identifier les définitions d’attributs dans les métadonnées rapidement et facilement. Le `attribute` attribut implique l’héritage de System::Attribute, dérivation explicite n’est pas nécessaire :  
+ Classes d’attributs personnalisés sont dérivées directement ou indirectement à partir de <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, ce qui permet d’identifier les définitions d’attributs dans les métadonnées rapidement et facilement. Le **attribut** attribut implique l’héritage à partir de `System::Attribute`, dérivation explicite n’est pas nécessaire :  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  est équivalent à  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` est un alias pour <xref:System.AttributeUsageAttribute?displayProperty=fullName> (pas AttributeAttribute ; il s’agit d’une exception à la règle d’affectation de noms d’attribut).  
+ **attribut** est un alias pour <xref:System.AttributeUsageAttribute?displayProperty=fullName> (pas AttributeAttribute ; il s’agit d’une exception à la règle d’affectation de noms d’attribut).  
   
 ## <a name="requirements"></a>Configuration requise  
   

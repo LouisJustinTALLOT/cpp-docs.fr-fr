@@ -15,26 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570322"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644350"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Substitutions explicites  (extensions du composant C++)
 Cette rubrique explique comment substituer explicitement un membre d’une classe de base ou une interface. Une substitution nommée (explicite) doit uniquement être utilisée pour substituer une méthode par une méthode dérivée qui a un nom différent.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe
   
-```  
+```cpp  
 overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **Paramètres**  
-  
+
+### <a name="parameters"></a>Paramètres 
  *substitution de déclarateur de fonction*  
  La liste de type, le nom et argument de retour de la fonction de substitution.  Notez que la fonction de substitution n’a pas d’avoir le même nom que la fonction qui est substitué.  
   
@@ -47,7 +46,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *substitution de définition de fonction*  
  Les instructions de corps de fonction qui définissent la fonction de substitution.  
   
- **Remarques**  
+### <a name="remarks"></a>Notes
   
  Utilisez explicite les remplacements pour créer un alias pour une signature de méthode, ou pour fournir des implémentations différentes pour les méthodes en utilisant la même signature.  
   
@@ -59,15 +58,14 @@ overriding-function-declarator = function { overriding-function-definition }
  Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Remarques**  
+### <a name="remarks"></a>Notes
   
  Pour plus d’informations sur explicite remplace en code natif ou code compilé avec `/clr:oldSyntax`, consultez [substitutions explicites](../cpp/explicit-overrides-cpp.md).  
   
 ### <a name="requirements"></a>Configuration requise  
  Option du compilateur : `/clr`  
   
-### <a name="examples"></a>Exemples  
- **Exemple**  
+### <a name="examples"></a>Exemples   
   
  L’exemple de code suivant montre un remplacement simple, implicite et l’implémentation d’un membre dans une interface de base, ne pas à l’aide de substitutions explicites.  
   
@@ -91,13 +89,9 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
-  
- **Exemple**  
   
  L’exemple de code suivant montre comment implémenter tous les membres d’interface avec une signature commune, à l’aide de la syntaxe de substitution explicite.  
   
@@ -126,18 +120,14 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **Exemple**  
-  
  L’exemple de code suivant montre comment une substitution de la fonction peut avoir un nom différent à partir de la fonction qu’il implémente.  
   
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -157,13 +147,9 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
 ```Output  
 X::g  
 ```  
-  
- **Exemple**  
   
  L’exemple de code suivant montre une implémentation d’interface explicite qui implémente une collection de types-safe.  
   

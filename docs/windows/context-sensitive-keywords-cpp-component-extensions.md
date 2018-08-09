@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466122"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644227"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Mots clés contextuels  (extensions de composant C++)
 *Mots clés contextuels* sont des éléments de langage reconnus uniquement dans des contextes spécifiques. En dehors du contexte spécifique, un mot clé contextuel peut être un symbole défini par l'utilisateur.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- **Remarques**  
+### <a name="remarks"></a>Notes
   
  Voici une liste de mots clés contextuels :  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466122"
  Pour des raisons de lisibilité, vous souhaiterez limiter votre utilisation des mots clés contextuels comme symboles définis par l’utilisateur.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/ZW**  
+ Option du compilateur : `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Remarques**  
+### <a name="remarks"></a>Notes  
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
 ### <a name="requirements"></a>Configuration requise  
- Option du compilateur : **/clr**  
+ Option du compilateur : `/clr`  
   
 ### <a name="examples"></a>Exemples  
- **Exemple**  
   
  L’exemple de code suivant montre que, dans le contexte approprié, le **propriété** mot clé contextuel peut être utilisé pour définir une propriété et une variable.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Sortie**  
   
 ```Output  
 100  

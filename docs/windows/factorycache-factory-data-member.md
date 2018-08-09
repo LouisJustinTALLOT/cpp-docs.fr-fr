@@ -1,5 +1,5 @@
 ---
-title: Factorycache::Factory, données de membre | Documents Microsoft
+title: Factorycache::Factory, données de membre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85fed4ff169c43762f82dd0524cc88a6e24370e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c714c13cb206fbc6535997c2ad32d9f652e229ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881437"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643522"
 ---
 # <a name="factorycachefactory-data-member"></a>FactoryCache::factory, données de membre
 Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 IUnknown* factory;  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Pointe vers une fabrique de classe COM ou Windows Runtime.  
+ Pointe vers une fabrique de classe Windows Runtime ou COM.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Namespace :** Microsoft::WRL::Details  

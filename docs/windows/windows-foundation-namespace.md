@@ -1,5 +1,5 @@
 ---
-title: Windows::Foundation Namespace | Documents Microsoft
+title: Windows::Foundation Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891222"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646729"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation, espace de noms
-Active la fonctionnalité de Windows Runtime fondamentale, telles que la création d’objet et la fabrique.  
+Permet des fonctionnalités fondamentales de Windows Runtime, telles que la création d’objet et de la fabrique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ namespace Windows::Foundation;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ActivateInstance, fonction](../windows/activateinstance-function.md)|Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifiée.|  
-|[GetActivationFactory, fonction](../windows/getactivationfactory-function.md)|Récupère la fabrique d’activation pour le type spécifié par le paramètre de modèle.|  
+|[ActivateInstance, fonction](../windows/activateinstance-function.md)|Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.|  
+|[GetActivationFactory, fonction](../windows/getactivationfactory-function.md)|Récupère une fabrique d’activation pour le type spécifié par le paramètre de modèle.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Namespace :** Windows  
   
 ## <a name="see-also"></a>Voir aussi  
- [Namespace de Windows](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+ [Windows Namespace](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

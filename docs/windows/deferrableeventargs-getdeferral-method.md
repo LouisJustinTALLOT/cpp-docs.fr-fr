@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 38958be32b03d0fe4a65a0dfe732d4a15c4ce633
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571202"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645082"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>DeferrableEventArgs::GetDeferral (méthode)
 Obtient une référence à la [report](http://go.microsoft.com/fwlink/p/?linkid=526520) objet qui représente un événement différé.  
@@ -29,7 +29,7 @@ Obtient une référence à la [report](http://go.microsoft.com/fwlink/p/?linkid=
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *Résultat*  
  Un pointeur qui référence le [report](http://go.microsoft.com/fwlink/p/?linkid=526520) lors de la fin de l’appel de l’objet.  
   

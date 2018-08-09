@@ -1,5 +1,5 @@
 ---
-title: Ajout de fichiers aux Applications Win32 vides | Documents Microsoft
+title: Ajout de fichiers aux Applications Win32 vides | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856890"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646840"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Ajout de fichiers à des applications Win32 vides
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Pour ajouter vos fichiers à une application de bureau Windows vide  
@@ -36,11 +36,11 @@ ms.locfileid: "33856890"
   
 4.  Cliquez sur **OK**.  
   
- Pour ajouter des fichiers autres que des fichiers sources, d’en-têtes ou de ressources à votre projet, cliquez avec le bouton droit sur le nœud Solution dans l’Explorateur de solutions et ajoutez les fichiers au projet de la même manière. Un dossier Divers est créé pour contenir les autres fichiers de votre projet.  
+ Pour ajouter des fichiers qui sont source, en-tête ni les fichiers de ressources à votre projet, cliquez sur le **Solution** nœud **l’Explorateur de solutions** et ajoutez les fichiers au projet de la même manière. Un **divers** dossier sera créé pour contenir les autres fichiers dans votre projet.  
   
 > [!NOTE]
 >  Avant de générer votre projet, vous devrez spécifier les options de génération de ces fichiers pour qu’ils soient correctement inclus dans l’application finale. Pour plus d’informations, consultez [Spécification des paramètres de projet avec des pages de propriétés](../ide/property-pages-visual-cpp.md) et [Génération d’un programme C/C++](../build/building-c-cpp-programs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une Application de bureau Windows vide](../windows/creating-an-empty-windows-desktop-application.md)   
- [Déploiement d’Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Déploiement d’applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

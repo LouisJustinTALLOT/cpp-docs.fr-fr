@@ -1,5 +1,5 @@
 ---
-title: Modification des propriétés pour un contrôle ActiveX | Documents Microsoft
+title: Modification des propriétés pour un contrôle ActiveX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f99caed2b0ce78635f89d884599ee6d40fc86f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f64fd94eca03b132d0448147085b04e3ff6c1097
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885150"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648059"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Modification des propriétés pour un contrôle ActiveX
-Contrôles ActiveX fournis par des éditeurs indépendants peuvent sont livrés avec leurs propriétés et leurs caractéristiques. Propriétés des contrôles ActiveX sont affichées dans la fenêtre Propriétés. En outre, les pages de propriétés créées par les auteurs du contrôle ActiveX sont affichés dans le **Pages de propriétés** boîte de dialogue (pour afficher la Page de propriétés pour un contrôle ActiveX spécifique, cliquez sur le bouton de la Page de propriétés dans le [Fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).  
+Contrôles ActiveX fournis par des fabricants indépendants peuvent sont équipés à leurs propriétés et leurs caractéristiques. Propriétés pour les contrôles ActiveX sont affichées dans le **propriétés** fenêtre. En outre, les pages de propriétés créées par les auteurs du contrôle ActiveX sont affichées dans le **Pages de propriétés** boîte de dialogue (pour afficher le **Page de propriétés** pour un contrôle ActiveX spécifique, cliquez sur le  **Page de propriétés** situé dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).  
   
  Plusieurs onglets s’affichent dans la page de propriétés pour un contrôle ActiveX, selon les feuilles de propriétés qui font partie du contrôle ActiveX.  
   
 > [!NOTE]
->  La procédure suivante s’applique à l’utilisation de la page de propriétés pour modifier des contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans la nouvelle fenêtre de propriétés.  
+>  La procédure suivante s’applique à l’utilisation de la page de propriétés pour modifier des contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans le nouveau **propriétés** fenêtre.  
   
-### <a name="to-edit-properties-for-an-activex-control"></a>Pour modifier les propriétés d’un contrôle ActiveX  
+### <a name="to-edit-properties-for-an-activex-control"></a>Pour modifier les propriétés pour un contrôle ActiveX  
   
 1.  Sélectionnez le **ActiveX** contrôle.  
   
@@ -39,15 +39,13 @@ Contrôles ActiveX fournis par des éditeurs indépendants peuvent sont livrés 
   
 3.  Apportez les modifications nécessaires dans la page de propriétés.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichage et ajout de contrôles ActiveX à une boîte de dialogue](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
+ [Affichage et ajout de contrôles ActiveX dans une boîte de dialogue](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
  [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
  [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md)
-

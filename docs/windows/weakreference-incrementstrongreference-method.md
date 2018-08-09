@@ -1,5 +1,5 @@
 ---
-title: WeakReference::incrementstrongreference, méthode | Documents Microsoft
+title: WeakReference::incrementstrongreference, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f564f5d6197a640ef311cda8b2133ed583eec91e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890620"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642692"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -37,13 +37,13 @@ ULONG IncrementStrongReference();
  Le nombre de référence forte incrémenté.  
   
 ## <a name="remarks"></a>Notes  
- Incrémente le décompte de références fort de l’objet WeakReference actuel.  
+ Incrémente le nombre de référence forte d’actuel **WeakReference** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
-[WeakReference (classe)](../windows/weakreference-class1.md)  
+ [WeakReference (classe)](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

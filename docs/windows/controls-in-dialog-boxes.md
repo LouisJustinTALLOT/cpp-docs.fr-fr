@@ -1,5 +1,5 @@
 ---
-title: Contrôles dans les boîtes de dialogue | Documents Microsoft
+title: Contrôles dans les boîtes de dialogue | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acbbbe0ecf1151f6159799592a8211bcf11fe7a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873119"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646941"
 ---
 # <a name="controls-in-dialog-boxes"></a>Contrôles dans les boîtes de dialogue
-Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [onglet Éditeur de la boîte de dialogue](../windows/dialog-editor-tab-toolbox.md) dans les [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), ce qui vous permet de choisir le contrôle souhaité et faites-le glisser sur la boîte de dialogue. Par défaut, la fenêtre Boîte à outils est définie pour masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque l’éditeur de boîte de dialogue est ouverte. Toutefois, vous pouvez épingler la fenêtre Boîte à outils dans la position en cliquant sur le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [onglet de boîte de dialogue Éditeur](../windows/dialog-editor-tab-toolbox.md) dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), ce qui vous permet de choisir le contrôle souhaité et faites-le glisser vers la boîte de dialogue. Par défaut, la fenêtre de boîte à outils est définie sur Masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque l’éditeur de boîtes de dialogue est ouverte. Toutefois, vous pouvez épingler la **boîte à outils** fenêtre dans sa position en cliquant sur le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- Le moyen le plus rapide pour ajouter des contrôles à une boîte de dialogue, de repositionner des contrôles existants ou de déplacer les contrôles à partir d’une boîte de dialogue à l’autre est d’utiliser la méthode glisser-déplacer. La position du contrôle est décrite dans une ligne pointillée jusqu'à ce qu’il est déposé dans la boîte de dialogue. Lorsque vous ajoutez un contrôle à une boîte de dialogue avec la méthode glisser-déplacer, le contrôle est donné à une hauteur standard appropriée pour ce type de contrôle.  
+ Le moyen le plus rapide pour ajouter des contrôles à une boîte de dialogue, repositionner des contrôles existants ou déplacer des contrôles à partir d’une boîte de dialogue à l’autre consiste à utiliser la méthode glisser-déplacer. La position du contrôle est décrite dans une ligne en pointillés jusqu'à ce qu’il sera déposé dans la boîte de dialogue. Lorsque vous ajoutez un contrôle à une boîte de dialogue avec la méthode glisser-déplacer, le contrôle est donné à une hauteur standard appropriée pour ce type de contrôle.  
   
- Lorsque vous ajoutez un contrôle à une boîte de dialogue ou repositionnez, son emplacement final peut être déterminé par les repères ou les marges, ou si vous disposez de la grille de disposition sous tension.  
+ Lorsque vous ajoutez un contrôle à une boîte de dialogue ou repositionnez, son emplacement final peut être déterminé par les guides ou les marges, ou si vous disposez de la grille de disposition sous tension.  
   
- Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez modifier les propriétés, telles que sa légende dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez sélectionner plusieurs contrôles et modifier leurs propriétés à la fois.  
+ Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez modifier les propriétés telles que sa légende dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez sélectionner plusieurs contrôles et modifier leurs propriétés à la fois.  
   
 -   [Ajout, modification ou suppression de contrôles](adding-editing-or-deleting-controls.md)  
   
@@ -47,7 +47,7 @@ Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [
   
 -   [Définition de la largeur d’une barre de défilement horizontale](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)  
   
--   [La disposition des contrôles dans les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+-   [L’organisation des contrôles sur les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)  
   
 -   [Contrôles personnalisés dans l’Éditeur de boîtes de dialogue](custom-controls-in-the-dialog-editor.md)  
   
@@ -55,13 +55,12 @@ Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [
   
 -   [Spécification de l’emplacement et de la taille d’une boîte de dialogue](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Contrôles de boîte de dialogue et Types de variables](../ide/dialog-box-controls-and-variable-types.md)   
  [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)
-

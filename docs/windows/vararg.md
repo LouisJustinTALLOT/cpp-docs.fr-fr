@@ -1,5 +1,5 @@
 ---
-title: vararg | Documents Microsoft
+title: vararg | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f842d27f6b0dfc72a48f1bc7fbcb8fcccb0c26e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890965"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650402"
 ---
 # <a name="vararg"></a>vararg
 Spécifie que la fonction accepte un nombre variable d’arguments.  
@@ -30,9 +30,7 @@ Spécifie que la fonction accepte un nombre variable d’arguments.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [vararg]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -41,7 +39,7 @@ Spécifie que la fonction accepte un nombre variable d’arguments.
 ## <a name="example"></a>Exemple  
  Le code suivant illustre une utilisation de **vararg**:  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -55,7 +53,7 @@ __interface X : public IUnknown
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -63,8 +61,8 @@ __interface X : public IUnknown
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Création d’une boîte de dialogue | Documents Microsoft
+title: Création d’une boîte de dialogue Nouvelle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e0fe5ddf8b54078e8578396d2ed41ebd15da66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101c135a5ebf4d188a1e241c9d343580c13b247a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872142"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653025"
 ---
 # <a name="creating-a-new-dialog-box"></a>Création d’une nouvelle boîte de dialogue
 ### <a name="to-create-a-new-dialog-box"></a>Pour créer une nouvelle boîte de dialogue  
@@ -33,22 +33,20 @@ ms.locfileid: "33872142"
     > [!NOTE]
     >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **boîte de dialogue** dans les **Type de ressource** liste, puis cliquez sur **nouveau**.  
+2.  Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **boîte de dialogue** dans le **Type de ressource** liste, puis cliquez sur **New**.  
   
-     Si un signe plus (+) s’affiche en regard du type de ressource de boîte de dialogue, cela signifie que les modèles de boîte de dialogue sont disponibles. Cliquez sur le signe plus pour développer la liste des modèles, sélectionnez un modèle et cliquez sur Nouveau.  
+     Si un signe plus (**+**) apparaît en regard du **boîte de dialogue** type de ressource, cela signifie que les modèles de boîte de dialogue sont disponibles. Cliquez sur le signe plus pour développer la liste des modèles, sélectionnez un modèle, puis cliquez sur **New**.  
   
-     La boîte de dialogue s’ouvre dans l’éditeur de boîte de dialogue.  
+     La nouvelle boîte de dialogue s’ouvre dans le **boîte de dialogue** éditeur.  
   
-     Vous pouvez également [ouvrir des boîtes de dialogue existantes dans l’éditeur de boîte de dialogue pour la modification](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
+     Vous pouvez également [ouvrir les boîtes de dialogue existantes dans l’éditeur de boîte de dialogue Modifier](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
-  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  
  [Comment : créer une ressource](../windows/how-to-create-a-resource.md)   
  [Fichiers de ressources](../windows/resource-files-visual-studio.md)   
  [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)
-

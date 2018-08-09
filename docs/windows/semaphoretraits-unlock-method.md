@@ -1,5 +1,5 @@
 ---
-title: Semaphoretraits::Unlock, méthode | Documents Microsoft
+title: Semaphoretraits::Unlock, méthode | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892245"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650425"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock, méthode
-Contrôle des versions d’une ressource partagée.  
+Contrôle de versions d’une ressource partagée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
- Handle vers un objet de sémaphore.  
+### <a name="parameters"></a>Paramètres  
+ *h*  
+ Handle vers un **sémaphore** objet.  
   
 ## <a name="remarks"></a>Notes  
- Si l’opération de déverrouillage échoue, Unlock() émet une erreur qui indique la cause de l’échec.  
+ Si l’opération de déverrouillage est infructueuse, **Unlock()** émet une erreur qui indique la cause de l’échec.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  

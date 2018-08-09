@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a34b66a6e2c901ddbfb3005a0bdb8fd686317af0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570595"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641503"
 ---
 # <a name="handlet-class"></a>HandleT (classe)
 Représente un handle à un objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename HandleTraits  
 >  

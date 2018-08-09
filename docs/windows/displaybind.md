@@ -1,5 +1,5 @@
 ---
-title: displaybind | Documents Microsoft
+title: displaybind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879885"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641738"
 ---
 # <a name="displaybind"></a>displaybind
 Indique une propriété qui doit être affichée à l’utilisateur comme pouvant être liée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
  Le **displaybind** attribut C++ a les mêmes fonctionnalités que le [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
- Consultez l’exemple de [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **displaybind**.  
+ Consultez l’exemple de [peut être liée](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **displaybind**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -49,8 +47,8 @@ Indique une propriété qui doit être affichée à l’utilisateur comme pouvan
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

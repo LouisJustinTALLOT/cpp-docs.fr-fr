@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dc632f251e618e5816b1b8d8ea8280cba3d7b217
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569870"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652488"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Remplissage avec une couleur d'une zone délimitée d'une image (Éditeur d'images pour les icônes)
 L’éditeur d’images fournit le **remplir** outil pour remplir les placée entre la zone d’image avec la couleur de dessin actuelle ou la couleur d’arrière-plan actuelle.  
@@ -44,7 +44,6 @@ L’éditeur d’images fournit le **remplir** outil pour remplir les placée en
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Semaphore::Semaphore, constructeur | Documents Microsoft
+title: Semaphore::Semaphore, constructeur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888657"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643658"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore, constructeur
-Initialise une nouvelle instance de la classe de sémaphore.  
+Initialise une nouvelle instance de la **sémaphore** classe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +39,11 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `h`  
- Un handle ou une référence rvalue à un objet de sémaphore.  
+### <a name="parameters"></a>Paramètres  
+ *h*  
+ Un handle ou une référence rvalue à un **sémaphore** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers

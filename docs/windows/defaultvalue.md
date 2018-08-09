@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deda09913f2774a2b3b246a285df0c8b6f1c62eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569984"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652823"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 Permet de spécifier une valeur par défaut pour un paramètre facultatif typé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ defaultvalue= value ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *valeur*  
  La valeur par défaut pour le paramètre.  
   
