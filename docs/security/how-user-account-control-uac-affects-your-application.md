@@ -1,5 +1,5 @@
 ---
-title: Comment le contrôle de compte d’utilisateur (UAC) affecte votre Application | Documents Microsoft
+title: Répercussions de contrôle de compte d’utilisateur (UAC) sur votre Application | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 020a7a16e38ee40c99a7a5b77c88002e3135bfa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91c5af565ac7de14d947f2376ae408caa0f890fe
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840916"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013575"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Répercussions du contrôle de compte utilisateur sur votre application
 Le contrôle de compte d’utilisateur (UAC) est une fonctionnalité de Windows Vista dans laquelle les comptes d’utilisateurs ont des privilèges limités. Vous pouvez rechercher des informations détaillées concernant le contrôle de compte d'utilisateur sur les sites Web suivants :  
   
 -   [Guide étape par étape contrôle de compte utilisateur Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
--   [Pratiques recommandées et des recommandations pour les Applications dans un environnement disposant de privilèges minimum](http://go.microsoft.com/fwlink/p/?linkid=82444)  
+-   [Pratiques recommandées et directives pour des Applications dans un environnement de moindre privilège](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   
 -   [Comprendre et configurer le contrôle de compte d’utilisateur dans Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
   
@@ -39,9 +39,9 @@ Le contrôle de compte d’utilisateur (UAC) est une fonctionnalité de Windows 
 ## <a name="applications-that-require-administrative-privileges"></a>Applications qui requièrent des privilèges d'administrateur  
  Par défaut, l'éditeur de liens Visual C++ incorpore un fragment du contrôle de compte d'utilisateur dans le manifeste d'une application avec un niveau d'exécution `asInvoker`. Si votre application nécessite des privilèges d'administrateur pour s'exécuter correctement (par exemple, si elle modifie le nœud HKLM du Registre ou si elle écrit dans des zones protégées du disque, comme le répertoire Windows), vous devez modifier votre application.  
   
- La première option consiste à modifier le fragment du contrôle du manifeste pour modifier le niveau d’exécution pour *requireAdministrator*. L'application demande ensuite à l'utilisateur ses informations d'identification administratives avant de s'exécuter. Pour plus d’informations sur la procédure à suivre, consultez [/MANIFESTUAC (informations incorpore un compte d’utilisateur dans le manifeste)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
+ La première option consiste à modifier le fragment du contrôle du manifeste pour modifier le niveau d’exécution à *requireAdministrator*. L'application demande ensuite à l'utilisateur ses informations d'identification administratives avant de s'exécuter. Pour savoir comment procéder, consultez [/MANIFESTUAC (informations UAC incorpore dans le manifeste)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
   
- La deuxième option consiste à ne pas incorporer un fragment du contrôle dans le manifeste en spécifiant le **: no** option de l’éditeur de liens. Dans ce cas, votre application s'exécutera en mode virtualisé. Toute modification apportée au Registre ou au système de fichiers ne sera pas rendue persistante une fois que votre application est terminée.  
+ La deuxième option consiste à ne pas incorporer de fragment du contrôle de compte d'utilisateur dans le manifeste en spécifiant l'option de l'éditeur de liens `/MANIFESTUAC:NO`. Dans ce cas, votre application s'exécutera en mode virtualisé. Toute modification apportée au Registre ou au système de fichiers ne sera pas rendue persistante une fois que votre application est terminée.  
   
  L'organigramme suivant décrit comment votre application s'exécutera selon que le contrôle de compte d'utilisateur est activé et que l'application a un manifeste de contrôle de compte d'utilisateur ou pas :  
   

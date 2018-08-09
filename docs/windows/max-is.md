@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2799039aa2c198bcea3784876d8299fcaec59b20
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608428"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012447"
 ---
 # <a name="maxis"></a>max_is
 Désigne la valeur maximale pour un index de tableau valide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ max_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  *Expression*  
  Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.  
   

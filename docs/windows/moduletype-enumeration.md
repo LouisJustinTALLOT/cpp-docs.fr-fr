@@ -1,5 +1,5 @@
 ---
-title: Moduletype (énumération) | Documents Microsoft
+title: ModuleType, énumération | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876834"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019928"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType (énumération)
 Spécifie si un module doit prendre en charge un serveur in-process ou un serveur out-of-process.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   
@@ -45,7 +45,7 @@ enum ModuleType;
 |`InProcDisableCaching`|Combinaison de `InProc` et `DisableCaching`.|  
 |`OutOfProcDisableCaching`|Combinaison de `OutOfProc` et `DisableCaching`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL  

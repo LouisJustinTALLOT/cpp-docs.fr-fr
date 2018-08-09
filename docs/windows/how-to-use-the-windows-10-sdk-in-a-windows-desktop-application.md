@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034778"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017995"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
 Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 2017, il est configuré par défaut pour générer avec la version du SDK Windows 10 qui a été installé lors de la charge de travail C++ Desktop a été installé ou mis à jour. Cette version du SDK Windows est compatible avec Windows 7 et versions ultérieures. Consultez [utilisation des en-têtes Windows](/windows/desktop/WinProg/using-the-windows-headers) pour plus d’informations sur le ciblage des versions spécifiques de Windows.
@@ -31,7 +31,6 @@ Si vous souhaitez cibler une version antérieure du Kit de développement, vous 
   
 1.  Assurez-vous que le Kit de développement logiciel (SDK) Windows 10 est installé. Le SDK Windows 10 est installé dans le cadre de la **développement Desktop en C++** charge de travail. Une version autonome est disponible à l’adresse [téléchargements et outils pour Windows 10](https://developer.microsoft.com/windows/downloads).
 
-  
 2.  Ouvrez le menu contextuel du nœud du projet, puis sélectionnez **Recibler la version du Kit de développement logiciel (SDK)**.  
   
      ![Recibler la Version SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Si vous souhaitez cibler une version antérieure du Kit de développement, vous 
   
      ![Cibler la Version de la plateforme](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Cette action change les valeurs des macros du projet qui incluent des chemins d'accès aux fichiers d'en-tête et aux fichiers de la bibliothèque. Pour voir ce qui a changé dans la section répertoires Visual C++ de la boîte de dialogue Propriétés du projet, choisissez l’une des propriétés telles que des répertoires Include ouvrir la liste déroulante, choisissez \<Modifier >. La boîte de dialogue **Répertoires Include** apparaît.  
+     Cette action change les valeurs des macros du projet qui incluent des chemins d'accès aux fichiers d'en-tête et aux fichiers de la bibliothèque. Pour voir ce qui a changé, dans le **répertoires Visual C++** section de la **propriétés du projet** boîte de dialogue, choisissez une des propriétés telles que la **répertoires Include**, choisir de Ouvrez la liste déroulante, puis choisissez \<Modifier >. La boîte de dialogue **Répertoires Include** apparaît.  
   
      ![Inclure la boîte de dialogue répertoires](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Si vous souhaitez cibler une version antérieure du Kit de développement, vous 
   
 1.  Ouvrez le menu contextuel du nœud du projet, puis sélectionnez **Recibler la version du Kit de développement logiciel (SDK)**.  
   
-2.  Dans la liste déroulante Version de la plateforme cible, choisissez 8.1.  
+2.  Dans le **Version de la plateforme cible** liste déroulante, choisissez **8.1**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de bureau Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

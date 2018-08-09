@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607022"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018280"
 ---
 # <a name="purpose-of-attributes"></a>Objectif des attributs
 Attributs étendent C++ dans les directions n’est pas actuellement possibles sans casser la structure classique de la langue. Attributs permettent aux fournisseurs (DLL séparées) pour étendre les fonctionnalités de langage dynamique. Le principal objectif des attributs est de simplifier la création de composants COM, en plus d’augmenter la productivité des développeurs de composants. Attributs peuvent être appliqués à presque n’importe quelle construction C++, telles que des classes, des membres de données ou des fonctions membres. Voici une mise en surbrillance des avantages offerts par cette nouvelle technologie :  
@@ -35,7 +35,7 @@ Attributs étendent C++ dans les directions n’est pas actuellement possibles s
   
  Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer le [event_receiver](../windows/event-receiver.md) attribut sur une classe spécifique, tel que `CMyReceiver`. Le `event_receiver` attribut est ensuite compilé par le compilateur Visual C++, qui insère le code approprié dans le fichier objet.  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  

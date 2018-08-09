@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7bd721d8f1edeedacc04515eef917899ed0c667
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3a2f7025d9e367c2a31d14012d9f6b22de3e70f2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608480"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011710"
 ---
 # <a name="runtimeclassaddref-method"></a>RuntimeClass::AddRef, méthode
 Incrémente le décompte de références pour actuel **RuntimeClass** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    AddRef  

@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102463"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018843"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Guide du développeur de C++ pour les canaux du côté l’exécution spéculative
 
-Cet article contient des conseils pour les développeurs aider à identifier et atténuer les vulnérabilités de matériel de canal de côté l’exécution spéculative dans des logiciels de C++. Ces vulnérabilités peuvent divulguer des informations sensibles au-delà des limites de confiance et peuvent affecter les logiciels qui s’exécutent sur des processeurs qui prennent en charge l’exécution spéculative et de désordre des instructions. Cette classe de vulnérabilités a été premier décrit dans janvier 2018 et arrière-plan supplémentaire et vous trouverez des instructions dans [avis de sécurité de Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Cet article contient des conseils pour les développeurs aider à identifier et atténuer les vulnérabilités de matériel de canal de côté l’exécution spéculative dans des logiciels de C++. Ces vulnérabilités peuvent divulguer des informations sensibles au-delà des limites de confiance et peuvent affecter les logiciels qui s’exécutent sur des processeurs qui prennent en charge l’exécution spéculative et de désordre des instructions. Cette classe de vulnérabilités a été premier décrit dans janvier 2018 et arrière-plan supplémentaire et vous trouverez des instructions dans [avis de sécurité de Microsoft](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 Les instructions fournies par cet article concerne les classes de vulnérabilités représentées par :
 
-1. CVE-2017-5753, également connu sous le variante Spectre 1. Cette classe de vulnérabilité de matériel est liée à des canaux du côté qui peuvent se produire en raison de l’exécution spéculative qui se produit suite à une mauvaise prédiction de branchement conditionnel. Le compilateur Visual C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge la `/Qspectre` commutateur qui fournit une atténuation de la compilation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. La documentation relative à la [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) indicateur fournit plus d’informations sur l’utilisation et ses effets. 
+1. CVE-2017-5753, également connu sous le variante Spectre 1. Cette classe de vulnérabilité de matériel est liée à des canaux du côté qui peuvent se produire en raison de l’exécution spéculative qui se produit suite à une mauvaise prédiction de branchement conditionnel. Le compilateur Visual C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge la `/Qspectre` commutateur qui fournit une atténuation de la compilation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. La documentation relative à la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) indicateur fournit plus d’informations sur l’utilisation et ses effets. 
 
 2. CVE-2018-3639, également appelé [spéculative Store contournement (SSB)](https://aka.ms/sescsrdssb). Cette classe de vulnérabilité de matériel est liée à des canaux du côté qui peuvent se produire en raison de l’exécution spéculative d’une charge avance un magasin dépendant à la suite d’une mauvaise prédiction de l’accès mémoire.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Il convient de noter que ces deux exemples impliquent la modification spéculative de pointeurs d’alloué par la pile de branche indirect. Il est possible que modification spéculative peut également se produire pour les variables globales, la mémoire alloués par tas et même la mémoire morte sur certains processeurs. Pour la mémoire allouée à la pile, le compilateur Visual C++ prend déjà les étapes pour le rendre plus difficile à modifier spéculant cibles alloué par la pile de branche indirecte, comme en réorganisant les variables locales telles que les mémoires tampons sont placées en position adjacentes à un cookie de sécurité en tant que dans le cadre de la [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) fonctionnalité de sécurité du compilateur.
+Il convient de noter que ces deux exemples impliquent la modification spéculative de pointeurs d’alloué par la pile de branche indirect. Il est possible que modification spéculative peut également se produire pour les variables globales, la mémoire alloués par tas et même la mémoire morte sur certains processeurs. Pour la mémoire allouée à la pile, le compilateur Visual C++ prend déjà les étapes pour le rendre plus difficile à modifier spéculant cibles alloué par la pile de branche indirecte, comme en réorganisant les variables locales telles que les mémoires tampons sont placées en position adjacentes à un cookie de sécurité en tant que dans le cadre de la [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) fonctionnalité de sécurité du compilateur.
 
 ## <a name="speculative-type-confusion"></a>Toute confusion type spéculative
 
@@ -368,6 +368,6 @@ Une autre technique qui peut être utilisée pour atténuer les vulnérabilités
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conseils pour atténuer les vulnérabilités par canal latéral l’exécution spéculative](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Conseils pour atténuer les vulnérabilités par canal latéral l’exécution spéculative](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Atténuer les vulnérabilités de matériel de l’exécution spéculative côté canal](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

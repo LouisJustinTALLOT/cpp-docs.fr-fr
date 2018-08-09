@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645407"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020084"
 ---
 # <a name="string-c"></a>string (C++)
 Indique qu’unidimensionnel **char**, **wchar_t**, `byte` (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité comme une chaîne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [string]  
 ```  
   

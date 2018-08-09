@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569454"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015545"
 ---
 # <a name="how-to-use-resource-templates"></a>comment : utiliser des modèles de ressources
 Un modèle de ressource est une ressource personnalisée que vous avez enregistrée en tant que fichier .rct. Un modèle de ressource peut servir ensuite de point de départ pour la création d'autres ressources. Les modèles de ressources permettent de gagner du temps pour le développement de ressources ou de groupes de ressources supplémentaires qui partagent des fonctionnalités, par exemple les contrôles standard et autres éléments récurrents. Par exemple, vous pouvez être amené à inclure un bouton Aide et l'icône d'un logo d'entreprise dans plusieurs boîtes de dialogue. Pour y parvenir rapidement, créez un modèle de boîte de dialogue, puis personnalisez-le avec le logo et le bouton Aide.  
@@ -46,7 +46,7 @@ Un modèle de ressource est une ressource personnalisée que vous avez enregistr
   
 4.  Fournissez un nom et un emplacement pour votre nouveau fichier .rct, puis cliquez sur **Open**.  
   
-5.  Le nouveau fichier .rct est ajouté à votre projet et apparaît dans l’Explorateur de solutions sous le **ressources** dossier.  
+5.  Le nouveau fichier .rct est ajouté à votre projet et apparaît dans **l’Explorateur de solutions** sous le **ressources** dossier.  
   
      Vous pouvez désormais double-cliquez sur le fichier .rct pour l’ouvrir dans une fenêtre de document, puis ajouter des ressources (cliquez sur le fichier dans la fenêtre de document et choisissez **ajouter une ressource** dans le menu contextuel). Vous pouvez ensuite personnaliser ces ressources et enregistrer le fichier .rct.  
   
@@ -76,7 +76,6 @@ Un modèle de ressource est une ressource personnalisée que vous avez enregistr
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

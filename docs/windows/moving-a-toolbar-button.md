@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90cdd21d77901f10b92ec73084806e8523924724
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8c0f6240ae35971d9f8f9d69d1985330de6206fe
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607451"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010845"
 ---
 # <a name="moving-a-toolbar-button"></a>Déplacement d'un bouton de barre d'outils
 ### <a name="to-move-a-toolbar-button"></a>Pour déplacer un bouton de barre d’outils  
@@ -31,7 +31,6 @@ ms.locfileid: "39607451"
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  MFC ou ATL  
   
 ## <a name="see-also"></a>Voir aussi  

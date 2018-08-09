@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d72fa9523b850e5c7d76b587c37b181f21df25c0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606798"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013978"
 ---
 # <a name="propputref"></a>propputref
 Spécifie une fonction de définition de propriété qui utilise une référence plutôt qu’une valeur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [propputref]  
 ```  
   

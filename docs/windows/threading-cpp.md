@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6da3bd5f0dd318b781d967d7974ef603b60b9ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652999"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019200"
 ---
 # <a name="threading-c"></a>thread (C++)
 Spécifie le modèle de thread pour un objet COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ threading(  
    model=enumeration  
 ) ]  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603343"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018359"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Permet d’utiliser des mots clés Visual C++ en tant qu’identificateurs.  
@@ -31,7 +31,7 @@ Permet d’utiliser des mots clés Visual C++ en tant qu’identificateurs.
 ## <a name="all-platforms"></a>Toutes les plateformes  
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Utilisation de la **__identifier** mot clé pour les identificateurs qui ne sont
 ### <a name="examples"></a>Exemples  
  **Exemple**  
   
- Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.  
+ Dans l’exemple suivant, une classe nommée **modèle** est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le **modèle** (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Exemples  
   
- Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.  
+ Dans l’exemple suivant, une classe nommée **modèle** est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le **modèle** (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.  
   
 ```cs  
 // identifier_template.cs  

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643281"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017326"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
 Vous pouvez utiliser Visual C++ dans l’environnement de développement intégré (IDE) Visual Studio pour créer des programmes C++ Standard. En suivant les étapes décrites dans cette procédure pas à pas, vous pouvez créer un projet, ajoutez un nouveau fichier au projet, modifiez le fichier pour ajouter du code C++, puis compiler et exécuter le programme à l’aide de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -59,7 +59,7 @@ Vous pouvez utiliser Visual C++ dans l’environnement de développement intégr
   
     2.  Dans le **Code** nœud, cliquez sur **fichier C++ (.cpp)**, tapez un nom pour le fichier, puis cliquez sur **ajouter**.  
   
-     Le fichier .cpp apparaît dans le dossier de fichiers sources dans **l’Explorateur de solutions**, et le fichier est ouvert dans l’éditeur Visual Studio.  
+     Le fichier .cpp apparaît dans le **fichiers sources** dossier **l’Explorateur de solutions**, et le fichier est ouvert dans l’éditeur Visual Studio.  
   
 6.  Dans le fichier dans l’éditeur, tapez un programme C++ valid qui utilise la bibliothèque C++ Standard, ou copiez un des exemples de programmes et collez-le dans le fichier.  
   

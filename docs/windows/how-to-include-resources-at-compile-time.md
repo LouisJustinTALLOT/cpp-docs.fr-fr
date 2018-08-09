@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571335"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018914"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Comment : inclure des ressources au moment de la compilation
 Normalement, il est facile et pratique d'utiliser la disposition par défaut de toutes les ressources dans un seul fichier de script de ressources (.rc). Toutefois, vous pouvez ajouter des ressources dans d’autres fichiers à votre projet actif au moment de la compilation en les répertoriant dans la **directives de compilation** zone le [boîte de dialogue Include des ressources](../windows/resource-includes-dialog-box.md).  
@@ -37,7 +37,7 @@ Normalement, il est facile et pratique d'utiliser la disposition par défaut de 
   
 -   Vous souhaitez ajouter des commentaires à des instructions de ressource qui ne sont pas supprimées quand vous enregistrez le fichier .rc.  
   
-     Les éditeurs de ressources ne lisent pas directement les fichiers .rc ou resource.h. Le compilateur de ressources les compile en fichiers .aps, qui sont consommés par les éditeurs de ressources. Ce fichier est une étape de compilation, qui stocke uniquement les données symboliques. Comme pour un processus de compilation normal, les informations non symboliques (par exemple les commentaires) sont ignorées durant le processus de compilation. Chaque fois que le fichier .aps n'est plus synchronisé au fichier .rc, le fichier .rc est régénéré (par exemple, quand vous effectuez un enregistrement, l'éditeur de ressources remplace les fichiers .rc et resource.h). Les changements apportés aux ressources sont conservés dans le fichier .rc, mais les commentaires disparaissent une fois le fichier .rc remplacé.  
+     Les éditeurs de ressources ne lisent pas directement .rc ou `resource.h` fichiers. Le compilateur de ressources les compile en fichiers .aps, qui sont consommés par les éditeurs de ressources. Ce fichier est une étape de compilation, qui stocke uniquement les données symboliques. Comme pour un processus de compilation normal, les informations non symboliques (par exemple les commentaires) sont ignorées durant le processus de compilation. Chaque fois que le fichier .aps obtient désynchronisé avec le fichier .rc, le fichier .rc est régénéré (par exemple, lorsque vous enregistrez, l’éditeur de ressources remplace le fichier .rc et `resource.h` fichier). Les changements apportés aux ressources sont conservés dans le fichier .rc, mais les commentaires disparaissent une fois le fichier .rc remplacé.  
   
 -   Vous souhaitez inclure des ressources qui ont déjà été développées et testées, et qui n'ont pas besoin de modifications supplémentaires. (Les fichiers inclus mais dépourvus d'extension .rc ne sont pas modifiables par les éditeurs de ressources.)  
   
@@ -58,7 +58,6 @@ Normalement, il est facile et pratique d'utiliser la disposition par défaut de 
      Les ressources des fichiers inclus de cette façon sont intégrées à votre fichier exécutable au moment de la compilation. Elles ne sont pas directement modifiables quand vous travaillez sur le fichier .rc principal de votre projet. Vous devez ouvrir les fichiers .rc inclus séparément. Les fichiers inclus mais dépourvus d’extension .rc ne sont pas modifiables par les éditeurs de ressources.  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

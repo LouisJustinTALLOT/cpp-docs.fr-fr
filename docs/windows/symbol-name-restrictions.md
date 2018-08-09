@@ -1,5 +1,5 @@
 ---
-title: Restrictions relatives au nom de symbole | Documents Microsoft
+title: Restrictions relatives au nom de symbole | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892333"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011446"
 ---
 # <a name="symbol-name-restrictions"></a>Restrictions relatives au nom de symbole
 Les restrictions relatives aux noms de symboles sont les suivantes :  
@@ -53,9 +53,7 @@ Les restrictions relatives aux noms de symboles sont les suivantes :
 |Chaînes|IDS_|Chaîne dans la table de chaînes|  
 |MFC|AFX_|Réservé aux symboles MFC prédéfinis|  
   
-
-  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

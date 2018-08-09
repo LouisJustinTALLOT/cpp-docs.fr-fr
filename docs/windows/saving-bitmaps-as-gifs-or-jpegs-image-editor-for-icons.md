@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608155"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010689"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Enregistrement de bitmaps au format GIF ou JPEG (Éditeur d'images pour les icônes)
 Lorsque vous créez une image bitmap, l’image est créée au format bitmap (.bmp). Vous pouvez, toutefois, enregistrer l’image au format GIF ou JPEG ou dans d’autres formats graphiques.  
@@ -51,9 +51,10 @@ Lorsque vous créez une image bitmap, l’image est créée au format bitmap (.b
   
 4.  Avec la bitmap est ouverte dans le **Image** éditeur, cliquez sur **enregistrer *filename*.bmp comme** sur le **fichier** menu.  
   
-5.  Dans le **enregistrer le fichier sous** boîte de dialogue, tapez le nom que vous souhaitez attribuer au fichier et l’extension qui dénote le format de fichier dans le **nom de fichier** boîte. Par exemple, monfichier.gif.  
+5.  Dans le **enregistrer le fichier sous** boîte de dialogue, tapez le nom que vous souhaitez attribuer au fichier et l’extension qui dénote le format de fichier dans le **nom de fichier** boîte. Par exemple, *MonFichier.gif*.  
   
-     **Remarque** vous devez créer ou ouvrir l’image bitmap en dehors de votre projet afin d’enregistrer dans un autre format de fichier. Si vous créez ou ouvrez dans votre projet, le **enregistrer en tant que** n’est pas disponible. Pour plus d’informations, consultez [affichage des ressources dans un fichier de Script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     > [!NOTE]
+     > Vous devez créer ou ouvrir l’image bitmap en dehors de votre projet afin d’enregistrer dans un autre format de fichier. Si vous créez ou ouvrez dans votre projet, le **enregistrer en tant que** n’est pas disponible. Pour plus d’informations, consultez [affichage des ressources dans un fichier de Script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Cliquez sur **Enregistrer**.  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f374c945312e41fd54b525dc0cb7cd84ce84985d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608856"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018892"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid, méthode
 Insère l’ID d’interface spécifié par le paramètre de modèle actuel placée dans l’élément de tableau spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    unsigned long &index,  
    _In_ IID* iids  

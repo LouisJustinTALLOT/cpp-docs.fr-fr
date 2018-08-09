@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604354"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018592"
 ---
 # <a name="module-c"></a>module (C++)
 Définit le bloc de bibliothèque dans le fichier .idl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ Définit le bloc de bibliothèque dans le fichier .idl.
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *type* (facultatif)  
- Il peut s'agir d'une des valeurs suivantes :  
+*type* (facultatif)  
+Il peut s'agir d'une des valeurs suivantes :  
   
 -   `dll` Ajoute des fonctions et des classes qui permettent à la DLL résultante de fonctionner comme serveur COM in-process. Valeur par défaut.  
   
@@ -61,51 +61,51 @@ Définit le bloc de bibliothèque dans le fichier .idl.
   
 -   `unspecified` Désactive l’injection de code ATL associé à l’attribut de module : injection de la classe ATL Module, instance globale _AtlModule et entrée des fonctions de point. Ne désactive pas l’injection de code ATL due à d’autres attributs dans le projet.  
   
- *name* (facultatif)  
- Nom du bloc de bibliothèque.  
+*name* (facultatif)  
+Nom du bloc de bibliothèque.  
   
- *version* (facultatif)  
- Numéro de version que vous souhaitez affecter au bloc de bibliothèque. La valeur par défaut est 1,0.  
+*version* (facultatif)  
+Numéro de version que vous souhaitez affecter au bloc de bibliothèque. La valeur par défaut est 1,0.  
   
- *uuid*  
- ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer le *uuid* de votre bloc de bibliothèque, vous pouvez ainsi faire en utilisant l’identificateur **__uuidof (***nom_bibliothèque***)**.  
+*uuid*  
+ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer le *uuid* de votre bloc de bibliothèque, vous pouvez ainsi faire en utilisant l’identificateur **__uuidof (***nom_bibliothèque***)**.  
   
- *lcid*  
- Paramètre de localisation. Pour plus d’informations, consultez [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
+*lcid*  
+Paramètre de localisation. Pour plus d’informations, consultez [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
   
- *contrôle* (facultatif)  
- Indique que toutes les coclasses dans la bibliothèque sont des contrôles.  
+*contrôle* (facultatif)  
+Indique que toutes les coclasses dans la bibliothèque sont des contrôles.  
   
- *helpstring*  
- Spécifie la bibliothèque de types.  
+*helpstring*  
+Spécifie la bibliothèque de types.  
   
- *helpstringdll* (facultatif)  
- Définit le nom du fichier .dll à utiliser pour effectuer une recherche de chaîne de document. Pour plus d’informations, consultez [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .  
+*helpstringdll* (facultatif)  
+Définit le nom du fichier .dll à utiliser pour effectuer une recherche de chaîne de document. Pour plus d’informations, consultez [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .  
   
- *HelpFile* (facultatif)  
- Nom du fichier d’aide pour la bibliothèque de types.  
+*HelpFile* (facultatif)  
+Le nom de la **aide** fichier pour la bibliothèque de types.  
   
- *HelpContext* (facultatif)  
- ID d’aide pour cette bibliothèque de types.  
+*HelpContext* (facultatif)  
+Le **ID d’aide** pour cette bibliothèque de types.  
   
- *helpstringcontext* (facultatif)  
- Pour plus d’informations, consultez [helpstringcontext](../windows/helpstringcontext.md) .  
+*helpstringcontext* (facultatif)  
+Pour plus d’informations, consultez [helpstringcontext](../windows/helpstringcontext.md) .  
   
- *masqué* (facultatif)  
- Empêche l’affichage de l’intégralité de la bibliothèque. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Pour plus d’informations, consultez l’attribut MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
+*masqué* (facultatif)  
+Empêche l’affichage de l’intégralité de la bibliothèque. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Pour plus d’informations, consultez l’attribut MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
   
- *restreint* (facultatif)  
- Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
+*restreint* (facultatif)  
+Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
- *personnalisé* (facultatif)  
- Un ou plusieurs attributs. Ceci est similaire à l’attribut [custom](../windows/custom-cpp.md) . Le premier paramètre de *personnalisé* est le GUID de l’attribut. Exemple :  
+*personnalisé* (facultatif)  
+Un ou plusieurs attributs. Ceci est similaire à l’attribut [custom](../windows/custom-cpp.md) . Le premier paramètre de *personnalisé* est le GUID de l’attribut. Exemple :  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- ID de ressource de chaîne du fichier .rgs utilisé pour enregistrer l’ID d’application de la DLL, de l’exécutable ou du service. Quand le module est de type service, cet argument sert également à obtenir l’ID de la chaîne contenant le nom du service.  
+*resource_name*  
+ID de ressource de chaîne du fichier .rgs utilisé pour enregistrer l’ID d’application de la DLL, de l’exécutable ou du service. Quand le module est de type service, cet argument sert également à obtenir l’ID de la chaîne contenant le nom du service.  
   
 > [!NOTE]
 >  Le fichier .rgs et la chaîne contenant le nom du service doivent tous deux contenir la même valeur numérique.  

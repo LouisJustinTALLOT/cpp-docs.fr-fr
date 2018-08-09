@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6543ada6840b292d6a7b981eefeab41642c42df
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649271"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017930"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits (structure)
 Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou exclusif.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct SRWLockExclusiveTraits;  
 ```  
   

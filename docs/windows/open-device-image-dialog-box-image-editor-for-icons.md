@@ -1,5 +1,5 @@
 ---
-title: Ouvrez &lt;périphérique&gt; l’Image de la boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Ouvrez &lt;appareil&gt; boîte de dialogue (Éditeur d’images pour les icônes) Image | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fdb7fb2baf2b12105475679a237fef6b69f5728
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3cfcf2ec4fdd5a559cf52bc84ee6e50031797c9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881703"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013325"
 ---
-# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Ouvrez &lt;périphérique&gt; l’Image de la boîte de dialogue (Éditeur d’images pour les icônes)
+# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Ouvrez &lt;appareil&gt; l’Image de la boîte de dialogue (Éditeur d’images pour les icônes)
 Utilisez cette boîte de dialogue pour ouvrir des images de périphérique. Il répertorie les images de périphérique existantes dans la ressource actuelle (les images qui font partie de la ressource actuelle).  
   
- **Images en cours**  
+### <a name="current-images"></a>Images actuelles  
  Répertorie les images incluses dans la ressource. Sélectionnez le type d’image que vous souhaitez ouvrir.  
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Menu image](../windows/image-menu-image-editor-for-icons.md)   
  [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
-

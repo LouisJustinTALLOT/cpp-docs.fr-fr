@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0929ac466a5f09a0ee2401111b40a969aaf7193d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5a59f1d677a3412f8f3edd016a9c719a8e221d6f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606811"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015570"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_, données de membre
 Contient un pointeur vers le Gestionnaire d’événements actuel **Module::MethodReleaseNotifier** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void (T::* method_)();  
 ```  
   

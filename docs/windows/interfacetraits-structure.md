@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6cb96b90a069c12e65c53158717d9a89fb0aed3d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606746"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014098"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<  
    typename I0  
 >  
@@ -69,7 +69,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 |[InterfaceTraits::CastToBase, méthode](../windows/interfacetraits-casttobase-method.md)|Effectue un cast du pointeur spécifié vers un pointeur vers `Base`.|  
 |[InterfaceTraits::CastToUnknown, méthode](../windows/interfacetraits-casttounknown-method.md)|Effectue un cast du pointeur spécifié vers un pointeur vers `IUnknown`.|  
 |[InterfaceTraits::FillArrayWithIid, méthode](../windows/interfacetraits-fillarraywithiid-method.md)|Attribue l’ID de l’interface de `Base` à l’élément de tableau spécifié par l’argument d’index.|  
-|[InterfaceTraits::Verify, méthode](../windows/interfacetraits-verify-method.md)|Vérifie qu’est correctement dérivé de Base.|  
+|[InterfaceTraits::Verify, méthode](../windows/interfacetraits-verify-method.md)|Vérifie que `Base` est dérivé correctement.|  
   
 ### <a name="public-constants"></a>Constantes publiques  
   

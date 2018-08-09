@@ -1,5 +1,5 @@
 ---
-title: Microsoft::wrl::wrappers Namespace | Documents Microsoft
+title: Microsoft::wrl::wrappers Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9667a3660f46db0a61991545108d66bf0cac9f38
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878279"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017794"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers, espace de noms
-Définit les types de wrapper de l’initialisation d’est d’Acquisition de ressources (RAII) qui simplifient la gestion de la durée de vie des objets, les chaînes et les handles.  
+Définit les types de wrapper Resource Acquisition est d’initialisation (RAII) qui simplifient la gestion de la durée de vie des objets, les chaînes et les descripteurs.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers;  
 ```  
   
@@ -47,15 +47,15 @@ namespace Microsoft::WRL::Wrappers;
 |----------|-----------------|  
 |[CriticalSection, classe](../windows/criticalsection-class.md)|Représente un objet de section critique.|  
 |[Event, classe (bibliothèque de modèles Windows Runtime C++)](../windows/event-class-windows-runtime-cpp-template-library.md)|Représente un événement.|  
-|[HandleT, classe](../windows/handlet-class.md)|Représente un handle d’un objet.|  
-|[HString, classe](../windows/hstring-class.md)|Prend en charge pour la manipulation des descripteurs de HSTRING.|  
-|[HStringReference, classe](../windows/hstringreference-class.md)|Représente un HSTRING est créé à partir d’une chaîne existante.|  
+|[HandleT, classe](../windows/handlet-class.md)|Représente un handle à un objet.|  
+|[HString, classe](../windows/hstring-class.md)|Prend en charge des handles HSTRING.|  
+|[HStringReference, classe](../windows/hstringreference-class.md)|Représente un HSTRING créé à partir d’une chaîne existante.|  
 |[Mutex (classe)](../windows/mutex-class1.md)|Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.|  
-|[RoInitializeWrapper, classe](../windows/roinitializewrapper-class.md)|Initialise le Windows Runtime.|  
+|[RoInitializeWrapper, classe](../windows/roinitializewrapper-class.md)|Initialise le Runtime de Windows.|  
 |[Semaphore, classe](../windows/semaphore-class.md)|Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.|  
-|[SRWLock, classe](../windows/srwlock-class.md)|Représente un verrou de lecteur/writer compacte.|  
+|[SRWLock, classe](../windows/srwlock-class.md)|Représente un verrou SRW.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

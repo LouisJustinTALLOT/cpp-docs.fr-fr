@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Nouvelle ressource personnalisée | Documents Microsoft
+title: Boîte de dialogue Nouvelle ressource personnalisée | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5474ff56c5a0a10842e090dc05b7c3515046dac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 420f5a6db7c537b8ccfa4d6b6ffbb86242a44299
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876122"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012961"
 ---
 # <a name="new-custom-resource-dialog-box"></a>Nouvelle ressource personnalisée, boîte de dialogue
 Vous permet de créer une nouvelle ressource personnalisée.  
   
- **Type de ressource**  
- Fournit une zone de texte pour entrer le nom d’un type de ressource personnalisé. Visual C++ met automatiquement le nom lorsque vous quittez la **nouvelle ressource personnalisée** boîte de dialogue.  
+### <a name="resource-type"></a>Type de ressource  
+ Fournit une zone de texte, vous pouvez entrer le nom d’un type de ressource personnalisée. Visual C++ met automatiquement le nom lorsque vous quittez le **nouvelle ressource personnalisée** boîte de dialogue.  
   
 ## <a name="remarks"></a>Notes  
  Ne spécifiez pas un nom de ressource ou un ID qui est réservée par [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Les noms réservés sont DESIGNINFO, HWB et TEXTINCLUDE et l’ID réservé est 255.  

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606934"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010287"
 ---
 # <a name="modifying-the-layout-grid"></a>Modification de la présentation grille
 Lorsque vous placez ou réorganiser les contrôles dans une boîte de dialogue, vous pouvez utiliser la grille de disposition pour un positionnement plus précis. Lorsque la grille est activée, les contrôles apparaissent comme « aligne » sur les lignes en pointillés de la grille comme si elle était aimantée. Vous pouvez activer cette fonctionnalité « Aligner sur la grille » et de désactiver et modifier la taille des disposition des cellules de grille.  
@@ -35,7 +35,7 @@ Lorsque vous placez ou réorganiser les contrôles dans une boîte de dialogue, 
   
 2.  Dans le [repère, boîte de dialogue Paramètres](../windows/guide-settings-dialog-box.md), activez ou désactivez le **grille** bouton.  
   
-     Vous pouvez toujours contrôler la grille dans les fenêtres individuelles de l’éditeur de boîte de dialogue à l’aide de la **bascule grille** bouton sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     Vous pouvez toujours contrôler la grille de l’individu **boîte de dialogue** fenêtres de l’éditeur à l’aide de la **bascule grille** bouton sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>Pour modifier la taille de la grille de disposition  
   
@@ -46,7 +46,6 @@ Lorsque vous placez ou réorganiser les contrôles dans une boîte de dialogue, 
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Configuration requise  
-  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

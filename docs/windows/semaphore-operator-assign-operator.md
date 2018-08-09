@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 49405cda5ff7a9d3313ebafbda35b5fb6182febe
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651276"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015505"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator=, opérateur
 Déplace le handle spécifié à partir d’un **sémaphore** objet actuel **sémaphore** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Semaphore& operator=(  
    _Inout_ Semaphore&& h  
 );  
