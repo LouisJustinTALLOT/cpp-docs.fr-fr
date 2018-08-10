@@ -1,5 +1,5 @@
 ---
-title: Charger la Palette de couleurs boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Charger la Palette de couleurs boîte de dialogue (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95e5235a792301f3742bc576da607d7433f2e4b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b88f13d0073c47d5c43908d4fea38c4337a5e1a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878172"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011404"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Charger la palette de couleurs (Éditeur d'images pour les icônes)
-Utilisez cette boîte de dialogue pour charger des palettes de couleurs particulières à utiliser dans votre projet. Pour plus d’informations, consultez [l’enregistrement et chargement de différentes Palettes de couleurs](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+Utilisez cette boîte de dialogue pour charger des palettes de couleurs spécial à utiliser dans votre projet. Pour plus d’informations, consultez [l’enregistrement et chargement de différentes Palettes de couleurs](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
- **Regarder dans**  
- Spécifie l’emplacement où vous souhaitez rechercher un fichier ou un dossier. Cliquez sur la flèche pour sélectionner un autre emplacement, ou cliquez sur l’icône de dossier sur la barre d’outils pour déplacer les niveaux.  
+### <a name="look-in"></a>Regarder dans  
+ Spécifie l’emplacement où vous souhaitez localiser un fichier ou dossier. Cliquez sur la flèche pour sélectionner un autre emplacement, ou cliquez sur l’icône de dossier dans la barre d’outils pour déplacer les niveaux.  
   
- **Nom de fichier**  
- Offre un espace vous permettant de taper le nom du fichier que vous souhaitez ouvrir. Pour rechercher rapidement un fichier que vous avez déjà ouvert, cliquez sur le nom de fichier dans la liste déroulante, si elle est disponible.  
+### <a name="file-name"></a>Nom de fichier  
+ Offre un espace vous permettant de taper le nom du fichier que vous souhaitez ouvrir. Pour trouver rapidement un fichier que vous avez déjà ouvert, cliquez sur le nom de fichier dans la liste déroulante, si elle est disponible.  
   
- Si vous recherchez un fichier, vous pouvez utiliser des astérisques (*) comme caractères génériques. Par exemple, vous pouvez taper \*.\* pour afficher la liste de tous les fichiers. Vous pouvez également taper le chemin d’accès complet d’un fichier, par exemple, de C:\My Documents\MyColorPalette.PAL ou \\\NetworkServer\MyFolder\MyColorPalette.pal.  
+ Si vous recherchez un fichier, vous pouvez utiliser des astérisques (*) comme caractères génériques. Par exemple, vous pouvez taper \*.\* pour afficher la liste de tous les fichiers. Vous pouvez également taper le chemin d’accès complet d’un fichier, par exemple, C:\My Documents\MyColorPalette.PAL ou \\\NetworkServer\MyFolder\MyColorPalette.pal.  
   
- **Types de fichiers**  
+### <a name="files-of-type"></a>Type de fichiers  
  Répertorie les types de fichiers à afficher. Palette (* .pal) est le type de fichier par défaut pour les palettes de couleurs.  
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
