@@ -482,7 +482,7 @@ virtual void OnDrawOnList(
  Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.  
   
  [in] *strText*  
- Le texte d’affichage [cmfcribbonedit classe](../../mfc/reference/cmfcribbonedit-class.md "").  
+ Le texte d’affichage [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit classe").  
   
  [in] *nTextOffset*  
  Distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.  
