@@ -1,5 +1,5 @@
 ---
-title: L’optimisation à virgule flottante de Microsoft Visual C++ | Documents Microsoft
+title: Optimisation à virgule flottante de Microsoft Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -9,23 +9,22 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35c9263fa6252469124eefb0dfd575ef5bd2ac34
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422732"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595046"
 ---
-# <a name="microsoft-visual-c-floating-point-optimization"></a>Optimisation de la virgule flottante de Microsoft Visual C++
+# <a name="microsoft-visual-c-floating-point-optimization"></a>Optimisation à virgule flottante de Microsoft Visual C++
 
-Obtenez un descripteur sur l’optimisation du code à virgule flottante à l’aide de la méthode du compilateur Microsoft C++ de la gestion de la sémantique à virgule flottante. Créer des programmes rapides tout en garantissant que seules les optimisations sécurisées sont effectuées sur le code à virgule flottante.
+Obtenez un descripteur sur l’optimisation du code en virgule flottante à l’aide de la méthode du compilateur Microsoft C++ de la gestion de la sémantique en virgule flottante. Créer des programmes rapides tout en garantissant que seules les optimisations sécurisées sont effectuées sur le code en virgule flottante.
 
 ## <a name="optimization-of-floating-point-code-in-c"></a>Optimisation du code à virgule flottante en C++
 
-Un compilateur C++ d’optimisation traduit non seulement le code source en code machine, il réorganise les instructions de l’ordinateur de manière à améliorer l’efficacité et/ou à réduire la taille. Malheureusement, le nombre d’optimisations courantes n’est pas nécessairement sécurisé quand il est appliqué à des calculs en virgule flottante. Un bon exemple de ce peut être affiché avec l’algorithme de somme suivant, obtenue à partir de David Goldberg, « Ce que chaque ordinateur chercheur doit connaître sur nombres à virgule flottante arithmétiques », *informatique des enquêtes*, mars 1991, pg. 203 :
+Un compilateur C++ d’optimisation traduit non seulement le code source en code machine, mais organise également les instructions machine de façon à améliorer l’efficacité et/ou à réduire la taille. Malheureusement, de nombreuses optimisations courantes ne sont pas nécessairement sécurisées lorsqu’il est appliqué à des calculs en virgule flottante. Un bon exemple de ce qui peut être consulté avec l’algorithme de somme suivante, extraite de David Goldberg, « Ce que chaque ordinateur scientifique doit savoir sur Floating-Point Arithmetic », *Computing Surveys*, mars 1991, pg. 203 :
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -42,15 +41,15 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Cette fonction ajoute n **float** valeurs du vecteur de tableau `A`. Dans le corps de la boucle, l’algorithme calcule une valeur de « correction » qui est ensuite appliquée à l’étape suivante de la somme. Cette méthode réduit considérablement les erreurs d’arrondi cumulés par rapport à une somme simple tout en conservant la complexité temporelle d’o (n).
+Cette fonction ajoute n **float** valeurs du vecteur de tableau `A`. Dans le corps de la boucle, l’algorithme calcule une valeur de « correction » qui est ensuite appliquée à l’étape suivante de la somme. Cette méthode réduit considérablement les erreurs d’arrondi cumulés par rapport à une somme simple tout en conservant la complexité d’o (n) fois.
 
-Un compilateur C++ naïf peut-être supposer qu’arithmétique à virgule flottante suit les mêmes règles algébriques que l’arithmétique des nombres réels. Ce type de compilateur puis tort permettent de conclure que
+Un compilateur C++ naïf peut supposer qu’arithmétique à virgule flottante suit les mêmes règles algébriques que l’arithmétique des nombres réels. Un tel compilateur peut ensuite à tort la conclusion que
 
-> C = T - somme - Y == > (somme + Y) - somme - Y == > 0 ;
+> C = T - sum - Y == > (somme + Y) - sum - Y == > 0 ;
 
-Autrement dit, que la valeur perçue de C est toujours un constante zéro. Si cette valeur constante est propagée aux expressions suivantes, le corps de la boucle est réduit à une somme simple. Pour être précis,
+Autrement dit, que la valeur perçue de C est toujours un zéro constant. Si cette valeur constante est propagée aux expressions suivantes, le corps de boucle est réduit à une simple somme. Pour être précis,
 
-> Y = [i] - C == > Y = [i]<br/>T = somme + Y == > T = somme + [i]<br/>SUM = T == > somme = somme + [i]
+> Y = [i] - C == > Y = un [i]<br/>T = somme + Y == > T = somme + un [i]<br/>SUM = T == > somme = somme + un [i]
 
 Par conséquent, pour le compilateur naïf, une transformation logique de la `KahanSum` fonction serait :
 
@@ -64,11 +63,11 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Bien que l’algorithme transformé est plus rapide, *n’est pas du tout une représentation exacte de l’intention du programmeur*. La correction des erreurs élaborées avec soin a été entièrement supprimée et nous obtenons un algorithme de somme simple et direct avec les erreurs correspondantes.
+Bien que l’algorithme transformé soit plus rapide, *il n’est pas du tout une représentation exacte de l’intention du programmeur*. La correction d’erreur élaborée avec soin a été entièrement supprimée et nous obtenons un algorithme de somme simple et direct, avec toutes les erreurs correspondantes.
 
-Bien entendu, un compilateur C++ perfectionné sait algébriques qui les règles de réel arithmétique ne généralement s’appliquent pas à l’arithmétique à virgule flottante. Toutefois, même un compilateur C++ perfectionné peut interpréter toujours correctement l’intention du programmeur.
+Bien entendu, un compilateur C++ perfectionné saurait autrement algébriques règles de réel arithmétique ne généralement s’appliquent pas à l’arithmétique à virgule flottante. Toutefois, même un compilateur C++ peut-être interpréter toujours correctement l’intention du programmeur.
 
-Prenons une optimisation classique qui tente de conserver toutes les valeurs dans les registres possible (appelée « enregistrement » une valeur). Dans le `KahanSum` exemple, cette optimisation peut tenter d’inscrire dans les variables `C`, `Y` et `T` dans la mesure où ils sont utilisés uniquement dans le corps de la boucle. La précision de Registre s’élève à 52 bits (double) au lieu de 23 (unique), cette optimisation efficacement type promeut `C`, `Y` et `T` au type **double**. Si la variable sum n’est pas de la même manière chances d’enregistrement, elle reste codée en simple précision. La sémantique de `KahanSum` à ce qui suit
+Prenons une optimisation classique qui tente d’intégrer autant de valeurs dans les registres que possible (appelé « enregistrement » une valeur). Dans le `KahanSum` exemple, cette optimisation peut tenter d’inscrire dans les variables `C`, `Y` et `T` dans la mesure où ils sont utilisés uniquement dans le corps de boucle. Si la précision de Registre s’élève à 52 bits (double) au lieu de 23 (unique), cette optimisation efficacement type promeut `C`, `Y` et `T` à taper **double**. Si la variable sum n’est pas de même inscrites dans le Registre, elle reste codée en simple précision. La sémantique de `KahanSum` à ce qui suit
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -86,9 +85,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Bien que `Y`, `T` et `C` sont maintenant calculées à une précision plus élevée, ce nouveau codage peut produire un résultat moins précis en fonction des valeurs de `A[]`. Par conséquent, même optimisations sans incidence peuvent avoir des conséquences négatives.
+Bien que `Y`, `T` et `C` soient désormais calculées à une précision plus élevée, ce nouveau codage peut produire un résultat moins précis en fonction des valeurs de `A[]`. Ainsi même apparemment inoffensifs optimisations peuvent avoir des conséquences négatives.
 
-Ces types de problèmes d’optimisation ne sont pas limitées à un code à virgule flottante « complexe ». Même simples algorithmes à virgule flottante peuvent échouer lors de l’optimisation est incorrecte. Considérez un algorithme de somme directe simple :
+Ces types de problèmes d’optimisation ne sont pas limitées à code en virgule flottante « complexe ». Les algorithmes à virgule flottante même simples peuvent échouer lors de l’optimisation est incorrecte. Prenez en compte un simple algorithme de somme directe :
 
 ```cpp
 float Sum( const float A[], int n )
@@ -100,7 +99,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-Étant donné que certaines unités à virgule flottante sont capables d’exécuter plusieurs opérations simultanément, un compilateur peut opter pour une optimisation de réduction scalaire. Cette optimisation transforme effectivement la fonction Sum simple ci-dessus dans les éléments suivants :
+Étant donné que certaines unités de virgule flottante sont capables d’exécuter plusieurs opérations simultanément, un compilateur peut opter pour une optimisation de la réduction scalaire. Cette optimisation transforme effectivement la simple fonction Sum ci-dessus dans les éléments suivants :
 
 ```cpp
 float Sum( const float A[], int n )
@@ -122,7 +121,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-La fonction comporte désormais quatre sommes distinctes, qui peuvent être traitées simultanément à chaque étape. Bien que la fonction optimisée est désormais plus rapide, les résultats optimisés peuvent être différents des résultats non optimisée. Dans cette modification, le compilateur a supposé associative addition à virgule flottante. Autrement dit, que ces deux expressions sont équivalentes : `(a + b) + c == a + (b + c)`. Toutefois, une associativité de ne pas toujours valable pour les nombres à virgule flottante. Au lieu de calculer la somme en tant que :
+La fonction comporte désormais quatre sommes distinctes qui peuvent être traitées simultanément à chaque étape. Bien que la fonction optimisée est désormais beaucoup plus rapide, les résultats optimisés peuvent être tout à fait différents à partir des résultats non optimisés. Dans cette modification, le compilateur a supposé associative addition à virgule flottante. Autrement dit, que ces deux expressions sont équivalentes : `(a + b) + c == a + (b + c)`. Toutefois, associativité n’est pas toujours vrai pour les nombres à virgule flottante. Au lieu de calculer la somme en tant que :
 
 ```cpp
 sum = A[0]+A[1]+A[2]+...+A[n-1];
@@ -137,17 +136,17 @@ sum = (A[0]+A[4]+A[8]+...)
     + (A[3]+A[7]+A[11]+...);
 ```
 
-Pour certaines valeurs de `A[]`, cette différence dans l’ordre des opérations d’addition peut produire des résultats inattendus. Pour compliquer encore les choses, certains programmeurs choisissent d’anticiper ces optimisations et compenser en conséquence. Dans ce cas, un programme peut créer le tableau `A` dans un ordre différent pour que la somme optimisée donne les résultats attendus. En outre, dans de nombreux cas, la précision des résultats optimisés peut être « suffisamment ». Cela est particulièrement vrai lorsque l’optimisation offre des avantages de vitesse. Jeux vidéo, par exemple, requièrent qu’accélérer autant que possible, mais ne nécessitent pas souvent des calculs en virgule flottante extrêmement précis. Les éditeurs de compilateurs doivent par conséquent fournir un mécanisme pour les programmeurs contrôler les objectifs, souvent disparates de vitesse et la précision.
+Pour certaines valeurs de `A[]`, cette différence dans l’ordre des opérations d’addition peut produire des résultats inattendus. Pour compliquer encore les choses, certains programmeurs choisissent d’anticiper ces optimisations et de les compenser en conséquence. Dans ce cas, un programme peut créer le tableau `A` dans un ordre différent afin que la somme optimisée produise les résultats escomptés. En outre, dans de nombreux cas, la précision des résultats optimisés peut être « suffisamment proche ». Cela est particulièrement vrai lorsque l’optimisation offre l’avantage de vitesse intéressant. Jeux vidéo, par exemple, requièrent accélérer autant que possible, mais ne nécessitent souvent des calculs en virgule flottante extrêmement précis. Les éditeurs de compilateurs doivent donc fournir un mécanisme pour les programmeurs contrôler les objectifs, souvent disparates de vitesse et la précision.
 
-Certains compilateurs de résoudre le compromis entre vitesse et la précision en fournissant un commutateur distinct pour chaque type d’optimisation. Cela permet aux développeurs de désactiver les optimisations qui affectent la précision en virgule flottante pour une application particulière. Alors que cette solution offre un degré élevé de contrôle sur le compilateur, il présente plusieurs problèmes supplémentaires :
+Certains compilateurs répondent au compromis vitesse et la précision en fournissant un commutateur distinct pour chaque type d’optimisation. Cela permet aux développeurs de désactiver les optimisations qui affectent la précision à virgule flottante pour une application particulière. Bien que cette solution offre un degré élevé de contrôle sur le compilateur, il présente plusieurs problèmes supplémentaires :
 
 - Il est souvent difficile de savoir quels commutateurs pour activer ou désactiver.
 - La désactivation d’une optimisation particulière peut nuire aux performances du code non à virgule flottante.
-- Pour chaque commutateur supplémentaire implique plusieurs combinaisons de commutateur nouveau ; le nombre de combinaisons peut devenir complexe.
+- Chaque commutateur supplémentaire multiple de nombreuses nouvelles combinaisons de commutateurs ; le nombre de combinaisons devenir difficile à gérer.
 
-Par conséquent, des commutateurs distincts pour chaque optimisation semble intéressante, à l’aide des compilateurs de ce type peut être fastidieuse et peu fiables.
+Par conséquent, des commutateurs distincts pour chaque optimisation semble intéressante, à l’aide de ces compilateurs peut être lourde et peu fiable.
 
-Nombreux compilateurs C++ offrent un *cohérence* modèle de virgule flottante, (via une **/Op** ou **/fltconsistency** basculer) qui permet à un développeur créer des programmes conformes avec une sémantique à virgule flottante stricte. Une fois activé, ce modèle empêche le compilateur à l’aide de la plupart des optimisations de calculs en virgule flottante tout en autorisant ces optimisations pour le code non en virgule flottante. Le modèle de cohérence, toutefois, a dark côté. Afin de retourner des résultats prévisibles sur différentes architectures FPU, presque toutes les implémentations de **/Op** round expressions intermédiaires à l’utilisateur spécifié de précision ; par exemple, prenons l’expression suivante :
+Nombre de compilateurs C++ offre un *cohérence* modèle de virgule flottante (via un **/Op** ou **/fltconsistency** basculer) qui permet à un développeur à créer des programmes conformes avec une sémantique à virgule flottante stricte. Une fois activé, ce modèle empêche le compilateur à l’aide de la plupart des optimisations sur des calculs en virgule flottante tout en autorisant ces optimisations pour le code non-virgule flottante. Le modèle de cohérence, cependant, a son revers. Afin de retourner des résultats prévisibles sur différentes architectures FPU, presque toutes les implémentations de **/Op** round expressions intermédiaires à l’utilisateur spécifié de précision ; par exemple, considérez l’expression suivante :
 
 ```cpp
 float a, b, c, d, e;
@@ -163,7 +162,7 @@ float y = d * e;
 a = x + y;
 ```
 
-Le résultat final contient désormais des erreurs d’arrondi simple précision *à chaque étape de l’évaluation de l’expression*. Bien que cette interprétation strictement n’empêche pas les règles de sémantique C++, il n’est presque jamais la meilleure façon d’évaluer des expressions en virgule flottante. Il est généralement plus judicieux de calcul intermédiaires entraîne aussi élevée que la précision que possible. Par exemple, il serait préférable de calcul de l’expression `a = b * c + d * e` dans une précision plus élevée, comme dans
+Le résultat final souffre maintenant d’erreurs d’arrondi simple précision *à chaque étape de l’évaluation de l’expression*. Bien que cette interprétation n’arrête strictement les règles de sémantique C++, il est presque jamais la meilleure façon d’évaluer des expressions en virgule flottante. Il est généralement plus judicieux de calcul intermédiaires entraîne aussi élevée que la précision possible. Par exemple, il serait préférable de calcul de l’expression `a = b * c + d * e` dans une précision plus élevée, comme dans
 
 ```cpp
 double x = b * c;
@@ -181,42 +180,42 @@ long double z = x + y;
 a = (float)z;
 ```
 
-Lors du calcul des résultats intermédiaires avec une précision plus élevée, le résultat final est sensiblement plus précis. Paradoxalement, par l’adoption d’un modèle de cohérence, la probabilité d’erreur augmente précisément à quel moment l’utilisateur essaie de réduire les erreurs en désactivant les optimisations non sécurisées. Par conséquent, le modèle de cohérence peut réduire nettement l’efficacité sans garantir aucune amélioration de la précision. Pour les programmeurs numériques graves, cela ne semble pas comme un très bon compromis et est la principale raison que le modèle n’est pas généralement bien reçu.
+Lors du calcul des résultats intermédiaires avec une précision plus élevée, le résultat final est sensiblement plus précis. Ironiquement, en adoptant un modèle de cohérence, la probabilité d’erreur augmente précisément lorsque l’utilisateur tente de réduire les erreurs en désactivant les optimisations non sécurisées. Par conséquent, le modèle de cohérence peut réduire nettement l’efficacité sans garantir aucune amélioration de la précision. Pour les programmeurs numériques graves, cela ne semble pas un très bon compromis et est la raison principale que le modèle est généralement pas bien accepté.
 
-Depuis la version 8.0 (Visual C++® 2005), Microsoft C++ compilateur fournit une solution plus adaptée. Il permet aux programmeurs de choisir un des trois modes à virgule flottante générales : fp : precise, fp : Fast et fp : strict.
+Depuis la version 8.0 (Visual C++® 2005), Microsoft C++ compilateur fournit une solution plus adaptée. Il permet aux programmeurs de choisir un des trois modes à virgule flottante générales : mode fp : precise, fp : Fast et fp : strict.
 
-- En mode fp : precise, uniquement sécurisant les optimisations de code à virgule flottante et, contrairement aux **/Op**, calculs intermédiaires sont effectuées de manière cohérente au niveau de précision le plus élevée possible.
+- En mode fp : precise, uniquement sécurisant les optimisations du code en virgule flottante et, contrairement à **/Op**, calculs intermédiaires sont effectués de manière cohérente à la précision plus élevé possible.
 - mode fp : Fast assouplit les règles à virgule flottante, permettant ainsi d’une optimisation au détriment de la précision.
-- fp : strict mode fournit tous les aspects d’exactitude du fp : precise lors de l’activation de la sémantique de l’exception de virgule flottante et en empêchant les transformations non conformes en présence de modifications de l’environnement FPU (par exemple, les modifications apportées à la précision de Registre, etc. de direction d’arrondi).
+- mode fp : strict mode fournit tous les aspects d’exactitude du mode fp : precise lors de l’activation de la sémantique d’exceptions de virgule flottante et en empêchant de transformation non autorisée en présence de modifications de l’environnement FPU (par exemple, les modifications apportées à la précision de Registre, etc. de direction d’arrondi).
 
-La sémantique d’exception à virgule flottante peut être contrôlée indépendamment par un commutateur de ligne de commande ou un pragma de compilateur ; par défaut, la sémantique d’exception à virgule flottante est désactivée en mode fp : precise et activée avec fp : strict. Le compilateur fournit également un contrôle sur l’environnement FPU et certaines optimisations à virgule flottante spécifiques, telles que les contractions. Ce modèle simple permet aux développeurs de contrôler la compilation du code à virgule flottante sans avoir à trop de commutateurs de compilation ou de la perspective d’effets secondaires indésirables précisément.
+Sémantique d’exceptions à virgule flottante peut être contrôlée indépendamment par un commutateur de ligne de commande ou un pragma de compilateur ; par défaut, la sémantique d’exceptions à virgule flottante est désactivée en mode fp : precise et activée en mode fp : strict. Le compilateur fournit également un contrôle sur l’environnement FPU et certaines optimisations à virgule flottante spécifiques, telles que les contractions. Ce modèle simple offre aux développeurs un grand contrôle sur la compilation du code en virgule flottante sans le fardeau de trop nombreux commutateurs du compilateur ou de la perspective d’effets secondaires indésirables.
 
-## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Fp : mode de précision pour la sémantique à virgule flottante
+## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Le mode fp : precise mode de sémantique en virgule flottante
 
-Le mode de sémantique à virgule flottante par défaut est fp : precise. Lorsque ce mode est sélectionné, le compilateur respecte strictement un ensemble de règles de sécurité lors de l’optimisation des opérations à virgule flottante. Ces règles permettent au compilateur de générer un code machine efficace tout en conservant la précision des calculs en virgule flottante. Pour faciliter la production d’accélérée programmes fp : modèle précis désactive la sémantique de l’exception de virgule flottante (même si elles peuvent être activées explicitement). Microsoft a choisi le mode fp : précis du mode par défaut à virgule flottante, car elle crée des programmes rapides et précises.
+Le mode de sémantique en virgule flottante par défaut est le mode fp : precise. Lorsque ce mode est sélectionné, le compilateur respecte strictement un ensemble de règles de sécurité lors de l’optimisation des opérations à virgule flottante. Ces règles permettent au compilateur de générer un code machine efficace tout en conservant la précision des calculs en virgule flottante. Pour faciliter la production de fast programmes, le mode fp : precise modèle désactive la sémantique d’exceptions à virgule flottante (bien qu’ils peuvent être explicitement activées). Microsoft a choisi le mode fp : precise comme le mode en virgule flottante par défaut car il crée des programmes à la fois rapides et précises.
 
-Demander explicitement fp : mode précision à l’aide du compilateur de ligne de commande, utilisez le [/fp : précise](fp-specify-floating-point-behavior.md) commutateur :
+Pour demander explicitement le mode fp : mode précision à l’aide du compilateur de ligne de commande, utilisez le [/fp : precise](fp-specify-floating-point-behavior.md) basculer :
 
-> CL fp : precise source.cpp
+> / de CL fp : precise source.cpp
 
-Cela indique au compilateur d’utiliser fp : precise sémantique lors de la génération de code pour le fichier source.cpp. Fp : precise modèle peut également être appelé sur une fonction par fonction à l’aide du [pragma de compilateur float_control](#the-float-control-pragma).
+Cela indique au compilateur d’utiliser le mode fp : precise sémantique lors de la génération de code pour le fichier source.cpp. Le mode fp : precise modèle peut également être appelé fonction par fonction à l’aide la [du pragma de compilateur float_control](#the-float-control-pragma).
 
-Sous fp : precise mode, le compilateur n’effectue aucune optimisation risquant de compromettre l’exactitude des calculs en virgule flottante. Le compilateur arrondit toujours correctement lors des affectations, des conversions de type et les appels de fonction et d’arrondi intermédiaire sera toujours effectué à la même précision car le FPU est inscrit. Les optimisations sécurisées, telles que les contractions, sont activées par défaut. Sémantique d’exceptions et d’environnement FPU sont désactivées par défaut.
+Le mode fp : precise mode, le compilateur n’effectue aucune optimisation risquant de compromettre l’exactitude des calculs à virgule flottante. Le compilateur correctement les arrondis lors des affectations, des conversions de type et les appels de fonction, et les arrondis intermédiaires sont effectués de façon cohérente à la même précision que les registres FPU. Les optimisations sécurisées, telles que les contractions, sont activées par défaut. Sémantique d’exceptions et l’environnement FPU sont désactivées par défaut.
 
-|fp : precise sémantique|Explication|
+|mode fp : precise sémantique|Explication|
 |-|-|
-|Sémantique d’arrondi|Arrondi explicite lors des affectations, des conversions de type, et les appels de fonction. Les expressions intermédiaires seront évaluées au niveau de précision de Registre.|
-|Transformations algébriques|Respect strict non associatif, non distributif algèbre à virgule flottante, sauf si une transformation systématiquement produisent les mêmes résultats.|
-|Contractions|Autorisé par la valeur par défaut. Pour plus d’informations, consultez la section [le pragma fp_contract](#the-fp-contract-pragma).|
-|Ordre d’évaluation à virgule flottante|Le compilateur peut réorganiser l’évaluation d’expressions en virgule flottante autant que le résultat final n’est pas modifié.|
+|Sémantique d’arrondi|Arrondi explicite lors des affectations, des conversions de type, et les appels de fonction. Les expressions intermédiaires sont évaluées au degré de précision de Registre.|
+|Transformations algébriques|Respect strict de l’algèbre non associatif, non distributif des nombres de virgule flottante, sauf si une transformation systématiquement produisent les mêmes résultats.|
+|Contractions|Autorisée par défaut. Pour plus d’informations, consultez la section [le pragma fp_contract](#the-fp-contract-pragma).|
+|Ordre d’évaluation à virgule flottante|Le compilateur peut réorganiser l’évaluation des expressions en virgule flottante autant que les résultats finaux ne sont pas modifiées.|
 |Accès à l’environnement FPU|Désactivé par défaut. Pour plus d’informations, consultez la section [le pragma fenv_access](#the-fenv-access-pragma). La précision par défaut et le mode d’arrondi est supposé.|
-|Sémantique d’exception à virgule flottante|Désactivé par défaut. Pour plus d’informations, consultez [/fp : sauf](fp-specify-floating-point-behavior.md).|
+|Sémantique d’exceptions de virgule flottante|Désactivé par défaut. Pour plus d’informations, consultez [/fp : sauf](fp-specify-floating-point-behavior.md).|
 
 ### <a name="rounding-semantics-for-floating-point-expressions-under-fpprecise"></a>Arrondi sémantique pour les expressions en virgule flottante en mode fp : precise
 
-Fp : modèle précis effectue toujours les calculs intermédiaires avec précision le plus élevé possible, arrondissant explicitement et uniquement à certains points dans l’évaluation d’expression. Toujours d’arrondi à la précision spécifiée par l’utilisateur se produit en quatre endroits : (a) établissement d’une affectation, (b) lors d’une conversion de type, (c) lorsqu’une valeur à virgule flottante est passée en tant qu’argument à une fonction et (d) lorsqu’une valeur à virgule flottante est retournée par un fonction. Étant donné que les calculs intermédiaires sont toujours effectuées au niveau de précision de Registre, l’exactitude des résultats intermédiaires dépend de la plateforme (bien que la précision est toujours en au moins précise que l’utilisateur spécifié précision).
+Le mode fp : precise modèle effectue toujours les calculs intermédiaires avec la précision plus élevé possible, en arrondissant explicitement et uniquement à certains points dans l’évaluation d’expression. Arrondi à la précision spécifiée par l’utilisateur toujours se produit en quatre endroits : (a) lorsqu’une affectation est effectuée, (b) lors d’une conversion de type, (c) lorsqu’une valeur à virgule flottante est passée en tant qu’argument à une fonction et (d) lorsqu’une valeur à virgule flottante est retournée à partir d’un fonction. Étant donné que les calculs intermédiaires sont toujours effectués avec précision de Registre, la précision des résultats intermédiaires dépend de la plateforme (bien que la précision sera toujours au moins aussi élevée que celle de l’utilisateur spécifié précision).
 
-Envisagez l’expression d’assignation dans le code suivant. L’expression située à droite de l’assignation opérateur '=' sera calculée au niveau de précision de Registre et ensuite explicitement arrondie vers le type de la partie gauche de l’affectation.
+Examinons l’expression d’assignation dans le code suivant. L’expression sur le côté droit de l’assignation opérateur '=' sera calculée à la précision de Registre et puis arrondie explicitement en fonction du type de la partie gauche de l’assignation.
 
 ```cpp
 float a, b, c, d;
@@ -237,7 +236,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Pour arrondir explicitement un résultat intermédiaire, vous devez introduire une conversion de type. Par exemple, si le code précédent est modifié en ajoutant une conversion de type explicite, l’expression intermédiaire (c * d) est arrondie au type de la conversion de type.
+Pour arrondir explicitement un résultat intermédiaire, introduire une conversion de type. Par exemple, si le code précédent est modifié en ajoutant une conversion de type explicite, l’expression intermédiaire (c * d) est arrondie conformément au type de la conversion de type.
 
 ```cpp
 float a, b, c, d;
@@ -258,7 +257,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Une conséquence de cette méthode d’arrondi est que certaines transformations apparemment équivalentes n’ont en fait une sémantique identiques. Par exemple, la transformation suivante fractionne une expression d’assignation unique en deux expressions d’assignation.
+Une conséquence de cette méthode d’arrondi est que certaines transformations apparemment équivalentes ne présentent pas la même sémantique. Par exemple, la transformation présentée ci-dessous divise une seule expression d’assignation dans les deux expressions d’assignation.
 
 ```cpp
 float a, b, c, d;
@@ -287,9 +286,9 @@ n’est pas équivalent à
 a = b*(a=c+d);
 ```
 
-Ces encodages n’aient pas l’équivalente sémantique car le deuxième codage introduit une opération d’assignation supplémentaires, et par conséquent, un arrondi supplémentaire de point.
+Ces codages ne partagent pas de sémantique car le deuxième codage introduit une opération d’affectation supplémentaire et, par conséquent, un arrondi en plus de point.
 
-Lorsqu’une fonction retourne une valeur à virgule flottante, la valeur est arrondie au type de la fonction. Lorsqu’une valeur à virgule flottante est passée en tant que paramètre à une fonction, la valeur est arrondie au type du paramètre. Par exemple :
+Lorsqu’une fonction retourne une valeur à virgule flottante, la valeur est arrondie au type de la fonction. Lorsqu’une valeur à virgule flottante est passée en tant que paramètre à une fonction, la valeur est arrondie au type du paramètre. Exemple :
 
 ```cpp
 float sumsqr(float a, float b)
@@ -331,27 +330,27 @@ float tmp3 = tmp2;
 c = symsqr( tmp3, z);
 ```
 
-### <a name="architecture-specific-rounding-under-fpprecise"></a>Spécifique à l’architecture d’arrondi en mode fp : precise
+### <a name="architecture-specific-rounding-under-fpprecise"></a>Arrondi spécifique de l’architecture mode fp : precise
 
 |Processeur|Arrondi de précision pour les expressions intermédiaires|
 |-|-|
-|x86|Les expressions intermédiaires sont calculées à la précision de 53 bits par défaut avec une plage étendue fournie par un exposant de 16 bits. Lorsque ces valeurs 53:16 sont « dispersées » dans la mémoire (peut se produire lors d’un appel de fonction), la plage étendue de l’exposant est réduite à 11 bits. Autrement dit, les valeurs dispersées sont converties au format standard de double précision avec uniquement un exposant de 11 bits.<br/>Un utilisateur peut basculer vers une précision étendue 64 bits d’arrondi intermédiaire en modifiant le mot de contrôle à virgule flottante à l’aide de `_controlfp` et en activant l’accès à l’environnement FPU (voir [le pragma fenv_access](#the-fenv-access-pragma)). Toutefois, lorsque les valeurs de Registre de précision étendue sont dispersées dans la mémoire, les résultats intermédiaires sont toujours arrondis à la double précision.<br/>Cette sémantique particulière est susceptible de changer.|
-|amd64|La sémantique FP amd64 est quelque peu différente à partir d’autres plateformes. Pour des raisons de performances, les opérations intermédiaires sont calculées sur le degré de précision de des opérandes et non sur le degré de précision disponible.  Pour forcer les calculs à l’aide d’une précision plus grande que celle des opérandes, les utilisateurs doivent présenter une opération de conversion au moins un opérande d’une sous-expression.<br/>Cette sémantique particulière est susceptible de changer.|
+|x86|Les expressions intermédiaires sont calculées à la précision de 53 bits par défaut avec une plage étendue fournie par un exposant de 16 bits. Lorsque ces valeurs 53:16 sont « dispersées » dans la mémoire (peut se produire lors d’un appel de fonction), la plage étendue exposant est réduite à 11 bits. Autrement dit, les valeurs dispersées sont converties au format standard de double précision avec uniquement un exposant de 11 bits.<br/>Un utilisateur peut basculer vers la précision étendue de 64 bits pour l’arrondi intermédiaire en modifiant le mot de contrôle à virgule flottante à l’aide `_controlfp` et en activant l’accès à l’environnement FPU (voir [le pragma fenv_access](#the-fenv-access-pragma)). Toutefois, lorsque les valeurs de Registre de précision étendue sont dispersées dans la mémoire, les résultats intermédiaires sont toujours arrondis à la double précision.<br/>Cette sémantique particulière est susceptible de changer.|
+|amd64|La sémantique FP du processeur AMD64 est différente de celle d’autres plateformes. Pour des raisons de performances, les opérations intermédiaires sont calculées au degré de précision plus large de des opérandes au lieu de sur le degré de précision disponible.  Pour forcer les calculs à l’aide d’une précision plus grande que celle des opérandes, les utilisateurs doivent présenter une opération de conversion au moins un opérande d’une sous-expression.<br/>Cette sémantique particulière est susceptible de changer.|
 
 ### <a name="algebraic-transformations-under-fpprecise"></a>Transformations algébriques en mode fp : precise
 
-Lorsque fp : precise est activé, le compilateur n’effectue jamais de transformations algébriques *, sauf si le résultat final est prouvée identique*. Nombre de règles algébriques courante arithmétique des nombres réels ne sont pas valables pour les opérations arithmétiques à virgule flottante. Par exemple, les expressions suivantes sont équivalentes pour réels, mais pas nécessairement de valeurs en virgule flottante.
+Lorsque fp : precise mode est activé, le compilateur n’effectue jamais de transformations algébriques *, sauf si le résultat final est prouvée identique*. Grand nombre de règles algébriques courante arithmétique des nombres réels ne sont pas valables pour l’arithmétique à virgule flottante. Par exemple, les expressions suivantes sont équivalentes pour les nombres, mais pas nécessairement à virgule flottante.
 
 |Formulaire|Description|
 |-|-|
 |`(a+b)+c = a+(b+c)`|Règle d’addition associative|
 |`(a*b)*c = a*(b*c)`|Règle de multiplication associative|
-|`a*(b+c) = a*b + b*c`|Distribution de multiplication sur l’addition|
-|`(a+b)(a-b) = a*a-b*b`|Facteur algébrique|
+|`a*(b+c) = a*b + b*c`|Distribution de la multiplication sur l’addition|
+|`(a+b)(a-b) = a*a-b*b`|Mise en facteur algébrique|
 |`a/b = a*(1/b)`|Division par l’inverse multiplicatif|
-|`a*1.0 = a`|Identité de multiplication|
+|`a*1.0 = a`|Identité multiplicative|
 
-Comme illustré dans l’exemple avec la fonction `KahanSum`, le compilateur peut être tenté d’effectuer diverses transformations algébriques afin de produire des programmes nettement plus rapides. Bien que les optimisations dépendant de telles transformations algébriques sont presque toujours incorrectes, il existe des occasions pour lesquelles ils sont parfaitement sécurisés. Par exemple, il est parfois souhaitable de remplacer la division par un *constante* valeur avec la multiplication par l’inverse multiplicatif de la constante :
+Comme illustré dans l’exemple avec la fonction `KahanSum`, le compilateur peut être tenté d’effectuer diverses transformations algébriques afin de produire des programmes nettement plus rapides. Bien que les optimisations dépendant de telles transformations algébriques soient presque toujours incorrectes, il existe des occasions pour lequel elles soient parfaitement sûres. Par exemple, il est parfois souhaitable de remplacer la division par un *constante* valeur et une multiplication par l’inverse multiplicatif de la constante :
 
 ```cpp
 const double four = 4.0;
@@ -371,7 +370,7 @@ double a, b;
 a = b*tmp0;
 ```
 
-Il s’agit une transformation sûre car l’optimiseur peut déterminer au moment de la compilation que x / 4.0 == x*(1/4.0) pour toutes les valeurs à virgule flottante de x, y compris les valeurs infinies et NaN. En remplaçant une opération de division par une multiplication, le compilateur peut économiser plusieurs cycles, en particulier sur FPU qui n’implémente pas directement division, mais nécessite au compilateur de générer une combinaison de réciproque / approximation et multiplier-ajouter obtenir des instructions. Le compilateur peut effectuer cette optimisation en mode fp : precise uniquement lorsque la multiplication de remplacement produit exactement le même résultat que la division. Le compilateur peut également effectuer des transformations triviales en mode fp : precise, à condition que les résultats soient identiques. Elles incluent notamment :
+Il s’agit une transformation sûre car l’optimiseur peut déterminer au moment de la compilation que x / 4.0 == x*(1/4.0) pour toutes les valeurs à virgule flottante de x, y compris les valeurs infinies et NaN. En remplaçant une opération de division par une multiplication, le compilateur peut économiser plusieurs cycles, en particulier dans les environnements FPU qui n’implémente pas directement division mais ont besoin du compilateur pour générer une combinaison de réciproque / approximation et de multiplication / addition obtenir des instructions. Le compilateur peut effectuer cette optimisation en mode fp : precise uniquement lorsque la multiplication de remplacement produit exactement le même résultat que la division. Le compilateur peut également effectuer des transformations triviales en mode fp : precise à condition que les résultats sont identiques. Elles incluent notamment :
 
 |Formulaire|Description
 |-|-|
@@ -383,7 +382,7 @@ Il s’agit une transformation sûre car l’optimiseur peut déterminer au mome
 
 ### <a name="contractions-under-fpprecise"></a>Contractions en mode fp : precise
 
-Une fonctionnalité clé architecturale de nombre à virgule flottante moderne est la possibilité d’effectuer une multiplication suivie d’une addition comme une seule opération, aucune erreur d’arrondi intermédiaire. Par exemple, l’architecture Itanium d’Intel fournit des instructions pour combiner chacune de ces opérations ternaires, (un*b + c), (un*b-c) et (c-a * b), dans une même instruction à virgule flottante (fma, fms et fnma respectivement). Ces instructions uniques sont plus rapides que l’exécution distincte multiplier et ajouter des instructions et sont plus précises, car il n’existe pas d’arrondi intermédiaire du produit. Cette optimisation peut considérablement accélérer les fonctions contenant plusieurs entrelacées multiplier et ajouter des opérations. Par exemple, considérez l’algorithme suivant qui calcule le produit scalaire de deux vecteurs à n dimensions.
+Une fonctionnalité architecturale essentielle de nombreuses unités de virgule flottante modernes est la possibilité d’effectuer une multiplication suivie d’une addition en une seule opération aucune erreur d’arrondi intermédiaire. Par exemple, l’architecture Itanium d’Intel fournit des instructions pour combiner chacune de ces opérations ternaires, (un*b + c), (un*b-c) et (c-a * b), dans une seule instruction à virgule flottante (respectivement, fma, fms et fnma respectivement). Ces instructions uniques sont plus rapides que l’exécution distincte instructions multiplication / addition et sont plus précises car il n’est pas d’arrondi intermédiaire du produit. Cette optimisation peut considérablement accélérer les fonctions contenant plusieurs entrelacés multiplier et ajouter des opérations. Par exemple, considérez l’algorithme ci-dessous qui calcule le produit scalaire de deux vecteurs de dimension n.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -395,9 +394,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Ce calcul peut être effectué une série de multiplier-ajouter les instructions de la forme p = p + x [i] * y [i].
+Ce calcul peut être effectué une série de multiplication / addition d’instructions au format p = p + x [i] * y [i].
 
-L’optimisation de la contraction peut être contrôlée de manière indépendante à l’aide de la `fp_contract` du pragma de compilateur. Par défaut, le mode fp : precise modèle tient compte des contractions car ils améliorent la précision et la vitesse. En mode fp : precise, le compilateur ne contracte jamais expression arrondi explicite.
+L’optimisation de la contraction peut être contrôlée indépendamment à l’aide de la `fp_contract` du pragma de compilateur. Par défaut, le mode fp : precise modèle tient compte des contractions car celles-ci améliorent la précision et la vitesse. En mode fp : precise, le compilateur ne contracte jamais une expression contient un arrondi explicite.
 Exemples
 
 ```cpp
@@ -414,9 +413,9 @@ t = a*b;             // (this assignment rounds a*b to float)
 d = t + c;           // won't be contracted because of rounding of a*b
 ```
 
-### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Ordre d’évaluation d’expression en virgule flottante en mode fp : precise
+### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Ordre d’évaluation d’expression à virgule flottante en mode fp : precise
 
-Les optimisations qui conservent l’ordre d’évaluation de l’expression à virgule flottante sont toujours sûres et sont donc autorisées en fp : precise mode. Considérez la fonction suivante qui calcule le produit scalaire de deux vecteurs de dimension n en simple précision. Le premier bloc de code ci-dessous est la fonction d’origine comme il peut être codée par un programmeur, suivie de la même fonction après une optimisation d’ouverture de boucle partielle.
+Les optimisations qui conservent l’ordre d’évaluation d’expression à virgule flottante sont toujours sûres et sont donc autorisées fp : precise mode. Examinons la fonction ci-dessous qui calcule le produit scalaire de deux vecteurs de dimension n en simple précision. Le premier bloc de code ci-dessous est la fonction d’origine car elle pourrait être codée par un programmeur, suivie par la fonction même après une optimisation par développement boucle partielle.
 
 ```cpp
 //original function
@@ -451,9 +450,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Le principal avantage de cette optimisation est qu’elle réduit le nombre de boucles for-création de branches conditionnel 75 %. En outre, en augmentant le nombre d’opérations dans le corps de la boucle, le compilateur a plus d’opportunités pour optimiser davantage. Par exemple, certains FPU peut-être être en mesure d’effectuer la multiplication-addition dans p += x [i] * y [i] tout en récupérant simultanément les valeurs de x [i + 1] et y [i + 1] pour une utilisation dans l’étape suivante. Ce type d’optimisation est parfaitement sûr pour les calculs à virgule flottante, car il conserve l’ordre des opérations.
+Le principal avantage de cette optimisation est qu’il réduit le nombre de branchement conditionnel boucle 75 %. En outre, en augmentant le nombre d’opérations dans le corps de la boucle, le compilateur a davantage d’opportunités pour optimiser davantage. Par exemple, certains FPU peut-être être en mesure d’effectuer la multiplication / addition dans p += x [i] * y [i] tout en récupérant simultanément les valeurs de x [i + 1] et y [i + 1] pour une utilisation dans l’étape suivante. Ce type d’optimisation est parfaitement sûr pour les calculs en virgule flottante car il préserve l’ordre des opérations.
 
-Il est souvent préférable pour le compilateur réordonner des opérations complètes afin de produire du code plus rapide. Examinons le code ci-dessous.
+Il est souvent préférable pour le compilateur de réordonner des opérations complètes afin de produire du code plus rapide. Examinons le code ci-dessous.
 
 ```cpp
 double a, b, c, d;
@@ -466,7 +465,7 @@ y = a*a + b*b + c*c;
 z = a + b + c;
 ```
 
-Règles de sémantique C++ indiquent que le programme doit produire des résultats comme si elle calculée tout d’abord x, puis y et enfin sur z. Supposons que le compilateur n'a que quatre des registres à virgule flottante disponibles. Si le compilateur est forcé pour calculer x, y et z dans l’ordre, il peut choisir de générer du code avec la sémantique suivante :
+Règles de sémantique C++ indiquent que le programme doit produire des résultats comme si elle portait d’abord x, puis y et enfin sur z. Supposons que le compilateur a seulement quatre registres en virgule flottante disponibles. Si le compilateur est forcé de calculer x, y et z dans l’ordre, il peut choisir de générer du code avec la sémantique suivante :
 
 ```cpp
 double a, b, c, d;
@@ -507,7 +506,7 @@ r0 = r0 + r3;
 z = r0;         // z = r1+r2+r3
 ```
 
-Il existe plusieurs opérations redondantes est cet encodage. Si le compilateur suit strictement les règles de sémantique C++, cette commande est nécessaire, car le programme peut accéder à l’environnement FPU entre chaque affectation. Toutefois, les paramètres par défaut pour fp : precise permettent au compilateur d’optimisation comme si le programme n’accéder à l’environnement, ce qui permet de réorganiser ces expressions. Il est alors libre de supprimer les redondances en calculant les trois valeurs dans l’ordre inverse, comme suit :
+Il existe plusieurs opérations redondantes est cet encodage. Si le compilateur suit strictement les règles de sémantique C++, cet ordre est nécessaire car le programme peut accéder à l’environnement FPU entre chaque affectation. Toutefois, les paramètres par défaut pour le mode fp : precise permettent au compilateur d’optimisation comme si le programme n’accède pas à l’environnement, lui permettant de réordonner ces expressions. Il est alors libre de supprimer les redondances en calculant les trois valeurs dans l’ordre inverse, comme suit :
 
 ```cpp
 double a, b, c, d;
@@ -542,9 +541,9 @@ r0 = r0+r3;
 x = r0;
 ```
 
-Ce codage est nettement supérieur ayant réduit le nombre d’instructions-fp près de 40 %. Les résultats de x, y et z sont les mêmes qu’avant, mais calculée avec moins de surcharge.
+Cet encodage est donc bien plus efficace, avoir diminué de près de 40 % le nombre d’instructions-fp. Les résultats de x, y et z sont les mêmes qu’avant, calculée, mais avec moins de surcharge.
 
-En mode fp : precise, le compilateur peut également *entrelacé* sous-expressions communes afin de produire du code plus rapide. Par exemple, le code pour calculer les racines d’une équation quadratic peut être écrit comme suit :
+En mode fp : precise, le compilateur peut également *entrelacé* sous-expressions communes afin de produire du code plus rapide. Par exemple, le code de calcul des racines d’une équation bicarrée peut être écrit comme suit :
 
 ```cpp
 double a, b, c, root0, root1;
@@ -553,7 +552,7 @@ root0 = (-b + sqrt(b*b-4*a*c))/(2*a);
 root1 = (-b - sqrt(b*b-4*a*c))/(2*a);
 ```
 
-Bien que ces expressions ne diffèrent que par une seule opération, le programmeur peut avoir écrit ce moyen de garantir que chaque valeur de racine soit calculée avec la précision le plus élevée possible. En mode fp : precise, le compilateur est libre d’imbriquer le calcul de root0 et de root1 pour supprimer les sous-expressions communes sans perte de précision. Par exemple, la commande suivante a supprimé plusieurs étapes redondantes lors de la production de la même réponse exacte.
+Bien que ces expressions ne diffèrent que par une seule opération, le programmeur peut avoir écrit cette façon afin de garantir que chaque valeur de racine soit calculée avec la précision plus élevé possible. En mode fp : precise, le compilateur est libre d’imbriquer le calcul de root0 et de root1 pour supprimer les sous-expressions communes sans perte de précision. Par exemple, les éléments suivants a supprimé plusieurs étapes redondantes tout en produisant la même réponse.
 
 ```cpp
 double a, b, c, root0, root1;
@@ -565,7 +564,7 @@ root0 = (tmp0+tmp1)/tmp2;
 root1 = (tmp0-tmp1)/tmp2;
 ```
 
-Autres optimisations peuvent tenter de déplacer l’évaluation de certaines expressions indépendantes. Examinons l’algorithme suivant qui contient une branche de conditionnelle dans un corps de boucle.
+Autres optimisations peuvent tenter de déplacer l’évaluation de certaines expressions indépendantes. Examinons l’algorithme suivant qui contient une ramification conditionnelle dans un corps de la boucle.
 
 ```cpp
 vector<double> a(n);
@@ -580,7 +579,7 @@ for (int i=0; i<n; i++)
 }
 ```
 
-Le compilateur peut détecter que la valeur de l’expression (ABS > 1) est invariante dans le corps de la boucle. Cela permet au compilateur pour « hausser « if instruction en dehors du corps de la boucle, transformer le code ci-dessus dans les éléments suivants :
+Le compilateur peut détecter que la valeur de l’expression (ABS > 1) est invariante dans le corps de boucle. Cela permet au compilateur if « sortir » l’instruction en dehors du corps de boucle, en transformant le code ci-dessus en ce qui suit :
 
 ```cpp
 vector<double> a(n);
@@ -594,17 +593,17 @@ else
       s = s+a[i]*d;
 ```
 
-Après la transformation, il n’est plus une branche conditionnelle dans une des instances de boucle, ce qui améliore considérablement les performances globales de la boucle. Ce type d’optimisation est parfaitement sûr, car l’évaluation de l’expression (ABS > 1.0) est indépendante des autres expressions.
+Après la transformation, il n’est plus une branche conditionnelle dans un des corps de boucle, ce qui améliore considérablement les performances globales de la boucle. Ce type d’optimisation est parfaitement sûr, car la version d’évaluation de l’expression (ABS > 1.0) est indépendante des autres expressions.
 
-En cas d’accès à l’environnement FPU ou des exceptions de virgule flottante, ces types d’optimisation sont contre-indiqués car ils modifient le flux sémantique. Ces optimisations sont uniquement disponibles sous fp : mode précis, car l’accès à l’environnement FPU et une sémantique des exceptions à virgule flottante est désactivée par défaut. Fonctions qui accèdent à l’environnement FPU peuvent désactiver explicitement ces optimisations à l’aide de la `fenv_access` du pragma de compilateur. De même, les fonctions à l’aide des exceptions de virgule flottante doivent utiliser le `float_control(except ... )` pragma de compilateur (ou utilisez le **/fp : sauf** commutateur de ligne de commande).
+En présence d’accès à l’environnement FPU ou des exceptions de virgule flottante, ces types d’optimisations sont contre-indiqués car ils modifient le flux sémantique. Ces optimisations sont uniquement disponibles sous le mode fp : precise mode, car l’accès à l’environnement FPU et sémantique d’exceptions à virgule flottante est désactivée par défaut. Les fonctions qui accèdent à l’environnement FPU peuvent désactiver explicitement ces optimisations en utilisant le `fenv_access` du pragma de compilateur. De même, les fonctions à l’aide des exceptions de virgule flottante doivent utiliser le `float_control(except ... )` du pragma de compilateur (ou utilisez le **/fp : sauf** commutateur de ligne de commande).
 
-En résumé, fp : mode précision permet au compilateur de réorganiser l’évaluation d’expressions en virgule flottante à condition que le résultat final n’est pas modifié et que les résultats ne sont pas dépendants sur l’environnement FPU ou sur les exceptions de virgule flottante.
+En résumé, le mode fp : precise mode permet au compilateur de réorganiser l’évaluation d’expressions en virgule flottante à condition que le résultat final n’est pas modifié et que les résultats ne sont pas dépendants sur l’environnement FPU ou sur les exceptions de virgule flottante.
 
 ### <a name="fpu-environment-access-under-fpprecise"></a>Accès à l’environnement FPU en mode fp : precise
 
-Lorsque le fp : precise est activé, le compilateur suppose qu’un programme ne pas accéder ou modifier l’environnement FPU. Comme indiqué précédemment, cette hypothèse permet au compilateur de réorganiser ou de déplacer des opérations à virgule flottante pour améliorer l’efficacité en mode fp : precise.
+Lorsque le mode fp : precise mode est activé, le compilateur suppose qu’un programme ne pas accéder ou modifier l’environnement FPU. Comme indiqué précédemment, cette hypothèse permet au compilateur de réorganiser ou de déplacer des opérations à virgule flottante pour améliorer l’efficacité en mode fp : precise.
 
-Certains programmes peuvent modifier la direction d’arrondi à virgule flottante à l’aide de la `_controlfp` (fonction). Par exemple, certains programmes de calcul supérieure et inférieure limites d’erreur des opérations arithmétiques en effectuant le même calcul à deux reprises, tout d’abord en arrondissant à l’infini négatif, en arrondissant à l’infini positif. Étant donné que le FPU offre un moyen pratique de contrôle des arrondis, un programmeur peut choisir de modifier le mode d’arrondi en modifiant l’environnement FPU. Le code suivant calcule la que limite d’une erreur exacte d’une multiplication à virgule flottante en modifiant l’environnement FPU.
+Certains programmes peuvent modifier la direction d’arrondi à virgule flottante à l’aide de la `_controlfp` (fonction). Par exemple, certains programmes calculent supérieure et inférieure limites d’erreur pour les opérations arithmétiques en effectuant le même calcul à deux reprises, tout d’abord en arrondissant à l’infini négatif, en arrondissant à l’infini positif. Étant donné que le FPU offre un moyen pratique de contrôle des arrondis, un programmeur peut choisir de changer de mode d’arrondi en modifiant l’environnement FPU. Le code suivant calcule la que limite d’une erreur exacte d’une multiplication à virgule flottante en modifiant l’environnement FPU.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -616,9 +615,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-En mode fp : precise, le compilateur considère toujours que l’environnement FPU par défaut, par conséquent, l’optimiseur est libre d’ignorer les appels à `_controlfp` et réduire les affectations ci-dessus à cUpper = cLower = un * b ; cela donnerait clairement des résultats incorrects. Pour empêcher ces optimisations, activer l’accès à l’environnement FPU à l’aide de la `fenv_access` du pragma de compilateur.
+En mode fp : precise, le compilateur suppose toujours l’environnement FPU par défaut, par conséquent, l’optimiseur est libre d’ignorer les appels à `_controlfp` et réduire les affectations ci-dessus à cUpper = cLower = un * b ; cela produirait indéniablement des résultats incorrects. Pour empêcher ces optimisations, activez les accès à l’environnement FPU à l’aide de la `fenv_access` du pragma de compilateur.
 
-Autres programmes peuvent tenter de détecter certaines erreurs en virgule flottante en vérifiant le mot d’état de la FPU. Par exemple, le code suivant vérifie les conditions de division par zéro ou d’inexactitude
+Autres programmes peuvent tenter de détecter certaines erreurs à virgule flottante en vérifiant le mot d’état du FPU. Par exemple, le code suivant vérifie les conditions de division par zéro ou d’inexactitude
 
 ```cpp
 double a, b, c, r;
@@ -635,42 +634,42 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-En mode fp : precise, les optimisations permettant de réorganiser l’évaluation d’expression peuvent modifier les points à laquelle certaines erreurs se produisent. Le mot d’état de l’accès à des programmes doivent activer l’accès à l’environnement FPU à l’aide de la `fenv_access` du pragma de compilateur.
+En mode fp : precise, les optimisations permettant de réorganiser l’évaluation de l’expression peuvent modifier les points à laquelle certaines erreurs se produisent. Le mot d’état de l’accès à des programmes doivent activer l’accès à l’environnement FPU à l’aide de la `fenv_access` du pragma de compilateur.
 
 Pour plus d’informations, consultez la section [le pragma fenv_access](#the-fenv-access-pragma).
 
-### <a name="floating-point-exception-semantics-under-fpprecise"></a>La sémantique d’exception à virgule flottante en mode fp : precise
+### <a name="floating-point-exception-semantics-under-fpprecise"></a>La sémantique d’exceptions à virgule flottante en mode fp : precise
 
-Par défaut, la sémantique d’exception à virgule flottante est désactivée en mode fp : precise. La plupart des programmeurs C++ préfèrent gérer des conditions exceptionnelles à virgule flottante sans utiliser le système ou des exceptions C++. En outre, comme indiqué précédemment, la désactivation de la sémantique d’exception à virgule flottante du compilateur une plus grande souplesse lors de l’optimisation des opérations à virgule flottante. Utilisez le **/fp : sauf** basculer ou le `float_control` pragma pour activer la sémantique d’exception de virgule flottante lors de l’utilisation de la virgule flottante : modèle précis.
+Par défaut, la sémantique d’exceptions à virgule flottante est désactivée en mode fp : precise. La plupart des programmeurs C++ préfèrent gérer des conditions exceptionnelles à virgule flottante sans utiliser le système ou des exceptions C++. En outre, comme indiqué précédemment, la désactivation de la sémantique d’exceptions à virgule flottante permet le compilateur plus de souplesse lors de l’optimisation des opérations à virgule flottante. Utiliser le **/fp : à l’exception** basculer ou `float_control` pragma pour activer la sémantique d’exception de virgule flottante lorsque vous utilisez le mode fp : modèle précis.
 
-Pour plus d’informations, consultez la section [activation de la sémantique de l’exception de virgule flottante](#enabling-floating-point-exception-semantics).
+Pour plus d’informations, consultez la section [activation de la sémantique d’exception de virgule flottante](#enabling-floating-point-exception-semantics).
 
-## <a name="the-fpfast-mode-for-floating-point-semantics"></a>Le mode fp : Fast pour la sémantique à virgule flottante
+## <a name="the-fpfast-mode-for-floating-point-semantics"></a>Le mode fp : Fast pour la sémantique en virgule flottante
 
-Lorsque le mode fp : fast est activé, le compilateur assouplit les règles mode fp : precise lors de l’optimisation des opérations à virgule flottante. Ce mode est permet au compilateur d’optimiser le code à virgule flottante de vitesse au détriment de la précision et l’exactitude. Les programmes qui ne reposent pas sur des calculs en virgule flottante extrêmement précis peuvent rencontrer une amélioration significative de la vitesse en activant le mode fp : fast.
+Lorsque le mode fp : fast est activé, le compilateur assouplit les règles mode fp : precise lors de l’optimisation des opérations à virgule flottante. Ce mode est permet au compilateur d’optimiser davantage le code en virgule flottante de vitesse aux dépens de sa précision et l’exactitude. Les programmes qui ne reposent pas sur des calculs en virgule flottante extrêmement précis peuvent rencontrer une amélioration significative de la vitesse en activant le mode fp : fast.
 
 Le mode en virgule flottante fp : fast est activé à l’aide de la [Fast](fp-specify-floating-point-behavior.md) commutateur de compilateur de ligne de commande comme suit :
 
 > CL Fast source.cpp
 
-Cet exemple indique au compilateur d’utiliser la sémantique fp : Fast lors de la génération de code pour le fichier source.cpp. Le modèle fp : fast peut également être appelé sur une fonction par fonction à l’aide de la `float_control` du pragma de compilateur.
+Cet exemple indique au compilateur d’utiliser la sémantique fp : Fast lors de la génération de code pour le fichier source.cpp. Le modèle fp : fast peut également être appelé fonction par fonction à l’aide du `float_control` du pragma de compilateur.
 
 Pour plus d’informations, consultez la section [le pragma float_control](#the-float-control-pragma).
 
-En mode fp : fast, le compilateur peut effectuer des optimisations qui affectent la précision des calculs en virgule flottante. Le compilateur ne peut pas arrondir correctement lors des affectations, des conversions de type ou les appels de fonction et d’arrondi intermédiaire ne sera pas toujours effectué. Les optimisations spécifiques à virgule flottante, telles que les contractions, sont toujours activées. Sémantique d’exception à virgule flottante et l’environnement FPU sont désactivées et non disponibles.
+En mode fp : fast, le compilateur peut effectuer des optimisations qui affectent l’exactitude des calculs en virgule flottante. Le compilateur ne peut pas correctement les arrondis lors des affectations, des conversions de type ou d’appels de fonction, et d’arrondi intermédiaire ne sera pas toujours effectué. Les optimisations spécifiques à virgule flottante, telles que les contractions, sont toujours activées. Sémantique d’exceptions à virgule flottante et l’environnement FPU sont désactivées et non disponibles.
 
 |sémantique fp : Fast|Explication
 |-|-|
-|Sémantique d’arrondi|Arrondi explicite lors des affectations, des conversions de type, et les appels de fonction peuvent être ignorés.<br/>Les expressions intermédiaires peuvent être arrondies à inscrire la précision en fonction des besoins de performances inférieur.|
-|Transformations algébriques|Le compilateur peut transformer les expressions en fonction du nombre réel des algèbre associatif et distributif ; Ces transformations ne sont pas garanties pour être exactes ou correctes.|
-|Contractions|Toujours activée ; ne peut pas être désactivé par le pragma `fp_contract`|
-|Ordre d’évaluation à virgule flottante|Le compilateur peut réorganiser l’évaluation des expressions en virgule flottante, même lorsque ces modifications peuvent modifier le résultat final.|
+|Sémantique d’arrondi|Arrondi explicite lors des affectations, des conversions de type, et les appels de fonction peuvent être ignorés.<br/>Les expressions intermédiaires peuvent être arrondies à un prix inférieur à celui des registres de précision en fonction des exigences de performances.|
+|Transformations algébriques|Le compilateur peut transformer les expressions selon l’algèbre associatif et distributif de nombres réels ; Ces transformations ne sont pas garanties pour être exactes ou correctes.|
+|Contractions|Toujours activée ; ne peut pas être désactivée par le pragma `fp_contract`|
+|Ordre d’évaluation à virgule flottante|Le compilateur peut réorganiser l’évaluation des expressions en virgule flottante, même lorsque ces modifications peuvent modifier les résultats finaux.|
 |Accès à l’environnement FPU|Désactivé. Non disponible|
-|Sémantique d’exception à virgule flottante|Désactivé. Non disponible|
+|Sémantique d’exceptions de virgule flottante|Désactivé. Non disponible|
 
-### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Sémantique des expressions à virgule flottante sous fp : Fast d’arrondi
+### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Sémantique des expressions à virgule flottante sous le mode fp : Fast d’arrondi
 
-Contrairement aux fp : modèle précis, le modèle fp : fast effectue des calculs intermédiaires précision au plus pratique. Arrondi lors des affectations, des conversions de type et des appels de fonction ne se produisent pas toujours. Par exemple, la première fonction ci-dessous introduit trois variables simple précision (`C`, `Y` et `T`). Le compilateur peut choisir d’inscrire ces variables, ce qui entraîne de promotion de type `C`, `Y` et `T` à double précision.
+Contrairement à la mode fp : precise modèle, le modèle fp : fast effectue des calculs intermédiaires précision au plus pratique. Arrondi lors des affectations, des conversions de type et des appels de fonction ne sont pas toujours appliqués. Par exemple, la première fonction ci-dessous introduit trois variables en simple précision (`C`, `Y` et `T`). Le compilateur peut choisir d’inscrire ces variables, en vigueur de la promotion de type `C`, `Y` et `T` à double précision.
 
 Fonction d’origine :
 
@@ -689,7 +688,7 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Enregistrement de variables :
+Variables inscrites dans le Registre :
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -707,9 +706,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Dans cet exemple, fp : Fast a modifié l’intention de la fonction d’origine. La dernière optimisé de résultats, dans la variable `sum`, peut être assez différent du résultat correct.
+Dans cet exemple, le mode fp : Fast a bouleversé l’intention de la fonction d’origine. Le résultat final optimisé, contenu dans la variable `sum`, peut être assez différent du résultat correct.
 
-Sous fp : fast, le compilateur tentera généralement à conserver au moins la précision spécifiée par le code source. Toutefois, dans certains cas, le compilateur peut choisir effectuer des expressions intermédiaires à un *diminuer la précision* que le nombre spécifié dans le code source. Par exemple, le premier bloc de code ci-dessous appelle une version en double précision de la fonction de la racine carrée. Sous fp : fast, dans certaines circonstances, par exemple lorsque les résultats et les opérandes de la fonction sont explicitement converties en simple précision, le compilateur peut choisir de remplacer l’appel à la double précision `sqrt` avec un appel à une seule précision `sqrtf`(fonction). Étant donné que les casts, pour garantir que la valeur dans `sqrt` et la valeur Sort sont arrondies en simple précision, cela modifie uniquement l’emplacement de l’arrondi. Si la valeur dans sqrt était une valeur double précision et le compilateur a effectué cette transformation, autant que la moitié des bits de précision peut être incorrecte.
+Sous mode fp : fast, le compilateur tente généralement conserver au moins la précision spécifiée par le code source. Toutefois, dans certains cas, le compilateur peut choisir effectuer des expressions intermédiaires à un *diminuer la précision* que le nombre spécifié dans le code source. Par exemple, le premier bloc de code ci-dessous appelle une version en double précision de la fonction racine carrée. Sous mode fp : fast, dans certaines circonstances, par exemple lorsque le résultat et les opérandes de la fonction sont explicitement converties en simple précision, le compilateur peut choisir de remplacer l’appel à la double précision `sqrt` avec un appel à une simple précision `sqrtf`(fonction). Étant donné que les casts de garantir que la valeur aborder `sqrt` et la valeur sortantes sont arrondies à simple précision, cela modifie uniquement l’emplacement de l’arrondi. Si la valeur arrivant dans sqrt était une valeur double précision et le compilateur a effectué cette transformation, comme la moitié des bits de précision peut être incorrecte.
 
 Fonction d’origine
 
@@ -737,9 +736,9 @@ float length = sqrtf(tmp1); // rounded sqrt result
 float sum = f1 + f2;
 ```
 
-Bien que moins précise, cette optimisation peut être particulièrement utile lors du ciblage de processeurs qui fournissent des versions de fonctions intrinsèques à simple précision comme `sqrt`. Précis lorsque le compilateur utilise ces optimisations dépend de la plate-forme et du contexte.
+Bien que moins précise, cette optimisation peut être particulièrement utile lors du ciblage de processeurs fournissant des versions intrinsèques de fonctions simple précision comme `sqrt`. Moment précis lorsque le compilateur utilise ces optimisations dépend de la plate-forme et du contexte.
 
-En outre, n’est pas garanti cohérent pour la précision des calculs intermédiaires, qui peuvent être effectuées sur n’importe quel niveau de précision disponible pour le compilateur. Bien que le compilateur tente de conserver au moins le niveau de précision comme spécifié par le code, fp : fast permet à l’optimiseur à downcast calculs intermédiaires afin de produire du code machine plus rapide ou plus petit. Par exemple, le compilateur peut optimiser le code ci-dessus pour arrondir des multiplications intermédiaires à simple précision.
+En outre, n’est pas garanti cohérent pour la précision des calculs intermédiaires, qui peuvent être effectués avec n’importe quel niveau de précision accessible au compilateur. Bien que le compilateur tente de conserver au moins le niveau de précision spécifiée par le code, mode fp : fast permet à l’optimiseur à effectuer un downcast calculs intermédiaires afin de produire le code machine plus rapide ou plus petits. Par exemple, le compilateur peut renforcer l’optimisation du code ci-dessus pour arrondir en simple précision les résultats de multiplications intermédiaires.
 
 ```cpp
 float sqrtf(float)...
@@ -755,41 +754,41 @@ float length = sqrtf(tmp3);
 float sum = f1 + f2;
 ```
 
-Ce type d’arrondi supplémentaires peut-être résulter d’à l’aide de la plus faible précision à virgule flottante globalement, telles que SSE2, pour effectuer certains calculs intermédiaires. La précision de l’arrondi de fp : fast est donc dépendant de la plateforme ; code qui se compile correctement pour un seul processeur ne peut pas nécessairement fonctionnent bien pour un autre processeur. Il incombe à l’utilisateur pour déterminer si les avantages de vitesse compensent les éventuels problèmes de précision.
+Ce type d’arrondi supplémentaires peut-être provenir d’à l’aide d’une plus faible précision unité de virgule flottante, telle que SSE2, pour effectuer certains calculs intermédiaires. La précision de l’arrondi du mode fp : fast est donc dépendante de la plateforme ; code se compile correctement pour un seul processeur ne peut pas nécessairement fonctionnent bien pour un autre processeur. Il incombe à l’utilisateur pour déterminer si les avantages de vitesse compensent les éventuels problèmes de précision.
 
-Si l’optimisation de fp : fast est particulièrement problématique pour une fonction spécifique, le mode en virgule flottante est localement possible fp : precise à l’aide de la `float_control` pragma de compilateur.
+Si l’optimisation de mode fp : fast est particulièrement problématique pour une fonction spécifique, le mode en virgule flottante permettre faire basculer localement fp : precise à l’aide du `float_control` du pragma de compilateur.
 
 
-### <a name="algebraic-transformations-under-fpfast"></a>Transformations algébriques sous fp : Fast
+### <a name="algebraic-transformations-under-fpfast"></a>Transformations algébriques sous le mode fp : Fast
 
-Le mode fp : fast permet au compilateur d’appliquer certaines transformations algébriques non fiables en virgule flottante pointent les expressions. Par exemple, les optimisations unsafe suivantes peuvent être utilisées en mode fp : fast.
+Le mode fp : fast permet au compilateur d’appliquer certaines transformations algébriques non fiables virgule flottante des expressions en virgule. Par exemple, les optimisations non fiables ci-dessous peuvent être utilisées en mode fp : fast.
 
 ||||
 |-|-|-|
-|Code d’origine|Étape 1 de #|Étape 2 de #
+|Code d’origine|Étape #1|Étape #2
 |`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = y – a – b;`<br/><br/>`c = x – z;`<br/><br/>`c = x * z;`<br/><br/>`c = x - z;`<br/><br/>`c = x + z;`<br/><br/>`c = z-x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x – 0;`<br/><br/>`c = x * 0;`<br/><br/>`c = x - 0;`<br/><br/>`c = x + 0;`<br/><br/>`c = 0 - x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x;`<br/><br/>`c = 0;`<br/><br/>`c = x;`<br/><br/>`c = x;`<br/><br/>`c = -x;`|
 
-À l’étape 1, le compilateur observe que `z = y – a – b` est toujours égale à zéro. Bien que cela soit techniquement une observation non valide, elle est autorisée en mode fp : fast. Le compilateur propage ensuite la valeur de constante zéro à chaque utilisation suivante de la variable z. À l’étape 2, le compilateur continue à optimiser en observant qui `x - 0 == x`, `x * 0 == 0`, etc. Là encore, même si ces observations ne sont pas strictement valides, ils sont autorisés sous fp : fast. Le code optimisé est désormais plus rapide, mais peut également être nettement moins précis ou même incorrect.
+À l’étape 1, le compilateur observe que `z = y – a – b` est toujours égale à zéro. Bien que cela soit techniquement une observation non valide, elle est autorisée en mode fp : fast. Le compilateur propage ensuite la valeur de constante zéro à chaque utilisation suivante de la variable z. À l’étape 2, le compilateur continue à optimiser en observant que `x - 0 == x`, `x * 0 == 0`, etc. Là encore, même si ces observations ne sont pas strictement valables, elles sont autorisées en mode fp : fast. Le code optimisé est désormais beaucoup plus rapide, mais peut également être nettement moins précis ou voire incorrect.
 
-Les règles algébriques (non sécurisés) suivantes peuvent être utilisées par l’optimiseur lorsque le mode fp : fast est activé :
+Les règles algébriques (non fiables) suivantes peuvent être employées par l’optimiseur lorsque le mode fp : fast est activé :
 
 |||
 |-|-|
 |Formulaire|Description|
 |`(a + b) + c = a + (b + c)`|Règle d’addition associative|
 |`(a * b) * c = a * (b * c)`|Règle de multiplication associative|
-|`a * (b + c) = a * b + b * c`|Distribution de multiplication sur l’addition|
-|`(a + b)(a - b) = a * a - b * b`|Facteur algébrique|
+|`a * (b + c) = a * b + b * c`|Distribution de la multiplication sur l’addition|
+|`(a + b)(a - b) = a * a - b * b`|Mise en facteur algébrique|
 |`a / b = a * (1 / b)`|Division par l’inverse multiplicatif|
-|`a * 1.0 = a, a / 1.0 = a`|Identité de multiplication|
+|`a * 1.0 = a, a / 1.0 = a`|Identité multiplicative|
 |`a ± 0.0 = a, 0.0 - a = -a`|Identité additive|
 |`a / a = 1.0, a - a = 0.0`|Annulation|
 
-Si l’optimisation de fp : fast est particulièrement problématique pour une fonction particulière, le mode en virgule flottante est localement possible fp : precise à l’aide de la `float_control` pragma de compilateur.
+Si l’optimisation de mode fp : fast est particulièrement problématique pour une fonction particulière, le mode en virgule flottante permettre faire basculer localement fp : precise à l’aide du `float_control` du pragma de compilateur.
 
-### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Ordre d’évaluation d’expression en virgule flottante sous fp : Fast
+### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Ordre d’évaluation d’expression à virgule flottante sous le mode fp : Fast
 
-Contrairement au mode fp : precise, fp : fast permet au compilateur de réorganiser des opérations à virgule flottante afin de produire du code plus rapide. Par conséquent, certaines optimisations en mode fp : fast peut ne pas conservent l’ordre prévu d’expressions. Par exemple, considérez la fonction suivante qui calcule le produit scalaire de deux vecteurs à n dimensions.
+Contrairement au mode fp : precise, fp : fast permet au compilateur de réorganiser les opérations à virgule flottante afin de produire du code plus rapide. Par conséquent, certaines optimisations en mode fp : fast peut ne pas conservent l’ordre prévu d’expressions. Par exemple, considérez la fonction suivante qui calcule le produit scalaire de deux vecteurs de dimension n.
 
 ```cpp
 float dotProduct( float x[], float y[],
@@ -802,7 +801,7 @@ float dotProduct( float x[], float y[],
 }
 ```
 
-Fp : fast, l’optimiseur peut effectuer une réduction scalaire de la `dotProduct` fonction transformant comme suit :
+Sous mode fp : fast, l’optimiseur peut effectuer une réduction scalaire de la `dotProduct` fonction transformant comme suit :
 
 ```cpp
 float dotProduct( float x[], float y[],int n )
@@ -828,36 +827,36 @@ float dotProduct( float x[], float y[],int n )
 }
 ```
 
-Dans la version optimisée de la fonction quatre sommes distinctes produit simultanément et sont ensuite ajoutés. Cette optimisation peut accélérer le calcul de la `dotProduct` par autant qu’un facteur de quatre selon le processeur cible, mais le résultat final peut manquer d’ainsi que pour la rendre inutilisable. Si ces optimisations sont particulièrement problématiques pour une fonction ou une unité de traduction, le mode en virgule flottante est localement possible fp : precise à l’aide de la `float_control` pragma de compilateur.
+Dans la version optimisée de la fonction quatre sommes distinctes produit simultanément et sont ensuite ajoutés ensemble. Cette optimisation peut accélérer le calcul de la `dotProduct` par autant comme un facteur de quatre, en fonction du processeur cible, mais le résultat final peut être tellement imprécis que rendre inutilisable. Si ces optimisations sont avèrent particulièrement problématiques pour une fonction ou une unité de traduction, le mode en virgule flottante permettre faire basculer localement fp : precise à l’aide du `float_control` du pragma de compilateur.
 
-## <a name="the-fpstrict-mode-for-floating-point-semantics"></a>Fp : le mode strict pour la sémantique à virgule flottante
+## <a name="the-fpstrict-mode-for-floating-point-semantics"></a>Le mode fp : strict mode de sémantique en virgule flottante
 
-Lors de la fp : strict est activé, le compilateur respecte toutes les règles que fp : precise lors de l’optimisation des opérations à virgule flottante. Également, ce mode permet une sémantique des exceptions à virgule flottante et la sensibilité à l’environnement FPU et désactive certaines optimisations telles que les contractions. Il est le mode strict.
+Lorsque le mode fp : mode strict est activé, le compilateur respecte toutes les règles mode fp : precise lors de l’optimisation des opérations à virgule flottante. Également, ce mode permet la sémantique d’exceptions à virgule flottante et la sensibilité à l’environnement FPU et désactive certaines optimisations telles que les contractions. Il est le mode de fonctionnement le plus strict.
 
-Fp : strict à virgule flottante est activé à l’aide de la [/fp : strict](fp-specify-floating-point-behavior.md) commutateur de compilateur de ligne de commande comme suit :
+Fp : strict mode en virgule flottante est activé à l’aide de la [/fp : strict](fp-specify-floating-point-behavior.md) commutateur de compilateur de ligne de commande comme suit :
 
-> CL fp : strict source.cpp
+> / de CL fp : strict source.cpp
 
-Cet exemple indique au compilateur d’utiliser fp : stricte sémantique lors de la génération de code pour le fichier source.cpp. Fp : strict modèle peut également être appelé sur une fonction par fonction à l’aide de la `float_control` du pragma de compilateur.
+Cet exemple indique au compilateur d’utiliser le mode fp : stricte sémantique lors de la génération de code pour le fichier source.cpp. Le mode fp : strict modèle peut également être appelé fonction par fonction à l’aide du `float_control` du pragma de compilateur.
 
 Pour plus d’informations, consultez la section [le pragma float_control](#the-float-control-pragma).
 
-Sous fp : mode strict, le compilateur n’effectue aucune optimisation risquant de compromettre l’exactitude des calculs en virgule flottante. Le compilateur arrondit toujours correctement lors des affectations, des conversions de type et les appels de fonction et d’arrondi intermédiaire sera toujours effectué à la même précision car le FPU est inscrit. La sémantique d’exception à virgule flottante et l’environnement FPU sont activées par défaut. Certaines optimisations, telles que les contractions, sont désactivées, car le compilateur ne peut pas garantir l’exactitude dans tous les cas.
+Fp : mode strict, le compilateur n’effectue aucune optimisation risquant de compromettre l’exactitude des calculs à virgule flottante. Le compilateur correctement les arrondis lors des affectations, des conversions de type et les appels de fonction, et les arrondis intermédiaires sont effectués de façon cohérente à la même précision que les registres FPU. Sémantique d’exceptions à virgule flottante et l’environnement FPU sont activées par défaut. Certaines optimisations, telles que les contractions, sont désactivées, car le compilateur ne peut pas garantir l’exactitude dans tous les cas.
 
-|fp : stricte sémantique|Explication|
+|mode fp : stricte sémantique|Explication|
 |-|-|
-|Sémantique d’arrondi|Arrondi explicite lors des affectations, des conversions de type, et les appels de fonction<br/>Les expressions intermédiaires seront évaluées au niveau de précision de Registre.<br/>Identique au mode fp : precise|
-|Transformations algébriques|Respect strict non associatif, non distributif algèbre à virgule flottante, sauf si une transformation systématiquement produisent les mêmes résultats.<br/>Identique au mode fp : precise|
+|Sémantique d’arrondi|Arrondi explicite lors des affectations, des conversions de type et les appels de fonction<br/>Les expressions intermédiaires sont évaluées au degré de précision de Registre.<br/>Identique au mode fp : precise|
+|Transformations algébriques|Respect strict de l’algèbre non associatif, non distributif des nombres de virgule flottante, sauf si une transformation systématiquement produisent les mêmes résultats.<br/>Identique au mode fp : precise|
 |Contractions|Toujours désactivé|
-|Ordre d’évaluation à virgule flottante|Le compilateur ne réorganise pas l’évaluation d’expressions en virgule flottante|
-|Accès à l’environnement FPU|Toujours activée.|
-|Sémantique d’exception à virgule flottante|Activé par défaut.|
+|Ordre d’évaluation à virgule flottante|Le compilateur ne réorganise pas l’évaluation des expressions à virgule flottante|
+|Accès à l’environnement FPU|Toujours activé.|
+|Sémantique d’exceptions de virgule flottante|Activé par défaut.|
 
-### <a name="floating-point-exception-semantics-under-fpstrict"></a>La sémantique d’exception à virgule flottante en mode fp : strict
+### <a name="floating-point-exception-semantics-under-fpstrict"></a>La sémantique d’exceptions à virgule flottante en mode fp : strict
 
-Par défaut, la sémantique d’exception à virgule flottante est activée sous fp : strict modèle. Pour désactiver cette sémantique, utilisez le **/fp : sauf-** commutateur ou d’introduire une `float_control(except, off)` pragma.
+Par défaut, la sémantique d’exceptions à virgule flottante est activée fp : strict modèle. Pour désactiver cette sémantique, utilisez le **/fp : à l’exception de-** basculer ou d’introduire un `float_control(except, off)` pragma.
 
-Pour plus d’informations, consultez les sections [activation de la sémantique de l’exception de virgule flottante](#enabling-floating-point-exception-semantics) et [le Pragma float_control](#the-float-control-pragma).
+Pour plus d’informations, consultez les sections [activation de la sémantique d’exception de virgule flottante](#enabling-floating-point-exception-semantics) et [Pragma float_control](#the-float-control-pragma).
 
 ## <a name="the-fenvaccess-pragma"></a>Le pragma fenv_access
 
@@ -867,9 +866,9 @@ Utilisation :
 #pragma fenv_access( [ on  | off ] )
 ```
 
-Le [fenv_access](../../preprocessor/fenv-access.md) pragma permet au compilateur d’apporter certaines optimisations pouvant perturber les tests d’indicateur FPU et les changements de mode FPU. Lorsque l’état de `fenv_access` est désactivé, le compilateur peut prendre les modes FPU par défaut sont en vigueur et que les indicateurs FPU ne sont pas testées. Par défaut, l’accès à l’environnement est désactivé pour fp : precise mode, si elle peut être activée explicitement à l’aide de ce pragma. En mode fp : strict, `fenv_access` est toujours activé et ne peut pas être désactivée. Sous fp : fast, `fenv_access` est toujours désactivé et ne peut pas être activée.
+Le [fenv_access](../../preprocessor/fenv-access.md) pragma permet au compilateur d’apporter certaines optimisations pouvant perturber les tests d’indicateur FPU et les changements de mode FPU. Lorsque l’état de `fenv_access` est désactivé, le compilateur peut prendre les modes FPU par défaut sont appliquées et que les indicateurs FPU ne sont pas testés. Par défaut, l’accès à l’environnement est désactivé pour le mode fp : precise mode, même si elle peut être explicitement activée à l’aide de ce pragma. En mode fp : strict, `fenv_access` est toujours activée et ne peut pas être désactivée. Sous mode fp : fast, `fenv_access` est toujours désactivé et ne peut pas être activée.
 
-Comme décrit dans fp : section précise, certains programmeurs peuvent modifier la direction d’arrondi à virgule flottante à l’aide du `_controlfp` (fonction). Par exemple, pour calculer les limites d’erreur supérieures et inférieures des opérations arithmétiques, certains programmes s’exécutent le même calcul à deux reprises, tout d’abord en arrondissant à l’infini négatif, puis en arrondissant à l’infini positif. Étant donné que le FPU offre un moyen pratique de contrôle des arrondis, un programmeur peut choisir de modifier le mode d’arrondi en modifiant l’environnement FPU. Le code suivant calcule la que limite d’une erreur exacte d’une multiplication à virgule flottante en modifiant l’environnement FPU.
+Comme décrit dans le mode fp : precise section, certains programmeurs peuvent modifier la direction d’arrondi à virgule flottante à l’aide du `_controlfp` (fonction). Par exemple, pour calculer les limites d’erreur supérieures et inférieures pour les opérations arithmétiques, certains programmes effectuent le même calcul à deux reprises, tout d’abord en arrondissant à l’infini négatif, puis en arrondissant à l’infini positif. Étant donné que le FPU offre un moyen pratique de contrôle des arrondis, un programmeur peut choisir de changer de mode d’arrondi en modifiant l’environnement FPU. Le code suivant calcule la que limite d’une erreur exacte d’une multiplication à virgule flottante en modifiant l’environnement FPU.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -881,9 +880,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-Lorsque désactivé, le `fenv_access` pragma permet au compilateur de supposer l’environnement FPU par défaut ; par conséquent, l’optimiseur est libre d’ignorer les appels à `_controlfp` et réduire les affectations ci-dessus à `cUpper = cLower = a*b`. Lorsque activé, toutefois, `fenv_access` évite de telles optimisations.
+Lorsque désactivé, le `fenv_access` pragma permet au compilateur de supposer l’environnement FPU par défaut ; par conséquent, l’optimiseur est libre d’ignorer les appels à `_controlfp` et réduire les affectations ci-dessus à `cUpper = cLower = a*b`. Lorsque activé, toutefois, `fenv_access` empêche ces optimisations.
 
-Programmes peuvent également vérifier le mot d’état FPU pour détecter certaines erreurs en virgule flottante. Par exemple, le code suivant vérifie les conditions de division par zéro ou d’inexactitude
+Les programmes peuvent également vérifier le mot d’état FPU pour détecter certaines erreurs liées à virgule flottante. Par exemple, le code suivant vérifie les conditions de division par zéro ou d’inexactitude
 
 ```cpp
 double a, b, c, r;
@@ -900,7 +899,7 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-Lorsque `fenv_access` est désactivé, le compilateur peut réorganiser l’ordre d’exécution des expressions en virgule flottante, compromettant probablement ainsi les vérifications d’état FPU. L’activation de `fenv_access` évite de telles optimisations.
+Lorsque `fenv_access` est désactivé, le compilateur peut réorganiser l’ordre d’exécution des expressions à virgule flottante, compromettant probablement ainsi les vérifications d’état FPU. L’activation `fenv_access` empêche ces optimisations.
 
 ## <a name="the-fpcontract-pragma"></a>Le pragma fp_contract
 
@@ -910,7 +909,7 @@ Utilisation :
 #pragma fp_contract( [ on | off ] )
 ```
 
-Comme décrit dans fp : section précise, contraction est une fonctionnalité architecturale essentielle pour le nombre d’unités à virgule flottante moderne. Les contractions pour effectuer une multiplication suivie d’une addition comme une seule opération, aucune erreur d’arrondi intermédiaire. Ces instructions uniques sont plus rapides que l’exécution distincte multiplier et ajouter des instructions et sont plus précises, car il n’existe pas d’arrondi intermédiaire du produit. Une opération conventionnel peut calcule la valeur de `(a*b+c)` comme si les deux opérations ont été calculées à une précision infinie et ensuite arrondies à la plus proche du nombre à virgule flottante. Cette optimisation peut considérablement accélérer les fonctions contenant plusieurs entrelacées multiplier et ajouter des opérations. Par exemple, considérez l’algorithme suivant qui calcule le produit scalaire de deux vecteurs à n dimensions.
+Comme décrit dans le mode fp : precise section contraction est une fonctionnalité architecturale essentielle pour le nombre d’unités de virgule flottante moderne. Contractions vous permettent d’effectuer une multiplication suivie d’une addition en une seule opération aucune erreur d’arrondi intermédiaire. Ces instructions uniques sont plus rapides que l’exécution distincte instructions multiplication / addition et sont plus précises car il n’est pas d’arrondi intermédiaire du produit. Une opération contractée permet de calculer la valeur de `(a*b+c)` comme si les deux opérations ont été calculées avec une précision infinie et ensuite arrondies à la plus proche du nombre à virgule flottante. Cette optimisation peut considérablement accélérer les fonctions contenant plusieurs entrelacés multiplier et ajouter des opérations. Par exemple, considérez l’algorithme ci-dessous qui calcule le produit scalaire de deux vecteurs de dimension n.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -922,9 +921,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Ce calcul peut être effectué une série de multiplier-ajouter les instructions du formulaire `p = p + x[i]*y[i]`.
+Ce calcul peut être effectué une série de multiplication / addition d’instructions du formulaire `p = p + x[i]*y[i]`.
 
-Le [fp_contract](../../preprocessor/fp-contract.md) pragma Spécifie si les expressions en virgule flottante peuvent être contractées. Par défaut, le préfixe : mode précision tient compte des contractions car ils améliorent la précision et la vitesse. Contractions sont toujours activées pour le mode fp : fast. Toutefois, étant donné que les contractions peuvent compromettre la détection explicite de conditions d’erreur, le `fp_contract` pragma est toujours désactivé sous fp : le mode strict. Exemples d’expressions pouvant être contractées lorsque le `fp_contract` pragma est activé :
+Le [fp_contract](../../preprocessor/fp-contract.md) pragma Spécifie si les expressions en virgule flottante peuvent être contractées. Par défaut, le mode fp : precise mode tient compte des contractions car celles-ci améliorent la précision et la vitesse. Contractions sont toujours activées pour le mode fp : fast. Toutefois, étant donné que les contractions peuvent compromettre la détection explicite des conditions d’erreur, le `fp_contract` pragma est toujours désactivé fp : mode strict. Exemples d’expressions pouvant être contractées lorsque le `fp_contract` pragma est activé :
 
 ```cpp
 float a, b, c, d, e, t;
@@ -941,7 +940,7 @@ d = t + c;           // won't be contracted because of rounding of a*b
 
 ## <a name="the-floatcontrol-pragma"></a>Le pragma float_control
 
-Le **/fp : précise**, **Fast**, **/fp : strict** et **/fp : sauf** commutateurs contrôlent la sémantique en virgule flottante sur un fichier par fichier base. Le [float_control](../../preprocessor/float-control.md) pragma offre un contrôle sur une base fonction par fonction.
+Le **/fp : precise**, **Fast**, **/fp : strict** et **/fp : sauf** commutateurs contrôlent la sémantique en virgule flottante fichier par fichier base. Le [float_control](../../preprocessor/float-control.md) pragma offre un contrôle fonction par fonction.
 
 Utilisation :
 
@@ -952,24 +951,24 @@ Utilisation :
 #pragma float_control( except, on | off [, push] )
 ```
 
-Les pragmas `float_control(push)` et `float_control(pop)` respectivement push et pop, l’état actuel du mode en virgule flottante et l’option d’exception dans une pile. Notez que l’état de la `fenv_access` et `fp_contract` pragma ne sont pas affectés par `pragma float_control(push/pop)`.
+Les pragmas `float_control(push)` et `float_control(pop)` respectivement push et pop l’état actuel du mode en virgule flottante et l’option d’exception dans une pile. Notez que l’état de la `fenv_access` et `fp_contract` n’est pas affecté par `pragma float_control(push/pop)`.
 
-Appel du pragma `float_control(precise, on)` activera et `float_control(precise, off)` désactivera la sémantique du mode de précision. De même, le pragma `float_control(except, on)` activera et `float_control(except, off)` désactivera la sémantique d’exceptions. La sémantique d’exceptions ne peut être activée que lors de la sémantique de précision est également activée. Lorsque le paramètre facultatif `push` argument est présent, les États de la `float_control` options sont envoyées avant le changement de sémantique.
+Appel du pragma `float_control(precise, on)` activera et `float_control(precise, off)` désactivera la sémantique du mode de précision. De même, le pragma `float_control(except, on)` activera et `float_control(except, off)` désactivera la sémantique d’exceptions. Sémantique d’exceptions ne peut être activée que lors de la sémantique de précision est également activée. Lorsque facultatif `push` argument est présent, les États de la `float_control` options sont envoyées avant le changement de sémantique.
 
-### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Définition du mode de sémantique à virgule flottante sur une base fonction par fonction
+### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Définition du mode de sémantique à virgule flottante fonction par fonction
 
-Les commutateurs de ligne de commande sont en fait des raccourcis permettant de configurer les quatre pragmas en virgule flottante. Pour choisir explicitement un mode de sémantique à virgule flottante particulier sur une base fonction par fonction, sélectionnez chacun des quatre pragmas à virgule flottante option comme décrit dans le tableau suivant :
+Les commutateurs de ligne de commande sont en fait des raccourcis permettant de configurer les quatre pragmas en virgule flottante. Pour choisir explicitement un mode de sémantique à virgule flottante particulier fonction par fonction, sélectionnez chacun des quatre pragmas en virgule flottante comme décrit dans le tableau suivant :
 
 ||||||
 |-|-|-|-|-|
-||float_control(precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/ fp : strict|actif|actif|Désactivé|actif|
-|/ fp : strict/fp : à l’exception :|actif|Désactivé|Désactivé|actif|
-|/ fp : precise|actif|Désactivé|actif|Désactivé|
-|/ fp : precise/fp : à l’exception|actif|actif|actif|Désactivé|
-|Fast|Désactivé|Désactivé|actif|Désactivé|
+||float_control(precise)|float_control|fp_contract|fenv_access|
+|/ fp : strict|actif|actif|Hors tension|actif|
+|/ fp : strict/fp : à l’exception :|actif|Hors tension|Hors tension|actif|
+|/ fp : precise|actif|Hors tension|actif|Hors tension|
+|/ fp : precise/fp : à l’exception|actif|actif|actif|Hors tension|
+|Fast|Hors tension|Hors tension|actif|Hors tension|
 
-Par exemple, la commande suivante active explicitement la sémantique fp : fast.
+Par exemple, le code ci-dessous Active explicitement la sémantique fp : fast.
 
 ```cpp
 #pragma float_control( except, off )   // disable exception semantics
@@ -979,11 +978,11 @@ Par exemple, la commande suivante active explicitement la sémantique fp : fast
 ```
 
 > [!Note]
-> La sémantique d’exception doit être désactivée avant de désactiver la sémantique de « précise ».
+> Sémantique d’exceptions doit être désactivée avant de désactiver la sémantique de « précision ».
 
-## <a name="enabling-floating-point-exception-semantics"></a>Activation de la sémantique de l’exception de virgule flottante
+## <a name="enabling-floating-point-exception-semantics"></a>Activation de la sémantique d’exception de virgule flottante
 
-Certaines conditions exceptionnelles à virgule flottante, telles que la division par zéro, peuvent provoquer une exception matérielle le FPU. Exceptions de virgule flottante sont désactivées par défaut. Exceptions de virgule flottante sont activées en modifiant le mot de commande FPU avec la `_controlfp` (fonction). Par exemple, le code suivant permet à l’exception de virgule flottante de division par zéro :
+Certaines conditions exceptionnelles à virgule flottante, telles que la division par zéro, peuvent provoquer une exception matérielle le FPU. Exceptions de virgule flottante sont désactivées par défaut. Exceptions de virgule flottante sont activées en modifiant le mot de contrôle FPU avec la `_controlfp` (fonction). Par exemple, le code suivant permet à l’exception de virgule flottante de division par zéro :
 
 ```cpp
 _clearfp(); // always call _clearfp before
@@ -991,13 +990,13 @@ _clearfp(); // always call _clearfp before
 _controlfp( _EM_ZERODIVIDE, _MCW_EM );
 ```
 
-Lorsque l’exception de division par zéro est activée, toute opération de division avec un dénominateur égal à zéro entraîne une exception de FPU soit signalé.
+Lorsque l’exception de division par zéro est activée, toute opération de division avec un dénominateur égal à zéro entraîne une exception FPU soit signalé.
 
-Pour rétablir le mot de commande FPU pour le mode par défaut, appelez `_controlfp(_CW_DEFAULT, ~0)`.
+Pour rétablir le mot de contrôle FPU en mode par défaut, appelez `_controlfp(_CW_DEFAULT, ~0)`.
 
-Activation de la sémantique d’exception à virgule flottante avec la **/fp : sauf** indicateur n’est pas le même que l’activation des exceptions à virgule flottante. Lors de la sémantique d’exception à virgule flottante est activée, le compilateur doit tenir compte du fait que toute opération à virgule flottante peut lever une exception. Étant donné que le FPU est une unité de processeur distincte, instructions s’exécutant sur le FPU peuvent être effectuées en même temps que des instructions sur d’autres unités.
+Activation de la sémantique d’exception de virgule flottante avec la **/fp : sauf** indicateur n’est pas identique à l’activation des exceptions de virgule flottante. Lors de la sémantique d’exception de virgule flottante est activée, le compilateur doit tenir compte de la possibilité que toutes les opérations à virgule flottante peuvent lever une exception. Étant donné que le FPU est une unité de processeur distincte, les instructions s’exécutant sur le FPU peuvent être effectuées en même temps que des instructions sur d’autres unités.
 
-Lorsqu’une exception de virgule flottante est activée, le FPU arrêtera l’exécution de l’instruction incriminée et signaler une condition exceptionnelle en définissant le mot d’état FPU. Lors de l’UC atteint la prochaine instruction à virgule flottante, il vérifie d’abord toutes les exceptions FPU en attente. S’il existe une exception en attente, le processeur de l’intercepte en appelant un gestionnaire d’exceptions fourni par le système d’exploitation. Cela signifie que lorsqu’une opération à virgule flottante rencontre une condition exceptionnelle, l’exception correspondante est détectée jusqu'à l’exécution de la prochaine opération à virgule flottante. Par exemple, le code suivant intercepte une exception de division par zéro :
+Quand une exception de virgule flottante est activée, le FPU arrêtera l’exécution de l’instruction fautive et signale ensuite une condition exceptionnelle en définissant le mot d’état FPU. Lorsque le CPU atteint la prochaine instruction à virgule flottante, il vérifie d’abord toutes les exceptions FPU en attente. S’il existe une exception en attente, le processeur les détecte en appelant un gestionnaire d’exceptions fourni par le système d’exploitation. Cela signifie que lorsqu’une opération à virgule flottante rencontre une condition exceptionnelle, l’exception correspondante ne sera pas détectée jusqu'à ce que l’opération à virgule flottante suivante est exécutée. Par exemple, le code suivant intercepte une exception de division par zéro :
 
 ```cpp
 double a, b, c;
@@ -1016,14 +1015,14 @@ __except( EXCEPTION_EXECUTE_HANDLER )
 // . . .
 ```
 
-Si une condition de division par zéro se produit dans l’expression une = b/c, le FPU/lève l’exception jusqu'à la prochaine opération à virgule flottante dans l’expression 2.0 * b. Ainsi, la sortie suivante :
+Si une condition de division par zéro se produit dans l’expression une = b/c, le FPU/lève l’exception jusqu'à la prochaine opération à virgule flottante dans l’expression 2.0 * b. Il en résulte dans la sortie suivante :
 
 ```Output
 This line shouldn't be reached when c==0.0
 SEH Exception Detected
 ```
 
-Les intrinsèques printf correspondant à la première ligne de la sortie ne devriez pas avoir été atteint ; Il a été atteinte, car l’exception à virgule flottante provoquée par l’expression b/c n’a pas été déclenchée jusqu'à ce que l’exécution atteint 2.0 * b. Pour lever l’exception juste après l’exécution de b/c, le compilateur doit introduire une instruction « en attente » :
+Le printf correspondant à la première ligne de la sortie ne doit pas dû être atteinte ; elle a été atteinte car l’exception à virgule flottante provoquée par l’expression b/c n’a pas été déclenchée jusqu'à ce que l’exécution atteint 2.0 * b. Pour lever l’exception juste après l’exécution de b/c, le compilateur doit introduire une instruction « attendre » :
 
 ```cpp
 // . . .
@@ -1037,15 +1036,15 @@ Les intrinsèques printf correspondant à la première ligne de la sortie ne dev
 // . . .
 ```
 
-Cette instruction « attente » force le processeur à synchroniser avec l’état du FPU et à gérer les exceptions en attente. Le compilateur génère uniquement ces instructions « attente » lors de la sémantique à virgule flottante est activée. Lorsque cette sémantique est désactivée, car il existe par défaut, programmes peuvent rencontrer des erreurs de synchronisme, similaires à celui illustré ci-dessus, lors de l’utilisation des exceptions de virgule flottante.
+Cette instruction « attendre » force le processeur à synchroniser avec l’état du FPU et à gérer les exceptions en attente. Le compilateur génère uniquement ces instructions « attendre » lors de la sémantique en virgule flottante est activée. Lorsque cette sémantique est désactivée, qu’il y a par défaut, programmes peuvent rencontrer des erreurs de synchronisme, similaires à celui illustré ci-dessus, lors de l’utilisation des exceptions de virgule flottante.
 
-Lors de la sémantique de virgule flottante est activée, le compilateur n’introduira pas uniquement des instructions « en attente », il sera également empêcher le compilateur illégalement optimisation code à virgule flottante en présence d’exceptions possibles. Cela inclut toutes les transformations qui modifient les points où les exceptions sont levées. En raison de ces facteurs, activation de la sémantique à virgule flottante peut réduire considérablement l’efficacité du code machine généré, ce qui diminue les performances d’une application.
+Lors de la sémantique en virgule flottante est activée, le compilateur n’introduira pas uniquement des instructions « wait », il sera également empêcher le compilateur optimisation illégalement du code à virgule flottante en présence d’exceptions possibles. Cela inclut toutes les transformations qui modifient les points où les exceptions sont levées. En raison de ces facteurs, activation de la sémantique en virgule flottante peut réduire considérablement l’efficacité du code machine généré et donc nuire aux performances d’une application.
 
-La sémantique d’exception à virgule flottante est activée par défaut sous fp : le mode strict. Pour activer cette sémantique dans fp : mode précis, ajoutez le **/fp : à l’exception** basculer vers le compilateur de ligne de commande. Sémantique d’exceptions à virgule flottante peut également être activée et désactivée sur une fonction par fonction à l’aide de la `float_control` pragma.
+Sémantique d’exceptions à virgule flottante est activée par défaut le mode fp : mode strict. Pour activer cette sémantique dans le mode fp : mode précision, ajoutez le **/fp : sauf** basculer vers le compilateur de ligne de commande. Sémantique d’exceptions à virgule flottante peut également être activée et désactivée fonction par fonction à l’aide du `float_control` pragma.
 
-### <a name="floating-point-exceptions-as-c-exceptions"></a>Exceptions à virgule flottante en tant qu’exceptions C++
+### <a name="floating-point-exceptions-as-c-exceptions"></a>Exceptions de virgule flottante en tant qu’exceptions C++
 
-Comme avec toutes les exceptions matérielles, les exceptions à virgule flottante ne provoquent pas intrinsèquement une exception C++, mais déclenchent une exception structurée. Pour mapper les exceptions structurées à virgule flottante sur des exceptions C++, les utilisateurs peuvent introduire un traducteur d’exceptions SEH personnalisé. Tout d’abord, introduire une exception C++ correspondant à chaque exception à virgule flottante :
+En tant qu’avec toutes les exceptions de matériel, exceptions de virgule flottante ne provoquent pas intrinsèquement une exception C++ mais déclenchent une exception structurée. Pour mapper des exceptions à virgule flottante structurées sur des exceptions C++, les utilisateurs peuvent introduire un traducteur d’exceptions SEH personnalisé. Commencez par introduire une exception C++ correspondant à chaque exception de virgule flottante :
 
 ```cpp
 class float_exception : public std::exception {};
@@ -1059,7 +1058,7 @@ class fe_stack_check : public float_exception {};
 class fe_underflow : public float_exception {};
 ```
 
-Ensuite, introduire une fonction de traduction qui détecte une exception SEH à virgule flottante et lever l’exception C++ correspondante. Pour utiliser cette fonction, définissez le traducteur de gestionnaire d’exceptions structurées pour le thread en cours de processus avec le [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) fonction de la bibliothèque runtime.
+Introduisez ensuite une fonction de traduction qui détecte une exception de virgule flottante SEH et lever l’exception C++ correspondante. Pour utiliser cette fonction, définissez le traducteur du Gestionnaire d’exceptions structurées pour le thread de processus actuel avec le [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) fonction à partir de la bibliothèque runtime.
 
 ```cpp
 void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
@@ -1075,7 +1074,7 @@ void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 _set_se_translator(se_fe_trans_func);
 ```
 
-Une fois que ce mappage est initialisé, les exceptions de virgule flottante seront comportent comme s’ils étaient des exceptions C++. Par exemple :
+Une fois ce mappage est initialisé, les exceptions de virgule flottante seront comportent comme si elles étaient des exceptions C++. Exemple :
 
 ```cpp
 try
@@ -1095,7 +1094,7 @@ catch(float_exception)
 
 ## <a name="references"></a>Références
 
-[Ce que les spécialistes de chaque ordinateur doit savoir sur l’arithmétique à virgule flottante](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) par David Grolier.
+[Ce que chaque authentique scientifique doit-elle savoir sur arithmétique à virgule flottante](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) par David Goldberg.
 
 ## <a name="see-also"></a>Voir aussi
 
