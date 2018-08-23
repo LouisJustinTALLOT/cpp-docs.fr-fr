@@ -1,5 +1,5 @@
 ---
-title: Cmfcacceleratorkeyassignctrl, classe | Documents Microsoft
+title: Cmfcacceleratorkeyassignctrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f3dfe9f728b01b175e897f1182c95e954969aaec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037244"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541751"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl, classe
-Le `CMFCAcceleratorKeyAssignCtrl` classe étend la [classe CEdit](../../mfc/reference/cedit-class.md) pour prendre en charge des boutons système supplémentaires tels que ALT, contrôle et MAJ.  
+Le `CMFCAcceleratorKeyAssignCtrl` classe étend la [classe CEdit](../../mfc/reference/cedit-class.md) pour prendre en charge des boutons système supplémentaires tels que ALT, CTRL et MAJ.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Réinitialise la touche de raccourci.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe étend les fonctionnalités de la classe `CEdit` en prenant en charge les touches de raccourci, aussi appelées touches accélérateur. Le `CMFCAcceleratorKeyAssignCtrl` classe fonctionne comme un [classe CEdit](../../mfc/reference/cedit-class.md) et il peut aussi reconnaître les boutons système.  
+ Cette classe étend les fonctionnalités de la classe `CEdit` en prenant en charge les touches de raccourci, aussi appelées touches accélérateur. Le `CMFCAcceleratorKeyAssignCtrl` fonctions en tant que classe un [classe CEdit](../../mfc/reference/cedit-class.md) et il peut aussi reconnaître les boutons système.  
   
  Cette classe mappe les combinaisons de touches de raccourci physiques à des valeurs de chaîne. Par exemple, supposons que la combinaison de touches Alt+B est mappé à la chaîne « Alt+B ». Quand l'utilisateur appuie sur cette combinaison de touches dans un objet `CMFCAcceleratorKeyAssignCtrl`, « Alt+B » est présenté à l'utilisateur. Pour plus d’informations sur le mappage entre les touches de raccourci et un format de chaîne, consultez [cmfcacceleratorkey, classe](../../mfc/reference/cmfcacceleratorkey-class.md).  
   
@@ -94,7 +94,7 @@ CMFCAcceleratorKeyAssignCtrl();
 ```  
   
 ##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
- Récupère le `ACCEL` de la structure d’une touche de raccourci enfoncée dans le [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objet.  
+ Récupère le `ACCEL` structure pour une touche de raccourci enfoncée dans le [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objet.  
   
 ```  
 ACCEL const* GetAccel() const;  
@@ -104,10 +104,10 @@ ACCEL const* GetAccel() const;
  Un `ACCEL` structure qui décrit la touche de raccourci.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction pour récupérer le `ACCEL` structure d’une touche de raccourci entré par l’utilisateur dans votre `CMFCAcceleratorKeyAssignCtrl` objet.  
+ Utilisez cette fonction pour récupérer le `ACCEL` structure pour une touche de raccourci entré par l’utilisateur dans votre `CMFCAcceleratorKeyAssignCtrl` objet.  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 BOOL IsFocused() const;  
@@ -125,13 +125,13 @@ BOOL IsKeyDefined() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’utilisateur a appuyé déjà sur une combinaison de clés qui définissent une touche de raccourci ; Sinon, 0.  
+ Différent de zéro si l’utilisateur a appuyé déjà sur une combinaison valide des clés qui définissent une touche de raccourci ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour déterminer si l’utilisateur a entré une touche de raccourci valide dans votre `CMFCAcceleratorKeyAssignCtrl` objet. Si une touche de raccourci existe, vous pouvez utiliser [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) méthode pour obtenir le `ACCEL` structure associée à cette touche de raccourci.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -152,7 +152,7 @@ void ResetKey();
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction efface le texte du contrôle edit. Cela inclut toutes les touches de raccourci que l’utilisateur a appuyé.  
+ La fonction efface le texte du contrôle edit. Cela inclut les touches de raccourci que l’utilisateur a appuyé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
