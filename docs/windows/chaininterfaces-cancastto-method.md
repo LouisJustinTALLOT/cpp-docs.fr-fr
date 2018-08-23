@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff24ac92e5e84cb85127ef6e33805928fabd6f60
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8398f0bd4d9fdc786926782b13ebcac913a6a351
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647529"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612868"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo, méthode
-Indique si l’ID d’interface spécifié peut être casté à chacune des spécialisations définies par les paramètres du modèle de celle par défaut.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-__forceinline bool CanCastTo(  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *riid*  
- ID d’interface.  
-  
- *PPV*  
- Pointeur vers le dernier ID d’interface qui a été converti avec succès.  
-  
-## <a name="return-value"></a>Valeur de retour  
- **true** si toutes les opérations de cast a réussi ; sinon, **false**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** implements.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ChainInterfaces, structure](../windows/chaininterfaces-structure.md)
+
+Indique si l’ID d’interface spécifié peut être casté à chacune des spécialisations définies par les paramètres du modèle de celle par défaut.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+__forceinline bool CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*riid*  
+ID d’interface.
+
+*PPV*  
+Pointeur vers le dernier ID d’interface qui a été converti avec succès.
+
+## <a name="return-value"></a>Valeur de retour
+
+**true** si toutes les opérations de cast a réussi ; sinon, **false**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** implements.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ChainInterfaces, structure](../windows/chaininterfaces-structure.md)

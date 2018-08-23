@@ -1,36 +1,36 @@
 ---
-title: Types fondamentaux (C + c++ / CX) | Documents Microsoft
+title: Types fondamentaux (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098535"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597871"
 ---
 # <a name="fundamental-types-ccx"></a>Types fondamentaux (C++/CX)
-Outre les types intégrés C++ standard, C + c++ / CX prend en charge le système de type défini par l’architecture de Windows Runtime en fournissant des typedefs pour le Windows Runtime fondamentaux types qui correspondent aux types C++ standard... C + c++ / CX implémente les booléen, de caractère et les types numériques fondamentaux. Ces typedefs sont définis dans l’espace de noms `default` qui ne doit jamais être spécifié explicitement. En outre, C + c++ / CX fournit des wrappers et des implémentations concrètes de certains types Windows Runtime et les interfaces.  
+Outre les types intégrés C++ standard, C++ / c++ / CX prend en charge le système de type défini par l’architecture de Windows Runtime en fournissant des typedefs pour le Runtime Windows fondamentaux des types qui correspondent aux types C++ standard... C++ / c++ / CX implémente booléennes, de caractère et les types numériques fondamentaux. Ces typedefs sont définis dans l’espace de noms `default` qui ne doit jamais être spécifié explicitement. En outre, C++ / c++ / CX fournit des wrappers et des implémentations concrètes pour certains types Windows Runtime et les interfaces.  
   
 ## <a name="boolean-and-character-types"></a>Types booléens et de caractère  
  Le tableau suivant répertorie les types intégrés booléens et de caractère, et leurs équivalents C++ standard.  
   
-|Espace de noms|C + c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|  
+|Espace de noms|C++ / c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |Plateforme|Booléen|Valeur booléenne de 8 bits.|bool|`true` (non nul) et `false` (nul)|  
 |default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> - ou -<br /><br /> L’c’|(Spécifié par la norme Unicode)|  
   
 ## <a name="numeric-types"></a>Types numériques  
- Le tableau suivant répertorie les types numériques intégrés. Les types numériques sont déclarés dans l’espace de noms `default` et sont des typedefs pour le type intégré C++ correspondant. Pas tous les types intégrés de C++ (longs, par exemple) sont pris en charge dans le Windows Runtime. Pour des raisons de clarté, nous vous recommandons d’utiliser les C + c++ / nom CX.  
+ Le tableau suivant répertorie les types numériques intégrés. Les types numériques sont déclarés dans l’espace de noms `default` et sont des typedefs pour le type intégré C++ correspondant. Pas tous les types intégrés de C++ (longs, par exemple) sont pris en charge dans le Runtime de Windows. Pour des raisons de clarté, nous vous recommandons d’utiliser C++ / c++ / nom CX.  
   
-|C + c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|  
+|C++ / c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|  
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |int8|Valeur numérique signée 8 bits.|signed char|-128 à 127|  
 |uint8|Valeur numérique non signée 8 bits.|unsigned char|De 0 à 255|  
@@ -43,8 +43,8 @@ Outre les types intégrés C++ standard, C + c++ / CX prend en charge le systèm
 |float32|Nombre à virgule flottante IEEE 754 32 bits.|float|3.4E +/- 38 (7 chiffres)|  
 |float64|Nombre à virgule flottante IEEE 754 64 bits.|double|1.7E +/- 308 (15 chiffres)|  
   
-## <a name="windows-runtime-types"></a>Types Windows Runtime  
- Le tableau suivant répertorie certains types supplémentaires qui sont définis par l’architecture de Windows Runtime et sont intégrées à C + c++ / CX. Object et String sont des types référence. Tous les autres sont des types valeur. Tous ces types sont déclarés dans l’espace de noms `Platform` . Pour obtenir une liste complète, consultez [Platform namespace](../cppcx/platform-namespace-c-cx.md).  
+## <a name="windows-runtime-types"></a>Types de Runtime Windows  
+ Le tableau suivant répertorie certains types supplémentaires qui sont définis par l’architecture de Windows Runtime et sont intégrés dans C++ / c++ / CX. Object et String sont des types référence. Tous les autres sont des types valeur. Tous ces types sont déclarés dans l’espace de noms `Platform` . Pour obtenir une liste complète, consultez [Platform namespace](../cppcx/platform-namespace-c-cx.md).  
   
 |Name|Définition|  
 |----------|----------------|  

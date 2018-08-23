@@ -1,23 +1,23 @@
 ---
-title: Propriétés (C + c++ / CX) | Documents Microsoft
+title: Propriétés (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089557"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600853"
 ---
 # <a name="properties-ccx"></a>Propriétés (C++/CX)
-Types Windows Runtime exposent les données publiques sous forme de propriétés. Le code client accède à la propriété comme un DataMember public. En interne, la propriété est implémentée en tant que bloc qui contient une méthode d'accesseur get et une méthode d'accesseur set ou les deux. En utilisant des méthodes d'accesseur, vous pouvez exécuter des actions supplémentaires avant ou après avoir récupéré la valeur. Par exemple, vous pouvez déclencher un événement ou effectuer des contrôles de validation.  
+Types Windows Runtime exposent les données publiques en tant que propriétés. Le code client accède à la propriété comme un DataMember public. En interne, la propriété est implémentée en tant que bloc qui contient une méthode d'accesseur get et une méthode d'accesseur set ou les deux. En utilisant des méthodes d'accesseur, vous pouvez exécuter des actions supplémentaires avant ou après avoir récupéré la valeur. Par exemple, vous pouvez déclencher un événement ou effectuer des contrôles de validation.  
   
 ### <a name="remarks"></a>Notes  
  La valeur d'une propriété est contenue dans une variable privée, appelée *magasin de stockage*, qui est du même type que la propriété. Une propriété peut contenir un accesseur set, qui assigne une valeur au magasin de stockage et un accesseur get qui récupère la valeur du magasin de stockage. La propriété est en lecture seule si elle fournit uniquement un accesseur get, en écriture seule si elle fournit uniquement un accesseur set et en lecture/écriture (modifiable) si elle fournit les deux accesseurs.  

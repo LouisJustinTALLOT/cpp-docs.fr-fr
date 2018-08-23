@@ -1,36 +1,36 @@
 ---
-title: Cast (C + c++ / CX) | Documents Microsoft
+title: Cast (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c0e6bc9d987c400c709e74586e6e37ccc0b715
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: ea0ac57b178baed76e6ccb7418c778c1ba2306f4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305993"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613300"
 ---
 # <a name="casting-ccx"></a>Effectuer un cast (C++/CX)
 
-Quatre opérateurs de cast différents s’appliquent aux types Windows Runtime : [opérateur static_cast](../cpp/static-cast-operator.md), [opérateur dynamic_cast](../cpp/dynamic-cast-operator.md), **opérateur safe_cast**, et [ Opérateur reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** et **static_cast** lève une exception lors de la conversion ne peut pas être exécutée. [opérateur static_cast](../cpp/static-cast-operator.md) effectue également la vérification de type au moment de la compilation. **dynamic_cast** retourne **nullptr** en cas d’échec convertir le type. Bien que **reinterpret_cast** retourne une valeur non null, il peut être non valide. Pour cette raison, nous vous recommandons de n'utiliser pas **reinterpret_cast** , sauf si vous savez que le cast réussit. En outre, nous vous conseillons pas casts de style C dans votre C + c++ / CX de code, car ils sont identiques aux **reinterpret_cast**.
+Quatre opérateurs de cast différents s’appliquent aux types Windows Runtime : [opérateur static_cast](../cpp/static-cast-operator.md), [opérateur dynamic_cast](../cpp/dynamic-cast-operator.md), **opérateur safe_cast**, et [ reinterpret_cast, opérateur](../cpp/reinterpret-cast-operator.md). **safe_cast** et **static_cast** lève une exception lors de la conversion ne peut pas être exécutée. [opérateur static_cast](../cpp/static-cast-operator.md) effectue également une vérification de type au moment de la compilation. **dynamic_cast** retourne **nullptr** en cas d’échec convertir le type. Bien que **reinterpret_cast** retourne une valeur non null, il peut être non valide. Pour cette raison, nous vous conseillons pas **reinterpret_cast** , sauf si vous savez que le cast va réussir. En outre, nous recommandons de n'utiliser pas des casts de style C en votre C / c++ / CX de code, car elles sont identiques aux **reinterpret_cast**.
 
 Le compilateur et le runtime exécutent également des casts implicites, par exemple, dans les opérations de boxing lorsqu'un type valeur ou un type intégré sont passés en tant qu'arguments à une méthode dont le type de paramètre est `Object^`. En théorie, un cast implicite ne doit jamais générer une exception au moment de l'exécution. Si le compilateur ne peut pas effectuer une conversion implicite, il déclenche une erreur au moment de la compilation.
 
-Windows Runtime sont des abstractions sur COM, qui utilise des codes d’erreur HRESULT au lieu des exceptions. En général, [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) indique une erreur COM de bas niveau d'E_NOINTERFACE.
+Windows Runtime est une abstraction sur COM, qui utilise des codes d’erreur HRESULT au lieu d’exceptions. En général, [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) indique une erreur COM de bas niveau d'E_NOINTERFACE.
 
 ## <a name="staticcast"></a>static_cast
 
-A **static_cast** est vérifiée au moment de la compilation pour déterminer s’il existe une relation d’héritage entre les deux types. Le cast provoque une erreur de compilation si les types ne sont pas liés.
+Un **static_cast** est vérifié au moment de la compilation pour déterminer s’il existe une relation d’héritage entre les deux types. Le cast provoque une erreur de compilation si les types ne sont pas liés.
 
-A **static_cast** sur un classe ref également entraîne une vérification de l’exécution à effectuer. A **static_cast** sur une référence classe peut passer la vérification des temps de compilation mais encore échouer au moment de l’exécution ; dans ce cas un `Platform::InvalidCastException` est levée. En général, vous n'avez pas à gérer ces exceptions, car elles indiquent presque toujours des erreurs de programmation que vous pouvez éliminer au cours du développement et des tests.
+Un **static_cast** sur une variable de référence la classe entraîne également une vérification de l’exécution à effectuer. Un **static_cast** sur ref classe passe la vérification des temps de compilation mais encore échouer au moment de l’exécution ; dans ce cas un `Platform::InvalidCastException` est levée. En général, vous n'avez pas à gérer ces exceptions, car elles indiquent presque toujours des erreurs de programmation que vous pouvez éliminer au cours du développement et des tests.
 
-Utilisez **static_cast** si le code déclare explicitement une relation entre les deux types, et que vous êtes certain que le cast doit fonctionner.
+Utilisez **static_cast** si le code déclare explicitement une relation entre les deux types, et vous êtes certain que le cast doit fonctionner.
 
 ```cpp
     interface class A{};
@@ -62,7 +62,7 @@ Utilisez safe_cast si le code ne déclare pas la relation mais que vous avez la 
 
 ## <a name="dynamiccast"></a>dynamic_cast
 
-Utilisez **dynamic_cast** lors de la conversion d’un objet (plus spécifiquement, un chapeau **^**) en un type plus dérivé, vous attendez à ce que la cible objet peut parfois être **nullptr** ou que le cast puisse échouer, et que vous souhaitez gérer cette condition comme un chemin d’accès de code normal au lieu d’une exception. Par exemple, dans le **application vide (Windows universel)** modèle de projet, le `OnLaunched` méthode des utilisations app.xamp.cpp **dynamic_cast** pour tester si la fenêtre d’application possède du contenu. Ce n'est pas une erreur si elle ne possède pas de contenu mais une condition attendue. `Windows::Current::Content` est un `Windows::UI::XAML::UIElement` et est converti en un `Windows::UI.XAML::Controls::Frame`, qui est un type plus dérivé dans la hiérarchie d'héritage.
+Utilisez **dynamic_cast** lors de la conversion d’un objet (plus précisément, un chapeau **^**) à un type plus dérivé, vous attendez soit que la cible objet peut être parfois **nullptr** ou que le cast puisse échouer, et que vous souhaitez gérer cette condition comme un chemin d’accès du code normal au lieu d’une exception. Par exemple, dans le **application vide (Windows universel)** modèle de projet, le `OnLaunched` méthode dans les utilisations app.xamp.cpp **dynamic_cast** pour tester si la fenêtre d’application possède du contenu. Ce n'est pas une erreur si elle ne possède pas de contenu mais une condition attendue. `Windows::Current::Content` est un `Windows::UI::XAML::UIElement` et est converti en un `Windows::UI.XAML::Controls::Frame`, qui est un type plus dérivé dans la hiérarchie d'héritage.
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -81,15 +81,15 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-Une autre utilisation de **dynamic_cast** est de détecter un `Object^` pour déterminer si elle contient un type valeur boxed. Dans ce cas, vous tentez une `dynamic_cast<Platform::Box>` ou une `dynamic_cast<Platform::IBox>`.
+Une autre utilisation de **dynamic_cast** est de détecter un `Object^` pour déterminer s’il contient un type valeur boxed. Dans ce cas, vous tentez une `dynamic_cast<Platform::Box>` ou une `dynamic_cast<Platform::IBox>`.
 
 ## <a name="dynamiccast-and-tracking-references-"></a>dynamic_cast et références de suivi (%)
 
-Vous pouvez également appliquer un **dynamic_cast** à une référence de suivi, mais dans ce cas, le cast se comporte comme **safe_cast**. Elle lève `Platform::InvalidCastException` en cas d’échec, car une référence de suivi ne peut pas avoir la valeur **nullptr**.
+Vous pouvez également appliquer un **dynamic_cast** à une référence de suivi, mais dans ce cas, le cast se comporte comme **safe_cast**. Elle lève une exception `Platform::InvalidCastException` en cas d’échec, car une référence de suivi ne peut pas avoir la valeur **nullptr**.
 
 ## <a name="reinterpretcast"></a>reinterpret_cast
 
-Nous vous recommandons de ne pas utiliser [reinterpret_cast](../cpp/reinterpret-cast-operator.md) , car aucune vérification n'est effectuée, que ce soit au moment de la compilation ou de l'exécution. Dans le pire des cas, un **reinterpret_cast** rend possible pour la programmation des erreurs pour ne pas être détectées au moment du développement et de provoquer des erreurs de mineurs ou majeurs dans votre programme. Par conséquent, nous vous recommandons d’utiliser **reinterpret_cast** uniquement dans les rares cas où vous devez effectuer un cast entre types non liés et que vous savez que le cast réussit. Un exemple d’utilisation rares consiste à convertir un type Windows Runtime en son type ABI sous-jacent, cela signifie que vous prenez le contrôle du décompte de références pour l’objet. C'est la raison pour laquelle nous vous recommandons d'utiliser le pointeur intelligent [ComPtr Class](../cpp/com-ptr-t-class.md) . Sinon, vous devez appeler spécifiquement Release sur l'interface. L'exemple suivant montre comment une classe de référence peut faire l'objet d'un cast en une `IInspectable*`.
+Nous vous recommandons de ne pas utiliser [reinterpret_cast](../cpp/reinterpret-cast-operator.md) , car aucune vérification n'est effectuée, que ce soit au moment de la compilation ou de l'exécution. Dans le pire des cas, un **reinterpret_cast** rend possible pour la programmation des erreurs détectées au moment du développement et de provoquer des erreurs subtiles ou catastrophiques un comportement de votre programme. Par conséquent, nous vous recommandons d’utiliser **reinterpret_cast** uniquement dans les rares cas où vous devez effectuer un cast entre types non liés et que vous savez que le cast va réussir. Un exemple d’utilisation rare consiste à convertir un type Windows Runtime en son type ABI sous-jacent, cela signifie que vous prenez le contrôle du décompte de références pour l’objet. C'est la raison pour laquelle nous vous recommandons d'utiliser le pointeur intelligent [ComPtr Class](../cpp/com-ptr-t-class.md) . Sinon, vous devez appeler spécifiquement Release sur l'interface. L'exemple suivant montre comment une classe de référence peut faire l'objet d'un cast en une `IInspectable*`.
 
 ```cpp
 #include <wrl.h>
@@ -99,7 +99,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-Si vous utilisez **reinterpret_cast** pour convertir à partir de l’interface oneWindows Runtime à un autre, vous conduisez l’objet à être libéré deux fois. Par conséquent, utilisez uniquement ce cast lorsque vous convertissez en une interface autre que d'[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] .
+Si vous utilisez **reinterpret_cast** pour convertir à partir de l’interface de Runtime oneWindows vers un autre, vous conduisez l’objet doit être publié deux fois. Par conséquent, utilisez uniquement cette conversion lors de la conversion vers une interface d’extensions de composant Visual C++.
 
 ## <a name="abi-types"></a>Types ABI.
 
@@ -107,13 +107,13 @@ Si vous utilisez **reinterpret_cast** pour convertir à partir de l’interface 
 
 - Les types ABI se trouvent dans une ABI d'espace de noms spéciale, par exemple, `ABI::Windows::Storage::Streams::IBuffer*`.
 
-- Conversions entre un type d’interface Windows Runtime et son type ABI équivalent sont toujours sécurisées, c'est-à-dire `IBuffer^` à `ABI::IBuffer*`.
+- Conversions entre un type d’interface Windows Runtime et son type ABI équivalent sont toujours sûres, autrement dit, `IBuffer^` à `ABI::IBuffer*`.
 
-- Une classe d’exécution Windows Runtime doit toujours être convertie en `IInspectable*` ou son interface par défaut, si cela est connu.
+- Une classe d’exécution de Windows Runtime doit-elle toujours être convertie en `IInspectable*` ou son interface par défaut, si cela est connu.
 
 - Après la conversion en types ABI, vous possédez la durée de vie du type et vous devez suivre les règles COM. Nous vous recommandons d'utiliser `WRL::ComPtr` pour simplifier la gestion de la durée de vie des pointeurs ABI.
 
-Le tableau suivant récapitule les cas dans lequel il est plus sûr d’utiliser **reinterpret_cast**. Dans tous les cas, le cast est sécurisé dans les deux sens.
+Le tableau suivant récapitule les cas dans lesquels il est déconseillé d’utiliser **reinterpret_cast**. Dans tous les cas, le cast est sécurisé dans les deux sens.
 
 |||
 |-|-|

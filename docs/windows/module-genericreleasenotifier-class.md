@@ -17,56 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013517"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611623"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier, classe
-Appelle un gestionnaire d’événements lorsque le dernier objet du module en cours est relâché. Le Gestionnaire d’événements est spécifié par dans une expression lambda, functor ou pointeur de fonction.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename T>  
-class GenericReleaseNotifier : public ReleaseNotifier;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *T*  
- Le type du membre de données qui contient l’emplacement du Gestionnaire d’événements.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier, constructeur](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Initialise une nouvelle instance de la **Module::GenericReleaseNotifier** classe.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[Module::GenericReleaseNotifier::Invoke, méthode](../windows/module-genericreleasenotifier-invoke-method.md)|Appelle le Gestionnaire d’événements associé actuel **Module::GenericReleaseNotifier** objet.|  
-  
-### <a name="protected-data-members"></a>Membres de données protégés  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[Module::GenericReleaseNotifier::callback_, données de membre](../windows/module-genericreleasenotifier-callback-data-member.md)|Contient l’expression lambda, functor ou gestionnaire d’événements de pointeur de fonction associé actuel **Module::GenericReleaseNotifier** objet.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `ReleaseNotifier`  
-  
- `GenericReleaseNotifier`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL
- 
- ## <a name="see-also"></a>Voir aussi
- [Module, classe](../windows/module-class.md)
+
+Appelle un gestionnaire d’événements lorsque le dernier objet du module en cours est relâché. Le Gestionnaire d’événements est spécifié par dans une expression lambda, functor ou pointeur de fonction.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename T>
+class GenericReleaseNotifier : public ReleaseNotifier;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*T*  
+Le type du membre de données qui contient l’emplacement du Gestionnaire d’événements.
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier, constructeur](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Initialise une nouvelle instance de la **Module::GenericReleaseNotifier** classe.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[Module::GenericReleaseNotifier::Invoke, méthode](../windows/module-genericreleasenotifier-invoke-method.md)|Appelle le Gestionnaire d’événements associé actuel **Module::GenericReleaseNotifier** objet.|
+
+### <a name="protected-data-members"></a>Membres de données protégés
+
+|Name|Description|
+|----------|-----------------|
+|[Module::GenericReleaseNotifier::callback_, données de membre](../windows/module-genericreleasenotifier-callback-data-member.md)|Contient l’expression lambda, functor ou gestionnaire d’événements de pointeur de fonction associé actuel **Module::GenericReleaseNotifier** objet.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`ReleaseNotifier`
+
+`GenericReleaseNotifier`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+[Module, classe](../windows/module-class.md)

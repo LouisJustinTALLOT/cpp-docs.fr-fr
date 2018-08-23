@@ -1,5 +1,5 @@
 ---
-title: _InterlockedExchangeAdd, fonctions intrinsèques | Documents Microsoft
+title: _InterlockedExchangeAdd, fonctions intrinsèques | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340552"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600890"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd, fonctions intrinsèques
 **Section spécifique à Microsoft**  
   
- Fournir la prise en charge intrinsèque de compilateur pour Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) (fonction).  
+ Fournir la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) (fonction).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -173,13 +173,13 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur initiale de la variable vers laquelle pointe le paramètre `Addend`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|En-tête|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Notes  
  Il existe plusieurs variantes de `_InterlockedExchangeAdd` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.  
@@ -190,7 +190,7 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
  Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l'indication est ignorée.  
   
- Ces routines sont disponibles seulement comme fonctions intrinsèques. Par conséquent, elles sont intrinsèques qu’ou non [/Oi](../build/reference/oi-generate-intrinsic-functions.md) ou [#pragma intrinsic](../preprocessor/intrinsic.md) est utilisé. Il n’est pas possible d’utiliser [#pragma function](../preprocessor/function-c-cpp.md) sur ces fonctions intrinsèques.  
+ Ces routines sont disponibles seulement comme fonctions intrinsèques. Par conséquent, elles sont intrinsèques qu’ou non [/Oi](../build/reference/oi-generate-intrinsic-functions.md) ou [#pragma intrinsic](../preprocessor/intrinsic.md) est utilisé. Il n’est pas possible d’utiliser [fonction #pragma](../preprocessor/function-c-cpp.md) sur ces fonctions intrinsèques.  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple montrant comment utiliser `_InterlockedExchangeAdd`, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  

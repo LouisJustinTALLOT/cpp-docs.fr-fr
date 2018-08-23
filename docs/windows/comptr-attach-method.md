@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f02d8585778dcb10013a5673c7443b0355535555
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641328"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600194"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach, méthode
-Cela associe **ComPtr** avec le type d’interface spécifié par le paramètre de type de modèle actuel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void Attach(  
-   _In_opt_ InterfaceType* other  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *other*  
- Type d’interface.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ComPtr, classe](../windows/comptr-class.md)
+
+Cela associe **ComPtr** avec le type d’interface spécifié par le paramètre de type de modèle actuel.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void Attach(
+   _In_opt_ InterfaceType* other
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*other*  
+Type d’interface.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ComPtr, classe](../windows/comptr-class.md)

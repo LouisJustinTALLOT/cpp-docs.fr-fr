@@ -1,5 +1,5 @@
 ---
-title: Platform::MTAThreadAttribute (classe) | Documents Microsoft
+title: Platform::MTAThreadAttribute, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089163"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613457"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
 Indique que le modèle de thread d'une application est un modèle MTA (MultiThreaded Apartment).  
@@ -42,7 +42,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 |[MTAThreadAttribute constructeur 1](#ctor) constructeur|Initialise une nouvelle instance de la classe.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
- L’attribut MTAThreadAttribute hérite [Platform::Object, classe](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :  
+ L’attribut MTAThreadAttribute hérite [Platform::Object Class](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -53,14 +53,14 @@ public ref class MTAThreadAttribute sealed : Attribute
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform  
 
 
 
-## <a name="ctor"></a> MTAThreadAttribute (constructeur)
+## <a name="ctor"></a> MTAThreadAttribute, constructeur
 Initialise une nouvelle instance de la classe MTAThreadAttribute.  
   
 ### <a name="syntax"></a>Syntaxe  

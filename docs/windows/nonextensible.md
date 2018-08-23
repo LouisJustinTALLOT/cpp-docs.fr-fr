@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 812f5e2462236faef1b2b13d5fb25320319e773e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5dc2419cad0744ae3487f368b2238f80b96bd8fb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015727"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612855"
 ---
 # <a name="nonextensible"></a>nonextensible
-Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés et méthodes répertoriées dans la description de l’interface et ne peut pas être étendus avec des membres supplémentaires en cours d’exécution.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[nonextensible]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le **nonextensible** attribut C++ a les mêmes fonctionnalités que le [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) attribut MIDL.  
-  
- Utilisation de **nonextensible** requiert également le [oleautomation](../windows/oleautomation.md) attribut.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant illustre une utilisation de la **nonextensible** attribut :  
-  
-```cpp  
-// cpp_attr_ref_nonextensible.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="ATLFIRELib")];  
-[export] typedef long HRESULT;  
-  
-[dual, nonextensible, ms_union, oleautomation,   
-uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl  
-{  
-   HRESULT procedure (int i);   
-};  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**interface**|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|`dual` et `oleautomation`, ou `dispinterface`|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [Attributs d’interface](../windows/interface-attributes.md)   
+
+Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés et méthodes répertoriées dans la description de l’interface et ne peut pas être étendus avec des membres supplémentaires en cours d’exécution.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[nonextensible]
+```
+
+## <a name="remarks"></a>Notes
+
+Le **nonextensible** attribut C++ a les mêmes fonctionnalités que le [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) attribut MIDL.
+
+Utilisation de **nonextensible** requiert également le [oleautomation](../windows/oleautomation.md) attribut.
+
+## <a name="example"></a>Exemple
+
+Le code suivant illustre une utilisation de la **nonextensible** attribut :
+
+```cpp
+// cpp_attr_ref_nonextensible.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="ATLFIRELib")];
+[export] typedef long HRESULT;
+
+[dual, nonextensible, ms_union, oleautomation,
+uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl
+{
+   HRESULT procedure (int i);
+};
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**interface**|
+|**Renouvelable**|Non|
+|**Attributs requis**|`dual` et `oleautomation`, ou `dispinterface`|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs d’interface](../windows/interface-attributes.md)  
