@@ -1,5 +1,5 @@
 ---
-title: __readeflags | Documents Microsoft
+title: __readeflags | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340097"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540632"
 ---
 # <a name="readeflags"></a>__readeflags
-Lit que l’état du programme et le contrôle (EFLAGS) inscrire.  
+Lit que l’état du programme et le contrôle (EFLAGS) inscrivent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +34,16 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- La valeur du Registre EFLAGS. La valeur de retour est de 32 bits de temps sur une plateforme 32 bits et 64 bits de temps sur une plateforme 64 bits.  
+ La valeur du Registre EFLAGS. La valeur de retour est 32 bits de temps sur une plateforme 32 bits et 64 bits de temps sur une plateforme 64 bits.  
   
 ## <a name="remarks"></a>Notes  
- Ces routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
