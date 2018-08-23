@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337406"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545837"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 La structure `AFX_GLOBAL_DATA` contient des champs et des méthodes qui permettent de gérer l’infrastructure ou de personnaliser l’apparence et le comportement de votre application.  
@@ -69,7 +69,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Détecte l’état actuel des fonctionnalités de masquage automatique de la barre des tâches et de l’animation des menus du Bureau.|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Inscrit la classe de fenêtre MFC spécifiée.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Libère les interfaces obtenues par les méthodes GetITaskbarList et GetITaskbarList3.|  
-|[AFX_GLOBAL_DATA::Resume](#resume)|Réinitialise les pointeurs de fonction internes qui accèdent à des méthodes prenant en charge [les thèmes et les styles visuels](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)Windows.|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|Réinitialise les pointeurs de fonction internes qui accèdent à des méthodes qui prennent en charge Windows [thèmes et styles visuels](/windows/desktop/Controls/visual-styles-overview).|  
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fournit un moyen simple d’appeler la méthode Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) .|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Crée la police logique spécifiée.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Crée et initialise un objet élément d’interpréteur de commandes à partir d’un nom de l’analyse.|  

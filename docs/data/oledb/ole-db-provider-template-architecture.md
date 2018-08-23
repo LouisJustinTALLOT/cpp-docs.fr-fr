@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2ce756cbeae87c33ec612b8c2665f27249e9ecf7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e4170e2089cbfc584c5832e4a1a0542f360741c5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339937"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571696"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architecture des modèles du fournisseur OLE DB
 ## <a name="data-sources-and-sessions"></a>Sources de données et sessions  
@@ -47,7 +47,7 @@ ms.locfileid: "39339937"
   
  Notez que les modèles du fournisseur OLE DB n’implémentent pas les objets de ligne et de stockage.  
   
- Le tableau suivant répertorie les interfaces obligatoires et facultatives pour les objets répertoriés ci-dessus, en fonction de la [OLE DB 2.6 SDK documentation sur](https://msdn.microsoft.com/library/ms722784.aspx).  
+ Le tableau suivant répertorie les interfaces obligatoires et facultatives pour les objets répertoriés ci-dessus, en fonction de la [OLE DB 2.6 SDK documentation sur](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
   
 |Composant|Interface|Commentaire|  
 |---------------|---------------|-------------|  
@@ -65,4 +65,4 @@ ms.locfileid: "39339937"
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Interfaces OLE DB](https://msdn.microsoft.com/library/ms709709.aspx)
+ [Interfaces OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

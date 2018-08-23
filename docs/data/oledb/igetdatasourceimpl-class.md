@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c6e304547af06d5de6d81bae2ceace119e4681d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339794"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572164"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl, classe
-Fournit une implémentation de la [IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx) objet.  
+Fournit une implémentation de la [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) objet.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,7 +71,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IGetDataSource::GetDataSource](https://msdn.microsoft.com/library/ms725443.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
  Cette option est utile si vous avez besoin accéder aux propriétés de l’objet de source de données.  

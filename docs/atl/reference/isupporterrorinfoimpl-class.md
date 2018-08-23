@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849107cc9f0d0611eb3dc9259fc317f73a961407
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026171"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571594"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl, classe
-Cette classe fournit une implémentation par défaut de la [ISupportErrorInfo Interface](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.  
+Cette classe fournit une implémentation par défaut de la [ISupportErrorInfo Interface](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 #### <a name="parameters"></a>Paramètres  
  *piid*  
- Un pointeur vers l’IID d’une interface qui prend en charge [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  
+ Un pointeur vers l’IID d’une interface qui prend en charge [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).  
   
 ## <a name="members"></a>Membres  
   
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interface.|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface.|  
   
 ## <a name="remarks"></a>Notes  
- Le [ISupportErrorInfo Interface](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) garantit que les informations d’erreur peuvent être retournées au client. Objets qui utilisent `IErrorInfo` doit implémenter `ISupportErrorInfo`.  
+ Le [ISupportErrorInfo Interface](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) garantit que les informations d’erreur peuvent être retournées au client. Objets qui utilisent `IErrorInfo` doit implémenter `ISupportErrorInfo`.  
   
  Classe `ISupportErrorInfoImpl` fournit une implémentation par défaut de `ISupportErrorInfo` et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet. Exemple :  
   
@@ -69,14 +69,14 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
  **En-tête :** atlcom.h  
   
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interface.  
+ Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface.  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/a54ef18d-ee3f-4483-ac4a-99d758f0960a) dans le Kit de développement logiciel Windows.  
+ Consultez [ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Appelez cette méthode pour obtenir le nombre de threads dans le pool.  

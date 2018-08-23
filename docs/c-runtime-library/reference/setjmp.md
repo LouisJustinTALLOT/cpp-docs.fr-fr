@@ -1,7 +1,7 @@
 ---
 title: setjmp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc4673485577f5a12024d31e94063c82a8c7b8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407250"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571765"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,26 +53,33 @@ int setjmp(
 
 ### <a name="parameters"></a>Paramètres
 
-*env*<br/>
+*env*  
 Variable dans laquelle l’environnement est stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur 0 après l’enregistrement de l’environnement de pile. Si **setjmp** retourne à la suite d’un **longjmp** appeler, elle retourne le **valeur** argument de **longjmp**, ou si le **valeur**  argument de **longjmp** est 0, **setjmp** renvoie la valeur 1. Aucun retour d'erreur.
+Retourne la valeur 0 après l’enregistrement de l’environnement de pile. Si **setjmp** retourne à la suite d’un `longjmp` appeler, elle retourne le *valeur* argument de `longjmp`, ou si le *valeur* argument de `longjmp` est 0, **setjmp** retourne 1. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **setjmp** fonction enregistre un environnement de la pile, vous pouvez restaurer par la suite, à l’aide de **longjmp**. Utilisés conjointement, **setjmp** et **longjmp** fournissent un moyen d’exécuter non local **goto**. Elles sont généralement utilisées pour passer le contrôle d’exécution au code de gestion des erreurs ou au code de récupération dans une routine appelée précédemment sans utiliser les conventions d’appel ou de retour normales.
+Le **setjmp** fonction enregistre un environnement de pile, vous pouvez restaurer par la suite, à l’aide de `longjmp`. Utilisés ensemble, **setjmp** et `longjmp` fournissent un moyen d’exécuter non local **goto**. Elles sont généralement utilisées pour passer le contrôle d’exécution au code de gestion des erreurs ou au code de récupération dans une routine appelée précédemment sans utiliser les conventions d’appel ou de retour normales.
 
-Un appel à **setjmp** enregistre l’environnement actuel de la pile dans *env*. Un appel ultérieur à **longjmp** restaure l’environnement enregistré et retourne le contrôle au point juste après le correspondant **setjmp** appeler. Toutes les variables (à l’exception des variables de Registre) accessibles à la routine de réception contrôle contiennent les valeurs qu’elles avaient lorsque **longjmp** a été appelée.
+Un appel à **setjmp** enregistre l’environnement de pile actuel dans *env*. Un appel ultérieur à `longjmp` restaure l’environnement enregistré et redonne le contrôle au point juste après le correspondantes **setjmp** appeler. Toutes les variables (à l’exception des variables de Registre) accessibles à la routine recevant le contrôle contiennent les valeurs qu’elles possédaient au moment où `longjmp` a été appelé.
 
-Il n’est pas possible d’utiliser **setjmp** pour accéder à partir de code natif au code managé.
+Il n’est pas possible d’utiliser **setjmp** à passer du code natif au code managé.
 
-**Remarque** **setjmp** et **longjmp** ne prennent pas en charge la sémantique d’objet C++. Dans les programmes C++, utilisez le mécanisme de gestion des exceptions C++.
+**Section spécifique à Microsoft**
+
+Dans le code C++ de Microsoft sur Windows, **longjmp** utilise la même sémantique de déroulement de pile en tant que code de gestion des exceptions. Il est sûr à utiliser dans les mêmes emplacements que les exceptions C++ peuvent être déclenchées. Toutefois, cette utilisation n’est pas portable et il est fourni avec quelques avertissements importants. Pour plus d’informations, consultez [longjmp](longjmp.md).
+
+**FIN de la section spécifique à Microsoft**
+
+> [!NOTE]  
+> Dans le code C++ portable, vous ne pouvez pas supposer `setjmp` et `longjmp` prennent en charge la sémantique d’objet C++. Plus précisément, un `setjmp` / `longjmp` appel paire a un comportement indéfini si en remplaçant le `setjmp` et `longjmp` par **catch** et **lever** appellerait tous les destructeurs non triviaux pour tous les objets automatiques. Dans les programmes C++, nous vous recommandons de qu'utiliser le mécanisme de gestion des exceptions C++.
 
 Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -86,6 +93,5 @@ Consultez l’exemple relatif à [_fpreset](fpreset.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
-[longjmp](longjmp.md)<br/>
-[_setjmp3](../../c-runtime-library/setjmp3.md)<br/>
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)  
+[longjmp](longjmp.md)  

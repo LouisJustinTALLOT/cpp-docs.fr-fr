@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413269"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571462"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -59,7 +59,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
@@ -72,13 +72,13 @@ Liste d’arguments de variable.
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui sont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit, ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **vfscanf** et **vfwscanf**.
 
-Ces fonctions valident leurs paramètres. Si *flux* ou *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *flux* ou *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **vfscanf** fonction lit les données à partir de la position actuelle de *flux* dans les emplacements qui sont fournis par le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôles l’interprétation de l’entrée des champs et a la même forme et fonction que la *format* argument pour **scanf**; consultez [scanf](scanf-scanf-l-wscanf-wscanf-l.md) pour un Description de *format*.
+Le **vfscanf** fonction lit les données à partir de la position actuelle du *flux* dans les emplacements fournis par le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôle l’interprétation de l’entrée champs et a la même forme et fonction que le *format* argument pour **scanf**; consultez [scanf](scanf-scanf-l-wscanf-wscanf-l.md) pour un Description de *format*.
 
-**vfwscanf** est une version à caractères larges de **vfscanf**; l’argument de format **vfwscanf** est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **vfscanf** ne prend pas en charge d’entrée à partir d’un flux de données UNICODE.
+**vfwscanf** est une version à caractères larges de **vfscanf**; l’argument format pour **vfwscanf** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **vfscanf** ne prend pas en charge d’entrée à partir d’un flux de données UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -88,7 +88,7 @@ Le **vfscanf** fonction lit les données à partir de la position actuelle de *f
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

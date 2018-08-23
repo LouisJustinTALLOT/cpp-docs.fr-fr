@@ -1,5 +1,5 @@
 ---
-title: -/ALLOWBIND (éviter la liaison DLL) | Documents Microsoft
+title: -ALLOWBIND (éviter la liaison DLL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369638"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571700"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Éviter la liaison DLL)
 ```  
@@ -37,11 +37,11 @@ ms.locfileid: "32369638"
 ## <a name="remarks"></a>Notes  
  /ALLOWBIND:NO définit un bit dans l'en-tête d'une DLL, qui indique à Bind.exe que l'image n'est pas autorisée à être liée. Vous ne voulez peut-être pas qu’une DLL soit liée si elle a été signée numériquement (la liaison invalide la signature).  
   
- Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND avec la [/ALLOWBIND](../../build/reference/allowbind.md) option de l’utilitaire EDITBIN.  
+ Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND à le [/ALLOWBIND](../../build/reference/allowbind.md) option de l’utilitaire EDITBIN.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
 2.  Développez **propriétés de Configuration**, **l’éditeur de liens**, puis sélectionnez **ligne de commande**.  
   
@@ -54,5 +54,5 @@ ms.locfileid: "32369638"
 ## <a name="see-also"></a>Voir aussi  
  [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
  [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
- [BindImage (fonction)](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [BindImageEx (fonction)](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [BindImage (fonction)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [BindImageEx (fonction)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

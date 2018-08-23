@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402570"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572084"
 ---
 # <a name="goto-statement-c"></a>goto, instruction (C++)
 Le **goto** instruction transfère sans condition le contrôle à l’instruction étiquetée par l’identificateur spécifié.  
@@ -36,6 +36,25 @@ goto identifier;
  L'instruction étiquetée indiquée par `identifier` doit se trouver dans la fonction actuelle. Tous les noms `identifier` sont membres d'un espace de noms interne et, par conséquent, n'interfèrent pas avec d'autres identificateurs.  
   
  Une étiquette d’instruction est uniquement explicite pour un **goto** instruction ; sinon, les étiquettes d’instruction sont ignorés. Les étiquettes ne peuvent pas être redéclarées.  
+
+Un **goto** instruction n’est pas autorisée à transférer le contrôle vers un emplacement qui ignore l’initialisation de n’importe quelle variable qui est dans la portée de cet emplacement. L’exemple suivant déclenche C2362 :
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  Il est conseillé d’utiliser le **saut**, **continuer**, et **retourner** instructions au lieu du **goto** instruction chaque fois que possibles. Toutefois, étant donné que le **saut** instruction se termine à partir d’un seul niveau d’une boucle, vous devrez peut-être utiliser un **goto** instruction pour quitter une boucle profondément imbriquée.  
   

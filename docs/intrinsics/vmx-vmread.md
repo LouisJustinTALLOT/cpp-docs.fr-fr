@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmread | Documents Microsoft
+title: __vmx_vmread | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340669"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545812"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Section spécifique à Microsoft**  
@@ -43,7 +43,7 @@ unsigned char __vmx_vmread(
 |Paramètre|Description|  
 |---------------|-----------------|  
 |[in] `Field`|Le champ VMCS à lire.|  
-|[in] `FieldValue`|Un pointeur vers l’emplacement pour stocker la valeur de lecture à partir du champ VMCS spécifié par le `Field` paramètre.|  
+|[in] `FieldValue`|Un pointeur vers l’emplacement pour stocker la valeur lire à partir du champ VMCS spécifié par le `Field` paramètre.|  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -54,13 +54,13 @@ unsigned char __vmx_vmread(
 |2|L’opération a échoué sans état disponible.|  
   
 ## <a name="remarks"></a>Notes  
- Le `__vmx_vmread` fonction est équivalente à la `VMREAD` instruction machine. La valeur de le `Field` paramètre est un index de champ codée qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) de site, puis consultez l’annexe C de ce document .  
+ Le `__vmx_vmread` fonction est équivalente à la `VMREAD` instruction machine. La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) de site, puis consultez l’annexe C de ce document .  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

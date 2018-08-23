@@ -1,5 +1,5 @@
 ---
-title: __umulh | Documents Microsoft
+title: __umulh | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 820f18e0f7db1b70982558c75f879902dca14d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327253"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545823"
 ---
 # <a name="umulh"></a>__umulh
 **Section spécifique à Microsoft**  
@@ -47,11 +47,11 @@ unsigned __int64 __umulh(
 ## <a name="return-value"></a>Valeur de retour  
  64 bits de poids fort du résultat 128 bits de la multiplication.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__umulh`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

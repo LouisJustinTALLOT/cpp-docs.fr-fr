@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397751"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571699"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -66,19 +66,19 @@ void _endthreadex(
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelée automatiquement lorsque le thread retourne de la routine passée en tant que paramètre à **_beginthread** ou **_beginthreadex**. Terminer un thread avec un appel à **endthread** ou **_endthreadex** permet de garantir une récupération correcte des ressources allouées pour le thread.
+Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelée automatiquement lorsque le thread retourne de la routine passée en tant que paramètre à **_beginthread** ou **_beginthreadex**. Arrêt d’un thread avec un appel à **endthread** ou **_endthreadex** vous aide à garantir une récupération correcte des ressources allouées pour le thread.
 
 > [!NOTE]
-> Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas l’API [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) Win32, car elle empêche le système runtime de récupérer les ressources allouées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appelez **ExitThread**.
+> Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas l’API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32, car elle empêche le système runtime de récupérer les ressources allouées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appellent **ExitThread**.
 
 **_endthread** ferme automatiquement le handle du thread. (Ce comportement diffère de Win32 **ExitThread** API.) Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
 
 Comme Win32 **ExitThread** API, **_endthreadex** ne ferme pas le handle du thread. Par conséquent, lorsque vous utilisez **_beginthreadex** et **_endthreadex**, vous devez fermer le handle du thread en appelant Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **_endthread** et **_endthreadex** provoquent des destructeurs C++ en attente dans le thread à ne pas appeler.
+> **_endthread** et **_endthreadex** provoquer des destructeurs C++ en attente dans le thread d’appel.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

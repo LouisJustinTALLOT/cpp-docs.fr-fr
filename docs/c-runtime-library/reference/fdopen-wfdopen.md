@@ -19,6 +19,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _tfdopen
@@ -41,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bd849d5ce9560fae356869291d6764d613f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d48222be892ebe0b05b8500bb1a4f2117e440b0c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405417"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571755"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -79,58 +81,58 @@ Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doser
 
 ## <a name="remarks"></a>Notes
 
-Le **_fdopen** fonction associe le fichier identifié par un flux d’e/s *fd*, permettant ainsi un fichier est ouvert pour les e/s de bas niveau mis en mémoire tampon et la mise en forme. **_wfdopen** est une version à caractères larges de **_fdopen**; le *mode* argument **_wfdopen** est une chaîne à caractères larges. **_wfdopen** et **_fdopen** sinon se comportent de façon identique.
+Le **_fdopen** fonction associe le fichier qui est identifié par un flux d’e/s *fd*, permettant ainsi un fichier est ouvert pour les e/s de bas niveau être mis en mémoire tampon et mise en forme. **_wfdopen** est une version à caractères larges de **_fdopen**; le *mode* l’argument de **_wfdopen** est une chaîne de caractères larges. **_wfdopen** et **_fdopen** sinon se comportent de façon identique.
 
-Transmis à des descripteurs de fichiers **_fdopen** sont détenus par retourné **fichier &#42;**  flux. Si **_fdopen** est réussie, n’appelez pas [ \_fermer](close.md) sur le descripteur de fichier. Appel de [fclose](fclose-fcloseall.md) sur retourné **fichier &#42;**  ferme également le descripteur de fichier.
+Transmis à des descripteurs de fichiers **_fdopen** sont détenus par retourné **fichier &#42;**  flux. Si **_fdopen** est réussie, n’appelez pas [ \_fermer](close.md) sur le descripteur de fichier. Appel [fclose](fclose-fcloseall.md) sur retourné **fichier &#42;**  ferme également le descripteur de fichier.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
-|Routine Tchar.h|\_UNICODE et \_MBCS non défini|\_MBCS défini|\_UNICODE défini|
+|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE définie|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-Le *mode* chaîne de caractères Spécifie le type d’accès de fichier demandé pour le fichier :
+Le *mode* chaîne de caractères Spécifie le type d’accès au fichier demandé pour le fichier :
 
 |*mode*|Accès|
 |-|-|
-**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appel échoue.
+**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appeler échoue.
 **"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.
-**"a"**|Ouvre pour l’accès en écriture à la fin du fichier (ajout). Crée le fichier s'il n'existe pas.
+**"a"**|S’ouvre pour écriture à la fin du fichier (ajout). Crée le fichier s'il n'existe pas.
 **"r+"**|Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister.
 **"w+"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit.
 **"a+"**|S'ouvre pour lecture et ajout. Crée le fichier s'il n'existe pas.
 
-Lorsqu’un fichier est ouvert avec le **« a »** ou **« a + »** accéder au type, toutes les opérations se produisent à la fin du fichier d’écriture. Le pointeur de fichier peut être repositionné à l’aide de [fseek](fseek-fseeki64.md) ou [rembobiner](rewind.md), mais il est toujours redéplacé à la fin du fichier avant toute opération d’écriture. Par conséquent, les données existantes ne peuvent pas être remplacées. Lorsque le **« r + »**, **« w + »**, ou **« a + »** type d’accès est spécifié, la lecture et l’écriture sont autorisées (le fichier est dite doit être ouvert pour « update »). Toutefois, lorsque vous basculez entre lecture et écriture, il doit y avoir un intervenant [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), ou [rembobiner](rewind.md) opération. Vous pouvez spécifier la position actuelle pour le [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) opération, si vous le souhaitez.
+Quand un fichier est ouvert avec le **« a »** ou **« a + »** accéder au type, toutes les opérations se produisent à la fin du fichier d’écriture. Le pointeur de fichier peut être repositionné à l’aide de [fseek](fseek-fseeki64.md) ou [rewind](rewind.md), mais il est toujours redéplacé à la fin du fichier avant toute opération d’écriture. Par conséquent, les données existantes ne peuvent pas être remplacées. Lorsque le **« r + »**, **« w + »**, ou **« a + »** type d’accès est spécifié, la lecture et l’écriture sont autorisées (le fichier est réputé être ouvert pour « update »). Toutefois, lorsque vous basculez entre lecture et écriture, il doit y avoir un intermédiaire [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), ou [rewind](rewind.md) opération. Vous pouvez spécifier la position actuelle pour le [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) opération, si vous le souhaitez.
 
-Outre les valeurs ci-dessus, les caractères suivants peuvent également être inclus dans *mode* pour spécifier le mode de traduction des caractères de saut de ligne :
+Outre les valeurs ci-dessus, les caractères suivants peuvent également être inclus dans *mode* pour spécifier le mode de traduction pour les caractères de saut de ligne :
 
 |*mode* modificateur|Comportement|
 |-|-|
 **t**|Ouvrir en mode texte (traduit). Dans ce mode, les combinaisons retour chariot-saut de ligne sont traduites en flux d'une ligne (saut de ligne) en entrée, et les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée.
 **b**|Ouvrir en mode binaire (non traduit). Les traductions du **t** mode sont supprimés.
-**c**|Activer l’indicateur de validation associé au *nom de fichier* afin que le contenu de la mémoire tampon de fichier est écrites directement sur le disque si le paramètre **fflush** ou **_flushall** est appelée.
-**n**|Réinitialiser l’indicateur de validation associé au *nom de fichier* pour « no-commit ». Il s'agit de la valeur par défaut. Substitue aussi l'indicateur de validation globale si vous liez votre programme avec Commode.obj. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec Commode.obj.
+**c**|Activer l’indicateur de validation associé au *filename* afin que le contenu de la mémoire tampon de fichier est écrites directement sur le disque si **fflush** ou **_flushall** est appelée.
+**n**|Réinitialiser l’indicateur de validation associé au *filename* pour « no-commit ». Il s'agit de la valeur par défaut. Substitue aussi l'indicateur de validation globale si vous liez votre programme avec Commode.obj. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec Commode.obj.
 
-Le **t**, **c**, et **n** *mode* options sont des extensions Microsoft **fopen** et **_fdopen**. Ne les utilisez pas si vous voulez préserver la portabilité ANSI.
+Le **t**, **c**, et **n** *mode* options sont des extensions Microsoft pour **fopen** et **_fdopen**. Ne les utilisez pas si vous voulez préserver la portabilité ANSI.
 
-Si **t** ou **b** n’est pas donné dans *mode*, le mode de traduction par défaut est défini par la variable globale [ \_fmode](../../c-runtime-library/fmode.md). Si **t** ou **b** est préfixé à l’argument, la fonction échoue et renvoie la valeur NULL. Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Si **t** ou **b** n’est pas spécifié dans *mode*, le mode de traduction par défaut est défini par la variable globale [ \_fmode](../../c-runtime-library/fmode.md). Si **t** ou **b** est préfixé à l’argument, la fonction échoue et retourne la valeur NULL. Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Les caractères valides pour le *mode* chaîne utilisée dans **fopen** et **_fdopen** correspondent aux *oflag* arguments utilisés dans [ \_ouvrir](open-wopen.md) et [ \_sopen](sopen-wsopen.md), comme indiqué dans cette table :
+Caractères valides pour le *mode* chaîne utilisée dans **fopen** et **_fdopen** correspondent aux *oflag* arguments utilisés dans [ \_ouvrir](open-wopen.md) et [ \_sopen](sopen-wsopen.md), comme illustré dans ce tableau :
 
 |Les caractères de *mode* chaîne|Équivalent *oflag* valeur **_open** et **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (généralement  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O \_APPEND**)|
-|**un +**|**\_O\_RDWR &#124; \_O\_APPEND** (généralement  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Créer un** )|
+|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (généralement  **\_O\_WRONLY &#124; \_O\_créer &#124; \_O \_APPEND**)|
+|**a +**|**\_O\_RDWR &#124; \_O\_APPEND** (généralement  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Créer un** )|
 |**r**|**\_O\_RDONLY**|
 |**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (généralement  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (généralement  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w**|**\_O\_WRONLY** (généralement  **\_O\_WRONLY &#124; \_O\_créer &#124; \_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (généralement  **\_O\_RDWR &#124; \_O\_créer &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_BINAIRE**|
 |**t**|**\_O\_TEXTE**|
-|**c**|Aucun|
-|**n**|Aucun|
+|**c**|Aucun.|
+|**n**|Aucun.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

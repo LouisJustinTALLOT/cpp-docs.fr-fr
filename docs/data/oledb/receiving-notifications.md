@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fdef616456b98086bf9490297d68c98596b2dca4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: edf4b2bd69947730caba6db5d31b1e5da15f3759
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338968"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571562"
 ---
 # <a name="receiving-notifications"></a>Réception des notifications
-OLE DB fournit des interfaces pour recevoir des notifications lorsque des événements se produisent. Ceux-ci sont décrits dans [Notifications de l’objet OLE DB](https://msdn.microsoft.com/library/ms725406.aspx) dans le *de référence du programmeur OLE DB*. Le programme d’installation de ces événements utilise le mécanisme de point de connexion COM standard. Par exemple, un objet ATL qui souhaite récupérer des événements via `IRowsetNotify` implémente le `IRowsetNotify` interface en ajoutant `IRowsetNotify` à la liste de classe dérivée et en l’exposant via une macro COM_INTERFACE_ENTRY.  
+OLE DB fournit des interfaces pour recevoir des notifications lorsque des événements se produisent. Ceux-ci sont décrits dans [Notifications de l’objet OLE DB](/previous-versions/windows/desktop/ms725406\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. Le programme d’installation de ces événements utilise le mécanisme de point de connexion COM standard. Par exemple, un objet ATL qui souhaite récupérer des événements via `IRowsetNotify` implémente le `IRowsetNotify` interface en ajoutant `IRowsetNotify` à la liste de classe dérivée et en l’exposant via une macro COM_INTERFACE_ENTRY.  
   
  `IRowsetNotify` a trois méthodes, qui peuvent être appelées à différents moments. Si vous souhaitez répondre à une seule de ces méthodes, vous pouvez utiliser la [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) (classe), qui retourne E_NOTIMPL pour les méthodes que vous n’êtes pas intéressé.  
   

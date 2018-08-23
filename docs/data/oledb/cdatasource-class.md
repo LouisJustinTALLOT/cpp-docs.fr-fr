@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340083"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571758"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 Correspond à un objet de source de données OLE DB, qui représente une connexion via un fournisseur de source de données.  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
+ Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in] Le `CLSID` du fournisseur de données.  
   
  *pPropSet*  
- [in] Un pointeur vers un tableau de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://msdn.microsoft.com/library/ms713696.aspx) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
+ [in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
   
  *nPropertySets*  
- [in] Le nombre de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) structures passées dans le *pPropSet* argument.  
+ [in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) structures passées dans le *pPropSet* argument.  
   
  *pName*  
  [in] Nom de la base de données à laquelle se connecter.  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [in] Mot de passe de l'utilisateur.  
   
  *nInitMode*  
- [in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](https://msdn.microsoft.com/library/ms723127.aspx)dans le *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si *nInitMode* est égal à zéro, aucune initialisation mode est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.  
+ [in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](/previous-versions/windows/desktop/ms723127\(v=vs.85\))dans le *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si *nInitMode* est égal à zéro, aucune initialisation mode est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.  
   
  *szProgID*  
  [in] Identificateur de programme.  
@@ -293,7 +293,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [in] Nom d'un fichier, généralement un fichier de connexion de source de données au format .UDL.  
   
- Pour plus d’informations sur les fichiers de liaison de données (fichiers .udl), consultez [Data Link API Overview](https://msdn.microsoft.com/library/ms718102.aspx) dans le SDK Windows.  
+ Pour plus d’informations sur les fichiers de liaison de données (fichiers .udl), consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
@@ -376,10 +376,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [in] ID de programme d'un fournisseur de données.  
   
  *pPropset*  
- [in] Un pointeur vers un tableau de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://msdn.microsoft.com/library/ms713696.aspx) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. Si l'objet source de données est initialisé, les propriétés doivent appartenir au groupe de propriétés Source de données. Si la même propriété est spécifiée plusieurs fois dans *pPropset*, puis de la valeur utilisée est spécifique au fournisseur. Si *ulPropSets* est égal à zéro, ce paramètre est ignoré.  
+ [in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. Si l'objet source de données est initialisé, les propriétés doivent appartenir au groupe de propriétés Source de données. Si la même propriété est spécifiée plusieurs fois dans *pPropset*, puis de la valeur utilisée est spécifique au fournisseur. Si *ulPropSets* est égal à zéro, ce paramètre est ignoré.  
   
  *ulPropSets*  
- [in] Le nombre de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) structures passées dans le *pPropSet* argument. S’il s’agit de zéro, le fournisseur ignore *pPropset*.  
+ [in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) structures passées dans le *pPropSet* argument. S’il s’agit de zéro, le fournisseur ignore *pPropset*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  

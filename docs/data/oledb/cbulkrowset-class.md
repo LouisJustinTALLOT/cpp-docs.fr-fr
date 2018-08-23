@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337720"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571557"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 Récupère et manipule des lignes à traiter les données en bloc en récupérant plusieurs handles de ligne avec un seul appel.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
-Appels [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
+Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] Le nombre de lignes à partir du signet à la ligne cible. Si *lSkip* est égal à zéro, la première ligne extraite est la ligne marquée par un signet. Si *lSkip* est 1, la première ligne extraite est la ligne après la ligne marquée par un signet. Si *lSkip* est -1, la première ligne extraite est la ligne avant la ligne marquée par un signet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Consultez [IRowset::GetData](https://msdn.microsoft.com/library/ms716988.aspx) dans le *de référence du programmeur OLE DB*. 
+ Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx) dans le *de référence du programmeur OLE DB*.   
+ Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
-Appels [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
+Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
   
 ### <a name="syntax"></a>Syntaxe  
   
