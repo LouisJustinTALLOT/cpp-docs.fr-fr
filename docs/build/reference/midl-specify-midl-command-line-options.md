@@ -1,5 +1,5 @@
 ---
-title: -MIDL (spécifier les Options de ligne de commande MIDL) | Documents Microsoft
+title: -MIDL (spécifier les Options de ligne de commande MIDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d125042041af1e20b6dfc4a02197c2124adbeb9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375186"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571948"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Spécification d'options de ligne de commande MIDL)
 ```  
@@ -37,10 +37,10 @@ ms.locfileid: "32375186"
  où :  
   
  `file`  
- Le nom du fichier qui contient [les options de ligne de commande MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ Le nom du fichier qui contient [options de ligne de commande MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
 ## <a name="remarks"></a>Notes  
- Toutes les options pour la conversion d’un fichier IDL dans un fichier TLB doivent être indiquées `file`; Les options de ligne de commande MIDL ne peut pas être spécifiées sur la ligne de commande de l’éditeur de liens. Si /MIDL n’est pas spécifié, le compilateur MIDL sera appelé avec uniquement le nom de fichier IDL et aucune autre option.  
+ Toutes les options pour la conversion d’un fichier IDL dans un fichier TLB doivent être indiquées dans `file`; Options de ligne de commande MIDL ne peut pas être spécifiées sur la ligne de commande de l’éditeur de liens. Si /MIDL n’est pas spécifié, le compilateur MIDL sera appelé avec uniquement le nom de fichier IDL et aucune autre option.  
   
  Le fichier doit contenir une option de ligne de commande MIDL par ligne.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "32375186"
   
 3.  Cliquez sur le **IDL incorporé** page de propriétés.  
   
-4.  Modifier la **commandes MIDL** propriété.  
+4.  Modifier le **commandes MIDL** propriété.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   

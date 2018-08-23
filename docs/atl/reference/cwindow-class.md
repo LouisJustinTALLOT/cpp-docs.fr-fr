@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a725ee9eb8d35ec947d21799c577243223f59ed4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a4f29cefa626928cb87ce7d72904a4b189113f05
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881264"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42575454"
 ---
 # <a name="cwindow-class"></a>CWindow, classe
 Cette classe fournit des méthodes pour manipuler une fenêtre.  

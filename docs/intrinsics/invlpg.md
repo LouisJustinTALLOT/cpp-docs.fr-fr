@@ -1,5 +1,5 @@
 ---
-title: __invlpg | Documents Microsoft
+title: __invlpg | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327523"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538465"
 ---
 # <a name="invlpg"></a>__invlpg
 **Section spécifique à Microsoft**  
   
- Génère le x86 `invlpg` instruction, ce qui invalide la mémoire tampon lookaside de traduction (TLB) pour la page liée à la mémoire vers laquelle pointé `Address`.  
+ Génère le x86 `invlpg` instruction, ce qui invalide la mémoire tampon à la lookaside traduction (TLB) pour la page associée de mémoire vers lequel pointé `Address`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ void __invlpg(
  [in]  `Address`  
  Une adresse 64 bits.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- La fonction intrinsèque `__invlpg` émet une instruction privilégiée et est uniquement disponible en mode noyau avec un niveau de privilège (Panneau de configuration) de 0.  
+ L’intrinsèque `__invlpg` émet une instruction privilégiée et est uniquement disponible en mode noyau avec un niveau de privilège (CPL) égale à 0.  
   
  Cette routine est disponible uniquement en tant qu'intrinsèque.  
   

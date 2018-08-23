@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55c9b4b7e14a9572f5a8922b65a41a9a92a0d688
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337707"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575477"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl, classe
-Implémente la norme OLE DB [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx) interface, ce qui permet de tester pour l’identité de ligne.  
+Implémente la norme OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) interface, ce qui permet de tester pour l’identité de ligne.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,7 +72,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
  Pour comparer les handles de ligne, cette méthode convertit le `HROW` gère à `RowClass` membres et appelle `memcmp` sur les pointeurs.  

@@ -1,5 +1,5 @@
 ---
-title: 'Classe Platform::Collections :: vectorview | Documents Microsoft'
+title: 'Classe Platform::Collections :: vectorview | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092908"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584104"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 Représente une vue en lecture seule d'une collection d'objets séquentielle qui peut être accessible individuellement par index. Le type de chaque objet de la collection est défini par le paramètre de modèle.  
@@ -68,7 +68,7 @@ template <typename T, typename E>
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `VectorView`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -88,7 +88,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
  Itérateur qui spécifie le premier élément de l'objet VectorView.  
   
 ### <a name="remarks"></a>Notes  
- Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myVectorView->First();`.  
+ Un moyen pratique de contenir l’itérateur retourné par First() consiste à attribuer la valeur de retour à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myVectorView->First();`.  
   
 
 
@@ -109,7 +109,7 @@ T GetAt(
  Entier non signé de base zéro qui spécifie un élément particulier dans l’objet VectorView.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Élément spécifié par le paramètre `index`. Le type d’élément spécifié par le paramètre de modèle VectorView *T*.  
+ Élément spécifié par le paramètre `index`. Le type d’élément est spécifié par le paramètre de modèle VectorView, *T*.  
   
 
 
@@ -131,7 +131,7 @@ virtual unsigned int GetMany(
  L'index de base zéro du début des éléments à récupérer.  
   
  `dest`  
- Lorsque cette opération est terminée, un tableau d’éléments qui commencent à l’élément spécifié par `startIndex` et se terminent au dernier élément du vectorview.  
+ Lorsque cette opération se termine, un tableau d’éléments qui commencent à l’élément spécifié par `startIndex` et se terminent au dernier élément du vectorview.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d'éléments à récupérer.  
@@ -242,7 +242,7 @@ VectorView(
  Type d’une collection d’objets utilisée pour initialiser le VectorView actif.  
   
  il  
- A [std::initializer_list](../standard-library/initializer-list-class.md) dont les éléments seront utilisés pour initialiser le VectorView.  
+ Un [std::initializer_list](../standard-library/initializer-list-class.md) dont les éléments sont utilisés pour initialiser le VectorView.  
   
  `N`  
  Nombre d’éléments d’une collection d’objets utilisée pour initialiser le VectorView actif.  
@@ -260,16 +260,16 @@ VectorView(
  Pointeur vers un `std::vector` utilisé pour initialiser le VectorView actif.  
   
  `arr`  
- A [Platform::Array](../cppcx/platform-array-class.md) objet qui est utilisé pour initialiser le VectorView actif.  
+ Un [Platform::Array](../cppcx/platform-array-class.md) objet qui est utilisé pour initialiser le VectorView actif.  
   
  `a`  
- A [std::array](../standard-library/array-class-stl.md) objet qui est utilisé pour initialiser le VectorView actif.  
+ Un [std::array](../standard-library/array-class-stl.md) objet qui est utilisé pour initialiser le VectorView actif.  
   
  `first`  
- Premier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type de `first` est passé à l’aide de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Premier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type de `first` est passée au moyen de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  `last`  
- Dernier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type de `last` est passé à l’aide de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Dernier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type de `last` est passée au moyen de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 
 

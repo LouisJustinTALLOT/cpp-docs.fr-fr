@@ -1,5 +1,5 @@
 ---
-title: À l’aide de C++ AMP dans les applications UWP | Documents Microsoft
+title: À l’aide de C++ AMP dans les applications UWP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3676bc8f2c4ecbd89f01fb9257c7306a66827548
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584014"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>À l’aide de C++ AMP dans les applications UWP
-Vous pouvez utiliser C++ AMP (C++ Accelerated Massive Parallelism) dans votre application de plateforme Windows universelle (UWP) pour effectuer des calculs sur le processeur graphique (GPU) ou d’autres accélérateurs de calculs. Toutefois, C++ AMP ne fournissent des API pour travailler directement avec les types Windows Runtime, et le Windows Runtime ne fournit pas un wrapper pour C++ AMP. Lorsque vous utilisez des types Windows Runtime dans votre code, y compris celles que vous avez créé vous-même, vous devez convertir les types qui sont compatibles avec C++ AMP.  
+Vous pouvez utiliser C++ AMP (C++ Accelerated Massive Parallelism) dans votre application de plateforme universelle Windows (UWP) pour effectuer des calculs sur le GPU (Graphics Processing Unit) ou d’autres accélérateurs de calcul. Toutefois, C++ AMP ne fournissent des API pour travailler directement avec les types Windows Runtime, et le Runtime Windows ne fournit pas un wrapper pour C++ AMP. Lorsque vous utilisez des types Windows Runtime dans votre code, y compris celles que vous avez créée vous-même, vous devez convertir les types qui sont compatibles avec C++ AMP.  
   
 ## <a name="performance-considerations"></a>Considérations sur les performances  
- Si vous utilisez [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) pour créer votre application de plateforme Windows universelle (UWP), nous vous recommandons d’utiliser des types de données (POD) brut basés ancien avec stockage contigu, par exemple, `std::vector` ou tableaux de style C, pour les données qui seront utilisées avec C++ AMP. Cela peut vous aider à obtenir de meilleures performances qu’à l’aide des types non POD ou les conteneurs Windows RT, car aucun marshaling n’est nécessaire.  
+ 
+Si vous utilisez des extensions du composant C++ de Visual C++ / c++ / CX pour créer votre application Universal Windows Platform (UWP), nous vous recommandons d’utiliser des types de plain-old-data (POD) avec le stockage contigu, par exemple, `std::vector` ou tableaux de style C, pour les données qui seront utilisé avec C++ AMP. Cela peut vous aider à atteindre de meilleures performances qu’à l’aide de types non POD ou les conteneurs Windows RT, car aucun marshaling ne doit se produire.  
   
- Dans un noyau de C++ AMP, pour accéder aux données qui est stocké de cette façon, encapsulez simplement la `std::vector` ou tableau de stockage dans un `concurrency::array_view` , puis utilisez l’affichage de tableau dans un `concurrency::parallel_for_each` boucle :  
+Dans un noyau C++ AMP, pour accéder aux données qui est stocké de cette façon, il suffit d’encapsuler le `std::vector` ou stockage de groupe dans un `concurrency::array_view` , puis utilisez l’affichage de tableau dans un `concurrency::parallel_for_each` boucle :  
   
 ```cpp  
 // simple vector addition example  
@@ -46,22 +47,23 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 ```  
   
 ## <a name="marshaling-windows-runtime-types"></a>Marshaling des types Windows Runtime  
- Lorsque vous travaillez avec APIs Windows Runtime, vous pouvez souhaiter utiliser C++ AMP sur les données stockées dans un conteneur Windows Runtime une `Platform::Array<T>^` ou dans les types de données complexes telles que les classes ou les structures déclarées à l’aide de la `ref` mot clé ou le `value`</C4>(motclé). Dans ces situations, vous devrez effectuer du travail supplémentaire pour mettre les données à la disposition de C++ AMP.  
+ 
+Lorsque vous travaillez avec Windows Runtime APIs, vous pouvez souhaiter utiliser C++ AMP sur les données stockées dans un conteneur Windows Runtime comme un `Platform::Array<T>^` ou dans les types de données complexes telles que les classes ou structs qui sont déclarés à l’aide de la **ref** mot clé ou le **valeur** mot clé. Dans ces situations, vous devez effectuer un travail supplémentaire pour rendre les données C++ AMP.  
   
 ### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform::Array\<T > ^, où T est un type POD  
- Lorsque vous rencontrez un `Platform::Array<T>^` et T est un type POD, vous pouvez accéder à son emplacement de stockage sous-jacent en utilisant simplement la `get` fonction membre :  
+Lorsque vous rencontrez un `Platform::Array<T>^` et T est un type POD, vous pouvez accéder à son stockage sous-jacent en utilisant simplement le `get` fonction membre :  
   
 ```cpp  
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API  
 concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 ```  
   
- Si T n’est pas un type POD, vous pouvez utiliser la technique décrite dans la section suivante pour utiliser les données avec C++ AMP.  
+Si T n’est pas un type POD, vous pouvez utiliser la technique décrite dans la section suivante pour utiliser les données avec C++ AMP.  
   
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Types Windows Runtime : classes de référence et classes de valeur  
- C++ AMP ne prend pas en charge les types de données complexes. Cela inclut les types non POD et tous les types qui sont déclarés à l’aide de la `ref` mot clé ou le `value` (mot clé). Si un type non pris en charge est utilisé dans un `restrict(amp)` contexte, une erreur de compilation est générée.  
+C++ AMP ne prend pas en charge les types de données complexes. Cela inclut les types non POD et tous les types qui sont déclarés à l’aide de la **ref** mot clé ou le **valeur** mot clé. Si un type non pris en charge est utilisé dans un `restrict(amp)` contexte, une erreur de compilation est générée.  
   
- Lorsque vous rencontrez un type non pris en charge, vous pouvez copier des éléments de ses données dans un `concurrency::array` objet. En plus de rendre les données disponibles pour C++ AMP consommer, cette approche de la copie manuelle peut également améliorer les performances en optimisant la localité des données et en vous assurant que les données ne seront pas utilisées n’est pas copiées dans l’accélérateur. Vous pouvez améliorer les performances davantage à l’aide un *intermédiaire tableau*, qui est une forme particulière de `concurrency::array` qui fournit un indicateur à l’exécution de l’AMP que le tableau doit être optimisé pour le transfert de fréquent entre elle et d’autres tableaux sur la accélérateur spécifié.  
+Lorsque vous rencontrez un type non pris en charge, vous pouvez copier les parties intéressantes de ses données dans un `concurrency::array` objet. En plus de rendre les données disponibles pour C++ AMP à consommer, cette approche de la copie manuelle peut également améliorer les performances en optimisant la localité des données et en garantissant que les données ne seront pas utilisées ne seront pas copiées à l’accélérateur. Vous pouvez améliorer davantage les performances en utilisant un *tableau intermédiaire*, qui est une forme spéciale de `concurrency::array` qui fournit une indication au runtime AMP le tableau doit être optimisé pour un transfert fréquent entre elles et d’autres tableaux sur la accélérateur spécifié.  
   
 ```cpp  
 // pixel_color.h  
@@ -119,6 +121,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer votre première application de plateforme Windows universelle à l’aide de C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
- [Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
-
+ 
+[Créer votre première application UWP à l’aide de C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
+[Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

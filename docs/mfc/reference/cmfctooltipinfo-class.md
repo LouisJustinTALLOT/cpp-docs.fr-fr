@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850889"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540581"
 ---
 # <a name="cmfctooltipinfo-class"></a>Cmfctooltipinfo, classe
 Stocke des informations sur l'apparence visuelle des info-bulles.  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  Si `m_bVislManagerTheme` a la valeur TRUE, chaque info-bulle demande un nouveau [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) à partir du Gestionnaire visuel de l’application avant qu’ils s’affichent sur l’écran et utilise les valeurs dans cet objet pour déterminer leur apparence. Les autres membres de votre [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) sont ignorés.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

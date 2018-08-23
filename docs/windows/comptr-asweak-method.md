@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78f6eb9f3d0acf6a28479593d64616fa6881be76
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d8de0ee1bf4d879490002d3483f0340714b989ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648088"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581222"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak, méthode
-Récupère une référence faible à l’objet actif.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-HRESULT AsWeak(  
-   _Out_ WeakRef* pWeakRef  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *pWeakRef*  
- Lorsque cette opération se termine, un pointeur vers un objet de référence faible.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ComPtr, classe](../windows/comptr-class.md)
+
+Récupère une référence faible à l’objet actif.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT AsWeak(
+   _Out_ WeakRef* pWeakRef
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pWeakRef*  
+Lorsque cette opération se termine, un pointeur vers un objet de référence faible.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ComPtr, classe](../windows/comptr-class.md)

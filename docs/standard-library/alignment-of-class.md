@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b679d4c8807a19c977cd7e59481dc1d78e67ba1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb492c1c804aacd79f1552afb5293b8b40a8b648
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956516"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42545758"
 ---
 # <a name="alignmentof-class"></a>alignment_of, classe
 
@@ -41,7 +41,7 @@ struct alignment_of;
 
 ## <a name="remarks"></a>Notes
 
-La requête de type conserve la valeur de la l’alignement du type *Ty*.
+La requête de type conserve la valeur de l’alignement du type *Ty*.
 
 ## <a name="requirements"></a>Configuration requise
 

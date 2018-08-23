@@ -1,5 +1,5 @@
 ---
-title: __rdtsc | Documents Microsoft
+title: __rdtsc | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b47a76b3045465d8c3c5c21a87020ee1e74a69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337078"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540825"
 ---
 # <a name="rdtsc"></a>__rdtsc
 **Section spécifique à Microsoft**  
@@ -39,18 +39,18 @@ unsigned __int64 __rdtsc();
 ## <a name="return-value"></a>Valeur de retour  
  Entier non signé 64 bits représentant le nombre de cycles.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__rdtsc`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Cette routine est disponible uniquement en tant qu’intrinsèque.  
+ Cette routine est disponible uniquement comme intrinsèque.  
   
- L’interprétation de la valeur TSC dans cette génération de matériel diffère de celui des versions antérieures de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Consultez les manuels de matériel pour plus d’informations.  
+ L’interprétation de la valeur TSC dans cette génération de matériel diffère de celui des versions précédentes de x64. Consultez les manuels de matériel pour plus d’informations.  
   
 ## <a name="example"></a>Exemple  
   

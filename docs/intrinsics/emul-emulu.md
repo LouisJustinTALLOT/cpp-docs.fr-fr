@@ -1,5 +1,5 @@
 ---
-title: __emul, __emulu | Documents Microsoft
+title: __emul, __emulu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331033"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538473"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Section spécifique à Microsoft**  
   
- Effectue des multiplications un dépassement de ce que peut contenir un entier 32 bits.  
+ Effectue des multiplications dépassant ce qui peut contenir un entier 32 bits.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,19 +55,19 @@ unsigned __int64 __emulu(
 ## <a name="return-value"></a>Valeur de retour  
  Le résultat de la multiplication.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- `__emul` accepte deux valeurs de 32 bits signés et retourne le résultat de la multiplication comme valeur de l’entier signé 64 bits.  
+ `__emul` accepte deux valeurs de 32 bits signés et retourne le résultat de la multiplication comme une valeur entière signée 64 bits.  
   
- `__emulu` accepte deux valeurs de l’entier non signé 32 bits et retourne le résultat de la multiplication comme valeur de l’entier non signé 64 bits.  
+ `__emulu` accepte deux valeurs d’entier non signé 32 bits et retourne le résultat de la multiplication comme valeur de l’entier non signé 64 bits.  
   
 ## <a name="example"></a>Exemple  
   

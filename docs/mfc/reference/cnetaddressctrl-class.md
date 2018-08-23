@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852267"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539017"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 La classe `CNetAddressCtrl` représente le contrôle d'adresse réseau, que vous pouvez utiliser pour entrer et valider le format des adresses IPv4, IPv6 et DNS nommées.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  L’illustration suivante représente une boîte de dialogue qui contient un contrôle d’adresse réseau. Le texte boîte (1) pour le contrôle d’adresse réseau contient une adresse réseau non valide. Le message d’info-bulle (2) s’affiche si l’adresse réseau n’est pas valide.  
   
- ![Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant est une partie d’une boîte de dialogue qui valide une adresse réseau. Les gestionnaires d’événements pour les trois boutons radio spécifient que l’adresse réseau peut être un des trois types d’adresses. L’utilisateur entre une adresse dans la zone de texte du contrôle de réseau, puis appuie sur un bouton pour valider l’adresse. Si l’adresse est valide, un message de réussite s’affiche ; Sinon, le message d’erreur prédéfinies info-bulle s’affiche.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
- Cette classe est pris en charge dans [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] et versions ultérieures.  
+ Cette classe est pris en charge dans Windows Vista et versions ultérieures.  
   
  Exigences supplémentaires pour cette classe sont décrites dans [Build Configuration requise pour Windows Vista contrôles communs](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   

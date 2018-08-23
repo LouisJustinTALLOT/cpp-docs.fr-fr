@@ -1,5 +1,5 @@
 ---
-title: bss_seg | Documents Microsoft
+title: bss_seg | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849806"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540998"
 ---
 # <a name="bssseg"></a>bss_seg
 Spécifie le segment où les variables non initialisées sont stockées dans le fichier .obj.  
@@ -31,35 +31,35 @@ Spécifie le segment où les variables non initialisées sont stockées dans le 
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Fichiers obj peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les données non initialisées est .bss. Dans certains cas l’utilisation de **bss_seg** peut accélérer les temps de chargement en regroupant les données non initialisées en une seule section.  
+ 
+Fichiers obj peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les données non initialisées est .bss. Dans certains cas l’utilisation de **bss_seg** peut accélérer les temps de chargement en regroupant les données non initialisées en une seule section.  
   
- **bss_seg** sans paramètre réinitialise le segment à .bss.  
+**bss_seg** sans paramètres réinitialise le segment à .bss.  
   
- **push**(facultatif)  
- Place un enregistrement sur la pile interne du compilateur. A **push** peut avoir un *identificateur* et *segment-name*.  
+*push* (facultatif)  
+Place un enregistrement sur la pile interne du compilateur. Un *push* peut avoir un *identificateur* et *segment-name*.  
   
- **POP** (facultatif)  
- Supprime un enregistrement du haut de la pile interne du compilateur.  
+*POP* (facultatif)  
+Supprime un enregistrement du haut de la pile interne du compilateur.  
   
- *identificateur* (facultatif)  
- Lorsqu’il est utilisé avec **push**, attribue un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
+*identificateur* (facultatif)  
+Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec *pop*, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
   
- *identificateur* permet à plusieurs enregistrements d’être dépilés avec une seule **pop** commande.  
+*identificateur* permet à plusieurs enregistrements à dépiler avec une seule *pop* commande.  
   
- *« nom du segment »*(facultatif)  
- Nom d'un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom du segment actif.  
+*« segment-name »*(facultatif)  
+Nom d'un segment. Lorsqu’il est utilisé avec *pop*, la pile est dépilée et *segment-name* devient le nom de segment actif.  
   
- *classe « segment »* (facultatif)  
- Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
+*« segment-class »* (facultatif)  
+Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // pragma_directive_bss_seg.cpp  
 int i;                     // stored in .bss  
 #pragma bss_seg(".my_data1")  
@@ -75,11 +75,12 @@ int main() {
 }  
 ```  
   
- Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), fonctions ([code_seg](../preprocessor/code-seg.md)) et les variables const ([const_seg](../preprocessor/const-seg.md)).  
+Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), fonctions ([code_seg](../preprocessor/code-seg.md)) et les variables const ([const_seg](../preprocessor/const-seg.md)).  
   
- Données allouées en utilisant le **bss_seg** pragma ne conserve aucune information concernant leur emplacement.  
+Données allouées en utilisant le **bss_seg** pragma ne conserve aucune information concernant leur emplacement.  
   
- Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour une liste de noms, vous ne devez pas utiliser lors de la création d’une section.  
+Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour obtenir la liste des noms que vous ne devez pas utiliser lors de la création d’une section.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

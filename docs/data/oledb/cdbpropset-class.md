@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337595"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572173"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 Hérite de la `DBPROPSET` structurer et ajoute un constructeur qui initialise les champs clés, ainsi que les `AddProperty` accéder à la méthode.  
@@ -131,7 +131,7 @@ bool AddProperty(DWORD dwPropertyID,
  **true** si la propriété a été ajoutée avec succès. Sinon, **false**. 
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
-Constructeur. Initialise le `rgProperties`, `cProperties`, et `guidPropertySet` champs de la [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) structure.  
+Constructeur. Initialise le `rgProperties`, `cProperties`, et `guidPropertySet` champs de la [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) structure.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -161,7 +161,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Paramètres  
  *guid*  
- [in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) structure.  
+ [in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) structure.  
   
 ### <a name="remarks"></a>Notes  
  Ce champ peut être défini le [constructeur](../../data/oledb/cdbpropset-cdbpropset.md) également.  
@@ -179,5 +179,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
  [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Référence de modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Cdbpropidset, classe](../../data/oledb/cdbpropidset-class.md)   
- [Structure DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)   
- [Structure DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)
+ [Structure DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+ [Structure DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

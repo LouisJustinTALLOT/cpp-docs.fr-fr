@@ -1,5 +1,5 @@
 ---
-title: _InterlockedIncrement, fonctions intrinsèques | Documents Microsoft
+title: _InterlockedIncrement, fonctions intrinsèques | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337978"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575786"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement, fonctions intrinsèques
 **Section spécifique à Microsoft**  
   
- Fournir la prise en charge intrinsèque de compilateur pour Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) (fonction).  
+ Fournir la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) (fonction).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -114,11 +114,11 @@ __int64 _InterlockedIncrement64_nf(
 ## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur incrémentée résultante.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|  
   
 ## <a name="remarks"></a>Notes  

@@ -1,5 +1,5 @@
 ---
-title: '#Directives ifdef et #ifndef (C/C++) | Documents Microsoft'
+title: '#Directives ifdef et #ifndef (C/C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a5ecfc9cc63fc4028e1f93d8f30e8d5cb9f9357
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 8c3453cd652401e9d1f4573bb1750773cbefe8d9
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954087"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538634"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Directives #ifdef et #ifndef (C/C++)
-Le **#ifdef** et **#ifndef** directives effectuent la même tâche que la `#if` directive lorsqu’il est utilisé avec **défini**( *identificateur* ).  
+Le **#ifdef** et **#ifndef** directives effectuant la même tâche que le `#if` directive lorsqu’il est utilisé avec **défini**( *identificateur* ).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,20 @@ Le **#ifdef** et **#ifndef** directives effectuent la même tâche que la `#if` 
 ```  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez utiliser la **#ifdef** et **#ifndef** directives n’importe où `#if` peut être utilisé. Le **#ifdef** *identificateur* instruction équivaut à `#if 1` lorsque *identificateur* a été défini, et elle est équivalente à `#if 0` lorsque *identificateur* n’a pas été défini ou a été supprimée avec le `#undef` la directive. Ces directives vérifient uniquement la présence ou l'absence d'identificateurs définis avec `#define`, et non d'identificateurs déclarés dans le code source C ou C++.  
+ 
+Vous pouvez utiliser la **#ifdef** et **#ifndef** directives n’importe où `#if` peut être utilisé. Le **#ifdef** *identificateur* instruction est équivalente à `#if 1` lorsque *identificateur* a été défini, et il est équivalent à `#if 0` lorsque *identificateur* n’a pas été défini ou a été supprimée avec la `#undef` directive. Ces directives vérifient uniquement la présence ou l'absence d'identificateurs définis avec `#define`, et non d'identificateurs déclarés dans le code source C ou C++.  
   
- Ces directives sont fournies uniquement pour des raisons de compatibilité avec les versions antérieures du langage. Le **défini (** *identificateur* **)** expression constante utilisée avec la `#if` directive est préférée.  
+Ces directives sont fournies uniquement pour des raisons de compatibilité avec les versions antérieures du langage. Le **défini (** *identificateur* **)** expression constante utilisée avec la `#if` directive est préférée.  
   
- Le **#ifndef** directive vérifie l’inverse de la condition vérifiée par **#ifdef**. Si l'identificateur n'a pas été défini (ou si sa définition a été supprimée avec `#undef`), la condition est vraie (non nulle). Sinon, la condition n'est pas vérifiée (0).  
+Le **#ifndef** directive vérifie l’inverse de la condition vérifiée par **#ifdef**. Si l'identificateur n'a pas été défini (ou si sa définition a été supprimée avec `#undef`), la condition est vraie (non nulle). Sinon, la condition n'est pas vérifiée (0).  
   
- **Section spécifique à Microsoft**  
+**Section spécifique à Microsoft**  
   
- Le *identificateur* peuvent être passés à partir de la ligne de commande à l’aide de l’option /D. Jusqu'à 30 macros peuvent être spécifiées avec /D.  
+Le *identificateur* peuvent être passés à partir de la ligne de commande à l’aide de la `/D` option. Jusqu'à 30 macros peut être spécifiée avec `/D`.  
   
- Cela est utile pour vérifier si une définition existe, car une définition peut être transmise à partir de la ligne de commande. Par exemple :  
+Cela est utile pour vérifier si une définition existe, car une définition peut être transmise à partir de la ligne de commande. Exemple :  
   
-```  
+```cpp  
 // ifdef_ifndef.CPP  
 // compile with: /Dtest /c  
 #ifndef test  
@@ -63,7 +64,8 @@ Le **#ifdef** et **#ifndef** directives effectuent la même tâche que la `#if` 
 #endif  
 ```  
   
- **FIN de la section spécifique à Microsoft**  
+**FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)
+ 
+[Directives de préprocesseur](../preprocessor/preprocessor-directives.md)

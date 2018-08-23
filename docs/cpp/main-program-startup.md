@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401480"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571957"
 ---
 # <a name="main-program-startup"></a>main : démarrage du programme
-Une fonction spéciale nommée **principal** est le point de départ de l’exécution de tous les programmes C et C++. Si vous êtes l’écriture de code qui respecte le [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modèle de programmation, vous pouvez utiliser `wmain`, qui est la version à caractères larges de **principal**.  
+Une fonction spéciale nommée **principal** est le point de départ de l’exécution de tous les programmes C et C++. Si vous êtes écrire du code qui suit le modèle de programmation Unicode, vous pouvez utiliser `wmain`, qui est la version à caractères larges de **principal**.  
   
  Le **principal** fonction n’est pas prédéfinie par le compilateur. Elle doit être fournie dans le texte du programme.  
   

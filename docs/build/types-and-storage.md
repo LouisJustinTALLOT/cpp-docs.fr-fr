@@ -1,5 +1,5 @@
 ---
-title: Types et stockage | Documents Microsoft
+title: Types et stockage | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d53749ace6b9021bd04e681fc74eb0e5ae4a5e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c76ea1bac491a7e9484ac88834c8e4b070c57ae5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380613"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571959"
 ---
 # <a name="types-and-storage"></a>Types et stockage
-Cette section décrit l’énumération et le stockage des types de données pour le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architecture.  
+Cette section décrit l’énumération et le stockage des types de données pour le x64 architecture.  
   
 -   [Types scalaires](../build/scalar-types.md)  
   

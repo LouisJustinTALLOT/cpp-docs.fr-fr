@@ -1,5 +1,5 @@
 ---
-title: rename_namespace | Documents Microsoft
+title: rename_namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51114787dde2f858a8409538083282ef292d599
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839389"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544397"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 **Spécifique à C++**  
   
- Renomme l'espace de noms qui contient le contenu de la bibliothèque de types.  
+Renomme l'espace de noms qui contient le contenu de la bibliothèque de types.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,19 @@ ms.locfileid: "33839389"
 rename_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `NewName`  
- Nom du nouvel espace de noms.  
+### <a name="parameters"></a>Paramètres  
+*NewName*  
+Nom du nouvel espace de noms.  
   
 ## <a name="remarks"></a>Notes  
- Il accepte un argument unique, *NewName*, qui spécifie le nouveau nom de l’espace de noms.  
+ 
+Il accepte un seul argument, *NewName*, qui spécifie le nouveau nom de l’espace de noms.  
   
- Pour supprimer l’espace de noms, utilisez la [no_namespace](../preprocessor/no-namespace.md) d’attribut à la place.  
+Pour supprimer l’espace de noms, utilisez le [no_namespace](../preprocessor/no-namespace.md) attribut à la place.  
   
- **FIN spécifique à C++**  
+**FIN spécifique à C++**  
   
 ## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

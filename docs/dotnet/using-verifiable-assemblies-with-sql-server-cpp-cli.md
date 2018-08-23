@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’assemblys vérifiables avec SQL Server (C + c++ / CLI) | Documents Microsoft
+title: Utilisation d’assemblys vérifiables avec SQL Server (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168644"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583817"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
-Procédures stockées étendues, empaquetées comme bibliothèques de liens dynamiques (DLL), permettent d’étendre les fonctionnalités de SQL Server via les fonctions développées à l’aide de Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions dans les DLL. En plus des fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [des fonctions d’agrégation](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  
+Les procédures stockées étendues, empaquetés en tant que bibliothèques de liens dynamiques (DLL), fournissent un moyen d’étendre les fonctionnalités de SQL Server via les fonctions développées avec Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions au sein de la DLL. Outre les fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [fonctions d’agrégation](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  
   
- Lorsqu’un client exécute une procédure stockée étendue, SQL Server recherche la DLL associée à la procédure stockée étendue et charge la DLL. SQL Server appelle la procédure stockée étendue demandée et l’exécute sous un contexte de sécurité spécifié. La procédure stockée étendue transmet résultat définit et retourne les paramètres sur le serveur.  
+ Lorsqu’un client exécute une procédure stockée étendue, SQL Server recherche la DLL associée à la procédure stockée étendue et charge la DLL. SQL Server appelle la procédure stockée étendue demandée et s’exécute sous un contexte de sécurité spécifié. La procédure stockée étendue, résultat de passes définit et retourne les paramètres sur le serveur.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] Fournit des extensions à Transact-SQL (T-SQL) pour vous permettre d’installer des assemblys vérifiables dans SQL Server. Le jeu d’autorisations SQL Server spécifie le contexte de sécurité, avec les niveaux de sécurité suivants :  
+ SQL Server fournit des extensions à Transact-SQL (T-SQL) pour vous permettre d’installer des assemblys vérifiables dans SQL Server. Le jeu d’autorisations SQL Server spécifie le contexte de sécurité, avec les niveaux de sécurité suivants :  
   
--   Mode non restreint : exécuter du code à vos propres risques ; code n’a pas besoin être de type sécurisé.  
+-   Mode non restreint : exécuter du code à vos risques et périls ; code ne devra pas être de type sécurisé.  
   
 -   Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe.  
   
- Mode sans échec nécessite les assemblys exécutés être vérifiable de type sécurisé.  
+ Mode sans échec nécessite les assemblys exécutés être sécurisé de type sécurisé.  
   
- Pour créer et charger un assembly vérifiable dans SQL Server, utilisez les commandes Transact-SQL CREATE ASSEMBLY et déplacement ASSEMBLY comme suit :  
+ Pour créer et charger un assembly vérifiable dans SQL Server, utilisez les commandes Transact-SQL CREATE ASSEMBLY et DROP ASSEMBLY comme suit :  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -43,9 +43,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- La commande PERMISSION_SET spécifie le contexte de sécurité et peut avoir les valeurs UNRESTRICTED, SAFE ou EXTENDED.  
+ La commande PERMISSION_SET spécifie le contexte de sécurité et peut avoir les valeurs UNRESTRICTED, SAFE ou étendu.  
   
- En outre, vous pouvez utiliser la commande CREATE FUNCTION pour lier à des noms de méthode dans une classe :  
+ En outre, vous pouvez utiliser la commande CREATE FUNCTION pour lier aux noms de méthode dans une classe :  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -78,12 +78,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- Scripts SQL peuvent être exécutées de manière interactive dans l’Analyseur de requêtes SQL ou à la ligne de commande avec l’utilitaire sqlcmd.exe. La ligne de commande se connecte à MyServer, utilise la base de données par défaut, utilise une connexion approuvée, entre MyScript.sql et renvoie MyResult.txt.  
+ Les scripts SQL peuvent être exécutés de manière interactive dans l’Analyseur de requêtes SQL ou à la ligne de commande avec l’utilitaire sqlcmd.exe. La ligne de commande suivante se connecte à MyServer, utilise la base de données par défaut, utilise une connexion approuvée, entre MyScript.sql et renvoie MyResult.txt.  
   
 ```  
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : migrer vers/clr : safe (C + c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+ [Comment : migrer vers/clr : safe (C++ / c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [Classes et structs](../cpp/classes-and-structs-cpp.md)

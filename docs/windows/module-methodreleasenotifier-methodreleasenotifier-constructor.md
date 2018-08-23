@@ -17,41 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01c000ee928e9394827a69acb48ef0f41478a699
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 62f136fb9aac184d6ca81314aafea270e7b33a87
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018505"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583869"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier, constructeur
-Initialise une nouvelle instance de la **Module::MethodReleaseNotifier** classe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-MethodReleaseNotifier(  
-   _In_ T* object,   
-   _In_ void (T::* method)(),   
-   bool release) throw() :  
-            ReleaseNotifier(release), object_(object),   
-            method_(method);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *object*  
- Objet dont la fonction membre est un gestionnaire d’événements.  
-  
- *(Méthode)*  
- La fonction membre de paramètre *objet* qui est le Gestionnaire d’événements.  
-  
- *release*  
- Spécifiez **true** pour activer l’appel sous-jacent [Module :: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) méthode ; sinon, spécifiez **false**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Module::MethodReleaseNotifier, classe](../windows/module-methodreleasenotifier-class.md)
+
+Initialise une nouvelle instance de la **Module::MethodReleaseNotifier** classe.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+MethodReleaseNotifier(
+   _In_ T* object,
+   _In_ void (T::* method)(),
+   bool release) throw() :
+            ReleaseNotifier(release), object_(object),
+            method_(method);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*object*  
+Objet dont la fonction membre est un gestionnaire d’événements.
+
+*(Méthode)*  
+La fonction membre de paramètre *objet* qui est le Gestionnaire d’événements.
+
+*release*  
+Spécifiez **true** pour activer l’appel sous-jacent [Module :: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) méthode ; sinon, spécifiez **false**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Module::MethodReleaseNotifier, classe](../windows/module-methodreleasenotifier-class.md)

@@ -1,5 +1,5 @@
 ---
-title: high_property_prefixes | Documents Microsoft
+title: high_property_prefixes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7269301fed3892fbf4b7cf6427bacb82d9712ef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ce21958dbb928a29debe21fb7cfaed4b9036141
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849387"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538232"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 **Spécifique à C++**  
   
- Spécifie d'autres préfixes pour trois méthodes de propriété.  
+Spécifie d'autres préfixes pour trois méthodes de propriété.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,21 +34,23 @@ ms.locfileid: "33849387"
 high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `GetPrefix`  
- Préfixe à utiliser pour le **propget** méthodes.  
+### <a name="parameters"></a>Paramètres  
+*GetPrefix*  
+Préfixe à utiliser pour le `propget` méthodes.  
   
- `PutPrefix`  
- Préfixe à utiliser pour le **propput** méthodes.  
+*PutPrefix*  
+Préfixe à utiliser pour le `propput` méthodes.  
   
- `PutRefPrefix`  
- Préfixe à utiliser pour le **propputref** méthodes.  
+*PutRefPrefix*  
+Préfixe à utiliser pour le `propputref` méthodes.  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, la gestion des erreurs principales **propget**, **propput**, et **propputref** méthodes sont exposées par les fonctions membres nommées avec les préfixes **obtenir** , `Put`, et **PutRef**, respectivement.  
+ 
+Par défaut, la gestion des erreurs générales `propget`, `propput`, et `propputref` méthodes sont exposées par les fonctions membres nommées avec les préfixes `Get`, `Put`, et `PutRef`, respectivement.  
   
- **FIN spécifique à C++**  
+**FIN spécifique à C++**  
   
 ## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

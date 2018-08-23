@@ -1,5 +1,5 @@
 ---
-title: __debugbreak | Documents Microsoft
+title: __debugbreak | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340175"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540817"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Section spécifique à Microsoft**  
@@ -36,19 +36,19 @@ ms.locfileid: "33340175"
 void __debugbreak();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|Header|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|x86, ARM, x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Notes  
  Le `__debugbreak` compilateur intrinsèque, comme dans [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), est une manière Win32 portable pour provoquer un point d’arrêt.  
   
 > [!NOTE]
->  Lors de la compilation avec **/CLR**, une fonction contenant `__debugbreak` sera compilé en langage MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).  
+>  Lors de la compilation avec **/CLR**, une fonction contenant `__debugbreak` seront compilés en MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).  
   
- Par exemple :  
+ Exemple :  
   
 ```  
 main() {  

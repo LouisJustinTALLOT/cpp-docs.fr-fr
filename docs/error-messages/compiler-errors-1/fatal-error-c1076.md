@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1076 | Documents Microsoft
+title: Erreur irrécupérable C1076 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199483"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538257"
 ---
 # <a name="fatal-error-c1076"></a>Erreur irrécupérable C1076
 limite du compilateur : la limite du tas interne a été atteinte ; utilisez /Zm pour spécifier une limite plus élevée  
@@ -30,9 +30,9 @@ limite du compilateur : la limite du tas interne a été atteinte ; utilisez /
   
  Pour corriger cette erreur :  
   
-1.  Utilisez le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option permettant de définir la limite de mémoire du compilateur pour la valeur spécifiée dans le [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) message d’erreur. Pour plus d’informations qui expliquent comment définir cette valeur dans [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], consultez la section Notes dans [/Zm (spécifier précompilés en-tête limite d’Allocation mémoire)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
+1.  Utilisez le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option pour définir la limite de mémoire du compilateur sur la valeur spécifiée dans le [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) message d’erreur. Pour plus d’informations qui inclut la définition de cette valeur dans Visual Studio, consultez la section Notes dans [/Zm (spécifier précompilé en-tête limite d’Allocation mémoire)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
   
-2.  Si vous utilisez des compilateurs hébergés 32 bits sur un système d'exploitation 64 bits, utilisez les compilateurs hébergés 64 bits à la place. Pour plus d’informations, consultez [Comment : activer un 64 bits Visual C++ ensemble d’outils de la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
+2.  Si vous utilisez des compilateurs hébergés 32 bits sur un système d'exploitation 64 bits, utilisez les compilateurs hébergés 64 bits à la place. Pour plus d’informations, consultez [Comment : activer un 64 bits Visual C++ ensemble d’outils sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
 3.  Éliminez les fichiers include superflus.  
   
@@ -46,4 +46,4 @@ limite du compilateur : la limite du tas interne a été atteinte ; utilisez /
   
 8.  Fractionnez le fichier en cours en fichiers moins volumineux.  
   
- Si l’erreur C1076 apparaît immédiatement après le démarrage de la build, la valeur spécifiée pour **/Zm** est sans doute trop élevée pour votre programme. Réduire le **/Zm** valeur.
+ Si l’erreur C1076 apparaît immédiatement après le démarrage de la build, la valeur spécifiée pour **/Zm** est probablement trop élevée pour votre programme. Réduire le **/Zm** valeur.

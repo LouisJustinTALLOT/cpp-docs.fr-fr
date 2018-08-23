@@ -16,26 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d868c9270e23e2ee1fa0dcdc1845d9762cefb16c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d9cb5e57d6c7020e0b89104dac87fa3cd08ea023
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649399"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583699"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Association de commandes de menu au texte de la barre d'état dans des applications MFC
-Votre application peut afficher un texte descriptif pour chacune des commandes de menu qu'un utilisateur peut sélectionner. Pour cela, affectez une chaîne de texte à chaque commande de menu à l’aide de la **invite** propriété dans le **propriétés** fenêtre. Si vous avez une chaîne dans la [table de chaînes](../windows/string-editor.md) dont l'ID est identique à la commande, une application MFC affiche automatiquement cette ressource de chaîne dans la barre d'état de l'application en cours d'exécution quand un utilisateur pointe sur un élément de menu.  
-  
-### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Pour associer une commande de menu à une chaîne de texte de barre d'état  
-  
-1.  Dans l' **éditeur de menus** , sélectionnez la commande de menu.  
-  
-2.  Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), tapez le texte de barre d'état associé dans la zone **Invite** .  
-  
-## <a name="requirements"></a>Configuration requise  
- MFC  
-  
-## <a name="see-also"></a>Voir aussi  
- [Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
- [Ajout de commandes à un Menu](../windows/adding-commands-to-a-menu.md)   
- [Éditeur de menus](../windows/menu-editor.md)
+
+Votre application peut afficher un texte descriptif pour chacune des commandes de menu qu'un utilisateur peut sélectionner. Pour cela, affectez une chaîne de texte à chaque commande de menu à l’aide de la **invite** propriété dans le **propriétés** fenêtre. Si vous avez une chaîne dans la [table de chaînes](../windows/string-editor.md) dont l'ID est identique à la commande, une application MFC affiche automatiquement cette ressource de chaîne dans la barre d'état de l'application en cours d'exécution quand un utilisateur pointe sur un élément de menu.
+
+### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Pour associer une commande de menu à une chaîne de texte de barre d'état
+
+1. Dans l' **éditeur de menus** , sélectionnez la commande de menu.
+
+2. Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), tapez le texte de barre d'état associé dans la zone **Invite** .
+
+## <a name="requirements"></a>Configuration requise
+
+MFC
+
+## <a name="see-also"></a>Voir aussi
+
+[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Ajout de commandes à un menu](../windows/adding-commands-to-a-menu.md)  
+[Éditeur de menus](../windows/menu-editor.md)

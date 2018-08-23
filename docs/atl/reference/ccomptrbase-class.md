@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573128"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 Cette classe fournit une base pour les classes de pointeur intelligent à l’aide des routines de mémoire basé sur COM.  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  CLSID associé aux données et au code qui sera utilisé pour créer l’objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne S_OK en cas de réussite, ou REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE en cas d’échec. Consultez [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) et [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) pour obtenir une description de ces erreurs.  
+ Retourne S_OK en cas de réussite, ou REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE en cas d’échec. Consultez [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) et [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) pour obtenir une description de ces erreurs.  
   
 ### <a name="remarks"></a>Notes  
- Si la première forme de la méthode est appelée, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) est utilisée pour récupérer le CLSID. Les deux formes puis appellent [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Si la première forme de la méthode est appelée, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) est utilisée pour récupérer le CLSID. Les deux formes puis appellent [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
  Dans les versions debug, une erreur d’assertion se produit si [CComPtrBase::p](#p) n’est pas égal à NULL.  
   

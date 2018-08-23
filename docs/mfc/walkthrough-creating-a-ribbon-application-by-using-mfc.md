@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21478cdfd96fc32efaa674d7ec4f838e2f6b989b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026891"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541015"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
 Cette procédure pas à pas montre comment utiliser le **Assistant Application MFC** pour créer une application comportant un ruban par défaut. Vous pouvez ensuite développer le ruban en ajoutant un **personnalisé** catégorie de ruban qui a un **favoris** ruban du Panneau de configuration et l’ajout de certaines commandes au panneau fréquemment utilisées.  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette procédure pas à pas suppose que vous avez défini [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] à utiliser **paramètres de développement généraux**. Si vous utilisez des paramètres différents, certains éléments de l'interface utilisateur qui sont référencés dans les instructions suivantes peuvent ne pas s'afficher. Pour plus d’informations sur la modification des paramètres, consultez [Comment : réinitialiser vos paramètres](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utiliser **paramètres de développement généraux**. Si vous utilisez des paramètres différents, certains éléments de l'interface utilisateur qui sont référencés dans les instructions suivantes peuvent ne pas s'afficher. Pour plus d’informations sur la modification des paramètres, consultez [Comment : réinitialiser vos paramètres](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Pour créer une application MFC comportant un ruban  
   

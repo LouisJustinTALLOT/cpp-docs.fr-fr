@@ -1,5 +1,5 @@
 ---
-title: Génération de programmes C/C++ | Documents Microsoft
+title: Création de programmes C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360973"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573344"
 ---
 # <a name="building-cc-programs"></a>Génération de programmes C/C++
 
-Vous pouvez générer des projets Visual C++ dans Visual Studio ou sur la ligne de commande. L’IDE Visual Studio utilise [MSBuild](../build/msbuild-visual-cpp.md) pour générer des projets et solutions. Sur la ligne de commande, vous pouvez utiliser le compilateur C/C++ (cl.exe) et l'éditeur de liens (link.exe) pour générer des projets simples. Pour générer des projets plus complexes sur la ligne de commande, vous pouvez utiliser MSBuild ou [NMAKE](../build/nmake-reference.md). Pour une vue d’ensemble sur l’utilisation [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pour générer des projets et solutions, consultez [compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+Vous pouvez générer des projets Visual C++ dans Visual Studio ou sur la ligne de commande. L’IDE Visual Studio utilise [MSBuild](../build/msbuild-visual-cpp.md) pour générer des projets et solutions. Sur la ligne de commande, vous pouvez utiliser le compilateur C/C++ (cl.exe) et l'éditeur de liens (link.exe) pour générer des projets simples. Pour générer des projets plus complexes sur la ligne de commande, vous pouvez utiliser MSBuild ou [NMAKE](../build/nmake-reference.md). Pour une vue d’ensemble sur l’utilisation de Visual Studio pour générer des projets et solutions, consultez [compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
 ## <a name="in-this-section"></a>Dans cette section  
 

@@ -1,7 +1,7 @@
 ---
-title: Options de l’éditeur de liens | Documents Microsoft
+title: Options de l’éditeur de liens | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753628"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572854"
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -68,14 +68,14 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Contrôle le chargement différé des DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Entraîne le chargement différé de la DLL spécifiée.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Signe partiellement un assembly.|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Définit les indicateurs de valeur par défaut sur les charges DLL dépendantes.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Définit les indicateurs par défaut sur les chargements DLL dépendantes.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Génère une DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crée un pilote en mode noyau.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Spécifie s’il convient de générer une image exécutable qui peut être redéfinie de façon aléatoire au moment du chargement en utilisant la fonctionnalité de randomisation du format d’espace d’adresse (ASLR).|
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|Définit l’adresse de départ.|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|Signale les erreurs internes de l’éditeur de liens à Microsoft.|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|Exporte une fonction.|
-|[/ /FILEALIGN](../../build/reference/filealign.md)|Aligne des sections dans le fichier de sortie multiples d’une valeur spécifiée.|
+|[/ /FILEALIGN](../../build/reference/filealign.md)|Alignement des sections dans le fichier de sortie multiples d’une valeur spécifiée.|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|Crée un programme qui peut être chargé uniquement à son adresse de base préférée.|
 |[/FORCE](../../build/reference/force-force-file-output.md)|Force un lien à se terminer même avec des symboles non résolus ou des symboles définis plusieurs fois.|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|Crée une image qui peut être corrigée en mémoire.|
@@ -105,7 +105,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Inclut les informations spécifiées dans le fichier de mappage.|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|Combine des sections.|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Spécifie les options de ligne de commande MIDL.|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Ajoute les visualiseurs de débogueur à partir d’un fichier Natvis au fichier PDB.|
+|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Ajoute des visualiseurs de débogueur à partir d’un fichier Natvis au fichier PDB.|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Supprime la création d’un assembly .NET Framework.|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|Ignore toutes les bibliothèques par défaut (ou celles spécifiées) quand des références externes sont résolues.|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|Crée une DLL de ressource uniquement.|
@@ -123,6 +123,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Définit la somme de contrôle dans l’en-tête du fichier .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Spécifie que l’image contiendra une table de gestionnaires d’exceptions sécurisés.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Remplace les attributs d’une section.|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|Spécifie un fichier SourceLink à ajouter au fichier PDB.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Définit la taille de la pile, en octets.|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Attache un programme stub MS-DOS à un programme Win32.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Indique au système d’exploitation comment exécuter le fichier .exe.|
@@ -130,7 +131,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Spécifie l’ID de ressource de la bibliothèque de types générée par l’éditeur de liens.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Spécifie le nom du fichier .tlb et d’autres fichiers de sortie MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Crée une application conçue spécifiquement pour s’exécuter sous Terminal Server.|
-|[/USEPROFILE](../../build/reference/useprofile.md)|Données d’apprentissage optimisation utilise guidée par profil pour créer une image optimisée.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Données d’apprentissage utilise guidée par profil optimisation pour créer une image optimisée.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Imprime les messages de progression de l’éditeur de liens.|
 |[/VERSION](../../build/reference/version-version-information.md)|Affecte un numéro de version.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Inclut tous les fichiers objet à partir de bibliothèques statiques spécifiés.|

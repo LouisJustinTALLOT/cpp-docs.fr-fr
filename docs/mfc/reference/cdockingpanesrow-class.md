@@ -1,5 +1,5 @@
 ---
-title: Classe de CDockingPanesRow | Documents Microsoft
+title: Cdockingpanesrow, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955265"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538321"
 ---
-# <a name="cdockingpanesrow-class"></a>Classe de CDockingPanesRow
+# <a name="cdockingpanesrow-class"></a>Cdockingpanesrow, classe
 Gère une liste de volets qui se trouvent sur la même ligne horizontale ou verticale (colonne) d'un site d'ancrage.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Réorganise les volets dans une ligne en fonction de la marge spécifiée de l’espacement des paramètres.  
+ Réorganise les volets dans une ligne en fonction de la marge spécifiée d’ancrage et l’espacement des paramètres.  
   
 ```  
 virtual void ArrangePanes(

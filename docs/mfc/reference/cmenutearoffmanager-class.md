@@ -1,5 +1,5 @@
 ---
-title: Classe de CMenuTearOffManager | Documents Microsoft
+title: Cmenutearoffmanager, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041011"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544463"
 ---
-# <a name="cmenutearoffmanager-class"></a>Classe de CMenuTearOffManager
+# <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager, classe
 Gère les menus détachables. Un menu détachable est un menu de la barre de menus. L'utilisateur peut supprimer un menu détachable de la barre de menus, provoquant ainsi son flottement.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
    
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>Notes  
- Pour utiliser les menus détachables dans votre application, vous devez disposer un `CMenuTearOffManager` objet. Dans la plupart des cas, vous ne créez ou initialisez une `CMenuTearOffManager` directement l’objet. Cela s’effectue lorsque vous appelez le [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (fonction).  
+ Pour utiliser les menus volants dans votre application, vous devez disposer un `CMenuTearOffManager` objet. Dans la plupart des cas, vous ne créez ou initialisez une `CMenuTearOffManager` directement l’objet. Ceci est géré pour vous lorsque vous appelez le [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (fonction).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager` objet en appelant le `CWinAppEX::EnableTearOffMenus` (méthode). Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).  
@@ -100,7 +100,7 @@ void Build(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *uiTearOffBarID*  
- [in] *%{strText/}*  
+ [in] *strText*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -112,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Dans la plupart des cas, vous ne devez créer un `CMenuTearOffManager` manuellement. L’infrastructure de votre application crée le `CMenuTearOffManager` lorsque vous appelez l’objet [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+ Dans la plupart des cas, vous ne devez pas créer un `CMenuTearOffManager` manuellement. L’infrastructure de votre application crée le `CMenuTearOffManager` lorsque vous appelez l’objet [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -149,7 +149,7 @@ BOOL Initialize(
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- La plage d’ID de menu à partir de *uiTearOffMenuFirst* à *uiTearOffMenuLast* doit être un intervalle continu. L’intervalle définit le nombre de menus détachables qui peuvent s’afficher en même temps dans l’application.  
+ La plage d’ID de menu à partir de *uiTearOffMenuFirst* à *uiTearOffMenuLast* doit être un intervalle continu. L’intervalle définit le nombre de menus volants qui peuvent s’afficher en même temps dans l’application.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 

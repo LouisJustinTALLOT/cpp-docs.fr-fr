@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonGalleryMenuButton | Documents Microsoft
+title: Cmfcribbongallerymenubutton, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041258"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540827"
 ---
-# <a name="cmfcribbongallerymenubutton-class"></a>Classe de CMFCRibbonGalleryMenuButton
+# <a name="cmfcribbongallerymenubutton-class"></a>Cmfcribbongallerymenubutton, classe
 Implémente un bouton de menu de ruban qui contient des galeries de ruban.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
    
 ## <a name="syntax"></a>Syntaxe  
   
@@ -113,7 +113,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
- Construit et initialise un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) objet.  
+ Crée et initialise un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) objet.  
   
 ```  
 CMFCRibbonGalleryMenuButton(
@@ -136,7 +136,7 @@ CMFCRibbonGalleryMenuButton(
  L’ID de commande du bouton. Il s’agit de la valeur envoyée dans le message WM_COMMAND lorsque l’utilisateur clique sur ce bouton.  
   
  *iImage*  
- Index de l’image à afficher avec le bouton de menu de la galerie. Les images sont stockées dans le *imagesPalette* paramètre.  
+ L’index de l’image à afficher avec le bouton de menu de galerie. Les images sont stockées dans le *imagesPalette* paramètre.  
   
  *lpszText*  
  Le texte à afficher sur le bouton de menu.  
@@ -205,5 +205,5 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
+ [Cmfctoolbarmenubutton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
  [CMFCRibbonGallery, classe](../../mfc/reference/cmfcribbongallery-class.md)

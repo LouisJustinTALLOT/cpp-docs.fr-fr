@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963924"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539804"
 ---
 # <a name="tuple-class"></a>tuple, classe
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit un objet qui stocke des objets de N de types `T1`, `T2`,..., `TN`, respectivement, le cas où `0 <= N <= Nmax`. L’étendue d’une instance de tuple `tuple<T1, T2, ..., TN>` correspond au nombre `N` de ses arguments template. L’index de l’argument template `Ti` et de la valeur stockée correspondante de ce type est `i - 1`. Par conséquent, pendant que nous numéroter les types à partir de 1 à N dans cette documentation, l’index correspondant les valeurs comprises entre 0 et N - 1.
+La classe de modèle décrit un objet qui stocke des objets de N de types `T1`, `T2`,..., `TN`, respectivement, où `0 <= N <= Nmax`. L’étendue d’une instance de tuple `tuple<T1, T2, ..., TN>` correspond au nombre `N` de ses arguments template. L’index de l’argument template `Ti` et de la valeur stockée correspondante de ce type est `i - 1`. Par conséquent, pendant que nous numéroter les types à partir de 1 à N dans cette documentation, l’index correspondant les valeurs comprises entre 0 et N - 1.
 
 ## <a name="example"></a>Exemple
 

@@ -1,5 +1,5 @@
 ---
-title: __readcr0 | Documents Microsoft
+title: __readcr0 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb1abfadbe793f49eae53e2ee35f820c947685c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334650"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539432"
 ---
 # <a name="readcr0"></a>__readcr0
 **Section spécifique à Microsoft**  
@@ -39,11 +39,11 @@ unsigned __int64 __readcr0(void);  /* X64 */
 ## <a name="return-value"></a>Valeur de retour  
  Valeur contenue dans le registre CR0.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__readcr0`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr0`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

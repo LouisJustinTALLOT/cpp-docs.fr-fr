@@ -48,17 +48,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337013"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538241"
 ---
 # <a name="cmfcautohidebar-class"></a>Cmfcautohidebar, classe
 `CMFCAutoHideBar` est une classe de barre d'outils spéciale qui implémente la fonctionnalité de masquage automatique.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.    
 ## <a name="syntax"></a>Syntaxe  
   
 ```  

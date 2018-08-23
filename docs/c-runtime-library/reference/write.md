@@ -18,6 +18,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _write
@@ -32,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f800c42480b6518c7482c15bfa18646b1988dc8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 917309717d72048650d2b3975fefd74a1db50949
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414794"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572722"
 ---
 # <a name="write"></a>_write
 
@@ -66,21 +67,21 @@ Nombre d'octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_write** retourne le nombre d’octets réellement écrits. Si l’espace effectif restant sur le disque est inférieure à la taille de la mémoire tampon de la fonction de la tentative d’écriture sur le disque, **_write** échoue et ne pas le vidage de la mémoire tampon contenu sur le disque. Une valeur de retour de -1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** est défini sur une des trois valeurs : **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou le fichier n’est pas ouvert pour l’écriture ; **ENOSPC**, ce qui signifie que ne contient pas suffisamment d’espace disponible sur l’appareil de l’opération ; ou **EINVAL**, ce qui signifie que *tampon* était un pointeur null ou qui irrégulière. *nombre* d’octets a été passée pour être écrite dans un fichier en mode Unicode.
+En cas de réussite, **_write** retourne le nombre d’octets réellement écrits. Si l’espace effectif restant sur le disque est inférieure à la taille de la mémoire tampon de la fonction tente d’écrire sur le disque, **_write** échoue et ne pas vidé du contenu de la mémoire tampon sur le disque. Une valeur de retour de -1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** est défini sur une des trois valeurs : **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou le fichier n’est pas ouvert pour écriture ; **ENOSPC**, ce qui signifie que ne comporte pas suffisamment d’espace disponible sur le périphérique de l’opération ; ou **EINVAL**, ce qui signifie que *tampon* était un pointeur null ou qui irrégulière. *nombre* d’octets a été passé à écrire dans un fichier en mode Unicode.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Si le fichier est ouvert en mode texte, chaque caractère de saut de ligne est remplacé par un retour chariot - paire de saut de ligne dans la sortie. Le remplacement n'a pas de conséquence sur la valeur de retour.
 
-Quand le fichier est ouvert en mode de traduction Unicode, par exemple, si *fd* est ouvert à l’aide de **_open** ou **_sopen** et un paramètre de mode qui inclut **_O_ WTEXT**, **_O_U16TEXT**, ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et un paramètre de mode qui inclut **ccs = UNICODE**, **ccs = UTF-16LE**, ou **ccs = UTF-8**, ou si le mode est modifié pour un mode de traduction Unicode à l’aide de **_setmode**:*tampon* est interprété comme un pointeur vers un tableau de **wchar_t** contenant **UTF-16** données. Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.
+Quand le fichier est ouvert en mode de traduction Unicode, par exemple, si *fd* est ouvert en utilisant **_open** ou **_sopen** et un paramètre de mode qui inclut **_O_ WTEXT**, **_O_U16TEXT**, ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et un paramètre de mode qui inclut **ccs = UNICODE**, **ccs = UTF-16LE**, ou **ccs = UTF-8**, ou si le mode est modifié pour un mode de traduction Unicode à l’aide de **_setmode**:*tampon* est interprété comme un pointeur vers un tableau de **wchar_t** contenant **UTF-16** données. Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.
 
 ## <a name="remarks"></a>Notes
 
 Le **_write** fonction écritures *nombre* octets à partir de *tampon* dans le fichier associé *fd*. L'opération d'écriture commence à la position actuelle du pointeur de fichier (le cas échéant) associé au fichier donné. Si le fichier est ouvert pour ajout, l'opération commence à la fin actuelle du fichier. Après l'opération d'écriture, le pointeur de fichier est augmenté du nombre d'octets réellement écrits.
 
-Lors de l’écriture aux fichiers ouverts en mode texte, **_write** traite un caractère CTRL + Z comme la fin du fichier logique. Lors de l’écriture sur un appareil, **_write** traite un caractère CTRL + Z dans la mémoire tampon comme un terminateur de sortie.
+Lors de l’écriture de fichiers ouverts en mode texte, **_write** traite un caractère CTRL + Z comme la fin du fichier logique. Lors de l’écriture sur un appareil, **_write** traite un caractère CTRL + Z dans la mémoire tampon comme un terminateur de sortie.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

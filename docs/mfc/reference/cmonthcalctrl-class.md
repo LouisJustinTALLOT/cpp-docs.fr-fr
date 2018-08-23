@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853548"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539850"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (classe)
 Encapsule les fonctionnalités d'un contrôle Month Calendar.  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *cxyBorder*|La largeur de la bordure, en pixels.|  
   
 ### <a name="remarks"></a>Notes  
- Si cette méthode réussit, la largeur de bordure est définie le *cxyBorder* paramètre. Sinon, la largeur de bordure est réinitialisée à la valeur par défaut qui est spécifiée par l’actuel [thème](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), ou zéro si les thèmes ne sont pas utilisés.  
+ Si cette méthode réussit, la largeur de bordure est définie le *cxyBorder* paramètre. Sinon, la largeur de bordure est réinitialisée à la valeur par défaut qui est spécifiée par l’actuel [thème](/windows/desktop/Controls/visual-styles-overview), ou zéro si les thèmes ne sont pas utilisés.  
   
  Cette méthode envoie le [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) message, qui est décrite dans le SDK Windows.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Notes  
- La largeur de bordure est définie sur la valeur par défaut spécifiée par l’actuel [thème](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), ou zéro si les thèmes ne sont pas utilisés.  
+ La largeur de bordure est définie sur la valeur par défaut spécifiée par l’actuel [thème](/windows/desktop/Controls/visual-styles-overview), ou zéro si les thèmes ne sont pas utilisés.  
   
  Cette méthode envoie le [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) message, qui est décrite dans le SDK Windows.  
   

@@ -1,5 +1,5 @@
 ---
-title: __ud2 | Documents Microsoft
+title: __ud2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326161"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540013"
 ---
 # <a name="ud2"></a>__ud2
 **Section spécifique à Microsoft**  
@@ -36,22 +36,22 @@ void __ud2();
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le processeur de déclenche une exception d’opération non valide si vous exécutez une instruction non définie.  
+ Le processeur génère une exception de l’opcode non valide si vous exécutez une instruction non définie.  
   
- Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez le document, « manuel du développeur du logiciel de l’Architecture Intel, Volume 2 : Instruction Set référence, » à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 **FIN de la section spécifique à Microsoft**  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant exécute une instruction non définie, ce qui lève une exception. Le Gestionnaire d’exceptions modifie ensuite le code de retour de zéro à un.  
+ L’exemple suivant exécute une instruction non définie, qui lève une exception. Le Gestionnaire d’exceptions modifie ensuite le code de retour de zéro à un.  
   
 ```  
 // __ud2_intrinsic.cpp  

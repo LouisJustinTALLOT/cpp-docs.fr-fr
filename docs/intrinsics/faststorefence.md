@@ -1,5 +1,5 @@
 ---
-title: __faststorefence | Documents Microsoft
+title: __faststorefence | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8c4a343126a14e1aea931b1e154714af280904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc3086a59fe3995fcb5b4fff34891faa6a630f63
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327796"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541425"
 ---
 # <a name="faststorefence"></a>__faststorefence
 **Section spécifique à Microsoft**  
@@ -36,11 +36,11 @@ ms.locfileid: "33327796"
 void __faststorefence();  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__faststorefence`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__faststorefence`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

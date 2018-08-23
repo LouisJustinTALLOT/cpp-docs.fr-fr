@@ -18,33 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 757360f231f15bc7166008e0e8d003bebab9eb3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645108"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578753"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Affichage ou masquage de la fenêtre Couleurs (Éditeur d'images pour les icônes)
-### <a name="to-display-colors-window"></a>Pour afficher la fenêtre couleurs  
-  
-1.  Avec le bouton droit dans une **Éditeur d’images** volet et choisissez **afficher la fenêtre des couleurs** dans le menu contextuel.  
-  
-     \- ou -  
-  
-2.  Cliquez sur **afficher la fenêtre des couleurs** sur le [menu Image](../windows/image-menu-image-editor-for-icons.md).  
-  
-### <a name="to-hide-the-colors-window"></a>Pour masquer la fenêtre couleurs  
-  
-1.  Détacher la fenêtre. Ainsi, la fenêtre à masquage automatique lorsqu’il n’est pas en cours d’utilisation.  
-  
- \- ou -  
-  
--   Cliquez sur le **fermer** bouton.  
-  
-## <a name="requirements"></a>Configuration requise  
- Aucun.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)   
- [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+
+### <a name="to-display-colors-window"></a>Pour afficher la fenêtre couleurs
+
+1. Avec le bouton droit dans une **Éditeur d’images** volet et choisissez **afficher la fenêtre des couleurs** dans le menu contextuel.
+
+   \- ou -
+
+2. Cliquez sur **afficher la fenêtre des couleurs** sur le [menu Image](../windows/image-menu-image-editor-for-icons.md).
+
+### <a name="to-hide-the-colors-window"></a>Pour masquer la fenêtre couleurs
+
+1. Détacher la fenêtre. Ainsi, la fenêtre à masquage automatique lorsqu’il n’est pas en cours d’utilisation.
+
+\- ou -
+
+- Cliquez sur le **fermer** bouton.
+
+## <a name="requirements"></a>Configuration requise
+
+Aucun.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)  
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

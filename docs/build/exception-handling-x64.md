@@ -1,5 +1,5 @@
 ---
-title: Exceptions (x64) | Documents Microsoft
+title: Exceptions (x64) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367184"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571952"
 ---
 # <a name="exception-handling-x64"></a>Gestion des exceptions (x64)
-Cette section décrit la gestion structurée des exceptions et des exceptions C++ comportement de gestion sur le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+Cette section décrit la gestion structurée des exceptions et le comportement sur le x64 des exceptions C++.  
   
 -   [Données de déroulement pour la gestion des exceptions et la prise en charge du débogueur](../build/unwind-data-for-exception-handling-debugger-support.md)  
   

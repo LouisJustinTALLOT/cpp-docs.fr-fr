@@ -1,5 +1,5 @@
 ---
-title: 'Comment : incorporer un manifeste à l’intérieur d’une Application C/C++ | Documents Microsoft'
+title: 'Comment : incorporer un manifeste à l’intérieur d’une Application C/C++ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369050"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573315"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Comment : incorporer un manifeste à une application C/C++
-Il est recommandé qu’une application C/C++ (ou la bibliothèque) son manifeste incorporé dans le fichier binaire final, car cela garantit un comportement correct dans la plupart des scénarios. Par défaut, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tente d’incorporer le manifeste lorsqu’il génère un projet à partir des fichiers sources, consultez [génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md) pour plus d’informations. Toutefois si une application est générée à l’aide de nmake, certaines modifications apportées à un makefile existant sont nécessaires. Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.  
+Il est recommandé qu’une application C/C++ (ou une bibliothèque) son manifeste incorporé dans le fichier binaire final, car cela garantit le comportement d’exécution correct dans la plupart des scénarios. Par défaut, Visual Studio essaie d’incorporer le manifeste lorsqu’il génère un projet à partir de fichiers sources ; consultez [génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md) pour plus d’informations. Toutefois si une application est générée à l’aide de nmake, certaines modifications dans le fichier makefile existant sont nécessaires. Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.  
   
 ## <a name="two-approaches"></a>Deux approches  
  Il existe deux façons d’incorporer le manifeste à l’intérieur d’une application ou une bibliothèque.  
   
--   Si vous n’effectuez pas une génération incrémentielle, vous pouvez incorporer directement le manifeste à l’aide d’une ligne de commande semblable à celle-ci comme une étape post-build :  
+-   Si vous n’effectuez pas une génération incrémentielle, vous pouvez directement incorporer le manifeste à l’aide d’une ligne de commande semblable à ce qui suit comme une étape post-build :  
   
      **MT.exe-manifeste MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
@@ -39,18 +39,18 @@ Il est recommandé qu’une application C/C++ (ou la bibliothèque) son manifest
   
      (1 pour un EXE, 2 pour une DLL).  
   
--   Si vous effectuez une génération incrémentielle, modifier directement la ressource, comme indiqué ici désactivera la génération incrémentielle et entraîner une régénération complète ; Par conséquent, une approche différente doit être prise :  
+-   Si vous effectuez une génération incrémentielle, modifier directement la ressource, comme indiqué ici sera désactiver une génération incrémentielle et provoquer une régénération complète ; Par conséquent une approche différente doit être effectuée :  
   
-    -   Lier le fichier binaire pour générer le fichier MyApp.exe.manifest.  
+    -   Liez le fichier binaire pour générer le fichier MyApp.exe.manifest.  
   
-    -   Convertissez le manifeste en un fichier de ressources.  
+    -   Convertir le manifeste d’un fichier de ressources.  
   
-    -   Reconnectez (incrémentielle) pour incorporer la ressource de manifeste dans le fichier binaire.  
+    -   Nouveau lien (incrémentielle) pour incorporer la ressource de manifeste dans le fichier binaire.  
   
  Les exemples suivants montrent comment modifier les makefiles pour incorporer les deux techniques.  
   
 ## <a name="makefiles-before"></a>Makefiles (avant)  
- Prenons le script nmake pour MyApp.exe, une application simple à partir d’un fichier :  
+ Examinez le script de nmake pour MyApp.exe, une application simple à partir d’un seul fichier :  
   
 ```  
 # build MyApp.exe  
@@ -70,7 +70,7 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Si ce script est exécuté tel quel avec Visual C++, il crée MyApp.exe avec succès. Il crée également le fichier manifeste MyApp.exe.manifest, externe pour une utilisation par le système d’exploitation pour charger des assemblys dépendants lors de l’exécution.  
+ Si ce script est exécuté sans modification avec Visual C++, il crée MyApp.exe avec succès. Il crée également le fichier manifest externe MyApp.exe.manifest, pour une utilisation par le système d’exploitation pour charger des assemblys dépendants lors de l’exécution.  
   
  Le script nmake pour MyLibrary.dll très similaire :  
   
@@ -96,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>Makefiles (après)  
- Pour générer des manifestes incorporés que vous devez apporter des modifications mineures quatre pour les makefiles d’origine. Pour le makefile MyApp.exe :  
+ Pour générer avec des manifestes incorporés que vous devez apporter des modifications mineures quatre pour les makefiles d’origine. Pour le makefile MyApp.exe :  
   
 ```  
 # build MyApp.exe  
@@ -159,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Les makefiles incluent désormais deux fichiers qui effectuent le travail réel, makefile.inc et makefile.targ.inc.  
+ Les makefiles incluent désormais deux fichiers qui effectuent le travail réel, makefile.inc makefile.targ.inc.  
   
- Créez makefile.inc et copiez-y ce qui suit :  
+ Créez makefile.inc et copiez-y les éléments suivants :  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -232,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- Maintenant créez makefile.targ.inc et copiez-y ce qui suit :  
+ Maintenant, créez makefile.targ.inc et copiez-y les éléments suivants :  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  

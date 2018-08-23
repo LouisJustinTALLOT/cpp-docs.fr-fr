@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333627"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538682"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Section spécifique à Microsoft**  
   
- Émet le x64 étendu version de la conversion avec le nombre de nombres à virgule flottante simple précision de troncation en entier 64 bits (`cvttss2si`) instruction.  
+ Émet le x64 étendu version de la convertir avec le nombre de nombres à virgule flottante simple précision de troncation en entier 64 bits (`cvttss2si`) instruction.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ __int64 _mm_cvttss_si64x(
 ## <a name="return-value"></a>Valeur de retour  
  Le résultat de la conversion de la première valeur à virgule flottante en un entier 64 bits.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- La fonction intrinsèque diffère `_mm_cvtss_si64x` uniquement qu’inexactes conversions sont tronquées vers zéro. Étant donné que le `__m128` structure représente un registre XMM, l’instruction générée déplace les données à partir d’un registre XMM dans la mémoire système.  
+ La fonction intrinsèque diffère `_mm_cvtss_si64x` uniquement par l’inexactes conversions sont tronquées vers zéro. Étant donné que le `__m128` structure représente un registre XMM, l’instruction générée déplace les données à partir d’un registre XMM dans la mémoire système.  
   
  Cette routine est disponible uniquement en tant qu'intrinsèque.  
   

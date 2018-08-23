@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCVisualManagerOffice2007 | Documents Microsoft
+title: CMFCVisualManagerOffice2007, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -240,17 +240,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039586"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539267"
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>Classe de CMFCVisualManagerOffice2007
-`CMFCVisualManagerOffice2007` donne à une application une apparence Microsoft Office 2007. 
+# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007, classe
+`CMFCVisualManagerOffice2007` Donne à une application une apparence Microsoft Office 2007. 
 
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -279,7 +279,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||  
 |[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||  
 |[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|`CMFCVisualManagerOffice2007::GetStyle`|Retourne le jeu de couleurs de la `CMFCVisualManagerOffice2007` l’interface graphique utilisateur qui, à son tour, reproduit l’interface utilisateur graphique de Microsoft Office 2007.|  
+|`CMFCVisualManagerOffice2007::GetStyle`|Retourne le jeu de couleurs de la `CMFCVisualManagerOffice2007` GUI qui, à son tour, reproduit l’interface utilisateur graphique de Microsoft Office 2007.|  
 |[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||  
 |[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||  
 |[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||  
@@ -380,10 +380,10 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |`CMFCVisualManagerOffice2007::SetStyle`|Définit le jeu de couleurs de la `CMFCVisualManagerOffice2007` l’interface graphique utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `CMFCVisualManagerOffice2007` pour modifier l’apparence visuelle de votre application sont similaires à celles de Microsoft Office 2007. Ce gestionnaire visuel nécessite que vous affectez au style avant de l’utiliser. Avant de passer ce gestionnaire visuel à `CMFCVisualManager::SetDefaultManager`, vous devez appeler la fonction statique `CMFCVisualManagerOffice2007::SetStyle`.  
+ Utilisez `CMFCVisualManagerOffice2007` pour modifier l’apparence visuelle de votre application pour ressembler à celle de Microsoft Office 2007. Ce gestionnaire visuel nécessite de définir le style avant de l’utiliser. Avant de le passer ce gestionnaire visuel à `CMFCVisualManager::SetDefaultManager`, vous devez appeler la fonction statique `CMFCVisualManagerOffice2007::SetStyle`.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le Gestionnaire visuel Office 2007. Cet extrait de code fait partie de la [exemple de démonstration d’alerte bureau](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment utiliser le Gestionnaire visuel Office 2007. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
@@ -464,7 +464,7 @@ virtual COLORREF GetMenuItemTextColor(
 ### <a name="parameters"></a>Paramètres  
  [in] *pButton*  
  [in] *bHighlighted*  
- [in] *bDésactiver*  
+ [in] *bDésactivé*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -556,7 +556,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bDésactiver*  
+ [in] *bDésactivé*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -586,7 +586,7 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *sizeDefault*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -787,7 +787,7 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectGripper*  
  [in] *bHorz*  
  [in] *pBar*  
@@ -806,7 +806,7 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
  [in] *état*  
@@ -826,7 +826,7 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
  [in] *état*  
@@ -845,7 +845,7 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *rect*  
   
@@ -865,7 +865,7 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *nState*  
  [in] *bHighlighted*  
@@ -888,9 +888,9 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
- [in] *bDésactiver*  
+ [in] *bDésactivé*  
  [in] *bIsDropped*  
  [in] *bIsHighlighted*  
  [in] *pButton*  
@@ -911,9 +911,9 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
- [in] *bDésactiver*  
+ [in] *bDésactivé*  
  [in] *bIsDropped*  
  [in] *bIsHighlighted*  
  [in] *pButton*  
@@ -933,7 +933,7 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectImage*  
  [in] *bIsDisabled*  
  [in] *bIsPressed*  
@@ -954,9 +954,9 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
- [in] *bDésactiver*  
+ [in] *bDésactivé*  
  [in] *bIsHighlighted*  
  [in] *pButton*  
   
@@ -974,7 +974,7 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pToolBar*  
  [in] *rectBorder*  
  [in] *rectBorderSize*  
@@ -995,7 +995,7 @@ virtual void OnDrawHeaderCtrlBorder(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *pCtrl*  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *bIsPressed*  
  [in] *bIsHighlighted*  
@@ -1013,7 +1013,7 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pMenu*  
  [in] *rect*  
   
@@ -1032,7 +1032,7 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
  [in] *bHighlight*  
@@ -1053,11 +1053,11 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rectButton*  
  [in] *bHighlight*  
- [in] *bDésactiver*  
+ [in] *bDésactivé*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1071,7 +1071,7 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1089,7 +1089,7 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *nResizeFlags*  
   
@@ -1109,7 +1109,7 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *bIsScrollDown*  
  [in] *bIsHighlited*  
@@ -1131,7 +1131,7 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *uiSystemCommand*  
  [in] *nStyle*  
@@ -1151,7 +1151,7 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pFrameWnd*  
  [in] *rectBorder*  
  [in] *rectBorderSize*  
@@ -1168,7 +1168,7 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectSplitter*  
   
 ### <a name="remarks"></a>Notes  
@@ -1185,7 +1185,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectBtn*  
  [in] *bIsHighlighted*  
  [in] *bIsPressed*  
@@ -1205,7 +1205,7 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *bActive*  
  [in] *rectCaption*  
@@ -1226,7 +1226,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectCaption*  
  [in] *pPopupWnd*  
   
@@ -1247,7 +1247,7 @@ virtual COLORREF OnDrawPropertySheetListItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pParent*  
  [in] *rect*  
  [in] *bIsHighlihted*  
@@ -1267,7 +1267,7 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Notes  
@@ -1282,7 +1282,7 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Notes  
@@ -1298,7 +1298,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pGroup*  
  [in] *rectGroup*  
   
@@ -1318,7 +1318,7 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *rectCaption*  
  [in] *rectText*  
@@ -1335,7 +1335,7 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Notes  
@@ -1351,7 +1351,7 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pCategory*  
  [in] *rectCategory*  
   
@@ -1367,7 +1367,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pContextCaption*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1384,7 +1384,7 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pScroll*  
   
 ### <a name="remarks"></a>Notes  
@@ -1400,7 +1400,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pTab*  
  [in] *bIsActive*  
   
@@ -1421,7 +1421,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pCheckBox*  
  [in] *rect*  
  [in] *bIsSelected*  
@@ -1439,7 +1439,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Notes  
@@ -1457,7 +1457,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
  [in] *bIsSelected*  
@@ -1476,7 +1476,7 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rectBorder*  
   
@@ -1492,7 +1492,7 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Notes  
@@ -1509,7 +1509,7 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pElement*  
  [in] *rect*  
  [in] *str*  
@@ -1526,7 +1526,7 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Notes  
@@ -1542,7 +1542,7 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pPanel*  
  [in] *rect*  
   
@@ -1559,7 +1559,7 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
   
@@ -1577,7 +1577,7 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pPanel*  
  [in] *rectPanel*  
  [in] *rectCaption*  
@@ -1597,7 +1597,7 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pPanel*  
  [in] *rectCaption*  
   
@@ -1616,7 +1616,7 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pProgress*  
  [in] *rectProgress*  
  [in] *rectChunk*  
@@ -1635,7 +1635,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pPanel*  
  [in] *rect*  
   
@@ -1652,7 +1652,7 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pSlider*  
  [in] *rect*  
   
@@ -1672,7 +1672,7 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pSlider*  
  [in] *rect*  
  [in] *bIsHighlighted*  
@@ -1696,7 +1696,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pSlider*  
  [in] *rect*  
  [in] *bIsZoomOut*  
@@ -1717,7 +1717,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *pPane*  
   
@@ -1736,7 +1736,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pWndRibbonBar*  
  [in] *rectTab*  
   
@@ -1757,7 +1757,7 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *nBorderSize*  
  [in] *iImage*  
@@ -1777,7 +1777,7 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *rect*  
  [in] *bIsHoriz*  
@@ -1795,7 +1795,7 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *état*  
   
@@ -1814,7 +1814,7 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *rectPane*  
  [in] *uiID*  
@@ -1833,7 +1833,7 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pStatBar*  
  [in] *rectSizeBox*  
   
@@ -1852,7 +1852,7 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectTab*  
  [in] *iTab*  
  [in] *bIsActive*  
@@ -1873,7 +1873,7 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *pButton*  
  [in] *uiState*  
@@ -1894,7 +1894,7 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pTask*  
  [in] *pIcons*  
  [in] *bIsHighlighted*  
@@ -1915,7 +1915,7 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pGroup*  
  [in] *bIsHighlighted*  
  [in] *bIsSelected*  
@@ -1934,7 +1934,7 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *bIsActive*  
   
@@ -1950,7 +1950,7 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectClient*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1968,7 +1968,7 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *pTabWnd*  
   
@@ -1986,7 +1986,7 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *pButton*  
  [in] *pWndTab*  
@@ -2004,7 +2004,7 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *pTabWnd*  
   
@@ -2025,7 +2025,7 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *rectClient*  
  [in] *rectClip*  
@@ -2045,7 +2045,7 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
  [in] *état*  
@@ -2068,7 +2068,7 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pBar*  
  [in] *rect*  
  [in] *bIsPressed*  
@@ -2093,7 +2093,7 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *pBrush*  
  [in] *pButton*  
@@ -2112,7 +2112,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectCaption*  
  [in] *pFrameWnd*  
  [in] *bActive*  
@@ -2132,7 +2132,7 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectCaption*  
  [in] *clrText*  
   
@@ -2151,7 +2151,7 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
  [in] *bIsHighlighted*  
  [in] *bIsPressed*  
@@ -2169,7 +2169,7 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Notes  
@@ -2184,7 +2184,7 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2208,7 +2208,7 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pEdit*  
  [in] *rect*  
  [in] *bIsHighlighted*  
@@ -2230,7 +2230,7 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -2248,7 +2248,7 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pPanel*  
  [in] *rect*  
   
@@ -2265,7 +2265,7 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pMenuBar*  
  [in] *rect*  
   
@@ -2285,7 +2285,7 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectFill*  
  [in] *pbrFill*  
  [in] *iTab*  
@@ -2306,7 +2306,7 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
  [in] *clrText*  
@@ -2323,7 +2323,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
+ [in] *pDC*  
  [in] *rectRarelyUsed*  
   
 ### <a name="remarks"></a>Notes  
@@ -2405,6 +2405,6 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Classe de CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [Cmfcvisualmanager, classe](../../mfc/reference/cmfcvisualmanager-class.md)   
+ [CMFCVisualManagerOfficeXP, classe](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
  [CMFCVisualManagerWindows, classe](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

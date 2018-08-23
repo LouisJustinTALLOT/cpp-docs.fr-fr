@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340727"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572539"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset, classe
 Encapsule un ensemble de lignes et de ses accesseurs associés dans une classe unique.  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Constructeur.|  
 |[Fermer](#close)|Ferme l’ensemble de lignes et de tous les accesseurs.|  
 |[FreeRecordMemory](#freerecordmemory)|Libère toutes les colonnes dans l’enregistrement actif qui doivent être libérées.|  
-|[GetColumnInfo](#getcolumninfo)|Implémente [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
+|[GetColumnInfo](#getcolumninfo)|Implémente [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Notes  
  Classe `TAccessor` gère l’accesseur. Classe *TRowset* gère l’ensemble de lignes.  
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
@@ -149,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Notes  
  L’utilisateur doit libérer les informations de la colonne retournée et de la mémoire tampon de chaîne. Utilisez la deuxième version de cette méthode lorsque vous utilisez [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) et avez besoin de remplacer les liaisons.  
   
- Pour plus d’informations, consultez [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) dans le *de référence du programmeur OLE DB*.  
+ Pour plus d’informations, consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

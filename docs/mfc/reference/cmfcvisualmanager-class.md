@@ -354,17 +354,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853561"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540847"
 ---
 # <a name="cmfcvisualmanager-class"></a>Cmfcvisualmanager, classe
 Fournit la prise en charge de la modification de l'apparence de votre application à un niveau global. La classe `CMFCVisualManager` fonctionne en association avec une classe qui fournit les instructions nécessaires pour dessiner les contrôles d'interface utilisateur de votre application dans un style cohérent. Ces autres classes portent le nom de gestionnaires visuels et héritent de `CMFCBaseVisualManager`.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   

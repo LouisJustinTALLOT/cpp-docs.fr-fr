@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028419"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540246"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 Fournit les fonctionnalités de base de toutes les classes de fenêtres de la bibliothèque MFC (Microsoft Foundation Class).  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  Le `DestroyWindow` fonction membre détruit également des boîtes de dialogue non modale créées par [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Si le `CWnd` en cours de destruction est une fenêtre enfant et n’a pas la [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) style ensemble, puis le [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) message est envoyé au parent.  
+ Si le `CWnd` en cours de destruction est une fenêtre enfant et n’a pas la [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) style ensemble, puis le [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) message est envoyé au parent.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- L’infrastructure appelle cette fonction membre quand lorsque la touche de direction droite ou gauche est utilisée pour basculer entre la barre de menus et le menu système.  
+ L’infrastructure appelle cette fonction membre lors de la touche de direction droite ou gauche est utilisée pour basculer entre la barre de menus et le menu système.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Notes  
  Cette méthode reçoit le [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) notification, qui est décrit dans le SDK Windows.  
   
- Le *nSessionState* paramètre spécifie qu’une session est connectée ou déconnectée depuis la console ou un terminal distant, un utilisateur connecté ou désactiver, une session est verrouillée ou déverrouillée ou une session a été modifié à l’état contrôlé à distance. Pour plus d’informations, consultez le *wParam* paramètre de la la [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) message.  
+ Le *nSessionState* paramètre spécifie qu’une session est connectée ou déconnectée depuis la console ou un terminal distant, un utilisateur connecté ou désactiver, une session est verrouillée ou déverrouillée ou une session a été modifié à l’état contrôlé à distance. Pour plus d’informations, consultez le *wParam* paramètre de la [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) message.  
   
 > [!NOTE]
 >  Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.  
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Appelé pour modifier l’utilisateur (IU) état de l’interface pour la fenêtre spécifiée et toutes ses fenêtres enfants.  
+ Appelé pour modifier l'état de l'interface utilisateur pour la fenêtre spécifiée et toutes ses fenêtres enfants.  
   
 ```  
 afx_msg void OnUpdateUIState(

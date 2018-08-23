@@ -1,5 +1,5 @@
 ---
-title: _interlockedbittestandreset, fonctions intrinsèques | Documents Microsoft
+title: _interlockedbittestandreset, fonctions intrinsèques | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340448"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541563"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -91,18 +91,18 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ## <a name="return-value"></a>Valeur de retour  
  Valeur d'origine du bit à la position spécifiée par `b`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|  
+|`_interlockedbittestandreset64`|X64|\<intrin.h>|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Notes  
- Sur les processeurs x86 et [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ces fonctions intrinsèques utilisent l'instruction `lock btr`, qui lit et affecte la valeur zéro au bit spécifié lors d'une opération atomique.  
+ Sur les processeurs x86 et x64, ces fonctions intrinsèques utilisent le `lock btr` instruction, qui lit et définit la valeur zéro au bit spécifié dans une opération atomique.  
   
  Sur les processeurs ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour les sémantiques Acquire et Release, par exemple au début et à la fin d'une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.  
   

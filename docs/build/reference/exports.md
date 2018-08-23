@@ -1,7 +1,7 @@
 ---
 title: EXPORTATIONS | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322187"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573168"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Si le nom que vous exportez est à partir de l’autre module, spécifiez nom de l’exportation dans la DLL à l’aide de *other_module.exported_name*. Par exemple, si votre DLL exporte une fonction `other_module.func1` et que vous voulez que les appelants l'utilisent comme `func2`, vous devez spécifier :
+Si le nom que vous exportez provient d’un autre module, spécifiez nom de l’exportation dans la DLL à l’aide de *other_module.exported_name*. Par exemple, si votre DLL exporte une fonction `other_module.func1` et que vous voulez que les appelants l'utilisent comme `func2`, vous devez spécifier :
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Si le nom que vous exportez à partir d’un autre module qui exporte par ordinal, spécifiez l’exportation de la position ordinale dans la DLL à l’aide *other_module. #ordinal_number*. Par exemple, si votre DLL exporte une fonction à partir du module où il est 42 ordinale, et que vous souhaitez les appelants à utiliser en tant que `func2`, vous devez spécifier :
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Étant donné que le compilateur Visual C++ utilise la décoration de nom pour les fonctions C++, vous devez utiliser le nom décoré internal_name ou définir les fonctions exportées à l’aide d’extern « C » dans le code source. Le compilateur décore également les fonctions C qui utilisent le [__stdcall](../../cpp/stdcall.md) appelant convention avec un préfixe de trait de soulignement (_) et un suffixe composé de l’arobase (@) suivi du nombre d’octets (au format décimal) dans la liste d’arguments.  

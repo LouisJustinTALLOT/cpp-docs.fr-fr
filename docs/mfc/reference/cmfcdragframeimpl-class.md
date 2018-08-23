@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCDragFrameImpl | Documents Microsoft
+title: Cmfcdragframeimpl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545800"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Classe de CMFCDragFrameImpl
-La `CMFCDragFrameImpl` classe dessine le rectangle de glissement qui s’affiche lorsque l’utilisateur fait glisser un volet dans le mode d’ancrage standard.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cmfcdragframeimpl-class"></a>Cmfcdragframeimpl, classe
+Le `CMFCDragFrameImpl` classe dessine le rectangle de glissement qui s’affiche lorsque l’utilisateur fait glisser un volet dans le mode d’ancrage standard.  
+   Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
    
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Notes  
- Un objet de cette classe est incorporé dans chaque [classe CPane](../../mfc/reference/cpane-class.md) objet. Par conséquent, chaque volet qui utilise le `CanFloat` méthode affiche un rectangle de glissement, quand l’utilisateur fait glisser.  
+ Un objet de cette classe est incorporé dans chaque [CPANE, classe](../../mfc/reference/cpane-class.md) objet. Par conséquent, chaque volet qui utilise le `CanFloat` méthode affiche un rectangle de glissement lorsque l’utilisateur fait glisser.  
   
- Vous pouvez contrôler l’épaisseur de la faire glisser le rectangle à l’aide de [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) et [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
+ Vous pouvez contrôler l’épaisseur de la faire glisser le rectangle en utilisant [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) et [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  

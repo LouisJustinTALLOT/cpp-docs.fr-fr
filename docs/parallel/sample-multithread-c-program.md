@@ -1,5 +1,5 @@
 ---
-title: Exemple de programme multithread en langage C | Documents Microsoft
+title: Exemple de programme multithread en langage C | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687990"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42544409"
 ---
 # <a name="sample-multithread-c-program"></a>Exemple de programme multithread en langage C
-Bounce.c est un exemple de programme multithread qui crée un thread chaque fois que la lettre **un** ou **A** est typé. Chaque thread rebondit un visage heureux d’une couleur différente autour de l’écran. Jusqu'à 32 threads peuvent être créés. Une fin normale du programme se produit lorsque `q` ou **Q** est typé. Pour plus d’informations sur la compilation et liaison de Bounce.c, consultez [compilation et liaison de programmes Multithread](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c est un exemple de programme multithread qui crée un thread chaque fois que la lettre `a` ou `A` est typé. Chaque thread rebondit un visage souriant de couleur différente autour de l’écran. Jusqu'à 32 threads peuvent être créés. Arrêt normal du programme se produit lorsque `q` ou `Q` est typé. Pour plus d’informations sur la compilation et liaison de Bounce.c, consultez [compilation et liaison de programmes Multithread](../parallel/compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)

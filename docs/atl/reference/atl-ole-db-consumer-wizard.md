@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572353"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de données nécessaire pour accéder à la source de données spécifié via le fournisseur OLE DB spécifié.  
@@ -33,7 +33,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
 **Source de données**  
-Le **Source de données** bouton vous permet de définir la source de données spécifié à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, le **propriétés des liaisons de données** boîte de dialogue s’affiche. Pour plus d’informations sur la création de chaînes de connexion et le **propriétés des liaisons de données** boîte de dialogue, consultez [Data Link API Overview](https://msdn.microsoft.com/library/ms718102.aspx) dans la documentation du SDK Windows.  
+Le **Source de données** bouton vous permet de définir la source de données spécifié à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, le **propriétés des liaisons de données** boîte de dialogue s’affiche. Pour plus d’informations sur la création de chaînes de connexion et le **propriétés des liaisons de données** boîte de dialogue, consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) dans la documentation du SDK Windows.  
   
 > [!NOTE]
 >  Dans les versions précédentes, en cliquant sur la touche MAJ enfoncée la **Source de données** bouton ouverte une boîte de dialogue Ouvrir le fichier afin que vous puissiez sélectionner un fichier Data Link (.udl). Cette fonctionnalité n’est plus pris en charge.  
@@ -176,7 +176,7 @@ Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données**
  Sélectionnez cette option si vous souhaitez utiliser `CCommand` ou `db_command` pour créer la commande et un accesseur de commande de déclarations de classe. Il s’agit de la sélection par défaut.  
   
  **Prise en charge**  
- Sélectionnez les cases à cocher pour spécifier les types de mises à jour pour être pris en charge dans le consommateur (la valeur par défaut est none). Chacun des éléments suivants définira [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) et les entrées appropriées pour [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) dans la jeu de propriétés carte.  
+ Sélectionnez les cases à cocher pour spécifier les types de mises à jour pour être pris en charge dans le consommateur (la valeur par défaut est none). Chacun des éléments suivants définira [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) et les entrées appropriées pour [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) dans la jeu de propriétés carte.  
   
  **Modification**  
  Spécifie que le consommateur prend en charge les mises à jour des données de ligne dans l’ensemble de lignes.  
@@ -190,4 +190,4 @@ Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données**
 ## <a name="see-also"></a>Voir aussi  
  [Consommateur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Chaînes de connexion et des liaisons de données (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Chaînes de connexion et des liaisons de données (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

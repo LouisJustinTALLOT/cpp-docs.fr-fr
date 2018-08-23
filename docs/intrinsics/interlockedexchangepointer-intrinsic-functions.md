@@ -1,5 +1,5 @@
 ---
-title: _Interlockedexchangepointer, fonctions intrinsèques | Documents Microsoft
+title: _InterlockedExchangePointer, fonctions intrinsèques | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334936"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543175"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -81,13 +81,13 @@ void * _InterlockedExchangePointer_HLERelease(
 ## <a name="return-value"></a>Valeur de retour  
  La fonction renvoie la valeur initiale indiquée par `Target`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] avec prise en charge HLE|\<immintrin.h>|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 avec prise en charge HLE|\<immintrin.h>|  
   
  Sur l'architecture x86, `_InterlockedExchangePointer` est une macro qui appelle `_InterlockedExchange`.  
   

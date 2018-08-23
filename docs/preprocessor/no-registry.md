@@ -1,5 +1,5 @@
 ---
-title: no_registry | Documents Microsoft
+title: no_registry | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 416663592f4362c110637fb4d4b4b418d9776cde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849663"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541228"
 ---
 # <a name="noregistry"></a>no_registry
-`no_registry` indique au compilateur qu'il ne faut pas rechercher dans le Registre les bibliothèques de types importées avec `#import`.  
+**no_registry** indique au compilateur de ne pas rechercher le Registre pour les bibliothèques de types importés avec `#import`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #import filename no_registry  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- *filename*  
- Bibliothèque de types.  
+### <a name="parameters"></a>Paramètres  
+*filename*  
+Bibliothèque de types.  
   
 ## <a name="remarks"></a>Notes  
- Si une bibliothèque de types référencée est introuvable dans les répertoires include, la compilation échoue même si la bibliothèque de types est dans le Registre.  `no_registry` se propage à d’autres bibliothèques de types importées implicitement avec `auto_search`.  
+ 
+Si une bibliothèque de types référencée est introuvable dans les répertoires include, la compilation échoue même si la bibliothèque de types est dans le Registre.  **no_registry** se propage à d’autres bibliothèques de types implicitement importées avec `auto_search`.  
   
- Le compilateur ne recherchera jamais dans le Registre les bibliothèques de types qui sont spécifiées par nom de fichier et passées directement à `#import`.  
+Le compilateur ne recherchera jamais dans le Registre les bibliothèques de types qui sont spécifiées par nom de fichier et passées directement à `#import`.  
   
- Lorsque `auto_search` est spécifié, les  `#import` supplémentaires sont générés avec le paramètre `no_registry` de l'`#import` initial (si la directive `#import` initiale était `no_registry`, un `auto_search` généré par `#import` est également `no_registry`.)  
+Lorsque `auto_search` est spécifié, supplémentaires `#import`s sera généré avec la **no_registry** paramètre initial `#import` (si initial `#import` directive a été **no_registry** , un `auto_search`-généré `#import` est également **no_registry**.)  
   
- `no_registry` est utile si vous souhaitez importer des bibliothèques de types référencé croisées sans risque du compilateur recherche une version antérieure du fichier dans le Registre.  `no_registry` est également utile si la bibliothèque de types n’est pas inscrit.  
+**no_registry** est utile si vous souhaitez importer des bibliothèques de types référencée sans le compilateur risque de trouver une version antérieure du fichier dans le Registre. **no_registry** est également utile si la bibliothèque de types n’est pas inscrit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

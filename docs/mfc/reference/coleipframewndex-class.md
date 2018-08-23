@@ -104,16 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850132"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541749"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex, classe
-La classe `COleIPFrameWndEx` implémente un conteneur OLE qui prend en charge MFC. Vous devez dériver la classe de fenêtres frames sur place pour votre application depuis la classe `COleIPFrameWndEx` , au lieu de la dériver de la classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+La classe `COleIPFrameWndEx` implémente un conteneur OLE qui prend en charge MFC. Vous devez dériver la classe de fenêtres frames sur place pour votre application depuis la classe `COleIPFrameWndEx` , au lieu de la dériver de la classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.   
   
 ## <a name="syntax"></a>Syntaxe  
   

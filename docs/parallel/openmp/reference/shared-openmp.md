@@ -1,5 +1,5 @@
 ---
-title: partagé (OpenMP) | Documents Microsoft
+title: partagé (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691675"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539805"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-Spécifie qu’une ou plusieurs variables doivent être partagées entre tous les threads.  
+Spécifie qu’une ou plusieurs variables doivent être partagés entre tous les threads.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,10 +36,10 @@ shared(var)
  où,  
   
  `var`  
- Variables de plus d’un à partager. Si plusieurs variables est spécifié, séparez les noms de variables par des virgules.  
+ Une ou plusieurs variables à partager. Si plusieurs variables est spécifié, séparez les noms de variables par une virgule.  
   
 ## <a name="remarks"></a>Notes  
- Est également possible de partager les variables entre les threads avec le [copyprivate](../../../parallel/openmp/reference/copyprivate.md) clause.  
+ Une autre façon de partager des variables entre les threads est avec la [copyprivate](../../../parallel/openmp/reference/copyprivate.md) clause.  
   
  `shared` s’applique aux directives suivantes :  
   

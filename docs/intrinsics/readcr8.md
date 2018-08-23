@@ -1,5 +1,5 @@
 ---
-title: __readcr8 | Documents Microsoft
+title: __readcr8 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688b4ad19f7b71c27933c1ad8663b37a3b3b6708
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8da8ca089a34f6e763ab6dfdb9bea8467d6316f1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327052"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539653"
 ---
 # <a name="readcr8"></a>__readcr8
 **Section spécifique à Microsoft**  
@@ -35,13 +35,13 @@ unsigned __int64 __readcr8(void);
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- La valeur dans le Registre CR8.  
+ La valeur du Registre CR8.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__readcr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr8`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

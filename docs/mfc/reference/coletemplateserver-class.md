@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849338"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538690"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer, classe
 Utilisée pour les serveurs d'édition visuelle OLE, les serveurs Automation et les conteneurs de lien (applications qui prennent en charge les liaisons aux incorporations).  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  Les informations contenues dans les arguments *rglpszRegister* et *rglpszOverwrite* est écrit dans le Registre via un appel à [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Les informations par défaut, qui sont enregistrées lorsque les deux arguments sont NULL, sont adaptées à la plupart des applications. Pour plus d’informations sur la structure des informations de ces arguments, consultez `AfxOleRegisterServerClass`.  
   
- Pour plus d’informations, consultez [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Pour plus d’informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC HIERSVR](../../visual-cpp-samples.md)   

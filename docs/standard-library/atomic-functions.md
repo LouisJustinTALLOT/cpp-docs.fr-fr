@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028315"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42543154"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;, fonctions
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Notes
 
-Un *opération atomique de comparaison et d’échange* compare la valeur est stockée dans l’objet qui est indiqué par *Atom* par rapport à la valeur désignée par *Exp*. Si les valeurs sont égales, la la valeur est stockée dans l’objet qui est indiqué par *atom* est remplacé par `Val` à l’aide un `read-modify-write` opération et en appliquant la mémoire contraintes sont spécifiées par d’ordre*Order1*. Si les valeurs ne sont pas égales, l’opération remplace la valeur désignée par *Exp* avec la valeur est stockée dans l’objet qui est indiqué par *Atom* et applique les contraintes d’ordre de mémoire qui sont spécifié par *Order2*.
+Un *opération atomique de comparaison et d’échange* compare la valeur est stockée dans l’objet qui est indiqué par *Atom* par rapport à la valeur désignée par *Exp*. Si les valeurs sont égales, la valeur est stockée dans l’objet qui est indiqué par *atom* est remplacé par *valeur* en utilisant un `read-modify-write` opération et en appliquant les contraintes d’ordre de mémoire qui sont spécifié par *Order1*. Si les valeurs ne sont pas égales, l’opération remplace la valeur désignée par *Exp* avec la valeur est stockée dans l’objet qui est indiqué par *Atom* et applique les contraintes d’ordre de mémoire qui sont spécifié par *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 

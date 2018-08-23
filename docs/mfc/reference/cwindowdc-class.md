@@ -1,5 +1,5 @@
 ---
-title: Classe de CWindowDC | Documents Microsoft
+title: Cwindowdc, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121540"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539090"
 ---
-# <a name="cwindowdc-class"></a>Classe de CWindowDC
+# <a name="cwindowdc-class"></a>Cwindowdc, classe
 Dérivée de `CDC`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,10 +48,10 @@ class CWindowDC : public CDC
   
 |Name|Description|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|Le HWND auquel ce `CWindowDC` est attaché.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|Le HWND à laquelle cet `CWindowDC` est attaché.|  
   
 ## <a name="remarks"></a>Notes  
- Appelle la fonction Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)au moment de la construction et [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) au moment de la destruction. Cela signifie qu’un `CWindowDC` objet accède à la zone de l’écran d’un [CWnd](../../mfc/reference/cwnd-class.md) (les zones clientes et).  
+ Appelle la fonction Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)au moment de la construction et [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) au moment de la destruction. Cela signifie qu’un `CWindowDC` objet accède à la zone de la totalité de l’écran d’un [CWnd](../../mfc/reference/cwnd-class.md) (zones clientes et non clientes).  
   
  Pour plus d’informations sur l’utilisation de `CWindowDC`, consultez [contextes de périphérique](../../mfc/device-contexts.md).  
   
@@ -66,7 +66,7 @@ class CWindowDC : public CDC
  En-tête : afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Construit un `CWindowDC` objet qui accède à la zone de l’écran (client et non cliente) de la `CWnd` objet pointé par *pWnd*.  
+ Construit un `CWindowDC` objet qui accède à la zone de l’écran (clientes et non clientes) de la `CWnd` objet vers lequel pointe *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
@@ -74,12 +74,12 @@ explicit CWindowDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Paramètres  
  *pWnd*  
- La fenêtre dont l’objet de contexte de périphérique sera accéder à la zone cliente.  
+ La fenêtre dont la zone cliente accède à l’objet de contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
  Le constructeur appelle la fonction Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- Une exception (de type `CResourceException`) est levée si les fenêtres `GetWindowDC` appel échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué à tous ses contextes de périphérique disponible. Votre application en concurrence pour les contextes d’affichage courantes cinq disponibles à un moment donné sous Windows.  
+ Une exception (de type `CResourceException`) est levée si le Windows `GetWindowDC` appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  

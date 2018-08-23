@@ -1,5 +1,5 @@
 ---
-title: '#importer des attributs (C++) | Documents Microsoft'
+title: '#importer des attributs (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e69f977ffaacdfd2bb8bb0f53d3fe197af3fad
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6a420294b2b7d2e0ff54b829d3177935f833a4e0
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842285"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543138"
 ---
 # <a name="import-attributes-c"></a>Attributs #import (C++)
-Fournit des liens vers des attributs utilisés avec la directive #import.  
+Fournit des liens vers les attributs utilisés avec la `#import` directive.  
   
- **Section spécifique à Microsoft**  
+**Section spécifique à Microsoft**  
   
- Les attributs ci-dessous sont disponibles pour la directive #import.  
+Les attributs suivants sont disponibles pour la `#import` directive.  
   
 |Attribut|Description|  
 |---------------|-----------------|  
@@ -39,25 +39,26 @@ Fournit des liens vers des attributs utilisés avec la directive #import.
 |[implementation_only](../preprocessor/implementation-only.md)|Supprime la génération du fichier d'en-tête .tlh (fichier d'en-tête principal).|  
 |[include()](../preprocessor/include-parens.md)|Désactive l'exclusion automatique.|  
 |[inject_statement](../preprocessor/inject-statement.md)|Insère son argument en tant que texte source dans l’en-tête de bibliothèque de types.|  
-|[named_guids](../preprocessor/named-guids.md)|Indique au compilateur de définir et initialiser des variables GUID dans le style ancien, sous la forme **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, et **DIID _MyDispInterface**.|  
+|[named_guids](../preprocessor/named-guids.md)|Indique au compilateur pour définir et initialiser des variables GUID dans l’ancien style sous la forme `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, et `DIID_MyDispInterface`.|  
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Désactive l'exclusion automatique.|  
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Modifie la façon dont le compilateur génère des fonctions wrapper pour les méthodes d'interface double.|  
 |[no_implementation](../preprocessor/no-implementation.md)|Supprime la génération de l'en-tête .tli, qui contient les implémentations des fonctions membres de wrapper.|  
 |[no_namespace](../preprocessor/no-namespace.md)|Indique que le nom de l'espace de noms n'est pas généré par le compilateur.|  
 |[no_registry](../preprocessor/no-registry.md)|Indique au compilateur de ne pas rechercher de bibliothèques de types dans le Registre.|  
-|[no_search_namespace](../preprocessor/no-search-namespace.md)|A les mêmes fonctionnalités que le [no_namespace](../preprocessor/no-namespace.md) attribut mais est utilisé sur les bibliothèques de types que vous utilisez la directive #import avec la [auto_search](../preprocessor/auto-search.md) attribut.|  
+|[no_search_namespace](../preprocessor/no-search-namespace.md)|A les mêmes fonctionnalités que le [no_namespace](../preprocessor/no-namespace.md) d’attribut, mais est utilisée sur les bibliothèques de types que vous utilisez la directive #import avec le [auto_search](../preprocessor/auto-search.md) attribut.|  
 |[no_smart_pointers](../preprocessor/no-smart-pointers.md)|Supprime la création des pointeurs intelligents pour toutes les interfaces dans la bibliothèque de types.|  
-|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Indique au compilateur de générer des fonctions wrapper de bas niveau pour les méthodes dispinterface et les propriétés qui appellent **IDispatch::Invoke** et retourner le `HRESULT` code d’erreur.|  
-|[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Supprime la génération de fonctions wrapper de gestion des erreurs et [propriété](../cpp/property-cpp.md) déclarations qui utilisent ces fonctions wrapper.|  
+|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Indique au compilateur de générer des fonctions wrapper de bas niveau pour dispinterface méthodes et propriétés qui appellent `IDispatch::Invoke` et renvoyer le code d’erreur HRESULT.|  
+|[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Supprime la génération de fonctions de wrapper de la gestion des erreurs et [propriété](../cpp/property-cpp.md) déclarations qui utilisent ces fonctions wrapper.|  
 |[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Spécifie un préfixe différent pour éviter les collisions de noms.|  
 |[raw_native_types](../preprocessor/raw-native-types.md)|Désactive l'utilisation des classes de prise en charge COM dans les fonctions wrapper de haut niveau et force l'utilisation de types de données de bas niveau à la place.|  
 |[raw_property_prefixes](../preprocessor/raw-property-prefixes.md)|Spécifie d'autres préfixes pour trois méthodes de propriété.|  
 |[rename](../preprocessor/rename-hash-import.md)|Offre une solution de contournement pour les problèmes de collisions de noms.|  
 |[rename_namespace](../preprocessor/rename-namespace.md)|Renomme l'espace de noms qui contient le contenu de la bibliothèque de types.|  
-|[rename_search_namespace](../preprocessor/rename-search-namespace.md)|A les mêmes fonctionnalités que le [rename_namespace](../preprocessor/rename-namespace.md) attribut mais est utilisé sur les bibliothèques de types que vous utilisez la directive #import avec la [auto_search](../preprocessor/auto-search.md) attribut.|  
+|[rename_search_namespace](../preprocessor/rename-search-namespace.md)|A les mêmes fonctionnalités que le [rename_namespace](../preprocessor/rename-namespace.md) d’attribut, mais est utilisée sur les bibliothèques de types que vous utilisez la directive #import avec le [auto_search](../preprocessor/auto-search.md) attribut.|  
 |[tlbid](../preprocessor/tlbid.md)|Permet de charger des bibliothèques autres que la bibliothèque de types principale.|  
   
- **FIN de la section spécifique à Microsoft**  
+**FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

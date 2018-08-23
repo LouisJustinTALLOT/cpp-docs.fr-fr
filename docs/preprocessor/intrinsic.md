@@ -1,5 +1,5 @@
 ---
-title: intrinsèques | Documents Microsoft
+title: intrinsèque | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844788"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540204"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -39,9 +39,9 @@ Spécifie que les appels aux fonctions spécifiées dans la liste d’arguments 
 
 Le **intrinsèque** pragma indique au compilateur qu’une fonction a un comportement connu.  Le compilateur peut appeler cette fonction sans remplacer l'appel de fonction par des instructions inline, si cela entraîne de meilleures performances.
 
-Les fonctions de bibliothèque avec des formes intrinsèques sont répertoriées ci-dessous. Une fois un **intrinsèque** pragma est visible, il prend effet à la première définition de fonction contenant une fonction intrinsèque spécifiée. L’effet se poursuit jusqu'à la fin du fichier source ou à l’apparence d’un **fonction** pragma spécifiant la même fonction intrinsèque. Le **intrinsèque** pragma peut être utilisé uniquement en dehors d’une définition de fonction, au niveau global.
+Les fonctions de bibliothèque avec des formes intrinsèques sont répertoriées ci-dessous. Une fois un **intrinsèque** pragma est vu, il prend effet à la première définition de fonction contenant une fonction intrinsèque spécifiée. L’effet se poursuit jusqu'à la fin du fichier source ou à l’apparence d’un `function` pragma spécifiant la même fonction intrinsèque. Le **intrinsèque** pragma peut être utilisé uniquement en dehors d’une définition de fonction, au niveau global.
 
-Les fonctions suivantes ont des formes intrinsèques et les formes intrinsèques sont utilisés lorsque vous spécifiez [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+Les fonctions suivantes ont des formes intrinsèques et les formes intrinsèques sont utilisées lorsque vous spécifiez [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -54,13 +54,13 @@ Les fonctions suivantes ont des formes intrinsèques et les formes intrinsèques
 
 Les programmes qui utilisent des fonctions intrinsèques sont plus rapides, car ils n'ont pas la charge liée à l'appel des fonctions, mais ils peuvent être plus volumineux en raison du code supplémentaire généré.
 
-**x86 spécifiques**
+**x86 spécifique**
 
-Le **_disable** et **_Activer** générer des instructions en mode noyau pour désactiver/activer des interruptions de fonctions intrinsèques et peut s’avérer utiles dans les pilotes en mode noyau.
+Le `_disable` et `_enable` générer des instructions en mode noyau pour désactiver ou activer des interruptions de fonctions intrinsèques et peut être utiles dans les pilotes en mode noyau.
 
 ### <a name="example"></a>Exemple
 
-Compilez le code ci-dessous à partir de la ligne de commande avec "cl -c -FAs sample.c" et examinez sample.asm pour vérifier que le code se transforme en instructions x86 CLI et STI :
+Compilez le code suivant à partir de la ligne de commande avec `cl -c -FAs sample.c` et examinez sample.asm pour vérifier qu’ils activent dans x86 instructions CLI et STI :
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -86,7 +86,7 @@ Les fonctions à virgule flottante répertoriées ci-dessous n'ont pas de vérit
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Les fonctions en virgule flottante répertoriées ci-dessous ont de véritables formes intrinsèques lorsque vous spécifiez [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), et [Fast](../build/reference/fp-specify-floating-point-behavior.md) (ou toute option comprenant /Og : [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)et/O2) :
+ Les fonctions à virgule flottante répertoriées ci-dessous ont de véritables formes intrinsèques lorsque vous spécifiez [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), et [Fast](../build/reference/fp-specify-floating-point-behavior.md) (ou toute option qui inclut /Og : [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)et/O2) :
 
 |||||
 |-|-|-|-|
@@ -96,9 +96,9 @@ Les fonctions à virgule flottante répertoriées ci-dessous n'ont pas de vérit
 
 Vous pouvez utiliser [/fp : strict](../build/reference/fp-specify-floating-point-behavior.md) ou [/Za](../build/reference/za-ze-disable-language-extensions.md) pour remplacer la génération d’options à virgule flottante intrinsèques vraies. Dans ce cas, les fonctions sont générées en tant que routines de bibliothèque qui passent directement des arguments au processeur de calcul en virgule flottante au lieu de leur appliquer une transmission de type push sur la pile du programme.
 
-Consultez [#pragma function](../preprocessor/function-c-cpp.md) pour plus d’informations et un exemple montrant comment activer ou désactiver les fonctions intrinsèques d’un bloc de texte source.
+Consultez [fonction #pragma](../preprocessor/function-c-cpp.md) pour plus d’informations et un exemple sur la façon d’activer/désactiver les intrinsèques pour un bloc de texte source.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)  

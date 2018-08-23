@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4114 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4114 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283921"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541051"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>Compilateur avertissement (niveau 1) C4114
 même qualificateur de type utilisé plusieurs fois  
   
- Une définition ou déclaration de type utilise un qualificateur de type (**const**, `volatile`, **signé**, ou `unsigned`) plusieurs fois. Cela déclenche un avertissement avec les extensions Microsoft (/Ze) et une erreur sous compatibilité ANSI (/Za).  
+ Une définition ou déclaration de type utilise un qualificateur de type (**const**, **volatile**, **signé**, ou **non signé**) plusieurs fois. Cela provoque un avertissement avec les extensions Microsoft (/Ze) et une erreur sous compatibilité ANSI (/Za).  
   
  L’exemple suivant génère l’erreur C4114 :  
   

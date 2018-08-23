@@ -1,5 +1,5 @@
 ---
-title: __movsb | Documents Microsoft
+title: __movsb | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328225"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543169"
 ---
 # <a name="movsb"></a>__movsb
 **Section spécifique à Microsoft**  
@@ -50,11 +50,11 @@ void __movsb(
  [in] `Count`  
  Nombre d'octets à copier.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

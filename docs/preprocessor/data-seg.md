@@ -1,5 +1,5 @@
 ---
-title: data_seg | Documents Microsoft
+title: data_seg | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841230"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539185"
 ---
 # <a name="dataseg"></a>data_seg
 Spécifie le segment de données où les variables initialisées sont stockées dans le fichier .obj.  
@@ -31,37 +31,37 @@ Spécifie le segment de données où les variables initialisées sont stockées 
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Notes  
- La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
+## <a name="remarks"></a>Notes 
+
+La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
- Fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les variables initialisées est .data. Les variables qui ne sont pas initialisées doivent être initialisées sur zéro et sont stockées dans .bss.  
+Les fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les variables initialisées est .data. Les variables qui ne sont pas initialisées doivent être initialisées sur zéro et sont stockées dans .bss.  
   
- **data_seg** sans paramètre réinitialise le segment sur .data.  
+**data_seg** sans paramètres réinitialise le segment sur .data.  
   
- **push**(facultatif)  
- Place un enregistrement sur la pile interne du compilateur. A **push** peut avoir un *identificateur* et *segment-name*.  
+*push* (facultatif)  
+Place un enregistrement sur la pile interne du compilateur. Un *push* peut avoir un *identificateur* et *segment-name*.  
   
- **POP** (facultatif)  
- Supprime un enregistrement du haut de la pile interne du compilateur.  
+*POP* (facultatif)  
+Supprime un enregistrement du haut de la pile interne du compilateur.  
   
- *identificateur* (facultatif)  
- Lorsqu’il est utilisé avec **push**, attribue un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
+*identificateur* (facultatif)  
+Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec *pop*, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
   
- *identificateur* permet à plusieurs enregistrements d’être dépilés avec une seule **pop** commande.  
+*identificateur* permet à plusieurs enregistrements à dépiler avec une seule *pop* commande.  
   
- *« nom du segment »*(facultatif)  
- Nom d'un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom du segment actif.  
+*« segment-name »*(facultatif)  
+Nom d'un segment. Lorsqu’il est utilisé avec *pop*, la pile est dépilée et *segment-name* devient le nom de segment actif.  
   
- *classe « segment »* (facultatif)  
- Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
+*« segment-class »* (facultatif)  
+Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // pragma_directive_data_seg.cpp  
 int h = 1;                     // stored in .data  
 int i = 0;                     // stored in .bss  
@@ -78,11 +78,12 @@ int main() {
 }  
 ```  
   
- Données allouées en utilisant **data_seg** ne conserve pas toutes les informations concernant son emplacement.  
+Données allouées en utilisant **data_seg** ne conserve pas toutes les informations concernant son emplacement.  
   
- Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour une liste de noms, vous ne devez pas utiliser lors de la création d’une section.  
+Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour obtenir la liste des noms que vous ne devez pas utiliser lors de la création d’une section.  
   
- Vous pouvez également spécifier des sections pour les variables const ([const_seg](../preprocessor/const-seg.md)), données non initialisées ([bss_seg](../preprocessor/bss-seg.md)) et les fonctions ([code_seg](../preprocessor/code-seg.md)).  
+Vous pouvez également spécifier des sections pour les variables const ([const_seg](../preprocessor/const-seg.md)), données non initialisées ([bss_seg](../preprocessor/bss-seg.md)) et les fonctions ([code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

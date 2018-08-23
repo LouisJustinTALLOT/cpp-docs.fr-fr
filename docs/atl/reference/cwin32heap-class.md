@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881725"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572964"
 ---
 # <a name="cwin32heap-class"></a>Classe de CWin32Heap
 Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions d’allocation du tas Win32.  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  Le paramètre HEAP_NO_SERIALIZE Spécifie que l’exclusion mutuelle ne sera pas utilisée lorsque les fonctions du tas allouent et libérer la mémoire, avec une augmentation des performances.  
   
- Le troisième paramètre est 0 par défaut, ce qui permet au tas de s'accroître en fonction des besoins. Consultez [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) pour une explication sur les tailles de mémoire et les indicateurs.  
+ Le troisième paramètre est 0 par défaut, ce qui permet au tas de s'accroître en fonction des besoins. Consultez [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) pour une explication sur les tailles de mémoire et les indicateurs.  
   
 ##  <a name="dtor"></a>  CWin32Heap :: ~ CWin32Heap  
  Destructeur.  
