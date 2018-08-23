@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a54cab831d3e3180a28f892fcf37c7351c22bc33
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c2cef491aac3350c1692c2f87236f3cbf01dd9b0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014960"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612076"
 ---
 # <a name="synclockwithstatustgetstatus-method"></a>SyncLockWithStatusT::GetStatus, méthode
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-DWORD GetStatus() const;  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Le résultat d’une opération d’attente sur l’objet qui est basé sur le **SyncLockWithStatusT** de classe, comme un [Mutex](../windows/mutex-class1.md) ou [sémaphore](../windows/semaphore-class.md). Zéro (0) indique que l’opération d’attente a renvoyé l’état signalé ; Sinon, un autre état s’est produite, telles que la valeur de délai d’expiration est écoulé.  
-  
-## <a name="remarks"></a>Notes  
- Récupère l’état d’attente de l’actuel **SyncLockWithStatusT** objet.  
-  
- La fonction GetStatus() récupère la valeur de l’objet sous-jacent [status_](../windows/synclockwithstatust-status-data-member.md) membre de données. Quand un objet basé sur le **SyncLockWithStatusT** classe effectue une opération de verrouillage, l’objet attend tout d’abord l’objet devienne disponible. Le résultat de cette opération d’attente est stocké dans le `status_` membre de données. Les valeurs possibles de le `status_` membre de données sont les valeurs de retour de l’opération d’attente. Pour plus d’informations, consultez les valeurs de retour de la `WaitForSingleObjectEx()` (fonction) dans MSDN Library.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+DWORD GetStatus() const;
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Le résultat d’une opération d’attente sur l’objet qui est basé sur le **SyncLockWithStatusT** de classe, comme un [Mutex](../windows/mutex-class1.md) ou [sémaphore](../windows/semaphore-class.md). Zéro (0) indique que l’opération d’attente a renvoyé l’état signalé ; Sinon, un autre état s’est produite, telles que la valeur de délai d’expiration est écoulé.
+
+## <a name="remarks"></a>Notes
+
+Récupère l’état d’attente de l’actuel **SyncLockWithStatusT** objet.
+
+La fonction GetStatus() récupère la valeur de l’objet sous-jacent [status_](../windows/synclockwithstatust-status-data-member.md) membre de données. Quand un objet basé sur le **SyncLockWithStatusT** classe effectue une opération de verrouillage, l’objet attend tout d’abord l’objet devienne disponible. Le résultat de cette opération d’attente est stocké dans le `status_` membre de données. Les valeurs possibles de le `status_` membre de données sont les valeurs de retour de l’opération d’attente. Pour plus d’informations, consultez les valeurs de retour de la `WaitForSingleObjectEx()` (fonction) dans MSDN Library.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)

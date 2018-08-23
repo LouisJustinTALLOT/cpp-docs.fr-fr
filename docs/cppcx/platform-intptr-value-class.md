@@ -1,5 +1,5 @@
 ---
-title: Classe de valeur Platform::IntPtr | Documents Microsoft
+title: Classe de valeur Platform::IntPtr | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088152"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612127"
 ---
 # <a name="platformintptr-value-class"></a>Classe de valeur Platform::IntPtr
 Représente un pointeur ou un handle signé dont la taille est propre à la plateforme (32 bits ou 64 bits).  
@@ -42,8 +42,8 @@ public value struct IntPtr
 |[IntPtr::op_explicit, opérateur](#op-explicit)|Convertit le paramètre spécifié en un IntPtr ou un pointeur en une valeur IntPtr.|  
 |[IntPtr::ToInt32](#toint32)|Convertit l'IntPtr actif en un entier 32 bits.|  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Classe Platform::Collections :: unorderedmapview | Documents Microsoft'
+title: 'Classe Platform::Collections :: unorderedmapview | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092675"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613572"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView, classe
 Représente une vue en lecture seule dans une *carte*, qui est une collection de paires clé/valeur.  
@@ -65,13 +65,13 @@ ref class UnorderedMapView sealed;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `UnorderedMapView`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First, méthode
-Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) élément du mappage non trié.  
+Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) élément dans la carte non triée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -85,7 +85,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Itérateur qui spécifie le premier élément de la vue cartographique.  
   
 ### <a name="remarks"></a>Notes  
- Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.  
+ Un moyen pratique de contenir l’itérateur retourné par First() consiste à attribuer la valeur de retour à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.  
   
 
 
@@ -100,7 +100,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>Paramètres  
  `key`  
- Clé utilisée pour rechercher l'élément. Le type de `key` est le nom de type *K*.  
+ Clé utilisée pour rechercher l'élément. Le type de `key` est typename *K*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` si la clé est trouvée ; sinon, `false`.  
@@ -118,7 +118,7 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>Paramètres  
  `key`  
- Clé utilisée pour rechercher un élément dans le UnorderedMapView. Le type de `key` est le nom de type *K*.  
+ Clé utilisée pour rechercher un élément dans le UnorderedMapView. Le type de `key` est typename *K*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur associée à `key`. Le type de la valeur de retour est typename *V*.  

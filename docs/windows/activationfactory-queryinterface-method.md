@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647100"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613230"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface, méthode
-Récupère un pointeur vers l’interface spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *riid*  
- ID d’interface.  
-  
- *ppvObject*  
- Lorsque cette opération est terminée, un pointeur vers l’interface spécifiée par le paramètre *riid*.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ActivationFactory, classe](../windows/activationfactory-class.md)
+
+Récupère un pointeur vers l’interface spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*riid*  
+ID d’interface.
+
+*ppvObject*  
+Lorsque cette opération est terminée, un pointeur vers l’interface spécifiée par le paramètre *riid*.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ActivationFactory, classe](../windows/activationfactory-class.md)

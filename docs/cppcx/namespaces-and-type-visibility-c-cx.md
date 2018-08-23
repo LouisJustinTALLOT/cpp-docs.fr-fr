@@ -1,28 +1,28 @@
 ---
-title: Espaces de noms et la visibilité du Type (C + c++ / CX) | Documents Microsoft
+title: Espaces de noms et la visibilité du Type (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d09d2f60f237439f208601fe8385cf7125e1ac20
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089830"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600779"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilité des espaces de noms et des types (C++/CX)
-Un espace de noms est une construction C++ standard qui sert à grouper les types qui ont des fonctionnalités associées et à empêcher les collisions de noms dans les bibliothèques. Le système de type Windows Runtime nécessite que tous les types Windows Runtime publics, y compris celles figurant dans votre propre code, doivent être déclarées dans un espace de noms à la portée espace de noms. Les types publics déclarés au niveau de la portée globale ou imbriqués au sein d'une autre classe génèrent une erreur de compilation.  
+Un espace de noms est une construction C++ standard qui sert à grouper les types qui ont des fonctionnalités associées et à empêcher les collisions de noms dans les bibliothèques. Le système de type Windows Runtime nécessite que tous les types publics de Windows Runtime, y compris celles dans votre propre code, doivent être déclarés dans un espace de noms à la portée de l’espace de noms. Les types publics déclarés au niveau de la portée globale ou imbriqués au sein d'une autre classe génèrent une erreur de compilation.  
   
  Un fichier .winmd doit avoir le même nom que l'espace de noms racine. Par exemple, une classe nommée A.B.C.MyClass peut être instanciée uniquement si elle est définie dans un fichier de métadonnées nommé A.winmd, A.B.winmd ou A.B.C.winmd. Il n'est pas requis que le nom de l'exécutable corresponde au nom du fichier .winmd.  
   
 ## <a name="type-visibility"></a>Visibilité du type  
- Dans un espace de noms, types Windows Runtime, contrairement aux types C++ standard, ont une accessibilité privée ou publique. Par défaut, l'accessibilité est privée. Seul un type public visible aux métadonnées est utilisable à partir d'applications et de composants qui peuvent être écrits dans d'autres langages que C++. En général, les règles pour les types visibles sont plus restrictives que les règles pour les types non visibles car les types visibles ne peuvent pas exposer des concepts spécifiques C++ qui ne sont pas pris en charge dans les langages .NET ou JavaScript.  
+ Dans un espace de noms, types Windows Runtime, contrairement aux types C++ standard, avoir une accessibilité privée ou publique. Par défaut, l'accessibilité est privée. Seul un type public visible aux métadonnées est utilisable à partir d'applications et de composants qui peuvent être écrits dans d'autres langages que C++. En général, les règles pour les types visibles sont plus restrictives que les règles pour les types non visibles car les types visibles ne peuvent pas exposer des concepts spécifiques C++ qui ne sont pas pris en charge dans les langages .NET ou JavaScript.  
   
 > [!NOTE]
 >  Les métadonnées sont utilisées uniquement au moment de l'exécution par les langages.NET et JavaScript. Lorsque l'application ou le composant C++ communique avec une autre application ou un autre composant C++ (comprenant les composants Windows qui sont tous écrits en C++), aucune consommation d'exécution des métadonnées n'est requise.  
@@ -43,17 +43,17 @@ Un espace de noms est une construction C++ standard qui sert à grouper les type
 |`internal` ou `private public`|Le membre est public dans l'application ou le composant, mais n'est pas visible dans les métadonnées.|Non|  
   
 ## <a name="windows-runtime-namespaces"></a>Espaces de noms Windows Runtime  
- L’API Windows se compose de types déclarés dans les fenêtres ::\* espaces de noms. Ces espaces de noms sont réservés à windows et aucun type ne peut y être ajouté. Dans l' **Explorateur d'objets**, vous pouvez consulter ces espaces de noms dans le fichier windows.winmd. Pour obtenir la documentation relative à ces espaces de noms, consultez [Informations de référence sur les API Windows des applications Windows Runtime](http://msdn.microsoft.com/library/windows/apps/br211377).  
+ L’API Windows se compose des types qui sont déclarés dans le Windows ::\* espaces de noms. Ces espaces de noms sont réservés à windows et aucun type ne peut y être ajouté. Dans l' **Explorateur d'objets**, vous pouvez consulter ces espaces de noms dans le fichier windows.winmd. Pour obtenir la documentation relative à ces espaces de noms, consultez [Informations de référence sur les API Windows des applications Windows Runtime](http://msdn.microsoft.com/library/windows/apps/br211377).  
   
 ## <a name="ccx-namespaces"></a>espaces de noms (C++/CX)  
- C + c++ / CX définissent certains types dans ces espaces de noms dans le cadre de la projection du système de type Windows Runtime.  
+ C++ / c++ / CX définissent certains types dans ces espaces de noms dans le cadre de la projection du système de type Windows Runtime.  
   
 |||  
 |-|-|  
 |**Espace de noms**|**Description**|  
 |default|Contient les types numérique et char16 intégrés. Ces types sont dans la portée dans chaque espace de noms et une instruction `using` n'est jamais requise.|  
-|Plateforme|Contient les types essentiellement publics qui correspondent aux types Windows Runtime, tels que `Array<T>`, `String`, `Guid`, et `Boolean`. Inclut également les types d'assistance spécialisés tels que `Platform::Agile<T>` et `Platform::Box<T>`.|  
-|Platform::Collections|Contient les classes de collection concrètes qui implémentent les interfaces de collection Windows Runtime `IVector`, `IMap`, et ainsi de suite. Ces types ne sont pas définis dans platform.winmd mais dans le fichier d'en-tête collection.h.|  
+|Plateforme|Contient les types essentiellement publics qui correspondent aux types Windows Runtime tel que `Array<T>`, `String`, `Guid`, et `Boolean`. Inclut également les types d'assistance spécialisés tels que `Platform::Agile<T>` et `Platform::Box<T>`.|  
+|Platform::Collections|Contient les classes de collection concrets qui implémentent les interfaces de collection Windows Runtime `IVector`, `IMap`, et ainsi de suite. Ces types ne sont pas définis dans platform.winmd mais dans le fichier d'en-tête collection.h.|  
 |Platform::Details|Contient les types qui sont utilisés par le compilateur et ne sont pas destinés à la consommation publique.|  
   
 ## <a name="see-also"></a>Voir aussi  

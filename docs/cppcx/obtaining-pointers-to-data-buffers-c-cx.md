@@ -1,27 +1,27 @@
 ---
-title: Obtention de pointeurs vers les mémoires tampons de données (C + c++ / CX) | Documents Microsoft
+title: Obtention de pointeurs vers les mémoires tampons de données (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090547"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613028"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtention de pointeurs vers les tampons de données (C++/CX)
 Dans Windows Runtime, l’interface [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) fournit une méthode indépendante du langage, basée sur les flux, pour accéder aux mémoires tampons de données. En C++, vous pouvez obtenir un pointeur brut vers le tableau d'octets sous-jacent à l'aide de l'interface IBufferByteAccess de la bibliothèque Windows Runtime, qui est définie dans robuffer.h. En utilisant cette approche, vous pouvez modifier le tableau d'octets sur place sans effectuer de copies non nécessaires des données.  
   
  Le diagramme suivant illustre un élément image XAML, dont la source est [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Une application cliente écrite dans un langage, quel qu'il soit, peut passer une référence à `WriteableBitmap` au code C++, lequel peut ensuite utiliser la référence pour atteindre la mémoire tampon sous-jacente. Dans une application de plateforme Windows universelle qui est écrit en C++, vous pouvez utiliser la fonction dans l’exemple suivant directement dans le code source sans l’empaqueter dans un composant Windows Runtime.  
   
- ![C&#43; &#43; code accédant directement aux données de pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
+ ![C&#43; &#43; code accéder directement aux données de pixels](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
  La méthode suivante accepte [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) et retourne un pointeur brut au tableau d’octets sous-jacent. Pour appeler la fonction, passez une propriété [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .  
@@ -56,11 +56,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 ```  
   
 ## <a name="complete-example"></a>Exemple complet  
- Les étapes suivantes montrent comment créer une application c# plateforme universelle Windows qui passe une `WriteableBitmap` à une DLL de composant C++ Windows Runtime. Le code C++ obtient un pointeur vers la mémoire tampon de pixels, et effectue une simple modification sur place de l'image. À défaut, vous pouvez créer l'application cliente en Visual Basic, JavaScript ou C++ au lieu du C#. Si vous utilisez le C++, vous n'avez pas besoin de la DLL de composant. Il vous suffit d'ajouter ces méthodes directement à la classe MainPage ou à une autre classe que vous définissez.  
+ Les étapes suivantes montrent comment créer une application de plateforme de Windows c# universelle qui transmet un `WriteableBitmap` à une DLL de composant C++ Windows Runtime. Le code C++ obtient un pointeur vers la mémoire tampon de pixels, et effectue une simple modification sur place de l'image. À défaut, vous pouvez créer l'application cliente en Visual Basic, JavaScript ou C++ au lieu du C#. Si vous utilisez le C++, vous n'avez pas besoin de la DLL de composant. Il vous suffit d'ajouter ces méthodes directement à la classe MainPage ou à une autre classe que vous définissez.  
   
 #### <a name="create-the-client"></a>Créer le client  
   
-1.  Utilisez le modèle de projet application vide pour créer une application c# plateforme universelle Windows.  
+1.  Utilisez le modèle de projet application vide pour créer une application de plateforme de Windows c# universelle.  
   
 2.  Dans MainPage.xaml  
   
@@ -134,7 +134,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 #### <a name="create-the-c-component"></a>Créer le composant C++  
   
-1.  Ajouter un nouveau composant C++ Windows Runtime à la solution existante et nommez-le `ImageManipCPP`. Ajoutez une référence à ce dernier dans le projet C# en cliquant avec le bouton droit sur le projet dans l' **Explorateur de solutions** , puis en choisissant **Ajouter**, **Référence**.  
+1.  Ajoutez un nouveau composant C++ Windows Runtime à la solution existante et nommez-le `ImageManipCPP`. Ajoutez une référence à ce dernier dans le projet C# en cliquant avec le bouton droit sur le projet dans l' **Explorateur de solutions** , puis en choisissant **Ajouter**, **Référence**.  
   
 2.  Dans Class1.h  
   

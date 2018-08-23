@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections Namespace | Documents Microsoft
+title: Platform::Collections Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088035"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612529"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections (espace de noms)
 
@@ -28,7 +28,7 @@ L’espace de noms Platform::Collections contient le `Map`, `MapView`, `Vector`,
 
 Vous pouvez construire un Platform::Collections::Vector à partir d'un [std::vector](../standard-library/vector-class.md) et un [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) à partir d'un [std::map](../standard-library/map-class.md).
 
-En outre, l’espace de noms Platform::Collections prend en charge insert arrière et des itérateurs d’entrée, et `Vector` et `VectorView` itérateurs.
+En outre, l’espace de noms Platform::Collections prend en charge insert back et itérateurs d’entrée, et `Vector` et `VectorView` itérateurs.
 
 Vous devez inclure (`#include`) l’en-tête collection.h pour utiliser les types dans l’espace de noms Platform::Collections.
 
@@ -58,7 +58,7 @@ Cet espace de noms contient les membres ci-dessous.
 
 [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Métadonnées :** platform.winmd
 
