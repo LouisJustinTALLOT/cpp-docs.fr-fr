@@ -1,5 +1,5 @@
 ---
-title: push_macro | Documents Microsoft
+title: push_macro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e41ef7bf7b93e4b2a533dddcb82fee904cb428
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70b472ba11445cdc5aa2a192d02d82c51d724b8c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912990"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539959"
 ---
 # <a name="pushmacro"></a>push_macro
-Enregistre la valeur de la *macro_name* (macro) en haut de la pile pour cette macro.  
+Enregistre la valeur de la *macro_name* macro en haut de la pile pour cette macro.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma push_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez récupérer la valeur de *macro_name* avec **pop_macro**.  
+ 
+Vous pouvez récupérer la valeur de *macro_name* avec `pop_macro`.  
   
- Consultez [pop_macro](../preprocessor/pop-macro.md) pour obtenir un exemple.  
+Consultez [pop_macro](../preprocessor/pop-macro.md) pour obtenir un exemple.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: embedded_idl | Documents Microsoft
+title: embedded_idl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0b594952e8e5be0a9be9c843877c8c4bb95eca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b41af8375249a48ac3a866af224370b19f071d28
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842714"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540761"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 **Spécifique à C++**  
   
- Indique que la bibliothèque de types est écrite dans le fichier .tlh et que le code généré par attributs est conservé.  
+Indique que la bibliothèque de types est écrite dans le fichier .tlh et que le code généré par attributs est conservé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ ms.locfileid: "33842714"
 embedded_idl[("param")]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `param`  
- Peut avoir l'une des deux valeurs suivantes :  
+### <a name="parameters"></a>Paramètres  
+*param*  
+Peut avoir l'une des deux valeurs suivantes :  
   
--   emitidl : les informations de type importées à partir du typelib seront présentes dans le fichier IDL généré pour le projet avec attributs.  Il s'agit de la valeur par défaut qui sera appliquée si vous ne spécifiez pas de paramètre pour `embedded_idl`.  
+- emitidl : les informations de type importées à partir du typelib seront présentes dans le fichier IDL généré pour le projet avec attributs.  Il s'agit de la valeur par défaut qui sera appliquée si vous ne spécifiez pas de paramètre pour `embedded_idl`.  
   
--   no_emitidl : les informations de type importées à partir du typelib ne seront pas présentes dans le fichier IDL généré pour le projet avec attributs.  
+- no_emitidl : les informations de type importées à partir du typelib ne seront pas présentes dans le fichier IDL généré pour le projet avec attributs.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // import_embedded_idl.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -53,8 +53,10 @@ embedded_idl[("param")]
 ```  
   
 ## <a name="remarks"></a>Notes  
- **FIN spécifique à C++**  
+ 
+**FIN spécifique à C++**  
   
 ## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

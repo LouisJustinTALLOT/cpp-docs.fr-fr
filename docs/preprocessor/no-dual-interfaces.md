@@ -1,5 +1,5 @@
 ---
-title: no_dual_interfaces | Documents Microsoft
+title: no_dual_interfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850780"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541184"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
 **Spécifique à C++**  
   
- Modifie la façon dont le compilateur génère des fonctions wrapper pour les méthodes d'interface double.  
+Modifie la façon dont le compilateur génère des fonctions wrapper pour les méthodes d'interface double.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Notes  
- Normalement, le wrapper appelle la méthode via la table de fonctions virtuelles pour l'interface. Avec `no_dual_interfaces`, le wrapper appelle à la place **IDispatch::Invoke** pour appeler la méthode.  
+ 
+Normalement, le wrapper appelle la méthode via la table de fonctions virtuelles pour l'interface. Avec **no_dual_interfaces**, le wrapper appelle à la place `IDispatch::Invoke` pour appeler la méthode.  
   
- **FIN spécifique à C++**  
+**FIN spécifique à C++**  
   
 ## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

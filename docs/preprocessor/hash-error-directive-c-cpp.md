@@ -1,5 +1,5 @@
 ---
-title: '#erreur Directive (C/C++) | Documents Microsoft'
+title: '#erreur Directive (C/C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905570"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539180"
 ---
 # <a name="error-directive-cc"></a>#error, directive (C/C++)
-Le `#error` directive émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis se termine la compilation.  
+Le **#error** directive émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis termine la compilation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +35,8 @@ Le `#error` directive émet un message d’erreur spécifié par l’utilisateur
 ```  
   
 ## <a name="remarks"></a>Notes  
- Cette directive émet le message d’erreur inclut le *chaîne de jeton* paramètre. Le `token-string` paramètre n’est pas soumis à une expansion de macro. Cette directive est très utile lors du prétraitement pour informer le développeur d’une incohérence de programme ou de la violation d’une contrainte. L’exemple suivant illustre l’erreur lors du traitement lors du prétraitement :  
+ 
+Le message d’erreur qui émet cette directive inclut le *chaîne de jeton* paramètre. Le *chaîne de jeton* paramètre n’est pas soumis à une expansion macro. Cette directive est particulièrement utile pendant le prétraitement pour notifier le développeur d’une incohérence de programme ou de la violation d’une contrainte. L’exemple suivant illustre l’erreur lors du traitement pendant le prétraitement :  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ Le `#error` directive émet un message d’erreur spécifié par l’utilisateur
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)
+ 
+[Directives de préprocesseur](../preprocessor/preprocessor-directives.md)
