@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339590"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541747"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fournit les fonctionnalités d'un contrôle d'édition Windows.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Valeur de retour  
  Pour les contrôles d’édition sur une ligne, la valeur de retour est la longueur, dans TCHARs, du texte dans le contrôle d’édition.  
   
- Pour les contrôles d’édition multiligne, la valeur de retour est la longueur, en TCHARs, de la ligne spécifiée par le *nLigne* paramètre. Pour [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] texte, la longueur est le nombre d’octets dans la ligne ; pour le texte Unicode, la longueur est le nombre de caractères dans la ligne. La longueur n’inclut pas le caractère de retour chariot à la fin de la ligne.  
+ Pour les contrôles d’édition multiligne, la valeur de retour est la longueur, en TCHARs, de la ligne spécifiée par le *nLigne* paramètre. Pour le texte ANSI, la longueur est le nombre d’octets dans la ligne. pour le texte Unicode, la longueur est le nombre de caractères dans la ligne. La longueur n’inclut pas le caractère de retour chariot à la fin de la ligne.  
   
  Si le *nLigne* paramètre est supérieur au nombre de caractères dans le contrôle, la valeur de retour est égale à zéro.  
   

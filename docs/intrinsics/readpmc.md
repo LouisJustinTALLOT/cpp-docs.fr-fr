@@ -1,5 +1,5 @@
 ---
-title: __readpmc | Documents Microsoft
+title: __readpmc | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333789"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540229"
 ---
 # <a name="readpmc"></a>__readpmc
 **Section spécifique à Microsoft**  
   
- Génère le `rdpmc` instruction, qui lit les performances d’analyse du compteur spécifié par `counter`.  
+ Génère le `rdpmc` instruction, qui lit les performances d’analyse de compteur spécifié par `counter`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,16 +45,16 @@ unsigned __int64 __readpmc(
 ## <a name="return-value"></a>Valeur de retour  
  La valeur du compteur de performance spécifié.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Cet intrinsèque est disponible en mode noyau uniquement, et la routine est disponible uniquement comme intrinsèque.  
+ Cette intrinsèque est disponible en mode noyau uniquement, et la routine est uniquement disponible comme intrinsèque.  
   
 **FIN de la section spécifique à Microsoft**  
   

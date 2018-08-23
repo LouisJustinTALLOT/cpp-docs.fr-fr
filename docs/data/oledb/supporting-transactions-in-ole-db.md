@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338708"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572843"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Prise en charge des transactions dans OLE DB
 Un [transaction](../../data/transactions-mfc-data-access.md) consiste à regrouper ou du lot, une série de mises à jour à une source de données afin que toutes réussissent et sont validées en même temps ou (si l’une d’elles échoue), aucun n’est validée et toute la transaction est restaurée. Ce processus garantit l’intégrité du résultat sur la source de données.  
   
  OLE DB prend en charge les transactions avec les trois méthodes suivantes :  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relations des Sessions et Transactions  
  Un objet de source de données unique peut créer un ou plusieurs objets de session, chacun d’eux peut être à l’intérieur ou en dehors de l’étendue d’une transaction à un moment donné.  
@@ -55,7 +55,7 @@ Un [transaction](../../data/transactions-mfc-data-access.md) consiste à regroup
  Appel `ITransaction::Commit` ou `ITransaction::Abort` met fin à la transaction. `Commit` toutes les modifications dans l’étendue de la transaction à appliquer au magasin de données. `Abort` causes de toutes les modifications dans l’étendue de la transaction doit être annulée et le magasin de données est laissé dans un état, il avaient avant le démarrage de la transaction.  
   
 ## <a name="nested-transactions"></a>Transactions imbriquées  
- Un [imbriqués transaction](https://msdn.microsoft.com/library/ms716985.aspx) se produit lorsque vous démarrez une nouvelle transaction locale lorsqu’une transaction active existe déjà sur la session. La nouvelle transaction est démarrée en tant que transaction imbriquée sous la transaction en cours. Si le fournisseur ne prend pas en charge les transactions imbriquées, l’appel `StartTransaction` lorsqu’il existe déjà une transaction active dans la session renvoie XACT_E_XTIONEXISTS.  
+ Un [imbriqués transaction](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) se produit lorsque vous démarrez une nouvelle transaction locale lorsqu’une transaction active existe déjà sur la session. La nouvelle transaction est démarrée en tant que transaction imbriquée sous la transaction en cours. Si le fournisseur ne prend pas en charge les transactions imbriquées, l’appel `StartTransaction` lorsqu’il existe déjà une transaction active dans la session renvoie XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transactions distribuées  
  Une transaction distribuée est une transaction qui met à jour des données distribuées ; Autrement dit, les données sur plusieurs systèmes informatiques en réseau. Si vous souhaitez prendre en charge des transactions sur un système distribué, vous devez utiliser le .NET Framework plutôt que la prise en charge des transactions OLE DB.  

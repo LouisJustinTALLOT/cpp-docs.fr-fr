@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851340"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539846"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane, classe
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
  Un contrôle dérivé [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md) qui peut être inséré dans une barre Outlook ( [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)). Le volet de barre Outlook contient une colonne de grands boutons. L'utilisateur peut faire défiler vers le haut ou vers le bas la liste des boutons si elle est plus grande que le volet. Lorsque l'utilisateur détache un volet de barre Outlook de la barre Outlook, il peut flotter ou s'ancrer à la fenêtre frame principale.  
   
@@ -222,7 +222,7 @@ BOOL AddButton(
  Si l’index spécifié par *iInsertAt* est -1, le bouton est ajouté à la fin de la page.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual BOOL CanBeAttached() const;  

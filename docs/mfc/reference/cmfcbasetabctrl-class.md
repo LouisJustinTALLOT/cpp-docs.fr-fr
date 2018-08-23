@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337479"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538886"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implémente les fonctionnalités de base pour les fenêtres à onglets.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Notes  
  `CMFCBaseTabCtrl` est une classe abstraite. Par conséquent, elle ne peut pas être instanciée. Pour créer une fenêtre à onglets, vous devez faire dériver une classe de `CMFCBaseTabCtrl`. La bibliothèque MFC contient des exemples de classes dérivées, parmi lesquels [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) et [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- À partir de [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], cette classe prend en charge Microsoft Active Accessibility.  
+ À compter de Visual Studio 2015, cette classe prend en charge Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Conseils de personnalisation  
  Les conseils suivants se rapportent à `CMFCBaseTabCtrl Class` et à toutes les classes qui héritent de celui-ci :  

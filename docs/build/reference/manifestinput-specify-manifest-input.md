@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTINPUT (spécifier l’entrée de manifeste) | Documents Microsoft
+title: -MANIFESTINPUT (spécifier l’entrée de manifeste) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1b5ed266f1b8929deee3ffb60a10b18b7604afc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372849"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572831"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Spécifier l'entrée de manifeste)
-Spécifie un fichier manifeste d’entrée à inclure dans le manifeste est incorporé dans l’image.  
+Spécifie un fichier d’entrée manifest à inclure dans le manifeste est incorporé dans l’image.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,9 +33,9 @@ Spécifie un fichier manifeste d’entrée à inclure dans le manifeste est inco
  Le fichier manifeste à inclure dans le manifeste incorporé.  
   
 ## <a name="remarks"></a>Notes  
- Le **/MANIFESTINPUT** option spécifie le chemin d’accès de fichier d’entrée à utiliser pour créer le manifeste incorporé dans une image exécutable. Si vous avez manifeste plusieurs fichiers d’entrée, utilisez le commutateur plusieurs fois : une fois pour chaque fichier d’entrée. Les fichiers d’entrée de manifeste sont fusionnés pour créer le manifeste incorporé. Cette option requiert le **de manifeste : incorporer** option.  
+ Le **/MANIFESTINPUT** option spécifie le chemin d’accès de fichier d’entrée à utiliser pour créer le manifeste incorporé dans une image exécutable. Si vous avez manifeste plusieurs fichiers d’entrée, utilisez le commutateur plusieurs fois : une fois pour chaque fichier d’entrée. Les fichiers d’entrée manifestes sont fusionnés pour créer le manifeste incorporé. Cette option nécessite la **de manifeste : incorporer** option.  
   
- Cette option ne peut pas être définie directement dans [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Utilisez plutôt le **des fichiers manifeste supplémentaires** propriété du projet pour spécifier les fichiers manifeste supplémentaires à inclure. Pour plus d’informations, consultez [entrée et sortie, outil manifeste, propriétés de Configuration, \<Projectname > Property Pages Dialog Box](../../ide/input-and-output-manifest-tool.md).  
+ Cette option ne peut pas être définie directement dans Visual Studio. Au lieu de cela, utilisez le **fichiers manifeste supplémentaires** propriété du projet pour spécifier les fichiers manifeste supplémentaires à inclure. Pour plus d’informations, consultez [entrée et sortie, outil manifeste, propriétés de Configuration, \<Projectname > Property Pages Dialog Box](../../ide/input-and-output-manifest-tool.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   

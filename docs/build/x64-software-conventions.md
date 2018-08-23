@@ -1,5 +1,5 @@
 ---
-title: x64 Conventions des logiciels | Documents Microsoft
+title: x64 Conventions des logiciels | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380886"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572561"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
-Cette section décrit la méthodologie de convention d’appel Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], extension 64 bits à le x86 architecture.  
+Cette section décrit le Visual C++ méthodologie de convention d’appel pour x64, extension de 64 bits pour le x86 architecture.  
   
 -   [Vue d’ensemble des conventions d’appel x64](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ Cette section décrit la méthodologie de convention d’appel Visual C++ [!INCL
   
 -   [Format d’image](../build/image-format.md)  
   
- L’option du compilateur suivante vous aide à optimiser votre application pour [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ L’option du compilateur suivante vous aide à optimiser votre application pour x64 :  
   
 -   [/favor (Optimisation pour les particularités d’architecture)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: __readdr | Documents Microsoft
+title: __readdr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332973"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539259"
 ---
 # <a name="readdr"></a>__readdr
-Lit la valeur de l’historique de débogage spécifiés.  
+Lit la valeur du Registre de débogage spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +38,16 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
  Une constante comprise entre 0 et 7 identifiant le débogage s’inscrire.  
   
 ## <a name="return-value"></a>Valeur de retour  
- La valeur de l’historique de débogage spécifiés.  
+ La valeur du Registre de débogage spécifié.  
   
 ## <a name="remarks"></a>Notes  
- Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles uniquement comme fonctions intrinsèques.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

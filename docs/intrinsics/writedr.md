@@ -1,5 +1,5 @@
 ---
-title: __writedr | Documents Microsoft
+title: __writedr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fab96a22dec9b4cf2914fa2c02dd973bcd7ace8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329181"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544479"
 ---
 # <a name="writedr"></a>__writedr
-Écrit la valeur spécifiée dans le Registre de débogage spécifiés.  
+Écrit la valeur spécifiée dans le Registre de débogage spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,19 +35,19 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 #### <a name="parameters"></a>Paramètres  
  [in] `DebugRegister`  
- Inscription d’un nombre compris entre 0 et 7 identifiant le débogage.  
+ Un nombre entre 0 et 7 identifiant le débogage s’inscrire.  
   
  [in] `DebugValue`  
  Inscription d’une valeur à écrire dans le débogage.  
   
 ## <a name="remarks"></a>Notes  
- Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles uniquement comme fonctions intrinsèques.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writedr`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

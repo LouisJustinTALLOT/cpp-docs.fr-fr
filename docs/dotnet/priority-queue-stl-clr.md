@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376035"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572463"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une longueur variable ordonné séquence d’éléments qui a un accès limité. Utilisation de l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent comme une file d’attente de priorité.  
@@ -855,7 +855,7 @@ void push(value_type val);
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre insère un élément avec la valeur `val` dans la la séquence contrôlée et réorganise la séquence contrôlée pour maintenir la discipline du tas. Il permet d’ajouter un autre élément à la file d’attente.  
+ La fonction membre insère un élément avec la valeur `val` dans la séquence contrôlée et réorganise la séquence contrôlée pour maintenir la discipline du tas. Il permet d’ajouter un autre élément à la file d’attente.  
   
 ### <a name="example"></a>Exemple  
   

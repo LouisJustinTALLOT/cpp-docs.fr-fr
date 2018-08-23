@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc17925e36e0e224a657177d0aa18912c564efed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850798"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571950"
 ---
 # <a name="using-contained-windows"></a>À l’aide de la relation contenant-contenu Windows
 ATL implémente les fenêtres contenues avec [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Une fenêtre contenue représente une fenêtre qui délègue ses messages à un objet conteneur au lieu de les gérer dans sa propre classe.  
@@ -40,7 +40,7 @@ ATL implémente les fenêtres contenues avec [CContainedWindowT](../atl/referenc
   
  [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
   
- Pour plus d’informations sur les fenêtres de relation contenant-contenus, consultez la [SUBEDIT](../visual-cpp-samples.md) exemple.  
+ Pour plus d’informations sur les fenêtres de relation contenant-contenus, consultez la [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) exemple.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes de fenêtre](../atl/atl-window-classes.md)

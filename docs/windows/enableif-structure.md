@@ -17,56 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 014099ce3e9152d2402263baaa6d6b30607756ed
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0e71c43ca9222b350c07dae5f299f4a6f469bf84
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644971"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578555"
 ---
 # <a name="enableif-structure"></a>EnableIf (structure)
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   bool b,  
-   typename T = void  
->  
-  
-struct EnableIf;  
-template <  
-   typename T  
->  
-struct EnableIf<true, T>;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *T*  
- Type.  
-  
- *b*  
- Expression booléenne.  
-  
-## <a name="remarks"></a>Notes  
- Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur **true**.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`type`|Si le paramètre de modèle *b* prend la valeur **true**, la spécialisation partielle définit le membre de données `type` soit de type `T`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `EnableIf`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** internal.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   bool b,
+   typename T = void
+>
+
+struct EnableIf;
+template <
+   typename T
+>
+struct EnableIf<true, T>;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*T*  
+Type.
+
+*b*  
+Expression booléenne.
+
+## <a name="remarks"></a>Notes
+
+Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur **true**.
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`type`|Si le paramètre de modèle *b* prend la valeur **true**, la spécialisation partielle définit le membre de données `type` soit de type `T`.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`EnableIf`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** internal.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

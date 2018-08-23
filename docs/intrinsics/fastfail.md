@@ -1,5 +1,5 @@
 ---
-title: __fastfail | Documents Microsoft
+title: __fastfail | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334364"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539244"
 ---
 # <a name="fastfail"></a>__fastfail
 **Section spécifique à Microsoft**  
@@ -38,14 +38,14 @@ void __fastfail(unsigned int code);
  Le `__fastfail` intrinsèque ne retourne pas.  
   
 ## <a name="remarks"></a>Notes  
- Le `__fastfail` intrinsèque fournit un mécanisme pour un *rapide échouent* demande : un moyen pour un processus potentiellement endommagé à l’arrêt immédiat du processus de demande. Les défaillances critiques qui ont peut-être endommagé l'état du programme et la pile au-delà de toute récupération ne peuvent pas être gérées par la fonctionnalité de gestion des exceptions ordinaire. Utilisez `__fastfail` pour arrêter le processus à l'aide d'une surcharge minimale.  
+ Le `__fastfail` intrinsèque fournit un mécanisme pour un *rapide échouent* demande — un moyen pour un processus potentiellement endommagé d’arrêt immédiat du processus de demande. Les défaillances critiques qui ont peut-être endommagé l'état du programme et la pile au-delà de toute récupération ne peuvent pas être gérées par la fonctionnalité de gestion des exceptions ordinaire. Utilisez `__fastfail` pour arrêter le processus à l'aide d'une surcharge minimale.  
   
  En interne, `__fastfail` est implémentée à l'aide de plusieurs mécanismes spécifiques à l'architecture :  
   
 |Architecture|Instruction|Emplacement de l'argument de code|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|X64|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
  Une demande de basculement rapide est autonome et son exécution ne nécessite généralement que deux instructions. Une fois qu'une demande de basculement rapide a été exécutée, le noyau exécute l'action appropriée. Dans le code en mode utilisateur, il n'existe aucune dépendance de mémoire au-delà du pointeur d'instruction proprement dit quand un événement de basculement rapide est déclenché. Cela permet d'optimiser la fiabilité même en cas de grave endommagement de la mémoire.  
@@ -58,11 +58,11 @@ void __fastfail(unsigned int code);
   
  `__fastfail` est uniquement disponible en tant qu'intrinsèque.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__fastfail`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ARM|  
+|`__fastfail`|x86, x 64, ARM|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

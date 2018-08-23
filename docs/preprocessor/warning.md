@@ -1,5 +1,5 @@
 ---
-title: avertissement | Documents Microsoft
+title: avertissement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b739a3f72416b6ab58cbdba45a496e10fef4424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581194fdeab233e3ad07b2af6a7087bb1877e1f2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842961"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539188"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
 Active la modification sélective du comportement des messages d'avertissement du compilateur.  
@@ -40,18 +40,19 @@ Active la modification sélective du comportement des messages d'avertissement d
 ```  
   
 ## <a name="remarks"></a>Notes  
+
 Les paramètres spécificateur-avertissement suivants sont disponibles.  
   
 |spécificateur-avertissement|Signification|  
 |------------------------|-------------|  
-|`1, 2, 3, 4`|Applique le niveau donné du ou des avertissements spécifiés. Cela active également un avertissement spécifié qui est désactivé par défaut.|  
-|`default`|Réinitialise le comportement d'avertissement à sa valeur par défaut. Cela active également un avertissement spécifié qui est désactivé par défaut. L'avertissement est généré à son niveau par défaut, documenté.<br /><br /> Pour plus d’informations, consultez [avertissements du compilateur désactivés par défaut](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|`disable`|Ne publie pas le ou les messages d'avertissement spécifiés.|  
-|`error`|Signale les avertissements spécifiés comme des erreurs.|  
-|`once`|Affiche le ou les messages spécifiés une seule fois.|  
-|`suppress`|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|  
+|*1, 2, 3, 4*|Applique le niveau donné du ou des avertissements spécifiés. Cela active également un avertissement spécifié qui est désactivé par défaut.|  
+|*default*|Réinitialise le comportement d'avertissement à sa valeur par défaut. Cela active également un avertissement spécifié qui est désactivé par défaut. L'avertissement est généré à son niveau par défaut, documenté.<br /><br /> Pour plus d’informations, consultez [avertissements du compilateur désactivés par défaut](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|*disable*|Ne publie pas le ou les messages d'avertissement spécifiés.|  
+|*Erreur*|Signale les avertissements spécifiés comme des erreurs.|  
+|*once*|Affiche le ou les messages spécifiés une seule fois.|  
+|*supprimer*|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|  
   
- L'instruction de code suivante montre qu'un paramètre `warning-number-list` peut contenir plusieurs numéros d'avertissement, et que plusieurs paramètres `warning-specifier` peuvent être spécifiés dans la même directive pragma.  
+L'instruction de code suivante montre qu'un paramètre `warning-number-list` peut contenir plusieurs numéros d'avertissement, et que plusieurs paramètres `warning-specifier` peuvent être spécifiés dans la même directive pragma.  
   
 ```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
@@ -70,9 +71,9 @@ Les paramètres spécificateur-avertissement suivants sont disponibles.
 #pragma warning( error : 164 )  
 ```  
   
- Le compilateur ajoute 4000 à n'importe quel numéro d'avertissement compris entre 0 et 999.  
+Le compilateur ajoute 4000 à n'importe quel numéro d'avertissement compris entre 0 et 999.  
   
- Pour les numéros d'avertissement dans la plage 4700-4999 qui sont associés à la génération du code, l'état d'avertissement en vigueur lorsque le compilateur rencontre l'accolade ouvrante d'une fonction est appliquée pour le reste de la fonction. L'utilisation du pragma `warning` dans la fonction pour modifier l'état d'un avertissement qui a un nombre supérieur à 4699 entre en vigueur uniquement après la fin de la fonction. L'exemple suivant indique le positionnement correct des pragmas `warning` pour désactiver un message d'avertissement génération-code, puis pour le restaurer.  
+Pour les numéros d'avertissement dans la plage 4700-4999 qui sont associés à la génération du code, l'état d'avertissement en vigueur lorsque le compilateur rencontre l'accolade ouvrante d'une fonction est appliquée pour le reste de la fonction. À l’aide de la **avertissement** pragma dans la fonction pour modifier l’état d’un avertissement qui a un nombre supérieur à 4699 entre en vigueur uniquement après la fin de la fonction. L’exemple suivant montre le positionnement correct de **avertissement** pragmas pour désactiver un message d’avertissement de génération de code, puis de le restaurer.  
   
 ```cpp  
 // pragma_warning.cpp  
@@ -90,18 +91,19 @@ int main() {
 }  
 ```  
   
- Notez que partout dans un corps de la fonction, le dernier paramètre du pragma `warning` sera appliqué à la fonction entière.  
+Notez que, tout au long d’une fonction, le corps, le dernier paramètre de la **avertissement** pragma sera appliquée à la fonction entière.  
   
 ## <a name="push-and-pop"></a>Push et pop  
- Le `warning` pragma prend également en charge la syntaxe suivante, où `n` représente un niveau d’avertissement (1 à 4).  
+ 
+Le **avertissement** pragma prend également en charge la syntaxe suivante, où *n* représente un niveau d’avertissement (1 à 4).  
   
- `#pragma warning( push [ , n ] )`  
+`#pragma warning( push [ , n ] )`  
   
- `#pragma warning( pop )`  
+`#pragma warning( pop )`  
    
- Le pragma `warning( push )` stocke l’état d’avertissement actuel pour chaque avertissement. Le pragma `warning( push, n )` stocke l’état actuel pour chaque avertissement et définit le niveau d’avertissement global sur `n`.  
+Le pragma `warning( push )` stocke l’état d’avertissement actuel pour chaque avertissement. Le pragma `warning( push, n )` stocke l’état actuel pour chaque avertissement et définit le niveau d’avertissement global sur *n*.  
   
- Le pragma `warning( pop )` dépile le dernier état d’avertissement est placé sur la pile. Toutes les modifications apportées à l'état d'avertissement entre `push` et `pop` sont annulées. Considérez cet exemple :  
+Le pragma `warning( pop )` POP le dernier état d’avertissement est placé sur la pile. Toutes les modifications que vous avez apportées à l’état d’avertissement entre *push* et *pop* sont annulées. Considérez cet exemple :  
   
 ```cpp  
 #pragma warning( push )  
@@ -112,9 +114,9 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- À la fin de ce code, `pop` restaure l'état de chaque avertissement (inclut 4705, 4706 et 4707) à ce qu'il était au début du code.  
+À la fin de ce code, *pop* restaure l’état de chaque avertissement (inclut 4705, 4706 et 4707) à ce qu’il était au début du code.  
   
- Lorsque vous écrivez des fichiers d'en-tête, vous pouvez utiliser `push` et `pop` pour garantir que les modifications de type état-avertissement apportées par un utilisateur n'empêchent pas les en-têtes de se compiler correctement. Utilisez `push` au début de l'en-tête et `pop` à la fin. Par exemple, si vous avez un en-tête qui ne se compile pas correctement au niveau de l'avertissement 4, le code suivant remplace le niveau d'avertissement par 3, puis restaure le niveau d'avertissement d'origine à la fin de l'en-tête.  
+Lorsque vous écrivez des fichiers d’en-tête, vous pouvez utiliser *push* et *pop* afin de garantir que les modifications d’état d’avertissement apportées par un utilisateur n’empêchent pas les en-têtes de se compiler correctement. Utilisez *push* au début de l’en-tête et *pop* à la fin. Par exemple, si vous avez un en-tête qui ne se compile pas correctement au niveau de l'avertissement 4, le code suivant remplace le niveau d'avertissement par 3, puis restaure le niveau d'avertissement d'origine à la fin de l'en-tête.  
   
 ```cpp  
 #pragma warning( push, 3 )  
@@ -122,7 +124,8 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Pour plus d’informations sur les options qui vous aident à suppriment de compilateur des avertissements, consultez [/FI](../build/reference/fi-name-forced-include-file.md) et [Wn](../build/reference/compiler-option-warning-level.md).  
+Pour plus d’informations sur les options qui vous aident à suppriment de compilateur des avertissements, consultez [/FI](../build/reference/fi-name-forced-include-file.md) et [/w](../build/reference/compiler-option-warning-level.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

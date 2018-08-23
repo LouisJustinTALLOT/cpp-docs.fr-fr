@@ -1,5 +1,5 @@
 ---
-title: _bittestandcomplement, _bittestandcomplement64 | Documents Microsoft
+title: _bittestandcomplement, _bittestandcomplement64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1c3eb6f6447363fee7bafca33b8ea59c1c7e45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74040260149b6a22dcb673eb26f4561c4f324e61
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538862"
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 **Section spécifique à Microsoft**  
@@ -56,12 +56,12 @@ unsigned char _bittestandcomplement64(
 ## <a name="return-value"></a>Valeur de retour  
  Bit à la position spécifiée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`_bittestandcomplement`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandcomplement64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandcomplement`|x86, ARM, x64|  
+|`_bittestandcomplement64`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

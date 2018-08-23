@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM | Documents Microsoft
+title: -SUBSYSTEM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377621"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572963"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Spécifie l’environnement d’exécution requis par l’image exécutable.  
@@ -40,7 +40,7 @@ Spécifie l’environnement d’exécution requis par l’image exécutable.
  Vous pouvez spécifier l'un des sous-systèmes suivants :  
   
  BOOT_APPLICATION  
- Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [à propos du fournisseur WMI BCD](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [propos du fournisseur WMI BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Application en mode caractères de Windows. Le système d'exploitation fournit une console pour les applications console.  
@@ -55,7 +55,7 @@ Spécifie l’environnement d’exécution requis par l’image exécutable.
  Application qui s'exécute dans le sous-système POSIX, dans Windows.  
   
  WINDOWS  
- Application qui s'exécute dans l'environnement graphique de Windows. Cela inclut les applications de bureau et applications de plateforme Windows universelle (UWP).  
+ Application qui s'exécute dans l'environnement graphique de Windows. Cela inclut les applications de bureau et applications Universal Windows Platform (UWP).  
   
  WINDOWSCE  
  Le sous-système WINDOWSCE indique que l'application est destinée à s'exécuter sur un périphérique doté d'une version du noyau Windows CE. Les versions du noyau incluent PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 et Windows Embedded Compact 7.  

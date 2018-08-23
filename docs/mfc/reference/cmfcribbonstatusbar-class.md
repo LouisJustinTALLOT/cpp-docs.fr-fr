@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852451"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543163"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar, classe
 Le `CMFCRibbonStatusBar` classe implémente un contrôle de barre d’état qui peut afficher les éléments de ruban.  
@@ -259,7 +259,7 @@ BOOL CreateEx(
  TRUE si la barre d’état est créée avec succès, FALSE sinon.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -340,7 +340,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 int GetSpace() const;  
@@ -365,7 +365,7 @@ int GetSpace() const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 BOOL IsBottomFrame() const;  
@@ -376,7 +376,7 @@ BOOL IsBottomFrame() const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
@@ -426,7 +426,7 @@ virtual void OnDrawInformation(
  Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser l’apparence de la chaîne d’informations sur la barre d’état. Utilisez le [CMFCRibbonStatusBar::SetInformation](#setinformation) méthode permettant de placer la barre d’état en mode d’informations. Dans ce mode, la barre d’état masque tous les volets et affiche la chaîne d’informations spécifiée par *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual void RecalcLayout();

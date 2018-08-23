@@ -90,17 +90,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 05f80ef1a7fd4e21bda2fd9705c4ed1be391e9a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852339"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538677"
 ---
 # <a name="cmultipaneframewnd-class"></a>Cmultipaneframewnd, classe
 Le `CMultiPaneFrameWnd` classe étend [cpaneframewnd, classe](../../mfc/reference/cpaneframewnd-class.md). Elle peut prendre en charge plusieurs volets. Au lieu d’un seul handle incorporé à une barre de contrôle, `CMultiPaneFrameWnd` contient un [cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md) objet qui permet à l’utilisateur d’ancrer un `CMultiPaneFrameWnd` vers un autre et dynamiquement créer plusieurs flottante, avec onglets Windows.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   

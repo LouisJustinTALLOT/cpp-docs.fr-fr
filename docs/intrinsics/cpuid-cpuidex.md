@@ -1,5 +1,5 @@
 ---
-title: __cpuid, __cpuidex | Documents Microsoft
+title: __cpuid, __cpuidex | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336067"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541448"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
 **Section spécifique à Microsoft**
 
-Génère l'instruction `cpuid` qui est disponible sur x86 et [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Cette instruction interroge le processeur pour obtenir des informations sur les fonctionnalités prises en charge et le type d’UC.
+Génère le `cpuid` instruction qui est disponible sur x86 et x64. Cette instruction interroge le processeur pour obtenir des informations sur les fonctionnalités prises en charge et le type d’UC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,36 +52,36 @@ void __cpuidex(
 [out] *cpuInfo*<br/>
 Tableau de quatre entiers qui contient les informations retournées dans EAX, EBX, ECX et EDX au sujet des fonctionnalités prises en charge de l’UC.
 
-[in] *function_id supérieures*<br/>
+[in] *function_id*<br/>
 Code qui spécifie des informations à récupérer, passées dans EAX.
 
 [in] *subfunction_id*<br/>
 Code supplémentaire qui spécifie des informations à récupérer, passées dans ECX.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
-|`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
+|`__cpuid`|x86, x64|
+|`__cpuidex`|x86, x64|
 
 **Fichier d’en-tête** \<intrin.h >
 
 ## <a name="remarks"></a>Notes
 
-Cet intrinsèque stocke les fonctionnalités prises en charge et les informations d’UC retournées par la `cpuid` instruction dans *cpuInfo*, un tableau de quatre entiers 32 bits qui est rempli avec les valeurs de la EAX EBX, ECX et EDX inscrit (dans ce ordre). Les informations retournées ont une signification différente selon la valeur passée en tant que le *function_id supérieures* paramètre. Les informations retournées avec diverses valeurs de *function_id supérieures* dépendent du processeur.
+Cet intrinsèque stocke les fonctionnalités prises en charge et les informations d’UC retournées par la `cpuid` instruction dans *cpuInfo*, un tableau de quatre entiers 32 bits qui est rempli avec les valeurs de la EAX EBX, ECX et EDX inscrit (dans ce ordre). Les informations retournées ont une signification différente selon la valeur passée comme le *function_id* paramètre. Les informations retournées avec diverses valeurs de *function_id* est dépendant du processeur.
 
 L'intrinsèque `__cpuid` efface le registre ECX avant d'appeler l'instruction `cpuid`. Le `__cpuidex` intrinsèque définit la valeur du Registre ECX à *subfunction_id* avant de générer la `cpuid` instruction. Cela vous permet de rassembler des informations supplémentaires sur le processeur.
 
-Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces fonctions intrinsèques sur les processeurs Intel, consultez la documentation relative à la `cpuid` instruction [Intel 64 et IA-32 Architectures Software développeurs manuel Volume 2 : Instruction Set référence](http://go.microsoft.com/fwlink/p/?LinkID=510021) et [référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentation Intel utilise les termes « feuille » et « sous-feuille » pour le *function_id supérieures* et *subfunction_id* paramètres passés dans EAX et ECX.
+Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces intrinsèques sur les processeurs Intel, consultez la documentation pour le `cpuid` instruction dans [Intel 64 et IA-32 Architectures Software développeurs manuel Volume 2 : Instruction Set référence](http://go.microsoft.com/fwlink/p/?LinkID=510021) et [référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentation Intel utilise les termes « feuille » et « sous-feuille » pour le *function_id* et *subfunction_id* paramètres passés dans EAX et ECX.
 
-Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces fonctions intrinsèques sur les processeurs AMD, consultez la documentation relative à la `cpuid` instruction du programmeur AMD64 Architecture Manual Volume 3 : à usage général et système Obtenir des instructions et dans les Guides de révision de familles de processeur spécifique. Pour accéder à ces documents et d’autres informations, voir l’AMD [Guides du développeur, manuels et les Documents ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) page. Documentation AMD utilise les termes « numéro de fonction » et « numéro de sous-fonction » pour le *function_id supérieures* et *subfunction_id* paramètres passés dans EAX et ECX.
+Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces intrinsèques sur les processeurs AMD, consultez la documentation pour le `cpuid` instruction dans Manual, Volume 3 le programmeur AMD64 Architecture : à usage général et système Obtenir des instructions et dans les Guides de révision pour les familles de processeur spécifique. Pour accéder à ces documents et d’autres informations, consultez le AMD [Guides du développeur, des manuels et des Documents de ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) page. Documentation AMD utilise les termes « numéro de fonction » et « numéro de sous-fonction » pour le *function_id* et *subfunction_id* paramètres passés dans EAX et ECX.
 
-Lorsque le *function_id supérieures* argument est 0, *cpuInfo*[0] Retourne le plus élevé disponible non étendu *function_id supérieures* valeur prise en charge par le processeur. Le fabricant du processeur est encodé dans *cpuInfo*[1], *cpuInfo*[2], et *cpuInfo*[3].
+Lorsque le *function_id* argument est 0, *cpuInfo*[0] Retourne le plus élevé disponible non étendues *function_id* valeur prise en charge par le processeur. Le fabricant du processeur est encodé dans *cpuInfo*[1], *cpuInfo*[2], et *cpuInfo*[3].
 
-Prise en charge pour les extensions et les fonctionnalités du processeur du jeu d’instructions spécifiques est encodée dans les *cpuInfo* résultats retournés pour une version ultérieure *function_id supérieures* valeurs. Pour plus d'informations, consultez les manuels mentionnés ci-dessus et l'exemple de code suivant.
+Prise en charge pour le jeu d’instructions spécifiques extensions et fonctionnalités du processeur est encodé dans le *cpuInfo* résultats renvoyés par une version ultérieure *function_id* valeurs. Pour plus d'informations, consultez les manuels mentionnés ci-dessus et l'exemple de code suivant.
 
-Certains processeurs prennent en charge les informations CPUID des fonctions étendues. Si cela est pris en charge, *function_id supérieures* valeurs de 0 x 80000000 peuvent être utilisées pour retourner des informations. Pour déterminer la valeur significative maximale autorisée, définissez *function_id supérieures* à 0 x 80000000. La valeur maximale de *function_id supérieures* pris en charge pour les fonctions étendues seront écrit dans *cpuInfo*[0].
+Certains processeurs prennent en charge les informations CPUID des fonctions étendues. Si cela est pris en charge, *function_id* valeurs à partir de 0 x 80000000 peuvent être utilisées pour retourner des informations. Pour déterminer la valeur significative maximale autorisée, définissez *function_id* à 0 x 80000000. La valeur maximale de *function_id* pris en charge pour les fonctions étendues seront écrit dans *cpuInfo*[0].
 
 ## <a name="example"></a>Exemple
 

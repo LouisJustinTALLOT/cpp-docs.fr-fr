@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1305 | Documents Microsoft
+title: Erreur irrécupérable C1305 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb1cf19d0fc4152fbb458d684972bb5a4418f37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90d73003d9f19eb41f9eb34cd47c7b90b1e6164f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227145"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540816"
 ---
 # <a name="fatal-error-c1305"></a>Erreur irrécupérable C1305
 la base de données de profil 'pgd_file ' du correspond à une architecture différente  
   
- Un fichier .pgd généré à partir de l’opération/LTCG : PGINSTRUMENT pour une autre plateforme a été passée à [/LTCG : PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Optimisations guidées par profil](../../build/reference/profile-guided-optimizations.md) sont disponibles pour x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] plateformes. Toutefois, un fichier .pgd généré avec une opération de/LTCG : PGINSTRUMENT pour une plateforme n’est pas valid en tant qu’entrée à un/LTCG : PGOPTIMIZE pour une plateforme différente.  
+ Un fichier .pgd qui a été généré à partir de l’opération/LTCG : PGINSTRUMENT pour une autre plateforme a été passée au [/LTCG : PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Optimisations guidées par profil](../../build/reference/profile-guided-optimizations.md) sont disponibles pour les plateformes x86 et x64. Toutefois, un fichier .pgd généré avec une opération de/LTCG : PGINSTRUMENT pour une plateforme n’est pas valide en tant qu’entrée à un/LTCG : PGOPTIMIZE pour une autre plateforme.  
   
- Pour résoudre cette erreur, seulement passez un fichier .pgd créé avec/LTCG : PGINSTRUMENT à/LTCG : PGOPTIMIZE sur la même plateforme.
+ Pour résoudre cette erreur, seulement passez un fichier .pgd qui est créé avec/LTCG : PGINSTRUMENT pour/LTCG : PGOPTIMIZE sur la même plateforme.

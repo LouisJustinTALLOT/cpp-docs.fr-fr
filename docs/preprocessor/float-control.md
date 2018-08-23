@@ -1,5 +1,5 @@
 ---
-title: float_control | Documents Microsoft
+title: float_control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840353"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540801"
 ---
 # <a name="floatcontrol"></a>float_control
 Spécifie le comportement de virgule flottante d'une fonction.  
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Indicateurs  
- `value`, `setting` **[commande]**  
- Spécifie le comportement de virgule flottante. `value` peut être **précise** ou **sauf**. Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md). `setting` peut être **sur** ou **hors**.  
+ 
+*valeur*, *paramètre* *[push]*  
+Spécifie le comportement de virgule flottante. *valeur* peut être `precise` ou `except`. Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md). *paramètre* peut être `on` ou `off`.  
   
- Si `value` est **précise**, les paramètres pour **précise** et **sauf** sont spécifiés. **à l’exception de** peut uniquement être définie sur **sur** lorsque **précise** est également défini sur **sur**.  
+Si *valeur* est `precise`, les paramètres pour `precise` et `except` sont spécifiés. `except` peut uniquement être définie sur `on` lorsque `precise` est également défini sur `on`.  
   
- Si le paramètre facultatif **push** jeton est ajouté, actuel définissant pour `value` est envoyée à la pile interne du compilateur sur.  
+Si le paramètre facultatif *push* jeton est ajouté, actuel définissant pour *valeur* est envoyée sur à la pile interne du compilateur.  
   
- **push**  
- Exécute un push du paramètre `float_control` sur la pile interne du compilateur  
+*push*  
+Exécute un push du **float_control** définition sur la pile interne du compilateur  
   
- **pop**  
- Supprime la `float_control` définition à partir du haut de la pile interne du compilateur et qui rend la nouvelle `float_control` paramètre.  
+*pop*  
+Supprime le **float_control** définition à partir du haut de la pile interne du compilateur et qui rend la nouvelle **float_control** paramètre.  
   
 ## <a name="remarks"></a>Notes  
- Vous ne pouvez pas activer `float_control precise` off lorsque **sauf** sur. De même, **précise** ne peut pas être mis hors tension lorsque `fenv_access` sur. Pour passer d'un modèle strict à un modèle rapide avec le pragma `float_control`, utilisez le code suivant :  
+ 
+Vous ne pouvez pas désactiver `float_control precise` lorsque `except` est activé. De même, `precise` ne peut pas être désactivé lorsque `fenv_access` est activé. Pour passer d’un modèle strict à un modèle rapide avec le **float_control** pragma, utilisez le code suivant :  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Pour passer d'un modèle rapide à un modèle strict avec le pragma `float_control`, utilisez le code suivant :  
+Pour passer d’un modèle rapide à un modèle strict avec le **float_control** pragma, utilisez le code suivant :  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Les autres pragmas à virgule flottante incluent :  
+Les autres pragmas à virgule flottante incluent :  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre comment intercepter une exception à virgule flottante de dépassement de capacité en utilisant le pragma `float_control`.  
+ 
+L’exemple suivant montre comment intercepter une exception de virgule flottante de dépassement de capacité en utilisant le pragma **float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

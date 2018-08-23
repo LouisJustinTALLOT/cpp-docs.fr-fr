@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850018"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538478"
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton, classe
 La classe `CMFCRibbonButton` implémente des boutons que vous pouvez placer sur des éléments de barre de ruban, tels que les volets, les barres d'outils Accès rapide et les menus contextuels.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmclear | Documents Microsoft
+title: __vmx_vmclear | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d93cff5c1be0847a6c88f0d60b89527388e4d8b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332408"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540643"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Section spécifique à Microsoft**  
   
- Initialise la structure de contrôle d’ordinateur virtuel spécifié (VMCS) et définit son état de lancement sur `Clear`.  
+ Initialise la structure de contrôle de machine virtuelle spécifiée (VMCS) et définit son état de lancement `Clear`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ unsigned char __vmx_vmclear(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `VmcsPhysicalAddress`|Pointeur vers un emplacement de mémoire de 64 bits qui contient l’adresse physique de la VMCS à effacer.|  
+|[in] `VmcsPhysicalAddress`|Pointeur vers un emplacement de mémoire 64 bits qui contient l’adresse physique de la VMCS à effacer.|  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -52,15 +52,15 @@ unsigned char __vmx_vmclear(
 |2|L’opération a échoué sans état disponible.|  
   
 ## <a name="remarks"></a>Notes  
- Une application peut effectuer une opération VM-enter à l’aide du [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (fonction). Le [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) fonction peut être utilisée uniquement avec une VMCS dont l’état de lancement est `Clear`et le [__vmx_vmresume](../intrinsics/vmx-vmresume.md) fonction peut être utilisée uniquement avec une VMCS dont l’état de lancement est `Launched`. Par conséquent, utilisez le [__vmx_vmclear](../intrinsics/vmx-vmclear.md) fonction pour définir l’état de lancement d’une VMCS sur `Clear`. Utilisez le [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) (fonction) pour votre première opération VM-enter et la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) fonction pour les opérations VM-enter ultérieures.  
+ Une application peut effectuer une opération VM-enter à l’aide du [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (fonction). Le [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) fonction peut être utilisée uniquement avec une VMCS dont l’état de lancement est `Clear`et le [__vmx_vmresume](../intrinsics/vmx-vmresume.md) fonction peut être utilisée uniquement avec une VMCS dont l’état de lancement est `Launched`. Par conséquent, utilisez le [__vmx_vmclear](../intrinsics/vmx-vmclear.md) fonction permettant de définir l’état de lancement d’une VMCS sur `Clear`. Utilisez le [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) (fonction) pour votre première opération VM-enter et la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (fonction) pour les opérations VM-enter ultérieures.  
   
- Le `__vmx_vmclear` fonction est équivalente à la `VMCLEAR` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ Le `__vmx_vmclear` fonction est équivalente à la `VMCLEAR` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmclear`|X64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

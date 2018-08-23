@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 106d1991f5312065aa78330888e55383d1f9506a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5e54a44be0ad5b7b07311d102871e584770fc441
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337016"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572566"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substitution des services par défaut du fournisseur
-Valeur de Registre du fournisseur pour les OLEDB_SERVICES est retournée en tant que la valeur par défaut pour le [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/library/ms716898.aspx) propriété d’initialisation sur l’objet de source de données.  
+Valeur de Registre du fournisseur pour les OLEDB_SERVICES est retournée en tant que la valeur par défaut pour le [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898\(v=vs.85\)) propriété d’initialisation sur l’objet de source de données.  
   
  Tant que l’entrée de Registre existe, les objets du fournisseur est agrégé et l’utilisateur peut remplacer le paramétrage par défaut des services activés en définissant le `DBPROP_INIT_OLEDBSERVICES` propriété avant l’initialisation. Pour activer ou désactiver un service particulier, l’utilisateur obtienne généralement la valeur actuelle de la `DBPROP_INIT_OLEDBSERVICES` propriété, définit ou efface le bit de la propriété particulière à être activé ou désactivé et réinitialise la propriété. `DBPROP_INIT_OLEDBSERVICES` peut être définie directement dans OLE DB ou dans la chaîne de connexion passée à ADO ou `IDataInitialize::GetDatasource`. Les valeurs correspondantes pour activer ou désactiver des services individuels sont répertoriés dans le tableau suivant.  
   
@@ -39,7 +39,7 @@ Valeur de Registre du fournisseur pour les OLEDB_SERVICES est retournée en tant
  Si l’entrée de Registre n’existe pas pour le fournisseur, les gestionnaires de composants ne regroupent pas les objets du fournisseur, et aucun service n’est appelé, même si explicitement demandé par l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Regroupement des ressources](https://msdn.microsoft.com/library/ms713655.aspx)   
- [Comment les consommateurs utilisent le regroupement des ressources](https://msdn.microsoft.com/library/ms715907.aspx)   
- [Comment les fournisseurs de travailler efficacement avec le regroupement de ressources](https://msdn.microsoft.com/library/ms714906.aspx)   
+ [Regroupement des ressources](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
+ [Comment les consommateurs utilisent le regroupement des ressources](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
+ [Comment les fournisseurs de travailler efficacement avec le regroupement de ressources](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
  [Activation et désactivation des services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

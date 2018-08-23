@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337113"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573332"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
 Fournit une implémentation pour le `IDBProperties` interface.  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|Définit les propriétés dans les groupes de propriétés de Source de données et d’initialisation, pour les objets de source de données, ou le groupe de propriétés d’initialisation pour les énumérateurs.|  
   
 ## <a name="remarks"></a>Notes  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx), elle doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), elle doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 Retourne les valeurs des propriétés dans les groupes de propriétés de Source de données, sources de données et d’initialisation qui sont actuellement définies sur l’objet de source de données ou les valeurs des propriétés dans le groupe de propriétés d’initialisation qui sont actuellement définies sur le énumérateur.  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
  Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::GetPropertyInfo](https://msdn.microsoft.com/library/ms718175.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
  Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::SetProperties](https://msdn.microsoft.com/library/ms723049.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
  Si le fournisseur est initialisé, cette méthode définit les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, groupes de propriétés DBPROPSET_DBINIT pour l’objet de source de données. Si le fournisseur n’est pas initialisé, elle définit uniquement les propriétés de groupe DBPROPSET_DBINIT.  

@@ -1,5 +1,5 @@
 ---
-title: fenv_access | Documents Microsoft
+title: fenv_access | Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,16 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963321"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543139"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Désactive (**sur**) ou active (**hors**) optimisations qui peuvent modifier l’environnement à virgule flottante marquer les tests et les changements de mode.
+Désactive (**sur**) ou active (**hors**) optimisations qui peuvent modifier l’environnement à virgule flottante signaler des tests et les changements de mode.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,11 +34,11 @@ Désactive (**sur**) ou active (**hors**) optimisations qui peuvent modifier l�
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, **fenv_access** est **hors**. Si le compilateur peut supposer que votre code ne pas accéder ou manipuler l’environnement à virgule flottante, puis il peut effectuer de nombreuses optimisations de code à virgule flottante. Définissez **fenv_access** à **sur** pour informer le compilateur que votre code accède à l’environnement à virgule flottante pour tester des indicateurs d’état, des exceptions, ou pour définir des indicateurs de mode de contrôle. Le compilateur désactive ces optimisations afin que votre code peut accéder à l’environnement à virgule flottante régulièrement. 
+Par défaut, **fenv_access** est **hors**. Si le compilateur peut supposer que votre code ne pas accéder à ou manipuler l’environnement à virgule flottante, il peut effectuer de nombreuses optimisations de code en virgule flottante. Définissez **fenv_access** à **sur** pour informer le compilateur que votre code accède à l’environnement à virgule flottante pour tester les indicateurs d’état, exceptions, ou pour définir des indicateurs de mode de contrôle. Le compilateur désactive ces optimisations afin que votre code peut accéder à l’environnement à virgule flottante régulièrement. 
 
-Pour plus d’informations sur le comportement de virgule flottante, consultez [/fp (spécifier du comportement de nombres à virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
+Pour plus d’informations sur le comportement de virgule flottante, consultez [/fp (spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Les types d’optimisations qui sont soumises à **fenv_access** sont :
+Les types d’optimisations qui sont soumis aux **fenv_access** sont :
 
 - Élimination globale de sous-expressions communes
 
@@ -55,7 +54,7 @@ Les autres pragmas à virgule flottante incluent :
 
 ## <a name="examples"></a>Exemples
 
-Cet exemple définit **fenv_access** à **sur** pour définir le Registre de contrôle à virgule flottante pour la précision de 24 bits :
+Cet exemple définit **fenv_access** à **sur** pour définir le Registre de contrôle à virgule flottante de précision de 24 bits :
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Si vous commentez `#pragma fenv_access (on)` à partir de l’exemple précédent, notez que la sortie est différente, car le compilateur effectue d’évaluation au moment de la compilation, qui n’utilise pas le mode de contrôle.
+Si vous commentez `#pragma fenv_access (on)` à partir de l’exemple précédent, notez que la sortie est différente, car le compilateur effectue l’évaluation au moment de la compilation, qui n’utilise pas le mode de contrôle.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853202"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538686"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 Représente des feuilles de propriétés, également appelées boîtes de dialogue à onglets.  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Notes  
  Une feuille de propriétés se compose d’un `CPropertySheet` objet et un ou plusieurs [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objets. L’infrastructure affiche une feuille de propriétés sous la forme d’une fenêtre avec un ensemble d’index de l’onglet et une zone qui contient la page actuellement sélectionnée. L’utilisateur navigue vers une page spécifique à l’aide de l’onglet approprié.  
   
- `CPropertySheet` prend en charge le texte développé [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) structure introduite dans [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] et NT de Windows 2000. La structure contient des indicateurs supplémentaires et les membres qui prennent en charge à l’aide d’une image bitmap d’arrière-plan de « filigrane ».  
+ `CPropertySheet` prend en charge le texte développé [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) structure introduite dans Windows 98 et Windows NT 2000. La structure contient des indicateurs supplémentaires et les membres qui prennent en charge à l’aide d’une image bitmap d’arrière-plan de « filigrane ».  
   
  Pour afficher ces nouvelles images automatiquement dans votre objet de feuille de propriétés, passer des valeurs valides pour les images bitmap et palette dans l’appel à [CPropertySheet::Construct](#construct) ou [CPropertySheet::CPropertySheet](#cpropertysheet).  
   

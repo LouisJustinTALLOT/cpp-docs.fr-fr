@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854133"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540226"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003, classe
 `CMFCVisualManagerOffice2003` Donne à une application une apparence Microsoft Office 2003.  
@@ -720,7 +720,7 @@ virtual void OnDrawBarGripper(
  L’implémentation par défaut de cette méthode affiche la barre de redimensionnement standard. Pour personnaliser l’apparence de la barre de redimensionnement, substituez cette méthode dans une classe personnalisée dérivée de la [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) classe.  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual BOOL OnDrawBrowseButton(

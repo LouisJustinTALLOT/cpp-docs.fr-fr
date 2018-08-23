@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854006"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538892"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl, classe
 Le `CMFCEditBrowseCtrl` classe prend en charge le contrôle de navigation d’édition, qui est une zone de texte modifiable contenant éventuellement un bouton Parcourir. Lorsque l’utilisateur clique sur le bouton Parcourir, le contrôle effectue une action personnalisée ou affiche une boîte de dialogue standard qui contient un explorateur de fichiers ou de dossiers.  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Notes  
  Quand le contrôle de zone de modification est en mode de navigation de fichiers et que l'utilisateur clique sur le bouton parcourir, le contrôle affiche la boîte de dialogue de sélection de fichier standard.  
   
- Pour obtenir une liste complète des indicateurs disponibles, consultez [structure OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Pour obtenir une liste complète des indicateurs disponibles, consultez [structure OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Affiche le bouton Parcourir sur le contrôle de navigation d’édition actuel et place le contrôle dans *parcourir les dossiers* mode.  

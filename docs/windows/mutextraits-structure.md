@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 529265c4b1e5f510a92295a1ceff6d0a012163fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018976"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584169"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits (structure)
-Définit les caractéristiques communes de la [Mutex](../windows/mutex-class1.md) classe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-struct MutexTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[MutexTraits::Unlock, méthode](../windows/mutextraits-unlock-method.md)|Libère le contrôle exclusif d’une ressource partagée.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `HANDLENullTraits`  
-  
- `MutexTraits`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL::Wrappers::HandleTraits, espace de noms](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Définit les caractéristiques communes de la [Mutex](../windows/mutex-class1.md) classe.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+struct MutexTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[MutexTraits::Unlock, méthode](../windows/mutextraits-unlock-method.md)|Libère le contrôle exclusif d’une ressource partagée.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`HANDLENullTraits`
+
+`MutexTraits`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL::Wrappers::HandleTraits, espace de noms](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

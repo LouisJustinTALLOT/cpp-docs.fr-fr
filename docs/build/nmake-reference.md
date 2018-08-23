@@ -1,5 +1,5 @@
 ---
-title: Référence NMAKE | Documents Microsoft
+title: Référence NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372677"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572670"
 ---
 # <a name="nmake-reference"></a>Référence NMAKE
-L'utilitaire de maintenance de programmes de Microsoft (NMAKE.EXE) est un outil en ligne de commande inclus avec [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] qui génère des projets en fonction de commandes contenues dans un fichier de description.  
+L’utilitaire Microsoft Program Maintenance (NMAKE. (EXE) est un outil de ligne de commande inclus avec Visual Studio qui génère des projets basés sur des commandes qui sont contenus dans un fichier de description.  
   
  Pour utiliser NMAKE, vous devez l'exécuter dans une fenêtre d'invite de commandes développeur. Une fenêtre d’invite de commandes développeur possède les variables d’environnement définies pour les outils, les bibliothèques et les chemins d’accès aux fichiers Include requis pour générer à partir de la ligne de commande. Pour plus d’informations sur la façon d’ouvrir une fenêtre d’invite de commandes développeur, consultez [code de génération C/C++ sur la ligne de commande](../build/building-on-the-command-line.md).  
   

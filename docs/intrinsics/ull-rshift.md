@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift | Documents Microsoft
+title: __ull_rshift | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333116"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541251"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Section spécifique à Microsoft**  
@@ -46,18 +46,18 @@ unsigned __int64 __ull_rshift(
  Le nombre de bits de décalage, modulo 32 sur x86 et modulo 64 sur x64.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Le masque décale `nBit` bits.  
+ Le masque décalés `nBit` bits.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Si le deuxième paramètre est supérieur à 31 sur x86 (63 sur x64), ce nombre est effectuée modulo 32 (64 sur x64) pour déterminer le nombre de bits à décaler. Le `ull` dans le nom indique `unsigned long long (unsigned __int64)`.  
+ Si le deuxième paramètre est supérieur à 31 sur x86 (63 sur x64), ce nombre est effectuée modulo 32 (64 sur x64) pour déterminer le nombre de bits de décalage. Le `ull` dans le nom indique `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Exemple  
   

@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853775"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538670"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar, classe
 Barre de menus qui implémente l'ancrage.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  La largeur du bouton de la zone de liste déroulante en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Le **aide** zone de liste modifiable ressemble à la **aide** zone de liste déroulante dans la barre de menus de [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ Le **aide** zone de liste modifiable ressemble à la **aide** zone de liste déroulante dans la barre de menus de Microsoft Word.  
   
  Lorsque vous appelez cette méthode avec *uiID* définie sur 0, cette méthode masque la zone de liste déroulante. Sinon, cette méthode affiche automatiquement la zone de liste déroulante située à droite de votre barre de menus. Après avoir appelé cette méthode, appelez [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) pour obtenir un pointeur vers le texte inséré [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objet.  
   

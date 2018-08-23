@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Documents Microsoft
+title: __svm_vmsave | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329663"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540218"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Section spécifique à Microsoft**  
   
- Stocke un sous-ensemble de l’état du processeur dans le bloc de contrôle d’ordinateur virtuel spécifié (VMCB).  
+ Stocke un sous-ensemble de l’état du processeur dans le bloc de contrôle de machine virtuelle spécifiée (VMCB).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +44,13 @@ void __svm_vmsave(
 |[in] `VmcbPhysicalAddress`|L’adresse physique de la VMCB.|  
   
 ## <a name="remarks"></a>Notes  
- Le `__svm_vmsave` fonction est équivalente à la `VMSAVE` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « de Volume manuelle AMD64 Architecture programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou une version ultérieure, à la [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
+ Le `__svm_vmsave` fonction est équivalente à la `VMSAVE` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou version ultérieure, à la [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

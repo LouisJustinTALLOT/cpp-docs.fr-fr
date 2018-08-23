@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: abc49a62e1cc9fb4abdc56b329b8fa057edebde7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642956"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583515"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy, énumération
-Indique la façon dont une opération asynchrone tentative du passage à un état terminal de terminé ou erreur doit se comporter en ce qui concerne un client a demandé l’état annulé.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-enum CancelTransitionPolicy;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="values"></a>Valeurs  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`RemainCanceled`|Si l’opération asynchrone est en cours d’un client a demandé l’état annulé, cela indique qu’il reste à l’état annulé par opposition à la transition vers un terminal terminée ou l’état d’erreur.|  
-|`TransitionFromCanceled`|Si l’opération asynchrone est en cours d’un client a demandé l’état annulé, cela indique qu’état doit passer de celle état annulé à l’état terminal de terminé ou erreur, tel que déterminé par l’appel qui utilise cet indicateur.|  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** async.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+
+Indique la façon dont une opération asynchrone tentative du passage à un état terminal de terminé ou erreur doit se comporter en ce qui concerne un client a demandé l’état annulé.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+enum CancelTransitionPolicy;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="values"></a>Valeurs
+
+|Nom|Description|
+|----------|-----------------|
+|`RemainCanceled`|Si l’opération asynchrone est en cours d’un client a demandé l’état annulé, cela indique qu’il reste à l’état annulé par opposition à la transition vers un terminal terminée ou l’état d’erreur.|
+|`TransitionFromCanceled`|Si l’opération asynchrone est en cours d’un client a demandé l’état annulé, cela indique qu’état doit passer de celle état annulé à l’état terminal de terminé ou erreur, tel que déterminé par l’appel qui utilise cet indicateur.|
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** async.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

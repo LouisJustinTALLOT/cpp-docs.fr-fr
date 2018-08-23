@@ -1,5 +1,5 @@
 ---
-title: __outbytestring | Documents Microsoft
+title: __outbytestring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334621"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539258"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Section spécifique à Microsoft**  
   
- Génère le `rep outsb` instruction, qui envoie le premier `Count` octets de données vers lequel pointe `Buffer` sur le port spécifié par `Port`.  
+ Génère le `rep outsb` instruction, qui envoie le premier `Count` octets de données vers lequel pointe `Buffer` vers le port spécifié par `Port`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,16 +45,16 @@ void __outbytestring(
  Le port pour envoyer les données.  
   
  [in] `Buffer`  
- Les données à envoyer le port spécifié.  
+ Les données seront envoyés le port spécifié.  
   
  [in] `Count`  
  Le nombre d’octets de données à envoyer.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

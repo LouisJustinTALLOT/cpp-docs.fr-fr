@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter la prise en charge du Gestionnaire de redémarrage | Documents Microsoft'
+title: 'Comment : ajouter la prise en charge du Gestionnaire de redémarrage | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8b30491b2cb46ab0e8b25edc2d39e6616817c9b4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931271"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539816"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Comment : ajouter la prise en charge du Gestionnaire de redémarrage
 
@@ -31,11 +31,11 @@ Le Gestionnaire de redémarrage est une fonctionnalité ajoutée à Visual Studi
 > [!NOTE]
 >  Vous pouvez substituer le comportement par défaut du Gestionnaire de redémarrage pour l’enregistrement des données et le redémarrage de l’application.  
   
- Par défaut, les applications MFC créées à l’aide de l’Assistant projet dans [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] prend en charge le Gestionnaire de redémarrage lorsque les applications sont exécutées sur un ordinateur équipé de Windows Vista ou système d’exploitation ultérieur. Si vous ne souhaitez pas que votre application prenne en charge le Gestionnaire de redémarrage, vous pouvez le désactiver dans l’Assistant Nouveau projet.  
+ Par défaut, les applications MFC créées à l’aide de l’Assistant de projet dans Visual Studio prend en charge le Gestionnaire de redémarrage quand les applications sont exécutées sur un ordinateur disposant d’un Windows Vista ou une version ultérieure du système d’exploitation. Si vous ne souhaitez pas que votre application prenne en charge le Gestionnaire de redémarrage, vous pouvez le désactiver dans l’Assistant Nouveau projet.  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>Pour ajouter la prise en charge du Gestionnaire de redémarrage à une application existante  
   
-1.  Ouvrez une application MFC existante dans [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+1.  Ouvrez une application MFC existante dans Visual Studio.  
   
 2.  Ouvrez le fichier source de votre application principale. Par défaut, il s’agit du fichier .cpp qui porte le même nom que votre application. Par exemple, le fichier source de l’application principale pour MyProject est MyProject.cpp.  
   
@@ -52,7 +52,7 @@ Le Gestionnaire de redémarrage est une fonctionnalité ajoutée à Visual Studi
 6.  Compilez et exécutez votre application.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe de CDataRecoveryHandler](../mfc/reference/cdatarecoveryhandler-class.md)   
+ [Cdatarecoveryhandler, classe](../mfc/reference/cdatarecoveryhandler-class.md)   
  [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp (classe)](../mfc/reference/cwinapp-class.md)   
  [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)   

@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337168"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575490"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 Une classe générique qui vous permet de spécifier des restrictions pour les ensembles de lignes de schéma.  
@@ -96,7 +96,7 @@ HRESULT Open(const CSession& session,
 ### <a name="remarks"></a>Notes  
  Vous pouvez spécifier un maximum de sept restrictions sur un ensemble de lignes de schéma.  
   
- Consultez [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.  
+ Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -88,16 +88,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af14457e10758c696a4141e58249e43134cf385a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851520"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538255"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
 Implémente les galeries de ruban de style Office 2007.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   

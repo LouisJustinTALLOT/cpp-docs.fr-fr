@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027811"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42544487"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Microsoft Foundation Class).  
@@ -852,7 +852,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Imite l’apparence de Microsoft Windows XP ou Microsoft Windows Vista lorsque l’utilisateur sélectionne un thème Windows XP ou Vista.  
   
  [CMFCVisualManagerWindows7, classe](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Donne à une application l'apparence d'une application [!INCLUDE[win7](../../build/includes/win7_md.md)] .  
+ Donne à une application l’apparence d’une application de Windows 7.  
   
  [CMFCWindowsManagerDialog, classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Permet à un utilisateur de gérer des fenêtres enfants MDI dans une application MDI.  
@@ -1020,7 +1020,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.  
   
  [COleVariant, classe](../../mfc/reference/colevariant-class.md)  
- Encapsule le [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) type de données.  
+ Encapsule le [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) type de données.  
   
  [CPagerCtrl, classe](../../mfc/reference/cpagerctrl-class.md)  
  La classe `CPagerCtrl` inclut dans un wrapper le contrôle pager Windows, qui peut afficher une fenêtre contenue qui ne tient pas dans la fenêtre conteneur.  

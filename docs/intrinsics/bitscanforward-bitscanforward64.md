@@ -1,5 +1,5 @@
 ---
-title: _BitScanForward, _BitScanForward64 | Documents Microsoft
+title: _BitScanForward, _BitScanForward64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331895"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538655"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Section spécifique à Microsoft**  
@@ -59,12 +59,12 @@ unsigned char _BitScanForward64(
 ## <a name="remarks"></a>Notes  
  Si un bit défini est détecté, la position de bit du premier bit défini détecté est retournée dans le premier paramètre. Si aucun bit défini n'est détecté, 0 est retourné ; dans le cas contraire, 1 est retourné.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86, ARM, x64|  
+|`_BitScanForward64`|ARM, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

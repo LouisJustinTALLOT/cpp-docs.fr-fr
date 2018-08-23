@@ -1,5 +1,5 @@
 ---
-title: message | Documents Microsoft
+title: message | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846361"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541373"
 ---
 # <a name="message"></a>message
 Envoie un littéral de chaîne à la sortie standard sans mettre fin à la compilation.  
@@ -31,20 +31,20 @@ Envoie un littéral de chaîne à la sortie standard sans mettre fin à la compi
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma message( messagestring )  
 ```  
   
 ## <a name="remarks"></a>Notes  
- En règle générale le **message** pragma consiste à afficher des messages d’information au moment de la compilation.  
+
+En règle générale le **message** pragma consiste à afficher des messages d’information au moment de la compilation.  
   
- Le *messagestring* paramètre peut être une macro qui se développe en un littéral de chaîne, et vous pouvez concaténer ces macros avec des littéraux de chaîne de n’importe quelle combinaison.  
+Le *messagestring* paramètre peut être une macro qui se développe en un littéral de chaîne, et vous pouvez concaténer ces macros avec des littéraux de chaîne dans n’importe quelle combinaison.  
   
- Si vous utilisez une macro prédéfinie dans le **message** pragma, la macro doit retourner une chaîne, sans quoi vous devez convertir la sortie de la macro en chaîne.  
+Si vous utilisez une macro prédéfinie dans le **message** pragma, la macro doit retourner une chaîne, sinon vous devrez convertir la sortie de la macro en chaîne.  
   
- Le fragment de code suivant utilise la **message** pragma pour afficher des messages lors de la compilation :  
+Le fragment de code suivant utilise la **message** pragma pour afficher les messages pendant la compilation :  
   
-```  
+```cpp  
 // pragma_directives_message1.cpp  
 // compile with: /LD  
 #if _M_IX86 >= 500  
@@ -68,4 +68,5 @@ Envoie un littéral de chaîne à la sortie standard sans mettre fin à la compi
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

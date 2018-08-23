@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028289"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538678"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implémente un volet qui peut être ancré dans un site d'ancrage ou être inclus dans un volet à onglets.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour gérer l’ancrage d’un volet flottant.  
   
- Pour les barres d’outils flottantes ou volets qui utilisent le mode d’ancrage DT_IMMEDIATE d’ancrage, le framework retarde la commande d’ancrage pour permettre aux utilisateurs de déplacer la fenêtre en dehors de la zone cliente du frame parent avant de l’ancrage se produit. La longueur du délai est mesurée en millisecondes et est contrôlée par le [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membre de données... La valeur par défaut [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) est 200. Ce comportement émule le comportement d’ancrage [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Pour les barres d’outils flottantes ou volets qui utilisent le mode d’ancrage DT_IMMEDIATE d’ancrage, le framework retarde la commande d’ancrage pour permettre aux utilisateurs de déplacer la fenêtre en dehors de la zone cliente du frame parent avant de l’ancrage se produit. La longueur du délai est mesurée en millisecondes et est contrôlée par le [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membre de données... La valeur par défaut [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) est 200. Ce comportement émule le comportement d’ancrage de Microsoft Word 2007.  
   
  Pour les États d’ancrage différées (CS_DELAY_DOCK et CS_DELAY_DOCK_TO_TAB), le framework n’effectue pas d’ancrage jusqu'à ce que l’utilisateur relâche le bouton de la souris. Si un volet utilise le mode d’ancrage DT_STANDARD, l’infrastructure affiche un rectangle à l’emplacement d’ancrage projetée. Si un volet utilise le mode d’ancrage DT_SMART, l’infrastructure affiche des marqueurs d’ancrage actifs et les rectangles semi-transparent à l’emplacement d’ancrage projetée. Pour spécifier le mode d’ancrage pour votre volet, appelez le [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) (méthode). Pour plus d’informations sur l’ancrage intelligents, consultez [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Pour un effet d’animation plus rapide, diminuez cette valeur. Pour un effet d’animation plus lent, augmentez cette valeur.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

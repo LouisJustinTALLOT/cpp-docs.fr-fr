@@ -1,5 +1,5 @@
 ---
-title: __ll_rshift | Documents Microsoft
+title: __ll_rshift | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324926"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544476"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Section spécifique à Microsoft**  
@@ -47,18 +47,18 @@ __int64 __ll_rshift(
  Le nombre de bits de décalage, modulo 64 sur x64 et modulo 32 sur x86.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Le masque décale `nBit` bits.  
+ Le masque décalés `nBit` bits.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Si le deuxième paramètre est supérieur à 64 sur x64 (32 sur x86), ce nombre est effectuée modulo 64 (32 sur x86) pour déterminer le nombre de bits à décaler. Le `ll` préfixe indique qu’il s’agit une opération sur `long long`, un autre nom pour `__int64`, le type intégral signé de 64 bits.  
+ Si le deuxième paramètre est supérieur à 64 sur x64 (32 sur x86), ce nombre est effectuée modulo 64 (32 sur x86) pour déterminer le nombre de bits de décalage. Le `ll` préfixe indique que cette opération se fait sur `long long`, un autre nom pour `__int64`, le type intégral signé de 64 bits.  
   
 ## <a name="example"></a>Exemple  
   
@@ -93,7 +93,7 @@ fffffffffffffff0
  - 10  
 ```  
   
- **Remarque** si `_ull_rshift` a été utilisé, l’octet le plus significatif de la valeur décalée vers la droite aurait égal à zéro, donc le résultat souhaité n’aurait été obtenu dans le cas d’une valeur négative.  
+ **Remarque** si `_ull_rshift` a été utilisé, l’octet le plus significatif de la valeur décalée vers la droite aurait été égal à zéro, donc le résultat souhaité n’aurait été obtenu dans le cas d’une valeur négative.  
   
 **FIN de la section spécifique à Microsoft**  
   

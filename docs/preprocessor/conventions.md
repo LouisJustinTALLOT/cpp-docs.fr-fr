@@ -1,5 +1,5 @@
 ---
-title: Conventions | Documents Microsoft
+title: Conventions | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae91b383159a6de7e28507f9e272e5ea60093e0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912665"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538809"
 ---
 # <a name="conventions"></a>Conventions
 Les conventions utilisent différents attributs de police pour différents composants de la syntaxe. Les symboles et les polices sont comme suit :  
@@ -32,7 +32,8 @@ Les conventions utilisent différents attributs de police pour différents compo
 |option|Les symboles non terminaux suivis de l'indication « option » sont toujours facultatifs.|  
 |police par défaut|Les caractères du jeu décrit ou répertorié dans cette police peuvent être utilisés comme symboles terminaux dans les instructions C.|  
   
- Un signe deux-points (:) qui suit un symbole non terminal introduit sa définition. D'autres définitions apparaissent sur des lignes distinctes.  
+Un signe deux-points (:) qui suit un symbole non terminal introduit sa définition. D'autres définitions apparaissent sur des lignes distinctes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+
+[Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

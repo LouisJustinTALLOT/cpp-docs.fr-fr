@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339707"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538325"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 Définit une classe d’objets de contexte de périphérique.  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  Pointeur vers la chaîne de caractères à traiter.  
   
  *nCount*  
- Spécifie la longueur de la chaîne. Pour la version ANSI, il est un nombre d’octets et pour la fonction Unicode, il est un nombre de mots. Pour plus d’informations, consultez [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
+ Spécifie la longueur de la chaîne. Pour la version ANSI, il est un nombre d’octets et pour la fonction Unicode, il est un nombre de mots. Pour plus d’informations, consultez [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).  
   
  *nMaxExtent*  
  Spécifie l’étendue maximale (en unités logiques) à laquelle la chaîne est traitée. Les caractères qui, si traités, dépasseraient cette étendue sont ignorés. Calculs pour des tableaux de glyphe ou d’ordonnancement requis s’appliquent uniquement aux caractères inclus. Ce paramètre est utilisé uniquement si la valeur GCP_MAXEXTENT est spécifiée dans le *dwFlags* paramètre. Pendant que la fonction traite la chaîne d’entrée, chaque caractère et son étendue est ajoutée à la sortie, étendue et les autres tableaux uniquement si l’étendue totale n’a pas encore dépassé le nombre maximal. Une fois que la limite est atteinte, le traitement s’arrête.  
   
  lpResults  
- Pointeur vers un [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) structure qui reçoit les résultats de la fonction.  
+ Pointeur vers un [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) structure qui reçoit les résultats de la fonction.  
   
  *dwFlags*  
- Spécifie comment traiter la chaîne dans les tableaux requis. Ce paramètre peut prendre l’une ou plusieurs des valeurs répertoriées dans le *dwFlags* section de la [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) rubrique.  
+ Spécifie comment traiter la chaîne dans les tableaux requis. Ce paramètre peut prendre l’une ou plusieurs des valeurs répertoriées dans le *dwFlags* section de la [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) rubrique.  
   
  *str*  
  Un pointeur vers un [CString](../../atl-mfc-shared/reference/cstringt-class.md) au processus de l’objet.  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  Si la fonction échoue, la valeur de retour est égale à zéro.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la fonction [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la fonction [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), comme décrit dans le SDK Windows.  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  Récupère la largeur des caractères consécutifs dans une plage spécifiée à partir de la police TrueType actuelle.  

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57290d2985036ea3df2863e175d742c819a3fe03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405056"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572377"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -87,38 +87,38 @@ Pointeur vers le nom du module (.exe ou .dll) où l'assertion ou le rapport s'es
 *format*<br/>
 Pointeur vers la chaîne de contrôle de format utilisée pour créer le message utilisateur.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments de substitution facultatifs utilisés par *format*.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Pour toutes les destinations du rapport, **_CrtDbgReport** et **_CrtDbgReportW** retourne -1 si une erreur se produit et la valeur 0 si aucune erreur. Cependant, quand la destination du rapport est une fenêtre de message de débogage et que l’utilisateur clique sur le bouton **Réessayer**, ces fonctions retournent 1. Si l’utilisateur clique sur le bouton **Abandonner** dans la fenêtre Message de débogage, ces fonctions sont immédiatement abandonnées et ne retournent aucune valeur.
+Pour toutes les destinations de rapport, **_CrtDbgReport** et **_CrtDbgReportW** retourner -1 si une erreur se produit et 0 si aucune erreur est rencontrée. Cependant, quand la destination du rapport est une fenêtre de message de débogage et que l’utilisateur clique sur le bouton **Réessayer**, ces fonctions retournent 1. Si l’utilisateur clique sur le bouton **Abandonner** dans la fenêtre Message de débogage, ces fonctions sont immédiatement abandonnées et ne retournent aucune valeur.
 
-Le [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) déboguer les macros appel **_CrtDbgReport** pour générer leur débogage rapports. Les versions à caractères larges de ces macros, ainsi que [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) et [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), utilisez **_CrtDbgReportW** à générer leurs rapports de débogage. Lorsque **_CrtDbgReport** ou **_CrtDbgReportW** retourne 1, ces macros démarrent le débogueur, sous réserve que le débogage juste-à-temps (JIT) est activé.
+Le [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) déboguer les macros appel **_CrtDbgReport** pour générer leur débogage rapports. Les versions à caractères larges de ces macros, ainsi que [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) et [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), utilisez **_CrtDbgReportW** à générer leurs rapports de débogage. Lorsque **_CrtDbgReport** ou **_CrtDbgReportW** retourne 1, ces macros démarrent le débogueur, autant que le débogage juste-à-temps (JIT) est activé.
 
 ## <a name="remarks"></a>Notes
 
-**_CrtDbgReport** et **_CrtDbgReportW** peut envoyer le rapport de débogage vers trois destinations différentes : un fichier de rapport de débogage, un moniteur de débogage (le débogueur Visual Studio) ou une fenêtre de message de débogage. Deux fonctions de configuration, [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md), sont utilisées pour spécifier la ou les destinations de chaque type de rapport. Ces fonctions permettent de contrôler séparément la ou les destinations de chaque type de rapport. Par exemple, il est possible de spécifier qu’un *reportType* de **_CRT_WARN** uniquement être envoyé au moniteur de débogage, tandis qu’un *reportType* de **_CRT_ASSERT** envoyés à une fenêtre de message de débogage et un fichier de rapport défini par l’utilisateur.
+**_CrtDbgReport** et **_CrtDbgReportW** peut envoyer le rapport de débogage vers trois destinations différentes : un fichier de rapport de débogage, un moniteur de débogage (le débogueur Visual Studio) ou une fenêtre de message de débogage. Deux fonctions de configuration, [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md), sont utilisées pour spécifier la ou les destinations de chaque type de rapport. Ces fonctions permettent de contrôler séparément la ou les destinations de chaque type de rapport. Par exemple, il est possible de spécifier qu’un *reportType* de **_CRT_WARN** uniquement être envoyé vers le moniteur de débogage, tandis qu’un *reportType* de **_CRT_ASSERT** être envoyé à une fenêtre de message de débogage et un fichier de rapport défini par l’utilisateur.
 
 **_CrtDbgReportW** est la version à caractères larges de **_CrtDbgReport**. Tous ses paramètres de sortie et de chaîne se trouvent dans des chaînes à caractères larges ; sinon, il est identique à la version à caractères codés sur un octet.
 
-**_CrtDbgReport** et **_CrtDbgReportW** créent le message utilisateur pour le rapport de débogage en substituant le *argument*[**n**] arguments dans le *format* chaîne, en utilisant les mêmes règles définies par le **printf** ou **wprintf** fonctions. Ces fonctions, puis génèrent le rapport de débogage et déterminent l’ou les destinations, basées sur les modes de rapport actuel et les fichiers définis pour *reportType*. Lorsque le rapport est envoyé à une fenêtre de message de débogage, le *nom de fichier*, **lineNumber**, et *moduleName* sont inclus dans les informations affichées dans la fenêtre.
+**_CrtDbgReport** et **_CrtDbgReportW** créer le message de l’utilisateur pour le rapport de débogage en substituant le *argument*[**n**] arguments dans le *format* de chaîne, à l’aide des mêmes règles définies par le **printf** ou **wprintf** fonctions. Ces fonctions, puis génèrent le rapport de débogage et déterminent l’ou les destinations, en fonction des modes de rapport actuel et le fichier définis pour *reportType*. Lorsque le rapport est envoyé vers une fenêtre de message de débogage, le *filename*, **lineNumber**, et *moduleName* sont inclus dans les informations affichées dans la fenêtre.
 
-Le tableau suivant répertorie les options disponibles pour le mode de rapport ou des modes et des fichiers et le comportement résultant de **_CrtDbgReport** et **_CrtDbgReportW**. Ces options sont définies sous forme d’indicateurs binaires dans \<crtdbg.h>.
+Le tableau suivant répertorie les options disponibles pour le mode de rapport ou les modes et les fichiers et le comportement résultant de **_CrtDbgReport** et **_CrtDbgReportW**. Ces options sont définies sous forme d’indicateurs binaires dans \<crtdbg.h>.
 
 |Mode de rapport|Fichier de rapport|**_CrtDbgReport**, **_CrtDbgReportW** comportement|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Non applicable|Écrit un message à l’aide de l’API Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx).|
-|**_CRTDBG_MODE_WNDW**|Non applicable|Appelle l’API Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) pour créer une boîte de message et afficher le message avec des boutons **Abandonner**, **Réessayer** et **Ignorer**. Si un utilisateur clique sur **abandonner**, **_CrtDbgReport** ou **_CrtDbgReport** abandonne immédiatement. Si un utilisateur clique sur **Réessayer**, la valeur 1 est retournée. Si un utilisateur clique sur **ignorer**, l’exécution se poursuit et **_CrtDbgReport** et **_CrtDbgReportW** retournent 0. Notez que le fait de cliquer sur **Ignorer** alors qu’il existe une condition d’erreur entraîne souvent un « comportement indéfini ».|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|Écrit un message dans fourni par l’utilisateur **gérer**, à l’aide de Windows [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) API et ne vérifie pas la validité du handle de fichier ; l’application est responsable de l’ouverture du fichier de rapport et le passage d’un fichier valid handle.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Écrit un message à **stderr**.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Écrit un message à **stdout**.|
+|**_CRTDBG_MODE_WNDW**|Non applicable|Appelle l’API Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) pour créer une boîte de message et afficher le message avec des boutons **Abandonner**, **Réessayer** et **Ignorer**. Si un utilisateur clique sur **abandonner**, **_CrtDbgReport** ou **_CrtDbgReport** abandonne immédiatement l’opération. Si un utilisateur clique sur **Réessayer**, la valeur 1 est retournée. Si un utilisateur clique sur **ignorer**, l’exécution se poursuit et **_CrtDbgReport** et **_CrtDbgReportW** retournent 0. Notez que le fait de cliquer sur **Ignorer** alors qu’il existe une condition d’erreur entraîne souvent un « comportement indéfini ».|
+|**_CRTDBG_MODE_FILE**|**__HFILE**|Écrit un message fourni par l’utilisateur **gérer**, à l’aide de la Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API et ne vérifie pas la validité du handle de fichier ; l’application est chargée d’ouvrir le fichier de rapport et de passage d’un fichier valid handle.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Écrit un message **stderr**.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Écrit un message **stdout**.|
 
 Le rapport peut être envoyé à une, deux ou trois destinations ou à aucune. Pour plus d’informations sur la spécification du ou des modes de rapport et du fichier de rapport, consultez les fonctions [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md). Pour plus d’informations sur l’utilisation des macros de débogage et des fonctions de création de rapports, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting).
 
-Si votre application a besoin de davantage de flexibilité que celle fournie par **_CrtDbgReport** et **_CrtDbgReportW**, vous pouvez écrire votre propre déclaration de fonction et raccordez-le dans la déclaration de bibliothèque Runtime C mécanisme à l’aide de la [_CrtSetReportHook](crtsetreporthook.md) (fonction).
+Si votre application a besoin de davantage de flexibilité que celle fournie par **_CrtDbgReport** et **_CrtDbgReportW**, vous pouvez écrire votre propre création de rapports fonction et la raccorder dans la déclaration de bibliothèque Runtime C mécanisme à l’aide de la [_CrtSetReportHook](crtsetreporthook.md) (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

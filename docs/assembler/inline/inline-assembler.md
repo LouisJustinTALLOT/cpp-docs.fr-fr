@@ -1,5 +1,5 @@
 ---
-title: Assembleur inline | Documents Microsoft
+title: Assembleur inline | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055038"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572159"
 ---
 # <a name="inline-assembler"></a>Assembleur inline
 **Section spécifique à Microsoft**  
@@ -33,7 +33,7 @@ ms.locfileid: "32055038"
 > [!NOTE]
 >  Les programmes avec du code assembleur inline ne sont pas entièrement portables sur d'autres plateformes matérielles. Si vous concevez pour la portabilité, évitez d'utiliser l'assembleur inline.  
   
- L'assembly inline n'est pas pris en charge sur les processeurs ARM et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  Les rubriques suivantes expliquent comment utiliser l'assembleur inline de Visual C/C++ avec des processeurs x86 :  
+ L’assembly inline n’est pas pris en charge sur le ARM et x64 processeurs.  Les rubriques suivantes expliquent comment utiliser l'assembleur inline de Visual C/C++ avec des processeurs x86 :  
   
 -   [Vue d’ensemble de l’assembleur inline](../../assembler/inline/inline-assembler-overview.md)  
   

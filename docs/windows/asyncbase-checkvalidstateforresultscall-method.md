@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 398f46d5f8eb15d961d80b9a7a20b758fffd09c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651906"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584234"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall, méthode
-Teste si les résultats d’une opération asynchrone peuvent être collectées dans l’état asynchrone actuelle.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-inline HRESULT CheckValidStateForResultsCall();  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK si les résultats peuvent être collectés ; Sinon, E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** async.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [AsyncBase, classe](../windows/asyncbase-class.md)
+
+Teste si les résultats d’une opération asynchrone peuvent être collectées dans l’état asynchrone actuelle.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+inline HRESULT CheckValidStateForResultsCall();
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK si les résultats peuvent être collectés ; Sinon, E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** async.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[AsyncBase, classe](../windows/asyncbase-class.md)

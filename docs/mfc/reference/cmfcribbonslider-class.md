@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850850"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539436"
 ---
 # <a name="cmfcribbonslider-class"></a>Cmfcribbonslider, classe
 Le `CMFCRibbonSlider` classe implémente un contrôle de curseur que vous pouvez ajouter à une barre de ruban ou de la barre d’état du ruban. Le contrôle Slider de ruban ressemble aux curseurs de zoom présents dans les applications Office 2007.  
@@ -152,7 +152,7 @@ int GetRangeMin() const;
  L’incrément minimale qui peut être acheminées par le curseur sur le contrôle slider.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -186,7 +186,7 @@ BOOL HasZoomButtons() const;
  TRUE si le curseur a des boutons de zoom ; FALSE sinon.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

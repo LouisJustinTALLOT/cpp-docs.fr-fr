@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION | Documents Microsoft
+title: -ALLOWISOLATION | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368972"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571877"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 Spécifie un comportement pour la recherche de manifeste.  
@@ -36,15 +36,15 @@ Spécifie un comportement pour la recherche de manifeste.
 ```  
   
 ## <a name="remarks"></a>Notes  
- **/ALLOWISOLATION** provoque le système d’exploitation et charger des manifestes.  
+ **/ ALLOWISOLATION** provoque le système d’exploitation et charger des manifestes.  
   
- **/ALLOWISOLATION** est la valeur par défaut.  
+ **/ ALLOWISOLATION** est la valeur par défaut.  
   
- **/ALLOWISOLATION:no** indique que les exécutables sont chargés comme s’il n’existait aucun manifeste et les causes [référence EDITBIN](../../build/reference/editbin-reference.md) pour définir le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans l’en-tête optional `DllCharacteristics` champ.  
+ **/ALLOWISOLATION:no** indique que les fichiers exécutables sont chargés comme s’il n’y avait aucun manifeste et causes [référence EDITBIN](../../build/reference/editbin-reference.md) pour définir le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans l’en-tête optional `DllCharacteristics` champ.  
   
- Quand l'isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d'application pour le processus nouvellement créé. Le nouveau processus n’a un contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable lui-même ou s’il existe un manifeste qui porte le nom *-nom du fichier exécutable*. exe.manifest.  
+ Quand l'isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d'application pour le processus nouvellement créé. Le nouveau processus n’a pas un contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable lui-même ou s’il existe un manifeste qui porte le nom *nom_exécutable*. exe.manifest.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options EDITBIN](../../build/reference/editbin-options.md)   
  [/ALLOWISOLATION (recherche de manifeste)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Référence des fichiers manifeste](http://msdn.microsoft.com/library/aa375632.aspx)
+ [Référence des fichiers manifeste](/windows/desktop/SbsCs/manifest-files-reference)

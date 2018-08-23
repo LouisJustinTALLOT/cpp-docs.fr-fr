@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrst | Documents Microsoft
+title: __vmx_vmptrst | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328592"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541031"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Section spécifique à Microsoft**  
@@ -44,13 +44,13 @@ void __vmx_vmptrst(
 ## <a name="remarks"></a>Notes  
  Le pointeur de la VMCS est une adresse physique 64 bits.  
   
- Le `__vmx_vmptrst` fonction est équivalente à la `VMPTRST` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ Le `__vmx_vmptrst` fonction est équivalente à la `VMPTRST` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   

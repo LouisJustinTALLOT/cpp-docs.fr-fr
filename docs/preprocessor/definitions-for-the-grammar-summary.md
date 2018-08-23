@@ -1,5 +1,5 @@
 ---
-title: Les définitions pour la synthèse de la grammaire | Documents Microsoft
+title: Le résumé de syntaxe des définitions de | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6c84354332b4d01ca07f672024fe9b488cd0a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ac3b742406f1e8be955921a9ee238f3b35d3bdf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840065"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539426"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Résumé des définitions de grammaire
 Les terminaux sont des points de terminaison dans une définition de syntaxe. Aucune autre résolution n'est possible. Les terminaux incluent l'ensemble des mots réservés et des identificateurs définis par l'utilisateur.  
@@ -33,5 +33,6 @@ Un composant facultatif est indiqué par l'élément opt indicé. Par exemple, l
   
 **{** *expression*opt **}**  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi 
+ 
 [Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

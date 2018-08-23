@@ -1,5 +1,5 @@
 ---
-title: /MP (générer avec plusieurs processus) | Documents Microsoft
+title: /MP (générer avec plusieurs processus) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379118"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572727"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Générer avec plusieurs processus)
 
@@ -38,19 +38,19 @@ L’option **/MP** option peut réduire la durée totale de compilation des fich
 *processMax*<br/>
 (Facultatif) Le nombre maximal de processus que le compilateur peut créer.
 
-Le *processMax* argument doit être comprise entre 1 et 65536. Sinon, le compilateur émet le message d’avertissement **D9014**, ignore les *processMax* argument et suppose que le nombre maximal de processus est 1.
+Le *processMax* argument doit être comprise entre 1 et 65 536. Sinon, le compilateur émet le message d’avertissement **D9014**, ignore les *processMax* argument et suppose que le nombre maximal de processus est 1.
 
 Si vous omettez le *processMax* argument, le compilateur récupère le nombre de [processeurs effectifs](#effective_processors) sur votre ordinateur à partir du système d’exploitation et crée un processus pour chaque processeur.
 
 ## <a name="remarks"></a>Notes
 
-L’option **/MP** du compilateur peut réduire considérablement le temps de génération quand vous compilez de nombreux fichiers. Pour améliorer les temps de génération, le compilateur crée jusqu'à *processMax* copie de lui-même, puis utilise ces copies pour compiler vos fichiers sources en même temps. L’option **/MP** s’applique aux compilations, mais pas à la liaison ni à la génération de code au moment de la liaison. L’option **/MP** est désactivée par défaut.
+L’option **/MP** du compilateur peut réduire considérablement le temps de génération quand vous compilez de nombreux fichiers. Pour améliorer le temps de génération, le compilateur crée jusqu'à *processMax* copies de lui-même et utilise ensuite ces copies pour compiler vos fichiers sources en même temps. L’option **/MP** s’applique aux compilations, mais pas à la liaison ni à la génération de code au moment de la liaison. L’option **/MP** est désactivée par défaut.
 
 L’amélioration de la durée de la génération dépend du nombre de processeurs sur un ordinateur, du nombre de fichiers à compiler et de la disponibilité des ressources système, comme la capacité d’E/S. Faites des essais avec l’option **/MP** pour déterminer la meilleure configuration pour générer un projet particulier. Pour des conseils pour vous aider à décider, consultez [Guidelines](#guidelines).
 
 ## <a name="incompatible-options-and-language-features"></a>Options et fonctionnalités du langage incompatibles
 
-L’option **/MP** est incompatible avec certaines options du compilateur et certaines fonctionnalités du langage. Si vous utilisez une option du compilateur incompatible avec le **/MP** option, le compilateur émet un avertissement **D9030** et ignore le **/MP** option. Si vous utilisez une fonctionnalité de langage incompatible, le compilateur émet erreur [l’erreur C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md) puis s’arrête ou continue selon le compilateur actuel, option de niveau d’avertissement.
+L’option **/MP** est incompatible avec certaines options du compilateur et certaines fonctionnalités du langage. Si vous utilisez une option du compilateur incompatible avec le **/MP** option, le compilateur émet avertissement **D9030** et ignore le **/MP** option. Si vous utilisez une fonctionnalité de langage incompatible, le compilateur émet une erreur [C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md) puis s’arrête ou continue, selon le choix du niveau d’avertissement de compilateur actuel.
 
 > [!NOTE]
 > La plupart des options sont incompatibles car si elles étaient autorisées, les compilateurs s’exécutant simultanément écriraient leur sortie en même temps sur la console ou dans un fichier particulier. Par conséquent, la sortie serait un mélange incompréhensible. Dans certains cas, la combinaison des options diminuerait les performances.
@@ -87,11 +87,11 @@ Un ordinateur peut avoir un ou plusieurs processeurs virtuels, qui sont égaleme
 
 Par exemple, un ordinateur a un processeur effectif s’il a un processeur physique avec un seul cœur et que l’hyperthreading est désactivé. En revanche, un ordinateur a huit processeurs effectifs s’il a deux processeurs physiques, que chacun d’eux a deux cœurs et que l’hyperthreading est activé sur tous les cœurs. Autrement dit, (8 processeurs effectifs) = (2 processeurs physiques) x (2 cœurs par processeur physique) x (2 processeurs effectifs par cœur en raison de l’hyperthreading).
 
-Si vous omettez le *processMax* argument dans le **/MP** option, le compilateur obtient le nombre de processeurs effectifs à partir du système d’exploitation, puis crée un processus par processeur effectif. Cependant, le compilateur ne peut pas garantir quel processus s’exécute sur un processeur particulier ; c’est le système d’exploitation qui prend cette décision.
+Si vous omettez le *processMax* argument dans le **/MP** option, le compilateur obtient le nombre de processeurs effectifs auprès du système d’exploitation et crée ensuite un processus par processeur effectif. Cependant, le compilateur ne peut pas garantir quel processus s’exécute sur un processeur particulier ; c’est le système d’exploitation qui prend cette décision.
 
 ### <a name="number-of-processes"></a>Nombre de processus
 
-Le compilateur calcule le nombre de processus qu’il utilisera pour compiler les fichiers sources. Cette valeur est la plus petite entre le nombre de fichiers sources que vous spécifiez sur la ligne de commande et le nombre de processus que vous spécifiez explicitement ou implicitement avec l’option **/MP** . Vous pouvez définir explicitement le nombre maximal de processus si vous fournissez la *processMax* argument de la **/MP** option. Ou vous pouvez utiliser la valeur par défaut, qui est égal au nombre de processeurs effectifs dans un ordinateur, si vous omettez le *processMax* argument.
+Le compilateur calcule le nombre de processus qu’il utilisera pour compiler les fichiers sources. Cette valeur est la plus petite entre le nombre de fichiers sources que vous spécifiez sur la ligne de commande et le nombre de processus que vous spécifiez explicitement ou implicitement avec l’option **/MP** . Vous pouvez définir explicitement le nombre maximal de processus si vous fournissez la *processMax* argument de la **/MP** option. Ou vous pouvez utiliser la valeur par défaut, ce qui est égal au nombre de processeurs effectifs dans un ordinateur, si vous omettez le *processMax* argument.
 
 Par exemple, supposons que vous spécifiez la ligne de commande suivante :
 
@@ -123,17 +123,17 @@ Le compilateur ne prend pas en charge l’utilisation de la directive [#import](
 
 #### <a name="the-msbuildexe-tool"></a>L’outil MSBUILD.exe
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] utilise l’outil [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) pour générer des solutions et des projets. Le **/maxcpucount :**_nombre_ (ou **/m:**_nombre_) une option de ligne de commande de l’outil MSBuild.exe peut générer plusieurs projets à la à la fois. L’option de compilateur **/MP** peut aussi générer plusieurs unités de compilation en même temps. Si c’est approprié pour votre application, améliorez le temps de génération de votre solution en utilisant **/MP** ou **/maxcpucount**, ou les deux.
+Visual Studio utilise le [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) outil permettant de créer des solutions et projets. Le **/maxcpucount :**_nombre_ (ou **/m:**_nombre_) option de ligne de commande de l’outil MSBuild.exe peut générer plusieurs projets à la même temps. L’option de compilateur **/MP** peut aussi générer plusieurs unités de compilation en même temps. Si c’est approprié pour votre application, améliorez le temps de génération de votre solution en utilisant **/MP** ou **/maxcpucount**, ou les deux.
 
-Le temps de génération de votre solution dépend en partie du nombre de processus qui effectuent la génération. Le *nombre* argument de la [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild option spécifie le nombre maximal de projets à générer en même temps. De même, la *processMax* argument de la **/MP** option du compilateur spécifie le nombre maximal d’unités de compilation à générer en même temps. Si le **/maxcpucount** option spécifie *P* projets et **/MP** option spécifie *C* traite, un maximum de *P*  x *C* processus s’exécutent en même temps.
+Le temps de génération de votre solution dépend en partie du nombre de processus qui effectuent la génération. Le *nombre* argument de la [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild option spécifie le nombre maximal de projets à générer en même temps. De même, le *processMax* argument de la **/MP** option du compilateur spécifie le nombre maximal d’unités de compilation à générer en même temps. Si le **/maxcpucount** option spécifie *P* projets et le **/MP** option spécifie *C* processus, un maximum de *P*  x *C* processus s’exécutent en même temps.
 
- L’indication pour décider s’il faut utiliser MSBuild ou **/MP** technologie est comme suit :
+ L’indication pour décider s’il faut utiliser MSBuild ou **/MP** technologie se présente comme suit :
 
 - S’il existe de nombreux projets avec peu de fichiers dans chaque projet, utilisez l’outil MSBuild.
 
 - S’il existe peu de projets avec de nombreux fichiers dans chaque projet, utilisez l’option **/MP** .
 
-- Si le nombre de projets et des fichiers par projet est équilibré, utilisez à la fois MSBuild et **/MP**. Définissez d’abord l’option **/maxcpucount** sur le nombre de projets à générer et l’option **/MP** sur le nombre de processeurs de votre ordinateur. Mesurez les performances, puis ajustez les paramètres pour obtenir les meilleurs résultats. Répétez ce cycle jusqu’à ce que le temps total de la génération soit satisfaisant.
+- Si le nombre de projets et des fichiers par projet est équilibré, utilisez les deux MSBuild et **/MP**. Définissez d’abord l’option **/maxcpucount** sur le nombre de projets à générer et l’option **/MP** sur le nombre de processeurs de votre ordinateur. Mesurez les performances, puis ajustez les paramètres pour obtenir les meilleurs résultats. Répétez ce cycle jusqu’à ce que le temps total de la génération soit satisfaisant.
 
 #### <a name="the-gm-compiler-option"></a>L’option de compilateur /Gm
 
@@ -141,6 +141,6 @@ Par défaut, la génération d’un projet active l’option de compilateur **/G
 
 ## <a name="see-also"></a>Voir aussi
 
-[#import (directive)](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[directive #import](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Informations de référence sur la ligne de commande](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
 [/Zf (génération PDB plus rapide)](zf.md)<br/>

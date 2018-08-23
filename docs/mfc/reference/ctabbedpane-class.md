@@ -1,5 +1,5 @@
 ---
-title: Classe de CTabbedPane | Documents Microsoft
+title: Ctabbedpane, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b4bb740f445d65c37d1bee8c1e777dbd8984e1c2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121836"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540223"
 ---
-# <a name="ctabbedpane-class"></a>Classe de CTabbedPane
+# <a name="ctabbedpane-class"></a>Ctabbedpane, classe
 Implémente les fonctionnalités d'un volet à onglets détachables.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,7 +93,7 @@ class CTabbedPane : public CBaseTabbedPane
  Si vous créez un volet à onglets avec des onglets détachables, le volet risque d’être détruit automatiquement par l’infrastructure. Il est donc déconseillé de stocker le pointeur. Pour obtenir un pointeur vers le volet à onglets, appelez la méthode `CBasePane::GetParentTabbedPane`.  
   
 ## <a name="example"></a>Exemple  
- Dans cet exemple, nous créons un objet `CTabbedPane`. Ensuite, nous utilisons [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) pour attacher des onglets supplémentaires.  
+ Dans cet exemple, nous créons un objet `CTabbedPane`. Ensuite, nous utilisons [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) à attacher des onglets supplémentaires.  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -196,9 +196,9 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
  TRUE pour activer la coloration automatique des onglets ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode statique pour activer ou désactiver la coloration automatique des onglets dans tous les volets à onglets dans l’application. Lorsque cette fonctionnalité est activée, chaque onglet est rempli par sa propre couleur. Vous trouverez la liste des couleurs qui sont utilisées pour les onglets de couleur en appelant le [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) (méthode).  
+ Utilisez cette méthode statique pour activer ou désactiver la coloration automatique des onglets dans tous les volets à onglets dans l’application. Lorsque cette fonctionnalité est activée, chaque onglet est rempli par sa propre couleur. Vous trouverez la liste de couleurs qui sont utilisés pour colorer les onglets en appelant le [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) (méthode).  
   
- Vous pouvez spécifier la liste des couleurs qui serviront pour les onglets en appelant [CTabbedPane::SetTabAutoColors](#settabautocolors).  
+ Vous pouvez spécifier la liste des couleurs qui sera utilisé pour les onglets en appelant [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
  Par défaut, cette option est désactivée.  
   
@@ -240,9 +240,9 @@ virtual void GetTabArea(
  Contient la taille et position, en coordonnées d’écran, de la zone d’onglet en bas.  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure appelle cette méthode pour déterminer comment ancrer un volet un utilisateur fait glisser. Lorsque l’utilisateur fait glisser un volet sur la zone d’onglet du volet cible, l’infrastructure essaie de l’ajouter en tant qu’un nouvel onglet du volet cible. Dans le cas contraire, il tente d’ancrer le volet vers le côté du volet cible, ce qui implique la création d’un conteneur de volet par un diviseur de volet qui sépare les deux volets.  
+ L’infrastructure appelle cette méthode pour déterminer comment un utilisateur fait glisser un volet d’ancrage. Lorsque l’utilisateur fait glisser un volet sur la zone d’onglet du volet cible, le framework tente d’ajouter comme un nouvel onglet du volet cible. Sinon, il essaie d’ancrer le volet vers le côté du volet cible, ce qui implique la création d’un conteneur de volet par un diviseur de volet qui sépare les deux volets.  
   
- Substituez cette méthode dans un `CTabbedPane`-dérivée de la classe pour modifier ce comportement.  
+ Substituez cette méthode dans un `CTabbedPane`-classe pour modifier ce comportement dérivée.  
   
 ##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- TRUE si la zone d’onglet est située au bas de la fenêtre à onglets. Sinon, FALSE.  
+ TRUE si la zone d’onglet se trouve en bas de la fenêtre à onglets. Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -300,7 +300,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Définissez cette variable de membre statique sur un pointeur vers les informations de classe runtime un `CMFCTabCtrl`-objet dérivé si vous utilisez une fenêtre à onglets personnalisée à l’intérieur d’un volet à onglets.  
+ Définissez cette variable de membre statique à un pointeur vers les informations de classe runtime un `CMFCTabCtrl`-objet dérivé si vous utilisez une fenêtre à onglets personnalisée à l’intérieur d’un volet à onglets.  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  Rétablit l'état par défaut de tous les volets à onglets.  
@@ -324,7 +324,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
  Contient le tableau de couleurs à définir.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour personnaliser la liste de couleurs qui sont utilisées lors de la fonctionnalité de couleur automatique est activée. Ceci est une fonction statique et affecte tous les onglets des volets dans votre application.  
+ Utilisez cette méthode pour personnaliser la liste des couleurs qui sont utilisées lorsque la fonctionnalité de couleur automatique est activée. Ceci est une fonction statique et affecte à tous les onglets des volets dans votre application.  
   
  Utilisez [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) pour activer ou désactiver la fonctionnalité de couleur automatique.  
   

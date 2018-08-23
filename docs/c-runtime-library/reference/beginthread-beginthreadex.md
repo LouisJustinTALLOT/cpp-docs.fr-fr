@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704657"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571882"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -90,20 +90,20 @@ Adresse de début d'une routine qui commence l'exécution d'un nouveau thread. P
 Taille de la pile d'un nouveau thread ou 0.
 
 *arglist*<br/>
-Liste d’arguments à passer à un nouveau thread ou **NULL**.
+Liste d’arguments à passer à un nouveau thread, ou **NULL**.
 
 *Sécurité*<br/>
 Pointeur vers une structure [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) qui détermine si le handle retourné peut être hérité par des processus enfants. Si *sécurité* est **NULL**, le handle ne peut pas être hérité. Doit être **NULL** pour les applications Windows 95.
 
 *initflag*<br/>
-Indicateurs qui contrôlent l'état initial d'un nouveau thread. Définissez *initflag* sur 0 pour une exécution immédiate, ou sur **CREATE_SUSPENDED** pour créer le thread dans un état suspendu ; utilisez [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) pour exécuter le thread. Définissez *initflag* à **STACK_SIZE_PARAM_IS_A_RESERVATION** indicateur à utiliser pour *stack_size* comme taille de la pile en octets de réserve initial ; si cet indicateur n’est pas spécifié, *stack_size* spécifie la taille de validation.
+Indicateurs qui contrôlent l'état initial d'un nouveau thread. Définissez *initflag* sur 0 pour une exécution immédiate, ou sur **CREATE_SUSPENDED** pour créer le thread dans un état suspendu ; utilisez [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) pour exécuter le thread. Définissez *initflag* à **STACK_SIZE_PARAM_IS_A_RESERVATION** indicateur à utiliser *stack_size* comme taille de la pile en octets de la réserve initial ; si cet indicateur n’est pas spécifié, *stack_size* spécifie la taille de validation.
 
 *thrdaddr*<br/>
 Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. S’il s’agit **NULL**, il n’est pas utilisé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, chacune de ces fonctions retourne un handle au thread nouvellement créé. Toutefois, si le nouveau thread se ferme trop rapidement, **_beginthread** peut ne pas retourner un handle valide. (Consultez la discussion dans la section Notes.) En cas d’erreur, **_beginthread** retourne-1 L, et **errno** a la valeur **EAGAIN** si il y a trop de threads, la valeur **EINVAL** si l’argument est non valide ou la taille de pile est incorrecte, ou la valeur **EACCES** si les ressources sont insuffisantes (par exemple la mémoire). En cas d’erreur, **_beginthreadex** renvoie la valeur 0, et **errno** et **_doserrno** sont définies.
+En cas de réussite, chacune de ces fonctions retourne un handle vers le thread nouvellement créé ; Toutefois, si le nouveau thread se ferme trop rapidement, **_beginthread** peut ne pas retourner un handle valide. (Consultez la discussion dans la section Notes.) En cas d’erreur, **_beginthread** retourne-1 L, et **errno** a la valeur **EAGAIN** s’il existe trop de threads, à **EINVAL** si l’argument est non valide ou la taille de pile est incorrecte, ou la valeur **EACCES** si les ressources sont insuffisantes (tels que la mémoire). En cas d’erreur, **_beginthreadex** retourne 0, et **errno** et **_doserrno** sont définies.
 
 Si *start_address* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
 
@@ -115,34 +115,34 @@ Pour plus d’informations sur **uintptr_t**, consultez [Types Standard](../../c
 
 Le **_beginthread** fonction crée un thread qui commence l’exécution d’une routine à *start_address*. La routine à *start_address* doit utiliser le **__cdecl** (pour le code natif) ou **__clrcall** (pour le code managé) convention d’appel et ne doit avoir aucune valeur de retour. Lorsque le thread retourne de cette routine, il est terminé automatiquement. Pour plus d’informations sur les threads, consultez [Prise en charge du multithreading pour le code plus ancien (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-**_beginthreadex** ressemble à Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API plus étroitement à **_beginthread** est. **_beginthreadex** diffère **_beginthread** comme suit :
+**_beginthreadex** ressemble à Win32 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) API plus étroitement à **_beginthread** est. **_beginthreadex** diffère **_beginthread** comme suit :
 
-- **_beginthreadex** a trois paramètres supplémentaires : *initflag*, *sécurité*, et **threadaddr**. Le nouveau thread peuvent être créé dans un état suspendu, avec une sécurité spécifiée et sont accessibles à l’aide de *thrdaddr*, qui est l’identificateur du thread.
+- **_beginthreadex** a trois paramètres supplémentaires : *initflag*, *sécurité*, et **threadaddr**. Le nouveau thread peut être créé dans un état suspendu, avec une sécurité spécifiée et sont accessibles à l’aide de *thrdaddr*, qui est l’identificateur du thread.
 
-- La routine à *start_address* qui est passé à **_beginthreadex** doit utiliser le **__stdcall** (pour le code natif) ou **__clrcall** (pour code managé) convention d’appel et doit retourner un code de sortie de thread.
+- La routine à *start_address* qui est passé à **_beginthreadex** doit utiliser le **__stdcall** (pour le code natif) ou **__clrcall** (pour code managé) convention d’appel et doit retourner un code de sortie du thread.
 
 - **_beginthreadex** retourne 0 en cas d’échec, plutôt que-1 L.
 
 - Un thread qui est créé à l’aide de **_beginthreadex** se termine par un appel à [_endthreadex](endthread-endthreadex.md).
 
-Le **_beginthreadex** fonction vous donne davantage de contrôle sur la création du thread que **_beginthread** est. Le **_endthreadex** fonction est également plus flexible. Par exemple, avec **_beginthreadex**, vous pouvez utiliser les informations de sécurité, définir l’état initial du thread (en cours d’exécution ou suspendu) et obtenir l’identificateur du thread du thread nouvellement créé. Vous pouvez également utiliser le handle du thread qui est retourné par **_beginthreadex** avec l’API de synchronisation, ce que vous ne pouvez pas faire avec **_beginthread**.
+Le **_beginthreadex** fonction vous donne davantage de contrôle sur la façon dont le thread est créé que **_beginthread** est. Le **_endthreadex** fonction est également plus flexible. Par exemple, avec **_beginthreadex**, vous pouvez utiliser les informations de sécurité, définir l’état initial du thread (en cours d’exécution ou suspendu) et obtenir l’identificateur du thread du thread nouvellement créé. Vous pouvez également utiliser le handle du thread qui est retourné par **_beginthreadex** avec l’API de synchronisation, ce que vous ne pouvez pas faire avec **_beginthread**.
 
-Il est recommandé d’utiliser **_beginthreadex** à **_beginthread**. Si le thread qui est généré par **_beginthread** se ferme rapidement, le handle qui est retourné à l’appelant de **_beginthread** peut être non valide ou pointer vers un autre thread. Toutefois, le handle qui est retourné par **_beginthreadex** a été fermée par l’appelant de **_beginthreadex**il agit donc forcément d’un handle valid si **_beginthreadex** n’a pas retourné une erreur.
+Il est préférable d’utiliser **_beginthreadex** à **_beginthread**. Si le thread qui est généré par **_beginthread** se ferme rapidement, le handle est retourné à l’appelant de **_beginthread** peut être non valide ou pointe vers un autre thread. Toutefois, le handle retourné par **_beginthreadex** a été fermée par l’appelant de **_beginthreadex**, donc il est garanti pour être un handle valide si **_beginthreadex** n’a pas retourné une erreur.
 
-Vous pouvez appeler [_endthread](endthread-endthreadex.md) ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelée automatiquement lorsque le thread retourne de la routine qui est passée en tant que paramètre. Terminer un thread avec un appel à **_endthread** ou **_endthreadex** vous aide à garantir une récupération correcte des ressources sont allouées pour le thread.
+Vous pouvez appeler [_endthread](endthread-endthreadex.md) ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelée Lorsque le thread retourne automatiquement à partir de la routine qui est passée en tant que paramètre. Arrêt d’un thread avec un appel à **_endthread** ou **_endthreadex** permet de garantir une récupération correcte des ressources allouées pour le thread.
 
-**_endthread** se ferme automatiquement le handle du thread, tandis que **_endthreadex** n’est pas. Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Ce comportement diffère de l’API [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) Win32.
+**_endthread** ferme automatiquement le handle du thread, tandis que **_endthreadex** pas. Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Ce comportement diffère de l’API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32.
 
 > [!NOTE]
-> Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas Win32 **ExitThread** API afin que vous n’empêchent pas le système runtime de récupérer les ressources allouées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appelez **ExitThread**.
+> Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas Win32 **ExitThread** API afin que vous n’empêchent pas le système d’exécution ne peut pas récupérer de ressources affectées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appellent **ExitThread**.
 
-Le système d’exploitation gère l’allocation de la pile lorsque soit **_beginthread** ou **_beginthreadex** est appelé ; vous n’êtes pas obligé de passer l’adresse de la pile des threads à une de ces fonctions. En outre, le *stack_size* argument peut être 0, dans lequel cas le système d’exploitation utilise la même valeur que la pile est spécifiée pour le thread principal.
+Le système d’exploitation gère l’allocation de la pile lorsque soit **_beginthread** ou **_beginthreadex** est appelée ; vous n’êtes pas obligé de passer l’adresse de la pile des threads à une de ces fonctions. En outre, le *stack_size* argument peut être 0, auquel cas le système d’exploitation utilise la même valeur que la pile est spécifiée pour le thread principal.
 
-*arglist* est un paramètre à passer au thread nouvellement créé. En général, il s'agit de l'adresse d'un élément de donnée, tel qu'une chaîne de caractères. *arglist* peut être **NULL** s’il n’est pas nécessaire, mais **_beginthread** et **_beginthreadex** doit comporter une valeur à passer au nouveau thread. Tous les threads sont arrêtés si un thread appelle [abandonner](abort.md), **quitter**, **_exit**, ou **ExitProcess**.
+*arglist* est un paramètre à passer au thread nouvellement créé. En général, il s'agit de l'adresse d'un élément de donnée, tel qu'une chaîne de caractères. *arglist* peut être **NULL** s’il n’est pas nécessaire, mais **_beginthread** et **_beginthreadex** doivent disposer d’une valeur à passer au nouveau thread. Tous les threads sont arrêtés si un thread appelle [abandonner](abort.md), **quitter**, **_exit**, ou **ExitProcess**.
 
-Les paramètres régionaux du nouveau thread sont initialisé en utilisant les informations de paramètres régionaux globaux actuel par processus. Si les paramètres régionaux par thread sont activé par un appel à [_configthreadlocale](configthreadlocale.md) (globalement ou pour de nouveaux threads uniquement), le thread peut modifier ses paramètres régionaux indépendamment des autres threads en appelant **setlocale** ou **_wsetlocale**. Les threads qui n’ont pas l’indicateur de paramètres régionaux par thread définie peuvent affecter les informations de paramètres régionaux dans tous les autres threads qui ne possèdent également l’indicateur de paramètres régionaux par thread défini, ainsi que tous les threads qui vient d’être créé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les paramètres régionaux du nouveau thread sont initialisé en utilisant les informations de paramètres régionaux globaux actuelles par processus. Si les paramètres régionaux par thread sont activé par un appel à [_configthreadlocale](configthreadlocale.md) (globalement ou pour de nouveaux threads uniquement), le thread peut modifier ses paramètres régionaux indépendamment d’autres threads en appelant **setlocale** ou **_wsetlocale**. Les threads qui n’ont pas l’indicateur de paramètres régionaux par thread définie peuvent affecter les informations de paramètres régionaux dans tous les autres threads qui également n’ont pas l’indicateur de paramètres régionaux par thread défini, ainsi que tous les threads qui vient d’être créé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Pour **/CLR** code, **_beginthread** et **_beginthreadex** ont chacun deux surcharges. L’une prend un pointeur de fonction à convention d’appel native, et l’autre prend un **__clrcall** pointeur de fonction. La première surcharge n'est pas sécurisée au niveau du domaine d'application et ne le sera jamais. Si vous écrivez **/CLR** code, vous devez vous assurer que le nouveau thread accède le domaine d’application correct avant d’accéder à des ressources managées. Pour cela, vous pouvez par exemple utiliser la [fonction call_in_appdomain](../../dotnet/call-in-appdomain-function.md). La seconde surcharge est application domaine-safe ; le nouveau thread finit toujours dans le domaine d’application de l’appelant de **_beginthread** ou **_beginthreadex**.
+Pour **/CLR** code, **_beginthread** et **_beginthreadex** ont chacun deux surcharges. Une prend un pointeur de fonction de convention d’appel native, et l’autre prend un **__clrcall** pointeur de fonction. La première surcharge n'est pas sécurisée au niveau du domaine d'application et ne le sera jamais. Si vous écrivez **/CLR** code, vous devez vous assurer que le nouveau thread accède le domaine d’application correct avant d’accéder à des ressources managées. Pour cela, vous pouvez par exemple utiliser la [fonction call_in_appdomain](../../dotnet/call-in-appdomain-function.md). La deuxième surcharge est application domaine-safe. le nouveau thread finit toujours dans le domaine d’application de l’appelant de **_beginthread** ou **_beginthreadex**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -157,7 +157,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Uniquement les versions multithread des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md) .
 
-Pour utiliser **_beginthread** ou **_beginthreadex**, l’application doit être liée à une des bibliothèques multithread Runtime C.
+Pour utiliser **_beginthread** ou **_beginthreadex**, l’application doit établir une liaison avec l’une des bibliothèques Runtime C multithreads.
 
 ## <a name="example"></a>Exemple
 
@@ -218,7 +218,7 @@ void CheckKey( void * ignored )
     repeat = 0;    // _endthread implied
 }
 
-// Bounce - Thread to create and and control a colored letter that moves
+// Bounce - Thread to create and control a colored letter that moves
 // around on the screen.
 //
 // Params: parg - the value to create the character from
@@ -281,7 +281,7 @@ Appuyez sur n'importe quelle touche pour fermer l'exemple d'application.
 
 ## <a name="example"></a>Exemple
 
-L’exemple de code suivant montre comment vous pouvez utiliser le handle du thread qui est retourné par **_beginthreadex** avec l’API de synchronisation [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx). Le thread principal attend que le second thread se termine avant de continuer. Lorsque le deuxième thread appelle **_endthreadex**, il fait son objet thread accéder à l’état signalé. Le thread principal peut ainsi continuer à s'exécuter. Cette opération ne peut pas être effectuée avec **_beginthread** et **_endthread**, car **_endthread** appelle **CloseHandle**, qui détruit le thread objet avant qu’il peut être défini à l’état signalé.
+L’exemple de code suivant montre comment vous pouvez utiliser le handle du thread qui est retourné par **_beginthreadex** avec l’API de synchronisation [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject). Le thread principal attend que le second thread se termine avant de continuer. Lorsque le deuxième thread appelle **_endthreadex**, elle entraîne son objet thread accéder à l’état signalé. Le thread principal peut ainsi continuer à s'exécuter. Cela ne peut pas être effectuée avec **_beginthread** et **_endthread**, car **_endthread** appels **CloseHandle**, ce qui supprime le thread objet avant qu’il peut être défini à l’état signalé.
 
 ```cpp
 // crt_begthrdex.cpp

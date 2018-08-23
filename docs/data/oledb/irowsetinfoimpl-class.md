@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337071"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571961"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
-Fournit une implémentation pour le [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) interface.  
+Fournit une implémentation pour le [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetInfo::GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) dans le *de référence du programmeur OLE DB*. 
+ Consultez [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’applique un signet.  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet. 
+ Consultez [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) dans le *de référence du programmeur OLE DB*.  
+ Consultez [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer des propriétés de l’objet de source de données.  

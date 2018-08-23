@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340415"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572471"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Référence des modèles du fournisseur OLE DB
 Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être regroupées dans les catégories suivantes. La documentation de référence inclut également des informations sur le [macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -60,7 +60,7 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
  Ouvre et retourne un ensemble de lignes qui inclut toutes les lignes à partir d’une seule table de base ou un index. Interface obligatoire pour un objet de session.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implémente la norme OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interface, ce qui permet la mise à jour des valeurs de colonnes dans les lignes existantes, la suppression de lignes et l’insertion de nouvelles lignes.  
+ Implémente la norme OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interface, ce qui permet la mise à jour des valeurs de colonnes dans les lignes existantes, la suppression de lignes et l’insertion de nouvelles lignes.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
  Cette classe hérite de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) et remplace [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` effectue les mêmes fonctions que `IObjectWithSite` mais permet également les propriétés OLE DB `DBPROPCANSCROLLBACKWARDS` et `DBPROPCANFETCHBACKWARDS`.  
@@ -75,13 +75,13 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
  Implémente les propriétés de l’ensemble de lignes à l’aide de la propriété jeu plan défini dans votre classe de commande. Interface obligatoire sur les ensembles de lignes.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Implémente la norme OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes. Pour prendre en charge des signets de OLE DB dans un ensemble de lignes, vérifiez l’ensemble de lignes à hériter de cette classe.  
+ Implémente la norme OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes. Pour prendre en charge des signets de OLE DB dans un ensemble de lignes, vérifiez l’ensemble de lignes à hériter de cette classe.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implémente des fonctions pour informer les écouteurs sur le point de connexion de diffusion `IID_IRowsetNotify` des modifications apportées au contenu de l’ensemble de lignes. Implémentent des consommateurs qui gèrent les notifications [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) et l’inscrire sur ce point de connexion.  
+ Implémente des fonctions pour informer les écouteurs sur le point de connexion de diffusion `IID_IRowsetNotify` des modifications apportées au contenu de l’ensemble de lignes. Implémentent des consommateurs qui gèrent les notifications [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) et l’inscrire sur ce point de connexion.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implémente la norme OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) interface, ce qui permet aux consommateurs de retarder la transmission des modifications apportées avec [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) à source de données et annuler les modifications avant la transmission.  
+ Implémente la norme OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interface, ce qui permet aux consommateurs de retarder la transmission des modifications apportées avec [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) à source de données et annuler les modifications avant la transmission.  
   
 ## <a name="command-classes"></a>Classes de commande  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implémente la norme OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interface, ajout d’enregistrements à et récupérer des enregistrements d’un membre de données.  
+ Implémente la norme OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interface, ajout d’enregistrements à et récupérer des enregistrements d’un membre de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   

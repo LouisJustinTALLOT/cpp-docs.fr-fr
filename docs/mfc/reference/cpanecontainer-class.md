@@ -1,5 +1,5 @@
 ---
-title: Classe de CPaneContainer | Documents Microsoft
+title: Cpanecontainer, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079473"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540836"
 ---
-# <a name="cpanecontainer-class"></a>Classe de CPaneContainer
-La `CPaneContainer` classe est un composant de base du modèle d’ancrage implémenté par MFC. Un objet de cette classe stocke des pointeurs vers deux volets d'ancrage ou deux instances `CPaneContainer.` . Il stocke aussi un pointeur vers le séparateur qui sépare les volets (ou les conteneurs). En imbriquant des conteneurs dans des conteneurs, l’infrastructure peut générer un arbre binaire qui représente des dispositions d’ancrage complexes. La racine de l’arborescence binaire est stockée dans un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objet.  
+# <a name="cpanecontainer-class"></a>Cpanecontainer, classe
+Le `CPaneContainer` classe est un composant de base du modèle d’ancrage implémenté par MFC. Un objet de cette classe stocke des pointeurs vers deux volets d'ancrage ou deux instances `CPaneContainer.` . Il stocke aussi un pointeur vers le séparateur qui sépare les volets (ou les conteneurs). En imbriquant des conteneurs dans des conteneurs, l’infrastructure peut générer un arbre binaire qui représente des dispositions d’ancrage complexes. La racine de l’arborescence binaire est stockée dans un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objet.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
  
 ## <a name="syntax"></a>Syntaxe  
   

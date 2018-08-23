@@ -1,5 +1,5 @@
 ---
-title: Les API ANSI déconseillées | Documents Microsoft
+title: Les API ANSI déconseillées | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342057"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539843"
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI déconseillées
-Migration de la bibliothèque Microsoft Foundation classes (MFC) vers les classes et méthodes qui sont basées sur le jeu de caractères Unicode. Par conséquent, les versions ANSI de plusieurs méthodes MFC sont déconseillées. Utilisez les versions Unicode de ces méthodes dans vos applications futures.  
+La bibliothèque Microsoft Foundation classes (MFC) est la migration vers les classes et méthodes qui sont basées sur le jeu de caractères Unicode. Par conséquent, les versions ANSI de plusieurs méthodes MFC sont déconseillées. Utilisez les versions Unicode de ces méthodes dans vos futures applications.  
   
- En commençant par les contrôles communs Windows version 6.1, qui est fourni avec [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], les méthodes ANSI suivantes sont déconseillées.  
+ À partir de contrôles communs Windows version 6.1, qui est fourni avec Windows Vista, les méthodes ANSI suivantes sont déconseillées.  
   
-## <a name="cbutton-class"></a>Classe de CButton  
+## <a name="cbutton-class"></a>CButton, classe  
   
 ```  
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
@@ -60,8 +60,8 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
 ```  
   
-## <a name="clinkctrl-class"></a>Classe de CLinkCtrl  
- L’ensemble de la classe est déconseillée.  
+## <a name="clinkctrl-class"></a>CLinkCtrl, classe  
+ La classe entière est déconseillée.  
   
 ## <a name="clistctrl-class"></a>CListCtrl (classe)  
   

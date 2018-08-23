@@ -1,5 +1,5 @@
 ---
-title: Classe de CPaneContainerManager | Documents Microsoft
+title: Cpanecontainermanager, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079375"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541438"
 ---
-# <a name="cpanecontainermanager-class"></a>Classe de CPaneContainerManager
-La `CPaneContainerManager` classe gère le stockage et l’affichage de la disposition d’ancrage actuelle.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cpanecontainermanager-class"></a>Cpanecontainermanager, classe
+Le `CPaneContainerManager` classe gère le stockage et l’affichage de la disposition d’ancrage actuelle.  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -191,7 +191,7 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Notes  
- L’infrastructure crée automatiquement les instances de `CPaneContainerManager` des objets et les incorpore soit en [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md) objets ou dans [CMultiPaneFrameWnd classe](../../mfc/reference/cmultipaneframewnd-class.md) objets.  
+ L’infrastructure crée automatiquement des instances de `CPaneContainerManager` les objets et les incorpore soit dans [cpanedivider, classe](../../mfc/reference/cpanedivider-class.md) objets ou dans [cmultipaneframewnd, classe](../../mfc/reference/cmultipaneframewnd-class.md) objets.  
   
  Le `CPaneContainerManager` classe stocke un pointeur vers la racine d’une arborescence binaire qui est construite à partir [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) objets.  
   
@@ -907,5 +907,5 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Classe de CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
+ [Cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md)   
  [CPaneDivider, classe](../../mfc/reference/cpanedivider-class.md)

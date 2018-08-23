@@ -1,5 +1,5 @@
 ---
-title: omp | Documents Microsoft
+title: omp | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849468"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544398"
 ---
 # <a name="omp"></a>omp
 Prend une ou plusieurs directives OpenMP, ainsi que toutes les clauses directives facultatives.  
@@ -31,12 +31,13 @@ Prend une ou plusieurs directives OpenMP, ainsi que toutes les clauses directive
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Consultez [Directives OpenMP](../parallel/openmp/reference/openmp-directives.md) pour plus d’informations.  
+ 
+Consultez [Directives OpenMP](../parallel/openmp/reference/openmp-directives.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

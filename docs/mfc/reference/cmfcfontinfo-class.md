@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852417"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543174"
 ---
 # <a name="cmfcfontinfo-class"></a>Cmfcfontinfo, classe
 Le `CMFCFontInfo` classe décrit le nom et autres attributs d’une police.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Valeur de retour  
   
 ### <a name="remarks"></a>Notes  
- Cette documentation utilise les termes du contrat *jeu de caractères* et *script* indifféremment. Un *script*, qui est également connu sous un système d’écriture, est une collection de caractères et des règles pour l’écriture de ces caractères dans une ou plusieurs langues. La collection de caractères inclut l’alphabet et les signes de ponctuation utilisés dans ce script. Par exemple, script Latin est utilisé pour l’anglais comme il est parlé aux États-Unis, et son alphabet inclut les caractères de A à Z. Le `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure spécifie un jeu de caractères. Par exemple, la valeur ANSI_CHARSET Spécifie le [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] jeu de caractères, ce qui inclut l’alphabet du script Latin.  
+ Cette documentation utilise les termes du contrat *jeu de caractères* et *script* indifféremment. Un *script*, qui est également connu sous un système d’écriture, est une collection de caractères et des règles pour l’écriture de ces caractères dans une ou plusieurs langues. La collection de caractères inclut l’alphabet et les signes de ponctuation utilisés dans ce script. Par exemple, script Latin est utilisé pour l’anglais comme il est parlé aux États-Unis, et son alphabet inclut les caractères de A à Z. Le `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure spécifie un jeu de caractères. Par exemple, la valeur ANSI_CHARSET Spécifie le jeu de caractères ANSI, ce qui inclut l’alphabet du script Latin.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Récupère les noms concaténés d’une police et son caractère du jeu (script).  

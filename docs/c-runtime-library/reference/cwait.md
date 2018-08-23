@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 64d312c75dcbebd968760c5f7d09d8458e68e4b0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572847"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -62,33 +62,33 @@ intptr_t _cwait(
 Pointeur vers une mémoire tampon où le code de résultat du processus spécifié sera stocké, ou **NULL**.
 
 *procHandle*<br/>
-Le handle pour le processus à attendre (autrement dit, le processus qui doit se terminer avant **_cwait** peut retourner).
+Le handle vers le processus à attendre (autrement dit, le processus qui doit se terminer avant **_cwait** peut retourner).
 
 *action*<br/>
-NULL : L’ignoré par les applications de système d’exploitation Windows ; pour d’autres applications : code d’action à effectuer sur *procHandle*.
+NULL : Ignoré par les applications du système d’exploitation Windows ; pour d’autres applications : code d’action à effectuer sur *procHandle*.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Lorsque le processus spécifié terminé, retourne le handle du processus spécifié et définit *termstat* pour le code de résultat retourné par le processus spécifié. Sinon, retourne -1 et définit **errno** comme suit.
+Lorsque le processus spécifié est terminée, retourne le handle du processus spécifié et définit *termstat* le code de résultat retourné par le processus spécifié. Sinon, retourne -1 et définit **errno** comme suit.
 
 |Value|Description|
 |-----------|-----------------|
-|**ECHILD**|Aucun processus spécifié n’existe, *procHandle* n’est pas valide ou l’appel à la [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) ou [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) échoué de l’API.|
+|**ECHILD**|Aucun processus spécifié existe, *procHandle* n’est pas valide, ou l’appel à la [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) échoué de l’API.|
 |**EINVAL**|*action* n’est pas valide.|
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_cwait** fonction attend l’arrêt de l’ID de processus du processus spécifié qui est fournie par *procHandle*. La valeur de *procHandle* qui est passé à **_cwait** doit avoir la valeur retournée par l’appel à la [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) fonction qui a créé le processus spécifié. Si l’ID de processus se termine avant **_cwait** est appelée, **_cwait** retourne immédiatement. **_cwait** peut être utilisé par n’importe quel processus pour attendre tout autre processus connu pour lequel un handle valide (*procHandle*) existe.
+Le **_cwait** fonction doit attendre l’arrêt de l’ID de processus du processus spécifié qui est fournie par *procHandle*. La valeur de *procHandle* qui est passé à **_cwait** doit avoir la valeur retournée par l’appel à la [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) fonction qui a créé le processus spécifié. Si l’ID de processus se termine avant **_cwait** est appelée, **_cwait** retourne immédiatement. **_cwait** utilisables par n’importe quel processus pour attendre un autre processus connu pour lequel un handle valide (*procHandle*) existe.
 
-*termstat* pointe vers une mémoire tampon où le code de retour du processus spécifié sera stocké. La valeur de *termstat* indique si le processus spécifié s’est terminé normalement en appelant les fenêtres [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API. **ExitProcess** est appelée en interne si le processus spécifié appelle **quitter** ou **_exit**, quitte **principal**, ou atteint la fin de **principal** . Pour plus d’informations sur la valeur qui est passée par le biais de *termstat*, consultez [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Si **_cwait** est appelée en utilisant un **NULL** valeur *termstat*, le code de retour du processus spécifié n’est pas stocké.
+*termstat* pointe vers une mémoire tampon où le code de retour du processus spécifié sera stocké. La valeur de *termstat* indique si le processus spécifié s’est terminée normalement en appelant le Windows [ExitProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) API. **ExitProcess** est appelée en interne si le processus spécifié appelle **quitter** ou **_exit**, renvoie à partir de **principal**, ou atteint la fin de **principal** . Pour plus d’informations sur la valeur qui est passée par le biais de *termstat*, consultez [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Si **_cwait** est appelée à l’aide un **NULL** valeur *termstat*, le code de retour du processus spécifié n’est pas stocké.
 
 Le *action* paramètre est ignoré par le système d’exploitation Windows, car les relations parent-enfant ne sont pas implémentées dans ces environnements.
 
-À moins que *procHandle* est -1 ou -2 (handles pour le processus en cours ou le thread), le handle est fermé. Ainsi, dans ce cas, n'utilisez pas le handle retourné.
+À moins que *procHandle* est -1 ou -2 (gère le processus en cours ou le thread), le handle est fermé. Ainsi, dans ce cas, n'utilisez pas le handle retourné.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

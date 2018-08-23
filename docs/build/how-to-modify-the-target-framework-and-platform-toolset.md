@@ -1,5 +1,5 @@
 ---
-title: 'Comment : modifier le Framework cible et un ensemble d’outils de plateforme | Documents Microsoft'
+title: 'Comment : modifier le Framework cible et un ensemble d’outils de plateforme | Microsoft Docs'
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371900"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572479"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme
-Vous pouvez modifier les paramètres de projet Visual C++ pour cibler différentes versions du .NET Framework et utiliser des ensembles d’outils de plateforme différente. Par défaut, le système de projet utilise la version du. Net Framework et la version de l'ensemble d'outils qui correspondent à la version de Visual Studio que vous utilisez pour créer le projet. Vous pouvez changer l'ensemble d'outils de plateforme cible en modifiant les propriétés du projet. Vous pouvez changer la version cible du .Net Framework en modifiant le fichier projet (.vcxproj). Vous n'avez pas besoin de conserver une base de code distincte pour chaque cible de compilation.  
+Vous pouvez modifier les paramètres de projet Visual C++ pour cibler différentes versions du .NET Framework et d’utiliser des ensembles d’outils de plateforme différente. Par défaut, le système de projet utilise la version du. Net Framework et la version de l'ensemble d'outils qui correspondent à la version de Visual Studio que vous utilisez pour créer le projet. Vous pouvez changer l'ensemble d'outils de plateforme cible en modifiant les propriétés du projet. Vous pouvez changer la version cible du .Net Framework en modifiant le fichier projet (.vcxproj). Vous n'avez pas besoin de conserver une base de code distincte pour chaque cible de compilation.  
   
 > [!IMPORTANT]
->  Certaines éditions ne prennent pas en charge les versions cibles du. Net Framework modifiées ou les ensembles d'outils de plateforme. Pour plus d’informations sur la compatibilité, consultez [Port, migration et mise à niveau des projets Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
+>  Certaines éditions ne prennent pas en charge les versions cibles du. Net Framework modifiées ou les ensembles d'outils de plateforme. Pour plus d’informations sur la compatibilité, consultez [porter, migrer et mettre à niveau des projets Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
   
  Lorsque vous changez le Framework cible, remplacez également l'ensemble d'outils de plateforme par une version qui prend en charge ce Framework. Par exemple, pour cibler le .NET Framework 4.5, vous devez utiliser un ensemble d’outils de plateforme compatible, comme Visual Studio 2015 (v140), Visual Studio 2013 (v120) ou Visual Studio 2012 (v110). Vous pouvez utiliser l'ensemble d'outils de plateforme **Windows7.1SDK** pour cibler les .NET Framework 2.0, 3.0, 3.5 et 4 et les plateformes x86, Itanium et x64.  
   
@@ -63,7 +63,7 @@ Vous pouvez modifier les paramètres de projet Visual C++ pour cibler différent
   
 3.  Dans le volet gauche de la boîte de dialogue, développez **Propriétés de configuration** , puis sélectionnez **Général**.  
   
-4.  Dans le volet droit, sélectionnez **Ensemble d'outils de plateforme** , puis sélectionnez l'ensemble d'outils de votre choix dans la liste déroulante. Par exemple, si vous avez installé l'ensemble d'outils [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] , sélectionnez **Visual Studio 2010 (v100)** pour l'utiliser pour votre projet.  
+4.  Dans le volet droit, sélectionnez **Ensemble d'outils de plateforme** , puis sélectionnez l'ensemble d'outils de votre choix dans la liste déroulante. Par exemple, si vous avez installé l’ensemble d’outils de Visual Studio 2010, sélectionnez **Visual Studio 2010 (v100)** à utiliser pour votre projet.  
   
 5.  Sélectionnez le bouton **OK** .  
   

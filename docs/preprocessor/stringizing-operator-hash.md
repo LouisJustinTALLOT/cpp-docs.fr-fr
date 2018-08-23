@@ -1,5 +1,5 @@
 ---
-title: Opérateur d’enchaînement (#) | Documents Microsoft
+title: Opérateur d’enchaînement (#) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7891b03fe80b5ad91ad52cf4577d237350d4584c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bbb1aa7db586a4b45084883491c8869b434eb8b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841697"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543141"
 ---
 # <a name="stringizing-operator-"></a>Opérateur d'enchaînement (#)
-Le signe ou opérateur de « chaîne » (**#**) convertit les paramètres de macro en littéraux de chaîne sans développer la définition de paramètre. Il est utilisé uniquement avec les macros qui acceptent des arguments. S'il précède un paramètre formel dans la définition de la macro, l'argument réel passé par l'appel de macro est entre guillemets et traité en tant que littéral de chaîne. Le littéral de chaîne remplace alors chaque occurrence d'une combinaison de l'opérateur de chaîne et du paramètre formel dans la définition de macro.  
+L’opérateur « chaîne » ou le signe dièse (**#**) convertit les paramètres de macro en littéraux de chaîne sans développer la définition du paramètre. Il est utilisé uniquement avec les macros qui acceptent des arguments. S'il précède un paramètre formel dans la définition de la macro, l'argument réel passé par l'appel de macro est entre guillemets et traité en tant que littéral de chaîne. Le littéral de chaîne remplace alors chaque occurrence d'une combinaison de l'opérateur de chaîne et du paramètre formel dans la définition de macro.  
   
 > [!NOTE]
->  L’extension Microsoft C (versions 6.0 et antérieures) de la norme C ANSI, qui développait auparavant les arguments formels de macro apparaissant dans les littéraux de chaîne et les constantes caractère, n’est plus prise en charge. Code qui reposait sur cette extension doit être réécrit à l’aide de l’enchaînement (**#**) (opérateur).  
+> L’extension Microsoft C (versions 6.0 et antérieures) de la norme C ANSI, qui développait auparavant les arguments formels de macro apparaissant dans les littéraux de chaîne et les constantes caractère, n’est plus prise en charge. Code qui reposait sur cette extension doit être réécrite à l’aide de l’enchaînement (**#**) opérateur.  
   
 L’espace blanc qui précède le premier jeton de l’argument réel ou qui suit le dernier jeton de l’argument réel est ignoré. Tout espace blanc situé entre les jetons dans l’argument réel est réduit à un espace blanc unique dans le littéral de chaîne résultant. Ainsi, si un commentaire figure entre deux jetons de l'argument réel, il est réduit à un espace blanc unique. Le littéral de chaîne résultant est automatiquement concaténé avec tous les littéraux de chaîne adjacents dont il est séparé uniquement par un espace blanc.  
   
-En outre, si un caractère inclus dans l’argument requiert généralement une séquence d’échappement lorsqu’il est utilisé dans un littéral de chaîne (par exemple, un guillemet (**»**) ou barre oblique inverse (**\\**) caractères), le barre oblique inverse d’échappement requise est automatiquement insérée avant ce caractère.  
+En outre, si un caractère contenu dans l’argument généralement requiert une séquence d’échappement lorsqu’il est utilisé dans un littéral de chaîne (par exemple, le guillemet (**»**) ou barre oblique inverse (**\\**) caractères), le barre oblique inverse d’échappement nécessaire est automatiquement insérée avant le caractère.  
   
-L’opérateur d’enchaînement Visual C++ ne se comporte pas correctement lorsqu’elle est utilisée avec des chaînes qui contiennent des séquences d’échappement. Dans ce cas, le compilateur génère [erreur du compilateur C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).  
+L’opérateur d’enchaînement Visual C++ ne se comporte pas correctement lorsqu’elle est utilisée avec des chaînes qui incluent des séquences d’échappement. Dans ce cas, le compilateur génère [erreur du compilateur C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="examples"></a>Exemples  
+
 L'exemple ci-dessous illustre une définition de macro incluant l'opérateur de chaîne et une fonction principale qui appelle la macro :  
   
 Ces appels sont développés pendant le prétraitement et génèrent le code suivant :  
@@ -70,8 +71,7 @@ In quotes in the printf function call
 "In quotes when printed to the screen"  
 "This: \"  prints an escaped double quote"  
 ```  
-  
-## <a name="example"></a>Exemple  
+ 
 L’exemple suivant montre comment développer un paramètre de macro :  
   
 ```cpp  
@@ -86,4 +86,5 @@ FB1(F B)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md)
+ 
+[Opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md)

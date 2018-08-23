@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397351"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572538"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -67,7 +68,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *offset*<br/>
@@ -82,9 +83,9 @@ Identique à [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md), respe
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions sont les versions sans verrouillage de [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md), respectivement. Ceux-ci sont identiques aux [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md) , sauf qu’elles ne sont pas protégés contre les interférences par d’autres threads. Ces fonctions peuvent être plus rapides, car elles n’entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+Ces fonctions sont les versions sans verrouillage de [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md), respectivement. Ceux-ci sont identiques aux [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md) , à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Ces fonctions peuvent être plus rapides, car elles n’entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

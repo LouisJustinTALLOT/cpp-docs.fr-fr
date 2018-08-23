@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce42a1e14e3de77b8ac10c67a8f15b6ee3f080f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019954"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578686"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator=, opérateur
-Assigne le texte spécifié (déplace) **Mutex** objet actuel **Mutex** objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-Mutex& operator=(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *h*  
- Une référence rvalue à un **Mutex** objet.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Une référence à l’actuel **Mutex** objet.  
-  
-## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez le **sémantique déplacer** section de [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>Voir aussi
- [Mutex (classe)](../windows/mutex-class1.md)
+
+Assigne le texte spécifié (déplace) **Mutex** objet actuel **Mutex** objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+Mutex& operator=(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*h*  
+Une référence rvalue à un **Mutex** objet.
+
+## <a name="return-value"></a>Valeur de retour
+
+Une référence à l’actuel **Mutex** objet.
+
+## <a name="remarks"></a>Notes
+
+Pour plus d’informations, consultez le **sémantique déplacer** section de [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+[Mutex (classe)](../windows/mutex-class1.md)

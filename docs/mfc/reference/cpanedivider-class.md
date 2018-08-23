@@ -1,5 +1,5 @@
 ---
-title: Classe de CPaneDivider | Documents Microsoft
+title: Cpanedivider, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079362"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538467"
 ---
-# <a name="cpanedivider-class"></a>Classe de CPaneDivider
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cpanedivider-class"></a>Cpanedivider, classe
+Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
- La `CPaneDivider` classe divise deux volets, divise deux groupes de volets ou sépare un groupe de volets de la zone cliente de la fenêtre frame principale.  
+ Le `CPaneDivider` classe divise deux volets, divise deux groupes de volets ou sépare un groupe de volets de la zone cliente de la fenêtre frame principale.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -163,24 +163,24 @@ class CPaneDivider : public CBasePane
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Retourne la liste des volets qui se trouvent dans le [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les séparateurs de volets par défaut.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Retourne la liste de diviseurs de volet qui résident dans le [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les séparateurs de volets par défaut.|  
+|[CPaneDivider::GetPanes](#getpanes)|Retourne la liste des volets qui se trouvent dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Retourne la liste de diviseurs de volet qui résident dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.|  
   
 ### <a name="data-members"></a>Membres de données  
   
 |Name|Description|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Spécifie la largeur par défaut en pixels de tous les séparateurs de volets de l’application.|  
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contient un pointeur vers les informations de classe runtime sur un `CPaneDivider`-objet dérivé.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Spécifie la largeur par défaut en pixels de tous les diviseurs de volet dans l’application.|  
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contient un pointeur vers les informations de classe runtime concernant un `CPaneDivider`-objet dérivé.|  
   
 ## <a name="remarks"></a>Notes  
- L’infrastructure crée `CPaneDivider` automatiquement des objets quand un volet est ancré.  
+ L’infrastructure crée `CPaneDivider` objets automatiquement lorsqu’un volet est ancré.  
   
  Il existe deux types de diviseurs de volet :  
   
--   un diviseur de volet par défaut est créé lorsqu’un groupe de volets est ancré à un côté de la fenêtre frame principale. Le diviseur de volet par défaut conserve un pointeur vers le [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) et redirige la plupart des opérations sur le groupe de volets (tels que redimensionnement d’un volet ou d’ancrage d’un autre volet ou un conteneur) pour le Gestionnaire de conteneur. Chaque volet d’ancrage conserve un pointeur vers son diviseur de volet par défaut.  
+-   un diviseur de volet par défaut est créé lorsqu’un groupe de volets est ancré à un côté de la fenêtre frame principale. Le diviseur de volet par défaut conserve un pointeur vers le [cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md) et redirige la plupart des opérations sur le groupe de volets (telles que le redimensionnement d’un volet ou d’ancrage d’un autre volet ou conteneur) pour le Gestionnaire de conteneur. Chaque volet d’ancrage conserve un pointeur vers son diviseur de volet par défaut.  
   
--   Un diviseur de volet régulière divise simplement deux volets dans un conteneur. Pour plus d’informations, consultez [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md).  
+-   Un diviseur de volet régulière divise juste deux volets dans un conteneur. Pour plus d’informations, consultez [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment obtenir un objet `CPaneDivider` à partir d'un objet `CWorkspaceBar`. Cet extrait de code fait partie de la [exemple de démonstration des onglets MDI](../../visual-cpp-samples.md).  
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Retourne la liste de diviseurs de volet qui résident dans le [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les séparateurs de volets par défaut.  
+ Retourne la liste de diviseurs de volet qui résident dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Retourne la liste des volets qui se trouvent dans le [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour récupérer des diviseurs de volet par défaut.  
+ Retourne la liste des volets qui se trouvent dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour récupérer des diviseurs de volet par défaut.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -570,7 +570,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth  
- Spécifie la largeur par défaut, en pixels, de tous les séparateurs de volets de l’application.  
+ Spécifie la largeur par défaut, en pixels, de tous les diviseurs de volet dans l’application.  
   
 ```  
 AFX_IMPORT_DATA static int m_nDefaultWidth;  
@@ -592,14 +592,14 @@ virtual void Move(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- Contient un pointeur vers les informations de classe runtime sur un `CPaneDivider`-objet dérivé.  
+ Contient un pointeur vers les informations de classe runtime concernant un `CPaneDivider`-objet dérivé.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Notes  
- Définir cette variable de membre si vous créez un diviseur de volet personnalisé. Cela permet à l’infrastructure créer votre diviseur de volet lorsque le volet est dessiné.  
+ Définissez cette variable de membre si vous créez un diviseur de volet personnalisé. Ainsi, l’infrastructure pour créer votre diviseur de volet lorsque le volet est dessiné.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment définir le `m_pSliderRTC` variable membre :  
@@ -744,7 +744,7 @@ void StoreRecentTabRelatedInfo(
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe de CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)   
- [Classe de CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
- [Classe de CDockingManager](../../mfc/reference/cdockingmanager-class.md)   
+ [Cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md)   
+ [Cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md)   
+ [Cdockingmanager, classe](../../mfc/reference/cdockingmanager-class.md)   
  [CBasePane, classe](../../mfc/reference/cbasepane-class.md)

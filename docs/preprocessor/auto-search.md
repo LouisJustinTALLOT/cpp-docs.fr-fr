@@ -1,5 +1,5 @@
 ---
-title: auto_search | Documents Microsoft
+title: auto_search | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5de12c9db3eec4fe84a93321bdb2d9d96d629ecd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6cea1e1fa31c21a399dace0a58983f97cc87988c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913042"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541552"
 ---
 # <a name="autosearch"></a>auto_search
 **Spécifique à C++**  
   
- Spécifie que, lorsqu'une bibliothèque de types est référencée avec #import et fait elle-même référence à une autre bibliothèque de types, le compilateur peut effectuer une opération #import implicite pour l'autre bibliothèque de types.  
+Spécifie que, lorsqu’une bibliothèque de types est référencée avec `#import` et fait elle-même référence à une autre bibliothèque de types, le compilateur peut effectuer implicite `#import` pour l’autre bibliothèque de types.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,6 +37,7 @@ auto_search
 ## <a name="remarks"></a>Notes  
  **FIN spécifique à C++**  
   
-## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Voir aussi 
+
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

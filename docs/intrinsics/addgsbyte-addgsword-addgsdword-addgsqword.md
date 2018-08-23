@@ -1,5 +1,5 @@
 ---
-title: __addgsbyte, __addgsword, __addgsdword, __addgsqword | Documents Microsoft
+title: __addgsbyte, __addgsword, __addgsdword, __addgsqword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271f5bf7140dff437b6ef0935f8a4c90daabccd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329473"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541245"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Section spécifique à Microsoft**  
   
- Ajoutez une valeur à un emplacement de mémoire spécifié par un décalage par rapport au début de la `GS` segment.  
+ Ajouter une valeur à un emplacement de mémoire spécifié par un offset par rapport au début de la `GS` segment.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,17 +66,17 @@ void __addgsqword(
  [in] `Data`  
  Valeur à ajouter à l’emplacement de mémoire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__addgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__addgsbyte`|X64|  
+|`__addgsword`|X64|  
+|`__addgsdword`|X64|  
+|`__addgsqword`|X64|  
   
 ## <a name="remarks"></a>Notes  
- Ces fonctions intrinsèques sont disponibles en mode noyau uniquement, et ces routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces fonctions intrinsèques sont disponibles en mode noyau uniquement, et ces routines sont uniquement disponibles en tant que fonctions intrinsèques.  
   
 **FIN de la section spécifique à Microsoft**  
   

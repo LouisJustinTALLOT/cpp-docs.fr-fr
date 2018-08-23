@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852521"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539084"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox, classe
 Implémente une zone de liste déroulante contenant une liste de polices. Vous placez la zone de liste déroulante sur un panneau de ruban.  
@@ -149,7 +149,7 @@ CMFCRibbonFontComboBox(
  Pour plus d’informations sur les jeux de caractères valide qui peut être affecté à *nCharSet*et les valeurs valides qui peuvent être affectés à *nPitchAndFamily*, consultez [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) dans le Documentation du Kit de développement logiciel Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

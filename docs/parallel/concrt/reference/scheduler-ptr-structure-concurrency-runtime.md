@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr::structure | Documents Microsoft
+title: scheduler_ptr, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686982"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42543157"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr, Structure
-Représente un pointeur vers un planificateur. Cette classe a pour fonction de permettre la spécification d'une durée de vie partagée à l'aide de shared_ptr ou d'une référence simple à l'aide d'un pointeur brut.  
+Représente un pointeur vers un planificateur. Cette classe existe pour permettre la spécification d’une durée de vie partagée à l’aide de shared_ptr ou simplement une référence simple à l’aide du pointeur brut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `scheduler_ptr`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** pplinterface.h  
   
  **Espace de noms :** concurrency  
@@ -75,7 +75,7 @@ scheduler_interface* get() const;
 ##  <a name="operator_bool"></a>  scheduler_ptr::operator bool   
  Teste si le pointeur du planificateur a une valeur non null  
   
-''' bool() opérateur const ;
+'''operator bool() const ;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   

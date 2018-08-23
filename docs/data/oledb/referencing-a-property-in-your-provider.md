@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec2a52949754e6b19730d5ef025f958d517f6fd0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 467fa4812af6957bea249d6f55701e1474a9382d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341034"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573232"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Référencement d'une propriété dans votre fournisseur
-Recherchez le groupe de propriétés et l’ID de propriété pour la propriété qui que vous intéresse. Pour plus d’informations, consultez [propriétés OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) dans le *de référence du programmeur OLE DB*.  
+Recherchez le groupe de propriétés et l’ID de propriété pour la propriété qui que vous intéresse. Pour plus d’informations, consultez [propriétés OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
  L’exemple suivant suppose que vous tentez d’obtenir une propriété à partir de l’ensemble de lignes. Le code pour l’utilisation de la session ou la commande est similaire, mais utilise une interface différente.  
   

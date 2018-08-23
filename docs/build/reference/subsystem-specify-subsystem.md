@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM (spécifier le sous-système) | Documents Microsoft
+title: -SUBSYSTEM (spécifier le sous-système) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379001"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571962"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Spécifier le sous-système)
 ```  
@@ -40,10 +40,10 @@ ms.locfileid: "32379001"
  Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [BCD sur](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
   
  CONSOLE  
- Application Win32 en mode caractère. Le système d'exploitation fournit une console pour les applications console. Si `main` ou `wmain` est défini pour le code natif, `int main(array<String ^> ^)` est défini pour le code managé, ou si vous générez complètement l’application à l’aide de `/clr:safe`, CONSOLE est la valeur par défaut.  
+ Application en mode caractères Win32. Le système d'exploitation fournit une console pour les applications console. Si `main` ou `wmain` est défini pour le code natif, `int main(array<String ^> ^)` est défini pour le code managé, ou si vous générez complètement l’application à l’aide de `/clr:safe`, CONSOLE est la valeur par défaut.  
   
- Interface micrologicielle extensible  
- Les sous-systèmes EFI_ *. Consultez la spécification EFI pour plus d’informations. Par exemple, consultez le site Web d’Intel. La version minimale de version et la valeur par défaut est 1,0.  
+ Extensible Firmware Interface  
+ Les sous-systèmes EFI_ *. Consultez la spécification EFI pour plus d’informations. Par exemple, consultez le site Web d’Intel. La version minimale de version et la valeur par défaut est 1.0.  
   
  NATIVE  
  Pilotes en mode noyau pour Windows NT. Cette option est généralement réservée pour les composants du système Windows. Si [/Driver : WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) est spécifié, NATIVE est la valeur par défaut.  
@@ -52,27 +52,27 @@ ms.locfileid: "32379001"
  Application qui s’exécute avec le sous-système POSIX sous Windows NT.  
   
  WINDOWS  
- Application ne requiert pas une console, probablement parce qu’il crée ses propres fenêtres d’interaction avec l’utilisateur. Si `WinMain` ou `wWinMain` est défini pour le code natif, ou `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` est défini pour le code managé, WINDOWS est la valeur par défaut.  
+ Application ne nécessite pas une console, probablement parce qu’il crée ses propres fenêtres pour l’interaction avec l’utilisateur. Si `WinMain` ou `wWinMain` est défini pour le code natif, ou `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` est défini pour le code managé, WINDOWS est la valeur par défaut.  
   
  `Major` et `minor` (facultatif)  
  Spécifiez la version minimale requise du sous-système. Les arguments sont des nombres décimaux compris entre 0 et 65 535. Consultez la section Notes pour plus d’informations. Il n’y a aucune limite supérieure pour les numéros de version.  
   
 ## <a name="remarks"></a>Notes  
- L’option /SUBSYSTEM spécifie l’environnement pour le fichier exécutable.  
+ L’option /SUBSYSTEM spécifie l’environnement pour l’exécutable.  
   
- Le choix du sous-système affecte le symbole de point d’entrée (ou une fonction de point d’entrée) que l’éditeur de liens sélectionnez.  
+ Le choix du sous-système affecte le symbole de point d’entrée (ou une fonction de point d’entrée) qui sélectionne l’éditeur de liens.  
   
- Le minimum facultatif et la valeur par défaut `major` et `minor` les numéros de version pour les sous-systèmes sont les suivantes.  
+ Le minimum facultatif et par défaut `major` et `minor` numéros de version pour les sous-systèmes sont comme suit.  
   
 |Sous-système|Minimum|Par défaut|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
-|CONSOLE|5.01 (x 86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6,00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|WINDOWS|5.01 (x 86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6,00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|Code natif (avec DRIVER : WDM)|1,00 (x 86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|1,00 (x 86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|  
-|NATIF (sans/Driver : WDM)|4.00 (x 86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|4.00 (x 86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
+|WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
+|Code natif (avec DRIVER : WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|  
+|NATIF (sans/Driver : WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
-|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, UN EFI_RUNTIME_DRIVER|1.0|1.0|  
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   

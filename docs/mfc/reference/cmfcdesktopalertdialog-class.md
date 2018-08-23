@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCDesktopAlertDialog | Documents Microsoft
+title: Cmfcdesktopalertdialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040793"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541449"
 ---
-# <a name="cmfcdesktopalertdialog-class"></a>Classe de CMFCDesktopAlertDialog
-Le `CMFCDesktopAlertDialog` classe est utilisée conjointement avec la [classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher une boîte de dialogue personnalisée dans une fenêtre contextuelle.  
+# <a name="cmfcdesktopalertdialog-class"></a>Cmfcdesktopalertdialog, classe
+Le `CMFCDesktopAlertDialog` classe est utilisée conjointement avec la [cmfcdesktopalertwnd, classe](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher une boîte de dialogue personnalisée dans une fenêtre contextuelle.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
 2.  Créez un modèle de boîte de dialogue enfant dans les ressources du projet.  
   
-3.  Appelez [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) avec l’ID de ressource de modèle de la boîte de dialogue et un pointeur vers les informations de classe runtime de la classe dérivée en tant que paramètres.  
+3.  Appelez [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) avec l’ID de ressource du modèle de boîte de dialogue et un pointeur vers les informations de classe runtime de la classe dérivée en tant que paramètres.  
   
 4.  Programmez la boîte de dialogue personnalisée de sorte qu'elle traite toutes les notifications en provenance des contrôles hébergés ou programmez les contrôles hébergés de sorte qu'ils traitent directement ces notifications.  
   
@@ -136,6 +136,6 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+ [Cmfcdesktopalertwnd, classe](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
  [Cmfcdesktopalertwndinfo, classe](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
  [CDialogEx, classe](../../mfc/reference/cdialogex-class.md)

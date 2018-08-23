@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32d9356c5c223df723626cf6ac07a7b5fda368de
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340649"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572940"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modèles, attributs et autres implémentations OLE DB
 ## <a name="atl-ole-db-templates"></a>Modèles OLE DB ATL  
@@ -34,7 +34,7 @@ ms.locfileid: "39340649"
   
 -   **Les modèles du fournisseur OLE DB** permettent d’implémenter une application de serveur (fournisseur) OLE DB.  
   
- Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx).  
+ Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
  Pour plus d’informations, vous pouvez :  
   
@@ -46,7 +46,7 @@ ms.locfileid: "39340649"
   
 -   Afficher la liste des [exemples de modèles OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
--   Consultez [de référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (dans le Kit de développement logiciel Windows).  
+-   Consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (dans le Kit de développement logiciel Windows).  
   
 ## <a name="ole-db-attributes"></a>Attributs du Kit de développement OLE DB  
  Le [attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md) offrent un moyen pratique pour créer des consommateurs OLE DB. Les attributs OLE DB injectent du code basé sur le [modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) pour la création de fournisseurs et consommateurs OLE DB de travail. Si vous avez besoin spécifier les fonctionnalités non prises en charge par les attributs, vous pouvez utiliser les modèles OLE DB conjointement avec des attributs dans votre code.  
@@ -55,7 +55,7 @@ ms.locfileid: "39340649"
  La bibliothèque MFC possède une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche les enregistrements de base de données dans les contrôles. La vue est une vue de formulaire directement connectée à un `CRowset` de l’objet et affiche les champs de la `CRowset` objet dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour le déplacement vers le premier, suivant, précédent ou le dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement dans la vue. Pour plus d'informations, consultez `COleDBRecordView`.  
   
 ## <a name="ole-db-sdk-interfaces"></a>Interfaces OLE DB SDK  
- Dans les cas où les modèles OLE DB ne prennent pas en charge la fonctionnalité OLE DB, vous devez utiliser les interfaces OLE DB elles-mêmes. Pour plus d’informations, consultez [de référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) dans le SDK Windows.  
+ Dans les cas où les modèles OLE DB ne prennent pas en charge la fonctionnalité OLE DB, vous devez utiliser les interfaces OLE DB elles-mêmes. Pour plus d’informations, consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   

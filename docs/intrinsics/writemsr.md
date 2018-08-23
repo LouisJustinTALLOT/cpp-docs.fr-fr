@@ -1,5 +1,5 @@
 ---
-title: __writemsr | Documents Microsoft
+title: __writemsr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323522"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539252"
 ---
 # <a name="writemsr"></a>__writemsr
 **Section spécifique à Microsoft**  
   
- Génère l’écriture dans le Registre spécifique à un modèle (`wrmsr`) instruction.  
+ Génère l’écriture dans le modèle de Registre spécifiques (`wrmsr`) instruction.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,21 +41,21 @@ void __writemsr(
   
 #### <a name="parameters"></a>Paramètres  
  [in] `Register`  
- Le Registre spécifique du modèle.  
+ Le Registre spécifiques du modèle.  
   
  [in] `Value`  
  Valeur à écrire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86, x64|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction peut uniquement être utilisée en mode noyau, et cette routine est disponible uniquement comme intrinsèque.  
+ Cette fonction peut uniquement être utilisée en mode noyau, et cette routine est uniquement disponible comme intrinsèque.  
   
 **FIN de la section spécifique à Microsoft**  
   
