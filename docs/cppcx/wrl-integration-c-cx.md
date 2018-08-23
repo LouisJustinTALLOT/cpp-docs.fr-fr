@@ -1,36 +1,36 @@
 ---
-title: Intégration WRL (C + c++ / CX) | Documents Microsoft
+title: Intégration WRL (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090258"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598088"
 ---
 # <a name="wrl-integration-ccx"></a>Intégration WRL (C++/CX)
 
-Vous pouvez mélanger code WRL avec [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) code. Dans la même unité de traduction, vous pouvez utiliser des objets déclarés avec WRL handle-to-object (`^`) notation et [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] pointeur intelligent (`ComPtr<T>`) notation. Toutefois, vous devez gérer manuellement les valeurs de retour, et [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT codes d’erreur et les exceptions de WRL.
+Vous pouvez mélanger code WRL avec le code de bibliothèque de modèles Windows Runtime C++ (WRL). Dans la même unité de traduction, vous pouvez utiliser des objets déclarés avec WRL handle-to-object (`^`) notation et WRL de pointeur intelligent (`ComPtr<T>`) notation. Toutefois, vous devez gérer manuellement les valeurs de retour et les codes d’erreur HRESULT de WRL et les exceptions de WRL.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>Développement[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 
+## <a name="wrl-development"></a>Développement de WRL
 
-Pour plus d’informations sur la création et la consommation [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] composants, consultez [bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Pour plus d’informations sur la conception et la consommation des composants WRL, consultez [bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Exemple
 
-L’extrait de code suivant illustre l’utilisation de WRL et [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] pour consommer [!INCLUDE[wrt](includes/wrt-md.md)] classes et examiner un fichier de métadonnées.
+L’extrait de code suivant illustre l’utilisation de WRL et WRL pour consommer des classes Windows Runtime et examiner un fichier de métadonnées.
 
-L’exemple est extraite d’un extrait de code dans le forum applications de génération Microsoft Store. L'auteur de cet extrait de code offre les exclusions et les conditions suivantes :
+L’exemple est tiré d’un extrait de code dans le forum d’applications de génération Microsoft Store. L'auteur de cet extrait de code offre les exclusions et les conditions suivantes :
 
-1. C++ ne fournit pas les API spécifiques à réfléchir sur les types [!INCLUDE[wrt](includes/wrt-md.md)] , mais les fichiers de métadonnées Windows (.winmd) pour un type sont totalement conformes aux fichiers de métadonnées CLR. Windows propose les nouvelles API de découverte des métadonnées (RoGetMetaDataFile) pour obtenir le fichier .winmd pour un type donné. Toutefois, l'utilisation de ces API est limitée aux développeurs C++ car il est impossible d'instancier une classe.
+1. C++ ne fournit des API spécifiques à réfléchir sur des types Windows Runtime, mais les fichiers de métadonnées Windows (.winmd) pour un type sont totalement conformes aux fichiers de métadonnées CLR. Windows propose les nouvelles API de découverte des métadonnées (RoGetMetaDataFile) pour obtenir le fichier .winmd pour un type donné. Toutefois, l'utilisation de ces API est limitée aux développeurs C++ car il est impossible d'instancier une classe.
 
 1. Une fois le code compilé, vous devez également passer Runtimeobject.lib et Rometadata.lib à l'Éditeur de liens.
 

@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::String | Documents Microsoft
+title: Platform::String, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -23,19 +23,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094824"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587409"
 ---
 # <a name="platformstring-class"></a>Platform::String, classe
-Représente une collection séquentielle de caractères Unicode utilisée pour représenter du texte. Pour plus d’informations et d’exemples, consultez [chaînes](../cppcx/strings-c-cx.md).  
+Représente une collection séquentielle de caractères Unicode utilisée pour représenter du texte. Pour plus d’informations et des exemples, consultez [chaînes](../cppcx/strings-c-cx.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,7 +81,7 @@ public ref class String sealed : Object,
 |[String::Equals](#equals)|Indique si l'objet spécifié est égal à l'objet actif.|  
 |[String::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|  
 |[String::IsEmpty](#isempty)|Indique si l'objet String actuel est vide.|  
-|[String::IsFastPass](#isfastpass)|Indique si l'objet String actuel participe à une opération de *passage rapide* . Dans une opération de passage rapide, le comptage des références est interrompu.|  
+|[String::IsFastPass](#isfastpass)|Indique si l’objet String actuel participe à une *passage rapide* opération. Dans une opération de passage rapide, le comptage des références est interrompu.|  
 |[String::Length](#length)|Récupère la longueur de l'objet String en cours.|  
 |[String::ToString](#tostring)|Retourne un objet String dont la valeur est identique à celle de la chaîne en cours.|  
   
@@ -93,13 +93,13 @@ public ref class String sealed : Object,
 |------------|-----------------|  
 |[String::operator ==, opérateur](#operator-equality)|Indique si deux objets String spécifiés ont la même valeur.|  
 |[Opérateur opérateur+](#operator-plus)|Concatène deux objets String en un nouvel objet String.|  
-|[String::operator > (opérateur)](#operator-greater-than)|Indique si la valeur d'un objet String est supérieure à la valeur d'un deuxième objet String.|  
-|[String::operator > = (opérateur)](#operator-greater-than-or-equals)|Indique si la valeur d'un objet String est supérieure ou égale à la valeur d'un deuxième objet String.|  
+|[String::operator > opérateur](#operator-greater-than)|Indique si la valeur d'un objet String est supérieure à la valeur d'un deuxième objet String.|  
+|[String::operator > =, opérateur](#operator-greater-than-or-equals)|Indique si la valeur d'un objet String est supérieure ou égale à la valeur d'un deuxième objet String.|  
 |[String::operator ! =, opérateur](#operator-inequality)|Indique si deux objets String spécifiés ont des valeurs différentes.|  
-|[String::operator < (opérateur)](#operator-less-than)|Indique si la valeur d'un objet String est inférieure à la valeur d'un deuxième objet String.|  
+|[String::operator < opérateur](#operator-less-than)|Indique si la valeur d'un objet String est inférieure à la valeur d'un deuxième objet String.|  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -171,7 +171,7 @@ String^ Concat( String^ str1, String^ str2)
 ### <a name="return-value"></a>Valeur de retour  
  Nouvel objet String^ dont la valeur est la concaténation des valeurs de `str1` et `str2`.  
   
- Si `str1` est `null` et `str2` n’est pas, `str1` est retourné. Si `str2` est `null` et `str1` n’est pas, `str2` est retourné. Si `str1` et `str2` sont tous deux `null`, la chaîne vide (L"") est retournée.  
+ Si `str1` est `null` et `str2` n’est pas, `str1` est retournée. Si `str2` est `null` et `str1` n’est pas, `str2` est retournée. Si `str1` et `str2` sont tous deux `null`, la chaîne vide (L"") est retournée.  
   
 
 
@@ -188,7 +188,7 @@ const char16* Data()
  Un pointeur vers le début d’un `const char16` tableau de caractères Unicode (`char16` est un typedef pour `wchar_t`).  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour convertir de `Platform::String^` en `wchar_t*`. Lorsque l'objet `String` se trouve hors de portée, la validité du pointeur donnée n'est plus garantie. Pour stocker les données au-delà de la durée de vie de l’original `String` de l’objet, utilisez [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) pour copier le tableau dans la mémoire que vous avez allouée à vous-même.  
+ Utilisez cette méthode pour convertir de `Platform::String^` en `wchar_t*`. Lorsque l'objet `String` se trouve hors de portée, la validité du pointeur donnée n'est plus garantie. Pour stocker les données allant au-delà de la durée de vie de l’original `String` de l’objet, utilisez [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) pour copier le tableau dans la mémoire que vous avez allouée à vous-même.  
   
 
 
@@ -275,7 +275,7 @@ bool IsEmpty()
 
 
 ## <a name="isfastpass"></a>  String::isfastpass, méthode
-Indique si l'objet String actuel participe à une opération de *passage rapide* . Dans une opération de passage rapide, le comptage des références est interrompu.  
+Indique si l’objet String actuel participe à une *passage rapide* opération. Dans une opération de passage rapide, le comptage des références est interrompu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -311,11 +311,11 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5  
 ```  
   
- Le tableau de caractères retourné par la [String::Data](#data) a un caractère supplémentaire, qui est le caractère de fin NULL ou « \0 ». La longueur de ce caractère est également de deux octets.  
+ Le tableau de caractères retourné par la [String::Data](#data) a un caractère supplémentaire, qui est le caractère NULL ou « \0 ». La longueur de ce caractère est également de deux octets.  
   
 
 
-## <a name="operator-plus"></a>  String::operator + (opérateur)
+## <a name="operator-plus"></a>  String::operator +, opérateur
 Concatène deux [chaîne](../cppcx/platform-string-class.md) objets dans un nouveau [chaîne](../cppcx/platform-string-class.md) objet.
   
 ### <a name="syntax"></a>Syntaxe  
@@ -465,7 +465,7 @@ String(char16* s, unsigned int n)
  Nombre qui spécifie la longueur de la chaîne.  
   
 ### <a name="remarks"></a>Notes  
- Si les performances sont critiques et que vous contrôlez la durée de vie de la chaîne source, vous pouvez utiliser [Platform::StringReference](../cppcx/platform-stringreference-class.md) à la place de chaîne.  
+ Si les performances sont importantes et que vous contrôlez la durée de vie de la chaîne source, vous pouvez utiliser [Platform::StringReference](../cppcx/platform-stringreference-class.md) à la place de chaîne.  
 ### <a name="example"></a>Exemple  
   
 ```cpp  

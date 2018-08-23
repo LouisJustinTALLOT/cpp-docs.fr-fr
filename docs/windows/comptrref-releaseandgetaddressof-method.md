@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 273c8aaded45e04f1564d434c1a4f4a6920c3883
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 03f709feddb1c0e9c82cf80a4bd5f24e531414d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647799"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611217"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf, méthode
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-InterfaceType** ReleaseAndGetAddressOf();  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’interface qui a été représenté par supprimés **ComPtrRef** objet.  
-  
-## <a name="remarks"></a>Notes  
- Supprime l’actuel **ComPtrRef** de l’objet et retourne un pointeur-à-un-pointeur vers l’interface qui a été représenté par le **ComPtrRef** objet.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [ComPtrRef (classe)](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+InterfaceType** ReleaseAndGetAddressOf();
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Pointeur vers l’interface qui a été représenté par supprimés **ComPtrRef** objet.
+
+## <a name="remarks"></a>Notes
+
+Supprime l’actuel **ComPtrRef** de l’objet et retourne un pointeur-à-un-pointeur vers l’interface qui a été représenté par le **ComPtrRef** objet.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[ComPtrRef, classe](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Platform::WriteOnlyArray (classe) | Documents Microsoft
+title: Platform::writeonlyarray, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091485"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603344"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 Représente un tableau unidimensionnel utilisé comme paramètre d'entrée lorsque l'appelant transmet un tableau à remplir pour la méthode.  
@@ -46,9 +46,9 @@ private ref class WriteOnlyArray<T, 1>
 |Name|Description|  
 |----------|-----------------|  
 
-|[WriteOnlyArray::begin](#begin)| Itérateur qui pointe vers le premier élément du tableau. |  
+|[WriteOnlyArray::begin](#begin)| Un itérateur qui pointe vers le premier élément du tableau. |  
 |[WriteOnlyArray::Data](#data)| Un pointeur vers le tampon de données. |  
-|[WriteOnlyArray::end](#end)| Itérateur qui pointe vers un suit le dernier élément du tableau. |  
+|[WriteOnlyArray::end](#end)| Un itérateur qui pointe juste après le dernier élément dans le tableau. |  
 |[WriteOnlyArray::FastPass](#fastpass)| Indique si le tableau peut utiliser le mécanisme FastPass, qui est une optimisation exécutée en toute transparence par le système. N’utilisez pas cela dans votre code |  
 |[WriteOnlyArray::Length](#length)| Retourne le nombre d’éléments dans le tableau. |  
 |[WriteOnlyArray::set](#set)| Définit l’élément spécifié à la valeur spécifiée. |  
@@ -57,7 +57,7 @@ private ref class WriteOnlyArray<T, 1>
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `WriteOnlyArray`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
  **Métadonnées :** platform.winmd  
@@ -130,7 +130,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>  WriteOnlyArray::get (méthode)
+## <a name="get"></a>  Writeonlyarray::Get, méthode
 Retourne l'élément à l'index spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations sur la manière d’interpréter la valeur HRESULT, consultez [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Pour plus d’informations sur la façon d’interpréter la valeur HRESULT, consultez [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
   
   
 ## <a name="see-also"></a>Voir aussi  

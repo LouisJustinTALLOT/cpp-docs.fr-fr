@@ -17,57 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a812317f66df3c0b1a330808a58753abb890765c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d5848581b26812f322782a73d8964deee1feefb9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014050"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606972"
 ---
 # <a name="viprogid"></a>vi_progid
-Spécifie un formulaire indépendant de la version du ProgID.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ vi_progid(  
-   name  
-) ];  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *name*  
- Le ProgID indépendants de la version qui représente l’objet.  
-  
- ProgID présentent une version explicite de l’identificateur de classe (CLSID) utilisé pour identifier les objets COM/ActiveX.  
-  
-## <a name="remarks"></a>Notes  
- Le **vi_progid** attribut C++ vous permet de spécifier un ProgID indépendants de la version pour un objet COM. Un ProgID présente sous la forme *name1.name2.version*. Un ProgID indépendants de la version n’a pas un *version*. Il est possible de spécifier à la fois le `progid` et **vi_progid** attributs sur un `coclass`. Si vous ne spécifiez pas **vi_progid**, le ProgID indépendants de la version est la valeur spécifiée par le [progid](../windows/progid.md) attribut.  
-  
- **vi_progid** implique la `coclass` d’attribut, autrement dit, si vous spécifiez **vi_progid**, il est la même chose que si vous définissiez le `coclass` et **vi_progid** attributs.  
-  
- Le **vi_progid** attribut entraîne une classe soit automatiquement inscrite sous le nom spécifié. Le fichier .idl généré n’affichera pas la valeur ProgID.  
-  
- Dans les projets ATL, si le [coclasse](../windows/coclass.md) attribut est également présent, le ProgID spécifié est utilisé par le `GetVersionIndependentProgID` (fonction) (insérées par les `coclass` attribut).  
-  
-## <a name="example"></a>Exemple  
- Consultez le [coclasse](../windows/coclass.md) exemple pour un exemple d’utilisation de **vi_progid**.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**classe**, **struct**|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributs de classe](../windows/class-attributes.md)   
- [Clé de progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
+
+Spécifie un formulaire indépendant de la version du ProgID.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ vi_progid(
+   name
+) ];
+```
+
+### <a name="parameters"></a>Paramètres
+
+*name*  
+Le ProgID indépendants de la version qui représente l’objet.
+
+ProgID présentent une version explicite de l’identificateur de classe (CLSID) utilisé pour identifier les objets COM/ActiveX.
+
+## <a name="remarks"></a>Notes
+
+Le **vi_progid** attribut C++ vous permet de spécifier un ProgID indépendants de la version pour un objet COM. Un ProgID présente sous la forme *name1.name2.version*. Un ProgID indépendants de la version n’a pas un *version*. Il est possible de spécifier à la fois le `progid` et **vi_progid** attributs sur un `coclass`. Si vous ne spécifiez pas **vi_progid**, le ProgID indépendants de la version est la valeur spécifiée par le [progid](../windows/progid.md) attribut.
+
+**vi_progid** implique la `coclass` d’attribut, autrement dit, si vous spécifiez **vi_progid**, il est la même chose que si vous définissiez le `coclass` et **vi_progid** attributs.
+
+Le **vi_progid** attribut entraîne une classe soit automatiquement inscrite sous le nom spécifié. Le fichier .idl généré n’affichera pas la valeur ProgID.
+
+Dans les projets ATL, si le [coclasse](../windows/coclass.md) attribut est également présent, le ProgID spécifié est utilisé par le `GetVersionIndependentProgID` (fonction) (insérées par les `coclass` attribut).
+
+## <a name="example"></a>Exemple
+
+Consultez le [coclasse](../windows/coclass.md) exemple pour un exemple d’utilisation de **vi_progid**.
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**classe**, **struct**|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Attributs de classe](../windows/class-attributes.md)  
+[Clé de progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)  

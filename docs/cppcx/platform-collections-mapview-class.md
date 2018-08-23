@@ -1,5 +1,5 @@
 ---
-title: 'Classe Platform::Collections :: mapview | Documents Microsoft'
+title: 'Classe Platform::Collections :: mapview | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091529"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605469"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 Représente une vue en lecture seule dans une *carte*, qui est une collection de paires clé/valeur.  
@@ -74,7 +74,7 @@ ref class MapView sealed;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `MapView`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -94,7 +94,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Itérateur qui spécifie le premier élément de la vue cartographique.  
   
 ### <a name="remarks"></a>Notes  
- Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.  
+ Un moyen pratique de contenir l’itérateur retourné par First() consiste à attribuer la valeur de retour à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.  
   
 
 
@@ -110,7 +110,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>Paramètres  
  `key`  
- Clé utilisée pour rechercher l’élément MapView. Le type de `key` est le nom de type *K*.  
+ Clé utilisée pour rechercher l’élément MapView. Le type de `key` est typename *K*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` si la clé est trouvée ; sinon, `false`.  
@@ -128,7 +128,7 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>Paramètres  
  `key`  
- Clé utilisée pour trouver un élément dans le MapView. Le type de `key` est le nom de type *K*.  
+ Clé utilisée pour trouver un élément dans le MapView. Le type de `key` est typename *K*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur associée à `key`. Le type de la valeur de retour est typename *V*.  
@@ -174,7 +174,7 @@ MapView(
  Itérateur d'entrée du premier élément qui suit une plage d'éléments utilisée pour initialiser le MapView actif.  
   
  il  
- A [std::initializer_list < std::pair\<K, V >>](../standard-library/initializer-list-class.md) dont les éléments sont insérés dans le MapView.  
+ Un [std::initializer_list < std::pair\<K, V >>](../standard-library/initializer-list-class.md) dont les éléments seront insérées dans le MapView.  
 
 
 

@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a90aab0fae3edbb54dfdd9176ffe47a18ad1796a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020211"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596939"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Sélection de plusieurs menus ou commandes de menu
-Vous pouvez sélectionner plusieurs noms de menus ou commandes de menu pour effectuer des opérations en bloc telles que la suppression ou la modification de propriétés.  
-  
-### <a name="to-select-multiple-menu-commands"></a>Pour sélectionner plusieurs commandes de menu  
-  
-1.  Tout en maintenant enfoncée la **Ctrl** enfoncée, cliquez sur les menus ou les commandes de sous-menu souhaitées.  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de menus](../windows/menu-editor.md)
+
+Vous pouvez sélectionner plusieurs noms de menus ou commandes de menu pour effectuer des opérations en bloc telles que la suppression ou la modification de propriétés.
+
+### <a name="to-select-multiple-menu-commands"></a>Pour sélectionner plusieurs commandes de menu
+
+1. Tout en maintenant enfoncée la **Ctrl** enfoncée, cliquez sur les menus ou les commandes de sous-menu souhaitées.
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Éditeur de menus](../windows/menu-editor.md)

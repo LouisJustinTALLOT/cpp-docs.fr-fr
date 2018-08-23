@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c854f11f64d8ec66d9c00ea8b4833f28f7bf6cdc
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 26ea9df5d5a615254b941c72d2847bbe9f22847d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011472"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599965"
 ---
 # <a name="modulereleasenotifierreleasenotifier-destructor"></a>Module::ReleaseNotifier::~ReleaseNotifier, destructeur
-Annule l’initialisation de l’instance actuelle de la **Module::ReleaseNotifier** classe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW virtual ~ReleaseNotifier();  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Module::ReleaseNotifier, classe](../windows/module-releasenotifier-class.md)
+
+Annule l’initialisation de l’instance actuelle de la **Module::ReleaseNotifier** classe.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW virtual ~ReleaseNotifier();
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Module::ReleaseNotifier, classe](../windows/module-releasenotifier-class.md)

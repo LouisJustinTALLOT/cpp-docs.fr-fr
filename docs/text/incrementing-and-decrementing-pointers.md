@@ -1,5 +1,5 @@
 ---
-title: Incrémentation et décrémentation de pointeurs | Documents Microsoft
+title: Incrémentation et décrémentation de pointeurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,49 +13,49 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82a6f792ce622481cbbab821b8a5446186bd692d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4fff5d7ec20ce052e4d831f1556432186ebc7bb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857127"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603358"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>Incrémentation et décrémentation de pointeurs
 Utilisez les conseils suivants :  
   
--   Pointer vers les octets de tête, pas les octets de Queue. Il est prudent de disposer d’un pointeur vers un octet de fin. Il est généralement plus sûr d’analyser une chaîne vers l’avant, plutôt que dans l’ordre inverse.  
+-   Pointer vers les octets de tête, pas les octets de Queue. Il est généralement déconseillé d’avoir un pointeur vers un octet de fin. Il est plus sûr d’analyser une chaîne vers l’avant, plutôt que dans l’ordre inverse.  
   
--   Il existe des fonctions d’incrémentation/décrémentation de pointeur et les macros qui se déplacent d’un caractère entier :  
+-   Il existe des fonctions incrémenter/décrémenter des pointeurs et des macros disponibles pour déplacement d’un caractère entier :  
   
     ```  
     sz1++;  
     ```  
   
-     Devient :  
+     devient :  
   
     ```  
     sz1 = _mbsinc( sz1 );  
     ```  
   
-     Le `_mbsinc` et `_mbsdec` fonctions correctement incrémenter et décrémenter dans `character` unités, quelles que soient la taille de caractères.  
+     Le `_mbsinc` et `_mbsdec` fonctions correctement incrémenter et décrémenter dans `character` unités, quelles que soient la taille des caractères.  
   
--   Pour décrémente, vous avez besoin d’un pointeur vers le début de la chaîne, comme suit :  
+-   Pour décréments, vous avez besoin d’un pointeur vers le début de la chaîne, comme dans l’exemple suivant :  
   
     ```  
     sz2--;  
     ```  
   
-     Devient :  
+     devient :  
   
     ```  
     sz2 = _mbsdec( sz2Head, sz2 );  
     ```  
   
-     Vous pouvez également votre pointeur de tête peut être un caractère valide dans la chaîne, telles que :  
+     Vous pouvez également votre pointeur d’en-tête peut être un caractère valide dans la chaîne, telles que :  
   
     ```  
     sz2Head < sz2  

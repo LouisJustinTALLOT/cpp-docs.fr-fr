@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019236"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594401"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Ajout de fichiers à des applications Win32 vides
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Pour ajouter vos fichiers à une application de bureau Windows vide  
-  
-1.  Sélectionnez le répertoire dans l’ **Explorateur de solutions**.  
-  
-2.  Cliquez avec le bouton droit sur le nom du répertoire, cliquez sur **Ajouter** dans le menu contextuel, puis cliquez sur **Élément existant**.  
-  
-3.  Dans la boîte de dialogue **Ajouter un élément existant**, accédez aux fichiers que vous souhaitez ajouter à votre projet.  
-  
-4.  Cliquez sur **OK**.  
-  
- Pour ajouter des fichiers qui sont source, en-tête ni les fichiers de ressources à votre projet, cliquez sur le **Solution** nœud **l’Explorateur de solutions** et ajoutez les fichiers au projet de la même manière. Un **divers** dossier sera créé pour contenir les autres fichiers dans votre projet.  
-  
+
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Pour ajouter vos fichiers à une application de bureau Windows vide
+
+1. Sélectionnez le répertoire dans l’ **Explorateur de solutions**.
+
+2. Cliquez avec le bouton droit sur le nom du répertoire, cliquez sur **Ajouter** dans le menu contextuel, puis cliquez sur **Élément existant**.
+
+3. Dans la boîte de dialogue **Ajouter un élément existant**, accédez aux fichiers que vous souhaitez ajouter à votre projet.
+
+4. Cliquez sur **OK**.
+
+Pour ajouter des fichiers qui sont source, en-tête ni les fichiers de ressources à votre projet, cliquez sur le **Solution** nœud **l’Explorateur de solutions** et ajoutez les fichiers au projet de la même manière. Un **divers** dossier sera créé pour contenir les autres fichiers dans votre projet.
+
 > [!NOTE]
->  Avant de générer votre projet, vous devrez spécifier les options de génération de ces fichiers pour qu’ils soient correctement inclus dans l’application finale. Pour plus d’informations, consultez [Spécification des paramètres de projet avec des pages de propriétés](../ide/property-pages-visual-cpp.md) et [Génération d’un programme C/C++](../build/building-c-cpp-programs.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Création d’une Application de bureau Windows vide](../windows/creating-an-empty-windows-desktop-application.md)   
- [Déploiement d’applications](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+> Avant de générer votre projet, vous devrez spécifier les options de génération de ces fichiers pour qu’ils soient correctement inclus dans l’application finale. Pour plus d’informations, consultez [Spécification des paramètres de projet avec des pages de propriétés](../ide/property-pages-visual-cpp.md) et [Génération d’un programme C/C++](../build/building-c-cpp-programs.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Création d’une application de bureau Windows vide](../windows/creating-an-empty-windows-desktop-application.md)  
+[Déploiement d’applications](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::type | Documents Microsoft
+title: Classe Platform::type | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255536"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596699"
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
-Contient des informations d'exécution sur un type, en particulier un nom de chaîne et un code de type. Obtenu en appelant [Object::GetType](../cppcx/platform-object-class.md#gettype) sur n’importe quel objet ou ou à l’aide de la [typeid](../windows/typeid-cpp-component-extensions.md) opérateur sur un nom de classe ou un struct.  
+Contient des informations d'exécution sur un type, en particulier un nom de chaîne et un code de type. Obtenu en appelant [Object::GetType](../cppcx/platform-object-class.md#gettype) sur n’importe quel objet ou à l’aide de la [typeid](../windows/typeid-cpp-component-extensions.md) opérateur sur un nom de classe ou un struct.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +42,14 @@ public ref class Platform::Type :
 |||  
 |-|-|  
 |[Type::GetTypeCode Method](#gettypecode)|Retourne une valeur [Platform::TypeCode Enumeration](../cppcx/platform-typecode-enumeration.md) pour l'objet.| 
-|[Type::ToString (méthode)](#tostring)|Retourne le nom du type spécifié dans ses métadonnées.| 
+|[Type::ToString (méthode)](#tostring)|Retourne le nom du type tel que spécifié dans ses métadonnées.| 
 
  
 ## <a name="public-properties"></a>Propriétés publiques  
   
 |||  
 |-|-|  
-|[Type::FullName](#fullname)|Retourne une [classe Platform::String](../cppcx/platform-string-class.md)^ qui représente le nom complet du type et utilise . (point) comme séparateur, pas :: (le double deux-points), par exemple, `MyNamespace.MyClass`.|  
+|[Type::FullName](#fullname)|Retourne une [classe Platform::String](../cppcx/platform-string-class.md)^ qui représente le nom complet du type et utilise . (point) comme séparateur, pas :: (double deux-points), par exemple, `MyNamespace.MyClass`.|  
   
 ## <a name="conversion-operators"></a>Opérateurs de conversion  
   
@@ -58,8 +58,8 @@ public ref class Platform::Type :
 |[Type^, opérateur](../cppcx/operator-type-hat.md)|Permet de convertir `Windows::UI::Xaml::Interop::TypeName` en `Platform::Type`.|  
 |[Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Permet de convertir `Platform::Type` en `Windows::UI::Xaml::Interop::TypeName`.|  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -120,7 +120,7 @@ Platform::String^ ToString();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Nom du type spécifié dans ses métadonnées.    
+ Un nom de type tel que spécifié dans ses métadonnées.    
   
 ## <a name="see-also"></a>Voir aussi  
  [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

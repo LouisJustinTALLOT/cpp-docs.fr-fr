@@ -15,39 +15,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 80af8f463d6cd1af631c6cb37c0239e7a9e85c3f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568769"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595883"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString, constructeur
-Initialise une nouvelle instance de la **HString** classe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-HString(HSTRING hstr = nullptr) throw();  
-HString(HString&& other) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *HSTR*  
- Un handle HSTRING.  
-  
- *other*  
- Un existant **HString** objet.  
-  
-## <a name="remarks"></a>Notes  
- Le premier constructeur initialise un nouveau **HString** objet est vide.  
-  
- Le deuxième constructeur initialise un nouveau **HString** objet à la valeur existants *autres* paramètre et détruit le *autres* paramètre.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HString, classe](../windows/hstring-class.md)
+
+Initialise une nouvelle instance de la **HString** classe.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+HString(HSTRING hstr = nullptr) throw();
+HString(HString&& other) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*HSTR*  
+Un handle HSTRING.
+
+*other*  
+Un existant **HString** objet.
+
+## <a name="remarks"></a>Notes
+
+Le premier constructeur initialise un nouveau **HString** objet est vide.
+
+Le deuxième constructeur initialise un nouveau **HString** objet à la valeur existants *autres* paramètre et détruit le *autres* paramètre.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HString, classe](../windows/hstring-class.md)

@@ -1,5 +1,5 @@
 ---
-title: to_vector (fonction) | Documents Microsoft
+title: to_vector, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c345b594c284c1273a080d979cd9588aff350d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ecb00a890629c69994019c9232ff559ea93c96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087969"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609736"
 ---
 # <a name="tovector-function"></a>to_vector (fonction)
 Retourne un `std::vector` dont la valeur est la même que la collection sous-jacente du paramètre IVector ou IVectorView spécifié.  
@@ -44,7 +44,7 @@ inline ::std::vector<T> to_vector(IVectorView<T>^ v);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Windows::Foundation::Collections  

@@ -1,5 +1,5 @@
 ---
-title: Platform::Details::__GUID Struct | Documents Microsoft
+title: __Guid (structure) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::__GUID Struct
 ms.assetid: 507cc577-b34d-4952-b1a9-ff4ae98bb6dd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 975e5ae8fd59b327e52a838f913257312175bf79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aaaffb4254fc676e95f6c6bb315d5f257d64e48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086575"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592419"
 ---
 # <a name="platformdetailsguid-struct"></a>Platform::Details::__GUID (structure)
 Ce struct est destiné à une utilisation interne uniquement et non à des fins de développement.  
@@ -38,7 +38,7 @@ ref struct __GUID;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform::Details  

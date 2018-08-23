@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c9a77a8a943dcefdf9db9d43121f2b00bde1568
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011008"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610159"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference, méthode
-Crée un `HStringReference` objet à partir d’un paramètre de chaîne spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *sizeDest*  
- Un paramètre de modèle qui spécifie la taille de la destination `HStringReference` mémoire tampon.  
-  
- *str*  
- Une référence à une chaîne à caractères larges.  
-  
- *Len*  
- La longueur maximale de la *str* mémoire tampon de paramètre à utiliser dans cette opération. Si le *len* paramètre n’est pas spécifié, l’intégralité de *str* paramètre est utilisé.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Un `HStringReference` objet dont la valeur est identique à celui du texte spécifié *str* paramètre.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HString, classe](../windows/hstring-class.md)
+
+Crée un `HStringReference` objet à partir d’un paramètre de chaîne spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*sizeDest*  
+Un paramètre de modèle qui spécifie la taille de la destination `HStringReference` mémoire tampon.
+
+*str*  
+Une référence à une chaîne à caractères larges.
+
+*Len*  
+La longueur maximale de la *str* mémoire tampon de paramètre à utiliser dans cette opération. Si le *len* paramètre n’est pas spécifié, l’intégralité de *str* paramètre est utilisé.
+
+## <a name="return-value"></a>Valeur de retour
+
+Un `HStringReference` objet dont la valeur est identique à celui du texte spécifié *str* paramètre.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HString, classe](../windows/hstring-class.md)

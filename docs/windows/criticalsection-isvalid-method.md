@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e89d7aa8bd35af3fa78d773b84276d560101942
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 031575c7d8e6cc9b9b56cdd172e75c45f45ca606
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644815"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592061"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid, méthode
-Indique si la section critique en cours est valide.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Par défaut, retourne toujours **true**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [CriticalSection, classe](../windows/criticalsection-class.md)
+
+Indique si la section critique en cours est valide.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Par défaut, retourne toujours **true**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[CriticalSection, classe](../windows/criticalsection-class.md)

@@ -1,28 +1,28 @@
 ---
-title: Les enums (C + c++ / CX) | Documents Microsoft
+title: Énumérations (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087379"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593962"
 ---
 # <a name="enums-ccx"></a>Énumérations (C++/CX)
-C + c++ / CX prend en charge la `public enum class` (mot clé), qui est analogue à la norme C++ `scoped  enum`. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class` , vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.  
+C++ / c++ / CX prend en charge la `public enum class` mot clé, ce qui est analogue à un C++ standard `scoped  enum`. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class` , vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.  
   
 ### <a name="remarks"></a>Notes  
  Un `public enum class` qui n'a pas de spécificateur d'accès, tel que `public`, est traité comme un [scoped enum](../cpp/enumerations-cpp.md)C++ standard.  
   
- A `public enum class` ou `public enum struct` déclaration peut avoir un type sous-jacent de n’importe quel type intégral bien que le Windows Runtime lui-même requiert que le type soit int32 ou uint32 pour un enum. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`.  
+ Un `public enum class` ou `public enum struct` déclaration peut avoir un type sous-jacent de n’importe quel type intégral bien que le Runtime Windows lui-même nécessite que le type soit int32 ou uint32 pour un enum. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`.  
   
  Cet exemple montre comment définir une classe d'énumération publique :  
   

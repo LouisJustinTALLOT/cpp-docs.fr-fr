@@ -1,7 +1,7 @@
 ---
-title: Erreur LNK1181 des outils Éditeur de liens | Documents Microsoft
+title: Erreur LNK1181 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/22/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301357"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597660"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Erreur des outils Éditeur de liens LNK1181
 Impossible d’ouvrir le fichier d’entrée 'nom_fichier'  
   
  L’éditeur de liens n’a pas pu trouver `filename` , car il n’existe pas ou le chemin d’accès est introuvable.  
   
- Parmi les causes courantes de l’erreur LNK1181 incluent :  
+ Certaines causes courantes pour l’erreur LNK1181 incluent :  
   
 -   `filename` est référencé comme dépendance supplémentaire sur la ligne de l’éditeur de liens, mais le fichier n’existe pas.  
   
--   A **/LIBPATH** instruction qui spécifie le répertoire contenant `filename` est manquant.  
+-   Un **/LIBPATH** instruction qui spécifie le répertoire contenant `filename` est manquant.  
   
- Pour résoudre les problèmes ci-dessus, vérifiez les fichiers référencés sur la ligne de l’éditeur de liens sont présents sur le système.  Également Vérifiez qu’il existe un **/LIBPATH** instruction pour chaque répertoire contenant un fichier dépendant de l’éditeur de liens.  
+ Pour résoudre les problèmes ci-dessus, vérifiez que les fichiers référencés sur la ligne de l’éditeur de liens sont présents sur le système.  Également Vérifiez qu’il existe un **/LIBPATH** instruction pour chaque répertoire contenant un fichier dépendant de l’éditeur de liens. 
+
+ Pour plus d’informations, consultez [fichiers .lib en tant qu’entrée de l’éditeur de liens](../../build/reference/dot-lib-files-as-linker-input.md).
   
- Autre cause possible de LNK1181 est qu’un nom de fichier long avec des espaces incorporés n’était pas entre guillemets.  Dans ce cas, l’éditeur de liens seulement reconnaît pas un nom de fichier jusqu’au premier espace et puis supposent une extension de fichier. obj.  La solution à cette situation consiste à placer le nom de fichier long (chemin d’accès plus nom de fichier) entre guillemets.  
+ Une autre cause possible pour LNK1181 est qu’un nom de fichier long avec des espaces incorporés n’était pas entre guillemets.  Dans ce cas, l’éditeur de liens reconnaîtra uniquement un nom de fichier jusqu’au premier espace et puis supposent une extension de fichier. obj.  La solution à cette situation consiste à placer le nom de fichier long (chemin d’accès plus nom de fichier) entre guillemets.  
+
+ Compilation avec le [/P (Prétraiter dans un fichier)](../../build/reference/p-preprocess-to-a-file.md) option peut entraîner LNK1181, car cette option supprime la création de fichiers .obj.
   
- Pour plus d’informations, consultez [fichiers .lib en tant qu’entrée de l’éditeur de liens](../../build/reference/dot-lib-files-as-linker-input.md).  
+  
   
 ## <a name="see-also"></a>Voir aussi  
  [/LIBPATH (Autre chemin de bibliothèque)](../../build/reference/libpath-additional-libpath.md)

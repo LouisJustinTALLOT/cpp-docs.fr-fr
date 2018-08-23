@@ -16,26 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 759ed60206ef9cb68ea2b0f502c1241c9ce5b6cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012144"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602971"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Insertion d'un nouveau menu parmi des menus existants
-### <a name="to-insert-a-new-menu-between-existing-menus"></a>Pour insérer un nouveau menu parmi des menus existants  
-  
-1.  Sélectionnez un nom de menu d’existant et appuyez sur la **insérer** clé. Le **un nouvel élément** boîte est insérée avant l’élément sélectionné.  
-  
-     \- ou -  
-  
-2.  Avec le bouton droit sur la barre de menus, choisissez **Insérer nouveau** dans le menu contextuel.  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de menus](../windows/menu-editor.md)   
+
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>Pour insérer un nouveau menu parmi des menus existants
+
+1. Sélectionnez un nom de menu d’existant et appuyez sur la **insérer** clé. Le **un nouvel élément** boîte est insérée avant l’élément sélectionné.
+
+   \- ou -
+
+2. Avec le bouton droit sur la barre de menus, choisissez **Insérer nouveau** dans le menu contextuel.
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Éditeur de menus](../windows/menu-editor.md)  

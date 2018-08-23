@@ -1,5 +1,5 @@
 ---
-title: Image personnalisée, boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft
+title: Image personnalisée, boîte de dialogue (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a0f8f4506d21c530f5131363cea9a9d142d5957
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb5e4d2fdc64499616af2492d39bfe3cac4931ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883132"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595939"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Type d'image personnalisée (Éditeur d'images pour les icônes)
 Vous permet de créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.
  **Largeur**  
- Offre un espace vous permettant d’entrer la largeur de l’image personnalisée en pixels (1-512, limite 2048).  
+ Fournit un espace vous permettant d’entrer la largeur de l’image personnalisée en pixels (1-512, limite de 2048).
   
  **Hauteur**  
- Fournit un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite 2048).  
+ Fournit un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite de 2048).
   
  **Couleurs**  
- Offre un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.  
+ Fournit un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.
   
-## <a name="requirements"></a>Spécifications  
- Aucun  
+## <a name="requirements"></a>Configuration requise
+ Aucun.
   
-## <a name="see-also"></a>Voir aussi  
- [Nouvelle \<appareil > boîte de dialogue Type d’Image](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+## <a name="see-also"></a>Voir aussi
+ [Nouvelle \<appareil > boîte de dialogue Type d’Image](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
  [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

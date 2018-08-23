@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb15dbd56656c72bc0f96491d24fc43fb96de84c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f419f9c370c58c1e3ebf07d3b78f15499a072d4e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017810"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603496"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Déplacement ou copie d'une entrée d'une table d'accélérateurs vers un autre fichier de script de ressources
-### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Pour déplacer ou copier une entrée de table d'accélérateurs vers un autre fichier de script de ressources  
-  
-1.  Ouvrez les tables d'accélérateurs dans les deux fichiers de script de ressources.  
-  
-    > [!NOTE]
-    >  Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Sélectionnez l'entrée à déplacer.  
-  
-3.  À partir de la **modifier** menu, choisissez **copie** ou **couper**.  
-  
-4.  Sélectionnez une entrée dans le fichier de script de ressources cible.  
-  
-5.  À partir de la **modifier** menu, choisissez **coller**.  
-  
-    > [!NOTE]
-    >  Vous pouvez également utiliser les touches de raccourci pour les opérations de copie et de collage.  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Modification des Tables d’accélérateurs](../windows/editing-accelerator-tables.md)   
- [Éditeur d’accélérateurs](../windows/accelerator-editor.md)
+
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Pour déplacer ou copier une entrée de table d'accélérateurs vers un autre fichier de script de ressources
+
+1. Ouvrez les tables d'accélérateurs dans les deux fichiers de script de ressources.
+
+   > [!NOTE]
+   > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
+
+2. Sélectionnez l'entrée à déplacer.
+
+3. À partir de la **modifier** menu, choisissez **copie** ou **couper**.
+
+4. Sélectionnez une entrée dans le fichier de script de ressources cible.
+
+5. À partir de la **modifier** menu, choisissez **coller**.
+
+   > [!NOTE]
+   > Vous pouvez également utiliser les touches de raccourci pour les opérations de copie et de collage.
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Modification des tables d’accélérateurs](../windows/editing-accelerator-tables.md)  
+[Éditeur d’accélérateurs](../windows/accelerator-editor.md)

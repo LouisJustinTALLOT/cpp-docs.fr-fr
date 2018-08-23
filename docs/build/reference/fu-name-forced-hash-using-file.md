@@ -1,5 +1,5 @@
 ---
-title: '-FU (nom forcé #using fichier) | Documents Microsoft'
+title: '-FU (nom du #using fichier) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a92e8d30d2c15ac07bc5a6ff3e6438da46438674
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597499"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Nom du fichier #using imposé)
 Une option du compilateur que vous pouvez utiliser comme alternative au passage d’un nom de fichier à [#using, Directive](../../preprocessor/hash-using-directive-cpp.md) dans le code source.  
@@ -41,21 +41,21 @@ Une option du compilateur que vous pouvez utiliser comme alternative au passage 
  Spécifie le fichier de métadonnées à référencer dans cette compilation.  
   
 ## <a name="remarks"></a>Notes  
- Le commutateur /FU prend simplement un nom de fichier. Pour spécifier plusieurs fichiers, utilisez /FU à chacun d’eux.  
+ Le commutateur /FU prend simplement un nom de fichier. Pour spécifier plusieurs fichiers, utilisez /FU avec chacun d’eux.  
   
- Si vous utilisez [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] et font référence à des métadonnées à utiliser le [Friend Assemblies](../../dotnet/friend-assemblies-cpp.md) fonctionnalité, vous ne pouvez pas utiliser **/FU**. Vous devez référencer les métadonnées dans le code à l’aide de `#using`: avec la `[as friend]` attribut. Assemblys friend ne sont pas pris en charge dans [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
+ Si vous utilisez C++ / c++ / CLI et référencez les métadonnées pour utiliser le [assemblys Friend](../../dotnet/friend-assemblies-cpp.md) fonctionnalité, vous ne pouvez pas utiliser **/FU**. Vous devez référencer les métadonnées dans le code à l’aide de `#using`— avec la `[as friend]` attribut. Assemblys friend ne sont pas pris en charge dans les extensions du composant C++ de Visual C++ / c++ / CX.  
   
- Pour plus d’informations sur la création d’un assembly ou un module pour le common language runtime (CLR), consultez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Pour plus d’informations sur la génération [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], consultez [génération d’applications et bibliothèques](../../cppcx/building-apps-and-libraries-c-cx.md).  
+ Pour plus d’informations sur la création d’un assembly ou un module pour le common language runtime (CLR), consultez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Pour plus d’informations sur la création en C / c++ / CX, consultez [génération d’applications et bibliothèques](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
 2.  Sélectionnez le **C/C++** dossier.  
   
 3.  Sélectionnez le **avancé** page de propriétés.  
   
-4.  Modifier la **Force #using** propriété.  
+4.  Modifier le **Force #using** propriété.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   

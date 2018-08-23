@@ -17,56 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7dd0dca806c1568d88c20eec6a7ac63e5fb242fb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c2a56904fb3709137c167513d0eba426bda7ad14
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020354"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589367"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As, méthode
-Définit le texte spécifié `ComPtr` paramètre de pointeur pour représenter l’interface spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename U>  
-HRESULT As(  
-   _Out_ ComPtr<U>* ptr  
-);  
-  
-template<typename U>  
-HRESULT As(  
-   _Out_ Details::ComPtrRef<ComPtr<U>> ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *U*  
- ID d’interface.  
-  
- *ptr*  
- Lorsque cette opération se termine, un objet qui représente le paramètre *U*.  
-  
-## <a name="return-value"></a>Valeur de retour  
-  
--   S_OK si cette opération réussit ; Sinon, un HRESULT qui indique la raison pour laquelle l’opération a échoué, et *ptr* a la valeur **nullptr**.  
-  
--   S_OK si cette opération réussit, mais actuel **WeakRef** l’objet a déjà été libéré. Paramètre *ptr* a la valeur **nullptr**.  
-  
--   S_OK si cette opération réussit, mais actuel **WeakRef** objet n’est pas dérivé de paramètre *U*. Paramètre *ptr* a la valeur **nullptr**.  
-  
-## <a name="remarks"></a>Notes  
- Une erreur est émise si le paramètre *U* est `IWeakReference`, ou n’est pas dérivé `IInspectable`.  
-  
- Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le deuxième modèle est une spécialisation d’assistance interne qui prend en charge les fonctionnalités du langage C++ telles que le mot clé de déduction de type [auto](../cpp/auto-cpp.md) .  
-  
- À compter dans le SDK Windows 10, cette méthode n’affecte pas la **WeakRef** l’instance à **nullptr** si la référence faible n’a pas pu être obtenue, vous devez donc éviter le code de vérification des erreurs qui vérifie si weakref est pour **nullptr**. Au lieu de cela, vérifiez *ptr* pour **nullptr**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [WeakRef, classe](../windows/weakref-class.md)
+
+Définit le texte spécifié `ComPtr` paramètre de pointeur pour représenter l’interface spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename U>
+HRESULT As(
+   _Out_ ComPtr<U>* ptr
+);
+
+template<typename U>
+HRESULT As(
+   _Out_ Details::ComPtrRef<ComPtr<U>> ptr
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*U*  
+ID d’interface.
+
+*ptr*  
+Lorsque cette opération se termine, un objet qui représente le paramètre *U*.
+
+## <a name="return-value"></a>Valeur de retour
+
+- S_OK si cette opération réussit ; Sinon, un HRESULT qui indique la raison pour laquelle l’opération a échoué, et *ptr* a la valeur **nullptr**.
+
+- S_OK si cette opération réussit, mais actuel **WeakRef** l’objet a déjà été libéré. Paramètre *ptr* a la valeur **nullptr**.
+
+- S_OK si cette opération réussit, mais actuel **WeakRef** objet n’est pas dérivé de paramètre *U*. Paramètre *ptr* a la valeur **nullptr**.
+
+## <a name="remarks"></a>Notes
+
+Une erreur est émise si le paramètre *U* est `IWeakReference`, ou n’est pas dérivé `IInspectable`.
+
+Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le deuxième modèle est une spécialisation d’assistance interne qui prend en charge les fonctionnalités du langage C++ telles que le mot clé de déduction de type [auto](../cpp/auto-cpp.md) .
+
+À compter dans le SDK Windows 10, cette méthode n’affecte pas la **WeakRef** l’instance à **nullptr** si la référence faible n’a pas pu être obtenue, vous devez donc éviter le code de vérification des erreurs qui vérifie si weakref est pour **nullptr**. Au lieu de cela, vérifiez *ptr* pour **nullptr**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[WeakRef, classe](../windows/weakref-class.md)

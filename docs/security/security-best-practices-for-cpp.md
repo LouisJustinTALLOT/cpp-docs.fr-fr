@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 author: mikeblome
-ms.author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015622"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610051"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -34,7 +34,7 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
  Ces fonctionnalités de sécurité sont intégrées dans le compilateur et l'éditeur de liens Visual C++ :  
   
  [/guard (Activer la protection du flux de contrôle)](../build/reference/guard-enable-control-flow-guard.md)  
- Indique au compilateur d'analyser le flux de contrôle pour rechercher les cibles d'appel indirectes au moment de la compilation, puis d'insérer du code afin de vérifier les cibles au moment de l'exécution.  
+ Indique au compilateur d’analyser le flux de contrôle pour les cibles d’appels indirects au moment de la compilation, puis d’insérer du code pour vérifier les cibles lors de l’exécution.  
   
  [/GS (vérification de la sécurité des mémoires tampons)](../build/reference/gs-buffer-security-check.md)  
  Indique au compilateur d'insérer du code de détection de débordement dans les fonctions qui courent le risque d'être exploitées. Quand un débordement est détecté, l'exécution est arrêtée. Cette option est activée par défaut.  

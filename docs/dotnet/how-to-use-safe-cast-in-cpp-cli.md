@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser safe_cast dans c++ / CLI | Documents Microsoft'
+title: 'Comment : utiliser safe_cast dans C++ / c++ / CLI | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f695c45d5202f376a4ce4daf14c37a7fd9a1904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1582179a64327afda6a4dc16cde9588b19397f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607912"
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>Comment : utiliser safe_cast dans C++/CLI
-Cet article explique comment utiliser safe_cast dans c++ / applications de CLI. Pour plus d’informations sur safe_cast dans [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], consultez [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+Cet article explique comment utiliser safe_cast dans C++ / c++ / applications de l’interface CLI. Pour plus d’informations sur safe_cast dans C++ / c++ / CX, consultez [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
-## <a name="upcasting"></a>Cast ascendant  
+## <a name="upcasting"></a>Upcast  
  Un upcast est un cast d’un type dérivé à une de ses classes de base. Ce cast est sécurisé et ne nécessite pas d’une notation de cast explicite. L’exemple suivant montre comment effectuer un upcast, avec `safe_cast` et sans elle.  
   
 ```cpp  
@@ -75,7 +75,7 @@ in C::Test
 in B::Test2  
 ```  
   
-## <a name="downcasting"></a>Cast descendant  
+## <a name="downcasting"></a>Cast  
  Un cast aval est un cast d’une classe de base à une classe qui est dérivée de la classe de base.  Un cast aval est sûr uniquement si l’objet qui est résolu lors de l’exécution d’adressage est en fait un objet de classe dérivée.  Contrairement aux `static_cast`, `safe_cast` effectue une vérification dynamique et lève <xref:System.InvalidCastException> si la conversion échoue.  
   
 ```cpp  
@@ -185,9 +185,9 @@ in operator V^(R^ r)
   
 ### <a name="boxing"></a>Boxing  
   
- Conversion boxing est définie comme une conversion définie par l’utilisateur injectées par le compilateur.  Par conséquent, vous pouvez utiliser `safe_cast` boxing d’une valeur sur le tas CLR.  
+ Le boxing est défini comme une conversion définie par l’utilisateur injectées par le compilateur.  Par conséquent, vous pouvez utiliser `safe_cast` à la zone d’une valeur sur le tas CLR.  
   
- L’exemple suivant montre un boxing des types de valeur simple et définie par l’utilisateur.  A `safe_cast` zones d’une variable de type valeur qui se trouve sur la pile native afin qu’il peut être affecté à une variable sur le tas de garbage collection.  
+ L’exemple suivant montre le boxing des types de valeur simple et définie par l’utilisateur.  Un `safe_cast` zones d’une variable de type valeur qui se trouve sur la pile native afin qu’il peut être affecté à une variable sur le tas de garbage collection.  
   
 ```cpp  
 // safe_cast_boxing.cpp  
@@ -248,9 +248,9 @@ int main() {
   
 ### <a name="unboxing"></a>Unboxing  
   
- Unboxing est définie comme une conversion définie par l’utilisateur injectées par le compilateur.  Par conséquent, vous pouvez utiliser `safe_cast` extraction d’une valeur sur le tas CLR.  
+ Conversion unboxing est défini comme une conversion définie par l’utilisateur injectées par le compilateur.  Par conséquent, vous pouvez utiliser `safe_cast` désencastrer une valeur sur le tas CLR.  
   
- Unboxing est une conversion définie par l’utilisateur, mais contrairement à une conversion boxing, unboxing doit être explicite, autrement dit, il doit être effectuée par un `static_cast`, C-style cast, ou `safe_cast`; unboxing ne peut pas être exécutée implicitement.  
+ Unboxing est une conversion définie par l’utilisateur, mais contrairement à une conversion boxing, unboxing doit être explicite, autrement dit, il doit être effectuée par un `static_cast`, C-style cast, ou `safe_cast`; unboxing ne peut pas être effectuée implicitement.  
   
 ```cpp  
 // safe_cast_unboxing.cpp  

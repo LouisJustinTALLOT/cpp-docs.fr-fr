@@ -26,34 +26,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e6cb463f95bc68d6880fb593ba394ec94d585696
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648208"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597334"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Fenêtre Couleurs (Éditeur d'images pour les icônes)
-Le **couleurs** fenêtre comporte deux parties :  
-  
-1.  Le **Palette de couleurs**, qui est un tableau d’échantillons de couleurs qui représentent les couleurs que vous pouvez utiliser. Vous pouvez cliquer sur les échantillons pour sélectionner les couleurs de premier plan et d'arrière-plan quand vous utilisez les outils graphiques.  
-  
-2.  Le **indicateur de couleur**, qui affiche les couleurs de premier plan et d’arrière-plan et les sélecteurs pour l’écran et la couleur inversée.  
-  
-     ![Fenêtre couleurs](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Fenêtre Couleurs  
-  
+
+Le **couleurs** fenêtre comporte deux parties :
+
+1. Le **Palette de couleurs**, qui est un tableau d’échantillons de couleurs qui représentent les couleurs que vous pouvez utiliser. Vous pouvez cliquer sur les échantillons pour sélectionner les couleurs de premier plan et d'arrière-plan quand vous utilisez les outils graphiques.
+
+2. Le **indicateur de couleur**, qui affiche les couleurs de premier plan et d’arrière-plan et les sélecteurs pour l’écran et la couleur inversée.
+
+   ![Fenêtre couleurs](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+Fenêtre Couleurs
+
 > [!NOTE]
->  Le **écran couleur** et **couleur inversée** outils sont uniquement disponibles pour les icônes et curseurs.  
-  
- Vous pouvez utiliser la **couleurs** fenêtre avec le [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md).  
-  
-## <a name="requirements"></a>Configuration requise  
- Aucun.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Affichage ou masquage de la fenêtre couleurs](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
- [Création de régions transparentes ou inversées dans des Images de périphérique](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
- [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Boîte de dialogue de sélecteur de couleurs](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
- [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+> Le **écran couleur** et **couleur inversée** outils sont uniquement disponibles pour les icônes et curseurs.
+
+Vous pouvez utiliser la **couleurs** fenêtre avec le [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md).
+
+## <a name="requirements"></a>Configuration requise
+
+Aucun.
+
+## <a name="see-also"></a>Voir aussi
+
+[Affichage ou masquage de la fenêtre couleurs](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
+[Création de régions transparentes ou inversées dans des images de périphérique](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
+[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Boîte de dialogue de sélecteur de couleurs](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

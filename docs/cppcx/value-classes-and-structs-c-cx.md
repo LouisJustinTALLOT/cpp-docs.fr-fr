@@ -1,5 +1,5 @@
 ---
-title: Classes et structs Value (C + c++ / CX) | Documents Microsoft
+title: Classes et structs Value (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090711"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589054"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes de valeur et structures de valeur (C++/CX)
-A *struct value* ou *classe value* est un Runtime compatible structure POD (plain ancien données ») de Windows. Elle a une taille fixe et se compose uniquement de champs ; contrairement à une classe ref, elle ne possède aucune propriété.  
+Un *struct value* ou *classe value* est un Runtime compatible (« structure POD plain old data ») de Windows. Elle a une taille fixe et se compose uniquement de champs ; contrairement à une classe ref, elle ne possède aucune propriété.  
   
  Les exemples suivants montrent comment déclarer et initialiser des structs value.  
   
@@ -59,7 +59,7 @@ A *struct value* ou *classe value* est un Runtime compatible structure POD (plai
   
  Une *classe value* est comparable à un `value struct` sauf que ses champs doivent avoir une accessibilité publique explicitement spécifiée. Elle est déclarée à l'aide du mot clé `value class` .  
   
- Un struct value ou une classe value peut contenir comme champs uniquement types numériques fondamentaux, classes enum, `Platform::String^`, ou [Platform::IBox \<T > ^](../cppcx/platform-ibox-interface.md) où T est une classe enum type numérique ou de classe value ou de struct. Un champ `IBox<T>^` peut avoir une valeur `nullptr`. C'est la façon dont C++ implémente le concept de *types valeur Nullable*.  
+ Un struct value ou une classe value peut contenir comme champs uniquement types numériques fondamentaux, classes enum, `Platform::String^`, ou [Platform::IBox \<T > ^](../cppcx/platform-ibox-interface.md) où T est une classe enum type numérique ou classe value ou un struct. Un champ `IBox<T>^` peut avoir une valeur `nullptr`. C'est la façon dont C++ implémente le concept de *types valeur Nullable*.  
   
  Une classe value ou un struct value qui contient un type `Platform::String^` ou `IBox<T>^` comme membre n'est pas utilisable avec `memcpy`.  
   

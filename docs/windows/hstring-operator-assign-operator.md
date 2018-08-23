@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9cc496f4f1c23508b2ebba2788910ff9c9ca2066
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9294650db7a1b18c2542603988952a80b3f1905d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608597"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598543"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator=, opérateur
-Déplace la valeur d’un autre **HString** objet actuel **HString** objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+Déplace la valeur d’un autre **HString** objet actuel **HString** objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 HString& operator=(HString&& other) throw()  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *other*  
- Un existant **HString** objet.  
-  
-## <a name="remarks"></a>Notes  
- La valeur existants *autres* objet est copié dans le cours **HString** objet, puis le *autres* détruit.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HString, classe](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Paramètres
+
+*other*  
+Un existant **HString** objet.
+
+## <a name="remarks"></a>Notes
+
+La valeur existants *autres* objet est copié dans le cours **HString** objet, puis le *autres* détruit.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HString, classe](../windows/hstring-class.md)

@@ -23,73 +23,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646784"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594067"
 ---
 # <a name="eventreceiver"></a>event_receiver
-Crée un récepteur d'événements (récepteur).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ event_receiver(  
-   type   
-   [, layout_dependent=false]   
-) ]  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *type*  
- Une énumération de l’une des valeurs suivantes :  
-  
--   `native` pour le code C/C++ non managé (valeur par défaut pour les classes natives).  
-  
--   `com` pour le code COM. Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :  
-  
-    ```cpp  
-    #define _ATL_ATTRIBUTES  
-    #include <atlbase.h>  
-    #include <atlcom.h>  
-    ```  
-  
- *layout_dependent*  
- Spécifiez *layout_dependent* uniquement si `type` = **com**. *layout_dependent* est une valeur booléenne :  
-  
--   **true** signifie que la signature des délégués dans le récepteur doit correspondre exactement à ceux auxquels ils sont raccordés des source de l’événement des événements. Les noms de gestionnaire d’événements récepteur doivent correspondre aux noms spécifiés dans l’interface de source d’événement pertinent. Vous devez utiliser `coclass` lorsque *layout_dependent* est **true**. Il est légèrement plus efficace de spécifier **true**.  
-  
--   **false** (valeur par défaut) signifie que la classe de stockage et de la convention d’appel (virtuelle, statique, etc.) n’ont pas à correspondre à la méthode d’événement et les gestionnaires ; ni les noms des gestionnaires doivent-ils correspondre aux noms de méthode source interface d’événements.  
-  
-## <a name="remarks"></a>Notes  
- Le **event_receiver** attribut C++ indique que la classe ou structure à laquelle il est appliqué est un récepteur d’événements, l’utilisation du modèle d’événement unifié de Visual C++.  
-  
- **event_receiver** est utilisé avec le [event_source](../windows/event-source.md) attribut et la [__hook](../cpp/hook.md) et [__unhook](../cpp/unhook.md) mots clés. Utilisez `event_source` pour créer des sources d’événements. Utilisez **__hook** dans les méthodes d’un récepteur d’événements à associer (« raccordement ») des méthodes de récepteur d’événements pour les événements de source d’événements. Utilisez **__unhook** pour dissocier les.  
-  
- *layout_dependent* est spécifié uniquement pour les récepteurs d’événements COM (`type`=**com**). La valeur par défaut pour *layout_dependent* est **false**.  
-  
+
+Crée un récepteur d'événements (récepteur).
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ event_receiver(
+   type
+   [, layout_dependent=false]
+) ]
+```
+
+### <a name="parameters"></a>Paramètres
+
+*type*  
+Une énumération de l’une des valeurs suivantes :
+
+- `native` pour le code C/C++ non managé (valeur par défaut pour les classes natives).
+
+- `com` pour le code COM. Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :
+
+    ```cpp
+    #define _ATL_ATTRIBUTES
+    #include <atlbase.h>
+    #include <atlcom.h>
+    ```
+
+*layout_dependent*  
+Spécifiez *layout_dependent* uniquement si `type` = **com**. *layout_dependent* est une valeur booléenne :
+
+- **true** signifie que la signature des délégués dans le récepteur doit correspondre exactement à ceux auxquels ils sont raccordés des source de l’événement des événements. Les noms de gestionnaire d’événements récepteur doivent correspondre aux noms spécifiés dans l’interface de source d’événement pertinent. Vous devez utiliser `coclass` lorsque *layout_dependent* est **true**. Il est légèrement plus efficace de spécifier **true**.
+
+- **false** (valeur par défaut) signifie que la classe de stockage et de la convention d’appel (virtuelle, statique, etc.) n’ont pas à correspondre à la méthode d’événement et les gestionnaires ; ni les noms des gestionnaires doivent-ils correspondre aux noms de méthode source interface d’événements.
+
+## <a name="remarks"></a>Notes
+
+Le **event_receiver** attribut C++ indique que la classe ou structure à laquelle il est appliqué est un récepteur d’événements, l’utilisation du modèle d’événement unifié de Visual C++.
+
+**event_receiver** est utilisé avec le [event_source](../windows/event-source.md) attribut et la [__hook](../cpp/hook.md) et [__unhook](../cpp/unhook.md) mots clés. Utilisez `event_source` pour créer des sources d’événements. Utilisez **__hook** dans les méthodes d’un récepteur d’événements à associer (« raccordement ») des méthodes de récepteur d’événements pour les événements de source d’événements. Utilisez **__unhook** pour dissocier les.
+
+*layout_dependent* est spécifié uniquement pour les récepteurs d’événements COM (`type`=**com**). La valeur par défaut pour *layout_dependent* est **false**.
+
 > [!NOTE]
->  Une classe ou structure modélisée ne peut pas contenir d'événements.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**classe**, **struct**|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|`coclass` Lorsque *layout_dependent*=**true**|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs de compilateur](../windows/compiler-attributes.md)   
- [event_source](../windows/event-source.md)   
- [__event](../cpp/event.md)   
- [__hook](../cpp/hook.md)   
- [__unhook](../cpp/unhook.md)   
- [Attributs de classe](../windows/class-attributes.md)   
+> Une classe ou structure modélisée ne peut pas contenir d'événements.
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**classe**, **struct**|
+|**Renouvelable**|Non|
+|**Attributs requis**|`coclass` Lorsque *layout_dependent*=**true**|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs de compilateur](../windows/compiler-attributes.md)  
+[event_source](../windows/event-source.md)  
+[__event](../cpp/event.md)  
+[__hook](../cpp/hook.md)  
+[__unhook](../cpp/unhook.md)  
+[Attributs de classe](../windows/class-attributes.md)  

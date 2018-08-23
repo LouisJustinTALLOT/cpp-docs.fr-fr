@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014189"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601965"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT, constructeur
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-SyncLockT(  
-   _Inout_ SyncLockT&& other  
-);  
-  
-explicit SyncLockT(  
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+SyncLockT(
+   _Inout_ SyncLockT&& other
+);
+
+explicit SyncLockT(
    typename SyncTraits::Type sync = SyncTraits::GetInvalidValue()  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *other*  
- Une référence rvalue à un autre **SyncLockT** objet.  
-  
- *sync*  
- Une référence à un autre `SyncLockWithStatusT` objet.  
-  
-## <a name="remarks"></a>Notes  
- Initialise une nouvelle instance de la **SyncLockT** classe.  
-  
- Le premier constructeur initialise actuel **SyncLockT** objet à partir d’un autre **SyncLockT** objet spécifié par le paramètre *autres*et puis invalide l’autres  **SyncLockT** objet. Le deuxième constructeur est **protégé**et l’initialise actuel **SyncLockT** objet à un état non valide.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [SyncLockT, classe](../windows/synclockt-class.md)
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*other*  
+Une référence rvalue à un autre **SyncLockT** objet.
+
+*sync*  
+Une référence à un autre `SyncLockWithStatusT` objet.
+
+## <a name="remarks"></a>Notes
+
+Initialise une nouvelle instance de la **SyncLockT** classe.
+
+Le premier constructeur initialise actuel **SyncLockT** objet à partir d’un autre **SyncLockT** objet spécifié par le paramètre *autres*et puis invalide l’autres  **SyncLockT** objet. Le deuxième constructeur est **protégé**et l’initialise actuel **SyncLockT** objet à un état non valide.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[SyncLockT, classe](../windows/synclockt-class.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 27c94442c8b64a635439f42208d0b7b0d1876da1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642033"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596420"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_, données de membre
-Contient une référence à FTM.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** ftm.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [FtmBase, classe](../windows/ftmbase-class.md)
+
+Contient une référence à FTM.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** ftm.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[FtmBase, classe](../windows/ftmbase-class.md)

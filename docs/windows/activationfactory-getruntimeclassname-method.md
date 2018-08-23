@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643067"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590180"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName, méthode
-Obtient le nom de classe runtime de l’objet qui actuel **ActivationFactory** instancie.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *runtimeName*  
- Lorsque cette opération se termine, un handle vers une chaîne qui contient le nom de classe runtime de l’objet qui actuel **ActivationFactory** instancie.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ActivationFactory, classe](../windows/activationfactory-class.md)
+
+Obtient le nom de classe runtime de l’objet qui actuel **ActivationFactory** instancie.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*runtimeName*  
+Lorsque cette opération se termine, un handle vers une chaîne qui contient le nom de classe runtime de l’objet qui actuel **ActivationFactory** instancie.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ActivationFactory, classe](../windows/activationfactory-class.md)

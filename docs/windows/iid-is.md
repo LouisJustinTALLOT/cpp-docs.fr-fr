@@ -17,62 +17,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508f83b1dde590a4a8a04980895ef247f2a16123
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c0743a34b39a29843bf4a99c8d6f234c1c67a05b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014986"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605143"
 ---
 # <a name="iidis"></a>iid_is
-Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’interface.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ iid_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *Expression*  
- Une expression de langage C qui spécifie un IID d’une interface COM vers laquelle pointe un pointeur d’interface.  
-  
-## <a name="remarks"></a>Notes  
- Le **iid_is** attribut C++ a les mêmes fonctionnalités que le [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) attribut MIDL.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant illustre l’utilisation de **iid_is**:  
-  
-```cpp  
-// cpp_attr_ref_iid_is.cpp  
-// compile with: /LD  
-#include "wtypes.h"  
-#include "unknwn.h"  
-[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl : IDispatch  
-{  
-   [id(1)] HRESULT CreateInstance([in] REFIID riid,[out, iid_is("riid")]   
-   IUnknown ** ppvObject);  
-};  
-  
-[module(name="ATLFIRELib")];  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|Paramètre d’interface, membre de données|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [Attributs de paramètres](../windows/parameter-attributes.md)   
+
+Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’interface.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ iid_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Expression*  
+Une expression de langage C qui spécifie un IID d’une interface COM vers laquelle pointe un pointeur d’interface.
+
+## <a name="remarks"></a>Notes
+
+Le **iid_is** attribut C++ a les mêmes fonctionnalités que le [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) attribut MIDL.
+
+## <a name="example"></a>Exemple
+
+Le code suivant illustre l’utilisation de **iid_is**:
+
+```cpp
+// cpp_attr_ref_iid_is.cpp
+// compile with: /LD
+#include "wtypes.h"
+#include "unknwn.h"
+[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl : IDispatch
+{
+   [id(1)] HRESULT CreateInstance([in] REFIID riid,[out, iid_is("riid")]
+   IUnknown ** ppvObject);
+};
+
+[module(name="ATLFIRELib")];
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|Paramètre d’interface, membre de données|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs de paramètres](../windows/parameter-attributes.md)  

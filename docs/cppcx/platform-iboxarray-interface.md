@@ -1,5 +1,5 @@
 ---
-title: Platform::iboxarray, Interface | Documents Microsoft
+title: Platform::iboxarray, Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088340"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597318"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray, interface
 `IBoxArray` est le wrapper pour les tableaux de types valeur passés via l'interface binaire d'application (ABI) ou stockés dans les collections d'éléments `Platform::Object^` tels que ceux dans les contrôles XAML.  

@@ -1,5 +1,5 @@
 ---
-title: Attribut de Platform::Metadata | Documents Microsoft
+title: 'Attribut Platform::Metadata :: Attribute | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b86c7502ce62f81d84a5ea43ecdd56186cfd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087576"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609912"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute (attribut)
 Indique qu'une énumération peut être traitée comme un champ de bits, c'est-à-dire un ensemble d'indicateurs.  
@@ -39,8 +39,8 @@ public ref class Flags abstract : Attribute
   
 ### <a name="remarks"></a>Notes  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   

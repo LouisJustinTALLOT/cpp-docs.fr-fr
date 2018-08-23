@@ -13,136 +13,149 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 156177d2501ad299e1f40494777c07de0d0747b0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bf101fdb0e93ef206ae61c29b636c973fa58a825
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643590"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593975"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
+
 La bibliothèque de modèles C++ Windows Runtime (WRL) est une bibliothèque de modèles qui fournit un moyen de bas niveau de créer et d’utiliser des composants Windows Runtime.
 
 > [!NOTE]
 > WRL est désormais remplacée par C / c++ / WinRT, une standard C ++ 17 projection de langage pour Windows Runtime APIs. C++ / c++ / WinRT est disponible dans le SDK Windows 10 à partir de la version 1803 qui interviennent. C++ / c++ / WinRT est entièrement implémentée dans les fichiers d’en-tête et conçu pour vous permettre d’accès idéal à l’API Windows moderne.
 
-> Avec C / c++ / WinRT, vous pouvez consommer et créer le Windows Runtime APIs à l’aide de n’importe quel conformes aux normes C ++ 17 du compilateur. C++ / c++ / WinRT généralement plus performant et produit des binaires plus petits que toute autre option de langage pour le Windows Runtime. Nous continuerons à prendre en charge de C++ / c++ / CX et WRL, mais vous recommandons vivement que les nouvelles applications utiliser C++ / c++ / WinRT. Pour plus d’informations, consultez [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
-  
-## <a name="benefits"></a>Avantages  
- La bibliothèque de modèles Windows Runtime C++ vous permet plus facilement implémenter et consommer des composants de composant COM (Object Model). Il fournit des techniques de gestion interne comme comptage de références pour gérer la durée de vie des objets et de tester des valeurs HRESULT pour déterminer si une opération a réussi ou échoué. Pour pouvoir utiliser la bibliothèque de modèles Windows Runtime C++, vous devez respecter soigneusement ces règles et techniques.  
-  
- C++ / c++ / CX est un moyen de haut niveau, en fonction de langage à utiliser des composants Windows Runtime. À la fois la bibliothèque de modèles Windows Runtime C++ et C++ / c++ / CX simplifient l’écriture de code pour le Windows Runtime en exécutant automatiquement les tâches de gestion interne à votre place.  
-  
- La bibliothèque de modèles Windows Runtime C++ et C / c++ / CX offrent des avantages différents. Voici quelques raisons pour lesquelles vous souhaiterez peut-être utiliser la bibliothèque de modèles Windows Runtime C++ au lieu de C++ / c++ / CX :  
-  
--   Bibliothèque de modèles Windows Runtime C++ ajoute peu d’abstraction sur le Windows Runtime binaire Interface Application (ABI), ce qui vous donne la possibilité de contrôler le code sous-jacent pour mieux créer ou consommer Windows APIs Runtime.  
-  
--   C++ / c++ / CX représente les valeurs HRESULT de COM en tant qu’exceptions. Si vous avez hérité d’une base de code qui utilise COM, ou qui n’utilise pas les exceptions, vous constaterez peut-être que la bibliothèque de modèles C++ Windows Runtime est une façon plus naturelle pour travailler avec le Runtime de Windows, car vous n’êtes pas obligé d’utiliser des exceptions.  
-  
-    > [!NOTE]
-    >  La bibliothèque de modèles Windows Runtime C++ utilise les valeurs HRESULT et ne lève pas d’exceptions. En outre, la bibliothèque de modèles Windows Runtime C++ utilise des pointeurs intelligents et le modèle RAII pour contribuer à garantir que les objets sont détruits correctement lorsque votre code d’application lève une exception. Pour plus d’informations sur les pointeurs intelligents et le modèle RAII, consultez [pointeurs intelligents](../cpp/smart-pointers-modern-cpp.md) et [ressources propre des objets (RAII)](../cpp/objects-own-resources-raii.md).  
-  
--   L’objectif et la conception de la bibliothèque de modèles C++ Windows Runtime est inspirée par la bibliothèque ATL (Active Template), qui est un ensemble de classes C++ basées sur modèle qui simplifie la programmation d’objets COM. Étant donné que la bibliothèque de modèles Windows Runtime C++ utilise C++ standard pour encapsuler le Runtime de Windows, vous pouvez plus facilement le port et interagir avec de nombreux composants COM existants écrits en ATL à l’exécution de Windows. Si vous connaissez déjà ATL, vous constaterez peut-être que la programmation de la bibliothèque de modèles C++ Windows Runtime est plus facile.  
-  
-## <a name="getting-started"></a>Prise en main  
- Voici quelques ressources qui peuvent vous aider à commencer à travailler avec la bibliothèque de modèles Windows Runtime C++ tout de suite.  
-  
- [Le Windows Runtime Library (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- Dans cette vidéo de Channel 9, en savoir plus sur comment la bibliothèque de modèles Windows Runtime C++ vous aide à que écrire des applications Universal Windows Platform (UWP) et comment créer et consommer des composants Windows Runtime.  
-  
- [Comment : activer et utiliser un composant d’exécution de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour initialiser le Runtime Windows et activer et utiliser un composant Windows Runtime.  
-  
- [Comment : effectuer des opérations asynchrones](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour démarrer des opérations asynchrones et effectuer des actions lorsque les opérations se terminent.  
-  
- [Comment : gérer les événements](../windows/how-to-handle-events-using-wrl.md)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour vous abonner à et gérer les événements d’un objet Windows Runtime.  
-  
- [Procédure pas à pas : création d’une application UWP à l’aide de WRL et Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Découvrez comment créer une application UWP qui utilise [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
-  
- [Comment : créer un composant COM classique](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant COM de base et une méthode simple pour vous inscrire et utiliser le composant COM à partir d’une application de bureau.  
-  
- [Guide pratique pour instancier directement les composants WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
- Découvrez comment utiliser le [Microsoft::wrl :: Make](../windows/make-function.md) et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pour instancier un composant à partir du module qui le définit.  
-  
- [Guide pratique pour utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
- Montre comment consommer des composants Windows Runtime personnalisées à partir de WRL en créant un fichier IDL à partir des métadonnées .winmd.  
-  
- [Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Montre comment utiliser le [IXMLHTTPRequest2](http://msdn.microsoft.com/bbc11c4a-aecf-4d6d-8275-3e852e309908) et [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces avec des tâches pour envoyer des demandes HTTP GET et POST à un service web dans une application UWP.  
-  
- [Exemple optimiseur de voyage Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Utilise le `HttpRequest` classe qui est définie dans [procédure pas à pas : connexion à l’aide de tâches et les requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) dans le contexte d’une application UWP complète.  
-  
- [Création d’un composant Windows DLL d’exécution avec l’exemple C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant DLL in-process et le consommer à partir de C++ / c++ / CX, JavaScript et c#.  
-  
- [Exemple de jeu marble maze DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
- Montre comment utiliser la bibliothèque de modèles C++ Windows Runtime pour gérer la durée de vie des composants COM tels que DirectX et Media Foundation dans le contexte d’un jeu 3D complet.  
-  
- [Envoi de notifications toast à partir d’exemples d’applications de bureau](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour travailler avec des notifications de toast à partir d’une application de bureau.  
-  
-## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime bibliothèque de modèles C++ comparé à ATL  
- Bibliothèque de modèles Windows Runtime C++ ressemble à la bibliothèque ATL (Active Template), car vous pouvez l’utiliser pour créer des objets COM rapides de petites. Bibliothèque de modèles Windows Runtime C++ et ATL partagent également des concepts tels que la définition d’objets dans des modules, l’inscription explicite d’interfaces et la création d’objets à l’aide de fabriques. Vous pouvez être à l’aise avec la bibliothèque de modèles Windows Runtime C++ si vous êtes familiarisé avec ATL.  
-  
- Bibliothèque de modèles Windows Runtime C++ prend en charge la fonctionnalité COM requise pour les applications UWP. Par conséquent, elle diffère de la bibliothèque ATL car elle omet la prise en charge directe des fonctionnalités COM telles que :  
-  
--   agrégation ;  
-  
--   implémentations stock ;  
-  
--   interfaces doubles (`IDispatch`) ;  
-  
--   interfaces d'énumérateur standard ;  
-  
--   points de connexion ;  
-  
--   interfaces détachables ;  
-  
--   incorporation OLE ;  
-  
--   contrôles ActiveX ;  
-  
--   COM+.  
-  
-## <a name="concepts"></a>Concepts  
- Bibliothèque de modèles Windows Runtime C++ fournit des types représentant quelques concepts de base. Les sections suivantes décrivent ces types.  
-  
-### <a name="comptr"></a>ComPtr  
- [ComPtr](../windows/comptr-class.md) est un *pointeur intelligent* type qui représente l’interface spécifiée par le paramètre de modèle. Utilisez `ComPtr` pour déclarer une variable pouvant accéder aux membres d'un objet dérivé de l'interface. `ComPtr` met à jour automatiquement un décompte de références pour le pointeur d'interface sous-jacent et libère l'interface lorsque le décompte de références atteint zéro.  
-  
-### <a name="runtimeclass"></a>RuntimeClass  
- [RuntimeClass](../windows/runtimeclass-class.md) représente une classe instanciée qui hérite d’un ensemble d’interfaces spécifiées. Un `RuntimeClass` objet peut fournir une combinaison de prise en charge pour une ou plusieurs interfaces Windows Runtime COM, ou une référence faible à un composant.  
-  
-### <a name="module"></a>Module  
- [Module](../windows/module-class.md) représente une collection d’objets connexes. Un objet `Module` gère les fabriques de classe, qui créent des objets, et l'inscription, qui permet à d'autres applications d'utiliser un objet.  
-  
-### <a name="callback"></a>Rappel  
- Le [rappel](../windows/callback-function-windows-runtime-cpp-template-library.md) fonction crée un objet dont la fonction membre est un gestionnaire d’événements (une méthode de rappel). Utilisez la fonction `Callback` pour écrire des opérations asynchrones.  
-  
-### <a name="eventsource"></a>EventSource  
- [EventSource](../windows/eventsource-class.md) sert à gérer *déléguer* gestionnaires d’événements. Utiliser la bibliothèque de modèles Windows Runtime C++ pour implémenter un délégué et utilisez `EventSource` pour ajouter, supprimer et appeler des délégués.  
-  
-### <a name="asyncbase"></a>AsyncBase  
- [AsyncBase](../windows/asyncbase-class.md) fournit des méthodes virtuelles qui représentent le modèle de programmation asynchrone Windows Runtime. Redéfinissez les membres de cette classe pour créer une classe personnalisée capable de démarrer, arrêter ou contrôler la progression d'une opération asynchrone.  
-  
-### <a name="ftmbase"></a>FtmBase  
- [FtmBase](../windows/ftmbase-class.md) représente un objet marshaler libre de threads. `FtmBase` crée un tableau global d'interface (GIT) et vous permet de gérer le marshaling et les objets proxy.  
-  
-### <a name="weakref"></a>WeakRef  
- [WeakRef](../windows/weakref-class.md) est un type pointeur intelligent qui représente un *référence faible*, qui fait référence à un objet qui peut ou ne peut pas accessible. Un `WeakRef` objet peut être utilisé uniquement par le Windows Runtime et non par le COM classique.  
-  
- Un objet `WeakRef` représente généralement un objet dont l'existence est contrôlée par un thread ou une application externe. Par exemple, un objet `WeakRef` peut faire référence à un objet fichier. Lorsque le fichier est ouvert, `WeakRef` est valide et le fichier référencé est accessible. En revanche, quand le fichier est fermé, `WeakRef` est incorrect et le fichier n'est pas accessible.  
-  
-## <a name="related-topics"></a>Rubriques connexes  
-  
-|||  
-|-|-|  
-|[API principales par catégorie](../windows/key-wrl-apis-by-category.md)|Met en évidence la principale bibliothèque de modèles Windows Runtime C++ types, fonctions et les macros.|  
-|[Référence](../windows/wrl-reference.md)|Contient des informations de référence pour la bibliothèque de modèles C++ Windows Runtime.|  
-|[Référence rapide (Windows Runtime et Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge l’exécution de Windows.|  
+> Avec C / c++ / WinRT, vous pouvez consommer et créer le Windows Runtime APIs à l’aide de n’importe quel conformes aux normes C ++ 17 du compilateur. C++ / c++ / WinRT généralement plus performant et produit des binaires plus petits que toute autre option de langage pour le Windows Runtime. Nous continuerons à prendre en charge de C++ / c++ / CX et WRL, mais vous recommandons vivement que les nouvelles applications utiliser C++ / c++ / WinRT. Pour plus d’informations, consultez [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+
+## <a name="benefits"></a>Avantages
+
+La bibliothèque de modèles Windows Runtime C++ vous permet plus facilement implémenter et consommer des composants de composant COM (Object Model). Il fournit des techniques de gestion interne comme comptage de références pour gérer la durée de vie des objets et de tester des valeurs HRESULT pour déterminer si une opération a réussi ou échoué. Pour pouvoir utiliser la bibliothèque de modèles Windows Runtime C++, vous devez respecter soigneusement ces règles et techniques.
+
+C++ / c++ / CX est un moyen de haut niveau, en fonction de langage à utiliser des composants Windows Runtime. À la fois la bibliothèque de modèles Windows Runtime C++ et C++ / c++ / CX simplifient l’écriture de code pour le Windows Runtime en exécutant automatiquement les tâches de gestion interne à votre place.
+
+La bibliothèque de modèles Windows Runtime C++ et C / c++ / CX offrent des avantages différents. Voici quelques raisons pour lesquelles vous souhaiterez peut-être utiliser la bibliothèque de modèles Windows Runtime C++ au lieu de C++ / c++ / CX :
+
+- Bibliothèque de modèles Windows Runtime C++ ajoute peu d’abstraction sur le Windows Runtime binaire Interface Application (ABI), ce qui vous donne la possibilité de contrôler le code sous-jacent pour mieux créer ou consommer Windows APIs Runtime.
+
+- C++ / c++ / CX représente les valeurs HRESULT de COM en tant qu’exceptions. Si vous avez hérité d’une base de code qui utilise COM, ou qui n’utilise pas les exceptions, vous constaterez peut-être que la bibliothèque de modèles C++ Windows Runtime est une façon plus naturelle pour travailler avec le Runtime de Windows, car vous n’êtes pas obligé d’utiliser des exceptions.
+
+   > [!NOTE]
+   > La bibliothèque de modèles Windows Runtime C++ utilise les valeurs HRESULT et ne lève pas d’exceptions. En outre, la bibliothèque de modèles Windows Runtime C++ utilise des pointeurs intelligents et le modèle RAII pour contribuer à garantir que les objets sont détruits correctement lorsque votre code d’application lève une exception. Pour plus d’informations sur les pointeurs intelligents et le modèle RAII, consultez [pointeurs intelligents](../cpp/smart-pointers-modern-cpp.md) et [ressources propre des objets (RAII)](../cpp/objects-own-resources-raii.md).
+
+- L’objectif et la conception de la bibliothèque de modèles C++ Windows Runtime est inspirée par la bibliothèque ATL (Active Template), qui est un ensemble de classes C++ basées sur modèle qui simplifie la programmation d’objets COM. Étant donné que la bibliothèque de modèles Windows Runtime C++ utilise C++ standard pour encapsuler le Runtime de Windows, vous pouvez plus facilement le port et interagir avec de nombreux composants COM existants écrits en ATL à l’exécution de Windows. Si vous connaissez déjà ATL, vous constaterez peut-être que la programmation de la bibliothèque de modèles C++ Windows Runtime est plus facile.
+
+## <a name="getting-started"></a>Prise en main
+
+Voici quelques ressources qui peuvent vous aider à commencer à travailler avec la bibliothèque de modèles Windows Runtime C++ tout de suite.
+
+[Le Windows Runtime Library (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+Dans cette vidéo de Channel 9, en savoir plus sur comment la bibliothèque de modèles Windows Runtime C++ vous aide à que écrire des applications Universal Windows Platform (UWP) et comment créer et consommer des composants Windows Runtime.
+
+[Comment : activer et utiliser un composant d’exécution de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour initialiser le Runtime Windows et activer et utiliser un composant Windows Runtime.
+
+[Comment : effectuer des opérations asynchrones](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour démarrer des opérations asynchrones et effectuer des actions lorsque les opérations se terminent.
+
+[Comment : gérer les événements](../windows/how-to-handle-events-using-wrl.md)  
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour vous abonner à et gérer les événements d’un objet Windows Runtime.
+
+[Procédure pas à pas : création d’une application UWP à l’aide de WRL et Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+Découvrez comment créer une application UWP qui utilise [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+
+[Comment : créer un composant COM classique](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant COM de base et une méthode simple pour vous inscrire et utiliser le composant COM à partir d’une application de bureau.
+
+[Guide pratique pour instancier directement les composants WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
+Découvrez comment utiliser le [Microsoft::wrl :: Make](../windows/make-function.md) et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pour instancier un composant à partir du module qui le définit.
+
+[Guide pratique pour utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+Montre comment consommer des composants Windows Runtime personnalisées à partir de WRL en créant un fichier IDL à partir des métadonnées .winmd.
+
+[Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+Montre comment utiliser le [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) et [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces avec des tâches pour envoyer des demandes HTTP GET et POST à un service web dans une application UWP.
+
+[Exemple optimiseur de voyage Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+Utilise le `HttpRequest` classe qui est définie dans [procédure pas à pas : connexion à l’aide de tâches et les requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) dans le contexte d’une application UWP complète.
+
+[Création d’un composant Windows DLL d’exécution avec l’exemple C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant DLL in-process et le consommer à partir de C++ / c++ / CX, JavaScript et c#.
+
+[Exemple de jeu marble maze DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+Montre comment utiliser la bibliothèque de modèles C++ Windows Runtime pour gérer la durée de vie des composants COM tels que DirectX et Media Foundation dans le contexte d’un jeu 3D complet.
+
+[Envoi de notifications toast à partir d’exemples d’applications de bureau](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour travailler avec des notifications de toast à partir d’une application de bureau.
+
+## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime bibliothèque de modèles C++ comparé à ATL
+
+Bibliothèque de modèles Windows Runtime C++ ressemble à la bibliothèque ATL (Active Template), car vous pouvez l’utiliser pour créer des objets COM rapides de petites. Bibliothèque de modèles Windows Runtime C++ et ATL partagent également des concepts tels que la définition d’objets dans des modules, l’inscription explicite d’interfaces et la création d’objets à l’aide de fabriques. Vous pouvez être à l’aise avec la bibliothèque de modèles Windows Runtime C++ si vous êtes familiarisé avec ATL.
+
+Bibliothèque de modèles Windows Runtime C++ prend en charge la fonctionnalité COM requise pour les applications UWP. Par conséquent, elle diffère de la bibliothèque ATL car elle omet la prise en charge directe des fonctionnalités COM telles que :
+
+- agrégation ;
+
+- implémentations stock ;
+
+- interfaces doubles (`IDispatch`) ;
+
+- interfaces d'énumérateur standard ;
+
+- points de connexion ;
+
+- interfaces détachables ;
+
+- incorporation OLE ;
+
+- contrôles ActiveX ;
+
+- COM+.
+
+## <a name="concepts"></a>Concepts
+
+Bibliothèque de modèles Windows Runtime C++ fournit des types représentant quelques concepts de base. Les sections suivantes décrivent ces types.
+
+### <a name="comptr"></a>ComPtr
+
+[ComPtr](../windows/comptr-class.md) est un *pointeur intelligent* type qui représente l’interface spécifiée par le paramètre de modèle. Utilisez `ComPtr` pour déclarer une variable pouvant accéder aux membres d'un objet dérivé de l'interface. `ComPtr` met à jour automatiquement un décompte de références pour le pointeur d'interface sous-jacent et libère l'interface lorsque le décompte de références atteint zéro.
+
+### <a name="runtimeclass"></a>RuntimeClass
+
+[RuntimeClass](../windows/runtimeclass-class.md) représente une classe instanciée qui hérite d’un ensemble d’interfaces spécifiées. Un `RuntimeClass` objet peut fournir une combinaison de prise en charge pour une ou plusieurs interfaces Windows Runtime COM, ou une référence faible à un composant.
+
+### <a name="module"></a>Module
+
+[Module](../windows/module-class.md) représente une collection d’objets connexes. Un objet `Module` gère les fabriques de classe, qui créent des objets, et l'inscription, qui permet à d'autres applications d'utiliser un objet.
+
+### <a name="callback"></a>Rappel
+
+Le [rappel](../windows/callback-function-windows-runtime-cpp-template-library.md) fonction crée un objet dont la fonction membre est un gestionnaire d’événements (une méthode de rappel). Utilisez la fonction `Callback` pour écrire des opérations asynchrones.
+
+### <a name="eventsource"></a>EventSource
+
+[EventSource](../windows/eventsource-class.md) sert à gérer *déléguer* gestionnaires d’événements. Utiliser la bibliothèque de modèles Windows Runtime C++ pour implémenter un délégué et utilisez `EventSource` pour ajouter, supprimer et appeler des délégués.
+
+### <a name="asyncbase"></a>AsyncBase
+
+[AsyncBase](../windows/asyncbase-class.md) fournit des méthodes virtuelles qui représentent le modèle de programmation asynchrone Windows Runtime. Redéfinissez les membres de cette classe pour créer une classe personnalisée capable de démarrer, arrêter ou contrôler la progression d'une opération asynchrone.
+
+### <a name="ftmbase"></a>FtmBase
+
+[FtmBase](../windows/ftmbase-class.md) représente un objet marshaler libre de threads. `FtmBase` crée un tableau global d'interface (GIT) et vous permet de gérer le marshaling et les objets proxy.
+
+### <a name="weakref"></a>WeakRef
+
+[WeakRef](../windows/weakref-class.md) est un type pointeur intelligent qui représente un *référence faible*, qui fait référence à un objet qui peut ou ne peut pas accessible. Un `WeakRef` objet peut être utilisé uniquement par le Windows Runtime et non par le COM classique.
+
+Un objet `WeakRef` représente généralement un objet dont l'existence est contrôlée par un thread ou une application externe. Par exemple, un objet `WeakRef` peut faire référence à un objet fichier. Lorsque le fichier est ouvert, `WeakRef` est valide et le fichier référencé est accessible. En revanche, quand le fichier est fermé, `WeakRef` est incorrect et le fichier n'est pas accessible.
+
+## <a name="related-topics"></a>Rubriques connexes
+
+|||
+|-|-|
+|[API principales par catégorie](../windows/key-wrl-apis-by-category.md)|Met en évidence la principale bibliothèque de modèles Windows Runtime C++ types, fonctions et les macros.|
+|[Référence](../windows/wrl-reference.md)|Contient des informations de référence pour la bibliothèque de modèles C++ Windows Runtime.|
+|[Référence rapide (Windows Runtime et Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge l’exécution de Windows.|
 |[À l’aide de composants Windows Runtime en Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Montre comment utiliser C++ / c++ / CX pour créer un composant Windows Runtime de base.|

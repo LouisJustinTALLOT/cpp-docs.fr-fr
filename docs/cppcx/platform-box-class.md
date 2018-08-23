@@ -1,5 +1,5 @@
 ---
-title: Platform::Box, classe | Documents Microsoft
+title: Platform::Box, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fcdf177f942dd598348654b366e0c0f42e916b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7def63199666a9dba0a1628031129ce584e0fcec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091678"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605957"
 ---
 # <a name="platformbox-class"></a>Platform::Box, classe
 Permet à un type valeur comme `Windows::Foundation::DateTime` ou à un type scalaire comme `int` d’être stocké dans un type `Platform::Object` . Vous n’avez généralement pas besoin d’utiliser `Box` explicitement, car le boxing s’effectue implicitement lors de la conversion d’un type valeur en `Object^`.  
@@ -30,7 +30,7 @@ ref class Box abstract;
 ```  
   ### <a name="remarks"></a>Notes  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** vccorlib.h  
   
  **Espace de noms :** Platform
@@ -43,7 +43,7 @@ ref class Box abstract;
 |[opérateur boîte&lt;volatile T&gt;^](#box-volatile-t)|Permet les conversions par boxing d'une classe value `volatile` `T` ou d'un type `enum` `T` en `Box<T>`.|
 |[Box::operator T](#t)|Permet les conversions par boxing d'une classe value `T` `enum` ou d'une classe `T` en `Box<T>`.| 
 ## <a name="ctor"></a> Box::Box, constructeur
-Crée un `Box` qui peut encapsuler une valeur du type spécifié. | |[ Valeur de propriété](#value)| Retourne une valeur qui est encapsulée dans le `Box` objet. |  
+Crée un `Box` qui peut encapsuler une valeur du type spécifié. | |[ Valeur de propriété](#value)| Retourne la valeur qui est encapsulée dans le `Box` objet. |  
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
@@ -55,7 +55,7 @@ Box(T valueArg);
  Le type de valeur boxed, par exemple, `int`, `bool`, `float64`, `DateTime`.  
   
 
-## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ (opérateur)
+## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ opérateur
 Permet les conversions par boxing d'une classe value `const` `T` ou d'une classe `enum` `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -69,9 +69,9 @@ operator Box<const T>^(const T valueType);
  Toute classe value, tout struct value ou tout type enum. Inclut les types intégrés dans le [par défaut d’espace de noms](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
+ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d’origine dans une classe ref.  
   
-## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ (opérateur)
+## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ opérateur
 Permet les conversions par boxing d'une classe value `const volatile` `T` ou d'un type `enum` `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -85,9 +85,9 @@ operator Box<const volatile T>^(const volatile T valueType);
  Tout type enum, de classe value ou de struct value. Inclut les types intégrés dans le [par défaut d’espace de noms](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
+ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d’origine dans une classe ref.  
   
-## <a name="box-t"></a> Box::operator Box&lt;T&gt;^ (opérateur)
+## <a name="box-t"></a> Box::operator Box&lt;T&gt;^ opérateur
 Permet les conversions par boxing d'une classe value `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -101,9 +101,9 @@ operator Box<const T>^(const T valueType);
  Tout type enum, de classe value ou de struct value. Inclut les types intégrés dans le [par défaut d’espace de noms](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
+ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d’origine dans une classe ref.  
   
-## <a name="box-volatile-t"></a> Box::operator Box&lt;volatile T&gt;^ (opérateur)
+## <a name="box-volatile-t"></a> Box::operator Box&lt;volatile T&gt;^ opérateur
 Permet les conversions par boxing d'une classe value `volatile` `T` ou d'un type `enum` `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -117,7 +117,7 @@ operator Box<volatile T>^(volatile T valueType);
  Tout type enum, de classe value ou de struct value. Inclut les types intégrés dans le [par défaut d’espace de noms](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
+ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d’origine dans une classe ref.  
   
 ## <a name="t"></a>  Box::operator T, opérateur
 Permet les conversions par boxing d'une classe value `T` `enum` ou d'une classe `T` en `Box<T>`.  
@@ -133,7 +133,7 @@ operator Box<T>^(T valueType);
  Tout type enum, de classe value ou de struct value. Inclut les types intégrés dans le [par défaut d’espace de noms](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
+ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d’origine dans une classe ref.  
   
 
 ## <a name="value"></a> Box::value, propriété

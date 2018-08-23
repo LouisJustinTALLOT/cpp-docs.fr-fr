@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassflags::value, constante | Documents Microsoft
+title: Runtimeclassflags::value, constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a9deb05bcb38acb157eaefcc392e9906bea6253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b64cb5c4e09cd72d96ff0ad7924f6ab5f203b015
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895734"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605272"
 ---
 # <a name="runtimeclassflagsvalue-constant"></a>RuntimeClassFlags::value, constante
-Un champ qui contient un [runtimeclasstype, énumération](../windows/runtimeclasstype-enumeration.md) valeur.  
+Un champ qui contient un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe
   
-```cpp  
-static const unsigned int value = flags;  
-```  
+```cpp
+static const unsigned int value = flags;
+```
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** implements.h  
+## <a name="requirements"></a>Configuration requise
+ **En-tête :** implements.h
   
- **Espace de noms :** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
  [RuntimeClassFlags, structure](../windows/runtimeclassflags-structure.md)

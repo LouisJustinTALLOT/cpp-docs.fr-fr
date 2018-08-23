@@ -17,41 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 94d08cc865b6388010dc07ef965f60edbf6796ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019676"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587518"
 ---
 # <a name="testing-a-dialog-box"></a>Test d’une boîte de dialogue
-Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son comportement au moment de l’exécution sans compiler votre programme. Dans ce mode, vous pouvez :  
-  
--   Taper du texte, effectuer des sélections dans des listes de zone de liste déroulante, activer ou désactiver des options, et choisir des commandes  
-  
--   Tester l’ordre de tabulation  
-  
--   Tester le groupement des contrôles tels que les cases à cocher et les cases d’option  
-  
--   Tester les raccourcis clavier pour les contrôles dans la boîte de dialogue  
-  
-    > [!NOTE]
-    >  Les connexions au code de boîte de dialogue effectuées à l’aide des Assistants ne sont pas incluses dans la simulation.  
-  
- Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la boîte de dialogue **Absolute Align** propriété **True**, la boîte de dialogue affiche à une position qui est relative à l’angle supérieur gauche de l’écran.  
-  
-### <a name="to-test-a-dialog-box"></a>Pour tester une boîte de dialogue  
-  
-1.  Lorsque le **boîte de dialogue** éditeur est la fenêtre active, dans la barre de menus, choisissez **Format** > **boîte de dialogue Test**.  
-  
-2.  Pour arrêter la simulation, appuyez sur **ÉCHAP**, ou sélectionnez simplement le **fermer** bouton dans la boîte de dialogue que vous testez.  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index).  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
- [Éditeur de boîte de dialogue](../windows/dialog-editor.md)   
- [Affichage ou masquage de la barre d’outils Éditeur de boîtes de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+
+Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son comportement au moment de l’exécution sans compiler votre programme. Dans ce mode, vous pouvez :
+
+- Taper du texte, effectuer des sélections dans des listes de zone de liste déroulante, activer ou désactiver des options, et choisir des commandes
+
+- Tester l’ordre de tabulation
+
+- Tester le groupement des contrôles tels que les cases à cocher et les cases d’option
+
+- Tester les raccourcis clavier pour les contrôles dans la boîte de dialogue
+
+   > [!NOTE]
+   > Les connexions au code de boîte de dialogue effectuées à l’aide des Assistants ne sont pas incluses dans la simulation.
+
+Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la boîte de dialogue **Absolute Align** propriété **True**, la boîte de dialogue affiche à une position qui est relative à l’angle supérieur gauche de l’écran.
+
+### <a name="to-test-a-dialog-box"></a>Pour tester une boîte de dialogue
+
+1. Lorsque le **boîte de dialogue** éditeur est la fenêtre active, dans la barre de menus, choisissez **Format** > **boîte de dialogue Test**.
+
+2. Pour arrêter la simulation, appuyez sur **ÉCHAP**, ou sélectionnez simplement le **fermer** bouton dans la boîte de dialogue que vous testez.
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index).
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)  
+[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)  
+[Affichage ou masquage de la barre d’outils Éditeur de boîtes de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

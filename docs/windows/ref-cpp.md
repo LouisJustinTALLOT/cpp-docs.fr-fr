@@ -17,54 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04eb49d0b0f5cb78f0dcd893ca97586e9a16e9cb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1a8fe658776bb41d1de4e1592df7ad83299aea46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010754"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587474"
 ---
 # <a name="ref-c"></a>ref (C++)
-Identifie un pointeur de référence.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ref]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le **ref** attribut C++ a les mêmes fonctionnalités que le [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) attribut MIDL.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant montre comment utiliser le **ref** attribut :  
-  
-```cpp  
-// cpp_attr_ref_ref.cpp  
-// compile with: /LD  
-#include <windows.h>   
-[module(name="ATLFIRELib")];  
-[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl  
-{  
-   [id(1), unique] char * GetFirstName([in, ref] char * pszFullName );   
-};  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**typedef**, paramètre de l’interface, interface (méthode)|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributs de paramètres](../windows/parameter-attributes.md)   
+
+Identifie un pointeur de référence.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ref]
+```
+
+## <a name="remarks"></a>Notes
+
+Le **ref** attribut C++ a les mêmes fonctionnalités que le [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) attribut MIDL.
+
+## <a name="example"></a>Exemple
+
+Le code suivant montre comment utiliser le **ref** attribut :
+
+```cpp
+// cpp_attr_ref_ref.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="ATLFIRELib")];
+[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl
+{
+   [id(1), unique] char * GetFirstName([in, ref] char * pszFullName );
+};
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**typedef**, paramètre de l’interface, interface (méthode)|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Attributs de paramètres](../windows/parameter-attributes.md)  

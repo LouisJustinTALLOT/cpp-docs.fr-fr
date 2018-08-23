@@ -1,5 +1,5 @@
 ---
-title: Platform::ValueType (classe) | Documents Microsoft
+title: Platform::ValueType, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1994aa6445c67bae138a51f1d3eebb2a54f9b17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12766e81ddd90b257830b6bf5adefd2562781d9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088204"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611045"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType (classe)
 Classe de base pour les instances de types de valeur.  
@@ -35,13 +35,13 @@ public ref class ValueType : Object
   
 |||  
 |-|-|  
-|[ValueType::ToString](#tostring)|Retourne une représentation sous forme de chaîne de l’objet. Hérité de [Platform::Object](../cppcx/platform-object-class.md).|  
+|[ValueType::ToString](#tostring)|Retourne une représentation sous forme de chaîne de l’objet. Héritée de [Platform::Object](../cppcx/platform-object-class.md).|  
   
 ### <a name="remarks"></a>Notes  
  La classe ValueType est utilisée pour construire des types valeur. ValueType est dérivée d’Object, qui a des membres de base. Toutefois, le compilateur détache ces membres de base des types valeur qui sont dérivés de la classe ValueType. Le compilateur réattache ces membres de base lorsqu’un type valeur est boxed.  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -49,7 +49,7 @@ public ref class ValueType : Object
   
  **Métadonnées :** platform.winmd  
 
-## <a name="tostring"></a> ValueType::ToString (méthode)
+## <a name="tostring"></a> ValueType::ToString, méthode
 Retourne une représentation sous forme de chaîne de l’objet.  
   
 ### <a name="syntax"></a>Syntaxe  

@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110019"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609347"
 ---
 # <a name="windows-operations-ccli"></a>Opérations Windows (C++/CLI)
-Illustre différentes tâches spécifiques à Windows à l’aide de la [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Illustre différentes tâches spécifiques à Windows en utilisant le SDK Windows.  
   
- Les rubriques suivantes montrent les différentes opérations Windows exécutées avec le [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] à l’aide de Visual C++.  
+ Les rubriques suivantes montrent les différentes opérations Windows exécutées avec le Kit de développement Windows à l’aide de Visual C++.  
 
 ## <a name="determine_shutdown"></a> Déterminer si le processus d’arrêt a commencé
 L’exemple de code suivant montre comment déterminer si l’application ou le .NET Framework s’arrête. Cela est utile pour accéder à des éléments statiques dans le .NET Framework, car, lors de l’arrêt, ces constructions sont finalisées par le système et ne peut pas être utilisées de façon fiable. En vérifiant la <xref:System.Environment.HasShutdownStarted%2A> propriété tout d’abord, vous pouvez éviter des défaillances potentielles en n’accède à ces éléments.  

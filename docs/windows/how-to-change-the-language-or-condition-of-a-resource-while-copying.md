@@ -18,42 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 508655dbfeb2d06d936d2b73d5435cf04c860f4b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650213"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598932"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Comment : modifier la langue ou la condition d'une ressource lors de la copie
-Durant la copie d'une ressource, vous pouvez changer sa propriété language ou sa propriété condition, ou les deux.  
-  
--   La langue de la ressource identifie simplement la langue correspondant à la ressource. Ceci est utilisé par [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) pour aider à identifier la ressource pour laquelle vous avez besoin. (Toutefois, les ressources peuvent présenter des différences spécifiques à chaque langue et qui ne sont pas liées à du texte, par exemple, des accélérateurs qui fonctionnent seulement sur un clavier japonais, ou une image bitmap appropriée uniquement pour les builds localisées en chinois, etc.)  
-  
--   La condition d'une ressource est un symbole défini qui identifie une condition dans laquelle cette copie particulière de la ressource doit être utilisée.  
-  
- La langue et la condition d'une ressource sont affichées entre parenthèses après le nom de la ressource dans la fenêtre Espace de travail. Dans cet exemple, la ressource nommée IDD_AboutBox utilise le finnois comme langue, et sa condition est XX33.  
-  
-```cpp  
+
+Durant la copie d'une ressource, vous pouvez changer sa propriété language ou sa propriété condition, ou les deux.
+
+- La langue de la ressource identifie simplement la langue correspondant à la ressource. Ceci est utilisé par [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) pour aider à identifier la ressource pour laquelle vous avez besoin. (Toutefois, les ressources peuvent présenter des différences spécifiques à chaque langue et qui ne sont pas liées à du texte, par exemple, des accélérateurs qui fonctionnent seulement sur un clavier japonais, ou une image bitmap appropriée uniquement pour les builds localisées en chinois, etc.)
+
+- La condition d'une ressource est un symbole défini qui identifie une condition dans laquelle cette copie particulière de la ressource doit être utilisée.
+
+La langue et la condition d'une ressource sont affichées entre parenthèses après le nom de la ressource dans la fenêtre Espace de travail. Dans cet exemple, la ressource nommée IDD_AboutBox utilise le finnois comme langue, et sa condition est XX33.
+
+```cpp
 IDD_AboutBox (Finnish - XX33)  
-```  
-  
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Pour copier une ressource existante et modifier sa langue ou sa condition  
-  
-1.  Dans le fichier .rc ou dans le [affichage des ressources](../windows/resource-view-window.md) fenêtre, avec le bouton droit de la ressource que vous souhaitez copier.  
-  
-2.  Choisissez **insérer une copie** dans le menu contextuel.  
-  
-3.  Dans le **insérer une copie de ressources** boîte de dialogue :  
-  
-    -   Pour le **langage** zone de liste, sélectionnez la langue.  
-  
-    -   Dans le **Condition** , tapez la condition.  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Comment : copier des ressources](../windows/how-to-copy-resources.md)   
- [Fichiers de ressources](../windows/resource-files-visual-studio.md)   
- [Éditeurs de ressources](../windows/resource-editors.md)
+```
+
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Pour copier une ressource existante et modifier sa langue ou sa condition
+
+1. Dans le fichier .rc ou dans le [affichage des ressources](../windows/resource-view-window.md) fenêtre, avec le bouton droit de la ressource que vous souhaitez copier.
+
+2. Choisissez **insérer une copie** dans le menu contextuel.
+
+3. Dans le **insérer une copie de ressources** boîte de dialogue :
+
+   - Pour le **langage** zone de liste, sélectionnez la langue.
+
+   - Dans le **Condition** , tapez la condition.
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Guide pratique pour copier des ressources](../windows/how-to-copy-resources.md)  
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)  
+[Éditeurs de ressources](../windows/resource-editors.md)

@@ -19,31 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5911d7125b6a5cdf1e6afd8502c5891ddf680a30
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7f10b0e46fee7877a4fcf6f21f3c5c938cd33ab2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011086"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607957"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Ouverture de l'Éditeur de ressources pour un symbole donné
-Lorsque vous parcourez les symboles dans le [boîte de dialogue Symboles des ressources](../windows/resource-symbols-dialog-box.md), vous souhaiterez peut-être plus d’informations sur l’utilisation d’un symbole particulier. Le **afficher l’utilisation** bouton offre un moyen rapide pour obtenir ces informations.  
-  
-### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>Pour passer à l'éditeur de ressources où un symbole est utilisé  
-  
-1.  Sélectionnez un symbole dans le **nom** zone de la **symboles des ressources** boîte de dialogue.  
-  
-2.  Dans le **Used By** , sélectionnez le type de ressource qui vous intéresse.  
-  
-3.  Cliquez sur le **afficher l’utilisation** bouton.  
-  
-     La ressource s'affiche dans la fenêtre d'éditeur appropriée.  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Affichage des symboles des ressources](../windows/viewing-resource-symbols.md)   
- [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)
+
+Lorsque vous parcourez les symboles dans le [boîte de dialogue Symboles des ressources](../windows/resource-symbols-dialog-box.md), vous souhaiterez peut-être plus d’informations sur l’utilisation d’un symbole particulier. Le **afficher l’utilisation** bouton offre un moyen rapide pour obtenir ces informations.
+
+### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>Pour passer à l'éditeur de ressources où un symbole est utilisé
+
+1. Sélectionnez un symbole dans le **nom** zone de la **symboles des ressources** boîte de dialogue.
+
+2. Dans le **Used By** , sélectionnez le type de ressource qui vous intéresse.
+
+3. Cliquez sur le **afficher l’utilisation** bouton.
+
+   La ressource s'affiche dans la fenêtre d'éditeur appropriée.
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Affichage des symboles des ressources](../windows/viewing-resource-symbols.md)  
+[ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)

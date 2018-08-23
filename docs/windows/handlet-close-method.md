@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7cbe76cdea5c8fadef818ede1d63d88e4437bdae
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ab919b3aeba45462a15900429493225f00909d5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651065"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602452"
 ---
 # <a name="handletclose-method"></a>HandleT::Close, méthode
-Ferme actuel **HandleT** objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void Close();  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le handle sous-jacent actuel **HandleT** est fermée et le **HandleT** est défini sur l’état non valide.  
-  
- Si le handle ne ferme pas correctement, une exception est levée dans le thread appelant.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HandleT, classe](../windows/handlet-class.md)
+
+Ferme actuel **HandleT** objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void Close();
+```
+
+## <a name="remarks"></a>Notes
+
+Le handle sous-jacent actuel **HandleT** est fermée et le **HandleT** est défini sur l’état non valide.
+
+Si le handle ne ferme pas correctement, une exception est levée dans le thread appelant.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HandleT, classe](../windows/handlet-class.md)

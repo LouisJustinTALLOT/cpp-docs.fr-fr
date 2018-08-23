@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d70a2c316f9e7994292f3dc29cef5bce993778ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015796"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595061"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked, méthode
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="remarks"></a>Notes  
- Indique si l’actuel **SyncLockWithStatusT** objet possède une ressource, c'est-à-dire, le **SyncLockWithStatusT** objet est *verrouillé*.  
-  
-## <a name="return-value"></a>Valeur de retour  
- **true** si le **SyncLockWithStatusT** objet est verrouillé ; sinon, **false**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="remarks"></a>Notes
+
+Indique si l’actuel **SyncLockWithStatusT** objet possède une ressource, c'est-à-dire, le **SyncLockWithStatusT** objet est *verrouillé*.
+
+## <a name="return-value"></a>Valeur de retour
+
+**true** si le **SyncLockWithStatusT** objet est verrouillé ; sinon, **false**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)

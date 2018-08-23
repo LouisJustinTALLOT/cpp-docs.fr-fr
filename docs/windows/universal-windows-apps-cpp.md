@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015005"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591751"
 ---
 # <a name="universal-windows-apps-c"></a>Applications de plateforme Windows universelle (C++)
 
 Les applications universelles Windows Platform (UWP) représentent un ensemble de principes de conception qui utilisent des interfaces utilisateur simples centrées autour du contenu s’ajuste automatiquement aux différentes tailles d’écran sur différents appareils. Vous créez l'interface utilisateur dans le balisage XAML et le code-behind en C++ natif. Vous pouvez également créer des composants (DLL) qui peuvent être utilisés par des applications de plateforme Windows universelle qui sont écrites dans d'autres langages. La surface d’API pour les applications UWP est l’exécution de Windows, qui est une bibliothèque bien factorisée qui fournit un large éventail de services de système d’exploitation.
 
-> [!TIP]  
+> [!TIP]
 > Pour Windows 10, vous pouvez utiliser le convertisseur d’application de pont du bureau pour empaqueter votre application de bureau existante pour le déploiement via le Microsoft Store. Pour plus d’informations, consultez [à l’aide de Visual C++ Runtime dans Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) et [pont du bureau](/windows/uwp/porting/desktop-to-uwp-root).
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>Les applications UWP qui utilisent C++ / c++ / WinRT
@@ -46,4 +46,5 @@ C++ / c++ / WinRT est une nouveau et à en-tête uniquement en fonction de bibli
 La bibliothèque de modèles Windows Runtime C++ fournit les interfaces COM de bas niveau par lequel code C++ ISO peut accéder à l’exécution de Windows dans un environnement sans exception. Dans la plupart des cas, nous vous recommandons d’utiliser C++ / c++ / WinRT ou C / c++ / CX au lieu de la bibliothèque de modèles Windows Runtime C++ pour le développement d’applications UWP. Pour plus d’informations sur la bibliothèque de modèles Windows Runtime C++, consultez [bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Classe Platform::Collections :: Map | Documents Microsoft'
+title: 'Classe Platform::Collections :: Map | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093179"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608986"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
@@ -56,7 +56,7 @@ Type de la valeur dans la paire clé-valeur.
 Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le Map. Par défaut, [std::less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type()*  
-Une fonction généré par le compilateur qui valide le type de *K* et *V* et fournit un message d’erreur convivial si le type ne peut pas être stocké dans le mappage.
+Une fonction générée par le compilateur qui valide le type de *K* et *V* et fournit un message d’erreur convivial si le type ne peut pas être stocké dans le mappage.
 
 ### <a name="remarks"></a>Notes
 
@@ -72,7 +72,7 @@ Les types autorisés sont les suivants :
 
 - classe d'énumération publique
 
-Map est essentiellement un wrapper pour [std::map](../standard-library/map-class.md). Il s’agit d’une implémentation concrète C++ de la [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) et [IObservableMap](http://msdn.microsoft.com/library/windows/apps/br226050.aspx) les types qui sont passés à travers public des interfaces Windows Runtime. Si vous tentez d'utiliser un type `Platform::Collections::Map` dans une valeur de retour ou un paramètre public, l'erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le type de la valeur de paramètre ou de retour à [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+Map est essentiellement un wrapper pour [std::map](../standard-library/map-class.md). Il est une implémentation concrète C++ de la [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) et [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) les types qui sont passés à travers public des interfaces Windows Runtime. Si vous tentez d'utiliser un type `Platform::Collections::Map` dans une valeur de retour ou un paramètre public, l'erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le type de la valeur de paramètre ou de retour à [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
 
 Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md).
 
@@ -108,7 +108,7 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 `Map`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 
@@ -141,11 +141,11 @@ Itérateur qui spécifie le premier élément de la carte.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMap->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First() consiste à attribuer la valeur de retour à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMap->First();`.
 
 ## <a name="getview"></a>  Map::GetView (méthode)
 
-Retourne une vue en lecture seule de l’objet Map actuel. Autrement dit, un [classe Platform::Collections :: mapview](../cppcx/platform-collections-mapview-class.md), qui implémente le [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interface.
+Retourne une vue en lecture seule du Map actif ; Autrement dit, un [classe Platform::Collections :: mapview](../cppcx/platform-collections-mapview-class.md), qui implémente le [Windows::Foundation::Collections::IMapView\<K, V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -170,7 +170,7 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Paramètres
 
 *key*  
-Clé utilisée pour rechercher l’élément Map. Le type de *clé* est le nom de type *K*.
+Clé utilisée pour rechercher l’élément Map. Le type de *clé* est typename *K*.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -189,16 +189,16 @@ virtual bool Insert(K key, V value);
 ### <a name="parameters"></a>Paramètres
 
 *key*  
-Partie de clé de la paire clé-valeur. Le type de *clé* est le nom de type *K*.
+Partie de clé de la paire clé-valeur. Le type de *clé* est typename *K*.
 
 *valeur*  
-Partie de valeur de la paire clé-valeur. Le type de *valeur* est le nom de type *V*.
+Partie de valeur de la paire clé-valeur. Le type de *valeur* est typename *V*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si la clé d’un élément existant dans le mappage actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false` Si aucun élément existant dans le mappage actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet Map actuel.
+`true` Si la clé d’un élément existant dans l’objet Map actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false` Si aucun élément existant dans l’objet Map actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet Map actuel.
 
-## <a name="lookup"></a>  Map::Lookup (méthode)
+## <a name="lookup"></a>  Méthode Map::Lookup
 
 Récupère la valeur de type V associée à la clé spécifiée de type K si la clé existe.
 
@@ -211,15 +211,15 @@ V Lookup(K key);
 ### <a name="parameters"></a>Paramètres
 
 *key*  
-Clé utilisée pour trouver un élément dans le Map. Le type de *clé* est le nom de type *K*.
+Clé utilisée pour trouver un élément dans le Map. Le type de *clé* est typename *K*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La valeur associée à la *clé*. Le type de la valeur de retour est typename *V*.
+La valeur qui est associée à la *clé*. Le type de la valeur de retour est typename *V*.
 
 ### <a name="remarks"></a>Notes
 
-Si la clé n’existe pas, un [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) est levée.
+Si la clé n’existe pas, puis un [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) est levée.
 
 ## <a name="ctor"></a>  Map::Map (constructeur)
 
@@ -267,7 +267,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour
 
-A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) qui contient des informations sur l’objet qui a déclenché l’événement et le type de modification qui s’est produite. Voir aussi [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) et [énumération CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Un [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) qui contient des informations sur l’objet qui a déclenché l’événement et le type de modification qui s’est produite. Voir aussi [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) et [énumération CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Équivalent .NET Framework
 
@@ -286,11 +286,11 @@ virtual void Remove(K key);
 ### <a name="parameters"></a>Paramètres
 
 *key*  
-Partie de clé de la paire clé-valeur. Le type de *clé* est le nom de type *K*.
+Partie de clé de la paire clé-valeur. Le type de *clé* est typename *K*.
 
 ## <a name="size"></a>  Map::Size, méthode
 
-Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) contenus dans le Map.
+Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) éléments du Map.
 
 ### <a name="syntax"></a>Syntaxe
 

@@ -1,5 +1,5 @@
 ---
-title: Conseils de programmation MBCS | Documents Microsoft
+title: Conseils de programmation MBCS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb6e298961580c959235a97f37793df41d1124f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5beaab3fe1642b3988e9d0dcbf258eab02e26b7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855277"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610307"
 ---
 # <a name="mbcs-programming-tips"></a>Conseils de programmation MBCS
-Dans tout nouveau développement, vous devez utiliser l’encodage de caractères Unicode pour toutes les chaînes que les utilisateurs finaux peuvent voir éventuellement. MBCS est une technologie héritée qui a été remplacée par le format Unicode. Cette section fournit des conseils pour les développeurs qui doivent conserver les programmes existants qui utilisent MBCS et où il n’est pas pratique de convertir au format Unicode. Les conseils s’appliquent aux applications MFC et les applications écrites sans MFC. Les rubriques traitées ici sont les suivantes :  
+Dans tout nouveau développement, vous devez utiliser l’encodage de caractères Unicode pour toutes les chaînes que les utilisateurs finaux peuvent voir éventuellement. MBCS est une technologie héritée qui a été remplacée par Unicode. Cette section fournit des conseils pour les développeurs qui doivent gérer les programmes existants qui utilisent MBCS et où il n’est pas pratique de convertir au format Unicode. Le Conseil s’applique aux applications MFC et les applications écrites sans MFC. Les rubriques traitées ici sont les suivantes :  
   
 -   [Conseils généraux sur la programmation MBCS](../text/general-mbcs-programming-advice.md)  
   

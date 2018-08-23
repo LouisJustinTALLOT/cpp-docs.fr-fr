@@ -1,23 +1,23 @@
 ---
-title: Délégués (C + c++ / CX) | Documents Microsoft
+title: Délégués (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936280d25933afb787d883139725b5a7044db6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092386"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592771"
 ---
 # <a name="delegates-ccx"></a>Délégués (C++/CX)
-Le `delegate` est utilisé pour déclarer un type référence qui est l’équivalent de Windows Runtime d’un objet de fonction en C++ standard. Une déclaration delegate est similaire à une signature de fonction. Elle spécifie le type de retour et les types de paramètre que sa fonction incluse dans un wrapper doit comporter. Voici une déclaration delegate définie par l'utilisateur :  
+Le `delegate` mot clé est utilisé pour déclarer un type référence qui est l’équivalent Windows Runtime d’un objet de fonction en C++ standard. Une déclaration delegate est similaire à une signature de fonction. Elle spécifie le type de retour et les types de paramètre que sa fonction incluse dans un wrapper doit comporter. Voici une déclaration delegate définie par l'utilisateur :  
   
 ```cpp  
      public delegate void PrimeFoundHandler(int result);  
@@ -29,10 +29,10 @@ Le `delegate` est utilisé pour déclarer un type référence qui est l’équiv
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Lors de la déclaration des délégués qui seront exposés aux clients via l’interface binaire d’application Windows Runtime, utilisez [Windows::Foundation :: typedeventhandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ce délégué a des binaires stub et proxy prédéfinis qui lui permettent d'être consommé par des clients Javascript.  
+ Lorsque vous déclarez des délégués qui seront exposées aux clients sur l’interface binaire d’application Windows Runtime, utilisez [Windows::Foundation :: typedeventhandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ce délégué a des binaires stub et proxy prédéfinis qui lui permettent d'être consommé par des clients Javascript.  
   
 ## <a name="consuming-delegates"></a>Utilisation des délégués  
- Lorsque vous créez une application de plateforme Windows universelle, vous utilisez souvent un délégué comme type d’événement qui expose d’une classe Windows Runtime. Pour s'abonner à un événement, créez une instance de son type délégué en spécifiant une fonction (ou lambda) qui correspond à la signature du délégué. Ensuite, utilisez l'opérateur `+=` pour transmettre l'objet délégué au membre d'événement dans la classe. Ce concept est appelé abonnement à l'événement. Lorsque l'instance de classe « déclenche » l'événement, votre fonction est appelée, ainsi que tous les autres gestionnaires ajoutés par votre objet ou d'autres objets.  
+ Lorsque vous créez une application de plateforme Windows universelle, vous utilisez souvent un délégué en tant que le type d’événement qui expose une classe Windows Runtime. Pour s'abonner à un événement, créez une instance de son type délégué en spécifiant une fonction (ou lambda) qui correspond à la signature du délégué. Ensuite, utilisez l'opérateur `+=` pour transmettre l'objet délégué au membre d'événement dans la classe. Ce concept est appelé abonnement à l'événement. Lorsque l'instance de classe « déclenche » l'événement, votre fonction est appelée, ainsi que tous les autres gestionnaires ajoutés par votre objet ou d'autres objets.  
   
 > [!TIP]
 >  Visual Studio exécute un volume important de travail lorsque vous créez un gestionnaire d'événements. Par exemple, si vous spécifiez un gestionnaire d'événements dans le balisage XAML, une info-bulle s'affiche. Si vous choisissez l'info-bulle, Visual Studio crée automatiquement la méthode de gestionnaire d'événements et l'associe à l'événement dans la classe d'édition.  
@@ -48,9 +48,9 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]  
   
 > [!WARNING]
->  En général, pour un gestionnaire d'événements, il est préférable d'utiliser une fonction nommée au lieu d'une fonction lambda, à moins que vous ne souhaitiez particulièrement éviter les références circulaires. Une fonction nommée capture le pointeur « this » par une référence faible, mais une fonction lambda le capture par une référence forte et crée une référence circulaire. Pour plus d’informations, consultez [références faibles et cycles avec rupture](../cppcx/weak-references-and-breaking-cycles-c-cx.md).  
+>  En général, pour un gestionnaire d'événements, il est préférable d'utiliser une fonction nommée au lieu d'une fonction lambda, à moins que vous ne souhaitiez particulièrement éviter les références circulaires. Une fonction nommée capture le pointeur « this » par une référence faible, mais une fonction lambda le capture par une référence forte et crée une référence circulaire. Pour plus d’informations, consultez [références faibles et cycles de rupture](../cppcx/weak-references-and-breaking-cycles-c-cx.md).  
   
- Par convention, les noms des délégués gestionnaires d’événements définis par le Windows Runtime ont la forme * EventHandler, par exemple, RoutedEventHandler, SizeChangedEventHandler ou SuspendingEventHandler. Également par convention, les délégués de gestionnaire d'événements ont deux paramètres et retournent la valeur void. Dans un délégué sans paramètres de type, le premier paramètre est de type [Platform::Object^](../cppcx/platform-object-class.md); il contient une référence à l'expéditeur, qui est l'objet qui a déclenché l'événement. Vous devez effectuer un cast vers le type d'origine avant d'utiliser la méthode de gestionnaire d'argument d'événement. Dans un délégué de gestionnaire d'événements ayant des paramètres de type, le premier paramètre de type spécifie le type de l'expéditeur et le deuxième paramètre est un handle à une classe de référence qui contient des informations sur l'événement. Par convention, cette classe est nommée \*EventArgs. Par exemple, un délégué RoutedEventHandler est doté d'un deuxième paramètre de type RoutedEventArgs^, et DragEventHander d'un deuxième paramètre de type DragEventArgs^.  
+ Par convention, les noms de délégué de gestionnaire d’événements qui sont définies par l’exécution de Windows ont la forme * EventHandler, par exemple, RoutedEventHandler, SizeChangedEventHandler ou SuspendingEventHandler. Également par convention, les délégués de gestionnaire d'événements ont deux paramètres et retournent la valeur void. Dans un délégué sans paramètres de type, le premier paramètre est de type [Platform::Object^](../cppcx/platform-object-class.md); il contient une référence à l'expéditeur, qui est l'objet qui a déclenché l'événement. Vous devez effectuer un cast vers le type d'origine avant d'utiliser la méthode de gestionnaire d'argument d'événement. Dans un délégué de gestionnaire d'événements ayant des paramètres de type, le premier paramètre de type spécifie le type de l'expéditeur et le deuxième paramètre est un handle à une classe de référence qui contient des informations sur l'événement. Par convention, cette classe est nommée \*EventArgs. Par exemple, un délégué RoutedEventHandler est doté d'un deuxième paramètre de type RoutedEventArgs^, et DragEventHander d'un deuxième paramètre de type DragEventArgs^.  
   
  Par convention, les délégués qui encapsulent le code exécuté lorsqu'une opération asynchrone se termine sont nommés *CompletedHandler. Ces délégués sont définis comme propriétés sur la classe, et non en tant qu'événements. De ce fait, n'utilisez pas l'opérateur `+=` pour vous y abonner ; n'assignez qu'un seul objet délégué à la propriété.  
   
@@ -70,9 +70,9 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]  
   
 > [!NOTE]
->  Vous utilisez le « ^ » de symboles lorsque vous faites référence au type délégué, tout comme vous procédez comme avec n’importe quel Runtime Windows type référence.  
+>  Vous utilisez le « ^ » de symboles lorsque vous faites référence au type délégué, tout comme vous avec n’importe quel Runtime Windows type référence.  
   
- Une déclaration d'événement a toujours un type délégué. Cet exemple montre un délégué classique signature de type dans le Windows Runtime :  
+ Une déclaration d'événement a toujours un type délégué. Cet exemple montre un délégué classique signature de type dans le Runtime de Windows :  
   
  [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]  
   
@@ -122,7 +122,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 ## <a name="delegates-and-threads"></a>Délégués et threads  
  Un délégué, comme un objet de fonction, contient le code qui s'exécute à un moment donné dans le futur. Si le code qui crée et passe le délégué, ainsi que la fonction qui accepte et exécute le délégué, s'exécutent sur le même thread, alors les choses sont relativement simples. Si ce thread est le thread d'interface utilisateur, le délégué peut directement manipuler des objets d'interface utilisateur tels que les contrôles XAML.  
   
- Si une application cliente charge un composant Windows Runtime qui s’exécute dans un thread cloisonné et fournit un délégué à ce composant, puis par défaut le délégué est appelé directement sur le thread STA. La plupart des composants Windows Runtime peuvent s’exécuter dans STA ou MTA.  
+ Si une application cliente charge un composant Windows Runtime qui s’exécute dans un thread cloisonné et fournit un délégué à ce composant, puis par défaut le délégué est appelé directement sur le thread STA. La plupart des composants Windows Runtime peut s’exécuter dans STA ou MTA.  
   
  Si le code qui exécute le délégué s'exécute sur un autre thread (par exemple, dans le contexte d'un objet concurrency::task), vous êtes alors chargé de synchroniser l'accès aux données partagées. Par exemple, si votre délégué contient une référence à un vecteur et qu'un contrôle XAML possède une référence à ce même vecteur, vous devez prendre les mesures nécessaires pour éviter les interblocages et les conditions de concurrence critiques qui peuvent se produire lorsque le délégué et le contrôle XAML tentent d'accéder au vecteur simultanément. Vous devez également veiller à ce que le délégué ne tente pas de capturer les variables locales par référence pouvant être hors de portée avant que le délégué ne soit appelé.  
   

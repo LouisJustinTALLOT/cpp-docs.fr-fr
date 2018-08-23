@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 823244b54513e4f6b2901bc29984604f65eb9a11
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f0a32fc373900af1a4322f4f2511c44417d2916a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018034"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594272"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (structure)
-Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-class.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   unsigned int flags  
->  
-struct RuntimeClassFlags;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *flags*  
- Un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constants"></a>Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[RuntimeClassFlags::value, constante](../windows/runtimeclassflags-value-constant.md)|Contient un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `RuntimeClassFlags`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** implements.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+
+Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-class.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   unsigned int flags
+>
+struct RuntimeClassFlags;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*flags*  
+Un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.
+
+## <a name="members"></a>Membres
+
+### <a name="public-constants"></a>Constantes publiques
+
+|Name|Description|
+|----------|-----------------|
+|[RuntimeClassFlags::value, constante](../windows/runtimeclassflags-value-constant.md)|Contient un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`RuntimeClassFlags`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** implements.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

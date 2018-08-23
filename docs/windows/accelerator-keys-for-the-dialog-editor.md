@@ -17,43 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32f8a643b8a960c4d5055a94abfaea5e0a911ed7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 18a2ae91de9b777f692b206c240cdd9b3c357fdb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646096"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592873"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Touches accélérateur pour l'Éditeur de boîtes de dialogue
-Voici la valeur par défaut touches accélérateur pour les commandes de l’éditeur de boîte de dialogue. Pour changer les touches de raccourci, cliquez sur **Options** sur le **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
-  
+
+Voici la valeur par défaut touches accélérateur pour les commandes de l’éditeur de boîte de dialogue. Pour changer les touches de raccourci, cliquez sur **Options** sur le **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+
 > [!NOTE]
->  Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-|Commande|Touches|Description|  
-|-------------|----------|-----------------|  
-|Format.AlignBottoms|**CTRL** + **MAJ** + **flèche vers le bas**|Aligne les bords inférieurs des contrôles sélectionnés sur le contrôle dominant|  
-|Format.AlignCenters|**MAJ** + **F9**|Aligne les centres verticaux des contrôles sélectionnés sur le contrôle dominant|  
-|Format.AlignLefts|**CTRL** + **MAJ** + **flèche gauche**|Aligner le bord gauche des contrôles sélectionnés sur le contrôle dominant|  
-|Format.AlignMiddles|**F9**|Aligne les centres horizontaux des contrôles sélectionnés sur le contrôle dominant|  
-|Format.AlignRights|**CTRL** + **MAJ** + **flèche droite**|Aligne les bords droits des contrôles sélectionnés sur le contrôle dominant|  
-|Format.AlignTops|**CTRL** + **MAJ** + **flèche vers le haut**|Aligne les bords supérieurs des contrôles sélectionnés sur le contrôle dominant|  
-|Format.ButtonBottom|**CTRL** + **B**|Place les boutons sélectionnés le centre vers le bas de la boîte de dialogue|  
-|Format.ButtonRight|**CTRL** + **R**|Place les boutons sélectionnés dans l’angle supérieur droit de la boîte de dialogue|  
-|Format.CenterHorizontal|**CTRL** + **MAJ** + **F9**|Centre les contrôles horizontalement dans la boîte de dialogue|  
-|Format.CenterVertical|**Ctrl** + **F9**|Centre les contrôles verticalement dans la boîte de dialogue|  
-|Format.CheckMnemonics|**CTRL** + **M**|Unicité des vérifications de mnémoniques|  
-|Format.SizeToContent|**MAJ** + **F7**|Redimensionne les contrôles sélectionnés pour s’adapter au texte de légende|  
-|Format.SpaceAcross|**Alt** + **Flèche gauche**|Espacer horizontalement les contrôles sélectionnés|  
-|Format.SpaceDown|**ALT** + **flèche vers le bas**|Espacer verticalement les contrôles sélectionnés|  
-|Format.TabOrder|**Ctrl** + **D**|Définit l’ordre des contrôles dans la boîte de dialogue|  
-|Format.TestDialog|**Ctrl** + **T**|Exécute la boîte de dialogue pour tester l’apparence et le comportement|  
-|Format.ToggleGuides|**Ctrl** + **G**|Cycles entre aucune grille, des instructions et grille pour la modification de la boîte de dialogue|  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)
+> Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+|Commande|Touches|Description|
+|-------------|----------|-----------------|
+|Format.AlignBottoms|**CTRL** + **MAJ** + **flèche vers le bas**|Aligne les bords inférieurs des contrôles sélectionnés sur le contrôle dominant|
+|Format.AlignCenters|**MAJ** + **F9**|Aligne les centres verticaux des contrôles sélectionnés sur le contrôle dominant|
+|Format.AlignLefts|**CTRL** + **MAJ** + **flèche gauche**|Aligner le bord gauche des contrôles sélectionnés sur le contrôle dominant|
+|Format.AlignMiddles|**F9**|Aligne les centres horizontaux des contrôles sélectionnés sur le contrôle dominant|
+|Format.AlignRights|**CTRL** + **MAJ** + **flèche droite**|Aligne les bords droits des contrôles sélectionnés sur le contrôle dominant|
+|Format.AlignTops|**CTRL** + **MAJ** + **flèche vers le haut**|Aligne les bords supérieurs des contrôles sélectionnés sur le contrôle dominant|
+|Format.ButtonBottom|**CTRL** + **B**|Place les boutons sélectionnés le centre vers le bas de la boîte de dialogue|
+|Format.ButtonRight|**CTRL** + **R**|Place les boutons sélectionnés dans l’angle supérieur droit de la boîte de dialogue|
+|Format.CenterHorizontal|**CTRL** + **MAJ** + **F9**|Centre les contrôles horizontalement dans la boîte de dialogue|
+|Format.CenterVertical|**Ctrl** + **F9**|Centre les contrôles verticalement dans la boîte de dialogue|
+|Format.CheckMnemonics|**CTRL** + **M**|Unicité des vérifications de mnémoniques|
+|Format.SizeToContent|**MAJ** + **F7**|Redimensionne les contrôles sélectionnés pour s’adapter au texte de légende|
+|Format.SpaceAcross|**Alt** + **Flèche gauche**|Espacer horizontalement les contrôles sélectionnés|
+|Format.SpaceDown|**ALT** + **flèche vers le bas**|Espacer verticalement les contrôles sélectionnés|
+|Format.TabOrder|**Ctrl** + **D**|Définit l’ordre des contrôles dans la boîte de dialogue|
+|Format.TestDialog|**Ctrl** + **T**|Exécute la boîte de dialogue pour tester l’apparence et le comportement|
+|Format.ToggleGuides|**Ctrl** + **G**|Cycles entre aucune grille, des instructions et grille pour la modification de la boîte de dialogue|
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)

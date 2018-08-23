@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652560"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607296"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID, méthode
-Retourne un **ComPtr** objet qui représente l’interface identifiée par l’ID de l’interface spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW HRESULT AsIID(  
-   REFIID riid,  
-   _Out_ ComPtr<IUnknown>* p  
-) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *riid*  
- ID d’interface.  
-  
- *p*  
- Si l’objet a une interface dont l’ID est égal à *riid*, un pointeur doublement indirect vers l’interface spécifiée par le *riid* paramètre ; sinon, un pointeur vers `IUnknown`.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ComPtr, classe](../windows/comptr-class.md)
+
+Retourne un **ComPtr** objet qui représente l’interface identifiée par l’ID de l’interface spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW HRESULT AsIID(
+   REFIID riid,
+   _Out_ ComPtr<IUnknown>* p
+) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*riid*  
+ID d’interface.
+
+*p*  
+Si l’objet a une interface dont l’ID est égal à *riid*, un pointeur doublement indirect vers l’interface spécifiée par le *riid* paramètre ; sinon, un pointeur vers `IUnknown`.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ComPtr, classe](../windows/comptr-class.md)

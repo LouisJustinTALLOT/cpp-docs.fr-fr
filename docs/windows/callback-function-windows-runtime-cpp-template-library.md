@@ -15,245 +15,251 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 799d0631ce29fcebd739f29232236e7cf87b74ac
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652573"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609252"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback, fonction (bibliothèque de modèles Windows Runtime C++)
-Crée un objet dont la fonction membre est une méthode de rappel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<  
-   typename TDelegateInterface,  
-   typename TCallback  
->  
-ComPtr<TDelegateInterface> Callback(  
-   TCallbackcallback  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
+
+Crée un objet dont la fonction membre est une méthode de rappel.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<
+   typename TDelegateInterface,
+   typename TCallback
+>
+ComPtr<TDelegateInterface> Callback(
+   TCallbackcallback
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
    _In_ HRESULT (TCallbackObject::* method)()  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
    _In_ HRESULT (TCallbackObject::* method)(TArg1)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
    TArg2)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
    TArg3)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
-   TArg3,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
+   TArg3,
    TArg4)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
-   TArg3,  
-   TArg4,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
+   TArg3,
+   TArg4,
    TArg5)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
-   TArg3,  
-   TArg4,  
-   TArg5,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
+   TArg3,
+   TArg4,
+   TArg5,
    TArg6)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6,  
-   typename TArg7  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
-   TArg3,  
-   TArg4,  
-   TArg5,  
-   TArg6,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6,
+   typename TArg7
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
+   TArg3,
+   TArg4,
+   TArg5,
+   TArg6,
    TArg7)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6,  
-   typename TArg7,  
-   typename TArg8  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
-   TArg3,  
-   TArg4,  
-   TArg5,  
-   TArg6,  
-   TArg7,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6,
+   typename TArg7,
+   typename TArg8
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
+   TArg3,
+   TArg4,
+   TArg5,
+   TArg6,
+   TArg7,
    TArg8)  
-);  
-template<  
-   typename TDelegateInterface,  
-   typename TCallbackObject,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6,  
-   typename TArg7,  
-   typename TArg8,  
-   typename TArg9  
->  
-ComPtr<TDelegateInterface> Callback(  
-   _In_ TCallbackObject *object,  
-   _In_ HRESULT (TCallbackObject::* method)(TArg1,  
-   TArg2,  
-   TArg3,  
-   TArg4,  
-   TArg5,  
-   TArg6,  
-   TArg7,  
-   TArg8,  
+);
+template<
+   typename TDelegateInterface,
+   typename TCallbackObject,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6,
+   typename TArg7,
+   typename TArg8,
+   typename TArg9
+>
+ComPtr<TDelegateInterface> Callback(
+   _In_ TCallbackObject *object,
+   _In_ HRESULT (TCallbackObject::* method)(TArg1,
+   TArg2,
+   TArg3,
+   TArg4,
+   TArg5,
+   TArg6,
+   TArg7,
+   TArg8,
    TArg9)  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *TDelegateInterface*  
- Paramètre de modèle qui spécifie l'interface du délégué à appeler lorsqu'un événement se produit.  
-  
- *TCallback*  
- Paramètre de modèle qui spécifie le type d'un objet qui représente un objet et sa fonction membre de rappel.  
-  
- *TCallbackObject*  
- Paramètre de modèle qui spécifie l'objet dont la fonction membre est la méthode à appeler lorsqu'un événement se produit.  
-  
- *TArg1*  
- Paramètre de modèle qui spécifie le type du premier argument de la méthode de rappel.  
-  
- *TArg2*  
- Paramètre de modèle qui spécifie le type du second argument de la méthode de rappel.  
-  
- *TArg3*  
- Paramètre de modèle qui spécifie le type du troisième argument de la méthode de rappel.  
-  
- *TArg4*  
- Paramètre de modèle qui spécifie le type du quatrième argument de la méthode de rappel.  
-  
- *TArg5*  
- Paramètre de modèle qui spécifie le type du cinquième argument de la méthode de rappel.  
-  
- *TArg6*  
- Paramètre de modèle qui spécifie le type du sixième argument de la méthode de rappel.  
-  
- *TArg7*  
- Paramètre de modèle qui spécifie le type du septième argument de la méthode de rappel.  
-  
- *TArg8*  
- Paramètre de modèle qui spécifie le type du huitième argument de la méthode de rappel.  
-  
- *TArg9*  
- Paramètre de modèle qui spécifie le type du neuvième argument de la méthode de rappel.  
-  
- *rappel*  
- Objet qui représente l'objet de rappel et sa fonction membre.  
-  
- *object*  
- Objet dont la fonction membre est appelée lorsqu'un événement se produit.  
-  
- *(Méthode)*  
- Fonction membre à appeler lorsqu'un événement se produit.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Objet dont la fonction membre est la méthode de rappel spécifiée.  
-  
-## <a name="remarks"></a>Notes  
- La base d’un objet délégué doit être `IUnknown`, et non `IInspectable`.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** event.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*TDelegateInterface*  
+Paramètre de modèle qui spécifie l'interface du délégué à appeler lorsqu'un événement se produit.
+
+*TCallback*  
+Paramètre de modèle qui spécifie le type d'un objet qui représente un objet et sa fonction membre de rappel.
+
+*TCallbackObject*  
+Paramètre de modèle qui spécifie l'objet dont la fonction membre est la méthode à appeler lorsqu'un événement se produit.
+
+*TArg1*  
+Paramètre de modèle qui spécifie le type du premier argument de la méthode de rappel.
+
+*TArg2*  
+Paramètre de modèle qui spécifie le type du second argument de la méthode de rappel.
+
+*TArg3*  
+Paramètre de modèle qui spécifie le type du troisième argument de la méthode de rappel.
+
+*TArg4*  
+Paramètre de modèle qui spécifie le type du quatrième argument de la méthode de rappel.
+
+*TArg5*  
+Paramètre de modèle qui spécifie le type du cinquième argument de la méthode de rappel.
+
+*TArg6*  
+Paramètre de modèle qui spécifie le type du sixième argument de la méthode de rappel.
+
+*TArg7*  
+Paramètre de modèle qui spécifie le type du septième argument de la méthode de rappel.
+
+*TArg8*  
+Paramètre de modèle qui spécifie le type du huitième argument de la méthode de rappel.
+
+*TArg9*  
+Paramètre de modèle qui spécifie le type du neuvième argument de la méthode de rappel.
+
+*rappel*  
+Objet qui représente l'objet de rappel et sa fonction membre.
+
+*object*  
+Objet dont la fonction membre est appelée lorsqu'un événement se produit.
+
+*(Méthode)*  
+Fonction membre à appeler lorsqu'un événement se produit.
+
+## <a name="return-value"></a>Valeur de retour
+
+Objet dont la fonction membre est la méthode de rappel spécifiée.
+
+## <a name="remarks"></a>Notes
+
+La base d’un objet délégué doit être `IUnknown`, et non `IInspectable`.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** event.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

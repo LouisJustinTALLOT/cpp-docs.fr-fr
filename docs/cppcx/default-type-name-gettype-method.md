@@ -1,5 +1,5 @@
 ---
-title: 'par défaut :: (type_name) :: GetType, méthode | Documents Microsoft'
+title: 'par défaut :: (type_name) :: GetType, méthode | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 21d0bf92-fac4-48cd-9108-c6f57ba1196a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66006281bfc4a29bd1acc2bc360b6f3c08f5ac8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087146"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597766"
 ---
 # <a name="defaulttypenamegettype-method"></a>default::(type_name)::GetType, méthode
 Retourne un Platform::Type^ qui représente le type actif.  
@@ -33,8 +33,8 @@ Platform::Type^ GetType()
 ### <a name="return-value"></a>Valeur de retour  
  Objet [Platform::Type](../cppcx/platform-type-class.md)^ qui représente l'objet actif.  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   

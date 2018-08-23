@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402684"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588215"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Résolution du nom pour les types dépendants
 Utilisez **typename** pour les noms qualifiés dans les définitions de modèle pour indiquer au compilateur que le nom qualifié donné identifie un type. Pour plus d’informations, consultez [typename](../cpp/typename.md).  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Levée des ambiguïtés de modèle  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] applique les règles standard C++98/03/11 pour éviter les ambiguïtés avec le mot clé template. Dans l’exemple suivant, Visual C++ 2010 accepterait les lignes non conformes et les lignes conformes.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] accepte uniquement les lignes conformes.  
+ Visual Studio 2012 applique les règles C ++ 98/03/11 standards pour éviter les ambiguïtés avec le mot clé « modèle ». Dans l’exemple suivant, Visual C++ 2010 accepterait les lignes non conformes et les lignes conformes.  Visual Studio 2012 accepte uniquement les lignes conformes.  
   
 ```cpp  
 #include <iostream>  

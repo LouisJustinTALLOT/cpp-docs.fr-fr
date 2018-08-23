@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa178126b3a749e3af67b9dae3711c0a5cf9f408
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645784"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606985"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass, macros
 
@@ -54,7 +54,7 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>Paramètres
 
 *nom de classe*  
-Nom de la classe à créer.  
+Nom de la classe à créer.
 
 *fabrique*  
 Fabrique qui crée une instance de la classe spécifiée.
@@ -73,4 +73,5 @@ N’utilisez pas ces macros avec COM classique, sauf si vous utilisez le `#undef
 **Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
+
 [Module, classe](../windows/module-class.md)

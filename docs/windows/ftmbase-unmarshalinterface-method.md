@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef462ae884aad4160ffbae1883485ac7e06d3aa5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644032"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610699"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface, méthode
-Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHODIMP UnmarshalInterface(  
-   __in IStream *pStm,  
-   __in REFIID riid,  
-   __deref_out void **ppv  
-) override;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *pStm*  
- Pointeur vers le flux à partir duquel le pointeur d’interface doit être marshalé.  
-  
- *riid*  
- Référence à l’identificateur de l’interface pour être marshalé.  
-  
- *PPV*  
- Lorsque cette opération se termine, l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Si cette opération est réussie, **ppv* contient le pointeur d’interface requis de l’interface pour être marshalé.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, E_NOINTERFACE ou E_FAIL.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** ftm.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [FtmBase, classe](../windows/ftmbase-class.md)
+
+Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pStm*  
+Pointeur vers le flux à partir duquel le pointeur d’interface doit être marshalé.
+
+*riid*  
+Référence à l’identificateur de l’interface pour être marshalé.
+
+*PPV*  
+Lorsque cette opération se termine, l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Si cette opération est réussie, **ppv* contient le pointeur d’interface requis de l’interface pour être marshalé.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de réussite ; Sinon, E_NOINTERFACE ou E_FAIL.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** ftm.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[FtmBase, classe](../windows/ftmbase-class.md)

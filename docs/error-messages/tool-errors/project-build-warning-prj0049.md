@@ -1,5 +1,5 @@
 ---
-title: PRJ0049 d’avertissement de génération de projet | Documents Microsoft
+title: Avertissement de génération PRJ0049 de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df6fcb8bc5d6517a46279e0bef5036db1e81241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 726294f420000ab1d1b98be72d310dfcbfcd04c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319808"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591882"
 ---
 # <a name="project-build-warning-prj0049"></a>Avertissement de génération de projet PRJ0049
-Cible référencé '\<référence >' requiert .NET Framework \<MinFrameworkVersion > et ne pourra pas s’exécuter sur le framework cible de ce projet  
+Cible référencé '\<référence >' requiert .NET Framework \<MinFrameworkVersion > et ne sont pas exécutés sur le framework cible de ce projet  
   
- Les applications créées à l’aide de Visual Studio 2008 peuvent spécifier la version de la [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] ils doivent cibler. Si vous ajoutez une référence à un assembly ou un projet qui dépend d’une version de la [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] qui est ultérieure à la version ciblée, vous obtenez cet avertissement au moment de la compilation.  
+ Les applications créées à l’aide de Visual Studio 2008 peuvent spécifier quelle version du .NET Framework, elles doivent cibler. Si vous ajoutez une référence à un assembly ou un projet qui dépend d’une version du .NET Framework ultérieure à la version ciblée, vous obtiendrez cet avertissement au moment de la compilation.  
   
 ### <a name="to-correct-this-warning"></a>Pour corriger cet avertissement  
   
 1.  Choisissez l'une des valeurs suivantes :  
   
-    -   Modifiez le framework ciblé du projet de **Pages de propriétés** afin qu’il soit postérieure ou égale à la version de framework minimale de tous les assemblys référencés et les projets de boîte de dialogue. Pour plus d’informations, consultez [l’ajout de références](../../ide/adding-references-in-visual-cpp-projects.md).  
+    -   Modifier le framework ciblé dans le projet **Pages de propriétés** afin qu’il soit postérieure ou égale à la version de framework minimale de tous les assemblys référencés et projets de boîte de dialogue. Pour plus d’informations, consultez [l’ajout de références](../../ide/adding-references-in-visual-cpp-projects.md).  
   
-    -   Supprimez la référence à l’assembly ou le projet qui a une version de framework minimale ultérieure au framework ciblé. Ces éléments seront marqués avec une icône d’avertissement dans le fichier **Pages de propriétés**.  
+    -   Supprimez la référence à l’assembly ou le projet qui a une version de framework minimale qui est ultérieure au framework ciblé. Ces éléments sont marqués avec une icône d’avertissement dans le projet **Pages de propriétés**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs et avertissements de génération de projet (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

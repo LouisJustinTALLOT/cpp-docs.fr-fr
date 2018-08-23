@@ -1,5 +1,5 @@
 ---
-title: 'Windows::Foundation :: Collections Namespace (C + c++ / CX) | Documents Microsoft'
+title: 'Windows::Foundation :: Collections Namespace (C++ / c++ / CX) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d889f68db2c631921f8c34f63d21ee1f5859bd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090820"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586709"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections (espace de noms) (C++/CX)
-C + c++ / CX complète l’espace de noms Windows::Foundation :: collections avec des fonctions qui simplifient l’utilisation des classes de collection Vector, VectorView, Map et MapView.  
+C++ / c++ / CX complète l’espace de noms Windows::Foundation :: collections avec des fonctions qui simplifient l’utilisation des classes de collection Vector, VectorView, Map et MapView.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ namespace Windows {
 |[end, fonction](../cppcx/end-function.md)|Retourne un itérateur qui pointe au-delà de la fin d’une collection.|  
 |[to_vector, fonction](../cppcx/to-vector-function.md)|Retourne une collection sous la forme d’un std::vector.|  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Windows::Foundation::Collections  

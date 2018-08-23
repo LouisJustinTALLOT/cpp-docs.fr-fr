@@ -17,69 +17,74 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e07d218158ff5615fbdc26a5f48b7cf828596ed
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 68cfd7eb96cbf19f5675cec17a9270b9b37b2105
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014167"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599817"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
-Implémente la prise en charge du retour d’erreurs détaillées.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ support_error_info(  
-   error_interface=uuid  
-) ]  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *error_interface*  
- L’identificateur de l’interface qui implémente `IErrorInfo`.  
-  
-## <a name="remarks"></a>Notes  
- L’attribut C++ **support_error_info** implémente la prise en charge permettant de retourner au client les erreurs détaillées et contextuelles rencontrées par l’objet cible. Pour l’objet prendre en charge les erreurs, les méthodes de la `IErrorInfo` interface doit être implémentée par l’objet. Pour plus d’informations, consultez [Prise en charge d’IDispatch et IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
-  
- Cet attribut ajoute la classe [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) comme classe de base à l’objet cible. Il en résulte une implémentation par défaut de `ISupportErrorInfo` et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant ajoute la prise en charge par défaut pour le `ISupportErrorInfo` interface pour le `CMyClass` objet.  
-  
-```cpp  
-// cpp_attr_ref_support_error_info.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module (name="mymod")];  
-[object, uuid("f0b17d66-dc6e-4662-baaf-76758e09c878")]  
-__interface IMyErrors  
-{  
-};  
-  
-[ coclass, support_error_info("IMyErrors"),  
-  uuid("854dd392-bdc7-4781-8667-8757936f2a4f") ]  
-class CMyClass  
-{  
-};  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**classe**|  
-|**Renouvelable**|Oui|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs COM](../windows/com-attributes.md)   
- [Attributs de classe](../windows/class-attributes.md)   
+
+Implémente la prise en charge du retour d’erreurs détaillées.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ support_error_info(
+   error_interface=uuid
+) ]
+```
+
+### <a name="parameters"></a>Paramètres
+
+*error_interface*  
+L’identificateur de l’interface qui implémente `IErrorInfo`.
+
+## <a name="remarks"></a>Notes
+
+L’attribut C++ **support_error_info** implémente la prise en charge permettant de retourner au client les erreurs détaillées et contextuelles rencontrées par l’objet cible. Pour l’objet prendre en charge les erreurs, les méthodes de la `IErrorInfo` interface doit être implémentée par l’objet. Pour plus d’informations, consultez [Prise en charge d’IDispatch et IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).
+
+Cet attribut ajoute la classe [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) comme classe de base à l’objet cible. Il en résulte une implémentation par défaut de `ISupportErrorInfo` et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.
+
+## <a name="example"></a>Exemple
+
+Le code suivant ajoute la prise en charge par défaut pour le `ISupportErrorInfo` interface pour le `CMyClass` objet.
+
+```cpp
+// cpp_attr_ref_support_error_info.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module (name="mymod")];
+[object, uuid("f0b17d66-dc6e-4662-baaf-76758e09c878")]
+__interface IMyErrors
+{
+};
+
+[ coclass, support_error_info("IMyErrors"),
+  uuid("854dd392-bdc7-4781-8667-8757936f2a4f") ]
+class CMyClass
+{
+};
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**classe**|
+|**Renouvelable**|Oui|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs COM](../windows/com-attributes.md)  
+[Attributs de classe](../windows/class-attributes.md)  

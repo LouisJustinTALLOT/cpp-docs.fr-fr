@@ -1,5 +1,5 @@
 ---
-title: Interface Platform::IBox | Documents Microsoft
+title: Interface Platform::IBox | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -10,16 +10,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7894eceb2f345303400eec9b0490db58b3c3583f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d83afb854aaa400a02f9de95e269f85cfeba1a96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089521"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586870"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox, interface
 L'interface [Platform::IBox](../cppcx/platform-ibox-interface.md) est le nom C++ de l'interface `Windows::Foundation::IReference` .  
@@ -38,7 +38,7 @@ interface class IBox
 ### <a name="remarks"></a>Notes  
  L'interface `IBox<T>` est principalement utilisée en interne pour représenter les types de valeur Nullable, comme décrit dans [Classes et structs value (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md). L'interface est aussi utilisée en interne pour effectuer un boxing des types valeur passés aux méthodes C++ qui prennent des paramètres de type `Object^`. Vous pouvez déclarer explicitement un paramètre d'entrée comme `IBox<SomeValueType>`. Pour obtenir un exemple, consultez [Boxing](../cppcx/boxing-c-cx.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   
 ### <a name="members"></a>Membres  
  L'interface `Platform::IBox` hérite de l'interface [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md) . `IBox` a ces membres :  

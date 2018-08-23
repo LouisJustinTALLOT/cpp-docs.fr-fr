@@ -17,38 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c46fad71a42f9f947f020709cdf7851d079edd81
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014024"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603379"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects, méthode
-Annule l’inscription d’objets dans le module spécifié afin que les autres applications ne peuvent pas s’y connecter.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-HRESULT UnregisterObjects(  
-   ModuleBase* module,  
-   const wchar_t* serverName);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *module*  
- Pointeur vers un module.  
-  
- *Nom du serveur*  
- Nom de qualification qui spécifie un sous-ensemble d’objets affectés par cette opération.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK si cette opération est réussie ; Sinon, une erreur HRESULT qui indique la raison pour laquelle cette opération a échoué.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL
- 
- ## <a name="see-also"></a>Voir aussi
- [Module, classe](../windows/module-class.md)
+
+Annule l’inscription d’objets dans le module spécifié afin que les autres applications ne peuvent pas s’y connecter.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT UnregisterObjects(
+   ModuleBase* module,
+   const wchar_t* serverName);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*module*  
+Pointeur vers un module.
+
+*Nom du serveur*  
+Nom de qualification qui spécifie un sous-ensemble d’objets affectés par cette opération.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK si cette opération est réussie ; Sinon, une erreur HRESULT qui indique la raison pour laquelle cette opération a échoué.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+[Module, classe](../windows/module-class.md)

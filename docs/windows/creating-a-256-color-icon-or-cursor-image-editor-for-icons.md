@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92f5a427399009baf1b157480f0e486e9c4ec538
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 34336a62574e83a25af5341c753df78be72a6a15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645221"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601681"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Création d'une icône ou d'un curseur 256 couleurs (Éditeur d'images pour les icônes)
-À l’aide de la **Image** éditeur, icônes et curseurs peuvent être de grande taille (64 x 64) avec une palette de 256 couleurs. Après avoir créé la ressource, un style d’image de périphérique est sélectionné.  
-  
-### <a name="to-create-a-256-color-icon-or-cursor"></a>Pour créer une icône de 256 couleurs ou d’un curseur  
-  
-1.  Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de votre fichier .rc, puis choisissez **insérer la ressource** dans le menu contextuel. (Si vous disposez déjà d’une ressource image dans votre fichier .rc, par exemple un curseur, vous pouvez simplement cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor** dans le menu contextuel.)  
-  
-    > [!NOTE] 
-    > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Dans le [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** et cliquez sur **New**.  
-  
-3.  Sur le **Image** menu, cliquez sur **nouvelle Image de périphérique**.  
-  
-4.  Sélectionnez le style de l’image de 256 couleurs souhaité.  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Configuration requise  
- Aucun.  
-  
-## <a name="see-also"></a>Voir aussi  
- [À l’aide de la Palette 256 couleurs](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
- [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+
+À l’aide de la **Image** éditeur, icônes et curseurs peuvent être de grande taille (64 x 64) avec une palette de 256 couleurs. Après avoir créé la ressource, un style d’image de périphérique est sélectionné.
+
+### <a name="to-create-a-256-color-icon-or-cursor"></a>Pour créer une icône de 256 couleurs ou d’un curseur
+
+1. Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de votre fichier .rc, puis choisissez **insérer la ressource** dans le menu contextuel. (Si vous disposez déjà d’une ressource image dans votre fichier .rc, par exemple un curseur, vous pouvez simplement cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor** dans le menu contextuel.)
+
+   > [!NOTE] 
+   > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
+
+2. Dans le [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** et cliquez sur **New**.
+
+3. Sur le **Image** menu, cliquez sur **nouvelle Image de périphérique**.
+
+4. Sélectionnez le style de l’image de 256 couleurs souhaité.
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Configuration requise
+
+Aucun.
+
+## <a name="see-also"></a>Voir aussi
+
+[À l’aide de la Palette 256 couleurs](../windows/using-the-256-color-palette-image-editor-for-icons.md)  
+[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

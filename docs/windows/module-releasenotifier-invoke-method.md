@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48e488188ed040d29ef70f273991d1df9cf1d63e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: da71ab887145f3bcb1341b5ea6004a24253a4a5f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014602"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594498"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke, méthode
-En cas d’implémentation, appelle un gestionnaire d’événements lorsque le dernier objet dans un module est lancé.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-virtual void Invoke() = 0;  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Module::ReleaseNotifier, classe](../windows/module-releasenotifier-class.md)
+
+En cas d’implémentation, appelle un gestionnaire d’événements lorsque le dernier objet dans un module est lancé.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+virtual void Invoke() = 0;
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Module::ReleaseNotifier, classe](../windows/module-releasenotifier-class.md)
