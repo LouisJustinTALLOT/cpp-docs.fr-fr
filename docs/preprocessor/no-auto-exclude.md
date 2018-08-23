@@ -1,5 +1,5 @@
 ---
-title: no_auto_exclude | Documents Microsoft
+title: no_auto_exclude | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0c8d28e1e9c7306c1a74db90177caf76ca95b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5cae3a52c3434317ee26292de13d3e0471d78998
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839520"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539563"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
 **Spécifique à C++**  
   
- Désactive l'exclusion automatique.  
+Désactive l'exclusion automatique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,12 @@ no_auto_exclude
 ```  
   
 ## <a name="remarks"></a>Notes  
- Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Dans ce cas, [l’avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) sera émis pour chaque élément à exclure. Vous pouvez désactiver cette exclusion automatique à l'aide de cet attribut.  
+ 
+Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Dans ce cas, [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) sera émis pour chaque élément à exclure. Vous pouvez désactiver cette exclusion automatique à l'aide de cet attribut.  
   
- **FIN spécifique à C++**  
+**FIN spécifique à C++**  
   
 ## <a name="see-also"></a>Voir aussi  
- [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directive)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

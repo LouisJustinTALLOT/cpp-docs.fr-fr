@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883630"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571845"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, classe
 Cette classe représente un `CSimpleStringT` objet.  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  La mémoire tampon est automatiquement libéré lorsque la `CSimpleStringT` objet est détruit.  
   
- Si vous effectuer le suivi de la longueur de chaîne vous-même, n’ajoutez pas pas le caractère null de fin. Vous devez spécifier la longueur de la chaîne finale lorsque vous libérez la mémoire tampon à l’aide de `ReleaseBuffer`. Si vous ajoutez un caractère null de fin lorsque vous appelez `ReleaseBuffer`, passez -1 (valeur par défaut) pour la longueur à `ReleaseBuffer`, et `ReleaseBuffer` effectuera une `strlen` sur la mémoire tampon pour déterminer sa longueur.  
+ Si vous effectuer le suivi de la longueur de chaîne vous-même, n’ajoutez pas le caractère null de fin. Vous devez spécifier la longueur de la chaîne finale lorsque vous libérez la mémoire tampon à l’aide de `ReleaseBuffer`. Si vous ajoutez un caractère null de fin lorsque vous appelez `ReleaseBuffer`, passez -1 (valeur par défaut) pour la longueur à `ReleaseBuffer`, et `ReleaseBuffer` effectuera une `strlen` sur la mémoire tampon pour déterminer sa longueur.  
   
  Pour plus d’informations sur le comptage de références, consultez les articles suivants :  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025816"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571559"
 ---
 # <a name="atl-project-wizard"></a>Assistant Projet ATL
 La bibliothèque ATL (Active Template) est un ensemble de classes C++ basées sur modèle qui simplifient l’écriture des objets COM petits et rapides. L’Assistant Projet ATL crée un projet avec les structures de contenir des objets COM.  
@@ -52,7 +52,7 @@ La bibliothèque ATL (Active Template) est un ensemble de classes C++ basées su
   
 -   [Optimiser le compilateur pour un projet ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Vous pouvez spécifier les propriétés du projet (par exemple, [s’il faut lier statiquement à la bibliothèque CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) dans le [propriétés du projet](../../ide/general-property-page-project.md) page et vous pouvez définir [des configurations de build](/visualstudio/ide/understanding-build-configurations) pour un Projet ATL. Consultez [à l’aide de projets pour créer des Applications](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) pour plus d’informations.  
+ Vous pouvez spécifier les propriétés du projet (par exemple, [s’il faut lier statiquement à la bibliothèque CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) dans le [propriétés du projet](../../ide/general-property-page-project.md) page et vous pouvez définir [des configurations de build](/visualstudio/ide/understanding-build-configurations) pour un Projet ATL.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et gestion de projets Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   

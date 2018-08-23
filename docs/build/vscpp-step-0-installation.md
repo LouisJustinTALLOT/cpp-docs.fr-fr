@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496556"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572058"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge C++ dans Visual Studio
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur l’espace disque et la configuration requise du 
 
    La première fois que vous exécutez Visual Studio, vous êtes invité à vous connecter avec un Account Microsoft. Si vous n’en avez pas, vous pouvez créer un gratuitement. Vous devez également choisir un thème. Ne vous inquiétez pas, vous pouvez modifier ultérieurement si vous le souhaitez. 
 
-   Il faudra encore Visual Studio plusieurs minutes pour préparer la première fois que vous exécutez. Voici ce que cela donne dans un rapide séquentiel :
+   Il faudra encore Visual Studio plusieurs minutes pour se préparer à utilisent la première fois que vous l’exécutez. Voici ce que cela donne dans un rapide séquentiel :
 
    ![Visual Studio 2017 connectez-vous](../build/media/vscpp-quickstart-first-run.gif "connecter Visual Studio 2017")
 

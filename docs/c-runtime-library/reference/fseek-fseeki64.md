@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - fseek
@@ -37,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a327bf196da71f47262c957e7fe6a8352971c36d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01c0eee248090f6bffad6f68b34d59f1a6fa7265
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403740"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572245"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -65,7 +66,7 @@ int _fseeki64(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *offset*<br/>
@@ -76,11 +77,11 @@ Position initiale.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **fseek** et **_fseeki64** retourne 0. Dans le cas contraire, une valeur différente de zéro est retournée. Sur les appareils incapables de rechercher, la valeur de retour n’est pas définie. Si *flux* est un pointeur null, ou si *origine* n’est pas une des valeurs autorisées décrites ci-dessous, **fseek** et **_fseeki64** appel non valide Gestionnaire de paramètres, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
+En cas de réussite, **fseek** et **_fseeki64** retourne 0. Dans le cas contraire, une valeur différente de zéro est retournée. Sur les appareils incapables de rechercher, la valeur de retour n’est pas définie. Si *flux* est un pointeur null, ou si *origine* ne fait pas partie des valeurs autorisées décrites ci-dessous, **fseek** et **_fseeki64** appeler le non valide Gestionnaire de paramètres, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
 
 ## <a name="remarks"></a>Notes
 
-Le **fseek** et **_fseeki64** déplace le pointeur de fichier (le cas échéant) associé à des fonctions *flux* vers un nouvel emplacement est *offset* octets à partir de *origine*. L’opération suivante sur le flux a lieu au nouvel emplacement. Sur un flux ouvert pour la mise à jour, l’opération suivante peut être une lecture ou une écriture. L’argument *origine* doit être une des constantes suivantes, définies dans STDIO. H :
+Le **fseek** et **_fseeki64** fonctions déplace le pointeur de fichier (le cas échéant) associé *flux* vers un nouvel emplacement est *décalage* octets à partir de *origine*. L’opération suivante sur le flux a lieu au nouvel emplacement. Sur un flux ouvert pour la mise à jour, l’opération suivante peut être une lecture ou une écriture. L’argument *origine* doit être une des constantes suivantes, définies dans STDIO. H :
 
 |valeur d’origine|Signification|
 |-|-|
@@ -88,23 +89,23 @@ Le **fseek** et **_fseeki64** déplace le pointeur de fichier (le cas échéant)
 **SEEK_END**|Fin du fichier.
 **SEEK_SET**|Début du fichier.
 
-Vous pouvez utiliser **fseek** et **_fseeki64** pour repositionner le pointeur n’importe où dans un fichier. Le pointeur peut également être positionné au-delà de la fin du fichier. **fseek** et **_fseeki64** efface l’indicateur de fin de fichier et annule l’effet du tout avant [ungetc](ungetc-ungetwc.md) les appels de fonction *flux*.
+Vous pouvez utiliser **fseek** et **_fseeki64** pour repositionner le pointeur n’importe où dans un fichier. Le pointeur peut également être positionné au-delà de la fin du fichier. **fseek** et **_fseeki64** efface l’indicateur de fin de fichier et annulent l’effet de tout avant [ungetc](ungetc-ungetwc.md) les appels de fonction *flux*.
 
 Quand un fichier est ouvert pour un ajout de données, la position de fichier actuelle est déterminée par la dernière opération d’E/S, pas par l’emplacement auquel l’écriture suivante se produirait. Si aucune opération d’E/S ne s’est produite sur un fichier ouvert pour un ajout, la position de fichier correspond au début du fichier.
 
-Pour les flux ouverts en mode texte, **fseek** et **_fseeki64** est limitée utilisation, comme des traductions chariot / sauts de ligne peuvent entraîner **fseek** et **_ fseeki64** pour produire des résultats inattendus. La seule **fseek** et **_fseeki64** opérations fonctionnent sur les flux ouverts en mode texte sont :
+Pour les flux ouverts en mode texte, **fseek** et **_fseeki64** ont une utilisation limitée, car les traductions des sauts de ligne de chariot peuvent provoquer **fseek** et **_ fseeki64** pour produire des résultats inattendus. La seule **fseek** et **_fseeki64** sont des opérations que fonctionnent sur les flux ouverts en mode texte :
 
 - Recherche avec un décalage de 0 par rapport à toute valeur d’origine.
 
-- La recherche à partir du début du fichier avec une valeur de décalage retourné par un appel à [ftell](ftell-ftelli64.md) lors de l’utilisation **fseek** ou [_ftelli64](ftell-ftelli64.md) lors de l’utilisation **_fseeki64**.
+- Recherche à partir du début du fichier avec une valeur de décalage retournée à partir d’un appel à [ftell](ftell-ftelli64.md) lors de l’utilisation **fseek** ou [_ftelli64](ftell-ftelli64.md) lors de l’utilisation **_fseeki64**.
 
-Également en mode texte, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture, [fopen](fopen-wfopen.md) et toutes les routines connexes d’un CTRL + Z à la fin du fichier et si possible de le supprimer. Pour cela, car il est à l’aide de la combinaison de **fseek** et [ftell](ftell-ftelli64.md) ou **_fseeki64** et [_ftelli64](ftell-ftelli64.md), pour se déplacer dans un fichier qui se termine par CTRL + Z peut provoquer **fseek** ou **_fseeki64** comportement incorrect vers la fin du fichier.
+Également en mode texte, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture, [fopen](fopen-wfopen.md) et toutes les routines connexes recherchent un CTRL + Z à la fin du fichier et le suppriment si possible. En effet à l’aide de la combinaison de **fseek** et [ftell](ftell-ftelli64.md) ou **_fseeki64** et [_ftelli64](ftell-ftelli64.md)pour se déplacer dans un fichier qui se termine par un CTRL + Z peut provoquer **fseek** ou **_fseeki64** au comportement incorrect vers la fin du fichier.
 
-Quand la bibliothèque CRT ouvre un fichier qui commence par une marque d’ordre d’octet, le pointeur de fichier est positionné après la marque (autrement dit, au début du contenu réel du fichier). Si vous devez **fseek** au début du fichier, utilisez [ftell](ftell-ftelli64.md) pour obtenir la position initiale et **fseek** à elle plutôt qu’à la position 0.
+Quand la bibliothèque CRT ouvre un fichier qui commence par une marque d’ordre d’octet, le pointeur de fichier est positionné après la marque (autrement dit, au début du contenu réel du fichier). Si vous devez **fseek** au début du fichier, utilisez [ftell](ftell-ftelli64.md) pour obtenir la position initiale et **fseek** lui plutôt qu’à la position 0.
 
 Cette fonction verrouille les autres threads pendant l’exécution et est donc thread-safe. Pour une version sans verrouillage, consultez [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

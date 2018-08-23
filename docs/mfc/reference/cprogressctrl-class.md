@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850155"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545836"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre de progression Windows.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui spécifie la nouvelle couleur de la barre de progression. Spécifiez CLR_DEFAULT pour provoquer la barre de progression à utiliser sa couleur par défaut.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- La couleur précédente de la barre de progression, représenté sous la forme un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur ou CLR_DEFAULT si la couleur de la barre de progression est la couleur par défaut.  
+
+La couleur précédente de la barre de progression, représenté sous la forme un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur ou CLR_DEFAULT si la couleur de la barre de progression est la couleur par défaut.  
   
 ### <a name="remarks"></a>Notes  
- Le `SetBarColor` méthode définit la progression de la barre uniquement si de couleur un [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [thème](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) n’est pas en vigueur.  
+
+Le `SetBarColor` méthode définit la progression de la barre uniquement si de couleur un Vista Windows [thème](/windows/desktop/Controls/visual-styles-overview) n’est pas en vigueur.  
   
  Cette méthode envoie le [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) message, qui est décrite dans le SDK Windows.  
   

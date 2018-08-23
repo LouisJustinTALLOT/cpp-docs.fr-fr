@@ -1,5 +1,5 @@
 ---
-title: _umul128 | Documents Microsoft
+title: _umul128 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6998b51be8fd11092c4266fa7eee7434be8e5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331530"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545802"
 ---
 # <a name="umul128"></a>_umul128
 **Section spécifique à Microsoft**  
@@ -51,11 +51,11 @@ unsigned __int64 _umul128(
 ## <a name="return-value"></a>Valeur de retour  
  64 bits de poids faible du produit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|Header|  
 |---------------|------------------|------------|  
-|`_umul128`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_umul128`|ARM, x64|\<intrin.h>|  
   
 ## <a name="example"></a>Exemple  
   

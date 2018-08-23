@@ -1,5 +1,5 @@
 ---
-title: la région, endregion | Documents Microsoft
+title: la région, endregion | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5590d2b251d86a9d20b62bfdb3d5bf929e3d92d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839445"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545746"
 ---
 # <a name="region-endregion"></a>region, endregion
-**#pragma region** vous permet de spécifier un bloc de code que vous pouvez développer ou réduire lorsque vous utilisez la [fonctionnalité mode plan](/visualstudio/ide/outlining) de l’éditeur de Code Visual Studio.  
+`#pragma region` vous permet de spécifier un bloc de code que vous pouvez développer ou réduire lorsque vous utilisez le [fonctionnalité mode plan](/visualstudio/ide/outlining) de l’éditeur de Code Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,22 @@ ms.locfileid: "33839445"
 #pragma endregion comment  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `comment`(facultatif)  
- Commentaire qui s'affiche dans l'éditeur de code.  
+### <a name="parameters"></a>Paramètres  
+*commentaire* (facultatif)  
+Commentaire qui s'affiche dans l'éditeur de code.  
   
- *nom*(facultatif)  
- Nom de la région.  Ce nom s'affiche dans l'éditeur de code.  
+*name* (facultatif)  
+Nom de la région.  Ce nom s'affiche dans l'éditeur de code.  
   
 ## <a name="remarks"></a>Notes  
- **#pragma endregion** marque la fin d’un **#pragma region** bloc.  
+ 
+`#pragma endregion` marque la fin d’un `#pragma region` bloc.  
   
- A `#region` bloc doit se terminer par **#pragma endregion**.  
+Un `#region` bloc doit se terminer par `#pragma endregion`.  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // pragma_directives_region.cpp  
 #pragma region Region_1  
 void Test() {}  
@@ -65,4 +66,5 @@ int main() {}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

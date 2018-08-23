@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208856"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571800"
 ---
 # <a name="csid-class"></a>CSid, classe
 Cette classe est un wrapper pour un `SID` structure de (l’identificateur de sécurité).  
@@ -332,13 +332,13 @@ bool LoadAccount(
  Le nom du système. Cette chaîne peut être le nom d’un ordinateur distant. Si cette chaîne est NULL, le système local est utilisé à la place.  
   
  *pSid*  
- Un pointeur vers un [SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx) structure.  
+ Un pointeur vers un [SID](/windows/desktop/api/winnt/ns-winnt-_sid) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.  
   
 ### <a name="remarks"></a>Notes  
- `LoadAccount` tente de trouver un identificateur de sécurité pour le nom spécifié. Consultez [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) pour plus d’informations.  
+ `LoadAccount` tente de trouver un identificateur de sécurité pour le nom spécifié. Consultez [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) pour plus d’informations.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Opérateur d'assignation.  

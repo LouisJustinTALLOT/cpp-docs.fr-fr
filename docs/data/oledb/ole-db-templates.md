@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339434"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571556"
 ---
 # <a name="ole-db-templates"></a>modèles OLE DB
 Les modèles OLE DB facilitent l’accès aux données de OLE DB. Visual C++ fournit des classes de modèle qui implémentent de nombreuses interfaces OLE DB couramment utilisées. Vous pouvez utiliser les modèles de consommateur Visual C++ pour écrire une application de client (consommateur) OLE DB et les modèles du fournisseur pour écrire une application serveur (fournisseur).  
@@ -38,7 +38,7 @@ Les modèles OLE DB facilitent l’accès aux données de OLE DB. Visual C++ fou
  [Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  Décrit les nouveautés de OLE DB et traite l’accès aux données universel dans OLE DB.  
   
- [Référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [Référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  Fournit des liens vers la documentation du SDK Windows sur OLE DB.  
   
  [Exemples de modèles OLE DB](../../visual-cpp-samples.md)  

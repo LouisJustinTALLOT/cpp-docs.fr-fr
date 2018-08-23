@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 853277959a29103a5dcd1e01f709d739f7ce4289
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339397"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571867"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modèles du consommateur OLE DB (C++)
 Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB version 2.6. (Les modèles de consommateurs OLE DB sont testés pour OLE DB 2.6, mais il ne prennent pas en charge chacune des interfaces de la spécification.) Les modèles de consommateurs réduisent la quantité de code que vous devez écrire pour implémenter un consommateur OLE DB. Les modèles fournissent :  
@@ -34,7 +34,7 @@ Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB
   
 -   Des types de données C/C++ natifs pour la programmation OLE DB.  
   
- Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms718124.aspx).  
+ Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
   
  Les modèles OLE DB prennent en charge le modèle objet OLE DB existant, au lieu d’ajouter un nouveau modèle objet. Les classes de la couche la plus élevée des modèles de consommateur OLE DB figurent en parallèle des composants définis dans la spécification OLE DB. La conception des modèles de consommateur OLE DB comprend des fonctionnalités avancées, comme les accesseurs multiples sur un ensemble de lignes. L’utilisation de modèles et de l’héritage multiple rend la bibliothèque souple et d’une taille réduite.  
   
@@ -68,5 +68,5 @@ Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB
 ## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   
  [Accès aux données](../data-access-in-cpp.md)   
- [Documentation du Kit de développement OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Référence du programmeur OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Documentation du Kit de développement OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
