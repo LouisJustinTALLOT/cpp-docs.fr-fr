@@ -1,5 +1,5 @@
 ---
-title: Catégories d’attribut | Documents Microsoft
+title: Catégories d’attribut | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a97cc367c1e4bda6218e30c57b36426395c8331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53577446db1001b354f5765c9c7b6c5e0e1e06b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859379"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604193"
 ---
 # <a name="attribute-categories"></a>Catégories d'attribut
-La référence des attributs décrit les différents types d’attributs que vous pouvez utiliser dans Visual C++.  
+La référence des attributs décrit les différents types d’attributs que vous pouvez utiliser dans Visual C++.
   
-## <a name="related-sections"></a>Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes
  [Attributs COM](../windows/com-attributes.md)  
- Injecte le code pour prendre en charge plusieurs domaines de développement COM.  
+ Injecte du code pour prendre en charge de nombreux domaines du développement COM.
   
  [Attributs IDL](../windows/idl-attributes.md)  
- Injecte le code qui crée ou modifie le fichier .idl associé à partir d’un fichier de code source sans Assistant et sans être familiarisés avec la structure et la syntaxe de ce fichier.  
+ Injecte le code qui crée ou modifie le fichier .idl associé à partir un fichier de code source sans Assistant et sans être familiarisé avec la structure et la syntaxe de ce fichier.
   
  [Attributs du consommateur OLE DB](../windows/ole-db-consumer-attributes.md)  
- Procurent un code, basé sur le [modèles du consommateur OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), pour créer un travail consommateur OLE DB qui effectue des tâches telles que les tables de l’ouverture, l’exécution de commandes et l’accès aux données.  
+ Injecte du code, selon la [les modèles du consommateur OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), pour créer un travail consommateur OLE DB qui effectue des tâches telles que les tables de l’ouverture, l’exécution de commandes et l’accès aux données.
   
  [Attributs de compilateur](../windows/compiler-attributes.md)  
- Injecte le code qui effectue diverses tâches de programmation courantes.  
+ Injecte le code qui effectue diverses tâches de programmation courantes.
   
  [Programmation par attributs](../windows/attributed-programming-concepts.md)  
  Fournit des liens vers des rubriques conceptuelles décrivant la programmation par attributs.

@@ -1,5 +1,5 @@
 ---
-title: Platform::Agile, classe | Documents Microsoft
+title: Platform::Agile, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092429"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596600"
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 Représente un objet qui a MashalingBehavior=Standard en tant qu’objet agile, ce qui réduit considérablement les risques d’exception de thread d’exécution. `Agile<T>` permet à l’objet non agile d’appeler ou d’être appelé par le même thread ou un thread différent. Pour plus d’informations, consultez [thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -42,7 +42,7 @@ class Agile;
  Nom de type de la classe non agile.  
   
 ### <a name="remarks"></a>Notes  
- La plupart des classes dans le Windows Runtime est agile. Un objet agile peut appeler, ou être appelé par, un objet intra-processus ou hors processus dans le même thread ou un autre thread. Si un objet n’est pas agile, encapsulez l’objet non agile dans un objet `Agile<T>` agile. L’objet `Agile<T>` peut ensuite être marshalé, et l’objet non agile sous-jacent peut être utilisé.  
+ La plupart des classes dans le Runtime Windows est agile. Un objet agile peut appeler, ou être appelé par, un objet intra-processus ou hors processus dans le même thread ou un autre thread. Si un objet n’est pas agile, encapsulez l’objet non agile dans un objet `Agile<T>` agile. L’objet `Agile<T>` peut ensuite être marshalé, et l’objet non agile sous-jacent peut être utilisé.  
   
  La classe `Agile<T>` est une classe C++ native standard qui nécessite `agile.h`. Elle représente l’objet non agile et le *contexte*de l’objet Agile. Le contexte spécifie le modèle de thread et le comportement de marshaling d’un objet agile. Le système d’exploitation utilise le contexte pour déterminer comment marshaler un objet.  
   
@@ -76,8 +76,8 @@ class Agile;
   
  `Agile`  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -139,7 +139,7 @@ Retourne un handle vers l’objet représenté par l’objet Agile actif.
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers l’objet représenté par l’objet Agile actif.  
   
- Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à affecter à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myAgileTvariable->Get();`.  
+ Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique pour contenir la valeur de retour est pour l’assigner à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myAgileTvariable->Get();`.  
   
 ## <a name="getaddressof"></a>  Agile::getaddressof, méthode
 Réinitialise l’objet Agile actif, puis retourne l’adresse d’un handle vers un objet de type `T`.  
@@ -160,7 +160,7 @@ throw();
  L’adresse d’un handle vers un objet de type `T`.  
   
 ### <a name="remarks"></a>Notes  
- Cette opération libère la représentation actuelle d’un objet de type `T`, le cas échéant ; réinitialise les membres de données de l’objet Agile, acquiert le contexte de thread actuel et retourne l’adresse d’une variable handle-to-object qui peut représenter un objet non agile. Pour provoquer une instance de la classe Agile représente un objet, utilisez l’opérateur d’assignation ([Agile::operator =](#operator-assign)) pour assigner l’objet à l’instance de la classe Agile.  
+ Cette opération libère la représentation actuelle d’un objet de type `T`, le cas échéant ; réinitialise les membres de données de l’objet Agile, acquiert le contexte du thread actuel ; et puis retourne l’adresse d’une variable handle-to-object qui peut représenter un objet non agile. Pour provoquer une instance de la classe Agile représenter un objet, utilisez l’opérateur d’assignation ([Agile::operator =](#operator-assign)) pour assigner l’objet à l’instance de la classe Agile.  
 
 ## <a name="getaddressofforinout"></a>  Agile::getaddressofforinout, méthode
 Retourne l'adresse d'un handle vers l'objet représenté par l'objet Agile actif.  
@@ -197,7 +197,7 @@ void Release() throw();
 ### <a name="remarks"></a>Notes  
  L'objet et le contexte sous-jacent de l'objet Agile actif sont ignorés, s'ils existent, et la valeur de l'objet Agile est alors définie sur null.  
 
-## <a name="operator-arrow"></a>  Agile::operator -&gt; (opérateur)
+## <a name="operator-arrow"></a>  Agile::operator -&gt; opérateur
 Récupère un handle vers l’objet représenté par l’objet Agile actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -211,7 +211,7 @@ const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers l’objet représenté par l’objet Agile actif.  
   
- Cet opérateur retourne un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à affecter à une variable déclarée avec le **automatique** mot clé de déduction de type.  
+ Cet opérateur retourne un type interne non divulgué. Un moyen pratique pour contenir la valeur de retour est pour l’assigner à une variable est déclarée avec le **automatique** mot clé de déduction de type.  
 
 ## <a name="operator-assign"></a>  Agile::operator =, opérateur
 Assigne l'objet spécifié à l'objet Agile actuel.  

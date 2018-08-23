@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef93be9a6994cf0e093380941810bc735961ee1c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647873"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593274"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid, méthode
-Indique si l’actuel **HandleT** objet représente un handle.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- **true** si le **HandleT** représente un handle ; sinon, **false**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HandleT, classe](../windows/handlet-class.md)
+
+Indique si l’actuel **HandleT** objet représente un handle.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+**true** si le **HandleT** représente un handle ; sinon, **false**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HandleT, classe](../windows/handlet-class.md)

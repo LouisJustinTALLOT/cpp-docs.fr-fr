@@ -18,45 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1f5cee3bf827effc7c99dd66d7dc2898c9ad55f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: dccf80feb4582610a4cfcc22ef0d658c2ce63fb2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645462"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599738"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>Définition de variables membres pour les contrôles de boîte de dialogue
-Pour définir une variable membre pour un contrôle de boîte de dialogue à l'exception des boutons, vous pouvez utiliser la méthode suivante.  
-  
+
+Pour définir une variable membre pour un contrôle de boîte de dialogue à l'exception des boutons, vous pouvez utiliser la méthode suivante.
+
 > [!NOTE]
->  Cet article s'applique uniquement aux contrôles de boîte de dialogue dans un projet MFC. Les projets ATL doivent utiliser la **nouveaux Messages Windows et gestionnaires d’événements** boîte de dialogue.  
-  
-### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Pour définir une variable membre pour un contrôle de boîte de dialogue (à l'exception d'un bouton)  
-  
-1.  Dans le [éditeur de boîte de dialogue](../windows/dialog-editor.md), sélectionnez un contrôle.  
-  
-2.  Tout en maintenant la **Ctrl** enfoncée, double-cliquez sur le contrôle de boîte de dialogue.  
-  
-     Le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) s’affiche.  
-  
-3.  Tapez les informations appropriées dans le **ajouter une Variable membre** Assistant. Pour plus d’informations, consultez [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md).  
-  
-4.  Cliquez sur **OK** pour revenir à la **boîte de dialogue** éditeur.  
-  
-    > [!TIP]
-    >  Pour passer d'un contrôle de boîte de dialogue à son gestionnaire existant, double-cliquez sur le contrôle.  
-  
- Vous pouvez également utiliser le **Variables membres** onglet **Assistant classe MFC** pour ajouter de nouvelles variables de membre pour une classe spécifiée et afficher ceux qui ont déjà été définis.  
-  
-## <a name="requirements"></a>Configuration requise  
- MFC  
-  
-## <a name="see-also"></a>Voir aussi  
- [Mappage des Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)   
- [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md)   
- [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)   
- [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
- [Substitution d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+> Cet article s'applique uniquement aux contrôles de boîte de dialogue dans un projet MFC. Les projets ATL doivent utiliser la **nouveaux Messages Windows et gestionnaires d’événements** boîte de dialogue.
+
+### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Pour définir une variable membre pour un contrôle de boîte de dialogue (à l'exception d'un bouton)
+
+1. Dans le [éditeur de boîte de dialogue](../windows/dialog-editor.md), sélectionnez un contrôle.
+
+2. Tout en maintenant la **Ctrl** enfoncée, double-cliquez sur le contrôle de boîte de dialogue.
+
+   Le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) s’affiche.
+
+3. Tapez les informations appropriées dans le **ajouter une Variable membre** Assistant. Pour plus d’informations, consultez [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md).
+
+4. Cliquez sur **OK** pour revenir à la **boîte de dialogue** éditeur.
+
+   > [!TIP]
+   > Pour passer d'un contrôle de boîte de dialogue à son gestionnaire existant, double-cliquez sur le contrôle.
+
+Vous pouvez également utiliser le **Variables membres** onglet **Assistant classe MFC** pour ajouter de nouvelles variables de membre pour une classe spécifiée et afficher ceux qui ont déjà été définis.
+
+## <a name="requirements"></a>Configuration requise
+
+MFC
+
+## <a name="see-also"></a>Voir aussi
+
+[Mappage des messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)  
+[Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)  
+[Classe MFC, Assistant](../mfc/reference/mfc-class-wizard.md)  
+[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)  
+[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)  
+[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)  
+[Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)

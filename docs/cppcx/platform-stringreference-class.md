@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::StringReference | Documents Microsoft
+title: Platform::stringreference, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097508"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609661"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 Type d'optimisation que vous pouvez utiliser pour passer des données de type chaîne des paramètres d'entrée `Platform::String^` à d'autres méthodes avec un minimum d'opérations de copie.  
@@ -59,8 +59,8 @@ class StringReference
 |[StringReference::operator =](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|  
 |[Stringreference::operator](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -153,7 +153,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>  Opérateur de Stringreference::operator
+## <a name="operator-call"></a>  Stringreference::operator opérateur
 Convertit un objet `StringReference` en un objet `Platform::String^`.  
   
 ### <a name="syntax"></a>Syntaxe  

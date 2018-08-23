@@ -14,16 +14,16 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb7bd027fca215e1c10c111132ee881ad49548
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b63801ac98027f490463f36df23541993528d33b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018063"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596196"
 ---
 # <a name="international-enabling"></a>Compatibilité internationale
 La plupart des code C et C++ sur les hypothèses sur la manipulation de caractère et de chaîne qui ne fonctionnent pas correctement dans les applications internationales. Bien que MFC et la bibliothèque Runtime prennent en charge Unicode ou MBCS, il reste encore à faire. Pour vous guider, cette section explique la signification de « compatibilité internationale » dans Visual C++ :  

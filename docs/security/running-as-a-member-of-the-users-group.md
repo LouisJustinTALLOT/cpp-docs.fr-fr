@@ -1,5 +1,5 @@
 ---
-title: En cours d’exécution en tant que membre du groupe utilisateurs | Documents Microsoft
+title: En cours d’exécution en tant que membre du groupe utilisateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841658"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586320"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Exécution en tant que membre du groupe Utilisateurs
 Cette rubrique explique comment la configuration de comptes d’utilisateurs Windows en tant que membres du Groupe Utilisateurs (par opposition au Groupe Administrateurs) améliore la sécurité et réduit le risque d’être infecté par un code malveillant.  
@@ -36,7 +36,7 @@ Cette rubrique explique comment la configuration de comptes d’utilisateurs Win
  L'exécution en tant qu'administrateur rend votre système vulnérable à plusieurs sortes d'attaque de sécurité, comme le « Cheval de Troie » ou le « dépassement de mémoire tampon ». Une simple visite d'un site Internet en tant qu'administrateur peut endommager le système, si un code malveillant téléchargé depuis un site Internet attaque votre ordinateur. S'il y parvient, il hérite de vos autorisations d'administrateur et peut alors perpétrer des actions telles que supprimer tous vos fichiers, reformater votre disque dur, et créer de nouveaux comptes utilisateurs avec accès d'administration.  
   
 ## <a name="non-administrator-user-groups"></a>Groupes Utilisateurs non Administrateurs  
- Les comptes utilisateurs Windows normalement utilisés par les développeurs doivent être ajoutés aux groupes Utilisateurs ou Utilisateurs avec pouvoir. Les développeurs doivent également être ajoutés au groupe Débogage. Être membre du groupe Utilisateurs permet d'effectuer des tâches habituelles, notamment exécuter les programmes et visiter des sites Internet sans exposer son ordinateur à des risques inutiles. En tant que membre du groupe Utilisateurs avec pouvoir, il est également possible d'effectuer des tâches telles que l'installation d'application, d'imprimante, et la plupart des opérations du panneau de configuration. Si vous devez exécuter des tâches d’administration telles que mettre à niveau le système d’exploitation ou configurer les paramètres du système, vous devez vous connecter à un compte d’administrateur juste le temps d’exécuter la tâche d’administration. Vous pouvez également les fenêtres **runas** commande peut être utilisée pour lancer des applications spécifiques avec un accès administratif.  
+ Les comptes utilisateurs Windows normalement utilisés par les développeurs doivent être ajoutés aux groupes Utilisateurs ou Utilisateurs avec pouvoir. Les développeurs doivent également être ajoutés au groupe Débogage. Être membre du groupe Utilisateurs permet d'effectuer des tâches habituelles, notamment exécuter les programmes et visiter des sites Internet sans exposer son ordinateur à des risques inutiles. En tant que membre du groupe Utilisateurs avec pouvoir, il est également possible d'effectuer des tâches telles que l'installation d'application, d'imprimante, et la plupart des opérations du panneau de configuration. Si vous devez exécuter des tâches d’administration telles que mettre à niveau le système d’exploitation ou configurer les paramètres du système, vous devez vous connecter à un compte d’administrateur juste le temps d’exécuter la tâche d’administration. Vous pouvez également le Windows **runas** commande peut être utilisée pour lancer des applications spécifiques avec un accès administratif.  
   
 ## <a name="exposing-customers-to-security-risks"></a>Exposition des clients aux risques de sécurité  
  Il est particulièrement important que les développeurs ne fassent pas partie du groupe Administrateurs car, outre la protection des ordinateurs de développement, cela évite aux développeurs d'écrire par inadvertance du code qui exigerait que les clients fassent partie du Groupe Administrateurs pour pouvoir exécuter les applications que vous développez. Si un code qui requiert l'accès administrateur est introduit au cours du développement, il échouera pendant l'exécution et déclenchera une alerte indiquant que les clients doivent désormais exécuter votre application en tant qu'Administrateurs.  

@@ -15,67 +15,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66009eb2e78268a4ee35a1c6023bfcb8dfda84b0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f1bab8c35a749240c839eaef5b652c1e3ec90b7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011651"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609409"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!=, opérateur (Microsoft::WRL)
-Opérateur d’inégalité pour [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md) objets.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW bool operator!=(  
-   const ComPtr<T>& a,  
-   const ComPtr<U>& b  
-);  
-WRL_NOTHROW bool operator!=(  
-   const ComPtr<T>& a,  
+
+Opérateur d’inégalité pour [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md) objets.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW bool operator!=(
+   const ComPtr<T>& a,
+   const ComPtr<U>& b
+);
+WRL_NOTHROW bool operator!=(
+   const ComPtr<T>& a,
    decltype(__nullptr)  
-);  
-WRL_NOTHROW bool operator!=(  
-   decltype(__nullptr),  
-   const ComPtr<T>& a  
-);  
-WRL_NOTHROW bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   const Details::ComPtrRef<ComPtr<U>>& b  
-);  
-WRL_NOTHROW bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
+);
+WRL_NOTHROW bool operator!=(
+   decltype(__nullptr),
+   const ComPtr<T>& a
+);
+WRL_NOTHROW bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   const Details::ComPtrRef<ComPtr<U>>& b
+);
+WRL_NOTHROW bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
    decltype(__nullptr)  
-);  
-WRL_NOTHROW bool operator!=(  
-   decltype(__nullptr),  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-WRL_NOTHROW bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   void* b  
-);  
-WRL_NOTHROW bool operator!=(  
-   void* b,  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *a*  
- Objet gauche.  
-  
- *b*  
- Objet droit.  
-  
-## <a name="return-value"></a>Valeur de retour  
- **true** si les objets ne sont pas égales ; sinon, **false**.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+);
+WRL_NOTHROW bool operator!=(
+   decltype(__nullptr),
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+WRL_NOTHROW bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   void* b
+);
+WRL_NOTHROW bool operator!=(
+   void* b,
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*a*  
+Objet gauche.
+
+*b*  
+Objet droit.
+
+## <a name="return-value"></a>Valeur de retour
+
+**true** si les objets ne sont pas égales ; sinon, **false**.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

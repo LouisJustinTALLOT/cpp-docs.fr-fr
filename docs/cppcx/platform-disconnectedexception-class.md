@@ -1,5 +1,5 @@
 ---
-title: Platform::disconnectedexception, classe | Documents Microsoft
+title: Platform::disconnectedexception, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::DisconnectedException
 ms.assetid: c25e0d64-5bff-4c21-88e5-c4ec2776fa7f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b756ef02082eb80cd8c9bd6b118ee9abca47236e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a84d07db2e3fe48d981641d2803352d90268d93a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087487"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606305"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException, classe
 Levée quand un objet proxy COM essaie de faire référence à un serveur COM qui n'existe plus  
@@ -37,8 +37,8 @@ public ref class DisconnectedException : COMException,    IException,    IPrinta
   
  Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   

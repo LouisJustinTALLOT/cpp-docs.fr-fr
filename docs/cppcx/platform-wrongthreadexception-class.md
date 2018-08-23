@@ -1,5 +1,5 @@
 ---
-title: Platform::wrongthreadexception, classe | Documents Microsoft
+title: Platform::wrongthreadexception, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f01b52470f5c70c588c7905a2c46f7cae9b26d06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbe88c460dfc3341832abdcda21698357a649570
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088256"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597423"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, classe
 Levée lorsqu'un thread effectue un appel via un pointeur d'interface qui concerne un objet proxy qui n'appartient pas à l'apartment du thread.  
@@ -35,8 +35,8 @@ public ref class WrongThreadException : COMException,    IException,    IPrintab
 ### <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   

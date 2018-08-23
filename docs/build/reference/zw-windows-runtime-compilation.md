@@ -1,5 +1,5 @@
 ---
-title: -ZW (Compilation Windows Runtime) | Documents Microsoft
+title: -ZW (Compilation pour le Runtime Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce6c6825ed4ae715a2f4cde6b0e1ffa8b3b6733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97a97158dda886a09fb6ccb00898a8c518d8e250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380064"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602260"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (compilation Windows Runtime)
-Compile le code source pour prendre en charge [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) pour la création d’applications de plateforme Windows universelle (UWP).  
+Compile le code pour prendre en charge les extensions du composant C++ de Visual C++ / source c++ / CX pour la création d’applications de plateforme universelle Windows (UWP).  
   
  Lorsque vous utilisez **/ZW** pour compiler, spécifiez toujours **/EHsc** également.  
   
@@ -42,20 +42,20 @@ Compile le code source pour prendre en charge [!INCLUDE[cppwrt](../../build/refe
   
 ## <a name="arguments"></a>Arguments  
  nostdlib  
- Indique que Platform.winmd, Windows.Foundation.winmd et les autres fichiers de métadonnées Windows par défaut (.winmd) ne sont pas inclus automatiquement dans la compilation. Au lieu de cela, vous devez utiliser le [/FU (nom forcé #using fichier)](../../build/reference/fu-name-forced-hash-using-file.md) option du compilateur pour spécifier explicitement les fichiers de métadonnées Windows.  
+ Indique que Platform.winmd, Windows.Foundation.winmd et les autres fichiers de métadonnées Windows par défaut (.winmd) ne sont pas inclus automatiquement dans la compilation. Au lieu de cela, vous devez utiliser le [/FU (nom du #using fichier)](../../build/reference/fu-name-forced-hash-using-file.md) option du compilateur pour spécifier explicitement les fichiers de métadonnées Windows.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque vous spécifiez la **/ZW** option, le compilateur prend en charge ces fonctionnalités :  
+ Lorsque vous spécifiez le **/ZW** option, le compilateur prend en charge ces fonctionnalités :  
   
--   Les fichiers de métadonnées requises, espaces de noms, types de données et fonctions que votre application a besoin pour s’exécuter dans le Windows Runtime.  
+-   Fichiers de métadonnées requis, espaces de noms, types de données et les fonctions dont votre application a besoin pour s’exécutent dans le Windows Runtime.  
   
--   Le décompte des objets Windows Runtime et automatique de rejet d’un objet lorsque son décompte de références atteint zéro.  
+-   Le comptage de références d’objets Windows Runtime et automatique l’abandon d’un objet lorsque son décompte de références atteint zéro.  
   
- Étant donné que l’éditeur de liens incrémentiel ne prend pas en charge les métadonnées Windows incluses dans les fichiers .obj à l’aide de la **/ZW** option, le [/Gm (activer la régénération minimale)](../../build/reference/gm-enable-minimal-rebuild.md) option n’est pas compatible avec **/ZW** .  
+ Étant donné que l’éditeur de liens incrémentielle ne prend pas en charge les métadonnées Windows incluses dans les fichiers .obj à l’aide de la **/ZW** option, le [/Gm (activer la régénération minimale)](../../build/reference/gm-enable-minimal-rebuild.md) option n’est pas compatible avec **/ZW** .  
   
  Pour plus d’informations, consultez [référence du langage Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   

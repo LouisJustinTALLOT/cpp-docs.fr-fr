@@ -1,5 +1,5 @@
 ---
-title: 'Classe Platform::Collections :: Vector | Documents Microsoft'
+title: 'Classe Platform::Collections :: Vector | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -25,16 +25,16 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 550a1e40d3fee80b4c9666457a60772ed49b580a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092494"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590233"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -71,7 +71,7 @@ Les types autorisés sont les suivants :
 
 Le **vecteur** classe est l’implémentation concrète C++ de la [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interface.
 
-Si vous tentez d’utiliser un **vecteur** type dans une valeur de retour public ou un paramètre, erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le paramètre ou type valeur de retour [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+Si vous essayez d’utiliser un **vecteur** type dans une valeur de retour public ou un paramètre, erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le paramètre ou valeur type de retour par [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membres
 
@@ -110,7 +110,7 @@ Si vous tentez d’utiliser un **vecteur** type dans une valeur de retour public
 
 `Vector`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 
@@ -157,7 +157,7 @@ Itérateur qui pointe vers le premier élément du Vector.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.
+Un moyen pratique de contenir l’itérateur retourné par First() consiste à attribuer la valeur de retour à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.
 
 Lorsque vous avez besoin d’une paire d’itérateurs à passer à une fonction STL, utilisez les fonctions libres [Windows::Foundation :: Collections :: begin](../cppcx/begin-function.md) et [Windows::Foundation](../cppcx/end-function.md)
 
@@ -198,7 +198,7 @@ virtual unsigned int GetMany(
 L'index de base zéro du début des éléments à récupérer.
 
 *dest*  
-Un tableau alloué par l’appelant des éléments qui commencent à l’élément spécifié par *startIndex* et se terminent au dernier élément dans le vecteur.
+Un tableau alloué par l’appelant d’éléments qui commencent à l’élément spécifié par *startIndex* et de fin au dernier élément dans le vecteur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -206,7 +206,7 @@ Le nombre d'éléments à récupérer.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction n'est pas destinée à être utilisée directement par le code client. Elle est utilisée en interne dans le [to_vector (fonction)](../cppcx/to-vector-function.md) pour permettre la conversion des instances Platform::Vector en instances std::vector.
+Cette fonction n'est pas destinée à être utilisée directement par le code client. Il est utilisé en interne dans le [to_vector, fonction](../cppcx/to-vector-function.md) pour permettre la conversion des instances Platform::Vector en instances std::vector.
 
 ## <a name="getview"></a>  Vector::GetView (méthode)
 
@@ -222,7 +222,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Objet IVectorView.
 
-## <a name="indexof"></a>  Vector::IndexOf (méthode)
+## <a name="indexof"></a>  Vector::IndexOf, méthode
 
 Recherche l'élément spécifié dans l'objet Vector actuel, et s'il existe, retourne l'index de l'élément.
 
@@ -238,9 +238,9 @@ virtual bool IndexOf(T value, unsigned int* index);
 Élément à rechercher.
 
 *index*  
-Index de base zéro de l’élément si paramètre *valeur* est trouvée ; sinon, 0.
+Index de base zéro de l’élément si paramètre *valeur* est trouvé ; sinon, 0.
 
-Le *index* paramètre est 0 si l’élément est introuvable ou l’élément est le premier élément du vecteur. Si la valeur de retour est `true`, l'élément est trouvé et représente le premier élément ; sinon, l'élément est introuvable.
+Le *index* paramètre a la valeur 0 si l’élément est introuvable ou l’élément est le premier élément du vecteur. Si la valeur de retour est `true`, l'élément est trouvé et représente le premier élément ; sinon, l'élément est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -266,7 +266,7 @@ virtual void InsertAt(unsigned int index, T item)
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
 *Élément*  
-Un élément à insérer dans l’objet Vector après l’élément spécifié par *index*. Le type de *élément* est défini par le *T* typename.
+Un élément à insérer dans le vecteur après l’élément spécifié par *index*. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="removeat"></a>  Vector::RemoveAt, méthode
 
@@ -366,16 +366,16 @@ Vector(std::initializer_list<T> il);
 ### <a name="parameters"></a>Paramètres
 
 *a*  
-A [std::array](../standard-library/array-class-stl.md) qui sera utilisé pour initialiser le Vector.
+Un [std::array](../standard-library/array-class-stl.md) qui sera utilisé pour initialiser le Vector.
 
 *arr*  
-A [Platform::Array](../cppcx/platform-array-class.md) qui sera utilisé pour initialiser le Vector.
+Un [Platform::Array](../cppcx/platform-array-class.md) qui sera utilisé pour initialiser le Vector.
 
 *InIt*  
 Type d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
 
 *il*  
-A [std::initializer_list](../standard-library/initializer-list-class.md) d’objets de type *T* qui sera utilisé pour initialiser le Vector.
+Un [std::initializer_list](../standard-library/initializer-list-class.md) d’objets de type *T* qui sera utilisé pour initialiser le Vector.
 
 *N*  
 Nombre d’éléments d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
@@ -393,10 +393,10 @@ Un [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std::ve
 Pointeur vers un `std::vector` utilisé pour initialiser l'objet Vector actuel.
 
 *first*  
-Premier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *première* est passé à l’aide de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Premier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *première* est passée au moyen de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *last*  
-Dernier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *dernière* est passé à l’aide de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Dernier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *dernière* est passée au moyen de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Voir aussi
 

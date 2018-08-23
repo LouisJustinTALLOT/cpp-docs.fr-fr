@@ -1,31 +1,31 @@
 ---
-title: Référence rapide (C + c++ / CX) | Documents Microsoft
+title: Aide-mémoire (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092556"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608331"
 ---
 # <a name="quick-reference-ccx"></a>Aide-mémoire (C++/CX)
-Le Windows Runtime prend en charge les applications de plateforme Windows universelle (UWP) qui s’exécutent uniquement dans un environnement de système d’exploitation fiable, utilisent les fonctions autorisées, les types de données et les appareils et sont distribuées via Microsoft Store. C + c++ / CX simplifient l’écriture d’applications pour Windows Runtime. Cet article est une référence rapide ; Pour obtenir une documentation plus complète, consultez [système de Type](../cppcx/type-system-c-cx.md) et [Extensions du composant pour les plateformes Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Le Runtime Windows prend en charge les applications Universal Windows Platform (UWP) qui s’exécutent uniquement dans un environnement de système d’exploitation fiable, utilisent les fonctions autorisées, les types de données et les appareils et sont distribuées via le Microsoft Store. C++ / c++ / CX simplifient l’écriture d’applications pour l’exécution de Windows. Cet article est une référence rapide ; Pour obtenir une documentation plus complète, consultez [système de Type](../cppcx/type-system-c-cx.md) et [Extensions du composant pour les plateformes Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
- Quand vous générez sur la ligne de commande, utilisez le **/ZW** option du compilateur pour générer une application UWP ou un composant Windows Runtime. Pour accéder aux déclarations de Windows Runtime, qui sont définies dans les fichiers de métadonnées (.winmd) de Windows Runtime, spécifiez la `#using` directive ou **/FU** option du compilateur. Lorsque vous créez un projet pour une application UWP, Visual Studio par défaut définit ces options et ajoute des références à toutes les bibliothèques Windows Runtime.  
+ Lorsque vous générez sur la ligne de commande, utilisez le **/ZW** option du compilateur pour générer une application UWP ou un composant Windows Runtime. Pour accéder aux déclarations de Windows Runtime, qui sont définies dans les fichiers de métadonnées (.winmd) Windows Runtime, spécifiez la `#using` directive ou **/FU** option du compilateur. Lorsque vous créez un projet pour une application UWP, Visual Studio par défaut définit ces options et ajoute des références à toutes les bibliothèques Windows Runtime.  
   
 ## <a name="quick-reference"></a>Aide-mémoire  
   
 |Concept|C++ standard|C++/CX|Notes|  
 |-------------|--------------------|------------------------------------------------------------------|-------------|  
-|Types fondamentaux|Types fondamentaux C++|C + c++ / types fondamentaux CX qui implémentent les types fondamentaux définis dans le Windows Runtime.|Le `default` contient de l’espace de noms C + c++ / CX types fondamentaux intégrés. Le compilateur mappe implicitement C + c++ / CX fondamentaux types de standard C++.<br /><br /> Le `Platform` famille d’espaces de noms contient des types qui implémentent les types fondamentaux Windows Runtime.|  
+|Types fondamentaux|Types fondamentaux C++|C++ / c++ / types fondamentaux CX qui implémentent les types fondamentaux qui sont définis dans le Runtime de Windows.|Le `default` contient de l’espace de noms C++ / c++ / CX types fondamentaux intégrés. Le compilateur mappe implicitement C + c++ / types fondamentaux de CX aux types C++ standard.<br /><br /> Le `Platform` famille d’espaces de noms contient des types qui implémentent les types fondamentaux de Windows Runtime.|  
 ||`bool`|`bool`|Valeur booléenne de 8 bits.|  
 ||`__wchar_t`|`char16`|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|  
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|Entier signé 16 bits.<br /><br /> Entier non signé 16 bits.|  
@@ -38,9 +38,9 @@ Le Windows Runtime prend en charge les applications de plateforme Windows univer
 ||(Non applicable)|`Windows::Foundation::TimeSpan`|Structure timespan.|  
 ||(Non applicable)|`Platform::Object^`|L’objet de base contenant des références dans la vue C++ du système de type Windows Runtime.|  
 ||`std::wstring`<br /><br /> `L"..."`|`Platform::String^`|`Platform::String^` est une séquence de caractères Unicode représentant du texte, immuable et faisant l'objet d'un décompte de références.|  
-|Pointeur|Pointeur vers un objet (`*`) :<br /><br /> `std::shared_ptr`|Handle-to-object (`^`, prononcé « chapeau ») :<br /><br /> *Identificateur T^*|Toutes les classes Windows Runtime sont déclarés à l’aide du modificateur handle-to-object. Les membres de l'objet sont accessibles à l'aide de l'opérateur class-member-access flèche (`->`).<br /><br /> Le modificateur hat signifie « pointeur vers un objet Windows Runtime qui est automatiquement référence pris en compte. » Plus précisément, handle-to-object déclare que le compilateur doit insérer du code pour gérer automatiquement le décompte de références de l'objet, et supprime l'objet si le décompte de références atteint zéro.|  
-|Référence|Référence à un objet (`&`) :<br /><br /> *T* `&` *identifier*|Suivi des références (`%`) :<br /><br /> *T* `%` *identifier*|Seul Windows Runtime types peuvent être déclarés à l’aide du suivi référencer modificateur. Les membres de l'objet sont accessibles à l'aide de l'opérateur class-member-access point (`.`).<br /><br /> La référence de suivi signifie « une référence à un objet Windows Runtime qui est automatiquement décompte de références ». Plus précisément, une référence de suivi déclare que le compilateur doit insérer du code pour gérer automatiquement le décompte de références de l'objet, et supprime l'objet si le décompte de références atteint zéro.|  
-|déclaration de type dynamique|`new`|`ref new`|Alloue un objet Windows Runtime, puis retourne un handle vers cet objet.|  
+|Pointeur|Pointeur vers un objet (`*`) :<br /><br /> `std::shared_ptr`|Handle-to-object (`^`, prononcé « chapeau ») :<br /><br /> *Identificateur T^*|Toutes les classes Windows Runtime sont déclarés à l’aide du modificateur handle-to-object. Les membres de l'objet sont accessibles à l'aide de l'opérateur class-member-access flèche (`->`).<br /><br /> Le modificateur hat signifie « pointeur vers un objet Windows Runtime qui est automatiquement référence comptée. » Plus précisément, handle-to-object déclare que le compilateur doit insérer du code pour gérer automatiquement le décompte de références de l'objet, et supprime l'objet si le décompte de références atteint zéro.|  
+|Référence|Référence à un objet (`&`) :<br /><br /> *T* `&` *identifier*|Suivi des références (`%`) :<br /><br /> *T* `%` *identifier*|Seul Windows Runtime, les types peuvent être déclarés à l’aide du suivi de référence modificateur. Les membres de l'objet sont accessibles à l'aide de l'opérateur class-member-access point (`.`).<br /><br /> La référence de suivi signifie « une référence à un objet Windows Runtime qui est automatiquement référence comptée. » Plus précisément, une référence de suivi déclare que le compilateur doit insérer du code pour gérer automatiquement le décompte de références de l'objet, et supprime l'objet si le décompte de références atteint zéro.|  
+|déclaration de type dynamique|`new`|`ref new`|Alloue un objet Windows Runtime, puis retourne un handle à cet objet.|  
 |gestion de la durée de vie d'un objet|`delete` *identifier*<br /><br /> `delete[]`  *identifier*|(Appelle le destructeur.)|La durée de vie est déterminée par le décompte de références. Un appel de delete appelle le destructeur mais ne libère pas lui-même la mémoire.|  
 |Déclaration de tableau|*Identificateur T* `[]`<br /><br /> `std::array` *identifier*|`Array<` *T* `^>^` *identifier* `(` *size* `)`<br /><br /> - ou -<br /><br /> `WriteOnlyArray<` *T* `^>`  *identifier* `(` *size* `)`|Déclare un tableau modifiable unidimensionnel ou un tableau de type T^ en écriture seule. Le tableau lui-même est également un objet faisant l'objet d'un décompte de références qui doit être déclaré à l'aide du modificateur handle-to-object.<br /><br /> (Les déclarations de tableau utilisent une classe d'en-tête de modèle qui se trouve dans l'espace de noms `Platform` .)|  
 |déclaration de classe|`class`  *identifier* `{}`<br /><br /> `struct` *identifier* `{}`|`ref class` *identifier* `{}`<br /><br /> `ref struct` *identifier* `{}`|Déclare une classe d'exécution ayant un accès privé par défaut.<br /><br /> Déclare une classe d'exécution ayant un accès public par défaut.|  

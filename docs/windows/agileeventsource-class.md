@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642836"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611030"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource, classe
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Paramètres  
- *TDelegateInterface*  
- L’interface à un délégué qui représente un gestionnaire d’événements.
+## <a name="parameters"></a>Paramètres
 
- *TEventSourceOptions*  
- Un [InvokeModeOptions](invokemodeoptions-structure.md) structure dont le champ invokeMode a la valeur `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
+*TDelegateInterface*  
+L’interface à un délégué qui représente un gestionnaire d’événements.
+
+*TEventSourceOptions*  
+Un [InvokeModeOptions](invokemodeoptions-structure.md) structure dont le champ invokeMode a la valeur `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Notes
 
@@ -49,13 +50,14 @@ La grande majorité des composants dans le Runtime Windows sont des composants a
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>Configuration requise
 
- **En-tête :** event.h
+**En-tête :** event.h
 
- **Espace de noms :** Microsoft::WRL
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="members"></a>Membres
 
@@ -92,4 +94,5 @@ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 
 ## <a name="see-also"></a>Voir aussi
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+
+[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

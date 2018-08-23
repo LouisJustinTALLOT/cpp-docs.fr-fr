@@ -1,5 +1,5 @@
 ---
-title: -/CLR (Compilation pour le Common Language Runtime) | Documents Microsoft
+title: -clr (Common Language Runtime Compilation) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379612"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606861"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 Permet aux applications et aux composants d’utiliser les fonctionnalités du Common Language Runtime (CLR).  
@@ -48,15 +48,15 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
   
  Pour plus d'informations, consultez  
   
- [Mixte (natifs et managés) assemblys](../../dotnet/mixed-native-and-managed-assemblies.md) et  
+ [Assemblys mixtes (natifs et managé)](../../dotnet/mixed-native-and-managed-assemblies.md) et  
   
- [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
+ [Comment : migrer vers/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
  /clr:pure est déconseillé. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.  
   
  **/clr:safe**  
- /clr:safe est déconseillé. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter du code doit être MSIL sécurisé en c#. 
+ /clr:safe est déconseillé. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter le code qui doit être MSIL sécurisé en c#. 
   
  **/clr:noAssembly**  
  Indique qu'un manifeste d'assembly ne doit pas être inséré dans le fichier de sortie. Par défaut, l’option **noAssembly** n’est pas activée.  
@@ -68,7 +68,7 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
  Avant Visual C++ 2005, **/clr:noAssembly** nécessitait l’option **/LD**. **/LD** est désormais implicite quand vous spécifiez **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Permet à une application [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] de s'exécuter sur la version 1 du CLR. Si vous utilisez **initialAppDomain**, vous pouvez voir certains des problèmes mentionnés dans [bogue : exception AppDomainUnloaded lorsque vous utilisez des extensions managées pour des composants Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) sur Microsoft Site Web du support technique.  
+ Permet à une application Visual C++ à exécuter sur la version 1 du CLR. Si vous utilisez **initialAppDomain**, vous pouvez voir certains des problèmes qui sont abordées dans [bogue : exception AppDomainUnloaded lors de l’utilisation d’extensions managées pour les composants Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) sur Microsoft Site Web de prise en charge.  
   
  Une application compilée en utilisant **initialAppDomain** ne doit pas être utilisée par une application qui utilise ASP.NET car elle n’est pas prise en charge dans la version 1 du CLR.  
   
@@ -84,11 +84,11 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
   
  Pour activer le débogage sur une application managée, consultez [/ASSEMBLYDEBUG (Ajouter DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
- Seuls les types CLR seront instanciés sur le tas récupéré par le garbage collector. Pour plus d’informations, consultez [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Pour compiler une fonction en code natif, utilisez le pragma `unmanaged` . Pour plus d’informations, consultez [managé, non managé](../../preprocessor/managed-unmanaged.md).  
+ Seuls les types CLR seront instanciés sur le tas récupéré par le garbage collector. Pour plus d’informations, consultez [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Pour compiler une fonction en code natif, utilisez le pragma `unmanaged` . Pour plus d’informations, consultez [managed, unmanaged](../../preprocessor/managed-unmanaged.md).  
   
  Par défaut, l’option **/clr** n’est pas activée. Quand l’option **/clr** est activée, **/MD** l’est également. Pour plus d’informations, consultez l’article [/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** garantit que les versions multithreads dynamiquement liées des routines d’exécution sont sélectionnées à partir des fichiers d’en-tête standard (.h). Le multithreading est requis pour la programmation managée, car le garbage collector CLR exécute les finaliseurs dans un thread auxiliaire.  
   
- Si vous compilez à l’aide de **/c**, vous pouvez spécifier le type CLR du fichier de sortie résultant avec [CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Si vous compilez à l’aide de **/c**, vous pouvez spécifier le type CLR de fichier de sortie résultant avec [CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
  **/clr** implique **/EHa**et aucune autre option **/EH** n’est prise en charge pour **/clr**. Pour plus d’informations, consultez l’article [/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md).  
   

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012191"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604277"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -26,14 +26,14 @@ Vous pouvez utiliser Visual C++ pour écrire de nombreux types de programmes qui
 - efficace dans les besoins en mémoire
 - économes en énergie 
 - en mesure de tirer pleinement parti des appareils multicœurs et de nombreux cœurs
-- en mesure d’effectuer un calcul général sur l’unité de traitement graphique (GPGPU)   
+- en mesure d’effectuer un calcul général sur l’unité de traitement graphique (GPGPU)  
 - possibilité de tirer parti des autres avancées récentes dans le matériel.
 
 Il existe plusieurs grandes catégories d'applications Windows que vous pouvez développer avec Visual C++. Ces catégories ont des modèles de programmation différents ou des modèles d’application, qui ont été introduits au fil des années. Chaque modèle utilise les différentes bibliothèques et API pour fournir un accès à la plateforme et créer des interfaces utilisateur telles que les fenêtres et boîtes de dialogue. La bibliothèque C++ standard, ainsi que les bibliothèques tierces peuvent être utilisés dans une de ces catégories, avec quelques restrictions pour UWP.
 
 - [Applications Windows universelles](#BK_WindowsUniversal). La troisième catégorie d'applications Windows a été introduite avec Windows 8 et la prise en charge de cette catégorie continue dans Windows 10. Ces applications sont souvent appelées simplement « applications Windows » et elles incluent des applications mobiles et de bureau qui ciblent divers appareils. Vous pouvez écrire ces applications en C++/CX, un dialecte de C++ qui inclut la prise en charge du développement Windows Runtime, ou en C++ standard avec COM qui utilise la bibliothèque WRL (Windows Runtime Library). Ces applications ont été conçues initialement pour s'exécuter en mode plein écran, bien que les utilisateurs de Windows 10 aient la possibilité de les exécuter dans une fenêtre du bureau. Elles intègrent des fonctions tactiles, mais il est facile d'utiliser la souris pour les faire fonctionner si les utilisateurs le préfèrent ou en l'absence d'un écran tactile. Ces applications sont distribuées à partir du Microsoft Store, ce qui a conduit à les appeler les applications « Store ».
 
-Les applications UWP sont en mesure d’exécuter sur tous les appareils Windows 10 tels que des tablettes et téléphones mobiles, ainsi que sur le bureau. Sur le bureau, elles peuvent s'exécuter sous la forme d'une fenêtre du bureau au lieu de toujours s'exécuter en mode plein écran. Ces applications peuvent également s'exécuter sur la Xbox et sur les appareils futurs.  Applications UWP s’exécutent sur le Windows Runtime, qui fournit les éléments d’interface utilisateur, services et une interface pour les divers périphériques matériels qui sont pris en charge sur Windows.  
+Les applications UWP sont en mesure d’exécuter sur tous les appareils Windows 10 tels que des tablettes et téléphones mobiles, ainsi que sur le bureau. Sur le bureau, elles peuvent s'exécuter sous la forme d'une fenêtre du bureau au lieu de toujours s'exécuter en mode plein écran. Ces applications peuvent également s'exécuter sur la Xbox et sur les appareils futurs.  Applications UWP s’exécutent sur le Windows Runtime, qui fournit les éléments d’interface utilisateur, services et une interface pour les divers périphériques matériels qui sont pris en charge sur Windows.
 
 Vous pouvez écrire des applications UWP en C / c++ / CX, un dialecte de C++, vous pouvez utiliser la [C++ / c++ / WinRT bibliothèque](https://moderncpp.com/)pour certains scénarios. Les applications UWP compilent en code natif et interface utilisateur XAML ou utilisent DirectX. Composants Windows Runtime qui sont écrits en code natif que les applications UWP écrites dans d’autres langages peuvent consommer. Pour plus d’informations, consultez [créer une application de plateforme Windows universelle en C++](http://go.microsoft.com/fwlink/?LinkID=534976), [créer votre premier jeu UWP à l’aide de DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), et [création Windows de composants Runtime en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
@@ -84,7 +84,7 @@ Jeux DirectX peuvent s’exécuter sur le PC ou Xbox. Pour plus d’informations
 
 ## <a name="sdks-libraries-and-header-files"></a>SDK, bibliothèques et fichiers d’en-tête
 
-Visual C++ inclut la bibliothèque Runtime C (CRT), de la bibliothèque Standard C++ et d’autres bibliothèques spécifiques à Microsoft. Les dossiers include qui contiennent les fichiers d’en-tête pour ces bibliothèques se trouvent dans le répertoire d’installation de Visual Studio dans le dossier \VC\, ou dans le cas de la bibliothèque CRT, dans le dossier d’installation du SDK Windows.   
+Visual C++ inclut la bibliothèque Runtime C (CRT), de la bibliothèque Standard C++ et d’autres bibliothèques spécifiques à Microsoft. Les dossiers include qui contiennent les fichiers d’en-tête pour ces bibliothèques se trouvent dans le répertoire d’installation de Visual Studio dans le dossier \VC\, ou dans le cas de la bibliothèque CRT, dans le dossier d’installation du SDK Windows.
 
 Vous pouvez utiliser la [Gestionnaire de package Vcpkg](../vcpkg.md) pour installer facilement des centaines de bibliothèques de tiers open source pour Windows.
 

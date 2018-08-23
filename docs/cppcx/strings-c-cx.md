@@ -1,23 +1,23 @@
 ---
-title: Chaînes (C + c++ / CX) | Documents Microsoft
+title: Chaînes (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092468"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592467"
 ---
 # <a name="strings-ccx"></a>Chaînes (C++/CX)
-Le texte dans le Windows Runtime est représenté dans C + c++ / CX par le [classe Platform::String](../cppcx/platform-string-class.md). Utilisez le `Platform::String Class` lorsque vous passez des chaînes dans les deux sens aux méthodes des classes Windows Runtime ou lors de l’interaction avec d’autres composants Windows Runtime au-delà des limites (ABI) de l’interface binaire d’application. La `Platform::String Class` fournit des méthodes pour plusieurs opérations de chaînes courantes mais elle n'est pas conçue pour être une classe de chaîne complète. Dans votre module C++, utilisez les types de chaînes C++ standard tels que [wstring](../standard-library/basic-string-class.md) pour tout traitement de texte significatif, puis convertissez le résultat final en [Platform::String^](../cppcx/platform-string-class.md) avant de le passer vers ou à partir d'une interface publique. Il est facile et efficace de convertir entre `wstring` ou `wchar_t*` et `Platform::String`.  
+Texte dans le Windows Runtime est représenté en C / c++ / CX par le [classe Platform::String](../cppcx/platform-string-class.md). Utilisez le `Platform::String Class` lorsque vous passez des chaînes dans les deux sens aux méthodes dans des classes Windows Runtime, ou lorsque vous interagissez avec d’autres composants Windows Runtime dans la limite (ABI) de l’interface binaire d’application. La `Platform::String Class` fournit des méthodes pour plusieurs opérations de chaînes courantes mais elle n'est pas conçue pour être une classe de chaîne complète. Dans votre module C++, utilisez les types de chaînes C++ standard tels que [wstring](../standard-library/basic-string-class.md) pour tout traitement de texte significatif, puis convertissez le résultat final en [Platform::String^](../cppcx/platform-string-class.md) avant de le passer vers ou à partir d'une interface publique. Il est facile et efficace de convertir entre `wstring` ou `wchar_t*` et `Platform::String`.  
   
  **Passage rapide**  
   
@@ -52,7 +52,7 @@ Le texte dans le Windows Runtime est représenté dans C + c++ / CX par le [clas
  Une `Platform::String` peut contenir des valeurs NULL incorporées, mais uniquement lorsque NULL est le résultat d'une opération de concaténation. Les valeurs NULL incorporées ne sont pas prises en charge dans les littéraux de chaîne. Par conséquent, vous ne pouvez pas utiliser de valeurs NULL incorporées de cette manière pour initialiser une `Platform::String`. Les valeurs NULL incorporées dans une `Platform::String` sont ignorées lorsque la chaîne est affichée, par exemple lorsqu'elle est assignée à une propriété `TextBlock::Text` . Les valeurs NULL incorporées sont supprimées quand la valeur de chaîne est retournée par la propriété `Data` .  
   
 ## <a name="stringreference"></a>StringReference  
- Dans certains cas, votre code (a) reçoit std::wstring, ou d’une chaîne wchar_t ou de L » « chaîne littérale et juste transmet à une autre méthode qui prend une chaîne ^ comme paramètre d’entrée. Tant que la mémoire tampon de chaîne d'origine elle-même reste valide et qu'elle ne mute pas avant le retour de la fonction, vous pouvez convertir la chaîne ou le littéral de chaîne `wchar_t*` en [Platform::StringReference](../cppcx/platform-stringreference-class.md), et le passer à la place de `Platform::String^`. Cela est autorisé, car `StringReference` dispose d'une conversion définie par l'utilisateur en `Platform::String^`. À l'aide de `StringReference` , vous pouvez éviter d'effectuer une copie supplémentaire des données de chaîne. Dans les boucles où vous passez un grand nombre de chaînes, ou lorsque vous passez des chaînes de très grande taille, vous pouvez éventuellement obtenir une amélioration significative des performances à l'aide de `StringReference`. Toutefois, dans la mesure où `StringReference` emprunte essentiellement la mémoire tampon de chaîne d'origine, vous devez faire preuve d'une grande vigilance afin d'éviter une altération de la mémoire. Ne passez pas `StringReference` à une méthode asynchrone, à moins que la chaîne d'origine ne soit dans la portée lorsque cette méthode est retournée. Un String^ initialisé à partir de StringReference force l'allocation et la copie des données de chaîne, si une seconde opération d'affectation se produit. Dans ce cas, vous perdez le gain de performances fourni par `StringReference`.  
+ Dans certains cas, votre code (a) reçoit std::wstring, ou de chaîne wchar_t ou de L » » chaîne littérale et simplement transmet à une autre méthode qui prend une chaîne ^ en tant que paramètre d’entrée. Tant que la mémoire tampon de chaîne d'origine elle-même reste valide et qu'elle ne mute pas avant le retour de la fonction, vous pouvez convertir la chaîne ou le littéral de chaîne `wchar_t*` en [Platform::StringReference](../cppcx/platform-stringreference-class.md), et le passer à la place de `Platform::String^`. Cela est autorisé, car `StringReference` dispose d'une conversion définie par l'utilisateur en `Platform::String^`. À l'aide de `StringReference` , vous pouvez éviter d'effectuer une copie supplémentaire des données de chaîne. Dans les boucles où vous passez un grand nombre de chaînes, ou lorsque vous passez des chaînes de très grande taille, vous pouvez éventuellement obtenir une amélioration significative des performances à l'aide de `StringReference`. Toutefois, dans la mesure où `StringReference` emprunte essentiellement la mémoire tampon de chaîne d'origine, vous devez faire preuve d'une grande vigilance afin d'éviter une altération de la mémoire. Ne passez pas `StringReference` à une méthode asynchrone, à moins que la chaîne d'origine ne soit dans la portée lorsque cette méthode est retournée. Un String^ initialisé à partir de StringReference force l'allocation et la copie des données de chaîne, si une seconde opération d'affectation se produit. Dans ce cas, vous perdez le gain de performances fourni par `StringReference`.  
   
  Notez que `StringReference` est un type de classe C++ standard, et non une classe ref. Vous ne pouvez pas l'utiliser dans l'interface publique des classes ref que vous définissez.  
   

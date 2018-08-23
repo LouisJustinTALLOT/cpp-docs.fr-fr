@@ -1,5 +1,5 @@
 ---
-title: Fonctions intrinsèques _interlockedcompareexchangepointer | Documents Microsoft
+title: Fonctions intrinsèques _interlockedcompareexchangepointer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b0fc52585171df740f70e12d81d849e3726dcd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339181"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611381"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
 **Section spécifique à Microsoft**  
@@ -198,19 +198,19 @@ __int64 _InterlockedCompareExchange64_rel(
 ## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur initiale du pointeur `Destination`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|En-tête|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|  
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Notes  
  `_InterlockedCompareExchange` effectue une comparaison atomique de la valeur `Destination` à la valeur `Comparand`. Si la valeur `Destination` est égale à la valeur `Comparand`, la valeur `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.  
   
- `_InterlockedCompareExchange` Fournit la prise en charge intrinsèque de compilateur pour Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx) (fonction).  
+ `_InterlockedCompareExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange) (fonction).  
   
  Il existe plusieurs variantes de `_InterlockedCompareExchange` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.  
   
@@ -225,7 +225,7 @@ __int64 _InterlockedCompareExchange64_rel(
  Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
 ## <a name="example"></a>Exemple  
- Dans l'exemple suivant, `_InterlockedCompareExchange` est utilisé pour la synchronisation simple des threads de bas niveau. L'approche a ses limites comme base pour la programmation multithread ; elle est présentée pour illustrer l'utilisation standard des intrinsèques verrouillées. Pour obtenir de meilleurs résultats, utilisez l'API Windows. Pour plus d’informations sur la programmation multithread, consultez [l’écriture d’un programme Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).  
+ Dans l'exemple suivant, `_InterlockedCompareExchange` est utilisé pour la synchronisation simple des threads de bas niveau. L'approche a ses limites comme base pour la programmation multithread ; elle est présentée pour illustrer l'utilisation standard des intrinsèques verrouillées. Pour obtenir de meilleurs résultats, utilisez l'API Windows. Pour plus d’informations sur la programmation multithread, consultez [écrire un programme Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ```  
 // intrinExample.cpp  

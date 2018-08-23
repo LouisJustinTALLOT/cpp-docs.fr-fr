@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2bf40202f225c015522a31c4e9b0482e37c7d0da
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641390"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599486"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_, données de membre
-Déclare un membre de données de section critique.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-CRITICAL_SECTION cs_;  
-```  
-  
-## <a name="remarks"></a>Notes  
- Ce membre de données est protégé.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [CriticalSection, classe](../windows/criticalsection-class.md)
+
+Déclare un membre de données de section critique.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+CRITICAL_SECTION cs_;
+```
+
+## <a name="remarks"></a>Notes
+
+Ce membre de données est protégé.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[CriticalSection, classe](../windows/criticalsection-class.md)

@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cfcbb57694fc18944d199c1d4c74d8c74a335783
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018814"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599113"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify, méthode
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-static void Verify();  
-```  
-  
-## <a name="remarks"></a>Notes  
- Teste les deux interfaces spécifiées par les paramètres de modèle actuelle et détermine si une interface est dérivée de l’autre.  
-  
- Une erreur est générée si une interface n’est pas dérivée de l’autre.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** implements.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [VerifyInheritanceHelper (Structure)](../windows/verifyinheritancehelper-structure.md)   
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+static void Verify();
+```
+
+## <a name="remarks"></a>Notes
+
+Teste les deux interfaces spécifiées par les paramètres de modèle actuelle et détermine si une interface est dérivée de l’autre.
+
+Une erreur est générée si une interface n’est pas dérivée de l’autre.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** implements.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[VerifyInheritanceHelper, structure](../windows/verifyinheritancehelper-structure.md)  
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

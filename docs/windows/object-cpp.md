@@ -17,47 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2667c8ecb14e31388737366c4de6c527bdc40f9d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e8d69ccb0b5a0c0f0dd13d377841732d9f663e91
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012750"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607583"
 ---
 # <a name="object-c"></a>object (C++)
-Identifie une interface personnalisée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[object]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Lorsqu’il précède une définition d’interface, le **objet** attribut C++ provoque l’interface à placer dans le fichier .idl comme une interface personnalisée.  
-  
- N’importe quelle interface marquée avec l’objet doit hériter `IUnknown`. Cette condition est remplie si une des interfaces de base héritent `IUnknown`. Si aucune interface de base ne hérite `IUnknown`, le compilateur entraîne l’interface marquée avec **objet** de dériver de `IUnknown`.  
-  
-## <a name="example"></a>Exemple  
- Consultez [nonbrowsable](../windows/nonbrowsable.md) pour obtenir un exemple montrant comment utiliser **objet**.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**interface**|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [Attributs d’interface](../windows/interface-attributes.md)   
- [Double](../windows/dual.md)   
- [Dispinterface](../windows/dispinterface.md)   
- [Personnalisé](../windows/custom-cpp.md)   
- [__interface](../cpp/interface.md)   
+
+Identifie une interface personnalisée.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[object]
+```
+
+## <a name="remarks"></a>Notes
+
+Lorsqu’il précède une définition d’interface, le **objet** attribut C++ provoque l’interface à placer dans le fichier .idl comme une interface personnalisée.
+
+N’importe quelle interface marquée avec l’objet doit hériter `IUnknown`. Cette condition est remplie si une des interfaces de base héritent `IUnknown`. Si aucune interface de base ne hérite `IUnknown`, le compilateur entraîne l’interface marquée avec **objet** de dériver de `IUnknown`.
+
+## <a name="example"></a>Exemple
+
+Consultez [nonbrowsable](../windows/nonbrowsable.md) pour obtenir un exemple montrant comment utiliser **objet**.
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**interface**|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs d’interface](../windows/interface-attributes.md)  
+[dual](../windows/dual.md)  
+[dispinterface](../windows/dispinterface.md)  
+[custom](../windows/custom-cpp.md)  
+[__interface](../cpp/interface.md)  

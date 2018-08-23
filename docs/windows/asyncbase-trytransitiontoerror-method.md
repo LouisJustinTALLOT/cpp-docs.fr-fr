@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61b56472e490d95e22c1013595c5c088d2b58dcd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1244b87410a09996d946408ff77dbb552b339c85
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643028"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591152"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError, méthode
-Indique si le code d’erreur spécifié peut modifier l’état d’erreur interne.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-bool TryTransitionToError(  
-   const HRESULT error  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *Erreur*  
- Une erreur HRESULT.  
-  
-## <a name="return-value"></a>Valeur de retour  
- **true** si l’état d’erreur interne a été modifié ; sinon, **false**.  
-  
-## <a name="remarks"></a>Notes  
- Cette opération modifie l’état d’erreur uniquement si l’état d’erreur est déjà définie à S_OK. Cette opération n’a aucun effet si l’état d’erreur est déjà erreur, annulé, terminé ou fermé.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** async.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [AsyncBase, classe](../windows/asyncbase-class.md)
+
+Indique si le code d’erreur spécifié peut modifier l’état d’erreur interne.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+bool TryTransitionToError(
+   const HRESULT error
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Erreur*  
+Une erreur HRESULT.
+
+## <a name="return-value"></a>Valeur de retour
+
+**true** si l’état d’erreur interne a été modifié ; sinon, **false**.
+
+## <a name="remarks"></a>Notes
+
+Cette opération modifie l’état d’erreur uniquement si l’état d’erreur est déjà définie à S_OK. Cette opération n’a aucun effet si l’état d’erreur est déjà erreur, annulé, terminé ou fermé.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** async.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[AsyncBase, classe](../windows/asyncbase-class.md)

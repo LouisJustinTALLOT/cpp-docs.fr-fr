@@ -17,54 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e5c4965ab8a013fdd52e6dfa51e74bfbf54ed73
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 326974e935608c9b41866e61e72b7a85fc8cb0b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651533"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598529"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (structure)
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   typename T  
->  
-struct DerefHelper;  
-  
-template <  
-   typename T  
->  
-struct DerefHelper<T*>;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *T*  
- Un paramètre de modèle.  
-  
-## <a name="remarks"></a>Notes  
- Représenter un pointeur déréférencé au `T*` paramètre de modèle.  
-  
- **DerefHelper** est utilisé dans une expression comme : `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`DerefType`|Identificateur pour le paramètre de modèle déréférencé `T*`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `DerefHelper`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** async.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   typename T
+>
+struct DerefHelper;
+
+template <
+   typename T
+>
+struct DerefHelper<T*>;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*T*  
+Un paramètre de modèle.
+
+## <a name="remarks"></a>Notes
+
+Représenter un pointeur déréférencé au `T*` paramètre de modèle.
+
+**DerefHelper** est utilisé dans une expression comme : `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`DerefType`|Identificateur pour le paramètre de modèle déréférencé `T*`.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`DerefHelper`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** async.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

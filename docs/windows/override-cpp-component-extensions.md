@@ -16,79 +16,82 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 708b69bc63e59d8ba6ba882d894d6f17b59d8237
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605559"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592367"
 ---
 # <a name="override--c-component-extensions"></a>substituer  (extensions du composant C++)
-Le **remplacer** mot clé contextuel indique qu’un membre d’un type substitue une classe de base ou d’un membre d’interface de base.  
-  
-## <a name="remarks"></a>Notes  
- Le **remplacer** mot clé est valide lors de la compilation pour les cibles natives (option de compilateur par défaut), les cibles Windows Runtime (`/ZW` option du compilateur), ou les cibles de runtime de langage courantes (`/clr` option du compilateur).  
-  
- Pour plus d’informations sur les spécificateurs de substitution, consultez [spécificateur de substitution](../cpp/override-specifier.md) et [des spécificateurs de substitution et Compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
-  
- Pour plus d’informations sur les mots clés contextuels, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
-  
-## <a name="examples"></a>Exemples  
-  
- L’exemple de code suivant montre que **remplacer** peut également être utilisé dans les compilations natives.  
-  
-```cpp  
-// override_keyword_1.cpp  
-// compile with: /c  
-struct I1 {  
-   virtual void f();  
-};  
-  
-struct X : public I1 {  
-   virtual void f() override {}  
-};  
-```  
-  
+
+Le **remplacer** mot clé contextuel indique qu’un membre d’un type substitue une classe de base ou d’un membre d’interface de base.
+
+## <a name="remarks"></a>Notes
+
+Le **remplacer** mot clé est valide lors de la compilation pour les cibles natives (option de compilateur par défaut), les cibles Windows Runtime (`/ZW` option du compilateur), ou les cibles de runtime de langage courantes (`/clr` option du compilateur).
+
+Pour plus d’informations sur les spécificateurs de substitution, consultez [spécificateur de substitution](../cpp/override-specifier.md) et [des spécificateurs de substitution et Compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+
+Pour plus d’informations sur les mots clés contextuels, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+
+## <a name="examples"></a>Exemples
+
+L’exemple de code suivant montre que **remplacer** peut également être utilisé dans les compilations natives.
+
+```cpp
+// override_keyword_1.cpp
+// compile with: /c
+struct I1 {
+   virtual void f();
+};
+
+struct X : public I1 {
+   virtual void f() override {}
+};
+```
+
 ### <a name="example"></a>Exemple
 
- L’exemple de code suivant montre que **remplacer** peut être utilisé dans les compilations de Windows Runtime.  
-  
+L’exemple de code suivant montre que **remplacer** peut être utilisé dans les compilations de Windows Runtime.
+
 ```cpp 
-// override_keyword_2.cpp  
-// compile with: /ZW /c  
-ref struct I1 {  
-   virtual void f();  
-};  
-  
-ref struct X : public I1 {  
-   virtual void f() override {}  
-};  
-```  
-  
-#### <a name="requirements"></a>Configuration requise  
-  
- Option du compilateur : `/ZW`  
-    
+// override_keyword_2.cpp
+// compile with: /ZW /c
+ref struct I1 {
+   virtual void f();
+};
+
+ref struct X : public I1 {
+   virtual void f() override {}
+};
+```
+
+#### <a name="requirements"></a>Configuration requise
+
+Option du compilateur : `/ZW`
+
 ### <a name="example"></a>Exemple
 
- L’exemple de code suivant montre que **remplacer** peut être utilisé dans les compilations de runtime de langage commun.  
-  
-```cpp  
-// override_keyword_3.cpp  
-// compile with: /clr /c  
-ref struct I1 {  
-   virtual void f();  
-};  
-  
-ref struct X : public I1 {  
-   virtual void f() override {}  
-};  
-```  
-  
-#### <a name="requirements"></a>Configuration requise  
-  
- Option du compilateur : `/clr`  
-  
-## <a name="see-also"></a>Voir aussi  
- [Spécificateur de substitution](../cpp/override-specifier.md)   
- [Spécificateurs de substitution](../windows/override-specifiers-cpp-component-extensions.md)
+L’exemple de code suivant montre que **remplacer** peut être utilisé dans les compilations de runtime de langage commun.
+
+```cpp
+// override_keyword_3.cpp
+// compile with: /clr /c
+ref struct I1 {
+   virtual void f();
+};
+
+ref struct X : public I1 {
+   virtual void f() override {}
+};
+```
+
+#### <a name="requirements"></a>Configuration requise
+
+Option du compilateur : `/clr`
+
+## <a name="see-also"></a>Voir aussi
+
+[override, spécificateur](../cpp/override-specifier.md)  
+[Spécificateurs de substitution](../windows/override-specifiers-cpp-component-extensions.md)

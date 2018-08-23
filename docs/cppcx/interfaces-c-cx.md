@@ -1,20 +1,20 @@
 ---
-title: Interfaces (C + c++ / CX) | Documents Microsoft
+title: Interfaces (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090644"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592550"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 Même si une classe ref peut hériter au plus d'une classe concrète, elle peut implémenter n'importe quel nombre de classes interface. Une classe interface (ou struct d'interface) lui-même peut hériter (ou) nécessiter plusieurs classes d'interface, peuvent surcharger ses fonctions membres, et peut avoir des paramètres de type.  
@@ -30,7 +30,7 @@ Même si une classe ref peut hériter au plus d'une classe concrète, elle peut 
   
 -   Les champs et les membres statiques ne sont pas autorisés.  
   
--   Types qui sont utilisés en tant que propriétés, les paramètres de méthode ou valeurs de retour peuvent uniquement être des types Windows Runtime ; Cela inclut les types fondamentaux et les types de classe enum.  
+-   Types qui sont utilisés en tant que propriétés, paramètres de méthode ou valeurs de retour peuvent uniquement être des types de Runtime de Windows ; Cela inclut les types fondamentaux et les types de classe enum.  
   
 ## <a name="declaration-and-usage"></a>Déclaration et utilisation  
  L'exemple suivant montre comment déclarer une interface. Notez qu'une interface peut être déclarée comme type de classe ou de structure.  
@@ -63,9 +63,9 @@ Même si une classe ref peut hériter au plus d'une classe concrète, elle peut 
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>Interfaces génériques  
- Dans C + c++ / CX, le `generic` est utilisé pour représenter un type Windows Runtime paramétrables. Un type paramétré est émis dans les métadonnées et peut être consommé par le code écrit dans n'importe quel langage qui prend en charge les paramètres de type. Le Windows Runtime définit certaines interfaces génériques, par exemple, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), mais il ne prend en charge la création de des interfaces génériques publiques définies par l’utilisateur dans C + c++ / CX. Toutefois, vous pouvez créer des interfaces génériques privées.  
+ En C / c++ / CX, le `generic` mot clé est utilisé pour représenter un type de Runtime Windows paramétrables. Un type paramétré est émis dans les métadonnées et peut être consommé par le code écrit dans n'importe quel langage qui prend en charge les paramètres de type. Le Windows Runtime définit certaines interfaces génériques — par exemple, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— mais il ne prend en charge la création de des interfaces génériques publiques définies par l’utilisateur en C / c++ / CX. Toutefois, vous pouvez créer des interfaces génériques privées.  
   
- Voici comment les types Windows Runtime peuvent servir à créer une interface générique :  
+ Voici comment les types de Runtime de Windows peuvent être utilisés pour créer une interface générique :  
   
 -   Une `interface class` générique définie par l'utilisateur ne peut pas émettre dans son fichier de métadonnées Windows ; par conséquent, elle ne peut pas avoir un accès public, et le code client dans d'autres fichiers .winmd ne peut pas l'implémenter. Elle peut être implémentée par les classes ref non publiques dans le même composant. Une classe ref publique peut avoir un type d'interface générique comme membre privé.  
   
@@ -93,7 +93,7 @@ Même si une classe ref peut hériter au plus d'une classe concrète, elle peut 
   
 -   Lorsque le type d'un paramètre de méthode est un paramètre de type, la déclaration de ce paramètre ou de cette variable utilise le nom du paramètre de type sans pointeur, référence native ou déclarateur de handle. En d'autres termes, vous ne devez jamais écrire « T^ ».  
   
--   Les classes ref basées sur un modèle doivent être privées. Elles peuvent implémenter les interfaces génériques et passer le paramètre de modèle *T* à l’argument générique *T*. Chaque instanciation d'une classe ref basée sur un modèle est elle-même une classe ref.  
+-   Les classes ref basées sur un modèle doivent être privées. Elles peuvent implémenter des interfaces génériques et passer le paramètre de modèle *T* à l’argument générique *T*. Chaque instanciation d'une classe ref basée sur un modèle est elle-même une classe ref.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Système de type](../cppcx/type-system-c-cx.md)   

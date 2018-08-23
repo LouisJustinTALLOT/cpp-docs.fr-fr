@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11b7045444433865d034318bab235c133c786842
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 776b6683d0adbfbb6b8ac64c08fd7f89eaad7046
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018427"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590111"
 ---
 # <a name="hstringrelease-method"></a>HString::Release, méthode
-Supprime la valeur de chaîne sous-jacente et initialise actuel **HString** objet à une valeur vide.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+Supprime la valeur de chaîne sous-jacente et initialise actuel **HString** objet à une valeur vide.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 void Release() throw()  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HString, classe](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HString, classe](../windows/hstring-class.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208387"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608265"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications parallèles fiables, évolutives et réactives. Il permet d'élever le niveau d'abstraction afin que vous n'ayez pas à gérer les détails de l'infrastructure liés à l'accès concurrentiel. Vous pouvez également l'utiliser pour spécifier les stratégies de planification qui répondent aux exigences de vos applications en matière de qualité de service. Utilisez ces ressources pour vous aider à vous familiariser avec le runtime d'accès concurrentiel.  
@@ -111,7 +111,7 @@ Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications
 |[Exemples de code pour le Runtime d’accès concurrentiel et la bibliothèque de modèles parallèles dans Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Donne des exemples d'applications et d'utilitaires qui montrent le runtime d'accès concurrentiel.|  
 |[Programmation parallèle en Code natif blog](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|  
 |[Informatique parallèle en C++ et le Code natif de forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|  
-|[Programmation parallèle](/dotnet/standard/parallel-programming/index)|Explique le modèle de programmation parallèle qui est disponible dans le [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
+|[Programmation parallèle](/dotnet/standard/parallel-programming/index)|Vous enseigne sur le modèle de programmation parallèle qui est disponible dans le .NET Framework.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence](../../parallel/concrt/reference/reference-concurrency-runtime.md)

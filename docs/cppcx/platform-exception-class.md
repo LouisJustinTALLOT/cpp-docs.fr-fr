@@ -1,5 +1,5 @@
 ---
-title: Platform::exception (classe) | Documents Microsoft
+title: Platform::exception, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091558"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586633"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 Représente les erreurs qui se produisent lors de l'exécution de l'application. Les classes d'exception personnalisées ne peuvent pas être dérivées d' `Platform::Exception`. Si vous avez besoin d'une exception personnalisée, vous pouvez utiliser `Platform::COMException` et spécifier un HRESULT propre à l'application.  
@@ -52,7 +52,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |------------|-----------------|  
 |[Exception::CreateException](#createexception)|Crée une exception qui représente la valeur HRESULT spécifiée.|  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
  La classe Exception comporte aussi les propriétés ci-dessous.  
   
 |Membre|Description|  
@@ -60,8 +60,8 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception::HRESULT](#hresult)|HRESULT qui correspond à l'exception.|  
 |[Exception::Message](#message)|Message qui décrit l'exception. Cette valeur est en lecture seule et ne peut pas être modifiée après la construction d' `Exception` .|  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>Paramètres  
  hr  
- Valeur HRESULT que vous obtenez généralement à partir d'un appel à une méthode COM. Si la valeur est 0, ce qui est égale à S_OK, cette méthode lève [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) , car les méthodes COM qui réussissent ne doivent pas lever d’exceptions.  
+ Valeur HRESULT que vous obtenez généralement à partir d'un appel à une méthode COM. Si la valeur est 0, ce qui est égal à S_OK, cette méthode lève [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) , car les méthodes COM qui réussissent ne doivent pas lever d’exceptions.  
   
  message  
  Chaîne qui décrit l'erreur.  
@@ -96,7 +96,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>  Constructeur de exception::exception
+## <a name="ctor"></a>  Exception::exception, constructeur
 Initialise une nouvelle instance de la classe Exception.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -116,7 +116,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>  Exception::HRESULT (propriété)
+## <a name="hresult"></a>  Propriété exception::HRESULT
 HRESULT qui correspond à l'exception.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -146,7 +146,7 @@ public:property String^ Message;
  Dans les exceptions qui proviennent de Windows Runtime, il s'agit d'une description de l'erreur fournie par le système.  
   
 ### <a name="remarks"></a>Notes  
- Dans Windows 8, cette propriété est en lecture seule, car les exceptions dans cette version de Windows Runtime traversent ABI uniquement sous forme de valeurs HRESULT. Dans Windows 8.1, les informations sur l'exception traversent ABI. Par ailleurs, vous pouvez fournir un message personnalisé accessible par programmation à d'autres composants. Pour plus d’informations, consultez [Exceptions (C + c++ / CX)](../cppcx/exceptions-c-cx.md).  
+ Dans Windows 8, cette propriété est en lecture seule, car les exceptions dans cette version du Runtime Windows sont traversent ABI uniquement sous forme de HRESULTS. Dans Windows 8.1, les informations sur l'exception traversent ABI. Par ailleurs, vous pouvez fournir un message personnalisé accessible par programmation à d'autres composants. Pour plus d’informations, consultez [Exceptions (C++ / c++ / CX)](../cppcx/exceptions-c-cx.md).  
   
 
   

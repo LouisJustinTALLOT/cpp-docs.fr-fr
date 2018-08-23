@@ -1,23 +1,23 @@
 ---
-title: Références faibles et cycles de rupture (C + c++ / CX) | Documents Microsoft
+title: Références faibles et cycles de rupture (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92076ac919664fb8ebf6a01513b9382ade52f2a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089076"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598295"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Références faibles et cycles de rupture (C++/CX)
-Dans n'importe quel système de type basé sur le comptage de références, les références aux types peuvent représenter des *cycles*, autrement dit, un objet fait référence à un deuxième objet, le deuxième objet fait référence à un troisième objet, et ainsi de suite jusqu'à ce qu'un objet final refasse référence au premier objet. Dans un cycle, les objets ne peuvent pas être supprimés correctement lorsque le nombre de références à un objet devient égal à zéro. Pour vous aider à résoudre ce problème, C + c++ / CX fournit le [Platform::WeakReference, classe](../cppcx/platform-weakreference-class.md) classe. Un objet `WeakReference` prend en charge la méthode [Resolve](../cppcx/platform-weakreference-class.md#resolve) , qui retourne la valeur null si l'objet n'existe plus ou lève une exception [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) si l'objet existe mais n'est pas de type `T`.  
+Dans n'importe quel système de type basé sur le comptage de références, les références aux types peuvent représenter des *cycles*, autrement dit, un objet fait référence à un deuxième objet, le deuxième objet fait référence à un troisième objet, et ainsi de suite jusqu'à ce qu'un objet final refasse référence au premier objet. Dans un cycle, les objets ne peuvent pas être supprimés correctement lorsque le nombre de références à un objet devient égal à zéro. Pour vous aider à résoudre ce problème, C++ / c++ / CX fournit le [Platform::WeakReference, classe](../cppcx/platform-weakreference-class.md) classe. Un objet `WeakReference` prend en charge la méthode [Resolve](../cppcx/platform-weakreference-class.md#resolve) , qui retourne la valeur null si l'objet n'existe plus ou lève une exception [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) si l'objet existe mais n'est pas de type `T`.  
   
  Un scénario dans lequel `WeakReference` doit être utilisé lorsque le pointeur `this` est capturé dans une expression lambda qui est utilisée pour définir un gestionnaire d'événements. Nous vous recommandons d'utiliser les méthodes nommées lorsque vous définissez des gestionnaires d'événements, mais si vous souhaitez utiliser un lambda pour votre gestionnaire d'événements (ou si vous devez arrêter un cycle de comptage de références dans une autre situation), utilisez `WeakReference`. Voici un exemple :  
   

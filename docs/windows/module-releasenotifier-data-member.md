@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 512a559eec613958cb51b0f8a06fdf42abee173f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 15e52ce46236080d29f3fb2896e5233d4547f90c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016315"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598665"
 ---
 # <a name="modulereleasenotifier-data-member"></a>Module::releaseNotifier_, données de membre
-Contient un pointeur vers un `ReleaseNotifier` objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-ReleaseNotifier *releaseNotifier_;  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL
- 
- ## <a name="see-also"></a>Voir aussi
- [Module, classe](../windows/module-class.md)
+
+Contient un pointeur vers un `ReleaseNotifier` objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+ReleaseNotifier *releaseNotifier_;
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+[Module, classe](../windows/module-class.md)

@@ -17,51 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96b97bf2afa8897063e8303a04445f9957cc42c3
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016637"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604264"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID, méthode
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename T>  
-__forceinline static HRESULT AsIID(  
-   _In_ T* implements,  
-   REFIID riid,  
-   _Deref_out_ void **ppvObject  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *T*  
- Un type qui implémente l’ID d’interface spécifié par le paramètre *riid*.  
-  
- *Implémente*  
- Une variable du type spécifié par le paramètre de modèle *T*.  
-  
- *riid*  
- L’ID d’interface à récupérer.  
-  
- *ppvObject*  
- Si cette opération réussite, un pointeur-à-un-pointeur vers l’interface spécifiée par le paramètre *riid*.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK en cas de réussite ; Sinon, une valeur HRESULT qui décrit l’erreur.  
-  
-## <a name="remarks"></a>Notes  
- Récupère un pointeur vers l’ID de l’interface spécifiée.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** implements.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [Runtimeclassbaset, Structure](../windows/runtimeclassbaset-structure.md)   
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename T>
+__forceinline static HRESULT AsIID(
+   _In_ T* implements,
+   REFIID riid,
+   _Deref_out_ void **ppvObject
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*T*  
+Un type qui implémente l’ID d’interface spécifié par le paramètre *riid*.
+
+*Implémente*  
+Une variable du type spécifié par le paramètre de modèle *T*.
+
+*riid*  
+L’ID d’interface à récupérer.
+
+*ppvObject*  
+Si cette opération réussite, un pointeur-à-un-pointeur vers l’interface spécifiée par le paramètre *riid*.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de réussite ; Sinon, une valeur HRESULT qui décrit l’erreur.
+
+## <a name="remarks"></a>Notes
+
+Récupère un pointeur vers l’ID de l’interface spécifiée.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** implements.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[RuntimeClassBaseT, structure](../windows/runtimeclassbaset-structure.md)  
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

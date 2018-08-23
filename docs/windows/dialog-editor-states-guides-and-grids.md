@@ -15,38 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1405597e933e36e6a080c5c1defd98006a1064f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6386531e12bdeb75e51976ad2ed9798200ea2c6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649316"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602883"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>États de l'Éditeur de boîtes de dialogue (repères et grilles)
-Vous pouvez organiser les contrôles dans les boîtes de dialogue avec le **boîte de dialogue** editor dans un des trois états différents :  
-  
--   Avec les guides et les marges (paramètre par défaut)  
-  
--   Avec la grille de disposition sur  
-  
--   Sans les fonctionnalités d’alignement  
-  
- Le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contient des boutons qui contrôlent l’état. Pour modifier l’état, cliquez sur l’icône appropriée. Vous pouvez également modifier des États à l’aide de la **Guide paramètres** commande sur le **Format** menu.  
-  
--   [Création et définition des repères et des marges](creating-and-setting-guides-and-margins.md)  
-  
--   [Alignement des contrôles sur un repère](../windows/aligning-controls-on-a-guide.md)  
-  
--   [Désactivation des repères](../windows/disabling-guides.md)  
-  
--   [Modification de la présentation grille](../windows/modifying-the-layout-grid.md)  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Disposition des contrôles sur les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
- [Contrôles (MFC)](../mfc/controls-mfc.md)
+
+Vous pouvez organiser les contrôles dans les boîtes de dialogue avec le **boîte de dialogue** editor dans un des trois états différents :
+
+- Avec les guides et les marges (paramètre par défaut)
+
+- Avec la grille de disposition sur
+
+- Sans les fonctionnalités d’alignement
+
+Le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contient des boutons qui contrôlent l’état. Pour modifier l’état, cliquez sur l’icône appropriée. Vous pouvez également modifier des États à l’aide de la **Guide paramètres** commande sur le **Format** menu.
+
+- [Création et définition des repères et des marges](creating-and-setting-guides-and-margins.md)
+
+- [Alignement des contrôles sur un repère](../windows/aligning-controls-on-a-guide.md)
+
+- [Désactivation des repères](../windows/disabling-guides.md)
+
+- [Modification de la présentation grille](../windows/modifying-the-layout-grid.md)
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Organisation des contrôles dans les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)  
+[Contrôles (MFC)](../mfc/controls-mfc.md)

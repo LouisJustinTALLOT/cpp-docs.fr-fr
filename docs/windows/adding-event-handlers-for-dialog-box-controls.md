@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ad7b007728d3de949fec678249edd56c7032d250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642849"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605735"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue
 
@@ -49,13 +49,13 @@ Pour les boîtes de dialogue de projet qui sont déjà associés à une classe, 
 
    - BN_SETFOCUS
 
-    > [!NOTE]
-    > Vous pouvez également sélectionner la boîte de dialogue et cliquez sur le **ControlEvents** bouton pour afficher la liste des événements Windows communs pour tous les contrôles dans la boîte de dialogue.
+   > [!NOTE]
+   > Vous pouvez également sélectionner la boîte de dialogue et cliquez sur le **ControlEvents** bouton pour afficher la liste des événements Windows communs pour tous les contrôles dans la boîte de dialogue.
 
 3. Dans le **propriétés** fenêtre, cliquez sur la colonne de droite en regard de l’événement à gérer, puis sélectionnez le nom d’événement de notification proposé (par exemple, `OnBnClickedOK` gère BN_CLICKED).
 
-    > [!NOTE]
-    > Alternativement, vous pouvez fournir un nom de gestionnaire d’événements de votre choix, plutôt que de sélectionner le nom de gestionnaire d’événements par défaut.
+   > [!NOTE]
+   > Alternativement, vous pouvez fournir un nom de gestionnaire d’événements de votre choix, plutôt que de sélectionner le nom de gestionnaire d’événements par défaut.
 
    Une fois que vous avez sélectionné l’événement, Visual Studio ouvre le **éditeur de texte** et affiche le code du Gestionnaire d’événements. Par exemple, le code suivant est ajouté pour la valeur par défaut `OnBnClickedOK`:
 
@@ -71,14 +71,16 @@ Si vous souhaitez ajouter le Gestionnaire d’événements à une classe autre q
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Configuration requise
- Win32
+
+Win32
 
 ## <a name="see-also"></a>Voir aussi
- [Événements de contrôle par défaut](../windows/default-control-events.md)  
- [Définition de variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)  
- [Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)  
- [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)  
- [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)  
- [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)  
- [Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)  
- [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+
+[Événements de contrôle par défaut](../windows/default-control-events.md)  
+[Définition de variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)  
+[Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)  
+[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)  
+[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)  
+[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)  
+[Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

@@ -1,5 +1,5 @@
 ---
-title: Indices d’octets | Documents Microsoft
+title: Indices d’octets | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - MBCS [C++], byte indices
 - byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509e66c7ea458519eaa9dc4f52c8a6b65c789d0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5beb69ef7d9d3356eddef40c6bce6483079d934a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863798"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590798"
 ---
 # <a name="byte-indices"></a>Indices d'octets
 Utilisez les conseils suivants :  
   
--   Travail avec des index dans une chaîne présente des problèmes semblables à ceux posés par la manipulation du pointeur. Considérez cet exemple, qui analyse une chaîne d’un caractère de barre oblique inverse :  
+-   Travailler avec des index dans une chaîne présente des problèmes similaires à ceux posés par la manipulation du pointeur. Considérez cet exemple, qui analyse une chaîne pour une barre oblique inverse :  
   
     ```  
     while ( rgch[ i ] != '\\' )  
         i++;  
     ```  
   
-     Cela peut indexer un octet de fin, et non un octet de tête, et par conséquent, elle ne peut pas pointer sur un `character`.  
+     Cela peut indexer un octet de fin, pas un octet de tête, et par conséquent, elle ne peut pas pointer sur un `character`.  
   
--   Utilisez le [_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) afin de résoudre le problème précédent :  
+-   Utilisez le [_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) fonction permettant de résoudre le problème précédent :  
   
     ```  
     while ( rgch[ i ] != '\\' )  

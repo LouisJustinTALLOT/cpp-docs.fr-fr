@@ -1,5 +1,5 @@
 ---
-title: Classe de valeur Platform::GUID | Documents Microsoft
+title: Classe de valeur Platform::GUID | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089449"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601252"
 ---
 # <a name="platformguid-value-class"></a>Classe de valeur Platform::Guid
 Représente un type [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) dans le système de type Windows Runtime.  
@@ -42,10 +42,10 @@ public value struct Guid
 |[operator()](#operator-call)|Convertit un Guid en GUID.|  
   
 ### <a name="remarks"></a>Notes  
- Pour un exemple de génération d'un nouveau Platform::Guid à l'aide de la fonction Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), consultez [Composant WinRT : comment générer un GUID ?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ Pour obtenir un exemple montrant comment générer un nouveau Platform::Guid à l’aide de la fonction Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consultez [les composant WinRT : comment générer un GUID ?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
-### <a name="requirements"></a>Spécifications  
- **Minimum pris en charge le client :** Windows 8  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum de client pris en charge :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
   
@@ -146,12 +146,12 @@ Platform::Guid::operator!=
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- True si les deux GUID ne sont pas égales.
+ True si les deux GUID ne sont pas égaux.
 
 
 
 ## <a name="operator-call"></a> Opérateur de GUID::operator
-Convertit implicitement un [structure GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID Platform::GUID.  
+Convertit implicitement un [structure GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)en un Platform::Guid.  
   
 ### <a name="syntax"></a>Syntaxe  
   

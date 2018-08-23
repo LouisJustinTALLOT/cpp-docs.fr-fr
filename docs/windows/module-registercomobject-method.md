@@ -17,56 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61ebc6b7bfb0571ba1f2ce1957d916ecb4c790c7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010982"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610431"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject, méthode
-Inscrit un ou plusieurs objets COM afin d’autres applications peuvent se connecter à leur.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW virtual HRESULT RegisterCOMObject(  
-   const wchar_t* serverName,  
-   IID* clsids,  
-   IClassFactory** factories,  
-   DWORD* cookies,  
-   unsigned int count);  
-  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *Nom du serveur*  
- Nom qualifié complet d’un serveur.  
-  
- *CLSID*  
- Tableau de CLSID à inscrire.  
-  
- *fabriques*  
- Tableau d’interfaces IUnknown des objets de classe dont la disponibilité est en cours de publication.  
-  
- *Cookies*  
- Lorsque l’opération se termine, un tableau de pointeurs vers des valeurs qui identifient la classe des objets qui ont été enregistrés. Ces valeurs sont utilisées ultérieurement révoque l’inscription.  
-  
- *count*  
- Le nombre de CLSID à inscrire.  
-  
-## <a name="return-value"></a>Valeur de retour  
- S_OK si réussies ; Sinon, un HRESULT comme CO_E_OBJISREG qui indique la raison pour laquelle l’opération a échoué.  
-  
-## <a name="remarks"></a>Notes  
- Les objets COM sont enregistrés avec l’énumérateur CLSCTX_LOCAL_SERVER de l’énumération CLSCTX.  
-  
- Le type de connexion pour les objets inscrits est spécifié par une combinaison de cours *comflag* paramètre de modèle et de l’énumérateur REGCLS_SUSPENDED de l’énumération REGCLS.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL
- 
- ## <a name="see-also"></a>Voir aussi
- [Module, classe](../windows/module-class.md)
+
+Inscrit un ou plusieurs objets COM afin d’autres applications peuvent se connecter à leur.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW virtual HRESULT RegisterCOMObject(
+   const wchar_t* serverName,
+   IID* clsids,
+   IClassFactory** factories,
+   DWORD* cookies,
+   unsigned int count);
+
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Nom du serveur*  
+Nom qualifié complet d’un serveur.
+
+*CLSID*  
+Tableau de CLSID à inscrire.
+
+*fabriques*  
+Tableau d’interfaces IUnknown des objets de classe dont la disponibilité est en cours de publication.
+
+*Cookies*  
+Lorsque l’opération se termine, un tableau de pointeurs vers des valeurs qui identifient la classe des objets qui ont été enregistrés. Ces valeurs sont utilisées ultérieurement révoque l’inscription.
+
+*count*  
+Le nombre de CLSID à inscrire.
+
+## <a name="return-value"></a>Valeur de retour
+
+S_OK si réussies ; Sinon, un HRESULT comme CO_E_OBJISREG qui indique la raison pour laquelle l’opération a échoué.
+
+## <a name="remarks"></a>Notes
+
+Les objets COM sont enregistrés avec l’énumérateur CLSCTX_LOCAL_SERVER de l’énumération CLSCTX.
+
+Le type de connexion pour les objets inscrits est spécifié par une combinaison de cours *comflag* paramètre de modèle et de l’énumérateur REGCLS_SUSPENDED de l’énumération REGCLS.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+[Module, classe](../windows/module-class.md)

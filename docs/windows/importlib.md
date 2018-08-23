@@ -17,58 +17,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9676c6c28e9f142f0ec376fae31c3d26f1a2083
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b9522db579641d79b8b77cc870cd1df6f03c0413
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011664"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607671"
 ---
 # <a name="importlib"></a>importlib
-Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ importlib(  
-   "tlb_file"  
-) ];  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *tlb_file*  
- Nom d'un fichier .tlb, entre guillemets, que vous souhaitez importer dans la bibliothèque de types du projet actuel.  
-  
-## <a name="remarks"></a>Notes  
- Le **importlib** C++ attribut entraîne une `importlib` instruction à placer dans le bloc de bibliothèque du fichier .idl généré. Le **importlib** attribut a les mêmes fonctionnalités que le [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) attribut MIDL.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant montre un exemple montrant comment utiliser **importlib**:  
-  
-```cpp  
-// cpp_attr_ref_importlib.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[importlib("importlib.tlb")];  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|N'importe où|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs de compilateur](../windows/compiler-attributes.md)   
- [Attributs autonomes](../windows/stand-alone-attributes.md)   
- [Importation](../windows/import.md)   
- [importidl](../windows/importidl.md)   
- [inclure](../windows/include-cpp.md)   
- [includelib](../windows/includelib-cpp.md)
+
+Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ importlib(
+   "tlb_file"
+) ];
+```
+
+### <a name="parameters"></a>Paramètres
+
+*tlb_file*  
+Nom d'un fichier .tlb, entre guillemets, que vous souhaitez importer dans la bibliothèque de types du projet actuel.
+
+## <a name="remarks"></a>Notes
+
+Le **importlib** C++ attribut entraîne une `importlib` instruction à placer dans le bloc de bibliothèque du fichier .idl généré. Le **importlib** attribut a les mêmes fonctionnalités que le [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) attribut MIDL.
+
+## <a name="example"></a>Exemple
+
+Le code suivant montre un exemple montrant comment utiliser **importlib**:
+
+```cpp
+// cpp_attr_ref_importlib.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[importlib("importlib.tlb")];
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|N'importe où|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs de compilateur](../windows/compiler-attributes.md)  
+[Attributs autonomes](../windows/stand-alone-attributes.md)  
+[import](../windows/import.md)  
+[importidl](../windows/importidl.md)  
+[include](../windows/include-cpp.md)  
+[includelib](../windows/includelib-cpp.md)

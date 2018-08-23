@@ -1,23 +1,23 @@
 ---
-title: Interopérabilité avec d’autres langages (C + c++ / CX) | Documents Microsoft
+title: Interopérabilité avec d’autres langages (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e096cda810085c0e0ce9e2772c7105843e486a39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087840"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589886"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interopérabilité avec d'autres langages (C++/CX)
-Cette partie de la documentation décrit l’utilisation de C + c++ / CX pour créer des composants Windows Runtime qui peuvent être utilisés par d’autres langages de programmation et bibliothèques. Vous pouvez également créer des composants qui ne peuvent pas être utilisés par toutes les langages. Cette section décrit les différents aspects à prendre en compte lorsque votre C + c++ / application de CX interagit avec des composants qui sont écrits à l’aide de JavaScript, un langage .NET Framework managés ou la bibliothèque de modèles Windows Runtime C++.  
+Cette partie de la documentation décrit comment utiliser C++ / c++ / CX pour créer des composants Windows Runtime qui peuvent être consommées par d’autres langages de programmation et bibliothèques. Vous pouvez également créer des composants qui ne peuvent pas être utilisés par toutes les langages. Cette section décrit les différents aspects à prendre en compte lorsque votre C + c++ / application de CX interagit avec des composants qui sont écrits à l’aide de JavaScript, un langage .NET Framework managés ou la bibliothèque de modèles C++ Windows Runtime.  
   
 ## <a name="related-topics"></a>Rubriques connexes  
   

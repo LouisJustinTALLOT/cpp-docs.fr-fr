@@ -15,35 +15,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1234c667426937f5d40937c5f2bcc72949e827ae
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b5a1838c153dc7a0a4def9f98e5e043e36ae9414
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012392"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603843"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel, méthode
-Obtient le niveau de confiance d’une instance de la classe spécifiée par le `Base` paramètre de modèle de classe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetTrustLevel  
-)(_Out_ TrustLevel* trustLvl);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *trustLvl*  
- Lorsque cette opération se termine, le niveau de confiance de l’objet de classe actuel.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Toujours S_OK.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [SimpleActivationFactory, classe](../windows/simpleactivationfactory-class.md)
+
+Obtient le niveau de confiance d’une instance de la classe spécifiée par le `Base` paramètre de modèle de classe.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*trustLvl*  
+Lorsque cette opération se termine, le niveau de confiance de l’objet de classe actuel.
+
+## <a name="return-value"></a>Valeur de retour
+
+Toujours S_OK.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[SimpleActivationFactory, classe](../windows/simpleactivationfactory-class.md)

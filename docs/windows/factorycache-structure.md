@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: df2335a49d2d5daf862db7cea7eb413c01164bee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647545"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609026"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (structure)
-Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-struct FactoryCache;  
-```  
-  
-## <a name="remarks"></a>Notes  
- Contient l’emplacement d’une fabrique de classe et une valeur qui identifie un inscrits wrt ou l’objet de classe COM.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[FactoryCache::cookie, données de membre](../windows/factorycache-cookie-data-member.md)|Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.|  
-|[FactoryCache::factory, données de membre](../windows/factorycache-factory-data-member.md)|Pointe vers une fabrique de classe Windows Runtime ou COM.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `FactoryCache`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+struct FactoryCache;
+```
+
+## <a name="remarks"></a>Notes
+
+Contient l’emplacement d’une fabrique de classe et une valeur qui identifie un inscrits wrt ou l’objet de classe COM.
+
+## <a name="members"></a>Membres
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|[FactoryCache::cookie, données de membre](../windows/factorycache-cookie-data-member.md)|Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.|
+|[FactoryCache::factory, données de membre](../windows/factorycache-factory-data-member.md)|Pointe vers une fabrique de classe Windows Runtime ou COM.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`FactoryCache`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

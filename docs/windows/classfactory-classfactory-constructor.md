@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d47c3b8513883b3b9ee27457fa3a0d670acac13
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d3ab1f176029c872c121b816a4ea57b9f83ca6bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646213"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596835"
 ---
 # <a name="classfactoryclassfactory-constructor"></a>ClassFactory::ClassFactory, constructeur
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW ClassFactory();  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** module.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ClassFactory, classe](../windows/classfactory-class.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** module.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ClassFactory, classe](../windows/classfactory-class.md)

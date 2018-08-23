@@ -17,172 +17,178 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df5f341382b7f9594d740b7e47fbb53b53188d75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643119"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597753"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (structure)
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename TMemberFunction>  
-struct ArgTraits;  
-template<typename TDelegateInterface>  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(void)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6,  
-   typename TArg7  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6,  
-   typename TArg7,  
-   typename TArg8  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8)>;  
-template<  
-   typename TDelegateInterface,  
-   typename TArg1,  
-   typename TArg2,  
-   typename TArg3,  
-   typename TArg4,  
-   typename TArg5,  
-   typename TArg6,  
-   typename TArg7,  
-   typename TArg8,  
-   typename TArg9  
->  
-struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *TMemberFunction*  
- Paramètre TypeName pour une ArgTraits (structure) qui ne correspond à aucune `Invoke` signature de méthode.  
-  
- *TDelegateInterface*  
- Une interface de délégué.  
-  
- *TArg1*  
- Le type du premier argument de la `Invoke` (méthode).  
-  
- *TArg2*  
- Le type du deuxième argument de la `Invoke` (méthode).  
-  
- *TArg3*  
- Le type du troisième argument de la `Invoke` (méthode).  
-  
- *TArg4*  
- Le type du quatrième argument de la `Invoke` (méthode).  
-  
- *TArg5*  
- Le type du cinquième argument de la `Invoke` (méthode).  
-  
- *TArg6*  
- Le type du sixième argument de la `Invoke` (méthode).  
-  
- *TArg7*  
- Le type du septième argument de la `Invoke` (méthode).  
-  
- *TArg8*  
- Le type du huitième argument de la `Invoke` (méthode).  
-  
- *TArg9*  
- Le type du neuvième argument de la `Invoke` (méthode).  
-  
-## <a name="remarks"></a>Notes  
- Le **ArgTraits** structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`Arg1Type`|Typedef pour TArg1.|  
-|`Arg2Type`|Typedef pour TArg2.|  
-|`Arg3Type`|Typedef pour TArg3.|  
-|`Arg4Type`|Typedef pour TArg4.|  
-|`Arg5Type`|Typedef pour TArg5.|  
-|`Arg6Type`|Typedef pour TArg6.|  
-|`Arg7Type`|Typedef pour TArg7.|  
-|`Arg8Type`|Typedef pour TArg8.|  
-|`Arg9Type`|Typedef pour TArg9.|  
-  
-### <a name="public-constants"></a>Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `ArgTraits`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** event.h  
-  
- **Namespace :** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename TMemberFunction>
+struct ArgTraits;
+template<typename TDelegateInterface>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(void)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6,
+   typename TArg7
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6,
+   typename TArg7,
+   typename TArg8
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8)>;
+template<
+   typename TDelegateInterface,
+   typename TArg1,
+   typename TArg2,
+   typename TArg3,
+   typename TArg4,
+   typename TArg5,
+   typename TArg6,
+   typename TArg7,
+   typename TArg8,
+   typename TArg9
+>
+struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*TMemberFunction*  
+Paramètre TypeName pour une ArgTraits (structure) qui ne correspond à aucune `Invoke` signature de méthode.
+
+*TDelegateInterface*  
+Une interface de délégué.
+
+*TArg1*  
+Le type du premier argument de la `Invoke` (méthode).
+
+*TArg2*  
+Le type du deuxième argument de la `Invoke` (méthode).
+
+*TArg3*  
+Le type du troisième argument de la `Invoke` (méthode).
+
+*TArg4*  
+Le type du quatrième argument de la `Invoke` (méthode).
+
+*TArg5*  
+Le type du cinquième argument de la `Invoke` (méthode).
+
+*TArg6*  
+Le type du sixième argument de la `Invoke` (méthode).
+
+*TArg7*  
+Le type du septième argument de la `Invoke` (méthode).
+
+*TArg8*  
+Le type du huitième argument de la `Invoke` (méthode).
+
+*TArg9*  
+Le type du neuvième argument de la `Invoke` (méthode).
+
+## <a name="remarks"></a>Notes
+
+Le **ArgTraits** structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`Arg1Type`|Typedef pour TArg1.|
+|`Arg2Type`|Typedef pour TArg2.|
+|`Arg3Type`|Typedef pour TArg3.|
+|`Arg4Type`|Typedef pour TArg4.|
+|`Arg5Type`|Typedef pour TArg5.|
+|`Arg6Type`|Typedef pour TArg6.|
+|`Arg7Type`|Typedef pour TArg7.|
+|`Arg8Type`|Typedef pour TArg8.|
+|`Arg9Type`|Typedef pour TArg9.|
+
+### <a name="public-constants"></a>Constantes publiques
+
+|Name|Description|
+|----------|-----------------|
+|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`ArgTraits`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** event.h
+
+**Namespace :** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Voir aussi
+
+[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

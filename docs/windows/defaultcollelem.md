@@ -17,56 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58038fdb621ca8d31ace1f756e5f3dc122af06b1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3cf41a5d827bd3834cffdd7d229d01d4a4889c9b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644958"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610000"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
-Utilisé pour l’optimisation du code Visual Basic.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[defaultcollelem]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le **defaultcollelem** attribut C++ a les mêmes fonctionnalités que le [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) attribut MIDL.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant montre une méthode d’interface à l’aide du **defaultcollelem** attribut :  
-  
-```cpp  
-// cpp_attr_ref_defaultcollelem.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib")];  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyForm   
-{     
-   [propget, id(1), bindable, defaultcollelem, displaybind,   
-   defaultbind, requestedit] HRESULT P1([out, retval] long *nSize);  
-   [propput, id(1), bindable, defaultcollelem, displaybind,   
-   defaultbind, requestedit] HRESULT P1([in] long nSize);  
-};  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|Méthode d’interface|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
-  
- Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [Attributs de méthode](../windows/method-attributes.md)   
+
+Utilisé pour l’optimisation du code Visual Basic.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[defaultcollelem]
+```
+
+## <a name="remarks"></a>Notes
+
+Le **defaultcollelem** attribut C++ a les mêmes fonctionnalités que le [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) attribut MIDL.
+
+## <a name="example"></a>Exemple
+
+Le code suivant montre une méthode d’interface à l’aide du **defaultcollelem** attribut :
+
+```cpp
+// cpp_attr_ref_defaultcollelem.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib")];
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyForm
+{
+   [propget, id(1), bindable, defaultcollelem, displaybind,
+   defaultbind, requestedit] HRESULT P1([out, retval] long *nSize);
+   [propput, id(1), bindable, defaultcollelem, displaybind,
+   defaultbind, requestedit] HRESULT P1([in] long nSize);
+};
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|Méthode d’interface|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
+
+Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs de méthode](../windows/method-attributes.md)  

@@ -18,45 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50503f06c3617d046c86db7fdcfd56555c1b4b8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cc95eef2c3cca678ae291846c2ebe0e5c1e80997
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011801"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609080"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Déplacement et copie de menus et de commandes de menu
-Vous pouvez déplacer ou copier des menus et des commandes de menu par glisser-déplacer ou à l'aide des commandes du menu contextuel.  
-  
-### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Pour déplacer ou copier des menus ou des commandes de menu par glisser-déplacer  
-  
-1.  Faites glisser ou copiez l'élément que vous souhaitez déplacer vers :  
-  
-    -   Un nouvel emplacement dans le menu actuel.  
-  
-    -   Un autre menu. (Vous pouvez naviguer vers d'autres menus en faisant glisser le pointeur de la souris au-dessus de ces derniers.)  
-  
-2.  Déplacez la commande de menu quand le guide d'insertion affiche la position souhaitée.  
-  
-### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Pour déplacer ou copier des menus ou des commandes de menu à l'aide des commandes de menu contextuel  
-  
-1.  Cliquez avec le bouton droit sur un ou plusieurs menus ou commandes de menu.  
-  
-2.  Dans le menu contextuel, choisissez **Couper** (pour déplacer) ou **Copier**.  
-  
-3.  Si vous déplacez les éléments vers une autre ressource de menu ou un autre fichier de script de ressources, vous devez l' [ouvrir dans une autre fenêtre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
-  
-4.  Sélectionnez la position du menu ou de la commande de menu où vous souhaitez effectuer le déplacement ou la copie.  
-  
-5.  Dans le menu contextuel, choisissez **Coller**. L'élément déplacé ou copié est placé avant l'élément sélectionné.  
-  
-    > [!NOTE]
-    >  Vous pouvez également faire glisser, copier et coller des éléments vers d'autres menus dans d'autres fenêtres de menu.  
-  
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, consultez [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Configuration requise  
- Win32  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de menus](../windows/menu-editor.md)
+
+Vous pouvez déplacer ou copier des menus et des commandes de menu par glisser-déplacer ou à l'aide des commandes du menu contextuel.
+
+### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Pour déplacer ou copier des menus ou des commandes de menu par glisser-déplacer
+
+1. Faites glisser ou copiez l'élément que vous souhaitez déplacer vers :
+
+   - Un nouvel emplacement dans le menu actuel.
+
+   - Un autre menu. (Vous pouvez naviguer vers d'autres menus en faisant glisser le pointeur de la souris au-dessus de ces derniers.)
+
+2. Déplacez la commande de menu quand le guide d'insertion affiche la position souhaitée.
+
+### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Pour déplacer ou copier des menus ou des commandes de menu à l'aide des commandes de menu contextuel
+
+1. Cliquez avec le bouton droit sur un ou plusieurs menus ou commandes de menu.
+
+2. Dans le menu contextuel, choisissez **Couper** (pour déplacer) ou **Copier**.
+
+3. Si vous déplacez les éléments vers une autre ressource de menu ou un autre fichier de script de ressources, vous devez l' [ouvrir dans une autre fenêtre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+4. Sélectionnez la position du menu ou de la commande de menu où vous souhaitez effectuer le déplacement ou la copie.
+
+5. Dans le menu contextuel, choisissez **Coller**. L'élément déplacé ou copié est placé avant l'élément sélectionné.
+
+   > [!NOTE]
+   > Vous pouvez également faire glisser, copier et coller des éléments vers d'autres menus dans d'autres fenêtres de menu.
+
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, consultez [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Configuration requise
+
+Win32
+
+## <a name="see-also"></a>Voir aussi
+
+[Éditeur de menus](../windows/menu-editor.md)

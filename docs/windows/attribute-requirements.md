@@ -1,5 +1,5 @@
 ---
-title: Configuration requise d’attribut | Documents Microsoft
+title: Configuration requise d’attribut | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fdf97120b5f6396e3b18e274ef3626c9dbf919d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea84b46e31d57ec05bf9641674d045f531b04722
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863567"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593750"
 ---
 # <a name="attribute-requirements"></a>Exigences des attributs
-La configuration requise pour les attributs C++ décrire les types de projet, les paramètres de compilateur et les autres informations nécessaires pour un attribut à utiliser. Les catégories d’informations sont décrits ci-dessous.  
+La configuration requise pour les attributs C++ décrire les types de projets, de paramètres de compilateur et d’autres informations nécessaires pour un attribut fonctionne. Les catégories d’informations sont décrits ci-dessous.
   
 > [!NOTE]
->  L’utilisation d’attributs sur une classe qui dérive d’une classe qui utilise des attributs n’est pas pris en charge.  
+> À l’aide des attributs sur une classe qui dérive d’une classe qui utilise également des attributs n’est pas pris en charge.
   
-## <a name="header"></a>Header  
- Ce champ affiche les fichiers d’en-tête qui doivent être inclus avant un attribut peut être utilisé.  
+## <a name="header"></a>Header
+ Ce champ répertorie les fichiers d’en-tête qui doivent être inclus avant un attribut peut être utilisé.
   
-## <a name="project"></a>Projet  
- Ce champ décrit les types de projets dans lesquels un attribut peut être utilisé.  
+## <a name="project"></a>Projet
+ Ce champ décrit les types de projets dans lesquels un attribut peut être utilisé.
   
-## <a name="compiler"></a>Compilateur  
- Ce champ fournit les options du compilateur qui doivent être présentes pour cet attribut à utiliser.  
+## <a name="compiler"></a>Compilateur
+ Ce champ fournit les options du compilateur qui doivent être présentes pour cet attribut à utiliser.
   
-## <a name="see-also"></a>Voir aussi  
- [Contextes d’attribut](../windows/attribute-contexts.md)   
+## <a name="see-also"></a>Voir aussi
+ [Contextes d’attribut](../windows/attribute-contexts.md)  
  [Attributs par groupe](../windows/attributes-by-group.md)

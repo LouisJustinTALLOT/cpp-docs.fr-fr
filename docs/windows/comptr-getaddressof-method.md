@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1be1dd844b08be23312848f007e4a57dbd893b5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 98609ce9cc15940586d626c52d24b5ca506164e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646983"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598992"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf, méthode
-Récupère l’adresse de la [ptr_](../windows/comptr-ptr-data-member.md) membre de données, qui contient un pointeur vers l’interface représentée par ce **ComPtr**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-T* const* GetAddressOf() const;  
-T** GetAddressOf();  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- L’adresse d’une variable.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** client.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [ComPtr, classe](../windows/comptr-class.md)
+
+Récupère l’adresse de la [ptr_](../windows/comptr-ptr-data-member.md) membre de données, qui contient un pointeur vers l’interface représentée par ce **ComPtr**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+T* const* GetAddressOf() const;
+T** GetAddressOf();
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+L’adresse d’une variable.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** client.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[ComPtr, classe](../windows/comptr-class.md)

@@ -17,77 +17,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60a4326975f60455e6d2ef90575f5c940287042a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3727fc70698d3202734db7bbe72773cbe49bffb9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644110"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592911"
 ---
 # <a name="dual"></a>dual
-Place une interface dans le fichier .idl comme une interface double.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[dual]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Lorsque le **double** attribut C++ précède une interface, il fait en sorte d’être placées dans le bloc de bibliothèque dans le fichier .idl généré.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant est un bloc d’attributs qui utilise **double** avant une définition d’interface :  
-  
-```cpp  
-// cpp_attr_ref_dual.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[module(name="MyLibrary")];  
-  
-[uuid("2F5F63F1-16DA-11d2-9E7B-00C04FB926DA"), dual]  
-  
-__interface IStatic : IDispatch   
-{  
-   HRESULT Func1(int i);  
-   [   propget,   
-      id(1),   
-      bindable,   
-      displaybind,   
-      defaultbind,   
-      requestedit  
-   ]   
-   HRESULT P1([out, retval] long *nSize);  
-   [   propput,   
-      id(1),   
-      bindable,   
-      displaybind,   
-      defaultbind,   
-      requestedit  
-   ]   
-   HRESULT P1([in] long nSize);      
-};  
-  
-[cpp_quote("#include file.h")];  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-### <a name="attribute-context"></a>Contexte d'attribut  
-  
-|||  
-|-|-|  
-|**S'applique à**|**interface**|  
-|**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|`dispinterface`|  
-  
- Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Attributs IDL](../windows/idl-attributes.md)   
- [Attributs par utilisation](../windows/attributes-by-usage.md)   
- [Personnalisé](../windows/custom-cpp.md)   
- [Dispinterface](../windows/dispinterface.md)   
- [object](../windows/object-cpp.md)   
- [__interface](../cpp/interface.md)   
+
+Place une interface dans le fichier .idl comme une interface double.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[dual]
+```
+
+## <a name="remarks"></a>Notes
+
+Lorsque le **double** attribut C++ précède une interface, il fait en sorte d’être placées dans le bloc de bibliothèque dans le fichier .idl généré.
+
+## <a name="example"></a>Exemple
+
+Le code suivant est un bloc d’attributs qui utilise **double** avant une définition d’interface :
+
+```cpp
+// cpp_attr_ref_dual.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="MyLibrary")];
+
+[uuid("2F5F63F1-16DA-11d2-9E7B-00C04FB926DA"), dual]
+
+__interface IStatic : IDispatch
+{
+   HRESULT Func1(int i);
+   [   propget,
+      id(1),
+      bindable,
+      displaybind,
+      defaultbind,
+      requestedit
+   ]
+   HRESULT P1([out, retval] long *nSize);
+   [   propput,
+      id(1),
+      bindable,
+      displaybind,
+      defaultbind,
+      requestedit
+   ]
+   HRESULT P1([in] long nSize); 
+};
+
+[cpp_quote("#include file.h")];
+```
+
+## <a name="requirements"></a>Configuration requise
+
+### <a name="attribute-context"></a>Contexte d'attribut
+
+|||
+|-|-|
+|**S'applique à**|**interface**|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|`dispinterface`|
+
+Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs par utilisation](../windows/attributes-by-usage.md)  
+[custom](../windows/custom-cpp.md)  
+[dispinterface](../windows/dispinterface.md)  
+[object](../windows/object-cpp.md)  
+[__interface](../cpp/interface.md)  

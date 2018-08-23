@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b648718c715a43befbc5ead828c810dbfa92d120
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6297b2d9313a8bc2c7a4f90632affa054c49c662
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646872"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595265"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel, méthode
-En cas de substitution dans une classe dérivée, annule une opération asynchrone.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-virtual void OnCancel(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** async.h  
-  
- **Espace de noms :** Microsoft::WRL  
-  
-## <a name="see-also"></a>Voir aussi  
- [AsyncBase (classe)](../windows/asyncbase-class.md)   
- [AsyncBase::Cancel, méthode](../windows/asyncbase-cancel-method.md)
+
+En cas de substitution dans une classe dérivée, annule une opération asynchrone.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+virtual void OnCancel(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** async.h
+
+**Espace de noms :** Microsoft::WRL
+
+## <a name="see-also"></a>Voir aussi
+
+[AsyncBase, classe](../windows/asyncbase-class.md)  
+[AsyncBase::Cancel, méthode](../windows/asyncbase-cancel-method.md)

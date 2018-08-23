@@ -18,47 +18,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 254734bec6649c7181e67d4d2330493b0f22197b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642810"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609435"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Affiner les couleurs (Éditeur d'images pour les icônes)
-Cette boîte de dialogue vous permet de personnaliser les couleurs à qu'utiliser pour votre image. Pour plus d’informations, consultez [personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
-  
- **Affichage de la couleur de dégradé**  
- Modifie les valeurs de la couleur sélectionnée. Positionner la croix sur la couleur que vous souhaitez modifier. Puis déplacez le curseur que vers le haut ou bas pour modifier la luminosité ou les valeurs RVB de la couleur.  
-  
- **Barre de luminosité**  
- Définit la luminosité de la couleur que vous sélectionnez dans la **affichage des dégradés de couleur** boîte. Cliquez et faites glisser la flèche blanche de la barre de luminosité supérieure ou vers le bas à moindre coût. Notez que le **couleur** zone affiche la couleur que vous avez sélectionné ainsi que l’impact de la luminosité que vous définissez.  
-  
- **Couleur**  
- Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.  
-  
- **HUE**  
- Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.  
-  
- **SAM**  
- Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.  
-  
- **Lum**  
- Répertorie la luminosité de la couleur que vous définissez. Les valeurs comprises entre 0 et 240.  
-  
- **Rouge**  
- Spécifie la valeur rouge de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.  
-  
- **Vert**  
- Spécifie la valeur verte de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.  
-  
- **Bleu**  
- Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.  
-  
-## <a name="requirements"></a>Configuration requise  
- Aucun.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Menu image](../windows/image-menu-image-editor-for-icons.md)   
- [Personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)
+
+Cette boîte de dialogue vous permet de personnaliser les couleurs à qu'utiliser pour votre image. Pour plus d’informations, consultez [personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
+
+**Affichage de la couleur de dégradé**  
+Modifie les valeurs de la couleur sélectionnée. Positionner la croix sur la couleur que vous souhaitez modifier. Puis déplacez le curseur que vers le haut ou bas pour modifier la luminosité ou les valeurs RVB de la couleur.
+
+**Barre de luminosité**  
+Définit la luminosité de la couleur que vous sélectionnez dans la **affichage des dégradés de couleur** boîte. Cliquez et faites glisser la flèche blanche de la barre de luminosité supérieure ou vers le bas à moindre coût. Notez que le **couleur** zone affiche la couleur que vous avez sélectionné ainsi que l’impact de la luminosité que vous définissez.
+
+**Couleur**  
+Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.
+
+**HUE**  
+Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.
+
+**SAM**  
+Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.
+
+**Lum**  
+Répertorie la luminosité de la couleur que vous définissez. Les valeurs comprises entre 0 et 240.
+
+**Rouge**  
+Spécifie la valeur rouge de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+
+**Vert**  
+Spécifie la valeur verte de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+
+**Bleu**  
+Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+
+## <a name="requirements"></a>Configuration requise
+
+Aucun.
+
+## <a name="see-also"></a>Voir aussi
+
+[Menu image](../windows/image-menu-image-editor-for-icons.md)  
+[Personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)

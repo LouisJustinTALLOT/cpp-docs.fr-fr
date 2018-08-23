@@ -30,16 +30,16 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016624"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610712"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
 Un aspect important du développement d’applications pour les marchés internationaux est la représentation adéquate des jeux de caractères local. Le jeu de caractères ASCII définit les caractères dans la plage 0 x 00 à 0x7F. Voici les autres jeux de caractères, principalement européens, qui définissent les caractères dans la plage 0 x 00 à 0x7F de façon identique au jeu de caractères ASCII et également définir un étendue jeu de caractères à partir de 0 x 80 à 0xFF. Par conséquent, un ensemble de 8 bits, en caractères sur un octet (SBCS) est suffisant pour représenter le jeu de caractères ASCII, ainsi que les jeux de caractères de nombreuses langues européennes. Toutefois, certains jeux de caractères non européens, tels que les Kanji japonais, comprennent plus de caractères qu’un schéma de codage d’un octet peut représenter et nécessitent donc le jeu de caractères multioctets (MBCS) encodage.  

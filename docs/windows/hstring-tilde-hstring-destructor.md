@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 177f91c0f5222144a81fa33e5418bc4baa85f99a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 394cabbd09a3eb2322424cd873e4d91825fa8c51
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603275"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603397"
 ---
 # <a name="hstringhstring-destructor"></a>HString::~HString, destructeur
-Détruit l’instance actuelle de la **HString** classe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+Détruit l’instance actuelle de la **HString** classe.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 ~HString() throw()  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** corewrappers.h  
-  
- **Namespace :** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Voir aussi  
- [HString, classe](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** corewrappers.h
+
+**Namespace :** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Voir aussi
+
+[HString, classe](../windows/hstring-class.md)
