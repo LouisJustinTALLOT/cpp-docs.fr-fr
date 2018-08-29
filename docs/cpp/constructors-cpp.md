@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572247"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131840"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -598,7 +598,7 @@ L'objet créé par les constructeurs est entièrement initialisé dès qu'un con
 
 ## <a name="inheriting_constructors"></a> Constructeurs d’héritage (C ++ 11)
 
-Une classe dérivée peut hériter des constructeurs d'une classe de base directe en utilisant une déclaration using, comme illustré dans l'exemple suivant :
+Une classe dérivée peut hériter les constructeurs d’une classe de base directe en utilisant un **à l’aide de** déclaration, comme indiqué dans l’exemple suivant :
 
 ```cpp
 #include <iostream>
@@ -647,9 +647,9 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-L'instruction using place dans la portée tous les constructeurs de la classe de base, à l'exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre.
+**Visual Studio 2017 version 15.7 et ultérieure**: le **à l’aide de** instruction dans **/std : c ++ 17** mode place dans la portée de tous les constructeurs de la classe de base, sauf ceux qui ont une signature identique aux constructeurs dans la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. Voir aussi [améliorations dans Visual Studio 2017 version 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
-Un modèle de classe peut hériter de tous les constructeurs d'un argument de type si ce type spécifie une classe de base :
+Un modèle de classe peut hériter de tous les constructeurs d’un argument de type si ce type spécifie une classe de base :
 
 ```cpp
 template< typename T >
