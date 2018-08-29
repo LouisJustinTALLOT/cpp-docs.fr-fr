@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading : Quand utiliser les Classes de synchronisation | Microsoft Docs'
+title: 'Multithreading : Quand utiliser les Classes de synchronisation MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d88bb98388aaedac9499ab91ad94bef085c0b702
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606062"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132264"
 ---
-# <a name="multithreading-when-to-use-the-synchronization-classes"></a>Multithreading : quand utiliser les classes de synchronisation
+# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading : Quand utiliser les Classes de synchronisation MFC
 Les classes multithread fournies avec MFC se répartissent en deux catégories : les objets de synchronisation ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), et [CEvent](../mfc/reference/cevent-class.md)) et accéder aux objets de synchronisation ([CMultiLock](../mfc/reference/cmultilock-class.md) et [CSingleLock](../mfc/reference/csinglelock-class.md)).  
   
 Classes de synchronisation sont utilisées lors de l’accès à une ressource doit être contrôlé pour garantir l’intégrité de la ressource. Classes d’accès de synchronisation sont utilisées pour accéder à ces ressources contrôlées. Cette rubrique explique quand utiliser chaque classe.  
@@ -61,8 +61,8 @@ Cet exemple d’application utilise les trois types de classes de synchronisatio
  
 Choisir les classes d’accès de synchronisation à utiliser sont encore plus simple. Si votre application est concernée par l’accès à une seule ressource contrôlée, utilisez `CSingleLock`. Si elle a besoin d’accéder à l’une des nombreuses ressources contrôlées, utilisez `CMultiLock`. Dans l’exemple 1, `CSingleLock` aurait été utilisé, car dans chaque cas qu’une seule ressource est nécessaire à un moment donné.  
   
-Pour plus d’informations sur l’utilisation des classes de synchronisation, consultez [Multithreading : comment utiliser les Classes de synchronisation](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Pour plus d’informations sur la synchronisation, consultez [synchronisation](http://msdn.microsoft.com/library/windows/desktop/ms686353) dans le SDK Windows. Pour plus d’informations sur la prise en charge le multithreading dans MFC, consultez [Multithreading à l’aide de C++ et MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Pour plus d’informations sur l’utilisation des classes de synchronisation, consultez [Multithreading : comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md). Pour plus d’informations sur la synchronisation, consultez [synchronisation](/windows/desktop/Sync/synchronization) dans le SDK Windows. Pour plus d’informations sur la prise en charge le multithreading dans MFC, consultez [Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  
-[Multithreading à l’aide de C++ et de MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading à l’aide de C++ et de MFC](multithreading-with-cpp-and-mfc.md)

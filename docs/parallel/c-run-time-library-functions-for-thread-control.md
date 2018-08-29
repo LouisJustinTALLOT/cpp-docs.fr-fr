@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540214"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131852"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Fonctions des bibliothèques Runtime C pour le contrôle des threads
 Tous les programmes Win32 ont au moins un thread. N’importe quel thread peut créer des threads supplémentaires. Un thread peut effectuer son travail rapidement, puis se ferme, ou il peut rester actif pendant la durée de vie du programme.  
@@ -54,4 +54,4 @@ Le [_endthread](../c-runtime-library/reference/endthread-endthreadex.md) fonctio
   
 ## <a name="see-also"></a>Voir aussi  
  
-[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)

@@ -1,7 +1,7 @@
 ---
 title: Énumérations (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406251"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130948"
 ---
 # <a name="enumerations-c"></a>Énumérations (C++)
 Une énumération est un type défini par l'utilisateur qui se compose d'un jeu de constantes intégrales nommées, appelées énumérateurs.  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  Notez que la ligne `hand = account_num;` provoque toujours l'erreur avec les enums non délimités, comme indiqué précédemment. Elle est autorisée avec un transtypage explicite. Toutefois, avec les enums délimités, la tentative de conversion dans l'instruction suivante, `account_num = Suit::Hearts;`, n'est plus autorisée sans transtypage explicite. 
 
-## <a name="enums-with-no-enumerators"></a>Enums avec aucun énumérateurs
+## <a name="no_enumerators"></a> Enums avec aucun énumérateurs
+
 **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (standard ou étendu) avec un type sous-jacent explicit et aucune énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a aucune conversion implicite en un autre type. À l’aide de ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le potentiel des erreurs subtiles provoquées par les conversions implicites par inadvertance.  
 
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f83037258ebd279f7c9ed80086a34ebf497efeed
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879366"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131681"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Mise en forme des valeurs de temps : Classes à usage général
 La procédure suivante montre comment formater les valeurs d’heure.  
@@ -41,6 +41,5 @@ Utilisez le `Format` fonction membre à partir d’un le [CTime](../atl-mfc-shar
   
 -   [Prise en charge de l’Automation de date et de programmation](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Date et heure : classes à usage général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 

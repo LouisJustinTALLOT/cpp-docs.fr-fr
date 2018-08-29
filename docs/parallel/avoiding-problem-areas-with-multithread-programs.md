@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540571"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131060"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Comment éviter les sources d'incident dans les programmes multithread
-Il existe plusieurs problèmes que vous pouvez rencontrer dans la création, la liaison ou l’exécution d’un programme multithread en langage C. Certains des problèmes plus courants sont décrits dans le tableau suivant. (Pour une description similaire du point de vue MFC, consultez [Multithreading : conseils de programmation](../parallel/multithreading-programming-tips.md).)  
+Il existe plusieurs problèmes que vous pouvez rencontrer dans la création, la liaison ou l’exécution d’un programme multithread en langage C. Certains des problèmes plus courants sont décrits dans le tableau suivant. (Pour une description similaire du point de vue MFC, consultez [Multithreading : conseils de programmation](multithreading-programming-tips.md).)  
   
 |Problème|Cause probable|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ Il existe plusieurs problèmes que vous pouvez rencontrer dans la création, la 
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879557"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132205"
 ---
 # <a name="date-and-time"></a>Date et heure
 MFC prend en charge plusieurs façons de travailler avec des dates et heures. Elles incluent notamment :  
@@ -34,8 +34,6 @@ MFC prend en charge plusieurs façons de travailler avec des dates et heures. El
 -   Prise en charge de l’automatisation [type de données DATE](../atl-mfc-shared/date-type.md). Date de prise en charge DATE et d’heure des valeurs de date/heure. Le [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulent cette fonctionnalité. Elles fonctionnent avec le [COleVariant](../mfc/reference/colevariant-class.md) classe à l’aide de la prise en charge Automation.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
-  
--   [Date et heure : classes à usage général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [Date et heure : prise en charge de SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541742"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131516"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Compilation et liaison de programmes multithread
-Le programme Bounce.c est présenté dans [exemple de programme multithread en langage C](../parallel/sample-multithread-c-program.md).  
+Le programme Bounce.c est présenté dans [exemple de programme multithread en langage C](sample-multithread-c-program.md).  
   
 Les programmes sont compilés multithread par défaut.  
   
@@ -54,4 +54,4 @@ Les programmes sont compilés multithread par défaut.
   
 ## <a name="see-also"></a>Voir aussi
 
-[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)

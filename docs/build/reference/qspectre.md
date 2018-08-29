@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375875"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130987"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ Spécifie la génération du compilateur des instructions pour atténuer certain
 
 ## <a name="remarks"></a>Notes
 
-Le **/qspectre** option indique au compilateur d’insérer des instructions pour atténuer certaines [des failles de sécurité de Spectre](https://spectreattack.com/spectre.pdf). Ces vulnérabilités, appelées *attaques par canal latéral de l’exécution spéculative*, affecter de nombreux systèmes d’exploitation et les processeurs modernes, y compris les processeurs Intel, AMD et ARM.
+Le **/qspectre** option est disponible dans Visual Studio 2017 version 15.7 et ultérieures. Il indique au compilateur d’insérer des instructions pour atténuer certaines [des failles de sécurité de Spectre](https://spectreattack.com/spectre.pdf). Ces vulnérabilités, appelées *attaques par canal latéral de l’exécution spéculative*, affecter de nombreux systèmes d’exploitation et les processeurs modernes, y compris les processeurs Intel, AMD et ARM.
 
 Le **/qspectre** option est désactivée par défaut.
 
