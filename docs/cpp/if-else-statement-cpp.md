@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405108"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131889"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 Contrôles création de branches conditionnelles. Les instructions dans le *bloc if* sont exécutés uniquement si la *-expression if* correspond à une valeur différente de zéro (ou la valeur TRUE). Si la valeur de *expression* est différent de zéro, *instruction1* et toutes les autres instructions dans le bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Si l’instruction avec un initialiseur
+## <a name="if_with_init"></a> Si l’instruction avec un initialiseur
+
 **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  Le **else** clause d’une `if...else` instruction est associée à la plus proche précédente **si** instruction dans la même étendue qui n’a pas un correspondant **else** instruction.   
 
-## <a name="constexpr-if-statements"></a>constexpr si les instructions
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser un `constexpr if` instruction pour prendre des décisions de branches de compilation sans avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) : 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si les instructions de constexpr
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser un **si constexpr** instruction pour prendre des décisions de branches de compilation sans avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) : 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

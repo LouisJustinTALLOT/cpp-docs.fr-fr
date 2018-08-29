@@ -1,5 +1,5 @@
 ---
-title: -diagnostics (options du compilateur de diagnostic) | Documents Microsoft
+title: -diagnostics (options de diagnostic du compilateur) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/11/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f1dce7c7c48e7c7c94da95ca187e0388b3f5d4d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371770"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131639"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (options de diagnostic du compilateur)  
   
@@ -37,15 +37,18 @@ Utilisez le **/diagnostics** option du compilateur pour spécifier l’affichage
 ```  
 
 ## <a name="remarks"></a>Notes  
+
+Cette option est prise en charge dans Visual Studio 2017 et versions ultérieures.
+
 Le **/diagnostics** option du compilateur contrôle l’affichage des informations d’erreur et avertissement.  
   
-Le **/diagnostics:classic** option est la valeur par défaut, ce qui n'indique que le numéro de ligne où le problème a été trouvé.  
+Le **/diagnostics:classic** option est la valeur par défaut, qui signale uniquement le numéro de ligne où le problème a été trouvé.  
   
-Le **/diagnostics:column** option inclut également la colonne où le problème a été trouvé. Cela peut vous aider à identifier la construction de langage spécifique ou un caractère qui pose problème.  
+Le **/diagnostics:column** option inclut également la colonne où le problème a été trouvé. Cela peut vous aider à identifier la construction de langage spécifique ou un caractère qui provoque le problème.  
   
-Le **/diagnostics:caret** option permet d’inclure la colonne dans laquelle le problème a été trouvé et place le signe insertion (^) sous l’emplacement dans la ligne de code où le problème a été détecté.  
+Le **/diagnostics:caret** option permet d’inclure la colonne où le problème a été trouvé et place le signe insertion (^) sous l’emplacement dans la ligne de code où le problème a été détecté.  
   
-Notez que dans certains cas, le compilateur ne détecte pas un problème où il s’est produite. Par exemple, un point-virgule manquant ne pas être détecté tant que symboles autres et inattendues ont été rencontrés. La colonne est signalée et le point d’insertion est placé dans lequel le compilateur a détecté que quelque chose est incorrecte, ce qui n’est pas toujours où vous souhaitez apporter la correction.  
+Notez que, dans certains cas, le compilateur ne détecte pas un problème où il s’est produite. Par exemple, un point-virgule manquant peuvent ne pas être détecté en tant que symboles autres, inattendues ont été rencontrées. La colonne est signalée et le point d’insertion est placé dans lequel le compilateur a détecté que transmettaient, qui n’est pas toujours où vous avez besoin effectuer votre correction.  
   
 Le **/diagnostics** option est disponible à partir de Visual Studio 2017.  
   
@@ -55,7 +58,7 @@ Le **/diagnostics** option est disponible à partir de Visual Studio 2017.
   
 2. Sous **propriétés de Configuration**, développez le **C/C++** dossier et choisissez le **général** page de propriétés.  
   
-3. Utilisez le contrôle de liste déroulante dans le **Diagnostics Format** pour sélectionner un diagnostic vous utilisiez l’option. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.  
+3. Utiliser le contrôle de liste déroulante dans le **Diagnostics Format** option d’affichage de champ pour sélectionner un diagnostic. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   

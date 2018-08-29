@@ -1,5 +1,5 @@
 ---
-title: 'Temps écoulé : Les Classes à usage général | Documents Microsoft'
+title: 'Temps écoulé : Les Classes à usage général | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7ef11bb20124a05e2e85c408ce27de8f982546
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354264"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131612"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Temps écoulé : Les Classes à usage général
-La procédure suivante montre comment calculer la différence entre deux `CTime` objets et obtenir un `CTimeSpan` résultat.  
-  
-#### <a name="to-calculate-elapsed-time"></a>Pour calculer le temps écoulé  
-  
-1.  Utilisez le `CTime` et `CTimeSpan` objets pour calculer le temps écoulé, comme suit :  
+La procédure suivante montre comment calculer la différence entre deux `CTime` objets et obtenez un `CTimeSpan` résultat. Utilisez le `CTime` et `CTimeSpan` objets pour calculer le temps écoulé, comme suit :  
   
      [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
   
-     Une fois que vous avez calculée `elapsedTime`, vous pouvez utiliser les fonctions membres de `CTimeSpan` pour extraire les composants de la valeur de temps écoulé.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Date et heure : classes à usage général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+Une fois que vous avez calculé `elapsedTime`, vous pouvez utiliser les fonctions membres de `CTimeSpan` pour extraire les composants de la valeur de temps écoulé.  
 

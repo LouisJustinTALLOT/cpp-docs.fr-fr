@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538322"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132074"
 ---
 # <a name="thread-local-storage-tls"></a>Stockage local des threads (TLS)
 Le stockage local des threads (TLS, {i>Thread Local Storage<i}) est une méthode où chaque thread d'un processus multithread donné peut allouer des emplacements de stockage de données propres au thread. Dynamiquement les données propres au thread (exécution) sont pris en charge par le biais de l’API TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 et le compilateur Visual C++ prennent désormais en charge les données par thread liées statiquement (au moment du chargement) en plus de l'implémentation existante des API.  
@@ -117,4 +117,4 @@ Les instructions suivantes doivent être observées au moment de déclarer des v
   
 ## <a name="see-also"></a>Voir aussi  
  
-[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)   
+[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)   

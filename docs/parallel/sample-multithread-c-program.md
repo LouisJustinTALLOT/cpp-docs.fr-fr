@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544409"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131334"
 ---
 # <a name="sample-multithread-c-program"></a>Exemple de programme multithread en langage C
-Bounce.c est un exemple de programme multithread qui crée un thread chaque fois que la lettre `a` ou `A` est typé. Chaque thread rebondit un visage souriant de couleur différente autour de l’écran. Jusqu'à 32 threads peuvent être créés. Arrêt normal du programme se produit lorsque `q` ou `Q` est typé. Pour plus d’informations sur la compilation et liaison de Bounce.c, consultez [compilation et liaison de programmes Multithread](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c est un exemple de programme multithread qui crée un thread chaque fois que la lettre `a` ou `A` est typé. Chaque thread rebondit un visage souriant de couleur différente autour de l’écran. Jusqu'à 32 threads peuvent être créés. Arrêt normal du programme se produit lorsque `q` ou `Q` est typé. Pour plus d’informations sur la compilation et liaison de Bounce.c, consultez [compilation et liaison de programmes Multithread](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)
