@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading : Arrêt des Threads | Microsoft Docs'
+title: 'Multithreading : Arrêt des Threads dans la bibliothèque MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608842"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131943"
 ---
-# <a name="multithreading-terminating-threads"></a>Multithreading : arrêt d'exécution des threads
+# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading : Arrêt des Threads dans MFC
 Deux situations normales provoquent un arrêt du thread : la fonction de contrôle se ferme ou le thread n’est pas autorisé à s’exécuter jusqu'à la fin. Si un traitement de texte utilise un thread pour l’impression en arrière-plan, la fonction de contrôle s’arrêtera normalement si l’impression se termine avec succès. Si l’utilisateur souhaite annuler l’impression, toutefois, le thread d’impression en arrière-plan doit être arrêté avant terme. Cette rubrique explique comment implémenter chaque situation et comment obtenir le code de sortie d’un thread qui se termine.  
   
 - [Arrêt du Thread normal](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ Soit la méthode vous permet de savoir pourquoi un `CWinThread` objet s’est ar
   
 ## <a name="see-also"></a>Voir aussi  
  
-[Multithreading à l’aide de C++ et MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

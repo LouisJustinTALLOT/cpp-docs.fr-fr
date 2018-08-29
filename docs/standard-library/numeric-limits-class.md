@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954875"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131436"
 ---
 # <a name="numericlimits-class"></a>numeric_limits, classe
 
@@ -156,7 +156,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 Retourne la plus petite valeur dénormalisée différente de zéro.
 
 ```cpp
-static Type denorm_min() throw();
+static constexpr Type denorm_min() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -215,7 +215,7 @@ The smallest nonzero denormalized value
 Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.
 
 ```cpp
-static const int digits = 0;
+static constexpr int digits = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -259,7 +259,7 @@ int main( )
 Retourne le nombre de chiffres décimaux que le type peut représenter sans perte de précision.
 
 ```cpp
-static const int digits10 = 0;
+static constexpr int digits10 = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -303,7 +303,7 @@ The float is; 100000000
 La fonction retourne la différence entre 1 et la plus petite valeur supérieure à 1 qui peut être représentée pour le type de données.
 
 ```cpp
-static Type epsilon() throw();
+static constexpr Type epsilon() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -355,7 +355,7 @@ The difference between 1 and the smallest value greater than 1
 Teste si un type autorise les valeurs dénormalisées.
 
 ```cpp
-static const float_denorm_style has_denorm = denorm_absent;
+static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -401,7 +401,7 @@ Whether long int objects allow denormalized values: 0
 Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.
 
 ```cpp
-static const bool has_denorm_loss = false;
+static constexpr bool has_denorm_loss = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -447,7 +447,7 @@ Whether long int objects can detect denormalized loss: 0
 Teste si un type a une représentation pour l'infini positif.
 
 ```cpp
-static const bool has_infinity = false;
+static constexpr bool has_infinity = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -493,7 +493,7 @@ Whether long int objects have infinity: 0
 Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.
 
 ```cpp
-static const bool has_quiet_NaN = false;
+static constexpr bool has_quiet_NaN = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -539,7 +539,7 @@ Whether long int objects have quiet_NaN: 0
 Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).
 
 ```cpp
-static const bool has_signaling_NaN = false;
+static constexpr bool has_signaling_NaN = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -585,7 +585,7 @@ Whether long int objects have a signaling_NaN: 0
 Représentation de l’infini positif pour un type, si elle est disponible.
 
 ```cpp
-static Type infinity() throw();
+static constexpr Type infinity() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -639,7 +639,7 @@ The representation of infinity for type long double is: inf
 Teste si l'ensemble des valeurs qu'un type peut représenter est fini.
 
 ```cpp
-static const bool is_bounded = false;
+static constexpr bool is_bounded = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -693,7 +693,7 @@ Whether unsigned char objects have bounded set of representable values: 1
 Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrondi.
 
 ```cpp
-static const bool is_exact = false;
+static constexpr bool is_exact = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -747,7 +747,7 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 Teste si un type est conforme aux normes IEC 559.
 
 ```cpp
-static const bool is_iec559 = false;
+static constexpr bool is_iec559 = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -797,7 +797,7 @@ Whether unsigned char objects conform to iec559 standards: 0
 Teste si un type a une représentation des entiers.
 
 ```cpp
-static const bool is_integer = false;
+static constexpr bool is_integer = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -847,7 +847,7 @@ Whether unsigned char objects have an integral representation: 1
 Teste si un **type** a une représentation du modulo.
 
 ```cpp
-static const bool is_modulo = false;
+static constexpr bool is_modulo = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -897,7 +897,7 @@ Whether unsigned char objects have a modulo representation: 1
 Teste si un type a une représentation signée.
 
 ```cpp
-static const bool is_signed = false;
+static constexpr bool is_signed = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -947,7 +947,7 @@ Whether unsigned char objects have a signed representation: 0
 Teste si un type a une spécialisation explicite définie dans la classe de modèle `numeric_limits`.
 
 ```cpp
-static const bool is_specialized = false;
+static constexpr bool is_specialized = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1001,7 +1001,7 @@ Whether int* objects have an explicit specialization in the class: 0
 Retourne la plus grande valeur finie négative.
 
 ```cpp
-static Type lowest() throw();
+static constexpr Type lowest() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1017,7 +1017,7 @@ Retourne la valeur finie plus négative pour le type (ce qui est généralement 
 Retourne la valeur finie maximale pour un type.
 
 ```cpp
-static Type max() throw();
+static constexpr Type max() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1059,7 +1059,7 @@ int main() {
 Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
 ```cpp
-static int max_digits10 = 0;
+static constexpr int max_digits10 = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1075,7 +1075,7 @@ Le membre stocke retourne le nombre de chiffres décimaux nécessaires pour s'as
 Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.
 
 ```cpp
-static const int max_exponent = 0;
+static constexpr int max_exponent = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1121,7 +1121,7 @@ The maximum radix-based exponent for type long double is:  1024
 Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.
 
 ```cpp
-static const int max_exponent10 = 0;
+static constexpr int max_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1167,7 +1167,7 @@ The maximum base 10 exponent for type long double is:  308
 Retourne la valeur normalisée minimale pour un type.
 
 ```cpp
-static Type min() throw();
+static constexpr Type min() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1217,7 +1217,7 @@ The minimum value for type short int is:  -32768
 Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.
 
 ```cpp
-static const int min_exponent = 0;
+static constexpr int min_exponent = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1263,7 +1263,7 @@ The minimum radix-based exponent for type long double is:  -1021
 Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.
 
 ```cpp
-static const int min_exponent10 = 0;
+static constexpr int min_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1309,7 +1309,7 @@ The minimum base 10 exponent for type long double is:  -307
 Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le type.
 
 ```cpp
-static Type quiet_NaN() throw();
+static constexpr Type quiet_NaN() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1355,7 +1355,7 @@ The quiet NaN for type long double is:  1.#QNAN
 Retourne la base entière, appelée base (radix), utilisée pour la représentation d'un type.
 
 ```cpp
-static const int radix = 0;
+static constexpr int radix = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1401,7 +1401,7 @@ The base for type long double is:  2
 Retourne l'erreur d'arrondi maximale pour le type.
 
 ```cpp
-static Type round_error() throw();
+static constexpr Type round_error() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1443,7 +1443,7 @@ The maximum rounding error for type long double is:  0.5
 Retourne une valeur qui décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.
 
 ```cpp
-static const float_round_style round_style = round_toward_zero;
+static constexpr float_round_style round_style = round_toward_zero;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1490,7 +1490,7 @@ The rounding style for an int type is: 0
 Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour le type.
 
 ```cpp
-static Type signaling_NaN() throw();
+static constexpr Type signaling_NaN() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1530,7 +1530,7 @@ int main( )
 Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.
 
 ```cpp
-static const bool tinyness_before = false;
+static constexpr bool tinyness_before = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1580,7 +1580,7 @@ Whether unsigned char types can detect tinyness before rounding: 0
 Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.
 
 ```cpp
-static const bool traps = false;
+static constexpr bool traps = false;
 ```
 
 ### <a name="return-value"></a>Valeur de retour

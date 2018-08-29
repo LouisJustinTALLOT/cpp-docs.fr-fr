@@ -1,5 +1,5 @@
 ---
-title: 'Heure actuelle : Classes à usage général | Documents Microsoft'
+title: 'Heure actuelle : Classes à usage général | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec71cf76f859457aa76e69b57b58db3940e974da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c99a2626c9f60c6407ca9b374bed9c83c981e5b3
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354593"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132005"
 ---
 # <a name="current-time-general-purpose-classes"></a>Heure actuelle : Classes à usage général
 La procédure suivante montre comment créer un `CTime` de l’objet et l’initialiser avec l’heure actuelle.  
@@ -35,20 +35,19 @@ La procédure suivante montre comment créer un `CTime` de l’objet et l’init
      [!code-cpp[NVC_ATLMFC_Utilities#171](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_1.cpp)]  
   
     > [!NOTE]
-    >  Sans être initialisé `CTime` objets ne sont pas initialisés avec une heure valide.  
+    >  Non initialisé `CTime` objets ne sont pas initialisés à une heure valide.  
   
-2.  Appelez le `CTime::GetCurrentTime` fonction permettant d’obtenir l’heure actuelle du système d’exploitation. Cette fonction retourne un `CTime` objet qui peut être utilisé pour définir la valeur de `CTime`, comme suit :  
+2.  Appelez le `CTime::GetCurrentTime` fonction pour obtenir l’heure actuelle du système d’exploitation. Cette fonction retourne un `CTime` objet qui peut être utilisé pour définir la valeur de `CTime`, comme suit :  
   
      [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]  
   
-     Étant donné que `GetCurrentTime` est une fonction membre statique à partir de la `CTime` (classe), vous devez qualifier son nom avec le nom de la classe et l’opérateur de résolution de portée (`::`), `CTime::GetCurrentTime()`.  
+     Dans la mesure où `GetCurrentTime` est une fonction membre statique à partir de la `CTime` (classe), vous devez qualifier son nom avec le nom de la classe et l’opérateur de résolution de portée (`::`), `CTime::GetCurrentTime()`.  
   
- Bien évidemment, les deux étapes décrites précédemment peuvent être combinées en une seule instruction comme suit :  
+ Bien sûr, les deux étapes décrites précédemment peuvent être combinés dans une seule instruction comme suit :  
   
  [!code-cpp[NVC_ATLMFC_Utilities#173](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_3.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Date et heure : classes à usage général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 
 
 

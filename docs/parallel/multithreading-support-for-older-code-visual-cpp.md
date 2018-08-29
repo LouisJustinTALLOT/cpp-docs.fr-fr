@@ -1,7 +1,7 @@
 ---
 title: Prise en charge le multithreading pour le Code plus ancien (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538647"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132100"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Prise en charge du multithreading pour le code plus ancien (Visual C++)
 Visual C++ vous permet d’avoir plusieurs threads simultanés d’exécution en cours d’exécution simultanément. Avec le multithreading, vous pouvez exécuter les tâches en arrière-plan, gérer des flux simultanés d’entrées, gérer une interface utilisateur et bien plus encore.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  
-[Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)  
 Fournit la prise en charge pour la création d’applications multithread avec Microsoft Windows  
   
-[Multithreading à l’aide de C++ et de MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Multithreading à l’aide de C++ et de MFC](multithreading-with-cpp-and-mfc.md)  
 Décrit les processus et les threads et que l’approche MFC pour le multithreading est.  
   
-[Multithreading et paramètres régionaux](../parallel/multithreading-and-locales.md)  
+[Multithreading et paramètres régionaux](multithreading-and-locales.md)  
 Décrit les problèmes qui surviennent lors de l’utilisation de la fonctionnalité de paramètres régionaux de la bibliothèque Runtime C et la bibliothèque C++ Standard dans une application multithread.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
