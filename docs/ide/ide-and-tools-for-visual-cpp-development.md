@@ -1,7 +1,7 @@
 ---
 title: IDE et outils de développement Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705398"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132018"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE et outils de développement Visual C++
 
@@ -29,7 +29,11 @@ En plus des outils partagés dans l’IDE Visual Studio, MSVC propose plusieurs 
 
 ## <a name="creating-a-solution-and-projects"></a>Création d'une solution et de projets
 
-Un *projet* est essentiellement un ensemble de fichiers de code source et des ressources comme des images ou des fichiers de données qui sont intégrés dans un fichier exécutable. Visual Studio 2017 peut prendre en charge tous les systèmes de génération ou outils de génération personnalisés que vous voulez utiliser, avec prise en charge complète d’IntelliSense, de la navigation et du débogage :
+Un *projet* est essentiellement un ensemble de fichiers de code source et des ressources comme des images ou des fichiers de données qui sont intégrés dans un fichier exécutable. 
+
+Visual Studio 2015 prend en charge les projets MSBuild. Vous pouvez télécharger des extensions Visual Studio pour d’autres systèmes de build tels que Qt ou CMake.
+
+Visual Studio 2017 prend en charge tous les systèmes de build ou outils de build personnalisés que vous voulez utiliser, avec prise en charge complète d’IntelliSense, de la navigation et du débogage :
 
 - MSBuild est le système de génération natif de Visual Studio et c’est souvent le meilleur choix pour les applications de plateforme Windows universelle (UWP) ou les applications de bureau Windows héritées qui utilisent MFC ou ATL. Pour plus d’informations sur les projets C++ basés sur MSBuild, consultez [Création et gestion de projets basés sur MSBuild](creating-and-managing-visual-cpp-projects.md).
 - CMake est un système de génération multiplateforme intégré dans l’IDE Visual Studio quand vous installez une charge de travail Développement Desktop en C++. Pour plus d’informations, consultez [CMake projects in Visual C++](cmake-tools-for-visual-cpp.md).
@@ -105,13 +109,17 @@ Vous pouvez également utiliser le compilateur (cl.exe) et de nombreux autres ou
 
 Visual Studio inclut une infrastructure de tests unitaires pour le code C++ natif et pour C++/CLI. Pour plus d’informations, consultez [Vérification du code à l’aide de tests unitaires](/visualstudio/test/unit-test-your-code) et [Écriture de tests unitaires pour C/C++ avec le framework de tests unitaires Microsoft pour C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
+## <a name="analyze"></a>Analyser
+
+Visual Studio inclut des outils d’analyse de code statique pour C++, notamment une implémentation des vérificateurs de règles [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Pour plus d’informations, consultez [Vue d’ensemble de l’analyse de code pour C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+
 ## <a name="debug"></a>Débogage
 
 Vous pouvez déboguer votre programme en appuyant sur **F5** quand votre configuration de projet est définie sur Debug. Pendant le débogage, vous pouvez définir des points d’arrêt en appuyant sur **F9**, parcourir le code pas à pas en appuyant sur **F10**, voir les valeurs de variables ou registres spécifiés et même, dans certains cas, modifier le code et continuer le débogage sans recompiler. Pour plus d’informations, consultez [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="deploy-completed-applications"></a>Déployer des applications terminées
 
-Vous déployez une application UWP pour les clients par le biais du Microsoft Store en accédant à l’option de menu **Projet** > **Store**. Le déploiement de la bibliothèque CRT est géré automatiquement en arrière-plan. Pour plus d’informations, consultez [Vente d’applications](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Vous déployez une application UWP pour les clients par le biais du Microsoft Store en accédant à l’option de menu **Projet** > **Store**. Le déploiement de la bibliothèque CRT est géré automatiquement en arrière-plan. Pour plus d’informations, consultez [Publier des applications et des jeux Windows](/windows/uwp/publish/). 
 
 Quand vous déployez une application de bureau C++ native sur un autre ordinateur, vous devez installer l'application elle-même et tous les fichiers bibliothèques dont elle dépend. Il existe trois façons de déployer le runtime universel C++ (UCRT) avec une application : le déploiement central, le déploiement local ou la liaison statique. Pour plus d’informations, consultez [Déploiement d’applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

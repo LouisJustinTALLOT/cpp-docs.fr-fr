@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253813"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131304"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
 
@@ -30,6 +30,18 @@ L’environnement de développement intégré (IDE) Visual Studio offre un ensem
 Si vous n’avez pas encore installé Visual Studio, le moment est venu. Pour connaître les liens de téléchargement et suivre une procédure pas à pas rapide, consultez [Installer la prise en charge de C++ dans Visual Studio](../build/vscpp-step-0-installation.md). Pour plus d’informations sur l’installation de Visual Studio en général et obtenir des conseils de dépannage si un problème se produit, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Veillez à choisir la charge de travail **Développement Desktop en C++** pour inclure les compilateurs, outils et bibliothèques C++ quand vous installez Visual Studio, car ils ne sont pas installés par défaut.
 
 Ces procédures pas à pas supposent que vous avez installé Visual Studio, ainsi que le langage Visual C++ et les composants nécessaires au développement Windows Desktop. Nous partons également du principe que vous comprenez les notions de base du langage C++. Si vous devez apprendre le langage C++, de nombreux livres et ressources web sont à votre disposition. Il est judicieux de commencer par la page [Prise en main](https://isocpp.org/get-started) du site web Standard C++ Foundation.
+
+Si vous n’avez pas encore installé Visual Studio, le moment est venu. 
+
+**Installation de Visual Studio 2017**
+
+Pour obtenir Visual Studio 2017, vous pouvez le télécharger depuis [Téléchargements de Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Veillez à inclure les outils de développement Visual C++ quand vous installez Visual Studio, car ceux-ci ne sont pas installés par défaut. Pour plus d’informations sur l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio).
+
+**Installation de Visual Studio 2015**
+
+ Pour installer Visual Studio 2015, accédez à [Télécharger d’anciennes versions de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Exécutez le programme d’installation, choisissez **Installation personnalisée**, puis le composant C++. 
+
+ En règle générale, nous vous recommandons vivement d’utiliser Visual Studio 2017 même si vous avez besoin de compiler votre code en utilisant le compilateur de Visual Studio 2015. Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](../porting/use-native-multi-targeting.md).
 
 Une fois que vous avez terminé votre installation de Visual Studio, vous êtes prêt à continuer.
 
