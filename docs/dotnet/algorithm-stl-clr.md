@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 93bbc86e32d75e81c342a0a0a71b823b87df62b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376148"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196763"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Définit les fonctions de modèle de conteneur STL/CLR qui exécutent des algorithmes.  
@@ -287,7 +287,7 @@ template<class _InIt, class _OutIt> inline
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction comporte comme la fonction de bibliothèque Standard C++ `copy`. Pour plus d’informations, consultez [copie](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1). 
+ Cette fonction comporte comme la fonction de bibliothèque Standard C++ `copy`. Pour plus d’informations, consultez [copie](../standard-library/algorithm-functions.md#copy). 
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.  
@@ -826,7 +826,7 @@ template<class _FwdIt, class _Ty> inline
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction comporte comme la fonction de bibliothèque Standard C++ `remove`. Pour plus d’informations, consultez [supprimer](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
+ Cette fonction comporte comme la fonction de bibliothèque Standard C++ `remove`. Pour plus d’informations, consultez [supprimer](../standard-library/algorithm-functions.md#remove).  
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 Copie les éléments d'une plage source vers une plage de destination. Les éléments ayant une valeur spécifiée ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.  
@@ -1149,7 +1149,7 @@ template<class _BidIt, class _Pr> inline
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction comporte comme la fonction de bibliothèque Standard C++ `swap`. Pour plus d’informations, consultez [échange](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972).  
+ Cette fonction comporte comme la fonction de bibliothèque Standard C++ `swap`. Pour plus d’informations, consultez [échange](../standard-library/algorithm-functions.md#swap).  
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 Échange les éléments d'une plage avec ceux d'une autre plage de taille égale.  

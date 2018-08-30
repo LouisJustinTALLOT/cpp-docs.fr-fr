@@ -1,5 +1,5 @@
 ---
-title: Objets graphiques | Documents Microsoft
+title: Objets graphiques | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930844"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197183"
 ---
 # <a name="graphic-objects"></a>Objets graphiques
 Windows propose divers outils de dessin à utiliser dans des contextes de périphériques. On trouve des stylets pour tracer des lignes, des pinceaux pour remplir des intérieurs et des polices pour dessiner du texte. MFC propose des classes d'objets graphiques équivalentes aux outils de dessin de Windows. Le tableau ci-dessous présente les classes disponibles et les types de handle GDI (Graphics Device Interface) Windows équivalents.  
   
 > [!NOTE]
->  Pour plus d’informations, consultez la documentation du Kit de développement logiciel GDI + à : [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Pour plus d’informations, consultez la documentation du Kit de développement logiciel GDI + à : [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Cet article explique l'utilisation de ces classes d'objets graphiques :  
   
@@ -90,7 +90,7 @@ Windows propose divers outils de dessin à utiliser dans des contextes de périp
   
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>Pour créer un objet graphique dans un contexte de périphérique  
   
-1.  Définissez un objet graphique sur le frame de pile. Initialisez l'objet avec la fonction de création propre au type, par exemple, `CreatePen`. Vous pouvez aussi initialiser l'objet dans le constructeur. Consultez la description de [la création d’une étape et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md), qui fournit des exemples de code.  
+1.  Définissez un objet graphique sur le frame de pile. Initialisez l'objet avec la fonction de création propre au type, par exemple, `CreatePen`. Vous pouvez aussi initialiser l'objet dans le constructeur. Consultez la rubrique sur [la création d’une étape et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md), qui fournit des exemples de code.  
   
 2.  [Sélectionnez l’objet dans le contexte de périphérique en cours](../mfc/selecting-a-graphic-object-into-a-device-context.md), l’enregistrement de l’ancien objet graphique qui était sélectionné auparavant.  
   
@@ -101,11 +101,11 @@ Windows propose divers outils de dessin à utiliser dans des contextes de périp
 > [!NOTE]
 >  Si vous prévoyez d'utiliser un objet graphique de façon récurrente, vous pouvez l'allouer une fois et le sélectionner dans un contexte de périphérique chaque fois que vous en avez besoin. Veillez à supprimer cet objet dès que vous n'en avez plus besoin.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
+### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
   
--   [Construction d’une étape et en deux étapes d’objets graphiques](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [Construction d’objets graphiques en une et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [Exemple de construction d’un stylet en une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [Exemple de construction d’un stylet dans une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
 -   [Sélection d’un objet graphique dans un contexte d’appareil](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   

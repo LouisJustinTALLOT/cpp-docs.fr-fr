@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ba67a990b027ff4cd770a0583f6d857a0ee7c725
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881056"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201039"
 ---
 # <a name="ccomcontainedobject-class"></a>Ccomcontainedobject, classe
-Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire `IUnknown`.  
+Cette classe implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) par délégation à l’objet propriétaire `IUnknown`.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -67,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Décrémente le décompte de références sur l’objet propriétaire.|  
   
 ## <a name="remarks"></a>Notes  
- ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), et [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire `IUnknown`. (Le propriétaire est l’objet externe d’une agrégation ou de l’objet pour lequel une interface détachable est créée.) `CComContainedObject` appels `CComObjectRootEx`de `OuterQueryInterface`, `OuterAddRef`, et `OuterRelease`, hérités via `Base`.  
+ ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), et [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) par délégation à l’objet propriétaire `IUnknown`. (Le propriétaire est l’objet externe d’une agrégation ou de l’objet pour lequel une interface détachable est créée.) `CComContainedObject` appels `CComObjectRootEx`de `OuterQueryInterface`, `OuterAddRef`, et `OuterRelease`, hérités via `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Base`  

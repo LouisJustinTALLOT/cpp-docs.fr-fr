@@ -1,7 +1,7 @@
 ---
-title: Erreur irrécupérable NMAKE U1000 | Documents Microsoft
+title: Erreur irrécupérable NMAKE U1000 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194886"
 ---
 # <a name="nmake-fatal-error-u1000"></a>Erreur irrécupérable NMAKE U1000
-Erreur de syntaxe : ')' manquante dans l’appel de macro  
-  
- Une parenthèse ouvrante, **(**, semblait sans parenthèse fermante, **)**, dans un appel de macro. La forme correcte est **$(***nom***)**; `$` *n* est autorisée pour les noms de caractères.
+
+> Erreur de syntaxe : ')' manquant dans l’appel de macro
+
+Une parenthèse ouvrante, **(**, semblait sans parenthèse fermante, **)**, dans un appel de macro. La forme correcte est **$(**<em>nom</em>**)**; **$** <em>n</em> est autorisée pour les noms de caractères.

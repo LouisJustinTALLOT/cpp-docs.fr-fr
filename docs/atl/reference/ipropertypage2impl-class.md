@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882895"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197144"
 ---
 # <a name="ipropertypage2impl-class"></a>Classe de IPropertyPage2Impl
 Cette classe implémente `IUnknown` et hérite de l’implémentation par défaut de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|Spécifie quel contrôle de la propriété reçoit le focus lorsque la page de propriétés est activée. L’implémentation de ATL retourne E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Notes  
- Le [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interface étend [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) en ajoutant le `EditProperty` (méthode). Cette méthode permet à un client sélectionner une propriété spécifique dans un objet de page de propriétés.  
+ Le [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interface étend [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) en ajoutant le `EditProperty` (méthode). Cette méthode permet à un client sélectionner une propriété spécifique dans un objet de page de propriétés.  
   
  Classe `IPropertyPage2Impl` renvoie simplement E_NOTIMPL pour `IPropertyPage2::EditProperty`. Toutefois, il hérite de l’implémentation par défaut de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
   
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  Retourne E_NOTIMPL.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) dans le Kit de développement logiciel Windows.  
+ Consultez [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Iperpropertybrowsingimpl, classe](../../atl/reference/iperpropertybrowsingimpl-class.md)   

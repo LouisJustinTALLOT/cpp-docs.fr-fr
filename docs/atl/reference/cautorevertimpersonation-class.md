@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885319"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196317"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation, classe
 Cette classe rétablit [CAccessToken](../../atl/reference/caccesstoken-class.md) objets à un état nonimpersonating lorsqu’il devient hors de portée.  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Récupère l’actuel jeton accès associé à cet objet.|  
   
 ## <a name="remarks"></a>Notes  
- Un [jeton d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000. Ces jetons d’accès peuvent être représentées avec la `CAccessToken` classe.  
+ Un [jeton d’accès](/windows/desktop/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000. Ces jetons d’accès peuvent être représentées avec la `CAccessToken` classe.  
   
  Il est parfois nécessaire d’emprunter l’identité des jetons d’accès. Cette classe est fournie pour des raisons pratiques, mais il n’effectue pas l’emprunt d’identité des jetons d’accès ; Il effectue uniquement le rétablissement automatique à un état nonimpersonated. Il s’agit, car l’emprunt d’identité du jeton d’accès peut être effectuée de différentes manières.  
   
- Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le SDK Windows.  
+ Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple ATLSecurity](../../visual-cpp-samples.md)   
- [Jetons d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Jetons d’accès](/windows/desktop/SecAuthZ/access-tokens)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

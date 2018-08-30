@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0318abde877e9b647c1781408d2e22cc9d70824e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200665"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert (macro), _assert, _wassert
 
@@ -69,7 +69,7 @@ void _wassert(
 
 ### <a name="parameters"></a>Paramètres
 
-*expression* une expression scalaire (expressions de pointeur comprises) qui prend la valeur de différente de zéro (**true**) ou 0 (**false**).
+*expression* une expression scalaire (expressions de pointeur comprises) qui prend la valeur différente de zéro à (**true**) ou 0 (**false**).
 
 *message* le message à afficher.
 
@@ -79,23 +79,23 @@ void _wassert(
 
 ## <a name="remarks"></a>Notes
 
-Le **assert** macro est généralement utilisé pour identifier des erreurs de logique pendant le développement de programme. Il permet d’arrêter l’exécution du programme lorsque des conditions inattendues se produisent en implémentant la *expression* argument soit évaluée comme **false** uniquement lorsque le programme fonctionne correctement. Contrôles d’assertion peuvent être désactivées au moment de la compilation en définissant la macro **NDEBUG**. Vous pouvez désactiver le **assert** macro sans modifier vos fichiers source à l’aide un **/DNDEBUG** une option de ligne de commande. Vous pouvez désactiver le **assert** macro dans votre code source en utilisant un `#define NDEBUG` directive avant \<assert.h > est inclus.
+Le **assert** macro est généralement utilisée pour identifier les erreurs de logique pendant le développement de programme. Utilisez-le pour arrêter l’exécution du programme lorsque des conditions inattendues se produisent en implémentant la *expression* argument soit évaluée comme **false** uniquement lorsque le programme fonctionne correctement. Contrôles d’assertion peuvent être désactivées au moment de la compilation en définissant la macro **NDEBUG**. Vous pouvez désactiver le **assert** macro sans modifier vos fichiers source à l’aide un **/DNDEBUG** option de ligne de commande. Vous pouvez désactiver le **assert** macro dans votre code source en utilisant un `#define NDEBUG` directive avant \<assert.h > est inclus.
 
-Le **assert** imprime macro un message de diagnostic lorsque *expression* prend la valeur de **false** (0) et appelle [abandonner](abort.md) pour arrêter le programme exécution. Aucune action n’est effectuée si *expression* est **true** (différente de zéro). Le message de diagnostic contient l'expression qui a échoué, le nom du fichier source et le numéro de ligne où l'assertion a échoué.
+Le **assert** imprime macro un message de diagnostic lorsque *expression* prend la valeur **false** (0) et appelle [abandonner](abort.md) pour arrêter le programme exécution. Aucune action n’est effectuée si *expression* est **true** (différent de zéro). Le message de diagnostic contient l'expression qui a échoué, le nom du fichier source et le numéro de ligne où l'assertion a échoué.
 
 le message de diagnostic est imprimé en caractères larges. Ainsi, la procédure fonctionne comme prévu même si l'expression contient des caractères Unicode.
 
-La destination du message de diagnostic dépend du type d'application qui a appelé la routine. Applications console reçoivent toujours le message via **stderr**. Dans une application Windows, **assert** appelle Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) fonction permettant de créer une boîte de message pour afficher le message avec un **OK** bouton. Lorsque l'utilisateur clique sur **OK**, le programme s'interrompt immédiatement.
+La destination du message de diagnostic dépend du type d'application qui a appelé la routine. Applications console reçoivent toujours le message via **stderr**. Dans une application basée sur Windows, **assert** appelle le Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) fonction permettant de créer une boîte de message pour afficher le message avec un **OK** bouton. Lorsque l'utilisateur clique sur **OK**, le programme s'interrompt immédiatement.
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime, **assert** crée une boîte de message avec trois boutons : **abandonner**, **réessayer**et **Ignorer**. Si l'utilisateur clique sur **Abandonner**, le programme s'interrompt immédiatement. Si l'utilisateur clique sur **Réessayer**, le débogueur est appelé et l'utilisateur peut déboguer le programme si le débogage juste-à-temps (JIT) est activé. Si l’utilisateur clique sur **ignorer**, **assert** poursuit son exécution normale : création de la boîte de message avec le **OK** bouton. Notez que lorsque vous cliquez sur **Ignorer** alors qu'une condition d'erreur existe, un comportement non défini peut se produire.
+Lorsque l’application est liée à une version debug des bibliothèques Runtime, **assert** crée une boîte de message avec trois boutons : **abandonner**, **de nouvelle tentative**et **Ignorer**. Si l'utilisateur clique sur **Abandonner**, le programme s'interrompt immédiatement. Si l'utilisateur clique sur **Réessayer**, le débogueur est appelé et l'utilisateur peut déboguer le programme si le débogage juste-à-temps (JIT) est activé. Si l’utilisateur clique sur **ignorer**, **assert** poursuit son exécution normale : création de la boîte de message avec le **OK** bouton. Notez que lorsque vous cliquez sur **Ignorer** alors qu'une condition d'erreur existe, un comportement non défini peut se produire.
 
 Pour plus d'informations sur le débogage CRT, consultez [Techniques de débogage CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-Le **_assert** et **_wassert** fonctions sont les fonctions CRT internes. Elles aident à réduire la quantité de code nécessaire dans vos fichiers objet pour prendre en charge les assertions. Nous vous déconseillons d’appeler ces fonctions directement.
+Le **_assert** et **_wassert** fonctions sont des fonctions CRT internes. Elles aident à réduire la quantité de code nécessaire dans vos fichiers objet pour prendre en charge les assertions. Nous vous déconseillons d’appeler ces fonctions directement.
 
-Le **assert** (macro) est activé dans les versions release et debug des bibliothèques Runtime C lorsque **NDEBUG** n’est pas défini. Lorsque **NDEBUG** est défini, la macro est disponible mais n’évalue pas son argument et n’a aucun effet. Lorsqu’elle est activée, le **assert** appels de macros **_wassert** pour son implémentation. D’autres macros d’assertion, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) et [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sont également disponibles, mais elles évaluent seulement les expressions qui leur sont passées quand la macro [_DEBUG](../../c-runtime-library/debug.md) a été définie et quand elles sont dans du code lié à la version Debug des bibliothèques Runtime C.
+Le **assert** macro est activée dans les versions release et debug des bibliothèques Runtime C lorsque **NDEBUG** n’est pas défini. Lorsque **NDEBUG** est défini, la macro est disponible mais n’évalue pas son argument et n’a aucun effet. Lorsqu’il est activé, le **assert** appels de macros **_wassert** pour son implémentation. D’autres macros d’assertion, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) et [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sont également disponibles, mais elles évaluent seulement les expressions qui leur sont passées quand la macro [_DEBUG](../../c-runtime-library/debug.md) a été définie et quand elles sont dans du code lié à la version Debug des bibliothèques Runtime C.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

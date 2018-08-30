@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4191 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4191 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291490"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197496"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avertissement du compilateur (niveau 3) C4191
 'operator/operation' : conversion risquée de 'type of expression' en 'type required'  
@@ -36,7 +36,7 @@ ms.locfileid: "33291490"
   
 -   Longueurs des listes d’arguments différentes (sur `__cdecl`, le cast de type n’est effectué que de la liste la plus longue vers la liste la plus courte, même si la plus courte est déclarée varargs).  
   
--   Pointeur vers des données (autre que **void\***) utilisé comme alias d’un pointeur vers une fonction.  
+-   Pointeur vers des données (autre que **void**<strong>\*</strong>) utilisé comme alias d’un pointeur vers une fonction.  
   
 -   Toute autre différence de type pouvant conduire à une erreur ou un avertissement sur un `reinterpret_cast`.  
   

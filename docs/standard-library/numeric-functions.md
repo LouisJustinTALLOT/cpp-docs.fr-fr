@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199186"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
 
@@ -62,7 +62,7 @@ La somme des *val* et tous les éléments dans la plage spécifiée pour la prem
 
 ### <a name="remarks"></a>Notes
 
-La valeur initiale garantit qu’il y aura un résultat bien défini lors de la plage est vide, auquel cas *val* est retourné. L’opération binaire n’est pas tenue d’être associative ou commutative. Le résultat est initialisé à la valeur initiale *val* , puis *résultat*  =  `binary_op` ( *résultat*, **\*** `Iter`) est calculé de manière itérative dans la plage, où `Iter` est un itérateur qui pointe vers l’élément suivant dans la plage. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.
+La valeur initiale garantit qu’il y aura un résultat bien défini lors de la plage est vide, auquel cas *val* est retourné. L’opération binaire n’est pas tenue d’être associative ou commutative. Le résultat est initialisé à la valeur initiale *val* , puis *résultat*  =  `binary_op` ( *résultat*, <strong>\*</strong> `Iter`) est calculé de manière itérative dans la plage, où `Iter` est un itérateur qui pointe vers l’élément suivant dans la plage. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.
 
 ### <a name="example"></a>Exemple
 

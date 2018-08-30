@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959931"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195813"
 ---
 # <a name="output-file-stream-member-functions"></a>Fonctions membres de flux de fichiers de sortie
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-Le `write` fonction n’arrête pas lorsqu’elle atteint un caractère null, de sorte que la structure de classe complète est écrite. La fonction accepte deux arguments : un **char** pointeur et le nombre de caractères à écrire. Notez le cast requis à **char\*** avant l’adresse de l’objet de structure.
+Le `write` fonction n’arrête pas lorsqu’elle atteint un caractère null, de sorte que la structure de classe complète est écrite. La fonction accepte deux arguments : un **char** pointeur et le nombre de caractères à écrire. Notez le cast requis à **char** <strong>\*</strong> avant l’adresse de l’objet de structure.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Fonctions seekp et tellp
 
@@ -114,12 +114,12 @@ Utilisez les fonctions membres ci-après pour tester les erreurs lors de l'écri
 
 |Fonction|Valeur de retour|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Retourne **true** s’il se produit une erreur irrécupérable.|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Retourne **true** s’il se produit une erreur irrécupérable ou une condition « attendue », par exemple une erreur de conversion, ou si le fichier est introuvable. Le traitement peut souvent reprendre après un appel à `clear` avec un argument zéro.|
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Retourne **true** s’il n’y a pas de condition d’erreur (irrécupérable ou autre) et si l’indicateur de fin de fichier n’est pas défini.|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Retourne **true** sur la condition de fin de fichier.|
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Définit l'état d'erreur interne. Si la fonction est appelée avec les arguments par défaut, elle efface tous les bits d’erreur.|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Retourne l'état d'erreur actuel.|
+|[bad](basic-ios-class.md#bad)|Retourne **true** s’il se produit une erreur irrécupérable.|
+|[fail](basic-ios-class.md#fail)|Retourne **true** s’il se produit une erreur irrécupérable ou une condition « attendue », par exemple une erreur de conversion, ou si le fichier est introuvable. Le traitement peut souvent reprendre après un appel à `clear` avec un argument zéro.|
+|[good](basic-ios-class.md#good)|Retourne **true** s’il n’y a pas de condition d’erreur (irrécupérable ou autre) et si l’indicateur de fin de fichier n’est pas défini.|
+|[eof](basic-ios-class.md#eof)|Retourne **true** sur la condition de fin de fichier.|
+|[clear](basic-ios-class.md#clear)|Définit l'état d'erreur interne. Si la fonction est appelée avec les arguments par défaut, elle efface tous les bits d’erreur.|
+|[rdstate] (basic-ios-class.md #rdstate|Retourne l'état d'erreur actuel.|
 
 L’opérateur **!** opérateur est surchargé pour exécuter la même fonction que le `fail` (fonction). Ainsi, l'expression :
 

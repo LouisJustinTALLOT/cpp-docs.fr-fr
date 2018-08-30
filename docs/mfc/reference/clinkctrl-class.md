@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208008"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201002"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl, classe
 Fournit les fonctionnalités du contrôle commun SysLink Windows.  
@@ -91,7 +91,7 @@ class CLinkCtrl : public CWnd
   
  Ce contrôle (et par conséquent la `CLinkCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows XP et versions ultérieures.  
   
- Pour plus d’informations, consultez [contrôle SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) dans le SDK Windows.  
+ Pour plus d’informations, consultez [contrôle SysLink](/windows/desktop/Controls/syslink-overview) dans le SDK Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,10 +132,10 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Paramètres  
  *lpszLinkMarkup*  
- Pointeur vers une chaîne se terminant par zéro contenant le texte marqué le texte à afficher. Pour plus d’informations, consultez la section « Balisage et lien accès » dans la rubrique [vue d’ensemble des contrôles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
+ Pointeur vers une chaîne se terminant par zéro contenant le texte marqué le texte à afficher. Pour plus d’informations, consultez la section « Balisage et lien accès » dans la rubrique [vue d’ensemble des contrôles SysLink](/windows/desktop/Controls/syslink-overview).  
   
  *dwStyle*  
- Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le `Windows SDK` pour plus d’informations.  
+ Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le `Windows SDK` pour plus d’informations.  
   
  *Rect*  
  Spécifie la taille et la position du contrôle de lien. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
@@ -186,13 +186,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Paramètres  
  *lpszLinkMarkup*  
- Pointeur vers une chaîne se terminant par zéro contenant le texte marqué le texte à afficher. Pour plus d’informations, consultez la section « Balisage et lien accès » dans la rubrique [vue d’ensemble des contrôles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
+ Pointeur vers une chaîne se terminant par zéro contenant le texte marqué le texte à afficher. Pour plus d’informations, consultez la section « Balisage et lien accès » dans la rubrique [vue d’ensemble des contrôles SysLink](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Spécifie le style étendu du contrôle de lien. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle de lien. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
   
  *dwStyle*  
- Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le SDK Windows.  
+ Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows.  
   
  *Rect*  
  Spécifie la taille et la position du contrôle de lien. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
@@ -222,7 +222,7 @@ int GetIdealHeight() const;
  La hauteur idéale de contrôle, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight), comme décrit dans le SDK Windows.  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  Calcule la hauteur préférée du texte du lien pour le contrôle de lien actuel, en fonction de la largeur de la liaison spécifiée.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Paramètre|Description|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|La largeur maximale de la liaison, en pixels.|  
-|[out] \* *pSize*|Un pointeur vers un Windows [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, le *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien spécifié par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur de texte de lien qui est réellement nécessaire.|  
+|[out] \* *pSize*|Un pointeur vers un Windows [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, le *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien spécifié par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur de texte de lien qui est réellement nécessaire.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur préférée du texte du lien, en pixels. La valeur de retour est identique à la valeur de la *cy* membre de la `SIZE` structure.  
@@ -246,7 +246,7 @@ int GetIdealSize(
 ### <a name="remarks"></a>Notes  
  Pour obtenir un exemple de la `GetIdealSize` (méthode), consultez l’exemple dans [CLinkCtrl::Create](#create).  
   
- Cette méthode envoie le [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  Récupère les États et les attributs d’un élément de contrôle de lien.  
@@ -257,13 +257,13 @@ BOOL GetItem(PLITEM pItem) const;
   
 ### <a name="parameters"></a>Paramètres  
  *pItem*  
- Un pointeur vers un [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure pour recevoir des informations sur les éléments.  
+ Un pointeur vers un [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) structure pour recevoir des informations sur les éléments.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem), comme décrit dans le SDK Windows.  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  Récupère l’ID d’un élément de contrôle de lien.  
@@ -299,7 +299,7 @@ BOOL GetItemID(
 >  Cette fonction retourne également FALSE si la mémoire tampon de *szID ou strID* est inférieure à MAX_LINKID_TEXT.  
   
 ### <a name="remarks"></a>Notes  
- Récupère l’ID d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) dans le SDK Windows.  
+ Récupère l’ID d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) dans le SDK Windows.  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  Récupère l’état de l’élément de contrôle de lien.  
@@ -319,13 +319,13 @@ BOOL GetItemState(
  La valeur de l’élément d’état spécifié.  
   
  *stateMask*  
- Combinaison d’indicateurs qui décrit quel élément d’état à obtenir. Pour obtenir la liste de valeurs, consultez la description de la `state` membre dans le [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Éléments autorisées sont identiques à celles autorisées dans `state`.  
+ Combinaison d’indicateurs qui décrit quel élément d’état à obtenir. Pour obtenir la liste de valeurs, consultez la description de la `state` membre dans le [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) structure. Éléments autorisées sont identiques à celles autorisées dans `state`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Récupère la valeur de l’élément d’état spécifié d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) dans le SDK Windows.  
+ Récupère la valeur de l’élément d’état spécifié d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) dans le SDK Windows.  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  Récupère l’URL représenté par l’élément de contrôle de lien.  
@@ -361,7 +361,7 @@ BOOL GetItemUrl(
 >  Cette fonction retourne également FALSE si la mémoire tampon de *szUrl ou strUrl* est inférieure à MAX_LINKID_TEXT.  
   
 ### <a name="remarks"></a>Notes  
- Récupère l’URL représenté par l’élément de contrôle de lien spécifié. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) dans le SDK Windows.  
+ Récupère l’URL représenté par l’élément de contrôle de lien spécifié. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) dans le SDK Windows.  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  Détermine si l’utilisateur a cliqué sur le lien spécifié.  
@@ -378,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [LM_HITTEST](/windows/desktop/Controls/lm-hittest), comme décrit dans le SDK Windows.  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  Définit les États et les attributs d’un élément de contrôle de lien.  
@@ -389,13 +389,13 @@ BOOL SetItem(PLITEM pItem);
   
 ### <a name="parameters"></a>Paramètres  
  *pItem*  
- Un pointeur vers un [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure contenant les informations à définir.  
+ Un pointeur vers un [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) structure contenant les informations à définir.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem), comme décrit dans le SDK Windows.  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  Récupère l’ID d’un élément de contrôle de lien.  
@@ -417,7 +417,7 @@ BOOL SetItemID(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Définit l’ID d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) dans le SDK Windows.  
+ Définit l’ID d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) dans le SDK Windows.  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  Récupère l’état de l’élément de contrôle de lien.  
@@ -437,13 +437,13 @@ BOOL SetItemState(
  La valeur de l’état spécifié de l’article en cours.  
   
  *stateMask*  
- Combinaison d’indicateurs décrivant l’état de l’article en cours. Pour obtenir la liste de valeurs, consultez la description de la `state` membre dans le [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Éléments autorisées sont identiques à celles autorisées dans `state`.  
+ Combinaison d’indicateurs décrivant l’état de l’article en cours. Pour obtenir la liste de valeurs, consultez la description de la `state` membre dans le [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) structure. Éléments autorisées sont identiques à celles autorisées dans `state`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Définit la valeur de l’élément d’état spécifié d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) dans le SDK Windows.  
+ Définit la valeur de l’élément d’état spécifié d’un élément de contrôle de liaison spécifique. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) dans le SDK Windows.  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  Définit l’URL représenté par l’élément de contrôle de lien.  
@@ -465,7 +465,7 @@ BOOL SetItemUrl(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Définit l’URL représenté par l’élément de contrôle de lien spécifié. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) dans le SDK Windows.  
+ Définit l’URL représenté par l’élément de contrôle de lien spécifié. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

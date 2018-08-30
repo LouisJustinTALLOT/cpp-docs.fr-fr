@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed0603482ffccf1bcb827d67b174768cfd3e3168
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338435"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196795"
 ---
 # <a name="clongbinary-class"></a>CLongBinary (classe)
 Simplifie l'utilisation d'objets de données binaires de très grande taille (souvent appelés BLOB ou « objets blob ») dans une base de données.  
@@ -86,7 +86,7 @@ SQLULEN m_dwDataLength;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette taille peut être inférieure à la taille du bloc de mémoire alloué pour les données. Appelez Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) fonction pour obtenir la taille allouée.  
+ Cette taille peut être inférieure à la taille du bloc de mémoire alloué pour les données. Appelez Win32 [GLobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize) fonction pour obtenir la taille allouée.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Stocke un handle Windows HGLOBAL pour les données d’objet BLOB réel.  

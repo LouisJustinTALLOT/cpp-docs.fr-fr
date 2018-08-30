@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a45866226f06b20d0805b7c4e294ff6d2d65506e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884172"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197918"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr, classe
 Cette classe fournit des méthodes pour la gestion des pointeurs d’interface et la table d’interface globale (GIT).  
@@ -254,6 +254,6 @@ HRESULT Revoke() throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [FTM](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [Accès aux Interfaces entre les cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
- [Quand utiliser le tableau Global d’Interface](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [Accès aux Interfaces entre les cloisonnements](/windows/desktop/com/accessing-interfaces-across-apartments)   
+ [Quand utiliser le tableau Global d’Interface](/windows/desktop/com/when-to-use-the-global-interface-table)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

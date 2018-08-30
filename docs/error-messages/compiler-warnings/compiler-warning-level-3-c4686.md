@@ -1,7 +1,7 @@
 ---
-title: Compilateur avertissement (niveau 3) C4686 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4686 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1edbf438951644f63aae637a68f69d173ab7e1b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a44cd929eb7629ef317ce9847950b613bde52c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202078"
 ---
 # <a name="compiler-warning-level-3-c4686"></a>Avertissement du compilateur (niveau 3) C4686
-**'**   
- ***type défini par l’utilisateur* ' : changement de comportement possible, changement de retour UDT convention d’appel**  
-  
- Une spécialisation de modèle de classe n’est définie avant d’être utilisé dans un type de retour. Tout ce qui instancie la classe résoudra C4686 ; déclaration d’une instance ou l’accès à un membre (C\<int > :: rien) sont également des options.  
-  
- Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
-  
- Essayez la suivante :  
-  
-```  
-// C4686.cpp  
-// compile with: /W3  
-#pragma warning (default : 4686)  
-template <class T>  
-class C;  
-  
-template <class T>  
-C<T> f(T);  
-  
-template <class T>  
-class C {};  
-  
-int main() {  
-   f(1);   // C4686  
-}  
-  
-template <class T>  
-C<T> f(T) {  
-   return C<int>();  
-}  
+
+> «*type défini par l’utilisateur*' : changement de comportement possible, changement retour UDT convention d’appel
+
+## <a name="remarks"></a>Notes
+
+Une spécialisation de modèle de classe n’a pas été est définie avant d’être utilisé dans un type de retour. Tout ce qui instancie la classe résoudra C4686 ; déclaration d’une instance ou l’accès à un membre (C\<int > :: quoi que ce soit) sont également possibles.
+
+Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
+
+## <a name="example"></a>Exemple
+
+Essayez ce qui suit à la place :
+
+```cpp
+// C4686.cpp
+// compile with: /W3
+#pragma warning (default : 4686)
+template <class T>
+class C;
+
+template <class T>
+C<T> f(T);
+
+template <class T>
+class C {};
+
+int main() {
+   f(1);   // C4686
+}
+
+template <class T>
+C<T> f(T) {
+   return C<int>();
+}
 ```

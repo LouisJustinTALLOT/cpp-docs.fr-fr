@@ -1,5 +1,5 @@
 ---
-title: Types de données (MFC) | Documents Microsoft
+title: Types de données (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,21 +34,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121012"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199867"
 ---
 # <a name="data-types-mfc"></a>Types de données (MFC)
-Cette rubrique répertorie les types de données plus couramment utilisés dans la bibliothèque Microsoft Foundation Class. La plupart des types de données est les mêmes que celles dans la plateforme logicielle Kit de développement (SDK), tandis que d’autres sont spécifiques à MFC.  
+Cette rubrique répertorie les types de données couramment utilisés dans la bibliothèque Microsoft Foundation Class. La plupart des types de données est les mêmes que celles dans la plateforme logicielle Kit de développement (SDK), tandis que d’autres sont propres à MFC.  
   
- Pour plus d’informations sur les types de données utilisés dans le Kit de développement logiciel Windows et MFC, consultez [les Types de données Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Pour plus d’informations sur les types de données utilisés dans le Kit de développement logiciel Windows et MFC, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types).  
   
- Types de données propres à la bibliothèque Microsoft Foundation Class sont les suivantes :  
+ Types de données uniques à la bibliothèque Microsoft Foundation Class sont les suivants :  
   
--   Placez une valeur utilisée pour indiquer la position d’un élément dans une collection ; utilisé par les classes de collection MFC.  
+-   POSITIONNER une valeur utilisée pour indiquer la position d’un élément dans une collection ; utilisé par les classes de collection MFC.  
   
 -   Pointeur 32 bits LPCRECT à une constante (non modifiable) `RECT` structure.  
   

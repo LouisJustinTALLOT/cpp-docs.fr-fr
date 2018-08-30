@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8a958ac670f91edfccdfced43fce311bc29c04
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196588"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre d'outils Windows.  
@@ -242,7 +242,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::GetButtonSize](#getbuttonsize)|Récupère la largeur actuelle et la hauteur des boutons de barre d’outils, en pixels.|  
 |[CToolBarCtrl::GetColorScheme](#getcolorscheme)|Récupère le jeu de couleurs du contrôle de barre d’outils actuel.|  
 |[CToolBarCtrl::GetDisabledImageList](#getdisabledimagelist)|Récupère la liste d’images par un contrôle de barre d’outils aux boutons d’affichage désactivé.|  
-|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Récupère le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface pour un contrôle de barre d’outils.|  
+|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Récupère le [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interface pour un contrôle de barre d’outils.|  
 |[CToolBarCtrl::GetExtendedStyle](#getextendedstyle)|Récupère les styles étendus pour un contrôle de barre d’outils.|  
 |[CToolBarCtrl::GetHotImageList](#gethotimagelist)|Récupère la liste d’images par un contrôle de barre d’outils pour afficher les boutons « à chaud ». Un bouton actif s’affiche en surbrillance lorsque le pointeur de la souris est au-dessus de lui.|  
 |[CToolBarCtrl::GetHotItem](#gethotitem)|Récupère l’index de l’élément actif dans une barre d’outils.|  
@@ -289,7 +289,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetCmdID](#setcmdid)|Définit l’identificateur de commande à envoyer à la fenêtre propriétaire lorsque vous appuyez sur le bouton spécifié.|  
 |[CToolBarCtrl::SetColorScheme](#setcolorscheme)|Définit le jeu de couleurs du contrôle de barre d’outils actuel.|  
 |[CToolBarCtrl::SetDisabledImageList](#setdisabledimagelist)|Définit la liste d’images qui utilise le contrôle de barre d’outils aux boutons d’affichage désactivé.|  
-|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Définit les indicateurs dans la fonction Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), qui est utilisé pour dessiner le texte dans le rectangle spécifié, la mise en forme selon la façon dont les indicateurs sont définis.|  
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Définit les indicateurs dans la fonction Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), qui est utilisé pour dessiner le texte dans le rectangle spécifié, la mise en forme selon la façon dont les indicateurs sont définis.|  
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Définit les styles étendus pour un contrôle de barre d’outils.|  
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Définit la liste d’images qui utilise le contrôle de barre d’outils pour afficher les boutons « à chaud ».|  
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Définit l’élément actif dans une barre d’outils.|  
@@ -386,7 +386,7 @@ int AddBitmap(
  Index de base zéro de la nouvelle image en cas de réussite ; Sinon, - 1.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez utiliser l’API Windows [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467) pour mapper les couleurs avant d’ajouter l’image bitmap à la barre d’outils. Si vous passez un pointeur vers un `CBitMap` de l’objet, vous devez vous assurer que l’image bitmap n’est pas détruit tant qu’après la destruction de la barre d’outils.  
+ Vous pouvez utiliser l’API Windows [CreateMappedBitmap](/windows/desktop/api/commctrl/nf-commctrl-createmappedbitmap) pour mapper les couleurs avant d’ajouter l’image bitmap à la barre d’outils. Si vous passez un pointeur vers un `CBitMap` de l’objet, vous devez vous assurer que l’image bitmap n’est pas détruit tant qu’après la destruction de la barre d’outils.  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  Ajoute un ou plusieurs boutons à un contrôle de barre d’outils.  
@@ -541,7 +541,7 @@ BOOL ChangeBitmap(
 ### <a name="remarks"></a>Notes  
  Si cette méthode réussite, le système affiche l’image spécifiée dans le bouton spécifié.  
   
- Cette méthode envoie le [TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_CHANGEBITMAP](/windows/desktop/Controls/tb-changebitmap) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant modifie la bitmap pour le **l’enregistrement du fichier** bouton à l’image bitmap pour le **sur** bouton.  
@@ -602,7 +602,7 @@ virtual BOOL Create(
  Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit sous **notes**.  
   
  *Rect*  
- Spécifie éventuellement la taille et la position du contrôle de barre d’outils. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
+ Spécifie éventuellement la taille et la position du contrôle de barre d’outils. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  *pParentWnd*  
  Spécifie la fenêtre parente du contrôle de barre d’outils. Il ne doit pas être NULL.  
@@ -622,11 +622,11 @@ virtual BOOL Create(
   
 - WS_DISABLED rarement  
   
- Consultez [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour une description des styles de fenêtre.  
+ Consultez [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour une description des styles de fenêtre.  
   
- Si vous le souhaitez, appliquer une combinaison de [des styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498), comme décrit dans le SDK Windows.  
+ Si vous le souhaitez, appliquer une combinaison de [des styles de contrôle courants](/windows/desktop/Controls/common-control-styles), comme décrit dans le SDK Windows.  
   
- Appliquer une combinaison de styles de barre d’outils pour le contrôle ou les boutons eux-mêmes. Les styles sont décrits dans la rubrique [contrôle de barre d’outils et les Styles de boutons](http://msdn.microsoft.com/library/windows/desktop/bb760439) dans le SDK Windows.  
+ Appliquer une combinaison de styles de barre d’outils pour le contrôle ou les boutons eux-mêmes. Les styles sont décrits dans la rubrique [contrôle de barre d’outils et les Styles de boutons](/windows/desktop/Controls/toolbar-control-and-button-styles) dans le SDK Windows.  
   
  Pour utiliser les styles de barre d’outils étendus, appelez [SetExtendedStyle](#setextendedstyle) après avoir appelé `Create`. Pour créer une barre d’outils avec des styles de fenêtre étendus, appelez [CToolBarCtrl::CreateEx](#createex) au lieu de `Create`.  
   
@@ -646,13 +646,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
   
  *dwStyle*  
  Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit dans la **remarques** section de [créer](#create).  
   
  *Rect*  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.  
+ Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.  
   
  *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
@@ -664,7 +664,7 @@ virtual BOOL CreateEx(
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**. `CreateEx` crée le contrôle avec les styles étendus de Windows spécifiés par *dwExStyle*. Ensemble spécifique d’un contrôle en utilisant des styles étendus [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir des styles de ce type en tant que WS_EX_CONTEXTHELP, mais utiliser `SetExtendedStyle` pour définir des styles de ce type comme TBSTYLE_EX_DRAWDDARROWS. Pour plus d’informations, consultez les styles décrits dans [Styles étendus de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760430) dans le SDK Windows.  
+ Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**. `CreateEx` crée le contrôle avec les styles étendus de Windows spécifiés par *dwExStyle*. Ensemble spécifique d’un contrôle en utilisant des styles étendus [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir des styles de ce type en tant que WS_EX_CONTEXTHELP, mais utiliser `SetExtendedStyle` pour définir des styles de ce type comme TBSTYLE_EX_DRAWDDARROWS. Pour plus d’informations, consultez les styles décrits dans [Styles étendus de barre d’outils](/windows/desktop/Controls/toolbar-extended-styles) dans le SDK Windows.  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  Construit un objet `CToolBarCtrl`.  
@@ -737,7 +737,7 @@ BOOL GetAnchorHighlight() const;
  Si elle est différente de zéro, la mise en surbrillance d’ancrage est activée. Si zéro, la mise en surbrillance d’ancrage est désactivée.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-getanchorhighlight), comme décrit dans le SDK Windows.  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  Récupère l’index de l’image bitmap associée à un bouton dans une barre d’outils.  
@@ -754,7 +754,7 @@ int GetBitmap(int nID) const;
  Retourne l’index de l’image bitmap en cas de réussite, ou zéro sinon.  
   
 ### <a name="remarks"></a>Notes  
- Implémente les fonctionnalités de [TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) dans le SDK Windows.  
+ Implémente les fonctionnalités de [TB_GETBITMAP](/windows/desktop/Controls/tb-getbitmap) dans le SDK Windows.  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  Récupère les indicateurs de bitmap à partir de la barre d’outils.  
@@ -812,13 +812,13 @@ int GetButtonInfo(
  L’identificateur du bouton.  
   
  *ptbbi*  
- Un pointeur vers un [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) structure qui reçoit les informations sur le bouton.  
+ Un pointeur vers un [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) structure qui reçoit les informations sur le bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du bouton, en cas de réussite ; sinon -1.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETBUTTONINFO](/windows/desktop/Controls/tb-getbuttoninfo), comme décrit dans le SDK Windows.  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  Obtient la taille d’un bouton de barre d’outils.  
@@ -847,7 +847,7 @@ CString GetButtonText(int idButton) const;
  Un [CString](../../atl-mfc-shared/using-cstring.md) qui contient le texte d’affichage du bouton spécifié.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_GETBUTTONTEXT](/windows/desktop/Controls/tb-getbuttontext) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  Récupère le jeu de couleurs du contrôle de barre d’outils actuel.  
@@ -860,13 +860,13 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Pointeur vers un [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) structure qui reçoit les informations de schéma de couleur. Lorsque cette méthode est retournée, la structure décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
+|[out] *lpColorScheme*|Pointeur vers un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) structure qui reçoit les informations de schéma de couleur. Lorsque cette méthode est retournée, la structure décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
   
 ### <a name="return-value"></a>Valeur de retour  
 TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_GETCOLORSCHEME](/windows/desktop/Controls/tb-getcolorscheme) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  Récupère la liste d’images par un contrôle de barre d’outils aux boutons d’affichage désactivé.  
@@ -879,10 +879,10 @@ CImageList* GetDisabledImageList() const;
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) de l’objet, ou NULL si aucune liste d’images désactivé n’est défini.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329), comme décrit dans le SDK Windows. L’implémentation MFC de `GetDisabledImageList` utilise un `CImageList` objet contenant le bouton du contrôle de barre d’outils des images, au lieu d’un handle vers une liste d’images.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-getdisabledimagelist), comme décrit dans le SDK Windows. L’implémentation MFC de `GetDisabledImageList` utilise un `CImageList` objet contenant le bouton du contrôle de barre d’outils des images, au lieu d’un handle vers une liste d’images.  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
- Récupère le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface pour un contrôle de barre d’outils.  
+ Récupère le [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interface pour un contrôle de barre d’outils.  
   
 ```  
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;  
@@ -890,13 +890,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
   
 ### <a name="parameters"></a>Paramètres  
  *ppDropTarget*  
- Un pointeur vers un [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) pointeur d’interface. Si une erreur se produit, un pointeur NULL est placé dans cette adresse.  
+ Un pointeur vers un [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) pointeur d’interface. Si une erreur se produit, un pointeur NULL est placé dans cette adresse.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur HRESULT indiquant la réussite ou l’échec de l’opération.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETOBJECT](/windows/desktop/Controls/tb-getobject), comme décrit dans le SDK Windows.  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  Récupère les styles étendus pour un contrôle de barre d’outils.  
@@ -906,10 +906,10 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur DWORD qui représente les styles étendus en cours d’utilisation pour le contrôle de barre d’outils. Pour obtenir la liste des styles, consultez [Styles étendus de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760430), dans le SDK Windows.  
+ Valeur DWORD qui représente les styles étendus en cours d’utilisation pour le contrôle de barre d’outils. Pour obtenir la liste des styles, consultez [Styles étendus de barre d’outils](/windows/desktop/Controls/toolbar-extended-styles), dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETEXTENDEDSTYLE](/windows/desktop/Controls/tb-getextendedstyle), comme décrit dans le SDK Windows.  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  Récupère la liste d’images par un contrôle de barre d’outils pour afficher les boutons « à chaud ». Un bouton actif s’affiche en surbrillance lorsque le pointeur de la souris est au-dessus de lui.  
@@ -922,7 +922,7 @@ CImageList* GetHotImageList() const;
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) de l’objet, ou NULL si aucune liste d’images désactivé n’est défini.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334), comme décrit dans le SDK Windows. Un bouton actif s’affiche en surbrillance lorsque le pointeur de la souris est au-dessus de lui.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETHOTIMAGELIST](/windows/desktop/Controls/tb-gethotimagelist), comme décrit dans le SDK Windows. Un bouton actif s’affiche en surbrillance lorsque le pointeur de la souris est au-dessus de lui.  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  Récupère l’index de l’élément actif dans une barre d’outils.  
@@ -935,7 +935,7 @@ int GetHotItem() const;
  Index de base zéro de l’élément actif dans une barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETHOTITEM](/windows/desktop/Controls/tb-gethotitem), comme décrit dans le SDK Windows.  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  Récupère la liste d’images par un contrôle de barre d’outils pour afficher des boutons dans leur état par défaut.  
@@ -948,7 +948,7 @@ CImageList* GetImageList() const;
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) de l’objet, ou NULL si aucune liste d’images n’est défini.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETIMAGELIST](/windows/desktop/Controls/tb-getimagelist), comme décrit dans le SDK Windows.  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  Récupère la marque d’insertion actuel pour la barre d’outils.  
@@ -959,10 +959,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
   
 ### <a name="parameters"></a>Paramètres  
  *ptbim*  
- Un pointeur vers un [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) structure qui reçoit la marque d’insertion.  
+ Un pointeur vers un [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) structure qui reçoit la marque d’insertion.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETINSERTMARK](/windows/desktop/Controls/tb-getinsertmark), comme décrit dans le SDK Windows.  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  Récupère la couleur utilisée pour dessiner la marque d’insertion pour la barre d’outils.  
@@ -975,7 +975,7 @@ COLORREF GetInsertMarkColor() const;
  Valeur COLORREF qui contient la couleur de marque d’insertion actuel.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETINSERTMARKCOLOR](/windows/desktop/Controls/tb-getinsertmarkcolor), comme décrit dans le SDK Windows.  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  Récupère le rectangle englobant d’un bouton dans un contrôle de barre d’outils.  
@@ -991,7 +991,7 @@ BOOL GetItemRect(
  Index de base zéro du bouton pour lequel récupérer des informations.  
   
  *lpRect*  
- Adresse d’un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées du rectangle englobant.  
+ Adresse d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées du rectangle englobant.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
@@ -1008,13 +1008,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
   
 ### <a name="parameters"></a>Paramètres  
  *pSize*  
- Un pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la taille des éléments.  
+ Un pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la taille des éléments.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETMAXSIZE](/windows/desktop/Controls/tb-getmaxsize), comme décrit dans le SDK Windows.  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  Récupère le nombre maximal de lignes de texte affichée sur un bouton de barre d’outils.  
@@ -1035,10 +1035,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
   
 ### <a name="parameters"></a>Paramètres  
  *ptbm*  
- Un pointeur vers le [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) structure de le `CToolBarCtrl` objet.  
+ Un pointeur vers le [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) structure de le `CToolBarCtrl` objet.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342) du message, comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la [TB_GETMETRICS](/windows/desktop/Controls/tb-getmetrics) du message, comme décrit dans le SDK Windows.  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  Récupère la marge horizontale et verticale du contrôle de barre d’outils actuel.  
@@ -1060,7 +1060,7 @@ BOOL GetPadding(
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_GETPADDING](/windows/desktop/Controls/tb-getpadding) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  Récupère la liste d’images que le contrôle de barre d’outils actuel utilise pour représenter les boutons dans un état appuyé.  
@@ -1073,7 +1073,7 @@ CImageList* GetPressedImageList();
  Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images pour le contrôle actuel, ou NULL si aucune liste d’images de ce type n’est défini.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_GETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-getpressedimagelist) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  Récupère le rectangle englobant d’un bouton de barre d’outils spécifiée.  
@@ -1089,13 +1089,13 @@ BOOL GetRect(
  L’identificateur du bouton.  
   
  *lpRect*  
- Un pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui doit recevoir les informations de rectangle englobant.  
+ Un pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui doit recevoir les informations de rectangle englobant.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite, sinon FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETRECT](/windows/desktop/Controls/tb-getrect), comme décrit dans le SDK Windows.  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  Récupère le nombre de lignes de boutons actuellement affichés par le contrôle de barre d’outils.  
@@ -1158,7 +1158,7 @@ int GetString(
  La longueur de la chaîne en cas de réussite, -1 dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_GETSTRING](/windows/desktop/Controls/tb-getstring), comme décrit dans le SDK Windows.  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  Obtient les styles actuellement appliqués à un contrôle de barre d’outils.  
@@ -1168,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une valeur DWORD contenant une combinaison de [styles de contrôle de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760439), comme décrit dans le SDK Windows.  
+ Une valeur DWORD contenant une combinaison de [styles de contrôle de barre d’outils](/windows/desktop/Controls/toolbar-control-and-button-styles), comme décrit dans le SDK Windows.  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  Récupère le handle du contrôle ToolTip, si une, associée au contrôle de barre d’outils.  
@@ -1192,7 +1192,7 @@ int HitTest(LPPOINT ppt) const;
   
 ### <a name="parameters"></a>Paramètres  
  *ppt*  
- Un pointeur vers un [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui contient la coordonnée x du test de positionnement dans la `x` membre et la coordonnée y de l’atteinte de test dans le `y` membre. Les coordonnées sont exprimées par rapport à la zone cliente de la barre d’outils.  
+ Un pointeur vers un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui contient la coordonnée x du test de positionnement dans la `x` membre et la coordonnée y de l’atteinte de test dans le `y` membre. Les coordonnées sont exprimées par rapport à la zone cliente de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur entière indiquant l’emplacement d’un point sur une barre d’outils. Si la valeur est zéro ou une valeur positive, cette valeur de retour est l’index de base zéro de l’élément nonseparator dans lequel se trouve le point.  
@@ -1200,7 +1200,7 @@ int HitTest(LPPOINT ppt) const;
  Si la valeur de retour est négative, le point ne se trouve pas dans un bouton. La valeur absolue de la valeur de retour est l’index d’un élément de séparateur ou de l’élément nonseparator le plus proche.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_HITTEST](/windows/desktop/Controls/tb-hittest), comme décrit dans le SDK Windows.  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  Masque ou affiche le bouton spécifié dans un contrôle de barre d’outils.  
@@ -1279,16 +1279,16 @@ BOOL InsertMarkHitTest(
   
 ### <a name="parameters"></a>Paramètres  
  *ppt*  
- Un pointeur vers un [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente de la barre d’outils.  
+ Un pointeur vers un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente de la barre d’outils.  
   
  *ptbim*  
- Un pointeur vers un [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) structure qui reçoit les informations de marque d’insertion.  
+ Un pointeur vers un [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) structure qui reçoit les informations de marque d’insertion.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_INSERTMARKHITTEST](/windows/desktop/Controls/tb-insertmarkhittest), comme décrit dans le SDK Windows.  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  Détermine si le bouton spécifié dans un contrôle de barre d’outils est activé.  
@@ -1415,7 +1415,7 @@ void LoadImages(
  Handle d’instance de programme à l’application appelante. Ce paramètre peut être HINST_COMMCTRL pour charger une liste d’images standard.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_LOADIMAGES](/windows/desktop/Controls/tb-loadimages), comme décrit dans le SDK Windows.  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  Mappe un caractère de l’accélérateur à un bouton de barre d’outils.  
@@ -1437,7 +1437,7 @@ BOOL MapAccelerator(
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_MAPACCELERATOR](/windows/desktop/Controls/tb-mapaccelerator), comme décrit dans le SDK Windows.  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  Définit l’état de mise en surbrillance d’un bouton donné dans un contrôle de barre d’outils.  
@@ -1459,7 +1459,7 @@ BOOL MarkButton(
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_MARKBUTTON](/windows/desktop/Controls/tb-markbutton), comme décrit dans le SDK Windows.  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  Déplace un bouton à partir d’un index vers un autre.  
@@ -1481,7 +1481,7 @@ BOOL MoveButton(
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_MOVEBUTTON](/windows/desktop/Controls/tb-movebutton), comme décrit dans le SDK Windows.  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  Appuie ou relâche le bouton spécifié dans un contrôle de barre d’outils.  
@@ -1503,7 +1503,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez modifier plusieurs États de bouton, il vaut mieux appeler [SetState](#setstate) à la place.  
   
- Cette méthode envoie le [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_PRESSBUTTON](/windows/desktop/Controls/tb-pressbutton) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  Remplace l’image bitmap existante dans le contrôle de barre d’outils actuel avec une nouvelle image bitmap.  
@@ -1516,13 +1516,13 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Pointeur vers un [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484) structure qui décrit la bitmap à remplacer et la nouvelle image bitmap.|  
+|[in] *pReplaceBitmap*|Pointeur vers un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) structure qui décrit la bitmap à remplacer et la nouvelle image bitmap.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_REPLACEBITMAP](/windows/desktop/Controls/tb-replacebitmap) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant remplace l’image bitmap de la barre d’outils standard avec une image bitmap différents.  
@@ -1600,7 +1600,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
  Le paramètre d’ancrage précédent. Si la mise en surbrillance a été activée, cette valeur est différente de zéro. Si la mise en surbrillance n’a pas été activée, cette valeur est zéro.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode implémente le comportement du message Win32 [TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396), comme décrit dans le SDK Windows.  
+ Cette méthode implémente le comportement du message Win32 [TB_SETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-setanchorhighlight), comme décrit dans le SDK Windows.  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  Définit la taille des images bitmaps réelles doit être ajouté à un contrôle de barre d’outils.  
@@ -1633,13 +1633,13 @@ BOOL SetButtonInfo(
  L’identificateur du bouton.  
   
  *ptbbi*  
- Un pointeur vers un [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) structure qui reçoit les informations sur le bouton.  
+ Un pointeur vers un [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) structure qui reçoit les informations sur le bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre implémente le comportement du message Win32 [TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413), comme décrit dans le SDK Windows.  
+ La fonction membre implémente le comportement du message Win32 [TB_SETBUTTONINFO](/windows/desktop/Controls/tb-setbuttoninfo), comme décrit dans le SDK Windows.  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  Définit la taille des boutons dans le contrôle de barre d’outils.  
@@ -1697,7 +1697,7 @@ BOOL SetButtonWidth(
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETBUTTONWIDTH](/windows/desktop/Controls/tb-setbuttonwidth), comme décrit dans le SDK Windows.  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  Définit l’identificateur de commande qui sera envoyé à la fenêtre propriétaire lorsque vous appuyez sur le bouton spécifié.  
@@ -1729,12 +1729,12 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Pointeur vers un [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) structure qui décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
+|[in] *lpColorScheme*|Pointeur vers un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) structure qui décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode n’a aucun effet si un thème visuel de Windows Vista est défini.  
   
- Cette méthode envoie le [TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_SETCOLORSCHEME](/windows/desktop/Controls/tb-setcolorscheme) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit le jeu de couleurs pour le contrôle de barre d’outils actuel. L’exemple de code rend les bords gauche et supérieure de chaque bouton d’outil rouge et les bords droit et bas bleue. Lorsque l’utilisateur appuie sur le bouton, les bords rouge du bouton Activer bleu et ses bords bleu en rouges.  
@@ -1756,10 +1756,10 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet qui a été précédemment utilisé par le contrôle de barre d’outils à afficher désactivé des images de bouton.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423), comme décrit dans le SDK Windows. L’implémentation MFC de `SetDisabledImageList` utilise un `CImageList` objet bouton désactivé du contrôle de barre d’outils contenant des images, au lieu d’un handle vers une liste d’images.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-setdisabledimagelist), comme décrit dans le SDK Windows. L’implémentation MFC de `SetDisabledImageList` utilise un `CImageList` objet bouton désactivé du contrôle de barre d’outils contenant des images, au lieu d’un handle vers une liste d’images.  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
- Définit les indicateurs dans la fonction Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), qui est utilisé pour dessiner le texte dans le rectangle spécifié, la mise en forme selon la façon dont les indicateurs sont définis.  
+ Définit les indicateurs dans la fonction Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), qui est utilisé pour dessiner le texte dans le rectangle spécifié, la mise en forme selon la façon dont les indicateurs sont définis.  
   
 ```  
 DWORD SetDrawTextFlags(
@@ -1769,7 +1769,7 @@ DWORD SetDrawTextFlags(
   
 ### <a name="parameters"></a>Paramètres  
  *dwMask*  
- Une combinaison d’un ou plusieurs des indicateurs du préfixeDT_, spécifiés dans la fonction Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), qui indique les bits qui dans *dwDTFlags* sera utilisé lors du dessin du texte.  
+ Une combinaison d’un ou plusieurs des indicateurs du préfixeDT_, spécifiés dans la fonction Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), qui indique les bits qui dans *dwDTFlags* sera utilisé lors du dessin du texte.  
   
  *dwDTFlags*  
  Une combinaison d’une ou plusieurs des indicateurs du préfixeDT_, spécifiés dans la fonction Win32 `DrawText`, qui indiquent comment le texte du bouton sera dessiné. Cette valeur est passée à `DrawText` lorsque le texte du bouton est dessiné.  
@@ -1778,7 +1778,7 @@ DWORD SetDrawTextFlags(
  Un valeur DWORD contenant l’indicateurs de dessin de texte précédent.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425), comme décrit dans le SDK Windows. Cette fonction membre définit les indicateurs dans la fonction Win32 `DrawText`, qui dessine le texte dans le rectangle spécifié, la mise en forme selon la façon dont les indicateurs sont définis.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETDRAWTEXTFLAGS](/windows/desktop/Controls/tb-setdrawtextflags), comme décrit dans le SDK Windows. Cette fonction membre définit les indicateurs dans la fonction Win32 `DrawText`, qui dessine le texte dans le rectangle spécifié, la mise en forme selon la façon dont les indicateurs sont définis.  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  Définit les styles étendus pour un contrôle de barre d’outils.  
@@ -1792,10 +1792,10 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
  Valeur spécifiant les nouveaux styles prolongés. Ce paramètre peut être une combinaison de la barre d’outils styles étendus.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur DWORD qui représente le précédent styles étendus. Pour obtenir la liste des styles, consultez [Styles étendus de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760430), dans le SDK Windows.  
+ Valeur DWORD qui représente le précédent styles étendus. Pour obtenir la liste des styles, consultez [Styles étendus de barre d’outils](/windows/desktop/Controls/toolbar-extended-styles), dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETEXTENDEDSTYLE](/windows/desktop/Controls/tb-setextendedstyle), comme décrit dans le SDK Windows.  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  Définit la liste d’images qui utilise le contrôle de barre d’outils pour afficher les boutons « à chaud ».  
@@ -1812,7 +1812,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet qui a été précédemment utilisé par le contrôle de barre d’outils pour afficher des images de bouton actif.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETHOTIMAGELIST](/windows/desktop/Controls/tb-sethotimagelist), comme décrit dans le SDK Windows.  
   
  L’implémentation MFC de `SetHotImageList` utilise un `CImageList` objet contenant le bouton d’actif du contrôle de barre d’outils des images, au lieu d’un handle vers une liste d’images. Un bouton actif apparaît en surbrillance lorsque le pointeur se trouve au-dessus de lui.  
   
@@ -1831,7 +1831,7 @@ int SetHotItem(int nHot);
  Index de l’élément actif précédent, ou -1 s’il n’y avait aucun élément à chaud.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem), comme décrit dans le SDK Windows.  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  Définit la liste d’images qui utilise la barre d’outils pour afficher des boutons qui se trouvent dans leur état par défaut.  
@@ -1848,7 +1848,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet qui a été précédemment utilisé par le contrôle de barre d’outils pour afficher des images de bouton dans leur état par défaut.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETIMAGELIST](/windows/desktop/Controls/tb-setimagelist), comme décrit dans le SDK Windows.  
   
  L’implémentation MFC de `SetImageList` utilise un `CImageList` objet contenant le bouton du contrôle de barre d’outils des images, au lieu d’un handle vers une liste d’images.  
   
@@ -1875,10 +1875,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
   
 ### <a name="parameters"></a>Paramètres  
  *ptbim*  
- Un pointeur vers le [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) structure qui contient la marque d’insertion.  
+ Un pointeur vers le [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) structure qui contient la marque d’insertion.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETINSERTMARK](/windows/desktop/Controls/tb-setinsertmark), comme décrit dans le SDK Windows.  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  Définit la couleur utilisée pour dessiner la marque d’insertion pour la barre d’outils.  
@@ -1895,7 +1895,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
  Valeur COLORREF qui contient la couleur précédente de la marque d’insertion.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439), comme décrit dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TB_SETINSERTMARKCOLOR](/windows/desktop/Controls/tb-setinsertmarkcolor), comme décrit dans le SDK Windows.  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  Définit le nombre maximal de lignes de texte affichée sur un bouton de barre d’outils.  
@@ -1920,10 +1920,10 @@ void SetMetrics(LPTBMETRICS ptbm);
   
 ### <a name="parameters"></a>Paramètres  
  *ptbm*  
- Un pointeur vers le [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) structure de le `CToolBarCtrl` objet.  
+ Un pointeur vers le [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) structure de le `CToolBarCtrl` objet.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446) du message, comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la [TB_SETMETRICS](/windows/desktop/Controls/tb-setmetrics) du message, comme décrit dans le SDK Windows.  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  Définit la fenêtre propriétaire pour le contrôle de barre d’outils.  
@@ -1959,7 +1959,7 @@ DWORD SetPadding(
  Un valeur DWORD dont mot de poids faible contient la valeur précédente de la marge intérieure horizontale et dont word haute contient la valeur précédente de la marge intérieure verticale. Les valeurs de remplissage sont mesurées en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_SETPADDING](/windows/desktop/Controls/tb-setpadding) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la marge horizontale et verticale du contrôle de barre d’outils actuel à 20 pixels.  
@@ -1986,7 +1986,7 @@ CImagelist* SetPressedImageList(
  Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images précédente pour le contrôle actuel, ou NULL si aucune liste d’images de ce type n’a été défini.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TB_SETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-setpressedimagelist) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la liste d’images appuyé à être identique à la liste d’images par défaut.  
@@ -2011,7 +2011,7 @@ void SetRows(
  Indique s’il faut utiliser des lignes plus ou moins de lignes si la barre d’outils ne peut pas être redimensionné pour le nombre de lignes demandé.  
   
  *lpRect*  
- Pointe vers le [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui recevra le nouveau rectangle englobant de la barre d’outils.  
+ Pointe vers le [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui recevra le nouveau rectangle englobant de la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  Si la barre d’outils ne peuvent pas redimensionner lui-même pour le nombre demandé de lignes, celui-ci se redimensionne lui-même soit la suivante plus grande ou suivante plus petite taille valide, selon la valeur de *bLarger*. Si *bLarger* a la valeur TRUE, le nouveau nombre de lignes sera supérieur au nombre demandé. Si *bLarger* est FALSE, le nouveau nombre de lignes sera inférieur au nombre demandé.  
@@ -2057,7 +2057,7 @@ void SetStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>Paramètres  
  *dwStyle*  
- Une valeur DWORD contenant une combinaison de [styles de contrôle de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760439), comme décrit dans le SDK Windows.  
+ Une valeur DWORD contenant une combinaison de [styles de contrôle de barre d’outils](/windows/desktop/Controls/toolbar-control-and-button-styles), comme décrit dans le SDK Windows.  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  Associe un contrôle info-bulle à un contrôle de barre d’outils.  
@@ -2085,7 +2085,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  La valeur de retour n’est pas utilisée.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la [TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465) du message, comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme) du message, comme décrit dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [MFC exemple CMNCTRL1](../../visual-cpp-samples.md)   

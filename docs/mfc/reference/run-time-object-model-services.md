@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027684"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197470"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 Les classes [CObject](../../mfc/reference/cobject-class.md) et [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulent plusieurs services d’objet, notamment l’accès aux informations de classe d’exécution, la sérialisation et la création d’objets dynamiques. Toutes les classes dérivées de `CObject` héritent de cette fonctionnalité.  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  Pointeur vers une chaîne se terminant par null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
    
 ### <a name="remarks"></a>Notes  
- Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+ Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
 ### <a name="requirements"></a>Configuration requise  
  afxcomctl32.h, afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  Pointeur vers une chaîne se terminant par null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
    
 ### <a name="remarks"></a>Notes  
- Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.  
+ Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.  
    
 ### <a name="requirements"></a>Configuration requise  
  afxcomctl32.h, afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = apartment (cloisonné).    
     -   `afxRegFreeThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = gratuit.  
       
-         Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread. 
+         Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread. 
    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Composants du CLSID de la classe.  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>Voir aussi  
  [Macros et objet Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [Clé de CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [Clé de CLSID](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  L’ID de ressource d’une chaîne contenant le nom externe du contrôle.  
   
  *dwOleMisc*  
- Énumération contenant un ou plusieurs indicateurs. Pour plus d’informations sur cette énumération, consultez [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le SDK Windows.  
+ Énumération contenant un ou plusieurs indicateurs. Pour plus d’informations sur cette énumération, consultez [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) dans le SDK Windows.  
    
 ### <a name="remarks"></a>Notes  
  En plus de IMPLEMENT_OLECTLTYPE, vous devez ajouter le declare_olectltype (macro) à votre déclaration de classe du contrôle.  
   
- Le `GetUserTypeNameID` fonction membre retourne la chaîne de ressource qui identifie votre classe de contrôle. `GetMiscStatus` Retourne les bits de poids OLEMISC pour votre contrôle. Cette énumération spécifie une collection de paramètres décrivant les diverses caractéristiques de votre contrôle. Pour obtenir une description complète des paramètres OLEMISC, consultez [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le SDK Windows.  
+ Le `GetUserTypeNameID` fonction membre retourne la chaîne de ressource qui identifie votre classe de contrôle. `GetMiscStatus` Retourne les bits de poids OLEMISC pour votre contrôle. Cette énumération spécifie une collection de paramètres décrivant les diverses caractéristiques de votre contrôle. Pour obtenir une description complète des paramètres OLEMISC, consultez [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) dans le SDK Windows.  
   
 > [!NOTE]
 >  Les paramètres par défaut utilisés par le ActiveX ControlWizard sont : OLEMISC_ACTIVATEWHENVISIBLE OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE et OLEMISC_RECOMPOSEONRESIZE.  

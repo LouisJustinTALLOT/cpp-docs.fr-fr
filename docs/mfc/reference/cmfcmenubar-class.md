@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196380"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar, classe
 Barre de menus qui implémente l'ancrage.  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Notes  
  Vous devez utiliser cette fonction au lieu de [CMFCMenuBar::Create](#create) lorsque vous souhaitez spécifier des styles en plus de la barre d’outils de style. Des styles supplémentaires fréquemment utilisées sont TBSTYLE_TRANSPARENT et CBRS_TOP.  
   
- Pour obtenir la liste des styles supplémentaires, consultez [contrôle de barre d’outils et les Styles de boutons](http://msdn.microsoft.com/library/windows/desktop/bb760439), [des styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498), et [les styles de fenêtre courants](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Pour obtenir la liste des styles supplémentaires, consultez [contrôle de barre d’outils et les Styles de boutons](/windows/desktop/Controls/toolbar-control-and-button-styles), [des styles de contrôle courants](/windows/desktop/Controls/common-control-styles), et [les styles de fenêtre courants](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `CreateEx` méthode de la `CMFCMenuBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *lpLogFont*  
- Un pointeur vers un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) structure qui définit la police à définir.  
+ Un pointeur vers un [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) structure qui définit la police à définir.  
   
  [in] *bHorz*  
  TRUE si vous voulez le *lpLogFont* paramètre à utiliser pour la police verticale, et FALSE si vous souhaitez pouvoir être utilisé pour les polices horizontales.  

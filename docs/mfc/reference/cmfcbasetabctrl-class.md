@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198566"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implémente les fonctionnalités de base pour les fenêtres à onglets.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Recalcule la disposition interne d'une fenêtre à onglets.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Supprime tous les onglets de la fenêtre à onglets.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Supprime un onglet d'une fenêtre à onglets.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui spécifie la couleur d’arrière-plan de l’onglet actif.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui spécifie la couleur d’arrière-plan de l’onglet actif.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, la couleur d’arrière-plan de l’onglet actif est COLOR_WINDOW. Vous pouvez modifier la couleur d’arrière-plan de l’onglet actif en utilisant la méthode [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui spécifie la couleur du texte de l’onglet actif.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui spécifie la couleur du texte de l’onglet actif.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, la couleur du texte des onglets actifs est COLOR_WINDOWTEXT, tel. Vous pouvez modifier la couleur du texte avec la méthode [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à un tableau de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeurs qui le [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objet utilise pour la coloration d’onglet automatique.  
+ Une référence à un tableau de [COLORREF](/windows/desktop/gdi/colorref) valeurs qui le [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objet utilise pour la coloration d’onglet automatique.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, le framework initialise le tableau de couleurs pour les couleurs définies par la bibliothèque. Vous pouvez fournir un tableau de couleurs personnalisé en appelant la méthode [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui indique la couleur d’arrière-plan de l’onglet spécifié, -1 si *iTab* est hors limites.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui indique la couleur d’arrière-plan de l’onglet spécifié, -1 si *iTab* est hors limites.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Récupère la taille des bordures d’onglet dans le contrôle onglet.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Index de base zéro de l’onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte de l’onglet spécifié ; -1 si *iTab* est hors limites.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte de l’onglet spécifié ; -1 si *iTab* est hors limites.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Retourne le pointeur vers le volet qui réside sur l’onglet spécifié.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Spécifie la nouvelle couleur d’arrière-plan.  
   
 ### <a name="remarks"></a>Notes  
- Le framework Obtient la couleur d’arrière-plan par défaut des onglets actifs à partir de la [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)(méthode).  
+ Le framework Obtient la couleur d’arrière-plan par défaut des onglets actifs à partir de la [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)(méthode).  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Définit la couleur du texte des onglets actifs.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Paramètres  
  [in] *clr*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui spécifie la nouvelle couleur de texte.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui spécifie la nouvelle couleur de texte.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, le framework Obtient la couleur du texte à partir de [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Remplacer cette couleur par défaut en utilisant le `SetActiveTabTextColor` (méthode).  
+ Par défaut, le framework Obtient la couleur du texte à partir de [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Remplacer cette couleur par défaut en utilisant le `SetActiveTabTextColor` (méthode).  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Définit les couleurs du contrôle onglet qui utilise l’infrastructure en mode couleur automatique.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  La largeur de chaque image en pixels.  
   
  [in] *clrTransp*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur transparente de l’image.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur transparente de l’image.  
   
  [in] *hImageList*  
  Handle vers une liste d’images préchargées.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Index de base zéro de l’onglet.  
   
  [in] *couleur*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la nouvelle couleur de texte.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la nouvelle couleur de texte.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite ; 0 dans le cas contraire.  

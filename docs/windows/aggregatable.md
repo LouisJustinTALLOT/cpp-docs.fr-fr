@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200566"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Un paramètre pour indiquer quand l’objet COM peut être agrégée :
 
 ## <a name="remarks"></a>Notes
 
-Le **agrégeable** attribut C++ a les mêmes fonctionnalités que le [agrégeable](http://msdn.microsoft.com/library/windows/desktop/aa366721) attribut MIDL. Cela signifie que le compilateur passe le **agrégeable** par le biais d’attributs dans le fichier .idl généré.
+Le **agrégeable** attribut C++ a les mêmes fonctionnalités que le [agrégeable](/windows/desktop/Midl/aggregatable) attribut MIDL. Cela signifie que le compilateur passe le **agrégeable** par le biais d’attributs dans le fichier .idl généré.
 
 Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
 
@@ -97,4 +97,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs IDL](../windows/idl-attributes.md)  
 [Attributs de classe](../windows/class-attributes.md)  
 [Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[Aggregation](/windows/desktop/com/aggregation)  

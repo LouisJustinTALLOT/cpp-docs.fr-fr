@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f21a4545bb24b0a4a9e19efa2a6ff9738272cc9f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199749"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Détermination du type d’accesseur à utiliser
 Vous pouvez déterminer les types de données sur un ensemble de lignes au moment de la compilation ou au moment de l’exécution.  
@@ -38,7 +38,7 @@ Vous pouvez déterminer les types de données sur un ensemble de lignes au momen
 |`CDynamicAccessor`|Automatique.|Non.|Cette option est utile si vous ne connaissez pas le type de données dans un ensemble de lignes.|  
 |`CDynamicParameterAccessor`|Automatique, mais peut être [substitution](../../data/oledb/overriding-a-dynamic-accessor.md).|Oui, si le fournisseur prend en charge `ICommandWithParameters`. Paramètres liés automatiquement.|Plus lent que `CDynamicAccessor` mais utile pour l’appel des procédures stockées génériques.|  
 |`CDynamicStringAccessor[A,W]`|Automatique.|Non.|Récupère les données accédées à partir du magasin de données en tant que données de chaîne.|  
-|`CManualAccessor`|À l’aide de manuel `AddBindEntry`.|Manuellement à l’aide `AddParameterEntry`.|Très rapide. paramètres et les colonnes ne liées qu’une seule fois. Vous déterminez le type de données à utiliser. (Consultez [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemple pour obtenir un exemple.) Nécessite plus de code que `CDynamicAccessor` ou `CAccessor`. Cela correspond davantage à l’appel OLE DB directement.|  
+|`CManualAccessor`|À l’aide de manuel `AddBindEntry`.|Manuellement à l’aide `AddParameterEntry`.|Très rapide. paramètres et les colonnes ne liées qu’une seule fois. Vous déterminez le type de données à utiliser. (Consultez [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemple pour obtenir un exemple.) Nécessite plus de code que `CDynamicAccessor` ou `CAccessor`. Cela correspond davantage à l’appel OLE DB directement.|  
 |`CXMLAccessor`|Automatique.|Non.|Récupère les données accédées à partir du magasin de données en tant que données de type chaîne et met en forme comme données XML.|  
   
 ## <a name="see-also"></a>Voir aussi  

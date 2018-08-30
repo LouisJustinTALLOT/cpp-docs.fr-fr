@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 566e78820dd382a4b4e05742a410057b681d1fdc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ee155bd47097dc5ac52fd00590e377e941923e5c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603148"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194436"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -79,4 +79,4 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 
 [Attributs de compilateur](../windows/compiler-attributes.md)  
 [Attributs autonomes](../windows/stand-alone-attributes.md)  
-[Exemples d’attributs](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+[Exemples d’attributs](https://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

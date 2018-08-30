@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83d19e53b50791255b87cfa73a51761e2cdf5e1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847867"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196143"
 ---
 # <a name="aggregation"></a>Agrégation
 Il est parfois quand un implémenteur d’un objet souhaitez tirer parti des services offerts par un autre objet prédéfini. En outre, il aimerait que ce deuxième objet à apparaissent sous la forme d’un composant naturel de la première. COM permet d’obtenir les deux de ces objectifs via l’agrégation et relation contenant-contenu.  
@@ -31,5 +31,5 @@ Il est parfois quand un implémenteur d’un objet souhaitez tirer parti des ser
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction à COM](../atl/introduction-to-com.md)   
- [Réutilisation d’objets](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Réutilisation d’objets](/windows/desktop/com/reusing-objects)
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338858"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197001"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 Implémente un métafichier Windows, qui contient une séquence de commandes SQL GDI (Graphics Device Interface) que vous pouvez relire pour créer une image ou du texte voulu.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  Une fois que vous avez envoyé les commandes souhaitées au métafichier, appelez le `Close` fonction membre, ce qui ferme les contextes de périphérique de métafichier et retourne un handle du métafichier. Puis de supprimer le `CMetaFileDC` objet.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) pouvez ensuite utiliser le handle du métafichier pour lire le métafichier à plusieurs reprises. Métafichier permettre également être manipulé par les fonctions de Windows comme [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), qui copie un métafichier sur le disque.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) pouvez ensuite utiliser le handle du métafichier pour lire le métafichier à plusieurs reprises. Métafichier permettre également être manipulé par les fonctions de Windows comme [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), qui copie un métafichier sur le disque.  
   
- Lorsque le métafichier n’est plus nécessaire, supprimez-le de la mémoire avec le [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (fonction) Windows.  
+ Lorsque le métafichier n’est plus nécessaire, supprimez-le de la mémoire avec le [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) (fonction) Windows.  
   
  Vous pouvez également implémenter le `CMetaFileDC` objet afin qu’il puisse gérer les deux appels de sortie et attribut tel que les appels GDI `GetTextExtent`. Tel un métafichier est plus souple et plus facilement réemployer code général GDI, qui se compose souvent d’une combinaison d’appels de sortie et d’attribut. Le `CMetaFileDC` classe hérite des deux contextes de périphérique, `m_hDC` et `m_hAttribDC`, à partir de la capture de données modifiées. Le `m_hDC` contexte de périphérique gère toutes les [CDC](../../mfc/reference/cdc-class.md) GDI sortie des appels et le `m_hAttribDC` contexte de périphérique gère tous les appels d’attribut GDI de capture de données modifiées. En règle générale, les contextes de deux périphérique font référence au même appareil. Dans le cas de `CMetaFileDC`, le contrôleur de domaine de l’attribut est défini avec la valeur NULL par défaut.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Un HMETAFILE valide si la fonction a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
- Le handle du métafichier Windows peut également être permet de manipuler le métafichier avec des fonctions de Windows comme [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ Le handle du métafichier Windows peut également être permet de manipuler le métafichier avec des fonctions de Windows comme [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Supprimer le métafichier après utilisation en appelant le Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (fonction).  
+ Supprimer le métafichier après utilisation en appelant le Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) (fonction).  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Ferme un contexte de périphérique de métafichier amélioré et retourne un handle qui identifie un métafichier de format amélioré.  

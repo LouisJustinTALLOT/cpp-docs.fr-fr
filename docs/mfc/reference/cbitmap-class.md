@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337012"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195850"
 ---
 # <a name="cbitmap-class"></a>CBitmap (classe)
 Encapsule une bitmap GDI (Graphics Device Interface) Windows et fournit des fonctions membres pour la manipuler.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Notes  
  Bien qu’une image bitmap ne peut pas être directement sélectionnée pour un périphérique d’affichage, il peut être sélectionné en tant qu’image bitmap active pour un contexte de périphérique de mémoire à l’aide de [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) et copiée dans un contexte de périphérique compatible à l’aide de la [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) (fonction). (Le [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) fonction pouvez copier l’image bitmap pour le pinceau actuel directement dans le contexte de périphérique d’affichage.)  
   
- Si le `BITMAP` structure vers laquelle pointe le *lpBitmap* paramètre a été rempli à l’aide de la `GetObject` (fonction), les bits de l’image bitmap ne sont pas spécifiés, et l’image bitmap n’est pas initialisée. Pour initialiser la bitmap, une application peut utiliser une fonction comme [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) pour copier les bits du bitmap identifié par le premier paramètre de `CGdiObject::GetObject` à l’image bitmap créé par `CreateBitmapIndirect`.  
+ Si le `BITMAP` structure vers laquelle pointe le *lpBitmap* paramètre a été rempli à l’aide de la `GetObject` (fonction), les bits de l’image bitmap ne sont pas spécifiés, et l’image bitmap n’est pas initialisée. Pour initialiser la bitmap, une application peut utiliser une fonction comme [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) pour copier les bits du bitmap identifié par le premier paramètre de `CGdiObject::GetObject` à l’image bitmap créé par `CreateBitmapIndirect`.  
   
  Lorsque vous avez terminé avec le `CBitmap` objet créé avec `CreateBitmapIndirect` fonctionner, tout d’abord sélectionner l’image bitmap hors du contexte de périphérique, puis supprimez le `CBitmap` objet.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Notes  
  Par défaut, `LoadMappedBitmap` mappera les couleurs utilisées dans les glyphes de bouton.  
   
- Pour plus d’informations sur la création d’une image bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) et [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) structure dans le SDK Windows.  
+ Pour plus d’informations sur la création d’une image bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) et [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) structure dans le SDK Windows.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Charge une bitmap prédéfinie utilisée par Windows.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Notes  
  Cet opérateur est un opérateur de cast, qui prend en charge l’utilisation directe d’un `HBITMAP` objet.  
   
- Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans le SDK Windows.  
+ Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](/windows/desktop/gdi/graphic-objects) dans le SDK Windows.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Définit les bits d’une image bitmap pour les valeurs de bits donnés par *lpBits*.  

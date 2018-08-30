@@ -1,7 +1,7 @@
 ---
-title: Erreur irrécupérable NMAKE U1059 | Documents Microsoft
+title: Erreur irrécupérable NMAKE U1059 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b54919398c757bfe05f747ff57341f31decfc61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320701"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200788"
 ---
 # <a name="nmake-fatal-error-u1059"></a>Erreur irrécupérable NMAKE U1059
-Erreur de syntaxe : '}' manquant dans le fichier dépendant  
-  
- Un chemin de recherche pour une dépendance a été incorrectement spécifié. Soit un espace se trouvait dans le chemin d’accès ou l’accolade fermante (**}**) a été omis.  
-  
- La syntaxe pour une spécification de répertoire d’un dépendant est  
-  
- **{**   
- ***répertoires* } dépendant**  
-  
- où `directories` spécifie un ou plusieurs chemins d’accès, chacun étant séparés par un point-virgule (**;**). Aucun des espaces ne sont autorisés.  
-  
- Si tout ou partie d’un chemin de recherche est remplacé par une macro, assurez-vous que sans espaces existent dans l’expansion macro.
+
+> Erreur de syntaxe : '}' manquant dans le fichier dépendant
+
+Un chemin de recherche pour une dépendance a été incorrectement spécifié. Soit un espace existe dans le chemin d’accès ou l’accolade fermante (**}**) a été omis.
+
+La syntaxe pour une spécification de répertoire pour une dépendance est
+
+> **{** *répertoires* **} dépendant**
+
+où *répertoires* spécifie un ou plusieurs chemins d’accès, chacun étant séparés par un point-virgule (**;**). Sans les espaces sont autorisés.
+
+Si tout ou partie d’un chemin de recherche est remplacé par une macro, assurez-vous que sans espaces existent dans l’expansion macro.

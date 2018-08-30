@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196709"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 Fournit les fonctionnalités des contrôles bouton Windows.  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité du message BCM_GETIDEALSIZE, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
+ Cette fonction membre émule la fonctionnalité du message BCM_GETIDEALSIZE, comme décrit dans la [boutons](https://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  Appelez cette méthode pour obtenir la liste d’images à partir du contrôle de bouton.  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité du message BCM_GETIMAGELIST, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
+ Cette fonction membre émule la fonctionnalité du message BCM_GETIMAGELIST, comme décrit dans la [boutons](https://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Récupère le texte de note associé au contrôle de lien de commande actuelle.  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_COMMANDLINK ou BS_DEFCOMMANDLINK.  
   
- Cette méthode envoie le [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Récupère la longueur du texte de note pour le contrôle de lien de commande actuelle.  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_COMMANDLINK ou BS_DEFCOMMANDLINK.  
   
- Cette méthode envoie le [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Récupère le glyphe associé au contrôle de bouton Fractionner en cours.  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_GLYPH et l’envoie que la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère le glyphe à partir de la `himlGlyph` membre de la structure.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_GLYPH et l’envoie que la structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère le glyphe à partir de la `himlGlyph` membre de la structure.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Récupère le [liste d’images](../../mfc/reference/cimagelist-class.md) pour le contrôle de bouton partagé actuel.  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_IMAGE et l’envoie que la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère la liste d’images à partir de la `himlGlyph` membre de la structure.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_IMAGE et l’envoie que la structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère la liste d’images à partir de la `himlGlyph` membre de la structure.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Récupère les paramètres qui déterminent la manière dont Windows crée le contrôle de bouton partagé actuel.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
+|[out] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
- Cette méthode envoie le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Récupère le rectangle englobant du composant de liste déroulante du contrôle de bouton de fractionnement actuel.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pSize*|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
+|[out] *pSize*|Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Lorsque le contrôle bouton partagé est développé, il peut afficher un composant de liste déroulante tel qu’un contrôle de liste ou d’un contrôle de pagineur. Cette méthode récupère le rectangle englobant qui contient le composant de liste déroulante.  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_SIZE et l’envoie que la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère le rectangle englobant de le `size` membre de la structure.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_SIZE et l’envoie que la structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère le rectangle englobant de le `size` membre de la structure.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Récupère les styles de bouton de fractionnement qui définissent le contrôle de bouton partagé actuel.  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Combinaison au niveau du bit de styles de boutons de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
+ Combinaison au niveau du bit de styles de boutons de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
  Les styles de bouton Fractionner spécifient l’alignement, le rapport hauteur / largeur et le format graphique avec laquelle Windows Dessine une icône de bouton de fractionnement.  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_STYLE et l’envoie que la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère les styles de bouton de fractionnement à partir de la `uSplitStyle` membre de la structure.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_STYLE et l’envoie que la structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le Windows SDK. Lorsque la fonction de message est retournée, cette méthode récupère les styles de bouton de fractionnement à partir de la `uSplitStyle` membre de la structure.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Récupère l’état d’un contrôle bouton.  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité du message BCM_GETTEXTMARGIN, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
+ Cette fonction membre émule la fonctionnalité du message BCM_GETTEXTMARGIN, comme décrit dans la [boutons](https://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
  Appelez cette fonction membre pour associer une nouvelle image bitmap avec le bouton.  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Un contrôle de bouton partagé a un style de BS_SPLITBUTTON ou BS_DEFSPLITBUTTON et se compose d’un bouton et une flèche de déroulement à sa droite. Pour plus d’informations, consultez [Styles de boutons](http://msdn.microsoft.com/library/windows/desktop/bb775951). En règle générale, l’état de la liste déroulante est défini lorsque l’utilisateur clique sur la flèche déroulante. Utilisez cette méthode pour définir par programme l’état de la liste déroulante du contrôle. La flèche est dessinée grisée pour indiquer l’état.  
+ Un contrôle de bouton partagé a un style de BS_SPLITBUTTON ou BS_DEFSPLITBUTTON et se compose d’un bouton et une flèche de déroulement à sa droite. Pour plus d’informations, consultez [Styles de boutons](/windows/desktop/Controls/button-styles). En règle générale, l’état de la liste déroulante est défini lorsque l’utilisateur clique sur la flèche déroulante. Utilisez cette méthode pour définir par programme l’état de la liste déroulante du contrôle. La flèche est dessinée grisée pour indiquer l’état.  
   
- Cette méthode envoie le [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, *m_splitButton*, qui est utilisé pour accéder par programmation le contrôle bouton partagé. Cette variable est utilisée dans l’exemple suivant.  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>Notes  
  Si un contrôle de lien de bouton ou la commande nécessite une autorisation de sécurité avec élévation de privilèges pour exécuter une action, la valeur est le contrôle `elevation required` état. Par la suite, Windows affiche l’icône de bouclier du contrôle de compte utilisateur (UAC) sur le contrôle. Pour plus d’informations, consultez « Contrôle de compte d’utilisateur » à l’adresse [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Cette méthode envoie le [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Appelez cette fonction membre pour associer une icône de nouveau avec le bouton.  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité du message BCM_SETIMAGELIST, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
+ Cette fonction membre émule la fonctionnalité du message BCM_SETIMAGELIST, comme décrit dans la [boutons](https://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  Définit le texte de note pour le contrôle de lien de commande actuelle.  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_COMMANDLINK ou BS_DEFCOMMANDLINK.  
   
- Cette méthode envoie le [BCM_SETNOTE détermine](http://msdn.microsoft.com/library/windows/desktop/bb775977) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [BCM_SETNOTE détermine](/windows/desktop/Controls/bcm-setnote) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, *m_cmdLink*, qui est utilisé pour accéder par programmation le contrôle de lien de commande. Cette variable est utilisée dans l’exemple suivant.  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Un glyphe est la représentation physique d’un caractère dans une police particulière. Le *chGlyph* paramètre n’est pas utilisé en tant que le glyphe, mais il est utilisé à la place pour sélectionner un glyphe à partir d’un jeu de glyphes définie par le système. Le glyphe de flèche de déroulement par défaut est spécifié par un caractère « 6 » et ressemble à caractère Unicode TRIANGLE pointant noir vers le bas (U + 25BC).  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_GLYPH et le `himlGlyph` membre avec le *chGlyph* paramètre et qui envoie ensuite structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le SDK Windows.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_GLYPH et le `himlGlyph` membre avec le *chGlyph* paramètre et qui envoie ensuite structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le SDK Windows.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Associe un [liste d’images](../../mfc/reference/cimagelist-class.md) avec le contrôle de bouton partagé actuel.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
- Cette méthode initialise le `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_IMAGE et le `himlGlyph` membre avec le *pSplitImageList* paramètre et l’envoie Cette structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le SDK Windows.  
+ Cette méthode initialise le `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_IMAGE et le `himlGlyph` membre avec le *pSplitImageList* paramètre et l’envoie Cette structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le SDK Windows.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Spécifie les paramètres qui déterminent la manière dont Windows crée le contrôle de bouton partagé actuel.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui définit le contrôle de bouton partagé actuel.|  
+|[in] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure qui définit le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
- Cette méthode envoie le [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, `m_splitButton`, qui est utilisé pour accéder par programmation le contrôle bouton partagé.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pSize*|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
+|[in] *pSize*|Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Lorsque le contrôle bouton partagé est développé, il peut afficher un composant de liste déroulante tel qu’un contrôle de liste ou d’un contrôle de pagineur. Cette méthode spécifie la taille du rectangle englobant qui contient le composant de liste déroulante.  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_SIZE et `size` membre avec le *pSize* paramètre et l’envoie de structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le SDK Windows.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_SIZE et `size` membre avec le *pSize* paramètre et l’envoie de structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, `m_splitButton`, qui est utilisé pour accéder par programmation le contrôle bouton partagé. Cette variable est utilisée dans l’exemple suivant.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Combinaison au niveau du bit de styles de boutons de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
+|[in] *uSplitStyle*|Combinaison au niveau du bit de styles de boutons de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est BS_SPLITBUTTON ou BS_DEFSPLITBUTTON.  
   
- Les styles de bouton Fractionner spécifient l’alignement, le rapport hauteur / largeur et le format graphique avec laquelle Windows Dessine une icône de bouton de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
+ Les styles de bouton Fractionner spécifient l’alignement, le rapport hauteur / largeur et le format graphique avec laquelle Windows Dessine une icône de bouton de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure.  
   
- Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec l’indicateur BCSIF_STYLE et le `uSplitStyle` membre avec le *uSplitStyle* paramètre et qui envoie ensuite structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le SDK Windows.  
+ Cette méthode initialise la `mask` membre d’un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure avec l’indicateur BCSIF_STYLE et le `uSplitStyle` membre avec le *uSplitStyle* paramètre et qui envoie ensuite structure dans le [adaptées à vos](/windows/desktop/Controls/bcm-getsplitinfo) message qui est décrit dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, `m_splitButton`, qui est utilisé pour accéder par programmation le contrôle bouton partagé.  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité du message BCM_SETTEXTMARGIN, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
+ Cette fonction membre émule la fonctionnalité du message BCM_SETTEXTMARGIN, comme décrit dans la [boutons](https://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CWnd, classe](../../mfc/reference/cwnd-class.md)   

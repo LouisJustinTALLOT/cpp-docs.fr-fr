@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f74ec15c6bc6d58f9f092a24faf66d0cef3740
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201939"
 ---
 # <a name="default-atl-project-configurations"></a>Configurations de projet ATL par défaut
 L’Assistant Projet ATL crée deux configurations de projet par défaut :  
   
-|Configuration|La chaîne retournée a le format suivant :|Utilisation des ATL|  
+|Configuration|Jeu de caractères|Utilisation des ATL|  
 |-------------------|-------------------|----------------|  
 |Mise en production|MBCS|DLL|  
 |Débogage|MBCS|DLL|  
@@ -35,6 +35,6 @@ L’Assistant Projet ATL crée deux configurations de projet par défaut :
 ## <a name="see-also"></a>Voir aussi  
  [Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)   
- [Boîte de dialogue de configuration Manager](http://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Boîte de dialogue de configuration Manager](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
  [Compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

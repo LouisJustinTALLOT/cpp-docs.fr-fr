@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850811"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194596"
 ---
 # <a name="reference-counting"></a>Comptage de références
 COM lui-même n’essaie pas automatiquement supprimer un objet de la mémoire lorsqu’il détermine que l’objet n’est plus utilisé. Au lieu de cela, le programmeur de l’objet doit supprimer l’objet inutilisé. Le programmeur détermine si un objet peut être supprimé en fonction d’un décompte de références.  
   
- COM utilise le `IUnknown` méthodes, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) et [version](http://msdn.microsoft.com/library/windows/desktop/ms682317), pour gérer le décompte de références des interfaces sur un objet. Les règles générales pour l’appel de ces méthodes sont :  
+ COM utilise le `IUnknown` méthodes, [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) et [version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), pour gérer le décompte de références des interfaces sur un objet. Les règles générales pour l’appel de ces méthodes sont :  
   
 -   Chaque fois qu’un client reçoit un pointeur d’interface, `AddRef` doit être appelée sur l’interface.  
   
@@ -43,5 +43,5 @@ COM lui-même n’essaie pas automatiquement supprimer un objet de la mémoire l
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction à COM](../atl/introduction-to-com.md)   
- [La gestion des durées de vie des objets via le décompte](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [La gestion des durées de vie des objets via le décompte](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

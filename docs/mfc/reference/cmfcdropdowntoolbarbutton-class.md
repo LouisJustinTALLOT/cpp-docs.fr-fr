@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ea64180a9f7abf37f379e3e8feccc4ee41fd44
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850194"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200652"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton, classe
 Type de bouton de barre d'outils qui se comporte comme un bouton normal lorsque l'utilisateur clique dessus. Toutefois, il ouvre une barre d’outils déroulante ( [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) si l’utilisateur appuie sur et maintient le bouton de barre d’outils.  
@@ -90,7 +90,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Détermine si la barre d’outils de la liste déroulante est actuellement ouverte.|  
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Détermine si le bouton peut être affiché avec une bordure étendue. (Substitue [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Appelé par l’infrastructure pour calculer la taille du bouton pour le contexte de périphérique spécifié et l’état d’ancrage. (Substitue [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|Appelé par l’infrastructure pour gérer la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message. (Substitue `CMCToolBarButton::OnCancelMode`.)|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Appelé par l’infrastructure pour gérer la [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) message. (Substitue `CMCToolBarButton::OnCancelMode`.)|  
 |[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Appelé par le framework lorsque le bouton est inséré dans une nouvelle barre d’outils. (Substitue [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|Appelé par le framework lorsque l’utilisateur clique sur le bouton de la souris. (Substitue [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Appelé par l’infrastructure lorsque l’utilisateur relâche le bouton de la souris. (Substitue [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  

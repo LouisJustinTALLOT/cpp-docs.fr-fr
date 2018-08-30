@@ -1,5 +1,5 @@
 ---
-title: -TSAWARE (créer une Application prenant en charge du serveur Terminal Server) | Documents Microsoft
+title: -TSAWARE (créer une Application prenant en charge du serveur Terminal Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e386c9024ea7736adb2766488c1c51c80ff7177b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9caf6c9a47a667b57220b6bf577080d3548e94e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379131"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198548"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Créer une application sensible à Terminal Server)
 ```  
@@ -36,15 +36,15 @@ ms.locfileid: "32379131"
 ## <a name="remarks"></a>Notes  
  L’option /TSAWARE définit un indicateur dans le champ DllCharacteristics IMAGE_OPTIONAL_HEADER de l’en-tête facultatif de l’image du programme. Si cet indicateur est défini, le serveur Terminal Server n’apportera aucune modification à l’application.  
   
- Lorsqu’une application n’est pas compatible Terminal Server (également appelé une application héritée), serveur Terminal Server apporte des modifications pour l’application héritée pour qu’il fonctionne correctement dans un environnement multi-utilisateur. Par exemple, serveur Terminal Server créera un dossier virtuel de Windows, telles que chaque utilisateur obtienne un dossier Windows au lieu d’obtenir le répertoire du système Windows. Cela fournit aux utilisateurs un accès à leurs propres fichiers INI. En outre, Terminal Server modifie certains ajustements dans le Registre pour une application héritée. Ces modifications ralentissent le chargement de l’application héritée sur le serveur Terminal Server.  
+ Lorsqu’une application n’est pas compatible Terminal Server (également appelé une application héritée), Terminal Server apporte des modifications pour l’application héritée pour qu’il fonctionne correctement dans un environnement multi-utilisateur. Par exemple, Terminal Server créera un dossier virtuel de Windows, telles que chaque utilisateur obtienne un dossier Windows au lieu d’obtenir le répertoire du système Windows. Ainsi, les utilisateurs l’accès à leurs propres fichiers INI. En outre, Terminal Server modifie certains ajustements dans le Registre pour une application héritée. Ces modifications ralentissent le chargement de l’application héritée sur le serveur Terminal Server.  
   
- Si une application est compatible Terminal Server, il doit s’appuient sur les fichiers INI ni écrire dans le **HKEY_CURRENT_USER** Registre pendant l’installation.  
+ Si une application est compatible Terminal Server, il doit s’appuyer sur les fichiers INI ni écrire dans le **HKEY_CURRENT_USER** Registre pendant l’installation.  
   
- Si vous utilisez /TSAWARE et que votre application utilise toujours les fichiers INI, les fichiers seront partagés par tous les utilisateurs du système. Si ce n’est acceptable, vous pouvez toujours lier votre application avec l’option /TSAWARE ; Sinon, vous devez utiliser/TSAWARE : no.  
+ Si vous utilisez /TSAWARE et que votre application utilise toujours les fichiers INI, les fichiers sont partagés par tous les utilisateurs du système. Si tel est acceptable, vous pouvez toujours lier votre application avec l’option /TSAWARE ; Sinon, vous devez utiliser : no.  
   
- L’option /TSAWARE est activée par défaut pour les applications Windows et console. Consultez [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [/VERSION](../../build/reference/version-version-information.md) pour plus d’informations.  
+ L’option /TSAWARE est activée par défaut pour Windows et les applications de console. Consultez [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [/VERSION](../../build/reference/version-version-information.md) pour plus d’informations.  
   
- /TSAWARE n’est pas valide pour les pilotes, VXD ou DLL.  
+ /TSAWARE n’est pas valide pour les pilotes, VxDs ou DLL.  
   
  Si une application a été liée avec l’option/TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) affiche des informations à cet effet.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "32379131"
   
 3.  Cliquez sur le **système** page de propriétés.  
   
-4.  Modifier la **Terminal Server** propriété.  
+4.  Modifier le **Terminal Server** propriété.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
@@ -65,5 +65,5 @@ ms.locfileid: "32379131"
 ## <a name="see-also"></a>Voir aussi  
  [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
  [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
- [Stocker des informations spécifiques à l’utilisateur](http://msdn.microsoft.com/library/aa383452)   
- [Applications héritées dans un environnement de Services Terminal Server](https://msdn.microsoft.com/en-us/library/aa382957.aspx)
+ [Stocker des informations spécifiques à l’utilisateur](/windows/desktop/TermServ/storing-user-specific-information)   
+ [Applications héritées dans un environnement de Services Terminal Server](https://msdn.microsoft.com/library/aa382957.aspx)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196205"
 ---
 # <a name="based-pointers-c"></a>Pointeurs basés sur (C++)
 **Section spécifique à Microsoft**  
@@ -56,7 +56,7 @@ struct llist_t {
  Le pointeur `vpBuffer` reçoit l'adresse de la mémoire allouée à un point ultérieur dans le programme. La liste liée est déplacée par rapport à la valeur de `vpBuffer`.  
   
 > [!NOTE]
->  Les identificateurs persistants contenant des pointeurs également possible à l’aide de [fichiers mappés en mémoire](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Les identificateurs persistants contenant des pointeurs également possible à l’aide de [fichiers mappés en mémoire](/windows/desktop/Memory/file-mapping).  
   
  Lors du déréférencement d'un pointeur based, la base doit être spécifiée explicitement ou connue implicitement via la déclaration.  
   

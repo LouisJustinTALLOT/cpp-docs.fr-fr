@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593355"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200216"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ Numéro de version que vous souhaitez affecter au bloc de bibliothèque. La vale
 ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer le *uuid* de votre bloc de bibliothèque, vous pouvez ainsi faire en utilisant l’identificateur **__uuidof (** *nom_bibliothèque* **)**.
 
 *lcid*  
-Paramètre de localisation. Pour plus d’informations, consultez [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .
+Paramètre de localisation. Consultez [lcid](/windows/desktop/Midl/lcid) pour plus d’informations.
 
 *contrôle* (facultatif)  
 Indique que toutes les coclasses dans la bibliothèque sont des contrôles.
@@ -82,7 +82,7 @@ Indique que toutes les coclasses dans la bibliothèque sont des contrôles.
 Spécifie la bibliothèque de types.
 
 *helpstringdll* (facultatif)  
-Définit le nom du fichier .dll à utiliser pour effectuer une recherche de chaîne de document. Pour plus d’informations, consultez [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .
+Définit le nom du fichier .dll à utiliser pour effectuer une recherche de chaîne de document. Consultez [helpstringdll](/windows/desktop/Midl/helpstringdll) pour plus d’informations.
 
 *HelpFile* (facultatif)  
 Le nom de la **aide** fichier pour la bibliothèque de types.
@@ -94,10 +94,10 @@ Le **ID d’aide** pour cette bibliothèque de types.
 Pour plus d’informations, consultez [helpstringcontext](../windows/helpstringcontext.md) .
 
 *masqué* (facultatif)  
-Empêche l’affichage de l’intégralité de la bibliothèque. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Pour plus d’informations, consultez l’attribut MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .
+Empêche l’affichage de l’intégralité de la bibliothèque. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
 
 *restreint* (facultatif)  
-Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .
+Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
 
 *personnalisé* (facultatif)  
 Un ou plusieurs attributs. Ceci est similaire à l’attribut [custom](../windows/custom-cpp.md) . Le premier paramètre de *personnalisé* est le GUID de l’attribut. Exemple :
@@ -124,15 +124,15 @@ Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) est utilisé comme classe de base et comme points d’entrée de DLL standard requis pour un serveur COM. Ces points d’entrée sont [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)et [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) est utilisé comme classe de base et comme points d’entrée de DLL standard requis pour un serveur COM. Ces points d’entrée sont [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), et [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) est utilisée comme classe de base et le point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) est utilisée comme classe de base et le point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 [Attributs autonomes](../windows/stand-alone-attributes.md)  
 [Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[Bibliothèque](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[Bibliothèque](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

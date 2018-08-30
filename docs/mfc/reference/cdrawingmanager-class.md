@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209168"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196058"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
 Le `CDrawingManager` classe implémente les algorithmes de dessins complexes.  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  Un handle de bitmap DIB nouvellement créé si cette méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations sur la création d’une image bitmap DIB, consultez [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+ Pour plus d’informations sur la création d’une image bitmap DIB, consultez [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  Affiche les bitmaps qui ont des pixels transparents ou semi-transparent.  
@@ -196,7 +196,7 @@ void DrawAlpha(
  Le rectangle source.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode effectue la simulation de transparence pour les bitmaps de deux. Pour plus d’informations sur le blindage alpha, consultez [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) dans le SDK Windows.  
+ Cette méthode effectue la simulation de transparence pour les bitmaps de deux. Pour plus d’informations sur le blindage alpha, consultez [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) dans le SDK Windows.  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  Dessine une ellipse avec les couleurs de remplissage et la bordure fournis.  

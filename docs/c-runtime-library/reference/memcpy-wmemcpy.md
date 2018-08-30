@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9880bdbc608933a1b6cfffe3473a9b07f0252ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f75aa6a32277fda0796fe2433062f5062fdd47eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196077"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -76,17 +76,17 @@ La valeur de *dest*.
 
 ## <a name="remarks"></a>Notes
 
-**memcpy** copies *nombre* octets à partir de *src* à *dest*; **wmemcpy** copies *nombre* caractères larges (sur deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy** n’est pas défini. Utilisez **memmove** pour gérer les régions qui se chevauche.
+**memcpy** copies *nombre* octets à partir de *src* à *dest*; **wmemcpy** copies *nombre* caractères larges (sur deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy** n’est pas défini. Utilisez **memmove** pour gérer les régions qui se chevauchent.
 
 > [!IMPORTANT]
-> Assurez-vous que la mémoire tampon de destination est d'une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assurez-vous que la mémoire tampon de destination est d'une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Étant donné qu’autant dépassements de mémoire tampon et les failles de sécurité potentielles par conséquent, ont été détectées pour une utilisation incorrecte de **memcpy**, cette fonction est répertoriée parmi les fonctions « bannies » par le cycle de vie de développement de sécurité (SDL).  Vous remarquerez peut-être que certaines classes de bibliothèque VC ++ continuent à utiliser **memcpy**.  En outre, vous pouvez observer que l’optimiseur du compilateur VC ++ émet parfois des appels à **memcpy**.  Le produit Visual C++ est développé conformément au processus SDL, et l'utilisation de cette fonction bannie a donc été évaluée avec attention.  Dans le cas de son utilisation dans des bibliothèques, les appels ont été examinés avec soin pour garantir que les dépassements de mémoire tampon ne seront pas autorisés via ces appels.  Dans le cas le compilateur, certains modèles de code sont parfois reconnus comme étant identiques au modèle de **memcpy**et sont donc remplacés par un appel à la fonction.  Dans ce cas, l’utilisation de **memcpy** n’est pas plus risquée que l’original instructions auraient été ; elles ont simplement été optimisées à un appel à la performance réglées **memcpy** (fonction).  Tout comme l'utilisation de fonctions CRT « sécurisées » ne garantit pas la sécurité (elles rendent simplement plus compliquée une utilisation risquée), l'utilisation de fonctions « bannies » ne signifie pas qu'il y a danger à coup sûr (elles nécessitent seulement un examen plus attentif pour garantir la sécurité).
+> Étant donné que tellement dépassements de mémoire tampon et les failles de sécurité potentielles par conséquent, ont été détectées pour une utilisation incorrecte de **memcpy**, cette fonction est répertoriée parmi les fonctions « bannies » par Security Development Lifecycle (SDL).  Vous pouvez observer que certaines classes de bibliothèque VC ++ continuent à utiliser **memcpy**.  En outre, vous pouvez observer que l’optimiseur du compilateur VC ++ émet parfois des appels à **memcpy**.  Le produit Visual C++ est développé conformément au processus SDL, et l'utilisation de cette fonction bannie a donc été évaluée avec attention.  Dans le cas de son utilisation dans des bibliothèques, les appels ont été examinés avec soin pour garantir que les dépassements de mémoire tampon ne seront pas autorisés via ces appels.  Dans le cas le compilateur, parfois, certains modèles de code sont reconnus comme étant identiques au modèle de **memcpy**et sont donc remplacés par un appel à la fonction.  Dans ce cas, l’utilisation de **memcpy** n’est pas plus risquée que l’original instructions auraient été ; elles ont simplement été optimisées à un appel à la performances optimisées **memcpy** (fonction).  Tout comme l'utilisation de fonctions CRT « sécurisées » ne garantit pas la sécurité (elles rendent simplement plus compliquée une utilisation risquée), l'utilisation de fonctions « bannies » ne signifie pas qu'il y a danger à coup sûr (elles nécessitent seulement un examen plus attentif pour garantir la sécurité).
 >
-> Étant donné que **memcpy** utilisation par les bibliothèques du compilateur VC ++ a été examinée avec soin, ces appels sont autorisés dans du code qui est conforme à SDL.  **memcpy** appels introduites dans le code source d’applications sont conformes à SDL seulement quand cette utilisation a été vérifiée par des experts en sécurité.
+> Étant donné que **memcpy** utilisation par des bibliothèques et du compilateur VC ++ a été examinée avec soin, ces appels sont autorisés dans du code qui est conforme à SDL.  **memcpy** appels introduites dans le code source d’application sont conformes à SDL uniquement lorsque cette utilisation a été vérifiée par des experts en sécurité.
 
-Le **memcpy** et **wmemcpy** fonctions seront déconseillées seulement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est défini avant l’instruction d’inclusion dans l’ordre de les fonctions déconseillées, comme dans l’exemple ci-dessous :
+Le **memcpy** et **wmemcpy** fonctions seront déconseillées seulement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est défini avant l’instruction d’inclusion dans l’ordre pour les fonctions déconseillées, comme illustré dans l’exemple ci-dessous :
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -100,7 +100,7 @@ ou
 #include <wchar.h>
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

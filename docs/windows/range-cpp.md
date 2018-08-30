@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c1ad17b6f658129ff33be28843ebb48b86f7845
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201349"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -47,7 +47,7 @@ La valeur de la plage supérieure.
 
 ## <a name="remarks"></a>Notes
 
-Le **plage** attribut C++ a les mêmes fonctionnalités que le [plage](http://msdn.microsoft.com/library/windows/desktop/aa367151) attribut MIDL.
+Le **plage** attribut C++ a les mêmes fonctionnalités que le [plage](/windows/desktop/Midl/range) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

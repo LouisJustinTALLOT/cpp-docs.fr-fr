@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199919"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC  
   
@@ -308,7 +308,7 @@ Les styles de zone de liste modifiable suivants sont disponibles dans MFC. Pour 
   
 ## <a name="edit-styles"></a>  Modifier les styles  
   
-Modifier les styles s’appliquent à [classe CEdit](../../mfc/reference/cedit-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Pour plus d’informations sur les styles de contrôle edit dans Windows, consultez [modifier les Styles du contrôle (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Modifier les styles s’appliquent à [classe CEdit](../../mfc/reference/cedit-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Pour plus d’informations sur les styles de contrôle edit dans Windows, consultez [modifier les Styles du contrôle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ Les styles de boîte de message suivants sont disponibles.
   
 ## <a name="scroll-bar-styles"></a> Styles de barre de défilement  
   
-Styles de barre de défilement s’appliquent à [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Pour plus d’informations sur les styles de contrôle dans Windows de la barre de défilement, consultez [Styles de contrôle de barre de défilement (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Styles de barre de défilement s’appliquent à [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Pour plus d’informations sur les styles de contrôle dans Windows de la barre de défilement, consultez [Styles de contrôle de barre de défilement (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Styles de barre de défilement s’appliquent à [CScrollBar, classe](../../mfc/
   
 ## <a name="static-styles"></a> Styles statiques  
   
-Styles statiques s’appliquent à [cstatic, classe](../../mfc/reference/cstatic-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Pour plus d’informations sur les styles de contrôle statique dans Windows, consultez [Styles de contrôle statique (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Styles statiques s’appliquent à [cstatic, classe](../../mfc/reference/cstatic-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Pour plus d’informations sur les styles de contrôle statique dans Windows, consultez [Styles de contrôle statique (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Appliquent des styles de fenêtre étendus à [classe CWnd](../../mfc/reference/
 |WS_EX_CONTEXTHELP|Inclut un point d’interrogation dans la barre de titre de la fenêtre. Lorsque l’utilisateur clique sur le point d’interrogation, le curseur se transforme en un point d’interrogation avec un pointeur. Si l’utilisateur clique ensuite sur une fenêtre enfant, l’enfant reçoit un message WM_HELP.|  
 |WS_EX_CONTROLPARENT|Permet à l’utilisateur à naviguer entre les fenêtres enfants de la fenêtre à l’aide de la touche TAB.|  
 |WS_EX_DLGMODALFRAME|Désigne une fenêtre avec une double bordure qui (peut éventuellement) être créée avec un titre de la barre lorsque vous spécifiez l’indicateur de style WS_CAPTION dans le *dwStyle* paramètre.|  
-|WS_EX_LAYERED|La fenêtre est un [fenêtre superposée](http://msdn.microsoft.com/library/ms632599.aspx#layered). Ce style ne peut pas être utilisé si la fenêtre possède un [style de classe](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) de CS_OWNDC ou CS_CLASSDC. Toutefois, Microsoft Windows 8 prend en charge le style WS_EX_LAYERED pour les fenêtres enfants, où les versions précédentes de Windows prennent en charge uniquement pour les fenêtres de niveau supérieur.|  
+|WS_EX_LAYERED|La fenêtre est un [fenêtre superposée](/windows/desktop/winmsg/window-features). Ce style ne peut pas être utilisé si la fenêtre possède un [style de classe](/windows/desktop/winmsg/about-window-classes) de CS_OWNDC ou CS_CLASSDC. Toutefois, Microsoft Windows 8 prend en charge le style WS_EX_LAYERED pour les fenêtres enfants, où les versions précédentes de Windows prennent en charge uniquement pour les fenêtres de niveau supérieur.|  
 |WS_EX_LEFT|Fournit des propriétés génériques d’alignement à gauche fenêtre. Il s'agit de la valeur par défaut.|  
 |WS_EX_LEFTSCROLLBAR|Place une barre de défilement verticale à gauche de la zone cliente.|  
 |WS_EX_LTRREADING|Affiche le texte à l’aide de gauche à droite de la fenêtre Propriétés de l’ordre de lecture. Il s'agit de la valeur par défaut.|  
@@ -524,14 +524,14 @@ Appliquent des styles de fenêtre étendus à [classe CWnd](../../mfc/reference/
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Styles de boutons (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Styles de zone de liste déroulante (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Modifier les Styles de contrôle (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Modifier les Styles de contrôle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Styles (Windows) de la zone de liste](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [MessageBox (fonction) (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[Styles de contrôle de barre de défilement (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Styles de contrôle statique (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[Styles de contrôle de barre de défilement (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Styles de contrôle statique (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Styles de fenêtre (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Styles de fenêtre étendus (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
