@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335616"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196551"
 ---
 # <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 Contrôles OLE, comme les autres objets de serveur OLE, sont accessibles par d’autres applications prenant en charge OLE. Pour cela, vous devez inscrire la bibliothèque de types et la classe du contrôle.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = gratuit.  
   
-     Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.  
+     Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.  
   
 > [!NOTE]
 >  Dans les versions MFC antérieures 4.2 de MFC, la **int** *nRegFlags* paramètre était un paramètre de type BOOL, *bInsertable*, qui autorisé ou interdit le contrôle à insérer à partir de l’instruction Insert Boîte de dialogue d’objet.  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Différent de zéro si la classe de contrôle a été inscrit ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Cela permet au contrôle à utiliser par les conteneurs de contrôle OLE prenant en charge. `AfxOleRegisterControlClass` met à jour le Registre avec le nom du contrôle et l’emplacement sur le système et définit également le modèle de thread qui le contrôle prend en charge dans le Registre. Pour plus d’informations, consultez [technique Remarque 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « Modèle de cloisonnement de thread dans OLE contrôles, » et [sur les processus et Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) dans le SDK Windows.  
+ Cela permet au contrôle à utiliser par les conteneurs de contrôle OLE prenant en charge. `AfxOleRegisterControlClass` met à jour le Registre avec le nom du contrôle et l’emplacement sur le système et définit également le modèle de thread qui le contrôle prend en charge dans le Registre. Pour plus d’informations, consultez [technique Remarque 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « Modèle de cloisonnement de thread dans OLE contrôles, » et [sur les processus et Threads](/windows/desktop/ProcThread/about-processes-and-threads) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Différent de zéro si la classe de contrôle a été inscrit ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Ainsi, la page de propriétés à utiliser par les conteneurs de contrôle OLE prenant en charge. `AfxOleRegisterPropertyPageClass` met à jour le Registre avec le nom de page de propriété et son emplacement sur le système et définit également le modèle de thread qui le contrôle prend en charge dans le Registre. Pour plus d’informations, consultez [technique Remarque 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « Modèle de cloisonnement de thread dans OLE contrôles, » et [sur les processus et Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) dans le SDK Windows.  
+ Ainsi, la page de propriétés à utiliser par les conteneurs de contrôle OLE prenant en charge. `AfxOleRegisterPropertyPageClass` met à jour le Registre avec le nom de page de propriété et son emplacement sur le système et définit également le modèle de thread qui le contrôle prend en charge dans le Registre. Pour plus d’informations, consultez [technique Remarque 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « Modèle de cloisonnement de thread dans OLE contrôles, » et [sur les processus et Threads](/windows/desktop/ProcThread/about-processes-and-threads) dans le SDK Windows.  
   
 ### <a name="requirements"></a>Configuration requise  
   **En-tête** afxctl.h  

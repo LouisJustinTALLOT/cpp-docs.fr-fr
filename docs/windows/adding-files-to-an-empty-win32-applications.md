@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200167"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Ajout de fichiers à des applications Win32 vides
 
@@ -45,4 +45,4 @@ Pour ajouter des fichiers qui sont source, en-tête ni les fichiers de ressource
 ## <a name="see-also"></a>Voir aussi
 
 [Création d’une application de bureau Windows vide](../windows/creating-an-empty-windows-desktop-application.md)  
-[Déploiement d’applications](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[Déploiement d’applications](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

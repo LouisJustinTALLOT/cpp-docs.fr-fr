@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 220adeb44e676937756cf8007647f7e381f7607f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88e5960b4f809b9c0a43e10fa8fbb69544c9d9bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194915"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,7 +36,7 @@ Identifie des paramètres pointeurs qui sont retournés de la procédure appelé
 
 ## <a name="remarks"></a>Notes
 
-L’attribut C++ **out** a les mêmes fonctionnalités que l’attribut MIDL [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) .
+Le **out** attribut C++ a les mêmes fonctionnalités que le [out](/windows/desktop/Midl/out-idl) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

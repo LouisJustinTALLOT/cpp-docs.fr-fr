@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b2d84d9a072d3eeaa84246a6692487be5c71679c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 758208de2ee27dba64808c60b1d94bed5bdeafa4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194572"
 ---
 # <a name="transaction-object-interfaces"></a>Interfaces de l’objet transaction
 L’objet de transaction définit une unité atomique de travail sur une source de données et détermine la façon dont ces unités de travail sont liés entre eux. Cet objet n’est pas directement pris en charge par les modèles du fournisseur OLE DB (autrement dit, vous devez créer votre propre objet).  
@@ -34,7 +34,7 @@ L’objet de transaction définit une unité atomique de travail sur une source 
   
 |Interface|Obligatoire ?|Implémentée par les modèles OLE DB ?|  
 |---------------|---------------|--------------------------------------|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Obligatoire|Non|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Obligatoire|Non|  
 |[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Obligatoire|Non|  
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Facultatif|Non|  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852534"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197301"
 ---
 # <a name="event-handling-principles"></a>Principes de gestion des événements
 Il existe trois étapes communes à la gestion des événements. Vous devrez :  
@@ -41,13 +41,13 @@ Il existe trois étapes communes à la gestion des événements. Vous devrez :
   
  Avertissement de la source d’événement peut être divisé en trois étapes :  
   
--   Interroger l’objet source pour [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+-   Interroger l’objet source pour [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).  
   
--   Appelez [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) en passant l’IID de l’interface d’événement qui vous intéresse. Si réussie, elle retournera le [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interface sur un objet de point de connexion.  
+-   Appelez [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) en passant l’IID de l’interface d’événement qui vous intéresse. Si réussie, elle retournera le [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interface sur un objet de point de connexion.  
   
--   Appelez [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) en passant le `IUnknown` du récepteur d’événements. Si réussie, elle retournera un `DWORD` cookie représentant la connexion.  
+-   Appelez [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) en passant le `IUnknown` du récepteur d’événements. Si réussie, elle retournera un `DWORD` cookie représentant la connexion.  
   
- Une fois que vous avez correctement enregistré votre intérêt pour la réception d’événements, les méthodes sur votre interface de l’objet événement sont appelées selon les événements déclenchés par l’objet source. Lorsque vous n’avez plus besoin de recevoir des événements, vous pouvez transmettre le cookie au point de connexion par le biais de [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Cela arrêtera la connexion entre la source et récepteur.  
+ Une fois que vous avez correctement enregistré votre intérêt pour la réception d’événements, les méthodes sur votre interface de l’objet événement sont appelées selon les événements déclenchés par l’objet source. Lorsque vous n’avez plus besoin de recevoir des événements, vous pouvez transmettre le cookie au point de connexion par le biais de [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Cela arrêtera la connexion entre la source et récepteur.  
   
  Veillez à éviter de référence des cycles de traitement des événements.  
   

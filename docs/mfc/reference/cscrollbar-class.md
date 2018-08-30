@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850041"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199199"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar, classe
 Fournit les fonctionnalités d'un contrôle de barre de défilement Windows.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Paramètres  
  *pScrollInfo*  
- Un pointeur vers le [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) structure.  
+ Un pointeur vers le [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) du message, comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) du message, comme décrit dans le SDK Windows.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Récupère les informations que la structure `SCROLLINFO` conserve à propos d'une barre de défilement.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Paramètres  
  *lpScrollInfo*  
- Un pointeur vers un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure. Consultez le SDK Windows pour plus d’informations sur cette structure.  
+ Un pointeur vers un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) structure. Consultez le SDK Windows pour plus d’informations sur cette structure.  
   
  *nMask*  
  Spécifie les paramètres de barre de défilement à récupérer. Utilisation typique, SIF_ALL, spécifie une combinaison de SIF_PAGE, SIF_POS, SIF_TRACKPOS et SIF_RANGE. Consultez `SCROLLINFO` pour plus d’informations sur les valeurs de nMask.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Notes  
  `GetScrollInfo` permet aux applications d’utiliser des positions de défilement de 32 bits.  
   
- Le [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure contient des informations sur une barre de défilement, y compris les minimale et maximale de défilement positions, la taille de page et la position de la case de défilement (curseur de défilement). Consultez le `SCROLLINFO` rubrique structure dans le SDK Windows pour plus d’informations sur la modification les valeurs par défaut de la structure.  
+ Le [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) structure contient des informations sur une barre de défilement, y compris les minimale et maximale de défilement positions, la taille de page et la position de la case de défilement (curseur de défilement). Consultez le `SCROLLINFO` rubrique structure dans le SDK Windows pour plus d’informations sur la modification les valeurs par défaut de la structure.  
   
  Les gestionnaires qui indiquent la position de barre de défilement, de messages de la Windows MFC [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) et [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), fournir seulement 16 bits de données de position. `GetScrollInfo` et `SetScrollInfo` fournir 32 bits de données de la position de la barre de défilement. Par conséquent, une application peut appeler `GetScrollInfo` lors du traitement soit `CWnd::OnHScroll` ou `CWnd::OnVScroll` pour obtenir des données de position de barre de défilement de 32 bits.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Paramètres  
  *lpScrollInfo*  
- Un pointeur vers un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure.  
+ Un pointeur vers un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) structure.  
   
  *bRedraw*  
  Spécifie si la barre de défilement doit être redessinée afin de refléter les nouvelles informations. Si *bRedraw* a la valeur TRUE, la barre de défilement est redessinée. Si la valeur est FALSE, cela signifie qu’il n’est pas redessiné. Par défaut, la barre de défilement est redessinée.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Notes  
  Vous devez fournir les valeurs requises par le `SCROLLINFO` structure des paramètres, y compris les valeurs d’indicateur.  
   
- Le `SCROLLINFO` structure contient des informations sur une barre de défilement, y compris les minimale et maximale de défilement positions, la taille de page et la position de la case de défilement (curseur de défilement). Consultez le [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) rubrique structure dans le SDK Windows pour plus d’informations sur la modification les valeurs par défaut de la structure.  
+ Le `SCROLLINFO` structure contient des informations sur une barre de défilement, y compris les minimale et maximale de défilement positions, la taille de page et la position de la case de défilement (curseur de défilement). Consultez le [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) rubrique structure dans le SDK Windows pour plus d’informations sur la modification les valeurs par défaut de la structure.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

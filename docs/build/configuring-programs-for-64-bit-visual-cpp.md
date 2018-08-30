@@ -1,5 +1,5 @@
 ---
-title: Configurer Visual C++ pour 64 bits, x64 cibles | Documents Microsoft
+title: Configurer Visual C++ pour x64 64 64 bits, cibles | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366807"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196987"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurer Visual C++ pour 64 bits, x64 cibles
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurer Visual C++ pour x64 64 64 bits, cibles
 
-Cette section contient des rubriques sur le ciblage de 64 bits x64 les outils de génération de matériel avec Visual C++.  
+Cette section contient des rubriques sur le ciblage x64 64 64 bits des outils de génération matériel avec Visual C++.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -49,7 +49,7 @@ Cette section contient des rubriques sur le ciblage de 64 bits x64 les outils de
   
 [/favor (Optimisation pour les particularités d’architecture)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-[Guide de programmation pour Windows 64 bits](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[Guide de programmation pour Windows de 64 bits](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
   
 [MASM pour x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : générer des Applications isolées pour consommer des composants COM | Documents Microsoft'
+title: 'Comment : générer des Applications isolées pour consommer des composants COM | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed2f43721eb698552ccde3e1b51ed4d6e467179
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b94a41aef1122a507a8966c475b9a87c69e3789
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367883"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196830"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Comment : générer des applications isolées pour consommer des composants COM
 Applications isolées sont des applications qui ont des manifestes générés dans le programme. Vous pouvez créer des applications isolées pour consommer des composants COM.  
   
 ### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Pour ajouter des références COM aux manifestes d’applications isolées  
   
-1.  Ouvrez les pages de propriétés de projet d’application isolée.  
+1.  Ouvrez les pages de propriétés de projet de l’application isolée.  
   
 2.  Développez le **propriétés de Configuration** nœud, puis développez le **outil manifeste** nœud.  
   
-3.  Sélectionnez le **COM isolé** page de propriétés et définissez la **nom de fichier de composant** nom à la propriété du composant COM que vous souhaitez que l’application isolée pour consommer.  
+3.  Sélectionnez le **COM isolé** page de propriétés, puis définissez le **nom de fichier de composant** propriété le nom du composant COM que vous souhaitez l’application isolée à consommer.  
   
 4.  Cliquez sur **OK**.  
   
-### <a name="to-build-manifests-into-isolated-applications"></a>Pour générer des manifestes dans des applications isolées  
+### <a name="to-build-manifests-into-isolated-applications"></a>Pour générer des manifestes dans les applications isolées  
   
-1.  Ouvrez les pages de propriétés de projet d’application isolée.  
+1.  Ouvrez les pages de propriétés de projet de l’application isolée.  
   
 2.  Développez le **propriétés de Configuration** nœud, puis développez le **outil manifeste** nœud.  
   
-3.  Sélectionnez le **d’entrée et sortie** page de propriétés et définissez la **incorporer le manifeste** propriété égale à **Oui**.  
+3.  Sélectionnez le **d’entrée et sortie** page de propriétés, puis définissez le **incorporer le manifeste** propriété égale à **Oui**.  
   
 4.  Cliquez sur **OK**.  
   
 5.  Générez la solution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications isolées](http://msdn.microsoft.com/library/aa375190)   
- [À propos des assemblys côte à côte](http://msdn.microsoft.com/library/ff951640)
+ [Applications isolées](/windows/desktop/SbsCs/isolated-applications)   
+ [Sur les assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-)

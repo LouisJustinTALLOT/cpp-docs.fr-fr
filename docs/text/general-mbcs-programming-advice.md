@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596793"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201120"
 ---
 # <a name="general-mbcs-programming-advice"></a>Conseils généraux sur la programmation MBCS
 Utilisez les conseils suivants :  
@@ -41,7 +41,7 @@ Utilisez les conseils suivants :
   
 -   Soyez prudent lors de la sélection de polices pour votre application, car certaines polices ne sont pas disponibles sur tous les systèmes.  
   
--   Lorsque vous sélectionnez la police des boîtes de dialogue, utilisez [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) au lieu de MS Sans Serif et Helvetica. MS Shell Dlg est remplacée par la police appropriée par le système avant de créer la boîte de dialogue. À l’aide de MS Shell Dlg permet de s’assurer que toutes les modifications dans le système d’exploitation pour agir sur cette police seront automatiquement disponibles. (MFC remplace MS Shell Dlg DEFAULT_GUI_FONT ou la police système sur Windows 95, Windows 98 et Windows NT 4, car ces systèmes ne gèrent pas correctement MS Shell Dlg.)  
+-   Lorsque vous sélectionnez la police des boîtes de dialogue, utilisez [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) au lieu de MS Sans Serif et Helvetica. MS Shell Dlg est remplacée par la police appropriée par le système avant de créer la boîte de dialogue. À l’aide de MS Shell Dlg permet de s’assurer que toutes les modifications dans le système d’exploitation pour agir sur cette police seront automatiquement disponibles. (MFC remplace MS Shell Dlg DEFAULT_GUI_FONT ou la police système sur Windows 95, Windows 98 et Windows NT 4, car ces systèmes ne gèrent pas correctement MS Shell Dlg.)  
   
 -   Lorsque vous concevez votre application, décidez des chaînes qui peuvent être localisés. En cas de doute, supposons que n’importe quelle chaîne donnée sera localisée. Par conséquent, ne mélangez pas les chaînes qui peuvent être localisés avec ceux qui ne peuvent pas.  
   

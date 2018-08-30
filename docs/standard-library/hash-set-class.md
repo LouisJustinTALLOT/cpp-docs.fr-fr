@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c7572ffd5a53456cd4555b82a8d3e235286339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961706"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200344"
 ---
 # <a name="hashset-class"></a>hash_set, classe
 
@@ -121,11 +121,14 @@ class hash_set
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé* type de données de l’élément à stocker dans le hash_set.
+*Key*<br/>
+ Type de données de l'élément à stocker dans l'objet hash_set.
 
-*Caractéristiques* type qui inclut les deux objets de fonction, une de la classe comparaison qui est un prédicat binaire capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage est un opérateur unaire prédicat mapper des valeurs clés de la éléments à des entiers non signés de type `size_t`. Cet argument est facultatif et le `hash_compare` *< clé,* **moins ***\<clé >>* est la valeur par défaut.
+*Caractéristiques*<br/>
+ Type qui inclut les deux objets de fonction, une de la classe comparer qui est un prédicat binaire capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage qui est un mappage de prédicat unaire les valeurs clés des éléments à non signé entiers de type `size_t`. Cet argument est facultatif et sa valeur par défaut est `hash_compare<Key, less<Key> >`.
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui encapsule des informations sur le hash_set allocation et désallocation de mémoire. Cet argument est facultatif et la valeur par défaut est **allocateur ***\<clé >.*
+*Allocateur*<br/>
+ Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe hash_set. Cet argument est facultatif et sa valeur par défaut est `allocator<Key>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -559,7 +562,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé des éléments à mettre en correspondance du hash_set.
+*key*<br/>
+ Clé des éléments à mettre en correspondance à partir du hash_set.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1025,7 +1029,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément du hash_set recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1111,13 +1116,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE* position de l’élément à supprimer du hash_set.
+*_WHERE*<br/>
+ Position de l'élément à supprimer du hash_set.
 
-*première* Position du premier élément supprimé du hash_set.
+*first*<br/>
+ Position du premier élément supprimé du hash_set.
 
-*dernière* Position juste après le dernier élément supprimé du hash_set.
+*last*<br/>
+ Position juste après le dernier élément supprimé du hash_set.
 
-*clé* la clé des éléments à supprimer du hash_set.
+*key*<br/>
+ Clé des éléments à supprimer du hash_set.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1225,7 +1234,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument qui doit correspondre à la clé de tri d’un élément du hash_set recherché.
+*key*<br/>
+ Clé d’argument qui doit correspondre à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1650,7 +1660,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément du hash_set recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2139,7 +2150,8 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* argument hash_set qui fournit les éléments à échanger avec le hash_set cible.
+*right*<br/>
+ Argument hash_set qui fournit les éléments à échanger avec le hash_set cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2214,7 +2226,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément du hash_set recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 

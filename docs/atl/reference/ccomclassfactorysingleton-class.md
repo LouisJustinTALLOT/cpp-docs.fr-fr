@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201153"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Ccomclassfactorysingleton, classe
 Cette classe est dérivée de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) et utilise [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) pour construire un objet unique.  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  Notez que le formulaire actuel de `m_spObj` présente une modification avec rupture à partir de la façon qui `CComClassFactorySingleton` travaillé dans les versions précédentes de l’ATL. Dans les versions précédentes du `CComClassFactorySingleton` objet a été créé en même temps que la fabrique de classe, lors de l’initialisation du serveur. Dans Visual C++ .NET 2003, l’objet est créé de manière différée, à la première demande. Cette modification peut provoquer des erreurs dans les programmes qui s’appuient sur l’initialisation anticipée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2, classe](../../atl/reference/ccomclassfactory2-class.md)   
  [Ccomclassfactoryautothread, classe](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)   

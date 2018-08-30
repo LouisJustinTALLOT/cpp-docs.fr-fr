@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879833"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201660"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo, classe
 Cette classe fournit des méthodes pour l’inscription des informations pour une classe de fenêtre.  
@@ -79,7 +79,7 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Pour plus d’informations sur les classes de fenêtre, consultez [Classes de fenêtre](http://msdn.microsoft.com/library/windows/desktop/ms632596) dans le SDK Windows.  
+ Pour plus d’informations sur les classes de fenêtre, consultez [Classes de fenêtre](https://msdn.microsoft.com/library/windows/desktop/ms632596) dans le SDK Windows.  
   
  Pour plus d’informations sur l’utilisation des fenêtres dans ATL, consultez l’article [Classes de fenêtre ATL](../../atl/atl-window-classes.md).  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` utilise `m_szAutoName` uniquement si la valeur NULL est passée le `WndClassName` paramètre [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), le [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) ou [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL construira un nom lors de la classe de fenêtre est inscrit.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- Conserve les informations de classe de fenêtre dans un [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) structure.  
+ Conserve les informations de classe de fenêtre dans un [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) structure.  
   
 ```
 WNDCLASSEX m_wc;

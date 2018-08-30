@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883090"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196519"
 ---
 # <a name="ccommodule-class"></a>CComModule (classe)
 À compter d’ATL 7.0, `CComModule` est déconseillée : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Paramètres  
  *dwClsContext*  
- [in] Spécifie le contexte dans lequel l’objet de classe doit être exécuté. Les valeurs possibles sont CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Pour obtenir une description de ces valeurs, consultez [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) dans le SDK Windows.  
+ [in] Spécifie le contexte dans lequel l’objet de classe doit être exécuté. Les valeurs possibles sont CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Pour obtenir une description de ces valeurs, consultez [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) dans le SDK Windows.  
   
  *dwFlags*  
- [in] Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Pour obtenir une description de ces valeurs, consultez [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) dans le SDK Windows.  
+ [in] Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Pour obtenir une description de ces valeurs, consultez [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  

@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7ccf2db8447b51757f5c8a90b2e9a5b6558929
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d31ebd1e4df65ef35449c374a5cbb99b878f00a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415791"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196782"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
@@ -111,10 +111,10 @@ Nombre de caractères écrits ou valeur négative si une erreur de sortie se pro
 
 Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans la console. **_vcwprintf** est la version à caractères larges de **_vcprintf**. Elle prend une chaîne de caractères larges comme argument.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -123,7 +123,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
 |**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

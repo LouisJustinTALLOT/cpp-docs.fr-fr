@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195401"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt;, opérateurs
 
@@ -90,7 +90,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 extrait jusqu’à *N* - 1 éléments et les stocke dans le tableau en commençant à _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr`. **largeur**; sinon, elle est la taille de la plus grande quantité de `Elem` qui peut être déclaré. La fonction stocke toujours la valeur `Elem()` après les éléments qu’elle stocke extraits. L’extraction s’arrête dès la fin du fichier, sur un caractère avec la valeur **Elem**(0) (qui n’est pas extrait), ou sur tout élément (qui n’est pas extrait) qui serait ignoré par [ws](../standard-library/istream-functions.md#ws). Si la fonction n’extrait aucun élément, elle appelle `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). Dans tous les cas, elle appelle `Istr`. **largeur**(0) et retourne *Istr*.
 
-**Note de sécurité** la chaîne se terminant par null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la mémoire tampon de destination *str*. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Note de sécurité** la chaîne se terminant par null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la mémoire tampon de destination *str*. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 La fonction de modèle
 
@@ -110,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-retourne `Istr` >> ( `char`**\***) `str`.
+Retourne `Istr >> ( char * ) str`.
 
 La fonction de modèle
 
@@ -120,7 +120,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-retourne `Istr` >> ( **char&**) `Ch`.
+Retourne `Istr >> ( char& ) Ch`.
 
 La fonction de modèle
 
@@ -130,9 +130,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-retourne `Istr` >> ( **char \***) `str`.
+Retourne `Istr >> ( char * ) str`.
 
-La fonction de modèle :
+La fonction de modèle
 
 ```cpp
 template <class Tr>
@@ -140,7 +140,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-retourne `Istr` >> ( **char&**) `Ch`.
+Retourne `Istr >> ( char& ) Ch`.
 
 La fonction de modèle
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-retourne `Istr` `>>` `val` (et convertit un `rvalue reference` à `Istr` en un `lvalue` dans le même temps).
+Retourne `Istr >> val` (et convertit une référence rvalue à `Istr` en lvalue dans le processus).
 
 ### <a name="example"></a>Exemple
 

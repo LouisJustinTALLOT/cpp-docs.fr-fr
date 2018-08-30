@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b962db5477294ad36997208f59265a284680fac5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6fd13c3e94f6b42bd485c645233f84272c6eae91
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194831"
 ---
 # <a name="string--c-component-extensions"></a>Chaîne  (extensions du composant C++)
 
@@ -48,7 +48,7 @@ using namespace default;
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations et des exemples sur les chaînes, consultez [littéraux (plate-forme), std::wstring et Platform::String](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
+Pour plus d’informations et des exemples sur les chaînes, consultez [littéraux (plate-forme), std::wstring et Platform::String](https://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
 
 ### <a name="requirements"></a>Configuration requise
 

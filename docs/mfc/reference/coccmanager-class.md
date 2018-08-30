@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852365"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195536"
 ---
 # <a name="coccmanager-class"></a>COccManager, classe
 Gère divers sites de contrôle personnalisés ; implémentée par les objets `COleControlContainer` et `COleControlSite` .  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Notes  
   
 > [!NOTE]
->  Le contrôle doit avoir le OLEMISC_ACTSLIKEBUTTON status bit défini. Pour plus d’informations sur les indicateurs OLEMISC, consultez le [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) rubrique dans le SDK Windows.  
+>  Le contrôle doit avoir le OLEMISC_ACTSLIKEBUTTON status bit défini. Pour plus d’informations sur les indicateurs OLEMISC, consultez le [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) rubrique dans le SDK Windows.  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Appelé par l’infrastructure pour fractionner les contrôles ActiveX à partir de contrôles de boîte de dialogue commune.  

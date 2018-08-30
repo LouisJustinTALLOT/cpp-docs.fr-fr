@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 35cc0d25d16831ae5de61f04c4e66763278c10d8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 93feda8c6359c5ec24fd4fd9dd38c632726b676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540649"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197023"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt;, typedefs
 
@@ -35,7 +35,7 @@ typedef unspecified exception_ptr;
 
 Une classe interne non spécifiée utilisée pour implémenter le type `exception_ptr`.
 
-Utilisez un objet `exception_ptr` pour référencer l'exception actuelle ou une instance d'une exception spécifiée par l'utilisateur. Dans l’implémentation Microsoft, une exception est représentée par une structure [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082). Chaque objet `exception_ptr` inclut un champ de référence d'exception qui pointe vers une copie de la structure `EXCEPTION_RECORD` qui représente l'exception.
+Utilisez un objet `exception_ptr` pour référencer l'exception actuelle ou une instance d'une exception spécifiée par l'utilisateur. Dans l’implémentation Microsoft, une exception est représentée par une structure [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record). Chaque objet `exception_ptr` inclut un champ de référence d'exception qui pointe vers une copie de la structure `EXCEPTION_RECORD` qui représente l'exception.
 
 Lorsque vous déclarez une variable `exception_ptr`, la variable n'est associée à aucune exception. Autrement dit, son champ de référence d'exception est NULL. Ce type d’objet `exception_ptr` est appelé *exception_ptr null*.
 

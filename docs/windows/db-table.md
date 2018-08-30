@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07c126e2cc6efe0193f6cfd55b84d8dfa7021ffc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201777"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -76,7 +76,7 @@ class CProducts {
 };
 ```
 
-Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) et [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).
+Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](https://github.com/Microsoft/VCSamples) et [MultiRead](https://github.com/Microsoft/VCSamples).
 
 ## <a name="requirements"></a>Configuration requise
 

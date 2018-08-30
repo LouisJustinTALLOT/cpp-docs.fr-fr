@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCToolBarComboBoxEdit | Documents Microsoft
+title: Cmfctoolbarcomboboxedit, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aa01a9cb38de2297ebf1282f0d86333218861a0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195484"
 ---
-# <a name="cmfctoolbarcomboboxedit-class"></a>Classe de CMFCToolBarComboBoxEdit
+# <a name="cmfctoolbarcomboboxedit-class"></a>Cmfctoolbarcomboboxedit, classe
 L’infrastructure utilise le `CMFCToolBarComboBoxEdit` classe pour créer un bouton de barre d’outils qui se comporte comme un contrôle de zone de liste déroulante modifiable.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -47,7 +47,7 @@ class CMFCToolBarComboBoxEdit : public CEdit
   
 |Nom|Description|  
 |----------|-----------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Convertit les messages de fenêtre avant d’être distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
   
 ### <a name="remarks"></a>Notes  
  Dérivez une classe de la `CMFCToolBarComboBoxEdit` classe pour personnaliser ses opérations de modification.  
@@ -74,11 +74,11 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *zone de liste déroulante*  
+ [in] *liste déroulante*  
  Une référence à un [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objet, qui est un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant montre comment construire un objet de la `CMFCToolBarComboBoxEdit` classe. Cet extrait de code fait partie de la [exemple de démonstration d’insertion/éjection](../../visual-cpp-samples.md).  
+ L’exemple suivant montre comment construire un objet de la `CMFCToolBarComboBoxEdit` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]  
   

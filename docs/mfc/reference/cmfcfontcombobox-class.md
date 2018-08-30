@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197611"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox, classe
 Le `CMFCFontComboBox` classe crée un contrôle de zone de liste déroulante qui contient une liste de polices.  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Appelé par l’infrastructure pour dessiner un élément spécifié dans le contrôle de zone de liste déroulante police actuelle. (Substitue [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Récupère des informations sur la police actuellement sélectionnée.|  
 |`CMFCFontComboBox::MeasureItem`|Appelé par l’infrastructure pour informer Windows des dimensions de la zone de liste dans le contrôle de zone de liste déroulante police actuelle. (Substitue [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Sélectionne la police qui correspond aux critères spécifiés dans la zone de liste déroulante de police.|  
 |[CMFCFontComboBox::Setup](#setup)|Initialise la liste des éléments dans la zone de liste déroulante de police.|  
   
@@ -139,7 +139,7 @@ BOOL SelectFont(
  Spécifie un nom de police.  
   
  [in] *nCharSet*  
- Spécifie un jeu de caractères. La valeur par défaut est DEFAULT_CHARSET. Pour plus d’informations, consultez le `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
+ Spécifie un jeu de caractères. La valeur par défaut est DEFAULT_CHARSET. Pour plus d’informations, consultez le `lfCharSet` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un élément dans la zone de liste déroulante police correspond à l’objet de description de police spécifiée ou de nom de la police et de jeu de caractères ; Sinon, FALSE.  

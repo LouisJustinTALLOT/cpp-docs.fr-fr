@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51470a572ec9540f203bb4cff80981fe6ad15dd1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 903c477117162dde1d0becc6e2196e683ea189f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196808"
 ---
 # <a name="string-editor"></a>Éditeur de chaînes
 
@@ -55,7 +55,7 @@ Avec l’Éditeur de chaînes, vous pouvez :
    > [!NOTE]
    > Windows n’autorise pas la création de tables de chaînes vides. Si vous créez une table de chaînes sans entrée, elle est supprimée automatiquement lorsque vous enregistrez le fichier de ressources.
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [procédure pas à pas : localisation de Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Procédure pas à pas : utilisation des ressources pour la localisation avec ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [procédure pas à pas : localisation de Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -64,6 +64,6 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeurs de ressources](../windows/resource-editors.md)  
-[Chaînes](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[Chaînes](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
 [À propos des chaînes](/windows/desktop/menurc/about-strings)
 

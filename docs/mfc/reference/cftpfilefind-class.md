@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 795261da81fbe8082e279bc3830f004d845e1ea7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336017"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196934"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind, classe
 Contribue à la recherche des fichiers Internet sur les serveurs FTP.  
@@ -120,14 +120,14 @@ virtual BOOL FindFile(
   
 -   Faire INTERNET_FLAG_DONT_CACHE met pas en cache les données, localement ou dans les passerelles.  
   
--   INTERNET_FLAG_RAW_DATA remplacer la valeur par défaut pour retourner les données brutes ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structures pour FTP).  
+-   INTERNET_FLAG_RAW_DATA remplacer la valeur par défaut pour retourner les données brutes ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) structures pour FTP).  
   
 -   INTERNET_FLAG_SECURE sécurise les transactions sur le câble avec le protocole SSL (Secure Sockets Layer) ou de pourcentage. Cet indicateur s’applique aux requêtes HTTP uniquement.  
   
 -   INTERNET_FLAG_EXISTING_CONNECT si possible, réutiliser les connexions existantes sur le serveur pour le nouveau `FindFile` demandes au lieu de créer une nouvelle session pour chaque demande.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0. Pour obtenir les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Valeur différente de zéro cas de réussite ; sinon, 0. Pour obtenir les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Notes  
  Après avoir appelé `FindFile` pour récupérer le premier fichier FTP, vous pouvez appeler [FindNextFile](#findnextfile) pour récupérer les fichiers suivants de FTP.  
@@ -143,12 +143,12 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro s’il existe plusieurs fichiers ; zéro si le fichier trouvé est le dernier dans le répertoire ou si une erreur s’est produite. Pour obtenir les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Si le fichier trouvé est le dernier fichier dans le répertoire, ou si aucune correspondance fichiers peuvent être trouvés, le `GetLastError` fonction retourne ERROR_NO_MORE_FILES.  
+ Différent de zéro s’il existe plusieurs fichiers ; zéro si le fichier trouvé est le dernier dans le répertoire ou si une erreur s’est produite. Pour obtenir les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Si le fichier trouvé est le dernier fichier dans le répertoire, ou si aucune correspondance fichiers peuvent être trouvés, le `GetLastError` fonction retourne ERROR_NO_MORE_FILES.  
   
 ### <a name="remarks"></a>Notes  
  Vous devez appeler cette fonction au moins une fois avant d’appeler n’importe quelle fonction de l’attribut (voir [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
- `FindNextFile` encapsule la fonction Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` encapsule la fonction Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple plus haut dans cette rubrique.  

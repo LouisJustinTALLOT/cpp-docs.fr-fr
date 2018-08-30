@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196395"
 ---
 # <a name="ustringorid-class"></a>_U_stringorid, classe
 Cette classe d’adaptateur argument permet des noms de ressources (LPCTSTRs) ou ID de ressource (ventes) à passer à une fonction sans nécessiter de l’appelant convertir l’ID d’une chaîne à l’aide de la macro MAKEINTRESOURCE.  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|L’identificateur de ressource.|  
   
 ## <a name="remarks"></a>Notes  
- Cette classe est conçue pour implémenter des wrappers pour l’API de gestion de ressources Windows telles que la [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), et [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) fonctions qui acceptent les un argument LPCTSTR qui peut être le nom d’une ressource ou son ID.  
+ Cette classe est conçue pour implémenter des wrappers pour l’API de gestion de ressources Windows telles que la [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), et [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) fonctions qui acceptent les un argument LPCTSTR qui peut être le nom d’une ressource ou son ID.  
   
  La classe définit deux surcharges de constructeur : une accepte un argument LPCTSTR et l’autre accepte un argument UINT. L’argument UINT est converti en un type de ressource compatible avec les fonctions de gestion des ressources de Windows à l’aide de la macro MAKEINTRESOURCE et le résultat stocké dans le membre de données unique de la classe, [m_lpstr](#_u_stringorid__m_lpstr). L’argument au constructeur LPCTSTR est stocké directement, sans conversion.  
   

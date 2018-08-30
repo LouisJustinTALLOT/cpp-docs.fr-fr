@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199236"
 ---
 # <a name="priorityqueue-class"></a>priority_queue, classe
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* type de données de l’élément à stocker dans la classe priority_queue.
+*Type*<br/>
+ Type de données des éléments à stocker dans la classe priority_queue.
 
-*Conteneur* le type du conteneur sous-jacent utilisé pour implémenter la classe priority_queue.
+*Conteneur*<br/>
+ Type du conteneur sous-jacent utilisé pour implémenter la classe priority_queue.
 
-*Comparer* le type qui fournit un objet de fonction qui peut comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif dans la classe priority_queue. Cet argument est facultatif et le prédicat binaire **moins***\<*** typename** *conteneur ***:: value_type*** >* est la valeur par défaut.
+*Compare*<br/>
+ Type qui fournit un objet de fonction pouvant comparer deux valeurs d’éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe priority_queue. Cet argument est facultatif et le prédicat binaire `less<typename Container::value_type>` est la valeur par défaut.
 
 ## <a name="remarks"></a>Notes
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Paramètres
 
-*comp. _* la fonction de comparaison de type **constTraits** utilisée pour ordonner les éléments dans la classe priority_queue, qui est par défaut pour comparer le conteneur de base (fonction).
+*_ comp*<br/>
+ Fonction de comparaison de type **constTraits** qui est utilisée pour classer les éléments dans l’objet priority_queue (par défaut, la fonction compare du conteneur de base).
 
-*_Cont* le conteneur de base sur lequel l’objet priority_queue construit doit être une copie.
+*_Cont*<br/>
+ Conteneur de base dont l’objet priority_queue construit doit être une copie.
 
-*droit* priority_queue dont le set construit doit être une copie.
+*right*<br/>
+ Objet priority_queue dont le set construit doit être une copie.
 
-*première* la position du premier élément dans la plage d’éléments à copier.
+*first*<br/>
+ Position du premier élément de la plage d'éléments à copier.
 
-*dernière* la position du premier élément au-delà de la plage d’éléments à copier.
+*last*<br/>
+ Position du premier élément au-delà de la plage d'éléments à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* l’élément ajouté en haut du priority_queue.
+*Val*<br/>
+ Élément ajouté en haut du priority_queue.
 
 ### <a name="remarks"></a>Notes
 

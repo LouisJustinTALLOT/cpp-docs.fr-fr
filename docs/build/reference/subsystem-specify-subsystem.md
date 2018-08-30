@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571962"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200386"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Spécifier le sous-système)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571962"
 ```  
   
  BOOT_APPLICATION  
- Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [BCD sur](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [BCD sur](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Application en mode caractères Win32. Le système d'exploitation fournit une console pour les applications console. Si `main` ou `wmain` est défini pour le code natif, `int main(array<String ^> ^)` est défini pour le code managé, ou si vous générez complètement l’application à l’aide de `/clr:safe`, CONSOLE est la valeur par défaut.  

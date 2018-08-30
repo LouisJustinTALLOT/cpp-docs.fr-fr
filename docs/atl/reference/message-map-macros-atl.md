@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d87a3b0e4ed9c5c558c90a2935c538b4fb826be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883477"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201678"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mappage des messages (ATL)
 Ces macros définissent des tables des messages et des entrées.  
@@ -346,7 +346,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  **En-tête :** atlwin.h   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message basé uniquement sur le code de notification.  
+ Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](/windows/desktop/menurc/wm-command) message basé uniquement sur le code de notification.  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -380,7 +380,7 @@ COMMAND_HANDLER(id, code, func)
  [in] Le nom de la fonction de gestionnaire de messages.  
   
 ### <a name="remarks"></a>Notes  
- COMMAND_HANDLER mappe un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message à la fonction de gestionnaire spécifié, selon le code de notification et l’identificateur du contrôle. Exemple :  
+ COMMAND_HANDLER mappe un [WM_COMMAND](/windows/desktop/menurc/wm-command) message à la fonction de gestionnaire spécifié, selon le code de notification et l’identificateur du contrôle. Exemple :  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,7 +401,7 @@ COMMAND_HANDLER(id, code, func)
  **En-tête :** atlwin.h   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) basées sur des messages uniquement sur l’identificateur de l’élément de menu, un contrôle ou un accélérateur.  
+ Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](/windows/desktop/menurc/wm-command) basées sur des messages uniquement sur l’identificateur de l’élément de menu, un contrôle ou un accélérateur.  
   
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -418,7 +418,7 @@ COMMAND_ID_HANDLER(id, func)
  **En-tête :** atlwin.h   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messages avec un code de notification spécifique à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
+ Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe [WM_COMMAND](/windows/desktop/menurc/wm-command) messages avec un code de notification spécifique à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -444,7 +444,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
  **En-tête :** atlwin.h   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- Semblable à [COMMAND_HANDLER](#command_handler), mais mappe [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messages à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
+ Semblable à [COMMAND_HANDLER](#command_handler), mais mappe [WM_COMMAND](/windows/desktop/menurc/wm-command) messages à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -553,7 +553,7 @@ MESSAGE_HANDLER( msg, func )
 > [!NOTE]
 >  Toujours commencer avec une table des messages [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec [ALT_MSG_MAP](#alt_msg_map). Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.  
   
- Outre MESSAGE_HANDLER, vous pouvez utiliser [COMMAND_HANDLER](#command_handler) et [NOTIFY_HANDLER](#notify_handler) pour mapper [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) et [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) messages , respectivement.  
+ Outre MESSAGE_HANDLER, vous pouvez utiliser [COMMAND_HANDLER](#command_handler) et [NOTIFY_HANDLER](#notify_handler) pour mapper [WM_COMMAND](/windows/desktop/menurc/wm-command) et [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) messages , respectivement.  
   
  Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).  
   
@@ -584,7 +584,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  **En-tête :** atlwin.h   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) message basé uniquement sur le code de notification.  
+ Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) message basé uniquement sur le code de notification.  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -618,7 +618,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in] Le nom de la fonction de gestionnaire de messages.  
   
 ### <a name="remarks"></a>Notes  
- NOTIFY_HANDLER mappe un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) message à la fonction de gestionnaire spécifié, selon le code de notification et l’identificateur du contrôle.  
+ NOTIFY_HANDLER mappe un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) message à la fonction de gestionnaire spécifié, selon le code de notification et l’identificateur du contrôle.  
   
  N’importe quelle fonction spécifiée dans une macro NOTIFY_HANDLER doit être définie comme suit :  
   
@@ -640,7 +640,7 @@ NOTIFY_HANDLER( id, cd, func )
  **En-tête :** atlwin.h   
   
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
- Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) basées sur des messages uniquement sur l’identificateur du contrôle.  
+ Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) basées sur des messages uniquement sur l’identificateur du contrôle.  
   
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -657,7 +657,7 @@ NOTIFY_ID_HANDLER( id, func )
  **En-tête :** atlwin.h   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) messages avec un code de notification spécifique à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
+ Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) messages avec un code de notification spécifique à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -683,7 +683,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  **En-tête :** atlwin.h   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) messages à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
+ Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) messages à partir d’un éventail de contrôles à une seule fonction gestionnaire.  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

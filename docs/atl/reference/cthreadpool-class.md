@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196960"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool, classe
 Cette classe fournit un pool de threads de travail qui traitent une file d’attente d’éléments de travail.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Notes  
  Threads du pool sont créés et détruits lorsque le pool est initialisé, redimensionné ou arrêté. Une instance de classe *Worker* va être créé sur la pile de chaque thread de travail dans le pool. Chaque instance se trouvera pour la durée de vie du thread.  
   
- Immédiatement après la création d’un thread, *Worker*:: `Initialize` est appelée sur l’objet associé à ce thread. Immédiatement avant la destruction d’un thread, *Worker*:: `Terminate` sera appelée. Les deux méthodes doivent accepter un **void\***  argument. La valeur de cet argument est passée au pool de threads par le biais du *pvWorkerParam* paramètre de [CThreadPool::Initialize](#initialize).  
+ Immédiatement après la création d’un thread, *Worker*::`Initialize` est appelée sur l’objet associé à ce thread. Immédiatement avant la destruction d’un thread, *Worker*::`Terminate` sera appelée. Les deux méthodes doivent accepter un **void** <strong>\*</strong> argument. La valeur de cet argument est passée au pool de threads par le biais du *pvWorkerParam* paramètre de [CThreadPool::Initialize](#initialize).  
   
- Lorsqu’il existe des éléments de travail dans les threads de la file d’attente et de travail disponibles pour le travail, un thread de travail extrait un élément au-delà de la file d’attente et appelez le `Execute` méthode de la *Worker* objet pour ce thread. Trois éléments sont ensuite transmis à la méthode : l’élément à partir de la file d’attente, le même `pvWorkerParam` passé à *Worker*:: `Initialize` et *Worker*:: `Terminate`et un pointeur vers le [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) structure utilisée pour la file d’attente du port de fin d’e/s.  
+ Lorsqu’il existe des éléments de travail dans les threads de la file d’attente et de travail disponibles pour le travail, un thread de travail extrait un élément au-delà de la file d’attente et appelez le `Execute` méthode de la *Worker* objet pour ce thread. Trois éléments sont ensuite transmis à la méthode : l’élément à partir de la file d’attente, le même `pvWorkerParam` passé à *Worker*:: `Initialize` et *Worker*:: `Terminate`et un pointeur vers le [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) structure utilisée pour la file d’attente du port de fin d’e/s.  
   
  Le *Worker* classe déclare le type des éléments qui seront mises en attente sur le pool de threads en fournissant un typedef, *Worker*:: `RequestType`. Ce type doit être capable d’en cours de conversion vers et depuis un ULONG_PTR entière.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  La durée maximale demandée en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter. Si 0 ou aucune valeur n’est fournie, cette méthode utilise le délai défini par [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode publie une demande d’arrêt à tous les threads dans le pool. Si le délai expire, cette méthode appelle [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) sur n’importe quel thread qui n’a pas été arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.  
+ Cette méthode publie une demande d’arrêt à tous les threads dans le pool. Si le délai expire, cette méthode appelle [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) sur n’importe quel thread qui n’a pas été arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [IThreadPoolConfig, Interface](../../atl/reference/ithreadpoolconfig-interface.md)   

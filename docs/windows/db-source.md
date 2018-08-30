@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 509395daef16e06c915190a80dc1b9c1c5e6494f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bad61c157926fd417467afaa2d97d0db517430f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598047"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201554"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -61,7 +61,7 @@ Lorsque vous utilisez **db_source** dans une méthode, le code injecté sera ex�
 
 Lorsque le fournisseur d’attributs consommateur applique cet attribut à une classe, le compilateur renomme la classe à \_ *Nom_de_votre_classe*accesseur, où *Nom_de_votre_classe* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *Nom_de_votre_classe*, qui dérive à son \_ *Nom_de_votre_classe*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.
 
-Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) et [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).
+Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](https://github.com/Microsoft/VCSamples) et [MultiRead](https://github.com/Microsoft/VCSamples).
 
 ## <a name="example"></a>Exemple
 

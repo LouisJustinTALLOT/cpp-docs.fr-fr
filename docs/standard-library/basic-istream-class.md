@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964461"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200026"
 ---
 # <a name="basicistream-class"></a>basic_istream, classe
 
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-extraient chacune un champ et le convertissent en valeur numérique en appelant `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Ici, **InIt** est défini comme `istreambuf_iterator` \< **Elem**, **Tr**>, et `val` a type **long**,**long non signé**, ou **void \***  en fonction des besoins.
+extraient chacune un champ et le convertissent en valeur numérique en appelant `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Ici, **InIt** est défini comme `istreambuf_iterator` \< **Elem**, **Tr**>, et `val` a type **long**, **long non signé**, ou **void** <strong>\*</strong> en fonction des besoins.
 
 Si la valeur convertie ne peut pas être représentée en tant que le type de `val`, les appels de fonction [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). Dans tous les cas, la fonction retourne **\*this**.
 

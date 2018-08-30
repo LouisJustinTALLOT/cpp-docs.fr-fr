@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609497"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197931"
 ---
 # <a name="cstringt-class"></a>CStringT, classe
 Cette classe représente un `CStringT` objet.  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` tente d’allouer la mémoire système pour la chaîne qui vient d’être mis en forme. Si cette tentative échoue, une exception de mémoire est automatiquement levée.  
   
- Chaque insertion doit avoir une paramètre correspondant suivant le *pszFormat* ou *nFormatID* paramètre. Dans le texte du message, plusieurs séquences d’échappement sont pris en charge pour la mise en forme dynamique le message. Pour plus d’informations, consultez le Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) fonction dans le SDK Windows.  
+ Chaque insertion doit avoir une paramètre correspondant suivant le *pszFormat* ou *nFormatID* paramètre. Dans le texte du message, plusieurs séquences d’échappement sont pris en charge pour la mise en forme dynamique le message. Pour plus d’informations, consultez le Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) fonction dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` appels [CStringT::FormatMessage](#formatmessage), qui tente d’allouer de mémoire système pour la chaîne qui vient d’être mis en forme. Si cette tentative échoue, une exception de mémoire est automatiquement levée.  
   
- Pour plus d’informations, consultez le Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) fonction dans le SDK Windows.  
+ Pour plus d’informations, consultez le Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) fonction dans le SDK Windows.  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  Met en forme une chaîne de message à l’aide d’une liste d’arguments variable.  

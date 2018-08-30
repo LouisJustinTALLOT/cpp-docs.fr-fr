@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4138 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4138 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0865935c30c4934684c7a12e50ab26f3e8b12c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc3102f18021c16663bdf61dcde6df5e6893d46c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277031"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197086"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>Avertissement du compilateur (niveau 1) C4138
 '*/' trouvé à l'extérieur du commentaire  
   
- Le délimiteur de commentaire de clôture n’est pas précédé d’un délimiteur de commentaire d’ouverture. Le compilateur suppose l’existence d’un espace entre l’astérisque (**\***) et la barre oblique (/).  
+ Le délimiteur de commentaire de clôture n’est pas précédé d’un délimiteur de commentaire d’ouverture. Le compilateur suppose un espace entre l’astérisque (<strong>\*</strong>) et la barre oblique (/).  
   
 ## <a name="example"></a>Exemple  
   
