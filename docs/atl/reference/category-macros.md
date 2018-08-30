@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206773"
 ---
 # <a name="category-macros"></a>Macros de catégorie
 Ces macros définissent les mappages de catégorie.  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL utilise le Gestionnaire de catégories de composants standard pour enregistrer les catégories de composants. Si le gestionnaire n’est pas présent sur le système lorsque le module est enregistré, l’inscription réussit, mais les catégories de composant ne seront pas enregistrés pour cette classe.  
   
- Pour plus d’informations sur les catégories de composants, consultez [quelles sont les catégories de composants et comment elles fonctionnent](http://msdn.microsoft.com/library/windows/desktop/ms694322) dans le SDK Windows.  
+ Pour plus d’informations sur les catégories de composants, consultez [quelles sont les catégories de composants et comment elles fonctionnent](/windows/desktop/com/component-categories-and-how-they-work) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  Les clients peuvent utiliser les informations de catégorie inscrits pour la classe pour déterminer ses fonctionnalités et les exigences sans avoir à créer une instance de celle-ci.  
   
- Pour plus d’informations sur les catégories de composants, consultez [quelles sont les catégories de composants et comment elles fonctionnent](http://msdn.microsoft.com/library/windows/desktop/ms694322) dans le SDK Windows.  
+ Pour plus d’informations sur les catégories de composants, consultez [quelles sont les catégories de composants et comment elles fonctionnent](/windows/desktop/com/component-categories-and-how-they-work) dans le SDK Windows.  
   
 ### <a name="a-selection-of-stock-categories"></a>Une sélection des catégories de Stock  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Objets prenant en charge Internet|Consultez [Internet des objets prenant en charge](http://msdn.microsoft.com/library/windows/desktop/ms690561) dans le SDK Windows pour un exemple de liste.||  
+|Objets prenant en charge Internet|Consultez [Internet des objets prenant en charge](/windows/desktop/com/internet-aware-objects) dans le SDK Windows pour un exemple de liste.||  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  Les clients peuvent utiliser les informations de catégorie inscrits pour la classe pour déterminer ses fonctionnalités et les exigences sans avoir à créer une instance de celle-ci. Par exemple, un contrôle peut nécessiter qu’un conteneur prend en charge la liaison de données. Le conteneur peut savoir s’il a les fonctionnalités nécessaires pour héberger le contrôle en interrogeant le Gestionnaire de catégorie pour les catégories requises par ce contrôle. Si le conteneur ne prend pas en charge une fonctionnalité requise, elle peut refuser héberger l’objet COM.  
   
- Pour plus d’informations sur les catégories de composants, notamment une liste d’exemples, consultez [quelles sont les catégories de composants et comment elles fonctionnent](http://msdn.microsoft.com/library/windows/desktop/ms694322) dans le SDK Windows.  
+ Pour plus d’informations sur les catégories de composants, notamment une liste d’exemples, consultez [quelles sont les catégories de composants et comment elles fonctionnent](/windows/desktop/com/component-categories-and-how-they-work) dans le SDK Windows.  
   
 ### <a name="a-selection-of-stock-categories"></a>Une sélection des catégories de Stock  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Objets prenant en charge Internet|Consultez [Internet des objets prenant en charge](http://msdn.microsoft.com/library/windows/desktop/ms690561) dans le SDK Windows pour un exemple de liste.||  
+|Objets prenant en charge Internet|Consultez [Internet des objets prenant en charge](/windows/desktop/com/internet-aware-objects) dans le SDK Windows pour un exemple de liste.||  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

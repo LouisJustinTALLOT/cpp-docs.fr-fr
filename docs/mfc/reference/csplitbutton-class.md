@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207639"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton, classe
 Le `CSplitButton` classe représente un contrôle bouton partagé. Le contrôle bouton partagé exécute un comportement par défaut lorsqu’un utilisateur clique sur la partie principale du bouton et affiche un menu déroulant lorsqu’un utilisateur clique sur la flèche déroulante du bouton.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Gère la notification BCN_DROPDOWN envoyé par le système lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton de fractionnement actuel.|  
   
 ## <a name="remarks"></a>Notes  
- Le `CSplitButton` classe est dérivée de la [CButton](../../mfc/reference/cbutton-class.md) classe. Le contrôle bouton partagé est un contrôle bouton dont le style est BS_SPLITBUTTON. Il affiche un menu personnalisé lorsqu’un utilisateur clique sur la flèche déroulante. Pour plus d’informations, consultez les styles BS_SPLITBUTTON et BS_DEFSPLITBUTTON [Styles de boutons](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ Le `CSplitButton` classe est dérivée de la [CButton](../../mfc/reference/cbutton-class.md) classe. Le contrôle bouton partagé est un contrôle bouton dont le style est BS_SPLITBUTTON. Il affiche un menu personnalisé lorsqu’un utilisateur clique sur la flèche déroulante. Pour plus d’informations, consultez les styles BS_SPLITBUTTON et BS_DEFSPLITBUTTON [Styles de boutons](/windows/desktop/Controls/button-styles).  
   
  L’illustration suivante représente une boîte de dialogue qui contient un contrôle de pagineur et un contrôle bouton partagé (1). La flèche déroulante (2) a déjà été cliqué et le sous-menu (3) s’affiche.  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Paramètre|Description|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Une combinaison (OR) au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [Styles de boutons](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
+|[in] *rect*|Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
 |[in] *pParentWnd*|Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|  
 |[in] *nID*|L’ID du contrôle.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Pointeur vers un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) structure qui contient des informations sur le [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
-|[out] *pResult*|(Non utilisé ; aucune valeur n’est retournée). Valeur de retour de la [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
+|[in] *pNMHDR*|Pointeur vers un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) structure qui contient des informations sur le [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notification.|  
+|[out] *pResult*|(Non utilisé ; aucune valeur n’est retournée). Valeur de retour de la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notification.|  
   
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur clique sur la flèche de déroulement sur un contrôle bouton partagé, le système envoie une notification BCN_DROPDOWN du message, ce qui le `OnDropDown` descripteurs de méthode. Toutefois, le `CSplitButton` objet ne transfère pas la notification BCN_DROPDOWN au contrôle qui contient le contrôle bouton partagé. Par conséquent, le contrôle conteneur ne peut pas prendre en charge une action personnalisée en réponse à la notification.  

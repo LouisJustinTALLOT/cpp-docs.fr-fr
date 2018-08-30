@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849654"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204139"
 ---
 # <a name="cpen-class"></a>CPen (classe)
 Encapsule un stylet GDI (Graphics Device Interface) Windows.  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Nom|Description|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Crée un stylet logique cosmétique ou géométrique avec le style spécifié, la largeur et les attributs de pinceau et l’attache à la `CPen` objet.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Crée un stylet avec le style, la largeur et la couleur donnée un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure et l’attache à la `CPen` objet.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Crée un stylet avec le style, la largeur et la couleur donnée un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) structure et l’attache à la `CPen` objet.|  
 |[CPen::FromHandle](#fromhandle)|Retourne un pointeur vers un `CPen` en fonction d’un HPEN Windows de l’objet.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Obtient un [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) structure sous-jacente.|  
-|[CPen::GetLogPen](#getlogpen)|Obtient un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure sous-jacente.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Obtient un [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) structure sous-jacente.|  
+|[CPen::GetLogPen](#getlogpen)|Obtient un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) structure sous-jacente.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -144,7 +144,7 @@ CPen(
   
 - PS_JOIN_BEVEL joint sont en relief.  
   
-- PS_JOIN_MITER joint sont entre elles forment lorsqu’ils se trouvent dans la limite actuelle définie par le [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) (fonction). Si la jointure dépasse cette limite, il est en relief.  
+- PS_JOIN_MITER joint sont entre elles forment lorsqu’ils se trouvent dans la limite actuelle définie par le [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) (fonction). Si la jointure dépasse cette limite, il est en relief.  
   
 - PS_JOIN_ROUND joint sont arrondis.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Contient une couleur RVB pour le stylet.  
   
  *pLogBrush*  
- Pointe vers un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure. Si *nPenStyle* est PS_COSMETIC, le `lbColor` membre de la `LOGBRUSH` structure spécifie la couleur du stylet et le *lbStyle* membre de la `LOGBRUSH` structure doit être définie sur BS_ SOLIDE. Si nPenStyle est PS_GEOMETRIC, tous les membres doivent être utilisés pour spécifier les attributs de pinceau du stylet.  
+ Pointe vers un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) structure. Si *nPenStyle* est PS_COSMETIC, le `lbColor` membre de la `LOGBRUSH` structure spécifie la couleur du stylet et le *lbStyle* membre de la `LOGBRUSH` structure doit être définie sur BS_ SOLIDE. Si nPenStyle est PS_GEOMETRIC, tous les membres doivent être utilisés pour spécifier les attributs de pinceau du stylet.  
   
  *nStyleCount*  
  Spécifie la longueur, en unités de mot double, de la *lpStyle* tableau. Cette valeur doit être zéro si *nPenStyle* n’est pas PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Paramètres  
  *pLogPen*  
- Pointe vers une [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) structure qui contient des informations sur le stylet.  
+ Pointe vers une [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) structure qui contient des informations sur le stylet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  Consultez les rubriques suivantes dans le SDK Windows pour plus d’informations sur les attributs de stylet :  
   
-- [Fonction GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant montre l’appel `GetExtLogPen` pour récupérer les attributs d’un stylet et ensuite créer un stylet de nouveau, cosmétique avec la même couleur.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Paramètres  
  *pLogPen*  
- Pointe vers un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure destinée à contenir des informations sur le stylet.  
+ Pointe vers un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) structure destinée à contenir des informations sur le stylet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  Consultez les rubriques suivantes dans le SDK Windows pour plus d’informations sur les attributs de stylet :  
   
-- [Fonction GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant montre l’appel `GetLogPen` pour récupérer un caractère de stylet et puis créer un nouveau stylet solid avec la même couleur.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Notes  
  Cet opérateur est un opérateur de cast, qui prend en charge l’utilisation directe d’un objet HPEN.  
   
- Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [graphique objets](/windows/desktop/gdi/graphic-objects) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

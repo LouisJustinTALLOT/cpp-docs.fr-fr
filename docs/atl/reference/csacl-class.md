@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 817875dd32457fa47eafca9d634bc2e7cc8e079d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879950"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206568"
 ---
 # <a name="csacl-class"></a>CSacl, classe
 Cette classe est un wrapper pour une structure de la liste SACL (liste de contrôle d’accès système).  
@@ -72,7 +72,7 @@ class CSacl : public CAcl
   
  Utilisez les méthodes de classe fournis pour ajouter, supprimer, créer et supprimer des entrées à partir de la `SACL` objet. Voir aussi [AtlGetSacl](security-global-functions.md#atlgetsacl) et [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le SDK Windows.  
+ Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -131,7 +131,7 @@ bool AddAuditAce(
 ### <a name="remarks"></a>Notes  
  Un `CSacl` objet contient des entrées de contrôle d’accès (ACE) qui spécifient les types de tentatives d’accès qui génèrent des enregistrements d’audit dans le journal d’événements de sécurité. Cette méthode ajoute cet un ACE pour le `CSacl` objet.  
   
- Consultez [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des indicateurs différents qui peuvent être définies dans le *AceFlags* paramètre.  
+ Consultez [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) pour obtenir une description des indicateurs différents qui peuvent être définies dans le *AceFlags* paramètre.  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  Constructeur.  
@@ -208,7 +208,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [CAcl, classe](../../atl/reference/cacl-class.md)   
- [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [ACL](/windows/desktop/SecAuthZ/access-control-lists)   
+ [ACE](/windows/desktop/SecAuthZ/access-control-entries)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

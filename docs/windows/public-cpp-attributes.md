@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f312267d83f73e30eecb569b50678e7cf5da5e7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52fb779173565eaa35eec37da80c93ba0610c14f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607276"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199066"
 ---
 # <a name="public-c-attributes"></a>public (attributs C++)
 
@@ -36,7 +36,7 @@ Garantit qu’un typedef passera à la bibliothèque de types même s’il n’e
 
 ## <a name="remarks"></a>Notes
 
-Le **public** attribut C++ a les mêmes fonctionnalités que le [public](http://msdn.microsoft.com/library/windows/desktop/aa367150) attribut MIDL.
+Le **public** attribut C++ a les mêmes fonctionnalités que le [public](/windows/desktop/Midl/public) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

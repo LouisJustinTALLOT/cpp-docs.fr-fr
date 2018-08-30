@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207840"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Récupération de métadonnées à l'aide de jeux de lignes du schéma
 Vous avez parfois besoin d'obtenir des informations sur le fournisseur, un ensemble de lignes, une table, des colonnes ou d'autres informations de base de données sans ouvrir l'ensemble de lignes. Les données relatives à la structure de base de données s'appellent des métadonnées et peuvent être récupérées par différentes méthodes. L'une d'elles consiste à utiliser des ensembles de lignes de schéma.  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Le [CRestrictions](../../data/oledb/crestrictions-class.md) classe fournit la prise en charge de la restriction. Après avoir créé une instance de l’ensemble de lignes du schéma, appelez [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Cette méthode retourne un jeu de résultats basé sur les restrictions que vous spécifiez.  
   
- Pour spécifier des restrictions, consultez [annexe b : Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) et rechercher l’ensemble de lignes que vous utilisez. Par exemple, `CColumns` correspond à la [ensemble de lignes COLUMNS](http://go.microsoft.com/fwlink/p/?linkid=64682); cette rubrique répertorie les colonnes de restriction de l’ensemble de lignes COLUMNS : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Vous devez suivre cet ordre quand vous spécifiez vos restrictions.  
+ Pour spécifier des restrictions, consultez [annexe b : Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) et rechercher l’ensemble de lignes que vous utilisez. Par exemple, `CColumns` correspond à la [ensemble de lignes COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); cette rubrique répertorie les colonnes de restriction de l’ensemble de lignes COLUMNS : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Vous devez suivre cet ordre quand vous spécifiez vos restrictions.  
   
  Par conséquent, par exemple, si vous souhaitez limiter par nom de table, notez que TABLE_NAME est la troisième colonne de restriction, puis appelez `Open`, spécifiant le nom de table voulue comme troisième paramètre de restriction, comme indiqué dans l’exemple suivant.  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Pour la référence de l’ensemble de lignes de schéma, les classes typedef fournies dans les modèles OLE DB (consultez [Classes d’ensemble de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Pour plus d’informations sur les ensembles de lignes de schéma OLE DB, y compris les colonnes de restriction, consultez [annexe b : Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) dans la référence du programmeur OLE DB.  
+ Pour plus d’informations sur les ensembles de lignes de schéma OLE DB, y compris les colonnes de restriction, consultez [annexe b : Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) dans la référence du programmeur OLE DB.  
   
- Pour obtenir des exemples plus complexes de l’utilisation des classes de jeu de lignes de schéma, consultez le [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) et [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemples.  
+ Pour obtenir des exemples plus complexes de l’utilisation des classes de jeu de lignes de schéma, consultez le [CatDB](https://github.com/Microsoft/VCSamples) et [DBViewer](https://github.com/Microsoft/VCSamples) exemples.  
   
  Pour plus d’informations sur la prise en charge du fournisseur d’ensembles de lignes de schéma, consultez [prenant en charge les ensembles de lignes de schéma](../../data/oledb/supporting-schema-rowsets.md).  
   

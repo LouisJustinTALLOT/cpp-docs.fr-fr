@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339304"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219017"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog, classe
 Vous pouvez ainsi incorporer une boîte de dialogue de sélection de couleur dans votre application.  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  Pour construire un `CColorDialog` de l’objet, utilisez le constructeur fourni ou dériver une nouvelle classe et utiliser votre propre constructeur personnalisé.  
   
- Une fois la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs dans le [m_cc](#m_cc) structure pour initialiser les valeurs des contrôles de la boîte de dialogue. Le *m_cc* structure est de type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Une fois la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs dans le [m_cc](#m_cc) structure pour initialiser les valeurs des contrôles de la boîte de dialogue. Le *m_cc* structure est de type [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora).  
   
  Après l’initialisation de contrôles de la boîte de dialogue, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et de permettre à l’utilisateur de sélectionner une couleur. `DoModal` Retourne la sélection de l’utilisateur du bouton OK (IDOK) ou Annuler (IDCANCEL) de la boîte de dialogue.  
   
  Si `DoModal` retourne IDOK, vous pouvez utiliser une des `CColorDialog`de fonctions membres pour récupérer les informations entrées par l’utilisateur.  
   
- Vous pouvez utiliser le Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur.  
+ Vous pouvez utiliser le Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) fonction pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur.  
   
  `CColorDialog` s’appuie sur le COMMDLG. Fichier DLL qui est livré avec Windows 3.1 et versions ultérieures.  
   
@@ -130,7 +130,7 @@ CColorDialog(
  La sélection de couleur par défaut. Si aucune valeur n’est spécifiée, la valeur par défaut est RGB(0,0,0) (noir).  
   
  *dwFlags*  
- Un jeu d’indicateurs qui personnalisent la fonction et l’apparence de la boîte de dialogue. Pour plus d’informations, consultez le [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) structure dans le SDK Windows.  
+ Un jeu d’indicateurs qui personnalisent la fonction et l’apparence de la boîte de dialogue. Pour plus d’informations, consultez le [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) structure dans le SDK Windows.  
   
  *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- IDOK ou IDCANCEL. Si IDCANCEL est retournée, appelez le Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction permettant de déterminer si une erreur s’est produite.  
+ IDOK ou IDCANCEL. Si IDCANCEL est retournée, appelez le Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) fonction permettant de déterminer si une erreur s’est produite.  
   
  IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou sur Annuler.  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur qui contient les informations de RVB pour la couleur sélectionnée dans la boîte de dialogue couleur.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui contient les informations de RVB pour la couleur sélectionnée dans la boîte de dialogue couleur.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Une structure de type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), dont les membres stocker les caractéristiques et les valeurs de la boîte de dialogue.  
+ Une structure de type [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora), dont les membres stocker les caractéristiques et les valeurs de la boîte de dialogue.  
   
 ```  
 CHOOSECOLOR m_cc;  

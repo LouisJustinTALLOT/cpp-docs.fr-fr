@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b19cff6e4f90485946521824bb0fd2f6358372
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a953f94e48f3093b1c61a1567252e04d98c1beb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208541"
 ---
 # <a name="cpatht-class"></a>Cpatht, classe
 Cette classe représente un chemin d’accès.  
@@ -176,7 +176,7 @@ void AddBackslash();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
+ Pour plus d’informations, consultez [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).  
   
 ##  <a name="addextension"></a>  CPathT::AddExtension  
  Appelez cette méthode pour ajouter une extension de fichier à un chemin d’accès.  
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
+ Pour plus d’informations, consultez [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).  
   
 ##  <a name="append"></a>  CPathT::Append  
  Appelez cette méthode pour ajouter une chaîne pour le chemin d’accès actuel.  
@@ -210,7 +210,7 @@ BOOL Append(PCXSTR pszMore);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
+ Pour plus d’informations, consultez [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).  
   
 ##  <a name="buildroot"></a>  CPathT::BuildRoot  
  Appelez cette méthode pour créer un chemin d’accès racine à partir d’un nombre donné de lecteur.  
@@ -224,7 +224,7 @@ void BuildRoot(int iDrive);
  Le numéro du lecteur (0 est a, 1 b : et ainsi de suite).  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
+ Pour plus d’informations, consultez [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).  
   
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  Appelez cette méthode pour convertir le chemin d’accès de la forme canonique.  
@@ -234,7 +234,7 @@ void Canonicalize();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
+ Pour plus d’informations, consultez [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).  
   
 ##  <a name="combine"></a>  CPathT::Combine  
  Appelez cette méthode pour concaténer une chaîne représentant un nom de répertoire et une chaîne représentant un nom de chemin d’accès de fichier dans un chemin d’accès.  
@@ -251,7 +251,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  Le chemin d’accès du fichier.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
+ Pour plus d’informations, consultez [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).  
   
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  Appelez cette méthode pour déterminer si le chemin d’accès spécifié partage un préfixe commun avec le chemin d’accès actuel.  
@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  Retourne le préfixe commun.  
   
 ### <a name="remarks"></a>Notes  
- Un préfixe est un de ces types : « C:\\\\«, ». «, ».. «, ».. \\\\". Pour plus d’informations, consultez [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
+ Un préfixe est un de ces types : « C:\\\\«, ». «, ».. «, ».. \\\\". Pour plus d’informations, consultez [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  Appelez cette méthode pour tronquer un chemin d’accès de fichier d’ajuster au sein d’une largeur en pixels donné en remplacement des composants de chemin d’accès avec les points de suspension.  
@@ -288,7 +288,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
+ Pour plus d’informations, consultez [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).  
   
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  Appelez cette méthode pour tronquer un chemin d’accès de fichier d’ajuster au sein d’un nombre donné de caractères en remplacement des composants de chemin d’accès avec les points de suspension.  
@@ -308,7 +308,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
+ Pour plus d’informations, consultez [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).  
   
 ##  <a name="cpatht"></a>  CPathT::CPathT  
  Constructeur.  
@@ -337,7 +337,7 @@ BOOL FileExists() const;
  Retourne la valeur TRUE si le fichier existe, FALSE sinon.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
+ Pour plus d’informations, consultez [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).  
   
 ##  <a name="findextension"></a>  CPathT::FindExtension  
  Appelez cette méthode pour rechercher la position de l’extension de fichier dans le chemin d’accès.  
@@ -350,7 +350,7 @@ int FindExtension() const;
  Retourne la position de la «. » précédant l’extension. Si aucune extension n’est trouvée, retourne -1.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
+ Pour plus d’informations, consultez [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).  
   
 ##  <a name="findfilename"></a>  CPathT::FindFileName  
  Appelez cette méthode pour trouver la position du nom de fichier dans le chemin d’accès.  
@@ -363,7 +363,7 @@ int FindFileName() const;
  Retourne la position du nom de fichier. Si aucun nom de fichier n’est trouvé, retourne -1.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
+ Pour plus d’informations, consultez [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).  
   
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  Appelez cette méthode pour rechercher le chemin d’accès pour une lettre de lecteur dans la plage de 'A' à 'Z' et retourner le nombre de lecteur correspondante.  
@@ -376,7 +376,7 @@ int GetDriveNumber() const;
  Retourne le nombre de lecteur sous forme d’entier de 0 à 25 (correspondant à « A » à « Z ») si le chemin d’accès comporte une lettre de lecteur, ou -1 dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
+ Pour plus d’informations, consultez [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).  
   
 ##  <a name="getextension"></a>  CPathT::GetExtension  
  Appelez cette méthode pour obtenir l’extension de fichier dans le chemin d’accès.  
@@ -399,7 +399,7 @@ BOOL IsDirectory() const;
  Retourne une valeur différente de zéro (16) si le chemin d’accès est un répertoire, sinon FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
+ Pour plus d’informations, consultez [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).  
   
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  Appelez cette méthode pour rechercher un chemin d’accès pour tout caractère délimiteur de chemin d’accès (par exemple, ' :' ou '\\'). S’il n’y a aucun caractère délimiteur de chemin d’accès est présent, le chemin d’accès est considéré comme un chemin d’accès de la spécification de fichier.  
@@ -412,7 +412,7 @@ BOOL IsFileSpec() const;
  Retourne TRUE si aucun caractère délimiteur de chemin d’accès dans le chemin d’accès, ou FALSE s’il existe des caractères de délimitation de chemin d’accès.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
+ Pour plus d’informations, consultez [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).  
   
 ##  <a name="isprefix"></a>  CPathT::IsPrefix  
  Appelez cette méthode pour déterminer si un chemin d’accès contient un préfixe valide du type passé *pszPrefix*.  
@@ -429,7 +429,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
  Retourne la valeur TRUE si le chemin d’accès contient le préfixe, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
+ Pour plus d’informations, consultez [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).  
   
 ##  <a name="isrelative"></a>  CPathT::IsRelative  
  Appelez cette méthode pour déterminer si le chemin d’accès est relatif.  
@@ -442,7 +442,7 @@ BOOL IsRelative() const;
  Retourne la valeur TRUE si le chemin d’accès est relatif, ou FALSE si elle est absolue.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
+ Pour plus d’informations, consultez [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).  
   
 ##  <a name="isroot"></a>  CPathT::IsRoot  
  Appelez cette méthode pour déterminer si le chemin d’accès est un répertoire racine.  
@@ -455,7 +455,7 @@ BOOL IsRoot() const;
  Retourne la valeur TRUE si le chemin d’accès est une racine, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
+ Pour plus d’informations, consultez [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).  
   
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  Appelez cette méthode pour déterminer si un autre chemin d’accès est un composant racine commun avec le chemin d’accès actuel.  
@@ -472,7 +472,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  Retourne la valeur TRUE si les deux chaînes ont le même composant racine, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
+ Pour plus d’informations, consultez [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).  
   
 ##  <a name="isunc"></a>  CPathT::IsUNC  
  Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (convention universelle d’affectation de noms) valide pour un serveur et le partager.  
@@ -485,7 +485,7 @@ BOOL IsUNC() const;
  Retourne la valeur TRUE si le chemin d’accès est un chemin UNC valide, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
+ Pour plus d’informations, consultez [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).  
   
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (convention universelle d’affectation de noms) valide pour un seul serveur.  
@@ -498,7 +498,7 @@ BOOL IsUNCServer() const;
  Retourne la valeur TRUE si la chaîne est un chemin d’accès UNC d’un serveur uniquement (aucun nom de partage) valide, ou FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
+ Pour plus d’informations, consultez [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).  
   
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  Appelez cette méthode pour déterminer si le chemin d’accès est un chemin de partage UNC (convention universelle d’affectation de noms) valid, \\ \  *server*\ *partager*.  
@@ -511,7 +511,7 @@ BOOL IsUNCServerShare() const;
  Retourne la valeur TRUE si le chemin d’accès se présente sous la forme \\ \  *server*\ *partager*, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
+ Pour plus d’informations, consultez [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).  
   
 ##  <a name="m_strpath"></a>  CPathT::m_strPath  
  Chemin d’accès.  
@@ -534,7 +534,7 @@ BOOL MakePretty();
  Retourne la valeur TRUE si le chemin d’accès a été converti, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
+ Pour plus d’informations, consultez [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).  
   
 ##  <a name="matchspec"></a>  CPathT::MatchSpec  
  Appelez cette méthode pour rechercher le chemin d’accès d’une chaîne contenant un type de correspondance de caractère générique.  
@@ -551,7 +551,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  Retourne si la chaîne correspond à la valeur TRUE ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
+ Pour plus d’informations, consultez [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).  
   
 ##  <a name="operator_add_eq"></a>  CPathT::operator +=  
  Cet opérateur ajoute une chaîne pour le chemin d’accès.  
@@ -625,7 +625,7 @@ void QuoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
+ Pour plus d’informations, consultez [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).  
   
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  Appelez cette méthode pour créer un chemin d’accès relatif d’un fichier ou dossier à un autre.  
@@ -655,7 +655,7 @@ BOOL RelativePathTo(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
+ Pour plus d’informations, consultez [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).  
   
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  Appelez cette méthode pour supprimer tous les arguments de ligne de commande à partir du chemin.  
@@ -665,7 +665,7 @@ void RemoveArgs();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
+ Pour plus d’informations, consultez [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).  
   
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  Appelez cette méthode pour supprimer la barre oblique de fin du chemin d’accès.  
@@ -675,7 +675,7 @@ void RemoveBackslash();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
+ Pour plus d’informations, consultez [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).  
   
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  Appelez cette méthode pour supprimer tous les espaces de début et de fin du chemin d’accès.  
@@ -685,7 +685,7 @@ void RemoveBlanks();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
+ Pour plus d’informations, consultez [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).  
   
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  Appelez cette méthode pour supprimer l’extension de fichier du chemin d’accès, le cas échéant.  
@@ -695,7 +695,7 @@ void RemoveExtension();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
+ Pour plus d’informations, consultez [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).  
   
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  Appelez cette méthode pour supprimer le nom de fichier à droite et la barre oblique inverse à partir du chemin, s’il a les.  
@@ -708,7 +708,7 @@ BOOL RemoveFileSpec();
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
+ Pour plus d’informations, consultez [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).  
   
 ##  <a name="renameextension"></a>  CPathT::RenameExtension  
  Appelez cette méthode pour remplacer l’extension de nom de fichier dans le chemin d’accès avec une nouvelle extension. Si le nom de fichier ne contient pas une extension, l’extension sera attachée à la fin du chemin d’accès.  
@@ -725,7 +725,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
+ Pour plus d’informations, consultez [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).  
   
 ##  <a name="skiproot"></a>  CPathT::SkipRoot  
  Appelez cette méthode pour analyser un chemin d’accès, en ignorant la lettre de lecteur ou les parties de chemin d’accès UNC (convention universelle d’affectation de noms) / partage de serveur.  
@@ -738,7 +738,7 @@ int SkipRoot() const;
  Retourne la position de début du sous-tracé qui suit la racine (lettre de lecteur ou UNC/partage de serveur).  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
+ Pour plus d’informations, consultez [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).  
   
 ##  <a name="strippath"></a>  CPathT::StripPath  
  Appelez cette méthode pour supprimer la partie de chemin d’accès d’un chemin d’accès complet et le nom de fichier.  
@@ -748,7 +748,7 @@ void StripPath();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
+ Pour plus d’informations, consultez [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).  
   
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  Appelez cette méthode pour supprimer toutes les parties du chemin d’accès à l’exception des informations sur les racine.  
@@ -761,7 +761,7 @@ BOOL StripToRoot();
  Retourne TRUE si une lettre de lecteur valide a été trouvé dans le chemin d’accès, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
+ Pour plus d’informations, consultez [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).  
   
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  Appelez cette méthode pour supprimer les guillemets de début et de fin d’un chemin d’accès.  
@@ -771,7 +771,7 @@ void UnquoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
+ Pour plus d’informations, consultez [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).  
   
 ##  <a name="xchar"></a>  CPathT::XCHAR  
  Type de caractère.  

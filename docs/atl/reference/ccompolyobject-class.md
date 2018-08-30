@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573350"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206370"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject, classe
 Cette classe implémente `IUnknown` pour un objet regroupé ou.  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|Délégués `IUnknown` appelle à inconnu externe si l’objet est agrégée ou à la `IUnknown` de l’objet si l’objet n’est pas agrégée.|  
   
 ## <a name="remarks"></a>Notes  
- `CComPolyObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet regroupé ou.  
+ `CComPolyObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet regroupé ou.  
   
  Lorsqu’une instance de `CComPolyObject` est créé, la valeur de l’élément externe inconnu est activée. Si sa valeur est NULL, `IUnknown` est implémentée pour un objet non regroupées en agrégats. Si l’inconnu extérieur n’est pas NULL, `IUnknown` est implémentée pour un objet agrégé.  
   

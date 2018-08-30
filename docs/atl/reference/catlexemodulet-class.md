@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6b5f46e20338bdb06c5c04599402dbbefa935e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214273"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT, classe
 Cette classe représente le module pour une application.  
@@ -259,7 +259,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>Paramètres  
  *nShowCmd*  
- Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) section. La valeur par défaut est SW_HIDE.  
+ Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section. La valeur par défaut est SW_HIDE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
@@ -285,7 +285,7 @@ static void UninitializeCom() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Par défaut cette méthode appelle simplement [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) et est appelé à partir du destructeur. Substituez cette méthode si vous substituez [CAtlExeModuleT::InitializeCom](#initializecom).  
+ Par défaut cette méthode appelle simplement [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) et est appelé à partir du destructeur. Substituez cette méthode si vous substituez [CAtlExeModuleT::InitializeCom](#initializecom).  
   
 ##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  Décrémente le de verrous du module nombre.  
@@ -306,7 +306,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Paramètres  
  *nShowCmd*  
- Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) section.  
+ Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de retour de l’exécutable.  

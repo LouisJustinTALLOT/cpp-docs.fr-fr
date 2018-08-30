@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f5b99266d465629853361c07ea16f9ae620b0e24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853067"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210826"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog, classe
 Utilisé pour les boîtes de dialogue OLE Le serveur ne répond pas ou Le serveur est occupé.  
@@ -67,7 +67,7 @@ class COleBusyDialog : public COleDialog
 > [!NOTE]
 >  Code généré par l’Assistant de conteneur d’application utilise cette classe.  
   
- Pour plus d’informations, consultez le [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) structure dans le SDK Windows.  
   
  Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleBusyDialog(
 ### <a name="remarks"></a>Notes  
  Pour afficher la boîte de dialogue, appelez [DoModal](#domodal).  
   
- Pour plus d’informations, consultez le [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) structure dans le SDK Windows.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue OLE serveur occupé ou serveur ne répond pas.  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, si l’utilisateur a annulé la boîte de dialogue.  
   
-- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) (fonction) dans le SDK Windows.  
+- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) (fonction) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez initialiser les divers contrôles de boîte de dialogue en définissant des membres de la [m_bz](#m_bz) structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>Notes  
  Membres de cette structure peuvent être modifiés directement ou via les fonctions membres.  
   
- Pour plus d’informations, consultez le [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) structure dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [COleDialog, classe](../../mfc/reference/coledialog-class.md)   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853018"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216200"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog, classe
 Encapsule la boîte de dialogue Propriétés d'objet OLE courante Windows.  
@@ -153,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Valeur de retour  
  IDOK ou IDCANCEL en cas de réussite ; sinon 0. IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou sur Annuler.  
   
- Si IDCANCEL est retourné, vous pouvez appeler la Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction permettant de déterminer si une erreur s’est produite.  
+ Si IDCANCEL est retourné, vous pouvez appeler la Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) fonction permettant de déterminer si une erreur s’est produite.  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- Une structure de type [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), utilisé pour initialiser la page Général de la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), utilisé pour initialiser la page Général de la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -168,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  Pour plus d’informations sur la `OLEUIGNRLPROPS` structure, consultez le kit SDK Windows.  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- Une structure de type [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), utilisé pour initialiser la page de lien de la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), utilisé pour initialiser la page de lien de la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -180,7 +180,7 @@ OLEUILINKPROPS m_lp;
  Pour plus d’informations sur la `OLEUILINKPROPS` structure, consultez le kit SDK Windows.  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- Une structure de type [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), utilisé pour initialiser la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), utilisé pour initialiser la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -189,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>Notes  
  Cette structure contient les membres utilisés pour initialiser les pages de vue général et lien.  
   
- Pour plus d’informations, consultez le OLEUIOBJECTPROPS et [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) structures dans le SDK Windows.  
+ Pour plus d’informations, consultez le OLEUIOBJECTPROPS et [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) structures dans le SDK Windows.  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- Une structure de type [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), dont les membres stockent les caractéristiques de l’objet de la boîte de dialogue.  
+ Une structure de type [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2), dont les membres stockent les caractéristiques de l’objet de la boîte de dialogue.  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -206,7 +206,7 @@ PROPSHEETHEADER m_psh;
  Pour plus d’informations sur la `PROPSHEETHEADER` structure, consultez le kit SDK Windows.  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- Une structure de type [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), utilisé pour initialiser la page de vue de la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), utilisé pour initialiser la page de vue de la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

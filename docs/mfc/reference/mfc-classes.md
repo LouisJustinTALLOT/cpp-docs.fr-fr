@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42544487"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213190"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Microsoft Foundation Class).  
@@ -135,7 +135,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Fournit les fonctionnalités d'une zone de liste de contrôle Windows.  
   
  [CClientDC, classe](../../mfc/reference/cclientdc-class.md)  
- Gère l’appel des fonctions Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) au moment de la construction et [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) au moment de la destruction.  
+ Gère l’appel des fonctions Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) au moment de la construction et [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) au moment de la destruction.  
   
  [CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)  
  Classe de base de l'architecture de table des messages de bibliothèque MFC (Microsoft Foundation Class).  
@@ -861,7 +861,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Représente une fenêtre frame de demi-hauteur généralement visible autour de barres d'outils flottantes.  
   
  [CMonikerFile, classe](../../mfc/reference/cmonikerfile-class.md)  
- Représente un flux de données ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) nommé par un [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+ Représente un flux de données ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) nommé par un [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
  [CMonthCalCtrl, classe](../../mfc/reference/cmonthcalctrl-class.md)  
  Encapsule les fonctionnalités d'un contrôle Month Calendar.  
@@ -930,7 +930,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Prend en charge les interfaces de contrôle côté client personnalisées.  
   
  [COleConvertDialog, classe](../../mfc/reference/coleconvertdialog-class.md)  
- Pour plus d’informations, consultez le [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) structure dans le SDK Windows.  
   
  [COleCurrency, classe](../../mfc/reference/colecurrency-class.md)  
  Encapsule le type de données `CURRENCY` d'OLE automation.  
@@ -1173,7 +1173,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Encapsule une transition de vitesse sinusoïdale dont l’amplitude est déterminée par la rapidité initiale de la variable de l’animation.  
   
  [CSize, classe](../../atl-mfc-shared/reference/csize-class.md)  
- Semblable à la structure [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) Windows, qui implémente une coordonnée ou une position relative.  
+ Similaire à la Windows [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui implémente une coordonnée relative ou une position.  
   
  [CSliderCtrl, classe](../../mfc/reference/csliderctrl-class.md)  
  Fournit les fonctionnalités du contrôle commun de curseur Windows.  

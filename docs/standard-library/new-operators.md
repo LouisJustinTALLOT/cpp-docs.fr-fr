@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 327e37d1f13691eca049c98e8b1ab314b393a608
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216186"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt;, opérateurs
 
@@ -45,7 +45,7 @@ void operator delete(void* ptr,
 
 La première fonction est appelée par une expression delete pour rendre la valeur de *ptr* non valide. Le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de *ptr* qui est null ou qui a été retournée par un appel antérieur à [opérateur new](../standard-library/new-operators.md#op_new)(**size_t**).
 
-Le comportement par défaut d’une valeur null de *ptr* consiste à ne rien faire. Toute autre valeur de *ptr* doit être une valeur retournée précédemment par un appel comme décrit précédemment. Le comportement par défaut pour ce type d’une valeur non null de *ptr* consiste à récupérer le stockage alloué par l’appel précédent. Il n’est pas spécifié dans quelles conditions tout ou partie de ce stockage récupéré est alloué par un appel ultérieur à `operator new`(**size_t**), ou à une des `calloc`( **size_t**), `malloc`( **size_t**), ou `realloc`( **void\***, **size_t**).
+Le comportement par défaut d’une valeur null de *ptr* consiste à ne rien faire. Toute autre valeur de *ptr* doit être une valeur retournée précédemment par un appel comme décrit précédemment. Le comportement par défaut pour ce type d’une valeur non null de *ptr* consiste à récupérer le stockage alloué par l’appel précédent. Il n’est pas spécifié dans quelles conditions tout ou partie de ce stockage récupéré est alloué par un appel ultérieur à `operator new`(**size_t**), ou à une des `calloc`( **size_t**), `malloc`( **size_t**), ou `realloc`( **void**<strong>\*</strong>, **size_t**).
 
 La deuxième fonction est appelée par une expression delete de positionnement correspondant à une expression de la forme **new**( **std::size_t**). Elle ne fait rien.
 
@@ -75,7 +75,7 @@ void operator delete[](void* ptr,
 
 ### <a name="remarks"></a>Notes
 
-La première fonction est appelée par un `delete[]` expression pour rendre la valeur de *ptr* non valide. La fonction est remplaçable, car le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de *ptr* qui est null ou qui a été retournée par un appel antérieur à [opérateur new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Le comportement par défaut d’une valeur null de *ptr* consiste à ne rien faire. Toute autre valeur de *ptr* doit être une valeur retournée précédemment par un appel comme décrit précédemment. Le comportement par défaut pour ce type d’une valeur non null de *ptr* consiste à récupérer le stockage alloué par l’appel précédent. Il n’est pas spécifié dans quelles conditions tout ou partie de ce stockage récupéré est alloué par un appel ultérieur à [opérateur new](../standard-library/new-operators.md#op_new)(**size_t**), ou à une des `calloc`(**size_t**), `malloc`(**size_t**), ou `realloc`( **void\***, **size_t**).
+La première fonction est appelée par un `delete[]` expression pour rendre la valeur de *ptr* non valide. La fonction est remplaçable, car le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de *ptr* qui est null ou qui a été retournée par un appel antérieur à [opérateur new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Le comportement par défaut d’une valeur null de *ptr* consiste à ne rien faire. Toute autre valeur de *ptr* doit être une valeur retournée précédemment par un appel comme décrit précédemment. Le comportement par défaut pour ce type d’une valeur non null de *ptr* consiste à récupérer le stockage alloué par l’appel précédent. Il n’est pas spécifié dans quelles conditions tout ou partie de ce stockage récupéré est alloué par un appel ultérieur à [opérateur new](../standard-library/new-operators.md#op_new)(**size_t**), ou à une des `calloc`(**size_t**), `malloc`(**size_t**), ou `realloc`( **void**<strong>\*</strong>, **size_t**) .
 
 La deuxième fonction est appelée par un positionnement `delete[]` expression correspondant à un `new[]` expression sous la forme `new[]`(**std::size_t**). Elle ne fait rien.
 

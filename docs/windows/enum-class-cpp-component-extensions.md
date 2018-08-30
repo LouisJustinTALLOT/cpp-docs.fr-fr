@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1f1e19ac51e36b04dd8ecfe89dbb7e3d592d869
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611960"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207600"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum, classe (extensions du composant C++)
 
@@ -65,7 +65,7 @@ La valeur de chaque énumérateur est une expression constante définie implicit
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations et d’exemples, consultez [Énumérations](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Pour plus d’informations et d’exemples, consultez [Enums](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Notez que le compilateur émet des messages d’erreur si l’expression constante qui définit la valeur d’un énumérateur ne peut pas être représentée par *underlying-type*.  Cependant, le compilateur ne signale pas d’erreur pour une valeur non appropriée pour le type sous-jacent. Exemple :
 

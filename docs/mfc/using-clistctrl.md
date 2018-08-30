@@ -1,5 +1,5 @@
 ---
-title: Utilisation de CListCtrl | Documents Microsoft
+title: Utilisation de CListCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210488"
 ---
 # <a name="using-clistctrl"></a>Utilisation de CListCtrl
-Utilisez un contrôle de liste pour afficher une disposition quelconque d’icônes avec des étiquettes, comme dans l’Explorateur de fichiers ou des listes en colonnes de texte, avec ou sans icônes. Pour obtenir une description des quatre possibles « vues » (à ne pas confondre avec les vues MFC), vous pouvez avoir dans un contrôle de liste, vues d’icône, petite icône, liste et vue rapport : consultez les vues dans le [CListCtrl](../mfc/reference/clistctrl-class.md) vue d’ensemble de la classe.  
+Utilisez un contrôle de liste pour afficher une disposition quelconque d’icônes avec des étiquettes, comme dans l’Explorateur de fichiers ou des listes en colonnes de texte, avec ou sans icônes. Pour obtenir une description des quatre possibles « vues » (à ne pas confondre avec les vues MFC), vous pouvez avoir dans un contrôle de liste, mode icône, petite icône vues, vue de liste et rapports, voir les vues dans le [CListCtrl](../mfc/reference/clistctrl-class.md) vue d’ensemble de la classe.  
   
- Dans certains affichages, les utilisateurs peuvent faire glisser des icônes à différents endroits ou modifier des étiquettes de l’icône. Par exemple, consultez le volet de droite dans l’Explorateur de fichiers, qui utilise un contrôle de liste dans un autre type de fenêtre. Vous pouvez tester les affichages disponibles dans le menu Affichage de l’Explorateur.  
+ Dans certains affichages, les utilisateurs peuvent faire glisser les icônes des positions différentes ou modifier les étiquettes de l’icône. Par exemple, consultez le volet de droite dans l’Explorateur de fichiers, qui utilise un contrôle de liste dans un autre type de fenêtre. Vous pouvez expérimenter avec les vues disponibles dans le menu Affichage de l’Explorateur.  
   
- Pour plus d’informations, consultez [sur les contrôles List-View](http://msdn.microsoft.com/library/windows/desktop/bb774735) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations, consultez [sur des contrôles d’affichage de liste](/windows/desktop/Controls/list-view-controls-overview) dans le SDK Windows.  
   
 > [!NOTE]
->  Le Kit de développement logiciel Windows fait référence à des contrôles de liste en tant que « contrôles list view ». Cette utilisation de la « vue » ne fait pas référence aux classes MFC, notamment `CListView`. Pour plus d’informations, consultez [contrôle de liste et vue liste](../mfc/list-control-and-list-view.md).  
+>  Le Kit de développement logiciel Windows fait référence aux contrôles de liste en tant que « contrôles list view ». Cette utilisation de « vue » ne fait pas référence aux classes MFC, notamment `CListView`. Pour plus d’informations, consultez [contrôle de liste et vue liste](../mfc/list-control-and-list-view.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
   
 -   [Contrôle de liste et vue Liste](../mfc/list-control-and-list-view.md)  
   

@@ -1,7 +1,7 @@
 ---
-title: Compilateur avertissement (niveau 1) C4679 | Documents Microsoft
+title: Avertissement (niveau 1) du compilateur C4679 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 951a2f5198a788395e4a870b204229f101ea4a50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca05c7983e87816e77f16ddbfe2fc9952b407f90
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281546"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221845"
 ---
 # <a name="compiler-warning-level-1-c4679"></a>Avertissement du compilateur (niveau 1) C4679
-Le compilateur a rencontré une construction qu’il ne peut pas prendre en charge, ce qui ne peut pas être importée à partir des métadonnées.  
-  
- **'**   
- ***membre* ' : Impossible d’importer le membre**  
-  
- N’essayez pas d’utiliser la construction.
+
+> «*membre*' : Impossible d’importer le membre
+
+Le compilateur a rencontré une construction qu’il ne peut pas prendre en charge, qui ne peuvent pas être importée à partir des métadonnées.
+
+N’essayez pas d’utiliser la construction.

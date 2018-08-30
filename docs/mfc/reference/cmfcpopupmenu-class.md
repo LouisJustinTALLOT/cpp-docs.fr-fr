@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540227"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204210"
 ---
 # <a name="cmfcpopupmenu-class"></a>Cmfcpopupmenu, classe
 Implémente les fonctionnalités de menu contextuel Windows et les étend en ajoutant des fonctionnalités telles que des menus volants et des info-bulles.
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  TRUE pour activer le son, FALSE sinon.  
   
 ### <a name="remarks"></a>Notes  
- Si vous activez le son, l’infrastructure appelle la [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) méthode lorsqu’un utilisateur ouvre un menu contextuel ou sélectionne une commande de menu. Par défaut, cette fonctionnalité est activée.  
+ Si vous activez le son, l’infrastructure appelle la [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) méthode lorsqu’un utilisateur ouvre un menu contextuel ou sélectionne une commande de menu. Par défaut, cette fonctionnalité est activée.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

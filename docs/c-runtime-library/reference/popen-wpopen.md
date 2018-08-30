@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218384"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -80,26 +80,26 @@ Mode du flux retourné.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est un paramètre non valide, par exemple si *commande* ou *mode* est un pointeur null, ou *mode* n’est pas un mode valide, **errno** a la valeur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
+Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est un paramètre non valide, par exemple si *commande* ou *mode* est un pointeur null, ou *mode* n’est pas un mode valide, **errno** est défini sur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_popen** fonction crée un canal de communication et exécute une copie engendrée de l’interpréteur de commandes avec la chaîne spécifiée de manière asynchrone *commande*. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
+Le **_popen** fonction crée un canal et exécute une copie de l’interpréteur de commandes avec la chaîne spécifiée générée de manière asynchrone *commande*. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
 
-**« r »** le processus appelant peut lire la sortie standard de la commande généré à l’aide du flux retourné.
+**« r »** le processus appelant peut lire la sortie standard de la commande générée en utilisant le flux retourné.
 
-**« w »** le processus appelant peut écrire à l’entrée standard de la commande généré à l’aide du flux retourné.
+**« w »** le processus appelant peut écrire dans l’entrée standard de la commande générée en utilisant le flux retourné.
 
 **« b »** ouvert en mode binaire.
 
 **« t »** ouvert en mode texte.
 
 > [!NOTE]
-> Si utilisé dans un programme Windows, le **_popen** fonction retourne un pointeur de fichier non valide, le programme se bloquer indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige les entrées et sorties, consultez [création d’un processus enfant avec redirigé d’entrée et sortie](http://msdn.microsoft.com/library/windows/desktop/ms682499) dans le Kit de développement logiciel Windows.
+> Si utilisé dans un programme Windows, le **_popen** fonction retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige les entrées et sorties, consultez [création d’un processus enfant avec redirigé d’entrée et sortie](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) dans le SDK Windows.
 
-**_wpopen** est une version à caractères larges de **_popen**; le *chemin d’accès* argument **_wpopen** est une chaîne à caractères larges. **_wpopen** et **_popen** comportent de façon identique.
+**_wpopen** est une version à caractères larges de **_popen**; le *chemin d’accès* l’argument de **_wpopen** est une chaîne de caractères larges. **_wpopen** et **_popen** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -107,7 +107,7 @@ Le **_popen** fonction crée un canal de communication et exécute une copie eng
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

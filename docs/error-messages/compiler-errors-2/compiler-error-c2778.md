@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2778 | Documents Microsoft
+title: Erreur du compilateur C2778 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f8747c0f2d0434f034ac0a0b84dcce510de0e96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209711"
 ---
 # <a name="compiler-error-c2778"></a>Erreur du compilateur C2778
 GUID incorrectement formé dans __declspec(uuid())  
@@ -37,7 +37,7 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
 ```  
   
- Le `uuid` attribut étendu accepte les chaînes reconnues par [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589), avec ou sans délimiteurs d’accolades.  
+ Le `uuid` attributs étendus accepte les chaînes reconnues par [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), avec ou sans délimiteurs d’accolades.  
   
  L’exemple suivant génère l’erreur C2778 :  
   

@@ -1,5 +1,5 @@
 ---
-title: L’annulation dans la bibliothèque PPL | Documents Microsoft
+title: L’annulation dans la bibliothèque PPL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694834"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221753"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annulation dans la bibliothèque de modèles parallèles
 Ce document explique le rôle de l’annulation dans la bibliothèque de modèles parallèles (PPL), comment annuler un travail parallèle et comment déterminer quand le travail parallèle est annulé.  
@@ -39,7 +39,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
 -   Si possible, utilisez des jetons d'annulation pour annuler un travail. Le [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) classe définit un jeton d’annulation.  
   
 
--   Lorsque vous utilisez des jetons d’annulation, utilisez le [Concurrency::cancellation_token_source :: Cancel](reference/cancellation-token-source-class.md#cancel) méthode pour initier l’annulation et la [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) (fonction) pour répondre à annulation. Utilisez le [Concurrency::cancellation_token :: is_canceled](reference/cancellation-token-class.md#is_canceled) méthode permettant de vérifier si une autre tâche a demandé l’annulation.
+-   Lorsque vous utilisez des jetons d’annulation, utilisez le [Concurrency::cancellation_token_source :: Cancel](reference/cancellation-token-source-class.md#cancel) méthode pour initier l’annulation et le [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) (fonction) pour répondre à annulation. Utilisez le [Concurrency::cancellation_token :: is_canceled](reference/cancellation-token-class.md#is_canceled) méthode permettant de vérifier si toute autre tâche a demandé l’annulation.
   
 -   L'annulation ne se produit pas immédiatement. Bien que tout nouveau travail ne soit pas démarré si une tâche ou un groupe de tâches sont annulés, un travail actif doit vérifier l’annulation et y répondre.  
   
@@ -66,7 +66,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
 - [Quand ne pas utiliser l’annulation](#when)  
   
 ##  <a name="trees"></a> Arborescences de travail parallèle  
- La bibliothèque de modèles parallèles (PPL) utilise des tâches et des groupes de tâches pour gérer les tâches et les calculs affinés. Vous pouvez imbriquer des groupes de tâches pour former *arborescences* de travail parallèle. L’illustration suivante montre une arborescence de travail parallèle. Dans cette illustration, `tg1` et `tg2` représentent des groupes de tâches ; `t1`, `t2`, `t3`, `t4` et `t5` représentent le travail que les groupes de tâches effectuent.  
+ La bibliothèque de modèles parallèles (PPL) utilise des tâches et des groupes de tâches pour gérer les tâches et les calculs affinés. Vous pouvez imbriquer des groupes de tâches pour le formulaire *arborescences* de travail parallèle. L’illustration suivante montre une arborescence de travail parallèle. Dans cette illustration, `tg1` et `tg2` représentent des groupes de tâches ; `t1`, `t2`, `t3`, `t4` et `t5` représentent le travail que les groupes de tâches effectuent.  
   
  ![Une arborescence de travail parallèle](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
   
@@ -74,7 +74,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
   
  [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]  
   
- Vous pouvez également utiliser le [concurrency::task_group](reference/task-group-class.md) classe pour créer une arborescence de travail similaire. Le [concurrency::task](../../parallel/concrt/reference/task-class.md) classe prend également en charge la notion d’une arborescence de travail. Toutefois, une arborescence `task` est une arborescence des dépendances. Dans une arborescence `task`, le travail futur s'accomplit après le travail en cours. Dans une arborescence de groupes de tâches, le travail interne s’accomplit avant le travail externe. Pour plus d’informations sur les différences entre les tâches et les groupes de tâches, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Vous pouvez également utiliser le [concurrency::task_group](reference/task-group-class.md) classe pour créer une arborescence de travail similaires. Le [concurrency::task](../../parallel/concrt/reference/task-class.md) classe prend également en charge la notion d’une arborescence de travail. Toutefois, une arborescence `task` est une arborescence des dépendances. Dans une arborescence `task`, le travail futur s'accomplit après le travail en cours. Dans une arborescence de groupes de tâches, le travail interne s’accomplit avant le travail externe. Pour plus d’informations sur les différences entre les tâches et les groupes de tâches, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  [[Haut](#top)]  
   
@@ -83,17 +83,17 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
  Il existe plusieurs façons d'annuler un travail parallèle. Le meilleur moyen consiste à utiliser un jeton d'annulation. Groupes de tâches également prise en charge la [Concurrency::task_group :: Cancel](reference/task-group-class.md#cancel) (méthode) et le [Concurrency::structured_task_group :: Cancel](reference/structured-task-group-class.md#cancel) (méthode). La dernière façon consiste à lever une exception dans le corps d’une fonction de travail de tâche. Quelle que soit la méthode choisie, comprenez bien que l'annulation ne se produit pas immédiatement. Bien que tout nouveau travail ne soit pas démarré si une tâche ou un groupe de tâches sont annulés, un travail actif doit vérifier l’annulation et y répondre.  
 
   
- Pour plus d’exemples d’annulation de tâches parallèles, consultez [procédure pas à pas : connexion à l’aide de tâches et les requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [Comment : utiliser l’annulation pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), et [Comment : utiliser Exceptions pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
+ Pour plus d’exemples d’annulation de tâches parallèles, consultez [procédure pas à pas : connexion à l’aide de tâches et les requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [Comment : utiliser l’annulation pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), et [Comment : utilisation Exceptions pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
 ###  <a name="tokens"></a> À l’aide d’un jeton d’annulation pour annuler un travail parallèle  
- Les classes `task`, `task_group` et `structured_task_group` prennent en charge l'annulation via l'utilisation de jetons d'annulation. La bibliothèque de modèles parallèles définit la [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) et [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) classes à cet effet. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Le travail qui est déjà actif peut utiliser le [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) fonction membre pour surveiller le jeton d’annulation et s’arrêter lorsqu’il peut.  
+ Les classes `task`, `task_group` et `structured_task_group` prennent en charge l'annulation via l'utilisation de jetons d'annulation. La bibliothèque PPL définit la [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) et [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) classes à cet effet. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Travail qui est déjà actif peut utiliser le [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) fonction membre pour surveiller le jeton d’annulation et arrêter lorsqu’il peut.  
   
 
- Pour initialiser l’annulation, appelez le [Concurrency::cancellation_token_source :: Cancel](reference/cancellation-token-source-class.md#cancel) (méthode). Vous répondez à l'annulation des façons suivantes :  
+ Pour initier l’annulation, appelez le [Concurrency::cancellation_token_source :: Cancel](reference/cancellation-token-source-class.md#cancel) (méthode). Vous répondez à l'annulation des façons suivantes :  
   
--   Pour `task` objets, utilisez la [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) (fonction). `cancel_current_task` annule la tâche en cours et toutes ses continuations basées sur des valeurs. (Cela n’annule pas l’annulation *jeton* associé à la tâche ou ses continuations.)  
+-   Pour `task` objets, utiliser le [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) (fonction). `cancel_current_task` annule la tâche en cours et toutes ses continuations basées sur des valeurs. (Cela n’annule pas l’annulation *jeton* qui est associé à la tâche ou ses continuations.)  
   
--   Pour les groupes de tâches et des algorithmes parallèles, utilisez le [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) afin de détecter l’annulation et revenir dès que possible à partir du corps de la tâche quand cette fonction retourne `true`. (N'appelez pas `cancel_current_task` à partir d'un groupe de tâches.)  
+-   Pour les groupes de tâches et des algorithmes parallèles, utilisez le [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) (fonction) pour détecter l’annulation et revenir dès que possible à partir du corps de la tâche lorsque cette fonction retourne `true`. (N'appelez pas `cancel_current_task` à partir d'un groupe de tâches.)  
 
   
  L'exemple suivant montre le premier modèle de base pour l'annulation de tâches. Le corps de la tâche vérifie parfois l’annulation dans une boucle.  
@@ -104,14 +104,14 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
   
 > [!TIP]
 
->  Vous pouvez également appeler le [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) de fonction au lieu de `cancel_current_task`.  
+>  Vous pouvez également appeler le [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) fonction au lieu de `cancel_current_task`.  
   
  Il est important d'appeler `cancel_current_task` quand vous répondez à l'annulation, car cela fait passer la tâche à l'état annulé. Si vous retournez un résultat trop tôt au lieu d'appeler `cancel_current_task`, l'opération passe à l'état terminé et toutes les continuations basées sur des valeurs sont exécutées.  
   
 > [!CAUTION]
 >  Ne levez jamais `task_canceled` à partir de votre code. Appelez `cancel_current_task` à la place.  
   
- Lorsqu’une tâche se termine dans l’état annulé, la [Concurrency::Task :: Get](reference/task-class.md#get) méthode lève une exception [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (À l’inverse, [Concurrency::Task :: wait](reference/task-class.md#wait) retourne [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) et ne lève pas.) L’exemple suivant illustre ce comportement pour une continuation basée sur des tâches. Une continuation basée sur des tâches est toujours appelée, même quand la tâche antécédente est annulée.  
+ Lorsqu’une tâche se termine à l’état annulé, le [Concurrency::Task :: Get](reference/task-class.md#get) méthode lève une exception [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (À l’inverse, [Concurrency::Task :: wait](reference/task-class.md#wait) retourne [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) et ne lève pas d’exception.) L’exemple suivant illustre ce comportement pour une continuation basée sur des tâches. Une continuation basée sur des tâches est toujours appelée, même quand la tâche antécédente est annulée.  
 
   
  [!code-cpp[concrt-task-canceled#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_3.cpp)]  
@@ -144,17 +144,17 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
 
 >  Utilisez le [concurrency::cancellation_token :: none](reference/cancellation-token-class.md#none) méthode lorsque vous appelez un constructeur ou une fonction qui accepte un `cancellation_token` objet et que vous ne souhaitez pas que l’opération soit annulable.  
   
- Vous pouvez également fournir un jeton d'annulation au constructeur d'un objet `task_group` ou `structured_task_group`. Autre aspect important : les groupes de tâches enfants héritent de ce jeton d’annulation. Pour obtenir un exemple qui illustre ce concept à l’aide de la [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) fonction à exécuter pour appeler `parallel_for`, consultez [annulation d’algorithmes parallèles](#algorithms) plus loin dans cette document.  
+ Vous pouvez également fournir un jeton d'annulation au constructeur d'un objet `task_group` ou `structured_task_group`. Autre aspect important : les groupes de tâches enfants héritent de ce jeton d’annulation. Pour obtenir un exemple qui illustre ce concept en utilisant le [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) fonction à exécuter pour appeler `parallel_for`, consultez [annulation d’algorithmes parallèles](#algorithms) plus loin dans cette document.  
   
  [[Haut](#top)]  
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Jetons d’annulation et composition de la tâche  
 
- Le [concurrency :: lien hypertexte «http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx» when_all](reference/concurrency-namespace-functions.md#when_all) et [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) fonctions peuvent vous aider à rédiger plusieurs tâches pour implémenter des modèles courants. Cette section décrit la manière dont ces fonctions utilisent des jetons d'annulation.  
+ Le [concurrence :: HYPERLINK "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx» when_all](reference/concurrency-namespace-functions.md#when_all) et [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) fonctions peuvent vous aider à composer plusieurs tâches pour implémenter des modèles courants. Cette section décrit la manière dont ces fonctions utilisent des jetons d'annulation.  
   
  Quand vous fournissez un jeton d'annulation à la fonction `when_all` et `when_any`, cette fonction s'annule uniquement quand ce jeton d'annulation est annulé ou quand une des tâches participantes se termine dans un état annulé ou lève une exception.  
   
- La fonction `when_all` hérite du jeton d'annulation de chaque tâche qui compose l'opération globale quand vous ne lui fournissez pas de jeton d'annulation. La tâche retournée de `when_all` est annulée quand un de ces jetons est annulé et qu'au moins une des tâches participantes n'a pas encore démarré ou est en cours d'exécution. Un comportement similaire se produit lorsque l’une des tâches lève une exception - la tâche est retournée à partir de `when_all` est immédiatement annulée avec cette exception.  
+ La fonction `when_all` hérite du jeton d'annulation de chaque tâche qui compose l'opération globale quand vous ne lui fournissez pas de jeton d'annulation. La tâche retournée de `when_all` est annulée quand un de ces jetons est annulé et qu'au moins une des tâches participantes n'a pas encore démarré ou est en cours d'exécution. Un comportement similaire se produit lorsqu’une tâche lève une exception - la tâche est retournée à partir de `when_all` est immédiatement annulée avec cette exception.  
   
  Le runtime sélectionne le jeton d'annulation de la tâche retournée de la fonction `when_any` quand cette tâche se termine. Si aucune des tâches participantes ne se termine dans un état terminé et qu'une ou plusieurs tâches lèvent une exception, une des tâches déclenchées est choisie pour effectuer l'opération `when_any` et son jeton est choisi en tant que jeton pour la tâche finale. Si plusieurs tâches se terminent dans l'état terminé, la tâche retournée de la tâche `when_any` se termine dans un état terminé. Le runtime essaie de sélectionner une tâche terminée dont le jeton n'est pas annulé au moment de l'exécution pour que la tâche retournée de `when_any` ne soit pas immédiatement annulée même si d'autres tâches en cours d'exécution risquent de se terminer plus tard.  
   
@@ -165,15 +165,15 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
  Le [Concurrency::task_group :: Cancel](reference/task-group-class.md#cancel) et [Concurrency::structured_task_group :: Cancel](reference/structured-task-group-class.md#cancel) méthodes définissent un groupe de tâches à l’état annulé. Après avoir appelé `cancel`, le groupe de tâches ne démarre pas les tâches futures. Les méthodes `cancel` peuvent être appelées par plusieurs tâches enfants. Une tâche annulée entraîne le [Concurrency::task_group :: wait](reference/task-group-class.md#wait) et [Concurrency::structured_task_group :: wait](reference/structured-task-group-class.md#wait) méthodes pour retourner les [Concurrency::structured_task_group :: wait](reference/concurrency-namespace-enums.md#task_group_status).  
 
   
- Si un groupe de tâches est annulé, les appels de chaque tâche enfant dans le runtime peuvent déclencher un *point d’interruption*, lequel amène le runtime à lever et intercepter un type d’exception interne pour annuler les tâches actives. Le runtime d'accès concurrentiel ne définit pas de points d'interruption spécifiques ; ils peuvent se produire dans tout appel au runtime. Le runtime doit gérer les exceptions qu'il lève pour effectuer l'annulation. Par conséquent, ne gérez pas les exceptions inconnues dans le corps d'une tâche.  
+ Si un groupe de tâches est annulé, les appels à partir de chaque tâche enfant dans le runtime peuvent déclencher un *point d’interruption*, ce qui entraîne le runtime à lever et intercepter un type d’exception interne pour annuler les tâches actives. Le runtime d'accès concurrentiel ne définit pas de points d'interruption spécifiques ; ils peuvent se produire dans tout appel au runtime. Le runtime doit gérer les exceptions qu'il lève pour effectuer l'annulation. Par conséquent, ne gérez pas les exceptions inconnues dans le corps d'une tâche.  
   
  Si une tâche enfant effectue une opération chronophage et n'appelle pas dans le runtime, elle doit régulièrement vérifier l'annulation et se fermer en temps voulu. L'exemple suivant montre une façon de déterminer le moment auquel le travail est annulé. La tâche `t4` annule le groupe de tâches parent quand elle rencontre une erreur. La tâche `t5` appelle de temps en temps la méthode `structured_task_group::is_canceling` pour vérifier l'annulation. Si le groupe de tâches parent est annulé, la tâche `t5` imprime un message et se ferme.  
   
  [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]  
   
- Cet exemple vérifie l’annulation chaque 100<sup>th</sup> itération de la boucle de tâche. La fréquence à laquelle vous vérifiez l’annulation dépend de la quantité de travail effectuée par votre tâche et de la vitesse à laquelle vous avez besoin que les tâches répondent à l’annulation.  
+ Cet exemple vérifie l’annulation sur toutes les 100<sup>th</sup> itération de la boucle de tâche. La fréquence à laquelle vous vérifiez l’annulation dépend de la quantité de travail effectuée par votre tâche et de la vitesse à laquelle vous avez besoin que les tâches répondent à l’annulation.  
   
- Si vous n’avez pas l’accès à l’objet de groupe de tâches parent, appelez le [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) afin de déterminer si le groupe de tâches parent est annulé.  
+ Si vous n’avez pas accès à l’objet de groupe de tâches parent, appelez le [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) fonction permettant de déterminer si le groupe de tâches parent est annulé.  
 
   
  La méthode `cancel` affecte uniquement les tâches enfants. Par exemple, si vous annulez le groupe de tâches `tg1` dans l'illustration de l'arborescence de travail parallèle, toutes les tâches de l'arborescence (`t1`, `t2`, `t3`, `t4` et `t5`) sont affectées. Si vous annulez le groupe de tâches imbriqué, `tg2`, seules les tâches `t4` et `t5` sont affectées.  
@@ -197,7 +197,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
  [[Haut](#top)]  
   
 ###  <a name="exceptions"></a> Utilisation d’Exceptions pour annuler un travail parallèle  
- L'utilisation de jetons d'annulation et la méthode `cancel` sont plus efficaces que la gestion des exceptions pour annuler une arborescence de travail parallèle. Les jetons d'annulation et la méthode `cancel` annulent une tâche et toutes les tâches enfants de haut en bas. À l’inverse, la gestion des exceptions fonctionne de bas en haut et doit annuler chaque groupe de tâches enfant indépendamment puisque l’exception se propage vers le haut. La rubrique [la gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) explique comment le Runtime d’accès concurrentiel utilise des exceptions pour communiquer des erreurs. Toutefois, toutes les exceptions n'indiquent pas une erreur. Par exemple, un algorithme de recherche peut annuler sa tâche associée quand il trouve le résultat. Toutefois, comme mentionné précédemment, la gestion des exceptions est moins efficace que l'utilisation de la méthode `cancel` pour annuler un travail parallèle.  
+ L'utilisation de jetons d'annulation et la méthode `cancel` sont plus efficaces que la gestion des exceptions pour annuler une arborescence de travail parallèle. Les jetons d'annulation et la méthode `cancel` annulent une tâche et toutes les tâches enfants de haut en bas. À l’inverse, la gestion des exceptions fonctionne de bas en haut et doit annuler chaque groupe de tâches enfant indépendamment puisque l’exception se propage vers le haut. La rubrique [gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) explique comment le Runtime d’accès concurrentiel utilise des exceptions pour communiquer des erreurs. Toutefois, toutes les exceptions n'indiquent pas une erreur. Par exemple, un algorithme de recherche peut annuler sa tâche associée quand il trouve le résultat. Toutefois, comme mentionné précédemment, la gestion des exceptions est moins efficace que l'utilisation de la méthode `cancel` pour annuler un travail parallèle.  
   
 > [!CAUTION]
 >  Nous vous recommandons d'utiliser des exceptions pour annuler un travail parallèle uniquement quand cela est nécessaire. Les jetons d'annulation et les méthodes `cancel` de  groupe de tâches sont plus efficaces et moins sujets à erreur.  
@@ -255,7 +255,7 @@ Caught 50
  [[Haut](#top)]  
   
 ##  <a name="when"></a> Quand ne pas utiliser l’annulation  
- L’utilisation de l’annulation est appropriée quand chaque membre d’un groupe de tâches connexes peut quitter le groupe en temps voulu. Toutefois, il existe certains scénarios où l'annulation peut ne pas convenir à votre application. Par exemple, étant donné que l'annulation de tâches est coopérative, l'ensemble des tâches n'est pas annulé si une tâches individuelle est bloquée. Par exemple, si une seule tâche n'a pas encore démarré, mais qu'elle débloque une autre tâche active, elle ne démarre pas si le groupe de tâches est annulé. Il existe alors un risque d'interblocage dans votre application. Deuxième exemple d'utilisation inappropriée de l'annulation : quand une tâche est annulée, alors que sa tâche enfant effectue une opération importante, comme la libération d'une ressource. Étant donné que l’ensemble des tâches est annulé quand la tâche parente est annulée, cette opération ne s’exécute pas. Pour obtenir un exemple qui illustre ce point, consultez la [comprendre comment l’annulation et la gestion des affectent Destruction d’objets](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) section dans la rubrique meilleures pratiques de la bibliothèque de modèles parallèles.  
+ L’utilisation de l’annulation est appropriée quand chaque membre d’un groupe de tâches connexes peut quitter le groupe en temps voulu. Toutefois, il existe certains scénarios où l'annulation peut ne pas convenir à votre application. Par exemple, étant donné que l'annulation de tâches est coopérative, l'ensemble des tâches n'est pas annulé si une tâches individuelle est bloquée. Par exemple, si une seule tâche n'a pas encore démarré, mais qu'elle débloque une autre tâche active, elle ne démarre pas si le groupe de tâches est annulé. Il existe alors un risque d'interblocage dans votre application. Deuxième exemple d'utilisation inappropriée de l'annulation : quand une tâche est annulée, alors que sa tâche enfant effectue une opération importante, comme la libération d'une ressource. Étant donné que l’ensemble des tâches est annulé quand la tâche parente est annulée, cette opération ne s’exécute pas. Pour obtenir un exemple qui illustre ce point, consultez le [comprendre comment l’annulation et Exception gestion affectent la Destruction d’objets](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) section dans les meilleures pratiques dans la rubrique de la bibliothèque de modèles parallèles.  
   
  [[Haut](#top)]  
   

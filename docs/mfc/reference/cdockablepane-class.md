@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538678"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223063"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implémente un volet qui peut être ancré dans un site d'ancrage ou être inclus dans un volet à onglets.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Spécifie si les onglets sont situés en haut ou bas du volet.|  
 |[CDockablePane::IsTracked](#istracked)|Spécifie si un volet est déplacé par l’utilisateur.|  
 |[CDockablePane::IsVisible](#isvisible)|Détermine si le volet actif est visible.|  
-|[CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Utilisé en interne.|  
+|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Utilisé en interne.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Appelé par le framework lorsque le parent d’un volet a changé. (Substitue [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Appelé par le framework lorsqu’une barre d’ancrage flottante s’ancre sur une fenêtre frame.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Appelé par le framework lorsque le parent du volet est va être modifiée. (Substitue [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

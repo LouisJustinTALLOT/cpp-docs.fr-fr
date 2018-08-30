@@ -1,5 +1,5 @@
 ---
-title: Définition d’une clé à chaud | Documents Microsoft
+title: Définition d’une clé à chaud | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3987ddee98ae35e02a181e38cd71f181801aeb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219395"
 ---
 # <a name="setting-a-hot-key"></a>Définition d'une touche d'accès rapide
 Votre application peut utiliser les informations fournies par une touche d’accès rapide ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) contrôle de deux manières :  
   
--   Définir une touche d’accès rapide pour activer une fenêtre non-enfant en envoyant un [message WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) message dans la fenêtre d’être activées.  
+-   Configurer une touche d’accès rapide pour activer une fenêtre non-enfant en envoyant un [message WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) message dans la fenêtre à activer.  
   
--   Définissez une touche d’accès rapide spécifiques aux threads en appelant la fonction Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+-   Définissez une touche d’accès rapide spécifiques aux threads en appelant la fonction Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

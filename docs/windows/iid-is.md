@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0743a34b39a29843bf4a99c8d6f234c1c67a05b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 597d4c2e6fa9904906c2971c3c442a9f26779834
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605143"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215076"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -43,7 +43,7 @@ Une expression de langage C qui spécifie un IID d’une interface COM vers laqu
 
 ## <a name="remarks"></a>Notes
 
-Le **iid_is** attribut C++ a les mêmes fonctionnalités que le [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) attribut MIDL.
+Le **iid_is** attribut C++ a les mêmes fonctionnalités que le [iid_is](/windows/desktop/Midl/iid-is) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

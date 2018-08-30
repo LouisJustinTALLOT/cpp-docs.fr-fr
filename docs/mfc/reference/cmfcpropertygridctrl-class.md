@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1bf852b10ace3dca8014e54f2b0070328da64e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205093"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Indique si le framework redessine les colonnes nom et la valeur du contrôle de grille de propriété actuel lorsqu’un utilisateur redimensionne les colonnes.|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Indique si l’apparence du contrôle de grille de propriété est dans le style qui est utilisé par Visual Studio .NET.|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Spécifie comment afficher les propriétés modifiées.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Supprime tous les objets de propriété à partir d’un contrôle de grille de propriétés.|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Restaure la valeur d’origine de toutes les propriétés.|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Définit ou réinitialise le mode alphabétique.|  

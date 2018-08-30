@@ -1,5 +1,5 @@
 ---
-title: LNK1123 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1123 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206786"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Erreur des outils Éditeur de liens LNK1123
 
@@ -41,7 +41,7 @@ Les fichiers d'entrée doivent avoir le format COFF (Common Object File Format).
 
 - Essayez de désactiver l'option Incorporer le manifeste. Dans la barre de menus, choisissez **Projet**, **Propriétés**. Dans le **Pages de propriétés** boîte de dialogue, développez **propriétés de Configuration**, **outil manifeste**, **d’entrée et sortie**. Modifiez la valeur de **incorporer le manifeste** à **non**.
 
-- Assurez-vous que le type de fichier est valide. Par exemple, assurez-vous qu'un objet OMF est un objet 32 bits et non pas 16 bits. Pour plus d’informations, consultez [. Fichiers obj en tant qu’entrée de l’éditeur de liens](../../build/reference/dot-obj-files-as-linker-input.md) et [Format PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+- Assurez-vous que le type de fichier est valide. Par exemple, assurez-vous qu'un objet OMF est un objet 32 bits et non pas 16 bits. Pour plus d’informations, consultez [. Fichiers obj en tant qu’entrée de l’éditeur de liens](../../build/reference/dot-obj-files-as-linker-input.md) et [Format PE](/windows/desktop/Debug/pe-format).
 
 - Assurez-vous que le fichier n'est pas endommagé. Régénérez-le, si nécessaire.
 

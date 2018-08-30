@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199589"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -67,7 +67,7 @@ La fonction d’erreur définie précédemment ; ou **NULL** s’il n’existe 
 
 Dans le nouveau code, utilisez uniquement **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** est uniquement inclus dans la bibliothèque pour la compatibilité descendante.
 
-Le **_RTC_SetErrorFuncW** rappel s’applique uniquement au composant auquel il a été lié, mais pas globalement.
+Le **_RTC_SetErrorFuncW** rappel s’applique uniquement au composant auquel il a été lié, mais pas dans le monde entier.
 
 Assurez-vous que l’adresse que vous passez à **_RTC_SetErrorFuncW** est celle d’une fonction de gestion d’erreur valide.
 
@@ -77,23 +77,36 @@ Avant d’appeler cette fonction, vous devez d’abord appeler une des fonctions
 
 **_RTC_error_fnW** est définie comme suit :
 
-> **TypeDef int (__cdecl \*_RTC_error_fnW) (int** *errorType* **, wchar_t const \***  *nom de fichier* **, int***linenumber* **, wchar_t const \***  *moduleName* **, wchar_t const \***  *format* **,...) ;** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 où :
 
-*errorType* le type d’erreur spécifié par [_RTC_SetErrorType](rtc-seterrortype.md).
+*Type d’erreur*<br/>
+Le type d’erreur qui est spécifié par [_RTC_SetErrorType](rtc-seterrortype.md).
 
-*nom de fichier* le fichier source où la défaillance s’est produite, ou null si aucune information de débogage n’est disponible.
+*filename*<br/>
+Le fichier source où la défaillance s’est produite, ou null si aucune information de débogage n’est disponible.
 
-*LineNumber* la ligne *nom de fichier* où la défaillance s’est produite, ou 0 si aucune information de débogage n’est disponible.
+*linenumber*<br/>
+La ligne de *filename* où la défaillance s’est produite, ou 0 si aucune information de débogage n’est disponible.
 
-*nom du module* la DLL ou le nom du fichier exécutable où la défaillance s’est produite.
+*moduleName*<br/>
+Le fichier DLL ou le nom du fichier exécutable où la défaillance s’est produite.
 
-*format* chaîne de style printf pour afficher un message d’erreur, en utilisant les paramètres restants. Le premier argument de VA_ARGLIST est le numéro de l’erreur RTC qui s’est produite.
+*format*<br/>
+chaîne de style printf pour afficher un message d’erreur, en utilisant les paramètres restants. Le premier argument de VA_ARGLIST est le numéro de l’erreur RTC qui s’est produite.
 
 Pour obtenir un exemple qui montre comment utiliser **_RTC_error_fnW**, consultez [Personnalisation des contrôles natifs à l’exécution](/visualstudio/debugger/native-run-time-checks-customization).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212167"
 ---
 # <a name="reflection-ccli"></a>Réflexion (C++/CLI)
 
@@ -42,12 +42,12 @@ La réflexion permet d’inspecter lors de l’exécution des types de données 
 
 Notez que le nom de l’assembly fourni est le nom fort (consultez [création et assemblys avec nom fort](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), qui inclut la version de l’assembly, de culture et les informations de signature. Notez également que le nom de l’espace de noms dans lequel le type de données est défini peut être extraits, ainsi que le nom de la classe de base.
 
-La méthode la plus courante pour accéder aux fonctionnalités de réflexion consiste à utiliser le <xref:System.Object.GetType%2A> (méthode). Cette méthode est fournie par [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), à partir de laquelle dérivent toutes les classes de garbage collection.
+La méthode la plus courante pour accéder aux fonctionnalités de réflexion consiste à utiliser le <xref:System.Object.GetType%2A> (méthode). Cette méthode est fournie par [System::Object](https://msdn.microsoft.com/library/system.object.aspx), à partir de laquelle dérivent toutes les classes de garbage collection.
 
 > [!NOTE]
 > Réflexion sur un .exe générées avec le compilateur Visual C++ est uniquement autorisée si le fichier .exe est générée avec le **/CLR : pure** ou **/CLR : safe** options du compilateur. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non disponible dans Visual Studio 2017. Consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations.
 
-Pour plus d’informations, consultez [System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+Pour plus d’informations, consultez [System.Reflection Namespace](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Exemple : GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Exemple : l’inspection des assemblys
 
-Si le code ci-dessus est compilé dans une DLL appelée vcpp_reflection_6.dll, vous pouvez ensuite utiliser la réflexion pour inspecter le contenu de cet assembly. Cela implique l’utilisation de la fonction d’API de réflexion statique [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) pour charger l’assembly. Cette fonction retourne l’adresse d’un **Assembly** objet peut ensuite être interrogée sur les modules et les types dans.
+Si le code ci-dessus est compilé dans une DLL appelée vcpp_reflection_6.dll, vous pouvez ensuite utiliser la réflexion pour inspecter le contenu de cet assembly. Cela implique l’utilisation de la fonction d’API de réflexion statique [Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) pour charger l’assembly. Cette fonction retourne l’adresse d’un **Assembly** objet peut ensuite être interrogée sur les modules et les types dans.
 
-Une fois le système de réflexion l’assembly, un tableau de **Type** objets est récupérée avec la [assembly.GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) (fonction). Chaque élément du tableau contient des informations sur un autre type, bien que dans ce cas, une seule classe est définie. À l’aide d’une boucle, chaque **Type** dans ce tableau est interrogé sur les membres de type à l’aide de la **Type::GetMembers** (fonction). Cette fonction retourne un tableau de **MethodInfo** objets, chaque objet contenant des informations sur la fonction membre, le membre de données ou la propriété dans le type.
+Une fois le système de réflexion l’assembly, un tableau de **Type** objets est récupérée avec la [assembly.GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) (fonction). Chaque élément du tableau contient des informations sur un autre type, bien que dans ce cas, une seule classe est définie. À l’aide d’une boucle, chaque **Type** dans ce tableau est interrogé sur les membres de type à l’aide de la **Type::GetMembers** (fonction). Cette fonction retourne un tableau de **MethodInfo** objets, chaque objet contenant des informations sur la fonction membre, le membre de données ou la propriété dans le type.
 
 Notez que la liste des méthodes inclut les fonctions explicitement définies dans **TestClass** et les fonctions héritent implicitement de la **System::Object** classe. En tant qu’elles sont décrites dans .NET plutôt que de la syntaxe Visual C++, les propriétés s’affichent en tant que les données membres sous-jacentes auxquelles accédé les fonctions get/set. Les fonctions get/set apparaissent dans cette liste en tant que méthodes régulières. La réflexion est prise en charge par le common language runtime, pas par le compilateur Visual C++.
 

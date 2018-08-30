@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 162abbae937e6eeae62dd9dfcd924af44dfd7270
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610038"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214634"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloud et programmation Web dans Visual C++
 
@@ -27,7 +27,7 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 
 - [Microsoft Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
 
-   Fournit des API natives que vous pouvez utiliser dans les applications de plateforme universelle Windows (UWP) ou des applications de bureau Windows pour se connecter à Windows Azure Mobile Services. Bien que la plupart des exemples présentés sur le site web soient en C#, vous pouvez aussi utiliser C++. Pour plus d’informations, consultez [Démarrage rapide : ajout d’un service mobile en C++](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+   Fournit des API natives que vous pouvez utiliser dans les applications de plateforme universelle Windows (UWP) ou des applications de bureau Windows pour se connecter à Windows Azure Mobile Services. Bien que la plupart des exemples présentés sur le site web soient en C#, vous pouvez aussi utiliser C++. Pour plus d’informations, consultez [Guide de démarrage rapide : ajout d’un service mobile à l’aide de C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Bibliothèque cliente de stockage Microsoft Azure pour C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -54,7 +54,7 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 
    Prend en charge de Windows Desktop (7 +), Windows Server (2012 et versions ultérieures), plateforme Windows universelle, Linux, OSX, Android et iOS. 
 
-- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/en-us/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
    Classe de client HTTP Windows Runtime modélisée sur la classe .NET Framework du même nom dans l'espace de noms System.Web. `HttpClient` prend entièrement en charge le chargement et le téléchargement asynchrones via HTTP, ainsi que les filtres de pipeline qui permettent l'insertion de gestionnaires HTTP personnalisés dans le pipeline. Le Kit de développement logiciel (SDK) Windows inclut des exemples de filtres pour les connexions réseau limitées, l'authentification OAuth et bien plus encore. Pour les applications qui ciblent uniquement les plateforme Windows universelle, nous vous recommandons d’utiliser la `Windows::Web:HttpClient` classe. 
 
@@ -62,7 +62,7 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 
    Fournit une interface COM native que vous pouvez utiliser dans les applications Windows Runtime ou des applications de bureau Windows pour se connecter à Internet via HTTP et émettre GET, PUT et d’autres commandes HTTP. Pour plus d’informations, consultez [procédure pas à pas : connexion à l’aide de tâches et les requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](http://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
 
    API Windows que vous pouvez utiliser dans les applications de bureau Windows pour vous connecter à Internet.
 

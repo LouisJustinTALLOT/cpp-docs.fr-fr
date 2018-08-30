@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212259"
 ---
 # <a name="const-and-volatile-pointers"></a>Pointeurs const et volatile
 Le [const](../cpp/const-cpp.md) et [volatile](../cpp/volatile-cpp.md) mots clés modifier la façon dont les pointeurs sont traités. Le **const** mot clé spécifie que le pointeur ne peut pas être modifié après l’initialisation ; le pointeur est protégé contre toute modification ultérieure.  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  L’instruction précédente déclare une fonction, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), où deux des trois arguments sont de type pointeur vers **char**. Étant donné que les arguments sont passés par référence et non par valeur, la fonction serait libre de modifier `strDestination` et `strSource` si `strSource` n’était pas déclaré comme **const**. La déclaration de `strSource` comme **const** garantit à l’appelant qui `strSource` ne peut pas être modifié par la fonction appelée.  
   
 > [!NOTE]
->  Car il existe une conversion standard de *typename* **\*** à **const** *typename* **\***, il est permis de passer un argument de type `char *` à [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Toutefois, l’inverse n’est pas vrai ; Il n’existe aucune conversion implicite pour supprimer le **const** attribut à partir d’un objet ou pointeur.  
+> Car il existe une conversion standard de *typename* <strong>\*</strong> à **const** *typename* <strong>\*</strong>, il est permis de passer un argument de type `char *` à [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Toutefois, l’inverse n’est pas vrai ; Il n’existe aucune conversion implicite pour supprimer le **const** attribut à partir d’un objet ou pointeur.  
   
  Un **const** pointeur d’un type donné peut être assigné à un pointeur du même type. Toutefois, un pointeur qui n’est pas **const** ne peut pas être assigné à un **const** pointeur. L'exemple de code suivant montre des assignations correctes et incorrectes :  
   

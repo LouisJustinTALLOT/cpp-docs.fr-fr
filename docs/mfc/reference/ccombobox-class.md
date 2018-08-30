@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205285"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 Fournit les fonctionnalités d'une zone de liste modifiable Windows.  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  Si la zone de liste n’a pas été créée avec le [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, la chaîne est ajoutée à la fin de la liste. Sinon, la chaîne est insérée dans la liste, et la liste est triée.  
   
 > [!NOTE]
->  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) dans le SDK Windows.  
+>  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) dans le SDK Windows.  
   
  Pour insérer une chaîne dans un emplacement spécifique dans la liste, utilisez la [InsertString](#insertstring) fonction membre.  
   
@@ -493,7 +493,7 @@ int Dir(
  Si la valeur de retour est supérieure ou égale à 0, c’est l’index de base zéro du dernier nom de fichier ajouté à la liste. La valeur de retour est CB_ERR si une erreur se produit ; la valeur de retour est CB_ERRSPACE si l’espace est insuffisant stocker les nouvelles chaînes.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) dans le SDK Windows.  
+ Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  Si la valeur de retour est supérieure ou égale à 0, il est l’index de base zéro de l’élément correspondant. Il est CB_ERR si la recherche a échoué.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) dans le SDK Windows.  
+ Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>Paramètres  
  *pcbi*  
- Un pointeur vers le [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) structure.  
+ Un pointeur vers le [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) du message, comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) du message, comme décrit dans le SDK Windows.  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  Appelez cette fonction membre pour récupérer le nombre d’éléments dans la partie zone de liste d’une zone de liste déroulante.  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Notes  
  Texte de signal est une invite s’affiche dans la zone d’entrée du contrôle de zone de liste déroulante. Le texte de la file d’attente est affiché jusqu'à ce que l’utilisateur fournit l’entrée.  
   
- Cette méthode envoie le [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Appelez cette fonction membre pour déterminer quel élément dans la zone de liste déroulante est sélectionné.  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  La valeur de 32 bits associée à l’élément, ou CB_ERR si une erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de 32 bits peut être définie avec la *dwItemData* paramètre d’un [SetItemData](#setitemdata) appel de fonction membre. Utilisez le `GetItemDataPtr` fonction membre si la valeur de 32 bits à récupérer est un pointeur ( **void\***).  
+ La valeur de 32 bits peut être définie avec la *dwItemData* paramètre d’un [SetItemData](#setitemdata) appel de fonction membre. Utilisez le `GetItemDataPtr` fonction membre si la valeur de 32 bits à récupérer est un pointeur (**void** <strong>\*</strong>).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- Récupère la valeur de 32 bits fournie par l’application associée à l’élément de zone de liste déroulante spécifiée en tant que pointeur ( **void\***).  
+ Récupère la valeur de 32 bits fournie par l’application associée à l’élément de zone de liste déroulante spécifiée en tant que pointeur (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  Le nombre minimal d’éléments visibles dans la liste actuelle de la liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Récupère l’index de base zéro du premier élément visible dans la partie de la zone de liste de la zone de liste déroulante.  
@@ -939,7 +939,7 @@ int InsertString(
  Contrairement à la [AddString](#addstring) fonction membre, le `InsertString` fonction membre n’entraîne pas une liste avec la [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style à trier.  
   
 > [!NOTE]
->  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) dans le SDK Windows.  
+>  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Notes  
  Texte de signal est une invite s’affiche dans la zone d’entrée du contrôle de zone de liste déroulante. Le texte de la file d’attente est affiché jusqu'à ce que l’utilisateur fournit l’entrée.  
   
- Cette méthode envoie le [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, *m_combobox*, qui est utilisé pour accéder par programmation le contrôle de zone de liste déroulante. Cette variable est utilisée dans l'exemple suivant.  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  Les positions sont de base zéro. Pour sélectionner le premier caractère du contrôle d’édition, vous spécifiez une position de départ de 0. La position de fin est le caractère juste après le dernier caractère à sélectionner. Par exemple, pour sélectionner les quatre premiers caractères du contrôle d’édition, vous utiliseriez une position de départ de 0 et une position de fin de 4.  
   
 > [!NOTE]
->  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) dans le SDK Windows.  
+>  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CComboBox::GetEditSel](#geteditsel).  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- Définit la valeur de 32 bits associée à l’élément spécifié dans une zone de liste déroulante, soit le pointeur spécifié ( **void\***).  
+ Définit la valeur de 32 bits associée à l’élément spécifié dans une zone de liste déroulante, soit le pointeur spécifié (**void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, *m_combobox*, qui est utilisé pour accéder par programmation le contrôle de zone de liste déroulante. Cette variable est utilisée dans l'exemple suivant.  

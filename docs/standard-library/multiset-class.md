@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028331"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220973"
 ---
 # <a name="multiset-class"></a>multiset, classe
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé* type de données de l’élément à stocker dans le multiset.
+*Key*<br/>
+ Type de données d'élément à stocker dans la classe multiset.
 
-*Comparer* le type qui fournit un objet de fonction qui peut comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif dans le multiset. Le prédicat binaire **less**\<Key> est la valeur par défaut.
+*Compare*<br/>
+ Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe multiset. Le prédicat binaire **less**\<Key> est la valeur par défaut.
 
 Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire du multiset. La valeur par défaut est **allocateur ***\<clé >.*
+*Allocateur*<br/>
+ Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe multiset. La valeur par défaut est `allocator<Key>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé des éléments à mettre en correspondance à partir de la classe multiset.
+*key*<br/>
+ Clé des éléments à mettre en correspondance à partir du multiset.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -873,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément du multiset recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -957,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* Position de l’élément à supprimer.
+*Where*<br/>
+ Position de l’élément à supprimer.
 
-*Première* Position du premier élément à supprimer.
+*Premier*<br/>
+ Position du premier élément à supprimer.
 
-*Dernière* Position juste après le dernier élément à supprimer.
+*Dernière*<br/>
+ Position juste après le dernier élément à supprimer.
 
-*Clé* la valeur de clé des éléments à supprimer.
+*Key*<br/>
+ Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -988,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé qui doit correspondre à la clé de tri d’un élément du multiset recherché.
+*key*<br/>
+ Valeur de clé qui doit correspondre à la clé de tri d'un élément du multiensemble dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1430,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément du multiset recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2036,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* argument multiset qui fournit les éléments à échanger avec le multiset cible.
+*right*<br/>
+ Argument multiset qui fournit les éléments à échanger avec le multiset cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2104,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément du multiset recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2307,7 +2320,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<définir > membres](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<définir > membres](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [Conteneurs](../cpp/containers-modern-cpp.md)<br/>
 [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

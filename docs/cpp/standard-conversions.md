@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220786"
 ---
 # <a name="standard-conversions"></a>Conversions standard
-Le langage C++ définit les conversions entre ses types fondamentaux. Il définit également les conversions pour les types dérivés de pointeur, de référence et de pointeur vers membre. Ces conversions sont appelées « conversions standard ». (Pour plus d’informations sur les types, les types standard et les types dérivés, consultez [Types](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+Le langage C++ définit les conversions entre ses types fondamentaux. Il définit également les conversions pour les types dérivés de pointeur, de référence et de pointeur vers membre. Ces conversions sont appelées « conversions standard ». (Pour plus d’informations sur les types, les types standard et les types dérivés, consultez [Types](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
   
  Cette section décrit les conversions standard suivantes :  
   
@@ -210,7 +210,7 @@ Graphique d'héritage pour l'illustration de l'accessibilité de la classe de ba
 ||Protected|Oui|  
 ||Public|Oui|  
   
- Dans le second cas, un pointeur vers une classe peut être converti en pointeur vers une classe de base lorsque vous utilisez une conversion de type explicite. (Consultez [Expressions avec Conversions de Type explicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) pour plus d’informations sur les conversions de type explicite.)  
+ Dans le second cas, un pointeur vers une classe peut être converti en pointeur vers une classe de base lorsque vous utilisez une conversion de type explicite. (Consultez [Expressions avec Conversions de Type explicite](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) pour plus d’informations sur les conversions de type explicite.)  
   
  Le résultat de ce type de conversion est un pointeur vers le « sous-objet », la partie de l'objet qui est complètement décrite par la classe de base.  
   
@@ -249,7 +249,7 @@ int main()
  Un pointeur vers une fonction peut être converti en type `void *`, si type `void *` est assez grand pour contenir ce pointeur.  
   
 ### <a name="pointer-to-void"></a>Pointeur vers void  
- Des pointeurs en type **void** peuvent être convertis en pointeurs vers un autre type, mais uniquement avec un cast de type explicite (contrairement à c). (Consultez [Expressions avec Conversions de Type explicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) pour plus d’informations sur les casts de type.) Un pointeur vers n’importe quel type peut être converti implicitement vers un pointeur vers un type **void**. Un pointeur vers un objet incomplet d’un type peut être converti en un pointeur vers **void** (implicitement) et inversement (explicitement). Le résultat de ce type de conversion est égal à la valeur du pointeur d'origine. Un objet est considéré incomplet s'il est déclaré, mais que les informations sont insuffisantes pour déterminer sa taille ou sa classe de base.  
+ Des pointeurs en type **void** peuvent être convertis en pointeurs vers un autre type, mais uniquement avec un cast de type explicite (contrairement à c). (Consultez [Expressions avec Conversions de Type explicite](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) pour plus d’informations sur les casts de type.) Un pointeur vers n’importe quel type peut être converti implicitement vers un pointeur vers un type **void**. Un pointeur vers un objet incomplet d’un type peut être converti en un pointeur vers **void** (implicitement) et inversement (explicitement). Le résultat de ce type de conversion est égal à la valeur du pointeur d'origine. Un objet est considéré incomplet s'il est déclaré, mais que les informations sont insuffisantes pour déterminer sa taille ou sa classe de base.  
   
  Un pointeur vers n’importe quel objet qui n’est pas **const** ou **volatile** peut être implicitement converti en un pointeur de type `void *`.  
   

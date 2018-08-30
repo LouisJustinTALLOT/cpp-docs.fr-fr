@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583817"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199963"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
-Les procédures stockées étendues, empaquetés en tant que bibliothèques de liens dynamiques (DLL), fournissent un moyen d’étendre les fonctionnalités de SQL Server via les fonctions développées avec Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions au sein de la DLL. Outre les fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [fonctions d’agrégation](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  
+Les procédures stockées étendues, empaquetés en tant que bibliothèques de liens dynamiques (DLL), fournissent un moyen d’étendre les fonctionnalités de SQL Server via les fonctions développées avec Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions au sein de la DLL. Outre les fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [fonctions d’agrégation](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  
   
  Lorsqu’un client exécute une procédure stockée étendue, SQL Server recherche la DLL associée à la procédure stockée étendue et charge la DLL. SQL Server appelle la procédure stockée étendue demandée et s’exécute sous un contexte de sécurité spécifié. La procédure stockée étendue, résultat de passes définit et retourne les paramètres sur le serveur.  
   

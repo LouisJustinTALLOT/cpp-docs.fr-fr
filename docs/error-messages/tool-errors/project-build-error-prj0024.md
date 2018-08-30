@@ -1,7 +1,7 @@
 ---
-title: PRJ0024 d’erreur de Build de projet | Documents Microsoft
+title: Erreur de génération PRJ0024 de projet | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318345"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215596"
 ---
 # <a name="project-build-error-prj0024"></a>Erreur de génération de projet PRJ0024
-Chemin de Unicode 'path' n’a pas pu être traduit dans la page de code ANSI de l’utilisateur.  
-  
- ***chemin d’accès*** est la version Unicode d’origine de la chaîne de chemin d’accès. Cette erreur peut se produire dans les cas où il existe un chemin Unicode qui ne peut pas être traduit directement en ANSI pour la page de codes système en cours.  
-  
- Cette erreur peut se produire si vous travaillez avec un projet qui a été développé sur un système à l’aide d’une page de codes qui n’est pas sur votre ordinateur.  
-  
- La résolution de cette erreur est mise à jour le chemin d’accès à utiliser le texte ANSI ou pour installer la page de codes sur votre ordinateur et définissez-le en tant que la valeur par défaut du système.
+
+> Chemin d’accès Unicode '*chemin d’accès*' n’a pas pu être traduit dans la page de code ANSI de l’utilisateur.
+
+*chemin d’accès* est la version Unicode d’origine de la chaîne de chemin d’accès. Cette erreur peut se produire dans les cas où il existe un chemin d’accès Unicode qui ne peut pas être converti directement en ANSI pour la page de codes système actuel.
+
+Cette erreur peut se produire si vous travaillez avec un projet qui a été développé sur un système à l’aide d’une page de codes qui n’est pas sur votre ordinateur.
+
+La résolution de cette erreur consiste à mettre à jour le chemin d’accès à utiliser le texte ANSI ou pour installer la page de codes sur votre ordinateur et définissez-la comme la valeur par défaut du système.

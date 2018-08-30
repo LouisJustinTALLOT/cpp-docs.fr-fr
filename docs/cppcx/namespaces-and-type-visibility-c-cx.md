@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d09d2f60f237439f208601fe8385cf7125e1ac20
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219519"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilité des espaces de noms et des types (C++/CX)
 Un espace de noms est une construction C++ standard qui sert à grouper les types qui ont des fonctionnalités associées et à empêcher les collisions de noms dans les bibliothèques. Le système de type Windows Runtime nécessite que tous les types publics de Windows Runtime, y compris celles dans votre propre code, doivent être déclarés dans un espace de noms à la portée de l’espace de noms. Les types publics déclarés au niveau de la portée globale ou imbriqués au sein d'une autre classe génèrent une erreur de compilation.  
@@ -43,7 +43,7 @@ Un espace de noms est une construction C++ standard qui sert à grouper les type
 |`internal` ou `private public`|Le membre est public dans l'application ou le composant, mais n'est pas visible dans les métadonnées.|Non|  
   
 ## <a name="windows-runtime-namespaces"></a>Espaces de noms Windows Runtime  
- L’API Windows se compose des types qui sont déclarés dans le Windows ::\* espaces de noms. Ces espaces de noms sont réservés à windows et aucun type ne peut y être ajouté. Dans l' **Explorateur d'objets**, vous pouvez consulter ces espaces de noms dans le fichier windows.winmd. Pour obtenir la documentation relative à ces espaces de noms, consultez [Informations de référence sur les API Windows des applications Windows Runtime](http://msdn.microsoft.com/library/windows/apps/br211377).  
+ L’API Windows se compose des types qui sont déclarés dans le Windows ::\* espaces de noms. Ces espaces de noms sont réservés à windows et aucun type ne peut y être ajouté. Dans l' **Explorateur d'objets**, vous pouvez consulter ces espaces de noms dans le fichier windows.winmd. Pour obtenir une documentation sur ces espaces de noms, consultez [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377).  
   
 ## <a name="ccx-namespaces"></a>espaces de noms (C++/CX)  
  C++ / c++ / CX définissent certains types dans ces espaces de noms dans le cadre de la projection du système de type Windows Runtime.  

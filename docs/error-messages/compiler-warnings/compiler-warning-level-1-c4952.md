@@ -1,7 +1,7 @@
 ---
-title: Compilateur avertissement (niveau 1) C4952 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4952 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42696dfae816742c958bca23e25e311e834dd62a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62f4c18380d89eb516a5fa49ef63e92ab79a6f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292140"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207149"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>Avertissement du compilateur (niveau 1) C4952
-'function' : aucune donnée de profil trouvée dans la base de données 'pgd_file' du programme  
-  
- Lors de l’utilisation de [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), le compilateur a détecté un module d’entrée qui a été recompilé après `/LTCG:PGINSTRUMENT` et possède une nouvelle fonction (***function***)  
-  
- Cet avertissement possède un caractère informatif. Pour résoudre cet avertissement, exécutez `/LTCG:PGINSTRUMENT`, relancez toutes les séries de tests, puis exécutez `/LTCG:PGOPTIMIZE`.  
-  
- Si `/LTCG:PGOPTIMIZE` avait été utilisé, cet avertissement aurait été remplacé par une erreur.
+
+> «*fonction*' : aucune donnée de profil trouvée dans la base de données du programme '*fichier_pgd*»
+
+Lorsque vous utilisez [/LTCG : PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), le compilateur a détecté un module d’entrée qui a été recompilé après `/LTCG:PGINSTRUMENT` et possède une nouvelle fonction (*fonction*) présent.
+
+Cet avertissement possède un caractère informatif. Pour résoudre cet avertissement, exécutez `/LTCG:PGINSTRUMENT`, relancez toutes les séries de tests, puis exécutez `/LTCG:PGOPTIMIZE`.
+
+Si `/LTCG:PGOPTIMIZE` avait été utilisé, cet avertissement aurait été remplacé par une erreur.

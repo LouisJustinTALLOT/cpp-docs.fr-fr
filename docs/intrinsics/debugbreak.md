@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9884cd8aec09bfcefaa8455457a3a4d3bb5b3d3d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540817"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219229"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Section spécifique à Microsoft**  
@@ -43,7 +43,7 @@ void __debugbreak();
 |`__debugbreak`|x86, ARM, x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Notes  
- Le `__debugbreak` compilateur intrinsèque, comme dans [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), est une manière Win32 portable pour provoquer un point d’arrêt.  
+ Le `__debugbreak` compilateur intrinsèque, comme dans [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), est une manière Win32 portable pour provoquer un point d’arrêt.  
   
 > [!NOTE]
 >  Lors de la compilation avec **/CLR**, une fonction contenant `__debugbreak` seront compilés en MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).  

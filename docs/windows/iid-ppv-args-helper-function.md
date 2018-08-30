@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d22d6a7fce670f7da7740b5f0678eafaa49f519
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6131cea7a7684036fd7183a79214c7c6936540b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604021"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218746"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper (fonction)
 
 Vérifie que le type de l’argument spécifié dérive le `IUnknown` interface.
 
 > [!IMPORTANT]
-> Cette spécialisation de modèle prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code. Utilisez [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) à la place.
+> Cette spécialisation de modèle prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code. Utilisez [IID_PPV_ARGS](https://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) à la place.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,4 +62,4 @@ Une erreur de compilation est générée si le paramètre de modèle *T* ne dér
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence (Windows Runtime Library)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)
+[Référence (Windows Runtime Library)](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

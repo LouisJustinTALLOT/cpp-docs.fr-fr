@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ee8ab5fe6e410cf812c7c147f4673803b81903
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fe4ddaab8de2369c7cb1b31132f686bc6037676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205523"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2, classe
-Cette classe implémente le [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface.  
+Cette classe implémente le [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interface.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +45,11 @@ class CComClassFactory2 : public IClassFactory2,
  *licence*  
  Une classe qui implémente les fonctions statiques suivantes :  
   
-- **statique BOOL VerifyLicenseKey (BSTR** `bstr` **) ;**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **statique BOOL GetLicenseKey (DWORD** `dwReserved` **, BSTR\***  `pBstr` **) ;**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **(de) BOOL IsLicenseValid statique ;**  
+- `static BOOL IsLicenseValid( );`  
   
 ## <a name="members"></a>Membres  
   
@@ -64,7 +64,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Crée et retourne une clé de licence.|  
   
 ## <a name="remarks"></a>Notes  
- `CComClassFactory2` implémente le [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, qui est une extension de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` Création d’objet de contrôles avec une licence. Une fabrique de classe s’exécutant sur un ordinateur sous licence peut fournir une clé de licence de l’exécution. Cette clé de licence permet à une application instancier des objets lorsqu’il n’existe pas d’une licence de la totalité de la machine.  
+ `CComClassFactory2` implémente le [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interface, qui est une extension de [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` Création d’objet de contrôles avec une licence. Une fabrique de classe s’exécutant sur un ordinateur sous licence peut fournir une clé de licence de l’exécution. Cette clé de licence permet à une application instancier des objets lorsqu’il n’existe pas d’une licence de la totalité de la machine.  
   
  Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactory2`, spécifiez la [macro DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) macro dans la définition de classe de votre objet. Exemple :  
   
@@ -149,7 +149,7 @@ STDMETHOD(CreateInstanceLic)(
  Vous pouvez obtenir une clé de licence à l’aide [RequestLicKey](#requestlickey). Pour créer un objet sur un ordinateur sans licence, vous devez appeler `CreateInstanceLic`.  
   
 ##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
- Remplit un [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) structure avec des informations qui décrivent la fabrique de classe de licences de fonctionnalités.  
+ Remplit un [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) structure avec des informations qui décrivent la fabrique de classe de licences de fonctionnalités.  
   
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -185,7 +185,7 @@ STDMETHOD(LockServer)(BOOL fLock);
  Appel `LockServer` permet à un client à maintenir une fabrique de classe afin que plusieurs objets peuvent être créés rapidement.  
   
 ##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
- Crée et retourne une clé de licence, à condition que le `fRuntimeKeyAvail` membre de la [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) structure a la valeur TRUE.  
+ Crée et retourne une clé de licence, à condition que le `fRuntimeKeyAvail` membre de la [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) structure a la valeur TRUE.  
   
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);

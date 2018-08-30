@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206204"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl, classe
 Cette classe définit une interface d’énumérateur basée sur une collection de la bibliothèque C++ Standard.  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>Paramètres  
  *base de*  
- Un énumérateur COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interface.  
+ Un énumérateur COM. Consultez [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) pour obtenir un exemple.
   
  *piid*  
  Pointeur vers l’ID d’interface de l’interface de l’énumérateur.  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|L’implémentation de [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[IEnumOnSTLImpl::Clone](#clone)|L’implémentation de **Clone**.|  
 |[IEnumOnSTLImpl::Init](#init)|Initialise l’énumérateur.|  
-|[IEnumOnSTLImpl::Next](#next)|L’implémentation de [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[IEnumOnSTLImpl::Reset](#reset)|L’implémentation de [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[IEnumOnSTLImpl::Skip](#skip)|L’implémentation de [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[IEnumOnSTLImpl::Next](#next)|L’implémentation de **suivant**.|  
+|[IEnumOnSTLImpl::Reset](#reset)|L’implémentation de **réinitialiser**.|  
+|[IEnumOnSTLImpl::Skip](#skip)|L’implémentation de **Skip**.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
@@ -122,7 +122,7 @@ HRESULT Init(
  Vous devez appeler cette méthode avant de passer un pointeur vers l’interface de l’énumérateur à tous les clients.  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- Cette méthode fournit l’implémentation de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) méthode en créant un objet de type `CComEnumOnSTL`, l’initialiser avec la même collection et itérateur utilisé par l’objet actuel et le renvoi de l’interface sur l’objet nouvellement créé.  
+ Cette méthode fournit l’implémentation de la **Clone** méthode en créant un objet de type `CComEnumOnSTL`, l’initialiser avec la même collection et itérateur utilisé par l’objet actuel et le renvoi de l’interface sur le récemment objet créé.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- Cette méthode fournit l’implémentation de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) (méthode).  
+ Cette méthode fournit l’implémentation de la **suivant** (méthode).  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  Une valeur HRESULT standard.  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- Cette méthode fournit l’implémentation de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) (méthode).  
+ Cette méthode fournit l’implémentation de la **réinitialiser** (méthode).  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  Une valeur HRESULT standard.  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- Cette méthode fournit l’implémentation de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) (méthode).  
+ Cette méthode fournit l’implémentation de la **Skip** (méthode).  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

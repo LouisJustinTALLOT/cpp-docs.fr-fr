@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957965"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209082"
 ---
 # <a name="basicstring-class"></a>basic_string, classe
 
@@ -881,7 +881,7 @@ Pointeur vers la version de style C de la chaîne d’appel.  La valeur du poin
 
 ### <a name="remarks"></a>Notes
 
-Les objets de type chaîne appartenant à la classe de modèle C++ basic_string\<char> ne sont pas nécessairement terminés par le caractère null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de const **char\*** en chaînes, mais la classe string ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char>**.
+Les objets de type chaîne appartenant à la classe de modèle C++ basic_string\<char> ne sont pas nécessairement terminés par le caractère null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de **const char** <strong>\*</strong> en chaînes, mais la chaîne de classe ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char >**.
 
 La chaîne de style C retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.
 
@@ -1652,7 +1652,7 @@ Pointeur vers le premier élément du tableau qui contient le contenu de la cha�
 
 Les objets de type chaîne appartenant à la classe de modèle C++ basic_string \<char> ne sont pas nécessairement terminés par le caractère null. Le type de retour pour `data` n’est pas une chaîne C valide, car aucun caractère null n’est ajouté. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de l’objet de chaîne comme tout autre caractère.
 
-Il existe une conversion automatique de const **char\*** en chaînes, mais la classe string ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char>**.
+Il existe une conversion automatique de **const char** <strong>\*</strong> en chaînes, mais la chaîne de classe ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string \<char >**.
 
 La chaîne retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 Le type est un synonyme de `allocator_type::pointer`.
 
-Pour type `string`, il est équivalent à **char\***.
+Pour type `string`, il est équivalent à **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Exemple
 

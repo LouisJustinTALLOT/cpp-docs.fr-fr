@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208173"
 ---
 # <a name="ccomobjectnolock-class"></a>Ccomobjectnolock, classe
 Cette classe implémente `IUnknown` pour un objet non regroupées en agrégats, mais ne pas incrémenter le module nombre de verrous dans le constructeur.  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Décrémente le décompte de références sur l’objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CComObjectNoLock` est similaire à [CComObject](../../atl/reference/ccomobject-class.md) car il implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet non regroupées en agrégats ; Toutefois, `CComObjectNoLock` ne pas incrémenter le verrou du module compte dans le constructeur.  
+ `CComObjectNoLock` est similaire à [CComObject](../../atl/reference/ccomobject-class.md) car il implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet non regroupées en agrégats ; Toutefois, `CComObjectNoLock` ne pas incrémenter le verrou du module compte dans le constructeur.  
   
  ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En règle générale, vous ne serez pas utiliser cette classe directement.  
   
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- **void\***  
- [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom***XXX*`Object`*XXX* constructeurs.  
+ <em>void\*</em>  
+ [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour la symétrie avec d’autres `CComXXXObjectXXX` constructeurs.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Destructeur.  

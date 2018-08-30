@@ -1,5 +1,5 @@
 ---
-title: CInstantaneousTransition, classe | Documents Microsoft
+title: CInstantaneousTransition, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209212"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition, classe
 Encapsule une transition instantanée.  
@@ -93,7 +93,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
 *pLibrary*  
- Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
+ Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.  
 
   
 ### <a name="return-value"></a>Valeur de retour  

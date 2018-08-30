@@ -1,5 +1,5 @@
 ---
-title: PRJ0013 d’erreur de Build de projet | Documents Microsoft
+title: Erreur de génération PRJ0013 de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d055043d5c7e7b030557ab03ceb7181c664ce01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb0ac9011697c440667a538bd1805780810fb4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221557"
 ---
 # <a name="project-build-error-prj0013"></a>Erreur de génération de projet PRJ0013
 Les ressources système sont peut-être dangereusement basses. Impossible de créer un canal requis au lancement d'une génération.  
   
  Cette erreur indique que les ressources système sont basses. Pour résoudre cette erreur, réduisez l'utilisation des ressources système par les autres processus/applications.  
   
- Cette erreur peut également se produire si le niveau de sécurité est insuffisant pour créer des canaux (consultez [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).
+ Cette erreur peut également se produire si votre niveau de sécurité est insuffisant pour créer des canaux (consultez [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608265"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203941"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications parallèles fiables, évolutives et réactives. Il permet d'élever le niveau d'abstraction afin que vous n'ayez pas à gérer les détails de l'infrastructure liés à l'accès concurrentiel. Vous pouvez également l'utiliser pour spécifier les stratégies de planification qui répondent aux exigences de vos applications en matière de qualité de service. Utilisez ces ressources pour vous aider à vous familiariser avec le runtime d'accès concurrentiel.  
@@ -107,7 +107,7 @@ Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications
   
 |||  
 |-|-|  
-|[Modèles de programmation asynchrones et conseils dans Hilo (applications du Windows Store utilisant C++ et XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le Runtime d’accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application Windows Runtime en C++ et XAML.|  
+|[Modèles de programmation asynchrone et conseils dans Hilo (applications du Windows Store en C++ et XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le Runtime d’accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application Windows Runtime en C++ et XAML.|  
 |[Exemples de code pour le Runtime d’accès concurrentiel et la bibliothèque de modèles parallèles dans Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Donne des exemples d'applications et d'utilitaires qui montrent le runtime d'accès concurrentiel.|  
 |[Programmation parallèle en Code natif blog](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|  
 |[Informatique parallèle en C++ et le Code natif de forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|  

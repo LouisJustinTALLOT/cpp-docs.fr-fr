@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2cc139fa0aa933131e4e19b8efa397e4bddee50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209226"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de serveur d’inscription
 Ces fonctions fournissent la prise en charge pour inscrire et désinscrire des objets de serveur du mappage d’objets.  
@@ -113,10 +113,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  Pointeur vers le module COM.  
   
  *dwClsContext*  
- Spécifie le contexte dans lequel l’objet de classe doit être exécuté. Les valeurs possibles sont CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Consultez [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) pour plus d’informations.  
+ Spécifie le contexte dans lequel l’objet de classe doit être exécuté. Les valeurs possibles sont CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Consultez [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) pour plus d’informations.  
   
  *dwFlags*  
- Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Consultez [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) pour plus d’informations.  
+ Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Consultez [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  

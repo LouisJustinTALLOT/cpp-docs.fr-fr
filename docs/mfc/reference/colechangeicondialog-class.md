@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214491"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog, classe
 Utilisé pour la boîte de dialogue OLE Changer d'icône.  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Notes  
  Créer un objet de classe `COleChangeIconDialog` lorsque vous souhaitez appeler cette boîte de dialogue. Après un `COleChangeIconDialog` objet a été construit, vous pouvez utiliser la [m_ci](#m_ci) structure pour initialiser les valeurs ou les États de contrôles dans la boîte de dialogue. Le `m_ci` structure est de type OLEUICHANGEICON. Pour plus d’informations sur l’utilisation de cette classe de boîte de dialogue, consultez la [DoModal](#domodal) fonction membre.  
   
- Pour plus d’informations, consultez le [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) structure dans le SDK Windows.  
   
  Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Notes  
  Pour afficher la boîte de dialogue, appelez le [DoModal](#domodal) (fonction).  
   
- Pour plus d’informations, consultez le [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) structure dans le SDK Windows.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Appelez cette fonction pour modifier l’icône représentant l’élément à celui sélectionné dans la boîte de dialogue après [DoModal](#domodal) retourne IDOK.  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, si l’utilisateur a annulé la boîte de dialogue.  
   
-- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) (fonction) dans le SDK Windows.  
+- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) (fonction) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez initialiser les divers contrôles de boîte de dialogue en définissant des membres de la [m_ci](#m_ci) structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Notes  
  Membres de cette structure peuvent être modifiés directement ou via les fonctions membres.  
   
- Pour plus d’informations, consultez le [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) structure dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [COleDialog, classe](../../mfc/reference/coledialog-class.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392460cde35096bc1c61db4d7e6bd2143932838d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0555b050770d5fbd411e1720282e3fb50769385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403993"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208402"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Section spécifique à Microsoft**  
@@ -59,7 +59,7 @@ HRESULT GetActiveObject(
   
 -   **GetActiveObject (**`clsidString`**)** s’attache à une instance existante d’un objet doté d’une chaîne Unicode qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.  
   
--   **GetActiveObject (**`clsidStringA`**)** s’attache à une instance existante d’un objet doté d’une chaîne de caractères multioctets qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`. Appels [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), ce qui suppose que la chaîne est dans la page de codes ANSI plutôt que dans une page de codes OEM.  
+-   **GetActiveObject (**`clsidStringA`**)** s’attache à une instance existante d’un objet doté d’une chaîne de caractères multioctets qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`. Appels [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), ce qui suppose que la chaîne est dans la page de codes ANSI plutôt que dans une page de codes OEM.  
   
  **FIN de la section spécifique à Microsoft**  
   

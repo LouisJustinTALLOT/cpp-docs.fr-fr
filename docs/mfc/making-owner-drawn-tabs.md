@@ -1,5 +1,5 @@
 ---
-title: Rendre des onglets Owner-Drawn | Documents Microsoft
+title: Rendre des onglets Owner-Drawn | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72192bdfb47fecb1588c3a36e402795468d527be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e7566c16abdd4540426d0c56e24c648fd0bcd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346501"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208691"
 ---
 # <a name="making-owner-drawn-tabs"></a>Rendre des onglets owner-drawn
-Vous pouvez définir les éléments individuels d’un contrôle tab ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) comme éléments owner-drawn. Pour plus d’informations, consultez [les onglets owner-drawn](http://msdn.microsoft.com/library/windows/desktop/bb760550) dans le Kit de développement logiciel Windows.  
+Vous pouvez définir des éléments individuels d’un contrôle onglet ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) à être des éléments owner-drawn. Pour plus d’informations, consultez [les onglets owner-drawn](/windows/desktop/Controls/tab-controls) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CTabCtrl](../mfc/using-ctabctrl.md)   

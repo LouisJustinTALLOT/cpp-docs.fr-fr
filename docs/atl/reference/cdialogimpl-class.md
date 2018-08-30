@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880701"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206639"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 Cette classe fournit des méthodes pour la création d’une boîte de dialogue modale ou non modale.  
@@ -102,7 +102,7 @@ template <class T,
 |Création de contrôles|[Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |À l’aide des boîtes de dialogue dans ATL|[ATL, classes de fenêtre](../../atl/atl-window-classes.md)|  
 |Assistant Projet ATL|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Boîtes de dialogue|[Boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms632588) et les rubriques suivantes dans le SDK Windows|  
+|Boîtes de dialogue|[Boîtes de dialogue](https://msdn.microsoft.com/library/windows/desktop/ms632588) et les rubriques suivantes dans le SDK Windows|  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in] Le handle vers la fenêtre propriétaire.  
   
  **RECT &** *rect*  
- [in] Un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la boîte de dialogue.  
+ [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la boîte de dialogue.  
   
  *dwInitParam*  
  [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Paramètres  
  *hWndParent*  
- [in] Le handle vers la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) fonction Win32.  
+ [in] Le handle vers la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) fonction Win32.  
   
  *dwInitParam*  
  [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.  

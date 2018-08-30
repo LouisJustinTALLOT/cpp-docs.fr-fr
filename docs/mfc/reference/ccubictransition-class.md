@@ -1,5 +1,5 @@
 ---
-title: CCubicTransition, classe | Documents Microsoft
+title: CCubicTransition, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953216"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210742"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition, classe
 Encapsule une transition cubique.  
@@ -65,7 +65,7 @@ class CCubicTransition : public CBaseTransition;
 |[CCubicTransition::m_duration](#m_duration)|La durée de la transition.|  
   
 ## <a name="remarks"></a>Notes  
- Pendant une transition cubique, la valeur de la variable de l’animation modifie sa valeur initiale à une valeur finale spécifiée pendant la durée de la transition, se terminant à une vitesse spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
+ Pendant une transition cubique, la valeur de la variable de l’animation modifie sa valeur initiale à une valeur finale spécifiée pendant la durée de la transition, se terminant par une vitesse spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -88,7 +88,7 @@ CCubicTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *Durée*  
+ *durée*  
  La durée de la transition.  
   
  *finalValue*  
@@ -108,7 +108,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
 *pLibrary*  
- Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
+ Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.  
 
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  

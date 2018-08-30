@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 892cccea65b9e1b6f0c1eec21d3973e84a0fba03
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223257"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl, classe
 Cette classe fournit les méthodes requises pour implémenter un contrôle composite.  
@@ -174,7 +174,7 @@ HWND Create(
  Réservé.  
   
  *dwInitParam*  
- Données à passer au contrôle lors de la création du contrôle. Les données transmises en tant que *dwInitParam* s’affichera en tant que le paramètre LPARAM de la [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message, qui sera envoyé au contrôle composite quand il est créé.  
+ Données à passer au contrôle lors de la création du contrôle. Les données transmises en tant que *dwInitParam* s’affichera en tant que le paramètre LPARAM de la [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) message, qui sera envoyé au contrôle composite quand il est créé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers la boîte de dialogue de contrôle composite qui vient d’être créé.  

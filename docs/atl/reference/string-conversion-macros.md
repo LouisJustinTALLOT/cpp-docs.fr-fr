@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8d9c4c43098d7f0ca8a5e9588a69a47d6e98a066
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885153"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210053"
 ---
 # <a name="string-conversion-macros"></a>Macros de Conversion de chaînes
 
@@ -38,7 +38,7 @@ Les macros de conversion de chaînes présentées ici sont valides à la fois po
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macros de Conversion de chaîne TEXTMETRIC et DEVMODE
 
-Ces macros créent une copie d’un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) ou [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) structurer et convertir les chaînes au sein de la nouvelle structure en un nouveau type de chaîne. Les macros allouer de mémoire sur la pile pour la nouvelle structure et retournent un pointeur vers la nouvelle structure.  
+Ces macros créent une copie d’un [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) ou [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) structurer et convertir les chaînes au sein de la nouvelle structure en un nouveau type de chaîne. Les macros allouer de mémoire sur la pile pour la nouvelle structure et retournent un pointeur vers la nouvelle structure.  
   
 ```cpp
 MACRONAME( address_of_structure )

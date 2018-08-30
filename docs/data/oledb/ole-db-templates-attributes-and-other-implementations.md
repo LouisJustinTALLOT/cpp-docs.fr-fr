@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9a775370228691e47b1b9becca8e0769ea0f7367
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572940"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221876"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modèles, attributs et autres implémentations OLE DB
 ## <a name="atl-ole-db-templates"></a>Modèles OLE DB ATL  
@@ -44,7 +44,7 @@ ms.locfileid: "42572940"
   
 -   Afficher la liste des [classes de consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) ou [classes du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
   
--   Afficher la liste des [exemples de modèles OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
+-   Afficher la liste des [exemples de modèles OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
 -   Consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (dans le Kit de développement logiciel Windows).  
   

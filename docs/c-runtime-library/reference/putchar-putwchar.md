@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7602ca44d6f8ec8197d1ebc61b4ef1d0847133f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00016bb191cc3a4d7b4df47f5252706a129c3583
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199729"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -67,13 +67,13 @@ Caractère à écrire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de fichier, **putc** et **putchar** retourner ** EOF`; **putwc` et **putwchar** retourner **WEOF**. Pour les quatre routines, utilisez [ferror](ferror.md) ou [feof](feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si un pointeur null passé à *flux*, ces fonctions génèrent une exception de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, elles retournent **EOF** ou **WEOF** et **errno** à **EINVAL**.
+Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de fichier, **putc** et **putchar** retourner ** EOF`; **putwc` et **putwchar** retourner **WEOF**. Pour les quatre routines, utilisez [ferror](ferror.md) ou [feof](feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si passé un pointeur null pour *flux*, ces fonctions génèrent une exception de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, elles retournent **EOF** ou **WEOF** et définissez **errno** à **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **putc** routine écrit le caractère unique *c* à la sortie *flux* à la position actuelle. Tout entier peut être passé à **putc**, mais uniquement les 8 derniers bits sont écrits. Le **putchar** routine est identique à **putc (** * c ***, stdout)**. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires aux **fputc** et **_fputchar**, respectivement, mais sont implémentées en tant que fonctions et macros (consultez [ Choix entre les Macros et fonctions](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont des versions à caractères larges de **putc** et **putchar**, respectivement.
+Le **putc** routine écrit le caractère unique *c* à la sortie *flux* à la position actuelle. N’importe quel entier peut être passé à **putc**, mais uniquement les 8 derniers bits sont écrits. Le **putchar** routine est identique à `putc( c, stdout )`. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires aux **fputc** et **_fputchar**, respectivement, mais sont implémentées en tant que fonctions et en tant que macros (consultez [ Choix entre fonctions et Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont des versions à caractères larges de **putc** et **putchar**, respectivement.
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
@@ -83,14 +83,14 @@ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_puttchar**|**putchar**|**putchar**|**putwchar**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

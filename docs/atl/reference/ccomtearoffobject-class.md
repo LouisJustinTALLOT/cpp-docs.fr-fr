@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885037"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218563"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject, classe
 Cette classe implémente une interface détachable.  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *base de*  
  Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.  
   
- ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObjectBase` méthodes gèrent le décompte de références et `QueryInterface`, tandis que `CComTearOffObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObjectBase` méthodes gèrent le décompte de références et `QueryInterface`, tandis que `CComTearOffObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).  
   
 ## <a name="members"></a>Membres  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d784d7f3c03b18d2f81d6eec8bc9e4b76c7ee8da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216767"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl, classe
-Cette classe implémente `IUnknown` et fournit une implémentation par défaut de la [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface.  
+Cette classe implémente `IUnknown` et fournit une implémentation par défaut de la [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interface.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Remplit un valeurs compté le tableau d’UUID. Chaque UUID correspond au CLSID de l’un des pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.|  
   
 ## <a name="remarks"></a>Notes  
- Le [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface permet à un client obtenir une liste des CLSID pour les pages de propriétés pris en charge par un objet. Classe `ISpecifyPropertyPagesImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
+ Le [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interface permet à un client obtenir une liste des CLSID pour les pages de propriétés pris en charge par un objet. Classe `ISpecifyPropertyPagesImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
   
 > [!NOTE]
 >  N’exposez pas le `ISpecifyPropertyPages` si votre objet ne prend pas en charge les pages de propriétés de l’interface.  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **En-tête :** atlcom.h  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- Remplit le tableau le [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) structure avec les CLSID pour les pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.  
+ Remplit le tableau le [CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid) structure avec les CLSID pour les pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -79,7 +79,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 ### <a name="remarks"></a>Notes  
  ATL utilise le mappage des propriétés de l’objet pour récupérer chaque CLSID.  
   
- Consultez [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) dans le Kit de développement logiciel Windows.  
+ Consultez [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [IPropertyPageImpl, classe](../../atl/reference/ipropertypageimpl-class.md)   

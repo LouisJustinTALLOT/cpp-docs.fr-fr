@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220885"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Référence des modèles du fournisseur OLE DB
 Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être regroupées dans les catégories suivantes. La documentation de référence inclut également des informations sur le [macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -63,7 +63,7 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
  Implémente la norme OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interface, ce qui permet la mise à jour des valeurs de colonnes dans les lignes existantes, la suppression de lignes et l’insertion de nouvelles lignes.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Cette classe hérite de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) et remplace [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` effectue les mêmes fonctions que `IObjectWithSite` mais permet également les propriétés OLE DB `DBPROPCANSCROLLBACKWARDS` et `DBPROPCANFETCHBACKWARDS`.  
+ Cette classe hérite de [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) et remplace [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` effectue les mêmes fonctions que `IObjectWithSite` mais permet également les propriétés OLE DB `DBPROPCANSCROLLBACKWARDS` et `DBPROPCANFETCHBACKWARDS`.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Implémente le `IRowsetIdentity` interface, ce qui vous permet de comparer si deux lignes de données sont identiques ou non.  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed63e89c2470691b677a234ba6b30e4f3ddd558d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5d5804a7437dabd688abab04ebdd50a79decbaaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572672"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198767"
 ---
 # <a name="ole-db-programming"></a>Programmation OLE DB
 Microsoft OLE DB est une technologie héritée ; pour les nouvelles applications, il est l’API accès aux données requises pour les serveurs SQL liés. Toutes les autres nouvelles applications doivent utiliser ODBC. Le fournisseur OLE DB actuel pour SQL Server est SQLNCLI11. DLL. Le fournisseur est toujours transaction dans SQL Server 2016. Cette documentation s’adresse aux développeurs chargés de la maintenant des applications existantes qui utilisent déjà OLE DB.
@@ -40,7 +40,7 @@ Microsoft OLE DB est une technologie héritée ; pour les nouvelles application
 |Classes et macros des modèles OLE DB|[Référence des modèles OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Attributs du consommateur OLE DB|[Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md)|  
 |Interfaces OLE DB|[Référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (dans le Kit de développement logiciel Windows)|  
-|Exemples de modèles OLE DB|[Exemples de modèles OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Exemples de modèles OLE DB|[Exemples de modèles OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Vue d'ensemble de la programmation de l'accès aux données (Visual C++)|[Programmation d’accès aux données](../../data/data-access-programming-mfc-atl.md)|  
 |Rubriques sur les concepts d'ODBC|[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)|  
 

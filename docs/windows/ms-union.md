@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 491f6f75a87e478966d5f0fb0cbbe8fe88a42670
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4251ee7d373e7c2d3e35f65f6b83b3af28d7eecc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601906"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209196"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -36,7 +36,7 @@ Contrôle l’alignement de représentation sous forme de données de réseau d�
 
 ## <a name="remarks"></a>Notes
 
-Le **ms_union** attribut C++ a les mêmes fonctionnalités que le [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) attribut MIDL.
+Le **ms_union** attribut C++ a les mêmes fonctionnalités que le [ms_union](/windows/desktop/Midl/ms-union-attrib) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

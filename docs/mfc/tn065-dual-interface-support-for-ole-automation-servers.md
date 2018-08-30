@@ -1,5 +1,5 @@
 ---
-title: 'TN065 : Prise en charge de Interface double pour les serveurs Automation OLE | Documents Microsoft'
+title: 'TN065 : Prise en charge de Interface double pour les serveurs Automation OLE | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e30be46aeab92f63f1b4cba593cda52bf9aeef9a
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 5ef599c99cc46c2014ee2d72c538b55e59122848
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122181"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209684"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065 : prise en charge d'une interface double pour les serveurs Automation OLE
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
 
-Cette note indique comment ajouter la prise en charge d'interfaces doubles à un serveur Automation MFC. Le [ACDUAL](../visual-cpp-samples.md) exemple illustre la prise en charge de l’interface double, et l’exemple de code dans cette note provient de ACDUAL. Les macros décrits dans cette note, telles que DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART et IMPLEMENT_DUAL_ERRORINFO, font partie de l’exemple ACDUAL et sont accessibles dans MFCDUAL. H.
+Cette note indique comment ajouter la prise en charge d'interfaces doubles à un serveur Automation MFC. Le [ACDUAL](../visual-cpp-samples.md) exemple illustre la prise en charge de l’interface double, et l’exemple de code dans cette note provient de ACDUAL. Les macros décrites dans cette note, telles que DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART et IMPLEMENT_DUAL_ERRORINFO, font partie de l’exemple ACDUAL et se trouve dans MFCDUAL. H.
 
 ## <a name="dual-interfaces"></a>Interfaces doubles
 
@@ -65,7 +65,7 @@ interface IDualAClick : IDispatch
     };
 ```
 
-Une fois que vous avez mis en place l'instruction Interface, commencez à ajouter les entrées des méthodes et des propriétés. Pour les interfaces doubles, vous devez réorganiser les listes de paramètres afin que vos méthodes et les fonctions d’accesseur de propriété de l’interface double retournent un **HRESULT** et transmettent les valeurs de retournés en tant que paramètres avec les attributs `[retval,out]`. N'oubliez pas que pour les propriétés, vous devez ajouter une fonction d'accesseur de lecture (`propget`) et d'écriture (`propput`) avec le même ID. Exemple :
+Une fois que vous avez mis en place l'instruction Interface, commencez à ajouter les entrées des méthodes et des propriétés. Pour les interfaces doubles, vous devez réorganiser les listes de paramètres afin que vos méthodes et les fonctions d’accesseur de propriété dans l’interface double retournent un **HRESULT** et transmettre leurs valeurs de retour en tant que paramètres avec les attributs `[retval,out]`. N'oubliez pas que pour les propriétés, vous devez ajouter une fonction d'accesseur de lecture (`propget`) et d'écriture (`propput`) avec le même ID. Exemple :
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
@@ -83,7 +83,7 @@ coclass Document
 };
 ```
 
-Une fois votre fichier ODL mis à jour, utilisez le mécanisme de mappage d'interface de MFC pour définir une classe d'implémentation pour l'interface double dans votre classe d'objets et effectuer les entrées correspondantes dans le mécanisme `QueryInterface` de MFC. Vous avez besoin d'une entrée dans le bloc `INTERFACE_PART` pour chaque entrée dans l'instruction Interface de l'ODL, en plus des entrées valides pour une interface de dispatch. Chaque entrée ODL possédant le *propput* attribut a besoin d’une fonction nommée `put_propertyname`. Chaque entrée avec le *propget* attribut a besoin d’une fonction nommée `get_propertyname`.
+Une fois votre fichier ODL mis à jour, utilisez le mécanisme de mappage d'interface de MFC pour définir une classe d'implémentation pour l'interface double dans votre classe d'objets et effectuer les entrées correspondantes dans le mécanisme `QueryInterface` de MFC. Vous avez besoin d'une entrée dans le bloc `INTERFACE_PART` pour chaque entrée dans l'instruction Interface de l'ODL, en plus des entrées valides pour une interface de dispatch. Chaque entrée ODL possédant le *propput* attribut requiert une fonction nommée `put_propertyname`. Chaque entrée avec la *propget* attribut requiert une fonction nommée `get_propertyname`.
 
 Pour définir une classe d'implémentation pour votre interface double, ajoutez un bloc `DUAL_INTERFACE_PART` à la définition de classe d'objets. Exemple :
 
@@ -103,7 +103,7 @@ BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
 END_DUAL_INTERFACE_PART(DualAClick)
 ```
 
-Pour connecter l’interface double à MFC [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms687230) mécanisme, ajoutez un `INTERFACE_PART` entrée à la table d’interface :
+Se connecter l’interface double à MFC [QueryInterface](/windows/desktop/com/queryinterface--navigating-in-an-object) mécanisme, ajoutez un `INTERFACE_PART` entrée à la table d’interface :
 
 ```cpp
 BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
@@ -271,9 +271,9 @@ Pour inscrire la bibliothèque de types d'application chaque fois que l'applicat
 
 Pour modifier les paramètres de génération d’un projet afin qu’un fichier d’en-tête contenant **UUID** définitions est généré par MkTypLib à chaque fois que la bibliothèque de types est reconstruite :
 
-1. Sur le **générer** menu, cliquez sur **paramètres**, puis sélectionnez le fichier ODL dans la liste des fichiers pour chaque configuration.
+1. Sur le **Build** menu, cliquez sur **paramètres**, puis sélectionnez le fichier ODL dans la liste des fichiers pour chaque configuration.
 
-2. Cliquez sur le **OLE Types** onglet et spécifier un nom de fichier dans le **en-tête de sortie** champ nom de fichier. Utilisez un nom de fichier qui n'est pas déjà utilisé par votre projet, car MkTypLib remplacera un fichier déjà existant. Cliquez sur **OK** pour fermer la **paramètres de génération** boîte de dialogue.
+2. Cliquez sur le **OLE Types** onglet et spécifier un nom de fichier dans le **en-tête de sortie** champ nom de fichier. Utilisez un nom de fichier qui n'est pas déjà utilisé par votre projet, car MkTypLib remplacera un fichier déjà existant. Cliquez sur **OK** pour fermer la **paramètres de Build** boîte de dialogue.
 
 Pour ajouter le **UUID** définitions à partir du fichier d’en-tête généré par MkTypLib à votre projet :
 
@@ -289,9 +289,9 @@ Pour ajouter le **UUID** définitions à partir du fichier d’en-tête génér�
     #include "acdual.h"
     ```
 
-3. Sur le **générer** menu, cliquez sur **paramètres**, puis sélectionnez INITIIDS. RPC à partir de la liste des fichiers pour chaque configuration.
+3. Sur le **Build** menu, cliquez sur **paramètres**, puis sélectionnez INITIIDS. CPP à partir de la liste des fichiers pour chaque configuration.
 
-4. Cliquez sur le **C++** , cliquez sur la catégorie **les en-têtes précompilés**, puis sélectionnez le **ne pas à l’aide d’en-têtes précompilés** case d’option. Cliquez sur OK pour fermer la **paramètres de génération** boîte de dialogue.
+4. Cliquez sur le **C++** , cliquez sur la catégorie **en-têtes précompilés**, puis sélectionnez le **ne pas à l’aide d’en-têtes précompilés** case d’option. Cliquez sur OK pour fermer la **paramètres de Build** boîte de dialogue.
 
 ## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Spécification du nom de classe d'objets correct dans une bibliothèque de types
 
@@ -301,9 +301,9 @@ Notez que lorsque l’instruction coclass est modifiée, les noms de variables d
 
 ## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Gestion des exceptions et des interfaces d'erreur Automation
 
-Les méthodes et les fonctions d’accesseur de propriété de votre objet automation peuvent lever des exceptions. Si, par conséquent, vous devez les gérer dans votre implémentation d’interface double et passer des informations sur l’exception vers le contrôleur via l’interface de gestion des erreurs OLE Automation, `IErrorInfo`. Cette interface fournit des informations d'erreur détaillées et contextuelles à travers à la fois de `IDispatch` et des interfaces VTBL. Pour indiquer qu’un gestionnaire d’erreurs est disponible, vous devez implémenter la `ISupportErrorInfo` interface.
+Les méthodes et les fonctions d’accesseur de propriété de votre objet automation peuvent lever des exceptions. Si, par conséquent, vous devez les gérer dans votre implémentation d’interface double et passer des informations relatives à l’exception vers le contrôleur via l’interface de gestion des erreurs OLE Automation, `IErrorInfo`. Cette interface fournit des informations d'erreur détaillées et contextuelles à travers à la fois de `IDispatch` et des interfaces VTBL. Pour indiquer qu’un gestionnaire d’erreurs est disponible, vous devez implémenter le `ISupportErrorInfo` interface.
 
-Pour illustrer le mécanisme de gestion des erreurs, supposez que les fonctions générées par ClassWizard permettant d'implémenter la prise en charge de la distribution (dispatch) standard lèvent des exceptions. L’implémentation MFC de `IDispatch::Invoke` en général intercepte les exceptions et les convertit en une structure EXCEPTINFO qui est retournée via la `Invoke` appeler. Toutefois, lorsque l'interface VTBL est utilisée, vous êtes chargé d'intercepter les exceptions vous-même. Voici un exemple de protection des méthodes d'interface double :
+Pour illustrer le mécanisme de gestion des erreurs, supposez que les fonctions générées par ClassWizard permettant d'implémenter la prise en charge de la distribution (dispatch) standard lèvent des exceptions. L’implémentation MFC de `IDispatch::Invoke` généralement intercepte ces exceptions et les convertit en une structure EXCEPTINFO qui est retournée via le `Invoke` appeler. Toutefois, lorsque l'interface VTBL est utilisée, vous êtes chargé d'intercepter les exceptions vous-même. Voici un exemple de protection des méthodes d'interface double :
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -320,9 +320,9 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` prend soin de retourner un code d'erreur approprié lorsqu'une exception se produit. `CATCH_ALL_DUAL` Convertit une exception MFC dans à l’aide des informations de gestion des erreurs OLE Automation le `ICreateErrorInfo` interface. (Par exemple `CATCH_ALL_DUAL` macro est dans le fichier MFCDUAL. H dans le [ACDUAL](../visual-cpp-samples.md) exemple. La fonction utilisée pour gérer les exceptions, `DualHandleException`, se trouve dans le fichier MFCDUAL.CPP.) `CATCH_ALL_DUAL` détermine le code d'erreur à retourner en fonction du type d'exception qui s'est produite :
+`CATCH_ALL_DUAL` prend soin de retourner un code d'erreur approprié lorsqu'une exception se produit. `CATCH_ALL_DUAL` Convertit une exception MFC dans à l’aide des informations de gestion des erreurs OLE Automation le `ICreateErrorInfo` interface. (Un exemple `CATCH_ALL_DUAL` macro se trouve dans le fichier MFCDUAL. H dans le [ACDUAL](../visual-cpp-samples.md) exemple. La fonction utilisée pour gérer les exceptions, `DualHandleException`, se trouve dans le fichier MFCDUAL.CPP.) `CATCH_ALL_DUAL` détermine le code d'erreur à retourner en fonction du type d'exception qui s'est produite :
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) - dans ce cas, `HRESULT` est construit en utilisant le code suivant :
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) : dans ce cas, `HRESULT` est construit en utilisant le code suivant :
 
     ```cpp
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
@@ -330,19 +330,19 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 
      Cela crée un `HRESULT` spécifique à l'interface qui a provoqué l'exception. Le code d'erreur est décalé de 0x200 pour éviter tout conflit avec les `HRESULT`définis par le système pour les interfaces OLE standard.
 
-- [CMemoryException](../mfc/reference/cmemoryexception-class.md) - dans ce cas, `E_OUTOFMEMORY` est retourné.
+- [CMemoryException](../mfc/reference/cmemoryexception-class.md) : dans ce cas, `E_OUTOFMEMORY` est retournée.
 
-- Toute autre exception - dans ce cas, `E_UNEXPECTED` est retourné.
+- Toute autre exception - dans ce cas, `E_UNEXPECTED` est retournée.
 
 Pour indiquer que le Gestionnaire d’erreurs OLE Automation est utilisé, vous devez également implémenter la `ISupportErrorInfo` interface.
 
 Tout d’abord, ajoutez le code à votre définition de classe automation pour montrer qu’il prend en charge `ISupportErrorInfo`.
 
-Ensuite, ajoutez le code au mappage d’interface de votre classe automation pour associer le `ISupportErrorInfo` classe d’implémentation MFC `QueryInterface` mécanisme. Le `INTERFACE_PART` instruction correspond à la classe définie pour `ISupportErrorInfo`.
+Ensuite, ajoutez le code au mappage d’interface de votre classe automation pour associer le `ISupportErrorInfo` classe d’implémentation de MFC `QueryInterface` mécanisme. Le `INTERFACE_PART` instruction correspond à la classe définie pour `ISupportErrorInfo`.
 
 Enfin, implémentez la classe définie pour prendre en charge `ISupportErrorInfo`.
 
-(Le [ACDUAL](../visual-cpp-samples.md) exemple contient trois macros pour aider à effectuer ces trois étapes, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, et `IMPLEMENT_DUAL_ERRORINFO`, toutes contenues dans MFCDUAL. H.)
+(Le [ACDUAL](../visual-cpp-samples.md) exemple contient trois macros aidant à effectuer ces trois étapes, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, et `IMPLEMENT_DUAL_ERRORINFO`, toutes contenues dans MFCDUAL. H.)
 
 L’exemple suivant implémente une classe définie pour prendre en charge `ISupportErrorInfo`. `CAutoClickDoc` est le nom de votre classe automation et `IID_IDualAClick` est la **IID** pour l’interface qui est la source des erreurs signalées par l’objet d’erreur OLE Automation :
 

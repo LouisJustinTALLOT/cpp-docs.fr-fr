@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a598a05c31c36c7defd5fe2441031d3bccdf20f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2781a41ddadc6932e1c5797f098407b7dd5e4f29
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336788"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221226"
 ---
 # <a name="cfont-class"></a>CFont (classe)
 Encapsule une police GDI (Graphics Device Interface) Windows et fournit des fonctions membres pour la manipuler.  
@@ -124,7 +124,7 @@ BOOL CreateFont(
   
 ### <a name="parameters"></a>Paramètres  
  *nHeight*  
- Spécifie la hauteur souhaitée (en unités logiques) de la police. Consultez le `lfHeight` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure dans le SDK Windows pour obtenir une description. La valeur absolue de *nHeight* ne doit pas dépasser 16 384 unités de périphérique après qu’il est converti. Pour toutes les comparaisons de hauteur, le mappeur de polices recherche la plus grande police qui ne dépasse pas la taille demandée ou la plus petite police si toutes les polices dépassent la taille demandée.  
+ Spécifie la hauteur souhaitée (en unités logiques) de la police. Consultez le `lfHeight` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)structure dans le SDK Windows pour obtenir une description. La valeur absolue de *nHeight* ne doit pas dépasser 16 384 unités de périphérique après qu’il est converti. Pour toutes les comparaisons de hauteur, le mappeur de polices recherche la plus grande police qui ne dépasse pas la taille demandée ou la plus petite police si toutes les polices dépassent la taille demandée.  
   
  *nWidth*  
  Spécifie la largeur moyenne (en unités logiques) de caractères dans la police. Si *nWidth* est 0, les proportions de l’appareil sera comparée aux proportions de numérisation des polices disponibles pour trouver la correspondance la plus proche, qui est déterminée par la valeur absolue de la différence.  
@@ -173,7 +173,7 @@ BOOL CreateFont(
  Spécifie la hauteur et la famille de la police. Consultez le `lfPitchAndFamily` membre dans le `LOGFONT` structure dans le SDK Windows pour obtenir la liste de valeurs et des informations supplémentaires.  
   
  *lpszFacename*  
- Un `CString` ou pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Le Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) fonction peut être utilisée pour énumérer toutes les polices actuellement disponibles. Si *lpszFacename* est NULL, l’interface GDI utilise une police indépendant du périphérique.  
+ Un `CString` ou pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Le Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) fonction peut être utilisée pour énumérer toutes les polices actuellement disponibles. Si *lpszFacename* est NULL, l’interface GDI utilise une police indépendant du périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -191,7 +191,7 @@ BOOL CreateFont(
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
 ##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
- Initialise un `CFont` objet avec les caractéristiques donné dans un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure.  
+ Initialise un `CFont` objet avec les caractéristiques donné dans un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)structure.  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -207,7 +207,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="remarks"></a>Notes  
  La police peut être sélectionnée par la suite en tant que la police actuelle de n’importe quel appareil.  
   
- Cette police présente les caractéristiques spécifiées dans le [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure. Lorsque la police est sélectionnée à l’aide de la [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) fonction membre, le mappeur de police GDI essaie de correspondre à la police logique avec une police physique existante. Si le mappeur de police ne parvient pas à trouver une correspondance exacte pour la police logique, il fournit une autre police dont les caractéristiques correspondent à autant de caractéristiques demandées que possible.  
+ Cette police présente les caractéristiques spécifiées dans le [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure. Lorsque la police est sélectionnée à l’aide de la [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) fonction membre, le mappeur de police GDI essaie de correspondre à la police logique avec une police physique existante. Si le mappeur de police ne parvient pas à trouver une correspondance exacte pour la police logique, il fournit une autre police dont les caractéristiques correspondent à autant de caractéristiques demandées que possible.  
   
  Lorsque vous n’avez plus besoin du `CFont` objet créé par le `CreateFontIndirect` fonction, utilisez `CDC::SelectObject` pour sélectionner une autre police dans le contexte de périphérique, puis supprimez le `CFont` objet n’est plus nécessaire.  
   
@@ -256,7 +256,7 @@ BOOL CreatePointFontIndirect(
   
 ### <a name="parameters"></a>Paramètres  
  *lpLogFont*  
- Pointe vers un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure qui définit les caractéristiques de la police logique. Le `lfHeight` membre de la `LOGFONT` structure est mesurée en dixièmes d’un point plutôt qu’en unités logiques. (Par exemple, définissez `lfHeight` à 120 pour demander une police de 12 points.)  
+ Pointe vers un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure qui définit les caractéristiques de la police logique. Le `lfHeight` membre de la `LOGFONT` structure est mesurée en dixièmes d’un point plutôt qu’en unités logiques. (Par exemple, définissez `lfHeight` à 120 pour demander une police de 12 points.)  
   
  *contrôleur de domaine principal*  
  Pointeur vers le [CDC](../../mfc/reference/cdc-class.md) objet à utiliser pour convertir la hauteur dans `lfHeight` d’unités logiques. Si NULL, un contexte de périphérique est utilisé pour la conversion.  
@@ -301,7 +301,7 @@ int GetLogFont(LOGFONT* pLogFont);
   
 ### <a name="parameters"></a>Paramètres  
  *pLogFont*  
- Pointeur vers le [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure pour recevoir des informations sur les police.  
+ Pointeur vers le [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure pour recevoir des informations sur les police.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction réussit, sinon 0.  
@@ -320,9 +320,9 @@ operator HFONT() const;
  Le handle de l’objet de police Windows GDI attaché à `CFont` cas de réussite ; sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
- Dans la mesure où cet opérateur est utilisé automatiquement pour les conversions entre `CFont` à [polices et texte](http://msdn.microsoft.com/library/windows/desktop/dd144819), vous pouvez passer `CFont` objets aux fonctions qui attendent HFONTs.  
+ Dans la mesure où cet opérateur est utilisé automatiquement pour les conversions entre `CFont` à [polices et texte](/windows/desktop/gdi/fonts-and-text), vous pouvez passer `CFont` objets aux fonctions qui attendent HFONTs.  
   
- Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans le SDK Windows.  
+ Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](/windows/desktop/gdi/graphic-objects) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  

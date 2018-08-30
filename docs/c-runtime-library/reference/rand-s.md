@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210160"
 ---
 # <a name="rands"></a>rand_s
 
-Génère un nombre pseudo-aléatoire. Il s’agit d’une version plus sécurisée de la fonction [rand](rand.md), des améliorations de sécurité, comme décrit dans [les fonctionnalités de sécurité dans la bibliothèque CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Génère un nombre pseudo-aléatoire. Il s’agit d’une version plus sécurisée de la fonction [rand](rand.md), avec les améliorations de sécurité comme décrit dans [des fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,18 +65,18 @@ Zéro en cas de réussite, code d’erreur dans un autre cas. Si le pointeur d�
 
 ## <a name="remarks"></a>Notes
 
-Le **rand_s** fonction écrit un entier pseudo-aléatoire comprise entre 0 et **UINT_MAX** au pointeur d’entrée. Le **rand_s** fonction utilise le système d’exploitation pour générer des nombres aléatoires sécurisés par chiffrement. Il n’utilise pas la valeur de départ générés par le [srand](srand.md) (fonction), et n’affecte pas la séquence de nombres aléatoire utilisée par [rand](rand.md).
+Le **rand_s** fonction écrit un entier pseudo-aléatoire compris dans la plage 0 à **UINT_MAX** au pointeur d’entrée. Le **rand_s** fonction utilise le système d’exploitation pour générer des nombres aléatoires sécurisés par chiffrement. Il n’utilise pas la valeur de départ générée par le [srand](srand.md) (fonction), et n’affecte pas la séquence de nombres aléatoire utilisée par [rand](rand.md).
 
-Le **rand_s** fonction requiert cette constante **_CRT_RAND_S** être définie avant l’instruction d’inclusion pour la fonction déclarée, comme dans l’exemple suivant :
+Le **rand_s** fonction exige que la constante **_CRT_RAND_S** soit définie avant l’instruction d’inclusion pour la fonction d’être déclarés, comme dans l’exemple suivant :
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s** dépend de la [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API, qui est uniquement disponible dans Windows XP et versions ultérieures.
+**rand_s** varie selon le [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, qui est uniquement disponible dans Windows XP et versions ultérieures.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

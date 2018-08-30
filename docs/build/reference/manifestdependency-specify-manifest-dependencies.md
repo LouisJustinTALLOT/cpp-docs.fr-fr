@@ -1,5 +1,5 @@
 ---
-title: -/MANIFESTDEPENDENCY (spécifier les dépendances de manifeste) | Documents Microsoft
+title: -MANIFESTDEPENDENCY (spécifier les dépendances de manifeste) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d486047b708e0c3412aa63e0a0b026a2a4204f71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213897"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Spécifier les dépendances de manifeste)
 ```  
@@ -33,9 +33,9 @@ ms.locfileid: "32376570"
 ## <a name="remarks"></a>Notes  
  /MANIFESTDEPENDENCY vous permet de spécifier des attributs qui seront placés dans le \<dépendance > section du fichier manifeste.  
   
- Consultez [/MANIFEST (manifeste d’Assembly créer côte à côte)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) pour plus d’informations sur la création d’un fichier manifeste.  
+ Consultez [/MANIFEST (manifeste d’Assembly côte à côte de créer)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) pour plus d’informations sur la création d’un fichier manifeste.  
   
- Pour plus d’informations sur la \<dépendance > section du fichier manifeste, consultez [les fichiers de Configuration de serveur de publication](http://msdn.microsoft.com/library/aa375682).  
+ Pour plus d’informations sur la \<dépendance > section du fichier manifeste, consultez [les fichiers de Configuration de serveur de publication](/windows/desktop/SbsCs/publisher-configuration-files).  
   
  Les informations /MANIFESTDEPENDENCY peuvent être passées à l’éditeur de liens de deux manières :  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32376570"
   
 -   Via le [commentaire](../../preprocessor/comment-c-cpp.md) pragma.  
   
- L’exemple suivant illustre un commentaire /MANIFESTDEPENDENCY passé via ce pragma :  
+ L’exemple suivant montre un commentaire /MANIFESTDEPENDENCY passé via ce pragma :  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
@@ -59,25 +59,25 @@ ms.locfileid: "32376570"
 </dependency>  
 ```  
   
- Les mêmes commentaires /MANIFESTDEPENDENCY peuvent être passés à la ligne de commande comme suit :  
+ Les mêmes commentaires /MANIFESTDEPENDENCY peuvent être passées à la ligne de commande comme suit :  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- L’éditeur de liens sera collecter les commentaires /MANIFESTDEPENDENCY, éliminer les entrées en double, puis ajoutez la chaîne XML qui en résulte dans le fichier manifeste.  Si l’éditeur de liens recherche d’entrées en conflit, le fichier manifeste est endommagé et l’application ne pourront pas lancer (une entrée peut être ajoutée au journal des événements, indiquant la source de l’échec).  
+ L’éditeur de liens sera collecter des commentaires /MANIFESTDEPENDENCY, éliminer les entrées en double, puis ajoutez la chaîne XML qui en résulte dans le fichier manifeste.  Si l’éditeur de liens recherche des entrées en conflit, le fichier manifeste est endommagé et l’application échoue lancer (une entrée peut-être être ajoutée au journal des événements, indiquant la source de l’échec).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez le **propriétés de Configuration** nœud.  
+2.  Développez le nœud **Propriétés de configuration**.  
   
 3.  Développez le **l’éditeur de liens** nœud.  
   
 4.  Sélectionnez le **le fichier manifeste** page de propriétés.  
   
-5.  Modifier la **dépendances de manifeste supplémentaires** propriété.  
+5.  Modifier le **les dépendances de manifeste supplémentaires** propriété.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   

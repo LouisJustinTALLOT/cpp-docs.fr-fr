@@ -1,5 +1,5 @@
 ---
-title: Marshaling | Documents Microsoft
+title: Marshaling | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b8b82d5369aa536dab638efa379089325d10b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac4bb35d29d74f0e66337dc6c3999df66a63d254
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360098"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212689"
 ---
-# <a name="marshaling"></a>marshaling
-La technique COM du marshaling permet aux interfaces exposées par un objet dans un processus à utiliser dans un autre processus. Dans le marshaling, COM fournit du code (ou utilise le code fourni par l’implémentation d’interface) pour compresser les paramètres d’une méthode dans un format qui peut être déplacé entre processus (ainsi que, sur le réseau à un processus qui s’exécutent sur d’autres ordinateurs) et pour décompresser ces paramètres à l’autre extrémité. De même, COM doit effectuer ces mêmes étapes sur le retour de l’appel.  
+# <a name="marshaling"></a>Marshaling
+La technique COM du marshaling permet aux interfaces exposées par un objet dans un seul processus à utiliser dans un autre processus. Dans le marshaling, COM fournit du code (ou utilise le code fourni par l’implémenteur d’interface) pour compresser les paramètres d’une méthode dans un format qui peut être déplacé entre processus (ainsi que, sur le réseau pour les processus exécutés sur d’autres ordinateurs) et à décompresser ces paramètres à l’autre extrémité. De même, COM doit effectuer ces mêmes étapes sur le retour de l’appel.  
   
 > [!NOTE]
 >  Marshaling est généralement pas nécessaire quand une interface fournie par un objet est utilisée dans le même processus que l’objet. Toutefois, le marshaling peut être nécessaire entre les threads.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction à COM](../atl/introduction-to-com.md)   
- [Détails du marshaling](http://msdn.microsoft.com/library/windows/desktop/ms692621)
+ [Détails de marshaling](/windows/desktop/com/marshaling-details)
 

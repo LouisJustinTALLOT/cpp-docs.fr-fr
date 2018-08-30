@@ -1,5 +1,5 @@
 ---
-title: -/ASSEMBLYLINKRESOURCE (lien vers une ressource du .NET Framework) | Documents Microsoft
+title: -ASSEMBLYLINKRESOURCE (lien vers une ressource du .NET Framework) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206486"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Lien vers une ressource du .NET Framework)
 ```  
@@ -40,13 +40,13 @@ ms.locfileid: "32374048"
 ## <a name="remarks"></a>Notes  
  L’option /ASSEMBLYLINKRESOURCE crée un lien vers une ressource .NET Framework dans le fichier de sortie ; le fichier de ressources n’est pas placé dans le fichier de sortie. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incorpore un fichier de ressources dans le fichier de sortie.  
   
- Les ressources liées sont publiques dans l’assembly lorsqu’elles sont créées avec l’éditeur de liens.  
+ Les ressources liées sont publiques dans l’assembly lors de la création avec l’éditeur de liens.  
   
  /ASSEMBLYLINKRESOURCE impose que la compilation inclue [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) ou [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) n’est pas autorisée avec /ASSEMBLYLINKRESOURCE.  
   
- Si *nom de fichier* est un fichier de ressources .NET Framework créé, par exemple, par [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou dans l’environnement de développement, il est accessible à l’aide des membres de la **System.Resources** espace de noms. Pour plus d’informations, consultez [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Pour toutes les autres ressources, utilisez le **GetManifestResource** \* méthodes dans le **System.Reflection.Assembly** classe pour accéder à la ressource au moment de l’exécution.  
+ Si *filename* est un fichier de ressources .NET Framework créé, par exemple, par [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou dans l’environnement de développement, il est accessible à l’aide des membres de la **System.Resources** espace de noms. Pour plus d’informations, consultez [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Pour toutes les autres ressources, utilisez le **GetManifestResource** \* méthodes dans le **System.Reflection.Assembly** classe pour accéder à la ressource au moment de l’exécution.  
   
- *nom de fichier* peut être n’importe quel format de fichier. Pouvez par exemple, si vous souhaitez apporter une DLL native de l’assembly, afin de pouvoir être installé dans le Global Assembly Cache et accessible à partir du code managé dans l’assembly.  
+ *nom de fichier* peut être n’importe quel format de fichier. Par exemple, vous souhaiterez effectuer une DLL native fasse partie de l’assembly, afin de pouvoir être installé dans le Global Assembly Cache et accessible à partir de code managé dans l’assembly.  
   
  Autres options de l’éditeur de liens qui affectent la génération de l’assembly sont :  
   

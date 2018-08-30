@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6019f2bb3d425b8ebfa4c49c3b6623d331fa5534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964156"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212566"
 ---
 # <a name="binaryfunction-struct"></a>binary_function, struct
 
@@ -41,11 +41,9 @@ struct binary_function {
 
 Le struct de modèle sert de base pour les classes qui définissent une fonction membre de la forme :
 
-**result_type operator()**( **constfirst_argument_type&**,
+> *RESULT_TYPE* ** operator() (const ** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**&) const**
 
-**const second_argument_type&** ) **const**
-
-Toutes ces fonctions binaires peuvent référencer leur premier type d’argument en tant que `first_argument_type`, leur deuxième type d’argument en tant que `second_argument_type`et leur type de retour en tant que ***result_type***.
+Toutes ces fonctions binaires peuvent référencer leur premier type d’argument comme *first_argument_type*, leur deuxième type d’argument comme *second_argument_type* et leur type de retour comme *result_type*.
 
 ## <a name="example"></a>Exemple
 

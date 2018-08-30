@@ -1,7 +1,7 @@
 ---
-title: PRJ0004 d’erreur de Build de projet | Documents Microsoft
+title: Erreur de génération PRJ0004 de projet | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10246f1d01441a84947a2fa426e962d49414782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76847c0df06ec61c29f84efb46eca87683c86cb4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316291"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216064"
 ---
 # <a name="project-build-error-prj0004"></a>Erreur de génération de projet PRJ0004
-Ligne de commande pour l’outil 'outil' n’a pas pu être générer.  
-  
- Une ou plusieurs propriétés ont été spécifiées de manière à créer la syntaxe de l’appel à ***outil*** non conforme :  
-  
--   Vous avez peut-être spécifié des macros incorrectes ou inconnues.  
-  
--   Votre ordinateur manque peut-être d’espace disque disponible.  
-  
- Vous pouvez souhaiter examiner les paramètres de l’outil en examinant la [page de propriétés ligne de commande](../../ide/command-line-property-pages.md).
+
+> Impossible de générer la ligne de commande pour le «*outil*' outil.
+
+Une ou plusieurs propriétés ont été spécifiées de manière à rendre la syntaxe de l’appel à *outil* non conforme :
+
+- Vous avez peut-être spécifié des macros incorrectes ou inconnues.
+
+- Votre ordinateur manque peut-être d’espace disque disponible.
+
+Vous pouvez souhaiter connaître les paramètres de l’outil en consultant le [page de propriétés de ligne de commande](../../ide/command-line-property-pages.md).

@@ -1,5 +1,5 @@
 ---
-title: OPTION (MASM) | Documents Microsoft
+title: OPTION (MASM) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4a2dcbc55d6a2d033cde3b6189618afd67bdc3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057719"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221507"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
-Active ou désactive les fonctionnalités de l’assembleur.  
+Active et désactive les fonctionnalités de l’assembleur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,9 +46,9 @@ optionlist
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**DÉCALAGE**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
 |**PROC**|**PROLOGUE**|**EN LECTURE SEULE**|**NOREADONLY**|  
-|**UNE ÉTENDUE**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
+|**ÉTENDUE**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
   
- La syntaxe de langage est **OPTION LANGUAGE : *** x*, où *x* est un des C, SYSCALL, STDCALL, PASCAL, FORTRAN ou BASIC.  SYSCALL, PASCAL, FORTRAN et BASIC ne sont pas pris en charge avec utilisé avec [. MODÈLE](../../assembler/masm/dot-model.md) plat.  
+ La syntaxe de langage est **OPTION LANGUAGE :**<em>x</em>, où *x* est un des C, SYSCALL, STDCALL, PASCAL, FORTRAN ou BASIC.  SYSCALL, PASCAL, FORTRAN et BASIC ne sont pas pris en charge avec utilisé avec [. MODÈLE](../../assembler/masm/dot-model.md) plat.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

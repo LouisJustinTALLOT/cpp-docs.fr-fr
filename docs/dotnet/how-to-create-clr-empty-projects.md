@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer des projets vides CLR | Documents Microsoft'
+title: 'Comment : créer des projets vides CLR | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128512"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212707"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Comment : créer des projets vides CLR
 Pour créer un projet vide CLR, utilisez le **projet vide CLR** modèle, qui est disponible à partir de la **nouveau projet** boîte de dialogue.  
   
 > [!NOTE]
->  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou votre édition et peut-être différer de celles décrites dans l’aide. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou votre édition et peut-être différer de celles décrites dans l’aide. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-clr-empty-project"></a>Pour créer un projet vide CLR  
   
@@ -40,10 +40,10 @@ Pour créer un projet vide CLR, utilisez le **projet vide CLR** modèle, qui est
 3.  Dans la zone **Nom** , entrez un nom unique pour votre application.  
   
     > [!NOTE]
-    >  Vous pouvez également spécifier d’autres paramètres de projet et une solution à partir de la **nouveau projet** boîte de dialogue, mais ces paramètres ne sont pas requis.  
+    >  Vous pouvez également spécifier d’autres paramètres de projet et solution à partir de la **nouveau projet** boîte de dialogue, mais ces paramètres ne sont pas requis.  
   
 4.  Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de projet Visual C++](../ide/visual-cpp-project-types.md)   
+ [Types de projets Visual C++](../ide/visual-cpp-project-types.md)   
  [Types de projets Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

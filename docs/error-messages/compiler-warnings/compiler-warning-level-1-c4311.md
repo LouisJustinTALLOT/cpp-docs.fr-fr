@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4311 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4311 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba06488ed41e7e296f9f6c16f34af827274acfd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adfd27a116ae5747a2dd899ce51c38f01055f356
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218538"
 ---
 # <a name="compiler-warning-level-1-c4311"></a>Avertissement du compilateur (niveau 1) C4311
 'variable' : troncation de pointeur de 'type' à 'type'  
   
- Cet avertissement détecte les problèmes de troncation de pointeur 64 bits. Par exemple, si le code est compilé pour une architecture 64 bits, la valeur d'un pointeur (64 bits) est tronquée si elle est affectée à un `int` (32 bits). Pour plus d’informations, consultez [les règles d’utilisation des pointeurs](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Cet avertissement détecte les problèmes de troncation de pointeur 64 bits. Par exemple, si le code est compilé pour une architecture 64 bits, la valeur d'un pointeur (64 bits) est tronquée si elle est affectée à un `int` (32 bits). Pour plus d’informations, consultez [règles d’utilisation des pointeurs](/windows/desktop/WinProg64/rules-for-using-pointers).  
   
- Pour plus d’informations sur les causes courantes de l’avertissement C4311, consultez [les erreurs courantes du compilateur](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Pour plus d’informations sur les causes courantes de l’avertissement C4311, consultez [erreurs de compilateur communes](/windows/desktop/WinProg64/common-compiler-errors).  
   
  L'exemple de code suivant génère l'avertissement C4311 quand il est compilé pour une cible 64 bits, puis indique comment le corriger :  
   

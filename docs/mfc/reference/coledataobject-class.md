@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f64902f4636d7933a368e28cac42a27abb440c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 67a4f03db6a7c4cf37e59e05464865016d836097
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215006"
 ---
 # <a name="coledataobject-class"></a>COleDataObject, classe
 Utilisée dans les transferts de données pour récupérer des données dans divers formats depuis le Presse-papiers, par glisser-déposer ou depuis un élément OLE incorporé.  
@@ -84,7 +84,7 @@ class COleDataObject
   
  Cette classe vous permet de déterminer si les données existent dans un format spécifié. Vous pouvez également énumérer les formats de données disponibles ou vérifier si un format donné est disponible et récupère ensuite les données dans le format par défaut. Récupération de l’objet est possible de différentes façons, notamment l’utilisation d’un [CFile](../../mfc/reference/cfile-class.md), un HGLOBAL, ou un `STGMEDIUM` structure.  
   
- Pour plus d’informations, consultez le [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) structure dans le SDK Windows.  
   
  Pour plus d’informations sur l’utilisation des objets de données dans votre application, consultez l’article [objets de données et Sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
@@ -111,7 +111,7 @@ void Attach(
  TRUE si l’objet de données OLE doit être libérée lorsque la `COleDataObject` objet est détruite ; sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) dans le SDK Windows.  
+ Pour plus d’informations, consultez [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) dans le SDK Windows.  
   
 ##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  Appelez cette fonction pour attacher l’objet de données qui est actuellement dans le Presse-papiers pour le `COleDataObject` objet.  
@@ -126,7 +126,7 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>Notes  
   
 > [!NOTE]
->  Appel de cette fonction verrouille le Presse-papiers jusqu'à ce que cet objet de données est libéré. L’objet de données est libéré dans le destructeur de la `COleDataObject`. Pour plus d’informations, consultez [ouverture du Presse-papiers](http://msdn.microsoft.com/library/windows/desktop/ms649048) et [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) dans la documentation de Win32.  
+>  Appel de cette fonction verrouille le Presse-papiers jusqu'à ce que cet objet de données est libéré. L’objet de données est libéré dans le destructeur de la `COleDataObject`. Pour plus d’informations, consultez [ouverture du Presse-papiers](/windows/desktop/api/winuser/nf-winuser-openclipboard) et [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) dans la documentation de Win32.  
   
 ##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  Appelez cette fonction pour vous préparer à des appels ultérieurs à `GetNextFormat` pour récupérer une liste de formats de données à partir de l’élément.  
@@ -140,7 +140,7 @@ void BeginEnumFormats();
   
  Pour vérifier la disponibilité des données dans un format donné, utilisez [COleDataObject::IsDataAvailable](#isdataavailable).  
   
- Pour plus d’informations, consultez [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) dans le SDK Windows.  
+ Pour plus d’informations, consultez [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) dans le SDK Windows.  
   
 ##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  Construit un objet `COleDataObject`.  
@@ -179,21 +179,21 @@ BOOL GetData(
   
 ### <a name="parameters"></a>Paramètres  
  *cfFormat*  
- Le format dans lequel les données doit être retourné. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
+ Le format dans lequel les données doit être retourné. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (fonction).  
   
  *lpStgMedium*  
- Pointe vers un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure qui recevra les données.  
+ Pointe vers un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) structure qui recevra les données.  
   
  *lpFormatEtc*  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être retourné. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
+ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure qui décrit le format dans lequel les données doit être retourné. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), et [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le SDK Windows.  
+ Pour plus d’informations, consultez [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), et [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) dans le SDK Windows.  
   
- Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans le SDK Windows.  
+ Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) dans le SDK Windows.  
   
 ##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  Appelez cette fonction pour créer un `CFile` ou `CFile`-objet dérivé et pour récupérer des données au format spécifié dans un `CFile` pointeur.  
@@ -206,10 +206,10 @@ CFile* GetFileData(
   
 ### <a name="parameters"></a>Paramètres  
  *cfFormat*  
- Le format dans lequel les données doit être retourné. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
+ Le format dans lequel les données doit être retourné. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (fonction).  
   
  *lpFormatEtc*  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être retourné. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
+ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure qui décrit le format dans lequel les données doit être retourné. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le nouveau `CFile` ou `CFile`-dérivés d’objet contenant les données de cas de réussite ; sinon, NULL.  
@@ -220,9 +220,9 @@ CFile* GetFileData(
 > [!NOTE]
 >  Le `CFile` objet accédé par la valeur de retour de cette fonction est possédée par l’appelant. Il incombe à l’appelant de **supprimer** le `CFile` objet, donc fermer le fichier.  
   
- Pour plus d’informations, consultez [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le SDK Windows.  
+ Pour plus d’informations, consultez [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) dans le SDK Windows.  
   
- Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans le SDK Windows.  
+ Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) dans le SDK Windows.  
   
 ##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  Appelez cette fonction pour allouer un bloc de mémoire globale et pour extraire des données au format spécifié dans un HGLOBAL.  
@@ -235,18 +235,18 @@ HGLOBAL GetGlobalData(
   
 ### <a name="parameters"></a>Paramètres  
  *cfFormat*  
- Le format dans lequel les données doit être retourné. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
+ Le format dans lequel les données doit être retourné. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (fonction).  
   
  *lpFormatEtc*  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être retourné. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
+ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure qui décrit le format dans lequel les données doit être retourné. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le handle du bloc de mémoire globale contenant les données en cas de réussite ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le SDK Windows.  
+ Pour plus d’informations, consultez [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) dans le SDK Windows.  
   
- Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans le SDK Windows.  
+ Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) dans le SDK Windows.  
   
 ##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  Appelez cette fonction à plusieurs reprises pour obtenir tous les formats disponibles pour récupérer des données à partir de l’élément.  
@@ -257,7 +257,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
 ### <a name="parameters"></a>Paramètres  
  *lpFormatEtc*  
- Pointe vers le [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui reçoit les informations de format lors de l’appel de fonction retourne.  
+ Pointe vers le [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure qui reçoit les informations de format lors de l’appel de fonction retourne.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si un autre format n’est disponible ; sinon 0.  
@@ -280,10 +280,10 @@ BOOL IsDataAvailable(
   
 ### <a name="parameters"></a>Paramètres  
  *cfFormat*  
- Le format de données du Presse-papiers pour être utilisé dans la structure vers laquelle pointe *lpFormatEtc*. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (fonction).  
+ Le format de données du Presse-papiers pour être utilisé dans la structure vers laquelle pointe *lpFormatEtc*. Ce paramètre peut être un des formats de Presse-papiers prédéfinis ou la valeur retournée par le Windows native [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (fonction).  
   
  *lpFormatEtc*  
- Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format souhaité. Indiquez une valeur pour ce paramètre uniquement si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
+ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure qui décrit le format souhaité. Indiquez une valeur pour ce paramètre uniquement si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par *cfFormat*. Si sa valeur est NULL, les valeurs par défaut sont utilisés pour les autres champs dans le `FORMATETC` structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les données sont disponibles dans le format spécifié ; sinon 0.  
@@ -291,22 +291,22 @@ BOOL IsDataAvailable(
 ### <a name="remarks"></a>Notes  
  Cette fonction est utile avant d’appeler `GetData`, `GetFileData`, ou `GetGlobalData`.  
   
- Pour plus d’informations, consultez [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) et [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le SDK Windows.  
+ Pour plus d’informations, consultez [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) et [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) dans le SDK Windows.  
   
- Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans le SDK Windows.  
+ Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
 ##  <a name="release"></a>  COleDataObject::Release  
- Appelez cette fonction pour libérer la possession de la [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objet qui a été associé précédemment à le `COleDataObject` objet.  
+ Appelez cette fonction pour libérer la possession de la [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) objet qui a été associé précédemment à le `COleDataObject` objet.  
   
 ```  
 void Release();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le `IDataObject` a été associé à la `COleDataObject` en appelant `Attach` ou `AttachClipboard` explicitement ou par l’infrastructure. Si le *bAutoRelease* paramètre de `Attach` est FALSE, le `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est chargé de libérer la `IDataObject` en appelant [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ Le `IDataObject` a été associé à la `COleDataObject` en appelant `Attach` ou `AttachClipboard` explicitement ou par l’infrastructure. Si le *bAutoRelease* paramètre de `Attach` est FALSE, le `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est chargé de libérer la `IDataObject` en appelant [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC HIERSVR](../../visual-cpp-samples.md)   

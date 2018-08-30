@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883672"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206913"
 ---
 # <a name="win32threadtraits-class"></a>Classe de Win32ThreadTraits
 Cette classe fournit la fonction de création d’un thread Windows. Utilisez cette classe si le thread ne doit pas utiliser de fonctions CRT.  
@@ -48,7 +48,7 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Statique) Appelez cette fonction pour créer un thread qui ne doit pas utiliser les fonctions CRT.|  
   
 ## <a name="remarks"></a>Notes  
- Caractéristiques de thread sont des classes qui fournissent une fonction de création d’un type particulier de thread. La fonction de création a la même signature et la même sémantique que le Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (fonction).  
+ Caractéristiques de thread sont des classes qui fournissent une fonction de création d’un type particulier de thread. La fonction de création a la même signature et la même sémantique que le Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) (fonction).  
   
  Caractéristiques de thread sont utilisés par les classes suivantes :  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out] Adresse de la variable DWORD qui, en cas de réussite, reçoit l’ID de thread du thread nouvellement créé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le handle vers le thread nouvellement créé ou NULL en cas d’échec. Appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour obtenir des informations d’erreur étendues.  
+ Retourne le handle vers le thread nouvellement créé ou NULL en cas d’échec. Appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pour obtenir des informations d’erreur étendues.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) pour plus d’informations sur les paramètres de cette fonction.  
+ Consultez [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) pour plus d’informations sur les paramètres de cette fonction.  
   
  Cette fonction appelle `CreateThread` pour créer le thread.  
   

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592771"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222741"
 ---
 # <a name="delegates-ccx"></a>Délégués (C++/CX)
 Le `delegate` mot clé est utilisé pour déclarer un type référence qui est l’équivalent Windows Runtime d’un objet de fonction en C++ standard. Une déclaration delegate est similaire à une signature de fonction. Elle spécifie le type de retour et les types de paramètre que sa fonction incluse dans un wrapper doit comporter. Voici une déclaration delegate définie par l'utilisateur :  
@@ -29,7 +29,7 @@ Le `delegate` mot clé est utilisé pour déclarer un type référence qui est l
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Lorsque vous déclarez des délégués qui seront exposées aux clients sur l’interface binaire d’application Windows Runtime, utilisez [Windows::Foundation :: typedeventhandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ce délégué a des binaires stub et proxy prédéfinis qui lui permettent d'être consommé par des clients Javascript.  
+ Lorsque vous déclarez des délégués qui seront exposées aux clients sur l’interface binaire d’application Windows Runtime, utilisez [Windows::Foundation :: typedeventhandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ce délégué a des binaires stub et proxy prédéfinis qui lui permettent d'être consommé par des clients Javascript.  
   
 ## <a name="consuming-delegates"></a>Utilisation des délégués  
  Lorsque vous créez une application de plateforme Windows universelle, vous utilisez souvent un délégué en tant que le type d’événement qui expose une classe Windows Runtime. Pour s'abonner à un événement, créez une instance de son type délégué en spécifiant une fonction (ou lambda) qui correspond à la signature du délégué. Ensuite, utilisez l'opérateur `+=` pour transmettre l'objet délégué au membre d'événement dans la classe. Ce concept est appelé abonnement à l'événement. Lorsque l'instance de classe « déclenche » l'événement, votre fonction est appelée, ainsi que tous les autres gestionnaires ajoutés par votre objet ou d'autres objets.  

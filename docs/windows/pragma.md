@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f8ff470af7b7c825fb1c1dc7bf118e969a4b992
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209112"
 ---
 # <a name="pragma"></a>pragma
 
@@ -43,7 +43,7 @@ Le pragma que vous souhaitez aller dans le fichier .idl généré.
 
 ## <a name="remarks"></a>Notes
 
-Le **pragma** attribut C++ a les mêmes fonctionnalités que le [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) attribut MIDL.
+Le **pragma** attribut C++ a les mêmes fonctionnalités que le [pragma](/windows/desktop/Midl/pragma) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

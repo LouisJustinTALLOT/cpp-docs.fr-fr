@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45975354305323f2a3a4d4f8916b901110d91441
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6d1e8ae445da8c69901c319665704e06895103d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849582"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199507"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx, classe
 Encapsule les services fournis par la feuille de propriétés d’impression de Windows.  
@@ -102,7 +102,7 @@ class CPrintDialogEx : public CCommonDialog
   
  Si vous souhaitez que votre application pour gérer l’impression sans l’intervention de l’infrastructure, vous pouvez utiliser la `CPrintDialogEx` de classe avec le constructeur fourni « tel quel », ou vous pouvez dériver votre propre classe de boîte de dialogue de `CPrintDialogEx` et écrire un constructeur pour l’adapter à vos besoins. Dans les deux cas, ces boîtes de dialogue se comportera comme des boîtes de dialogue MFC standards, car ils sont dérivés de la classe `CCommonDialog`.  
   
- Pour utiliser un `CPrintDialogEx` d’objet, commencez par créer l’objet en utilisant le `CPrintDialogEx` constructeur. Une fois la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs dans le [m_pdex](#m_pdex) structure pour initialiser les valeurs des contrôles de la boîte de dialogue. Le `m_pdex` structure est de type [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
+ Pour utiliser un `CPrintDialogEx` d’objet, commencez par créer l’objet en utilisant le `CPrintDialogEx` constructeur. Une fois la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs dans le [m_pdex](#m_pdex) structure pour initialiser les valeurs des contrôles de la boîte de dialogue. Le `m_pdex` structure est de type [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
   
  Si vous ne fournissez pas de vos propres descripteurs dans `m_pdex` pour le `hDevMode` et `hDevNames` membres, veillez à appeler la fonction Windows `GlobalFree` pour ces descripteurs lorsque vous avez terminé avec la boîte de dialogue.  
   
@@ -147,7 +147,7 @@ CPrintDialogEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwFlags*  
- Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. Par exemple, l’indicateur PD_ALLPAGES définit l’étendue d’impression par défaut à toutes les pages du document. Consultez le [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
+ Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. Par exemple, l’indicateur PD_ALLPAGES définit l’étendue d’impression par défaut à toutes les pages du document. Consultez le [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
   
  *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
@@ -156,7 +156,7 @@ CPrintDialogEx(
  Cette fonction membre construit uniquement l’objet. Utilisez le `DoModal` fonction membre pour afficher la boîte de dialogue.  
   
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC  
- Crée un contexte de périphérique (DC) à partir de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
+ Crée un contexte de périphérique (DC) à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
   
 ```  
 HDC CreatePrinterDC();
@@ -178,14 +178,14 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le INT_PTR valeur de retour est en fait un HRESULT. Consultez la section de valeurs de retour dans [PrintDlgEx](http://msdn.microsoft.com/library/windows/desktop/ms646942) dans le SDK Windows.  
+ Le INT_PTR valeur de retour est en fait un HRESULT. Consultez la section de valeurs de retour dans [PrintDlgEx](https://msdn.microsoft.com/library/windows/desktop/ms646942) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez initialiser les différentes options de la boîte de dialogue Imprimer en définissant des membres de la `m_pdex` structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
   
  Après avoir appelé `DoModal`, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations saisies par l’utilisateur dans la boîte de dialogue autres membres.  
   
- Si l’indicateur PD_RETURNDC est utilisé lors de l’appel `DoModal`, une contrôleur de domaine de l’imprimante s’affichera dans le `hDC` membre [m_pdex](#m_pdex). Ce contrôleur de domaine doit être libérée avec un appel à [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) par l’appelant de `CPrintDialogEx`.  
+ Si l’indicateur PD_RETURNDC est utilisé lors de l’appel `DoModal`, une contrôleur de domaine de l’imprimante s’affichera dans le `hDC` membre [m_pdex](#m_pdex). Ce contrôleur de domaine doit être libérée avec un appel à [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) par l’appelant de `CPrintDialogEx`.  
   
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies  
  Appelez cette fonction après l’appel `DoModal` pour récupérer le nombre de copies demandé.  
@@ -208,11 +208,11 @@ BOOL GetDefaults();
  TRUE en cas de réussite, sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Crée un contexte de périphérique (DC) à partir de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
+ Crée un contexte de périphérique (DC) à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
   
- `GetDefaults` n’affiche pas la feuille de propriétés d’impression. Au lieu de cela, il définit le `hDevNames` et `hDevMode` membres de [m_pdex](#m_pdex) pour les poignées pour le [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures qui sont initialisées pour le imprimante par défaut du système. Les deux `hDevNames` et `hDevMode` doit être NULL, ou `GetDefaults` échoue.  
+ `GetDefaults` n’affiche pas la feuille de propriétés d’impression. Au lieu de cela, il définit le `hDevNames` et `hDevMode` membres de [m_pdex](#m_pdex) pour les poignées pour le [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures qui sont initialisées pour le imprimante par défaut du système. Les deux `hDevNames` et `hDevMode` doit être NULL, ou `GetDefaults` échoue.  
   
- Si l’indicateur PD_RETURNDC est défini, cette fonction seulement retourneront `hDevNames` et `hDevMode` (situé dans `m_pdex.hDevNames` et `m_pdex.hDevMode`) à l’appelant, mais retourne également un périphérique d’impression dans `m_pdex.hDC`. Il incombe à l’appelant de supprimer le périphérique d’impression et appelez le Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) fonction sur les poignées lorsque vous avez terminé avec le `CPrintDialogEx` objet.  
+ Si l’indicateur PD_RETURNDC est défini, cette fonction seulement retourneront `hDevNames` et `hDevMode` (situé dans `m_pdex.hDevNames` et `m_pdex.hDevMode`) à l’appelant, mais retourne également un périphérique d’impression dans `m_pdex.hDC`. Il incombe à l’appelant de supprimer le périphérique d’impression et appelez le Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) fonction sur les poignées lorsque vous avez terminé avec le `CPrintDialogEx` objet.  
   
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) pour récupérer le nom de l’imprimante actuellement sélectionnée, ou après l’appel [GetDefaults](#getdefaults) pour récupérer le nom de l’imprimante par défaut.  
@@ -235,7 +235,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure de données qui contient des informations sur l’environnement d’un pilote d’impression et de l’initialisation des périphériques. Vous devez déverrouiller la mémoire consommée par cette structure avec le Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) (fonction), qui est décrit dans le SDK Windows.  
+ Le [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) structure de données qui contient des informations sur l’environnement d’un pilote d’impression et de l’initialisation des périphériques. Vous devez déverrouiller la mémoire consommée par cette structure avec le Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) (fonction), qui est décrit dans le SDK Windows.  
   
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) ou [GetDefaults](#getdefaults) pour récupérer le nom du pilote de périphérique d’imprimante définie par le système.  
@@ -271,7 +271,7 @@ HDC GetPrinterDC() const;
  Handle vers le contexte de périphérique d’imprimante.  
   
 ### <a name="remarks"></a>Notes  
- Vous devez appeler la Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) (fonction) pour supprimer le contexte de périphérique lorsque vous avez terminé l’utiliser.  
+ Vous devez appeler la Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) (fonction) pour supprimer le contexte de périphérique lorsque vous avez terminé l’utiliser.  
   
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex  
  Une structure PRINTDLGEX dont les membres stockent les caractéristiques de l’objet de la boîte de dialogue.  
@@ -281,7 +281,7 @@ PRINTDLGEX m_pdex;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Après avoir construit un `CPrintDialogEx` de l’objet, vous pouvez utiliser `m_pdex` pour définir les divers aspects de la boîte de dialogue avant d’appeler le [DoModal](#domodal) fonction membre. Pour plus d’informations sur la `m_pdex` structure, consultez [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) dans le SDK Windows.  
+ Après avoir construit un `CPrintDialogEx` de l’objet, vous pouvez utiliser `m_pdex` pour définir les divers aspects de la boîte de dialogue avant d’appeler le [DoModal](#domodal) fonction membre. Pour plus d’informations sur la `m_pdex` structure, consultez [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) dans le SDK Windows.  
   
  Si vous modifiez le `m_pdex` membre de données directement, vous remplacerez tout comportement par défaut.  
   
@@ -326,7 +326,7 @@ BOOL PrintRange() const;
  TRUE uniquement si une plage de pages dans le document sont à imprimer ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Les plages de pages spécifié peuvent être déterminés à partir [m_pdex](#m_pdex) (consultez `nPageRanges`, `nMaxPageRanges`, et `lpPageRanges` dans le [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) structure dans le SDK Windows).  
+ Les plages de pages spécifié peuvent être déterminés à partir [m_pdex](#m_pdex) (consultez `nPageRanges`, `nMaxPageRanges`, et `lpPageRanges` dans le [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) structure dans le SDK Windows).  
   
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection  
  Appelez cette fonction après l’appel `DoModal` pour déterminer s’il faut imprimer uniquement les éléments actuellement sélectionnés.  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541638"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198124"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Fonctionnalités avancées, Assistant Application MFC
 La rubrique répertorie les options de fonctionnalités supplémentaires de l’application, telles que l’aide, la prise en charge de l’impression, etc. Dans chaque section, spécifiez la prise en charge supplémentaire de ces fonctionnalités avancées.  
@@ -47,17 +47,17 @@ La rubrique répertorie les options de fonctionnalités supplémentaires de l’
  Prend en charge Windows Sockets, que vous pouvez utiliser pour écrire des applications qui communiquent sur les réseaux TCP/IP.  
   
  **Active Accessibility**  
- Ajoute la prise en charge de [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) à [CWnd](../../mfc/reference/cwnd-class.md)-les classes dérivées, qui vous permet de personnaliser l’interface utilisateur pour une meilleure interaction avec les clients d’accessibilité.  
+ Ajoute la prise en charge de [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) à [CWnd](../../mfc/reference/cwnd-class.md)-les classes dérivées, qui vous permet de personnaliser l’interface utilisateur pour une meilleure interaction avec les clients d’accessibilité.  
   
  **Manifeste des contrôles communs**  
  Activé par défaut. Génère un manifeste d'application qui active la DLL de contrôles communs incluse dans Microsoft Windows XP et des systèmes d'exploitation plus récents.  
   
  La version 6 de la DLL de contrôles communs ne met pas automatiquement à jour la version précédente des contrôles communs utilisée par vos applications existantes. Pour utiliser la version 6 de la DLL de contrôles communs, vous devez créer un manifeste d'application qui commande à votre application de charger la DLL. Cette DLL de contrôles communs prend également en charge les thèmes Windows XP.  
   
- Un manifeste d'application peut également spécifier d'autres DLL et versions demandées par votre application. Pour plus d’informations sur les manifestes d’application, consultez [Applications isolées et les assemblys côte à côte](http://msdn.microsoft.com/library/dd408052) dans le SDK Windows.  
+ Un manifeste d'application peut également spécifier d'autres DLL et versions demandées par votre application. Pour plus d’informations sur les manifestes d’application, consultez [Applications isolées et les assemblys côte à côte](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) dans le SDK Windows.  
   
  **Prise en charge le Gestionnaire de redémarrage**  
- Ajoute la prise en charge pour le [Gestionnaire de redémarrage de Windows](/windows/desktop/RstMgr/using-restart-manager). Cette vidéo montre comment utiliser le Gestionnaire de redémarrage depuis MFC : [comment faire pour utiliser le nouveau Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
+ Ajoute la prise en charge pour le [Gestionnaire de redémarrage de Windows](/windows/desktop/RstMgr/using-restart-manager). Cette vidéo montre comment utiliser le Gestionnaire de redémarrage depuis MFC : [comment faire pour utiliser le nouveau Restart Manager](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Fenêtres frames avancées**  
  |Option|Description|  

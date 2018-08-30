@@ -1,5 +1,5 @@
 ---
-title: Comparaison du Runtime d’accès concurrentiel aux autres modèles d’accès concurrentiel | Documents Microsoft
+title: Comparaison du Runtime d’accès concurrentiel aux autres modèles d’accès concurrentiel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694067"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207209"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 Ce document décrit les différences entre les fonctionnalités et les modèles de programmation du runtime d’accès concurrentiel et d’autres technologies. Il est important de connaître les avantages du runtime d’accès concurrentiel par rapport à ceux des autres modèles de programmation pour choisir la technologie la mieux adaptée aux exigences de vos applications.  
@@ -64,7 +64,7 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
  L’API Windows utilise le langage de programmation C pour exposer le modèle de programmation. Le runtime d’accès concurrentiel fournit une interface de programmation C++ qui tire parti des nouvelles fonctionnalités du langage C++. Par exemple, les fonctions lambda fournissent un mécanisme succinct de type sécurisé pour la définition des fonctions de travail parallèles. Pour plus d’informations sur les nouvelles fonctionnalités C++ utilisées par le runtime d’accès concurrentiel, consultez [Vue d’ensemble](../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ### <a name="threads-and-thread-pools"></a>Threads et pools de threads  
- Le thread est au cœur du mécanisme d’accès concurrentiel dans l’API Windows. Les threads sont généralement créés à l’aide de la fonction [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) . Les threads sont relativement faciles à créer et à utiliser, mais pour leur gestion, le système d’exploitation alloue une quantité importante de temps et d’autres ressources. Même si chaque thread est assuré d’obtenir le même temps d’exécution que les autres threads au même niveau de priorité, vous devez aussi créer des tâches suffisamment grandes pour prendre en charge le traitement induit. Pour des tâches plus petites ou plus précises, le traitement lié à l’accès concurrentiel peut annuler les avantages de l’exécution des tâches en parallèle.  
+ Le thread est au cœur du mécanisme d’accès concurrentiel dans l’API Windows. Les threads sont généralement créés à l’aide de la fonction [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) . Les threads sont relativement faciles à créer et à utiliser, mais pour leur gestion, le système d’exploitation alloue une quantité importante de temps et d’autres ressources. Même si chaque thread est assuré d’obtenir le même temps d’exécution que les autres threads au même niveau de priorité, vous devez aussi créer des tâches suffisamment grandes pour prendre en charge le traitement induit. Pour des tâches plus petites ou plus précises, le traitement lié à l’accès concurrentiel peut annuler les avantages de l’exécution des tâches en parallèle.  
   
  Les pools de threads sont un moyen de réduire le coût de gestion des threads. Les pools de threads personnalisés et l’implémentation du pool de threads fournie par l’API Windows permettent à de petits éléments de travail de s’exécuter efficacement en parallèle. Le pool de threads Windows met les éléments de travail en attente selon le principe du premier entré, premier sorti (FIFO). Chaque élément de travail est démarré dans l’ordre dans lequel il a été ajouté au pool.  
   
@@ -77,7 +77,7 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
   
  Sur Windows 7 et Windows Server 2008 R2, le système d’exploitation prend mieux en charge l’accès concurrentiel et la scalabilité. Par exemple, ces systèmes d’exploitation prennent en charge les ordinateurs qui ont plus de 64 threads matériels. Une application existante qui utilise l’API Windows doit être modifiée pour tirer parti de ces nouvelles fonctionnalités. En revanche, une application qui utilise le runtime d’accès concurrentiel utilise automatiquement ces fonctionnalités, sans nécessiter de modifications.  
   
- [base.user-mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[Haut](#top)]  
   

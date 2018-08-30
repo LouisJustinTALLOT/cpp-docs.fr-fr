@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da959abaf08644e4a2411d6946ae03218fee4bfd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 66c60db67450c3a3f46b8d434b7a8416ce85161c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211456"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset, classe
 Le `concurrent_unordered_multiset` classe est un conteneur d’accès concurrentiel sécurisé qui contrôle une séquence de longueur variable constituée d’éléments de type K. La séquence est représentée d’une façon qui permet l’accès concurrentiel sécurisé Ajout, l’accès à un élément, itérateurs et opérations de traversée d’itérateur.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  La valeur de clé à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [paire](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
+ Un [paire](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
   
 ### <a name="remarks"></a>Notes  
  Il est possible pour les insertions simultanées provoquer des clés supplémentaires à insérer après l’itérateur de début et avant l’itérateur de fin.  

@@ -9,21 +9,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205478"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Déconseiller des types et des membres (C++/CX)
-En C / c++ / CX, le fait de déconseiller des types Windows Runtime et des membres pour les producteurs et consommateurs à l’aide de la [déconseillées](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) attribut est pris en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.  
+En C / c++ / CX, le fait de déconseiller des types Windows Runtime et des membres pour les producteurs et consommateurs à l’aide de la [déconseillées](/uwp/api/windows.foundation.metadata.deprecatedattribute) attribut est pris en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.  
   
 > [!CAUTION]
->  Le [déconseillées](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) attribut doit être utilisé uniquement avec les types Windows Runtime. Pour les classes et les membres C++ standard, utilisez [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx).  
+>  Le [déconseillées](/uwp/api/windows.foundation.metadata.deprecatedattribute) attribut doit être utilisé uniquement avec les types Windows Runtime. Pour les classes C++ standard et des membres, utilisez [__declspec (deprecated)](../cpp/deprecated-cpp.md).  
   
 ### <a name="example"></a>Exemple  
- L'exemple suivant montre comment déconseiller vos propres API publiques, par exemple dans un composant Windows Runtime. Le deuxième paramètre, de type [Windows:Foundation::Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) , spécifie si l'API est déconseillée ou supprimée. Actuellement, seule la valeur DeprecationType::Deprecated est prise en charge. Le troisième paramètre de l'attribut spécifie le [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) auquel l'attribut s'applique.  
+ L'exemple suivant montre comment déconseiller vos propres API publiques, par exemple dans un composant Windows Runtime. Le deuxième paramètre, de type [Windows : Foundation :: Metadata :: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype) Spécifie si l’API est déconseillée ou supprimée. Actuellement, seule la valeur DeprecationType::Deprecated est prise en charge. Le troisième paramètre de l’attribut spécifie le [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) auquel l’attribut s’applique.  
   
 ```  
   

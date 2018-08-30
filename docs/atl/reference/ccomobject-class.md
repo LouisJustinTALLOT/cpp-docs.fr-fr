@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572065"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198658"
 ---
 # <a name="ccomobject-class"></a>CComObject, classe
 Cette classe implémente `IUnknown` pour un objet non regroupées en agrégats.  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Décrémente le décompte de références sur l’objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CComObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet non regroupées en agrégats. Toutefois, les appels à `QueryInterface`, `AddRef`, et `Release` sont déléguées à `CComObjectRootEx`.  
+ `CComObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet non regroupées en agrégats. Toutefois, les appels à `QueryInterface`, `AddRef`, et `Release` sont déléguées à `CComObjectRootEx`.  
   
  Pour plus d’informations sur l’utilisation de `CComObject`, consultez l’article [principes de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- **void\***  
- [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom***XXX*`Object`*XXX* constructeurs.  
+ <em>void\*</em>  
+ [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour la symétrie avec d’autres `CComXXXObjectXXX` constructeurs.  
   
 ### <a name="remarks"></a>Notes  
  Le destructeur décrémente il.  

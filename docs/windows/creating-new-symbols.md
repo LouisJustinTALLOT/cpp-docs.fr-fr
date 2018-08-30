@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d1911a8bd8a7f3079497ec66ea1de59aff480a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d84eef4c91442eedc830fdee836dc5d950b5eae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209588"
 ---
 # <a name="creating-new-symbols"></a>Création de nouveaux symboles
 
@@ -45,7 +45,7 @@ Quand vous commencez un nouveau projet, il peut s'avérer pratique de mapper les
 
 Si vous tapez un nom de symbole qui existe déjà, un message s'affiche en indiquant qu'un symbole portant le même nom est déjà défini. Vous ne pouvez pas définir plusieurs symboles avec le même nom. Toutefois, vous pouvez définir des symboles distincts avec la même valeur numérique. Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md) et [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, consultez [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, les chaînes affichage de ressources statiques et l’assignation de ressources aux propriétés.
 
 ## <a name="requirements"></a>Configuration requise
 

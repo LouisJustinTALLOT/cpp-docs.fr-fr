@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 710dc1929662c5f5358912433be2df605bf87964
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879807"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218179"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Ccomdynamicunkarray, classe
 Cette classe stocke un tableau de `IUnknown` des pointeurs.  
@@ -160,7 +160,7 @@ IUnknown* GetAt(int nIndex);
  Index de l'élément à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface.  
+ Un pointeur vers un [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface.  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Appelez cette méthode pour obtenir le cookie associé à une donnée `IUnknown` pointeur.  

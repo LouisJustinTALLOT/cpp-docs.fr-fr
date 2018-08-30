@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 928f4fe5200d9ea03541976664d472d9e99e1147
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ae2d5121e17a9325ec45143e7e90e7d2a211f380
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575688"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223096"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -43,7 +43,7 @@ Le texte de la chaîne d’aide.
 
 ## <a name="remarks"></a>Notes
 
-Le **helpstring** attribut C++ a les mêmes fonctionnalités que le [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) attribut MIDL.
+Le **helpstring** attribut C++ a les mêmes fonctionnalités que le [helpstring](/windows/desktop/Midl/helpstring) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

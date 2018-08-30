@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850207"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215355"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de curseur Windows.  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
  *dwStyle*  
- Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](http://msdn.microsoft.com/library/windows/desktop/bb760147), comme décrit dans le Kit de développement logiciel Windows, au contrôle.  
+ Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.  
   
  *Rect*  
- Spécifie la taille et la position du curseur. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
+ Spécifie la taille et la position du curseur. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  *pParentWnd*  
  Spécifie les fenêtre du parent du contrôle slider, généralement un `CDialog`. Il ne doit pas être NULL.  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
   
  *dwStyle*  
- Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](http://msdn.microsoft.com/library/windows/desktop/bb760147), comme décrit dans le Kit de développement logiciel Windows, au contrôle.  
+ Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.  
   
  *Rect*  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.  
+ Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.  
   
  *pParentWnd*  
  Pointeur vers la fenêtre qui est le parent du contrôle.  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre associée à l’emplacement spécifié par *fLocation*, ou NULL si aucune fenêtre associée n’existe à cet emplacement.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), comme décrit dans le SDK Windows. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), comme décrit dans le SDK Windows. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Récupère la taille et la position du rectangle englobant pour les canaux d’un contrôle slider.  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  La longueur du curseur, en pixels.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode envoie le [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) message, qui est décrite dans le SDK Windows.  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Récupère la taille et la position du rectangle englobant pour le slider (curseur de défilement) d’un contrôle slider.  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  Un pointeur vers un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) de l’objet, ou NULL si l’info-bulles ne sont pas en cours d’utilisation. Si le contrôle slider n’utilise pas le style TBS_TOOLTIPS, la valeur de retour est NULL.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), comme décrit dans le SDK Windows. Notez que cette fonction membre retourne un `CToolTipCtrl` objet au lieu d’un handle à un contrôle.  
+ Cette fonction membre implémente le comportement du message Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), comme décrit dans le SDK Windows. Notez que cette fonction membre retourne un `CToolTipCtrl` objet au lieu d’un handle à un contrôle.  
   
- Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) dans le SDK Windows.  
+ Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Assigne une fenêtre en tant que la fenêtre associée pour un contrôle slider.  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui a été précédemment affecté au contrôle de curseur à cet emplacement.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), comme décrit dans le SDK Windows. Notez que cette fonction membre utilise des pointeurs vers `CWnd` objets, plutôt que des handles de fenêtre pour sa valeur de retour et le paramètre.  
+ Cette fonction membre implémente le comportement du message Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), comme décrit dans le SDK Windows. Notez que cette fonction membre utilise des pointeurs vers `CWnd` objets, plutôt que des handles de fenêtre pour sa valeur de retour et le paramètre.  
   
- Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) dans le SDK Windows.  
+ Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Définit la taille de la ligne pour un contrôle slider.  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in] *nLength*|Longueur du curseur, en pixels.|  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode exige que le contrôle de barre de suivi [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) style.  
+ Cette méthode exige que le contrôle de barre de suivi [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) style.  
   
- Cette méthode envoie le [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) message, qui est décrite dans le SDK Windows.  
+ Cette méthode envoie le [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) message, qui est décrite dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  L’exemple de code suivant définit la variable, `m_sliderCtrl`, qui est utilisé pour accéder au contrôle de barre de suivi actuel. L’exemple définit également une variable, `thumbLength`, qui est utilisé pour stocker la longueur par défaut du composant de curseur de défilement du contrôle trackbar. Ces variables sont utilisées dans l’exemple suivant.  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Paramètres  
  *%nemplacement*  
- Valeur représentant l’emplacement auquel afficher le contrôle d’info-bulle. Pour obtenir la liste des valeurs possibles, consultez le message Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), comme décrit dans le SDK Windows.  
+ Valeur représentant l’emplacement auquel afficher le contrôle d’info-bulle. Pour obtenir la liste des valeurs possibles, consultez le message Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), comme décrit dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui représente l’emplacement précédent du contrôle d’info-bulle. La valeur de retour correspond à l’une des valeurs possibles pour *%nemplacement*.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 TBM_SETTIPSIDE, comme décrit dans le SDK Windows. Les contrôles de curseur qui utilisent le style TBS_TOOLTIPS affichent des info-bulles. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 TBM_SETTIPSIDE, comme décrit dans le SDK Windows. Les contrôles de curseur qui utilisent le style TBS_TOOLTIPS affichent des info-bulles. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Affecte un contrôle d’info-bulle à un contrôle slider.  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Un pointeur vers un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objet contenant les info-bulles à utiliser avec le contrôle slider.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement du message Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), comme décrit dans le SDK Windows. Création d’un contrôle slider avec le style TBS_TOOLTIPS, il crée un contrôle d’info-bulle par défaut qui s’affiche à côté du curseur, en affichant la position actuelle du curseur. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) dans le SDK Windows.  
+ Cette fonction membre implémente le comportement du message Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), comme décrit dans le SDK Windows. Création d’un contrôle slider avec le style TBS_TOOLTIPS, il crée un contrôle d’info-bulle par défaut qui s’affiche à côté du curseur, en affichant la position actuelle du curseur. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [MFC exemple CMNCTRL2](../../visual-cpp-samples.md)   

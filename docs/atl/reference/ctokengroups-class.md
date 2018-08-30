@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6c186302c1c59e73e63e20ae29aa665f600fe23
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 72fd8530a05bb0b61af266ca78a1c2fa6716ee6b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880331"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206614"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups, classe
 Cette classe est un wrapper pour le `TOKEN_GROUPS` structure.  
@@ -75,11 +75,11 @@ class CTokenGroups
 |[CTokenGroups::operator =](#operator_eq)|Opérateur d'assignation.|  
   
 ## <a name="remarks"></a>Notes  
- Un [jeton d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows.  
+ Un [jeton d’accès](/windows/desktop/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows.  
   
- Le `CTokenGroups` classe est un wrapper pour le [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure, contenant des informations sur les identificateurs de sécurité (SID de) groupe dans un jeton d’accès.  
+ Le `CTokenGroups` classe est un wrapper pour le [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure, contenant des informations sur les identificateurs de sécurité (SID de) groupe dans un jeton d’accès.  
   
- Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le SDK Windows.  
+ Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
@@ -100,7 +100,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
  Les attributs à associer à la `CSid` objet.  
   
  *rTokenGroups*  
- Un [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure.  
+ Un [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure.  
   
 ### <a name="remarks"></a>Notes  
  Ces méthodes ajoutent un ou plusieurs `CSid` objets et leurs attributs associés à la `CTokenGroups` objet.  
@@ -116,7 +116,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *terme de droite*  
- Le `CTokenGroups` objet ou [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure permettant de construire le `CTokenGroups` objet.  
+ Le `CTokenGroups` objet ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure permettant de construire le `CTokenGroups` objet.  
   
 ### <a name="remarks"></a>Notes  
  Le `CTokenGroups` objet peut éventuellement être créé à l’aide un `TOKEN_GROUPS` précédemment définie ou structure `CTokenGroups` objet.  
@@ -180,7 +180,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Récupère un pointeur vers le [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure appartenant à la `CTokenGroups` objet de jeton d’accès.  
+ Récupère un pointeur vers le [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure appartenant à la `CTokenGroups` objet de jeton d’accès.  
   
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes  
  Récupère le `CSid` objets et (éventuellement) les attributs appartenant à la `CTokenGroups` objet.  
@@ -233,7 +233,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *terme de droite*  
- Le `CTokenGroups` objet ou [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure à affecter à la `CTokenGroups` objet.  
+ Le `CTokenGroups` objet ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure à affecter à la `CTokenGroups` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la mise à jour `CTokenGroups` objet.  
@@ -246,7 +246,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Convertit une valeur en un pointeur vers le [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure.  
+ Convertit une valeur en un pointeur vers le [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de sécurité](../../visual-cpp-samples.md)   

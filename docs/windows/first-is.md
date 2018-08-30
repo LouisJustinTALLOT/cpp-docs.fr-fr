@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ef8cfc2a8485a45ac3156a277617c3eacdd8a5b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9017ffe6e254aa96700beff76cd3ea62f14bfb9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217481"
 ---
 # <a name="firstis"></a>first_is
 
@@ -43,7 +43,7 @@ Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont 
 
 ## <a name="remarks"></a>Notes
 
-Le **first_is** attribut C++ a les mêmes fonctionnalités que le [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) attribut MIDL.
+Le **first_is** attribut C++ a les mêmes fonctionnalités que le [first_is](/windows/desktop/Midl/first-is) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 691a2adf5269be0047ee6eee474406b036cad200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572066"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222593"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Fonctionnement de la génération de manifestes pour les programmes C/C++
-Un [manifeste](http://msdn.microsoft.com/library/aa375365) est un document XML qui peut être un fichier XML externe ou une ressource incorporé dans une application ou un assembly. Le manifeste d’un [application isolée](http://msdn.microsoft.com/library/aa375190) est utilisé pour gérer les noms et les versions des assemblys côte à côte partagés auxquels l’application doit se lier au moment de l’exécution. Le manifeste d’un assembly côte à côte spécifie ses dépendances sur les noms, les versions, les ressources et les autres assemblys.  
+Un [manifeste](https://msdn.microsoft.com/library/aa375365) est un document XML qui peut être un fichier XML externe ou une ressource incorporé dans une application ou un assembly. Le manifeste d’un [application isolée](/windows/desktop/SbsCs/isolated-applications) est utilisé pour gérer les noms et les versions des assemblys côte à côte partagés auxquels l’application doit se lier au moment de l’exécution. Le manifeste d’un assembly côte à côte spécifie ses dépendances sur les noms, les versions, les ressources et les autres assemblys.  
   
  Il existe deux façons de créer un manifeste pour une application isolée ou un assembly côte à côte. Tout d’abord, l’auteur de l’assembly peut créer manuellement un fichier de manifeste suivant les règles et conventions de dénomination. Vous pouvez également, si un programme dépend uniquement des assemblys Visual C++ telles que la bibliothèque CRT, MFC, ATL ou d’autres, un manifeste peut être généré automatiquement par l’éditeur de liens.  
   

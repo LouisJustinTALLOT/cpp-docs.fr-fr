@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338365"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216701"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les macros suivantes :  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  Le type de la fonction doit être `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Notes  
- Messages définis par l’utilisateur sont ceux qui ne sont pas les messages Windows WM_MESSAGE standard. Lorsque vous sélectionnez un ID de message, vous devez utiliser des valeurs dans la plage de WM_USER (0 x 0400) 0x7FFF ou WM_APP (0 x 8000) pour 0xBFFF. Pour plus d’informations sur l’ID de message, consultez [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ Messages définis par l’utilisateur sont ceux qui ne sont pas les messages Windows WM_MESSAGE standard. Lorsque vous sélectionnez un ID de message, vous devez utiliser des valeurs dans la plage de WM_USER (0 x 0400) 0x7FFF ou WM_APP (0 x 8000) pour 0xBFFF. Pour plus d’informations sur l’ID de message, consultez [WM_APP](/windows/desktop/winmsg/wm-app).  
   
  Il doit y avoir exactement une instruction de macro ON_MESSAGE dans votre table des messages pour tous les messages définis par l’utilisateur qui doivent être mappé à une fonction de gestionnaire de messages.  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **En-tête :** afxmsg_.h  
   
 ### <a name="see-also"></a>Voir aussi  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Gestionnaires définis par l’utilisateur](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

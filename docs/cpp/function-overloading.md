@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221438"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ils sont appelés *surchargé* fonctions. Les fonctions surchargées permettent de fournir une sémantique différente pour une fonction, selon les types et le nombre d’arguments. 
@@ -43,8 +43,9 @@ Vous pouvez surcharger des fonctions membres et des fonctions non-membres. Le ta
 |**const** ou **volatile**|Oui, lorsqu’il est appliqué à la fonction entière|
 |[ref-qualifier](#ref-qualifier)|Oui|  
   
-## <a name="example"></a>Exemple  
- L'exemple suivant illustre comment utiliser la surcharge.  
+## <a name="example"></a>Exemple
+
+L'exemple suivant illustre comment utiliser la surcharge.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Correspondance exacte. Une correspondance exacte entre les types avec lesquels la fonction est appelée et les types déclarés dans le prototype de fonction est toujours la meilleure correspondance. Les séquences de conversions ordinaires sont classées comme correspondances exactes. Toutefois, les séquences qui n'effectuent aucune de ces conversions sont considérées meilleures que les séquences qui convertissent :  
   
-    -   À partir du pointeur, vers **const** (`type` **\*** à **const** `type` **\*** ).  
+    -   À partir du pointeur, vers **const** (`type` <strong>\*</strong> à **const** `type` <strong>\*</strong> ).  
   
-    -   À partir du pointeur, vers **volatile** (`type` **\*** à **volatile** `type` **\***).  
+    -   À partir du pointeur, vers **volatile** (`type` <strong>\*</strong> à **volatile** `type` <strong>\*</strong>).  
   
     -   À partir de la référence, vers la référence à **const** (`type` **&** à **const** `type` **&**).  
   

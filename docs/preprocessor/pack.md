@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207490"
 ---
 # <a name="pack"></a>pack
 Spécifie l'alignement de compression pour des membres de structure, d'union et de classe.  
@@ -38,7 +38,7 @@ Spécifie l'alignement de compression pour des membres de structure, d'union et 
 
 La compression d'une classe consiste à placer ses membres directement les uns après les autres dans la mémoire, ce qui peut signifier que certains ou l'ensemble des membres peuvent être alignés sur une limite inférieure à l'alignement par défaut de l'architecture cible. **Pack** donne le contrôle au niveau de la déclaration de données. Ceci est différent de l’option du compilateur [/Zp](../build/reference/zp-struct-member-alignment.md), qui fournit uniquement un contrôle au niveau du module. **Pack** prend effet à la première **struct**, **union**, ou **classe** déclaration après le pragma. **Pack** n’a aucun effet sur les définitions. Appel **pack** sans arguments affecte *n* à la valeur définie dans l’option de compilateur `/Zp`. Si l'option du compilateur n'est pas définie, la valeur par défaut est 8.  
   
-Si vous modifiez l'alignement d'une structure, il est possible qu'elle n'utilise pas autant d'espace en mémoire, mais vous risquez de constater une baisse des performances ou même d'obtenir une exception générée par le matériel relative au non-alignement de l'accès.  Vous pouvez modifier ce comportement d’exception à l’aide de [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Si vous modifiez l'alignement d'une structure, il est possible qu'elle n'utilise pas autant d'espace en mémoire, mais vous risquez de constater une baisse des performances ou même d'obtenir une exception générée par le matériel relative au non-alignement de l'accès.  Vous pouvez modifier ce comportement d’exception à l’aide de [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *afficher* (facultatif)  
 Affiche la valeur d'octet actuelle pour l'alignement de compression. La valeur est affichée par un message d'avertissement.  

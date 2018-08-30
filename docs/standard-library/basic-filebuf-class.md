@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222719"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf, classe
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem* l’élément de base de la mémoire tampon de fichier.
+*Elem*<br/>
+ Élément de base de la mémoire tampon de fichier.
 
-*TR* les caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits` <  `Elem`>).
+*Tr*<br/>
+ Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Notes
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filename* le nom du fichier à ouvrir.
+*_Filename*<br/>
+ Nom du fichier à ouvrir.
 
-*Mode _De* une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De*<br/>
+ Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+ Le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* une référence rvalue à un [basic_filebuf](../standard-library/basic-filebuf-class.md) objet.
+*right*<br/>
+ Référence rvalue à un objet [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* le caractère à insérer dans la mémoire tampon ou `traits_type::eof`.
+*_Meta*<br/>
+ Caractère à insérer dans la mémoire tampon ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -484,7 +491,7 @@ Si la fonction ne peut pas réussir, elle retourne `traits_type::eof`. Sinon, el
 
 ### <a name="remarks"></a>Notes
 
-Si _ * Meta ***! = traits_type ::**[eof](../standard-library/char-traits-struct.md#eof), la fonction membre virtuelle protégée s’efforce d’insérer l’élément **ch = traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
+Si *_Meta* **! = traits_type ::**[eof](../standard-library/char-traits-struct.md#eof), la fonction membre virtuelle protégée s’efforce d’insérer l’élément **ch = traits_type ::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
 
 - Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* le caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
+*_Meta*<br/>
+ Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* la position à rechercher par rapport à *_Way*.
+*_Off*<br/>
+ La position à rechercher par rapport à *_Way*.
 
-*_Way* le point de départ pour les opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
+*_Way*<br/>
+ Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*_Which* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+ Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp* la position à rechercher.
+*_Sp*<br/>
+ Position à rechercher.
 
-*_Which* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+ Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Buffer* pointeur vers une mémoire tampon.
+*_Buffer*<br/>
+ Pointeur vers une mémoire tampon.
 
-*nombre* taille de la mémoire tampon.
+*count*<br/>
+ Taille de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -616,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un `lvalue` référence à un autre `basic_filebuf`.
+*right*<br/>
+ Référence `lvalue` à un autre `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

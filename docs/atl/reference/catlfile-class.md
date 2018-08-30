@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885271"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220647"
 ---
 # <a name="catlfile-class"></a>Catlfile, classe
 Cette classe fournit un wrapper fin autour de la Windows API de gestion de fichiers.  
@@ -132,7 +132,7 @@ HRESULT Create(
  Nom du fichier.  
   
  *dwDesiredAccess*  
- L’accès désiré. Consultez *dwDesiredAccess* dans [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) dans le SDK Windows.  
+ L’accès désiré. Consultez *dwDesiredAccess* dans [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) dans le SDK Windows.  
   
  *dwShareMode*  
  Le mode de partage. Consultez *dwShareMode* dans `CreateFile`.  
@@ -153,7 +153,7 @@ HRESULT Create(
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) pour créer ou ouvrir le fichier.  
+ Appels [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) pour créer ou ouvrir le fichier.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  Appelez cette méthode pour effacer les mémoires tampons pour le fichier et de provoquer de toutes les données mises en mémoire tampon à écrire dans le fichier.  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) pour vider les données en mémoire tampon dans le fichier.  
+ Appels [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) pour vider les données en mémoire tampon dans le fichier.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Appelez cette méthode pour obtenir les résultats d’une opération avec chevauchement sur le fichier.  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Paramètres  
  *pOverlapped*  
- La structure avec chevauchement. Consultez *lpOverlapped* dans [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) dans le SDK Windows.  
+ La structure avec chevauchement. Consultez *lpOverlapped* dans [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) dans le SDK Windows.  
   
  *dwBytesTransferred*  
  Les octets transférés. Consultez *lpNumberOfBytesTransferred* dans `GetOverlappedResult`.  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) pour obtenir les résultats d’une opération avec chevauchement sur le fichier.  
+ Appels [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) pour obtenir les résultats d’une opération avec chevauchement sur le fichier.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Appelez cette méthode pour obtenir la position actuelle du pointeur de fichier.  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) pour obtenir la position actuelle du pointeur de fichier.  
+ Appels [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) pour obtenir la position actuelle du pointeur de fichier.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Appelez cette méthode pour obtenir la taille en octets du fichier.  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) pour obtenir la taille en octets du fichier.  
+ Appels [GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) pour obtenir la taille en octets du fichier.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Appelez cette méthode pour le verrouillage d’une région dans le fichier pour empêcher les autres processus d’y accéder.  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [fichier de verrouillage](http://msdn.microsoft.com/library/windows/desktop/aa365202) verrouillage d’une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauche n’est autorisées. Lorsque vous déverrouillez une région, à l’aide [CAtlFile::UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région qui a été précédemment verrouillée. `LockRange` ne fusionne pas les zones adjacentes ; Si les deux zones verrouillées sont adjacentes, vous devez déverrouiller chacune séparément.  
+ Appels [fichier de verrouillage](/windows/desktop/api/fileapi/nf-fileapi-lockfile) verrouillage d’une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauche n’est autorisées. Lorsque vous déverrouillez une région, à l’aide [CAtlFile::UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région qui a été précédemment verrouillée. `LockRange` ne fusionne pas les zones adjacentes ; Si les deux zones verrouillées sont adjacentes, vous devez déverrouiller chacune séparément.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Pointeur vers un `CAtlTransactionManager` objet.  
@@ -293,16 +293,16 @@ HRESULT Read(
  Nombre d'octets lus.  
   
  *pOverlapped*  
- La structure avec chevauchement. Consultez *lpOverlapped* dans [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) dans le SDK Windows.  
+ La structure avec chevauchement. Consultez *lpOverlapped* dans [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) dans le SDK Windows.  
   
  *pfnCompletionRoutine*  
- La routine d’exécution. Consultez *lpCompletionRoutine* dans [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) dans le SDK Windows.  
+ La routine d’exécution. Consultez *lpCompletionRoutine* dans [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Les trois premiers formulaires appellent [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), le dernier [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) pour lire les données à partir du fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
+ Les trois premiers formulaires appellent [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), le dernier [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) pour lire les données à partir du fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  Appelez cette méthode pour déplacer le pointeur de fichier du fichier.  
@@ -324,7 +324,7 @@ HRESULT Seek(
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) pour déplacer le pointeur de fichier.  
+ Appels [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) pour déplacer le pointeur de fichier.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  Appelez cette méthode pour définir la taille du fichier.  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) et [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) pour définir la taille du fichier. En retour, le pointeur de fichier est placé à la fin du fichier.  
+ Appels [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) et [SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) pour définir la taille du fichier. En retour, le pointeur de fichier est placé à la fin du fichier.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Appelez cette méthode pour déverrouiller une région du fichier.  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) pour déverrouiller une région du fichier.  
+ Appels [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) pour déverrouiller une région du fichier.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  Appelez cette méthode pour écrire des données dans le fichier en commençant à la position indiquée par le pointeur de fichier.  
@@ -392,10 +392,10 @@ HRESULT Write(
  Le nombre d’octets à transférer à partir de la mémoire tampon.  
   
  *pOverlapped*  
- La structure avec chevauchement. Consultez *lpOverlapped* dans [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) dans le SDK Windows.  
+ La structure avec chevauchement. Consultez *lpOverlapped* dans [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) dans le SDK Windows.  
   
  *pfnCompletionRoutine*  
- La routine d’exécution. Consultez *lpCompletionRoutine* dans [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) dans le SDK Windows.  
+ La routine d’exécution. Consultez *lpCompletionRoutine* dans [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) dans le SDK Windows.  
   
  *pnBytesWritten*  
  Octets écrits.  
@@ -404,7 +404,7 @@ HRESULT Write(
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Les trois premiers formulaires appellent [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), les appels dernière [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) pour écrire des données dans le fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
+ Les trois premiers formulaires appellent [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), les appels dernière [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) pour écrire des données dans le fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de texte défilant](../../visual-cpp-samples.md)   

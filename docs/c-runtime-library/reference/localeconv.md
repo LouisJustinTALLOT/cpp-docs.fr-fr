@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7c5f66975d8d9904d1a4a8f2d26d4fe98ecfdd40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223023"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -79,7 +79,7 @@ n_sep_by_space|Défini sur 1 si le symbole monétaire est séparé par un espace
 p_sign_posn|Position du signe positif dans les quantités monétaires mises en forme non négatives.
 n_sign_posn|Position du signe positif dans les quantités monétaires mises en forme négatives.
 
-Sauf en tant que membres spécifiés, de la **lconv** structure ayant `char *` et `wchar_t *` versions sont des pointeurs vers des chaînes. Un d’eux est égal à **» «** (ou **L » «** pour **wchar_t \*** ) est de longueur nulle ou non pris en charge dans les paramètres régionaux actuels. Notez que **decimal_point** et **_W_decimal_point** sont toujours pris en charge et de longueur différente de zéro.
+Sauf en tant que membres spécifiés, de la **lconv** structure ayant `char *` et `wchar_t *` versions sont des pointeurs vers des chaînes. Un d’eux est égal à **» «** (ou **L » «** pour **wchar_t** <strong>\*</strong>) est de longueur nulle ou pas pris en charge en cours paramètres régionaux. Notez que **decimal_point** et **_W_decimal_point** sont toujours pris en charge et de longueur différente de zéro.
 
 Le **char** membres de la structure sont petits nombres non négatifs, et non des caractères. Si l’un d’eux est égal à **CHAR_MAX**, il n’est pas pris en charge dans les paramètres régionaux actuels.
 

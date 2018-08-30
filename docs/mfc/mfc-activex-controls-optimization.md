@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028172"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220504"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
 Cet article explique les techniques que vous pouvez utiliser pour optimiser vos contrôles ActiveX pour de meilleures performances.  
@@ -53,7 +53,7 @@ Cet article explique les techniques que vous pouvez utiliser pour optimiser vos 
 |**Notifications du pointeur de cas d’inactivité de la souris** case à cocher|Sélectionner|[Prise en charge de l’interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Code de dessin optimisé** case à cocher|Sélectionner|[Optimisation du contrôle de dessin](../mfc/optimizing-control-drawing.md)|  
   
- Pour obtenir des informations détaillées sur les fonctions membres qui implémentent ces optimisations, consultez [COleControl](../mfc/reference/colecontrol-class.md). Les fonctions membres sont répertoriées par utilisation, telles que [opérations sans fenêtre](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) et [fonctions de gestion de pointeur inactif](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Pour obtenir des informations détaillées sur les fonctions membres qui implémentent ces optimisations, consultez [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Pour plus d'informations, voir :  
   

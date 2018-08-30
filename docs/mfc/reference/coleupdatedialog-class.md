@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9f522635c170af784b5bd9f2bb7011fd51e345b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852105"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211606"
 ---
 # <a name="coleupdatedialog-class"></a>Coleupdatedialog, classe
 Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.  
@@ -114,7 +114,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, si aucun élément lié ou incorporé dans le document actif avez besoin de la mise à jour.  
   
-- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) (fonction) dans le SDK Windows.  
+- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) (fonction) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Tous les liens et/ou des incorporations sont mis à jour, sauf si l’utilisateur sélectionne le bouton Annuler.  

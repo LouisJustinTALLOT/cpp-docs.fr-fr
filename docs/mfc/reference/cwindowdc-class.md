@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539090"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212519"
 ---
 # <a name="cwindowdc-class"></a>Cwindowdc, classe
 Dérivée de `CDC`.  
@@ -77,7 +77,7 @@ explicit CWindowDC(CWnd* pWnd);
  La fenêtre dont la zone cliente accède à l’objet de contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
- Le constructeur appelle la fonction Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+ Le constructeur appelle la fonction Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).  
   
  Une exception (de type `CResourceException`) est levée si le Windows `GetWindowDC` appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
   

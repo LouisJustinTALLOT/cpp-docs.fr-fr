@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953419"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208187"
 ---
 # <a name="queryinterface"></a>QueryInterface
-Bien qu’il existe des mécanismes par lesquels un objet peut exprimer la fonctionnalité qu’elle fournit statiquement (avant son instanciation), le mécanisme fondamental de COM consiste à utiliser le `IUnknown` méthode appelée [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+Bien qu’il existe des mécanismes par lesquels un objet peut exprimer la fonctionnalité qu’elle fournit statiquement (avant son instanciation), le mécanisme fondamental de COM consiste à utiliser le `IUnknown` méthode appelée [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
   
  Chaque interface est dérivée de `IUnknown`, chaque interface a une implémentation de `QueryInterface`. Quel que soit l’implémentation, cette méthode interroge un objet à l’aide de l’IID de l’interface à laquelle l’appelant veut un pointeur. Si l’objet prend en charge cette interface, `QueryInterface` récupère un pointeur vers l’interface, tout en appelant également `AddRef`. Sinon, elle retourne le code d’erreur E_NOINTERFACE.  
   
@@ -34,5 +34,5 @@ Bien qu’il existe des mécanismes par lesquels un objet peut exprimer la fonct
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction à COM](../atl/introduction-to-com.md)   
- [QueryInterface : Navigation dans un objet](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [QueryInterface : Navigation dans un objet](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

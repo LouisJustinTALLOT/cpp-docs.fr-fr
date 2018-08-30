@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404640"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209601"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
@@ -96,7 +96,7 @@ Lorsqu’il est utilisé avec des fichiers, le **_access** fonction détermine s
 |04|Lecture seule|
 |06|Opérations de lecture et d’écriture|
 
-Cette fonction vérifie uniquement si le fichier et le répertoire sont en lecture seule ou non ; elle ne vérifie pas les paramètres de sécurité du système de fichiers. Pour cela, vous avez besoin d’un jeton d’accès. Pour plus d’informations sur la sécurité du système de fichiers, consultez [Access Tokens](http://msdn.microsoft.com/library/windows/desktop/aa374909) (Jetons d’accès). Il existe une classe ATL pour fournir cette fonctionnalité ; consultez [CAccessToken, classe](../../atl/reference/caccesstoken-class.md).
+Cette fonction vérifie uniquement si le fichier et le répertoire sont en lecture seule ou non ; elle ne vérifie pas les paramètres de sécurité du système de fichiers. Pour cela, vous avez besoin d’un jeton d’accès. Pour plus d’informations sur la sécurité du système de fichiers, consultez [Access Tokens](/windows/desktop/SecAuthZ/access-tokens) (Jetons d’accès). Il existe une classe ATL pour fournir cette fonctionnalité ; consultez [CAccessToken, classe](../../atl/reference/caccesstoken-class.md).
 
 **_waccess** est une version à caractères larges de **_access**; le *chemin d’accès* l’argument de **_waccess** est une chaîne de caractères larges. **_waccess** et **_access** se comportent de façon identique dans le cas contraire.
 

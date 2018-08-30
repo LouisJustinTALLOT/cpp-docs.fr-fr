@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d549d3440de902bf9888fa399e5636b93001ca29
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964884"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204608"
 ---
 # <a name="set-class"></a>set, classe
 
@@ -118,13 +118,16 @@ class set
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé* type de données de l’élément à stocker dans le jeu.
+*Key*<br/>
+ Type de données d'élément à stocker dans la classe set.
 
-*Caractéristiques* le type qui fournit un objet de fonction qui peut comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif dans le jeu. Cet argument est facultatif, et le prédicat binaire **less** *\<Key>* est la valeur par défaut.
+*Caractéristiques*<br/>
+ Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe set. Cet argument est facultatif, et le prédicat binaire **less** *\<Key>* est la valeur par défaut.
 
 Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire de l’ensemble. Cet argument est facultatif et la valeur par défaut est **allocateur ***\<clé >.*
+*Allocateur*<br/>
+ Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe set. Cet argument est facultatif et sa valeur par défaut est `allocator<Key>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -484,7 +487,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé des éléments à mettre en correspondance à partir de l’ensemble.
+*key*<br/>
+ Clé des éléments à mettre en correspondance à partir de l'ensemble.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -929,7 +933,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément à partir du jeu recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1013,13 +1018,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* Position de l’élément à supprimer.
+*Where*<br/>
+ Position de l’élément à supprimer.
 
-*Première* Position du premier élément à supprimer.
+*Premier*<br/>
+ Position du premier élément à supprimer.
 
-*Dernière* Position juste après le dernier élément à supprimer.
+*Dernière*<br/>
+ Position juste après le dernier élément à supprimer.
 
-*Clé* la valeur de clé des éléments à supprimer.
+*Key*<br/>
+ Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1121,7 +1130,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé qui doit correspondre à la clé de tri d’un élément à partir du jeu recherché.
+*key*<br/>
+ Valeur de clé qui doit correspondre à la clé de tri d'un élément de l'ensemble dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1584,7 +1594,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément à partir du jeu recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2203,7 +2214,8 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’argument set qui fournit les éléments à échanger avec le jeu de cibles.
+*right*<br/>
+ Argument set qui fournit les éléments à échanger avec le set cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2271,7 +2283,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la clé d’argument à comparer avec la clé de tri d’un élément à partir du jeu recherché.
+*key*<br/>
+ Clé d’argument à comparer à la clé de tri d’un élément du set dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 

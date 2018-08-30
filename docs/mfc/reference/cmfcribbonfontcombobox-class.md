@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216472"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox, classe
 Implémente une zone de liste déroulante contenant une liste de polices. Vous placez la zone de liste déroulante sur un panneau de ruban.  
@@ -144,9 +144,9 @@ CMFCRibbonFontComboBox(
  Spécifie la largeur, en pixels, de la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations sur les éventuelles *nFontType* les valeurs de paramètre, consultez [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du SDK Windows.  
+ Pour plus d’informations sur les éventuelles *nFontType* les valeurs de paramètre, consultez [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du SDK Windows.  
   
- Pour plus d’informations sur les jeux de caractères valide qui peut être affecté à *nCharSet*et les valeurs valides qui peuvent être affectés à *nPitchAndFamily*, consultez [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) dans le Documentation du Kit de développement logiciel Windows.  
+ Pour plus d’informations sur les jeux de caractères valide qui peut être affecté à *nCharSet*et les valeurs valides qui peuvent être affectés à *nPitchAndFamily*, consultez [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) dans le Documentation du Kit de développement logiciel Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  

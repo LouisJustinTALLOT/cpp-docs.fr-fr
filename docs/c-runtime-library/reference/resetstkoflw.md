@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08779311cc6a2ff0df622d69cf94ced07e67e9e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31d3f647d2d72cf96c9b935c33376aae698464c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412411"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207574"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -60,9 +60,9 @@ Valeur différente de zéro si la fonction réussit, zéro si elle échoue.
 
 ## <a name="remarks"></a>Notes
 
-Le **_resetstkoflw** fonction récupère à partir d’un débordement de pile, ce qui permet un programme à continuer au lieu d’échouer avec une erreur fatale. Si le **_resetstkoflw** fonction n’est pas appelée, il n’y aucune page de garde après la précédente exception. La prochaine fois qu’un dépassement de capacité de la pile se produit, aucune exception n’est déclarée et le processus s’achève sans avertissement.
+Le **_resetstkoflw** fonction récupère à partir d’un débordement de pile, ce qui permet un programme à continuer au lieu d’échouer avec une erreur d’exception fatale. Si le **_resetstkoflw** fonction n’est pas appelée, il n’existe aucune page de garde après l’exception précédente. La prochaine fois qu’un dépassement de capacité de la pile se produit, aucune exception n’est déclarée et le processus s’achève sans avertissement.
 
-Si un thread au sein d’une application provoque une exception **EXCEPTION_STACK_OVERFLOW**, cela signifie que le thread a quitté sa pile dans un état endommagé. Cette exception se distingue d’autres exceptions, telles que **EXCEPTION_ACCESS_VIOLATION** ou **EXCEPTION_INT_DIVIDE_BY_ZERO**, où la pile n’est pas endommagée. La pile est définie sur une valeur arbitrairement petite lorsque le programme est chargé pour la première fois. La pile se développe ensuite à la demande pour répondre aux besoins du thread. Cela est implémenté en plaçant une page avec un accès par PAGE_GUARD à la fin de la pile actuelle. Pour plus d’informations, consultez [Création de pages de garde](http://msdn.microsoft.com/library/windows/desktop/aa366549).
+Si un thread au sein d’une application provoque une exception **EXCEPTION_STACK_OVERFLOW**, cela signifie que le thread a quitté sa pile dans un état endommagé. Cette exception se distingue d’autres exceptions, telles que **EXCEPTION_ACCESS_VIOLATION** ou **EXCEPTION_INT_DIVIDE_BY_ZERO**, où la pile n’est pas endommagée. La pile est définie sur une valeur arbitrairement petite lorsque le programme est chargé pour la première fois. La pile se développe ensuite à la demande pour répondre aux besoins du thread. Cela est implémenté en plaçant une page avec un accès par PAGE_GUARD à la fin de la pile actuelle. Pour plus d’informations, consultez [Création de pages de garde](/windows/desktop/Memory/creating-guard-pages).
 
 Lorsque le code fait pointer le pointeur de pile vers une adresse sur cette page, une exception se produit et le système exécute les trois actions suivantes :
 
@@ -84,7 +84,7 @@ Lorsque cette taille de pile maximale est dépassée, le système exécute les t
 
 Notez que, à ce stade, la pile ne contient plus de page de garde. La prochaine fois que le programme augmentera la pile jusqu'à la fin, où devra se trouver une page de garde, il écrira au-delà de la fin de la pile et provoquera une violation d'accès.
 
-Appelez **_resetstkoflw** pour restaurer la page de garde chaque fois que la récupération est effectuée après une exception de dépassement de capacité de pile. Cette fonction peut être appelée à partir de dans le corps principal d’un **__except** bloc ou à l’extérieur une **__except** bloc. Toutefois, il existe quelques restrictions sur son utilisation. **_resetstkoflw** ne doit jamais être appelée à partir de :
+Appelez **_resetstkoflw** pour restaurer la page de garde chaque fois que la récupération est effectuée après une exception de dépassement de capacité de pile. Cette fonction peut être appelée à partir de dans le corps principal d’un **__except** bloc ou de l’extérieur un **__except** bloc. Toutefois, il existe quelques restrictions sur son utilisation. **_resetstkoflw** ne doit jamais être appelée à partir de :
 
 - Une expression de filtre.
 
@@ -94,19 +94,19 @@ Appelez **_resetstkoflw** pour restaurer la page de garde chaque fois que la ré
 
 - Un bloc **catch**.
 
-- A **__finally** bloc.
+- Un **__finally** bloc.
 
 À ce stade, la pile n'est pas encore suffisamment déroulée.
 
-Exceptions de dépassement de capacité de pile sont générées en tant qu’exceptions structurées, pas les exceptions C++, par conséquent, **_resetstkoflw** n’est pas utile dans une boucle **catch** bloqué, car elle n’intercepte pas d’une exception de dépassement de capacité de pile. Toutefois, si [_set_se_translator](set-se-translator.md) est utilisé pour implémenter un traducteur d’exceptions structurées qui lève des exceptions C++ (comme dans le deuxième exemple), une exception de dépassement de la capacité de la pile provoque une exception C++ qui peut être gérée par le bloc catch C++.
+Exceptions de dépassement de capacité de pile sont générées en tant qu’exceptions structurées, pas les exceptions C++, par conséquent, **_resetstkoflw** n’est pas utile dans un ordinaire **catch** bloqué, car elle n’intercepte pas une exception de dépassement de capacité de pile. Toutefois, si [_set_se_translator](set-se-translator.md) est utilisé pour implémenter un traducteur d’exceptions structurées qui lève des exceptions C++ (comme dans le deuxième exemple), une exception de dépassement de la capacité de la pile provoque une exception C++ qui peut être gérée par le bloc catch C++.
 
 Il est déconseillé d’appeler **_resetstkoflw** dans un bloc catch C++ qui est atteint à partir d’une exception levée par la fonction de traduction d’exceptions structurées. Dans ce cas, l'espace de la pile n'est pas libéré et le pointeur de pile n'est pas réinitialisé jusqu'à l'extérieur du bloc catch, même si des destructeurs ont été appelés pour les objets destructibles avant le bloc catch. Cette fonction ne doit pas être appelée jusqu'à ce que l'espace de la pile soit libéré et que le pointeur de pile ait été réinitialisé. Par conséquent, elle doit être appelée uniquement après avoir quitté le bloc catch. Un espace de pile limité doit être utilisé dans le bloc catch, car un dépassement de capacité de la pile qui se produit dans le bloc catch qui tente lui-même de récupérer d'un précédent dépassement de capacité de la pile n'est pas récupérable et peut empêcher le programme de répondre lorsque le dépassement de capacité dans le bloc catch lève une exception qui est elle-même gérée par le même bloc catch.
 
 Dans certaines situations, la fonction **_resetstkoflw** peut échouer même si elle est utilisée dans un emplacement approprié, comme dans un bloc **__except**. Si, même après avoir déroulé la pile, il ne reste pas assez d’espace de pile pour exécuter **_resetstkoflw** sans écrire dans la dernière page de la pile, **_resetstkoflw** ne peut pas réinitialiser la dernière page de la pile en tant que page de garde et retourne 0, ce qui indique un échec. Par conséquent, l'utilisation sécurisée de cette fonction doit inclure la vérification de la valeur de retour au lieu de supposer que l'utilisation de la pile ne présente aucun risque.
 
-Gestion structurée des exceptions n’intercepte pas un **STATUS_STACK_OVERFLOW** exception lors de l’application est compilée avec **/CLR** (consultez [/clr (Compilation Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).
+Gestion structurée des exceptions n’intercepte pas une **STATUS_STACK_OVERFLOW** exception lorsque l’application est compilée avec **/CLR** (consultez  [ /CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -222,7 +222,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Description
 
-L’exemple suivant montre l’utilisation recommandée de **_resetstkoflw** dans un programme où les exceptions structurées sont converties en exceptions C++.
+L’exemple suivant illustre l’utilisation recommandée de **_resetstkoflw** dans un programme où les exceptions structurées sont converties en exceptions C++.
 
 ### <a name="code"></a>Code
 

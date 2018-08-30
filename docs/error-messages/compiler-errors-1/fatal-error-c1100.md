@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1100 | Documents Microsoft
+title: Erreur irrécupérable C1100 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da442ea76d6c559213b319d3e91d447ec47bc848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220044"
 ---
 # <a name="fatal-error-c1100"></a>Erreur irrécupérable C1100
 Impossible d’initialiser OLE : message d’erreur système  
   
- Le compilateur ne peut pas initialiser la bibliothèque de modèle COM (Component Object). Consultez [CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543).
+ Le compilateur ne peut pas initialiser la bibliothèque de composant COM (Object Model). Consultez [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).

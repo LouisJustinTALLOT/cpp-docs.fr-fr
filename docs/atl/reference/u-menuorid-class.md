@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884735"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211185"
 ---
 # <a name="umenuorid-class"></a>_U_menuorid, classe
 Cette classe fournit des wrappers pour `CreateWindow` et `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Notes  
  Cette classe d’adaptateur argument permet ID (ventes) ou handles de menu (HMENUs) à passer à une fonction sans nécessiter un cast explicite part de l’appelant.  
   
- Cette classe est conçue pour l’implémentation des wrappers pour l’API Windows, en particulier le [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) et [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) fonctions, qui acceptent un argument HMENU qui peut être une fenêtre enfant identificateur (UINT) plutôt qu’un handle de menu. Par exemple, vous pouvez voir cette classe en cours d’utilisation en tant que paramètre à [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Cette classe est conçue pour l’implémentation des wrappers pour l’API Windows, en particulier le [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) et [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) fonctions, qui acceptent un argument HMENU qui peut être une fenêtre enfant identificateur (UINT) plutôt qu’un handle de menu. Par exemple, vous pouvez voir cette classe en cours d’utilisation en tant que paramètre à [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  La classe définit deux surcharges de constructeur : une accepte un argument UINT et l’autre accepte un argument HMENU. L’argument UINT est simplement casté en une valeur HMENU du constructeur et le résultat stocké dans le membre de données unique de la classe, [m_hMenu](#_u_menuorid__m_hmenu). L’argument au constructeur HMENU est stocké directement, sans conversion.  

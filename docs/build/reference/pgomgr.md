@@ -1,5 +1,5 @@
 ---
-title: pgomgr | Documents Microsoft
+title: pgomgr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377204"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198313"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -37,20 +37,20 @@ Les options suivantes peuvent être spécifiées à **pgomgr**:
 
 - **/Help** ou **/ ?** Affichages disponibles **pgomgr** options.
 
-- **/Clear** , le fichier .pgd à effacer toutes les informations de profil. Vous ne pouvez pas spécifier un .pgc fichier lorsque **/effacer** est spécifié.
+- **/ Effacer** , le fichier .pgd à effacer toutes les informations de profil. Vous ne pouvez pas spécifier un .pgc fichier lorsque **/effacer** est spécifié.
 
-- **/Detail** affiche des statistiques détaillées, y compris les informations de couverture du graphique de flux.
+- **/ detail** affiche des statistiques détaillées, y compris les informations de couverture du graphe de flux.
 
-- **/ summary** affiche des statistiques par fonction.
+- **/ summary** affiche les statistiques par fonction.
 
-- **/unique** lorsqu’il est utilisé avec **/summary**, entraîne affichage des noms de fonction l'décorés. La valeur par défaut, lorsque **/ uniques** n’est pas utilisé, pour les noms de fonction non décoré à afficher.
+- **/unique** lorsqu’il est utilisé avec **/summary**, entraîne affichage des noms de fonction l'décorés. La valeur par défaut, lorsque **/ unique** n’est pas utilisé, est des noms de fonctions non décorée à afficher.
 
-- **/merge**[**:***n*] provoque les données dans le fichier .pgc ou les fichiers à ajouter au fichier .pgd. Le paramètre facultatif, *n*, vous permet de spécifier que les données doivent être ajoutées *n* fois. Par exemple, si un scénario est habituellement effectués six fois afin de refléter la fréquence à laquelle elle est effectuée par les clients, vous pouvez exécuter une fois dans une série de tests et ajoutez-la au fichier .pgd six fois avec **pgomgr/merge:6**.
+- **/ fusion**\[**:**<em>n</em>], les données dans le fichier .pgc ou les fichiers à ajouter au fichier .pgd. Le paramètre facultatif, *n*, vous permet de spécifier que les données doivent être ajoutées *n* fois. Par exemple, si un scénario est habituellement effectués six fois afin de refléter la fréquence à laquelle elle est effectuée par les clients, vous pouvez exécuter une fois dans une série de tests et ajoutez-la au fichier .pgd six fois avec **pgomgr/merge:6**.
 
 *pgcfiles*<br/>
 Un ou plusieurs fichiers .pgc dont vous souhaitez fusionner dans le fichier .pgd les données de profil. Vous pouvez spécifier un fichier .pgc unique ou plusieurs fichiers .pgc. Si vous ne spécifiez pas de tous les fichiers .pgc, **pgomgr** fusionne tous les fichiers .pgc dont les noms de fichiers sont les mêmes que le fichier .pgd.
 
-*pgdFile* le fichier .pgd dans lequel vous fusionnez des données à partir de l’ou les fichiers .pgc.
+*pgdFile* le fichier .pgd dans lequel vous fusionnez des données à partir du fichier .pgc ou les fichiers.
 
 ## <a name="remarks"></a>Notes
 
@@ -59,7 +59,7 @@ Un ou plusieurs fichiers .pgc dont vous souhaitez fusionner dans le fichier .pgd
 
 ## <a name="example"></a>Exemple
 
-Cet exemple de commande supprime le fichier myapp.pgd des données de profil :
+Cet exemple de commande efface le fichier myapp.pgd des données de profil :
 
 `pgomgr /clear myapp.pgd`
 

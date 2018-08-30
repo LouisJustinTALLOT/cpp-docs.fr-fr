@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339345"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220759"
 ---
 # <a name="bitmap-structure"></a>Structure BITMAP
 Le **BITMAP** structure définit la hauteur, largeur, format de couleur et les valeurs de bit d’une image bitmap logique **.**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Tous les périphériques prennent en charge les bitmaps qui ont le jeu RC_BITBLT bit dans l’index RASTERCAPS de la [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) fonction membre.  
   
- Chaque périphérique possède son propre format de couleur unique. Afin de transférer une image bitmap à partir d’un périphérique vers un autre, utilisez la [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) et [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) des fonctions de Windows.  
+ Chaque périphérique possède son propre format de couleur unique. Afin de transférer une image bitmap à partir d’un périphérique vers un autre, utilisez la [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits) et [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) des fonctions de Windows.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  

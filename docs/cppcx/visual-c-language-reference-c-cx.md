@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801a88573133a68beec4855dc499fcba27bb64e8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593867"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219637"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Référence du langage Visual C++ (C++/CX)
 
@@ -45,5 +45,5 @@ C++ / c++ / CX est un ensemble d’extensions du langage C++ qui permettent la c
 |[Thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|Explique comment spécifier le comportement de threads et de marshaling des composants que vous créez.|
 |[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)|Documentation de référence sur l’espace de noms par défaut, l’espace de noms de plateforme, Platform::Collections et les espaces de noms associés.|
 |[Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Répertorie les fonctions CRT qui ne peuvent pas être utilisées dans les applications Windows Runtime.|
-|[Guides de procédures pour les applications Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Fournit des instructions détaillées sur les applications Windows 10, ainsi que des liens vers d’autres informations.|
+|[Guides de procédures pour les applications Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Fournit des instructions détaillées sur les applications Windows 10, ainsi que des liens vers d’autres informations.|
 |[C++ / c++ / CX partie 0 sur \[n\]: Introduction](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++ / c++ / CX partie 1 sur \[n\]: une classe Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++ / c++ / CX partie 2 sur \[n\]: Types avec chapeaux](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++ / c++ / CX partie 3 sur \[n\]: sous Construction](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++ / c++ / CX partie 4 sur \[n\]: les fonctions membres statiques](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Une série blog Visual C++ sur C++ / c++ / CX.|

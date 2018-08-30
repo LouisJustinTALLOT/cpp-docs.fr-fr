@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199844"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Le `CMFCTabCtrl` classe fournit des fonctionnalités pour un contrôle onglet. Le contrôle onglet affiche une fenêtre ancrable avec des onglets plats ou tridimensionnels en haut ou en bas. Les onglets peuvent afficher un texte et une image et peuvent changer de couleur en cas d'activation.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Appelé par l’infrastructure quand le curseur est tout d’abord déplacé dans la fenêtre de contrôle onglet.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Appelé par l’infrastructure pendant une opération glisser lorsque la souris est placée sur la fenêtre cible du déplacement. (Substitue [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Affiche un menu contextuel de fenêtres à onglets, attend que l’utilisateur sélectionne un onglet et rend l’onglet sélectionné l’onglet actif.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Recalcule la disposition interne du contrôle onglet. (Substitue [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Définit l’onglet actuel d’un contrôle onglet comme onglet actif dans un groupe d’onglets document interface plusieurs.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Active un onglet. (Substitue [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Pointe vers un objet de données qui contient les données que l’utilisateur fait glisser.  
   
  [in] *dwKeyState*  
- Contient l’état des touches de modification. Ce paramètre est une combinaison au niveau du bit (OR) des valeurs suivantes : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez le **Message paramètres** section de [sur l’entrée de la souris](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Contient l’état des touches de modification. Ce paramètre est une combinaison au niveau du bit (OR) des valeurs suivantes : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez le **Message paramètres** section de [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *point*  
  Contient l’emplacement actuel du curseur en coordonnées clientes.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Pointeur vers un [COleDataObject](../../mfc/reference/coledataobject-class.md) objet est glissé sur la cible de déplacement.  
   
  [in] *dwKeyState*  
- L’état des touches de modification, qui est une combinaison au niveau du bit (ou) de MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez « Paramètres de Message » dans [sur l’entrée de la souris](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ L’état des touches de modification, qui est une combinaison au niveau du bit (ou) de MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez « Paramètres de Message » dans [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *point*  
  La position actuelle de la souris.  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Paramètres  
  [out] *pScrollInfo*  
- Pointeur vers un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure ou valeur NULL. Lorsque cette méthode est retournée, et si ce paramètre n’est pas NULL, la structure contient tous les paramètres de la barre de défilement. La valeur par défaut est NULL.  
+ Pointeur vers un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) structure ou valeur NULL. Lorsque cette méthode est retournée, et si ce paramètre n’est pas NULL, la structure contient tous les paramètres de la barre de défilement. La valeur par défaut est NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode réussit ; Sinon, FALSE.  

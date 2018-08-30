@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209726"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Opérateurs de multiplication et opérateur modulo
 ## <a name="syntax"></a>Syntaxe  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Notes  
  Les opérateurs de multiplication sont :  
   
--   Multiplication (**\****)  
+-   Multiplication (<strong>\**</strong>)  
   
 -   Division (**/**)  
   
--   Modulo (reste de division) (`%`)  
+-   Modulo (reste de division) (**%**)  
   
  Ces opérateurs binaires ont une associativité de droite à gauche.  
   
- Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L'opérateur Modulo (`%`) a une exigence plus stricte dans le sens où ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division à virgule flottante, utilisez la fonction de l’exécution, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions abordées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.  
+ Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L’opérateur modulo (**%**) a une exigence plus stricte dans la mesure où ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division à virgule flottante, utilisez la fonction de l’exécution, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions abordées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.  
   
  L’opérateur de multiplication montre le résultat de la multiplication du premier opérande par le second.  
   

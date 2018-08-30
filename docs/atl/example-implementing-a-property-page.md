@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214780"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une Page de propriétés
 Cet exemple montre comment créer une page de propriétés qui affiche (et vous permet de modifier) les propriétés de la [Classes de documents](../mfc/document-classes.md) interface.  
@@ -70,7 +70,7 @@ Cet exemple montre comment créer une page de propriétés qui affiche (et vous 
  Ces contrôles doit être utilisées pour afficher le nom de fichier du document et son état en lecture seule.  
   
 > [!NOTE]
->  La ressource de boîte de dialogue n’inclut pas d’un frame ou commande boutons, ni n’a pas l’apparence à onglets qui vous attendent. Ces fonctionnalités sont fournies par un cadre de la page propriété tel que celui créé en appelant [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  La ressource de boîte de dialogue n’inclut pas d’un frame ou commande boutons, ni n’a pas l’apparence à onglets qui vous attendent. Ces fonctionnalités sont fournies par un cadre de la page propriété tel que celui créé en appelant [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Ajout de gestionnaires de messages  
  Avec les contrôles en place, vous pouvez ajouter des gestionnaires de messages pour mettre à jour l’état modifié de la page lorsque la valeur de l’un des contrôles change :  
