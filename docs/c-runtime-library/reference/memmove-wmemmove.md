@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204626"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -79,9 +79,9 @@ La valeur de *dest*.
 
 Copies *nombre* octets (**memmove**) ou de caractères (**wmemmove**) à partir de *src* à *dest*. Si certaines régions de la zone source et de la destination se chevauchent, les deux fonctions garantissent que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
 
-**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Le **memmove** et **wmemmove** fonctions seront déconseillées seulement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est défini avant l’instruction d’inclusion dans l’ordre de les fonctions déconseillées, comme dans l’exemple ci-dessous :
+Le **memmove** et **wmemmove** fonctions seront déconseillées seulement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est défini avant l’instruction d’inclusion dans l’ordre pour les fonctions déconseillées, comme illustré dans l’exemple ci-dessous :
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -95,7 +95,7 @@ ou
 #include <wchar.h>
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

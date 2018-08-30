@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f82988e8756a6894464c9d95ae47fe6baf922
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ef5728a20cc97d330540b10c2de325f62583b69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336811"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203074"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog, classe
 Vous pouvez ainsi incorporer une boîte de dialogue de sélection de la police dans votre application.  
@@ -96,13 +96,13 @@ class CFontDialog : public CCommonDialog
   
  Pour construire un `CFontDialog` de l’objet, utilisez le constructeur fourni ou dériver une nouvelle sous-classe et utiliser votre propre constructeur personnalisé.  
   
- Une fois un `CFontDialog` objet a été construit, vous pouvez utiliser le `m_cf` structure pour initialiser les valeurs ou les États de contrôles dans la boîte de dialogue. Le [m_cf](#m_cf) structure est de type [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
+ Une fois un `CFontDialog` objet a été construit, vous pouvez utiliser le `m_cf` structure pour initialiser les valeurs ou les États de contrôles dans la boîte de dialogue. Le [m_cf](#m_cf) structure est de type [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
   
  Après l’initialisation de contrôles de l’objet de boîte de dialogue, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et autoriser l’utilisateur à sélectionner une police. `DoModal` Retourne si l’utilisateur a sélectionné le bouton OK (IDOK) ou Annuler (IDCANCEL).  
   
  Si `DoModal` retourne IDOK, vous pouvez utiliser une des `CFontDialog`de fonctions membres pour récupérer les informations entrées par l’utilisateur.  
   
- Vous pouvez utiliser le Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur. Pour plus d’informations sur cette fonction, consultez le Kit de développement Windows.  
+ Vous pouvez utiliser le Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) fonction pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur. Pour plus d’informations sur cette fonction, consultez le Kit de développement Windows.  
   
  `CFontDialog` s’appuie sur le COMMDLG. Fichier DLL qui est livré avec Windows 3.1 et versions ultérieures.  
   
@@ -147,13 +147,13 @@ CFontDialog(
   
 ### <a name="parameters"></a>Paramètres  
  *plfInitial*  
- Un pointeur vers un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure de données qui vous permet de définir certaines caractéristiques de la police.  
+ Un pointeur vers un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure de données qui vous permet de définir certaines caractéristiques de la police.  
   
  *charFormat*  
- Un pointeur vers un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) contrôle d’édition de structure de données qui vous permet de définir certaines caractéristiques de la police dans une riche.  
+ Un pointeur vers un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) contrôle d’édition de structure de données qui vous permet de définir certaines caractéristiques de la police dans une riche.  
   
  *dwFlags*  
- Spécifie un ou plusieurs indicateurs de choix de police. Une ou plusieurs valeurs prédéfinies peuvent être combinées à l'aide de l'opérateur de bits OR. Si vous changez le membre de structure de `m_cf.Flag`, veillez à utiliser un opérateur de bits OR dans les changements pour préserver le comportement par défaut. Pour plus d’informations sur chacun de ces indicateurs, consultez la description de la [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) structure dans le SDK Windows.  
+ Spécifie un ou plusieurs indicateurs de choix de police. Une ou plusieurs valeurs prédéfinies peuvent être combinées à l'aide de l'opérateur de bits OR. Si vous changez le membre de structure de `m_cf.Flag`, veillez à utiliser un opérateur de bits OR dans les changements pour préserver le comportement par défaut. Pour plus d’informations sur chacun de ces indicateurs, consultez la description de la [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) structure dans le SDK Windows.  
   
  *pdcPrinter*  
  Pointeur vers un contexte de périphérique d'impression. Si ce paramètre est fourni, il pointe vers un contexte de périphérique d'impression pour l'imprimante sur laquelle les polices doivent être sélectionnées.  
@@ -178,7 +178,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- IDOK ou IDCANCEL. Si IDCANCEL est retournée, appelez le Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction permettant de déterminer si une erreur s’est produite.  
+ IDOK ou IDCANCEL. Si IDCANCEL est retournée, appelez le Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) fonction permettant de déterminer si une erreur s’est produite.  
   
  IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou sur Annuler.  
   
@@ -199,7 +199,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
   
 ### <a name="parameters"></a>Paramètres  
  *CF*  
- Un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure contenant des informations sur la mise en forme des caractères de la police sélectionnée.  
+ Un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) structure contenant des informations sur la mise en forme des caractères de la police sélectionnée.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Appelez cette fonction pour récupérer la couleur de police sélectionnée.  
@@ -215,7 +215,7 @@ COLORREF GetColor() const;
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
- Appelez cette fonction pour affecter les caractéristiques de la police actuellement sélectionnée pour les membres d’un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
+ Appelez cette fonction pour affecter les caractéristiques de la police actuellement sélectionnée pour les membres d’un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
@@ -348,7 +348,7 @@ CHOOSEFONT m_cf;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Après avoir construit un `CFontDialog` de l’objet, vous pouvez utiliser `m_cf` pour modifier les différents aspects de la boîte de dialogue avant d’appeler le `DoModal` fonction membre. Pour plus d’informations sur cette structure, consultez [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) dans le SDK Windows.  
+ Après avoir construit un `CFontDialog` de l’objet, vous pouvez utiliser `m_cf` pour modifier les différents aspects de la boîte de dialogue avant d’appeler le `DoModal` fonction membre. Pour plus d’informations sur cette structure, consultez [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  

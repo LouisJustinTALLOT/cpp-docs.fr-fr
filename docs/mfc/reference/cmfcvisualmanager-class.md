@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203640"
 ---
 # <a name="cmfcvisualmanager-class"></a>Cmfcvisualmanager, classe
 Fournit la prise en charge de la modification de l'apparence de votre application à un niveau global. La classe `CMFCVisualManager` fonctionne en association avec une classe qui fournit les instructions nécessaires pour dessiner les contrôles d'interface utilisateur de votre application dans un style cohérent. Ces autres classes portent le nom de gestionnaires visuels et héritent de `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Pointeur vers un bouton Masquer automatiquement.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui spécifie la couleur du texte *pButton*.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui spécifie la couleur du texte *pButton*.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour personnaliser la couleur du texte d’un bouton Masquer automatiquement dans votre application. Pour ce faire, retourne la couleur que vous souhaitez que votre application à utiliser comme la couleur du texte.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Pointeur vers une barre de légende.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte dans *pBar*.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte dans *pBar*.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans votre classe dérivée pour personnaliser la couleur du texte pour une barre de légende. Dans votre méthode de substitution, retourne la couleur souhaitée.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Pointeur vers la liste de propriétés du dessin de l’infrastructure.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur d’arrière-plan *pPropList*.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur d’arrière-plan *pPropList*.  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser la couleur d’arrière-plan d’une liste de propriétés dans votre application.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Pointeur vers la liste de propriétés.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte de la liste de propriétés.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte de la liste de propriétés.  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser la couleur du texte d’une liste de propriétés dans votre application.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Pointeur vers la fenêtre à onglets dans lequel le frame Dessine un onglet.  
   
  [out] *clrDark*  
- Une référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre où cette méthode stocke la couleur de la bordure sombre d’un onglet.  
+ Une référence à un [COLORREF](/windows/desktop/gdi/colorref) paramètre où cette méthode stocke la couleur de la bordure sombre d’un onglet.  
   
  [out] *clrBlack*  
  Une référence à un paramètre COLORREF où cette méthode stocke la couleur de la bordure de la fenêtre de l’onglet. La couleur par défaut pour la bordure est noire.  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Valeur énumérée qui spécifie l’état du bouton.  
   
  [out] *clrText*  
- Une référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre. Ceci est une valeur réservée et n’est actuellement pas utilisé.  
+ Une référence à un [COLORREF](/windows/desktop/gdi/colorref) paramètre. Ceci est une valeur réservée et n’est actuellement pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite, sinon FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Un rectangle qui spécifie les limites des boutons de légende.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte de la légende.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte de la légende.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans un gestionnaire visuel dérivée pour personnaliser l’apparence des légendes du volet.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Pointeur vers une barre de légende. Le Gestionnaire visuel dessine cela [cmfcribboncontextcaption, classe](../../mfc/reference/cmfcribboncontextcaption-class.md) objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte sur la barre de légende.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte sur la barre de légende.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la barre de légende pour une catégorie de ruban. Pour plus d’informations sur la barre de légende, consultez [cmfcribboncontextcaption, classe](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  La progression actuelle de la barre de progression.  
   
  [in] *clrBar*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur initiale de la barre de progression. La valeur est soit le début d’un dégradé de couleur ou la couleur complète de la barre de progression.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur initiale de la barre de progression. La valeur est soit le début d’un dégradé de couleur ou la couleur complète de la barre de progression.  
   
  [in] *clrProgressBarDest*  
  Un paramètre COLORREF qui indique la fin d’un dégradé de couleur de la barre de progression. Si *clrProgressBarDest* est -1, le framework ne consomme pas de la barre de progression comme un dégradé de couleur. Au lieu de cela, il remplit la barre de progression ensemble avec la couleur spécifiée par *clrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Un rectangle qui spécifie les limites de la barre de légende.  
   
  [out] *clrText*  
- Une référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre. La méthode écrit la couleur du texte sur la barre de légende pour ce paramètre.  
+ Une référence à un [COLORREF](/windows/desktop/gdi/colorref) paramètre. La méthode écrit la couleur du texte sur la barre de légende pour ce paramètre.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette méthode remplit la barre de légende avec la couleur des ombres basé sur l’apparence actuelle. Substituez cette méthode dans un gestionnaire visuel dérivée pour personnaliser la couleur de la barre de légende Outlook.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Un paramètre booléen qui spécifie si le bouton est enfoncé.  
   
  [out] *clrText*  
- Une référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre. Cette méthode stocke la couleur du texte du bouton de page outlook dans ce paramètre.  
+ Une référence à un [COLORREF](/windows/desktop/gdi/colorref) paramètre. Cette méthode stocke la couleur du texte du bouton de page outlook dans ce paramètre.  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction dans un gestionnaire visuel dérivée pour personnaliser l’apparence des boutons de page d’Outlook.  

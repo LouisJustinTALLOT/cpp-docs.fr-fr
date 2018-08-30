@@ -1,5 +1,5 @@
 ---
-title: -constexpr (évaluation de constexpr de contrôle) | Documents Microsoft
+title: -constexpr (contrôler l’évaluation de constexpr) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,39 +19,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373957"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202572"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (évaluation de constexpr de contrôle)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (contrôler l’évaluation de constexpr)  
   
-Utilisez le **/constexpr** options du compilateur pour les paramètres de contrôle pour `constexpr` évaluation au moment de la compilation.  
+Utilisez le **/constexpr** options du compilateur pour les paramètres de contrôle pour **constexpr** évaluation au moment de la compilation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-> /constexpr:Depth*N*  
-> /constexpr:backtrace*N*  
-> / constexpr : Steps*N*  
+> **/ constexpr : Depth**<em>N</em>  
+> **/constexpr:backtrace**<em>N</em>  
+> **/ constexpr : Steps**<em>N</em>  
   
 ## <a name="arguments"></a>Arguments  
   
-**profondeur *** N*  
-Limiter la profondeur des récursive `constexpr` invocation de fonction *N* niveaux. La valeur par défaut est 512.  
+**profondeur**<em>N</em>  
+Limiter la profondeur des récursive **constexpr** l’appel de fonction *N* niveaux. La valeur par défaut est 512.  
   
-**suivi de *** N*  
-Afficher jusqu'à *N* `constexpr` évaluations dans les diagnostics. La valeur par défaut est 10.  
+**backtrace**<em>N</em>  
+Afficher jusqu'à *N* **constexpr** évaluations dans les diagnostics. La valeur par défaut est 10.  
   
-**étapes *** N*  
-Terminer `constexpr` évaluation après *N* étapes. La valeur par défaut est 100 000.  
+**étapes**<em>N</em>  
+Mettre fin à **constexpr** évaluation après *N* étapes. La valeur par défaut est 100 000.  
   
 ## <a name="remarks"></a>Notes  
   
-Le **/constexpr** options du compilateur contrôlent l’évaluation de compilation de `constexpr` expressions. Les étapes d’évaluation, les niveaux de récursivité et la profondeur de suivi sont contrôlés pour empêcher que le compilateur passe trop de temps sur `constexpr` évaluation. Pour plus d’informations sur la `constexpr` l’élément de langage, consultez [constexpr (C++)](../../cpp/constexpr-cpp.md).  
+Le **/constexpr** évaluation au moment de la compilation de contrôlent les options du compilateur **constexpr** expressions. Procédure d’évaluation, les niveaux de récursivité et la profondeur de suivi sont contrôlés pour empêcher le compilateur de passer beaucoup trop de temps sur **constexpr** évaluation. Pour plus d’informations sur la **constexpr** l’élément de langage, consultez [constexpr (C++)](../../cpp/constexpr-cpp.md).  
 
-Le **/constexpr** options sont disponibles à partir de Visual Studio 2015.  
+Le **/constexpr** options sont disponibles depuis dans Visual Studio 2015.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
@@ -59,7 +59,7 @@ Le **/constexpr** options sont disponibles à partir de Visual Studio 2015.
   
 2. Sous **propriétés de Configuration**, développez le **C/C++** dossier et choisissez le **ligne de commande** page de propriétés.  
   
-3. Entrez les **/constexpr** options du compilateur dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.  
+3. Entrer une **/constexpr** options du compilateur dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   

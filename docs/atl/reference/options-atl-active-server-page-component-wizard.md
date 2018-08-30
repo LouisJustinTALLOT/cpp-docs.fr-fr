@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd3e62915b81311450cf4d798b04f8df30492ff
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 29a5209eb05958861a5c021f48bff1bf36654115
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205442"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Options, Assistant Composant ASP ATL
 Utilisez cette page de l’Assistant composant Active Server Page ATL pour une efficacité accrue et prise en charge de l’erreur de l’objet.  
@@ -35,14 +35,14 @@ Utilisez cette page de l’Assistant composant Active Server Page ATL pour une e
   
 |Option|Description|  
 |------------|-----------------|  
-|**Single**|Spécifie que l’objet utilise le modèle de thread unique. Dans le modèle de thread unique, un objet s’exécute toujours dans le thread COM principal. Consultez [Single-Threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) et [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) pour plus d’informations.|  
-|**Cloisonnement**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement de threads équivalent au seul. Chaque objet d’un composant avec thread cloisonné se voit assigner un cloisonnement pour son thread, pour la durée de vie de l’objet ; Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (valeur par défaut).<br /><br /> Consultez [Single-Threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) pour plus d’informations.|  
+|**Single**|Spécifie que l’objet utilise le modèle de thread unique. Dans le modèle de thread unique, un objet s’exécute toujours dans le thread COM principal. Consultez [Single-Threaded Apartments](/windows/desktop/com/single-threaded-apartments) et [InprocServer32](/windows/desktop/com/inprocserver32) pour plus d’informations.|  
+|**Cloisonnement**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement de threads équivalent au seul. Chaque objet d’un composant avec thread cloisonné se voit assigner un cloisonnement pour son thread, pour la durée de vie de l’objet ; Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (valeur par défaut).<br /><br /> Consultez [Single-Threaded Apartments](/windows/desktop/com/single-threaded-apartments) pour plus d’informations.|  
 |**Les deux**|Spécifie que l’objet peut utiliser soit cloisonné ou libre, selon le type d’un thread est créé.|  
-|**Gratuit**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](http://msdn.microsoft.com/library/windows/desktop/ms693421) pour plus d’informations.|  
+|**Gratuit**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](/windows/desktop/com/multithreaded-apartments) pour plus d’informations.|  
 |**Neutral**|Spécifie que l’objet suit les indications des multithreads cloisonnés, mais il peut s’exécuter sur n’importe quel type de thread.|  
   
  **Aggregation**  
- Indique si l’objet utilise [agrégation](http://msdn.microsoft.com/library/windows/desktop/ms686558). L’objet d’agrégation choisit les interfaces à exposer aux clients et les interfaces sont exposées comme si l’objet d’agrégation les implémenter. Les clients de l’objet d’agrégation communiquent uniquement avec l’objet d’agrégation.  
+ Indique si l’objet utilise [agrégation](/windows/desktop/com/aggregation). L’objet d’agrégation choisit les interfaces à exposer aux clients et les interfaces sont exposées comme si l’objet d’agrégation les implémenter. Les clients de l’objet d’agrégation communiquent uniquement avec l’objet d’agrégation.  
   
 |Option|Description|  
 |------------|-----------------|  

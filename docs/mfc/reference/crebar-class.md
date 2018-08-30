@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201852"
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 Barre de contrôles qui fournit des informations de disposition, de persistance et d'état pour les contrôles rebar.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Un pointeur vers un `CBitmap` objet doit être affiché sur l’arrière-plan du contrôle rebar. NULL par défaut.  
   
  *dwStyle*  
- Un valeur DWORD qui contient le style à appliquer pour le rebar. Consultez le `fStyle` description dans la structure Win32 de fonction [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) pour une liste complète des styles de bande.  
+ Un valeur DWORD qui contient le style à appliquer pour le rebar. Consultez le `fStyle` description dans la structure Win32 de fonction [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) pour une liste complète des styles de bande.  
   
  *clrFore*  
  Valeur COLORREF qui représente la couleur de premier plan du rebar.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Pointeur vers le `CWnd` objet dont la fenêtre Windows est le parent de la barre d’état. Normalement votre fenêtre frame.  
   
  *dwCtrlStyle*  
- Le style du contrôle rebar. Par défaut, RBS_BANDBORDERS, qui affiche les lignes étroits entre les bandes contiguës dans le contrôle rebar. Consultez [Styles de contrôle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) dans le SDK Windows pour obtenir la liste des styles.  
+ Le style du contrôle rebar. Par défaut, RBS_BANDBORDERS, qui affiche les lignes étroits entre les bandes contiguës dans le contrôle rebar. Consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans le SDK Windows pour obtenir la liste des styles.  
   
  *dwStyle*  
  Les styles de fenêtre rebar.  

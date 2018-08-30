@@ -1,5 +1,5 @@
 ---
-title: CLinearTransitionFromSpeed, classe | Documents Microsoft
+title: CLinearTransitionFromSpeed, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203306"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed, classe
 Encapsule une transition de vitesse linéaire.  
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
 *pLibrary*  
- Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
+ Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  

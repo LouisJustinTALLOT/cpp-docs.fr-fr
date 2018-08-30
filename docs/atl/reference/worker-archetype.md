@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881303"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204852"
 ---
 # <a name="worker-archetype"></a>Archétype de travail
 Classes qui se conforment à la *worker* archétype fournissent le code pour traiter des éléments de travail en file d’attente sur un pool de threads.  
@@ -31,8 +31,8 @@ Classes qui se conforment à la *worker* archétype fournissent le code pour tra
 |Méthode|Description|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Appelée pour initialiser l’objet de travail avant que toutes les demandes sont passées à [Execute](#execute).|  
-|[Exécuter](#execute)|Appelé pour traiter un élément de travail.|  
-|[Mettre fin à](#terminate)|Appelé pour annuler l’initialisation de l’objet de travail une fois que toutes les demandes ont été transmis au [Execute](#execute).|  
+|[Execute](#execute)|Appelé pour traiter un élément de travail.|  
+|[Terminate](#terminate)|Appelé pour annuler l’initialisation de l’objet de travail une fois que toutes les demandes ont été transmis au [Execute](#execute).|  
   
 |TypeDef|Description|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Un paramètre personnalisé compris par la classe de travail. Également transmis à `WorkerArchetype::Initialize` et `Terminate`.  
   
  *pOverlapped*  
- Un pointeur vers le [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) structure utilisée pour créer la file d’attente à laquelle le travail des éléments ont été en file d’attente.  
+ Un pointeur vers le [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) structure utilisée pour créer la file d’attente à laquelle le travail des éléments ont été en file d’attente.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Appelée pour initialiser l’objet de travail avant que toutes les demandes sont passées à `WorkerArchetype::Execute`.  

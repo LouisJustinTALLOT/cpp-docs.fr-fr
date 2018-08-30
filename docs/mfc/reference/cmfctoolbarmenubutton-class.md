@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205143"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton, classe
 Bouton de barre d'outils qui contient un menu contextuel.  
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Spécifie si le bouton peut être déplacé. (Substitue [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Appelé par l’infrastructure pour calculer la taille du bouton pour le contexte de périphérique spécifié et l’état d’ancrage. (Substitue [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Appelé par l’infrastructure pour gérer la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message. (Substitue [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Appelé par l’infrastructure pour gérer la [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) message. (Substitue [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Appelé par le framework lorsque le bouton est inséré dans une nouvelle barre d’outils. (Substitue [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|Appelé par le framework lorsque l’utilisateur clique sur le bouton de la souris. (Substitue [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Appelé par le framework lorsque l’utilisateur sélectionne un élément dans le menu contextuel.|  

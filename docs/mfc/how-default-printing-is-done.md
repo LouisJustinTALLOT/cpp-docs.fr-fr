@@ -1,5 +1,5 @@
 ---
-title: Procédure d’impression par défaut | Documents Microsoft
+title: Procédure d’impression par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2cf5b4a9bda3506a9558d5b723020dfe6d43396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f6559459bed9376dba8b7d9059761e9ace5ac8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358913"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202828"
 ---
 # <a name="how-default-printing-is-done"></a>Impression par défaut
 Cet article explique le processus d'impression par défaut dans Windows en termes de framework MFC.  
   
- Dans les applications MFC, la classe d'affichage fournit une fonction membre nommée `OnDraw` qui contient le code de dessin. `OnDraw` prend un pointeur vers un [CDC](../mfc/reference/cdc-class.md) objet en tant que paramètre. Cet objet `CDC` représente le contexte de périphérique pour recevoir l'image générée par `OnDraw`. Lorsque la fenêtre affichant le document reçoit un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) d’un message, le framework appelle `OnDraw` et lui passe un contexte de périphérique de l’écran (un [CPaintDC](../mfc/reference/cpaintdc-class.md) objet, pour être précis). Par conséquent, la sortie de `OnDraw`passe à l'écran.  
+ Dans les applications MFC, la classe d'affichage fournit une fonction membre nommée `OnDraw` qui contient le code de dessin. `OnDraw` accepte un pointeur vers un [CDC](../mfc/reference/cdc-class.md) objet en tant que paramètre. Cet objet `CDC` représente le contexte de périphérique pour recevoir l'image générée par `OnDraw`. Lorsque la fenêtre affichant le document reçoit un [WM_PAINT](/windows/desktop/gdi/wm-paint) du message, le framework appelle `OnDraw` et lui passe un contexte de périphérique pour l’écran (un [CPaintDC](../mfc/reference/cpaintdc-class.md) objet, pour être précis). Par conséquent, la sortie de `OnDraw`passe à l'écran.  
   
  En programmation pour Windows, envoyer la sortie vers l'imprimante est très similaire à envoyer la sortie à l'écran. Cela est dû au fait que l'interface Windows GDI (Windows Graphics Device Interface) est indépendante du matériel. Vous pouvez utiliser les mêmes fonctions GDI pour afficher l'écran ou pour l'impression simplement à l'aide du contexte de périphérique. Si l'objet `CDC` que `OnDraw` reçoit représente l'imprimante, la sortie de `OnDraw`est envoyée à l'imprimante.  
   

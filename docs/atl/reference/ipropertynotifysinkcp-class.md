@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3fddd187dd6df58c4013b9c1fc7a08d5f644a0db
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203161"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP, classe
-Cette classe expose [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interface comme une interface sortante sur un objet connectable.  
+Cette classe expose [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface comme une interface sortante sur un objet connectable.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -50,7 +50,7 @@ class IPropertyNotifySinkCP
 ## <a name="remarks"></a>Notes  
  `IPropertyNotifySinkCP` hérite de toutes les méthodes via sa classe de base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
- Le [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interface permet à un objet de récepteur recevoir des notifications sur les modifications de propriété. Classe `IPropertyNotifySinkCP` expose cette interface comme une interface sortante sur un objet connectable. Le client doit implémenter le `IPropertyNotifySink` méthodes sur le récepteur.  
+ Le [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface permet à un objet de récepteur recevoir des notifications sur les modifications de propriété. Classe `IPropertyNotifySinkCP` expose cette interface comme une interface sortante sur un objet connectable. Le client doit implémenter le `IPropertyNotifySink` méthodes sur le récepteur.  
   
  Dérivez votre classe de `IPropertyNotifySinkCP` lorsque vous souhaitez créer un point de connexion qui représente le `IPropertyNotifySink` interface.  
   

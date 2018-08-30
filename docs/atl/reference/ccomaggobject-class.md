@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202473"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject, classe
-Cette classe implémente le [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface pour un objet agrégé. Par définition, un objet est contenu dans un objet externe. Le `CComAggObject` classe est semblable à la [CComObject, classe](../../atl/reference/ccomobject-class.md), à ceci près qu’il expose une interface qui est directement accessible aux clients externes.  
+Cette classe implémente le [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface pour un objet agrégé. Par définition, un objet est contenu dans un objet externe. Le `CComAggObject` classe est semblable à la [CComObject, classe](../../atl/reference/ccomobject-class.md), à ceci près qu’il expose une interface qui est directement accessible aux clients externes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Délégués `IUnknown` appels à inconnu externe.|  
   
 ## <a name="remarks"></a>Notes  
- `CComAggObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet agrégé. `CComAggObject` possède son propre `IUnknown` interface, distinct de l’objet externe `IUnknown` interface et gère son propre nombre de références.  
+ `CComAggObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet agrégé. `CComAggObject` possède son propre `IUnknown` interface, distinct de l’objet externe `IUnknown` interface et gère son propre nombre de références.  
   
  Pour plus d’informations sur l’agrégation, consultez l’article [principes de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Paramètres  
  *PP*  
- [out] Un pointeur vers un **CComAggObject\<*** contenus* **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.  
+ [out] Un pointeur vers un **CComAggObject\<**<em>contenus</em> **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  

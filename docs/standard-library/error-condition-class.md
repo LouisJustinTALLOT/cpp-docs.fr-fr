@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 869eba484a5ffa4e9c57c9c65a9b74e0962114e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027337"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204038"
 ---
 # <a name="errorcondition-class"></a>error_condition, classe
 
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 Le premier constructeur stocke une valeur de code d’erreur égale à zéro et un pointeur vers [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Le deuxième constructeur stocke *val* en tant que la valeur de code d’erreur et un pointeur vers [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Le deuxième constructeur stocke *val* en tant que la valeur de code d’erreur et un pointeur vers [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
 Le troisième constructeur stocke `(value_type)_Errcode` comme valeur de code d’erreur et un pointeur vers [generic_category](../standard-library/system-error-functions.md#generic_category).
 

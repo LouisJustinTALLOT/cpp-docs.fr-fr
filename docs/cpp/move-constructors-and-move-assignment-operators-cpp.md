@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204985"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement permet les ressources détenues par un objet rvalue à déplacer vers une lvalue sans copier. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclarateur de référence rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utilitaire > déplacer](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<utilitaire > déplacer](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

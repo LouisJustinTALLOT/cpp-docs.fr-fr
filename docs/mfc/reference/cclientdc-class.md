@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205933"
 ---
 # <a name="cclientdc-class"></a>CClientDC (classe)
-Prend en charge de l’appel de fonctions Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) au moment de la construction et [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) au moment de la destruction.  
+Prend en charge de l’appel de fonctions Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) au moment de la construction et [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) au moment de la destruction.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  La fenêtre dont la zone cliente accède à l’objet de contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
- Le constructeur appelle la fonction Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Le constructeur appelle la fonction Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc).  
   
  Une exception (de type `CResourceException`) est levée si le Windows `GetDC` appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
   

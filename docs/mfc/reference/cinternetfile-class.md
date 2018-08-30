@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202728"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile, classe
 Autorise l’accès aux fichiers sur des systèmes distants qui utilisent des protocoles Internet.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Une référence à la [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet qui reçoit la ligne de lecture.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la mémoire tampon contenant les données ordinaires récupérées à partir de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objet. Quel que soit le type de données de la mémoire tampon passée à cette méthode, il n’effectue pas des manipulations sur les données (par exemple, la conversion en Unicode), donc vous devez mapper les données retournées à la structure que vous attendez, comme si le **void\***  type ont été retournés.  
+ Un pointeur vers la mémoire tampon contenant les données ordinaires récupérées à partir de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objet. Quel que soit le type de données de la mémoire tampon passée à cette méthode, il n’effectue pas des manipulations sur les données (par exemple, la conversion en Unicode), donc vous devez mapper les données retournées à la structure que vous attendez, comme si le **void** <strong>\*</strong> type ont été retournés.  
   
  NULL si la fin du fichier a été atteinte sans lire toutes les données ; ou, si le booléen, FALSE si la fin du fichier a été atteinte sans lire toutes les données.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Taille de la mémoire tampon voulue en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.  
+ Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.  
   
 ### <a name="remarks"></a>Notes  
  APIs WinInet sous-jacentes ne pas effectuer la mise en mémoire tampon, par conséquent, choisissez une taille de mémoire tampon qui permet à votre application lire les données de manière efficace, quelle que soit la quantité de données à lire. Si chaque appel à [en lecture](#read) normalement implique un aount volumineux de données (par exemple, les kilo-octets quatre ou plus), vous ne devez pas une mémoire tampon. Toutefois, si vous appelez `Read` pour obtenir des petits morceaux de données, ou si vous utilisez [ReadString](#readstring) pour lire des lignes individuelles à la fois, d’un mémoire tampon de lecture améliore les performances de l’application.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Taille de la mémoire tampon en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.  
+ Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.  
   
 ### <a name="remarks"></a>Notes  
  Sous-jacent WinInet APIs n’effectuez pas de mise en mémoire tampon, choisissez donc une taille de mémoire tampon qui permet à votre application écrire des données efficacement, quel que soit la quantité de données à écrire. Si chaque appel à [écrire](#write) normalement implique une grande quantité de données (par exemple, les kilo-octets quatre ou plus à la fois), vous ne devez pas une mémoire tampon. Toutefois, si vous appelez [écrire](#write) pour écrire des petits morceaux de données, une mémoire tampon d’écriture améliore les performances de votre application.  

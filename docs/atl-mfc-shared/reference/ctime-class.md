@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027671"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205985"
 ---
 # <a name="ctime-class"></a>Classe de CTime
 Représente une date et l’heure absolue.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Convertit un `CTime` objet dans une chaîne mise en forme, en fonction du fuseau horaire local.|  
 |[CTime::FormatGmt](#formatgmt)|Convertit un `CTime` objet en une chaîne formatée, basé sur l’heure UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Convertit les informations d’heure stockées dans le `CTime` objet vers une structure Win32 compatibles DBTIMESTAMP.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Convertit les informations d’heure stockées dans le `CTime` objet à un écran compatible Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Convertit les informations d’heure stockées dans le `CTime` objet à un écran compatible Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure.|  
 |[CTime::GetCurrentTime](#getcurrenttime)|Crée un `CTime` objet qui représente l’heure actuelle (fonction membre statique).|  
 |[CTime::GetDay](#getday)|Retourne la jour représenté par le `CTime` objet.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Retourne le jour de la semaine représenté par le `CTime` objet.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  Le constructeur à l’aide `DBTIMESTAMP` paramètre est uniquement disponible lorsque OLEDB.h est inclus.  
   
- Pour plus d’informations, consultez le [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) et [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure dans le SDK Windows. Consultez également le [MS-DOS Date et heure](http://msdn.microsoft.com/library/windows/desktop/ms724503) entrée dans le SDK Windows.  
+ Pour plus d’informations, consultez le [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) et [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) structure dans le SDK Windows. Consultez également le [MS-DOS Date et heure](/windows/desktop/SysInfo/ms-dos-date-and-time) entrée dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Appelez cette fonction membre pour convertir les informations d’heure stockées dans le `CTime` objet à un écran compatible Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure.  
+ Appelez cette fonction membre pour convertir les informations d’heure stockées dans le `CTime` objet à un écran compatible Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Paramètres  
  *timeDest*  
- Une référence à un [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui contiendra la valeur de date/heure convertie de la `CTime` objet.  
+ Une référence à un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui contiendra la valeur de date/heure convertie de la `CTime` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite, sinon FALSE.  

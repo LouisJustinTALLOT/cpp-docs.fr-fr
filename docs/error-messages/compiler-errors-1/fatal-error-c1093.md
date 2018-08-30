@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1093 | Documents Microsoft
+title: Erreur irrécupérable C1093 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226342"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202024"
 ---
 # <a name="fatal-error-c1093"></a>Erreur irrécupérable C1093
-Échec de l’appel d’API 'nom de la fonction' 'emplacement d’appel' : 'texte du runtime'  
+
+> Appel d’API «*nom de la fonction*'échec'*emplacement d’appel*' : '*texte à partir de l’exécution*'  
   
- Un appel à une fonction .NET a échoué. ***texte à partir du moment de l’exécution*** peut ou ne peut pas être fournie par le runtime COM.  
+Un appel à une fonction .NET a échoué. Le *texte à partir de l’exécution* chaîne peut ou ne peut pas être fournie par le runtime COM.  
   
- Pour plus d’informations sur les messages d’erreur système, consultez le fichier système winerror.h, et [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).
+Pour plus d’informations sur les messages d’erreur système, consultez le fichier système winerror.h, et [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

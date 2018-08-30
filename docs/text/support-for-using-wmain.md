@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604061"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205714"
 ---
 # <a name="support-for-using-wmain"></a>Prise en charge de l'utilisation de wmain
 Visual C++ prend en charge la définition d’un **wmain** (fonction) et en passant des arguments à caractère élargi à votre application Unicode. Vous déclarez des paramètres formels à **wmain**, à l’aide d’un format similaire à `main`. Vous pouvez ensuite passer des arguments à caractère élargi et éventuellement un pointeur d’environnement à caractère élargi au programme. Les paramètres `argv` et `envp` de la fonction **wmain** sont de type `wchar_t*`. Exemple :  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge Unicode](../text/support-for-unicode.md)   
  [Synthèse de la programmation Unicode](../text/unicode-programming-summary.md)   
- [Fonction WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [Fonction WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)

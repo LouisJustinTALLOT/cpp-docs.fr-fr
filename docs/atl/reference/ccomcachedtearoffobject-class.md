@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203869"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject, classe
-Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable.  
+Cette classe implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour une interface détachable.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|Un `CComContainedObject` objet dérivé de votre classe détachable (la classe `contained`).|  
   
 ## <a name="remarks"></a>Notes  
- `CComCachedTearOffObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable. Cette classe diffère `CComTearOffObject` dans la mesure `CComCachedTearOffObject` possède son propre `IUnknown`, indépendamment de l’objet propriétaire `IUnknown` (le propriétaire est l’objet pour lequel le détachable est créé). `CComCachedTearOffObject` conserve son propre le décompte de références sur son `IUnknown` et se supprime lui-même une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez des ses détachable interfaces, le décompte de références de l’objet propriétaire `IUnknown` est incrémenté.  
+ `CComCachedTearOffObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour une interface détachable. Cette classe diffère `CComTearOffObject` dans la mesure `CComCachedTearOffObject` possède son propre `IUnknown`, indépendamment de l’objet propriétaire `IUnknown` (le propriétaire est l’objet pour lequel le détachable est créé). `CComCachedTearOffObject` conserve son propre le décompte de références sur son `IUnknown` et se supprime lui-même une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez des ses détachable interfaces, le décompte de références de l’objet propriétaire `IUnknown` est incrémenté.  
   
  Si le `CComCachedTearOffObject` implémentant le détachable est déjà instancié, et l’interface détachable est interrogée pour là encore, dans le même objet `CComCachedTearOffObject` objet est réutilisé. En revanche, si une interface détachable implémentée par un `CComTearOffObject` est à nouveau interrogée pour via l’objet propriétaire, un autre `CComTearOffObject` sera instancié.  
   

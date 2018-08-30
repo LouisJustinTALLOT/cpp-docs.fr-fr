@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451743"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203516"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Écrit des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -146,7 +146,7 @@ Nombre maximal de caractères à stocker.
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -156,13 +156,13 @@ Pour plus d’informations, consultez [Syntaxe de spécification de format : fo
 
 ## <a name="return-value"></a>Valeur de retour
 
-Laisser **len** soit de la longueur de la chaîne de données mises en forme, non compris le caractère null de fin. Les deux **len** et *nombre* sont exprimées en octets pour **snprintf** et **_snprintf**, caractères larges pour **_snwprintf**.
+Laisser **len** être la longueur de la chaîne de données mises en forme, non compris le caractère null de fin. Les deux **len** et *nombre* sont exprimées en octets pour **snprintf** et **_snprintf**, caractères larges pour **_snwprintf**.
 
 Pour toutes les fonctions, si **len** < *nombre*, **len** caractères sont stockés dans *tampon*, une marque de fin null est ajoutée, et **len** est retourné.
 
 Le **snprintf** fonction tronque le résultat lorsque **len** est supérieur ou égal à *nombre*, en plaçant une marque de fin null à `buffer[count-1]`. La valeur retournée est **len**, le nombre de caractères qui aurait été sortie si *nombre* était suffisante. Le **snprintf** fonction retourne une valeur négative si une erreur de codage se produit.
 
-Pour toutes les fonctions autres que **snprintf**si **len** = *nombre*, **len** caractères sont stockés dans  *mémoire tampon*, aucune marque de fin null n’est ajoutée, et **len** est retourné. Si **len** > *nombre*, *nombre* caractères sont stockés dans *tampon*, aucune marque de fin null n’est ajouté et une valeur négative valeur est retournée.
+Pour toutes les fonctions autres que **snprintf**si **len** = *nombre*, **len** caractères sont stockés dans  *mémoire tampon*, aucune marque de fin null n’est ajoutée, et **len** est retourné. Si **len** > *nombre*, *nombre* caractères sont stockés dans *tampon*, aucune marque de fin null n’est ajoutée et qu’une valeur négative valeur est retournée.
 
 Si *tampon* est un pointeur null et *nombre* est égal à zéro, **len** est retourné en tant que le nombre de caractères requis pour mettre en forme la sortie, sans le caractère null de fin. Pour effectuer un appel réussi avec le même *argument* et *paramètres régionaux* paramètres, allouez une mémoire tampon contenant au moins **len** + 1 caractères.
 
@@ -172,16 +172,16 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-Le **snprintf** (fonction) et le **_snprintf** famille de fonctions forme et stockent *nombre* caractères au maximum dans *tampon*. Le **snprintf** fonction stocke toujours un caractère null de fin, tronque la sortie si nécessaire. Le **_snprintf** famille de fonctions ajoute uniquement un caractère null de fin si la longueur de la chaîne mise en forme est strictement inférieur à *nombre* caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que la *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **snprintf** (fonction) et le **_snprintf** famille de fonctions forme et stockent *nombre* caractères au maximum dans *tampon*. Le **snprintf** fonction stocke toujours un caractère null de fin, tronque la sortie si nécessaire. Le **_snprintf** famille de fonctions ajoute uniquement un caractère null de fin si la longueur de la chaîne mise en forme est strictement inférieur à *nombre* caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Étant donné que la **_snprintf** fonctions ne garantissent pas le caractère null de fin : en particulier, lorsque la valeur de retour est *nombre*— vous assurer qu’elles sont suivies par le code qui ajoute la marque de fin null. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Étant donné que le **_snprintf** fonctions ne garantissent pas le caractère null de fin, en particulier, lorsque la valeur de retour est *nombre*— vous assurer qu’ils sont suivis par le code qui ajoute la marque de fin null. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, **snprintf** n’est plus identique à **_snprintf**. Le **snprintf** comportement de la fonction est désormais conforme à la norme C99.
 
-**_snwprintf** est une version à caractères larges de **_snprintf**; les arguments de pointeur de **_snwprintf** sont des chaînes à caractères larges. La détection des erreurs dans l’encodage **_snwprintf** peut différer de celle dans **_snprintf**. **_snwprintf**, comme **swprintf**, écrit la sortie dans une chaîne au lieu d’une destination de type **fichier**.
+**_snwprintf** est une version à caractères larges de **_snprintf**; les arguments de pointeur à **_snwprintf** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **_snwprintf** peut différer de celle dans **_snprintf**. **_snwprintf**, comme **swprintf**, écrit la sortie dans une chaîne au lieu d’une destination de type **fichier**.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -192,7 +192,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_sntprintf**|**_snprintf**|**_snprintf**|**_snwprintf**|
 |**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
