@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81642132272b40229437c2be8bac32d160885600
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202272"
 ---
 # <a name="accelerator-editor"></a>Éditeur d’accélérateurs
 
@@ -35,7 +35,7 @@ Une table d’accélérateurs est une ressource Windows qui contient une liste d
 
 Normalement, les accélérateurs sont utilisés comme raccourcis clavier pour des commandes de programme qui sont également disponibles dans un menu ou une barre d’outils. Toutefois, vous pouvez utiliser la table d’accélérateurs pour définir des combinaisons de touches pour des commandes qui ne sont associées à aucun objet d’interface utilisateur.
 
-Vous pouvez utiliser [affichage de classes](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) pour raccorder des commandes de touches accélérateur au code.
+Vous pouvez utiliser [affichage de classes](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) pour raccorder des commandes de touches accélérateur au code.
 
 Avec le **Accelerator** éditeur, vous pouvez :
 

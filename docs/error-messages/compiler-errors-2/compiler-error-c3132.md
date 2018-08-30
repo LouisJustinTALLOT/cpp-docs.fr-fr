@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3132 | Documents Microsoft
+title: Erreur du compilateur C3132 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252385"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204756"
 ---
 # <a name="compiler-error-c3132"></a>Erreur du compilateur C3132
 'paramètre de fonction' : les tableaux de paramètres peuvent uniquement être appliqués à un argument formel de type 'single-dimensional managed array'  
   
- Le [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) attribut a été appliqué à un paramètre qui n’est pas un tableau unidimensionnel.  
+ Le [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) attribut a été appliqué à un paramètre qui n’était pas un tableau unidimensionnel.  
   
  L’exemple suivant génère l’erreur C3132 :  
   

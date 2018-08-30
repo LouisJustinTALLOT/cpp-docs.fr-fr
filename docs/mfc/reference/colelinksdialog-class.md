@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853876"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203503"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog, classe
 Utilisée pour la boîte de dialogue OLE Modifier les liens.  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  Code généré par l’Assistant de conteneur d’application utilise cette classe.  
   
- Pour plus d’informations, consultez le [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) structure dans le SDK Windows.  
   
  Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, si l’utilisateur a annulé la boîte de dialogue.  
   
-- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) (fonction) dans le SDK Windows.  
+- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) (fonction) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez initialiser les divers contrôles de boîte de dialogue en définissant des membres de la [m_el](#m_el) structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Notes  
  Membres de cette structure peuvent être modifiés directement ou via les fonctions membres.  
   
- Pour plus d’informations, consultez le [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure dans le SDK Windows.  
+ Pour plus d’informations, consultez le [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) structure dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [COleDialog, classe](../../mfc/reference/coledialog-class.md)   

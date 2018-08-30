@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598878"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203590"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
-Le*boxing* est l’encapsulation d’une variable de type valeur, telle que [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)ou de type scalaire fondamental tel que `int`dans une classe ref quand la variable est passée à une méthode qui accepte [Platform::Object^](../cppcx/platform-object-class.md) comme son type d’entrée.  
+*Boxing* est l’encapsulation d’une variable de type valeur tel que [Windows::Foundation :: DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), ou un type scalaire fondamental tel que `int`— dans une classe ref quand la variable est passée à une méthode qui accepte [ Platform::Object ^](../cppcx/platform-object-class.md) en tant que son type d’entrée.  
   
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Passer un type valeur à un paramètre Object^  
  Bien que vous ne deviez pas convertir par boxing une variable explicitement pour la passer à un paramètre de méthode de type [Platform::Object^](../cppcx/platform-object-class.md), vous devez caster explicitement vers le type d'origine lorsque vous récupérez des valeurs qui ont été précédemment converties par boxing.  

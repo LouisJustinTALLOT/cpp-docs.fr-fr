@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544481"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202974"
 ---
 # <a name="cusertool-class"></a>Cusertool, classe
 Un outil utilisateur est un élément de menu qui exécute une application externe. Le **outils** onglet de la **personnaliser** boîte de dialogue ( [cmfctoolbarscustomizedialog, classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permet à l’utilisateur d’ajouter des outils de l’utilisateur et pour spécifier le nom, les commandes, les arguments, et répertoire initial de chaque outil utilisateur.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Différent de zéro si la commande a été exécutée avec succès ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Appels [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) pour exécuter une commande associée à l’outil utilisateur. La fonction échoue si la commande est vide ou si [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) échoue.  
+ Appels [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) pour exécuter une commande associée à l’outil utilisateur. La fonction échoue si la commande est vide ou si [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) échoue.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Charge l’icône par défaut pour un outil utilisateur.  

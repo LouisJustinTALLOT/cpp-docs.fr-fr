@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201443"
 ---
 # <a name="member-access-operators--and--gt"></a>Opérateurs d’accès au membre :. et -&gt;
 ## <a name="syntax"></a>Syntaxe  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  Dans la première forme, *postfix-expression* représente une valeur de struct, classe ou type d’union, et *nom* désigne un membre de la structure spécifiée, d’union ou classe. La valeur de l’opération est celle de *nom* et est une l-value Si *postfix-expression* est une l-value.  
   
-2.  Dans la seconde forme, *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, d’union ou classe. La valeur est celle de *nom* et est une l-value. Le **->** opérateur de déréférence le pointeur. Par conséquent, les expressions * e ***->**`member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs **->** ou **\*** sont surchargées).  
+2.  Dans la seconde forme, *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, d’union ou classe. La valeur est celle de *nom* et est une l-value. Le **->** opérateur de déréférence le pointeur. Par conséquent, les expressions `e->member` et `(*e).member` (où *e* représente un pointeur) produisent des résultats (sauf lorsque les opérateurs **->** ou <strong>\*</strong> sont surchargés).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre les deux formes de l'opérateur d'accès aux membres.  

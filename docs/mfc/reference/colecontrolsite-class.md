@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202853"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite, classe
 Prend en charge les interfaces de contrôle côté client personnalisées.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Les dimensions du site de contrôle.|  
   
 ## <a name="remarks"></a>Notes  
- Cette prise en charge est le moyen principal par lequel un contrôle ActiveX incorporé obtient des informations sur l’emplacement et l’étendue de son site d’affichage, son moniker, son interface utilisateur, ses propriétés ambiantes et autres ressources fournies par son conteneur. `COleControlSite` implémente entièrement le [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfaces. En outre, le IDispatch interface (prise en charge pour les propriétés ambiantes et de récepteurs d’événements) est également implémentée.  
+ Cette prise en charge est le moyen principal par lequel un contrôle ActiveX incorporé obtient des informations sur l’emplacement et l’étendue de son site d’affichage, son moniker, son interface utilisateur, ses propriétés ambiantes et autres ressources fournies par son conteneur. `COleControlSite` implémente entièrement le [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite), [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite), [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfaces. En outre, le IDispatch interface (prise en charge pour les propriétés ambiantes et de récepteurs d’événements) est également implémentée.  
   
  Pour créer un site de contrôle ActiveX à l’aide `COleControlSite`, dérivez une classe de `COleControlSite`. Dans votre `CWnd`-classe dérivée pour le conteneur (par exemple, votre boîte de dialogue) remplacer le `CWnd::CreateControlSite` (fonction).  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Notes  
  Cette fonction appelle directement par le biais du contrôle `IOleObject` interface pour exécuter le verbe spécifié. Si une exception est levée à la suite de cet appel de fonction, un code d’erreur HRESULT est retourné.  
   
- Pour plus d’informations, consultez [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) dans le SDK Windows.  
+ Pour plus d’informations, consultez [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) dans le SDK Windows.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Permet l’approvisionnement pour le site de contrôle de données.  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Ces informations sont stockées dans un [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) structure.  
+ Ces informations sont stockées dans un [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo) structure.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Contient le cookie du point de connexion à partir du récepteur d’événements du contrôle.  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)dans le SDK Windows.  
+ Pour plus d’informations, consultez [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)dans le SDK Windows.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Contient le [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) cookie.  
+ Contient le [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Contient le [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interface du contrôle.  
+ Contient le [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) interface du contrôle.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Contient le `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) interface du contrôle.  
+ Contient le `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) interface du contrôle.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Contient le `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) interface du contrôle.  
+ Contient le `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) interface du contrôle.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Les styles à ajouter des styles de fenêtre actuelle.  
   
  *nIndicateurs*  
- Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) fonction dans le SDK Windows.  
+ Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) fonction dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les styles sont modifiés, sinon zéro.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Notes  
  Stock du contrôle propriété Enabled est modifié pour correspondre au paramètre de WS_DISABLED. Propriétés de Style de bordure du contrôle stock seront modifiée pour correspondre au paramètre demandé pour WS_BORDER. Tous les autres styles sont appliqués directement à un handle de fenêtre du contrôle, s’il en existe.  
   
- Modifie les styles de fenêtre du contrôle. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
+ Modifie les styles de fenêtre du contrôle. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
   
  Si *nIndicateurs* est différent de zéro, `ModifyStyle` appelle la fonction Win32 `SetWindowPos`, puis le redessine la fenêtre en combinant *nIndicateurs* avec les indicateurs de quatre suivants :  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Les styles étendus à ajouter des styles de fenêtre actuelle.  
   
  *nIndicateurs*  
- Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) fonction dans le SDK Windows.  
+ Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) fonction dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les styles sont modifiés, sinon zéro.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Notes  
  Stock du contrôle propriété Appearance sera modifiée pour correspondre au paramètre de WS_EX_CLIENTEDGE. Tous les autres styles de fenêtre étendus sont appliqués directement à un handle de fenêtre du contrôle, s’il en existe.  
   
- Modifie la fenêtre styles de l’objet de site de contrôle étendus. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
+ Modifie la fenêtre styles de l’objet de site de contrôle étendus. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
   
  Si *nIndicateurs* est différent de zéro, `ModifyStyleEx` appelle la fonction Win32 `SetWindowPos`, puis le redessine la fenêtre en combinant *nIndicateurs* avec les indicateurs de quatre suivants :  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  La nouvelle hauteur de la fenêtre.  
   
  *nIndicateurs*  
- Spécifie la fenêtre de dimensionnement et de positionnement des indicateurs. Pour connaître les valeurs possibles, consultez la section Notes pour [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) dans le SDK Windows.  
+ Spécifie la fenêtre de dimensionnement et de positionnement des indicateurs. Pour connaître les valeurs possibles, consultez la section Notes pour [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, sinon, zéro.  

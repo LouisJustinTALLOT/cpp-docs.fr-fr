@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1108 | Documents Microsoft
+title: Erreur irrécupérable C1108 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8b00f61a70e7c40f442173acace2e9f186d1d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f301669e1aeead5a8c92f59fbaaaf87167fef4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203922"
 ---
 # <a name="fatal-error-c1108"></a>Erreur irrécupérable C1108
-Impossible de trouver la DLL : 'dll'  
-  
- La DLL spécifiée (***dll***) est introuvable dans le chemin fourni.  
-  
- Pour résoudre cette erreur, réinstallez Visual C++ ou copiez sur votre ordinateur le fichier .dll correspondant à partir du CD d’installation.
+
+> Impossible de trouver la DLL : '*nom de la dll*'
+
+La DLL spécifiée (*nom de la dll*) est introuvable dans le chemin d’accès.
+
+Pour résoudre cette erreur, réinstallez Visual C++ ou copiez le fichier .dll approprié à partir de l’installation sur votre ordinateur.

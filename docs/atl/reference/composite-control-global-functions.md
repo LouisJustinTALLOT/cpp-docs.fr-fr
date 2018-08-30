@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882430"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203714"
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 Ces fonctions prennent en charge pour la création de boîtes de dialogue et de création, d’hébergement et de licences des contrôles ActiveX.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Identifie une instance du module dont le fichier exécutable contient le modèle de boîte de dialogue.  
   
  *lpTemplateName*  
- [in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.  
+ [in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.  
   
  *hWndParent*  
  [in] Identifie la fenêtre propriétaire de la boîte de dialogue.  
   
  *lpDialogProc*  
- [in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](http://msdn.microsoft.com/library/windows/desktop/aa380902) sous Windows SDK *: SDK Tools*.  
+ Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](/windows/desktop/menurc/common-control-parameters) sous Windows SDK *: SDK Tools*.  
   
- Pour plus d’informations sur les boîtes de dialogue en général, consultez [boîte de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms645452) et [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) dans le SDK Windows.  
+ Pour plus d’informations sur les boîtes de dialogue en général, consultez [boîte de dialogue](/windows/desktop/api/winuser/nf-winuser-dialogboxa) et [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) dans le SDK Windows.  
   
 ##  <a name="atlaxcreatedialog"></a>  API AtlAxCreateDialog  
  Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Identifie une instance du module dont le fichier exécutable contient le modèle de boîte de dialogue.  
   
  *lpTemplateName*  
- [in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.  
+ [in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.  
   
  *hWndParent*  
  [in] Identifie la fenêtre propriétaire de la boîte de dialogue.  
   
  *lpDialogProc*  
- [in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Notes  
  La boîte de dialogue qui en résulte peut contenir des contrôles ActiveX.  
   
- Consultez [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) et [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) dans le Kit de développement logiciel Windows.  
+ Consultez [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) et [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Crée un contrôle ActiveX, puis initialise et héberge ce dernier dans la fenêtre spécifiée.  
@@ -159,7 +159,7 @@ ATLAPI AtlAxCreateControl(
   
 -   Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »  
   
--   Une URL comme «http://www.microsoft.com»  
+-   Une URL comme « http://www.microsoft.com»  
   
 -   Une référence à un document actif comme « file://\\\Documents\MyDoc.doc »  
   
@@ -207,7 +207,7 @@ ATLAPI AtlAxCreateControlEx(
   
 -   Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »  
   
--   Une URL comme «http://www.microsoft.com»  
+-   Une URL comme « http://www.microsoft.com»  
   
 -   Une référence à un document actif comme « file://\\\Documents\MyDoc.doc »  
   
@@ -262,7 +262,7 @@ ATLAPI AtlAxCreateControlLic(
   
 -   Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »  
   
--   Une URL comme «http://www.microsoft.com»  
+-   Une URL comme « http://www.microsoft.com»  
   
 -   Une référence à un document actif comme « file://\\\Documents\MyDoc.doc »  
   
@@ -312,7 +312,7 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »  
   
--   Une URL comme «http://www.microsoft.com»  
+-   Une URL comme « http://www.microsoft.com»  
   
 -   Une référence à un document actif comme « file://\\\Documents\MyDoc.doc »  
   
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Différent de zéro si l’initialisation du contrôle de code d’hébergement a réussi ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction doit être appelée avant d’utiliser l’API d’hébergement de contrôle ATL. Suite à un appel à cette fonction, le **« AtlAxWin »** classe de fenêtre peut être utilisée dans les appels à [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), comme décrit dans le SDK Windows.  
+ Cette fonction doit être appelée avant d’utiliser l’API d’hébergement de contrôle ATL. Suite à un appel à cette fonction, le **« AtlAxWin »** classe de fenêtre peut être utilisée dans les appels à [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), comme décrit dans le SDK Windows.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Cette fonction n’initialise pas le contrôle du ATL code d’hébergement en désinscrivant le **« AtlAxWin80 »** et **« AtlAxWinLic80 »** classes de fenêtre.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Renvoie toujours TRUE.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction appelle simplement [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) comme décrit dans le SDK Windows.  
+ Cette fonction appelle simplement [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) comme décrit dans le SDK Windows.  
   
  Appelez cette fonction pour nettoyer une fois que toutes les fenêtres d’hôte existantes ont été détruits si vous avez appelé [AtlAxWinInit](#atlaxwininit) et vous n’avez plus besoin créer des fenêtres de l’hôte. Si vous n’appelez pas cette fonction, la classe de fenêtre sera annulée automatiquement lorsque le processus se termine.  
   

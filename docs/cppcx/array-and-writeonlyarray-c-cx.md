@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606110"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203750"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array et WriteOnlyArray (C++/CX)
 Vous pouvez utiliser librement des tableaux de style C normaux ou [std::array](../standard-library/array-class-stl.md) en C / c++ / programme CX (bien que [std::vector](../standard-library/vector-class.md) est souvent un meilleur choix), mais dans n’importe quelle API qui est publié dans les métadonnées, vous devez convertir un tableau de style C ou vector, à un [Platform::Array](../cppcx/platform-array-class.md) ou [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) type en fonction de son utilisation. Le type [Platform::Array](../cppcx/platform-array-class.md) n'est pas aussi efficace ni aussi puissant que le type [std::vector](../standard-library/vector-class.md), donc en règle générale, vous devez éviter de l'utiliser dans le code interne qui exécute un grand nombre d'opérations sur les éléments de tableau.  
@@ -82,12 +82,12 @@ Vous pouvez utiliser librement des tableaux de style C normaux ou [std::array](.
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Utilisez le type ArrayReference pour éviter de copier les données.  
  Dans certains scénarios où les données sont passées à travers l'ABI dans un [Platform::Array](../cppcx/platform-array-class.md)et où vous voulez finalement traiter ces données dans un tableau de style C pour plus d'efficacité, vous pouvez utiliser [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) pour éviter l'opération de copie supplémentaire. Lorsque vous passez un type [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) comme argument à un paramètre qui accepte un `Platform::Array`, le `ArrayReference` stocke les données directement dans un tableau de style C que vous spécifiez. Gardez à l'esprit que le type `ArrayReference` ne peut effectuer aucun verrouillage sur les données sources. Ainsi, si ces données sont modifiées ou supprimées sur un autre thread avant l'appel, les résultats seront non définis.  
   
- L’extrait de code suivant montre comment copier les résultats d’une opération [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) dans un `Platform::Array` (le modèle habituel), puis comment substituer `ArrayReference` pour copier les données directement dans un tableau de style C :  
+ L’extrait de code suivant montre comment copier les résultats d’une [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) opération dans un `Platform::Array` (le modèle habituel), puis comment substituer `ArrayReference` pour copier les données directement dans un tableau de style C :  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Évitez d'exposer un tableau comme propriété  
- En général, vous devez éviter d'exposer un type `Platform::Array` en tant que propriété dans une classe ref, car le tableau entier est retourné même si le code client tente uniquement d'accéder à un seul élément. Quand vous devez exposer un conteneur de séquence en tant que propriété dans une classe ref publique, choisissez plutôt [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) . Dans les API privées ou internes (qui ne sont pas publiées en métadonnées), envisagez d'utiliser un conteneur C++ standard tel que le type [std::vector](../standard-library/vector-class.md).  
+ En général, vous devez éviter d'exposer un type `Platform::Array` en tant que propriété dans une classe ref, car le tableau entier est retourné même si le code client tente uniquement d'accéder à un seul élément. Lorsque vous avez besoin d’exposer un conteneur de séquences en tant que propriété dans une classe ref publique, [Windows::Foundation ::](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) constitue un meilleur choix. Dans les API privées ou internes (qui ne sont pas publiées en métadonnées), envisagez d'utiliser un conteneur C++ standard tel que le type [std::vector](../standard-library/vector-class.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Système de type](../cppcx/type-system-c-cx.md)   

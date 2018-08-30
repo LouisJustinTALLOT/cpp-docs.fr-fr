@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338823"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205461"
 ---
 # <a name="cevent-class"></a>CEvent, classe
 Représente un événement, qui est un objet de synchronisation qui permet à un thread de notifier à un autre un événement s’est produite.  
@@ -113,7 +113,7 @@ CEvent(
  Nom de l'objet `CEvent`. Doit être fourni si l’objet doit être utilisé au-delà des limites de processus. Si le nom correspond à un événement existant, le constructeur crée quand même un `CEvent` objet qui fait référence à l’événement de ce nom. Si le nom correspond à un objet de synchronisation existant qui n’est pas un événement, la construction échoue. Si NULL, le nom sera null.  
   
  *lpsaAttribute*  
- Attributs de sécurité de l’objet d’événement. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) dans le SDK Windows.  
+ Attributs de sécurité de l’objet d’événement. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Pour accéder à ou libérer un `CEvent` d’objet, de créer un [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objet et appelez ses [verrou](../../mfc/reference/csinglelock-class.md#lock) et [Unlock](../../mfc/reference/csinglelock-class.md#unlock) fonctions membres.  
@@ -121,7 +121,7 @@ CEvent(
  Pour modifier l’état d’un `CEvent` objet signalé (threads n’ont pas d’attente), appelez [SetEvent](#setevent) ou [PulseEvent](#pulseevent). Pour définir l’état d’un `CEvent` objet comme étant non signalé (threads doivent attendre), appelez [ResetEvent](#resetevent).  
   
 > [!IMPORTANT]
->  Après avoir créé le `CEvent` de l’objet, utilisez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour vous assurer que le mutex n’existe pas déjà. Si le mutex n’existait inattendu, cela peut indiquer un processus non fiable est l’occupation et peut être ayant l’intention d’utiliser le mutex à des fins malveillantes. Dans ce cas, la procédure en termes de sécurité recommandée consiste à fermer le handle et continuer comme si une défaillance s’est produite lors de la création de l’objet.  
+>  Après avoir créé le `CEvent` de l’objet, utilisez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pour vous assurer que le mutex n’existe pas déjà. Si le mutex n’existait inattendu, cela peut indiquer un processus non fiable est l’occupation et peut être ayant l’intention d’utiliser le mutex à des fins malveillantes. Dans ce cas, la procédure en termes de sécurité recommandée consiste à fermer le handle et continuer comme si une défaillance s’est produite lors de la création de l’objet.  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Définit l’état de l’événement signalé (disponible), libère tous les threads en attente et une remise à "non signalé" (non disponible) automatiquement.  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  Si aucun thread n’attend, ou si aucun thread ne peut être libéré immédiatement, `PulseEvent` définit l’état de l’événement à "non signalé" et le retourne.  
   
- `PulseEvent` utilise Win32 sous-jacente `PulseEvent` (fonction), qui peut être momentanément supprimée à partir de l’état d’attente par un appel de procédure asynchrone en mode noyau. Par conséquent, `PulseEvent` n’est pas fiable et ne doit pas être utilisé par les nouvelles applications. Pour plus d’informations, consultez le [PulseEvent fonction](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` utilise Win32 sous-jacente `PulseEvent` (fonction), qui peut être momentanément supprimée à partir de l’état d’attente par un appel de procédure asynchrone en mode noyau. Par conséquent, `PulseEvent` n’est pas fiable et ne doit pas être utilisé par les nouvelles applications. Pour plus d’informations, consultez le [PulseEvent fonction](/windows/desktop/api/winbase/nf-winbase-pulseevent).  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Définit l’état de l’événement à "non signalé" jusqu'à ce que le définir explicitement à signalé par le [SetEvent](#setevent) fonction membre.  

@@ -1,5 +1,5 @@
 ---
-title: Ajout d’éléments au contrôle Header | Documents Microsoft
+title: Ajout d’éléments au contrôle Header | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206145"
 ---
 # <a name="adding-items-to-the-header-control"></a>Ajout d'éléments au contrôle Header
-Après avoir créé votre contrôle header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) dans sa fenêtre parente, ajoutez autant « éléments d’en-tête » dont vous avez besoin : généralement un par colonne.  
+Après avoir créé votre contrôle header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) dans sa fenêtre parente, ajoutez autant « éléments d’en-tête » que vous avez besoin : généralement un par colonne.  
   
 ### <a name="to-add-a-header-item"></a>Pour ajouter un élément d’en-tête  
   
-1.  Préparer un [structure HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure.  
+1.  Préparer un [structure HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) structure.  
   
 2.  Appelez [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), en passant la structure.  
   
 3.  Répétez les étapes 1 et 2 pour les éléments supplémentaires.  
   
- Pour plus d’informations, consultez [Ajout d’un élément à un contrôle Header](http://msdn.microsoft.com/library/windows/desktop/bb775238) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations, consultez [Ajout d’un élément à un contrôle d’en-tête](/windows/desktop/Controls/header-controls) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)   

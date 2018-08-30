@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613199"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202155"
 ---
 # <a name="build-system-changes"></a>Modifications du système de génération
 Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefois, dans Visual Studio 2008 et versions antérieures, le système de VCBuild a été utilisé. Certains types de fichiers et les concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document présente les différences dans le système de génération en cours.  
@@ -55,7 +55,7 @@ Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefoi
   
  Dans la version actuelle, l’héritage est pris en charge en spécifiant la valeur d’une propriété comme la concaténation d’un ou plusieurs des valeurs littérales et des macros de propriété. Le **$ (Inherit)** et **$ (NoInherit)** macros ne sont pas prises en charge.  
   
- Dans l’exemple suivant, une liste délimitée par des points-virgules est affectée à une propriété sur une page de propriétés. La liste se compose de la concaténation de la  *\<valeur >* littéral et la valeur de la `MyProperty` propriété, qui est accessible à l’aide de la notation de macro, **$(***MyProperty***)** .  
+ Dans l’exemple suivant, une liste délimitée par des points-virgules est affectée à une propriété sur une page de propriétés. La liste se compose de la concaténation de la  *\<valeur >* littéral et la valeur de la `MyProperty` propriété, qui est accessible à l’aide de la notation de macro, **$(**  <em>MyProperty</em>**)**.  
   
 ```  
 Property=<value>;$(MyProperty)  

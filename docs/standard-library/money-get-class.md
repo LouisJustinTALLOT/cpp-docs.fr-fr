@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966548"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201749"
 ---
 # <a name="moneyget-class"></a>money_get, classe
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType*<br/>
+ Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*InputIterator* le type d’itérateur à partir de laquelle les fonctions get lisent leur entrée.
+*InputIterator*<br/>
+ Type d'itérateur depuis lequel les fonctions get lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*première* itérateur d’entrée traitant le début de la séquence à convertir.
+*first*<br/>
+ Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernière* itérateur d’entrée se rapportant à la fin de la séquence à convertir.
+*last*<br/>
+ Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
+*Intl*<br/>
+ Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est nécessaire.
+*iosbase*<br/>
+ Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*État* définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+*État*<br/>
+ Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*Val* chaîne stockant la séquence convertie.
+*Val*<br/>
+ Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*première* itérateur d’entrée traitant le début de la séquence à convertir.
+*first*<br/>
+ Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernière* itérateur d’entrée se rapportant à la fin de la séquence à convertir.
+*last*<br/>
+ Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
+*Intl*<br/>
+ Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est obligatoire
+*iosbase*<br/>
+ Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*État* définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi.
+*État*<br/>
+ Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*Val* chaîne stockant la séquence convertie.
+*Val*<br/>
+ Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -294,7 +309,7 @@ Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise son objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).
+Le constructeur initialise son objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
 ## <a name="string_type"></a>  money_get::string_type
 

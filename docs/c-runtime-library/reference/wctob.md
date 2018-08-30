@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cff2dcb8d6b0ad3756a8a0047fcc9b982fb7bb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61d92c02c4410bdc01b76ac6307fb9bb2652880a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411443"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203606"
 ---
 # <a name="wctob"></a>wctob
 
@@ -59,15 +59,15 @@ Valeur à traduire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wctob** correctement convertit un caractère large, elle retourne sa représentation sous forme de caractères multioctets, uniquement si le caractère multioctet est exactement un seul octet de long. Si **wctob** rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet ou le caractère multioctet est pas exactement un seul octet long, il retourne une valeur -1.
+Si **wctob** convertit correctement un caractère large, elle retourne sa représentation sous forme de caractère multioctet, uniquement si le caractère multioctet est un octet exactement. Si **wctob** rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet ou le caractère multioctet est de pas exactement un octet, elle retourne une valeur -1.
 
 ## <a name="remarks"></a>Notes
 
-Le **wctob** fonction convertit un caractère large contenu dans *wchar* le caractère multioctet correspondant passé par la valeur de retour **int** valeur, si le multioctets caractère correspond à exactement un octet de long.
+Le **wctob** fonction convertit un caractère large contenu dans *wchar* caractère multioctet correspondant passé par la valeur de retour **int** valeur, si le multioctets caractère est un octet exactement.
 
 Si **wctob** a échoué et qu’aucun caractère multioctet correspondant a été trouvé, la fonction définit **errno** à **EILSEQ** et retourne -1.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -118,4 +118,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

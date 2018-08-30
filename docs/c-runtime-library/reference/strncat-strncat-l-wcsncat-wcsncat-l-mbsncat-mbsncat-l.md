@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202866"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Ajoute les caractères d’une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncat** et **_mbsncat_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat** et **_mbsncat_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -152,12 +152,12 @@ Retourne un pointeur désignant la chaîne de destination. Aucune valeur de reto
 
 ## <a name="remarks"></a>Notes
 
-Le **strncnt** fonction ajoute au maximum, la première *nombre* caractères de *strSource* à *strDest*. Le caractère initial de *strSource* remplace le caractère null de fin de *strDest*. Si un caractère null apparaît dans *strSource* avant *nombre* caractères sont ajoutés, **strncnt** ajoute tous les caractères de *strSource*, jusqu’au caractère null. Si *nombre* est supérieure à la longueur de *strSource*, la longueur de *strSource* est utilisé à la place de *nombre*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **strncnt** fonction ajoute, au plus, le premier *nombre* caractères de *strSource* à *strDest*. Le caractère initial de *strSource* remplace le caractère null de fin de *strDest*. Si un caractère null apparaît dans *strSource* avant *nombre* caractères sont ajoutés, **strncnt** ajoute tous les caractères de *strSource*, jusqu’au caractère null. Si *nombre* est supérieur à la longueur de *strSource*, la longueur de *strSource* est utilisé à la place de *nombre*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> **strncnt** ne vérifie pas suffisamment d’espace *strDest*; il est donc une cause potentielle de dépassements de mémoire tampon. N’oubliez pas que *nombre* limite le nombre de caractères ajoutés ; il n’est pas une limite sur la taille de *strDest*. Lisez l'exemple ci-dessous. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> **strncnt** ne vérifie pas suffisamment d’espace *strDest*; il est donc une cause potentielle de dépassements de mémoire tampon. N’oubliez pas que *nombre* limite le nombre de caractères ajoutés ; il n’est pas une limite sur la taille de *strDest*. Lisez l'exemple ci-dessous. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** et **_mbsncat** sont des versions à caractères larges et caractères multioctets de **strncnt**. Les arguments de chaîne et la valeur de retour de **wcsncat** sont des caractères larges chaînes ; ceux de **_mbsncat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcsncat** et **_mbsncat** sont des versions à caractères larges et à caractères multioctets de **strncnt**. Les arguments de chaîne et la valeur de retour de **wcsncat** sont des caractères larges chaînes ; ceux de **_mbsncat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -171,9 +171,9 @@ En C++, ces fonctions ont des surcharges de modèle. Pour plus d'informations, c
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** et **_wcsncat_l** n’ont aucune dépendance des paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies à un usage interne par **_tcsncat_l**.
+> **_strncat_l** et **_wcsncat_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies pour une utilisation interne par **_tcsncat_l**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

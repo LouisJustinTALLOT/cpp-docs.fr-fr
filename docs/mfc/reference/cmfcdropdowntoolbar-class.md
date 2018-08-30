@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201457"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar, classe
 Barre d'outils qui s'affiche lorsque l'utilisateur appuie sur un bouton de barre d'outils de niveau supérieur et le maintient enfoncé.  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Substitue `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Substitue [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Substitue [CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Notes  
  Un `CMFCDropDownToolBar` objet combine l’apparence visuelle d’une barre d’outils avec le comportement d’un menu contextuel. Lorsqu’un utilisateur appuie sur et contient un bouton de barre d’outils déroulante (consultez [cmfcdropdowntoolbarbutton, classe](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), une barre d’outils de la liste déroulante s’affiche, et l’utilisateur peut sélectionner un bouton à partir de la barre d’outils de la liste déroulante en le défilement vers elle et en libérant de la souris bouton. Une fois que l’utilisateur sélectionne un bouton dans la barre d’outils de la liste déroulante, ce bouton s’affiche en tant que bouton dans la barre d’outils de niveau supérieur en cours.  

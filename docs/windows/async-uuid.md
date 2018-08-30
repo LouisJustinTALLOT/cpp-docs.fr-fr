@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7619868e131476143c144e695e842708d1b54a6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a1117ba3933d714486f314510d0288f0c63bf4b8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606443"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202374"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -43,7 +43,7 @@ UUID qui identifie la version de l’interface.
 
 ## <a name="remarks"></a>Notes
 
-Le **async_uuid** attribut C++ a les mêmes fonctionnalités que le [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) attribut MIDL.
+Le **async_uuid** attribut C++ a les mêmes fonctionnalités que le [async_uuid](/windows/desktop/Midl/async-uuid) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

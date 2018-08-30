@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407143"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202514"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
@@ -54,15 +54,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Paramètres
 
 *newhandlermode*<br/>
-Mode du nouveau gestionnaire de **malloc**; valide valeur est 0 ou 1.
+Mode de nouveau gestionnaire pour **malloc**; valide valeur est 0 ou 1.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le gestionnaire précédent mode défini pour **malloc**. Une valeur de 1 indique que, en cas d’échec d’allocation de mémoire, de retour **malloc** précédemment appelé la routine du nouveau gestionnaire ; une valeur de retour de 0 indique qu’il n’a pas. Si le *newhandlermode* argument est différent de 0 ou 1, retourne -1.
+Retourne le gestionnaire précédent jeu de mode pour **malloc**. Une valeur de retour 1 indique qui, en cas d’échec d’allocation de mémoire, **malloc** précédemment appelé la routine de nouveau gestionnaire ; une valeur de retour 0 indique qu’il ne le faisait pas. Si le *newhandlermode* argument n’est pas égale 0 ou 1, retourne -1.
 
 ## <a name="remarks"></a>Notes
 
-La fonction C++ **_set_new_mode** définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine du gestionnaire en tant que jeu par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine du gestionnaire sur les échecs d’allocation de mémoire. Vous pouvez substituer ce comportement par défaut afin que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine du Gestionnaire de la même façon que les **nouveau** opérateur est Lorsqu’il échoue pour la même raison. Pour plus d’informations, voir les opérateurs [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*. Pour substituer la valeur par défaut, appelez :
+La fonction C++ **_set_new_mode** définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur Quand elle échoue pour la même raison. Pour plus d’informations, voir les opérateurs [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*. Pour substituer la valeur par défaut, appelez :
 
 ```cpp
 _set_new_mode(1);
@@ -70,9 +70,9 @@ _set_new_mode(1);
 
 au début de votre programme, ou créez un lien avec Newmode.obj (consultez [Options de lien](../../c-runtime-library/link-options.md)).
 
-Cette fonction valide son paramètre. Si *newhandlermode* tout élément autre que 0 ou 1, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_ *** set_new_mode** retourne -1 et définit **errno** à **EINVAL**.
+Cette fonction valide son paramètre. Si *newhandlermode* tout élément autre que 0 ou 1, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, <strong>_set_new_mode</strong> retourne -1 et définit **errno** à `EINVAL`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

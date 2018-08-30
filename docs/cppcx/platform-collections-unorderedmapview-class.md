@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203026"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView, classe
 Représente une vue en lecture seule dans une *carte*, qui est une collection de paires clé/valeur.  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Espace de noms :** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First, méthode
-Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) élément dans la carte non triée.  
+Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) élément dans la carte non triée.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  UnorderedMapView::Size, méthode
-Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) éléments de l’objet UnorderedMapView.  
+Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) éléments de l’objet UnorderedMapView.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Nom de type du UnorderedMapView.  
   
  `H`  
- Objet de fonction qui peut avoir une valeur de hachage pour une clé. Valeur par défaut est [std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) pour les types qui `std::hash` prend en charge.  
+ Objet de fonction qui peut avoir une valeur de hachage pour une clé. Valeur par défaut est [std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) pour les types qui `std::hash` prend en charge.  
   
  `P`  
  Type qui fournit un objet de fonction qui peut comparer deux clés pour déterminer leur égalité. Valeur par défaut est [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
