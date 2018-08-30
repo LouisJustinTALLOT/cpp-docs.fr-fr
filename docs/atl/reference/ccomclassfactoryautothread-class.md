@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: dbd258761bef7789e73fe61ac288b414902d2af8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883058"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214072"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Ccomclassfactoryautothread, classe
-Cette classe implémente le [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface et permet aux objets d’être créé dans plusieurs des cloisonnements.  
+Cette classe implémente le [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interface et permet aux objets d’être créé dans plusieurs des cloisonnements.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -114,7 +114,7 @@ STDMETHODIMP LockServer(BOOL fLock);
  Appel `LockServer` permet à un client à maintenir une fabrique de classe afin que plusieurs objets peuvent être créés rapidement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2, classe](../../atl/reference/ccomclassfactory2-class.md)   
  [Ccomclassfactorysingleton, classe](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)   

@@ -1,7 +1,7 @@
 ---
 title: Projets Ouvrir un dossier dans Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337283"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131321"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projets Ouvrir un dossier dans Visual C++
-Introduite dans Visual Studio 2017, la fonctionnalité « Ouvrir un dossier » vous permet d’ouvrir un dossier de fichiers sources et de commencer immédiatement à coder en bénéficiant des avantages suivants : IntelliSense, navigation, refactorisation, débogage, etc. Aucun fichier .sln ou .vcxproj n’est chargé. Si nécessaire, vous pouvez spécifier des tâches personnalisées ou générer et lancer des paramètres par le biais de fichiers .json simples. Grâce à la technologie Ouvrir un dossier, Visual C++ prend non seulement en charge des collections souples de fichiers, mais aussi la quasi-totalité des systèmes de génération : CMake, Ninja, QMake (pour les projets de Qt), gyp, SCons, Gradle, Buck, make, etc. 
+
+Dans Visual Studio 2017 et ultérieur, la fonctionnalité « Ouvrir un dossier » vous permet d’ouvrir un dossier de fichiers sources et de commencer immédiatement à coder en bénéficiant des avantages suivants : IntelliSense, navigation, refactorisation, débogage, etc. Aucun fichier .sln ou .vcxproj n’est chargé. Si nécessaire, vous pouvez spécifier des tâches personnalisées ou générer et lancer des paramètres par le biais de fichiers .json simples. Grâce à la technologie Ouvrir un dossier, Visual C++ prend non seulement en charge des collections souples de fichiers, mais aussi la quasi-totalité des systèmes de génération : CMake, Ninja, QMake (pour les projets de Qt), gyp, SCons, Gradle, Buck, make, etc. 
 
 Pour utiliser Ouvrir un dossier, sélectionnez *Fichier | Ouvrir | Dossier* à partir du menu principal ou appuyez sur *Ctrl + Maj + Alt + O*. L’Explorateur de solutions affiche immédiatement tous les fichiers dans le dossier. Vous pouvez cliquer sur n’importe quel fichier pour le modifier. En arrière-plan, Visual Studio démarre l’indexation des fichiers pour activer les fonctionnalités IntelliSense, de navigation et de refactorisation. Au fil des modifications, créations, déplacements et suppressions de fichiers, Visual Studio effectue automatiquement le suivi des modifications et met à jour en permanence son index IntelliSense. 
   
@@ -30,7 +31,7 @@ Pour utiliser Ouvrir un dossier, sélectionnez *Fichier | Ouvrir | Dossier* à p
 CMake est intégré à l’IDE Visual Studio sous le nom « Outils Visual C++ pour CMake », un composant de la charge de travail de bureau C++. Pour plus d’informations, consultez [Visual C++ Tools pour CMake](cmake-tools-for-visual-cpp.md).
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Projets QMake qui ciblent le framework Qt
-Vous pouvez soit utiliser Outils Visual C++ pour CMake pour cibler Qt afin de générer des projets Qt, soit utiliser l’extension Qt Visual Studio. Remarque : À compter d’août 2017, la [prise en charge de l’extension Qt Visual Studio pour Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) est disponible en version bêta.
+Vous pouvez soit utiliser Outils Visual C++ pour CMake pour cibler Qt afin de générer des projets Qt, soit utiliser l’[extension Qt Visual Studio](https://download.qt.io/development_releases/vsaddin/) pour Visual Studio 2015 ou Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc.
 Quel que soit le système de génération que vous utilisez dans Visual C++, vous pouvez tirer parti des avantages de l’IDE et du débogueur Visual C++. Quand vous ouvrez le dossier racine de votre projet, Visual C++ utilise l’heuristique pour indexer les fichiers sources pour IntelliSense et la navigation. Vous pouvez fournir des indications sur la structure de votre code en modifiant le fichier CppProperties.json. De la même façon, vous pouvez configurer votre programme de génération en modifiant le fichier launch.vs.json. 

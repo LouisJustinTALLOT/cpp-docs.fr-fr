@@ -1,7 +1,7 @@
 ---
 title: Visual C++ dans Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 08/22/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,21 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b43f9ac9edb0d19af4002bb839f857ae71ad4a11
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: b4d4005479c1808ba2d396dfe8807f8a415f9322
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762049"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131774"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ dans Visual Studio
 
+> [!NOTE]  
+> Cette documentation pour les développeurs s’applique à Visual Studio 2015 et Visual Studio 2017. 
+
+> Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](http://www.microsoft.com/en-us/download/) et entrez **Visual C++** dans la zone de recherche.  
+  
+
 Microsoft Visual C++, généralement abrégé en Visual C++ ou MSVC, est le nom qui désigne les outils de développement C++, C et en langage assembleur et les bibliothèques disponibles dans le cadre de Visual Studio sur Windows. Ces outils et bibliothèques vous permettent de créer des applications de plateforme Windows universelle (UWP), des applications serveur et de bureau Windows natives, des bibliothèques multiplateformes et des applications qui s’exécutent sur Windows, Linux, Android et iOS, ainsi que des applications et des bibliothèques managées qui utilisent le .NET Framework. Vous pouvez utiliser Visual C++ pour écrire aussi bien des applications de console simples que des applications plus sophistiquées et complexes pour le Bureau Windows,des pilotes de périphériques et des composants de système d’exploitation que des jeux multiplateformes pour appareils mobiles, des très petits appareils IoT que des dispositifs HPC multiserveurs dans le cloud Azure.
 
-## <a name="general-information-about-visual-c"></a>Informations générales sur Visual C++
+## <a name="whats-new-and-conformance-history"></a>Nouveautés et historique de la conformité
 
-[Nouveautés de Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Découvrez les nouveautés intégrées dans Visual C++.
+[Nouveautés de C++ dans Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Découvrez les nouveautés dans Visual Studio 2017.
+
+[Nouveautés de C++ de Visual Studio 2003 à 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+Découvrez ce qui était nouveau dans C++ pour chaque version de Visual Studio de 2003 à 2015.
 
 [Améliorations de la conformité de C++ dans Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
 Découvrez les améliorations de la conformité de C++ dans Visual Studio 2017.
@@ -42,20 +51,13 @@ Liste des états de conformité par fonctionnalité dans le compilateur MSVC C++
 [Historique des modifications de Visual C++ entre 2003 et 2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
 Découvrez les modifications avec rupture introduites dans cette version.
 
-[Bienvenue dans C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-En savoir plus sur les techniques de programmation C++ basées sur C++11 et C++14 qui vous permettent d’écrire rapidement du code sécurisé et d’éviter la plupart des pièges de la programmation de style C.
+## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Installer Visual Studio et mettre à niveau à partir de versions antérieures
 
-[Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
-Découvrez comment créer des rapports d’erreurs efficaces portant sur l’ensemble d’outils Visual C++ (compilateur, éditeur de liens et autres outils) et différentes manières de soumettre votre rapport.
+[Installer la prise en charge de C++ dans Visual Studio](build/vscpp-step-0-installation.md)<br/>
+Téléchargez Visual Studio 2015 ou Visual Studio 2017 et installez l’ensemble d’outils Visual C++.
 
 [Guide du portage et de la mise à niveau de Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Conseils pour le portage de code et la mise à niveau de projets vers Visual Studio 2017, notamment le portage de code C++ vers Windows 10 et la plateforme universelle Windows.
-
-[Blog de l’équipe Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
-Obtenez plus d’informations sur les nouvelles fonctionnalités et les informations les plus récentes des développeurs de [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
-
-[Téléchargements Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=235233)<br/>
-Télécharger Visual Studio
+Conseils pour le portage de code et la mise à niveau de projets vers Visual 2015 ou Visual Studio 2017, notamment le portage de code C++ vers Windows 10 et la plateforme universelle Windows.
 
 [Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Découvrez les différentes éditions de Visual Studio.
@@ -63,19 +65,38 @@ Découvrez les différentes éditions de Visual Studio.
 [Plateformes prises en charge](supported-platforms-visual-cpp.md)<br/>
 Découvrez quelles plateformes sont prises en charge.
 
+## <a name="learn-c"></a>Apprendre C++
+
+[Bienvenue dans C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+En savoir plus sur les techniques de programmation C++ basées sur C++11 et C++14 qui vous permettent d’écrire rapidement du code sécurisé et d’éviter la plupart des pièges de la programmation de style C.
+
+[C++ standard](http://isocpp.org/)<br/>
+Découvrez C++, obtenez une vue d’ensemble du langage C++ moderne et bénéficiez de liens vers des ouvrages, des articles, des entretiens et des événements.
+
+[Découvrir Visual C++](build/vscpp-step-1-create.md)<br/>
+Commencez à vous familiariser avec le langage C++.
+
 [Exemples Visual C++](visual-cpp-samples.md)<br/>
 Informations sur les exemples.
 
-[Communauté des développeurs Visual Studio](https://developercommunity.visualstudio.com/)<br/>
-Découvrez comment obtenir de l’aide, consigner des bogues et envoyer des suggestions pour Visual Studio.
+## <a name="c-development-tools"></a>Outils de développement C++
 
-## <a name="writing-applications-in-c"></a>Écriture d’applications en C++
+[IDE et outils de développement](ide/ide-and-tools-for-visual-cpp-development.md)
+Comment utiliser l’IDE Visual Studio pour créer des projets, travailler avec des fichiers de code source, lier à des bibliothèques, compiler, déboguer, créer des tests unitaires, effectuer une analyse statique, déployer et bien plus encore.
+
+[Compilateurs et outils de build](build/building-c-cpp-programs.md) Options du compilateur et de l’éditeur de liens, messages d’erreur, exemples de ligne de commande, configuration de différentes plateformes et rubriques de référence de build Microsoft C++. 
+
+## <a name="write-applications-in-c"></a>Écrire des applications en C++
 
 [Applications universelles Windows](windows/universal-windows-apps-cpp.md)<br/>
 Recherchez des guides et du contenu de référence dans le Centre de développement Windows. Pour plus d’informations sur le développement d’applications UWP, consultez [Présentation de la plateforme Windows universelle](/windows/uwp/get-started/universal-application-platform-guide) et [Créer votre première application UWP en C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Applications de bureau (C++)](windows/desktop-applications-visual-cpp.md)<br/>
-Apprenez à créer des applications de bureau dotées d’une boucle de messages et de rappels.
+Découvrez comment créer des applications de bureau C++ natives traditionnelles pour Windows.
+
+[Programmation .NET avec C++/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) Apprenez à créer des DLL qui permettent une interopérabilité entre les programmes C++ et .NET natifs écrits dans des langages tels que C# ou Visual Basic.
+
+[Programmation Linux](linux/index.md) Utilisez l’IDE de Visual Studio pour coder et déployer sur une machine Linux distante pour une compilation avec GCC.
 
 [DLL dans Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Découvrez comment utiliser Win32, ATL et MFC pour créer des DLL de bureau Windows, et obtenez des informations sur la façon de compiler et d’enregistrer votre DLL.
@@ -94,10 +115,6 @@ Connectez-vous aux bases de données à l’aide d’ODBC et d’autres technolo
 
 [Texte et chaînes](text/text-and-strings-in-visual-cpp.md)<br/>
 En savoir plus sur l’utilisation de différents formats et encodages de texte et de chaîne pour un développement local et international.
-
-## <a name="c-development-tools"></a>Outils de développement C++
-
-Pour découvrir comment créer des projets, utiliser des fichiers de code source, lier des bibliothèques, compiler, déboguer, profiler, déployer, etc., consultez [IDE et outils de développement Visual C++](ide/ide-and-tools-for-visual-cpp-development.md).
 
 ## <a name="c-language-reference"></a>Informations de référence sur le langage C++
 
@@ -133,19 +150,20 @@ Applications et composants de plateforme Windows universelle (UWP).
 [Programmation .NET avec C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Programmation du Common Langage Runtime (CLR).
 
-Consultez également la documentation relative à [STL/CLR](dotnet/stl-clr-library-reference.md) et à la [C++ Support Library](dotnet/cpp-support-library.md).
+## <a name="third-party-open-source-c-libraries"></a>Bibliothèques C++ open source tierces
 
-## <a name="other-c-libraries"></a>Autres bibliothèques C++
+L’outil en ligne de commande **vcpkg** multiplateforme simplifie considérablement la découverte et l’installation de plus de 900 bibliothèques open source C++. Consultez [vcpkg : Gestionnaire de package C++ pour Windows](vcpkg.md).
 
-Vous pouvez utiliser l’outil en ligne de commande vcpkg pour simplifier considérablement la découverte et l’installation de plus de 600 bibliothèques open source C++. Consultez [vcpkg : Gestionnaire de package C++ pour Windows](vcpkg.md).
+## <a name="feedback-and-community"></a>Commentaires et communauté
 
-## <a name="more-resources"></a>Autres ressources
+[Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+Découvrez comment créer des rapports d’erreurs efficaces portant sur l’ensemble d’outils Visual C++ (compilateur, éditeur de liens et autres outils) et différentes manières de soumettre votre rapport.
 
-[C++ standard](http://isocpp.org/)<br/>
-Découvrez C++, obtenez une vue d’ensemble du langage C++ moderne et bénéficiez de liens vers des ouvrages, des articles, des entretiens et des événements.
+[Blog de l’équipe Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
+Obtenez plus d’informations sur les nouvelles fonctionnalités et les informations les plus récentes des développeurs de [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
 
-[Découvrir Visual C++](build/vscpp-step-1-create.md)<br/>
-Commencez à vous familiariser avec le langage C++.
+[Communauté des développeurs Visual Studio](https://developercommunity.visualstudio.com/)<br/>
+Découvrez comment obtenir de l’aide, consigner des bogues et envoyer des suggestions pour Visual Studio.
 
 ## <a name="see-also"></a>Voir aussi
 

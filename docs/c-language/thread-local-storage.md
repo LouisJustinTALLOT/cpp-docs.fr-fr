@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390022"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131737"
 ---
 # <a name="thread-local-storage"></a>stockage local des threads
 **Section spécifique à Microsoft**  
   
- Le stockage local des threads (TLS) est le mécanisme par lequel chaque thread d’un processus multithread donné alloue de l’espace de stockage pour les données spécifiques aux threads. Dans les programmes multithread standard, les données sont partagées entre tous les threads d’un processus donné, alors que le stockage local des threads est le mécanisme d’allocation des données par thread. Pour une description complète des threads, consultez [Threads](http://msdn.microsoft.com/library/windows/desktop/ms684841) et processus dans [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Le stockage local des threads (TLS) est le mécanisme par lequel chaque thread d’un processus multithread donné alloue de l’espace de stockage pour les données spécifiques aux threads. Dans les programmes multithread standard, les données sont partagées entre tous les threads d’un processus donné, alors que le stockage local des threads est le mécanisme d’allocation des données par thread. Pour une description complète des threads, consultez [Threads et processus](/windows/desktop/ProcThread/processes-and-threads) dans le kit SDK Windows.  
   
  Le langage Microsoft C inclut l’attribut de classe de stockage étendu, le thread, utilisé avec le mot clé __declspec pour déclarer une variable locale de thread. Par exemple, le code suivant déclare une variable locale de thread entière et lui affecte une valeur initiale :  
   
