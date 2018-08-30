@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212889"
 ---
 # <a name="ckeyboardmanager-class"></a>Ckeyboardmanager, classe
 Gère les tables de touches de raccourci pour la fenêtre frame principale et les fenêtres frames enfants.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Paramètre|Description|  
 |[in] *nKey*|Clé à vérifier.|  
-|[in] *fVirt*|Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *pWndFrame*|Une fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|  
 |[in] *bIsDefaultFrame*|Un paramètre booléen qui indique si *pWndFrame* est la fenêtre de frame par défaut.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Différent de zéro si le caractère imprimable, zéro si elle n’est pas.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode échoue si un appel à [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) échoue.  
+ Cette méthode échoue si un appel à [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) échoue.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Indique si les menus affichent toutes les touches de raccourci associées aux commandes de menu ou uniquement les touches de raccourci par défaut.  
