@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1339f41a0764e44f46bed7ad24181ce406998c22
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2f92408c8d8ee4ac1dd1309810ae6282f04ca315
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885599"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213321"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Ioleinplaceactiveobjectimpl, classe
 Cette classe fournit des méthodes d’assistance de communication entre un contrôle sur place et de son conteneur.  
@@ -66,7 +66,7 @@ class IOleInPlaceActiveObjectImpl
   
   
 ## <a name="remarks"></a>Notes  
- Le [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interface facilite la communication entre un contrôle sur place et de son conteneur ; par exemple, communiquer l’état actif du contrôle et le conteneur et à informer le contrôle qu’il doit redimensionner lui-même. Classe `IOleInPlaceActiveObjectImpl` fournit une implémentation par défaut de `IOleInPlaceActiveObject` et prend en charge `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
+ Le [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) interface facilite la communication entre un contrôle sur place et de son conteneur ; par exemple, communiquer l’état actif du contrôle et le conteneur et à informer le contrôle qu’il doit redimensionner lui-même. Classe `IOleInPlaceActiveObjectImpl` fournit une implémentation par défaut de `IOleInPlaceActiveObject` et prend en charge `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -89,7 +89,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
  Retourne E_NOTIMPL.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Permet de boîtes de dialogue non modale.  
@@ -102,7 +102,7 @@ HRESULT EnableModeless(BOOL fEnable);
  Retourne S_OK.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  Le conteneur appelle cette fonction pour obtenir le handle de fenêtre du contrôle.  
@@ -114,7 +114,7 @@ HRESULT GetWindow(HWND* phwnd);
 ### <a name="remarks"></a>Notes  
  Certains conteneurs ne fonctionnent pas avec un contrôle qui a été sans fenêtre, même si elle est actuellement avec fenêtres. Dans l’implémentation d’ATL, si le `CComControl::m_bWasOnceWindowless` membre de données a la valeur TRUE, la fonction retourne E_FAIL. Sinon, si \* *phwnd* n’est pas NULL, `GetWindow` attribue *phwnd* au membre de données de la classe de contrôle `m_hWnd` et retourne S_OK.  
   
- Consultez [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Avertit le contrôle lors de la fenêtre de document du conteneur est activée ou désactivée.  
@@ -127,7 +127,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
  Retourne S_OK.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Avertit le contrôle lors de la fenêtre de frame de niveau supérieur du conteneur est activée ou désactivée.  
@@ -140,7 +140,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
  Retourne S_OK.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Indique au contrôle qu'il doit redimensionner ses bordures.  
@@ -156,7 +156,7 @@ HRESULT ResizeBorder(
  Retourne S_OK.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Traite les messages de touche d’accès rapide de menu à partir du conteneur.  
@@ -173,9 +173,9 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
  S_FALSE si le message n’était pas traduit.  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) dans le Kit de développement logiciel Windows.  
+ Consultez [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CComControl, classe](../../atl/reference/ccomcontrol-class.md)  
- [Interfaces de contrôles ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)  
+ [Interfaces de contrôles ActiveX](/windows/desktop/com/activex-controls-interfaces)  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

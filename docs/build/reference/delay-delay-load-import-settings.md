@@ -1,5 +1,5 @@
 ---
-title: -DELAY (paramètres d’importation chargement différé) | Documents Microsoft
+title: -DELAY (paramètres d’importation chargement différé) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c898727504a8ae530bcdffb3e01bde68c31c8e87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7920c8a3fe002c0d3ef9c9a64872a07ec75ebd8b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373333"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213476"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Paramètres d'importation à chargement différé)
 ```  
@@ -40,15 +40,15 @@ ms.locfileid: "32373333"
   
 -   Le qualificateur UNLOAD indique à la fonction d'assistance de chargement différé de prendre en charge le déchargement explicite de la DLL. La table IAT (Import Address Table) est réinitialisée à sa forme d'origine, ce qui invalide les pointeurs IAT et entraîne leur remplacement.  
   
-     Si vous ne sélectionnez pas UNLOAD, tout appel à [FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md) échoue.  
+     Si vous ne sélectionnez pas UNLOAD, tout appel à [FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md) échouera.  
   
 -   Le qualificateur NOBIND indique à l'éditeur de liens de ne pas inclure dans l'image finale de table IAT pouvant être liée. L'option par défaut consiste à créer la table IAT pouvant être liée pour les DLL chargées en différé. L'image obtenue ne peut pas être liée statiquement. (Les images avec des tables IAT pouvant être liées sont susceptibles d'être liées statiquement avant leur exécution.) Consultez [/lier](../../build/reference/bind.md).  
   
-     Si la DLL est liée, la fonction d’assistance tente d’utiliser les informations liées au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) sur chaque importation référencée. Si l'horodatage ou l'adresse préférée ne correspondent pas à ceux de la DLL chargée, la fonction d'assistance suppose que la table IAT liée est obsolète et continuera comme si la table IAT liée n'existe pas.  
+     Si la DLL est liée, la fonction d’assistance tente d’utiliser les informations liées au lieu d’appeler [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) sur chacun des importations référencées. Si l'horodatage ou l'adresse préférée ne correspondent pas à ceux de la DLL chargée, la fonction d'assistance suppose que la table IAT liée est obsolète et continuera comme si la table IAT liée n'existe pas.  
   
      NOBIND augmente la taille de votre image de programme mais peut réduire le temps de chargement de la DLL. Si vous n'avez pas l'intention de lier la DLL, NOBIND empêchera la création de la table IAT liée.  
   
- Pour spécifier les DLL pour différer le chargement, utilisez la [DELAYLOAD](../../build/reference/delayload-delay-load-import.md) option.  
+ Pour spécifier les DLL pour différer le chargement, utilisez la [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) option.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
@@ -56,7 +56,7 @@ ms.locfileid: "32373333"
   
 2.  Développez **propriétés de Configuration**, **l’éditeur de liens**, puis sélectionnez **avancé**.  
   
-3.  Modifier la **chargement différé des DLL** propriété.  
+3.  Modifier le **chargement différé des DLL** propriété.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
